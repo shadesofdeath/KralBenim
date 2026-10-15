@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8">
+<style>
+  html, body { margin: 0; background: #0a0a0b; font-family: Inter, sans-serif; -webkit-font-smoothing: antialiased; }
+  .banner { position: relative; width: 2560px; height: 1440px; overflow: hidden;
+    background: radial-gradient(ellipse 1300px 520px at 50% 50%, rgba(217,164,65,.10), rgba(255,255,255,.03) 45%, rgba(0,0,0,0) 75%), #0a0a0b; }
+  .deco { position: absolute; inset: 0; }
+  .safe { position: absolute; left: 507px; top: 508px; width: 1546px; height: 423px;
+    display: flex; align-items: center; justify-content: center; gap: 70px; }
+  .name { font-weight: 900; font-size: 168px; letter-spacing: -0.045em; color: #f5f5f7; line-height: 1; white-space: nowrap; }
+  .tag { margin-top: 26px; font-weight: 600; font-size: 56px; letter-spacing: -0.015em; color: #8a8a8e; white-space: nowrap; }
+  .tag b { color: #111; background: #d9a441; padding: 0 .2em; border-radius: .14em; font-weight: 800; }
+  .logo { position: relative; width: 800px; height: 800px; overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #17171a 0%, #0a0a0b 70%); }
+</style></head><body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="q" viewBox="40 -10 330 590">
+      <path d="M90 150 C90 70 150 30 205 30 C270 30 320 75 320 140 C320 200 280 225 245 245 C215 262 200 285 200 325 V350"
+            fill="none" stroke="#f5f5f7" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="200" cy="450" r="44" fill="#d9a441" style="filter: drop-shadow(0 0 22px rgba(217,164,65,.75))"/>
+    </symbol>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+</svg>
+
+<div class="banner" id="banner">
+  <svg class="deco" viewBox="0 0 2560 1440" fill="none" stroke="#2c2c31" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left: airplane window, bridge -->
+    <rect x="150" y="300" width="190" height="260" rx="80"/><rect x="172" y="322" width="146" height="216" rx="62" stroke="#232327"/>
+    <path d="M60 1080 H520 M150 1080 V880 M430 1080 V880 M60 1060 Q150 880 150 880 Q290 1040 430 880 Q520 1060 520 1060"/>
+    <path d="M380 180 l60 0 M410 150 v60" stroke="#d9a441" stroke-opacity=".5"/>
+    <!-- right: pendulum, atom, gear -->
+    <path d="M2240 250 H2440 M2340 250 L2290 520"/><circle cx="2290" cy="545" r="26" fill="#d9a441" fill-opacity=".55" stroke="none"/>
+    <ellipse cx="2300" cy="1000" rx="170" ry="60"/><ellipse cx="2300" cy="1000" rx="170" ry="60" transform="rotate(60 2300 1000)"/><ellipse cx="2300" cy="1000" rx="170" ry="60" transform="rotate(-60 2300 1000)"/><circle cx="2300" cy="1000" r="14" fill="#e5484d" fill-opacity=".6" stroke="none"/>
+    <!-- top/bottom thin rules -->
+    <path d="M760 300 H1800 M760 1140 H1800" stroke="#1f1f23"/>
+  </svg>
+  <div class="safe">
+    <svg width="180" height="322"><use href="#q" width="180" height="322"/></svg>
+    <div>
+      <div class="name">Düşün Bakalım</div>
+      <div class="tag">Her gün yeni bir <b>neden?</b></div>
+    </div>
+  </div>
+</div>
+
+<div class="logo" id="logo">
+  <svg viewBox="0 0 800 800" width="800" height="800">
+    <circle cx="400" cy="400" r="330" fill="none" stroke="#2a2a2f" stroke-width="6"/>
+    <use href="#q" x="250" y="150" width="300" height="536"/>
+  </svg>
+</div>
+</body></html>
