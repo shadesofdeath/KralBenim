@@ -14,6 +14,7 @@ import os
 import re
 import subprocess
 import sys
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -56,8 +57,11 @@ def tts_elevenlabs(text, cfg, mp3):
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
         data=json.dumps({"text": text, "model_id": cfg.get("model", "eleven_multilingual_v2")}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
-    with urllib.request.urlopen(req) as r:
-        res = json.load(r)
+    try:
+        with urllib.request.urlopen(req) as r:
+            res = json.load(r)
+    except urllib.error.HTTPError as e:
+        sys.exit(f"ElevenLabs {e.code}: {e.read().decode(errors='replace')[:500]}")
     Path(mp3).write_bytes(base64.b64decode(res["audio_base64"]))
     al = res["alignment"]
     chars, st, en = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
