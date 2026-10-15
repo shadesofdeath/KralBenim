@@ -55,7 +55,8 @@ def tts_elevenlabs(text, cfg, mp3):
         sys.exit("ELEVENLABS_API_KEY and tts.voice_id (or ELEVENLABS_VOICE_ID) are required")
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
-        data=json.dumps({"text": text, "model_id": cfg.get("model", "eleven_multilingual_v2")}).encode(),
+        data=json.dumps({"text": text, "model_id": cfg.get("model", "eleven_multilingual_v2"),
+                         **({"voice_settings": cfg["settings"]} if cfg.get("settings") else {})}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
     try:
         with urllib.request.urlopen(req) as r:
@@ -156,10 +157,11 @@ def build_timeline(script, text, ranges, words, duration):
             chunks.append(chunk)
         for k, ch in enumerate(chunks):
             end = chunks[k + 1][0]["start"] if k + 1 < len(chunks) else min(ch[-1]["end"] + 0.5, ends[i])
-            captions.append({"start": ch[0]["start"], "end": end, "text": " ".join(c["disp"] for c in ch)})
+            captions.append({"start": ch[0]["start"], "end": end,
+                             "words": [{"t": c["start"], "text": c["disp"]} for c in ch]})
 
 
-    return {"duration": duration, "fps": FPS, "channel": script.get("channel", ""),
+    return {"duration": duration, "fps": script.get("fps", FPS), "channel": script.get("channel", ""),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -179,27 +181,28 @@ def open_page(pw, timeline):
 
 def render(timeline, mp3, out, until):
     from playwright.sync_api import sync_playwright
-    n = round(until * FPS)
+    fps = timeline["fps"]
+    n = round(until * fps)
     ff = subprocess.Popen([
         "ffmpeg", "-y", "-loglevel", "error",
-        "-f", "image2pipe", "-framerate", str(FPS), "-i", "-",
+        "-f", "image2pipe", "-framerate", str(fps), "-i", "-",
         "-i", str(mp3),
-        "-map", "0:v", "-map", "1:a", "-af", "apad", "-t", f"{n / FPS:.3f}",
-        "-c:v", "libx264", "-preset", "medium", "-crf", "18", "-pix_fmt", "yuv420p",
+        "-map", "0:v", "-map", "1:a", "-af", "apad", "-t", f"{n / fps:.3f}",
+        "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
         stdin=subprocess.PIPE)
     with sync_playwright() as pw:
         browser, page = open_page(pw, timeline)
         for i in range(n):
-            page.evaluate("t => window.seek(t)", i / FPS)
+            page.evaluate("t => window.seek(t)", i / fps)
             ff.stdin.write(page.screenshot(type="png"))
-            if i % FPS == 0:
+            if i % (fps * 5) == 0:
                 print(f"\rframe {i}/{n}", end="", flush=True)
         browser.close()
     ff.stdin.close()
     if ff.wait() != 0:
         sys.exit("ffmpeg failed")
-    print(f"\r{out}  ({n} frames, {n / FPS:.1f}s)")
+    print(f"\r{out}  ({n} frames, {n / fps:.1f}s)")
 
 
 def still(timeline, t, out):

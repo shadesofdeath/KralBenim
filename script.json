@@ -2,63 +2,95 @@
   "slug": "ucak-pencereleri",
   "channel": "Düşün Bakalım",
   "subtitles": true,
+  "fps": 60,
   "tts": {
     "provider": "elevenlabs",
-    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
-    "model": "eleven_multilingual_v2"
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_multilingual_v2",
+    "settings": { "stability": 0.42, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true, "speed": 1.0 }
   },
   "scenes": [
     {
       "type": "window_compare",
-      "text": "Uçak pencerelerinin köşeleri neden hep yuvarlak? Cevabı, birkaç uçağın düşmesiyle öğrenildi.",
+      "text": "Hiç dikkat ettiniz mi? Uçak pencerelerinin köşeleri hep yuvarlaktır. Bu bir zevk meselesi değil. Bu kural, gökyüzünde parçalanan uçaklarla yazıldı.",
       "title": { "white": "Pencereler", "gray": "neden hep yuvarlak?" },
       "tags": ["Kare köşe", "Yuvarlak köşe"],
-      "cues": { "mark": "düşmesiyle" },
+      "cues": { "mark": "parçalanan" },
       "params": { "radius": 92 }
     },
     {
       "type": "plane",
-      "text": "1950'lerin başında de Havilland Comet, dünyanın ilk jet yolcu uçağıydı. Ve pencereleri kareydi.",
-      "title": { "white": "1950'ler:", "gray": "ilk jet yolcu uçağı" },
-      "tags": ["de Havilland Comet", "1952", "Kare pencere"],
-      "cues": { "lens": "kareydi" },
+      "text": "Yıl 1952. İngiltere, dünyanın ilk jet yolcu uçağını tanıtıyor: de Havilland Comet. Pervanesiz, daha sessiz, çok daha hızlı. Ve geniş, kare pencereli.",
+      "title": { "white": "1952:", "gray": "ilk jet yolcu uçağı" },
+      "tags": ["de Havilland Comet", "Jet motor", "Kare pencere"],
+      "cues": { "lens": "kare" },
       "params": { "window_shape": "square", "windows": 9 }
     },
     {
+      "type": "timeline",
+      "text": "Ama sadece iki yıl sonra, Ocak 1954'te, bir Comet Elba adası açıklarında havada parçalandı. Nisan'da ikincisi, Napoli yakınlarında.",
+      "title": { "white": "1954:", "gray": "iki kaza, üç ay arayla" },
+      "tags": ["Elba", "Napoli"],
+      "cues": { "e1": "Ocak", "e2": "Nisan" },
+      "params": {
+        "events": [
+          { "label": "1952", "sub": "Hizmete giriş", "kind": "start" },
+          { "label": "Ocak 1954", "sub": "Elba açıkları", "kind": "crash" },
+          { "label": "Nisan 1954", "sub": "Napoli yakınları", "kind": "crash" }
+        ]
+      }
+    },
+    {
       "type": "plane_breakup",
-      "text": "1954'te, birkaç ay arayla, iki Comet havada parçalandı.",
-      "title": { "white": "1954:", "gray": "iki Comet havada parçalandı" },
-      "tags": ["Ocak 1954", "Nisan 1954"],
-      "cues": { "break": "havada" },
-      "params": { "window_shape": "square", "windows": 9, "split_x": 520 }
+      "text": "İki uçak da yüksek irtifada, adeta havada yırtılmıştı. Bütün Comet filosu yere indirildi.",
+      "title": { "white": "Filo", "gray": "yere indirildi" },
+      "tags": ["Uçuş yasağı"],
+      "cues": { "break": "yırtılmıştı", "stamp": "filosu" },
+      "params": { "window_shape": "square", "windows": 9, "split_x": 520, "stamp": "UÇUŞ YASAĞI" }
     },
     {
       "type": "pressure_cycle",
-      "text": "Sebep: metal yorgunluğu. Kabin her uçuşta basınçlanıp şişiyor, inişte gevşiyor. Gövde bunu binlerce kez yaşıyor.",
-      "title": { "white": "Sebep:", "gray": "metal yorgunluğu" },
-      "tags": ["Basınçlanma", "Gevşeme", "Binlerce döngü"],
-      "cues": { "fast": "binlerce" },
-      "params": { "period": 1.5, "count_to": 12000 }
+      "text": "Şüpheler tek bir şeyde toplandı: basınç. Yüksekte kabin, yolcular rahat nefes alsın diye basınçlandırılır. Gövde her uçuşta balon gibi hafifçe şişer, inişte geri söner.",
+      "title": { "white": "Şüpheli:", "gray": "kabin basıncı" },
+      "tags": ["Basınçlanma", "Gevşeme"],
+      "cues": {},
+      "params": { "period": 1.6, "count_to": 0 }
     },
     {
-      "type": "stress_corner",
-      "text": "Kare pencerenin keskin köşelerinde gerilim tek bir noktada yığılıyor. Zamanla orada bir çatlak başlıyor.",
-      "title": { "white": "Keskin köşe", "gray": "gerilimi biriktirir" },
-      "tags": ["Gerilim yığılması", "Çatlak"],
-      "cues": { "pile": "yığılıyor", "crack": "çatlak" },
+      "type": "water_tank",
+      "text": "Bunu kanıtlamak için mühendisler bir Comet gövdesini dev bir su tankına koydu. Kabini tekrar tekrar şişirip boşalttılar. Yaklaşık üç bin döngüden sonra gövde yarıldı.",
+      "title": { "white": "Deney:", "gray": "su tankında binlerce uçuş" },
+      "tags": ["Farnborough", "Su tankı testi", "≈3.000 döngü"],
+      "cues": { "fill": "tankına", "count": "tekrar", "crack": "döngüden" },
+      "params": { "count_to": 3000 }
+    },
+    {
+      "type": "stress_flow",
+      "text": "Çatlak, bir pencerenin keskin köşesinden başlamıştı. Gövdedeki yükü, akan çizgiler gibi düşünün. Keskin köşede bu çizgiler sıkışır ve gerilim tek bir noktada yığılır.",
+      "title": { "white": "Keskin köşe", "gray": "yükü sıkıştırır" },
+      "tags": ["Gerilim yığılması"],
+      "cues": { "flow": "akan", "squeeze": "sıkışır" },
       "params": { "shape": "square" }
     },
     {
       "type": "stress_corner",
-      "text": "Yuvarlak köşe ise bu gerilimi kenar boyunca dağıtıyor. Hiçbir nokta yükü tek başına taşımıyor.",
-      "title": { "white": "Yuvarlak köşe", "gray": "gerilimi dağıtır" },
-      "tags": ["Gerilim dağılımı", "Yuvarlak köşe"],
-      "cues": { "spread": "kenar" },
+      "text": "Metal her uçuşta biraz daha yorulur. Ve sonunda o noktada, gözle görülmeyen bir çatlak başlar.",
+      "title": { "white": "Metal", "gray": "yorgunluğu" },
+      "tags": ["Metal yorgunluğu", "Çatlak"],
+      "cues": { "pile": "yorulur", "crack": "çatlak" },
+      "params": { "shape": "square" }
+    },
+    {
+      "type": "stress_flow",
+      "text": "Yuvarlak köşede ise çizgiler kenar boyunca rahatça akar. Yük paylaşılır, hiçbir nokta tek başına zorlanmaz.",
+      "title": { "white": "Yuvarlak köşe", "gray": "yükü dağıtır" },
+      "tags": ["Gerilim dağılımı"],
+      "cues": { "flow": "çizgiler" },
       "params": { "shape": "round", "radius": 120 }
     },
     {
       "type": "window_glow",
-      "text": "Yani o pencere bir tasarım tercihi değil, bir ders.",
+      "text": "Bugün bindiğiniz her yolcu uçağının penceresi bu yüzden yuvarlak. Yani o pencere bir tasarım tercihi değil. Bedeli ağır ödenmiş bir ders.",
       "title": { "white": "Bir tercih değil,", "gray": "bir ders." },
       "tags": ["Comet dersi"],
       "cues": {},
@@ -66,7 +98,7 @@
     },
     {
       "type": "question",
-      "text": "Sizce başka hangi tasarımın arkasında böyle bir hikâye var?",
+      "text": "Sizce başka hangi tasarımın arkasında böyle bir hikâye var? Yorumlara yazın.",
       "title": { "white": "Sıra sende:", "gray": "başka hangi tasarım?" },
       "tags": ["Yorumlara yaz"],
       "cues": {},

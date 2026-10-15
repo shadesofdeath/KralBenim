@@ -34,6 +34,7 @@
     position: absolute; left: 130px; right: 130px; top: 1530px;
     text-align: center; font-size: 52px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em;
   }
+  #caption span { transition: none; }
   #progress { position: absolute; left: 80px; right: 80px; top: 1790px; height: 6px; border-radius: 3px; background: #1d1d20; }
   #bar { height: 100%; width: 0; border-radius: 3px; background: var(--white); }
   svg text { font-family: Inter, sans-serif; }
@@ -273,6 +274,162 @@ const BUILD = {
     };
   },
 
+  timeline(svg, P) {
+    const ev = P.events || [], y0 = 330, x0 = 110, x1 = 810;
+    const base = line(svg, `M${x0} ${y0} H${x1}`, DIM, 4);
+    const fillL = line(svg, '', WHITE, 4);
+    const xs = ev.map((_, i) => lerp(x0 + 40, x1 - 40, ev.length > 1 ? i / (ev.length - 1) : 0.5));
+    const items = ev.map((e, i) => {
+      const g = el(svg, 'g');
+      const col = e.kind === 'crash' ? RED : WHITE;
+      const ring = el(g, 'circle', { cx: xs[i], cy: y0, r: 18, fill: 'none', stroke: col, 'stroke-width': 3 });
+      const dot = el(g, 'circle', { cx: xs[i], cy: y0, r: 10, fill: col });
+      const up = i % 2 === 0;
+      const lab = el(g, 'text', { x: xs[i], y: up ? y0 - 70 : y0 + 100, fill: col === RED ? '#ff8a8e' : WHITE, 'font-size': 44, 'font-weight': 800, 'text-anchor': 'middle', 'letter-spacing': '-0.02em' });
+      lab.textContent = e.label;
+      const sub = el(g, 'text', { x: xs[i], y: up ? y0 - 32 : y0 + 140, fill: GRAY, 'font-size': 28, 'font-weight': 500, 'text-anchor': 'middle' });
+      sub.textContent = e.sub || '';
+      const stem = line(g, `M${xs[i]} ${y0 + (up ? -22 : 22)} V${y0 + (up ? -24 : 24)}`, col, 2);
+      const pulse = el(g, 'circle', { cx: xs[i], cy: y0, r: 18, fill: 'none', stroke: col, 'stroke-width': 2, opacity: 0 });
+      return { g, ring, dot, pulse, crash: e.kind === 'crash' };
+    });
+    // small plane glyph travelling along the line
+    const glyph = el(svg, 'path', { d: 'M-22 0 L14 0 L22 -3 L22 3 L14 4 L-22 4 Z M-4 0 L-14 -14 L-8 -14 L6 0 M-4 4 L-14 18 L-8 18 L6 4 M-20 0 L-26 -10 L-21 -10 L-14 0', fill: WHITE });
+    return (lt, dur, c) => {
+      draw(base, prog(lt, 0.1, 1.0));
+      const at = ev.map((_, i) => i === 0 ? 0.5 : (c['e' + i] ?? dur * (0.25 + 0.35 * i)));
+      let px = x0;
+      items.forEach((it, i) => {
+        const p = prog(lt, at[i] - 0.1, 0.6);
+        it.g.style.opacity = p;
+        it.g.setAttribute('transform', `translate(0 ${(1 - p) * 14})`);
+        if (lt > at[i]) px = xs[i];
+        if (i > 0) px = lerp(px, xs[i], 0);
+        const k = (lt - at[i]) % 1.4;
+        if (it.crash && lt > at[i]) {
+          it.pulse.setAttribute('r', 18 + k * 40);
+          it.pulse.setAttribute('opacity', (1 - k / 1.4) * 0.8);
+        }
+      });
+      // glyph glides to the latest event
+      let gx = x0;
+      for (let i = 0; i < xs.length; i++) {
+        const from = i === 0 ? x0 : xs[i - 1];
+        gx = lt < at[i] - 0.6 ? gx : lerp(from, xs[i], prog(lt, at[i] - 0.6, 0.8));
+      }
+      fillL.setAttribute('d', `M${x0} ${y0} H${gx}`);
+      fillL.style.strokeDasharray = 'none';
+      fillL.style.opacity = prog(lt, 0.3, 0.6);
+      glyph.setAttribute('transform', `translate(${gx} ${y0 - 2 - Math.sin(lt * 3) * 3})`);
+      glyph.style.opacity = prog(lt, 0.3, 0.6);
+    };
+  },
+
+  water_tank(svg, P) {
+    const tx = 90, ty = 150, tw = 740, th = 440, wl = ty + 70;   // water level
+    const defs = el(svg, 'defs');
+    const cp = el(defs, 'clipPath', { id: 'tankclip' });
+    el(cp, 'rect', { x: tx, y: ty, width: tw, height: th, rx: 24 });
+    const inner = el(svg, 'g', { 'clip-path': 'url(#tankclip)' });
+    const water = el(inner, 'path', { fill: 'rgba(120,150,190,0.10)' });
+    const surface = el(inner, 'path', { fill: 'none', stroke: 'rgba(170,200,235,0.55)', 'stroke-width': 3 });
+    const body = el(inner, 'g');
+    const hull = line(body, 'M200 330 L650 330 C710 330 742 350 750 372 C742 394 710 414 650 414 L240 414 C200 414 182 390 172 372 C182 350 200 330 200 330 Z', WHITE, 5);
+    const wins = [];
+    for (let i = 0; i < 8; i++) wins.push(el(body, 'rect', { x: 260 + i * 52, y: 356, width: 24, height: 26, rx: 2, fill: 'none', stroke: AMBER, 'stroke-width': 3 }));
+    const crack = line(body, 'M574 356 L586 344 L592 348 L604 330 L612 332 L620 318', RED, 4);
+    const bubbles = [], r = rng(11);
+    for (let i = 0; i < 14; i++) bubbles.push({ e: el(inner, 'circle', { r: 3 + r() * 5, fill: 'none', stroke: 'rgba(200,220,240,.7)', 'stroke-width': 2 }), x: 560 + r() * 60, d: r() * 2, s: 40 + r() * 50 });
+    const tank = line(svg, rrect(tx, ty, tw, th, 24), GRAY, 4);
+    // pressure gauge
+    const gx = 770, gy = 110;
+    const gface = el(svg, 'circle', { cx: gx, cy: gy, r: 62, fill: '#141416', stroke: WHITE, 'stroke-width': 4 });
+    const ticks = el(svg, 'g');
+    for (let i = 0; i <= 8; i++) {
+      const a = (-220 + i * 32.5) * Math.PI / 180;
+      el(ticks, 'path', { d: `M${gx + Math.cos(a) * 46} ${gy + Math.sin(a) * 46} L${gx + Math.cos(a) * 54} ${gy + Math.sin(a) * 54}`, stroke: i > 6 ? RED : GRAY, 'stroke-width': 3, 'stroke-linecap': 'round' });
+    }
+    const needle = el(svg, 'path', { d: `M${gx} ${gy} L${gx} ${gy - 44}`, stroke: AMBER, 'stroke-width': 5, 'stroke-linecap': 'round' });
+    const hub = el(svg, 'circle', { cx: gx, cy: gy, r: 7, fill: AMBER });
+    const label = el(svg, 'text', { x: tx + 24, y: ty + th - 26, fill: GRAY, 'font-size': 28, 'font-weight': 500 });
+    label.textContent = 'basınç döngüsü';
+    const count = el(svg, 'text', { x: tx + tw - 24, y: ty + th - 22, fill: AMBER, 'font-size': 60, 'font-weight': 800, 'text-anchor': 'end', 'font-variant-numeric': 'tabular-nums' });
+    return (lt, dur, c) => {
+      draw(tank, prog(lt, 0.1, 1.0));
+      const fill = c.fill ?? 1.2, cnt = c.count ?? dur * 0.35, cr = c.crack ?? dur * 0.85;
+      const lvl = lerp(ty + th + 10, wl, prog(lt, fill - 0.6, 1.6));
+      let d = `M${tx} ${ty + th} L${tx} ${lvl}`;
+      for (let x = tx; x <= tx + tw; x += 20) d += ` L${x} ${lvl + Math.sin(x / 40 + lt * 2.4) * 5}`;
+      water.setAttribute('d', d + ` L${tx + tw} ${ty + th} Z`);
+      surface.setAttribute('d', d.replace(/^M[^L]+L[^L]+/, 'M' + tx + ' ' + lvl));
+      // body sinks in, then breathes with pressure cycles
+      const pIn = prog(lt, 0.2, 1.2);
+      const cycles = Math.max(0, lt - cnt);
+      const period = lerp(1.2, 0.35, prog(lt, cnt, cr - cnt));       // cycles speed up
+      const ph = cycles / period, s = lt > cnt && lt < cr ? 0.5 - 0.5 * Math.cos(2 * Math.PI * ph) : 0;
+      body.setAttribute('transform', `translate(0 ${(1 - pIn) * -160}) translate(460 372) scale(1 ${1 + 0.035 * s}) translate(-460 -372)`);
+      body.style.opacity = pIn;
+      draw(hull, pIn);
+      wins.forEach((w, i) => w.style.opacity = prog(lt, 0.5 + i * 0.05, 0.4));
+      needle.setAttribute('transform', `rotate(${-130 + 200 * s} ${gx} ${gy})`);
+      [gface, ticks, needle, hub].forEach(e => e.style.opacity = prog(lt, cnt - 0.8, 0.6));
+      const n = lt < cnt ? 0 : Math.round((P.count_to ?? 3000) * Math.pow(prog(lt, cnt, cr - cnt), 1.6));
+      count.textContent = n.toLocaleString('tr-TR');
+      count.style.opacity = label.style.opacity = prog(lt, cnt - 0.4, 0.6);
+      draw(crack, prog(lt, cr, 0.7));
+      count.setAttribute('fill', lt > cr ? RED : AMBER);
+      bubbles.forEach(b => {
+        const k = lt - cr - b.d * 0.6;
+        const y = 340 - (k * b.s) % 140;
+        b.e.setAttribute('cx', b.x + Math.sin(k * 3 + b.d * 5) * 6);
+        b.e.setAttribute('cy', y);
+        b.e.style.opacity = k > 0 ? 0.8 * clamp01(1 - ((k * b.s) % 140) / 140) : 0;
+      });
+    };
+  },
+
+  stress_flow(svg, P) {
+    const round = P.shape === 'round';
+    const w = 300, h = 360, cx = 460, cy = 340, R = round ? (P.radius ?? 120) : 6;
+    const L = cx - w / 2, Rx = cx + w / 2, T = cy - h / 2, B = cy + h / 2;
+    const gap0 = round ? 14 : 5, sp = round ? 15 : 7;
+    const ys = []; for (let y = 40; y <= 640; y += 34) ys.push(y);
+    const above = ys.filter(y => y < cy).sort((a, b) => b - a), below = ys.filter(y => y >= cy).sort((a, b) => a - b);
+    const target = {};
+    let cur = T - gap0; for (const y of above) { target[y] = Math.min(y, cur); cur = target[y] - sp; }
+    cur = B + gap0; for (const y of below) { target[y] = Math.max(y, cur); cur = target[y] + sp; }
+    const lines = ys.map(y => {
+      const t = target[y], moved = Math.abs(t - y) > 0.5;
+      const near = moved ? Math.abs(t - (y < cy ? T : B)) : 999;
+      const a = L - (round ? 230 : 150), b = round ? L + R * 0.55 : L - 2;
+      const a2 = Rx + (round ? 230 : 150), b2 = round ? Rx - R * 0.55 : Rx + 2;
+      const d = moved
+        ? `M-20 ${y} H${a} C${(a + b) / 2} ${y} ${(a + b) / 2 + (round ? 20 : 30)} ${t} ${b} ${t} H${b2} C${(a2 + b2) / 2 - (round ? 20 : 30)} ${t} ${(a2 + b2) / 2} ${y} ${a2} ${y} H940`
+        : `M-20 ${y} H940`;
+      const hot = near < (round ? 50 : 26);
+      const col = hot ? (round ? AMBER : RED) : (moved ? '#5a5a60' : '#2e2e33');
+      return { e: el(svg, 'path', { d, fill: 'none', stroke: col, 'stroke-width': hot ? 3.5 : 2.5, 'stroke-linecap': 'round', 'stroke-dasharray': '18 14' }), y, hot };
+    });
+    const hole = el(svg, 'path', { d: rrect(L, T, w, h, R), fill: '#141416', stroke: WHITE, 'stroke-width': 5, pathLength: 1 });
+    const pane = line(svg, rrect(L + 22, T + 22, w - 44, h - 44, Math.max(R - 18, 3)), GRAY, 2.5);
+    const glows = round ? [] : [[L, T], [Rx, T], [L, B], [Rx, B]].map(([x, y]) => el(svg, 'circle', { cx: x, cy: y, r: 30, fill: RED, opacity: 0 }));
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.1, 1.0);
+      hole.style.strokeDasharray = '1 1'; hole.style.strokeDashoffset = 1 - pIn;
+      draw(pane, prog(lt, 0.4, 0.9));
+      const fl = c.flow ?? 1.0, sq = c.squeeze ?? dur * 0.7;
+      lines.forEach((o, i) => {
+        o.e.style.opacity = prog(lt, fl - 0.4 + Math.abs(o.y - cy) / 600, 0.8) * (o.hot ? 1 : 0.9);
+        o.e.style.strokeDashoffset = -lt * (o.hot ? 95 : 60);
+      });
+      glows.forEach((g, i) => {
+        const pulse = 0.5 + 0.5 * Math.sin(lt * 6 + i);
+        g.setAttribute('opacity', prog(lt, sq, 0.8) * (0.18 + 0.14 * pulse));
+        g.setAttribute('r', 26 + 10 * pulse * prog(lt, sq, 0.8));
+      });
+    };
+  },
+
   window_glow(svg, P) {
     const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
     const defs = el(svg, 'defs');
@@ -362,6 +519,13 @@ function buildPlane(svg, P, breakup) {
   // breakup extras
   const debris = [], r = rng(7);
   let crackLine = null;
+  let stamp = null;
+  if (breakup && P.stamp) {
+    stamp = el(svg, 'g');
+    el(stamp, 'rect', { x: 250, y: 470, width: 420, height: 104, rx: 14, fill: 'rgba(229,72,77,0.08)', stroke: RED, 'stroke-width': 5 });
+    const tx = el(stamp, 'text', { x: 460, y: 540, fill: RED, 'font-size': 52, 'font-weight': 800, 'text-anchor': 'middle', 'letter-spacing': '0.06em' });
+    tx.textContent = P.stamp;
+  }
   if (breakup) {
     crackLine = line(svg, `M${zz}`, RED, 4);
     for (let i = 0; i < 12; i++) debris.push({ e: line(svg, `M0 0 l${6 + r() * 10} ${r() * 8 - 4}`, GRAY, 3), a: r() * Math.PI * 2, v: 60 + r() * 120, s: r() * 360 });
@@ -400,6 +564,11 @@ function buildPlane(svg, P, breakup) {
       const p = prog(lt, B, 1.3);
       halves[0].setAttribute('transform', `translate(${-60 * p} ${50 * p}) rotate(${-9 * p} ${split} 340)`);
       halves[1].setAttribute('transform', `translate(${55 * p} ${75 * p}) rotate(${12 * p} ${split} 340)`);
+      if (stamp) {
+        const ps = prog(lt, c.stamp ?? dur * 0.75, 0.45);
+        stamp.style.opacity = ps;
+        stamp.setAttribute('transform', `translate(460 522) rotate(-6) scale(${lerp(1.5, 1, ps)}) translate(-460 -522)`);
+      }
       const k = lin(lt, B, 1.3);
       debris.forEach(d => {
         const dist = d.v * EASE(k);
@@ -455,7 +624,7 @@ window.seek = (t) => {
       g.style.transform = `translateY(${(1 - p) * 18}px)`;
     });
     o.svg.style.opacity = prog(t, sc.start, 0.45) * out;
-    const z = lerp(1, 1.05, lt / Math.max(dur, 1)), fy = Math.sin(t * 0.9) * 6;
+    const z = lerp(0.96, 1, prog(t, sc.start, 0.8)) * lerp(1, 1.05, lt / Math.max(dur, 1)), fy = Math.sin(t * 0.9) * 6;
     o.svg.style.transform = `translateY(${fy}px) scale(${z})`;
     const cues = {};
     for (const k in sc.cues) cues[k] = sc.cues[k] - sc.start;
@@ -475,7 +644,16 @@ window.seek = (t) => {
   const cap = document.getElementById('caption');
   const c = D.captions.find(c => t >= c.start && t < c.end);
   if (c) {
-    if (cap.textContent !== c.text) cap.textContent = c.text;
+    if (cap._c !== c) {
+      cap._c = c;
+      cap.innerHTML = '';
+      c.spans = c.words.map(w => { const s = document.createElement('span'); s.textContent = w.text + ' '; cap.appendChild(s); return s; });
+    }
+    c.words.forEach((w, k) => {
+      const next = k + 1 < c.words.length ? c.words[k + 1].t : c.end;
+      const on = t >= w.t, now = on && t < next;
+      c.spans[k].style.color = now ? 'var(--amber)' : (on ? 'var(--white)' : 'rgba(245,245,247,.45)');
+    });
     const pin = prog(t, c.start, 0.22), pout = 1 - prog(t, c.end - 0.12, 0.12);
     cap.style.opacity = pin * pout;
     cap.style.transform = `translateY(${(1 - pin) * 14}px)`;
