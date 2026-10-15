@@ -15,7 +15,7 @@
   }
   .title {
     position: absolute; left: 80px; right: 80px; bottom: 1320px;
-    font-weight: 800; font-size: 110px; line-height: 1.04; letter-spacing: -0.035em;
+    font-weight: 800; font-size: 84px; line-height: 1.06; letter-spacing: -0.03em;
   }
   .title span { display: inline-block; margin-right: .24em; }
   .title .g { color: var(--gray); }
@@ -42,7 +42,7 @@
   html.cover .title, html.cover .tags, html.cover #caption, html.cover #progress { display: none !important; }
   html.cover #covertext {
     display: block; position: absolute; left: 80px; right: 80px; top: 200px;
-    font-weight: 900; font-size: 148px; line-height: 1.12; letter-spacing: -0.045em; text-transform: uppercase;
+    font-weight: 900; font-size: 124px; line-height: 1.12; letter-spacing: -0.04em; text-transform: uppercase;
   }
   html.cover #covertext .hl { color: var(--amber); }
   html.cover #covertext .line { display: block; }
@@ -77,7 +77,7 @@
   html.long, html.long body, html.long #stage { width: 1920px; height: 1080px; }
   html.long #stage { background: radial-gradient(ellipse 1100px 800px at 70% 45%, rgba(255,255,255,.05), rgba(255,255,255,0) 70%), var(--bg); }
   html.long #brand { left: 120px; top: 70px; font-size: 32px; }
-  html.long .title { left: 120px; right: auto; width: 700px; bottom: auto; top: 190px; font-size: 84px; }
+  html.long .title { left: 120px; right: auto; width: 700px; bottom: auto; top: 190px; font-size: 68px; }
   html.long #card { left: 900px; top: 170px; }
   html.long .tags { left: 120px; right: auto; width: 700px; top: 760px; }
   html.long .tag { font-size: 30px; padding: 12px 26px; }
@@ -163,6 +163,40 @@ function rrect(x, y, w, h, r) {
 function rng(seed) { return () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
 
 const WHITE = '#f5f5f7', GRAY = '#8a8a8e', DIM = '#3a3a3f', AMBER = '#d9a441', RED = '#e5484d';
+
+// ------------------------------------------------------------ icon library (100x100 boxes, stroke drawn)
+const ICONS = {
+  bulb: 'M50 10 C28 10 18 28 18 42 C18 56 30 62 34 72 H66 C70 62 82 56 82 42 C82 28 72 10 50 10 Z M36 80 H64 M40 88 H60 M44 96 H56',
+  brain: 'M48 20 C38 10 20 16 22 30 C10 34 10 52 20 56 C14 68 26 82 38 76 C42 88 56 88 52 76 M52 20 C62 10 80 16 78 30 C90 34 90 52 80 56 C86 68 74 82 62 76 C58 88 44 88 48 76 M50 20 V82 M30 40 C38 42 40 48 36 54 M70 40 C62 42 60 48 64 54',
+  eye: 'M8 50 C24 24 76 24 92 50 C76 76 24 76 8 50 Z M50 34 A16 16 0 1 1 49.9 34 M50 44 A6 6 0 1 1 49.9 44',
+  clock: 'M50 10 A40 40 0 1 1 49.9 10 M50 26 V50 L66 60',
+  globe: 'M50 10 A40 40 0 1 1 49.9 10 M10 50 H90 M50 10 C30 30 30 70 50 90 M50 10 C70 30 70 70 50 90 M16 30 H84 M16 70 H84',
+  warning: 'M50 10 L92 86 H8 Z M50 38 V60 M50 70 V72',
+  heart: 'M50 86 C20 64 8 46 14 30 C20 14 42 12 50 30 C58 12 80 14 86 30 C92 46 80 64 50 86 Z',
+  drop: 'M50 8 C38 30 22 46 22 62 C22 80 36 92 50 92 C64 92 78 80 78 62 C78 46 62 30 50 8 Z M36 64 C36 74 42 80 50 80',
+  fire: 'M50 92 C26 92 18 72 24 56 C30 42 40 38 38 18 C56 28 62 44 58 56 C66 52 68 44 66 36 C80 48 84 70 74 82 C68 88 60 92 50 92 Z',
+  snow: 'M50 8 V92 M14 29 L86 71 M14 71 L86 29 M40 14 L50 24 L60 14 M40 86 L50 76 L60 86',
+  bolt: 'M58 8 L22 56 H48 L40 92 L78 40 H52 Z',
+  question: 'M32 34 C32 18 44 10 52 10 C66 10 74 20 74 32 C74 46 60 50 54 58 C52 62 52 66 52 70 M52 84 V88',
+  check: 'M14 52 L38 76 L86 26',
+  x: 'M18 18 L82 82 M82 18 L18 82',
+  star: 'M50 8 L62 38 L94 40 L70 60 L78 92 L50 74 L22 92 L30 60 L6 40 L38 38 Z',
+  magnet: 'M20 16 V54 C20 72 34 86 50 86 C66 86 80 72 80 54 V16 H62 V54 C62 62 56 68 50 68 C44 68 38 62 38 54 V16 Z M20 30 H38 M62 30 H80',
+  atom: 'M50 46 A4 4 0 1 1 49.9 46 M50 50 m-42 0 a42 16 0 1 0 84 0 a42 16 0 1 0 -84 0 M50 50 m-21 -36 a42 16 60 1 0 42 72 a42 16 60 1 0 -42 -72 M29 86 a42 16 -60 1 0 42 -72 a42 16 -60 1 0 -42 72',
+  gear: 'M50 30 A20 20 0 1 1 49.9 30 M50 8 V20 M50 80 V92 M8 50 H20 M80 50 H92 M20 20 L28 28 M72 72 L80 80 M80 20 L72 28 M28 72 L20 80',
+  rocket: 'M50 8 C68 22 72 46 64 70 H36 C28 46 32 22 50 8 Z M50 34 A8 8 0 1 1 49.9 34 M36 60 L22 76 L34 78 M64 60 L78 76 L66 78 M42 76 L50 92 L58 76',
+  leaf: 'M18 82 C18 40 46 14 88 12 C86 54 62 82 18 82 Z M18 82 C38 62 54 46 70 30',
+  sound: 'M14 38 H30 L52 20 V80 L30 62 H14 Z M64 34 C72 42 72 58 64 66 M74 24 C88 38 88 62 74 76',
+  hand: 'M34 92 C22 80 16 66 16 56 L20 44 C24 40 30 42 32 48 V24 C32 16 42 16 42 24 V44 V18 C42 10 54 10 54 18 V44 V22 C54 14 66 14 66 22 V46 V32 C66 24 78 24 78 32 V62 C78 80 66 92 52 92 Z',
+  sun: 'M50 30 A20 20 0 1 1 49.9 30 M50 6 V18 M50 82 V94 M6 50 H18 M82 50 H94 M19 19 L27 27 M73 73 L81 81 M81 19 L73 27 M27 73 L19 81',
+  moon: 'M66 12 C42 16 26 38 30 62 C34 82 54 94 76 88 C52 82 40 60 46 40 C50 26 58 18 66 12 Z',
+};
+function drawIcon(g, name, cx, cy, scale, stroke, accent) {
+  const d = ICONS[name] || ICONS.question;
+  const t = `translate(${cx - 50 * scale} ${cy - 50 * scale}) scale(${scale})`;
+  if (accent) el(g, 'path', { d, transform: t, fill: 'none', stroke: accent, 'stroke-width': 10 / scale * 2.2, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0.25 });
+  el(g, 'path', { d, transform: t, fill: 'none', stroke, 'stroke-width': 7 / scale * 1.6, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
+}
 
 // ------------------------------------------------------------ illustrations
 // Each builder gets (svg, params) and returns update(lt, dur, cues) with lt = scene-local time.
@@ -1045,6 +1079,100 @@ const BUILD = {
     };
   },
 
+  // big kinetic typography. params: words [..] (one line each), highlight (index), sub. cues: w0, w1, ...
+  kinetic(svg, P) {
+    const words = P.words || ['?'], n = words.length;
+    const rays = el(svg, 'g', { opacity: 0 });
+    for (let i = 0; i < 18; i++) { const a = i / 18 * Math.PI * 2; el(rays, 'path', { d: `M${460 + Math.cos(a) * 120} ${330 + Math.sin(a) * 120} L${460 + Math.cos(a) * 520} ${330 + Math.sin(a) * 520}`, stroke: i % 2 ? '#26262b' : '#1f1f23', 'stroke-width': 26 }); }
+    const size = P.size ?? Math.min(170, 900 / Math.max(...words.map(w => w.length)) * 1.6);
+    const top = 340 - (n - 1) * size * 0.55;
+    const items = words.map((w, i) => {
+      const hl = i === (P.highlight ?? -1);
+      const g = el(svg, 'g');
+      const bg = hl ? el(g, 'rect', { rx: 18, fill: AMBER }) : null;
+      const t = el(g, 'text', { x: 460, y: top + i * size * 1.1 + size * 0.35, fill: hl ? '#111' : WHITE, 'font-size': size, 'font-weight': 900, 'text-anchor': 'middle', 'letter-spacing': '-0.04em' });
+      t.textContent = w.toLocaleUpperCase('tr-TR');
+      return { g, t, bg, i };
+    });
+    const under = line(svg, '', AMBER, 8);
+    const sub = el(svg, 'text', { x: 460, y: 630, fill: GRAY, 'font-size': 34, 'font-weight': 600, 'text-anchor': 'middle' });
+    sub.textContent = P.sub || '';
+    return (lt, dur, c) => {
+      rays.setAttribute('opacity', 0.9 * prog(lt, 0, 0.4));
+      rays.setAttribute('transform', `rotate(${lt * 8} 460 330)`);
+      let lastAt = 0;
+      items.forEach(o => {
+        const at = c['w' + o.i] ?? 0.08 + o.i * 0.28; lastAt = Math.max(lastAt, at);
+        const p = spring(lt, at, 0.55), k = punch(lt, at, 0.4);
+        o.g.style.opacity = clamp01(p * 2);
+        const cy = +o.t.getAttribute('y') - size * 0.35;
+        o.g.setAttribute('transform', `translate(460 ${cy}) scale(${lerp(2.2, 1, p) * (1 + 0.05 * k)}) rotate(${(1 - p) * (o.i % 2 ? 6 : -6)}) translate(-460 ${-cy})`);
+        if (o.bg) { const bb = o.t.getBBox(); o.bg.setAttribute('x', bb.x - 24); o.bg.setAttribute('y', bb.y - 4); o.bg.setAttribute('width', bb.width + 48); o.bg.setAttribute('height', bb.height + 8); }
+      });
+      const last = items[n - 1].t.getBBox();
+      under.setAttribute('d', `M${last.x} ${last.y + last.height + 18} H${last.x + last.width}`);
+      draw(under, prog(lt, lastAt + 0.3, 0.5));
+      sub.style.opacity = prog(lt, lastAt + 0.4, 0.5);
+    };
+  },
+
+  // split-screen comparison. params: left/right {label, icon, mark: check|x|none, color}. cues: left, right
+  compare(svg, P) {
+    const sides = [P.left || {}, P.right || {}];
+    const div = line(svg, 'M460 60 V620', '#3a3a42', 4);
+    const vs = el(svg, 'text', { x: 460, y: 352, fill: '#111', 'font-size': 34, 'font-weight': 900, 'text-anchor': 'middle' });
+    const vsBg = el(svg, 'circle', { cx: 460, cy: 340, r: 36, fill: AMBER });
+    vs.parentNode.appendChild(vs); vs.textContent = P.vs ?? 'VS';
+    const S = sides.map((sd, i) => {
+      const cx = i ? 690 : 230, g = el(svg, 'g');
+      const col = sd.color === 'red' ? RED : sd.color === 'amber' ? AMBER : sd.color === 'green' ? '#4cc38a' : WHITE;
+      el(g, 'rect', { x: cx - 190, y: 90, width: 380, height: 500, rx: 26, fill: 'rgba(255,255,255,0.025)', stroke: '#2c2c31', 'stroke-width': 2 });
+      const ic = el(g, 'g'); drawIcon(ic, sd.icon || 'question', cx, 290, 1.7, col);
+      const lab = el(g, 'text', { x: cx, y: 500, fill: col, 'font-size': 44, 'font-weight': 800, 'text-anchor': 'middle' });
+      lab.textContent = sd.label || '';
+      const mk = el(svg, 'g');
+      const good = sd.mark === 'check';
+      if (sd.mark && sd.mark !== 'none') {
+        el(mk, 'circle', { cx: cx + 130, cy: 140, r: 38, fill: good ? '#4cc38a' : RED });
+        line(mk, good ? `M${cx + 112} ${140} l12 14 l24 -28` : `M${cx + 115} ${125} l30 30 M${cx + 145} ${125} l-30 30`, '#111', 8);
+      }
+      return { g, ic, mk, cx, i };
+    });
+    return (lt, dur, c) => {
+      draw(div, prog(lt, 0.1, 0.5));
+      const pv = spring(lt, 0.5, 0.5); vsBg.setAttribute('r', 36 * pv); vs.style.opacity = pv;
+      S.forEach(o => {
+        const at = o.i ? (c.right ?? 0.45) : (c.left ?? 0.1), p = spring(lt, at, 0.6);
+        o.g.style.opacity = clamp01(p * 1.8);
+        o.g.setAttribute('transform', `translate(${(1 - p) * (o.i ? 120 : -120)} 0)`);
+        o.ic.setAttribute('transform', `translate(0 ${Math.sin(lt * 2 + o.i * 2) * 8})`);
+        const pm = spring(lt, at + 0.5, 0.45);
+        o.mk.style.opacity = clamp01(pm * 2);
+        o.mk.setAttribute('transform', `translate(${o.cx + 130} 140) scale(${pm}) translate(${-(o.cx + 130)} -140)`);
+      });
+    };
+  },
+
+  // one big animated icon with pulse rings and orbiting sparks. params: icon, label, color
+  icon(svg, P) {
+    const col = P.color === 'red' ? RED : P.color === 'white' ? WHITE : P.color === 'blue' ? '#4f8ff7' : AMBER;
+    const rings = [0, 1, 2].map(() => el(svg, 'circle', { cx: 460, cy: 300, fill: 'none', stroke: col, 'stroke-width': 3 }));
+    const halo = el(svg, 'circle', { cx: 460, cy: 300, r: 150, fill: col, opacity: 0.08 });
+    const ic = el(svg, 'g'); drawIcon(ic, P.icon || 'bulb', 460, 300, 2.6, WHITE, col);
+    const sparks = [0, 1, 2, 3, 4, 5].map(() => el(svg, 'circle', { r: 5, fill: col }));
+    const lab = el(svg, 'text', { x: 460, y: 600, fill: WHITE, 'font-size': 52, 'font-weight': 800, 'text-anchor': 'middle' });
+    lab.textContent = P.label || '';
+    return (lt, dur, c) => {
+      const p = spring(lt, 0.05, 0.6), pk = c.hit !== undefined ? punch(lt, c.hit) : 0;
+      ic.setAttribute('transform', `translate(460 300) scale(${p * (1 + 0.04 * Math.sin(lt * 3) + 0.15 * pk)}) rotate(${Math.sin(lt * 1.5) * 4}) translate(-460 -300)`);
+      halo.setAttribute('opacity', (0.07 + 0.05 * Math.sin(lt * 3) + 0.2 * pk) * p);
+      rings.forEach((r, i) => { const k = ((lt * 0.7 + i / 3) % 1); r.setAttribute('r', 150 + k * 170); r.setAttribute('opacity', (1 - k) * 0.5 * p); });
+      sparks.forEach((sp, i) => { const a = lt * 1.2 + i / 6 * Math.PI * 2, R = 200 + Math.sin(lt * 2 + i) * 14; sp.setAttribute('cx', 460 + Math.cos(a) * R); sp.setAttribute('cy', 300 + Math.sin(a) * R * 0.75); sp.setAttribute('opacity', 0.8 * p); });
+      lab.style.opacity = prog(lt, 0.4, 0.4);
+      lab.setAttribute('transform', `translate(0 ${(1 - prog(lt, 0.4, 0.4)) * 20})`);
+    };
+  },
+
   window_glow(svg, P) {
     const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
     const defs = el(svg, 'defs');
@@ -1337,7 +1465,10 @@ function renderAt(t) {
     const sy = (kind === 'rise' ? (1 - ps) * 140 : 0) + Math.sin(t * 0.9) * 6 + Math.cos(lt * 63) * 5 * pk;
     o.svg.style.opacity = (kind === 'wipe' ? 1 : pi) * out;
     o.svg.style.clipPath = kind === 'wipe' && pi < 1 ? `inset(0 ${(1 - pi) * 100}% 0 0)` : 'none';
-    o.svg.style.transform = `translate(${sx}px, ${sy}px) scale(${z}) rotate(${Math.sin(lt * 55) * 0.6 * pk}deg)`;
+    const cam = (sc.params || {}).camera;
+    if (cam) o.svg.style.transformOrigin = `${(cam.x ?? 460) / 9.2}% ${(cam.y ?? 340) / 6.8}%`;
+    const cz = cam ? lerp(1, cam.zoom ?? 1.6, cam.push ? prog(lt, 0, dur) : 1) : 1;
+    o.svg.style.transform = `translate(${sx}px, ${sy}px) scale(${z * cz}) rotate(${Math.sin(lt * 55) * 0.6 * pk}deg)`;
     o.update(lt, dur, cues);
   });
 

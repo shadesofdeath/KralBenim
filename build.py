@@ -204,7 +204,7 @@ def build_timeline(script, text, ranges, words, duration):
         # the hook frame stays up until the first sentence is spoken
         first = next((w for w in per[0] if w["disp"][-1] in ".?!"), per[0][-1])
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
-    return {"hook": hook,"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
+    return {"hook": hook, "scale": script.get("scale", 4 / 3),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -216,7 +216,9 @@ def open_page(pw, timeline):
     except Exception:
         browser = pw.chromium.launch(executable_path="/opt/pw-browsers/chromium")
     w, h = timeline["size"]
-    page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=1)
+    # render at 4/3 scale (1440x2560 / 2560x1440): YouTube gives >1080p uploads the VP9/AV1 high-bitrate
+    # encodes, so the final stream stays sharp; layout stays in 1080p CSS pixels
+    page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=timeline.get("scale", 4 / 3))
     page.goto(TEMPLATE.as_uri())
     page.evaluate("d => window.init(d)", timeline)
     page.evaluate("document.fonts.ready.then(() => true)")
@@ -235,7 +237,9 @@ def render(timeline, mp3, out, until, sfx=None):
            "[1:a]apad[v];[2:a]apad[s];[v][s]amix=inputs=2:duration=first:normalize=0[a]",
            "-map", "0:v", "-map", "[a]"] if sfx else ["-map", "0:v", "-map", "1:a", "-af", "apad"]),
         "-t", f"{n / fps:.3f}",
-        "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
+        "-c:v", "libx264", "-preset", "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
+        "-pix_fmt", "yuv420p", "-g", str(fps * 2), "-bf", "2",
+        "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
         stdin=subprocess.PIPE)
     with sync_playwright() as pw:
