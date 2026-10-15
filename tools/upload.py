@@ -61,7 +61,15 @@ def chapters(video):
     return "\n\n⏱️ Bölümler\n" + "\n".join(f"{fmt(t)} {name}" for t, name in kept)
 
 
+def set_thumbnail(video_id, jpg):
+    yt = gbuild("youtube", "v3", credentials=credentials(), cache_discovery=False)
+    yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(jpg), mimetype="image/jpeg")).execute()
+    print("thumbnail set", video_id)
+
+
 def main():
+    if sys.argv[1] == "--thumbnail":           # upload.py --thumbnail <video.youtube.json> <cover.jpg>
+        return set_thumbnail(json.loads(Path(sys.argv[2]).read_text())["id"], sys.argv[3])
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     meta = json.loads(script_path.read_text())["youtube"]
     creds = credentials()

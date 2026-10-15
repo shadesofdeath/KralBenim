@@ -1,0 +1,205 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "ay-ayni-yuz",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "orbit",
+      "text": "Ay'ın arka yüzünü Dünya'dan hiç göremezsin.",
+      "title": {
+        "white": "Ay'ın",
+        "gray": "arka yüzü"
+      },
+      "tags": [
+        "Ay"
+      ],
+      "cues": {
+        "hit": "hiç"
+      },
+      "params": {
+        "mode": "locked"
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Çünkü Ay bize hep aynı yüzünü gösterir.",
+      "title": {
+        "white": "Hep aynı",
+        "gray": "yüz"
+      },
+      "tags": [
+        "Yakın yüz"
+      ],
+      "cues": {
+        "hit": "aynı"
+      },
+      "params": {
+        "mode": "locked",
+        "label": "amber nokta hep Dünya'ya bakıyor"
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Ama bu, Ay'ın kendi etrafında dönmediği anlamına gelmez.",
+      "title": {
+        "white": "Ay",
+        "gray": "dönüyor mu?"
+      },
+      "tags": [
+        "Dönüş"
+      ],
+      "cues": {
+        "hit": "dönmediği"
+      },
+      "params": {
+        "mode": "locked"
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Ay, Dünya'nın etrafında bir tur atarken kendi etrafında da tam bir tur döner.",
+      "title": {
+        "white": "Bir tur",
+        "gray": "= bir dönüş"
+      },
+      "tags": [
+        "Senkron dönüş"
+      ],
+      "cues": {
+        "hit": "tam"
+      },
+      "params": {
+        "mode": "locked",
+        "counter": true
+      }
+    },
+    {
+      "type": "stat",
+      "text": "İkisi de yaklaşık yirmi yedi gün sürer.",
+      "title": {
+        "white": "Yaklaşık",
+        "gray": "27 gün"
+      },
+      "tags": [
+        "Yörünge süresi"
+      ],
+      "cues": {
+        "count": "İkisi"
+      },
+      "params": {
+        "value": 27,
+        "suffix": " gün",
+        "label": "bir tur = bir dönüş",
+        "fill": 0.9,
+        "size": 120
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Ay hiç dönmeseydi, arka yüzünü de görürdük.",
+      "title": {
+        "white": "Dönmeseydi",
+        "gray": "ne olurdu?"
+      },
+      "tags": [
+        "Karşılaştırma"
+      ],
+      "cues": {
+        "hit": "arka"
+      },
+      "params": {
+        "mode": "still",
+        "label": "dönmeseydi: amber nokta kaybolurdu"
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Bu uyumun adı gelgit kilitlenmesi.",
+      "title": {
+        "white": "Gelgit",
+        "gray": "kilitlenmesi"
+      },
+      "tags": [
+        "Kütleçekim"
+      ],
+      "cues": {
+        "hit": "gelgit"
+      },
+      "params": {
+        "mode": "tidal"
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Çok uzun zaman önce Dünya'nın çekimi, Ay'ın dönüşünü yavaşlatıp bu ritme oturttu.",
+      "title": {
+        "white": "Dünya'nın",
+        "gray": "çekimi"
+      },
+      "tags": [
+        "Yavaşlama"
+      ],
+      "cues": {
+        "hit": "yavaşlatıp"
+      },
+      "params": {
+        "mode": "tidal"
+      }
+    },
+    {
+      "type": "orbit",
+      "text": "Bu yüzden hâlâ,",
+      "title": {
+        "white": "Bu yüzden",
+        "gray": "hâlâ"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "locked"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Ay'ın arkasını",
+      "hiç göremezsin"
+    ],
+    "highlight": [
+      "arkasını"
+    ],
+    "scene": 6,
+    "t": 2.0
+  },
+  "youtube": {
+    "title": "Ay Neden Hep Aynı Yüzünü Gösterir? 🌙",
+    "description": "Ay neden hep aynı yüzünü gösterir? Çünkü Ay, Dünya'nın etrafında bir tur atarken kendi etrafında da tam bir tur döner. Bu uyuma gelgit kilitlenmesi denir ve Dünya'nın çekimi Ay'ı bu ritme oturtmuştur.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Ay'ın arka yüzünde ne var? Yorumlara yaz!\n\n#shorts #uzay #ay #bilim #düşünbakalım",
+    "tags": [
+      "ay neden hep aynı yüzünü gösterir",
+      "ayın karanlık yüzü",
+      "ayın arka yüzü",
+      "gelgit kilitlenmesi",
+      "ay kendi etrafında döner mi",
+      "ay",
+      "uzay",
+      "astronomi",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T22:11:00+03:00"
+  }
+}

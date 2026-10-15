@@ -1,0 +1,199 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "parmaklar-suda-burusur",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "finger",
+      "text": "Vücudun parmaklarını suda bilerek buruşturur.",
+      "title": {
+        "white": "Bilerek",
+        "gray": "buruşuyor"
+      },
+      "tags": [
+        "Parmaklar"
+      ],
+      "cues": {
+        "hit": "buruşturur"
+      },
+      "params": {
+        "mode": "wet"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Uzun süre derinin su çekip şiştiği sanıldı.",
+      "title": {
+        "white": "Eski",
+        "gray": "açıklama"
+      },
+      "tags": [
+        "Şişme mi?"
+      ],
+      "cues": {
+        "hit": "şiştiği"
+      },
+      "params": {
+        "mode": "wet"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Ama sinirleri hasar görmüş parmaklar suda buruşmuyor.",
+      "title": {
+        "white": "Sinir yoksa",
+        "gray": "buruşma yok"
+      },
+      "tags": [
+        "Önemli ipucu"
+      ],
+      "cues": {
+        "hit": "buruşmuyor"
+      },
+      "params": {
+        "mode": "wet",
+        "damaged": true
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Demek ki bu işi sinir sistemi yapıyor.",
+      "title": {
+        "white": "Sinir",
+        "gray": "sistemi"
+      },
+      "tags": [
+        "Otomatik tepki"
+      ],
+      "cues": {
+        "hit": "sinir"
+      },
+      "params": {
+        "mode": "nerve"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Islak deriyi algılayınca parmak uçlarındaki damarları daraltıyor.",
+      "title": {
+        "white": "Damarlar",
+        "gray": "daralıyor"
+      },
+      "tags": [
+        "Damar daralması"
+      ],
+      "cues": {
+        "hit": "daraltıyor"
+      },
+      "params": {
+        "mode": "vessels"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Parmak ucu biraz küçülüyor ve deri kırışıyor.",
+      "title": {
+        "white": "Deri",
+        "gray": "kırışıyor"
+      },
+      "tags": [
+        "Kırışıklık"
+      ],
+      "cues": {
+        "hit": "kırışıyor"
+      },
+      "params": {
+        "mode": "wet"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Bir teoriye göre amaç, ıslak cisimleri daha iyi kavramak.",
+      "title": {
+        "white": "Amaç:",
+        "gray": "daha iyi tutuş"
+      },
+      "tags": [
+        "Teori"
+      ],
+      "cues": {
+        "hit": "kavramak"
+      },
+      "params": {
+        "mode": "grip"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Tıpkı lastik tekerlerdeki oluklar gibi suyu dışarı atıyor.",
+      "title": {
+        "white": "Lastik",
+        "gray": "oluğu gibi"
+      },
+      "tags": [
+        "Su kanalları"
+      ],
+      "cues": {
+        "hit": "oluklar"
+      },
+      "params": {
+        "mode": "grip"
+      }
+    },
+    {
+      "type": "finger",
+      "text": "Yani,",
+      "title": {
+        "white": "Yani",
+        "gray": ""
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "wet"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Parmakların",
+      "bilerek",
+      "buruşuyor"
+    ],
+    "highlight": [
+      "bilerek"
+    ],
+    "scene": 6,
+    "t": 2.6
+  },
+  "youtube": {
+    "title": "Parmaklar Suda Neden Buruşur? 🖐️",
+    "description": "Parmaklar suda neden buruşur? Şişmekten değil: sinir sistemi parmak uçlarındaki damarları daraltır ve deri kırışır. Sinirleri hasar görmüş parmaklar suda buruşmaz. Bir teoriye göre amaç, ıslak cisimleri daha iyi kavramak.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence vücudumuzun başka hangi garip refleksi var? Yorumlara yaz!\n\n#shorts #insanvücudu #bilim #düşünbakalım",
+    "tags": [
+      "parmaklar suda neden buruşur",
+      "parmak buruşması",
+      "suda el neden buruşur",
+      "parmak uçları neden kırışır",
+      "sinir sistemi",
+      "insan vücudu",
+      "biyoloji",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T22:41:00+03:00"
+  }
+}

@@ -947,6 +947,104 @@ const BUILD = {
     };
   },
 
+  // Earth & Moon. params: mode locked|still|tidal, counter (bool). cues: hit
+  orbit(svg, P) {
+    const mode = P.mode || 'locked', cx = 460, cy = 330, R = 225, BLUE = '#4f8ff7';
+    const stars = []; const r = rng(77);
+    for (let i = 0; i < 40; i++) stars.push({ e: el(svg, 'circle', { cx: r() * 920, cy: r() * 680, r: 0.8 + r() * 1.8, fill: WHITE }), ph: r() * 6 });
+    const trail = el(svg, 'ellipse', { cx, cy, rx: R, ry: R * 0.82, fill: 'none', stroke: '#3a3a42', 'stroke-width': 3, 'stroke-dasharray': '6 12' });
+    const glow = el(svg, 'circle', { cx, cy, r: 95, fill: BLUE, opacity: 0.12 });
+    const earth = el(svg, 'g');
+    el(earth, 'circle', { cx, cy, r: 70, fill: '#12213d', stroke: BLUE, 'stroke-width': 5 });
+    const land = line(earth, `M${cx - 40} ${cy - 30} q20 -20 40 -5 q15 15 -5 30 q-20 10 -35 -5 Z M${cx + 18} ${cy + 18} q20 -6 28 10 q-8 18 -26 10 Z`, '#4cc38a', 4);
+    const bulge = el(svg, 'ellipse', { cx, cy, rx: 82, ry: 70, fill: 'none', stroke: BLUE, 'stroke-width': 2, 'stroke-dasharray': '4 8', opacity: 0 });
+    const moon = el(svg, 'g');
+    el(moon, 'circle', { cx: 0, cy: 0, r: 40, fill: '#2a2a30', stroke: WHITE, 'stroke-width': 5 });
+    [[-14, -10, 8], [12, 14, 6], [16, -16, 5], [-10, 18, 4]].forEach(([x, y, rr]) => el(moon, 'circle', { cx: x, cy: y, r: rr, fill: 'none', stroke: GRAY, 'stroke-width': 2.5 }));
+    const face = el(moon, 'circle', { cx: -30, cy: 0, r: 9, fill: AMBER, style: 'filter: drop-shadow(0 0 8px rgba(217,164,65,.9))' });
+    const sight = line(svg, '', AMBER, 3, { 'stroke-dasharray': '8 8' });
+    const pull = [0, 1].map(() => line(svg, '', BLUE, 4));
+    const lbl = el(svg, 'text', { x: 460, y: 640, fill: GRAY, 'font-size': 30, 'font-weight': 600, 'text-anchor': 'middle' });
+    const days = el(svg, 'text', { x: 840, y: 90, fill: AMBER, 'font-size': 48, 'font-weight': 800, 'text-anchor': 'end' });
+    return (lt, dur, c) => {
+      const pIn = spring(lt, 0, 0.7);
+      stars.forEach(s => s.e.setAttribute('opacity', (0.25 + 0.35 * Math.sin(lt * 2 + s.ph)) * pIn));
+      trail.style.opacity = pIn; glow.setAttribute('opacity', 0.1 + 0.05 * Math.sin(lt * 2));
+      earth.setAttribute('transform', `translate(${cx} ${cy}) scale(${lerp(0.6, 1, pIn)}) rotate(${lt * 25}) translate(${-cx} ${-cy})`);
+      draw(land, prog(lt, 0.2, 0.6));
+      const ang = lt * 0.9 + 0.6, mx = cx + Math.cos(ang) * R, my = cy + Math.sin(ang) * R * 0.82;
+      // locked: the amber face always points at Earth; still: keeps the same orientation in space
+      const toEarth = Math.atan2(cy - my, cx - mx) * 180 / Math.PI + 180;
+      const rot = mode === 'still' ? 180 : toEarth;
+      const pk = c.hit !== undefined ? punch(lt, c.hit) : 0;
+      moon.setAttribute('transform', `translate(${mx} ${my}) rotate(${rot}) scale(${pIn * (1 + 0.15 * pk)})`);
+      sight.setAttribute('d', `M${mx} ${my} L${cx} ${cy}`);
+      sight.style.strokeDasharray = '8 8'; sight.style.strokeDashoffset = -lt * 40;
+      sight.style.opacity = (mode === 'locked' ? 0.7 : 0) * prog(lt, 0.6, 0.5);
+      const tid = mode === 'tidal' ? prog(lt, 0.4, 0.8) : 0;
+      bulge.setAttribute('opacity', tid);
+      bulge.setAttribute('transform', `rotate(${Math.atan2(my - cy, mx - cx) * 180 / Math.PI} ${cx} ${cy})`);
+      pull.forEach((e, i) => {
+        const k = ((lt * 1.2 + i * 0.5) % 1), x1 = lerp(mx, cx, k * 0.5), y1 = lerp(my, cy, k * 0.5);
+        e.setAttribute('d', `M${x1} ${y1} L${lerp(x1, cx, 0.12)} ${lerp(y1, cy, 0.12)}`);
+        e.style.strokeDasharray = 'none'; e.style.opacity = tid * (1 - k);
+      });
+      lbl.textContent = P.label || '';
+      lbl.style.opacity = prog(lt, 0.5, 0.5);
+      days.textContent = P.counter ? `${Math.min(27.3, lt * 9).toFixed(1).replace('.', ',')} gün` : '';
+      days.style.opacity = prog(lt, 0.3, 0.4);
+    };
+  },
+
+  // fingertip in water. params: mode dry|wet|nerve|vessels|grip, damaged (bool). cues: hit
+  finger(svg, P) {
+    const mode = P.mode || 'wet', BLUE = '#4f8ff7';
+    const water = el(svg, 'path', { fill: 'rgba(79,143,247,.10)', stroke: 'rgba(120,170,255,.5)', 'stroke-width': 3 });
+    const tip = el(svg, 'path', { d: 'M200 600 L200 300 C200 170 300 110 380 110 C470 110 540 170 540 300 L540 600', fill: '#2a2024', stroke: WHITE, 'stroke-width': 7, 'stroke-linejoin': 'round' });
+    const nail = line(svg, 'M300 150 C330 120 430 120 450 150 L455 230 C420 245 330 245 300 230 Z', GRAY, 4);
+    const wr = []; for (let i = 0; i < 9; i++) wr.push(line(svg, '', '#e8b9a8', 4));
+    const vessels = [0, 1, 2].map(i => el(svg, 'path', { d: `M${290 + i * 80} 600 C${280 + i * 80} 450 ${300 + i * 80} 330 ${330 + i * 40} 220`, fill: 'none', stroke: RED, 'stroke-linecap': 'round' }));
+    const nerve = el(svg, 'path', { d: 'M370 600 C380 480 350 380 380 240', fill: 'none', stroke: AMBER, 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-dasharray': '18 12' });
+    const cross = line(svg, 'M600 200 l90 90 M690 200 l-90 90', RED, 10);
+    const drops = []; const r = rng(55);
+    for (let i = 0; i < 8; i++) drops.push({ e: el(svg, 'path', { d: 'M0 -14 C8 0 10 6 0 12 C-10 6 -8 0 0 -14 Z', fill: BLUE }), x: 150 + r() * 600, d: r() * 2 });
+    const obj = el(svg, 'g');
+    el(obj, 'circle', { cx: 690, cy: 330, r: 95, fill: '#1c2a40', stroke: BLUE, 'stroke-width': 5 });
+    const arrows = [0, 1, 2].map(() => line(obj, '', BLUE, 5));
+    return (lt, dur, c) => {
+      const pIn = spring(lt, 0, 0.6), pk = c.hit !== undefined ? punch(lt, c.hit) : 0;
+      const wet = mode !== 'dry';
+      const lvl = 330 + Math.sin(lt * 2) * 6;
+      let d = `M0 680 L0 ${lvl}`;
+      for (let x = 0; x <= 920; x += 40) d += ` L${x} ${(lvl + Math.sin(x / 60 + lt * 3) * 8).toFixed(1)}`;
+      water.setAttribute('d', d + ' L920 680 Z'); water.style.opacity = wet ? prog(lt, 0, 0.4) : 0;
+      const shrink = mode === 'vessels' || mode === 'wet' || mode === 'grip' ? prog(lt, c.hit ?? 0.8, 1.2) : 0;
+      tip.setAttribute('transform', `translate(370 600) scale(${(1 - 0.04 * shrink) * lerp(0.85, 1, pIn)} ${lerp(0.85, 1, pIn)}) translate(-370 -600)`);
+      draw(nail, prog(lt, 0.2, 0.5));
+      const wrink = P.damaged ? 0 : (mode === 'wet' || mode === 'grip' ? prog(lt, c.hit ?? 0.6, 1.4) : mode === 'vessels' ? shrink : 0);
+      wr.forEach((e, i) => {
+        const y = 290 + i * 34, amp = 10 * wrink, w = 150 + Math.sin(i) * 20;
+        e.setAttribute('d', `M${370 - w} ${y} q${w / 4} ${-amp} ${w / 2} 0 t${w / 2} 0 t${w / 2} 0 t${w / 2} 0`);
+        e.style.strokeDasharray = 'none'; e.style.opacity = wrink;
+      });
+      vessels.forEach(v => { v.setAttribute('stroke-width', mode === 'vessels' ? lerp(12, 3, shrink) : 0); v.style.opacity = mode === 'vessels' ? 0.85 : 0; });
+      nerve.style.opacity = mode === 'nerve' || (mode === 'vessels') ? prog(lt, 0.3, 0.4) : 0;
+      nerve.style.strokeDashoffset = -lt * 80; nerve.setAttribute('stroke-width', 5 + 4 * pk);
+      draw(cross, P.damaged ? prog(lt, c.hit ?? 0.8, 0.5) : 0);
+      drops.forEach(dp => {
+        const k = ((lt * 0.8 + dp.d) % 1.6) / 1.6;
+        dp.e.setAttribute('transform', `translate(${dp.x} ${lerp(40, lvl, k)})`);
+        dp.e.style.opacity = wet ? (1 - k) * 0.8 : 0;
+      });
+      obj.style.opacity = mode === 'grip' ? prog(lt, 0.3, 0.5) : 0;
+      arrows.forEach((a, i) => {
+        const k = ((lt * 1.5 + i * 0.33) % 1), y = 280 + i * 50;
+        a.setAttribute('d', `M${560 - k * 40} ${y} l${-50} 0 m14 -12 l-14 12 l14 12`);
+        a.style.strokeDasharray = 'none'; a.style.opacity = (1 - k) * 0.9;
+      });
+    };
+  },
+
   window_glow(svg, P) {
     const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
     const defs = el(svg, 'defs');
@@ -1133,10 +1231,13 @@ window.init = (data) => {
 // Thumbnail: big text + one scene's illustration frozen at a chosen moment.
 // c = {lines: ["UÇAK PENCERELERİ", "NEDEN KARE DEĞİL?"], highlight: ["KARE"], scene: 0, t: 4.0}
 window.cover = (c) => {
-  document.documentElement.classList.add('cover');
   const sc = D.scenes[Math.min(c.scene ?? 0, D.scenes.length - 1)];
   const dur = sc.end - sc.start;
   window.seek(sc.start + Math.min(c.t ?? dur * 0.85, dur - 0.35));
+  // seek() toggles the hook classes; set the thumbnail state after it
+  document.documentElement.classList.remove('hook');
+  document.documentElement.classList.add('cover');
+  document.getElementById('covertext').style.transform = '';
   const box = buildCoverText(c);
   if (D.format !== 'long') {   // keep the card clear of the text block
     const bottom = box.getBoundingClientRect().bottom;
@@ -1158,6 +1259,12 @@ function buildCoverText(c) {
       row.appendChild(sp);
     }
     box.appendChild(row);
+  }
+  // shrink the type until the longest line fits (long Turkish words)
+  box.style.fontSize = '';
+  let fs = parseFloat(getComputedStyle(box).fontSize);
+  while (fs > 70 && [...box.querySelectorAll('.line')].some(l => l.scrollWidth > box.clientWidth + 2 || l.offsetHeight > fs * 1.6)) {
+    fs -= 6; box.style.fontSize = fs + 'px';
   }
   return box;
 }

@@ -1,0 +1,32 @@
+name: Refresh thumbnails
+
+# Re-renders covers (estimated timings, no TTS) and sets them on already-uploaded videos.
+on:
+  workflow_dispatch:
+    inputs:
+      files:
+        description: "Space separated script paths"
+        required: true
+
+jobs:
+  thumbs:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - name: Covers + upload
+        env:
+          FILES: ${{ inputs.files }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+        run: |
+          for f in $FILES; do
+            python tools/preview.py "$f" --times 0
+            slug=$(python -c "import json,sys;print(json.load(open('$f'))['slug'])")
+            python tools/upload.py --thumbnail "${f%.json}.youtube.json" "out/preview/$slug/cover.jpg"
+          done
