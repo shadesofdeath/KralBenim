@@ -1,0 +1,76 @@
+{
+  "slug": "ucak-pencereleri",
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+    "model": "eleven_multilingual_v2"
+  },
+  "scenes": [
+    {
+      "type": "window_compare",
+      "text": "Uçak pencerelerinin köşeleri neden hep yuvarlak? Cevabı, birkaç uçağın düşmesiyle öğrenildi.",
+      "title": { "white": "Pencereler", "gray": "neden hep yuvarlak?" },
+      "tags": ["Kare köşe", "Yuvarlak köşe"],
+      "cues": { "mark": "düşmesiyle" },
+      "params": { "radius": 92 }
+    },
+    {
+      "type": "plane",
+      "text": "1950'lerin başında de Havilland Comet, dünyanın ilk jet yolcu uçağıydı. Ve pencereleri kareydi.",
+      "title": { "white": "1950'ler:", "gray": "ilk jet yolcu uçağı" },
+      "tags": ["de Havilland Comet", "1952", "Kare pencere"],
+      "cues": { "lens": "kareydi" },
+      "params": { "window_shape": "square", "windows": 9 }
+    },
+    {
+      "type": "plane_breakup",
+      "text": "1954'te, birkaç ay arayla, iki Comet havada parçalandı.",
+      "title": { "white": "1954:", "gray": "iki Comet havada parçalandı" },
+      "tags": ["Ocak 1954", "Nisan 1954"],
+      "cues": { "break": "havada" },
+      "params": { "window_shape": "square", "windows": 9, "split_x": 520 }
+    },
+    {
+      "type": "pressure_cycle",
+      "text": "Sebep: metal yorgunluğu. Kabin her uçuşta basınçlanıp şişiyor, inişte gevşiyor. Gövde bunu binlerce kez yaşıyor.",
+      "title": { "white": "Sebep:", "gray": "metal yorgunluğu" },
+      "tags": ["Basınçlanma", "Gevşeme", "Binlerce döngü"],
+      "cues": { "fast": "binlerce" },
+      "params": { "period": 1.5, "count_to": 12000 }
+    },
+    {
+      "type": "stress_corner",
+      "text": "Kare pencerenin keskin köşelerinde gerilim tek bir noktada yığılıyor. Zamanla orada bir çatlak başlıyor.",
+      "title": { "white": "Keskin köşe", "gray": "gerilimi biriktirir" },
+      "tags": ["Gerilim yığılması", "Çatlak"],
+      "cues": { "pile": "yığılıyor", "crack": "çatlak" },
+      "params": { "shape": "square" }
+    },
+    {
+      "type": "stress_corner",
+      "text": "Yuvarlak köşe ise bu gerilimi kenar boyunca dağıtıyor. Hiçbir nokta yükü tek başına taşımıyor.",
+      "title": { "white": "Yuvarlak köşe", "gray": "gerilimi dağıtır" },
+      "tags": ["Gerilim dağılımı", "Yuvarlak köşe"],
+      "cues": { "spread": "kenar" },
+      "params": { "shape": "round", "radius": 120 }
+    },
+    {
+      "type": "window_glow",
+      "text": "Yani o pencere bir tasarım tercihi değil, bir ders.",
+      "title": { "white": "Bir tercih değil,", "gray": "bir ders." },
+      "tags": ["Comet dersi"],
+      "cues": {},
+      "params": { "radius": 120 }
+    },
+    {
+      "type": "question",
+      "text": "Sizce başka hangi tasarımın arkasında böyle bir hikâye var?",
+      "title": { "white": "Sıra sende:", "gray": "başka hangi tasarım?" },
+      "tags": ["Yorumlara yaz"],
+      "cues": {},
+      "params": {}
+    }
+  ]
+}

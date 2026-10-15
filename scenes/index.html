@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bg: #0a0a0b; --card: #141416; --edge: #232327;
+    --white: #f5f5f7; --gray: #8a8a8e; --amber: #d9a441; --red: #e5484d;
+  }
+  html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+  body { font-family: Inter, sans-serif; color: var(--white); -webkit-font-smoothing: antialiased; }
+  #stage {
+    position: relative; width: 1080px; height: 1920px;
+    background: radial-gradient(ellipse 950px 850px at 50% 40%, rgba(255,255,255,.05), rgba(255,255,255,0) 70%), var(--bg);
+  }
+  .title {
+    position: absolute; left: 80px; right: 80px; bottom: 1320px;
+    font-weight: 800; font-size: 110px; line-height: 1.04; letter-spacing: -0.035em;
+  }
+  .title span { display: inline-block; margin-right: .24em; }
+  .title .g { color: var(--gray); }
+  #card {
+    position: absolute; left: 80px; top: 640px; width: 920px; height: 680px;
+    background: var(--card); border-radius: 28px; border: 1.5px solid var(--edge);
+    box-sizing: border-box; overflow: hidden;
+  }
+  #card svg { position: absolute; left: -1.5px; top: -1.5px; width: 920px; height: 680px; }
+  .tags { position: absolute; left: 80px; right: 80px; top: 1356px; display: flex; flex-wrap: wrap; gap: 16px; }
+  .tag {
+    border: 1.5px solid #2e2e33; border-radius: 999px; padding: 14px 30px;
+    font-size: 34px; font-weight: 500; color: #c9c9cd; letter-spacing: -0.01em;
+  }
+  #caption {
+    position: absolute; left: 130px; right: 130px; top: 1530px;
+    text-align: center; font-size: 52px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em;
+  }
+  #progress { position: absolute; left: 80px; right: 80px; top: 1790px; height: 6px; border-radius: 3px; background: #1d1d20; }
+  #bar { height: 100%; width: 0; border-radius: 3px; background: var(--white); }
+  svg text { font-family: Inter, sans-serif; }
+  #brand {
+    position: absolute; left: 80px; top: 120px; display: flex; align-items: center; gap: 16px;
+    font-size: 36px; font-weight: 700; letter-spacing: -0.01em; color: var(--white);
+  }
+  #brand i { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); display: block; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="brand"><i></i><span></span></div>
+  <div id="titles"></div>
+  <div id="card"></div>
+  <div id="tagrows"></div>
+  <div id="caption"></div>
+  <div id="progress"><div id="bar"></div></div>
+</div>
+<script>
+// ------------------------------------------------------------ easing & helpers
+function bezier(x1, y1, x2, y2) {
+  const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+  const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+  const sx = t => ((ax * t + bx) * t + cx) * t, sy = t => ((ay * t + by) * t + cy) * t;
+  return x => {
+    if (x <= 0) return 0;
+    if (x >= 1) return 1;
+    let lo = 0, hi = 1, t = x;
+    for (let i = 0; i < 24; i++) { t = (lo + hi) / 2; if (sx(t) < x) lo = t; else hi = t; }
+    return sy(t);
+  };
+}
+const EASE = bezier(.2, .8, .2, 1);
+const clamp01 = v => Math.max(0, Math.min(1, v));
+const prog = (t, a, d) => EASE(clamp01((t - a) / d));    // eased 0..1 from a over d seconds
+const lin = (t, a, d) => clamp01((t - a) / d);
+const lerp = (a, b, p) => a + (b - a) * p;
+
+const NS = 'http://www.w3.org/2000/svg';
+function el(parent, tag, attrs = {}) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  parent.appendChild(e);
+  return e;
+}
+const line = (p, d, stroke, w = 4, extra = {}) =>
+  el(p, 'path', Object.assign({ d, fill: 'none', stroke, 'stroke-width': w, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', pathLength: 1 }, extra));
+function draw(e, p) {               // reveal a pathLength=1 stroke
+  e.style.strokeDasharray = '1 1';
+  e.style.strokeDashoffset = 1 - p;
+  e.style.opacity = p > 0.002 ? 1 : 0;
+}
+function rrect(x, y, w, h, r) {
+  r = Math.min(r, w / 2, h / 2);
+  return `M${x + w / 2} ${y} H${x + w - r} A${r} ${r} 0 0 1 ${x + w} ${y + r} V${y + h - r} A${r} ${r} 0 0 1 ${x + w - r} ${y + h}` +
+         ` H${x + r} A${r} ${r} 0 0 1 ${x} ${y + h - r} V${y + r} A${r} ${r} 0 0 1 ${x + r} ${y} Z`;
+}
+// deterministic pseudo-random
+function rng(seed) { return () => { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+
+const WHITE = '#f5f5f7', GRAY = '#8a8a8e', DIM = '#3a3a3f', AMBER = '#d9a441', RED = '#e5484d';
+
+// ------------------------------------------------------------ illustrations
+// Each builder gets (svg, params) and returns update(lt, dur, cues) with lt = scene-local time.
+// cues are scene-local times of spoken words (may be missing → fallbacks).
+
+function windowPane(g, x, y, w, h, r, stroke) {
+  return [line(g, rrect(x, y, w, h, r), stroke, 5), line(g, rrect(x + 22, y + 22, w - 44, h - 44, Math.max(r - 18, 3)), GRAY, 2.5)];
+}
+
+const BUILD = {
+  window_compare(svg, P) {
+    const R = P.radius ?? 92;
+    const left = windowPane(svg, 130, 150, 260, 360, 4, WHITE);
+    const right = windowPane(svg, 530, 150, 260, 360, R, WHITE);
+    const glow = el(svg, 'path', { d: rrect(552, 172, 216, 316, R - 18), fill: AMBER, opacity: 0 });
+    right[0].parentNode.appendChild(right[0]);
+    // red marks at the square corners
+    const marks = [];
+    for (const [cx, cy, sx, sy] of [[130, 150, -1, -1], [390, 150, 1, -1], [130, 510, -1, 1], [390, 510, 1, 1]]) {
+      const g = el(svg, 'g');
+      for (const a of [-0.5, 0, 0.5]) {
+        const ang = Math.atan2(sy, sx) + a;
+        line(g, `M${cx + Math.cos(ang) * 14} ${cy + Math.sin(ang) * 14} L${cx + Math.cos(ang) * 42} ${cy + Math.sin(ang) * 42}`, RED, 4);
+      }
+      marks.push(g);
+    }
+    const tick = el(svg, 'path', { d: '', fill: 'none' });
+    return (lt, dur, c) => {
+      const m = c.mark ?? dur * 0.6;
+      draw(left[0], prog(lt, 0.1, 1.0)); draw(left[1], prog(lt, 0.45, 0.9));
+      draw(right[0], prog(lt, 0.35, 1.0)); draw(right[1], prog(lt, 0.7, 0.9));
+      marks.forEach((g, i) => {
+        const p = prog(lt, m + i * 0.08, 0.6);
+        g.style.opacity = p;
+        g.setAttribute('transform', `translate(0 0)`);
+        g.querySelectorAll('path').forEach(e => draw(e, p));
+      });
+      glow.setAttribute('opacity', 0.10 * prog(lt, m + 0.3, 1.0));
+      right[0].setAttribute('stroke', lt > m + 0.3 ? AMBER : WHITE);
+      right[0].style.opacity = right[0].style.opacity;
+    };
+  },
+
+  plane(svg, P) { return buildPlane(svg, P, false); },
+  plane_breakup(svg, P) { return buildPlane(svg, P, true); },
+
+  pressure_cycle(svg, P) {
+    const cx = 460, cy = 330, R0 = 190, A = 16, period = P.period ?? 1.5;
+    const ghost = el(svg, 'circle', { cx, cy, r: R0, fill: 'none', stroke: DIM, 'stroke-width': 2, 'stroke-dasharray': '6 10' });
+    const fill = el(svg, 'circle', { cx, cy, r: R0, fill: AMBER, opacity: 0 });
+    const hull = el(svg, 'circle', { cx, cy, r: R0, fill: 'none', stroke: WHITE, 'stroke-width': 5, pathLength: 1, transform: `rotate(-90 ${cx} ${cy})` });
+    const floor = line(svg, '', GRAY, 3);
+    const wins = [0, 1].map(() => el(svg, 'rect', { width: 22, height: 30, rx: 4, fill: 'none', stroke: GRAY, 'stroke-width': 3 }));
+    const arrows = [];
+    for (let i = 0; i < 8; i++) arrows.push(line(svg, '', AMBER, 4));
+    const label = el(svg, 'text', { x: 60, y: 620, fill: GRAY, 'font-size': 30, 'font-weight': 500 });
+    label.textContent = 'basınç döngüsü';
+    const count = el(svg, 'text', { x: 860, y: 622, fill: AMBER, 'font-size': 64, 'font-weight': 700, 'text-anchor': 'end', 'font-variant-numeric': 'tabular-nums' });
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.1, 1.0);
+      hull.style.strokeDasharray = '1 1'; hull.style.strokeDashoffset = 1 - pIn;
+      const run = Math.max(0, lt - 0.9);
+      const s = 0.5 - 0.5 * Math.cos(2 * Math.PI * run / period);   // 0..1 breathing
+      const r = R0 + A * s;
+      [hull, fill].forEach(e => e.setAttribute('r', r));
+      fill.setAttribute('opacity', (0.03 + 0.10 * s) * pIn);
+      ghost.style.opacity = pIn;
+      const fy = cy + 70, fx = Math.sqrt(r * r - 70 * 70);
+      floor.setAttribute('d', `M${cx - fx} ${fy} L${cx + fx} ${fy}`); draw(floor, prog(lt, 0.5, 0.8));
+      [-150, -30].forEach((deg, i) => {
+        const a = deg * Math.PI / 180, x = cx + Math.cos(a) * (r - 34), y = cy + Math.sin(a) * (r - 34);
+        wins[i].setAttribute('x', x - 11); wins[i].setAttribute('y', y - 15);
+        wins[i].setAttribute('transform', `rotate(${deg + 90} ${x} ${y})`);
+        wins[i].style.opacity = prog(lt, 0.7, 0.6);
+      });
+      arrows.forEach((e, i) => {
+        const a = (i / 8) * 2 * Math.PI + Math.PI / 8, r1 = r + 16, r2 = r + 16 + 40 * s;
+        const x1 = cx + Math.cos(a) * r1, y1 = cy + Math.sin(a) * r1, x2 = cx + Math.cos(a) * r2, y2 = cy + Math.sin(a) * r2;
+        const h = 12 * s, nx = Math.cos(a), ny = Math.sin(a);
+        e.setAttribute('d', `M${x1} ${y1} L${x2} ${y2} M${x2 - nx * h - ny * h * .7} ${y2 - ny * h + nx * h * .7} L${x2} ${y2} L${x2 - nx * h + ny * h * .7} ${y2 - ny * h - nx * h * .7}`);
+        e.style.strokeDasharray = 'none'; e.style.opacity = s * pIn;
+      });
+      const fast = c.fast ?? dur * 0.7;
+      let n = Math.floor(run / period) + 1;
+      if (lt > fast) n = Math.max(n, Math.round(lerp(n, P.count_to ?? 12000, prog(lt, fast, 2.0))));
+      count.textContent = '× ' + n.toLocaleString('tr-TR');
+      count.style.opacity = label.style.opacity = prog(lt, 0.9, 0.6);
+    };
+  },
+
+  stress_corner(svg, P) {
+    const round = P.shape === 'round';
+    const x = 270, y = 130, w = 380, h = 420, R = round ? (P.radius ?? 120) : 5;
+    // fuselage skin context: rivet rows
+    const rivets = [
+      el(svg, 'path', { d: rrect(x - 50, y - 50, w + 100, h + 100, round ? R + 50 : 10), fill: 'none', stroke: DIM, 'stroke-width': 7, 'stroke-linecap': 'round', 'stroke-dasharray': '0 24' }),
+      line(svg, 'M40 40 H880', DIM, 2), line(svg, 'M40 640 H880', DIM, 2)];
+    const pane = windowPane(svg, x, y, w, h, R, WHITE);
+    const corners = [[x, y, -1, -1], [x + w, y, 1, -1], [x, y + h, -1, 1], [x + w, y + h, 1, 1]];
+    const red = [], amber = [], cracks = [];
+    // square: concentric 270° arcs piling into each corner
+    for (const [px, py, sx, sy] of corners) {
+      const g = el(svg, 'g'); red.push(g);
+      for (let k = 0; k < 5; k++) el(g, 'path', { fill: 'none', stroke: RED, 'stroke-width': 3.5, 'stroke-linecap': 'round' });
+      const glow = el(g, 'circle', { cx: px, cy: py, r: 34, fill: RED, opacity: 0 });
+    }
+    // round: offset lines spreading along the edges
+    if (round) for (let q = 0; q < 4; q++) {
+      const g = el(svg, 'g'); amber.push(g);
+      for (let k = 0; k < 4; k++) el(g, 'path', { fill: 'none', stroke: AMBER, 'stroke-width': 3.5, 'stroke-linecap': 'round' });
+    }
+    if (!round) {
+      const pts = [[0, 0], [16, -12], [26, -8], [42, -30], [58, -32], [70, -54], [92, -60], [100, -86], [122, -96]];
+      cracks.push(line(svg, 'M' + pts.map(([a, b]) => `${x + w + a} ${y + b}`).join(' L'), RED, 5));
+      cracks.push(line(svg, 'M' + pts.slice(0, 6).map(([a, b]) => `${x - a * .9} ${y + h - b * .9}`).join(' L'), RED, 4));
+    }
+    pane.forEach(e => svg.appendChild(e));
+
+    const sqArc = (px, py, sx, sy, rho) => {
+      const sw = sx * sy < 0 ? 1 : 0;
+      return `M${px - sx * rho} ${py} A${rho} ${rho} 0 1 ${sw} ${px} ${py - sy * rho}`;
+    };
+    const rdArc = (q, off, L) => {        // offset outline around rounded corner q, extending L along both edges
+      const [px, py, sx, sy] = corners[q];
+      const cx = px - sx * R, cy = py - sy * R, rr = R + off, sw = sx * sy < 0 ? 1 : 0;
+      return `M${cx - sx * L} ${cy + sy * rr} L${cx} ${cy + sy * rr} A${rr} ${rr} 0 0 ${sw} ${cx + sx * rr} ${cy} L${cx + sx * rr} ${cy - sy * L}`;
+    };
+
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.1, 1.0);
+      draw(pane[0], pIn); draw(pane[1], prog(lt, 0.4, 0.9));
+      rivets.forEach(e => e.style.opacity = 0.9 * prog(lt, 0.2, 1.0));
+      if (!round) {
+        const pile = c.pile ?? dur * 0.3, crack = c.crack ?? dur * 0.7;
+        red.forEach((g, ci) => {
+          const [px, py, sx, sy] = corners[ci];
+          const weight = ci === 1 ? 1 : 0.55;           // top-right corner is the hero
+          [...g.children].forEach((e, k) => {
+            if (e.tagName === 'circle') {
+              const pulse = 0.5 + 0.5 * Math.sin((lt - pile) * 5);
+              e.setAttribute('opacity', weight * prog(lt, pile, 1.2) * (0.10 + 0.08 * pulse));
+              return;
+            }
+            const p = prog(lt, 0.6 + k * 0.35 * (pile / 2.2), 1.4);   // arcs arrive one by one
+            const rho = lerp(150 + k * 30, 12 + k * 10, p);           // and close in on the corner
+            e.setAttribute('d', sqArc(px, py, sx, sy, rho));
+            e.setAttribute('opacity', weight * p * (1 - k * 0.14));
+          });
+        });
+        draw(cracks[0], prog(lt, crack, 1.4));
+        draw(cracks[1], prog(lt, crack + 0.5, 1.4) * 0.8);
+      } else {
+        const sp = c.spread ?? dur * 0.3;
+        const pRed = 1 - prog(lt, sp - 0.4, 0.8);
+        red.forEach((g, ci) => {
+          const [px, py, sx, sy] = corners[ci];
+          [...g.children].forEach((e, k) => {
+            if (e.tagName === 'circle') { e.setAttribute('opacity', 0); return; }
+            const p = prog(lt, 0.5 + k * 0.15, 1.0);
+            const cxr = px - sx * R * 0.29, cyr = py - sy * R * 0.29;   // point on the rounded arc
+            e.setAttribute('d', `M${cxr + sx * (10 + k * 9)} ${cyr + sy * (10 + k * 9)} l${sx * 0.1} ${sy * 0.1}`);
+            e.setAttribute('stroke-width', 6);
+            e.setAttribute('opacity', p * pRed * (1 - k * 0.15) * 0.8);
+          });
+        });
+        amber.forEach((g, q) => {
+          [...g.children].forEach((e, k) => {
+            const p = prog(lt, sp + k * 0.18, 2.2);
+            const maxL = (q % 2 === 0 ? 1 : 1) * Math.min(w / 2 - R, h / 2 - R) + 30;
+            e.setAttribute('d', rdArc(q, 18 + k * 18, maxL * p));
+            e.setAttribute('opacity', p > 0.002 ? (0.85 - k * 0.18) * Math.min(1, p * 3) : 0);
+          });
+        });
+      }
+    };
+  },
+
+  window_glow(svg, P) {
+    const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
+    const defs = el(svg, 'defs');
+    const grad = el(defs, 'radialGradient', { id: 'wg', cx: '50%', cy: '62%', r: '60%' });
+    el(grad, 'stop', { offset: '0%', 'stop-color': AMBER, 'stop-opacity': .35 });
+    el(grad, 'stop', { offset: '100%', 'stop-color': AMBER, 'stop-opacity': 0 });
+    const clip = el(defs, 'clipPath', { id: 'wc' });
+    el(clip, 'path', { d: rrect(x + 22, y + 22, w - 44, h - 44, R - 18) });
+    const inner = el(svg, 'g', { 'clip-path': 'url(#wc)' });
+    const sky = el(inner, 'rect', { x, y, width: w, height: h, fill: 'url(#wg)', opacity: 0 });
+    const horizon = line(inner, `M${x} ${y + h * 0.66} H${x + w}`, AMBER, 3);
+    const clouds = [line(inner, '', GRAY, 3), line(inner, '', GRAY, 3)];
+    const pane = windowPane(svg, x, y, w, h, R, WHITE);
+    return (lt, dur) => {
+      draw(pane[0], prog(lt, 0.1, 1.1)); draw(pane[1], prog(lt, 0.4, 1.0));
+      sky.setAttribute('opacity', prog(lt, 0.6, 1.4));
+      draw(horizon, prog(lt, 0.8, 1.2));
+      [[y + 160, 0], [y + 230, 1]].forEach(([cy, i]) => {
+        const off = ((lt * 22 + i * 140) % (w + 200)) - 100;
+        clouds[i].setAttribute('d', `M${x + off} ${cy} h${90 - i * 30}`);
+        clouds[i].style.opacity = prog(lt, 1.0 + i * 0.2, 0.8) * 0.8;
+      });
+    };
+  },
+
+  question(svg) {
+    const bubble = line(svg, rrect(210, 110, 500, 360, 60) + '', WHITE, 5);
+    const tail = line(svg, 'M330 470 L300 560 L410 470', WHITE, 5);
+    const q = el(svg, 'text', { x: 460, y: 352, fill: AMBER, 'font-size': 220, 'font-weight': 800, 'text-anchor': 'middle' });
+    q.textContent = '?';
+    const bars = [0, 1, 2].map(i => el(svg, 'rect', { x: 560 + i * 0, y: 0, width: 0, height: 14, rx: 7, fill: DIM }));
+    return (lt, dur) => {
+      draw(bubble, prog(lt, 0.1, 1.1)); draw(tail, prog(lt, 0.7, 0.6));
+      const p = prog(lt, 0.6, 0.9);
+      q.style.opacity = p;
+      q.setAttribute('transform', `translate(0 ${(1 - p) * 30})`);
+      bars.forEach((b, i) => {
+        const pb = prog(lt, 1.2 + i * 0.25, 0.8);
+        b.setAttribute('x', 740); b.setAttribute('y', 520 + i * 32);
+        b.setAttribute('width', pb * [120, 90, 60][i]);
+        b.style.opacity = pb;
+      });
+    };
+  },
+};
+
+// side-view airliner; breakup splits it along a jagged line using two clipPaths
+let planeId = 0;
+function buildPlane(svg, P, breakup) {
+  const id = 'pl' + (planeId++);
+  const nWin = P.windows ?? 9, sq = (P.window_shape ?? 'square') === 'square';
+  const split = P.split_x ?? 520;
+  const defs = el(svg, 'defs');
+  const zig = [[split - 6, 250], [split + 8, 290], [split - 8, 322], [split + 10, 350], [split - 4, 380], [split + 6, 420]];
+  const zz = zig.map(([a, b]) => `${a} ${b}`).join(' L');
+  el(el(defs, 'clipPath', { id: id + 'a' }), 'path', { d: `M0 0 H${split} L${zz} L${split} 680 H0 Z` });
+  el(el(defs, 'clipPath', { id: id + 'b' }), 'path', { d: `M920 0 H${split} L${zz} L${split} 680 H920 Z` });
+
+  const world = el(svg, 'g');
+  const halves = breakup ? [el(world, 'g', { 'clip-path': `url(#${id}a)` }), el(world, 'g', { 'clip-path': `url(#${id}b)` })] : [el(world, 'g')];
+  const parts = halves.map(h => {
+    const g = el(h, 'g');
+    const body = line(g, 'M150 300 L680 300 C760 300 812 320 832 342 C812 362 760 374 680 374 L250 374 C200 374 168 350 150 300 Z', WHITE, 5);
+    const fin = line(g, 'M156 302 L118 196 L164 196 L238 300', WHITE, 5);
+    const stab = line(g, 'M178 338 L100 356 L186 352', GRAY, 3.5);
+    const wing = line(g, 'M470 368 L360 456 L408 458 L560 372', GRAY, 4);
+    const cockpit = line(g, 'M772 318 L796 318 L808 330 L784 330 Z', GRAY, 3);
+    const wins = [];
+    for (let i = 0; i < nWin; i++) {
+      const wx = 290 + i * 46;
+      wins.push(el(g, 'rect', { x: wx, y: 318, width: 22, height: 24, rx: sq ? 2 : 9, fill: 'none', stroke: AMBER, 'stroke-width': 3 }));
+    }
+    return { strokes: [body, fin, stab, wing, cockpit], wins };
+  });
+  // speed lines
+  const speed = [0, 1, 2, 3].map(() => line(svg, '', DIM, 3));
+  // magnifier lens on one window (plane scene)
+  let lens = null;
+  if (!breakup) {
+    const g = el(svg, 'g');
+    const lx = 690, ly = 150, lr = 108;
+    const conn = line(g, `M${336 + 11} 318 L${lx - lr * 0.8} ${ly + lr * 0.6}`, GRAY, 2);
+    const circ = el(g, 'circle', { cx: lx, cy: ly, r: lr, fill: '#141416', stroke: GRAY, 'stroke-width': 3 });
+    const big = el(g, 'rect', { x: lx - 46, y: ly - 52, width: 92, height: 104, rx: sq ? 4 : 34, fill: 'none', stroke: AMBER, 'stroke-width': 6 });
+    lens = { g, conn };
+  }
+  // breakup extras
+  const debris = [], r = rng(7);
+  let crackLine = null;
+  if (breakup) {
+    crackLine = line(svg, `M${zz}`, RED, 4);
+    for (let i = 0; i < 12; i++) debris.push({ e: line(svg, `M0 0 l${6 + r() * 10} ${r() * 8 - 4}`, GRAY, 3), a: r() * Math.PI * 2, v: 60 + r() * 120, s: r() * 360 });
+  }
+
+  return (lt, dur, c) => {
+    const bob = Math.sin(lt * 1.6) * 4;
+    const drift = breakup ? 0 : lerp(-30, 30, lt / Math.max(dur, 1));
+    world.setAttribute('transform', `translate(${drift} ${bob})`);
+    const drawT = breakup ? 0.5 : 1.1;
+    parts.forEach(pt => {
+      pt.strokes.forEach((e, i) => draw(e, prog(lt, 0.05 + i * 0.12, drawT)));
+      pt.wins.forEach((w, i) => {
+        const p = prog(lt, (breakup ? 0.3 : 0.8) + i * 0.06, 0.5);
+        w.style.opacity = p;
+        const cx = 290 + i * 46 + 11, cy = 330, s = lerp(0.4, 1, p);
+        w.setAttribute('transform', `translate(${cx} ${cy}) scale(${s}) translate(${-cx} ${-cy})`);
+      });
+    });
+    speed.forEach((e, i) => {
+      const yy = 260 + i * 50, len = 70 + i * 25, x0 = 90 - ((lt * 260 + i * 97) % 260);
+      e.setAttribute('d', `M${x0 + drift} ${yy + bob} h${-len}`);
+      e.style.strokeDasharray = 'none';
+      e.style.opacity = (breakup ? 1 - prog(lt, (c.break ?? dur * 0.6), 0.4) : 1) * prog(lt, 0.6, 0.8) * 0.8;
+    });
+    if (lens) {
+      const L = c.lens ?? dur * 0.65, p = prog(lt, L - 0.2, 0.8);
+      lens.g.style.opacity = p;
+      lens.g.setAttribute('transform', `translate(${690 * (1 - lerp(0.85, 1, p))} ${150 * (1 - lerp(0.85, 1, p))}) scale(${lerp(0.85, 1, p)})`);
+      draw(lens.conn, p);
+    }
+    if (breakup) {
+      const B = c.break ?? dur * 0.6;
+      draw(crackLine, prog(lt, B - 1.0, 0.9));
+      crackLine.style.opacity = (prog(lt, B - 1.0, 0.3)) * (1 - prog(lt, B + 0.2, 0.5));
+      const p = prog(lt, B, 1.3);
+      halves[0].setAttribute('transform', `translate(${-60 * p} ${50 * p}) rotate(${-9 * p} ${split} 340)`);
+      halves[1].setAttribute('transform', `translate(${55 * p} ${75 * p}) rotate(${12 * p} ${split} 340)`);
+      const k = lin(lt, B, 1.3);
+      debris.forEach(d => {
+        const dist = d.v * EASE(k);
+        d.e.setAttribute('transform', `translate(${split + Math.cos(d.a) * dist} ${340 + Math.sin(d.a) * dist + 40 * k * k}) rotate(${d.s + 200 * k})`);
+        d.e.style.strokeDasharray = 'none';
+        d.e.style.opacity = k > 0 ? Math.min(1, k * 6) * (1 - k * 0.6) : 0;
+      });
+    }
+  };
+}
+
+// ------------------------------------------------------------ timeline
+let D, S = [];
+window.init = (data) => {
+  D = data;
+  document.querySelector('#brand span').textContent = D.channel || '';
+  const titles = document.getElementById('titles'), tagrows = document.getElementById('tagrows'), card = document.getElementById('card');
+  S = D.scenes.map((sc) => {
+    const t = document.createElement('div'); t.className = 'title';
+    const words = [];
+    for (const [cls, txt] of [['w', sc.title.white || ''], ['g', sc.title.gray || '']])
+      for (const wd of txt.split(/\s+/).filter(Boolean)) {
+        const s = document.createElement('span'); s.className = cls; s.textContent = wd; t.appendChild(s); words.push(s);
+      }
+    titles.appendChild(t);
+    const tg = document.createElement('div'); tg.className = 'tags';
+    const tags = sc.tags.map(x => { const d = document.createElement('div'); d.className = 'tag'; d.textContent = x; tg.appendChild(d); return d; });
+    tagrows.appendChild(tg);
+    const svg = el(card, 'svg', { viewBox: '0 0 920 680' });
+    const update = BUILD[sc.type](svg, sc.params || {});
+    return { sc, t, words, tg, tags, svg, update };
+  });
+  window.seek(0);
+};
+
+window.seek = (t) => {
+  const last = S.length - 1;
+  S.forEach((o, i) => {
+    const { sc } = o;
+    const live = t >= sc.start - 0.001 && t < sc.end + 0.4;
+    for (const node of [o.t, o.tg, o.svg]) node.style.display = live ? '' : 'none';
+    if (!live) return;
+    const lt = t - sc.start, dur = sc.end - sc.start;
+    const out = i === last ? 1 : 1 - prog(t, sc.end - 0.28, 0.32);
+    o.words.forEach((w, k) => {
+      const p = prog(t, sc.start + 0.05 + k * 0.07, 0.65);
+      w.style.opacity = p * out;
+      w.style.transform = `translateY(${(1 - p) * 42 - (1 - out) * 16}px)`;
+    });
+    o.tags.forEach((g, k) => {
+      const p = prog(t, sc.start + 0.45 + k * 0.12, 0.6);
+      g.style.opacity = p * out;
+      g.style.transform = `translateY(${(1 - p) * 18}px)`;
+    });
+    o.svg.style.opacity = prog(t, sc.start, 0.45) * out;
+    const z = lerp(1, 1.05, lt / Math.max(dur, 1)), fy = Math.sin(t * 0.9) * 6;
+    o.svg.style.transform = `translateY(${fy}px) scale(${z})`;
+    const cues = {};
+    for (const k in sc.cues) cues[k] = sc.cues[k] - sc.start;
+    o.update(lt, dur, cues);
+  });
+
+  const card = document.getElementById('card'), pc = prog(t, 0, 0.6);
+  card.style.opacity = pc;
+  card.style.transform = `scale(${lerp(0.97, 1, pc)})`;
+
+  const stage = document.getElementById('stage'), lx = 50 + Math.sin(t * 0.35) * 8, ly = 40 + Math.cos(t * 0.27) * 5;
+  stage.style.background = `radial-gradient(ellipse 950px 850px at ${lx}% ${ly}%, rgba(255,255,255,${0.045 + 0.015 * Math.sin(t * 0.6)}), rgba(255,255,255,0) 70%), #0a0a0b`;
+  const brand = document.getElementById('brand');
+  brand.style.opacity = prog(t, 0.2, 0.8);
+  brand.querySelector('i').style.transform = `scale(${1 + 0.18 * Math.sin(t * 2.2)})`;
+
+  const cap = document.getElementById('caption');
+  const c = D.captions.find(c => t >= c.start && t < c.end);
+  if (c) {
+    if (cap.textContent !== c.text) cap.textContent = c.text;
+    const pin = prog(t, c.start, 0.22), pout = 1 - prog(t, c.end - 0.12, 0.12);
+    cap.style.opacity = pin * pout;
+    cap.style.transform = `translateY(${(1 - pin) * 14}px)`;
+  } else cap.style.opacity = 0;
+
+  document.getElementById('bar').style.width = (100 * clamp01(t / D.duration)) + '%';
+};
+</script>
+</body>
+</html>
