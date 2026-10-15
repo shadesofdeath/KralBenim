@@ -104,4 +104,8 @@ jobs:
           if git diff --cached --quiet; then echo "nothing to record"; exit 0; fi
           git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
             commit -m "Record YouTube uploads"
-          git push
+          for i in 1 2 3 4; do
+            git pull --rebase -q origin "${GITHUB_REF_NAME}" && git push && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
