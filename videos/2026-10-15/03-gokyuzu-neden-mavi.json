@@ -1,0 +1,204 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "gokyuzu-neden-mavi",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "sky_scatter",
+      "text": "Gökyüzü aslında mavi değil. Mavi olan, havaya çarpıp etrafa saçılan güneş ışığı.",
+      "title": {
+        "white": "Gökyüzü",
+        "gray": "neden mavi?"
+      },
+      "tags": [
+        "Işık saçılması"
+      ],
+      "cues": {
+        "scatter": "saçılan"
+      },
+      "params": {
+        "mode": "sky"
+      }
+    },
+    {
+      "type": "sky_scatter",
+      "text": "Güneş ışığı beyaz görünür ama içinde gökkuşağının bütün renkleri vardır.",
+      "title": {
+        "white": "Beyaz ışık:",
+        "gray": "bütün renkler"
+      },
+      "tags": [
+        "Güneş ışığı"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "spectrum"
+      }
+    },
+    {
+      "type": "sky_scatter",
+      "text": "Bu ışık atmosfere girince, havadaki minicik azot ve oksijen molekülleriyle karşılaşır.",
+      "title": {
+        "white": "Atmosfer",
+        "gray": "molekülleri"
+      },
+      "tags": [
+        "Azot",
+        "Oksijen"
+      ],
+      "cues": {
+        "scatter": "karşılaşır"
+      },
+      "params": {
+        "mode": "scatter"
+      }
+    },
+    {
+      "type": "sky_scatter",
+      "text": "Kısa dalga boylu mavi ışık, bu moleküllere çarpınca her yöne saçılır. Kırmızı ise çoğunlukla dümdüz geçip gider.",
+      "title": {
+        "white": "Mavi saçılır,",
+        "gray": "kırmızı geçer"
+      },
+      "tags": [
+        "Rayleigh saçılması"
+      ],
+      "cues": {
+        "scatter": "çarpınca"
+      },
+      "params": {
+        "mode": "scatter"
+      }
+    },
+    {
+      "type": "stat",
+      "text": "Mavi ışık, kırmızıya göre beş kattan fazla saçılır.",
+      "title": {
+        "white": "Beş kattan",
+        "gray": "fazla"
+      },
+      "tags": [
+        "Mavi ve kırmızı"
+      ],
+      "cues": {
+        "count": "kırmızıya"
+      },
+      "params": {
+        "value": 5,
+        "suffix": "×",
+        "label": "mavi ışık daha çok saçılır",
+        "fill": 0.8,
+        "size": 150
+      }
+    },
+    {
+      "type": "sky_scatter",
+      "text": "Yani nereye bakarsanız bakın, gözünüze her yönden saçılmış mavi ışık gelir.",
+      "title": {
+        "white": "Her yönden",
+        "gray": "mavi ışık"
+      },
+      "tags": [
+        "Gözümüze ulaşan"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "sky"
+      }
+    },
+    {
+      "type": "list",
+      "text": "Peki mor ışık daha da kısa; gökyüzü neden mor değil? Çünkü Güneş daha az mor ışık yayar ve gözümüz mora daha az duyarlıdır.",
+      "title": {
+        "white": "Neden",
+        "gray": "mor değil?"
+      },
+      "tags": [
+        "Mor ışık"
+      ],
+      "cues": {
+        "i0": "Güneş",
+        "i1": "gözümüz"
+      },
+      "params": {
+        "items": [
+          "Güneş az mor ışık yayar",
+          "Göz mora az duyarlı"
+        ]
+      }
+    },
+    {
+      "type": "sky_scatter",
+      "text": "Gün batımında ise ışık havada çok daha uzun yol alır. Mavi yolda saçılıp kaybolur, geriye kırmızı ve turuncu kalır.",
+      "title": {
+        "white": "Gün batımı",
+        "gray": "neden kırmızı?"
+      },
+      "tags": [
+        "Uzun yol"
+      ],
+      "cues": {
+        "scatter": "yolda"
+      },
+      "params": {
+        "mode": "sunset"
+      }
+    },
+    {
+      "type": "question",
+      "text": "Sizce Mars'ta gün batımı ne renk? Yorumlara yazın.",
+      "title": {
+        "white": "Sıra sende:",
+        "gray": "Mars'ta ne renk?"
+      },
+      "tags": [
+        "Yorumlara yaz"
+      ],
+      "cues": {},
+      "params": {}
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Gökyüzü",
+      "aslında mavi",
+      "değil"
+    ],
+    "highlight": [
+      "mavi"
+    ],
+    "scene": 3,
+    "t": 5.5
+  },
+  "youtube": {
+    "title": "Gökyüzü Neden Mavi? Peki Neden Mor Değil? 🌅",
+    "description": "Gökyüzü neden mavi? Cevap, güneş ışığının havadaki moleküllere çarpıp saçılmasında. Mavi ışık kırmızıdan beş kattan fazla saçılır; gün batımında ise ışık uzun yol aldığı için gökyüzü kırmızıya döner. Peki mor ışık daha da kısayken gökyüzü neden mor değil?\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol.\n\n#shorts #bilim #fizik #gökyüzü #düşünbakalım",
+    "tags": [
+      "gökyüzü neden mavi",
+      "gökyüzü neden mavidir",
+      "gökyüzünün rengi",
+      "gün batımı neden kırmızı",
+      "gökyüzü neden mor değil",
+      "rayleigh saçılması",
+      "ışığın saçılması",
+      "fizik",
+      "bilim",
+      "ışık",
+      "atmosfer",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T20:30:00+03:00"
+  }
+}

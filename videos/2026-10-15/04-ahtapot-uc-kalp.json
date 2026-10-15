@@ -1,0 +1,195 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "ahtapot-uc-kalp",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "octopus",
+      "text": "Bir ahtapotun tam üç kalbi var. Ve bu kalplerden biri, ahtapot yüzerken atmayı bırakır.",
+      "title": {
+        "white": "Üç kalp,",
+        "gray": "biri duruyor"
+      },
+      "tags": [
+        "Ahtapot"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "hearts",
+        "labels": true
+      }
+    },
+    {
+      "type": "octopus",
+      "text": "Her şey kanıyla başlıyor. Ahtapotun kanı kırmızı değil, mavidir.",
+      "title": {
+        "white": "Mavi",
+        "gray": "kan"
+      },
+      "tags": [
+        "Hemosiyanin"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "blood"
+      }
+    },
+    {
+      "type": "list",
+      "text": "Bizim kanımız oksijeni demir içeren hemoglobinle taşır. Ahtapotunki ise bakır içeren hemosiyaninle.",
+      "title": {
+        "white": "Demir",
+        "gray": "yerine bakır"
+      },
+      "tags": [
+        "Kan kimyası"
+      ],
+      "cues": {
+        "i0": "Bizim",
+        "i1": "Ahtapotunki"
+      },
+      "params": {
+        "items": [
+          "İnsan: hemoglobin (demir)",
+          "Ahtapot: hemosiyanin (bakır)"
+        ]
+      }
+    },
+    {
+      "type": "octopus",
+      "text": "Hemosiyanin soğuk ve oksijeni az sularda iyi çalışır, ama oksijeni hemoglobin kadar verimli taşıyamaz.",
+      "title": {
+        "white": "Soğuk sularda",
+        "gray": "avantaj"
+      },
+      "tags": [
+        "Verimlilik"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "blood"
+      }
+    },
+    {
+      "type": "octopus",
+      "text": "Bu yüzden ahtapot ekstra pompaya ihtiyaç duyar. İki küçük kalp, kanı solungaçlardan geçirip oksijen yükler.",
+      "title": {
+        "white": "İki",
+        "gray": "solungaç kalbi"
+      },
+      "tags": [
+        "Solungaçlar"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "hearts",
+        "focus": "branchial",
+        "labels": true
+      }
+    },
+    {
+      "type": "octopus",
+      "text": "Üçüncü ve en büyük kalp ise bu kanı bütün vücuda pompalar.",
+      "title": {
+        "white": "Ana",
+        "gray": "kalp"
+      },
+      "tags": [
+        "Vücut dolaşımı"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "hearts",
+        "focus": "systemic",
+        "labels": true
+      }
+    },
+    {
+      "type": "octopus",
+      "text": "İşin ilginç yanı: ahtapot yüzmeye başlayınca ana kalp atmayı bırakır. Bu yüzden yüzmek onu çabuk yorar.",
+      "title": {
+        "white": "Yüzerken",
+        "gray": "kalp duruyor"
+      },
+      "tags": [
+        "Yüzme"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "swim",
+        "labels": true,
+        "focus": "systemic"
+      }
+    },
+    {
+      "type": "octopus",
+      "text": "Ahtapotların çoğu zaman yüzmek yerine deniz dibinde sürünmeyi tercih etmesinin bir nedeni de bu.",
+      "title": {
+        "white": "Yüzmek yerine",
+        "gray": "sürünmek"
+      },
+      "tags": [
+        "Deniz dibi"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "crawl"
+      }
+    },
+    {
+      "type": "question",
+      "text": "Sizce hangi hayvanın en garip vücut özelliği var? Yorumlara yazın.",
+      "title": {
+        "white": "Sıra sende:",
+        "gray": "en garip hayvan?"
+      },
+      "tags": [
+        "Yorumlara yaz"
+      ],
+      "cues": {},
+      "params": {}
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Ahtapotun",
+      "üç kalbi var"
+    ],
+    "highlight": [
+      "üç"
+    ],
+    "scene": 0,
+    "t": 4.0
+  },
+  "youtube": {
+    "title": "Ahtapotun Neden Üç Kalbi Var? 🐙",
+    "description": "Ahtapotun neden üç kalbi var ve kanı neden mavi? İki kalp kanı solungaçlardan geçirir, üçüncüsü bütün vücuda pompalar. Üstelik ahtapot yüzerken ana kalbi atmayı bırakır; bu yüzden yüzmek yerine sürünmeyi tercih eder.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol.\n\n#shorts #hayvanlar #ahtapot #bilim #düşünbakalım",
+    "tags": [
+      "ahtapot",
+      "ahtapotun kaç kalbi var",
+      "ahtapotun üç kalbi",
+      "ahtapot kanı neden mavi",
+      "mavi kan",
+      "hemosiyanin",
+      "deniz canlıları",
+      "hayvanlar",
+      "biyoloji",
+      "bilim",
+      "ilginç bilgiler",
+      "hayvanlar hakkında bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T22:45:00+03:00"
+  }
+}
