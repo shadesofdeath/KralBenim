@@ -7,8 +7,8 @@
   .deco { position: absolute; inset: 0; }
   .safe { position: absolute; left: 507px; top: 508px; width: 1546px; height: 423px;
     display: flex; align-items: center; justify-content: center; gap: 70px; }
-  .name { font-weight: 900; font-size: 168px; letter-spacing: -0.045em; color: #f5f5f7; line-height: 1; white-space: nowrap; }
-  .tag { margin-top: 26px; font-weight: 600; font-size: 56px; letter-spacing: -0.015em; color: #8a8a8e; white-space: nowrap; }
+  .name { font-weight: 900; font-size: 150px; letter-spacing: -0.045em; color: #f5f5f7; line-height: 1; white-space: nowrap; }
+  .tag { margin-top: 24px; font-weight: 600; font-size: 52px; letter-spacing: -0.015em; color: #8a8a8e; white-space: nowrap; }
   .tag b { color: #111; background: #d9a441; padding: 0 .2em; border-radius: .14em; font-weight: 800; }
   .logo { position: relative; width: 800px; height: 800px; overflow: hidden;
     background: radial-gradient(circle at 50% 50%, #17171a 0%, #0a0a0b 70%); }
@@ -22,6 +22,21 @@
     </symbol>
     <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
   </defs>
+  <symbol id="bulbsym" viewBox="90 10 620 720"><defs><radialGradient id="bulbg" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#d9a441" stop-opacity=".55"/><stop offset="1" stop-color="#d9a441" stop-opacity="0"/></radialGradient></defs><g transform="rotate(-7 400 420)">
+    <path d="M400 110 C270 110 190 205 190 320 C190 405 240 455 280 500 C305 528 315 555 315 590 H485 C485 555 495 528 520 500 C560 455 610 405 610 320 C610 205 530 110 400 110 Z"
+          fill="#141417" stroke="#f5f5f7" stroke-width="26" stroke-linejoin="round"/>
+    <circle cx="400" cy="320" r="190" fill="url(#bulbg)"/>
+    <path d="M352 290 C352 254 374 234 402 234 C432 234 452 256 452 284 C452 310 434 322 420 330 C408 337 404 346 404 362 V372"
+          fill="none" stroke="#d9a441" stroke-width="22" stroke-linecap="round" style="filter: drop-shadow(0 0 16px rgba(217,164,65,.95))"/>
+    <circle cx="404" cy="414" r="13" fill="#d9a441" style="filter: drop-shadow(0 0 12px rgba(217,164,65,.95))"/>
+    <ellipse cx="300" cy="400" rx="15" ry="22" fill="#f5f5f7"/><ellipse cx="500" cy="400" rx="15" ry="22" fill="#f5f5f7"/>
+    <path d="M380 450 Q404 468 428 450" fill="none" stroke="#f5f5f7" stroke-width="9" stroke-linecap="round"/>
+    <ellipse cx="270" cy="445" rx="18" ry="9" fill="#e58a7a" opacity=".7"/><ellipse cx="530" cy="445" rx="18" ry="9" fill="#e58a7a" opacity=".7"/>
+    <rect x="320" y="605" width="160" height="34" rx="14" fill="#8a8a8e"/><rect x="330" y="648" width="140" height="30" rx="13" fill="#8a8a8e"/>
+    <path d="M365 690 H435 L420 712 H380 Z" fill="#5a5a60"/>
+    <path d="M215 160 l-34 -30 M585 160 l34 -30 M400 70 v-36 M150 300 h-42 M650 300 h42" stroke="#d9a441" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+  </g>
+</symbol>
 </svg>
 
 <div class="banner" id="banner">
@@ -37,7 +52,7 @@
     <path d="M760 300 H1800 M760 1140 H1800" stroke="#1f1f23"/>
   </svg>
   <div class="safe">
-    <svg width="180" height="322"><use href="#q" width="180" height="322"/></svg>
+    <svg width="300" height="348"><use href="#bulbsym" width="300" height="348"/></svg>
     <div>
       <div class="name">Düşün Bakalım</div>
       <div class="tag">Her gün yeni bir <b>neden?</b></div>
