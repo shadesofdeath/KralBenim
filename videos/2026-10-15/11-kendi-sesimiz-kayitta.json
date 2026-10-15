@@ -1,0 +1,216 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "kendi-sesimiz-kayitta",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "voice",
+      "text": "Kayıtta duyduğun ses, gerçek sesin.",
+      "visual": "Konuşan bir kafa profili, sesin hem havadan hem kafatasından kulağa gidişi",
+      "title": {
+        "white": "Gerçek",
+        "gray": "sesin bu"
+      },
+      "tags": [
+        "Ses"
+      ],
+      "cues": {
+        "hit": "gerçek"
+      },
+      "params": {
+        "mode": "both"
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Konuşurken sesin kulağına iki yoldan ulaşır.",
+      "visual": "Dev yazı: İKİ YOL",
+      "title": {
+        "white": "İki",
+        "gray": "yol"
+      },
+      "tags": [
+        "Duyma"
+      ],
+      "cues": {
+        "w0": "iki",
+        "w1": "yoldan"
+      },
+      "params": {
+        "words": [
+          "iki",
+          "yol"
+        ],
+        "highlight": 0,
+        "sub": "sesin kulağına ulaşma yolları"
+      }
+    },
+    {
+      "type": "voice",
+      "text": "Birincisi havadan, tıpkı başkalarının duyduğu gibi.",
+      "visual": "Ağızdan çıkan ses dalgaları havadan dolaşıp kulağa geliyor",
+      "title": {
+        "white": "1.",
+        "gray": "havadan"
+      },
+      "tags": [
+        "Hava yolu"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "air",
+        "label": "hava yolu"
+      }
+    },
+    {
+      "type": "voice",
+      "text": "İkincisi içeriden, kafatası kemiklerinin titreşimiyle.",
+      "visual": "Ağızdan kulağa kafatasının içinden titreşen amber yol, kafa hafifçe parlıyor",
+      "title": {
+        "white": "2.",
+        "gray": "kemikten"
+      },
+      "tags": [
+        "Kemik yolu"
+      ],
+      "cues": {
+        "hit": "titreşimiyle"
+      },
+      "params": {
+        "mode": "bone",
+        "label": "kemik yolu"
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Kemikten gelen ses, sesini olduğundan daha kalın ve dolgun duyurur.",
+      "visual": "Dev yazı: DAHA KALIN",
+      "title": {
+        "white": "Daha",
+        "gray": "kalın"
+      },
+      "tags": [
+        "Bas sesler"
+      ],
+      "cues": {
+        "w0": "daha",
+        "w1": "kalın"
+      },
+      "params": {
+        "words": [
+          "daha",
+          "kalın"
+        ],
+        "highlight": 1,
+        "sub": "kemik, bas sesleri taşır"
+      }
+    },
+    {
+      "type": "voice",
+      "text": "Mikrofon ise sadece havadaki sesi yakalar.",
+      "visual": "Kafa konuşuyor, sağda kırmızı ışıklı mikrofon sadece hava dalgalarını alıyor",
+      "title": {
+        "white": "Mikrofon",
+        "gray": "sadece hava"
+      },
+      "tags": [
+        "Kayıt"
+      ],
+      "cues": {
+        "hit": "sadece"
+      },
+      "params": {
+        "mode": "record",
+        "label": "mikrofon: sadece hava yolu"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Yani senin duyduğun sesle, herkesin duyduğu ses farklı.",
+      "visual": "Sol: kafatası ikonu 'SEN'; sağ: ses ikonu 'HERKES'",
+      "title": {
+        "white": "Sen",
+        "gray": "vs herkes"
+      },
+      "tags": [
+        "Fark"
+      ],
+      "cues": {
+        "left": "senin",
+        "right": "herkesin"
+      },
+      "params": {
+        "left": {
+          "label": "SEN",
+          "icon": "brain",
+          "color": "amber"
+        },
+        "right": {
+          "label": "HERKES",
+          "icon": "sound",
+          "color": "white"
+        }
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Bu yüzden kendi sesin sana yabancı gelir. Ama unutma:",
+      "visual": "Ses ikonu soru işaretinden dönüşüyor",
+      "title": {
+        "white": "Yabancı",
+        "gray": "ses"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {
+        "hit": "yabancı"
+      },
+      "params": {
+        "icon": "sound",
+        "label": "kendi sesin",
+        "color": "amber"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Gerçek sesin",
+      "kayıttaki"
+    ],
+    "highlight": [
+      "gerçek"
+    ],
+    "scene": 3,
+    "t": 2.5
+  },
+  "youtube": {
+    "title": "Kendi Sesimizi Kayıtta Neden Sevmeyiz? 🎙️",
+    "description": "Kendi sesimiz kayıtta neden farklı gelir? Konuşurken sesimizi hem havadan hem de kafatası kemiklerinden duyarız; kemik yolu sesi daha kalın ve dolgun gösterir. Mikrofon ise sadece havadaki sesi yakalar. Yani kayıttaki ses, herkesin duyduğu gerçek sesin.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen kendi sesini kayıtta seviyor musun? Yorumlara yaz!\n\n#shorts #psikoloji #bilim #düşünbakalım",
+    "tags": [
+      "kendi sesimizi neden sevmeyiz",
+      "kayıttaki sesim neden farklı",
+      "kendi sesimiz",
+      "ses kaydı",
+      "kemik iletimi",
+      "ses neden farklı geliyor",
+      "psikoloji",
+      "insan vücudu",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T02:17:00+03:00"
+  }
+}

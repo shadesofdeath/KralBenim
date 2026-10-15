@@ -93,6 +93,7 @@
   #flash { position: absolute; inset: 0; pointer-events: none; opacity: 0;
     background: radial-gradient(circle at 50% 45%, rgba(217,164,65,.55), rgba(217,164,65,0) 65%); }
   #card svg { filter: drop-shadow(0 0 10px rgba(255,255,255,.07)) drop-shadow(0 0 22px rgba(217,164,65,.07)); }
+  .title .ch { display: inline-block; }
   #caption span { display: inline-block; margin: 0 .16em; transform-origin: 50% 60%; }
   svg text { font-family: Inter, sans-serif; }
   #brand {
@@ -101,6 +102,10 @@
   }
   #brand i { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); display: block; }
 </style>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="vendor/MorphSVGPlugin.min.js"></script>
+<script src="vendor/CustomEase.min.js"></script>
 </head>
 <body>
 <div id="stage">
@@ -131,6 +136,9 @@ function bezier(x1, y1, x2, y2) {
   };
 }
 const EASE = bezier(.2, .8, .2, 1);
+// GSAP timelines are created paused and driven by seek(t): fully deterministic, frame by frame
+gsap.registerPlugin(SplitText, MorphSVGPlugin, CustomEase);
+gsap.ticker.lagSmoothing(0);
 const clamp01 = v => Math.max(0, Math.min(1, v));
 const prog = (t, a, d) => EASE(clamp01((t - a) / d));    // eased 0..1 from a over d seconds
 // springy 0..1 with a little overshoot (titles, pops)
@@ -1158,12 +1166,15 @@ const BUILD = {
     const col = P.color === 'red' ? RED : P.color === 'white' ? WHITE : P.color === 'blue' ? '#4f8ff7' : AMBER;
     const rings = [0, 1, 2].map(() => el(svg, 'circle', { cx: 460, cy: 300, fill: 'none', stroke: col, 'stroke-width': 3 }));
     const halo = el(svg, 'circle', { cx: 460, cy: 300, r: 150, fill: col, opacity: 0.08 });
-    const ic = el(svg, 'g'); drawIcon(ic, P.icon || 'bulb', 460, 300, 2.6, WHITE, col);
+    const ic = el(svg, 'g'); drawIcon(ic, 'question', 460, 300, 2.6, WHITE, col);
+    const target = ICONS[P.icon] || ICONS.bulb, mtl = gsap.timeline({ paused: true });
+    ic.querySelectorAll('path').forEach(pth => mtl.to(pth, { morphSVG: target, duration: 0.7, ease: 'expo.inOut' }, 0.25));
     const sparks = [0, 1, 2, 3, 4, 5].map(() => el(svg, 'circle', { r: 5, fill: col }));
     const lab = el(svg, 'text', { x: 460, y: 600, fill: WHITE, 'font-size': 52, 'font-weight': 800, 'text-anchor': 'middle' });
     lab.textContent = P.label || '';
     return (lt, dur, c) => {
       const p = spring(lt, 0.05, 0.6), pk = c.hit !== undefined ? punch(lt, c.hit) : 0;
+      mtl.seek(Math.max(0, lt), false);
       ic.setAttribute('transform', `translate(460 300) scale(${p * (1 + 0.04 * Math.sin(lt * 3) + 0.15 * pk)}) rotate(${Math.sin(lt * 1.5) * 4}) translate(-460 -300)`);
       halo.setAttribute('opacity', (0.07 + 0.05 * Math.sin(lt * 3) + 0.2 * pk) * p);
       rings.forEach((r, i) => { const k = ((lt * 0.7 + i / 3) % 1); r.setAttribute('r', 150 + k * 170); r.setAttribute('opacity', (1 - k) * 0.5 * p); });
@@ -1227,6 +1238,45 @@ const BUILD = {
         sm.setAttribute('cx', f + 25 + drift - k * 120); sm.setAttribute('cy', deck - 125 - k * 90 + bob);
         sm.setAttribute('r', 8 + k * 26); sm.setAttribute('opacity', (mode === 'sail' || mode === 'hit' ? 1 : 0.3) * (1 - k) * pIn);
       });
+    };
+  },
+
+  // head profile: your voice reaches your ear by air (outside) and through bone (inside).
+  // params: mode both|air|bone|record. cues: hit
+  voice(svg, P) {
+    const mode = P.mode || 'both';
+    const head = line(svg, 'M300 600 C300 540 270 520 262 470 C230 455 236 420 250 400 C232 330 240 230 300 170 C360 110 470 100 540 150 C600 195 610 260 600 320 L640 380 C648 392 640 400 626 402 L618 430 C628 440 622 452 612 456 L612 480 C612 510 590 520 560 518 L520 516 L520 600', WHITE, 6);
+    const ear = line(svg, 'M405 300 C380 280 360 300 365 330 C370 360 395 370 405 350', GRAY, 5);
+    const eye = el(svg, 'circle', { cx: 560, cy: 300, r: 8, fill: WHITE });
+    const mouth = { x: 628, y: 440 };
+    const airWaves = [0, 1, 2, 3].map(() => el(svg, 'path', { fill: 'none', stroke: WHITE, 'stroke-width': 4, 'stroke-linecap': 'round' }));
+    const airPath = el(svg, 'path', { d: 'M650 440 C780 420 800 200 640 120 C520 70 380 140 395 270', fill: 'none', stroke: WHITE, 'stroke-width': 3, 'stroke-dasharray': '14 14', opacity: 0 });
+    const bonePath = el(svg, 'path', { d: 'M600 445 C540 470 470 430 430 380 C415 360 410 340 405 320', fill: 'none', stroke: AMBER, 'stroke-width': 8, 'stroke-linecap': 'round', opacity: 0 });
+    const skullGlow = el(svg, 'path', { d: 'M262 470 C230 455 236 420 250 400 C232 330 240 230 300 170 C360 110 470 100 540 150 C600 195 610 260 600 320 L640 380 L612 480 C612 510 590 520 560 518 L520 516 C450 520 330 520 262 470 Z', fill: AMBER, opacity: 0 });
+    const mic = el(svg, 'g');
+    el(mic, 'rect', { x: 790, y: 360, width: 50, height: 90, rx: 25, fill: 'none', stroke: WHITE, 'stroke-width': 5 });
+    el(mic, 'path', { d: 'M775 420 C775 470 855 470 855 420 M815 465 V510 M790 510 H840', fill: 'none', stroke: WHITE, 'stroke-width': 5, 'stroke-linecap': 'round' });
+    const recDot = el(mic, 'circle', { cx: 815, cy: 335, r: 10, fill: RED });
+    const lbl = el(svg, 'text', { x: 460, y: 650, fill: GRAY, 'font-size': 30, 'font-weight': 600, 'text-anchor': 'middle' });
+    lbl.textContent = P.label || '';
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.05, 0.7), pk = c.hit !== undefined ? punch(lt, c.hit) : 0;
+      draw(head, pIn); draw(ear, prog(lt, 0.3, 0.5)); eye.style.opacity = prog(lt, 0.4, 0.3);
+      const air = mode === 'both' || mode === 'air' || mode === 'record', bone = mode === 'both' || mode === 'bone';
+      airWaves.forEach((w, i) => {
+        const k = ((lt * 0.9 + i / 4) % 1), r = 20 + k * (mode === 'record' ? 170 : 120);
+        w.setAttribute('d', `M${mouth.x + 18 + r * 0.3} ${mouth.y - r * 0.6} A${r} ${r} 0 0 1 ${mouth.x + 18 + r * 0.3} ${mouth.y + r * 0.6}`);
+        w.style.opacity = air ? (1 - k) * 0.85 * prog(lt, 0.5, 0.4) : 0;
+      });
+      airPath.style.opacity = (mode === 'both' || mode === 'air') ? 0.7 * prog(lt, 0.7, 0.5) : 0;
+      airPath.style.strokeDashoffset = -lt * 60;
+      bonePath.style.opacity = bone ? prog(lt, 0.7, 0.5) : 0;
+      bonePath.setAttribute('stroke-dasharray', `${10 + 6 * Math.sin(lt * 18)} 12`);
+      bonePath.style.strokeDashoffset = lt * 90;
+      skullGlow.style.opacity = bone ? (0.06 + 0.05 * Math.sin(lt * 9) + 0.12 * pk) * prog(lt, 0.7, 0.5) : 0;
+      mic.style.opacity = mode === 'record' ? prog(lt, 0.3, 0.5) : 0;
+      recDot.style.opacity = Math.sin(lt * 5) > 0 ? 1 : 0.2;
+      lbl.style.opacity = prog(lt, 0.8, 0.4);
     };
   },
 
@@ -1403,12 +1453,16 @@ window.init = (data) => {
         const s = document.createElement('span'); s.className = cls; s.textContent = wd; t.appendChild(s); words.push(s);
       }
     titles.appendChild(t);
+    t.style.perspective = '600px';
+    const split = new SplitText(t, { type: 'chars', charsClass: 'ch' });
+    const tl = gsap.timeline({ paused: true });
+    tl.from(split.chars, { yPercent: 120, rotationX: -95, opacity: 0, transformOrigin: '50% 100%', duration: 0.55, stagger: 0.022, ease: 'back.out(2.2)' });
     const tg = document.createElement('div'); tg.className = 'tags';
     const tags = sc.tags.map(x => { const d = document.createElement('div'); d.className = 'tag'; d.textContent = x; tg.appendChild(d); return d; });
     tagrows.appendChild(tg);
     const svg = el(card, 'svg', { viewBox: '0 0 920 680' });
     const update = BUILD[sc.type](svg, sc.params || {});
-    return { sc, t, words, tg, tags, svg, update };
+    return { sc, t, words, tg, tags, svg, update, tl };
   });
   window.seek(0);
 };
@@ -1500,11 +1554,9 @@ function renderAt(t) {
     if (!live) return;
     const lt = t - sc.start, dur = sc.end - sc.start;
     const out = i === last ? 1 : 1 - prog(t, sc.end - 0.16, 0.18);
-    o.words.forEach((w, k) => {
-      const p = spring(t, sc.start + 0.02 + k * 0.045, 0.6);
-      w.style.opacity = clamp01(p * 1.6) * out;
-      w.style.transform = `translateY(${(1 - p) * 56 - (1 - out) * 16}px) scale(${lerp(0.82, 1, p)})`;
-    });
+    o.tl.seek(Math.max(0, lt), false);
+    o.t.style.opacity = out;
+    o.t.style.transform = `translateY(${-(1 - out) * 16}px)`;
     o.tags.forEach((g, k) => {
       const p = spring(t, sc.start + 0.2 + k * 0.08, 0.55);
       g.style.opacity = clamp01(p * 1.5) * out;

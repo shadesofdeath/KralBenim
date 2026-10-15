@@ -204,7 +204,7 @@ def build_timeline(script, text, ranges, words, duration):
         # the hook frame stays up until the first sentence is spoken
         first = next((w for w in per[0] if w["disp"][-1] in ".?!"), per[0][-1])
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
-    return {"hook": hook, "scale": script.get("scale", 4 / 3),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
+    return {"hook": hook, "scale": script.get("scale", 4 / 3), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -229,6 +229,7 @@ def render(timeline, mp3, out, until, sfx=None):
     from playwright.sync_api import sync_playwright
     fps = timeline["fps"]
     n = round(until * fps)
+    blur = timeline.get("motion_blur", False) and fps >= 60
     ff = subprocess.Popen([
         "ffmpeg", "-y", "-loglevel", "error",
         "-f", "image2pipe", "-framerate", str(fps), "-i", "-",
@@ -236,9 +237,11 @@ def render(timeline, mp3, out, until, sfx=None):
         *(["-i", str(sfx), "-filter_complex",
            "[1:a]apad[v];[2:a]apad[s];[v][s]amix=inputs=2:duration=first:normalize=0[a]",
            "-map", "0:v", "-map", "[a]"] if sfx else ["-map", "0:v", "-map", "1:a", "-af", "apad"]),
+        # motion blur: average each pair of 60 fps renders into one 30 fps frame
+        *(["-vf", "tmix=frames=2,fps=30"] if blur else []),
         "-t", f"{n / fps:.3f}",
         "-c:v", "libx264", "-preset", "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
-        "-pix_fmt", "yuv420p", "-g", str(fps * 2), "-bf", "2",
+        "-pix_fmt", "yuv420p", "-g", str(60 if blur else fps * 2), "-bf", "2",
         "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
         stdin=subprocess.PIPE)

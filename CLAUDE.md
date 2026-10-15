@@ -1,7 +1,7 @@
 # Düşün Bakalım — video otomasyonu
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
-Her gün **2 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
+Her gün **3 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
 
 ## Yapı
 
@@ -20,12 +20,12 @@ Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece
 
 Zamanlanmış görev her sabah bu bölümü uygular.
 
-**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **2 Shorts**; **pazar günleri ek olarak 1 uzun video**. Bu planın dışına çıkma, fazladan video üretme.
+**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **3 Shorts**; **pazar günleri ek olarak 1 uzun video**. Bu planın dışına çıkma, fazladan video üretme. Bütçe sıkı: karakter sınırlarına kesinlikle uy.
 
 | | Süre | Karakter (anlatım metni toplamı) | Yayın |
 |---|---|---|---|
-| Shorts ×2 | 30–40 sn | **450–600** (sert sınır 650) | her gün 13:00 ve 19:00 (+03:00) |
-| Uzun video (sadece pazar) | 5–6 dk | **4.300–5.000** (sert sınır 5.200) | pazar 20:00 (+03:00) |
+| Shorts ×3 | 28–35 sn | **400–500** (sert sınır 550) | her gün 11:00, 15:00 ve 19:00 (+03:00) |
+| Uzun video (sadece pazar) | ~4 dk | **3.400–4.000** (sert sınır 4.300) | pazar 20:30 (+03:00) |
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
 - **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–7 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
@@ -37,7 +37,8 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanala uygun, aranan ve merak uyandıran bir soru seç ("Neden...?", "Nasıl...?", "Ne olurdu...?"). Kategorileri günden güne değiştir: gündelik tasarımların hikâyesi, bilim, insan vücudu, tarih, hayvanlar, uzay, mühendislik, psikoloji. Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir konu.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
-5. **Senaryo** — dosyalar: `01-<slug>.json` ve `02-<slug>.json` (Shorts, farklı kategorilerden), pazar günleri ayrıca `03-<slug>.json` (uzun video).
+5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json`, `03-<slug>.json` (Shorts, üçü de farklı kategorilerden), pazar günleri ayrıca `04-<slug>.json` (uzun video).
+   - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir çizim kullanma. Uygun tip yoksa konuya özel yeni bir sahne tipi kodla (GSAP mevcut: `gsap`, `SplitText`, `MorphSVGPlugin`, `CustomEase`; timeline'ları `paused: true` oluştur ve update içinde `tl.seek(lt)` ile sür).
    - Shorts: `"format": "short"`, `"fps": 60`, 8–11 sahne, sahne başına tek cümle. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
    - `channel`, `subtitles`, `tts` alanlarını `script.json`'dan aynen kopyala.
      Ses her zaman ElevenLabs `voice_id: BwhlzGpUiZ9uHtfvCl1H` (kanal sahibinin seçtiği ses), model `eleven_v3`. Sesi veya modeli asla değiştirme.
