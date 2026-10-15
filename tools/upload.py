@@ -7,6 +7,8 @@
 script.json:
   "youtube": {"title": "...", "description": "...", "tags": [...], "category_id": "27",
               "publish_at": "2026-10-16T10:00:00+03:00"}   # omit publish_at to keep it private
+Also sets <video>.jpg as the thumbnail if present, and for long videos appends chapters
+built from scenes that have a "chapter" title (timings from <video>.timeline.json).
 Prints the video URL. Writes result JSON next to the video (<video>.youtube.json).
 """
 import json
@@ -32,6 +34,33 @@ def credentials():
     return Credentials.from_authorized_user_info(info)
 
 
+def insert_chapters(desc, chap):
+    """Chapters go before the hashtag block so hashtags stay at the very end."""
+    if not chap:
+        return desc
+    head, sep, tags = desc.rpartition("\n\n#")
+    return (head + chap + sep + tags) if sep else desc + chap
+
+
+def chapters(video):
+    tl_path = video.with_suffix(".timeline.json")
+    if not tl_path.exists():
+        return ""
+    tl = json.loads(tl_path.read_text())
+    marks = [(s["start"], s["chapter"]) for s in tl["scenes"] if s.get("chapter")]
+    if tl.get("format") != "long" or len(marks) < 3:
+        return ""
+    marks[0] = (0.0, marks[0][1])
+    kept = [marks[0]]
+    for t, name in marks[1:]:
+        if t - kept[-1][0] >= 10:          # YouTube needs >= 10 s per chapter
+            kept.append((t, name))
+    if len(kept) < 3:
+        return ""
+    fmt = lambda t: f"{int(t) // 60}:{int(t) % 60:02d}"
+    return "\n\n⏱️ Bölümler\n" + "\n".join(f"{fmt(t)} {name}" for t, name in kept)
+
+
 def main():
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     meta = json.loads(script_path.read_text())["youtube"]
@@ -51,7 +80,7 @@ def main():
     body = {
         "snippet": {
             "title": meta["title"][:100],
-            "description": meta.get("description", "")[:5000],
+            "description": insert_chapters(meta.get("description", ""), chapters(video))[:5000],
             "tags": meta.get("tags", []),
             "categoryId": str(meta.get("category_id", "27")),
             "defaultLanguage": "tr",
@@ -66,7 +95,15 @@ def main():
         st, res = req.next_chunk()
         if st:
             print(f"upload {int(st.progress() * 100)}%")
-    result = {"id": res["id"], "url": f"https://youtu.be/{res['id']}", "status": res.get("status", {}),
+    thumb = video.with_suffix(".jpg")
+    thumb_ok = False
+    if thumb.exists():
+        try:
+            yt.thumbnails().set(videoId=res["id"], media_body=MediaFileUpload(str(thumb), mimetype="image/jpeg")).execute()
+            thumb_ok = True
+        except Exception as e:   # Shorts / unverified channels may refuse custom thumbnails
+            print(f"thumbnail not set: {e}")
+    result = {"id": res["id"], "thumbnail": thumb_ok, "url": f"https://youtu.be/{res['id']}", "status": res.get("status", {}),
               "title": meta["title"], "script": str(script_path)}
     video.with_suffix(".youtube.json").write_text(json.dumps(result, ensure_ascii=False, indent=1))
     print(result["url"], result["status"])

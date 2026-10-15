@@ -4,6 +4,7 @@
   python build.py script.json                 # full video
   python build.py script.json --scenes 3      # only the first 3 scenes (test)
   python build.py script.json --still 12.5    # save a single frame as PNG
+  python build.py script.json --cover          # only the thumbnail (out/video.jpg)
 """
 import argparse
 import asyncio
@@ -176,7 +177,7 @@ def build_timeline(script, text, ranges, words, duration):
                 cues[name] = hit["start"]
             else:
                 print(f"warning: cue '{needle}' not found in scene {i}", file=sys.stderr)
-        out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"],
+        out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"], "chapter": sc.get("chapter"),
                            "title": sc.get("title", {}), "tags": sc.get("tags", []),
                            "params": sc.get("params", {}), "cues": cues})
 
@@ -243,6 +244,26 @@ def render(timeline, mp3, out, until):
     print(f"\r{out}  ({n} frames, {n / fps:.1f}s)")
 
 
+def cover(timeline, script, out_jpg):
+    """Thumbnail from the script's "cover" block. Long videos: 1280x720 JPEG; Shorts: 1080x1920."""
+    from playwright.sync_api import sync_playwright
+    c = script.get("cover")
+    if not c:
+        return None
+    png = out_jpg.with_suffix(".cover.png")
+    with sync_playwright() as pw:
+        browser, page = open_page(pw, timeline)
+        page.evaluate("c => window.cover(c)", c)
+        page.screenshot(path=str(png), type="png")
+        browser.close()
+    scale = "1280:720" if timeline["format"] == "long" else "1080:1920"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(png), "-vf", f"scale={scale}:flags=lanczos",
+                    "-q:v", "2", str(out_jpg)], check=True)
+    png.unlink()
+    print(out_jpg)
+    return out_jpg
+
+
 def still(timeline, t, out):
     from playwright.sync_api import sync_playwright
     with sync_playwright() as pw:
@@ -261,6 +282,7 @@ def main():
     ap.add_argument("-o", "--out", default="out/video.mp4")
     ap.add_argument("--scenes", type=int, help="render only the first N scenes")
     ap.add_argument("--still", type=float, help="save one frame at this time (s) instead of a video")
+    ap.add_argument("--cover", action="store_true", help="only render the thumbnail")
     a = ap.parse_args()
 
     script = json.loads(Path(a.script).read_text())
@@ -280,12 +302,20 @@ def main():
     duration = audio_duration(mp3) + TAIL
     timeline = build_timeline(script, text, ranges, words, duration)
     (work / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1))
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.with_suffix(".timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1))
+
+    if a.cover:
+        cover(timeline, script, out.with_suffix(".jpg"))
+        return
 
     if a.still is not None:
         still(timeline, a.still, out.with_suffix(".png") if out.suffix == ".mp4" else out)
         return
     until = timeline["scenes"][a.scenes - 1]["end"] if a.scenes else duration
     render(timeline, mp3, out, until)
+    if not a.scenes:
+        cover(timeline, script, out.with_suffix(".jpg"))
 
 
 if __name__ == "__main__":

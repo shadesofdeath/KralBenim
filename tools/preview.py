@@ -59,7 +59,10 @@ def main():
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "frame_%02d.png"),
                     "-vf", f"scale={scale},tile={cols}x{-(-len(times) // cols)}", "-frames:v", "1",
                     str(out / "sheet.png")], check=True)
-    print(f"{out / 'sheet.png'}  (~{dur:.0f}s estimated, {len(tl['scenes'])} scenes)")
+    if script.get("cover"):
+        build.cover(tl, script, out / "cover.jpg")
+    chars = len(text)
+    print(f"{out / 'sheet.png'}  (~{dur:.0f}s estimated, {len(tl['scenes'])} scenes, {chars} chars)")
     for s in tl["scenes"]:
         print(f"  {s['start']:6.1f}-{s['end']:6.1f}  {s['type']:15s} cues={list(s['cues'])}")
 

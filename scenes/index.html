@@ -36,6 +36,21 @@
   }
   #caption span { transition: none; }
 
+  /* cover (thumbnail) mode */
+  #covertext { display: none; }
+  html.cover .title, html.cover .tags, html.cover #caption, html.cover #progress { display: none !important; }
+  html.cover #covertext {
+    display: block; position: absolute; left: 80px; right: 80px; top: 200px;
+    font-weight: 900; font-size: 148px; line-height: 1.04; letter-spacing: -0.045em; text-transform: uppercase;
+  }
+  html.cover #covertext .hl { color: var(--amber); }
+  html.cover #covertext .line { display: block; }
+  html.cover #card { top: 860px; box-shadow: 0 0 160px rgba(217,164,65,.18); border-color: #34343a; transform: scale(1.04) !important; opacity: 1 !important; }
+  html.cover #brand { font-size: 44px; opacity: 1 !important; }
+  html.cover #brand i { width: 22px; height: 22px; }
+  html.long.cover #covertext { left: 100px; right: auto; width: 820px; top: 50%; transform: translateY(-50%); font-size: 132px; }
+  html.long.cover #card { left: 960px; top: 200px; transform: scale(1.0) !important; }
+
   /* 16:9 long-form layout */
   html.long, html.long body, html.long #stage { width: 1920px; height: 1080px; }
   html.long #stage { background: radial-gradient(ellipse 1100px 800px at 70% 45%, rgba(255,255,255,.05), rgba(255,255,255,0) 70%), var(--bg); }
@@ -63,6 +78,7 @@
   <div id="card"></div>
   <div id="tagrows"></div>
   <div id="caption"></div>
+  <div id="covertext"></div>
   <div id="progress"><div id="bar"></div></div>
 </div>
 <script>
@@ -657,6 +673,28 @@ window.init = (data) => {
     return { sc, t, words, tg, tags, svg, update };
   });
   window.seek(0);
+};
+
+// Thumbnail: big text + one scene's illustration frozen at a chosen moment.
+// c = {lines: ["UÇAK PENCERELERİ", "NEDEN KARE DEĞİL?"], highlight: ["KARE"], scene: 0, t: 4.0}
+window.cover = (c) => {
+  document.documentElement.classList.add('cover');
+  const sc = D.scenes[Math.min(c.scene ?? 0, D.scenes.length - 1)];
+  const dur = sc.end - sc.start;
+  window.seek(sc.start + Math.min(c.t ?? dur * 0.85, dur - 0.35));
+  const hl = (c.highlight || []).map(w => w.toLocaleUpperCase('tr-TR'));
+  const box = document.getElementById('covertext');
+  box.innerHTML = '';
+  for (const ln of c.lines || []) {
+    const row = document.createElement('span'); row.className = 'line';
+    for (const w of ln.split(/\s+/)) {
+      const sp = document.createElement('span');
+      sp.textContent = w + ' ';
+      if (hl.includes(w.toLocaleUpperCase('tr-TR').replace(/[?!.,:]/g, ''))) sp.className = 'hl';
+      row.appendChild(sp);
+    }
+    box.appendChild(row);
+  }
 };
 
 window.seek = (t) => {

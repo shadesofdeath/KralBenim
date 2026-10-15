@@ -83,6 +83,7 @@ jobs:
           name: video-${{ steps.n.outputs.name }}
           path: |
             out/${{ steps.n.outputs.name }}.mp4
+            out/${{ steps.n.outputs.name }}.jpg
             videos/**/*.youtube.json
           retention-days: 14
 
