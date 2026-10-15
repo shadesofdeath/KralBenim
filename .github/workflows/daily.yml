@@ -78,6 +78,21 @@ jobs:
           if [ -z "$YOUTUBE_TOKEN_JSON" ] && [ -z "$YOUTUBE_REFRESH_TOKEN" ]; then echo "YouTube secrets missing, skipping upload"; exit 0; fi
           python tools/upload.py "$F" "out/${{ steps.n.outputs.name }}.mp4"
           cp "out/${{ steps.n.outputs.name }}.youtube.json" "${F%.json}.youtube.json"
+      - name: Send to Telegram (Instagram-ready)
+        if: always() && steps.n.outputs.name != ''
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          F: ${{ matrix.file }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ ! -f config/telegram_chat_id ]; then echo "Telegram not set up, skipping"; exit 0; fi
+          V="out/${{ steps.n.outputs.name }}.mp4"
+          if [ ! -f "$V" ]; then python tools/telegram.py text "⚠️ Render başarısız: $F"; exit 0; fi
+          if grep -q '"format": "long"' "$F"; then
+            python tools/telegram.py text "📺 Uzun video yüklendi: $(python -c "import json;print(json.load(open('$F'))['youtube']['title'])")"
+          else
+            python tools/telegram.py send "$F" "$V"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: video-${{ steps.n.outputs.name }}
