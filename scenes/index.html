@@ -14,24 +14,24 @@
     background: radial-gradient(ellipse 950px 850px at 50% 40%, rgba(255,255,255,.05), rgba(255,255,255,0) 70%), var(--bg);
   }
   .title {
-    position: absolute; left: 80px; right: 80px; bottom: 1320px;
+    position: absolute; left: 80px; right: 80px; top: 215px;
     font-weight: 800; font-size: 84px; line-height: 1.06; letter-spacing: -0.03em;
   }
   .title span { display: inline-block; margin-right: .24em; }
   .title .g { color: var(--gray); }
   #card {
-    position: absolute; left: 80px; top: 640px; width: 920px; height: 680px;
+    position: absolute; left: 50px; top: 430px; width: 980px; height: 724px;
     background: var(--card); border-radius: 28px; border: 1.5px solid var(--edge);
     box-sizing: border-box; overflow: hidden;
   }
-  #card svg { position: absolute; left: -1.5px; top: -1.5px; width: 920px; height: 680px; }
-  .tags { position: absolute; left: 80px; right: 80px; top: 1356px; display: flex; flex-wrap: wrap; gap: 16px; }
+  #card svg { position: absolute; left: -1.5px; top: -1.5px; width: calc(100% + 3px); height: calc(100% + 3px); }
+  .tags { position: absolute; left: 50px; right: 50px; top: 1180px; display: flex; flex-wrap: wrap; gap: 16px; }
   .tag {
     border: 1.5px solid #2e2e33; border-radius: 999px; padding: 14px 30px;
     font-size: 34px; font-weight: 500; color: #c9c9cd; letter-spacing: -0.01em;
   }
   #caption {
-    position: absolute; left: 110px; right: 110px; top: 1500px;
+    position: absolute; left: 90px; right: 90px; top: 1275px;
     text-align: center; font-size: 66px; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em;
     text-shadow: 0 4px 24px rgba(0,0,0,.6);
   }
@@ -78,7 +78,7 @@
   html.long #stage { background: radial-gradient(ellipse 1100px 800px at 70% 45%, rgba(255,255,255,.05), rgba(255,255,255,0) 70%), var(--bg); }
   html.long #brand { left: 120px; top: 70px; font-size: 32px; }
   html.long .title { left: 120px; right: auto; width: 700px; bottom: auto; top: 190px; font-size: 68px; }
-  html.long #card { left: 900px; top: 170px; }
+  html.long #card { left: 900px; top: 170px; width: 920px; height: 680px; }
   html.long .tags { left: 120px; right: auto; width: 700px; top: 760px; }
   html.long .tag { font-size: 30px; padding: 12px 26px; }
   html.long #caption { left: 260px; right: 260px; top: 900px; font-size: 46px; }
@@ -96,7 +96,7 @@
   #caption span { display: inline-block; margin: 0 .16em; transform-origin: 50% 60%; }
   svg text { font-family: Inter, sans-serif; }
   #brand {
-    position: absolute; left: 80px; top: 120px; display: flex; align-items: center; gap: 16px;
+    position: absolute; left: 80px; top: 110px; display: flex; align-items: center; gap: 16px;
     font-size: 36px; font-weight: 700; letter-spacing: -0.01em; color: var(--white);
   }
   #brand i { width: 18px; height: 18px; border-radius: 50%; background: var(--amber); display: block; }
@@ -1426,7 +1426,7 @@ window.cover = (c) => {
   const box = buildCoverText(c);
   if (D.format !== 'long') {   // keep the card clear of the text block
     const bottom = box.getBoundingClientRect().bottom;
-    document.getElementById('card').style.top = Math.max(860, Math.min(1180, bottom + 50)) + 'px';
+    document.getElementById('card').style.top = Math.max(640, Math.min(1080, bottom + 50)) + 'px';
   }
   drawCoverMark(c);
 };
@@ -1483,7 +1483,7 @@ window.seek = (t) => {
     const box = document.getElementById('covertext');
     box.style.transform = `scale(${lerp(1.06, 1, prog(t, 0, 0.35))})`;
     box.style.transformOrigin = 'left top';
-    card.style.top = Math.max(860, Math.min(1180, box.getBoundingClientRect().bottom + 50)) + 'px';
+    card.style.top = Math.max(640, Math.min(1080, box.getBoundingClientRect().bottom + 50)) + 'px';
     card.style.setProperty('transform', `scale(${lerp(1.04, 1.1, t / h.end)})`, 'important');
     return;
   }

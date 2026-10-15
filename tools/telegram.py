@@ -68,7 +68,13 @@ def main():
     elif cmd == "send":
         script = json.loads(Path(sys.argv[2]).read_text())
         cap = instagram_caption(script)
-        res = call("sendVideo", {"chat_id": chat_id(), "supports_streaming": "true",
+        import subprocess
+        w, h, dur = subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
+                                             "stream=width,height:format=duration", "-of", "csv=p=0:s=,", sys.argv[3]],
+                                            text=True).replace("\n", ",").strip(",").split(",")[:3]
+        # Telegram needs the real size, otherwise vertical videos show up squashed
+        res = call("sendVideo", {"chat_id": chat_id(), "supports_streaming": "true", "width": w, "height": h,
+                                 "duration": int(float(dur)),
                                  "caption": "🎬 Instagram Reels için hazır. Açıklama aşağıda 👇"}, {"video": sys.argv[3]})
         print("video sent", res.get("ok"))
         call("sendMessage", {"chat_id": chat_id(), "text": cap})
