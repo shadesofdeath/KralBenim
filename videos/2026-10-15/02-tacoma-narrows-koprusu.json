@@ -1,0 +1,656 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "tacoma-narrows-koprusu",
+  "format": "long",
+  "fps": 30,
+  "scenes": [
+    {
+      "type": "bridge",
+      "text": "7 Kasım 1940. Amerika'da yepyeni bir köprü, kameraların önünde dalga gibi kıvrılıyor. Çelik ve beton, sanki lastikten yapılmış gibi.",
+      "title": {
+        "white": "7 Kasım 1940:",
+        "gray": "köprü kıvrılıyor"
+      },
+      "tags": [
+        "Tacoma Narrows"
+      ],
+      "cues": {
+        "start": "kıvrılıyor"
+      },
+      "params": {
+        "mode": "twist",
+        "wind": true
+      },
+      "chapter": "Rüzgârın yıktığı köprü"
+    },
+    {
+      "type": "bridge",
+      "text": "Birkaç dakika sonra köprünün ortası koparak suya düşüyor. Onu yıkan şey bir deprem ya da bomba değil. Sadece rüzgâr.",
+      "title": {
+        "white": "Suçlu:",
+        "gray": "sadece rüzgâr"
+      },
+      "tags": [
+        "Çöküş"
+      ],
+      "cues": {
+        "start": "Birkaç",
+        "collapse": "koparak"
+      },
+      "params": {
+        "mode": "collapse",
+        "wind": true
+      }
+    },
+    {
+      "type": "stat",
+      "text": "Üstelik o gün esen rüzgâr fırtına bile değildi. Hızı, saatte yaklaşık altmış dört kilometreydi.",
+      "title": {
+        "white": "Fırtına",
+        "gray": "bile değildi"
+      },
+      "tags": [
+        "Rüzgâr hızı"
+      ],
+      "cues": {
+        "count": "Hızı"
+      },
+      "params": {
+        "value": 64,
+        "suffix": " km/sa",
+        "label": "rüzgâr hızı (yaklaşık)",
+        "fill": 0.45
+      }
+    },
+    {
+      "type": "question",
+      "text": "Peki sabit bir rüzgâr, koca bir çelik köprüyü nasıl yıkabilir? Ve okulda öğrendiğimiz cevap neden büyük ihtimalle yanlış?",
+      "title": {
+        "white": "Peki",
+        "gray": "nasıl?"
+      },
+      "tags": [
+        "Bu videoda"
+      ],
+      "cues": {},
+      "params": {}
+    },
+    {
+      "type": "bridge",
+      "text": "Tacoma Narrows Köprüsü, Washington eyaletinde, Temmuz 1940'ta trafiğe açıldı. O dönemin en uzun asma köprülerinden biriydi.",
+      "title": {
+        "white": "Tacoma Narrows",
+        "gray": "Köprüsü"
+      },
+      "tags": [
+        "Washington, ABD",
+        "1940"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "calm",
+        "cars": true
+      },
+      "chapter": "Zarif ama ince bir köprü"
+    },
+    {
+      "type": "bridge",
+      "text": "Tasarımcısı, köprüyü olabildiğince zarif ve ekonomik yapmak istedi. Yol tabliyesi, uzunluğuna göre şaşırtıcı derecede ince ve hafifti.",
+      "title": {
+        "white": "İnce ve",
+        "gray": "hafif tabliye"
+      },
+      "tags": [
+        "Ekonomik tasarım"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "calm"
+      }
+    },
+    {
+      "type": "deck_section",
+      "text": "Tabliyenin iki kenarında, yaklaşık iki buçuk metre yüksekliğinde dolu çelik levhalar vardı. Rüzgârı geçirecek boşluk yoktu; rüzgâr bu levhalara bir duvar gibi çarpıyordu.",
+      "title": {
+        "white": "Dolu levhalar:",
+        "gray": "rüzgâra duvar"
+      },
+      "tags": [
+        "Kesit görünümü"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "plate"
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Sonuç kısa sürede ortaya çıktı. Hafif bir rüzgârda bile köprü, inip kalkan dalgalar halinde salınıyordu.",
+      "title": {
+        "white": "Hafif rüzgârda",
+        "gray": "bile dalgalanma"
+      },
+      "tags": [
+        "Dikey salınım"
+      ],
+      "cues": {
+        "start": "inip"
+      },
+      "params": {
+        "mode": "wave",
+        "wind": true
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Yerel halk ona bir lakap taktı: Dörtnala Giden Gertie. İnsanlar korkmak yerine eğlendi; bazı sürücüler dalgaların üzerinde gitmek için köprüye özellikle gelir oldu.",
+      "title": {
+        "white": "Dörtnala",
+        "gray": "Giden Gertie"
+      },
+      "tags": [
+        "Lakap"
+      ],
+      "cues": {
+        "start": "lakap"
+      },
+      "params": {
+        "mode": "wave",
+        "cars": true,
+        "amp": 0.8
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Köprü açıldıktan sadece dört ay sonra, 7 Kasım sabahı, rüzgâr yine esmeye başladı.",
+      "title": {
+        "white": "Dört ay",
+        "gray": "sonra"
+      },
+      "tags": [
+        "7 Kasım 1940"
+      ],
+      "cues": {
+        "e1": "Kasım"
+      },
+      "params": {
+        "events": [
+          {
+            "label": "Temmuz 1940",
+            "sub": "Açılış",
+            "kind": "start"
+          },
+          {
+            "label": "7 Kasım 1940",
+            "sub": "Son sabah",
+            "kind": "crash"
+          }
+        ]
+      },
+      "chapter": "7 Kasım 1940"
+    },
+    {
+      "type": "bridge",
+      "text": "Önce alışıldık dalgalar geldi. Ama sonra köprü, bambaşka bir şey yapmaya başladı.",
+      "title": {
+        "white": "Önce",
+        "gray": "dalgalar"
+      },
+      "tags": [
+        "Sabah saatleri"
+      ],
+      "cues": {
+        "start": "Önce"
+      },
+      "params": {
+        "mode": "wave",
+        "wind": true
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Tabliye ortasından bir yana, sonra öbür yana bükülmeye başladı. Bir kenarı yükselirken, diğer kenarı alçalıyordu.",
+      "title": {
+        "white": "Burulma",
+        "gray": "başlıyor"
+      },
+      "tags": [
+        "Burulma hareketi"
+      ],
+      "cues": {
+        "start": "bükülmeye"
+      },
+      "params": {
+        "mode": "twist",
+        "wind": true
+      }
+    },
+    {
+      "type": "deck_section",
+      "text": "Kesitten bakınca yol, bir tahterevalli gibi sağa sola yatıyordu. Ve her salınım, bir öncekinden daha büyüktü.",
+      "title": {
+        "white": "Her salınım",
+        "gray": "daha büyük"
+      },
+      "tags": [
+        "Kesit görünümü"
+      ],
+      "cues": {
+        "flutter": "tahterevalli"
+      },
+      "params": {
+        "kind": "plate",
+        "flutter": true
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Köprünün üzerinde mahsur kalan bir sürücü, arabasını bırakıp sürünerek kurtuldu. Arabanın içinde ise köpeği kalmıştı.",
+      "title": {
+        "white": "Köprüde",
+        "gray": "mahsur kalanlar"
+      },
+      "tags": [
+        "Son dakikalar"
+      ],
+      "cues": {
+        "start": "Köprünün"
+      },
+      "params": {
+        "mode": "twist",
+        "cars": true,
+        "amp": 1.1
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Saat on biri biraz geçe, askı kabloları teker teker kopmaya başladı. Ve orta açıklık, büyük bir gürültüyle suya düştü.",
+      "title": {
+        "white": "Saat 11:",
+        "gray": "çöküş"
+      },
+      "tags": [
+        "Askı kabloları"
+      ],
+      "cues": {
+        "start": "Saat",
+        "collapse": "açıklık"
+      },
+      "params": {
+        "mode": "collapse",
+        "wind": true
+      }
+    },
+    {
+      "type": "list",
+      "text": "Neyse ki hiçbir insan hayatını kaybetmedi. Tek kayıp, arabada kalan o köpekti. Ve bütün bu olay film kamerasıyla kaydedildi.",
+      "title": {
+        "white": "Kayıplar",
+        "gray": "ve kayıtlar"
+      },
+      "tags": [
+        "Tarihi görüntüler"
+      ],
+      "cues": {
+        "i0": "hiçbir",
+        "i1": "köpekti",
+        "i2": "kamerasıyla"
+      },
+      "params": {
+        "items": [
+          "İnsan kaybı: yok",
+          "Tek kayıp: bir köpek",
+          "Çöküş filme alındı"
+        ]
+      }
+    },
+    {
+      "type": "swing",
+      "text": "Fizik derslerinde bu olay genellikle rezonansla açıklanır. Salıncaktaki bir çocuğu düşünün.",
+      "title": {
+        "white": "Okuldaki",
+        "gray": "cevap: rezonans"
+      },
+      "tags": [
+        "Rezonans"
+      ],
+      "cues": {
+        "push": "Salıncaktaki"
+      },
+      "params": {},
+      "chapter": "Okuldaki cevap: Rezonans"
+    },
+    {
+      "type": "swing",
+      "text": "Her seferinde tam doğru anda küçük bir itiş yaparsanız, salıncak giderek daha yükseğe çıkar. Çünkü itişleriniz, salıncağın kendi ritmine uyar.",
+      "title": {
+        "white": "Doğru anda",
+        "gray": "küçük itişler"
+      },
+      "tags": [
+        "Ritim uyumu"
+      ],
+      "cues": {
+        "push": "seferinde"
+      },
+      "params": {}
+    },
+    {
+      "type": "bridge",
+      "text": "Anlatılan hikâyeye göre rüzgâr da köprüyü tam onun ritminde itti ve köprü giderek daha çok sallandı.",
+      "title": {
+        "white": "Yaygın",
+        "gray": "açıklama"
+      },
+      "tags": [
+        "Ders kitapları"
+      ],
+      "cues": {
+        "start": "rüzgâr"
+      },
+      "params": {
+        "mode": "wave",
+        "wind": true
+      }
+    },
+    {
+      "type": "list",
+      "text": "Ama burada bir sorun var. Rüzgâr düzenli darbelerle esmez ve o gün oldukça sabit esiyordu. Sabit bir rüzgâr, bir salıncağı tam zamanında itemez.",
+      "title": {
+        "white": "Ama bir",
+        "gray": "sorun var"
+      },
+      "tags": [
+        "Efsane mi?"
+      ],
+      "cues": {
+        "i0": "darbelerle",
+        "i1": "sabit",
+        "i2": "itemez"
+      },
+      "params": {
+        "items": [
+          "Rüzgâr ritmik esmez",
+          "O gün rüzgâr sabitti",
+          "Sabit itiş = rezonans değil"
+        ]
+      }
+    },
+    {
+      "type": "deck_section",
+      "text": "Mühendislerin bugün kabul ettiği açıklamanın adı aeroelastik çırpınma. Kulağa karmaşık geliyor ama fikri basit.",
+      "title": {
+        "white": "Asıl suçlu:",
+        "gray": "çırpınma"
+      },
+      "tags": [
+        "Aeroelastik çırpınma"
+      ],
+      "cues": {
+        "flutter": "çırpınma"
+      },
+      "params": {
+        "kind": "plate",
+        "flutter": true
+      },
+      "chapter": "Asıl suçlu: Çırpınma"
+    },
+    {
+      "type": "deck_section",
+      "text": "Tabliye biraz döndüğünde, rüzgâr ona farklı bir açıdan çarpar. Bu da tabliyeyi aynı yöne daha çok döndüren bir kuvvet yaratır.",
+      "title": {
+        "white": "Dönüş,",
+        "gray": "kuvveti büyütür"
+      },
+      "tags": [
+        "Geri besleme"
+      ],
+      "cues": {
+        "flutter": "döndüğünde"
+      },
+      "params": {
+        "kind": "plate",
+        "flutter": true
+      }
+    },
+    {
+      "type": "deck_section",
+      "text": "Tabliye geri dönerken aynı şey tersine olur. Yani köprü, rüzgârdan her salınımda biraz daha enerji çeker.",
+      "title": {
+        "white": "Her salınımda",
+        "gray": "daha çok enerji"
+      },
+      "tags": [
+        "Kendi kendini besler"
+      ],
+      "cues": {
+        "flutter": "Tabliye"
+      },
+      "params": {
+        "kind": "plate",
+        "flutter": true
+      }
+    },
+    {
+      "type": "list",
+      "text": "Bu, kendi kendini besleyen bir döngüdür. Dışarıdan ritmik bir itişe gerek yoktur; hareketin kendisi, bir sonraki itişi yaratır.",
+      "title": {
+        "white": "Kendini",
+        "gray": "besleyen döngü"
+      },
+      "tags": [
+        "Çırpınma döngüsü"
+      ],
+      "cues": {
+        "i0": "döngüdür",
+        "i1": "Dışarıdan",
+        "i2": "hareketin"
+      },
+      "params": {
+        "items": [
+          "Tabliye döner",
+          "Rüzgâr açısı değişir",
+          "Kuvvet dönüşü büyütür"
+        ]
+      }
+    },
+    {
+      "type": "deck_section",
+      "text": "Dolu kenar levhaları durumu daha da kötüleştirdi. Rüzgâr levhaların arkasında girdaplar oluşturdu ve tabliyeyi daha da kararsız hale getirdi.",
+      "title": {
+        "white": "Girdaplar",
+        "gray": "işi zorlaştırdı"
+      },
+      "tags": [
+        "Girdap oluşumu"
+      ],
+      "cues": {
+        "flutter": "kararsız"
+      },
+      "params": {
+        "kind": "plate",
+        "flutter": true,
+        "vortices": true
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Köprü ince ve esnek olduğu için bu dönmeye direnecek kadar sert değildi. Böylece salınım, köprü dayanamayana kadar büyüdü.",
+      "title": {
+        "white": "Fazla",
+        "gray": "esnek"
+      },
+      "tags": [
+        "Burulma direnci"
+      ],
+      "cues": {
+        "start": "Köprü"
+      },
+      "params": {
+        "mode": "twist",
+        "wind": true,
+        "amp": 1.2
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Köprünün yerine yapılan yeni köprü 1950'de açıldı. Bu kez çok farklı tasarlanmıştı.",
+      "title": {
+        "white": "Yeni köprü:",
+        "gray": "1950"
+      },
+      "tags": [
+        "İkinci köprü"
+      ],
+      "cues": {
+        "e1": "1950"
+      },
+      "params": {
+        "events": [
+          {
+            "label": "1940",
+            "sub": "Çöküş",
+            "kind": "crash"
+          },
+          {
+            "label": "1950",
+            "sub": "Yeni köprü",
+            "kind": "start"
+          }
+        ]
+      },
+      "chapter": "Bir felaketten çıkan ders"
+    },
+    {
+      "type": "deck_section",
+      "text": "Yeni tabliye çok daha derin ve sertti. Kenarlarında dolu levhalar yerine, rüzgârın içinden geçebildiği kafes kirişler vardı.",
+      "title": {
+        "white": "Kafes kiriş:",
+        "gray": "rüzgâr geçer"
+      },
+      "tags": [
+        "Derin ve sert"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "truss"
+      }
+    },
+    {
+      "type": "deck_section",
+      "text": "Rüzgâr artık bir duvara çarpmıyor, köprünün içinden süzülüp geçiyordu.",
+      "title": {
+        "white": "Rüzgâr",
+        "gray": "içinden geçiyor"
+      },
+      "tags": [
+        "Açık kesit"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "truss"
+      }
+    },
+    {
+      "type": "list",
+      "text": "Ve en önemlisi, mühendisler yeni bir kural öğrendi: büyük bir köprü, inşa edilmeden önce rüzgâr tünelinde test edilmeli.",
+      "title": {
+        "white": "Yeni",
+        "gray": "kurallar"
+      },
+      "tags": [
+        "Rüzgâr tüneli"
+      ],
+      "cues": {
+        "i0": "mühendisler",
+        "i1": "kural",
+        "i2": "tünelinde"
+      },
+      "params": {
+        "items": [
+          "Derin, sert tabliye",
+          "Rüzgârı geçiren kesit",
+          "Rüzgâr tüneli testi"
+        ]
+      }
+    },
+    {
+      "type": "bridge",
+      "text": "Bugün dünyadaki büyük asma köprüler bu dersle tasarlanıyor. Yani o gün suya düşen köprü, sonraki pek çok köprünün ayakta kalmasını sağladı.",
+      "title": {
+        "white": "Bir çöküş,",
+        "gray": "binlerce köprü"
+      },
+      "tags": [
+        "Mühendislik mirası"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "calm",
+        "cars": true
+      }
+    },
+    {
+      "type": "question",
+      "text": "Sizce başka hangi mühendislik felaketi, bugün kullandığımız bir kuralı doğurdu? Yorumlara yazın ve böyle hikâyeler için abone olmayı unutmayın.",
+      "title": {
+        "white": "Sıra sende:",
+        "gray": "hangi felaket?"
+      },
+      "tags": [
+        "Yorumlara yaz"
+      ],
+      "cues": {},
+      "params": {}
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Bu köprüyü",
+      "rüzgâr yıktı"
+    ],
+    "highlight": [
+      "rüzgâr"
+    ],
+    "scene": 14,
+    "t": 6.1,
+    "mark": {
+      "x": 470,
+      "y": 480,
+      "r": 95
+    }
+  },
+  "youtube": {
+    "title": "Tacoma Narrows Köprüsü Neden Çöktü? Rezonans Değildi!",
+    "description": "Tacoma Narrows Köprüsü 1940'ta sadece saatte 64 km hızla esen bir rüzgârla nasıl çöktü? Okulda anlatılan rezonans açıklamasının neden eksik olduğunu ve köprüyü asıl yıkan aeroelastik çırpınmayı adım adım anlatıyoruz.\n\nBu videoda:\n• \"Dörtnala Giden Gertie\": dalgalanan köprünün hikâyesi\n• 7 Kasım 1940 sabahı yaşanan çöküş\n• Rezonans efsanesi ve asıl suçlu: çırpınma\n• Bu felaketin bugünkü köprü mühendisliğine kazandırdığı ders\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol.\n\n#mühendislik #köprü #fizik #bilim #düşünbakalım",
+    "tags": [
+      "tacoma narrows köprüsü",
+      "tacoma narrows",
+      "köprü neden çöktü",
+      "rezonans",
+      "aeroelastik çırpınma",
+      "rüzgar köprüyü yıktı",
+      "galloping gertie",
+      "asma köprü",
+      "mühendislik felaketleri",
+      "mühendislik",
+      "fizik",
+      "rezonans nedir",
+      "bilim",
+      "ilginç bilgiler",
+      "tarih",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T21:30:00+03:00"
+  }
+}
