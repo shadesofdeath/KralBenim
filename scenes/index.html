@@ -35,6 +35,17 @@
     text-align: center; font-size: 52px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em;
   }
   #caption span { transition: none; }
+
+  /* 16:9 long-form layout */
+  html.long, html.long body, html.long #stage { width: 1920px; height: 1080px; }
+  html.long #stage { background: radial-gradient(ellipse 1100px 800px at 70% 45%, rgba(255,255,255,.05), rgba(255,255,255,0) 70%), var(--bg); }
+  html.long #brand { left: 120px; top: 70px; font-size: 32px; }
+  html.long .title { left: 120px; right: auto; width: 700px; bottom: auto; top: 190px; font-size: 84px; }
+  html.long #card { left: 900px; top: 170px; }
+  html.long .tags { left: 120px; right: auto; width: 700px; top: 760px; }
+  html.long .tag { font-size: 30px; padding: 12px 26px; }
+  html.long #caption { left: 260px; right: 260px; top: 900px; font-size: 46px; }
+  html.long #progress { left: 120px; right: 120px; top: 1020px; }
   #progress { position: absolute; left: 80px; right: 80px; top: 1790px; height: 6px; border-radius: 3px; background: #1d1d20; }
   #bar { height: 100%; width: 0; border-radius: 3px; background: var(--white); }
   svg text { font-family: Inter, sans-serif; }
@@ -430,6 +441,49 @@ const BUILD = {
     };
   },
 
+  // generic: big animated number. params: value, prefix, suffix, label, decimals, color
+  stat(svg, P) {
+    const col = P.color === 'red' ? RED : P.color === 'white' ? WHITE : AMBER;
+    const ring = el(svg, 'circle', { cx: 460, cy: 300, r: 240, fill: 'none', stroke: DIM, 'stroke-width': 3, pathLength: 1, transform: 'rotate(-90 460 300)' });
+    const arc = el(svg, 'circle', { cx: 460, cy: 300, r: 240, fill: 'none', stroke: col, 'stroke-width': 6, 'stroke-linecap': 'round', pathLength: 1, transform: 'rotate(-90 460 300)' });
+    const num = el(svg, 'text', { x: 460, y: 335, fill: WHITE, 'font-size': P.size ?? 92, 'font-weight': 800, 'text-anchor': 'middle', 'letter-spacing': '-0.04em', 'font-variant-numeric': 'tabular-nums' });
+    const lab = el(svg, 'text', { x: 460, y: 620, fill: GRAY, 'font-size': 36, 'font-weight': 600, 'text-anchor': 'middle' });
+    lab.textContent = P.label || '';
+    return (lt, dur, c) => {
+      const at = c.count ?? 0.4, p = prog(lt, at, Math.min(2.2, dur * 0.5));
+      ring.style.strokeDasharray = '1 1'; ring.style.strokeDashoffset = 1 - prog(lt, 0.1, 0.8);
+      arc.style.strokeDasharray = `${p * (P.fill ?? 0.75)} 1`; arc.style.opacity = p > 0.002 ? 1 : 0;
+      const v = (P.value ?? 0) * p;
+      num.textContent = (P.prefix || '') + v.toLocaleString('tr-TR', { minimumFractionDigits: P.decimals || 0, maximumFractionDigits: P.decimals || 0 }) + (P.suffix || '');
+      num.style.opacity = prog(lt, at - 0.2, 0.5);
+      lab.style.opacity = prog(lt, at + 0.3, 0.6);
+      lab.setAttribute('transform', `translate(0 ${(1 - prog(lt, at + 0.3, 0.6)) * 16})`);
+    };
+  },
+
+  // generic: list of items revealed one by one. params: items[], cues: i0, i1, ...
+  list(svg, P) {
+    const items = P.items || [], n = items.length, top = 340 - (n - 1) * 60;
+    const rows = items.map((txt, i) => {
+      const g = el(svg, 'g');
+      const y = top + i * 120;
+      el(g, 'rect', { x: 110, y: y - 46, width: 700, height: 92, rx: 20, fill: 'rgba(255,255,255,0.03)', stroke: '#2a2a2f', 'stroke-width': 1.5 });
+      el(g, 'circle', { cx: 162, cy: y, r: 22, fill: 'none', stroke: AMBER, 'stroke-width': 3 });
+      const k = el(g, 'text', { x: 162, y: y + 10, fill: AMBER, 'font-size': 28, 'font-weight': 800, 'text-anchor': 'middle' });
+      k.textContent = i + 1;
+      const t = el(g, 'text', { x: 210, y: y + 13, fill: WHITE, 'font-size': 38, 'font-weight': 600 });
+      t.textContent = txt;
+      return g;
+    });
+    return (lt, dur, c) => {
+      rows.forEach((g, i) => {
+        const p = prog(lt, c['i' + i] ?? (0.4 + i * dur / (n + 1)), 0.6);
+        g.style.opacity = p;
+        g.setAttribute('transform', `translate(${(1 - p) * -30} 0)`);
+      });
+    };
+  },
+
   window_glow(svg, P) {
     const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
     const defs = el(svg, 'defs');
@@ -584,6 +638,7 @@ function buildPlane(svg, P, breakup) {
 let D, S = [];
 window.init = (data) => {
   D = data;
+  document.documentElement.classList.add(D.format || 'short');
   document.querySelector('#brand span').textContent = D.channel || '';
   const titles = document.getElementById('titles'), tagrows = document.getElementById('tagrows'), card = document.getElementById('card');
   S = D.scenes.map((sc) => {

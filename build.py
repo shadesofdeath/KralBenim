@@ -14,6 +14,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -21,7 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 TEMPLATE = ROOT / "scenes" / "index.html"
 FPS = 30
-W, H = 1080, 1920
+SIZES = {"short": (1080, 1920), "long": (1920, 1080)}
 TAIL = 0.8  # hold after the last word (s)
 PUNCT = ".,;:!?…\"'"
 
@@ -48,34 +49,69 @@ def tts_edge(text, cfg, mp3):
     return asyncio.run(run())
 
 
-def tts_elevenlabs(text, cfg, mp3):
-    key = os.environ.get("ELEVENLABS_API_KEY")
-    voice = cfg.get("voice_id") or os.environ.get("ELEVENLABS_VOICE_ID")
-    if not key or not voice:
-        sys.exit("ELEVENLABS_API_KEY and tts.voice_id (or ELEVENLABS_VOICE_ID) are required")
+def _eleven_chunk(text, cfg, key, voice):
     req = urllib.request.Request(
         f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/with-timestamps?output_format=mp3_44100_128",
         data=json.dumps({"text": text, "model_id": cfg.get("model", "eleven_multilingual_v2"),
                          **({"voice_settings": cfg["settings"]} if cfg.get("settings") else {})}).encode(),
         headers={"xi-api-key": key, "Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req) as r:
-            res = json.load(r)
-    except urllib.error.HTTPError as e:
-        sys.exit(f"ElevenLabs {e.code}: {e.read().decode(errors='replace')[:500]}")
-    Path(mp3).write_bytes(base64.b64decode(res["audio_base64"]))
-    al = res["alignment"]
-    chars, st, en = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
-    words, i = [], 0
-    while i < len(chars):
-        if chars[i].isspace():
-            i += 1
-            continue
-        j = i
-        while j < len(chars) and not chars[j].isspace():
-            j += 1
-        words.append({"text": "".join(chars[i:j]).strip(PUNCT), "start": st[i], "end": en[j - 1]})
-        i = j
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=300) as r:
+                return json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 500, 502, 503) and attempt < 2:
+                time.sleep(10 * (attempt + 1))
+                continue
+            sys.exit(f"ElevenLabs {e.code}: {e.read().decode(errors='replace')[:500]}")
+
+
+def split_text(text, limit):
+    """Split at sentence ends into chunks of at most `limit` chars."""
+    sentences = re.findall(r"[^.!?]+[.!?]*\s*", text)
+    chunks, cur = [], ""
+    for snt in sentences:
+        if cur and len(cur) + len(snt) > limit:
+            chunks.append(cur)
+            cur = ""
+        cur += snt
+    if cur:
+        chunks.append(cur)
+    return chunks
+
+
+def tts_elevenlabs(text, cfg, mp3):
+    key = os.environ.get("ELEVENLABS_API_KEY")
+    voice = cfg.get("voice_id") or os.environ.get("ELEVENLABS_VOICE_ID")
+    if not key or not voice:
+        sys.exit("ELEVENLABS_API_KEY and tts.voice_id (or ELEVENLABS_VOICE_ID) are required")
+    # long scripts are synthesized in pieces (per-request character limits) and concatenated
+    parts, words, offset = [], [], 0.0
+    for n, chunk in enumerate(split_text(text, cfg.get("chunk_chars", 2500))):
+        res = _eleven_chunk(chunk.strip(), cfg, key, voice)
+        part = Path(mp3).with_name(f"part{n:02d}.mp3")
+        part.write_bytes(base64.b64decode(res["audio_base64"]))
+        al = res["alignment"]
+        chars, st, en = al["characters"], al["character_start_times_seconds"], al["character_end_times_seconds"]
+        i = 0
+        while i < len(chars):
+            if chars[i].isspace():
+                i += 1
+                continue
+            j = i
+            while j < len(chars) and not chars[j].isspace():
+                j += 1
+            words.append({"text": "".join(chars[i:j]).strip(PUNCT), "start": offset + st[i], "end": offset + en[j - 1]})
+            i = j
+        offset += audio_duration(part)
+        parts.append(part)
+    if len(parts) == 1:
+        parts[0].replace(mp3)
+    else:
+        lst = Path(mp3).with_name("parts.txt")
+        lst.write_text("".join(f"file '{p.name}'\n" for p in parts))
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
+                        "-c:a", "libmp3lame", "-b:a", "192k", str(mp3)], check=True)
     return words
 
 
@@ -161,7 +197,8 @@ def build_timeline(script, text, ranges, words, duration):
                              "words": [{"t": c["start"], "text": c["disp"]} for c in ch]})
 
 
-    return {"duration": duration, "fps": script.get("fps", FPS), "channel": script.get("channel", ""),
+    fmt = script.get("format", "short")
+    return {"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -172,7 +209,8 @@ def open_page(pw, timeline):
         browser = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH"))
     except Exception:
         browser = pw.chromium.launch(executable_path="/opt/pw-browsers/chromium")
-    page = browser.new_page(viewport={"width": W, "height": H}, device_scale_factor=1)
+    w, h = timeline["size"]
+    page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=1)
     page.goto(TEMPLATE.as_uri())
     page.evaluate("d => window.init(d)", timeline)
     page.evaluate("document.fonts.ready.then(() => true)")

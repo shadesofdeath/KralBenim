@@ -1,0 +1,104 @@
+name: Daily batch
+
+# Fires when new scripts land in videos/<date>/ (pushed by the daily Claude task),
+# or manually for a given folder. Each script is rendered and uploaded in parallel.
+on:
+  push:
+    paths: ["videos/**.json"]
+  workflow_dispatch:
+    inputs:
+      dir:
+        description: "Folder to (re)build, e.g. videos/2026-10-16"
+        required: true
+      upload:
+        description: "Upload to YouTube"
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      files: ${{ steps.list.outputs.files }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - id: list
+        env:
+          DIR: ${{ inputs.dir }}
+        run: |
+          if [ -n "$DIR" ]; then
+            files=$(ls "$DIR"/*.json | grep -v '\.youtube\.json$' || true)
+          else
+            files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'videos/*/*.json' | grep -v '\.youtube\.json$' || true)
+          fi
+          echo "files=$(printf '%s\n' $files | jq -R . | jq -sc 'map(select(length>0))')" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: plan
+    if: needs.plan.outputs.files != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        file: ${{ fromJson(needs.plan.outputs.files) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
+      - name: Python packages
+        run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - name: Names
+        id: n
+        env:
+          F: ${{ matrix.file }}
+        run: echo "name=$(basename "$(dirname "$F")")-$(basename "$F" .json)" >> "$GITHUB_OUTPUT"
+      - name: Build
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          F: ${{ matrix.file }}
+        run: python build.py "$F" -o "out/${{ steps.n.outputs.name }}.mp4"
+      - name: Upload to YouTube
+        if: inputs.upload != 'false'
+        env:
+          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+          F: ${{ matrix.file }}
+        run: |
+          if [ -z "$YOUTUBE_TOKEN_JSON" ]; then echo "YOUTUBE_TOKEN_JSON secret missing, skipping upload"; exit 0; fi
+          python tools/upload.py "$F" "out/${{ steps.n.outputs.name }}.mp4"
+          cp "out/${{ steps.n.outputs.name }}.youtube.json" "${F%.json}.youtube.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: video-${{ steps.n.outputs.name }}
+          path: |
+            out/${{ steps.n.outputs.name }}.mp4
+            videos/**/*.youtube.json
+          retention-days: 14
+
+  record:
+    needs: render
+    if: always() && needs.render.result != 'skipped'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: video-*
+          path: results
+          merge-multiple: true
+      - name: Commit upload results
+        run: |
+          [ -d results/videos ] && cp -r results/videos/. videos/ || true
+          git add videos
+          if git diff --cached --quiet; then echo "nothing to record"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -m "Record YouTube uploads"
+          git push
