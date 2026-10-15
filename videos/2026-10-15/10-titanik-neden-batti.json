@@ -1,0 +1,782 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "titanik-neden-batti",
+  "format": "long",
+  "fps": 30,
+  "scenes": [
+    {
+      "type": "ship",
+      "text": "Nisan 1912. Dünyanın en büyük yolcu gemisi, ilk seferinde Atlantik'i geçiyor.",
+      "title": {
+        "white": "Nisan",
+        "gray": "1912"
+      },
+      "tags": [
+        "Titanik"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "sail"
+      },
+      "chapter": "Batmaz gemi"
+    },
+    {
+      "type": "kinetic",
+      "text": "Titanik yaklaşık iki yüz altmış dokuz metre uzunluğundaydı. Kendi döneminin en büyük yolcu gemisiydi.",
+      "title": {
+        "white": "Dev",
+        "gray": "bir gemi"
+      },
+      "tags": [
+        "Boyut"
+      ],
+      "cues": {
+        "w0": "dokuz",
+        "w1": "metre"
+      },
+      "params": {
+        "words": [
+          "269",
+          "metre"
+        ],
+        "highlight": 0,
+        "sub": "döneminin en büyük yolcu gemisi"
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Gazeteler ona neredeyse batmaz bir gemi diyordu.",
+      "title": {
+        "white": "Batmaz",
+        "gray": "gemi"
+      },
+      "tags": [
+        "Efsane"
+      ],
+      "cues": {
+        "w0": "batmaz"
+      },
+      "params": {
+        "words": [
+          "batmaz",
+          "gemi"
+        ],
+        "highlight": 0,
+        "sub": "gazeteler böyle yazıyordu"
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Gövdesi, su geçirmez bölmelerle on altı parçaya ayrılmıştı.",
+      "title": {
+        "white": "16",
+        "gray": "bölme"
+      },
+      "tags": [
+        "Su geçirmez bölmeler"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "sail",
+        "camera": {
+          "zoom": 1.5,
+          "x": 460,
+          "y": 380
+        }
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Hesaplara göre ilk dört bölme tamamen su alsa bile gemi yüzmeye devam edecekti.",
+      "title": {
+        "white": "4 bölme",
+        "gray": "dolsa bile"
+      },
+      "tags": [
+        "Güvenlik hesabı"
+      ],
+      "cues": {
+        "flood": "dört"
+      },
+      "params": {
+        "mode": "flood",
+        "flooded": 4
+      }
+    },
+    {
+      "type": "question",
+      "text": "Peki bu kadar güvenli görünen bir gemi, nasıl sadece birkaç saatte battı?",
+      "title": {
+        "white": "Peki",
+        "gray": "nasıl?"
+      },
+      "tags": [
+        "Bu videoda"
+      ],
+      "cues": {},
+      "params": {}
+    },
+    {
+      "type": "timeline",
+      "text": "Titanik, 10 Nisan'da İngiltere'den yola çıktı. Dört gün sonra, Kuzey Atlantik'in buzlu sularına girdi.",
+      "title": {
+        "white": "Yolculuk",
+        "gray": "başlıyor"
+      },
+      "tags": [
+        "Southampton",
+        "New York"
+      ],
+      "cues": {
+        "e1": "Dört"
+      },
+      "params": {
+        "events": [
+          {
+            "label": "10 Nisan",
+            "sub": "Southampton",
+            "kind": "start"
+          },
+          {
+            "label": "14 Nisan",
+            "sub": "Buzlu sular",
+            "kind": "crash"
+          }
+        ]
+      },
+      "chapter": "14 Nisan 1912"
+    },
+    {
+      "type": "icon",
+      "text": "O gün gemiye, başka gemilerden birçok buz uyarısı geldi.",
+      "title": {
+        "white": "Buz",
+        "gray": "uyarıları"
+      },
+      "tags": [
+        "Telsiz"
+      ],
+      "cues": {
+        "hit": "uyarısı"
+      },
+      "params": {
+        "icon": "warning",
+        "label": "buz uyarısı",
+        "color": "red"
+      }
+    },
+    {
+      "type": "stat",
+      "text": "Ama gemi hızını pek azaltmadı ve saatte kırk kilometreyi aşan bir hızla ilerledi.",
+      "title": {
+        "white": "Hız",
+        "gray": "kesilmedi"
+      },
+      "tags": [
+        "Yaklaşık 22 knot"
+      ],
+      "cues": {
+        "count": "hızını"
+      },
+      "params": {
+        "value": 41,
+        "suffix": " km/sa",
+        "label": "yaklaşık hız",
+        "fill": 0.6
+      }
+    },
+    {
+      "type": "icon",
+      "text": "O gece deniz cam gibi durgundu ve ay yoktu. Buzdağının dibinde dalga kırılmadığı için onu görmek çok zordu.",
+      "title": {
+        "white": "Aysız",
+        "gray": "gece"
+      },
+      "tags": [
+        "Durgun deniz"
+      ],
+      "cues": {
+        "hit": "zordu"
+      },
+      "params": {
+        "icon": "moon",
+        "label": "aysız, durgun gece",
+        "color": "blue"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Üstelik gözcülerin elinde dürbün bile yoktu.",
+      "title": {
+        "white": "Dürbün",
+        "gray": "yok"
+      },
+      "tags": [
+        "Gözcüler"
+      ],
+      "cues": {
+        "hit": "dürbün"
+      },
+      "params": {
+        "icon": "eye",
+        "label": "sadece çıplak göz",
+        "color": "red"
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Gece yarısına yirmi dakika kala gözcüler, tam karşılarında bir buzdağı gördü.",
+      "title": {
+        "white": "Tam",
+        "gray": "karşıda"
+      },
+      "tags": [
+        "23:40"
+      ],
+      "cues": {
+        "hit": "buzdağı"
+      },
+      "params": {
+        "mode": "hit",
+        "iceberg": true
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Gemi dönmeye çalıştı ama çok geçti. Buzdağı, gövdenin sancak tarafını sürterek geçti.",
+      "title": {
+        "white": "Çarpışma",
+        "gray": ""
+      },
+      "tags": [
+        "Sancak tarafı"
+      ],
+      "cues": {
+        "hit": "sürterek"
+      },
+      "params": {
+        "mode": "hit",
+        "iceberg": true,
+        "camera": {
+          "zoom": 1.5,
+          "x": 700,
+          "y": 380
+        }
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Ortada büyük tek bir delik yoktu. Çelik levhalar yarılmış, perçinler kopmuştu.",
+      "title": {
+        "white": "Yarılan",
+        "gray": "levhalar"
+      },
+      "tags": [
+        "Hasar"
+      ],
+      "cues": {
+        "flood": "yarılmış"
+      },
+      "params": {
+        "mode": "flood",
+        "flooded": 2,
+        "camera": {
+          "zoom": 2.0,
+          "x": 720,
+          "y": 400
+        }
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Asıl sorun hasarın uzunluğuydu. Buzdağı, en az beş bölmeye su girmesine yol açmıştı.",
+      "title": {
+        "white": "Beş",
+        "gray": "bölme"
+      },
+      "tags": [
+        "Uzun hasar"
+      ],
+      "cues": {
+        "flood": "beş"
+      },
+      "params": {
+        "mode": "flood",
+        "flooded": 5
+      },
+      "chapter": "Neden battı?"
+    },
+    {
+      "type": "compare",
+      "text": "Gemi dört bölmeyle yüzebilirdi, ama beşle değil.",
+      "title": {
+        "white": "Dört",
+        "gray": "vs beş"
+      },
+      "tags": [
+        "Kritik sınır"
+      ],
+      "cues": {
+        "left": "dört",
+        "right": "beşle"
+      },
+      "params": {
+        "left": {
+          "label": "4 BÖLME",
+          "icon": "check",
+          "mark": "check",
+          "color": "green"
+        },
+        "right": {
+          "label": "5 BÖLME",
+          "icon": "warning",
+          "mark": "x",
+          "color": "red"
+        }
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Üstelik bölmelerin duvarları yukarıda kapalı değildi.",
+      "title": {
+        "white": "Açık",
+        "gray": "bölmeler"
+      },
+      "tags": [
+        "Tasarım hatası"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "spill",
+        "flooded": 5,
+        "camera": {
+          "zoom": 1.6,
+          "x": 600,
+          "y": 330
+        }
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Ön taraf suyun ağırlığıyla battıkça, su bir bölmenin üstünden diğerine taştı.",
+      "title": {
+        "white": "Su",
+        "gray": "taşıyor"
+      },
+      "tags": [
+        "Domino etkisi"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "spill",
+        "flooded": 5
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Tıpkı eğilen bir buz kalıbında suyun bir gözden diğerine taşması gibi.",
+      "title": {
+        "white": "Buz kalıbı",
+        "gray": "gibi"
+      },
+      "tags": [
+        "Benzetme"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "spill",
+        "flooded": 6,
+        "camera": {
+          "zoom": 1.7,
+          "x": 520,
+          "y": 350,
+          "push": true
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Bu noktadan sonra geminin batması artık kaçınılmazdı.",
+      "title": {
+        "white": "Geri",
+        "gray": "dönüş yok"
+      },
+      "tags": [
+        "Kaçınılmaz"
+      ],
+      "cues": {
+        "w0": "kaçınılmazdı"
+      },
+      "params": {
+        "words": [
+          "kaçınılmaz"
+        ],
+        "highlight": 0
+      }
+    },
+    {
+      "type": "stat",
+      "text": "Gemide yaklaşık iki bin iki yüz kişi vardı.",
+      "title": {
+        "white": "Gemide",
+        "gray": "2.200 kişi"
+      },
+      "tags": [
+        "Yolcu ve mürettebat"
+      ],
+      "cues": {
+        "count": "iki"
+      },
+      "params": {
+        "value": 2200,
+        "label": "gemideki kişi (yaklaşık)",
+        "fill": 1.0
+      },
+      "chapter": "Filikalar ve telsiz"
+    },
+    {
+      "type": "compare",
+      "text": "Ama yirmi filikanın toplam kapasitesi, sadece bin yüz yetmiş sekiz kişiydi.",
+      "title": {
+        "white": "Yetersiz",
+        "gray": "filika"
+      },
+      "tags": [
+        "20 filika"
+      ],
+      "cues": {
+        "left": "filikanın",
+        "right": "sadece"
+      },
+      "params": {
+        "left": {
+          "label": "1.178 YER",
+          "icon": "hand",
+          "color": "amber"
+        },
+        "right": {
+          "label": "2.200 KİŞİ",
+          "icon": "warning",
+          "mark": "x",
+          "color": "red"
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Üstelik ilk filikalar panik ve kararsızlık içinde, yarı boş indirildi.",
+      "title": {
+        "white": "Yarı boş",
+        "gray": "filikalar"
+      },
+      "tags": [
+        "Kargaşa"
+      ],
+      "cues": {
+        "w0": "yarı",
+        "w1": "boş"
+      },
+      "params": {
+        "words": [
+          "yarı",
+          "boş"
+        ],
+        "highlight": 1,
+        "sub": "ilk filikalar"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Bu, o dönemin kurallarına uygundu. Kurallar filika sayısını, yolcu sayısına göre değil, geminin büyüklüğüne göre belirliyordu.",
+      "title": {
+        "white": "Eski",
+        "gray": "kurallar"
+      },
+      "tags": [
+        "Yasal ama yetersiz"
+      ],
+      "cues": {
+        "hit": "büyüklüğüne"
+      },
+      "params": {
+        "icon": "gear",
+        "label": "kural: gemi büyüklüğü",
+        "color": "amber"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Yakınlarda başka bir gemi vardı. Ama telsiz operatörü uyumak için cihazını kapatmıştı.",
+      "title": {
+        "white": "Kapalı",
+        "gray": "telsiz"
+      },
+      "tags": [
+        "Californian"
+      ],
+      "cues": {
+        "hit": "kapatmıştı"
+      },
+      "params": {
+        "icon": "sound",
+        "label": "telsiz kapalı",
+        "color": "red"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Titanik'in telsizcileri ise son ana kadar yardım çağrısı göndermeye devam etti.",
+      "title": {
+        "white": "Son ana",
+        "gray": "kadar"
+      },
+      "tags": [
+        "İmdat çağrısı"
+      ],
+      "cues": {
+        "hit": "yardım"
+      },
+      "params": {
+        "icon": "bolt",
+        "label": "imdat çağrısı",
+        "color": "amber"
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Titanik, çarpışmadan yaklaşık iki saat kırk dakika sonra, 15 Nisan sabahı battı.",
+      "title": {
+        "white": "15 Nisan",
+        "gray": "02:20"
+      },
+      "tags": [
+        "Batış"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "sink",
+        "flooded": 6
+      }
+    },
+    {
+      "type": "stat",
+      "text": "Bin beş yüzden fazla kişi hayatını kaybetti.",
+      "title": {
+        "white": "1.500'den",
+        "gray": "fazla"
+      },
+      "tags": [
+        "Kayıplar"
+      ],
+      "cues": {
+        "count": "Bin"
+      },
+      "params": {
+        "value": 1500,
+        "suffix": "+",
+        "label": "hayatını kaybeden",
+        "color": "red",
+        "fill": 0.68
+      }
+    },
+    {
+      "type": "stat",
+      "text": "Çağrıyı duyup yetişen Carpathia gemisi, sabaha karşı yedi yüze yakın kişiyi kurtardı.",
+      "title": {
+        "white": "Carpathia",
+        "gray": "yetişti"
+      },
+      "tags": [
+        "Kurtarma"
+      ],
+      "cues": {
+        "count": "yedi"
+      },
+      "params": {
+        "value": 700,
+        "label": "kurtarılan kişi (yaklaşık)",
+        "color": "white",
+        "fill": 0.32
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Titanik'in enkazı ise ancak 1985'te, yaklaşık dört kilometre derinlikte, iki parçaya ayrılmış halde bulundu.",
+      "title": {
+        "white": "Enkaz:",
+        "gray": "1985"
+      },
+      "tags": [
+        "Okyanus tabanı"
+      ],
+      "cues": {
+        "w0": "1985",
+        "w1": "dört"
+      },
+      "params": {
+        "words": [
+          "1985",
+          "4 km derinlik"
+        ],
+        "highlight": 1,
+        "sub": "gemi iki parçaya ayrılmıştı"
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Bu felaket denizcilik kurallarını kökten değiştirdi. 1914'te ilk uluslararası deniz güvenliği sözleşmesi imzalandı.",
+      "title": {
+        "white": "Yeni",
+        "gray": "kurallar"
+      },
+      "tags": [
+        "SOLAS 1914"
+      ],
+      "cues": {
+        "e1": "1914"
+      },
+      "params": {
+        "events": [
+          {
+            "label": "1912",
+            "sub": "Titanik",
+            "kind": "crash"
+          },
+          {
+            "label": "1914",
+            "sub": "SOLAS",
+            "kind": "start"
+          }
+        ]
+      },
+      "chapter": "Değişen kurallar"
+    },
+    {
+      "type": "list",
+      "text": "Artık her gemide herkese yetecek filika olacaktı. Telsizler yirmi dört saat dinlenecekti. Ve buzdağları için uluslararası bir devriye kuruldu.",
+      "title": {
+        "white": "Üç",
+        "gray": "büyük ders"
+      },
+      "tags": [
+        "Güvenlik"
+      ],
+      "cues": {
+        "i0": "filika",
+        "i1": "Telsizler",
+        "i2": "devriye"
+      },
+      "params": {
+        "items": [
+          "Herkese filika",
+          "24 saat telsiz",
+          "Buz devriyesi"
+        ]
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Yani Titanik'in asıl dersi şuydu: hiçbir gemi batmaz değildir.",
+      "title": {
+        "white": "Asıl",
+        "gray": "ders"
+      },
+      "tags": [
+        "Mühendislik"
+      ],
+      "cues": {
+        "w0": "hiçbir",
+        "w1": "batmaz"
+      },
+      "params": {
+        "words": [
+          "batmaz",
+          "gemi yoktur"
+        ],
+        "highlight": 0
+      }
+    },
+    {
+      "type": "ship",
+      "text": "Bugün bindiğimiz her gemideki filikalar ve güvenlik kuralları, o soğuk nisan gecesinden kalan bir miras.",
+      "title": {
+        "white": "Bugünün",
+        "gray": "mirası"
+      },
+      "tags": [
+        "Deniz güvenliği"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "sail",
+        "camera": {
+          "zoom": 1.2,
+          "x": 460,
+          "y": 340,
+          "push": true
+        }
+      }
+    },
+    {
+      "type": "question",
+      "text": "Sizce Titanik'te en büyük hata hangisiydi: hız mı, filikalar mı, yoksa telsiz mi? Yorumlara yazın.",
+      "title": {
+        "white": "Sıra sende:",
+        "gray": "en büyük hata?"
+      },
+      "tags": [
+        "Yorumlara yaz"
+      ],
+      "cues": {},
+      "params": {}
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Batmaz",
+      "deniyordu"
+    ],
+    "highlight": [
+      "batmaz"
+    ],
+    "scene": 17,
+    "t": 4.5,
+    "mark": {
+      "x": 560,
+      "y": 330,
+      "r": 70
+    }
+  },
+  "youtube": {
+    "title": "Titanik Neden Battı? Batmaz Denen Geminin Gerçek Hikâyesi",
+    "description": "Titanik neden battı? Batmaz denen gemi, su geçirmez bölmelerine rağmen buzdağına çarptıktan sadece iki saat kırk dakika sonra nasıl battı? Bölmelerin üstten açık olması, yetersiz filikalar ve kapalı bir telsiz bu felaketi nasıl büyüttü?\n\nBu videoda:\n• Batmaz denen geminin 16 su geçirmez bölmesi\n• 14 Nisan 1912 gecesi: buz uyarıları ve çarpışma\n• Neden 4 bölme sorun değildi ama 5 bölme felaketti\n• 2.200 kişi, 1.178 kişilik filika\n• Titanik'in bugün denizcilikte değiştirdiği kurallar\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence en büyük hata hangisiydi? Yorumlara yaz!\n\n#titanik #tarih #mühendislik #düşünbakalım",
+    "tags": [
+      "titanik",
+      "titanik neden battı",
+      "titanik nasıl battı",
+      "titanik batışı",
+      "titanik hikayesi",
+      "titanik gerçekleri",
+      "batmaz gemi",
+      "su geçirmez bölmeler",
+      "solas",
+      "denizcilik tarihi",
+      "tarih",
+      "mühendislik felaketleri",
+      "belgesel",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T01:48:00+03:00"
+  }
+}

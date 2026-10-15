@@ -1,0 +1,220 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "ucaklar-neden-beyaz",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "plane",
+      "text": "Uçakların beyaz olması tesadüf değil.",
+      "title": {
+        "white": "Beyaz",
+        "gray": "tesadüf değil"
+      },
+      "tags": [
+        "Uçak"
+      ],
+      "cues": {
+        "lens": "tesadüf"
+      },
+      "params": {
+        "window_shape": "round",
+        "windows": 9
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Beyaz boya, güneş ışığının çoğunu geri yansıtır.",
+      "title": {
+        "white": "Güneşi",
+        "gray": "yansıtır"
+      },
+      "tags": [
+        "Güneş"
+      ],
+      "cues": {
+        "hit": "yansıtır"
+      },
+      "params": {
+        "icon": "sun",
+        "label": "ışık geri yansır"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Koyu renkli bir uçak, güneşin altında çok daha fazla ısınırdı.",
+      "title": {
+        "white": "Koyu",
+        "gray": "vs beyaz"
+      },
+      "tags": [
+        "Isınma"
+      ],
+      "cues": {
+        "left": "Koyu",
+        "right": "ısınırdı"
+      },
+      "params": {
+        "left": {
+          "label": "KOYU",
+          "icon": "fire",
+          "mark": "x",
+          "color": "red"
+        },
+        "right": {
+          "label": "BEYAZ",
+          "icon": "snow",
+          "mark": "check",
+          "color": "white"
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Beyaz yüzeyde çatlaklar ve yağ sızıntıları da hemen fark edilir.",
+      "title": {
+        "white": "Kusurlar",
+        "gray": "görünür"
+      },
+      "tags": [
+        "Bakım"
+      ],
+      "cues": {
+        "w0": "çatlaklar",
+        "w1": "sızıntıları"
+      },
+      "params": {
+        "words": [
+          "çatlak",
+          "sızıntı"
+        ],
+        "highlight": 0,
+        "sub": "beyazda hemen görünür"
+      }
+    },
+    {
+      "type": "stress_corner",
+      "text": "Bu da bakım ekiplerinin işini çok kolaylaştırır.",
+      "title": {
+        "white": "Kolay",
+        "gray": "bakım"
+      },
+      "tags": [
+        "Güvenlik"
+      ],
+      "cues": {
+        "crack": "kolaylaştırır"
+      },
+      "params": {
+        "shape": "square",
+        "camera": {
+          "zoom": 1.7,
+          "x": 650,
+          "y": 130
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Üstelik boya ağırdır; büyük bir uçağın boyası yüzlerce kilo gelebilir.",
+      "title": {
+        "white": "Boya",
+        "gray": "ağırdır"
+      },
+      "tags": [
+        "Ağırlık"
+      ],
+      "cues": {
+        "w0": "yüzlerce",
+        "w1": "kilo"
+      },
+      "params": {
+        "words": [
+          "yüzlerce",
+          "kilo"
+        ],
+        "highlight": 0,
+        "sub": "daha az boya = daha az yakıt"
+      }
+    },
+    {
+      "type": "plane",
+      "text": "Uçak satıldığında, beyaz gövdeye yeni şirketin renkleri de kolayca uygulanır.",
+      "title": {
+        "white": "Satışta",
+        "gray": "da avantaj"
+      },
+      "tags": [
+        "Havayolu"
+      ],
+      "cues": {
+        "lens": "beyaz"
+      },
+      "params": {
+        "window_shape": "round",
+        "windows": 9,
+        "camera": {
+          "zoom": 1.2,
+          "x": 520,
+          "y": 330,
+          "push": true
+        }
+      }
+    },
+    {
+      "type": "plane",
+      "text": "Yani bir dahaki uçuşunda hatırla:",
+      "title": {
+        "white": "Yani",
+        "gray": "hatırla"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {},
+      "params": {
+        "window_shape": "round",
+        "windows": 9
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Beyaz",
+      "tesadüf değil"
+    ],
+    "highlight": [
+      "beyaz"
+    ],
+    "scene": 2,
+    "t": 4.0
+  },
+  "youtube": {
+    "title": "Uçaklar Neden Hep Beyaz? ✈️",
+    "description": "Uçaklar neden beyaz boyanır? Beyaz boya güneş ışığını yansıtıp gövdeyi serin tutar, çatlak ve sızıntıları hemen görünür kılar ve boyayı daha hafif tutar. Üstelik uçak satılınca yeni şirketin renkleri kolayca uygulanır.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence başka hangi rengin arkasında böyle bir sebep var? Yorumlara yaz!\n\n#shorts #uçak #havacılık #düşünbakalım",
+    "tags": [
+      "uçaklar neden beyaz",
+      "uçak neden beyaz boyanır",
+      "uçak rengi",
+      "uçak boyası",
+      "havacılık",
+      "uçak",
+      "uçaklar hakkında bilgiler",
+      "mühendislik",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T01:48:00+03:00"
+  }
+}

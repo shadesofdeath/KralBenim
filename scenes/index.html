@@ -1084,7 +1084,7 @@ const BUILD = {
     const words = P.words || ['?'], n = words.length;
     const rays = el(svg, 'g', { opacity: 0 });
     for (let i = 0; i < 18; i++) { const a = i / 18 * Math.PI * 2; el(rays, 'path', { d: `M${460 + Math.cos(a) * 120} ${330 + Math.sin(a) * 120} L${460 + Math.cos(a) * 520} ${330 + Math.sin(a) * 520}`, stroke: i % 2 ? '#26262b' : '#1f1f23', 'stroke-width': 26 }); }
-    const size = P.size ?? Math.min(170, 900 / Math.max(...words.map(w => w.length)) * 1.6);
+    const size = P.size ?? Math.min(170, 1150 / Math.max(...words.map(w => w.length)));
     const top = 340 - (n - 1) * size * 0.55;
     const items = words.map((w, i) => {
       const hl = i === (P.highlight ?? -1);
@@ -1170,6 +1170,63 @@ const BUILD = {
       sparks.forEach((sp, i) => { const a = lt * 1.2 + i / 6 * Math.PI * 2, R = 200 + Math.sin(lt * 2 + i) * 14; sp.setAttribute('cx', 460 + Math.cos(a) * R); sp.setAttribute('cy', 300 + Math.sin(a) * R * 0.75); sp.setAttribute('opacity', 0.8 * p); });
       lab.style.opacity = prog(lt, 0.4, 0.4);
       lab.setAttribute('transform', `translate(0 ${(1 - prog(lt, 0.4, 0.4)) * 20})`);
+    };
+  },
+
+  // ocean liner side view. params: mode sail|hit|flood|spill|sink, flooded (n bow compartments), iceberg (bool)
+  // cues: hit (impact), flood (water starts)
+  ship(svg, P) {
+    const mode = P.mode || 'sail', WL = 400, BLUE = '#4f8ff7';
+    const X0 = 90, X1 = 800, deck = 300, keel = 455, nB = 16;
+    const sea = [0, 1, 2].map(i => el(svg, 'path', { fill: i ? 'none' : 'rgba(79,143,247,.10)', stroke: i ? 'rgba(120,170,255,.35)' : 'rgba(120,170,255,.6)', 'stroke-width': 3 }));
+    const berg = el(svg, 'g');
+    el(berg, 'path', { d: 'M780 400 L815 300 L845 330 L870 260 L905 400 Z', fill: '#e8f0ff', opacity: 0.9 });
+    el(berg, 'path', { d: 'M760 400 L740 520 L800 600 L900 590 L940 480 L905 400 Z', fill: 'rgba(200,220,255,.18)', stroke: 'rgba(200,220,255,.5)', 'stroke-width': 3, 'stroke-dasharray': '10 8' });
+    const shipG = el(svg, 'g');
+    const hullD = `M${X0} ${deck} L${X1} ${deck} L${X1 + 30} ${deck - 20} C${X1 + 10} ${keel - 20} ${X1 - 20} ${keel} ${X1 - 70} ${keel} L${X0 + 40} ${keel} C${X0 + 10} ${keel} ${X0} ${keel - 40} ${X0} ${deck} Z`;
+    const defs = el(svg, 'defs'); const cid = 'hull' + (planeId++);
+    el(el(defs, 'clipPath', { id: cid }), 'path', { d: hullD });
+    const water = el(shipG, 'g', { 'clip-path': `url(#${cid})` });
+    const step = (X1 - X0 - 20) / nB;
+    const comps = []; for (let i = 0; i < nB; i++) comps.push(el(water, 'rect', { x: X1 - (i + 1) * step, width: step, y: keel, height: 0, fill: BLUE, opacity: 0.55 }));
+    el(shipG, 'path', { d: hullD, fill: 'rgba(24,24,28,.2)', stroke: WHITE, 'stroke-width': 6, 'stroke-linejoin': 'round' });
+    const bulk = el(shipG, 'path', { d: comps.map((_, i) => `M${X1 - (i + 1) * step} ${keel - 2} V${deck + 45}`).join(' '), stroke: GRAY, 'stroke-width': 2.5, fill: 'none' });
+    el(shipG, 'path', { d: `M${X0 + 60} ${deck} V${deck - 40} H${X1 - 90} V${deck}`, fill: 'none', stroke: GRAY, 'stroke-width': 4 });
+    const funnels = [0, 1, 2, 3].map(i => { const x = 260 + i * 110; el(shipG, 'path', { d: `M${x} ${deck - 40} L${x + 8} ${deck - 120} H${x + 50} L${x + 50} ${deck - 40}`, fill: '#1c1c20', stroke: AMBER, 'stroke-width': 4 }); return x; });
+    const portholes = []; for (let i = 0; i < 22; i++) portholes.push(el(shipG, 'circle', { cx: X0 + 50 + i * 30, cy: deck + 22, r: 4, fill: '#f2cf4a' }));
+    const smoke = []; for (let i = 0; i < 12; i++) smoke.push(el(svg, 'circle', { fill: 'rgba(140,140,150,.35)' }));
+    const gash = line(shipG, `M${X1 - 10} ${deck + 80} L${X1 - 4 * step} ${deck + 92}`, RED, 5);
+    return (lt, dur, c) => {
+      const pIn = spring(lt, 0, 0.6), hit = c.hit ?? (mode === 'hit' ? dur * 0.4 : -1), fl = c.flood ?? 0.4;
+      const pk = hit >= 0 ? punch(lt, hit, 0.6) : 0;
+      const n = P.flooded ?? (mode === 'sail' || mode === 'hit' ? 0 : 5);
+      const sinkA = mode === 'sink' ? lerp(3, 14, prog(lt, 0, dur)) : mode === 'spill' ? 4 + 2 * prog(lt, 0, dur) : mode === 'flood' ? 2 * prog(lt, fl, 2) : 0;
+      const drift = mode === 'sail' ? lerp(-40, 30, lt / Math.max(dur, 1)) : mode === 'hit' ? lerp(-60, 0, prog(lt, 0, Math.max(hit, 0.5))) : 0;
+      const bob = Math.sin(lt * 1.6) * 3 + Math.sin(lt * 37) * 6 * pk;
+      shipG.setAttribute('transform', `translate(${drift} ${bob + (mode === 'sink' ? prog(lt, 0, dur) * 60 : 0)}) rotate(${sinkA} ${X0} ${WL}) translate(0 ${(1 - pIn) * 40})`);
+      shipG.style.opacity = pIn;
+      sea.forEach((e, i) => {
+        let d = `M0 ${i ? 680 : 680} L0 ${WL + i * 30}`;
+        for (let x = 0; x <= 920; x += 20) d += ` L${x} ${(WL + i * 30 + Math.sin(x / 45 + lt * 2.2 + i) * 5).toFixed(1)}`;
+        e.setAttribute('d', i ? d.replace(/^M0 680 L/, 'M') : d + ' L920 680 Z');
+      });
+      berg.style.opacity = P.iceberg || mode === 'hit' ? prog(lt, 0.1, 0.5) : 0;
+      berg.setAttribute('transform', `translate(${Math.sin(lt * 37) * 4 * pk} 0)`);
+      comps.forEach((r, i) => {
+        let lvl = 0;
+        if (i < n) lvl = prog(lt, fl + i * 0.2, 2.2) * (mode === 'flood' ? 0.75 : 1);
+        if (mode === 'spill' && i >= n) lvl = prog(lt, 0.6 + (i - n) * 0.45, 1.6) * 0.9;
+        if (mode === 'sink') lvl = i < n + 6 ? 1 : prog(lt, (i - n - 6) * 0.3, 1.5);
+        const h = (keel - deck) * lvl;
+        r.setAttribute('y', keel - h); r.setAttribute('height', h);
+      });
+      draw(gash, hit >= 0 || n > 0 ? prog(lt, Math.max(0, hit), 0.5) : 0);
+      portholes.forEach((ph, i) => ph.setAttribute('opacity', mode === 'sink' ? (Math.sin(lt * 20 + i * 3) > 0.2 ? 0.9 : 0.15) * (1 - prog(lt, dur * 0.7, dur * 0.3)) : 0.85));
+      smoke.forEach((sm, i) => {
+        const k = ((lt * 0.4 + i / smoke.length) % 1), f = funnels[i % 4];
+        sm.setAttribute('cx', f + 25 + drift - k * 120); sm.setAttribute('cy', deck - 125 - k * 90 + bob);
+        sm.setAttribute('r', 8 + k * 26); sm.setAttribute('opacity', (mode === 'sail' || mode === 'hit' ? 1 : 0.3) * (1 - k) * pIn);
+      });
     };
   },
 
