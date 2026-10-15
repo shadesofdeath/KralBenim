@@ -1,0 +1,283 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "yesil-isik-gec",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "signal",
+      "text": "Bir zamanlar geç işareti yeşil değildi.",
+      "title": {
+        "white": "Geç işareti",
+        "gray": "yeşil değildi"
+      },
+      "tags": [
+        "Sinyal"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "white",
+            "label": "GEÇ"
+          }
+        ],
+        "active": 0,
+        "labels": true
+      }
+    },
+    {
+      "type": "signal",
+      "text": "İlk renkli sinyaller, 1800'lerde trenler için kullanıldı.",
+      "title": {
+        "white": "İlk sinyaller:",
+        "gray": "trenler"
+      },
+      "tags": [
+        "Demiryolu"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "red"
+          },
+          {
+            "c": "green"
+          },
+          {
+            "c": "white"
+          }
+        ],
+        "active": "cycle",
+        "labels": false
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Kırmızı dur, yeşil dikkat, beyaz ise geç demekti.",
+      "title": {
+        "white": "Eski",
+        "gray": "renk kodu"
+      },
+      "tags": [
+        "Kırmızı",
+        "Yeşil",
+        "Beyaz"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "red",
+            "label": "DUR"
+          },
+          {
+            "c": "green",
+            "label": "DİKKAT"
+          },
+          {
+            "c": "white",
+            "label": "GEÇ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Ama büyük bir sorun vardı: kırmızı cam kırılır ya da düşerse lamba beyaz yanıyordu.",
+      "title": {
+        "white": "Kırık",
+        "gray": "cam"
+      },
+      "tags": [
+        "Tehlike"
+      ],
+      "cues": {
+        "break": "kırılır"
+      },
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "red",
+            "label": "DUR"
+          }
+        ],
+        "active": 0,
+        "broken": 0,
+        "brokenLabel": "GEÇ?"
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Yani dur işareti, bir anda geç işaretine dönüşebiliyordu.",
+      "title": {
+        "white": "Dur",
+        "gray": "→ geç"
+      },
+      "tags": [
+        "Kaza riski"
+      ],
+      "cues": {
+        "break": "anda"
+      },
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "red",
+            "label": "DUR"
+          }
+        ],
+        "active": 0,
+        "broken": 0,
+        "brokenLabel": "GEÇ?"
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Üstelik beyaz ışık, sokak lambalarıyla ve yıldızlarla kolayca karışabiliyordu.",
+      "title": {
+        "white": "Beyaz",
+        "gray": "her yerde"
+      },
+      "tags": [
+        "Karışıklık"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "white",
+            "label": "GEÇ?"
+          }
+        ],
+        "active": 0
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Bu yüzden geç rengi yeşile çevrildi, dikkat içinse sarı seçildi.",
+      "title": {
+        "white": "Yeni",
+        "gray": "renkler"
+      },
+      "tags": [
+        "Yeşil = geç"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "red",
+            "label": "DUR"
+          },
+          {
+            "c": "yellow",
+            "label": "DİKKAT"
+          },
+          {
+            "c": "green",
+            "label": "GEÇ"
+          }
+        ]
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Trafik lambaları da bu renkleri trenlerden aldı.",
+      "title": {
+        "white": "Trenlerden",
+        "gray": "trafiğe"
+      },
+      "tags": [
+        "Trafik lambası"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "traffic",
+        "lamps": [
+          {
+            "c": "red"
+          },
+          {
+            "c": "yellow"
+          },
+          {
+            "c": "green"
+          }
+        ],
+        "active": "cycle",
+        "labels": false
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Çünkü dediğim gibi,",
+      "title": {
+        "white": "Çünkü",
+        "gray": "dediğim gibi"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {},
+      "params": {
+        "kind": "rail",
+        "lamps": [
+          {
+            "c": "white",
+            "label": "GEÇ"
+          }
+        ],
+        "active": 0
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Eskiden",
+      "geç rengi",
+      "beyazdı"
+    ],
+    "highlight": [
+      "beyazdı"
+    ],
+    "scene": 2,
+    "t": 1.6
+  },
+  "youtube": {
+    "title": "Trafik Lambasında Neden Yeşil Geç Demek? 🚦",
+    "description": "Trafik lambasında yeşil neden geç demek? Çünkü ilk renkli sinyaller trenler içindi ve orada geç işareti beyazdı. Kırmızı cam kırılınca lamba beyaz yanıyor, dur işareti geç'e dönüşüyordu. Bu yüzden geç rengi yeşile çevrildi.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence başka hangi tasarımın arkasında böyle bir hikâye var? Yorumlara yaz!\n\n#shorts #trafik #tarih #düşünbakalım",
+    "tags": [
+      "trafik lambası neden yeşil",
+      "yeşil ışık neden geç",
+      "trafik lambası renkleri",
+      "trafik ışıkları tarihi",
+      "tren sinyalleri",
+      "demiryolu sinyali",
+      "kırmızı ışık neden dur",
+      "tasarım tarihi",
+      "tarih",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T22:09:00+03:00"
+  }
+}

@@ -187,7 +187,7 @@ def build_timeline(script, text, ranges, words, duration):
             chunk.append(w)
             txt = " ".join(c["disp"] for c in chunk)
             if (w["disp"][-1] in ".?!:;" or (w["disp"][-1] == "," and len(chunk) > 1)
-                    or len(chunk) >= 5 or len(txt) > 30):
+                    or len(chunk) >= 4 or len(txt) > 24):
                 chunks.append(chunk)
                 chunk = []
         if chunk:
@@ -199,7 +199,12 @@ def build_timeline(script, text, ranges, words, duration):
 
 
     fmt = script.get("format", "short")
-    return {"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
+    hook = None
+    if fmt == "short" and script.get("cover"):
+        # the hook frame stays up until the first sentence is spoken
+        first = next((w for w in per[0] if w["disp"][-1] in ".?!"), per[0][-1])
+        hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
+    return {"hook": hook,"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -299,7 +304,8 @@ def main():
         text += sc["text"]
 
     mp3, words = synthesize(text, script.get("tts", {}), work)
-    duration = audio_duration(mp3) + TAIL
+    # Shorts end tight so the loop back to the hook feels seamless
+    duration = audio_duration(mp3) + (0.3 if script.get("format", "short") == "short" else TAIL)
     timeline = build_timeline(script, text, ranges, words, duration)
     (work / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1))
     out.parent.mkdir(parents=True, exist_ok=True)

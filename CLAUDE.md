@@ -1,7 +1,7 @@
 # Düşün Bakalım — video otomasyonu
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
-Her gün **1 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
+Her gün **2 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
 
 ## Yapı
 
@@ -18,26 +18,32 @@ Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece
 
 Zamanlanmış görev her sabah bu bölümü uygular.
 
-**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **1 Shorts**; **pazar günleri ek olarak 1 uzun video**. Bu planın dışına çıkma, fazladan video üretme.
+**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **2 Shorts**; **pazar günleri ek olarak 1 uzun video**. Bu planın dışına çıkma, fazladan video üretme.
 
 | | Süre | Karakter (anlatım metni toplamı) | Yayın |
 |---|---|---|---|
-| Shorts | 55–60 sn | **800–900** (sert sınır 950) | her gün 18:00 (+03:00) |
+| Shorts ×2 | 30–40 sn | **450–600** (sert sınır 650) | her gün 13:00 ve 19:00 (+03:00) |
 | Uzun video (sadece pazar) | 5–6 dk | **4.300–5.000** (sert sınır 5.200) | pazar 20:00 (+03:00) |
+
+**Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
+- **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–7 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
+- **Hızlı tempo:** her sahne tek cümle, 2–4 saniye; 8–11 sahne. Uzun cümleleri böl.
+- **Döngü sonu:** son sahnenin cümlesi yarım kalsın ve videonun ilk cümlesine bağlansın ("Yani bir dahaki sefere hatırla:" → video başa döner → "Bisküvilerdeki bu delikler süs değil."). Ayrı bir soru/"yorumlara yazın" sahnesi koyma; yorum sorusu açıklamaya yazılır.
+- Hiç dolgu cümle yok; her cümle ya yeni bir bilgi ya da gerilim eklesin.
 
 1. **Tarih:** Bugünün tarihi (Europe/Istanbul). Klasör: `videos/YYYY-MM-DD/`. Klasör zaten varsa hiçbir şey yapma, dur.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanala uygun, aranan ve merak uyandıran bir soru seç ("Neden...?", "Nasıl...?", "Ne olurdu...?"). Kategorileri günden güne değiştir: gündelik tasarımların hikâyesi, bilim, insan vücudu, tarih, hayvanlar, uzay, mühendislik, psikoloji. Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir konu.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
-5. **Senaryo** — dosyalar: `01-<slug>.json` (Shorts) ve pazar günleri `02-<slug>.json` (uzun video).
-   - Shorts: `"format": "short"`, `"fps": 60`, 7–10 sahne. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
+5. **Senaryo** — dosyalar: `01-<slug>.json` ve `02-<slug>.json` (Shorts, farklı kategorilerden), pazar günleri ayrıca `03-<slug>.json` (uzun video).
+   - Shorts: `"format": "short"`, `"fps": 60`, 8–11 sahne, sahne başına tek cümle. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
    - `channel`, `subtitles`, `tts` alanlarını `script.json`'dan aynen kopyala.
      Ses her zaman ElevenLabs `voice_id: BwhlzGpUiZ9uHtfvCl1H` (kanal sahibinin seçtiği ses), model `eleven_v3`. Sesi veya modeli asla değiştirme.
    - **Karakter bütçesine uy** (tablo). `tools/preview.py` çıktısındaki `chars` değerini kontrol et; sınırı aşıyorsa metni kısalt.
-   - Anlatım: ilk cümle kanca (ilk 2 saniyede merak — soru ya da şaşırtıcı iddia), sonra hikâye (kişiler, yer, tarih, gerilim), sonra açıklama (mekanizma, basitçe), sonra dönüş ("yani..."), sonda yoruma çağıran tek bir soru. Sade, konuşma dili, kısa cümleler. "km/sa" gibi kısaltmaları açık yaz.
+   - Anlatım (Shorts): kanca iddiası → neden (mekanizma, basitçe) → şaşırtıcı detay → döngü cümlesi. Uzun video: kanca, hikâye (kişiler, yer, tarih, gerilim), açıklama, dönüş ("yani..."), sonda yoruma çağıran tek bir soru. Sade, konuşma dili, kısa cümleler. "km/sa" gibi kısaltmaları açık yaz.
    - Her sahne 1–3 cümle. `title.white` 1–2 kelime, `title.gray` en fazla ~4 kelime (Shorts'ta en fazla 3 satır). 1–3 `tags`.
    - `cues`: sahnenin metninde geçen bir kelimenin parçası (büyük/küçük harf duyarsız, ilk eşleşme). Animasyonun vurgusunu o kelimeye bağla; erken bir kelimeyle yanlışlıkla eşleşmediğinden emin ol.
-6. **Görseller:** Mevcut sahne tiplerini kullan (`window_compare`, `plane`, `plane_breakup`, `timeline`, `pressure_cycle`, `water_tank`, `stress_flow`, `stress_corner`, `window_glow`, `stat`, `list`, `question`). Konuya özgü görsel gerekiyorsa `scenes/index.html` içine yeni bir sahne tipi ekle:
+6. **Görseller:** Mevcut sahne tiplerini kullan (`window_compare`, `plane`, `plane_breakup`, `timeline`, `pressure_cycle`, `water_tank`, `stress_flow`, `stress_corner`, `window_glow`, `stat`, `list`, `question`, `bridge`, `deck_section`, `swing`, `sky_scatter`, `octopus`, `biscuit`, `signal`). Konuya özgü görsel gerekiyorsa `scenes/index.html` içine yeni bir sahne tipi ekle:
    - Stil: koyu kart üzerinde ince çizgi SVG (viewBox 920×680), beyaz/gri çizgiler, tek vurgu amber `#d9a441`, tehlike/hata için kırmızı `#e5484d`. Çizimler `draw()` ile çizilerek gelsin, her sahnede sürekli bir hareket olsun (akış, nefes alma, sayaç, süzülme). Easing: `prog()`.
    - Yeni tipleri olabildiğince genel ve parametrik yaz (başka konularda da kullanılabilsin). Mevcut tipleri bozma.
 7. **Kapak (thumbnail)** — her dosyada `cover` bloğu zorunlu. Kapak tıklanma oranını belirler; en çok özen gösterilecek kısım budur.
@@ -58,13 +64,13 @@ Zamanlanmış görev her sabah bu bölümü uygular.
      "description": "...",
      "tags": ["..."],
      "category_id": "27",
-     "publish_at": "2026-10-16T18:00:00+03:00"
+     "publish_at": "2026-10-16T13:00:00+03:00"
    }
    ```
    - **Başlık:** ana anahtar kelime başta (insanların gerçekten arayacağı ifade: "uçak pencereleri neden yuvarlak"), merak boşluğu bırakan soru ya da iddia. Shorts ≤ 60, uzun ≤ 70 karakter. Türkçe karakterler doğru, BÜYÜK HARF spam yok, en fazla 1 emoji, yanıltıcı clickbait yok (videonun cevabı başlığın vaadini karşılamalı).
-   - **Açıklama:** ilk 150 karakter (aramada görünen kısım) ana anahtar kelimeyi ve kancayı içersin. Sonra 2–4 cümlelik özet; 2–3 yan anahtar kelimeyi doğal geçir. Uzun videoda bir boş satırdan sonra "Bu videoda:" ile 3–5 madde. Sonra abone çağrısı tek satır ("Her gün yeni bir 'neden?' için abone ol."). En sonda 3–5 hashtag (ilk üçü başlığın üstünde görünür): Shorts'ta ilk hashtag `#shorts`, sonra konu hashtag'leri ve `#düşünbakalım`. Bölümler (chapters) uzun videoda otomatik eklenir; elle yazma.
+   - **Açıklama:** ilk 150 karakter (aramada görünen kısım) ana anahtar kelimeyi ve kancayı içersin. Sonra 2–4 cümlelik özet; 2–3 yan anahtar kelimeyi doğal geçir. Uzun videoda bir boş satırdan sonra "Bu videoda:" ile 3–5 madde. Sonra abone çağrısı + yoruma çağıran soru ("Her gün yeni bir 'neden?' için abone ol. Sence ...? Yorumlara yaz!"). En sonda 3–5 hashtag (ilk üçü başlığın üstünde görünür): Shorts'ta ilk hashtag `#shorts`, sonra konu hashtag'leri ve `#düşünbakalım`. Bölümler (chapters) uzun videoda otomatik eklenir; elle yazma.
    - **Etiketler:** 12–18 etiket, toplam ≤ 450 karakter: ana anahtar kelime, 3–5 varyasyonu (eş anlamlı, soru biçimi), konu/kişi/olay adları, genel kategori ("bilim", "tarih", "ilginç bilgiler"), `düşün bakalım`.
-   - `category_id`: "27" (Eğitim). `publish_at`: tablodaki saat. Render ~1 saat sürer: şu andan en az 2 saat sonrası değilse ertesi güne kaydır.
+   - `category_id`: "27" (Eğitim). `publish_at`: tablodaki saat. Render ~15 dk sürer: şu andan en az 1 saat sonrası değilse ertesi güne kaydır.
 9. **Kontrol:** `pip install -r requirements.txt` (gerekirse), sonra her dosya için `python tools/preview.py videos/<tarih>/<dosya>.json`. `sheet.png` ve `cover.jpg` dosyalarını oku ve kontrol et: taşan/üst üste binen yazı, boş kart, eşleşmeyen cue uyarısı, okunamayan küçük metin, karakter bütçesi. Sorunları düzelt ve tekrar kontrol et.
 10. **Gönder:** Dosyaları (ve varsa `scenes/index.html` değişikliğini) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
 11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını ve yayın saatini kısaca özetle.

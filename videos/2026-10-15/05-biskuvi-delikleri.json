@@ -1,0 +1,192 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "biskuvi-delikleri",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "biscuit",
+      "text": "Bisküvilerdeki bu delikler süs değil.",
+      "title": {
+        "white": "Bu delikler",
+        "gray": "süs değil"
+      },
+      "tags": [
+        "Bisküvi"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "flat"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Onlar olmasa bisküvi fırında balon gibi şişer, yer yer kabarıp eğri büğrü pişerdi.",
+      "title": {
+        "white": "Delik",
+        "gray": "olmasaydı?"
+      },
+      "tags": [
+        "Fırın"
+      ],
+      "cues": {
+        "grow": "fırında"
+      },
+      "params": {
+        "mode": "bubble"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Çünkü hamurun içinde su var.",
+      "title": {
+        "white": "Hamurda",
+        "gray": "su var"
+      },
+      "tags": [
+        "Hamur"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "dough"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Fırının sıcağında bu su buhara dönüşür ve dışarı çıkmak ister.",
+      "title": {
+        "white": "Su",
+        "gray": "buhar olur"
+      },
+      "tags": [
+        "Buhar"
+      ],
+      "cues": {
+        "grow": "buhara"
+      },
+      "params": {
+        "mode": "bubble"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Çıkış yolu yoksa buhar hamurun içinde sıkışır ve kocaman kabarcıklar yapar.",
+      "title": {
+        "white": "Sıkışan",
+        "gray": "buhar"
+      },
+      "tags": [
+        "Kabarcık"
+      ],
+      "cues": {
+        "grow": "Çıkış"
+      },
+      "params": {
+        "mode": "bubble"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Delikler, buhara kaçış yolu açar.",
+      "title": {
+        "white": "Kaçış",
+        "gray": "yolu"
+      },
+      "tags": [
+        "Delikler"
+      ],
+      "cues": {
+        "grow": "buhara"
+      },
+      "params": {
+        "mode": "holes"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Böylece bisküvi düz, eşit ve çıtır pişer.",
+      "title": {
+        "white": "Düz ve",
+        "gray": "çıtır"
+      },
+      "tags": [
+        "Sonuç"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "flat"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Krakerlerde ve pek çok bisküvide bu düzenli delikleri bu yüzden görürsün.",
+      "title": {
+        "white": "Krakerlerde",
+        "gray": "de aynısı"
+      },
+      "tags": [
+        "Kraker"
+      ],
+      "cues": {
+        "grow": "düzenli"
+      },
+      "params": {
+        "mode": "holes"
+      }
+    },
+    {
+      "type": "biscuit",
+      "text": "Yani bir dahaki sefere hatırla:",
+      "title": {
+        "white": "Yani",
+        "gray": "hatırla"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {},
+      "params": {
+        "mode": "holes"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Bu delikler",
+      "süs değil"
+    ],
+    "highlight": [
+      "süs"
+    ],
+    "scene": 5,
+    "t": 2.0
+  },
+  "youtube": {
+    "title": "Bisküvilerde Neden Delik Var? 🍪",
+    "description": "Bisküvilerde neden delik var? Bu küçük delikler süs değil: fırında hamurdaki su buhara dönüşür ve delik olmasa bisküvi balon gibi şişer. Delikler buhara kaçış yolu açar, bisküvi düz ve çıtır pişer.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence başka hangi gündelik nesnenin gizli bir sebebi var? Yorumlara yaz!\n\n#shorts #bisküvi #bilim #düşünbakalım",
+    "tags": [
+      "bisküvilerde neden delik var",
+      "bisküvi delikleri",
+      "kraker delikleri neden",
+      "bisküvi neden delikli",
+      "fırında hamur neden kabarır",
+      "mutfak bilimi",
+      "gündelik bilim",
+      "bilim",
+      "ilginç bilgiler",
+      "neden",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-15T21:44:00+03:00"
+  }
+}

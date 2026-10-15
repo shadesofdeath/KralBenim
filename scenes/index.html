@@ -31,8 +31,9 @@
     font-size: 34px; font-weight: 500; color: #c9c9cd; letter-spacing: -0.01em;
   }
   #caption {
-    position: absolute; left: 130px; right: 130px; top: 1530px;
-    text-align: center; font-size: 52px; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em;
+    position: absolute; left: 110px; right: 110px; top: 1500px;
+    text-align: center; font-size: 66px; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em;
+    text-shadow: 0 4px 24px rgba(0,0,0,.6);
   }
   #caption span { transition: none; }
 
@@ -837,6 +838,100 @@ const BUILD = {
     };
   },
 
+  // biscuit in the oven. params: mode dough|bubble|holes|flat. cues: grow (bubbles / steam start)
+  biscuit(svg, P) {
+    const mode = P.mode || 'holes', X = 200, Y = 200, W = 520, H = 300;
+    const heat = [0, 1, 2, 3, 4].map(i => el(svg, 'path', { fill: 'none', stroke: RED, 'stroke-width': 4, 'stroke-linecap': 'round', opacity: 0 }));
+    const tray = line(svg, `M150 ${Y + H + 40} H770`, GRAY, 5);
+    const bis = el(svg, 'g');
+    const body = el(bis, 'rect', { x: X, y: Y, width: W, height: H, rx: 46, fill: '#c98f35', stroke: '#e7b45a', 'stroke-width': 6 });
+    const edge = el(bis, 'rect', { x: X + 22, y: Y + 22, width: W - 44, height: H - 44, rx: 30, fill: 'none', stroke: '#a8742a', 'stroke-width': 4, 'stroke-dasharray': '2 16', 'stroke-linecap': 'round' });
+    const holes = [];
+    for (let r = 0; r < 3; r++) for (let c = 0; c < 5; c++) holes.push(el(bis, 'circle', { cx: X + 90 + c * 85, cy: Y + 70 + r * 80, r: 11, fill: '#5a3a12' }));
+    const drops = []; const rr = rng(31);
+    for (let i = 0; i < 14; i++) drops.push(el(bis, 'circle', { cx: X + 50 + rr() * (W - 100), cy: Y + 40 + rr() * (H - 80), r: 7, fill: '#4f8ff7', opacity: 0 }));
+    const bubbles = [[X + 150, Y + 110, 70], [X + 360, Y + 170, 90], [X + 260, Y + 230, 45]].map(([x, y, r]) => ({ x, y, r, e: el(bis, 'circle', { cx: x, cy: y, r: 0, fill: '#dba650', stroke: '#f3cf86', 'stroke-width': 5 }), hi: el(bis, 'path', { fill: 'none', stroke: '#fff', 'stroke-opacity': .5, 'stroke-width': 6, 'stroke-linecap': 'round' }) }));
+    const steam = holes.map(() => el(svg, 'path', { fill: 'none', stroke: 'rgba(230,236,245,.7)', 'stroke-width': 5, 'stroke-linecap': 'round' }));
+    const crumbs = [0, 1, 2, 3].map(() => line(svg, '', '#f3cf86', 4));
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.05, 0.4), g = c.grow ?? 0.6;
+      draw(tray, pIn); bis.style.opacity = pIn;
+      const hot = mode !== 'dough' && mode !== 'flat';
+      heat.forEach((e, i) => {
+        let d = ''; const y = Y + H + 70 + i * 8;
+        for (let x = 170 + i * 20; x <= 750; x += 20) d += (d ? 'L' : 'M') + x + ' ' + (y + Math.sin(x / 25 + lt * 8 + i) * 6).toFixed(1) + ' ';
+        e.setAttribute('d', d); e.setAttribute('opacity', hot ? prog(lt, 0.2, 0.5) * (0.35 + 0.25 * Math.sin(lt * 5 + i)) : 0);
+      });
+      const showHoles = mode === 'holes' || mode === 'flat';
+      holes.forEach((h, i) => { const p = showHoles ? prog(lt, (mode === 'holes' ? 0.15 : 0) + i * 0.03, 0.25) : 0; h.setAttribute('r', 11 * p); });
+      drops.forEach((d, i) => d.setAttribute('opacity', mode === 'dough' ? prog(lt, 0.3 + i * 0.05, 0.3) * (0.6 + 0.4 * Math.sin(lt * 4 + i)) : 0));
+      bubbles.forEach((b, i) => {
+        const p = mode === 'bubble' ? prog(lt, g + i * 0.25, 1.6) : 0, r = b.r * p * (1 + 0.04 * Math.sin(lt * 6 + i));
+        b.e.setAttribute('r', r);
+        b.hi.setAttribute('d', r > 5 ? `M${b.x - r * 0.5} ${b.y - r * 0.2} A${r * 0.6} ${r * 0.6} 0 0 1 ${b.x - r * 0.1} ${b.y - r * 0.55}` : '');
+      });
+      const warp = mode === 'bubble' ? 1 + 0.06 * prog(lt, g, 1.6) : 1;
+      bis.setAttribute('transform', `translate(460 ${Y + H / 2}) scale(1 ${warp}) translate(-460 ${-(Y + H / 2)})`);
+      steam.forEach((e, i) => {
+        const h = holes[i], k = ((lt * 0.7 + i * 0.13) % 1), on = mode === 'holes' ? prog(lt, g, 0.6) : 0;
+        const x = +h.getAttribute('cx'), y = +h.getAttribute('cy');
+        e.setAttribute('d', `M${x} ${y - 6 - k * 60} q12 -18 0 -36 q-12 -18 0 -36`);
+        e.setAttribute('opacity', on * (1 - k) * 0.9);
+      });
+      crumbs.forEach((e, i) => {
+        const a = -0.6 + i * 0.4, k = ((lt * 0.8 + i * 0.25) % 1);
+        e.setAttribute('d', `M${730 + Math.cos(a) * 30} ${Y + 20 + Math.sin(a) * 30} l${Math.cos(a) * 18} ${Math.sin(a) * 18}`);
+        e.style.strokeDasharray = 'none'; e.style.opacity = mode === 'flat' ? (1 - k) * prog(lt, 0.4, 0.4) : 0;
+      });
+      body.setAttribute('fill', mode === 'flat' ? '#d29a3e' : '#c98f35');
+    };
+  },
+
+  // signal lamps. params: lamps [{c: red|yellow|green|white, label}], active (index or "cycle"), broken (index), kind rail|traffic
+  // cues: break (the red glass breaks and the lamp shows white)
+  signal(svg, P) {
+    const COL = { red: RED, yellow: '#f2cf4a', green: '#4cc38a', white: '#f5f5f7' };
+    const lamps = P.lamps || [{ c: 'red' }, { c: 'yellow' }, { c: 'green' }], n = lamps.length;
+    const H = 150 * n + 40, top = 340 - H / 2, cx = P.labels === false ? 460 : 380;
+    const pole = line(svg, `M${cx} ${top + H} V650`, GRAY, 10);
+    const box = el(svg, 'rect', { x: cx - 95, y: top, width: 190, height: H, rx: P.kind === 'rail' ? 30 : 60, fill: '#18181c', stroke: WHITE, 'stroke-width': 6 });
+    const L = lamps.map((l, i) => {
+      const y = top + 95 + i * 150;
+      const visor = line(svg, `M${cx - 72} ${y - 50} Q${cx} ${y - 92} ${cx + 72} ${y - 50}`, GRAY, 5);
+      const off = el(svg, 'circle', { cx, cy: y, r: 58, fill: '#26262b', stroke: '#3a3a40', 'stroke-width': 4 });
+      const glow = el(svg, 'circle', { cx, cy: y, r: 58, fill: COL[l.c], opacity: 0 });
+      const lab = el(svg, 'text', { x: cx + 140, y: y + 16, fill: COL[l.c], 'font-size': 46, 'font-weight': 800 });
+      lab.textContent = l.label || '';
+      return { y, glow, lab, visor, c: l.c };
+    });
+    const shards = []; const r = rng(41);
+    for (let i = 0; i < 7; i++) shards.push({ e: el(svg, 'path', { d: `M0 0 l${10 + r() * 22} ${r() * 14} l${-r() * 18} ${12 + r() * 10} Z`, fill: RED, opacity: 0 }), dx: (r() - 0.5) * 160, rot: (r() - 0.5) * 400 });
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.05, 0.4);
+      draw(pole, pIn); box.style.opacity = pIn;
+      const br = P.broken ?? -1, bt = c.break ?? dur * 0.4;
+      const act = P.active === 'cycle' ? Math.floor(lt / 1.1) % n : P.active;
+      L.forEach((o, i) => {
+        o.visor.style.opacity = pIn;
+        const on = act === undefined || act === i;
+        let col = COL[o.c];
+        if (i === br && lt > bt) col = COL.white;
+        o.glow.setAttribute('fill', col);
+        const flick = i === br && lt > bt && lt < bt + 0.4 ? (Math.sin(lt * 60) > 0 ? 1 : 0.3) : 1;
+        o.glow.setAttribute('opacity', on ? prog(lt, 0.2 + i * 0.12, 0.3) * flick : 0.08);
+        o.glow.style.filter = on ? `drop-shadow(0 0 28px ${col})` : 'none';
+        o.lab.style.opacity = P.labels === false ? 0 : prog(lt, 0.35 + i * 0.15, 0.35) * (on ? 1 : 0.35);
+        if (i === br) o.lab.setAttribute('fill', lt > bt ? COL.white : COL[o.c]);
+        if (i === br && P.brokenLabel && lt > bt) o.lab.textContent = P.brokenLabel;
+      });
+      shards.forEach(sh => {
+        const k = lin(lt, bt, 1.0), y0 = L[Math.max(0, br)].y;
+        sh.e.setAttribute('transform', `translate(${cx + sh.dx * k} ${y0 + k * k * 260}) rotate(${sh.rot * k})`);
+        sh.e.setAttribute('opacity', br >= 0 && k > 0 && k < 1 ? 1 - k * 0.5 : 0);
+      });
+    };
+  },
+
   window_glow(svg, P) {
     const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
     const defs = el(svg, 'defs');
@@ -1019,6 +1114,15 @@ window.cover = (c) => {
   const sc = D.scenes[Math.min(c.scene ?? 0, D.scenes.length - 1)];
   const dur = sc.end - sc.start;
   window.seek(sc.start + Math.min(c.t ?? dur * 0.85, dur - 0.35));
+  const box = buildCoverText(c);
+  if (D.format !== 'long') {   // keep the card clear of the text block
+    const bottom = box.getBoundingClientRect().bottom;
+    document.getElementById('card').style.top = Math.max(860, Math.min(1180, bottom + 50)) + 'px';
+  }
+  drawCoverMark(c);
+};
+
+function buildCoverText(c) {
   const hl = (c.highlight || []).map(w => w.toLocaleUpperCase('tr-TR'));
   const box = document.getElementById('covertext');
   box.innerHTML = '';
@@ -1032,10 +1136,10 @@ window.cover = (c) => {
     }
     box.appendChild(row);
   }
-  if (D.format !== 'long') {   // keep the card clear of the text block
-    const bottom = box.getBoundingClientRect().bottom;
-    document.getElementById('card').style.top = Math.max(860, Math.min(1180, bottom + 50)) + 'px';
-  }
+  return box;
+}
+
+function drawCoverMark(c) {
   const mk = document.getElementById('covermark');
   mk.innerHTML = '';
   if (c.mark && D.format === 'long') {
@@ -1052,7 +1156,27 @@ window.cover = (c) => {
   }
 };
 
+// Shorts open on a ready-made hook frame (big text + the most dramatic illustration moment),
+// so the very first frame in the feed is already "full". It cuts to the normal layout when
+// the first sentence ends (D.hook.end).
 window.seek = (t) => {
+  const h = D.hook, root = document.documentElement, card = document.getElementById('card');
+  if (h && t < h.end) {
+    if (!root.classList.contains('cover')) { root.classList.add('cover', 'hook'); buildCoverText(h); }
+    const sc = D.scenes[Math.min(h.scene ?? 0, D.scenes.length - 1)], dur = sc.end - sc.start;
+    renderAt(Math.min(sc.start + Math.min(h.t ?? dur * 0.85, dur - 0.35) + t * 0.5, sc.end - 0.3));
+    const box = document.getElementById('covertext');
+    box.style.transform = `scale(${lerp(1.06, 1, prog(t, 0, 0.35))})`;
+    box.style.transformOrigin = 'left top';
+    card.style.top = Math.max(860, Math.min(1180, box.getBoundingClientRect().bottom + 50)) + 'px';
+    card.style.setProperty('transform', `scale(${lerp(1.04, 1.1, t / h.end)})`, 'important');
+    return;
+  }
+  if (root.classList.contains('hook')) { root.classList.remove('cover', 'hook'); card.style.top = ''; card.style.removeProperty('transform'); }
+  renderAt(t);
+};
+
+function renderAt(t) {
   const last = S.length - 1;
   S.forEach((o, i) => {
     const { sc } = o;
@@ -1060,33 +1184,33 @@ window.seek = (t) => {
     for (const node of [o.t, o.tg, o.svg]) node.style.display = live ? '' : 'none';
     if (!live) return;
     const lt = t - sc.start, dur = sc.end - sc.start;
-    const out = i === last ? 1 : 1 - prog(t, sc.end - 0.28, 0.32);
+    const out = i === last ? 1 : 1 - prog(t, sc.end - 0.16, 0.18);
     o.words.forEach((w, k) => {
-      const p = prog(t, sc.start + 0.05 + k * 0.07, 0.65);
+      const p = prog(t, sc.start + 0.02 + k * 0.035, 0.4);
       w.style.opacity = p * out;
       w.style.transform = `translateY(${(1 - p) * 42 - (1 - out) * 16}px)`;
     });
     o.tags.forEach((g, k) => {
-      const p = prog(t, sc.start + 0.45 + k * 0.12, 0.6);
+      const p = prog(t, sc.start + 0.2 + k * 0.08, 0.4);
       g.style.opacity = p * out;
       g.style.transform = `translateY(${(1 - p) * 18}px)`;
     });
-    o.svg.style.opacity = prog(t, sc.start, 0.45) * out;
-    const z = lerp(0.96, 1, prog(t, sc.start, 0.8)) * lerp(1, 1.05, lt / Math.max(dur, 1)), fy = Math.sin(t * 0.9) * 6;
+    o.svg.style.opacity = prog(t, sc.start, 0.2) * out;
+    const z = lerp(1.07, 1, prog(t, sc.start, 0.35)) * lerp(1, 1.06, lt / Math.max(dur, 1)), fy = Math.sin(t * 0.9) * 6;
     o.svg.style.transform = `translateY(${fy}px) scale(${z})`;
     const cues = {};
     for (const k in sc.cues) cues[k] = sc.cues[k] - sc.start;
     o.update(lt, dur, cues);
   });
 
-  const card = document.getElementById('card'), pc = prog(t, 0, 0.6);
+  const card = document.getElementById('card'), pc = D.hook ? 1 : prog(t, 0, 0.6);
   card.style.opacity = pc;
   card.style.transform = `scale(${lerp(0.97, 1, pc)})`;
 
   const stage = document.getElementById('stage'), lx = 50 + Math.sin(t * 0.35) * 8, ly = 40 + Math.cos(t * 0.27) * 5;
   stage.style.background = `radial-gradient(ellipse 950px 850px at ${lx}% ${ly}%, rgba(255,255,255,${0.045 + 0.015 * Math.sin(t * 0.6)}), rgba(255,255,255,0) 70%), #0a0a0b`;
   const brand = document.getElementById('brand');
-  brand.style.opacity = prog(t, 0.2, 0.8);
+  brand.style.opacity = D.hook ? 1 : prog(t, 0.2, 0.8);
   brand.querySelector('i').style.transform = `scale(${1 + 0.18 * Math.sin(t * 2.2)})`;
 
   const cap = document.getElementById('caption');
@@ -1108,7 +1232,7 @@ window.seek = (t) => {
   } else cap.style.opacity = 0;
 
   document.getElementById('bar').style.width = (100 * clamp01(t / D.duration)) + '%';
-};
+}
 </script>
 </body>
 </html>
