@@ -26,6 +26,7 @@ Zamanlanmış görev her sabah bu bölümü uygular.
    - `01-<slug>.json` … `04-<slug>.json`: Shorts. `"format": "short"`, `"fps": 60`, 75–100 sn (~180–240 kelime), 9–12 sahne.
    - `05-<slug>.json`: Uzun video. `"format": "long"`, `"fps": 30`, 5–6 dk (~750–850 kelime), 35–45 sahne.
    - `channel`, `subtitles`, `tts` alanlarını `script.json`'dan aynen kopyala.
+     Ses her zaman ElevenLabs `voice_id: BwhlzGpUiZ9uHtfvCl1H` (kanal sahibinin seçtiği ses), model `eleven_v3`. Sesi veya modeli asla değiştirme.
    - Anlatım: ilk cümle kanca (ilk 2 saniyede merak), sonra hikâye (kişiler, yer, tarih, gerilim), sonra açıklama (mekanizma, basitçe), sonra dönüş ("yani..."), sonda yoruma çağıran bir soru. Sade, konuşma dili, kısa cümleler. Sayıları okunacağı gibi yazmak gerekmez ama "km/sa" gibi kısaltmaları açık yaz ("kilometre").
    - Her sahne 1–3 cümle. `title.white` 1–2 kelime, `title.gray` en fazla ~4 kelime (Shorts'ta en fazla 3 satır olmalı). 1–3 `tags`.
    - `cues`: sahnenin metninde geçen bir kelimenin parçası (büyük/küçük harf duyarsız, ilk eşleşme). Animasyonun vurgusunu o kelimeye bağla; erken bir kelimeyle yanlışlıkla eşleşmediğinden emin ol.
