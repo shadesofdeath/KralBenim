@@ -40,14 +40,17 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 6. **Görseller:** Mevcut sahne tiplerini kullan (`window_compare`, `plane`, `plane_breakup`, `timeline`, `pressure_cycle`, `water_tank`, `stress_flow`, `stress_corner`, `window_glow`, `stat`, `list`, `question`). Konuya özgü görsel gerekiyorsa `scenes/index.html` içine yeni bir sahne tipi ekle:
    - Stil: koyu kart üzerinde ince çizgi SVG (viewBox 920×680), beyaz/gri çizgiler, tek vurgu amber `#d9a441`, tehlike/hata için kırmızı `#e5484d`. Çizimler `draw()` ile çizilerek gelsin, her sahnede sürekli bir hareket olsun (akış, nefes alma, sayaç, süzülme). Easing: `prog()`.
    - Yeni tipleri olabildiğince genel ve parametrik yaz (başka konularda da kullanılabilsin). Mevcut tipleri bozma.
-7. **Kapak (thumbnail)** — her dosyada `cover` bloğu zorunlu:
+7. **Kapak (thumbnail)** — her dosyada `cover` bloğu zorunlu. Kapak tıklanma oranını belirler; en çok özen gösterilecek kısım budur.
    ```json
-   "cover": {"lines": ["Uçak pencereleri", "neden kare değil?"], "highlight": ["kare"], "scene": 6, "t": 9.5}
+   "cover": {"lines": ["Bu pencere", "uçak düşürdü"], "highlight": ["pencere"],
+             "scene": 6, "t": 9.5, "mark": {"x": 310, "y": 160, "r": 70}}
    ```
-   - `lines`: 2–4 satır, toplam **en fazla 5–6 kelime**, büyük harfle basılır. Başlığı tekrar etme; merakı artıran kısa bir vaat/şok cümlesi olsun ("BU PENCERE UÇAK DÜŞÜRDÜ", "BEYNİN SENİ KANDIRIYOR").
-   - `highlight`: amber renkte vurgulanacak 1 (en fazla 2) anahtar kelime.
-   - `scene` + `t`: illüstrasyonun en dramatik, en dolu anı (çatlak çizilmiş, sayaç dolmuş, kırmızı vurgu görünür). Boş ya da yarım çizilmiş kare seçme.
-   - Uzun video kapağı 1280×720 olur (sol: yazı, sağ: görsel). Shorts kapağı 1080×1920. Kapak `tools/preview.py` ile `out/preview/<slug>/cover.jpg` olarak üretilir; mutlaka açıp bak: yazı okunuyor mu, taşma var mı, görsel dolu mu.
+   - `lines`: 2–4 satır, toplam **3–5 kelime**, büyük harfle basılır. Başlığı tekrar etme; merakı patlatan kısa bir iddia ya da şok cümlesi olsun ("BU PENCERE UÇAK DÜŞÜRDÜ", "BEYNİN SENİ KANDIRIYOR", "3.000 UÇUŞTA ÇATLADI"). Soru cümlesi yerine iddia çoğu zaman daha güçlüdür.
+   - `highlight`: amber kutu içinde vurgulanacak **tek** anahtar kelime (en kritik nesne/sayı).
+   - `scene` + `t`: illüstrasyonun en dramatik, en dolu anı (çatlak çizilmiş, kırmızı çizgiler sıkışmış, sayaç dolmuş, parçalar ayrılmış). Boş ya da yarım çizilmiş kare seçme.
+   - `mark` (uzun videoda zorunlu, Shorts'ta yok sayılır): kırmızı halka + ok ile işaretlenecek nokta, sahnenin SVG koordinatlarında (viewBox 920×680) `x`, `y`, `r`. Hikâyenin kilit detayını göstersin (çatlağın başladığı köşe, kritik parça).
+   - Uzun video kapağı 1280×720: solda dev yazı, sağda kenardan taşan büyütülmüş illüstrasyon. Shorts kapağı 1080×1920.
+   - `tools/preview.py` kapağı `out/preview/<slug>/cover.jpg` olarak üretir; **mutlaka açıp bak**: yazı küçük ekranda okunuyor mu, yazı görsele biniyor mu, halka doğru noktada mı, görsel dolu ve dramatik mi. Gerekirse `scene`, `t`, `mark` ve metni değiştirip tekrar üret.
 8. **YouTube SEO** — her dosyaya `youtube` bloğu:
    ```json
    "youtube": {

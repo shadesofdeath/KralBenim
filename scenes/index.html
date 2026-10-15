@@ -41,15 +41,36 @@
   html.cover .title, html.cover .tags, html.cover #caption, html.cover #progress { display: none !important; }
   html.cover #covertext {
     display: block; position: absolute; left: 80px; right: 80px; top: 200px;
-    font-weight: 900; font-size: 148px; line-height: 1.04; letter-spacing: -0.045em; text-transform: uppercase;
+    font-weight: 900; font-size: 148px; line-height: 1.12; letter-spacing: -0.045em; text-transform: uppercase;
   }
   html.cover #covertext .hl { color: var(--amber); }
   html.cover #covertext .line { display: block; }
   html.cover #card { top: 860px; box-shadow: 0 0 160px rgba(217,164,65,.18); border-color: #34343a; transform: scale(1.04) !important; opacity: 1 !important; }
   html.cover #brand { font-size: 44px; opacity: 1 !important; }
   html.cover #brand i { width: 22px; height: 22px; }
-  html.long.cover #covertext { left: 100px; right: auto; width: 820px; top: 50%; transform: translateY(-50%); font-size: 132px; }
-  html.long.cover #card { left: 960px; top: 200px; transform: scale(1.0) !important; }
+  html.cover #covertext .hl {
+    color: #111; background: var(--amber); padding: 0 .14em; margin: .05em .18em .07em 0; border-radius: .12em;
+    display: inline-block; transform: rotate(-2deg); box-shadow: 0 .06em .3em rgba(217,164,65,.35);
+  }
+  #covershade, #covermark { display: none; }
+
+  /* long-form thumbnail: huge text left, illustration bleeding off the right edge */
+  html.long.cover #stage { background: radial-gradient(ellipse 900px 700px at 74% 52%, rgba(217,164,65,.22), rgba(229,72,77,.06) 45%, rgba(0,0,0,0) 72%), #0a0a0b !important; }
+  html.long.cover #card {
+    left: 880px; top: 200px; background: transparent; border: none; box-shadow: none; overflow: visible;
+    transform: scale(1.5) !important;
+  }
+  html.long.cover #card svg { overflow: visible; filter: drop-shadow(0 0 18px rgba(255,255,255,.12)); }
+  html.long.cover #covershade {
+    display: block; position: absolute; inset: 0;
+    background: linear-gradient(90deg, #0a0a0b 0%, rgba(10,10,11,.96) 36%, rgba(10,10,11,.55) 50%, rgba(10,10,11,0) 64%);
+  }
+  html.long.cover #covertext {
+    left: 90px; right: auto; width: 900px; top: 50%; transform: translateY(-46%);
+    font-size: 168px; line-height: 0.98; text-shadow: 0 8px 40px rgba(0,0,0,.6);
+  }
+  html.long.cover #brand { left: 96px; top: 64px; font-size: 38px; z-index: 2; }
+  html.long.cover #covermark { display: block; position: absolute; inset: 0; pointer-events: none; }
 
   /* 16:9 long-form layout */
   html.long, html.long body, html.long #stage { width: 1920px; height: 1080px; }
@@ -78,7 +99,9 @@
   <div id="card"></div>
   <div id="tagrows"></div>
   <div id="caption"></div>
+  <div id="covershade"></div>
   <div id="covertext"></div>
+  <svg id="covermark" viewBox="0 0 1920 1080" width="1920" height="1080"></svg>
   <div id="progress"><div id="bar"></div></div>
 </div>
 <script>
@@ -694,6 +717,24 @@ window.cover = (c) => {
       row.appendChild(sp);
     }
     box.appendChild(row);
+  }
+  if (D.format !== 'long') {   // keep the card clear of the text block
+    const bottom = box.getBoundingClientRect().bottom;
+    document.getElementById('card').style.top = Math.max(860, Math.min(1180, bottom + 50)) + 'px';
+  }
+  const mk = document.getElementById('covermark');
+  mk.innerHTML = '';
+  if (c.mark && D.format === 'long') {
+    // scene svg (920x680) sits in the 1.5x-scaled card at left 880, top 200 (scale origin = card centre)
+    const k = 1.5, cx0 = 880 + 460, cy0 = 200 + 340;
+    const x = cx0 + (c.mark.x - 460) * k, y = cy0 + (c.mark.y - 340) * k, r = (c.mark.r ?? 60) * k;
+    const g = el(mk, 'g', { style: 'filter: drop-shadow(0 0 14px rgba(229,72,77,.8))' });
+    el(g, 'circle', { cx: x, cy: y, r, fill: 'none', stroke: RED, 'stroke-width': 12 });
+    const ax = x - r * 0.75 - 170, ay = y + r * 0.75 + 150, bx = x - r * 0.78, by = y + r * 0.78;
+    el(g, 'path', { d: `M${ax} ${ay} Q${ax + 30} ${by + 20} ${bx - 14} ${by + 14}`, fill: 'none', stroke: RED, 'stroke-width': 12, 'stroke-linecap': 'round' });
+    const ang = Math.atan2(by + 14 - (by + 20), bx - 14 - (ax + 30));
+    const hx = bx - 6, hy = by + 6, L = 44;
+    el(g, 'path', { d: `M${hx - L * Math.cos(ang - 0.5)} ${hy - L * Math.sin(ang - 0.5)} L${hx} ${hy} L${hx - L * Math.cos(ang + 0.5)} ${hy - L * Math.sin(ang + 0.5)}`, fill: 'none', stroke: RED, 'stroke-width': 12, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
   }
 };
 
