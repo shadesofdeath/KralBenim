@@ -2,6 +2,7 @@
 """Upload a rendered video to YouTube using the script's "youtube" block.
 
   YOUTUBE_TOKEN_JSON='<contents of youtube_token.json>' python tools/upload.py script.json out/video.mp4
+  # or: YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN
 
 script.json:
   "youtube": {"title": "...", "description": "...", "tags": [...], "category_id": "27",
@@ -19,13 +20,22 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build as gbuild
 from googleapiclient.http import MediaFileUpload
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload", "https://www.googleapis.com/auth/youtube"]
+
+
+def credentials():
+    if os.environ.get("YOUTUBE_TOKEN_JSON"):
+        info = json.loads(os.environ["YOUTUBE_TOKEN_JSON"])
+    else:
+        info = {"client_id": os.environ["YOUTUBE_CLIENT_ID"], "client_secret": os.environ["YOUTUBE_CLIENT_SECRET"],
+                "refresh_token": os.environ["YOUTUBE_REFRESH_TOKEN"], "token_uri": "https://oauth2.googleapis.com/token"}
+    info.pop("scopes", None)   # refresh with whatever scopes were granted
+    return Credentials.from_authorized_user_info(info)
 
 
 def main():
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     meta = json.loads(script_path.read_text())["youtube"]
-    creds = Credentials.from_authorized_user_info(json.loads(os.environ["YOUTUBE_TOKEN_JSON"]), SCOPES)
+    creds = credentials()
     if not creds.valid:
         creds.refresh(Request())
     yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)
