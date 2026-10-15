@@ -61,6 +61,12 @@ jobs:
         env:
           F: ${{ matrix.file }}
         run: echo "name=$(basename "$(dirname "$F")")-$(basename "$F" .json)" >> "$GITHUB_OUTPUT"
+      - name: TTS cache (re-renders do not spend ElevenLabs credits)
+        uses: actions/cache@v4
+        with:
+          path: out/*/
+          key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
+          restore-keys: tts-${{ steps.n.outputs.name }}-
       - name: Build
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}

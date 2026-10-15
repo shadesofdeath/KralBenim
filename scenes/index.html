@@ -84,7 +84,16 @@
   html.long #caption { left: 260px; right: 260px; top: 900px; font-size: 46px; }
   html.long #progress { left: 120px; right: 120px; top: 1020px; }
   #progress { position: absolute; left: 80px; right: 80px; top: 1790px; height: 6px; border-radius: 3px; background: #1d1d20; }
-  #bar { height: 100%; width: 0; border-radius: 3px; background: var(--white); }
+  #bar { position: relative; height: 100%; width: 0; border-radius: 3px; background: linear-gradient(90deg, #8a8a8e, var(--white)); }
+  #bar::after { content: ''; position: absolute; right: -7px; top: -5px; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--amber); box-shadow: 0 0 16px 2px rgba(217,164,65,.8); }
+  #particles, #vignette { position: absolute; inset: 0; pointer-events: none; }
+  #particles i { position: absolute; display: block; border-radius: 50%; background: #f5f5f7; }
+  #vignette { background: radial-gradient(ellipse 75% 70% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%); }
+  #flash { position: absolute; inset: 0; pointer-events: none; opacity: 0;
+    background: radial-gradient(circle at 50% 45%, rgba(217,164,65,.55), rgba(217,164,65,0) 65%); }
+  #card svg { filter: drop-shadow(0 0 10px rgba(255,255,255,.07)) drop-shadow(0 0 22px rgba(217,164,65,.07)); }
+  #caption span { display: inline-block; margin: 0 .16em; transform-origin: 50% 60%; }
   svg text { font-family: Inter, sans-serif; }
   #brand {
     position: absolute; left: 80px; top: 120px; display: flex; align-items: center; gap: 16px;
@@ -95,6 +104,7 @@
 </head>
 <body>
 <div id="stage">
+  <div id="particles"></div>
   <div id="brand"><i></i><span></span></div>
   <div id="titles"></div>
   <div id="card"></div>
@@ -104,6 +114,7 @@
   <div id="covertext"></div>
   <svg id="covermark" viewBox="0 0 1920 1080" width="1920" height="1080"></svg>
   <div id="progress"><div id="bar"></div></div>
+  <div id="vignette"></div>
 </div>
 <script>
 // ------------------------------------------------------------ easing & helpers
@@ -122,6 +133,10 @@ function bezier(x1, y1, x2, y2) {
 const EASE = bezier(.2, .8, .2, 1);
 const clamp01 = v => Math.max(0, Math.min(1, v));
 const prog = (t, a, d) => EASE(clamp01((t - a) / d));    // eased 0..1 from a over d seconds
+// springy 0..1 with a little overshoot (titles, pops)
+const spring = (t, a, d) => { const x = clamp01((t - a) / d); return x >= 1 ? 1 : 1 - Math.exp(-6 * x) * Math.cos(10 * x); };
+// 1 at the hit moment, decaying fast (camera punch, flashes)
+const punch = (t, at, d = 0.5) => (t >= at && t < at + d) ? Math.exp(-(t - at) * 8) : 0;
 const lin = (t, a, d) => clamp01((t - a) / d);
 const lerp = (a, b, p) => a + (b - a) * p;
 
@@ -1088,6 +1103,14 @@ window.init = (data) => {
   D = data;
   document.documentElement.classList.add(D.format || 'short');
   document.querySelector('#brand span').textContent = D.channel || '';
+  // ambient dust particles (deterministic)
+  const pr = rng(99), pbox = document.getElementById('particles');
+  window.PARTS = Array.from({ length: 38 }, () => {
+    const e = document.createElement('i'), sz = 2 + pr() * 4;
+    e.style.width = e.style.height = sz + 'px'; pbox.appendChild(e);
+    return { e, x: pr(), y: pr(), v: 8 + pr() * 22, ph: pr() * 6.28, a: 0.08 + pr() * 0.25 };
+  });
+  const fl = document.createElement('div'); fl.id = 'flash'; document.getElementById('card').appendChild(fl);
   const titles = document.getElementById('titles'), tagrows = document.getElementById('tagrows'), card = document.getElementById('card');
   S = D.scenes.map((sc) => {
     const t = document.createElement('div'); t.className = 'title';
@@ -1186,23 +1209,38 @@ function renderAt(t) {
     const lt = t - sc.start, dur = sc.end - sc.start;
     const out = i === last ? 1 : 1 - prog(t, sc.end - 0.16, 0.18);
     o.words.forEach((w, k) => {
-      const p = prog(t, sc.start + 0.02 + k * 0.035, 0.4);
-      w.style.opacity = p * out;
-      w.style.transform = `translateY(${(1 - p) * 42 - (1 - out) * 16}px)`;
+      const p = spring(t, sc.start + 0.02 + k * 0.045, 0.6);
+      w.style.opacity = clamp01(p * 1.6) * out;
+      w.style.transform = `translateY(${(1 - p) * 56 - (1 - out) * 16}px) scale(${lerp(0.82, 1, p)})`;
     });
     o.tags.forEach((g, k) => {
-      const p = prog(t, sc.start + 0.2 + k * 0.08, 0.4);
-      g.style.opacity = p * out;
-      g.style.transform = `translateY(${(1 - p) * 18}px)`;
+      const p = spring(t, sc.start + 0.2 + k * 0.08, 0.55);
+      g.style.opacity = clamp01(p * 1.5) * out;
+      g.style.transform = `translateY(${(1 - p) * 22}px) scale(${lerp(0.7, 1, p)})`;
     });
-    o.svg.style.opacity = prog(t, sc.start, 0.2) * out;
-    const z = lerp(1.07, 1, prog(t, sc.start, 0.35)) * lerp(1, 1.06, lt / Math.max(dur, 1)), fy = Math.sin(t * 0.9) * 6;
-    o.svg.style.transform = `translateY(${fy}px) scale(${z})`;
     const cues = {};
     for (const k in sc.cues) cues[k] = sc.cues[k] - sc.start;
+    // varied entrance per scene + camera: slow push, punch-in & shake on cue words
+    const kind = i === 0 ? 'zoom' : ['slide', 'zoom', 'rise', 'wipe'][i % 4];
+    const pi = prog(t, sc.start, 0.32), ps = spring(t, sc.start, 0.6);
+    let pk = 0; for (const k in cues) pk = Math.max(pk, punch(lt, cues[k]));
+    o.pk = pk;
+    const z = (kind === 'zoom' ? lerp(1.22, 1, pi) : lerp(1.05, 1, pi)) * lerp(1, 1.07, lt / Math.max(dur, 1)) * (1 + 0.05 * pk) * lerp(0.94, 1, out);
+    const sx = (kind === 'slide' ? (1 - ps) * 160 : 0) - (1 - out) * 60 + Math.sin(lt * 70) * 7 * pk;
+    const sy = (kind === 'rise' ? (1 - ps) * 140 : 0) + Math.sin(t * 0.9) * 6 + Math.cos(lt * 63) * 5 * pk;
+    o.svg.style.opacity = (kind === 'wipe' ? 1 : pi) * out;
+    o.svg.style.clipPath = kind === 'wipe' && pi < 1 ? `inset(0 ${(1 - pi) * 100}% 0 0)` : 'none';
+    o.svg.style.transform = `translate(${sx}px, ${sy}px) scale(${z}) rotate(${Math.sin(lt * 55) * 0.6 * pk}deg)`;
     o.update(lt, dur, cues);
   });
 
+  const fl = document.getElementById('flash');
+  fl.style.opacity = Math.max(0, ...S.map(o => (t >= o.sc.start && t < o.sc.end ? o.pk || 0 : 0))) * 0.45;
+  (window.PARTS || []).forEach(q => {
+    const y = ((q.y * 1.1 - t * q.v / 1000 * 1.0) % 1.1 + 1.1) % 1.1 - 0.05;
+    q.e.style.transform = `translate(${(q.x + Math.sin(t * 0.4 + q.ph) * 0.015) * 100}vw, ${y * 100}vh)`;
+    q.e.style.opacity = q.a * (0.6 + 0.4 * Math.sin(t * 1.3 + q.ph));
+  });
   const card = document.getElementById('card'), pc = D.hook ? 1 : prog(t, 0, 0.6);
   card.style.opacity = pc;
   card.style.transform = `scale(${lerp(0.97, 1, pc)})`;
@@ -1219,16 +1257,17 @@ function renderAt(t) {
     if (cap._c !== c) {
       cap._c = c;
       cap.innerHTML = '';
-      c.spans = c.words.map(w => { const s = document.createElement('span'); s.textContent = w.text + ' '; cap.appendChild(s); return s; });
+      c.spans = c.words.map(w => { const s = document.createElement('span'); s.textContent = w.text; cap.appendChild(s); return s; });
     }
     c.words.forEach((w, k) => {
       const next = k + 1 < c.words.length ? c.words[k + 1].t : c.end;
       const on = t >= w.t, now = on && t < next;
       c.spans[k].style.color = now ? 'var(--amber)' : (on ? 'var(--white)' : 'rgba(245,245,247,.45)');
+      c.spans[k].style.transform = now ? `scale(${1.03 + 0.07 * Math.exp(-(t - w.t) * 9)})` : "scale(1)";
     });
-    const pin = prog(t, c.start, 0.22), pout = 1 - prog(t, c.end - 0.12, 0.12);
-    cap.style.opacity = pin * pout;
-    cap.style.transform = `translateY(${(1 - pin) * 14}px)`;
+    const pin = spring(t, c.start, 0.4), pout = 1 - prog(t, c.end - 0.1, 0.1);
+    cap.style.opacity = clamp01(pin * 1.6) * pout;
+    cap.style.transform = `translateY(${(1 - pin) * 26}px) scale(${lerp(0.9, 1, pin)})`;
   } else cap.style.opacity = 0;
 
   document.getElementById('bar').style.width = (100 * clamp01(t / D.duration)) + '%';

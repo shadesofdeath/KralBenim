@@ -223,7 +223,7 @@ def open_page(pw, timeline):
     return browser, page
 
 
-def render(timeline, mp3, out, until):
+def render(timeline, mp3, out, until, sfx=None):
     from playwright.sync_api import sync_playwright
     fps = timeline["fps"]
     n = round(until * fps)
@@ -231,7 +231,10 @@ def render(timeline, mp3, out, until):
         "ffmpeg", "-y", "-loglevel", "error",
         "-f", "image2pipe", "-framerate", str(fps), "-i", "-",
         "-i", str(mp3),
-        "-map", "0:v", "-map", "1:a", "-af", "apad", "-t", f"{n / fps:.3f}",
+        *(["-i", str(sfx), "-filter_complex",
+           "[1:a]apad[v];[2:a]apad[s];[v][s]amix=inputs=2:duration=first:normalize=0[a]",
+           "-map", "0:v", "-map", "[a]"] if sfx else ["-map", "0:v", "-map", "1:a", "-af", "apad"]),
+        "-t", f"{n / fps:.3f}",
         "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
         stdin=subprocess.PIPE)
@@ -319,7 +322,12 @@ def main():
         still(timeline, a.still, out.with_suffix(".png") if out.suffix == ".mp4" else out)
         return
     until = timeline["scenes"][a.scenes - 1]["end"] if a.scenes else duration
-    render(timeline, mp3, out, until)
+    sfx = None
+    if script.get("sfx", True):
+        sys.path.insert(0, str(ROOT / "tools"))
+        import sfx as sfxmod
+        sfx = sfxmod.render(timeline, work / "sfx.wav", until)
+    render(timeline, mp3, out, until, sfx)
     if not a.scenes:
         cover(timeline, script, out.with_suffix(".jpg"))
 

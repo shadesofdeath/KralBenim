@@ -12,6 +12,8 @@ Her gün **2 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitH
 - `tools/preview.py` — TTS olmadan görsel kontrol (tahmini zamanlama ile kontak sayfası).
 - `tools/upload.py` — YouTube yüklemesi (Actions'ta çalışır, `YOUTUBE_TOKEN_JSON` secret'ı).
 
+Ses tasarımı (`tools/sfx.py`): her videoya otomatik olarak çok hafif ambiyans müziği, sahne geçişlerinde whoosh, cue'larda pop ve kanca kesmesinde vuruş eklenir (telifsiz, kodla üretilir). Kapatmak için senaryoya `"sfx": false`.
+
 Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece GitHub Actions'ta çalışır. Yerel kontrol için `tools/preview.py` kullan.
 
 ## Günlük üretim görevi
@@ -46,6 +48,7 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 6. **Görseller:** Mevcut sahne tiplerini kullan (`window_compare`, `plane`, `plane_breakup`, `timeline`, `pressure_cycle`, `water_tank`, `stress_flow`, `stress_corner`, `window_glow`, `stat`, `list`, `question`, `bridge`, `deck_section`, `swing`, `sky_scatter`, `octopus`, `biscuit`, `signal`). Konuya özgü görsel gerekiyorsa `scenes/index.html` içine yeni bir sahne tipi ekle:
    - Stil: koyu kart üzerinde ince çizgi SVG (viewBox 920×680), beyaz/gri çizgiler, tek vurgu amber `#d9a441`, tehlike/hata için kırmızı `#e5484d`. Çizimler `draw()` ile çizilerek gelsin, her sahnede sürekli bir hareket olsun (akış, nefes alma, sayaç, süzülme). Easing: `prog()`.
    - Yeni tipleri olabildiğince genel ve parametrik yaz (başka konularda da kullanılabilsin). Mevcut tipleri bozma.
+   - **Animasyon kalitesi (zorunlu):** motor her sahneye otomatik olarak çeşitli giriş geçişleri, yavaş kamera itişi, toz parçacıkları, parlama ve yaylı başlık animasyonu ekler. **Cue anlarında kamera "punch-in" yapar, hafif sarsılır, kart parlar ve "pop" sesi çalar** — bu yüzden her sahnede 1–2 cue'yu gerçekten dramatik kelimelere bağla. Yeni sahne tiplerinde: en az 3 ayrı hareketli öğe, sahne boyunca sürekli hareket (hiçbir an donuk kalmasın), girişlerde `spring()` ile yaylanma, vurgu anlarında `punch(lt, cue)` ile büyüyüp sönme; çizimler ince çizgi ama zengin detaylı (gölge katmanı, ikinci çizgi, küçük ışıltılar).
 7. **Kapak (thumbnail)** — her dosyada `cover` bloğu zorunlu. Kapak tıklanma oranını belirler; en çok özen gösterilecek kısım budur.
    ```json
    "cover": {"lines": ["Bu pencere", "uçak düşürdü"], "highlight": ["pencere"],
