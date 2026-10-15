@@ -6,8 +6,8 @@
   "tts": {
     "provider": "elevenlabs",
     "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
-    "model": "eleven_multilingual_v2",
-    "settings": { "stability": 0.42, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true, "speed": 1.0 }
+    "model": "eleven_v3",
+    "settings": { "stability": 0.5 }
   },
   "scenes": [
     {
