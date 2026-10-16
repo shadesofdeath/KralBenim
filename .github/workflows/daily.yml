@@ -41,7 +41,7 @@ jobs:
     needs: plan
     if: needs.plan.outputs.files != '[]'
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 300   # studio long videos draw 3D in software
     strategy:
       fail-fast: false
       max-parallel: 5

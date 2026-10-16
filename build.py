@@ -271,10 +271,12 @@ def prepare_media(timeline, work):
 # ---------------------------------------------------------------- render
 
 def open_page(pw, timeline):
+    # software WebGL (SwiftShader) for the studio 3D shots: runners have no GPU
+    args = ["--enable-unsafe-swiftshader", "--use-angle=swiftshader", "--ignore-gpu-blocklist", "--enable-webgl"]
     try:
-        browser = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH"))
+        browser = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH"), args=args)
     except Exception:
-        browser = pw.chromium.launch(executable_path="/opt/pw-browsers/chromium")
+        browser = pw.chromium.launch(executable_path="/opt/pw-browsers/chromium", args=args)
     w, h = timeline["size"]
     # render at 4/3 scale (1440x2560 / 2560x1440): YouTube gives >1080p uploads the VP9/AV1 high-bitrate
     # encodes, so the final stream stays sharp; layout stays in 1080p CSS pixels
@@ -296,7 +298,7 @@ def _encode_args(timeline):
         # (film grain was dropped: it tripled the file size and encode time and YouTube smears it anyway)
         vf += [f"scale={round(w * 4 / 3)}:{round(h * 4 / 3)}:flags=lanczos"]
     return [*(["-vf", ",".join(vf)] if vf else []),
-            "-c:v", "libx264", "-preset", "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
+            "-c:v", "libx264", "-preset", "medium" if timeline.get("engine") == "studio" else "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
             "-pix_fmt", "yuv420p", "-g", str(60 if blur else fps * 2), "-bf", "2",
             "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
 

@@ -6,6 +6,9 @@ on:
       script:
         description: Script JSON path
         default: script.json
+      no_tts:
+        description: "Silent draft (no ElevenLabs call)"
+        default: "false"
 
 jobs:
   render:
@@ -24,7 +27,11 @@ jobs:
         env:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           SCRIPT: ${{ inputs.script }}
-        run: python build.py "$SCRIPT"
+          NO_TTS: ${{ inputs.no_tts }}
+        run: |
+          start=$(date +%s)
+          if [ "$NO_TTS" = "true" ]; then python build.py "$SCRIPT" --no-tts; else python build.py "$SCRIPT"; fi
+          echo "render took $(( $(date +%s) - start )) s"
       - uses: actions/upload-artifact@v4
         with:
           name: video
