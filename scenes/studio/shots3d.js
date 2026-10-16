@@ -174,8 +174,10 @@ function surfaceMaps(renderer, kind, seed) {
         c = mix(ocean, ground, land);
         c = mix(c, vec3(0.92, 0.95, 1.0), smoothstep(0.78, 0.86, lat + 0.05 * snoise(p * 6.0)));
       } else if (${kind} == 1) {
-        float n = fbm(p * 2.2); float cr = smoothstep(0.55, 0.62, snoise(p * 7.0) * 0.5 + 0.5);
-        c = mix(vec3(0.42), vec3(0.62), n * 0.5 + 0.5) - cr * 0.12;
+        float mare = smoothstep(0.05, 0.3, fbm(p * 1.3 + 4.0));
+        float fine = fbm(p * 9.0) * 0.5 + 0.5;
+        float cr = smoothstep(0.78, 0.84, snoise(p * 16.0) * 0.5 + 0.5) - 0.6 * smoothstep(0.84, 0.9, snoise(p * 16.0) * 0.5 + 0.5);
+        c = vec3(mix(0.66, 0.34, mare) * (0.85 + 0.25 * fine) + cr * 0.12) * vec3(1.0, 0.99, 0.96);
       } else if (${kind} == 2) {
         float n = fbm(p * 2.0); c = mix(vec3(0.55, 0.22, 0.1), vec3(0.78, 0.42, 0.22), n * 0.5 + 0.5);
         c = mix(c, vec3(0.95), smoothstep(0.86, 0.92, lat));
@@ -187,7 +189,7 @@ function surfaceMaps(renderer, kind, seed) {
   // r = city lights, g = clouds, b = second granulation layer (sun)
   const aux = bake(renderer, `aux${kind}_${seed}`, 2048, 1024, `varying vec2 vUv; ${GLSL_NOISE} ${BAKE_DIR}
     void main(){ vec3 o = dirOf(vUv); vec3 p = o + ${seed.toFixed(3)};
-      float city = smoothstep(0.55, 0.85, snoise(p * 38.0) * 0.5 + 0.5) * (1.0 - smoothstep(0.7, 0.8, abs(o.y)));
+      float city = smoothstep(0.72, 0.95, snoise(p * 60.0) * 0.5 + 0.5) * smoothstep(0.2, 0.6, snoise(p * 9.0) * 0.5 + 0.5) * (1.0 - smoothstep(0.7, 0.8, abs(o.y)));
       float cl = smoothstep(0.08, 0.45, fbm(o * 2.6 + ${seed.toFixed(3)} + 11.0));
       float g = fbm(p * 5.0 + 9.0);
       gl_FragColor = vec4(city, cl, g * 0.5 + 0.5, 1.0); }`);
@@ -202,7 +204,7 @@ function noiseMap(renderer) {
 const SPHERE_UV = `vec2 sphUV(vec3 r){ return vec2(atan(r.z, r.x) / 6.2831853 + 0.5, asin(clamp(r.y, -1.0, 1.0)) / 3.14159265 + 0.5); }`;
 
 const SURFACE_FS = `
-uniform float uT; uniform float uSpin; uniform float uCut; uniform vec3 uSun; uniform int uKind;
+uniform float uT; uniform float uSpin; uniform float uCut; uniform vec3 uSun; uniform int uKind; uniform float uGain;
 uniform sampler2D uMap; uniform sampler2D uAux;
 varying vec3 vObj; varying vec3 vN; varying vec3 vView;
 ${SPHERE_UV}
@@ -221,7 +223,7 @@ void main(){
     float land = alb.a;
     float spec = pow(max(dot(N, normalize(uSun + V)), 0.0), 40.0) * (1.0 - land) * 0.6;
     float night = smoothstep(0.12, -0.12, dot(N, uSun));
-    c = c * (0.05 + 1.05 * diff) + spec + night * land * ax.r * vec3(1.0, 0.7, 0.35) * 1.4;
+    c = c * (0.05 + 1.05 * diff) + spec + night * land * ax.r * vec3(1.0, 0.7, 0.35) * 0.9;
     c += fres * vec3(0.25, 0.5, 1.0) * 0.8;
   } else if (uKind == 3) {
     // sun: two drifting samples of the baked granulation
@@ -233,7 +235,7 @@ void main(){
     c *= 0.05 + 1.1 * diff;
     if (uKind == 2) c += fres * vec3(1.0, 0.5, 0.3) * 0.35;
   }
-  gl_FragColor = vec4(c, 1.0);
+  gl_FragColor = vec4(c * uGain, 1.0);
 }`;
 const SURFACE_VS = `varying vec3 vObj; varying vec3 vN; varying vec3 vView;
 void main(){ vObj = position; vN = normalize(mat3(modelMatrix) * normal);
@@ -297,7 +299,7 @@ SHOTS.planet = {
 
     const maps = surfaceMaps(renderer, kind, seed), NOISE = noiseMap(renderer);
     const surfU = { uT: { value: 0 }, uSpin: { value: 0 }, uCut: { value: cut ? 1 : 0 }, uSun: { value: sun }, uKind: { value: kind },
-                    uMap: { value: maps.albedo }, uAux: { value: maps.aux } };
+                    uMap: { value: maps.albedo }, uAux: { value: maps.aux }, uGain: { value: 1 } };
     const surf = new THREE.Mesh(new THREE.SphereGeometry(1, 160, 120),
       new THREE.ShaderMaterial({ uniforms: surfU, vertexShader: SURFACE_VS, fragmentShader: SURFACE_FS, side: THREE.FrontSide }));
     group.add(surf);
@@ -382,7 +384,8 @@ SHOTS.planet = {
     }
     const coreGlow = cut ? glowSprite(layers[0] ? layers[0].b : '#ffd36b', 0.9, 0.0) : null;
     if (coreGlow) { coreGlow.position.set(0.12, 0.12, 0.12); group.add(coreGlow); }
-    if (kind === 3) { const corona = glowSprite('#ffb347', 3.4, 0.8); corona.position.set(0, 0, -0.2); scene.add(corona); }
+    let corona = null;
+    if (kind === 3) { corona = glowSprite('#ffb347', 3.4, 0.8); corona.position.set(0, 0, -0.2); scene.add(corona); }
 
     // drill: a glowing shaft from the north pole down the notch edge to the centre
     let drill = null, tip = null, drillLbl = null;
@@ -404,9 +407,14 @@ SHOTS.planet = {
         stars(t);
         const spin = (P.spin ?? (cut ? 0.06 : 0.12)) * t;
         surfU.uT.value = t; surfU.uSpin.value = spin;
+        // P.fade: the body switches off at the "hit" cue (e.g. "if the Sun went out")
+        const gain = P.fade ? lerp(1, 0.06, progIO(lt, cue(cues, 'hit', dur * 0.5), 0.6)) : 1;
+        surfU.uGain.value = gain;
+        if (corona) corona.material.opacity = 0.8 * gain;
         if (clouds) { clouds.material.uniforms.uSpin.value = spin; clouds.material.uniforms.uT.value = t; }
         cutU.uT.value = t;
         if (!cut) group.rotation.y = 0;
+        group.rotation.z = (P.tilt || 0) * DEG;
         // layer highlight: chosen layer stays lit, others dim; eased in at scene start / cue
         const hp = prog(lt, cue(cues, 'hit', 0.25), 0.6);
         const prevHl = env.prevP ? hlIndex(env.prevP.highlight) : -1;
@@ -419,7 +427,7 @@ SHOTS.planet = {
         cutU.uLit.value = lit.concat([1, 1, 1, 1, 1]).slice(0, 5);
         if (core) core.material.uniforms.uLit.value = lit[0];
         if (coreGlow) coreGlow.material.opacity = 0.35 * lit[0] + 0.25 * Math.sin(t * 3) * 0.3;
-        halo.material.opacity = 0.32 * (P.glow ?? 1) * (0.9 + 0.1 * Math.sin(t * 1.3));
+        halo.material.opacity = 0.32 * (P.glow ?? 1) * (0.9 + 0.1 * Math.sin(t * 1.3)) * surfU.uGain.value;
         const c = shotCam(P, env, lt, dur);
         applyCam(camera, c, W, H);
         halo.position.copy(camera.position.clone().normalize().multiplyScalar(-0.8));
@@ -467,7 +475,7 @@ SHOTS.orbs = {
       let mesh;
       if (mk != null) {
         mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 128, 96), new THREE.ShaderMaterial({
-          uniforms: (() => { const m2 = surfaceMaps(renderer, mk, 3 + i); return { uT: { value: 0 }, uSpin: { value: 0 }, uCut: { value: 0 }, uSun: { value: sun }, uKind: { value: mk }, uMap: { value: m2.albedo }, uAux: { value: m2.aux } }; })(),
+          uniforms: (() => { const m2 = surfaceMaps(renderer, mk, 3 + i); return { uT: { value: 0 }, uSpin: { value: 0 }, uCut: { value: 0 }, uSun: { value: sun }, uKind: { value: mk }, uMap: { value: m2.albedo }, uAux: { value: m2.aux }, uGain: { value: 1 } }; })(),
           vertexShader: SURFACE_VS, fragmentShader: SURFACE_FS }));
       } else {
         const C = { core: ['#fff6d6', '#ffb020', 1.0], lava: ['#ffb347', '#d0300a', 0.8], metal: ['#e8e8ee', '#6f7380', 0.0],
@@ -507,8 +515,8 @@ SHOTS.orbs = {
           const off = (i - (n - 1) / 2) * gap;
           const at = cue(cues, 'o' + i, 0.25 + i * 0.5), sp = spring(lt, at, 0.9);
           // portrait: small spheres in a row in the upper half, labels under them (captions stay clear)
-          const x = portrait ? (i - (n - 1) / 2) * (n > 2 ? 0.82 : 1.2) : off * 1.2, y = portrait ? 0.8 : 0.2;
-          const r = o.s * (portrait ? (n > 2 ? 0.36 : 0.5) : 1.05) * Math.max(sp, 0.001) * (1 + 0.04 * punch(lt, cue(cues, 'v' + i, at + 0.8)));
+          const x = portrait ? (i - (n - 1) / 2) * (n > 2 ? 0.82 : 1.2) : off * 1.2, y = portrait ? (n === 1 ? 1.0 : 0.8) : 0.05;
+          const r = o.s * (portrait ? (n > 2 ? 0.36 : n === 1 ? 0.62 : 0.5) : 0.92) * Math.max(sp, 0.001) * (1 + 0.04 * punch(lt, cue(cues, 'v' + i, at + 0.8)));
           o.mesh.position.set(x, y, 0); o.mesh.scale.setScalar(r);
           o.mesh.rotation.y = t * 0.15;
           if (o.mesh.material.uniforms.uT) o.mesh.material.uniforms.uT.value = t;
@@ -520,7 +528,8 @@ SHOTS.orbs = {
           const vt = v == null ? '' : (o.it.prefix || '') + fmtNum(v * vp, dec) + (o.it.suffix || '') + (o.it.unit ? `<span style="font-size:.5em"> ${o.it.unit}</span>` : '');
           const s = toScreen(V3(x, y - r - 0.15, 0), camera, W, H);
           const fs = portrait ? (n > 2 ? 64 : 88) : 84;
-          o.lbl.set(`<b style="font-size:${fs}px;color:${o.hot ? pal.accent : pal.ink}">${vt}</b><small style="font-size:${portrait ? 38 : 36}px">${o.it.label || ''}</small>`,
+          o.lbl.set(v == null ? `<b style="font-size:${portrait ? 64 : 58}px;color:${o.hot ? pal.accent : pal.ink}">${o.it.label || ''}</b>`
+                     : `<b style="font-size:${fs}px;color:${o.hot ? pal.accent : pal.ink}">${vt}</b><small style="font-size:${portrait ? 38 : 36}px">${o.it.label || ''}</small>`,
             s[0], s[1] + fs * 0.75, clamp01(sp * 1.3));
         });
       },
@@ -536,7 +545,7 @@ SHOTS.lattice = {
     const { P, scene, camera, pal, W, H, labels } = ctx;
     const n = P.n || 5, N = n * n * n, r = rng(17);
     const geo = new THREE.SphereGeometry(0.2, 32, 24);
-    const mat = new THREE.MeshStandardMaterial({ color: col(P.color || '#c9ccd6'), metalness: 0.85, roughness: 0.28,
+    const mat = new THREE.MeshStandardMaterial({ color: col(P.color || '#c9ccd6'), metalness: P.metal === false ? 0.05 : 0.85, roughness: P.metal === false ? 0.3 : 0.28,
       emissive: col(pal.accent), emissiveIntensity: 0 });
     const atoms = new THREE.InstancedMesh(geo, mat, N);
     scene.add(atoms);
@@ -560,7 +569,7 @@ SHOTS.lattice = {
     // six pressure arrows pushing inwards
     const arrows = [];
     const dirs = [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]];
-    if (P.mode !== 'melt') for (const d of dirs) {
+    if (P.mode !== 'melt' && P.arrows !== false) for (const d of dirs) {
       const g = new THREE.Group();
       const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 0.9, 16), new THREE.MeshBasicMaterial({ color: col(pal.accent) }));
       shaft.position.y = 0.75;
@@ -579,8 +588,8 @@ SHOTS.lattice = {
         const t = env.t;
         const sq = P.mode === 'squeeze' ? progIO(lt, cue(cues, 'hit', 0.6), 1.4) : 0;
         const heat = (P.hot ?? (P.mode === 'heat' || P.mode === 'squeeze' ? 0.6 : 0.3));
-        const melt = P.mode === 'melt' ? prog(lt, cue(cues, 'hit', 0.6), 2.0) : 0;
-        const spacing = lerp(0.62, 0.47, sq);
+        const melt = P.mode === 'melt' ? (P.melt_at ? prog(lt, cue(cues, 'hit', 0.6), 2.0) : 1) : 0;
+        const spacing = lerp(P.spacing || 0.62, 0.47, sq);
         const amp = 0.05 * heat * (1 - 0.65 * sq);
         const enter = spring(lt, 0, 1.0);
         const half = (n - 1) / 2;
@@ -615,6 +624,200 @@ SHOTS.lattice = {
           lbl.set(`<b style="font-size:${H > W ? 150 : 110}px;color:${pal.accent}">${C.prefix || ''}${v}${C.suffix || ''}</b><small style="font-size:44px">${C.label || ''}</small>`,
             W / 2, H > W ? H * 0.2 : H * 0.18, clamp01(spring(lt, at, 0.6) * 1.3));
         }
+      },
+    };
+  },
+};
+
+// ------------------------------------------------------------ shared bodies for system shots
+// textured sphere (earth / moon / mars / sun) with day-night lighting; returns {mesh, set(t, spin)}
+function bodyMesh(renderer, kind, seed, sun, segs = 96) {
+  const maps = surfaceMaps(renderer, kind, seed);
+  const U = { uT: { value: 0 }, uSpin: { value: 0 }, uCut: { value: 0 }, uSun: { value: sun }, uKind: { value: kind },
+              uMap: { value: maps.albedo }, uAux: { value: maps.aux }, uGain: { value: 1 } };
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(1, segs, Math.round(segs * 0.75)),
+    new THREE.ShaderMaterial({ uniforms: U, vertexShader: SURFACE_VS, fragmentShader: SURFACE_FS }));
+  return { mesh, set(t, spin) { U.uT.value = t; U.uSpin.value = spin; } };
+}
+// molten world: dark crust plates with glowing seams (texture noise, cheap); heat 0..1
+function lavaMesh(renderer, sun, seed = 1) {
+  const U = { uT: { value: 0 }, uHeat: { value: 0.5 }, uSun: { value: sun }, uNoise: { value: noiseMap(renderer) }, uSeed: { value: seed } };
+  const mesh = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 72), new THREE.ShaderMaterial({ uniforms: U, vertexShader: SURFACE_VS,
+    fragmentShader: `uniform float uT; uniform float uHeat; uniform vec3 uSun; uniform sampler2D uNoise; uniform float uSeed;
+      varying vec3 vObj; varying vec3 vN; varying vec3 vView; ${SPHERE_UV}
+      void main(){ vec3 N = normalize(vN), V = normalize(vView); vec2 uv = sphUV(normalize(vObj)) * vec2(3.0, 1.5) + uSeed * 0.31;
+        float n = texture2D(uNoise, uv + vec2(uT * 0.004, 0.0)).r, m = texture2D(uNoise, uv * 2.1 - vec2(0.0, uT * 0.006)).b;
+        float seam = smoothstep(0.06, 0.0, abs(n - 0.5)) + 0.6 * smoothstep(0.05, 0.0, abs(m - 0.5));
+        float d = max(dot(N, uSun), 0.0), f = pow(1.0 - max(dot(N, V), 0.0), 2.0);
+        vec3 crust = mix(vec3(0.10, 0.06, 0.05), vec3(0.28, 0.16, 0.10), m) * (0.15 + 0.9 * d);
+        vec3 glow = mix(vec3(1.0, 0.35, 0.05), vec3(1.0, 0.85, 0.4), seam * 0.6);
+        vec3 c = mix(crust, glow, clamp(seam * (0.4 + uHeat) + uHeat * 0.35, 0.0, 1.0)) + f * vec3(1.0, 0.4, 0.1) * (0.3 + uHeat * 0.6);
+        gl_FragColor = vec4(c, 1.0); }` }));
+  return { mesh, U };
+}
+
+// ------------------------------------------------------------ collision: a planet-sized impact and what comes after
+// P: {stage: "approach"|"impact"|"disk"|"moon", target: {size: 1}, impactor: {size: 0.53, name: "Theia"},
+//     labels: {target: "Proto-Dünya", impactor: "Theia"}, camera: {...}}   cues: hit (impact moment / coalescing)
+SHOTS.collision = {
+  kind: '3d',
+  build(ctx) {
+    const { P, scene, camera, pal, W, H, labels, renderer } = ctx;
+    const sun = V3(-0.6, 0.5, 0.65).normalize();
+    const stars = starfield(scene, 33);
+    const stage = P.stage || 'approach';
+    const earth = lavaMesh(renderer, sun, 1); scene.add(earth.mesh);
+    const ts = (P.target && P.target.size) || 1, is = (P.impactor && P.impactor.size) || 0.53;
+    earth.mesh.scale.setScalar(ts);
+    const theia = lavaMesh(renderer, sun, 7); scene.add(theia.mesh);
+    theia.mesh.scale.setScalar(is);
+    const halo = glowSprite('#ff7a2a', 4 * ts, 0.35); scene.add(halo);
+    const flash = glowSprite('#fff1c4', 6, 0); scene.add(flash);
+    // debris: instanced rocks, each with a launch direction, then an orbit in the disk plane
+    const N = 900, r = rng(91);
+    const rock = new THREE.InstancedMesh(new THREE.IcosahedronGeometry(0.03, 0),
+      new THREE.MeshBasicMaterial({ color: col('#ffb057') }), N);
+    scene.add(rock);
+    const D = Array.from({ length: N }, () => {
+      const u = r() * 2 - 1, a = r() * 6.283, s = Math.sqrt(1 - u * u);
+      return { dir: V3(Math.cos(a) * s, u * 0.6, Math.sin(a) * s).normalize(), sp: 0.6 + r() * 1.6, R: ts * (1.5 + r() * 2.2),
+               a0: r() * 6.283, y: (r() - 0.5) * 0.12, sz: 0.5 + r() * 1.5, k: r() };
+    });
+    const moon = bodyMesh(renderer, 1, 5, sun, 64); scene.add(moon.mesh);
+    const lblE = labels.add('counter'), lblT = labels.add('counter');
+    const m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), sc = V3(1, 1, 1), pos = V3(0, 0, 0);
+    const MOON_R = ts * 3.2, MOON_A = 0.6;
+    return {
+      update(lt, dur, cues, env) {
+        const t = env.t; stars(t);
+        const hit = cue(cues, 'hit', stage === 'impact' ? Math.min(1.6, dur * 0.4) : 0.8);
+        const cam = Object.assign({ dist: H > W ? 11 : 8.5, yaw: 18, pitch: 16, fov: 34 }, P.camera || {});
+        cam.yaw += t * 1.5;
+        applyCam(camera, camLerp(Object.assign({}, cam, { dist: cam.dist * 1.15 }), cam, progIO(lt, 0, 1.5)), W, H);
+        earth.U.uT.value = theia.U.uT.value = t;
+        earth.mesh.rotation.y = t * 0.08;
+        // theia path: from upper right towards a grazing hit
+        let tp = 0, show = stage === 'approach' || stage === 'impact';
+        if (stage === 'approach') tp = lin(lt, 0, dur) * 0.55;
+        if (stage === 'impact') tp = Math.min(1, 0.55 + 0.45 * EASE_IO(clamp01(lt / hit)));
+        const start = H > W ? V3(2.2 * ts, 2.8 * ts, 0) : V3(4.4 * ts, 0.8 * ts, 0.3), end = V3((ts + is) * 0.72, (ts + is) * 0.45, 0);
+        theia.mesh.position.copy(start.clone().lerp(end, tp));
+        theia.mesh.visible = show && !(stage === 'impact' && lt > hit + 0.15);
+        theia.mesh.rotation.y = -t * 0.2;
+        const boom = stage === 'impact' ? clamp01((lt - hit) / 2.5) : 0;
+        earth.U.uHeat.value = stage === 'impact' ? lerp(0.35, 1.0, clamp01((lt - hit) * 2)) : stage === 'approach' ? 0.35 : stage === 'disk' ? 0.8 : 0.6;
+        const fp = stage === 'impact' ? punch(lt, hit, 1.6) : 0;
+        flash.material.opacity = fp; flash.scale.setScalar(4 + 8 * fp);
+        flash.position.copy(end);
+        halo.material.opacity = 0.3 + 0.4 * earth.U.uHeat.value * 0.5;
+        // debris
+        const ex = boom, disk = stage === 'disk' ? 1 : stage === 'moon' ? 1 : 0;
+        const gather = stage === 'moon' ? progIO(lt, hit - 0.5, Math.max(1.5, dur - hit)) : 0;
+        const ma = MOON_A + t * 0.12;
+        const mpos = V3(Math.cos(ma) * MOON_R, 0, Math.sin(ma) * MOON_R);
+        for (let i = 0; i < N; i++) {
+          const d = D[i];
+          let x = 0, y = 0, z = 0, s = 0;
+          if (stage === 'impact' && lt > hit) {
+            const dist = (ts + 0.1) + d.sp * Math.pow(ex, 0.6) * 2.4;
+            const p = end.clone().normalize().multiplyScalar(ts * 0.9).add(d.dir.clone().multiplyScalar(dist - ts * 0.9 + 0.2));
+            x = p.x; y = p.y; z = p.z; s = d.sz * (1 - 0.3 * ex);
+          } else if (disk) {
+            const a = d.a0 + t * (0.9 / Math.pow(d.R / ts, 1.5));
+            x = Math.cos(a) * d.R; y = d.y * (1 - gather); z = Math.sin(a) * d.R; s = d.sz * 0.8;
+            if (gather > 0) {
+              const g = clamp01(gather * (1.2 - d.k * 0.4));
+              x = lerp(x, mpos.x, g); y = lerp(y, 0, g); z = lerp(z, mpos.z, g); s *= 1 - g;
+            }
+          }
+          pos.set(x, y, z); sc.setScalar(Math.max(s, 0.0001));
+          m4.compose(pos, q, sc); rock.setMatrixAt(i, m4);
+        }
+        rock.instanceMatrix.needsUpdate = true;
+        rock.visible = (stage === 'impact' && lt > hit) || disk > 0;
+        moon.mesh.visible = stage === 'moon';
+        if (stage === 'moon') { moon.mesh.position.copy(mpos); moon.mesh.scale.setScalar(Math.max(0.001, 0.27 * ts * gather)); moon.set(t, t * 0.05); }
+        // labels
+        const L = P.labels || {};
+        const se = toScreen(V3(0, -ts - 0.35, 0), camera, W, H);
+        lblE.set(L.target ? `<b style="font-size:${H > W ? 64 : 52}px">${L.target}</b>` : '', se[0], se[1] + 30, L.target ? prog(lt, 0.3, 0.6) : 0);
+        const st = toScreen(theia.mesh.position.clone().add(V3(0, is + 0.3, 0)), camera, W, H);
+        lblT.set(L.impactor ? `<b style="font-size:${H > W ? 64 : 52}px;color:${pal.accent}">${L.impactor}</b>` : '', st[0], st[1] - 20,
+          L.impactor && theia.mesh.visible ? prog(lt, 0.5, 0.6) : 0);
+      },
+    };
+  },
+};
+
+// ------------------------------------------------------------ orbit3d: a planet with its moon on an orbit ring
+// P: {center: "earth", satellite: "moon", sat_size: 0.27, dist: 3.2, label: "384.400 km", recede: "+3,8 cm/yıl",
+//     laser: true, tides: true, camera: {...}}   cues: hit (laser fires / recede label)
+SHOTS.orbit3d = {
+  kind: '3d',
+  build(ctx) {
+    const { P, scene, camera, pal, W, H, labels, renderer } = ctx;
+    const sun = V3(-0.8, 0.35, 0.5).normalize();
+    const stars = starfield(scene, 55);
+    const kinds = { earth: 0, moon: 1, mars: 2, sun: 3 };
+    const A = bodyMesh(renderer, kinds[P.center || 'earth'] ?? 0, 3 * 1.37, sun); scene.add(A.mesh);
+    const B = bodyMesh(renderer, kinds[P.satellite || 'moon'] ?? 1, 5, sun, 64); scene.add(B.mesh);
+    const ss = P.sat_size ?? 0.27, R0 = P.dist ?? 3.2;
+    B.mesh.scale.setScalar(ss);
+    const halo = glowSprite(pal.glow, 3.4, 0.3); scene.add(halo);
+    const ringGeo = new THREE.BufferGeometry().setFromPoints(Array.from({ length: 181 }, (_, i) => V3(Math.cos(i / 180 * 6.283), 0, Math.sin(i / 180 * 6.283))));
+    const ring = new THREE.Line(ringGeo, new THREE.LineDashedMaterial({ color: col(pal.accent2), dashSize: 0.04, gapSize: 0.03, transparent: true, opacity: 0.5 }));
+    ring.computeLineDistances(); scene.add(ring);
+    const beam = new THREE.Mesh(new THREE.CylinderGeometry(0.012, 0.012, 1, 8, 1), new THREE.MeshBasicMaterial({ color: col('#ff3b3b'), transparent: true }));
+    scene.add(beam);
+    const spot = glowSprite('#ff4b4b', 0.25, 0); scene.add(spot);
+    let tide = null;
+    if (P.tides) {
+      tide = new THREE.Mesh(new THREE.SphereGeometry(1.0, 64, 48), new THREE.MeshBasicMaterial({ color: col('#4aa3ff'), transparent: true, opacity: 0.32, depthWrite: false }));
+      scene.add(tide);
+    }
+    const lblD = labels.add('counter'), lblR = labels.add('counter');
+    const up = V3(0, 1, 0);
+    const meas = new THREE.Line(new THREE.BufferGeometry().setFromPoints([V3(0, 0, 0), V3(1, 0, 0)]),
+      new THREE.LineBasicMaterial({ color: col(pal.accent), transparent: true, opacity: 0 }));
+    scene.add(meas);
+    return {
+      update(lt, dur, cues, env) {
+        const t = env.t; stars(t);
+        const hit = cue(cues, 'hit', Math.min(1.2, dur * 0.4));
+        const cam = Object.assign({ dist: H > W ? 10.5 : 2.2 + R0 * 1.6, yaw: 0, pitch: 22, fov: 34, tx: R0 * 0.5 }, P.camera || {});
+        applyCam(camera, camLerp(Object.assign({}, cam, { dist: cam.dist * 1.15, yaw: cam.yaw - 8 }), cam, progIO(lt, 0, 1.6)), W, H);
+        A.set(t, t * 0.12);
+        const R = R0 * (1 + (P.recede ? 0.12 * progIO(lt, hit, Math.max(1, dur - hit)) : 0));
+        ring.scale.setScalar(R);
+        const ang = (P.angle ?? 0.25) - lt * (P.orbit_speed ?? 0.04);
+        const mp = V3(Math.cos(ang) * R, 0, Math.sin(ang) * R);
+        B.mesh.position.copy(mp); B.set(t, -ang);   // tidally locked: same face to the planet
+        halo.position.set(0, 0, 0);
+        // laser: Earth -> Moon, pulses after the cue
+        const lp = P.laser ? prog(lt, hit, 0.6) : 0;
+        if (lp > 0) {
+          const from = mp.clone().normalize().multiplyScalar(1.0), to = mp.clone().sub(mp.clone().normalize().multiplyScalar(ss));
+          const len = from.distanceTo(to) * lp;
+          beam.position.copy(from.clone().add(to.clone().sub(from).normalize().multiplyScalar(len / 2)));
+          beam.scale.set(1, Math.max(len, 0.001), 1);
+          beam.quaternion.setFromUnitVectors(up, to.clone().sub(from).normalize());
+          beam.material.opacity = 0.65 + 0.35 * Math.sin(t * 30);
+          spot.position.copy(to); spot.material.opacity = lp >= 1 ? 0.9 + 0.1 * Math.sin(t * 25) : 0;
+        }
+        beam.visible = lp > 0;
+        if (tide) {
+          const k = 1 + 0.2 * prog(lt, hit, 1.0);
+          tide.scale.set(k * 1.03, 1.0, 1.03);
+          tide.rotation.y = -ang;
+        }
+        // measuring line from the planet's surface to the moon, label above its middle
+        const a0 = mp.clone().normalize().multiplyScalar(1.08), a1 = mp.clone().sub(mp.clone().normalize().multiplyScalar(ss * 1.2));
+        meas.geometry.setFromPoints([a0.clone().add(V3(0, -0.02, 0)), a1.clone().add(V3(0, -0.02, 0))]);
+        meas.material.opacity = P.label ? 0.85 * prog(lt, 0.3, 0.6) : 0;
+        const mid = toScreen(a0.clone().lerp(a1, 0.5).add(V3(0, 0.3, 0)), camera, W, H);
+        lblD.set(P.label ? `<b style="font-size:${H > W ? 80 : 64}px;color:${pal.accent}">${P.label}</b>` : '', mid[0], mid[1], P.label ? prog(lt, 0.4, 0.6) : 0);
+        const ms = toScreen(mp.clone().add(V3(0, ss + 0.45, 0)), camera, W, H);
+        lblR.set(P.recede ? `<b style="font-size:${H > W ? 72 : 56}px;color:${pal.ink}">${P.recede}</b>` : '', ms[0], ms[1], P.recede ? prog(lt, hit, 0.6) : 0);
       },
     };
   },

@@ -123,7 +123,7 @@ SHOTS2.headline = {
         if (countNode) {
           const C = P.count, at = cue(cues, 'count', 0.1), cp = prog(lt, at, 1.5);
           const to = parseNum(C.to), dec = String(C.to).includes(',') ? 1 : 0;
-          countNode.textContent = (C.prefix || '') + fmtNum(to * cp, dec) + (C.suffix || '');
+          countNode.textContent = (C.prefix || '') + (C.plain ? String(Math.round(to * cp)) : fmtNum(to * cp, dec)) + (C.suffix || '');
           const sp = spring(lt, at, 0.6);
           countNode.setAttribute('opacity', clamp01(sp * 2));
           countNode.setAttribute('transform', `translate(${W / 2} ${countNode.getAttribute('y')}) scale(${lerp(0.6, 1, sp) * (1 + 0.04 * Math.sin(env.t * 3))}) translate(${-W / 2} ${-countNode.getAttribute('y')})`);
@@ -273,20 +273,23 @@ SHOTS2.compare = {
       const S = P[k] || {};
       const g = el(svg, 'g');
       const c = S.color === 'red' ? RED : S.color === 'green' ? GREEN : S.color === 'accent' ? pal.accent : S.color || (i ? pal.accent : pal.ink);
-      const rect = portrait ? { x: 0, y: i ? H * 0.42 : H * 0.12, w: W, h: H * 0.3 } : { x: i ? W / 2 : 0, y: 0, w: W / 2, h: H };
+      const rect = portrait ? { x: 0, y: i ? H * 0.36 : H * 0.1, w: W, h: H * 0.26 } : { x: i ? W / 2 : 0, y: 0, w: W / 2, h: H };
       el(g, 'rect', { x: rect.x, y: rect.y, width: rect.w, height: rect.h, fill: rgba(c, 0.08) });
       const cx = rect.x + rect.w / 2, cy = rect.y + rect.h * (portrait ? 0.4 : 0.42);
       const ic = el(g, 'g');
       const hasIcon = S.icon && ICONS[S.icon];
-      // icon above the text, text auto-fits the half width
-      const iy = portrait ? cy - 150 : cy - 120, ty = hasIcon ? (portrait ? cy + 90 : cy + 140) : cy + 40;
+      // portrait: icon on the left, text on the right; landscape: icon above the text
+      const tx = hasIcon && portrait ? cx + 110 : cx;
+      const ty = portrait ? cy + 60 : (hasIcon ? cy + 140 : cy + 40);
       if (hasIcon) {
-        el(ic, 'path', { d: ICONS[S.icon], transform: `translate(${cx - 70} ${iy - 70}) scale(1.4)`, fill: 'none', stroke: c, 'stroke-width': 7, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', style: `filter: drop-shadow(0 0 16px ${rgba(c, .6)})` });
+        const [ix, iy, k] = portrait ? [cx - 330, cy - 10, 1.7] : [cx, cy - 120, 1.8];
+        el(ic, 'path', { d: ICONS[S.icon], transform: `translate(${ix - 50 * k} ${iy - 50 * k}) scale(${k})`, fill: 'none', stroke: c, 'stroke-width': 7, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', style: `filter: drop-shadow(0 0 16px ${rgba(c, .6)})` });
       }
-      const val = svgText(g, S.value || S.title || '', cx, ty, portrait ? 150 : 130, { fill: c, 'font-family': 'Anton' });
+      const val = svgText(g, S.value || S.title || '', tx, ty, portrait ? 150 : 130, { fill: c, 'font-family': 'Anton' });
       let fs = portrait ? 150 : 130;
-      while (val.getComputedTextLength() > rect.w - 120 && fs > 60) { fs -= 6; val.setAttribute('font-size', fs); }
-      const lab = svgText(g, S.value ? (S.title || '') : (S.sub || ''), cx, ty + (portrait ? 70 : 70), portrait ? 50 : 46, { fill: pal.ink, 'font-weight': 800, opacity: .85 });
+      const maxw = rect.w - (hasIcon && portrait ? 400 : 120);
+      while (val.getComputedTextLength() > maxw && fs > 60) { fs -= 6; val.setAttribute('font-size', fs); }
+      const lab = svgText(g, S.value ? (S.title || '') : (S.sub || ''), tx, ty + 70, portrait ? 50 : 46, { fill: pal.ink, 'font-weight': 800, opacity: .85 });
       let mk = null;
       if (S.mark) {
         mk = el(g, 'g');
@@ -295,12 +298,12 @@ SHOTS2.compare = {
         el(mk, 'path', { d: ICONS[S.mark === 'x' ? 'x' : 'check'], transform: `translate(${mx - 26} ${my - 26}) scale(.52)`, fill: 'none', stroke: '#fff', 'stroke-width': 18, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' });
         mk._c = [mx, my];
       }
-      return { g, ic, val, lab, mk, cx, cy, i };
+      return { g, ic, val, lab, mk, cx: tx, cy: ty, i };
     });
     const vs = el(svg, 'g');
-    const vc = portrait ? [W / 2, H * 0.42] : [W / 2, H / 2];
+    const vc = portrait ? [W / 2, H * 0.36] : [W / 2, H / 2];
     el(vs, 'circle', { cx: vc[0], cy: vc[1], r: 70, fill: pal.accent });
-    svgText(vs, P.vs || 'VS', vc[0], vc[1] + 22, 64, { fill: '#111', 'font-family': 'Anton' });
+    const vsT = P.vs || 'VS'; svgText(vs, vsT, vc[0], vc[1] + (vsT.length === 1 ? 36 : 22), vsT.length === 1 ? 110 : 64, { fill: '#111', 'font-family': 'Anton' });
     return {
       update(lt, dur, cues, env) {
         sides.forEach(s => {
@@ -410,6 +413,105 @@ SHOTS2.photo = {
             t.setAttribute('transform', `translate(${tx} ${ty}) scale(${lerp(0.6, 1, a)}) translate(${-tx} ${-ty})`);
           }
         });
+      },
+    };
+  },
+};
+
+// ------------------------------------------------------------ waterline: floating / sinking objects, frozen lakes
+// P: {mode: "float"|"sink"|"lake", fraction: 0.9 (part under water), object: "ice"|"block",
+//     above: "%10", below: "%90", top_temp: "0 °C", bottom_temp: "4 °C", fish: 3}  cues: hit (labels / sinking)
+SHOTS2.waterline = {
+  kind: '2d',
+  build(ctx) {
+    const { P, pal, W, H, svg, defs } = ctx;
+    const portrait = H > W, mode = P.mode || 'float';
+    const wy = H * (mode === 'lake' ? 0.3 : 0.46), r = rng(61);
+    const id = 'wl' + ctx.seed;
+    const wg = el(defs, 'linearGradient', { id: id + 'w', x1: 0, y1: 0, x2: 0, y2: 1 });
+    el(wg, 'stop', { offset: 0, 'stop-color': '#1f7fb8', 'stop-opacity': 0.85 });
+    el(wg, 'stop', { offset: 1, 'stop-color': '#04182c', 'stop-opacity': 0.98 });
+    const ig = el(defs, 'linearGradient', { id: id + 'i', x1: 0, y1: 0, x2: 1, y2: 1 });
+    el(ig, 'stop', { offset: 0, 'stop-color': '#f4fdff' }); el(ig, 'stop', { offset: 1, 'stop-color': '#9fdcff' });
+    // sky glow above water
+    const sky = el(svg, 'rect', { x: 0, y: 0, width: W, height: wy, fill: rgba(pal.glow, 0.08) });
+    // light shafts under water
+    const shafts = el(svg, 'g', { opacity: 0.12 });
+    for (let i = 0; i < 6; i++) el(shafts, 'path', { d: `M${W * (0.1 + i * 0.17)} ${wy} l${120} ${H} l${-90} 0 Z`, fill: '#bfe9ff' });
+    // object
+    const obj = el(svg, 'g');
+    const ow = portrait ? 520 : 460, oh = portrait ? 760 : 520;
+    let shape;
+    if (mode !== 'lake') {
+      const ice = (P.object || 'ice') === 'ice';
+      const pts = ice ? [[0.42, 0], [0.62, 0.08], [0.7, 0.22], [0.92, 0.38], [1, 0.62], [0.86, 0.86], [0.6, 1], [0.3, 0.97], [0.08, 0.8], [0, 0.55], [0.12, 0.3], [0.28, 0.14]]
+                       : [[0, 0], [1, 0], [1, 1], [0, 1]];
+      const d = 'M' + pts.map(([x, y]) => `${(x - 0.5) * ow} ${y * oh}`).join(' L') + ' Z';
+      shape = el(obj, 'path', { d, fill: ice ? `url(#${id}i)` : (P.color || '#8a6a4a'), stroke: '#ffffff', 'stroke-width': 4, 'stroke-linejoin': 'round' });
+      if (ice) for (let i = 0; i < 7; i++) {
+        const x = (r() - 0.5) * ow * 0.7, y = r() * oh * 0.8 + 30;
+        el(obj, 'path', { d: `M${x} ${y} l${(r() - 0.5) * 120} ${40 + r() * 80}`, stroke: 'rgba(255,255,255,.6)', 'stroke-width': 3, fill: 'none' });
+      }
+    }
+    // water body drawn over the submerged part (tinted)
+    const water = el(svg, 'rect', { x: 0, y: wy, width: W, height: H - wy, fill: `url(#${id}w)`, opacity: mode === 'lake' ? 1 : 0.62 });
+    const surface = el(svg, 'path', { fill: 'none', stroke: '#bfe9ff', 'stroke-width': 5, opacity: 0.9 });
+    // lake: ice sheet + fish + temperature labels
+    let sheet = null, fish = [], tTop = null, tBot = null;
+    if (mode === 'lake') {
+      sheet = el(svg, 'g');
+      el(sheet, 'rect', { x: 0, y: wy - 20, width: W, height: 120, fill: `url(#${id}i)` });
+      for (let i = 0; i < 9; i++) el(sheet, 'path', { d: `M${r() * W} ${wy - 20} l${(r() - 0.5) * 80} ${50 + r() * 70}`, stroke: 'rgba(80,140,180,.7)', 'stroke-width': 3, fill: 'none' });
+      const n = P.fish ?? 3;
+      for (let i = 0; i < n; i++) {
+        const g = el(svg, 'g');
+        const c = [pal.accent, pal.accent2, '#ffffff'][i % 3];
+        el(g, 'path', { d: 'M-60 0 C-30 -32 30 -32 50 0 C30 32 -30 32 -60 0 Z M50 0 L90 -26 L82 0 L90 26 Z', fill: c, opacity: 0.92 });
+        el(g, 'circle', { cx: -34, cy: -6, r: 6, fill: '#111' });
+        fish.push({ g, y: wy + 380 + i * (portrait ? 260 : 150), v: 70 + r() * 60, ph: r() * W, dir: i % 2 ? -1 : 1, s: 0.9 + r() * 0.6 });
+      }
+      tTop = svgText(svg, P.top_temp || '0 °C', W - 70, wy + 180, portrait ? 84 : 64, { fill: '#ffffff', 'font-family': 'Anton', 'text-anchor': 'end' });
+      tBot = svgText(svg, P.bottom_temp || '4 °C', W - 70, H * (portrait ? 0.6 : 0.88), portrait ? 110 : 80, { fill: pal.accent, 'font-family': 'Anton', 'text-anchor': 'end' });
+    }
+    const lA = P.above ? svgText(svg, P.above, 0, 0, portrait ? 96 : 76, { fill: '#ffffff', 'font-family': 'Anton', 'text-anchor': 'start' }) : null;
+    const lB = P.below ? svgText(svg, P.below, 0, 0, portrait ? 140 : 110, { fill: pal.accent, 'font-family': 'Anton', 'text-anchor': 'start' }) : null;
+    const brA = el(svg, 'path', { fill: 'none', stroke: '#ffffff', 'stroke-width': 5 }), brB = el(svg, 'path', { fill: 'none', stroke: pal.accent, 'stroke-width': 6 });
+    const bubbles = Array.from({ length: 22 }, () => ({ c: el(svg, 'circle', { r: 3 + r() * 8, fill: 'none', stroke: 'rgba(200,240,255,.5)', 'stroke-width': 2 }), x: r() * W, y: r(), v: 40 + r() * 80 }));
+    return {
+      update(lt, dur, cues, env) {
+        const t = env.t, hit = cue(cues, 'hit', 0.8);
+        let d = `M0 ${wy}`;
+        for (let x = 0; x <= W; x += 30) d += ` L${x} ${wy + Math.sin(x / 90 + t * 2.2) * 9 + Math.sin(x / 37 - t * 1.3) * 4}`;
+        surface.setAttribute('d', d);
+        shafts.setAttribute('transform', `translate(${Math.sin(t * 0.4) * 40} 0)`);
+        bubbles.forEach(b => { const y = H - (((1 - b.y) * (H - wy) + t * b.v) % (H - wy)); b.c.setAttribute('cx', b.x + Math.sin(t * 2 + b.x) * 10); b.c.setAttribute('cy', y); });
+        if (mode !== 'lake') {
+          const f = mode === 'sink' ? 1 : (P.fraction ?? 0.9);
+          const enter = spring(lt, 0, 1.2);
+          let top = wy - oh * (1 - f);
+          if (mode === 'sink') top = lerp(wy - oh * 0.6, H - oh - 60, progIO(lt, hit, 2.2));
+          const y = lerp(-oh - 100, top, enter) + Math.sin(t * 1.6) * 8;
+          obj.setAttribute('transform', `translate(${W / 2 + (portrait ? 0 : -260)} ${y}) rotate(${Math.sin(t * 0.9) * 2})`);
+          // proportion brackets on the right of the object
+          const bx = W / 2 + (portrait ? ow / 2 + 30 : -260 + ow / 2 + 40);
+          const lp = prog(lt, hit, 0.6);
+          brA.setAttribute('d', `M${bx} ${y + 6} h20 V${wy - 6} h-20`); brA.style.opacity = P.above ? lp : 0;
+          brB.setAttribute('d', `M${bx} ${wy + 6} h24 V${y + oh} h-24`); brB.style.opacity = P.below ? lp : 0;
+          if (lA) { lA.setAttribute('x', bx + 40); lA.setAttribute('y', (y + wy) / 2 + 30); lA.setAttribute('opacity', lp); }
+          if (lB) { lB.setAttribute('x', bx + 44); lB.setAttribute('y', (wy + y + oh) / 2 + 40); lB.setAttribute('opacity', prog(lt, hit + 0.25, 0.6)); }
+          if (lB && portrait) { const tw = lB.getComputedTextLength(); if (bx + 44 + tw > W - 30) { lB.setAttribute('x', W - 30 - tw); } }
+          if (lA && portrait) { const tw = lA.getComputedTextLength(); if (bx + 40 + tw > W - 30) { lA.setAttribute('x', W - 30 - tw); } }
+        } else {
+          const freeze = prog(lt, 0, 1.2);
+          sheet.setAttribute('transform', `translate(0 ${(1 - freeze) * -140})`); sheet.setAttribute('opacity', freeze);
+          fish.forEach(f => {
+            const x = ((f.ph + f.dir * t * f.v) % (W + 300) + W + 300) % (W + 300) - 150;
+            f.g.setAttribute('transform', `translate(${x} ${f.y + Math.sin(t * 1.5 + f.ph) * 14}) scale(${f.dir * -f.s} ${f.s})`);
+          });
+          tTop.setAttribute('opacity', prog(lt, hit, 0.5));
+          const bp = spring(lt, hit + 0.4, 0.6);
+          tBot.setAttribute('opacity', clamp01(bp * 1.4));
+        }
       },
     };
   },
