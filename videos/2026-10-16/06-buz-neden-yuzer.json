@@ -1,0 +1,281 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "buz-neden-yuzer",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "ice"
+  },
+  "scenes": [
+    {
+      "type": "waterline",
+      "text": "Buz, doğanın kuralını bozuyor.",
+      "visual": "Suyun yüzeyinde sallanan beyaz-mavi bir buz parçası; büyük kısmı su altında.",
+      "title": {
+        "white": "Buz",
+        "gray": "yüzer"
+      },
+      "cues": {
+        "hit": "bozuyor"
+      },
+      "params": {
+        "mode": "float",
+        "fraction": 0.9
+      }
+    },
+    {
+      "type": "compare",
+      "art": {
+        "palette": "lab"
+      },
+      "text": "Çoğu madde katılaşınca kendi sıvısında batar.",
+      "visual": "Bölünmüş ekran: üstte kırmızı aşağı ok 'Çoğu madde — katısı batar', altta kar tanesi 'Su — buzu yüzer'.",
+      "title": {
+        "white": "Kural"
+      },
+      "cues": {
+        "left": "madde",
+        "right": "sıvısında"
+      },
+      "params": {
+        "left": {
+          "title": "Çoğu madde",
+          "sub": "katısı batar",
+          "icon": "arrowDown",
+          "color": "red",
+          "mark": "x"
+        },
+        "right": {
+          "title": "Su",
+          "sub": "buzu yüzer",
+          "icon": "snow",
+          "color": "accent",
+          "mark": "check"
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "ice"
+      },
+      "text": "Su ise donunca genişler.",
+      "visual": "Dev yazılar çarpıyor: 'SU DONUNCA' ve amber kutuda 'GENİŞLER'.",
+      "title": {},
+      "mascot": "shock",
+      "cues": {
+        "w0": "su",
+        "w1": "donunca",
+        "w2": "genişler"
+      },
+      "params": {
+        "lines": [
+          "Su donunca",
+          "genişler"
+        ],
+        "highlight": [
+          "genişler"
+        ]
+      }
+    },
+    {
+      "type": "lattice",
+      "art": {
+        "palette": "ocean"
+      },
+      "text": "Sıvı suda moleküller kayar ve birbirine sokulur.",
+      "visual": "3D moleküller dağınık bir sıvı gibi kayıp akıyor, sık ve düzensiz.",
+      "title": {
+        "white": "Sıvı",
+        "gray": "su"
+      },
+      "cues": {
+        "hit": "kayar"
+      },
+      "params": {
+        "mode": "melt",
+        "color": "#bfe6ff",
+        "hot": 0.5,
+        "n": 5,
+        "metal": false
+      }
+    },
+    {
+      "type": "lattice",
+      "art": {
+        "palette": "ice"
+      },
+      "text": "Donunca ise boşluklu, düzenli bir kafese kilitlenirler.",
+      "visual": "Aynı moleküller aralarında boşluk kalan düzenli bir 3D kafese oturuyor, yerlerinde hafifçe titriyor.",
+      "title": {
+        "white": "Buz",
+        "gray": "kafes"
+      },
+      "cues": {
+        "hit": "kilitlenirler"
+      },
+      "params": {
+        "mode": "heat",
+        "arrows": false,
+        "spacing": 0.8,
+        "color": "#e8f8ff",
+        "hot": 0.15,
+        "n": 5,
+        "metal": false
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "ice"
+      },
+      "text": "Bu yüzden buz, aynı miktar sudan yüzde 9 kadar fazla yer kaplar.",
+      "visual": "Dev sayaç '%9'a çıkıyor, altında 'DAHA FAZLA HACİM'.",
+      "title": {
+        "white": "Yüzde 9",
+        "gray": "fazla hacim"
+      },
+      "mascot": "explain",
+      "cues": {
+        "count": "yüzde",
+        "w0": "fazla"
+      },
+      "params": {
+        "count": {
+          "to": "9",
+          "prefix": "%"
+        },
+        "lines": [
+          "daha fazla hacim"
+        ],
+        "highlight": [
+          "hacim"
+        ]
+      }
+    },
+    {
+      "type": "waterline",
+      "art": {
+        "palette": "ocean"
+      },
+      "text": "Buzdağlarının onda dokuzunun suyun altında kalması bundan.",
+      "visual": "Yüzen buzdağı; su üstündeki kısım '%10', su altındaki dev kısım '%90' köşeli parantezle işaretli.",
+      "title": {
+        "white": "Buzdağı"
+      },
+      "cues": {
+        "hit": "dokuzunun"
+      },
+      "params": {
+        "mode": "float",
+        "fraction": 0.9,
+        "above": "%10",
+        "below": "%90"
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "ice"
+      },
+      "text": "Göller de bu sayede yukarıdan donar.",
+      "visual": "Dev yazılar: 'YUKARIDAN' ve amber kutuda 'DONAR'.",
+      "title": {},
+      "cues": {
+        "w0": "göller",
+        "w1": "donar"
+      },
+      "params": {
+        "lines": [
+          "Yukarıdan",
+          "donar"
+        ],
+        "highlight": [
+          "donar"
+        ]
+      }
+    },
+    {
+      "type": "waterline",
+      "art": {
+        "palette": "ocean"
+      },
+      "text": "Dipteki su yaklaşık 4 derecede kalır, balıklar kışı orada geçirir.",
+      "visual": "Göl kesiti: üstte buz tabakası '0 °C', altta yüzen balıklar ve dipte '4 °C'.",
+      "title": {
+        "white": "Dipte",
+        "gray": "4 °C"
+      },
+      "cues": {
+        "hit": "4"
+      },
+      "params": {
+        "mode": "lake",
+        "top_temp": "0 °C",
+        "bottom_temp": "4 °C",
+        "fish": 3
+      }
+    },
+    {
+      "type": "waterline",
+      "art": {
+        "palette": "noir"
+      },
+      "text": "Yani buz batsaydı, göller dipten donar, kış ölümcül olurdu.",
+      "visual": "Buz parçası 'batsaydı' kelimesinde suyun dibine doğru batıyor; maskot üzgün.",
+      "title": {
+        "white": "Ya",
+        "gray": "batsaydı?"
+      },
+      "mascot": "sad",
+      "cues": {
+        "hit": "batsaydı"
+      },
+      "params": {
+        "mode": "sink"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Buz",
+      "kuralı",
+      "bozuyor"
+    ],
+    "highlight": [
+      "Buz"
+    ],
+    "scene": 6,
+    "t": 2.2
+  },
+  "youtube": {
+    "title": "Buz Neden Suda Yüzer? Su Kuralı Bozuyor 🧊",
+    "description": "Buz neden suda yüzer? Çoğu madde katılaşınca sıkışır ve kendi sıvısında batar, ama su donunca genişler. Buz bu yüzden sudan hafif kalır ve yüzer.\n\nDonarken su molekülleri boşluklu, düzenli bir kafese kilitlenir; buz aynı miktar sudan yaklaşık yüzde 9 fazla yer kaplar. Buzdağlarının onda dokuzu bu yüzden suyun altındadır. Göller yukarıdan donar, dipteki su yaklaşık 4 derecede kalır ve balıklar kışı atlatır.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence buz batsaydı dünya nasıl olurdu? Yorumlara yaz!\n\n#shorts #buz #bilim #fizik #düşünbakalım",
+    "tags": [
+      "buz neden yüzer",
+      "buz neden suda yüzer",
+      "su donunca genişler mi",
+      "buzdağı neden yüzer",
+      "göller neden yukarıdan donar",
+      "suyun yoğunluğu",
+      "4 derece su",
+      "fizik",
+      "kimya",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T18:00:00+03:00"
+  }
+}

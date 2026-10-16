@@ -1,0 +1,1034 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "ay-nasil-olustu",
+  "engine": "studio",
+  "format": "long",
+  "fps": 30,
+  "art": {
+    "palette": "space"
+  },
+  "scenes": [
+    {
+      "type": "planet",
+      "text": "Her gece gökyüzünde gördüğümüz Ay, aslında bir felaketin eseri olabilir.",
+      "visual": "Uzayda yavaşça dönen kraterli 3D Ay.",
+      "title": {
+        "white": "Ay",
+        "gray": "bir felaket mi?"
+      },
+      "params": {
+        "preset": "moon",
+        "spin": 0.05,
+        "camera": {
+          "dist": 4.2,
+          "yaw": 20,
+          "pitch": 6,
+          "drift": 2
+        }
+      },
+      "cues": {
+        "hit": "felaketin"
+      },
+      "chapter": "Giriş"
+    },
+    {
+      "type": "collision",
+      "text": "Bilim insanlarının en güçlü açıklamasına göre Ay, iki gezegenin çarpışmasından doğdu.",
+      "visual": "Erimiş genç Dünya ve ona doğru gelen daha küçük gezegen Theia; etiketler 'Proto-Dünya' ve 'Theia'.",
+      "title": {
+        "white": "Dev",
+        "gray": "çarpışma"
+      },
+      "params": {
+        "stage": "approach",
+        "labels": {
+          "target": "Proto-Dünya",
+          "impactor": "Theia"
+        },
+        "camera": {
+          "dist": 7.2,
+          "yaw": 18,
+          "pitch": 12
+        }
+      },
+      "cues": {},
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Peki bunu nereden biliyoruz? Ve o çarpışma, bugünkü dünyamızı nasıl değiştirdi?",
+      "visual": "Dev yazılar: 'BUNU' ve amber kutuda 'NEREDEN BİLİYORUZ?'; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Bunu nereden",
+          "biliyoruz?"
+        ],
+        "highlight": [
+          "biliyoruz?"
+        ]
+      },
+      "cues": {
+        "w0": "bunu",
+        "w1": "nereden",
+        "w2": "biliyoruz"
+      },
+      "mascot": "think",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Ay, Dünya'dan ortalama 384.400 kilometre uzakta. Çapı ise Dünya'nınkinin yaklaşık dörtte biri.",
+      "visual": "3D Dünya ve yörünge çizgisinde dönen Ay; aradaki mesafe etiketi '384.400 km'.",
+      "title": {
+        "white": "384.400",
+        "gray": "kilometre"
+      },
+      "params": {
+        "label": "384.400 km"
+      },
+      "cues": {
+        "hit": "dörtte"
+      },
+      "chapter": "Apollo'nun getirdiği ipucu",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "orbs",
+      "text": "Bu, bir gezegenin uydusu için alışılmadık derecede büyük bir boyut.",
+      "visual": "Yan yana 3D Dünya ve Ay küreleri gerçek oranla; altlarında çap sayaçları 12.742 km ve 3.474 km.",
+      "title": {
+        "white": "Boyut",
+        "gray": "karşılaştırması"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Dünya",
+            "value": "12.742",
+            "unit": "km",
+            "material": "earth",
+            "size": 1
+          },
+          {
+            "label": "Ay",
+            "value": "3.474",
+            "unit": "km",
+            "material": "moon",
+            "size": 0.27
+          }
+        ]
+      },
+      "cues": {
+        "v0": "alışılmadık",
+        "v1": "büyük"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "1969 ile 1972 arasında Apollo astronotları Ay'a tam altı kez indi.",
+      "visual": "Dev sayaç 1969'a sayıyor, altında 'APOLLO' ve '6 İNİŞ'.",
+      "title": {
+        "white": "Apollo",
+        "gray": "1969–1972"
+      },
+      "params": {
+        "count": {
+          "to": "1969",
+          "plain": true
+        },
+        "lines": [
+          "Apollo: 6 iniş"
+        ],
+        "highlight": [
+          "6"
+        ]
+      },
+      "cues": {
+        "count": "1969",
+        "w0": "apollo",
+        "w2": "altı"
+      },
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Dünya'ya yaklaşık 382 kilogram kaya ve toprak getirdiler.",
+      "visual": "Dev sayaç 382'ye çıkıyor, altında amber kutuda 'KG AY TAŞI'.",
+      "title": {
+        "white": "382 kg",
+        "gray": "Ay taşı"
+      },
+      "params": {
+        "count": {
+          "to": "382"
+        },
+        "lines": [
+          "kg Ay taşı"
+        ],
+        "highlight": [
+          "taşı"
+        ]
+      },
+      "cues": {
+        "count": "382"
+      },
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Taşlar incelendiğinde şaşırtıcı bir sonuç çıktı: Ay kayaları, Dünya kayalarıyla neredeyse aynı kimyaya sahipti.",
+      "visual": "Bölünmüş ekran: solda küre ikonu 'Dünya kayası', sağda Ay ikonu 'Ay kayası', ortada '=' işareti.",
+      "title": {
+        "white": "Aynı",
+        "gray": "kimya"
+      },
+      "params": {
+        "left": {
+          "title": "Dünya kayası",
+          "icon": "globe",
+          "color": "accent"
+        },
+        "right": {
+          "title": "Ay kayası",
+          "icon": "moon",
+          "color": "accent"
+        },
+        "vs": "="
+      },
+      "cues": {
+        "left": "kayaları",
+        "right": "aynı"
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Özellikle oksijen atomlarının türleri, yani izotopları, neredeyse birebir eşleşiyordu.",
+      "visual": "Dev yazılar: 'OKSİJEN İZOTOPLARI' ve amber kutuda 'BİREBİR'.",
+      "title": {
+        "white": "Oksijen",
+        "gray": "izotopları"
+      },
+      "params": {
+        "lines": [
+          "Oksijen izotopları",
+          "birebir"
+        ],
+        "highlight": [
+          "birebir"
+        ]
+      },
+      "cues": {
+        "w0": "oksijen",
+        "w2": "birebir"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Ama bir fark vardı: Ay'ın demir çekirdeği, boyutuna göre çok küçüktü.",
+      "visual": "Kesitli 3D Ay; ortada minicik parlayan demir çekirdek, etiket 'KÜÇÜK ÇEKİRDEK'.",
+      "title": {
+        "white": "Küçük",
+        "gray": "çekirdek"
+      },
+      "params": {
+        "preset": "moon",
+        "cut": true,
+        "highlight": "inner",
+        "labels": [
+          {
+            "layer": "inner",
+            "text": "KÜÇÜK ÇEKİRDEK",
+            "sub": "demir",
+            "at": "hit",
+            "angle": 45,
+            "dx": -380,
+            "dy": -200
+          }
+        ],
+        "camera": {
+          "dist": 4.0,
+          "yaw": 40,
+          "pitch": 22
+        }
+      },
+      "cues": {
+        "hit": "küçüktü"
+      },
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Bu iki ipucu, o güne kadarki teorilerin hepsini zora soktu.",
+      "visual": "Dev yazılar: 'ESKİ TEORİLER' ve kırmızı kutuda 'ZORDA'; maskot şaşkın.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Eski teoriler",
+          "zorda"
+        ],
+        "highlight": [
+          "zorda"
+        ]
+      },
+      "cues": {
+        "w0": "ipucu",
+        "w2": "zora"
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "İlk fikir, Charles Darwin'in oğlu George Darwin'den geldi. 1879'da, hızla dönen genç Dünya'dan bir parçanın koptuğunu öne sürdü.",
+      "visual": "Çok hızlı dönen 3D Dünya.",
+      "title": {
+        "white": "Kopma",
+        "gray": "teorisi · 1879"
+      },
+      "params": {
+        "preset": "earth",
+        "spin": 1.6,
+        "camera": {
+          "dist": 4.6,
+          "yaw": 30,
+          "pitch": 12
+        }
+      },
+      "cues": {
+        "hit": "koptuğunu"
+      },
+      "chapter": "Eski teoriler",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Ama hesaplar, Dünya'nın bunun için imkânsız bir hızla dönmesi gerektiğini gösterdi.",
+      "visual": "Dev yazılar: 'İMKÂNSIZ' ve kırmızı kutuda 'BİR HIZ'.",
+      "title": {},
+      "params": {
+        "lines": [
+          "İmkânsız",
+          "bir hız"
+        ],
+        "highlight": [
+          "hız"
+        ]
+      },
+      "cues": {
+        "w0": "hesaplar",
+        "w1": "imkânsız"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "İkinci fikre göre Ay uzaktan gelip Dünya'nın çekimine yakalandı. Ama o zaman ikisinin kimyasının bu kadar benzer olması garipti.",
+      "visual": "3D Dünya ve uzak bir yörüngede Ay; etiket 'YAKALANMA?'.",
+      "title": {
+        "white": "Yakalanma",
+        "gray": "teorisi"
+      },
+      "params": {
+        "label": "Yakalanma?",
+        "dist": 4.2,
+        "angle": 0.4
+      },
+      "cues": {
+        "hit": "yakalandı"
+      },
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "orbs",
+      "text": "Üçüncü fikre göre ikisi yan yana, aynı malzemeden oluştu. Ama o zaman da Ay'ın çekirdeği neden bu kadar küçük?",
+      "visual": "Yan yana iki 3D küre: Dünya ve Ay; altlarında 'Dünya' ve 'Ay' etiketleri.",
+      "title": {
+        "white": "Birlikte",
+        "gray": "oluşum"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Dünya",
+            "material": "earth",
+            "size": 1
+          },
+          {
+            "label": "Ay",
+            "material": "moon",
+            "size": 0.27
+          }
+        ]
+      },
+      "cues": {}
+    },
+    {
+      "type": "headline",
+      "text": "Her teori bir şeyi açıklıyordu, ama hiçbiri hepsini açıklayamıyordu.",
+      "visual": "Dev yazılar: 'HİÇBİRİ' ve amber kutuda 'YETMİYORDU'; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Hiçbiri",
+          "yetmiyordu"
+        ],
+        "highlight": [
+          "yetmiyordu"
+        ]
+      },
+      "cues": {
+        "w0": "teori",
+        "w1": "hiçbiri"
+      },
+      "mascot": "think",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "collision",
+      "text": "1970'lerin ortasında iki ayrı araştırma ekibi cesur bir fikir ortaya attı: dev çarpışma.",
+      "visual": "Erimiş genç Dünya'ya doğru yaklaşan Theia, uzaktan.",
+      "title": {
+        "white": "Dev çarpışma",
+        "gray": "1970'ler"
+      },
+      "params": {
+        "stage": "approach",
+        "labels": {
+          "target": "Proto-Dünya",
+          "impactor": "?"
+        },
+        "camera": {
+          "dist": 8.0,
+          "yaw": 40,
+          "pitch": 10
+        }
+      },
+      "cues": {},
+      "chapter": "Theia",
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "orbs",
+      "text": "Yaklaşık 4,5 milyar yıl önce, genç Dünya'ya Mars büyüklüğünde bir gök cismi yaklaşıyordu.",
+      "visual": "Yan yana iki 3D küre: büyük erimiş 'Proto-Dünya' ve yarısı boyutunda kızıl 'Theia'.",
+      "title": {
+        "white": "4,5 milyar",
+        "gray": "yıl önce"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Proto-Dünya",
+            "material": "lava",
+            "size": 1
+          },
+          {
+            "label": "Theia (Mars boyunda)",
+            "material": "mars",
+            "size": 0.53
+          }
+        ]
+      },
+      "cues": {
+        "o1": "mars"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Bilim insanları ona, Yunan mitolojisinde Ay tanrıçası Selene'nin annesinin adını verdi: Theia.",
+      "visual": "Dev yazı: amber kutuda 'THEIA', altında 'Selene'nin annesi'.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Theia"
+        ],
+        "highlight": [
+          "Theia"
+        ],
+        "sub": "Ay tanrıçası Selene'nin annesi"
+      },
+      "cues": {
+        "w0": "theia"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "collision",
+      "text": "Ve çarpıştılar. Doğrudan değil, yandan, sıyırarak.",
+      "visual": "Theia genç Dünya'ya yandan çarpıyor: beyaz parlama, erimiş kaya parçaları her yöne fışkırıyor.",
+      "title": {
+        "white": "Çarpışma"
+      },
+      "params": {
+        "stage": "impact",
+        "labels": {
+          "target": "",
+          "impactor": "Theia"
+        }
+      },
+      "cues": {
+        "hit": "çarpıştılar"
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "collision",
+      "text": "Çarpışmanın enerjisiyle iki gezegenin dış katmanları eridi, kaya buharı ve enkaz uzaya fırladı.",
+      "visual": "Kızgın Dünya'nın etrafında dönen parlak enkaz halkası oluşuyor.",
+      "title": {
+        "white": "Enkaz",
+        "gray": "halkası"
+      },
+      "params": {
+        "stage": "disk",
+        "camera": {
+          "dist": 9.5,
+          "yaw": 10,
+          "pitch": 24
+        }
+      },
+      "cues": {},
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Theia'nın ağır demir çekirdeğinin büyük kısmı ise Dünya'nın içine karıştı.",
+      "visual": "Dev yazılar: 'DEMİR ÇEKİRDEK' ve amber kutuda 'DÜNYA'YA'.",
+      "title": {
+        "white": "Demir",
+        "gray": "Dünya'ya"
+      },
+      "params": {
+        "lines": [
+          "Demir çekirdek",
+          "Dünya'ya"
+        ],
+        "highlight": [
+          "Dünya'ya"
+        ]
+      },
+      "cues": {
+        "w0": "demir",
+        "w2": "karıştı"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "İşte Ay'ın çekirdeğinin küçük olmasının sebebi bu. Ay, çoğunlukla hafif dış katmanlardan oluştu.",
+      "visual": "Kesitli 3D Ay yakın plan; minicik çekirdek parlıyor, kalın kaya manto vurgulu.",
+      "title": {
+        "white": "Hafif",
+        "gray": "katmanlar"
+      },
+      "params": {
+        "preset": "moon",
+        "cut": true,
+        "highlight": "mantle",
+        "labels": [
+          {
+            "layer": "mantle",
+            "text": "HAFİF KAYA",
+            "sub": "dış katmanlardan",
+            "at": "hit",
+            "angle": 60,
+            "dx": -420,
+            "dy": -40
+          }
+        ],
+        "camera": {
+          "dist": 3.6,
+          "yaw": 52,
+          "pitch": 26
+        }
+      },
+      "cues": {
+        "hit": "hafif"
+      },
+      "mascot": "explain",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "collision",
+      "text": "Halkadaki parçalar birbirine yapışarak tek bir gövdede toplandı. Böylece Ay doğdu.",
+      "visual": "Enkaz halkasındaki parçalar bir noktada toplanıyor ve küçük bir Ay küresi büyüyor.",
+      "title": {
+        "white": "Ay",
+        "gray": "doğuyor"
+      },
+      "params": {
+        "stage": "moon",
+        "camera": {
+          "dist": 9.0,
+          "yaw": 0,
+          "pitch": 26
+        }
+      },
+      "cues": {
+        "hit": "parçalar"
+      },
+      "chapter": "Ay'ın doğuşu",
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Bazı bilgisayar simülasyonlarına göre bu, astronomik ölçüde çok kısa bir sürede oldu.",
+      "visual": "Dev yazılar: 'ÇOK' ve amber kutuda 'KISA SÜREDE'.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Çok",
+          "kısa sürede"
+        ],
+        "highlight": [
+          "kısa",
+          "sürede"
+        ]
+      },
+      "cues": {
+        "w0": "simülasyonlarına",
+        "w1": "kısa"
+      },
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Yeni doğan Ay, Dünya'ya bugünkünden çok daha yakındı ve gökyüzünde devasa görünüyordu.",
+      "visual": "3D Dünya'nın hemen yakınında dönen büyük Ay; etiket 'ÇOK DAHA YAKIN'.",
+      "title": {
+        "white": "Çok",
+        "gray": "daha yakın"
+      },
+      "params": {
+        "label": "Çok daha yakın",
+        "dist": 1.9,
+        "angle": 0.2,
+        "camera": {
+          "dist": 5.2,
+          "pitch": 16
+        }
+      },
+      "cues": {
+        "hit": "yakındı"
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Ve iki kayanın kimyası neden aynı? Çünkü ikisi de aynı karışımdan, aynı felaketten doğdu.",
+      "visual": "Bölünmüş ekran: solda 'Dünya' sağda 'Ay', ortada '=' işareti, ikisinin altında 'aynı karışım'.",
+      "title": {
+        "white": "Aynı",
+        "gray": "felaket"
+      },
+      "params": {
+        "left": {
+          "title": "Dünya",
+          "sub": "aynı karışım",
+          "icon": "globe",
+          "color": "accent"
+        },
+        "right": {
+          "title": "Ay",
+          "sub": "aynı karışım",
+          "icon": "moon",
+          "color": "accent"
+        },
+        "vs": "="
+      },
+      "cues": {
+        "left": "kayanın",
+        "right": "felaketten"
+      },
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Hikâye burada bitmiyor. Apollo astronotları, Ay'ın yüzeyine özel aynalar bıraktı.",
+      "visual": "3D Dünya ve Ay; Ay yüzeyinde kırmızı bir nokta parlıyor (ayna).",
+      "title": {
+        "white": "Ay'daki",
+        "gray": "aynalar"
+      },
+      "params": {
+        "laser": true,
+        "angle": 0.3,
+        "camera": {
+          "pitch": 14
+        }
+      },
+      "cues": {
+        "hit": "aynalar"
+      },
+      "chapter": "Ay uzaklaşıyor",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Bilim insanları bugün hâlâ bu aynalara lazer gönderiyor ve ışığın geri dönüş süresini ölçüyor.",
+      "visual": "Dünya'dan Ay'a kırmızı lazer ışını gidiyor, Ay'daki noktada parlıyor.",
+      "title": {
+        "white": "Lazer",
+        "gray": "ölçümü"
+      },
+      "params": {
+        "laser": true,
+        "label": "~2,5 saniye gidiş-dönüş",
+        "angle": 0.1,
+        "camera": {
+          "pitch": 26
+        }
+      },
+      "cues": {
+        "hit": "lazer"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Sonuç şaşırtıcı: Ay, her yıl yaklaşık 3,8 santimetre uzaklaşıyor.",
+      "visual": "Ay'ın yörüngesi yavaşça genişliyor; Ay'ın üstünde '+3,8 cm / yıl' etiketi.",
+      "title": {
+        "white": "Her yıl",
+        "gray": "+3,8 cm"
+      },
+      "params": {
+        "recede": "+3,8 cm / yıl",
+        "angle": 0.35,
+        "camera": {
+          "pitch": 32
+        }
+      },
+      "cues": {
+        "hit": "uzaklaşıyor"
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "headline",
+      "text": "Bu, tırnaklarımızın uzama hızına yakın bir hız.",
+      "visual": "Dev yazılar: 'TIRNAK' ve amber kutuda 'HIZINDA'.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Tırnak",
+          "hızında"
+        ],
+        "highlight": [
+          "hızında"
+        ]
+      },
+      "cues": {
+        "w0": "tırnaklarımızın",
+        "w1": "hızına"
+      },
+      "mascot": "happy",
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Sebep gelgitler. Ay'ın çekimi okyanusları kabartıyor ve bu sürtünme, Dünya'nın dönüşünü yavaşlatıyor.",
+      "visual": "3D Dünya'yı saran mavi su kabuğu Ay'a doğru uzayarak kabarıyor (gelgit).",
+      "title": {
+        "white": "Gelgit",
+        "gray": "freni"
+      },
+      "params": {
+        "tides": true,
+        "dist": 2.6,
+        "angle": 0.15,
+        "camera": {
+          "pitch": 38
+        }
+      },
+      "cues": {
+        "hit": "kabartıyor"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Yani günler uzuyor. 400 milyon yıl kadar önceki mercan fosilleri, o zaman bir yılın 400 güne yakın olduğunu gösteriyor.",
+      "visual": "Dev sayaç 400'e çıkıyor, altında '1 YILDA GÜN' ve 'yaklaşık 400 milyon yıl önce'.",
+      "title": {
+        "white": "Günler",
+        "gray": "uzuyor"
+      },
+      "params": {
+        "count": {
+          "to": "400"
+        },
+        "lines": [
+          "günlük yıllar"
+        ],
+        "highlight": [
+          "yıllar"
+        ],
+        "sub": "yaklaşık 400 milyon yıl önce"
+      },
+      "cues": {
+        "count": "güne"
+      },
+      "art": {
+        "palette": "ocean"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Ay, Dünya'nın eksen eğikliğini de dengede tutuyor. Bu, iklimin uzun vadede daha kararlı kalmasına yardım ediyor.",
+      "visual": "Yan açıdan dönen 3D Dünya.",
+      "title": {
+        "white": "Dengeyi",
+        "gray": "tutan Ay"
+      },
+      "params": {
+        "preset": "earth",
+        "spin": 0.25,
+        "tilt": 23.4,
+        "camera": {
+          "dist": 5.2,
+          "yaw": -35,
+          "pitch": 4
+        }
+      },
+      "cues": {
+        "hit": "dengede"
+      },
+      "chapter": "Ay olmasaydı",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "orbs",
+      "text": "Bir tesadüf daha var: Güneş, Ay'dan yaklaşık 400 kat büyük ama yaklaşık 400 kat da uzak. Bu yüzden gökyüzünde neredeyse aynı boyutta görünürler.",
+      "visual": "Gökyüzünde aynı boyutta görünen iki küre yan yana: kaynayan Güneş ve gri Ay; altlarında '400 kat büyük' ve '400 kat yakın'.",
+      "title": {
+        "white": "400 kat",
+        "gray": "tesadüf"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "400 kat büyük",
+            "material": "sun",
+            "size": 1
+          },
+          {
+            "label": "400 kat yakın",
+            "material": "moon",
+            "size": 1
+          }
+        ]
+      },
+      "cues": {
+        "o1": "uzak"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Tam güneş tutulmalarını bu tesadüfe borçluyuz. Ama Ay uzaklaştıkça, yüz milyonlarca yıl sonra tam tutulmalar sona erecek.",
+      "visual": "Dev yazılar: 'TAM TUTULMALAR' ve kırmızı kutuda 'BİTECEK'.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Tam tutulmalar",
+          "bitecek"
+        ],
+        "highlight": [
+          "bitecek"
+        ],
+        "sub": "yüz milyonlarca yıl sonra"
+      },
+      "cues": {
+        "w0": "tam",
+        "w2": "sona"
+      },
+      "mascot": "sad",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Son bir ipucu: 2023'te yayımlanan bir çalışma, Theia'nın parçalarının bugün hâlâ Dünya'nın mantosunun derinlerinde olabileceğini öne sürdü.",
+      "visual": "Kesitli 3D Dünya; manto katmanı parlıyor, etiket 'THEIA'NIN İZLERİ?'.",
+      "title": {
+        "white": "Theia",
+        "gray": "hâlâ içimizde?"
+      },
+      "params": {
+        "cut": true,
+        "highlight": "mantle",
+        "labels": [
+          {
+            "layer": "mantle",
+            "text": "THEIA'NIN İZLERİ?",
+            "sub": "derin mantoda",
+            "at": "hit",
+            "angle": 30,
+            "dx": -420,
+            "dy": -120
+          }
+        ],
+        "camera": {
+          "dist": 4.4,
+          "yaw": 38,
+          "pitch": 22
+        }
+      },
+      "cues": {
+        "hit": "theia"
+      },
+      "chapter": "Kapanış",
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "orbit3d",
+      "text": "Yani her gece Ay'a baktığında, aslında 4,5 milyar yıl önceki bir çarpışmanın enkazına bakıyorsun.",
+      "visual": "Kamera geri çekilirken 3D Dünya ve yörüngesinde dönen Ay; maskot mutlu.",
+      "title": {
+        "white": "Bir çarpışmanın",
+        "gray": "enkazı"
+      },
+      "params": {
+        "angle": 0.45,
+        "camera": {
+          "pitch": 14
+        }
+      },
+      "cues": {
+        "hit": "enkazına"
+      },
+      "mascot": "happy",
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Sence Ay hiç olmasaydı, Dünya'da yaşam bugünkü gibi olur muydu? Yorumlarda buluşalım.",
+      "visual": "Dev yazı: 'AY OLMASAYDI?' amber kutuda; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Ay",
+          "olmasaydı?"
+        ],
+        "highlight": [
+          "olmasaydı?"
+        ]
+      },
+      "cues": {
+        "w0": "ay",
+        "w1": "olmasaydı"
+      },
+      "mascot": "think",
+      "art": {
+        "palette": "noir"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Ay bir",
+      "çarpışmadan",
+      "doğdu"
+    ],
+    "highlight": [
+      "çarpışmadan"
+    ],
+    "scene": 19,
+    "t": 3.2
+  },
+  "youtube": {
+    "title": "Ay Nasıl Oluştu? Dünya'ya Çarpan Kayıp Gezegen: Theia 🌙",
+    "description": "Ay nasıl oluştu? Bilim insanlarının en güçlü açıklamasına göre Ay, yaklaşık 4,5 milyar yıl önce genç Dünya'ya Mars büyüklüğünde bir gezegenin, Theia'nın çarpmasıyla doğdu.\n\nApollo astronotlarının getirdiği 382 kilogram Ay taşı, Ay ile Dünya'nın kimyasının neredeyse aynı olduğunu gösterdi. Eski teorilerin açıklayamadığı bu ipucu, dev çarpışma teorisini güçlendirdi. Ay bugün hâlâ her yıl yaklaşık 3,8 santimetre uzaklaşıyor; gelgitler Dünya'nın dönüşünü yavaşlatıyor ve günler uzuyor.\n\nBu videoda:\n• Apollo'nun getirdiği ipucu: aynı kimya, küçük çekirdek\n• Eski teoriler: kopma, yakalanma, birlikte oluşum\n• Theia çarpışması ve Ay'ın doğuşu\n• Ay neden her yıl 3,8 cm uzaklaşıyor?\n• Ay olmasaydı ne olurdu?\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Ay hiç olmasaydı, Dünya'da yaşam bugünkü gibi olur muydu? Yorumlara yaz!\n\n#ay #uzay #bilim #theia #düşünbakalım",
+    "tags": [
+      "ay nasıl oluştu",
+      "ay nasıl oluştu belgesel",
+      "ayın oluşumu",
+      "theia",
+      "dev çarpışma teorisi",
+      "ay nereden geldi",
+      "apollo ay taşları",
+      "ay uzaklaşıyor",
+      "ay her yıl uzaklaşıyor",
+      "gelgit",
+      "güneş tutulması",
+      "ay olmasaydı ne olurdu",
+      "uzay",
+      "astronomi",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T18:00:00+03:00"
+  }
+}

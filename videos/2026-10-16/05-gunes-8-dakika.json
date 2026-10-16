@@ -1,0 +1,302 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "gunes-8-dakika",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "space"
+  },
+  "scenes": [
+    {
+      "type": "planet",
+      "text": "Gördüğün Güneş, 8 dakika önceki Güneş.",
+      "visual": "Uzayda kaynayan, granülasyonlu 3D Güneş küresi ve etrafında parlayan korona.",
+      "title": {
+        "white": "Güneş",
+        "gray": "8 dk önce"
+      },
+      "cues": {
+        "hit": "önceki"
+      },
+      "params": {
+        "preset": "sun",
+        "camera": {
+          "dist": 5.6,
+          "yaw": 20,
+          "pitch": 8,
+          "drift": 3
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "sunset"
+      },
+      "text": "Çünkü Güneş bizden yaklaşık 150 milyon kilometre uzakta.",
+      "visual": "Dev sayaç 0'dan 150.000.000'a sayıyor, altında 'KİLOMETRE' yazısı.",
+      "title": {
+        "white": "Uzaklık"
+      },
+      "cues": {
+        "count": "150",
+        "w0": "kilometre"
+      },
+      "params": {
+        "count": {
+          "to": "150.000.000"
+        },
+        "lines": [
+          "kilometre"
+        ],
+        "highlight": [
+          "kilometre"
+        ],
+        "sub": "Dünya ile Güneş arası (ortalama)"
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "lab"
+      },
+      "text": "Işık saniyede yaklaşık 300 bin kilometre yol alır.",
+      "visual": "Dev sayaç 300.000'e sayıyor, altında 'KM / SANİYE'.",
+      "title": {
+        "white": "Işık",
+        "gray": "hızı"
+      },
+      "mascot": "explain",
+      "cues": {
+        "count": "300",
+        "w0": "saniyede"
+      },
+      "params": {
+        "count": {
+          "to": "300.000"
+        },
+        "lines": [
+          "km / saniye"
+        ],
+        "highlight": [
+          "saniye"
+        ]
+      }
+    },
+    {
+      "type": "bars",
+      "art": {
+        "palette": "space"
+      },
+      "text": "Ay'ın ışığı bize 1 saniyede ulaşır, Güneş'inki ise 8 dakika 20 saniyede.",
+      "visual": "İki çubuk: 'Ay'dan' 1,3 saniye (minicik), 'Güneş'ten' 500 saniye (ekranı dolduran amber çubuk).",
+      "title": {
+        "white": "Işığın",
+        "gray": "yolculuğu"
+      },
+      "cues": {
+        "b0": "ay'ın",
+        "b1": "güneş'inki"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Ay'dan gelen ışık",
+            "value": "1,3",
+            "unit": "sn"
+          },
+          {
+            "label": "Güneş'ten gelen ışık",
+            "value": "500",
+            "unit": "sn"
+          }
+        ],
+        "highlight": 1
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Güneş şu an sönseydi bile,",
+      "visual": "3D Güneş yakın plan; 'sönseydi' kelimesinde ışığı kararıp sönüyor.",
+      "title": {
+        "white": "Ya",
+        "gray": "sönerse?"
+      },
+      "mascot": "shock",
+      "cues": {
+        "hit": "sönseydi"
+      },
+      "params": {
+        "preset": "sun",
+        "fade": true,
+        "camera": {
+          "dist": 4.2,
+          "yaw": 35,
+          "pitch": 12
+        }
+      }
+    },
+    {
+      "type": "planet",
+      "text": "8 dakika boyunca hiçbir şey fark etmezdik.",
+      "visual": "Gece-gündüz çizgisi ve şehir ışıklarıyla dönen 3D Dünya, hiçbir şey olmamış gibi.",
+      "title": {
+        "white": "8 dakika",
+        "gray": "habersiz"
+      },
+      "cues": {
+        "hit": "fark"
+      },
+      "params": {
+        "preset": "earth",
+        "spin": 0.15,
+        "camera": {
+          "dist": 6.6,
+          "yaw": 70,
+          "pitch": 14
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "noir"
+      },
+      "text": "Gece gökyüzünde bu gecikme çok daha büyük.",
+      "visual": "Dev yazılar çarpıyor: 'GECİKME' ve kırmızı kutuda 'BÜYÜYOR'; maskot düşünüyor.",
+      "title": {},
+      "mascot": "think",
+      "cues": {
+        "w0": "gecikme",
+        "w1": "büyük"
+      },
+      "params": {
+        "lines": [
+          "Gecikme",
+          "büyüyor"
+        ],
+        "highlight": [
+          "büyüyor"
+        ]
+      }
+    },
+    {
+      "type": "orbs",
+      "art": {
+        "palette": "ice"
+      },
+      "text": "En parlak yıldız Sirius'un ışığı bize 8,6 yılda gelir.",
+      "visual": "Beyaz-sıcak parlayan tek bir yıldız küresi; altında sayaç '8,6 yıl' ve 'Sirius'.",
+      "title": {
+        "white": "Sirius",
+        "gray": "8,6 yıl"
+      },
+      "cues": {
+        "v0": "8,6"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Sirius'tan gelen ışık",
+            "value": "8,6",
+            "unit": "yıl",
+            "material": "core",
+            "size": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "space"
+      },
+      "text": "Bazı yıldızların ışığı ise binlerce yıldır yolda.",
+      "visual": "Dev yazı: 'BİNLERCE' ve amber kutuda 'YIL'.",
+      "title": {
+        "white": "Binlerce",
+        "gray": "yıl"
+      },
+      "cues": {
+        "w0": "binlerce",
+        "w1": "yolda"
+      },
+      "params": {
+        "lines": [
+          "Binlerce",
+          "yıl"
+        ],
+        "highlight": [
+          "yıl"
+        ],
+        "sub": "yolda olan ışık"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Yani gökyüzüne her baktığında, aslında geçmişe bakıyorsun.",
+      "visual": "Kamera geri çekilirken dönen 3D Dünya ve arkasında yıldızlar; maskot mutlu el sallıyor.",
+      "title": {
+        "white": "Geçmişe",
+        "gray": "bakıyorsun"
+      },
+      "mascot": "happy",
+      "cues": {
+        "hit": "geçmişe"
+      },
+      "params": {
+        "preset": "earth",
+        "spin": 0.12,
+        "camera": {
+          "dist": 7.4,
+          "yaw": 20,
+          "pitch": 18,
+          "drift": 4
+        }
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Güneş",
+      "8 dakika",
+      "gecikmeli"
+    ],
+    "highlight": [
+      "gecikmeli"
+    ],
+    "scene": 0,
+    "t": 1.6
+  },
+  "youtube": {
+    "title": "Güneş'i Neden 8 Dakika Geç Görüyoruz? ☀️",
+    "description": "Güneş'i neden 8 dakika geç görüyoruz? Çünkü Güneş'ten çıkan ışık bize yaklaşık 8 dakika 20 saniyede ulaşıyor. Yani şu an gördüğün Güneş, 8 dakika önceki Güneş.\n\nGüneş bizden yaklaşık 150 milyon kilometre uzakta ve ışık saniyede yaklaşık 300 bin kilometre yol alıyor. Ay'ın ışığı bize 1 saniyede gelirken, en parlak yıldız Sirius'un ışığı 8,6 yılda geliyor. Gökyüzüne bakmak, aslında geçmişe bakmak.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Güneş sönse ilk neyi fark ederdik? Yorumlara yaz!\n\n#shorts #güneş #uzay #bilim #düşünbakalım",
+    "tags": [
+      "güneş ışığı kaç dakikada gelir",
+      "güneş 8 dakika",
+      "ışık hızı",
+      "güneş ne kadar uzakta",
+      "güneşi geç görüyoruz",
+      "güneş sönerse ne olur",
+      "sirius",
+      "ışık yılı",
+      "uzay",
+      "astronomi",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T18:00:00+03:00"
+  }
+}
