@@ -69,13 +69,21 @@ def main():
         script = json.loads(Path(sys.argv[2]).read_text())
         cap = instagram_caption(script)
         import subprocess
+        video = sys.argv[3]
+        # bot uploads are capped at 50 MB: send a 1080p copy when the master is bigger
+        if Path(video).stat().st_size > 48 * 1024 * 1024:
+            small = str(Path(video).with_suffix(".telegram.mp4"))
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", video, "-vf", "scale=1080:-2:flags=lanczos",
+                            "-c:v", "libx264", "-preset", "medium", "-crf", "21", "-maxrate", "8M", "-bufsize", "16M",
+                            "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", small], check=True)
+            video = small
         w, h, dur = subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
-                                             "stream=width,height:format=duration", "-of", "csv=p=0:s=,", sys.argv[3]],
+                                             "stream=width,height:format=duration", "-of", "csv=p=0:s=,", video],
                                             text=True).replace("\n", ",").strip(",").split(",")[:3]
         # Telegram needs the real size, otherwise vertical videos show up squashed
         res = call("sendVideo", {"chat_id": chat_id(), "supports_streaming": "true", "width": w, "height": h,
                                  "duration": int(float(dur)),
-                                 "caption": "🎬 Instagram Reels için hazır. Açıklama aşağıda 👇"}, {"video": sys.argv[3]})
+                                 "caption": "🎬 Instagram Reels için hazır. Açıklama aşağıda 👇"}, {"video": video})
         print("video sent", res.get("ok"))
         call("sendMessage", {"chat_id": chat_id(), "text": cap})
     elif cmd == "text":
