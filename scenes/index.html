@@ -1280,6 +1280,324 @@ const BUILD = {
     };
   },
 
+  // feather tickling a foot sole; the brain can predict the touch.
+  // params: mode self|predict|other|robot|delay, label. cues: hit
+  tickle(svg, P) {
+    const mode = P.mode || 'self', other = mode === 'other' || mode === 'delay';
+    const level = { self: 0.18, predict: 0.15, other: 1, robot: 0.22, delay: 0.85 }[mode] ?? 0.2;
+    const hot = level > 0.5 ? RED : AMBER;
+    // foot sole (seen from below)
+    const foot = el(svg, 'g');
+    const soleD = 'M575 615 C530 585 525 500 540 430 C552 370 555 300 590 262 C625 226 690 236 708 292 C724 345 700 420 702 492 C704 560 680 612 630 620 C608 623 590 622 575 615 Z';
+    el(foot, 'path', { d: soleD, fill: 'rgba(232,185,168,.07)', stroke: 'none' });
+    const sole = line(foot, soleD, WHITE, 6);
+    const arch = line(foot, 'M600 560 C585 500 590 430 610 380', GRAY, 2.5);
+    const toes = [[592, 228, 24], [636, 210, 19], [670, 216, 16], [697, 232, 13], [716, 256, 11]].map(([x, y, r]) =>
+      line(foot, `M${x} ${y - r} A${r} ${r} 0 1 1 ${x - 0.1} ${y - r}`, WHITE, 5));
+    const wig = [0, 1, 2, 3, 4, 5].map(() => el(svg, 'path', { fill: 'none', stroke: hot, 'stroke-width': 4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+    const has = [0, 1, 2].map(i => { const t = el(svg, 'text', { fill: hot, 'font-size': 40 + i * 6, 'font-weight': 900, 'text-anchor': 'middle' }); t.textContent = 'HA'; return t; });
+    // predicted contact spot
+    const target = el(svg, 'circle', { cx: 600, cy: 430, r: 40, fill: 'none', stroke: AMBER, 'stroke-width': 3, 'stroke-dasharray': '8 8' });
+    // feather (+ hand or robot gripper at its base); local tip at 0,0
+    const fg = el(svg, 'g');
+    const vane = el(fg, 'path', { d: 'M0 0 C-30 -46 -150 -40 -230 58 C-150 92 -50 64 0 0 Z', fill: 'rgba(245,245,247,.06)', stroke: WHITE, 'stroke-width': 4, 'stroke-linejoin': 'round' });
+    const quill = line(fg, 'M6 -2 C-80 30 -170 72 -270 128', WHITE, 4);
+    const barbs = []; for (let i = 1; i < 9; i++) { const k = i / 9, x = -270 * k, y = 128 * k * k * 0.9 + 0; barbs.push(line(fg, `M${x} ${y} l${-30 + k * 10} ${-34 + k * 8} M${x} ${y} l${-12} ${26 - k * 6}`, GRAY, 2)); }
+    const holder = el(fg, 'g');
+    if (mode === 'robot' || mode === 'delay') {
+      el(holder, 'path', { d: 'M-300 112 l40 -14 l14 30 l-40 14 Z', fill: '#1c1c20', stroke: AMBER, 'stroke-width': 4 });
+    } else drawIcon(holder, 'hand', -300, 150, 0.95, other ? WHITE : AMBER);
+    const tag = el(svg, 'text', { x: 150, y: 90, fill: other ? WHITE : AMBER, 'font-size': 36, 'font-weight': 800, 'text-anchor': 'middle' });
+    tag.textContent = P.who ?? (mode === 'self' || mode === 'predict' ? 'Kendi elin' : mode === 'other' ? 'Başkası' : 'Robot kol');
+    // robot arm
+    const arm = [line(svg, '', GRAY, 14), line(svg, '', WHITE, 4)];
+    const joints = [0, 1, 2].map(() => el(svg, 'circle', { r: 14, fill: '#1c1c20', stroke: AMBER, 'stroke-width': 4 }));
+    const base = el(svg, 'rect', { x: 50, y: 620, width: 120, height: 30, rx: 8, fill: '#1c1c20', stroke: WHITE, 'stroke-width': 4 });
+    // brain + prediction signal
+    const brain = el(svg, 'g'); drawIcon(brain, 'brain', 150, 190, 1.05, WHITE, AMBER);
+    const sig = el(svg, 'path', { d: 'M215 200 C330 160 470 260 570 440', fill: 'none', stroke: AMBER, 'stroke-width': 4, 'stroke-dasharray': '12 12', 'stroke-linecap': 'round' });
+    const pulses = [0, 1, 2].map(() => el(svg, 'circle', { r: 8, fill: AMBER }));
+    // delay clock
+    const clk = el(svg, 'g');
+    el(clk, 'circle', { cx: 150, cy: 200, r: 62, fill: '#141416', stroke: GRAY, 'stroke-width': 4 });
+    const clkArc = el(clk, 'circle', { cx: 150, cy: 200, r: 62, fill: 'none', stroke: AMBER, 'stroke-width': 8, pathLength: 1, transform: 'rotate(-90 150 200)', 'stroke-linecap': 'round' });
+    const clkHand = line(clk, 'M150 200 V158', WHITE, 5);
+    const clkT = el(clk, 'text', { x: 150, y: 310, fill: AMBER, 'font-size': 32, 'font-weight': 800, 'text-anchor': 'middle' }); clkT.textContent = '+ gecikme';
+    // sensation meter
+    const mLab = el(svg, 'text', { x: 855, y: 640, fill: GRAY, 'font-size': 24, 'font-weight': 700, 'letter-spacing': '0.08em', 'text-anchor': 'end' }); mLab.textContent = 'GIDIKLANMA';
+    el(svg, 'rect', { x: 815, y: 250, width: 34, height: 350, rx: 17, fill: 'none', stroke: '#3a3a40', 'stroke-width': 3 });
+    const mFill = el(svg, 'rect', { x: 821, width: 22, rx: 11, fill: hot });
+    const lbl = el(svg, 'text', { x: 460, y: 660, fill: GRAY, 'font-size': 30, 'font-weight': 600, 'text-anchor': 'middle' }); lbl.textContent = P.label || '';
+    const robotish = mode === 'robot' || mode === 'delay';
+    return (lt, dur, c) => {
+      const pIn = spring(lt, 0, 0.7), hit = c.hit ?? dur * 0.45, pk = punch(lt, hit, 0.6);
+      const act = prog(lt, 0.5, 0.6), lvl = level * prog(lt, Math.min(hit, 0.9), 0.8);
+      draw(sole, prog(lt, 0.05, 0.8)); draw(arch, prog(lt, 0.5, 0.5));
+      toes.forEach((t, i) => draw(t, prog(lt, 0.3 + i * 0.07, 0.4)));
+      const shake = lvl > 0.5 ? Math.sin(lt * 38) * 4 * lvl : 0;
+      const curl = lvl > 0.5 ? Math.sin(lt * 9) * 6 * lvl : 0;
+      foot.setAttribute('transform', `translate(${shake} 0) rotate(${curl * 0.3} 620 600)`);
+      toes.forEach((t, i) => t.setAttribute('transform', `translate(0 ${curl * (i % 2 ? 1 : -1)})`));
+      // feather tip sweeps over the sole
+      const tx = 600 + Math.sin(lt * 7) * 26 * act, ty = 430 + Math.sin(lt * 3.5) * 46 * act;
+      const slide = (1 - pIn) * -320;
+      fg.setAttribute('transform', `translate(${tx + slide} ${ty}) rotate(${-6 + Math.sin(lt * 7) * 6})`);
+      fg.style.opacity = clamp01(pIn * 1.5);
+      barbs.forEach((b, i) => draw(b, prog(lt, 0.3 + i * 0.05, 0.4)));
+      draw(quill, prog(lt, 0.1, 0.6));
+      // robot arm follows the gripper
+      const bx = tx + slide - 300 * Math.cos(-0.1) + 10, by = ty + 120;
+      const ex = lerp(110, bx, 0.45), ey = Math.min(by, 640) - 170 + Math.sin(lt * 2) * 8;
+      arm.forEach(a => { a.setAttribute('d', `M110 625 L${ex} ${ey} L${bx} ${by}`); a.style.opacity = robotish ? pIn : 0; a.style.strokeDasharray = 'none'; });
+      [[110, 625], [ex, ey], [bx, by]].forEach(([x, y], i) => { joints[i].setAttribute('cx', x); joints[i].setAttribute('cy', y); joints[i].style.opacity = robotish ? pIn : 0; });
+      base.style.opacity = robotish ? pIn : 0;
+      tag.style.opacity = prog(lt, 0.4, 0.4) * (mode === 'predict' || mode === 'delay' ? 0 : 1);
+      // prediction
+      const pred = mode === 'predict' || mode === 'self';
+      brain.style.opacity = (mode === 'predict' ? 1 : mode === 'self' ? 0.0 : 0) * prog(lt, 0.2, 0.5);
+      brain.setAttribute('transform', `translate(150 190) scale(${1 + 0.04 * Math.sin(lt * 3) + 0.15 * pk}) translate(-150 -190)`);
+      sig.style.opacity = mode === 'predict' ? prog(lt, 0.5, 0.5) : 0;
+      sig.style.strokeDashoffset = -lt * 60;
+      pulses.forEach((p, i) => {
+        const k = ((lt * 0.7 + i / 3) % 1), u = 1 - k;
+        const x = u * u * u * 215 + 3 * u * u * k * 330 + 3 * u * k * k * 470 + k * k * k * 570;
+        const y = u * u * u * 200 + 3 * u * u * k * 160 + 3 * u * k * k * 260 + k * k * k * 440;
+        p.setAttribute('cx', x); p.setAttribute('cy', y); p.style.opacity = mode === 'predict' ? prog(lt, 0.6, 0.4) * (1 - k * 0.5) : 0;
+      });
+      target.style.opacity = pred ? prog(lt, 0.4, 0.4) * (0.6 + 0.4 * Math.sin(lt * 4)) : 0;
+      target.setAttribute('r', 40 + 6 * Math.sin(lt * 4) + 20 * pk);
+      target.style.strokeDashoffset = lt * 30;
+      clk.style.opacity = mode === 'delay' ? prog(lt, 0.2, 0.4) : 0;
+      const cp = prog(lt, 0.3, Math.max(0.6, hit - 0.3));
+      clkArc.style.strokeDasharray = `${cp * 0.3} 1`;
+      clkHand.setAttribute('transform', `rotate(${lt * 220} 150 200)`); clkHand.style.strokeDasharray = 'none';
+      // sensation
+      wig.forEach((w, i) => {
+        const a = i / 6 * Math.PI * 2 + lt * 0.6, R = 150 + 20 * Math.sin(lt * 5 + i), cx = 620 + Math.cos(a) * R * 0.6, cy = 430 + Math.sin(a) * R;
+        const amp = 6 + 10 * lvl;
+        w.setAttribute('d', `M${cx - 22} ${cy} l8 ${-amp} l8 ${amp * 2} l8 ${-amp * 2} l8 ${amp}`);
+        w.style.opacity = clamp01(lvl * 1.4) * (0.5 + 0.5 * Math.sin(lt * 8 + i * 2));
+      });
+      has.forEach((h, i) => {
+        const k = ((lt * 0.6 + i / 3) % 1);
+        h.setAttribute('x', 470 + i * 70 + Math.sin(lt * 3 + i) * 10); h.setAttribute('y', 330 - k * 160 + (i % 2) * 70);
+        h.style.opacity = lvl > 0.5 ? (1 - k) * clamp01((lvl - 0.5) * 3) : 0;
+      });
+      const jit = lvl > 0.5 ? Math.sin(lt * 23) * 0.04 : Math.sin(lt * 5) * 0.01;
+      const mh = Math.max(0, 338 * clamp01(0.04 + lvl + jit * (lvl > 0 ? 1 : 0)));
+      mFill.setAttribute('height', mh); mFill.setAttribute('y', 594 - mh);
+      mFill.style.filter = lvl > 0.5 ? `drop-shadow(0 0 ${10 + 10 * pk}px ${hot})` : 'none';
+      lbl.style.opacity = prog(lt, 0.6, 0.4);
+    };
+  },
+
+  // flamingo side view. params: mode chick|eat|absorb|fade|pink. cues: hit
+  flamingo(svg, P) {
+    const mode = P.mode || 'pink', PINK = [242, 120, 159], GRY = [200, 200, 206], BLUE = '#4f8ff7';
+    const mix = p => `rgb(${GRY.map((g, i) => Math.round(lerp(g, PINK[i], p))).join(',')})`;
+    const WL = 540;
+    const sea = [0, 1].map(i => el(svg, 'path', { fill: i ? 'none' : 'rgba(79,143,247,.08)', stroke: i ? 'rgba(120,170,255,.3)' : 'rgba(120,170,255,.55)', 'stroke-width': 3 }));
+    const reflect = el(svg, 'path', { fill: 'none', stroke: 'rgba(242,120,159,.25)', 'stroke-width': 3 });
+    const bird = el(svg, 'g');
+    const legs = [line(bird, 'M440 360 L446 470 L450 600', GRAY, 5), line(bird, 'M470 360 L486 430 L446 462 L462 470', GRAY, 5)];
+    const knee = el(bird, 'circle', { cx: 446, cy: 470, r: 6, fill: GRAY });
+    const bodyD = 'M330 300 C330 240 420 222 500 240 C560 254 592 290 562 330 C532 366 420 372 370 352 C340 340 330 322 330 300 Z';
+    const bodyFill = el(bird, 'path', { d: bodyD, stroke: 'none' });
+    const body = line(bird, bodyD, WHITE, 5);
+    const wingL = line(bird, 'M380 270 C420 250 500 256 540 290 C500 310 430 320 380 300 Z', WHITE, 3);
+    const wingFeath = line(bird, 'M410 292 L380 320 M440 300 L414 330 M470 302 L448 332', GRAY, 2.5);
+    const tail = line(bird, 'M334 296 L286 282 L304 302 L284 320 L338 318', WHITE, 4);
+    const neck = el(bird, 'path', { fill: 'none', 'stroke-width': 16, 'stroke-linecap': 'round' });
+    const neckO = el(bird, 'path', { fill: 'none', stroke: WHITE, 'stroke-width': 3, 'stroke-linecap': 'round' });
+    const head = el(bird, 'g');
+    const headC = el(head, 'circle', { cx: 0, cy: 0, r: 24, stroke: WHITE, 'stroke-width': 4 });
+    el(head, 'path', { d: 'M16 -8 C46 -6 60 14 52 42 C44 28 32 18 18 12 Z', fill: '#f5f5f7', stroke: WHITE, 'stroke-width': 3, 'stroke-linejoin': 'round' });
+    el(head, 'path', { d: 'M44 18 C52 26 54 34 52 42 C47 34 42 28 38 24 Z', fill: '#111' });
+    el(head, 'circle', { cx: 4, cy: -6, r: 4, fill: '#111' });
+    // chick + egg shells
+    const chick = el(svg, 'g');
+    let fuzz = ''; for (let i = 0; i <= 36; i++) { const a = i / 36 * Math.PI * 2, r = 62 + (i % 2 ? 7 : -3); fuzz += (i ? 'L' : 'M') + (250 + Math.cos(a) * r * 1.15).toFixed(1) + ' ' + (470 + Math.sin(a) * r).toFixed(1) + ' '; }
+    el(chick, 'path', { d: fuzz + 'Z', fill: 'rgba(200,200,206,.14)', stroke: '#c8c8ce', 'stroke-width': 4, 'stroke-linejoin': 'round' });
+    el(chick, 'circle', { cx: 318, cy: 392, r: 36, fill: 'rgba(200,200,206,.14)', stroke: '#c8c8ce', 'stroke-width': 4 });
+    el(chick, 'path', { d: 'M348 386 L384 396 L350 404 Z', fill: '#3a3a40', stroke: GRAY, 'stroke-width': 3 });
+    el(chick, 'circle', { cx: 326, cy: 382, r: 5, fill: WHITE });
+    line(chick, 'M230 528 L226 580 M270 528 L274 580', GRAY, 5);
+    const shells = [el(svg, 'path', { d: 'M-50 0 L-36 -14 L-22 2 L-8 -16 L6 0 L20 -12 L30 0 C30 40 -50 40 -50 0 Z', fill: '#1c1c20', stroke: WHITE, 'stroke-width': 4 }),
+                    el(svg, 'path', { d: 'M-40 0 L-26 14 L-12 -2 L2 16 L16 0 L28 10 C28 -40 -40 -40 -40 0 Z', fill: '#1c1c20', stroke: WHITE, 'stroke-width': 4 })];
+    // food particles: algae dots + tiny shrimp
+    const r = rng(23), food = [];
+    for (let i = 0; i < 16; i++) {
+      const shrimp = i % 3 === 0;
+      const e = shrimp ? el(svg, 'path', { d: 'M-10 0 C-8 -10 8 -10 10 0 C6 6 -2 8 -6 4', fill: 'none', stroke: '#f28c5a', 'stroke-width': 3, 'stroke-linecap': 'round' })
+                       : el(svg, 'circle', { r: 4 + r() * 3, fill: '#4cc38a' });
+      food.push({ e, x: 120 + r() * 700, y: WL + 20 + r() * 100, ph: r() * 6, sp: 0.3 + r() * 0.4 });
+    }
+    // pigment dots travelling into feathers
+    const pig = []; for (let i = 0; i < 14; i++) pig.push({ e: el(svg, 'circle', { r: 5, fill: 'rgb(242,120,159)' }), a: r() * 6.28, d: r() });
+    const drops = []; for (let i = 0; i < 4; i++) drops.push({ e: el(svg, 'path', { d: 'M0 0 C10 -8 30 -6 40 4 C28 6 12 6 0 0 Z', stroke: WHITE, 'stroke-width': 2 }), x: 380 + i * 50, d: i * 0.6 });
+    const lbl = el(svg, 'text', { x: 460, y: 660, fill: GRAY, 'font-size': 30, 'font-weight': 600, 'text-anchor': 'middle' }); lbl.textContent = P.label || '';
+    return (lt, dur, c) => {
+      const pIn = spring(lt, 0, 0.7), hit = c.hit ?? dur * 0.4, pk = punch(lt, hit, 0.6);
+      // water
+      sea.forEach((e, i) => {
+        let d = `M0 680 L0 ${WL + i * 26}`;
+        for (let x = 0; x <= 920; x += 20) d += ` L${x} ${(WL + i * 26 + Math.sin(x / 50 + lt * 2 + i) * 5).toFixed(1)}`;
+        e.setAttribute('d', i ? d.replace(/^M0 680 L/, 'M') : d + ' L920 680 Z');
+      });
+      let pink = mode === 'chick' ? 1 : mode === 'pink' ? 1 : mode === 'eat' ? 0.35 + 0.65 * prog(lt, hit, 2.5) : 0;
+      if (mode === 'absorb') pink = 0.15 + 0.85 * prog(lt, hit - 0.2, 2.0);
+      if (mode === 'fade') pink = 1 - 0.85 * prog(lt, hit - 0.3, Math.max(1.5, dur - hit));
+      const col = mix(pink);
+      bodyFill.setAttribute('fill', col); bodyFill.style.opacity = 0.22 + 0.18 * pink;
+      neck.setAttribute('stroke', col); headC.setAttribute('fill', col);
+      [body, wingL, tail].forEach(e => e.setAttribute('stroke', mix(pink * 0.9)));
+      // pose
+      const breathe = Math.sin(lt * 2.2) * 3, eat = mode === 'eat' ? prog(lt, 0.2, 0.8) : 0;
+      const hx = lerp(612, 668, eat), hy = lerp(92 + breathe, 512 + Math.sin(lt * 6) * 4, eat);
+      const nd = eat > 0 ? `M545 258 C${lerp(600, 640, eat)} ${lerp(230, 280, eat)} ${lerp(555, 660, eat)} ${lerp(170, 380, eat)} ${lerp(540, 662, eat)} ${lerp(140, 450, eat)} C${lerp(520, 664, eat)} ${lerp(104, 480, eat)} ${lerp(565, 666, eat)} ${lerp(80, 500, eat)} ${hx} ${hy}`
+                         : `M545 258 C600 230 555 170 540 140 C520 104 565 ${80 + breathe} ${hx} ${hy}`;
+      neck.setAttribute('d', nd); neckO.setAttribute('d', nd);
+      head.setAttribute('transform', `translate(${hx} ${hy}) rotate(${eat * 150 + Math.sin(lt * 1.5) * 4}) scale(${1 + 0.1 * pk})`);
+      const big = mode === 'chick' ? 0.72 : 1;
+      bird.setAttribute('transform', `translate(${mode === 'chick' ? 230 : 0} ${mode === 'chick' ? 40 : (1 - pIn) * 60}) translate(460 600) scale(${big}) translate(-460 -600)`);
+      bird.style.opacity = clamp01(pIn * 1.5) * (mode === 'chick' ? 0.9 : 1);
+      [body, wingL, tail, wingFeath].forEach((e, i) => draw(e, prog(lt, 0.05 + i * 0.1, 0.7)));
+      legs.forEach((e, i) => draw(e, prog(lt, 0.3 + i * 0.1, 0.5)));
+      wingL.setAttribute('transform', `rotate(${Math.sin(lt * 2.2) * 2} 380 285)`);
+      reflect.setAttribute('d', `M${mode === 'chick' ? 650 : 400} ${WL + 14} q20 ${4 + Math.sin(lt * 3) * 3} 40 0 t40 0 t40 0`);
+      reflect.style.opacity = 0.6 * pink;
+      // chick
+      chick.style.opacity = mode === 'chick' ? clamp01(spring(lt, 0.15, 0.7) * 1.4) : 0;
+      chick.setAttribute('transform', `translate(0 ${Math.sin(lt * 3) * 4 - 50}) rotate(${Math.sin(lt * 2.5) * 3} 260 540)`);
+      shells.forEach((s, i) => {
+        const k = prog(lt, 0.2, 0.8);
+        s.setAttribute('transform', `translate(${i ? 150 + k * 40 : 90 - k * 30} ${i ? 560 : 556}) rotate(${(i ? 1 : -1) * k * 25 + Math.sin(lt * 2 + i) * 3})`);
+        s.style.opacity = mode === 'chick' ? prog(lt, 0.1, 0.4) : 0;
+      });
+      // food flows to the beak when eating
+      food.forEach((f, i) => {
+        const k = ((lt * f.sp + f.ph) % 1.4) / 1.4;
+        const show = mode === 'eat' ? 1 : mode === 'pink' || mode === 'absorb' ? 0.35 : 0;
+        const x = mode === 'eat' ? lerp(f.x, hx + 40, EASE(k)) : f.x + Math.sin(lt + f.ph) * 20, y = mode === 'eat' ? lerp(f.y, hy + 30, EASE(k)) : f.y + Math.cos(lt * 0.8 + f.ph) * 10;
+        f.e.setAttribute('transform', `translate(${x} ${y}) rotate(${lt * 60 + i * 30})`);
+        f.e.style.opacity = show * (mode === 'eat' ? (1 - k) : 0.8) * pIn;
+      });
+      pig.forEach((p, i) => {
+        const k = ((lt * 0.6 + p.d) % 1);
+        const sx = 450, sy = 330, ex = 400 + Math.cos(p.a) * 110, ey = 285 + Math.sin(p.a) * 40;
+        p.e.setAttribute('cx', lerp(sx, ex, k)); p.e.setAttribute('cy', lerp(sy, ey, k) - Math.sin(k * Math.PI) * 30);
+        p.e.style.opacity = mode === 'absorb' ? (1 - k) * prog(lt, hit - 0.4, 0.4) : 0;
+      });
+      drops.forEach(d => {
+        const k = ((lt * 0.35 + d.d / 2.4) % 1);
+        d.e.setAttribute('fill', mix(1 - k * 0.3));
+        d.e.setAttribute('transform', `translate(${d.x + Math.sin(k * 9) * 30} ${300 + k * 240}) rotate(${Math.sin(k * 8) * 40})`);
+        d.e.style.opacity = mode === 'fade' ? (1 - k) * prog(lt, hit, 0.4) : 0;
+      });
+      lbl.style.opacity = prog(lt, 0.6, 0.4);
+    };
+  },
+
+  // front of a pair of jeans: front pocket, tiny watch pocket, copper rivets.
+  // params: mode pocket|watch|rivet|tear. cues: hit
+  jeans(svg, P) {
+    const mode = P.mode || 'pocket', DEN = '#18243a', COP = '#c9803a';
+    const defs = el(svg, 'defs'); const cid = 'jn' + (planeId++);
+    const panelD = 'M110 40 H830 V700 H110 Z';
+    el(el(defs, 'clipPath', { id: cid }), 'path', { d: panelD });
+    const panel = el(svg, 'g', { 'clip-path': `url(#${cid})` });
+    el(panel, 'path', { d: panelD, fill: DEN });
+    const twill = []; for (let i = -14; i < 30; i++) twill.push(el(panel, 'path', { d: `M${110 + i * 34} 40 l-260 660`, stroke: 'rgba(255,255,255,.035)', 'stroke-width': 6 }));
+    const wb = line(svg, 'M110 70 H830 M110 150 H830', WHITE, 4);
+    const wbS = el(svg, 'path', { d: 'M110 82 H830 M110 138 H830', fill: 'none', stroke: AMBER, 'stroke-width': 2.5, 'stroke-dasharray': '9 7' });
+    const loops = [300, 640].map(x => line(svg, `M${x} 56 h34 v108 h-34 Z`, GRAY, 4));
+    const btn = el(svg, 'circle', { cx: 170, cy: 110, r: 22, fill: '#2a2a30', stroke: COP, 'stroke-width': 5 });
+    const fly = line(svg, 'M230 150 V560 C230 610 200 640 160 660', GRAY, 3);
+    const mouthD = 'M380 150 C400 310 560 372 830 392';
+    const mouth = line(svg, mouthD, WHITE, 5);
+    const mouthS = el(svg, 'path', { d: 'M394 152 C414 300 566 356 830 376', fill: 'none', stroke: AMBER, 'stroke-width': 2.5, 'stroke-dasharray': '9 7' });
+    const side = line(svg, 'M830 40 V700', GRAY, 3);
+    // pocket watch (behind the watch-pocket face)
+    const watch = el(svg, 'g');
+    const chain = el(svg, 'path', { fill: 'none', stroke: '#e0b45a', 'stroke-width': 4, 'stroke-dasharray': '7 5', 'stroke-linecap': 'round' });
+    svg.insertBefore(chain, watch);
+    el(watch, 'circle', { cx: 0, cy: 0, r: 50, fill: '#1c1c20', stroke: '#e0b45a', 'stroke-width': 6 });
+    el(watch, 'circle', { cx: 0, cy: 0, r: 38, fill: 'none', stroke: GRAY, 'stroke-width': 2 });
+    for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; el(watch, 'path', { d: `M${Math.cos(a) * 32} ${Math.sin(a) * 32} L${Math.cos(a) * 38} ${Math.sin(a) * 38}`, stroke: WHITE, 'stroke-width': 2.5 }); }
+    el(watch, 'path', { d: 'M-8 -50 h16 v-12 h-16 Z M-12 -76 a12 12 0 1 1 24 0', fill: 'none', stroke: '#e0b45a', 'stroke-width': 4 });
+    const hm = el(watch, 'path', { d: 'M0 0 V-28', stroke: AMBER, 'stroke-width': 4, 'stroke-linecap': 'round' });
+    const hh = el(watch, 'path', { d: 'M0 0 V-18', stroke: WHITE, 'stroke-width': 5, 'stroke-linecap': 'round' });
+    // watch pocket
+    const wp = { x: 560, y: 168, w: 150, h: 130 };
+    const wpFace = el(svg, 'path', { d: `M${wp.x} ${wp.y} H${wp.x + wp.w} V${wp.y + wp.h - 20} L${wp.x + wp.w - 20} ${wp.y + wp.h} H${wp.x + 20} L${wp.x} ${wp.y + wp.h - 20} Z`, fill: '#1d2b44', stroke: 'none' });
+    const wpL = line(svg, `M${wp.x} ${wp.y} V${wp.y + wp.h - 20} L${wp.x + 20} ${wp.y + wp.h} H${wp.x + wp.w - 20} L${wp.x + wp.w} ${wp.y + wp.h - 20} V${wp.y}`, WHITE, 5);
+    const wpTop = line(svg, `M${wp.x} ${wp.y} H${wp.x + wp.w}`, WHITE, 5);
+    const wpS = el(svg, 'path', { d: `M${wp.x + 10} ${wp.y + 12} H${wp.x + wp.w - 10} M${wp.x + 10} ${wp.y + 12} V${wp.y + wp.h - 24} M${wp.x + wp.w - 10} ${wp.y + 12} V${wp.y + wp.h - 24}`, fill: 'none', stroke: AMBER, 'stroke-width': 2.5, 'stroke-dasharray': '9 7' });
+    const glow = el(svg, 'rect', { x: wp.x - 18, y: wp.y - 18, width: wp.w + 36, height: wp.h + 36, rx: 22, fill: 'none', stroke: AMBER, 'stroke-width': 5 });
+    // rivets
+    const rivPts = [[392, 160], [818, 392], [wp.x + 8, wp.y + 8], [wp.x + wp.w - 8, wp.y + 8]];
+    const rivets = rivPts.map(([x, y]) => {
+      const g = el(svg, 'g');
+      el(g, 'circle', { cx: x, cy: y, r: 15, fill: COP, stroke: '#f0c080', 'stroke-width': 3 });
+      el(g, 'circle', { cx: x - 4, cy: y - 4, r: 4, fill: '#ffe2b0' });
+      const sp = el(g, 'path', { d: `M${x} ${y - 30} V${y - 20} M${x} ${y + 20} V${y + 30} M${x - 30} ${y} H${x - 20} M${x + 20} ${y} H${x + 30}`, stroke: '#ffe2b0', 'stroke-width': 3, 'stroke-linecap': 'round' });
+      return { g, sp, x, y };
+    });
+    // tear: rips spreading from the side corner, tools pulling down
+    const rips = [0, 1, 2].map(() => el(svg, 'path', { fill: 'none', stroke: RED, 'stroke-width': 4, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' }));
+    const tools = el(svg, 'g');
+    el(tools, 'path', { d: 'M640 470 L760 470 M700 470 V560', stroke: GRAY, 'stroke-width': 10, 'stroke-linecap': 'round' });
+    el(tools, 'rect', { x: 640, y: 446, width: 54, height: 40, rx: 6, fill: '#2a2a30', stroke: WHITE, 'stroke-width': 4 });
+    const pulls = [0, 1, 2].map(() => line(svg, '', RED, 5));
+    const lbl = el(svg, 'text', { x: 470, y: 650, fill: WHITE, 'font-size': 34, 'font-weight': 800, 'text-anchor': 'middle' }); lbl.textContent = P.label || '';
+    return (lt, dur, c) => {
+      const pIn = prog(lt, 0.05, 0.8), hit = c.hit ?? dur * 0.4, pk = punch(lt, hit, 0.6);
+      twill.forEach((t, i) => t.setAttribute('transform', `translate(${Math.sin(lt * 0.8 + i * 0.3) * 2} 0)`));
+      draw(wb, pIn); draw(mouth, prog(lt, 0.2, 0.8)); draw(fly, prog(lt, 0.3, 0.7)); draw(side, pIn);
+      loops.forEach((l, i) => draw(l, prog(lt, 0.2 + i * 0.1, 0.5)));
+      wbS.style.opacity = mouthS.style.opacity = wpS.style.opacity = prog(lt, 0.5, 0.5);
+      wbS.style.strokeDashoffset = mouthS.style.strokeDashoffset = wpS.style.strokeDashoffset = -lt * 8;
+      btn.style.opacity = prog(lt, 0.3, 0.4);
+      draw(wpL, prog(lt, 0.3, 0.7)); draw(wpTop, prog(lt, 0.5, 0.4)); wpFace.style.opacity = prog(lt, 0.2, 0.5);
+      glow.style.opacity = mode === 'pocket' || mode === 'watch' ? prog(lt, 0.4, 0.4) * (0.35 + 0.35 * Math.sin(lt * 4) + 0.3 * pk) : 0;
+      glow.setAttribute('stroke-width', 5 + 6 * pk);
+      // watch drops into the pocket and ticks
+      const showW = mode === 'pocket' || mode === 'watch';
+      const drop = mode === 'watch' ? prog(lt, Math.max(0.2, hit - 0.5), 0.9) : mode === 'pocket' ? prog(lt, Math.max(0.2, hit - 0.4), 0.8) : 0;
+      const wx = wp.x + wp.w / 2 + Math.sin(lt * 2.4) * 6 * (1 - drop), wy = lerp(-90, wp.y + 4, drop) + Math.sin(lt * 3) * 2;
+      watch.setAttribute('transform', `translate(${wx} ${wy}) rotate(${Math.sin(lt * 2.4) * 10 * (1 - drop)}) scale(${1 + 0.06 * pk})`);
+      watch.style.opacity = showW ? clamp01(drop * 3) : 0;
+      hm.setAttribute('transform', `rotate(${lt * 90})`); hh.setAttribute('transform', `rotate(${lt * 8 + 60})`);
+      const lx = 317, ly = 150, mx = (wx + lx) / 2, my = Math.max(wy - 88, ly) + 90 + Math.sin(lt * 2.4) * 10;
+      chain.setAttribute('d', `M${wx} ${wy - 88} Q${mx} ${my} ${lx} ${ly}`);
+      chain.style.opacity = showW ? clamp01(drop * 3) : 0; chain.style.strokeDashoffset = lt * 6;
+      // rivets
+      const rivOn = mode === 'rivet' || mode === 'pocket' || mode === 'watch';
+      rivets.forEach((o, i) => {
+        const at = mode === 'rivet' ? hit + i * 0.22 - 0.3 : 0.3 + i * 0.08, p = spring(lt, at, 0.5);
+        const s = rivOn ? p * (1 + (mode === 'rivet' ? 0.25 * punch(lt, at + 0.15, 0.5) : 0)) : 0;
+        o.g.setAttribute('transform', `translate(${o.x} ${o.y}) scale(${s}) translate(${-o.x} ${-o.y})`);
+        o.g.style.opacity = clamp01(s * 2);
+        o.sp.style.opacity = mode === 'rivet' ? clamp01(Math.sin(lt * 3 - i * 1.3)) * prog(lt, at + 0.3, 0.3) : 0;
+      });
+      // tear
+      const tr = mode === 'tear' ? prog(lt, Math.max(0.2, hit - 0.8), 1.4) : 0;
+      rips.forEach((e, i) => {
+        let d = 'M818 392', x = 818, y = 392; const rr = rng(5 + i);
+        for (let k = 0; k < 7; k++) { x -= 20 + rr() * 16; y += (i - 1) * 14 + (rr() - 0.5) * 30; d += ` L${x.toFixed(1)} ${y.toFixed(1)}`; }
+        e.setAttribute('d', d); e.setAttribute('pathLength', 1); draw(e, tr);
+      });
+      tools.style.opacity = mode === 'tear' ? prog(lt, 0.2, 0.5) : 0;
+      tools.setAttribute('transform', `translate(0 ${Math.sin(lt * 3) * 6 + tr * 20}) rotate(${Math.sin(lt * 2) * 4} 700 470)`);
+      pulls.forEach((p, i) => {
+        const k = ((lt * 1.3 + i / 3) % 1);
+        p.setAttribute('d', `M${620 + i * 70} ${560 + k * 50} l0 30 m-12 -12 l12 12 l12 -12`); p.style.strokeDasharray = 'none';
+        p.style.opacity = mode === 'tear' ? (1 - k) * prog(lt, 0.4, 0.4) : 0;
+      });
+      lbl.style.opacity = prog(lt, 0.7, 0.4);
+    };
+  },
+
   window_glow(svg, P) {
     const R = P.radius ?? 120, x = 290, y = 110, w = 340, h = 460;
     const defs = el(svg, 'defs');

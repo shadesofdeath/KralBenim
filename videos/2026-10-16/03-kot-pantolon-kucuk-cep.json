@@ -1,0 +1,259 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "kot-pantolon-kucuk-cep",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "jeans",
+      "text": "Bu minik cep aslında saat içindi.",
+      "visual": "Kotun ön cebinin üstündeki minik cep parlıyor ve zincirli bir cep saati içine iniyor.",
+      "title": {
+        "white": "Minik cep",
+        "gray": "saat içindi"
+      },
+      "tags": [
+        "Kot pantolon"
+      ],
+      "cues": {
+        "hit": "saat"
+      },
+      "params": {
+        "mode": "pocket",
+        "camera": {
+          "zoom": 1.3,
+          "x": 640,
+          "y": 260
+        }
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Kol saatleri yaygınlaşmadan önce saatler cepte taşınırdı.",
+      "visual": "Dev bir saat ikonu dönüyor, altında 'Cep saati' yazısı.",
+      "title": {
+        "white": "Saatler",
+        "gray": "cepteydi"
+      },
+      "tags": [
+        "Cep saati"
+      ],
+      "cues": {
+        "hit": "cepte"
+      },
+      "params": {
+        "icon": "clock",
+        "label": "Cep saati",
+        "color": "amber"
+      }
+    },
+    {
+      "type": "jeans",
+      "text": "Zincirli cep saati bu küçük cebe tam otururdu.",
+      "visual": "Cep saati zinciriyle sallanarak minik cebe iniyor, zincir kemer köprüsüne bağlı, akrep ve yelkovan dönüyor.",
+      "title": {
+        "white": "Tam",
+        "gray": "otururdu"
+      },
+      "tags": [
+        "Saat cebi"
+      ],
+      "cues": {
+        "hit": "tam"
+      },
+      "params": {
+        "mode": "watch",
+        "camera": {
+          "zoom": 1.55,
+          "x": 630,
+          "y": 230,
+          "push": true
+        }
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Büyük cepte ezilecek saat, burada güvendeydi.",
+      "visual": "Solda kırmızı uyarı ikonu 'Büyük cep' (çarpı), sağda amber saat ikonu 'Saat cebi' (onay).",
+      "title": {
+        "white": "Burada",
+        "gray": "güvende"
+      },
+      "tags": [
+        "Koruma"
+      ],
+      "cues": {
+        "left": "büyük",
+        "right": "güvendeydi"
+      },
+      "params": {
+        "left": {
+          "label": "Büyük cep",
+          "icon": "warning",
+          "mark": "x",
+          "color": "red"
+        },
+        "right": {
+          "label": "Saat cebi",
+          "icon": "clock",
+          "mark": "check",
+          "color": "amber"
+        }
+      }
+    },
+    {
+      "type": "jeans",
+      "text": "Peki ya bu metal perçinler?",
+      "visual": "Cep köşelerindeki bakır perçinler tek tek yaylanarak beliriyor ve parlıyor.",
+      "title": {
+        "white": "Metal",
+        "gray": "perçinler"
+      },
+      "tags": [
+        "Perçin"
+      ],
+      "cues": {
+        "hit": "perçinler"
+      },
+      "params": {
+        "mode": "rivet"
+      }
+    },
+    {
+      "type": "jeans",
+      "text": "İşçilerin ağır aletleri cep köşelerini sürekli yırtıyordu.",
+      "visual": "Cepteki ağır aletler aşağı çekiyor; cebin köşesinden kırmızı yırtıklar yayılıyor, perçin yok.",
+      "title": {
+        "white": "Köşeler",
+        "gray": "yırtılıyordu"
+      },
+      "tags": [
+        "Ağır aletler"
+      ],
+      "cues": {
+        "hit": "yırtıyordu"
+      },
+      "params": {
+        "mode": "tear",
+        "camera": {
+          "zoom": 1.35,
+          "x": 700,
+          "y": 420
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "1873'te Levi Strauss ve Jacob Davis, perçinli cebin patentini aldı.",
+      "visual": "Dev yazı: amber kutuda '1873' ve altında 'PATENT'.",
+      "title": {
+        "white": "1873:",
+        "gray": "perçin patenti"
+      },
+      "tags": [
+        "Levi Strauss",
+        "Jacob Davis"
+      ],
+      "cues": {
+        "w0": "1873",
+        "w1": "patentini"
+      },
+      "params": {
+        "words": [
+          "1873",
+          "patent"
+        ],
+        "highlight": 0,
+        "sub": "Levi Strauss & Jacob Davis"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Perçin köşeyi kilitledi ve yırtılma bitti.",
+      "visual": "Dev onay ikonu yeşil-amber parlıyor, altında 'Yırtılma bitti' yazısı.",
+      "title": {
+        "white": "Yırtılma",
+        "gray": "bitti"
+      },
+      "tags": [
+        "Sağlam cep"
+      ],
+      "cues": {
+        "hit": "kilitledi"
+      },
+      "params": {
+        "icon": "check",
+        "label": "Yırtılma bitti",
+        "color": "amber"
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Yani bir dahaki sefere o cebe bakınca hatırla:",
+      "visual": "Dev yazı: 'O CEBE', 'BAKINCA' ve amber kutuda 'HATIRLA'.",
+      "title": {
+        "white": "Hatırla",
+        "gray": ""
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {
+        "w0": "dahaki",
+        "w1": "bakınca",
+        "w2": "hatırla"
+      },
+      "params": {
+        "words": [
+          "O cebe",
+          "bakınca",
+          "hatırla"
+        ],
+        "highlight": 2
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Bu cep",
+      "SAAT",
+      "içindi"
+    ],
+    "highlight": [
+      "SAAT"
+    ],
+    "scene": 2,
+    "t": 2.6
+  },
+  "youtube": {
+    "title": "Kot Pantolondaki Küçük Cep Ne İşe Yarar? 👖",
+    "description": "Kot pantolondaki küçük cep ne işe yarar? Bu minik cep aslında cep saati için yapıldı: kol saatleri yaygınlaşmadan önce saat, zinciriyle bu cebe yerleşirdi.\n\nCep köşelerindeki bakır perçinlerin de bir hikâyesi var: ağır aletler cepleri yırtıyordu ve 1873'te Levi Strauss ile Jacob Davis perçinli cebin patentini aldı. Kot pantolonun tarihi ve tasarım detayları bu videoda.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen o küçük cebe ne koyuyorsun? Yorumlara yaz!\n\n#shorts #kotpantolon #tasarım #tarih #düşünbakalım",
+    "tags": [
+      "kot pantolondaki küçük cep",
+      "kot pantolon küçük cep ne işe yarar",
+      "kottaki küçük cep",
+      "saat cebi",
+      "cep saati",
+      "kot pantolon perçin",
+      "kot pantolon tarihi",
+      "levi strauss",
+      "jacob davis",
+      "levis",
+      "tasarım",
+      "tarih",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T19:00:00+03:00"
+  }
+}

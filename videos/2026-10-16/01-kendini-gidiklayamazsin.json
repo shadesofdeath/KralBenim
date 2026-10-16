@@ -1,0 +1,286 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "kendini-gidiklayamazsin",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "tickle",
+      "text": "Kendini asla gıdıklayamazsın.",
+      "visual": "Kendi elinle tuttuğun tüy ayak tabanında geziniyor ama gıdıklanma göstergesi neredeyse boş.",
+      "title": {
+        "white": "Kendini",
+        "gray": "gıdıklayamazsın"
+      },
+      "tags": [
+        "Gıdıklanma"
+      ],
+      "cues": {
+        "hit": "gıdıklayamazsın"
+      },
+      "params": {
+        "mode": "self"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Çünkü beynin her hareketini önceden biliyor.",
+      "visual": "Ortada nabız gibi atan dev bir beyin ikonu, altında 'Önceden biliyor' yazısı.",
+      "title": {
+        "white": "Beynin",
+        "gray": "önceden biliyor"
+      },
+      "tags": [
+        "Beyin"
+      ],
+      "cues": {
+        "hit": "önceden"
+      },
+      "params": {
+        "icon": "brain",
+        "label": "Önceden biliyor",
+        "color": "amber"
+      }
+    },
+    {
+      "type": "tickle",
+      "text": "Elin daha kalkmadan, dokunuşun nasıl hissettireceğini tahmin ediyor.",
+      "visual": "Beyinden ayak tabanına kesik amber bir tahmin sinyali akıyor; tüyün değeceği nokta önceden halkayla işaretli.",
+      "title": {
+        "white": "Önceden",
+        "gray": "tahmin ediyor"
+      },
+      "tags": [
+        "Tahmin sinyali"
+      ],
+      "cues": {
+        "hit": "tahmin"
+      },
+      "params": {
+        "mode": "predict",
+        "camera": {
+          "zoom": 1.25,
+          "x": 380,
+          "y": 330
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Tahmin tutunca, his kısılıyor.",
+      "visual": "Dev yazı: 'TAHMİN TUTAR' ve amber kutuda 'HİS KISILIR'.",
+      "title": {
+        "white": "His",
+        "gray": "kısılıyor"
+      },
+      "tags": [
+        "Sönümleme"
+      ],
+      "cues": {
+        "w0": "tahmin",
+        "w1": "kısılıyor"
+      },
+      "params": {
+        "words": [
+          "Tahmin tutar",
+          "his kısılır"
+        ],
+        "highlight": 1,
+        "sub": "beyin kendi dokunuşunu bastırır"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Başkası gıdıkladığında ise tahmin yok, sürpriz var.",
+      "visual": "Solda beyin ikonu 'Tahmin' (kırmızı çarpı), sağda şimşek ikonu 'Sürpriz' (yeşil onay).",
+      "title": {
+        "white": "Başkası:",
+        "gray": "sürpriz"
+      },
+      "tags": [
+        "Başkasının eli"
+      ],
+      "cues": {
+        "left": "başkası",
+        "right": "sürpriz"
+      },
+      "params": {
+        "left": {
+          "label": "Tahmin",
+          "icon": "brain",
+          "mark": "x",
+          "color": "white"
+        },
+        "right": {
+          "label": "Sürpriz",
+          "icon": "bolt",
+          "mark": "check",
+          "color": "amber"
+        }
+      }
+    },
+    {
+      "type": "tickle",
+      "text": "Bu yüzden aynı dokunuş birden dayanılmaz oluyor.",
+      "visual": "Başkasının elindeki tüy ayağı gıdıklıyor: ayak titriyor, 'HA HA' yazıları uçuşuyor, gösterge kırmızıya dolmuş.",
+      "title": {
+        "white": "Dayanılmaz",
+        "gray": ""
+      },
+      "tags": [
+        "Aynı dokunuş"
+      ],
+      "cues": {
+        "hit": "dayanılmaz"
+      },
+      "params": {
+        "mode": "other",
+        "camera": {
+          "zoom": 1.25,
+          "x": 600,
+          "y": 420,
+          "push": true
+        }
+      }
+    },
+    {
+      "type": "tickle",
+      "text": "Bir deneyde insanlar kendilerini robot kolla gıdıkladı.",
+      "visual": "Tüyü bir robot kol tutuyor ve ayak tabanında gezdiriyor; gösterge hâlâ düşük.",
+      "title": {
+        "white": "Robot kol",
+        "gray": "deneyi"
+      },
+      "tags": [
+        "Deney"
+      ],
+      "cues": {
+        "hit": "robot"
+      },
+      "params": {
+        "mode": "robot",
+        "camera": {
+          "zoom": 1.1,
+          "x": 420,
+          "y": 460
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Robota küçücük bir gecikme eklendi.",
+      "visual": "Dev yazı: 'KÜÇÜCÜK' ve amber kutuda 'BİR GECİKME'.",
+      "title": {
+        "white": "Küçük bir",
+        "gray": "gecikme"
+      },
+      "tags": [
+        "Gecikme"
+      ],
+      "cues": {
+        "w0": "küçücük",
+        "w1": "gecikme"
+      },
+      "params": {
+        "words": [
+          "Küçücük",
+          "bir gecikme"
+        ],
+        "highlight": 1,
+        "sub": "komut ile dokunuş arasına"
+      }
+    },
+    {
+      "type": "tickle",
+      "text": "Ve gıdıklanma hissi geri geldi.",
+      "visual": "Robot kol tüyü gecikmeli oynatıyor, köşede gecikme saati dönüyor; ayak titriyor ve gösterge doluyor.",
+      "title": {
+        "white": "Gıdıklanma",
+        "gray": "geri geldi"
+      },
+      "tags": [
+        "Tahmin şaştı"
+      ],
+      "cues": {
+        "hit": "geri"
+      },
+      "params": {
+        "mode": "delay",
+        "camera": {
+          "zoom": 1.15,
+          "x": 460,
+          "y": 380,
+          "push": true
+        }
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Yani beynin seni o kadar iyi tanıyor ki,",
+      "visual": "Yakın planda parlayan beyin ikonu, altında 'Seni tanıyor' yazısı.",
+      "title": {
+        "white": "Seni",
+        "gray": "tanıyor"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {
+        "hit": "tanıyor"
+      },
+      "params": {
+        "icon": "brain",
+        "label": "Seni tanıyor",
+        "color": "amber",
+        "camera": {
+          "zoom": 1.15,
+          "x": 460,
+          "y": 360,
+          "push": true
+        }
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Kendini ASLA",
+      "gıdıklayamazsın"
+    ],
+    "highlight": [
+      "ASLA"
+    ],
+    "scene": 0,
+    "t": 1.9
+  },
+  "youtube": {
+    "title": "Kendimizi Neden Gıdıklayamayız? 🪶",
+    "description": "Kendimizi neden gıdıklayamayız? Çünkü beyin kendi hareketinin yaratacağı dokunuşu önceden tahmin ediyor ve hissi kısıyor. Başkası gıdıkladığında tahmin yok, sürpriz var.\n\nBilim insanları bunu robot kolla test etti: komut ile dokunuş arasına küçücük bir gecikme eklenince insanlar kendini gıdıklayabildi. Beyin, tahmin ve gıdıklanma hissinin arkasındaki şaşırtıcı mekanizma bu videoda.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence en çok nerede gıdıklanıyorsun? Yorumlara yaz!\n\n#shorts #beyin #psikoloji #bilim #düşünbakalım",
+    "tags": [
+      "kendimizi neden gıdıklayamayız",
+      "insan kendini gıdıklayabilir mi",
+      "neden gıdıklanırız",
+      "gıdıklanma",
+      "kendini gıdıklamak",
+      "gıdıklanma neden olur",
+      "beyin",
+      "beyincik",
+      "beyin tahmini",
+      "psikoloji",
+      "insan vücudu",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T13:30:00+03:00"
+  }
+}

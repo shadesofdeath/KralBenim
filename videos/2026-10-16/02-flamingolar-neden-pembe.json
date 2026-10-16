@@ -1,0 +1,251 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "flamingolar-neden-pembe",
+  "format": "short",
+  "fps": 60,
+  "scenes": [
+    {
+      "type": "flamingo",
+      "text": "Flamingolar pembe doğmaz.",
+      "visual": "Yumurta kabuklarının yanında gri tüylü bir yavru, arkasında pembe yetişkin flamingo.",
+      "title": {
+        "white": "Pembe",
+        "gray": "doğmaz"
+      },
+      "tags": [
+        "Flamingo"
+      ],
+      "cues": {
+        "hit": "doğmaz"
+      },
+      "params": {
+        "mode": "chick"
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Yumurtadan gri tüylerle çıkarlar.",
+      "visual": "Dev yazı: amber kutuda 'GRİ' ve altında 'TÜYLERLE'.",
+      "title": {
+        "white": "Gri",
+        "gray": "tüyler"
+      },
+      "tags": [
+        "Yavru"
+      ],
+      "cues": {
+        "w0": "gri",
+        "w1": "tüylerle"
+      },
+      "params": {
+        "words": [
+          "Gri",
+          "tüylerle"
+        ],
+        "highlight": 0,
+        "sub": "yeni çıkan flamingo yavrusu"
+      }
+    },
+    {
+      "type": "flamingo",
+      "text": "Pembe renk tamamen yedikleri şeyden geliyor.",
+      "visual": "Flamingo başını ters çevirip suya daldırıyor; yeşil alg taneleri ve minik karidesler gagasına akıyor, tüyleri pembeleşiyor.",
+      "title": {
+        "white": "Renk",
+        "gray": "besinden"
+      },
+      "tags": [
+        "Beslenme"
+      ],
+      "cues": {
+        "hit": "yedikleri"
+      },
+      "params": {
+        "mode": "eat"
+      }
+    },
+    {
+      "type": "icon",
+      "text": "Alglerde ve minik karideslerde karotenoid denen boyalar var.",
+      "visual": "Dev yaprak ikonu nabız gibi atıyor, altında 'Karotenoid' yazısı.",
+      "title": {
+        "white": "Karotenoid",
+        "gray": "boyalar"
+      },
+      "tags": [
+        "Alg",
+        "Karides"
+      ],
+      "cues": {
+        "hit": "karotenoid"
+      },
+      "params": {
+        "icon": "leaf",
+        "label": "Karotenoid",
+        "color": "red"
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Havucu turuncu yapan boyaların akrabası.",
+      "visual": "Dev yazı: amber kutuda 'HAVUÇ' ve altında 'İLE AYNI AİLE'.",
+      "title": {
+        "white": "Havuçla",
+        "gray": "aynı aile"
+      },
+      "tags": [
+        "Pigment"
+      ],
+      "cues": {
+        "w0": "havucu",
+        "w1": "akrabası"
+      },
+      "params": {
+        "words": [
+          "Havuç",
+          "ile aynı aile"
+        ],
+        "highlight": 0,
+        "sub": "beta-karoten de bir karotenoid"
+      }
+    },
+    {
+      "type": "flamingo",
+      "text": "Flamingo bu boyaları sindirir ve tüylerine taşır.",
+      "visual": "Pembe boya noktacıkları karından kanatlara doğru akıyor; soluk tüyler giderek pembeleşiyor.",
+      "title": {
+        "white": "Tüylere",
+        "gray": "taşınır"
+      },
+      "tags": [
+        "Sindirim"
+      ],
+      "cues": {
+        "hit": "tüylerine"
+      },
+      "params": {
+        "mode": "absorb",
+        "camera": {
+          "zoom": 1.3,
+          "x": 450,
+          "y": 300
+        }
+      }
+    },
+    {
+      "type": "flamingo",
+      "text": "Bu besinler kesilirse yeni tüyler giderek solar.",
+      "visual": "Pembe flamingodan tüyler dökülüyor ve kuş grimsi beyaza dönüyor.",
+      "title": {
+        "white": "Renk",
+        "gray": "solar"
+      },
+      "tags": [
+        "Boyasız yem"
+      ],
+      "cues": {
+        "hit": "solar"
+      },
+      "params": {
+        "mode": "fade"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Bu yüzden hayvanat bahçelerinde yemlerine özel boya katılır.",
+      "visual": "Solda 'Sade yem' damla ikonu (kırmızı çarpı), sağda kırmızı 'Boyalı yem' damla ikonu (yeşil onay).",
+      "title": {
+        "white": "Yeme",
+        "gray": "boya katılır"
+      },
+      "tags": [
+        "Hayvanat bahçesi"
+      ],
+      "cues": {
+        "left": "hayvanat",
+        "right": "boya"
+      },
+      "params": {
+        "left": {
+          "label": "Sade yem",
+          "icon": "drop",
+          "mark": "x",
+          "color": "white"
+        },
+        "right": {
+          "label": "Boyalı yem",
+          "icon": "drop",
+          "mark": "check",
+          "color": "red"
+        }
+      }
+    },
+    {
+      "type": "kinetic",
+      "text": "Yani o pembe sonradan kazanılıyor, çünkü",
+      "visual": "Dev yazı: amber kutuda 'SONRADAN' ve altında 'KAZANILIR'.",
+      "title": {
+        "white": "Sonradan",
+        "gray": "kazanılır"
+      },
+      "tags": [
+        "Düşün Bakalım"
+      ],
+      "cues": {
+        "w0": "sonradan",
+        "w1": "kazanılıyor"
+      },
+      "params": {
+        "words": [
+          "Sonradan",
+          "kazanılır"
+        ],
+        "highlight": 0,
+        "sub": "yediğin neyse, rengin o"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Flamingolar",
+      "PEMBE",
+      "doğmaz"
+    ],
+    "highlight": [
+      "PEMBE"
+    ],
+    "scene": 0,
+    "t": 1.8
+  },
+  "youtube": {
+    "title": "Flamingolar Neden Pembe? Pembe Doğmuyorlar 🦩",
+    "description": "Flamingolar neden pembe? Aslında pembe doğmuyorlar: yavrular gri tüylerle çıkar ve rengi yedikleri alg ve minik karideslerdeki karotenoid boyalardan kazanırlar.\n\nBu boyalar havucu turuncu yapan pigmentlerin akrabası. Besin kesilirse yeni tüyler solar; bu yüzden hayvanat bahçelerinde flamingo yemine özel boya katılır.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence başka hangi hayvan rengini yediğinden alıyor? Yorumlara yaz!\n\n#shorts #flamingo #hayvanlar #bilim #düşünbakalım",
+    "tags": [
+      "flamingolar neden pembe",
+      "flamingo neden pembe",
+      "flamingo rengi",
+      "flamingo pembe doğar mı",
+      "flamingo yavrusu",
+      "flamingo",
+      "karotenoid",
+      "karides",
+      "hayvanlar",
+      "hayvanlar hakkında ilginç bilgiler",
+      "doğa",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-16T16:00:00+03:00"
+  }
+}
