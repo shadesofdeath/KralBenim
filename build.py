@@ -22,9 +22,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 TEMPLATE = ROOT / "scenes" / "index.html"
+STUDIO = ROOT / "scenes" / "studio" / "index.html"   # "engine": "studio" (full-bleed 2D/3D shots)
 FPS = 30
 SIZES = {"short": (1080, 1920), "long": (1920, 1080)}
 TAIL = 0.8  # hold after the last word (s)
+STUDIO_TAIL = 1.2  # studio videos end on a complete sentence and let the last shot breathe
 PUNCT = ".,;:!?…\"'"
 
 
@@ -142,6 +144,17 @@ def synthesize(text, cfg, work):
     return mp3, words
 
 
+def estimate_words(text):
+    """Rough word timings (~Turkish narration pace) for drafts and previews without TTS."""
+    words, t = [], 0.2
+    for m in re.finditer(r"\S+", text):
+        tok = m.group(0)
+        d = 0.10 + 0.05 * len(tok.strip(PUNCT))
+        words.append({"text": tok.strip(PUNCT), "start": t, "end": t + d, "pos": m.start()})
+        t += d + 0.04 + (0.35 if tok[-1] in ".?!" else 0.15 if tok[-1] in ",:;" else 0)
+    return words, t
+
+
 def audio_duration(path):
     out = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                    "-of", "csv=p=0", str(path)])
@@ -179,15 +192,19 @@ def build_timeline(script, text, ranges, words, duration):
                 print(f"warning: cue '{needle}' not found in scene {i}", file=sys.stderr)
         out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"], "chapter": sc.get("chapter"),
                            "title": sc.get("title", {}), "tags": sc.get("tags", []),
-                           "params": sc.get("params", {}), "cues": cues})
+                           "params": sc.get("params", {}), "cues": cues,
+                           **{k: sc[k] for k in ("mascot", "art", "transition") if k in sc}})
 
         # captions: short phrases, broken at punctuation or ~5 words / 30 chars
+        # (studio: punchier 1-3 word groups)
+        studio = script.get("engine") == "studio"
+        max_words, max_chars = (3, 16) if studio else (4, 24)
         chunk, chunks = [], []
         for w in ws:
             chunk.append(w)
             txt = " ".join(c["disp"] for c in chunk)
             if (w["disp"][-1] in ".?!:;" or (w["disp"][-1] == "," and len(chunk) > 1)
-                    or len(chunk) >= 4 or len(txt) > 24):
+                    or len(chunk) >= max_words or len(txt) > max_chars):
                 chunks.append(chunk)
                 chunk = []
         if chunk:
@@ -204,8 +221,51 @@ def build_timeline(script, text, ranges, words, duration):
         # the hook frame stays up until the first sentence is spoken
         first = next((w for w in per[0] if w["disp"][-1] in ".?!"), per[0][-1])
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
-    return {"hook": hook, "scale": script.get("scale", 4 / 3), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
+    studio = script.get("engine") == "studio"
+    # studio: draw at 1080p (software WebGL cost scales with pixels), upscale to 1440p at encode time
+    return {"hook": hook, "scale": script.get("scale", 1.0 if studio else 4 / 3), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
+            "engine": script.get("engine", "classic"), "art": script.get("art"),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
+
+
+# ---------------------------------------------------------------- media (studio "photo" shots)
+
+def load_script(path):
+    """Read a script and resolve media paths (params.src / params.video) relative to the script file."""
+    path = Path(path).resolve()
+    script = json.loads(path.read_text())
+    for sc in script["scenes"]:
+        p = sc.get("params") or {}
+        for k in ("src", "video"):
+            if p.get(k) and "://" not in p[k]:
+                f = (path.parent / p[k]).resolve()
+                if not f.exists():
+                    sys.exit(f"media not found: {f}")
+                p[k] = str(f)
+    return script
+
+
+def prepare_media(timeline, work):
+    """Studio photo shots: turn image paths into file URIs and pre-extract video clips into
+    numbered JPEG frames at the render fps (frame-exact, deterministic seeking)."""
+    fps = timeline["fps"]
+    for i, sc in enumerate(timeline["scenes"]):
+        p = sc.get("params") or {}
+        if p.get("src") and not p["src"].startswith(("file:", "http")):
+            p["src"] = Path(p["src"]).as_uri()
+        if p.get("video") and not p.get("frames"):
+            d = work / "media" / f"scene{i:02d}"
+            d.mkdir(parents=True, exist_ok=True)
+            dur = sc["end"] - sc["start"] + 0.5
+            rate = p.get("rate", 1)
+            w, h = timeline["size"]
+            scale = timeline.get("scale", 4 / 3)
+            if not any(d.glob("*.jpg")):
+                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(p.get("from", 0)), "-t", f"{dur * rate:.2f}",
+                                "-i", p["video"], "-vf", f"fps={fps / rate},scale=-2:{round(max(w, h) * scale)}",
+                                "-q:v", "3", str(d / "%05d.jpg")], check=True)
+            p["frames"] = {"pattern": (d / "%05d.jpg").as_uri().replace("%2505d", "%05d"),
+                           "count": len(list(d.glob("*.jpg"))), "fps": fps / rate}
 
 
 # ---------------------------------------------------------------- render
@@ -219,44 +279,82 @@ def open_page(pw, timeline):
     # render at 4/3 scale (1440x2560 / 2560x1440): YouTube gives >1080p uploads the VP9/AV1 high-bitrate
     # encodes, so the final stream stays sharp; layout stays in 1080p CSS pixels
     page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=timeline.get("scale", 4 / 3))
-    page.goto(TEMPLATE.as_uri())
+    page.on("pageerror", lambda e: print(f"page error: {e}", file=sys.stderr))
+    page.goto((STUDIO if timeline.get("engine") == "studio" else TEMPLATE).as_uri())
     page.evaluate("d => window.init(d)", timeline)
     page.evaluate("document.fonts.ready.then(() => true)")
     return browser, page
 
 
-def render(timeline, mp3, out, until, sfx=None):
+def _encode_args(timeline):
+    fps = timeline["fps"]
+    blur = timeline.get("motion_blur", False) and fps >= 60
+    vf = ["tmix=frames=2,fps=30"] if blur else []   # motion blur: 60 fps pairs -> 30 fps
+    if timeline.get("engine") == "studio":
+        w, h = timeline["size"]
+        # upscale to 1440p so YouTube serves the high-bitrate VP9/AV1 encode
+        # (film grain was dropped: it tripled the file size and encode time and YouTube smears it anyway)
+        vf += [f"scale={round(w * 4 / 3)}:{round(h * 4 / 3)}:flags=lanczos"]
+    return [*(["-vf", ",".join(vf)] if vf else []),
+            "-c:v", "libx264", "-preset", "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
+            "-pix_fmt", "yuv420p", "-g", str(60 if blur else fps * 2), "-bf", "2",
+            "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
+
+
+def _render_segment(args):
+    """Worker: frames [a, b) -> silent H.264 segment. Every frame is a pure function of t, so
+    segments can be rendered by independent browsers in parallel and concatenated."""
+    timeline, a, b, seg = args
     from playwright.sync_api import sync_playwright
     fps = timeline["fps"]
+    ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-i", "-",
+                           *_encode_args(timeline), str(seg)], stdin=subprocess.PIPE)
+    shot = {"type": "jpeg", "quality": 95} if timeline.get("engine") == "studio" else {"type": "png"}
+    with sync_playwright() as pw:
+        browser, page = open_page(pw, timeline)
+        for i in range(a, b):
+            page.evaluate("t => window.seek(t)", i / fps)
+            ff.stdin.write(page.screenshot(**shot))
+            if a == 0 and i % (fps * 5) == 0:
+                print(f"\rframe {i}/{b} (worker 1)", end="", flush=True)
+        browser.close()
+    ff.stdin.close()
+    if ff.wait() != 0:
+        raise RuntimeError(f"ffmpeg failed on segment {seg}")
+    return seg
+
+
+def render(timeline, mp3, out, until, sfx=None, workers=None):
+    import multiprocessing as mp
+    fps = timeline["fps"]
     n = round(until * fps)
-    blur = timeline.get("motion_blur", False) and fps >= 60
-    ff = subprocess.Popen([
-        "ffmpeg", "-y", "-loglevel", "error",
-        "-f", "image2pipe", "-framerate", str(fps), "-i", "-",
+    workers = max(1, min(workers or int(os.environ.get("RENDER_WORKERS", os.cpu_count() or 1)), 8, n // (fps * 2) or 1))
+    # split at even frame indices so motion-blur pairs never straddle a segment boundary
+    step = -(-n // workers)
+    step += step % 2
+    tmp = Path(out).with_suffix(".parts")
+    tmp.mkdir(parents=True, exist_ok=True)
+    jobs = [(timeline, a, min(n, a + step), tmp / f"seg{k:02d}.mp4") for k, a in enumerate(range(0, n, step))]
+    t0 = time.time()
+    if len(jobs) == 1:
+        segs = [_render_segment(jobs[0])]
+    else:
+        with mp.get_context("spawn").Pool(len(jobs)) as pool:
+            segs = pool.map(_render_segment, jobs)
+    (tmp / "list.txt").write_text("".join(f"file '{s.name}'\n" for s in segs))
+    subprocess.run([
+        "ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"),
         "-i", str(mp3),
         *(["-i", str(sfx), "-filter_complex",
            "[1:a]apad[v];[2:a]apad[s];[v][s]amix=inputs=2:duration=first:normalize=0[a]",
            "-map", "0:v", "-map", "[a]"] if sfx else ["-map", "0:v", "-map", "1:a", "-af", "apad"]),
-        # motion blur: average each pair of 60 fps renders into one 30 fps frame
-        *(["-vf", "tmix=frames=2,fps=30"] if blur else []),
-        "-t", f"{n / fps:.3f}",
-        "-c:v", "libx264", "-preset", "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
-        "-pix_fmt", "yuv420p", "-g", str(60 if blur else fps * 2), "-bf", "2",
-        "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
-        "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
-        stdin=subprocess.PIPE)
-    with sync_playwright() as pw:
-        browser, page = open_page(pw, timeline)
-        for i in range(n):
-            page.evaluate("t => window.seek(t)", i / fps)
-            ff.stdin.write(page.screenshot(type="png"))
-            if i % (fps * 5) == 0:
-                print(f"\rframe {i}/{n}", end="", flush=True)
-        browser.close()
-    ff.stdin.close()
-    if ff.wait() != 0:
-        sys.exit("ffmpeg failed")
-    print(f"\r{out}  ({n} frames, {n / fps:.1f}s)")
+        "-t", f"{n / fps:.3f}", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
+        check=True)
+    for s in segs:
+        s.unlink()
+    (tmp / "list.txt").unlink()
+    tmp.rmdir()
+    print(f"\r{out}  ({n} frames, {n / fps:.1f}s, {len(jobs)} workers, {time.time() - t0:.0f}s)")
 
 
 def cover(timeline, script, out_jpg):
@@ -298,9 +396,10 @@ def main():
     ap.add_argument("--scenes", type=int, help="render only the first N scenes")
     ap.add_argument("--still", type=float, help="save one frame at this time (s) instead of a video")
     ap.add_argument("--cover", action="store_true", help="only render the thumbnail")
+    ap.add_argument("--no-tts", action="store_true", help="silent draft: estimated word timings, no TTS call")
     a = ap.parse_args()
 
-    script = json.loads(Path(a.script).read_text())
+    script = load_script(a.script)
     out = Path(a.out)
     work = out.parent / script.get("slug", Path(a.script).stem)
     work.mkdir(parents=True, exist_ok=True)
@@ -313,10 +412,19 @@ def main():
         ranges.append((len(text), len(text) + len(sc["text"])))
         text += sc["text"]
 
-    mp3, words = synthesize(text, script.get("tts", {}), work)
-    # Shorts end tight so the loop back to the hook feels seamless
-    duration = audio_duration(mp3) + (0.3 if script.get("format", "short") == "short" else TAIL)
+    if a.no_tts:
+        words, speech = estimate_words(text)
+        mp3 = work / "silence.wav"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono",
+                        "-t", f"{speech:.2f}", str(mp3)], check=True)
+        words = locate(text, words)
+    else:
+        mp3, words = synthesize(text, script.get("tts", {}), work)
+    studio = script.get("engine") == "studio"
+    # classic Shorts end tight (they used to loop back to the hook); studio videos end on a full sentence
+    duration = audio_duration(mp3) + (STUDIO_TAIL if studio else 0.3 if script.get("format", "short") == "short" else TAIL)
     timeline = build_timeline(script, text, ranges, words, duration)
+    prepare_media(timeline, work)
     (work / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1))
     out.parent.mkdir(parents=True, exist_ok=True)
     out.with_suffix(".timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1))

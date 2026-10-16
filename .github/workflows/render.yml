@@ -10,7 +10,7 @@ on:
 jobs:
   render:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -30,4 +30,5 @@ jobs:
           name: video
           path: |
             out/video.mp4
+            out/video.jpg
             out/*/timeline.json

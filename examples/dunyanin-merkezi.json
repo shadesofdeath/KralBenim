@@ -1,0 +1,368 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "dunyanin-merkezi",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "space"
+  },
+  "scenes": [
+    {
+      "type": "planet",
+      "text": "Dünya'nın merkezi, Güneş'in yüzeyi kadar sıcak.",
+      "visual": "Uzayda dönen 3D Dünya; bir dilimi kesilip çıkarılmış, kesitte katmanlar ve ortada parlayan iç çekirdek görünüyor.",
+      "title": {
+        "white": "Dünya'nın",
+        "gray": "merkezi"
+      },
+      "cues": {
+        "hit": "sıcak"
+      },
+      "params": {
+        "cut": true,
+        "highlight": "inner",
+        "camera": {
+          "dist": 6.6,
+          "yaw": 28,
+          "pitch": 16
+        }
+      }
+    },
+    {
+      "type": "orbs",
+      "art": {
+        "palette": "magma"
+      },
+      "text": "Beş bin dereceyi aşıyor.",
+      "visual": "Yan yana iki küre: beyaz-sıcak demir çekirdek ve kaynayan Güneş; altlarında sıcaklık sayaçları 5.000+ °C ve ~5.500 °C'ye yükseliyor.",
+      "title": {
+        "white": "5.000+",
+        "gray": "derece"
+      },
+      "cues": {
+        "v0": "beş",
+        "v1": "bin"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Dünya'nın merkezi",
+            "value": "5.000",
+            "suffix": "+",
+            "unit": "°C",
+            "material": "core",
+            "size": 1
+          },
+          {
+            "label": "Güneş'in yüzeyi",
+            "value": "5.500",
+            "prefix": "~",
+            "unit": "°C",
+            "material": "sun",
+            "size": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Oraya inmek için 6.400 kilometre kazman gerekir.",
+      "visual": "Kesitli Dünya; kuzey kutbundan merkeze kesik kenarı boyunca parlayan bir sondaj çizgisi iniyor, ucundaki sayaç 0'dan 6.400 km'ye çıkıyor.",
+      "title": {
+        "white": "Merkeze",
+        "gray": "yolculuk"
+      },
+      "cues": {
+        "drill": "inmek"
+      },
+      "params": {
+        "cut": true,
+        "drill": {
+          "to": 6400,
+          "unit": "km",
+          "round": 10,
+          "dx": -230
+        },
+        "camera": {
+          "dist": 6.4,
+          "yaw": 52,
+          "pitch": 12
+        }
+      }
+    },
+    {
+      "type": "scale_bar",
+      "art": {
+        "palette": "desert"
+      },
+      "text": "İnsanın kazdığı en derin delik ise 12 kilometre.",
+      "visual": "Yüzeyden merkeze 6.400 km'lik dikey çubuk doluyor; tepedeki minicik kırmızı nokta büyüteçle açılıyor: 12 km.",
+      "title": {
+        "white": "Sadece",
+        "gray": "12 km"
+      },
+      "cues": {
+        "part": "12"
+      },
+      "params": {
+        "total": "6.400",
+        "part": "12",
+        "unit": "km",
+        "step": "1.000",
+        "top_label": "Yüzey",
+        "total_label": "Dünya'nın merkezi",
+        "part_label": "En derin kuyu"
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Önce kalın, kayadan bir manto geçersin.",
+      "visual": "Kamera kesite yaklaşıyor; manto katmanı turuncu parlıyor, yavaş konveksiyon akıntıları dönüyor, 'MANTO ~2.900 km' etiketi.",
+      "title": {
+        "white": "1. katman",
+        "gray": "manto"
+      },
+      "cues": {
+        "hit": "manto"
+      },
+      "params": {
+        "cut": true,
+        "highlight": "mantle",
+        "labels": [
+          {
+            "layer": "mantle",
+            "text": "MANTO",
+            "sub": "~2.900 km kaya",
+            "at": "hit",
+            "angle": 62,
+            "dx": -250,
+            "dy": -150
+          }
+        ],
+        "camera": {
+          "dist": 4.2,
+          "yaw": 34,
+          "pitch": 20,
+          "tx": 0.3,
+          "ty": 0.2,
+          "tz": 0.3
+        }
+      }
+    },
+    {
+      "type": "planet",
+      "art": {
+        "palette": "magma"
+      },
+      "text": "Sonra sıvı demirden bir okyanus gelir.",
+      "visual": "Kamera daha da içeri kayıyor; dış çekirdek akan sıvı demir gibi girdap yapıyor, 'DIŞ ÇEKİRDEK — sıvı demir' etiketi.",
+      "title": {
+        "white": "2. katman",
+        "gray": "sıvı demir"
+      },
+      "cues": {
+        "hit": "sıvı"
+      },
+      "params": {
+        "cut": true,
+        "highlight": "outer",
+        "labels": [
+          {
+            "layer": "outer",
+            "text": "DIŞ ÇEKİRDEK",
+            "sub": "sıvı demir",
+            "at": "hit",
+            "angle": 70,
+            "dx": -150,
+            "dy": -260
+          }
+        ],
+        "camera": {
+          "dist": 3.1,
+          "yaw": 46,
+          "pitch": 24,
+          "tx": 0.2,
+          "ty": 0.15,
+          "tz": 0.2
+        }
+      }
+    },
+    {
+      "type": "planet",
+      "art": {
+        "palette": "magma"
+      },
+      "text": "En ortada ise demir ve nikelden katı bir top var.",
+      "visual": "Yakın plan: kesitin ortasından beyaz-sıcak, kristal parıltılı katı iç çekirdek topu çıkıyor; 'İÇ ÇEKİRDEK — katı demir-nikel' etiketi.",
+      "title": {
+        "white": "Merkez",
+        "gray": "katı top"
+      },
+      "cues": {
+        "hit": "katı"
+      },
+      "params": {
+        "cut": true,
+        "highlight": "inner",
+        "labels": [
+          {
+            "layer": "inner",
+            "text": "İÇ ÇEKİRDEK",
+            "sub": "katı demir-nikel",
+            "at": "hit",
+            "angle": 45,
+            "dx": -120,
+            "dy": -330
+          }
+        ],
+        "camera": {
+          "dist": 2.0,
+          "yaw": 40,
+          "pitch": 22,
+          "tx": 0.08,
+          "ty": 0.06,
+          "tz": 0.08
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "noir"
+      },
+      "text": "Peki bu sıcakta neden erimiyor?",
+      "visual": "Siyah zeminde dev yazılar tek tek çarpıyor: 'PEKİ NEDEN' ve kırmızı kutuda 'ERİMİYOR?'; köşede ampul maskot şaşkın zıplıyor.",
+      "title": {},
+      "mascot": "shock",
+      "cues": {
+        "w0": "peki",
+        "w1": "neden",
+        "w2": "erimiyor"
+      },
+      "params": {
+        "lines": [
+          "Peki neden",
+          "erimiyor?"
+        ],
+        "highlight": [
+          "erimiyor?"
+        ]
+      }
+    },
+    {
+      "type": "headline",
+      "art": {
+        "palette": "lab"
+      },
+      "text": "Çünkü oradaki basınç, yüzeydekinin üç milyon katından fazla.",
+      "visual": "Dev sayaç 0'dan 3.000.000+'ya hızla sayıyor, altında 'KAT BASINÇ' yazısı.",
+      "title": {
+        "white": "Basınç",
+        "gray": "3 milyon kat"
+      },
+      "mascot": "explain",
+      "cues": {
+        "count": "basınç",
+        "w0": "milyon",
+        "w1": "katından"
+      },
+      "params": {
+        "count": {
+          "to": "3.000.000",
+          "suffix": "+"
+        },
+        "lines": [
+          "kat basınç"
+        ],
+        "highlight": [
+          "basınç"
+        ],
+        "sub": "yeryüzündeki hava basıncına göre"
+      }
+    },
+    {
+      "type": "lattice",
+      "art": {
+        "palette": "magma"
+      },
+      "text": "Atomlar öyle sıkışır ki, akıp sıvı olamazlar.",
+      "visual": "3D metal atom kafesi; altı yönden oklar bastırıyor, atomlar birbirine yaklaşıp yerlerinde titriyor ama dağılmıyor.",
+      "title": {
+        "white": "Atomlar",
+        "gray": "kilitlenir"
+      },
+      "cues": {
+        "hit": "sıkışır"
+      },
+      "params": {
+        "mode": "squeeze",
+        "hot": 0.8
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Yani ayağının altında, erimeyi reddeden bir demir güneş var.",
+      "visual": "Kamera geri çekiliyor; kesitli Dünya bütünüyle görünüyor, ortadaki iç çekirdek güneş gibi parlıyor; ampul maskot mutlu el sallıyor.",
+      "title": {
+        "white": "Demir",
+        "gray": "bir güneş"
+      },
+      "mascot": "happy",
+      "cues": {
+        "hit": "güneş"
+      },
+      "params": {
+        "cut": true,
+        "highlight": "inner",
+        "camera": {
+          "dist": 7.2,
+          "yaw": 24,
+          "pitch": 14,
+          "drift": 4
+        }
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Merkezi",
+      "GÜNEŞ kadar",
+      "sıcak"
+    ],
+    "highlight": [
+      "GÜNEŞ"
+    ],
+    "scene": 0,
+    "t": 1.5
+  },
+  "youtube": {
+    "title": "Dünyanın Merkezi Ne Kadar Sıcak? 🌍",
+    "description": "Dünyanın merkezi ne kadar sıcak? Tahminlere göre 5.000 dereceyi aşıyor, yani neredeyse Güneş'in yüzeyi kadar. Peki bu sıcakta iç çekirdek neden erimiyor?\n\nMerkeze yaklaşık 6.400 kilometre var; insanın kazdığı en derin delik ise sadece 12 kilometre. Yolda kayadan manto, sıvı demirden dış çekirdek ve en ortada katı demir-nikel iç çekirdek var. Oradaki basınç yeryüzündekinin 3 milyon katından fazla, bu yüzden atomlar sıvı olamayacak kadar sıkışıyor.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Dünya'nın merkezine bir gün inebilecek miyiz? Yorumlara yaz!\n\n#shorts #dünya #bilim #düşünbakalım",
+    "tags": [
+      "dünyanın merkezi",
+      "dünyanın çekirdeği",
+      "dünyanın merkezi ne kadar sıcak",
+      "iç çekirdek neden erimiyor",
+      "dünyanın katmanları",
+      "dış çekirdek",
+      "manto",
+      "kola kuyusu",
+      "en derin kuyu",
+      "yer bilimi",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27"
+  }
+}

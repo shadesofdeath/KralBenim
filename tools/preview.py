@@ -6,8 +6,6 @@
 Output: out/preview/<slug>/sheet.png (+ frame_NN.png)
 """
 import argparse
-import json
-import re
 import subprocess
 import sys
 from pathlib import Path
@@ -17,32 +15,26 @@ sys.path.insert(0, str(ROOT))
 import build  # noqa: E402
 
 
-def fake_words(text):
-    words, t = [], 0.2
-    for m in re.finditer(r"\S+", text):
-        tok = m.group(0)
-        d = 0.10 + 0.05 * len(tok.strip(build.PUNCT))
-        words.append({"text": tok.strip(build.PUNCT), "start": t, "end": t + d, "pos": m.start()})
-        t += d + 0.04 + (0.35 if tok[-1] in ".?!" else 0.15 if tok[-1] in ",:;" else 0)
-    return words, t
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("script")
     ap.add_argument("--times", help="comma separated seconds")
     a = ap.parse_args()
-    script = json.loads(Path(a.script).read_text())
+    script = build.load_script(a.script)
     text, ranges = "", []
     for sc in script["scenes"]:
         if text:
             text += " "
         ranges.append((len(text), len(text) + len(sc["text"])))
         text += sc["text"]
-    words, dur = fake_words(text)
-    tl = build.build_timeline(script, text, ranges, build.locate(text, words), dur + build.TAIL)
+    words, dur = build.estimate_words(text)
+    tail = build.STUDIO_TAIL if script.get("engine") == "studio" else build.TAIL
+    tl = build.build_timeline(script, text, ranges, build.locate(text, words), dur + tail)
     out = ROOT / "out" / "preview" / script.get("slug", Path(a.script).stem)
     out.mkdir(parents=True, exist_ok=True)
+    for f in out.glob("frame_*.png"):
+        f.unlink()
+    build.prepare_media(tl, out)
     if a.times:
         times = [float(x) for x in a.times.split(",")]
     else:   # mid + late frame of every scene

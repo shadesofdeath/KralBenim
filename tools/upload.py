@@ -61,6 +61,16 @@ def chapters(video):
     return "\n\n⏱️ Bölümler\n" + "\n".join(f"{fmt(t)} {name}" for t, name in kept)
 
 
+def credits(script):
+    """Attribution for photos / clips used by studio "photo" shots (CC BY / CC BY-SA require it)."""
+    seen = []
+    for sc in script.get("scenes", []):
+        c = (sc.get("params") or {}).get("credit")
+        if c and c not in seen:
+            seen.append(c)
+    return ("\n\n📷 Görseller\n" + "\n".join(seen)) if seen else ""
+
+
 def set_thumbnail(video_id, jpg):
     yt = gbuild("youtube", "v3", credentials=credentials(), cache_discovery=False)
     yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(jpg), mimetype="image/jpeg")).execute()
@@ -71,7 +81,8 @@ def main():
     if sys.argv[1] == "--thumbnail":           # upload.py --thumbnail <video.youtube.json> <cover.jpg>
         return set_thumbnail(json.loads(Path(sys.argv[2]).read_text())["id"], sys.argv[3])
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
-    meta = json.loads(script_path.read_text())["youtube"]
+    script = json.loads(script_path.read_text())
+    meta = script["youtube"]
     creds = credentials()
     if not creds.valid:
         creds.refresh(Request())
@@ -88,7 +99,7 @@ def main():
     body = {
         "snippet": {
             "title": meta["title"][:100],
-            "description": insert_chapters(meta.get("description", ""), chapters(video))[:5000],
+            "description": insert_chapters(meta.get("description", ""), chapters(video) + credits(script))[:5000],
             "tags": meta.get("tags", []),
             "categoryId": str(meta.get("category_id", "27")),
             "defaultLanguage": "tr",
