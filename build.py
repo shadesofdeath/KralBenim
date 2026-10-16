@@ -298,7 +298,8 @@ def _encode_args(timeline):
         # (film grain was dropped: it tripled the file size and encode time and YouTube smears it anyway)
         vf += [f"scale={round(w * 4 / 3)}:{round(h * 4 / 3)}:flags=lanczos"]
     return [*(["-vf", ",".join(vf)] if vf else []),
-            "-c:v", "libx264", "-preset", "medium" if timeline.get("engine") == "studio" else "slow", "-crf", "15", "-tune", "animation", "-profile:v", "high",
+            "-c:v", "libx264", "-preset", "medium" if timeline.get("engine") == "studio" else "slow",
+            "-crf", "18" if timeline.get("engine") == "studio" else "15",   # studio Shorts stay < 50 MB (Telegram bot limit) "-tune", "animation", "-profile:v", "high",
             "-pix_fmt", "yuv420p", "-g", str(60 if blur else fps * 2), "-bf", "2",
             "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
 
