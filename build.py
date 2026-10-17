@@ -276,7 +276,7 @@ def prepare_media(timeline, work):
         if p.get("src") and not p["src"].startswith(("file:", "http")):
             p["src"] = Path(p["src"]).as_uri()
         if p.get("video") and not p.get("frames"):
-            d = work / "media" / f"scene{i:02d}"
+            d = (work / "media" / f"scene{i:02d}").resolve()   # as_uri() needs an absolute path
             d.mkdir(parents=True, exist_ok=True)
             dur = sc["end"] - sc["start"] + 0.5
             rate = p.get("rate", 1)

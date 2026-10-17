@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       dir:
-        description: "Folder to (re)build, e.g. videos/2026-10-16"
+        description: "Folder or single script to (re)build, e.g. videos/2026-10-16 or videos/2026-10-16/04-x.json"
         required: true
       upload:
         description: "Upload to YouTube"
@@ -30,7 +30,9 @@ jobs:
         env:
           DIR: ${{ inputs.dir }}
         run: |
-          if [ -n "$DIR" ]; then
+          if [ -f "$DIR" ]; then
+            files="$DIR"
+          elif [ -n "$DIR" ]; then
             files=$(ls "$DIR"/*.json | grep -v '\.youtube\.json$' || true)
           else
             files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'videos/*/*.json' | grep -v '\.youtube\.json$' || true)
@@ -62,7 +64,8 @@ jobs:
           F: ${{ matrix.file }}
         run: echo "name=$(basename "$(dirname "$F")")-$(basename "$F" .json)" >> "$GITHUB_OUTPUT"
       - name: TTS cache (re-renders do not spend ElevenLabs credits)
-        uses: actions/cache@v4
+        id: tts
+        uses: actions/cache/restore@v4
         with:
           path: out/*/
           key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
@@ -72,6 +75,13 @@ jobs:
           ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
           F: ${{ matrix.file }}
         run: python build.py "$F" -o "out/${{ steps.n.outputs.name }}.mp4"
+      - name: Save TTS cache (also when the render fails, so a fixed re-run reuses the narration)
+        if: always() && steps.tts.outputs.cache-hit != 'true'
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: out/*/
+          key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
       - name: Upload to YouTube
         if: inputs.upload != 'false'
         env:
