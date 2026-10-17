@@ -1,0 +1,287 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "mars-neden-kirmizi",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "desert"
+  },
+  "scenes": [
+    {
+      "type": "planet",
+      "text": "Mars aslında paslanmış bir gezegen.",
+      "visual": "Uzayda yavaşça dönen kızıl 3D Mars, gece-gündüz çizgisiyle.",
+      "title": {
+        "white": "Mars"
+      },
+      "cues": {
+        "hit": "paslanmış"
+      },
+      "params": {
+        "preset": "mars",
+        "spin": 0.1,
+        "camera": {
+          "dist": 6.5,
+          "yaw": 20,
+          "pitch": 12
+        }
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "O kızıl rengin kaynağı demir oksit, yani pas.",
+      "visual": "Dev yazılar: 'DEMİR OKSİT' ve amber kutuda 'YANİ PAS'.",
+      "title": {},
+      "cues": {
+        "w0": "demir",
+        "w1": "oksit",
+        "w2": "yani",
+        "w3": "pas"
+      },
+      "params": {
+        "lines": [
+          "Demir oksit",
+          "yani pas"
+        ],
+        "highlight": [
+          "pas"
+        ]
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "orbs",
+      "text": "Kayalardaki demir, oksijenle birleşip paslandı.",
+      "visual": "İki 3D küre yan yana: parlak gri metal 'Demir' ve kızıl tozlu 'Pas'.",
+      "title": {
+        "white": "Demir",
+        "gray": "+ oksijen"
+      },
+      "cues": {
+        "o0": "demir",
+        "o1": "paslandı"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Demir",
+            "material": "metal",
+            "size": 0.8
+          },
+          {
+            "label": "Pas",
+            "material": "mars",
+            "size": 0.8
+          }
+        ],
+        "camera": {
+          "dist": 9.5
+        }
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Yağmurda unutulan bir çivi de aynı şekilde kızarır.",
+      "visual": "Bölünmüş ekran: üstte damla ikonu 'Çivi — yağmurda paslanır', altta dünya ikonu 'Mars — milyarlarca yıl paslandı'.",
+      "title": {
+        "white": "Aynı",
+        "gray": "kimya"
+      },
+      "cues": {
+        "left": "çivi",
+        "right": "kızarır"
+      },
+      "params": {
+        "left": {
+          "title": "yağmurda paslanır",
+          "value": "Çivi",
+          "icon": "drop",
+          "color": "#c9ccd6"
+        },
+        "right": {
+          "title": "aynı kimya",
+          "value": "Mars",
+          "icon": "globe",
+          "color": "accent"
+        },
+        "vs": "="
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Rüzgâr bu pası pudra gibi ince bir toza çevirip her yere yaydı.",
+      "visual": "Mars'a yaklaşan kamera: kızıl, tozlu yüzey ekranı dolduruyor ve dönüyor.",
+      "title": {
+        "white": "İnce",
+        "gray": "kızıl toz"
+      },
+      "cues": {
+        "hit": "pudra"
+      },
+      "params": {
+        "preset": "mars",
+        "spin": 0.12,
+        "camera": {
+          "dist": 3.4,
+          "yaw": -40,
+          "pitch": 18
+        }
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Ama bu kızıllık sadece ince bir kabuk.",
+      "visual": "Dev yazılar: 'SADECE' ve amber kutuda 'İNCE BİR KABUK'.",
+      "title": {},
+      "cues": {
+        "w0": "sadece",
+        "w1": "ince",
+        "w2": "bir",
+        "w3": "kabuk"
+      },
+      "params": {
+        "lines": [
+          "Sadece",
+          "ince bir kabuk"
+        ],
+        "highlight": [
+          "kabuk"
+        ]
+      },
+      "mascot": "think"
+    },
+    {
+      "type": "compare",
+      "text": "Curiosity aracı kayayı deldiğinde içinden gri toz çıktı.",
+      "visual": "Bölünmüş ekran: üstte kızıl dünya ikonu 'Kızıl — yüzey', altta gri matkap ikonu 'Gri — kayanın içi'.",
+      "title": {
+        "white": "Curiosity",
+        "gray": "deldi"
+      },
+      "cues": {
+        "left": "kayayı",
+        "right": "gri"
+      },
+      "params": {
+        "left": {
+          "title": "yüzey",
+          "value": "Kızıl",
+          "icon": "globe",
+          "color": "#e0642c"
+        },
+        "right": {
+          "title": "kayanın içi",
+          "value": "Gri",
+          "icon": "drill",
+          "color": "#b9bcc6"
+        }
+      },
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Üstelik bu toz yüzünden Mars'ta gün batımı mavi görünür.",
+      "visual": "Dev yazılar: 'GÜN BATIMI' ve mavi kutuda 'MAVİ'.",
+      "title": {},
+      "cues": {
+        "w0": "gün",
+        "w1": "batımı",
+        "w2": "mavi"
+      },
+      "params": {
+        "lines": [
+          "Gün batımı",
+          "mavi"
+        ],
+        "highlight": [
+          "mavi"
+        ]
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "ice",
+        "colors": {
+          "accent": "#5fb4ff"
+        }
+      }
+    },
+    {
+      "type": "planet",
+      "text": "Yani Kızıl Gezegen'i boyayan şey, milyarlarca yıllık pas.",
+      "visual": "Kamera geri çekiliyor: yıldızların önünde dönen kızıl Mars'ın tamamı.",
+      "title": {
+        "white": "Kızıl",
+        "gray": "gezegen"
+      },
+      "cues": {
+        "hit": "pas"
+      },
+      "params": {
+        "preset": "mars",
+        "spin": 0.1,
+        "camera": {
+          "dist": 6.8,
+          "yaw": -10,
+          "pitch": 15
+        }
+      },
+      "mascot": "happy",
+      "art": {
+        "palette": "magma"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Mars",
+      "paslanmış",
+      "bir gezegen"
+    ],
+    "highlight": [
+      "paslanmış"
+    ],
+    "scene": 0,
+    "t": 2.0
+  },
+  "youtube": {
+    "title": "Mars Neden Kırmızı? Gezegen Resmen Paslanmış 🔴",
+    "description": "Mars neden kırmızı? Çünkü Kızıl Gezegen resmen paslanmış: yüzeyi demir oksit, yani pasla kaplı ince bir tozla örtülü.\n\nKayalardaki demir oksijenle birleşip paslandı, rüzgâr bu pası pudra gibi ince bir toza çevirip bütün gezegene yaydı. Ama bu kızıllık ince bir kabuk; Curiosity kayayı deldiğinde içinden gri toz çıktı. Üstelik bu toz yüzünden Mars'ta gün batımı mavi görünür.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Mars'ta gün batımını izlemek nasıl olurdu? Yorumlara yaz!\n\n#shorts #mars #uzay #bilim #düşünbakalım",
+    "tags": [
+      "mars neden kırmızı",
+      "mars neden kızıl",
+      "kızıl gezegen",
+      "mars neden kırmızı renkte",
+      "mars paslı mı",
+      "demir oksit",
+      "mars gün batımı mavi",
+      "curiosity",
+      "mars",
+      "uzay",
+      "gezegenler",
+      "astronomi",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-17T15:00:00+03:00"
+  }
+}

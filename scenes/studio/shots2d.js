@@ -516,3 +516,129 @@ SHOTS2.waterline = {
     };
   },
 };
+
+// ------------------------------------------------------------ tower: an iron lattice tower (Eiffel-like) that grows, leans or gets measured
+// P: {mode: "grow"|"lean"|"measure", grow: "+15 cm", height: "330", unit: "m", sun: true, temp: "35 °C", label: "..."}
+// cues: hit (growth / lean / ruler starts)
+SHOTS2.tower = {
+  kind: '2d',
+  build(ctx) {
+    const { P, pal, W, H, svg, defs } = ctx;
+    const portrait = H > W;
+    const mode = P.mode || 'grow';
+    const bd = backdrop(svg, pal, W, H, 61, { rays: 0.05, cy: portrait ? 420 : H * 0.3 });
+    const cx = portrait ? W * 0.47 : W * 0.5, baseY = P.base_y || (portrait ? 1130 : H * 0.9), topY = P.top_y || (portrait ? 330 : H * 0.14);
+    const TH = baseY - topY, hb = (portrait ? 330 : 300) * (P.top_y || P.base_y ? TH0(baseY - topY) : 1);
+    const half = h => hb * Math.pow(1 - h, 2.3) + 10;           // half-width at height fraction h
+    const Y = h => baseY - h * TH;
+    const gid = 'twg' + ctx.seed;
+    const lg = el(defs, 'linearGradient', { id: gid, x1: 0, y1: 0, x2: 0, y2: 1 });
+    el(lg, 'stop', { offset: 0, 'stop-color': shade(pal.accent2, -0.1) }); el(lg, 'stop', { offset: 1, 'stop-color': shade(pal.accent, -0.35) });
+    // sun
+    const sunG = el(svg, 'g', { opacity: 0 });
+    const sx = portrait ? 170 : W * 0.16, sy = (portrait ? 470 : H * 0.24) + (P.top_y ? P.top_y - 330 : 0) * 0.6;
+    el(sunG, 'circle', { cx: sx, cy: sy, r: 150, fill: rgba('#ffb347', 0.18) });
+    el(sunG, 'circle', { cx: sx, cy: sy, r: 70, fill: '#ffcf6b', style: 'filter: drop-shadow(0 0 40px #ff9a2a)' });
+    const sunRays = el(sunG, 'g');
+    for (let i = 0; i < 12; i++) { const a = i / 12 * Math.PI * 2; el(sunRays, 'path', { d: `M${sx + Math.cos(a) * 92} ${sy + Math.sin(a) * 92} L${sx + Math.cos(a) * 125} ${sy + Math.sin(a) * 125}`, stroke: '#ffcf6b', 'stroke-width': 9, 'stroke-linecap': 'round' }); }
+    const tempT = svgText(sunG, P.temp || '', sx, sy + 215, 64, { fill: '#ffcf6b', 'font-family': 'Anton' });
+    // ground
+    el(svg, 'path', { d: `M0 ${baseY + 6} H${W}`, stroke: rgba(pal.ink, 0.35), 'stroke-width': 4 });
+    // ghost (original pose) + tower
+    const ghost = el(svg, 'g', { opacity: 0 });
+    const tw = el(svg, 'g');
+    const drawTower = (g, ghostMode) => {
+      const st = ghostMode ? { fill: 'none', stroke: rgba(pal.ink, 0.5), 'stroke-width': 3, 'stroke-dasharray': '10 10' } : null;
+      const N = 40, L = [], R = [];
+      for (let i = 0; i <= N; i++) { const h = 0.92 * i / N; L.push([cx - half(h), Y(h)]); R.push([cx + half(h), Y(h)]); }
+      const arch = `Q${cx} ${Y(0.2)} ${cx + half(0.13) * 0.55} ${Y(0)}`;
+      const outline = `M${L.map(p => p.join(' ')).join(' L')} L${R.slice().reverse().map(p => p.join(' ')).join(' L')} L${cx + half(0) * 0.45} ${Y(0)} Q${cx} ${Y(0.2)} ${cx - half(0) * 0.45} ${Y(0)} Z`;
+      if (ghostMode) { el(g, 'path', Object.assign({ d: outline }, st)); return; }
+      el(g, 'path', { d: outline, fill: `url(#${gid})`, opacity: 0.22 });
+      const bars = el(g, 'g', { stroke: pal.ink, 'stroke-linecap': 'round', fill: 'none' });
+      el(bars, 'path', { d: 'M' + L.map(p => p.join(' ')).join(' L'), 'stroke-width': 9 });
+      el(bars, 'path', { d: 'M' + R.map(p => p.join(' ')).join(' L'), 'stroke-width': 9 });
+      // inner leg edges up to the first platform
+      for (const s of [-1, 1]) {
+        const pts = [];
+        for (let i = 0; i <= 10; i++) { const h = 0.19 * i / 10; pts.push([cx + s * (half(h) - lerp(hb * 0.55, 30, i / 10) * (1 - h * 2)), Y(h)]); }
+        el(bars, 'path', { d: 'M' + pts.map(p => p.join(' ')).join(' L'), 'stroke-width': 6, opacity: 0.85 });
+      }
+      el(bars, 'path', { d: `M${cx - half(0) * 0.45} ${Y(0)} Q${cx} ${Y(0.24)} ${cx + half(0) * 0.45} ${Y(0)}`, 'stroke-width': 7 });
+      // cross bracing
+      const lv = [];
+      for (let i = 0; i < 26; i++) lv.push(0.92 * Math.pow(i / 25, 0.85));
+      for (let i = 0; i < lv.length - 1; i++) {
+        const a = lv[i], b = lv[i + 1];
+        el(bars, 'path', { d: `M${cx - half(a)} ${Y(a)} L${cx + half(b)} ${Y(b)} M${cx + half(a)} ${Y(a)} L${cx - half(b)} ${Y(b)}`, 'stroke-width': 2.5, opacity: 0.55 });
+      }
+      // platforms
+      for (const h of [0.19, 0.38, 0.88]) {
+        const w = half(h) + 22;
+        el(g, 'rect', { x: cx - w, y: Y(h) - 14, width: w * 2, height: 22, rx: 4, fill: pal.ink });
+      }
+      // antenna
+      el(bars, 'path', { d: `M${cx} ${Y(0.92)} L${cx} ${Y(1)}`, 'stroke-width': 7 });
+      el(g, 'circle', { cx, cy: Y(1), r: 9, fill: pal.accent, style: `filter: drop-shadow(0 0 14px ${pal.accent})` });
+    };
+    drawTower(ghost, true); drawTower(tw, false);
+    // growth bracket + label
+    const brk = el(svg, 'path', { stroke: pal.accent, 'stroke-width': 7, fill: 'none', 'stroke-linecap': 'round', opacity: 0 });
+    const topLine = el(svg, 'path', { stroke: rgba(pal.ink, 0.7), 'stroke-width': 3, 'stroke-dasharray': '12 10', opacity: 0 });
+    const growT = svgText(svg, P.grow || '', 0, 0, portrait ? 120 : 100, { fill: pal.accent, 'font-family': 'Anton', 'text-anchor': 'start', style: `filter: drop-shadow(0 0 20px ${rgba(pal.accent, .6)})` });
+    // ruler
+    const rx = cx + hb + 90;
+    const ruler = el(svg, 'g', { opacity: 0 });
+    const rFill = el(ruler, 'path', { stroke: pal.accent, 'stroke-width': 10, 'stroke-linecap': 'round' });
+    for (let i = 0; i <= 10; i++) el(ruler, 'path', { d: `M${rx - 14} ${Y(i / 10)} h28`, stroke: pal.ink, 'stroke-width': 3, opacity: 0.6 });
+    const rT = svgText(svg, '', rx - 40, topY - 40, portrait ? 110 : 96, { fill: pal.accent, 'font-family': 'Anton', 'text-anchor': portrait ? 'middle' : 'start' });
+    const lab = svgText(svg, P.label || '', cx, baseY + 90, 54, { fill: pal.ink, 'font-weight': 800, opacity: 0 });
+    return {
+      update(lt, dur, cues, env) {
+        const t = env.t; bd(t);
+        const hit = cue(cues, 'hit', Math.min(0.9, dur * 0.35));
+        const ent = spring(lt, 0, 0.9);
+        const show = P.sun || mode !== 'measure';
+        sunG.setAttribute('opacity', show ? prog(lt, 0.1, 0.6) : 0);
+        sunRays.setAttribute('transform', `rotate(${t * 12} ${sx} ${sy})`);
+        tempT.setAttribute('opacity', P.temp ? prog(lt, 0.4, 0.5) : 0);
+        const gp = mode === 'grow' ? progIO(lt, hit, 1.2) : 0;
+        const lp = mode === 'lean' ? progIO(lt, hit, 1.4) : 0;
+        const sY = (0.92 + 0.08 * ent) * (1 + 0.075 * gp), sX = 0.92 + 0.08 * ent;
+        const lean = lp * 5 + (mode === 'lean' ? 0.25 * lp * Math.sin(t * 2) : 0);
+        tw.setAttribute('transform', `translate(${cx} ${baseY}) rotate(${lean}) scale(${sX} ${sY}) translate(${-cx} ${-baseY})`);
+        ghost.setAttribute('opacity', (mode === 'grow' ? gp : lp) * 0.9);
+        const origTop = baseY - (baseY - Y(1)) * sX, newTop = baseY - (baseY - Y(1)) * sY;
+        if (mode === 'grow') {
+          const bx = cx + 70;
+          brk.setAttribute('d', `M${bx - 18} ${origTop} H${bx + 18} M${bx} ${origTop} V${newTop} M${bx - 18} ${newTop} H${bx + 18}`);
+          brk.setAttribute('opacity', clamp01(gp * 3));
+          brk.setAttribute('stroke-width', 7 + 6 * punch(lt, hit + 1.1, 0.6));
+          topLine.setAttribute('d', `M${cx - 160} ${origTop} H${cx + 160}`); topLine.setAttribute('opacity', clamp01(gp * 3) * 0.8);
+          growT.setAttribute('x', bx + 40); growT.setAttribute('y', (origTop + newTop) / 2 + 42);
+          growT.setAttribute('opacity', prog(lt, hit + 0.6, 0.5));
+          const k = 1 + 0.25 * punch(lt, hit + 0.6, 0.8);
+          growT.setAttribute('transform', `translate(${bx + 40} ${(origTop + newTop) / 2}) scale(${k}) translate(${-(bx + 40)} ${-(origTop + newTop) / 2})`);
+        } else if (mode === 'lean') {
+          growT.textContent = P.grow || ''; growT.setAttribute('x', cx + 110); growT.setAttribute('y', topY - 30);
+          growT.setAttribute('opacity', P.grow ? prog(lt, hit + 0.8, 0.5) : 0);
+          const a = lean * DEG2;
+          const tx = cx + Math.sin(a) * (baseY - Y(1)) * sY, ty = baseY - Math.cos(a) * (baseY - Y(1)) * sY;
+          brk.setAttribute('d', `M${cx} ${Y(1) + (1 - sY) * 0} Q${(cx + tx) / 2} ${ty - 40} ${tx} ${ty}`);
+          brk.setAttribute('opacity', clamp01(lp * 3));
+        }
+        if (mode === 'measure') {
+          const mp = progIO(lt, hit, 1.6);
+          ruler.setAttribute('opacity', prog(lt, hit - 0.2, 0.4));
+          rFill.setAttribute('d', `M${rx} ${baseY} V${baseY - (baseY - Y(1)) * mp}`);
+          rT.textContent = fmtNum(Math.round(parseNum(P.height || '330') * mp)) + ' ' + (P.unit || 'm');
+          rT.setAttribute('x', portrait ? rx - 60 : rx + 30); rT.setAttribute('y', portrait ? Math.max(170, baseY - (baseY - Y(1)) * mp - 40) : baseY - (baseY - Y(1)) * mp + 30);
+          rT.setAttribute('opacity', prog(lt, hit, 0.3));
+        }
+        lab.setAttribute('opacity', P.label ? prog(lt, 0.5, 0.5) : 0);
+      },
+    };
+  },
+};
+const DEG2 = Math.PI / 180;
+function TH0(th) { return Math.max(0.6, Math.min(1, th / 800)); }

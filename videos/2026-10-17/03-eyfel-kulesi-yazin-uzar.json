@@ -1,0 +1,252 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "eyfel-kulesi-yazin-uzar",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "sunset"
+  },
+  "scenes": [
+    {
+      "type": "tower",
+      "text": "Eyfel Kulesi yazın uzar.",
+      "visual": "Güneşin altında demir kafes kule yukarı doğru uzuyor; eski boyu kesikli çizgiyle, aradaki fark amber parantezle '+15 cm'.",
+      "title": {
+        "white": "Eyfel",
+        "gray": "Kulesi"
+      },
+      "cues": {
+        "hit": "eyfel"
+      },
+      "params": {
+        "mode": "grow",
+        "grow": "+15 cm",
+        "sun": true,
+        "temp": "35 °C",
+        "top_y": 820,
+        "base_y": 1320
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Sıcak bir günde boyu yaklaşık 15 santim artabilir.",
+      "visual": "Dev sayaç '+15 cm'e çıkıyor, altında 'DAHA UZUN'.",
+      "title": {
+        "white": "Yaklaşık",
+        "gray": "15 santim"
+      },
+      "cues": {
+        "count": "15",
+        "w0": "günde",
+        "w1": "boyu"
+      },
+      "params": {
+        "count": {
+          "to": "15",
+          "prefix": "+",
+          "suffix": " cm"
+        },
+        "lines": [
+          "daha uzun"
+        ],
+        "highlight": [
+          "uzun"
+        ]
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "lattice",
+      "text": "Çünkü kule baştan sona demirden yapılmış.",
+      "visual": "Parlak metal atomlarından oluşan düzenli 3D kafes, yavaşça dönüyor.",
+      "title": {
+        "white": "Demir",
+        "gray": "atomları"
+      },
+      "cues": {
+        "hit": "demirden"
+      },
+      "params": {
+        "mode": "heat",
+        "hot": 0.15,
+        "n": 5,
+        "arrows": false,
+        "spacing": 0.62,
+        "metal": true,
+        "color": "#c9ccd6"
+      },
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "lattice",
+      "text": "Isınan demir atomları daha hızlı titreşir ve birbirini iter.",
+      "visual": "Aynı 3D kafes kızarıyor; atomlar hızla titreşiyor ve aralarındaki boşluk büyüyor.",
+      "title": {
+        "white": "Isınan",
+        "gray": "atomlar"
+      },
+      "cues": {
+        "hit": "titreşir"
+      },
+      "params": {
+        "mode": "heat",
+        "hot": 1.0,
+        "n": 5,
+        "arrows": false,
+        "spacing": 0.74,
+        "metal": true,
+        "color": "#ffb08a"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "tower",
+      "text": "Kule 330 metre olunca bu minik farklar toplanıyor.",
+      "visual": "Kulenin yanında yerden tepeye yükselen amber cetvel, sayaç 330 m'ye çıkıyor.",
+      "title": {
+        "white": "330",
+        "gray": "metre"
+      },
+      "cues": {
+        "hit": "330"
+      },
+      "params": {
+        "mode": "measure",
+        "height": "330",
+        "unit": "m"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Kışın soğukta ise kule yeniden kısalır.",
+      "visual": "Bölünmüş ekran: üstte güneş ikonu 'Yaz — uzar', altta kar tanesi ikonu 'Kış — kısalır'.",
+      "title": {
+        "white": "Yaz",
+        "gray": "ve kış"
+      },
+      "cues": {
+        "left": "kışın",
+        "right": "kısalır"
+      },
+      "params": {
+        "left": {
+          "title": "yazın",
+          "value": "Uzar",
+          "icon": "sun",
+          "color": "accent"
+        },
+        "right": {
+          "title": "kışın",
+          "value": "Kısalır",
+          "icon": "snow",
+          "color": "#9fe8ff"
+        }
+      }
+    },
+    {
+      "type": "tower",
+      "text": "Güneş tek yüzünü ısıtınca tepesi ters yöne hafifçe eğilir.",
+      "visual": "Soldaki güneş kulenin bir yüzünü ısıtıyor; kule sağa doğru hafifçe eğiliyor, dik hali kesikli çizgiyle.",
+      "title": {
+        "white": "Tepesi",
+        "gray": "eğilir"
+      },
+      "cues": {
+        "hit": "eğilir"
+      },
+      "params": {
+        "mode": "lean",
+        "sun": true
+      },
+      "mascot": "point"
+    },
+    {
+      "type": "headline",
+      "text": "Köprülerdeki genleşme boşlukları da bu yüzden var.",
+      "visual": "Dev yazılar: 'GENLEŞME' ve amber kutuda 'BOŞLUKLARI'.",
+      "title": {},
+      "cues": {
+        "w0": "genleşme",
+        "w1": "boşlukları"
+      },
+      "params": {
+        "lines": [
+          "Genleşme",
+          "boşlukları"
+        ],
+        "highlight": [
+          "boşlukları"
+        ]
+      },
+      "mascot": "explain",
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "tower",
+      "text": "Yani Eyfel Kulesi'nin boyu, havaya göre değişen bir sayı.",
+      "visual": "Güneşin altında kule yeniden uzuyor; amber parantezde '+15 cm'.",
+      "title": {
+        "white": "Boyu",
+        "gray": "değişir"
+      },
+      "cues": {
+        "hit": "değişen"
+      },
+      "params": {
+        "mode": "grow",
+        "grow": "+15 cm",
+        "sun": true
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Eyfel",
+      "yazın",
+      "uzuyor"
+    ],
+    "highlight": [
+      "uzuyor"
+    ],
+    "scene": 0,
+    "t": 2.6
+  },
+  "youtube": {
+    "title": "Eyfel Kulesi Yazın Neden Uzar? 15 Santim Fark 🗼",
+    "description": "Eyfel Kulesi yazın neden uzar? Sıcak bir günde demir kule yaklaşık 15 santim uzayabilir; sebebi ısıl genleşme.\n\nKule baştan sona demirden yapılmış. Isınan demir atomları daha hızlı titreşir ve birbirini iter; 330 metrelik kulede bu minik farklar toplanır. Kışın kule yeniden kısalır, güneş tek yüzünü ısıtınca tepesi ters yöne hafifçe eğilir. Köprülerdeki genleşme boşlukları da bu yüzden var.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence evindeki hangi eşya sıcakta uzuyor? Yorumlara yaz!\n\n#shorts #eyfelkulesi #mühendislik #fizik #düşünbakalım",
+    "tags": [
+      "eyfel kulesi yazın uzar mı",
+      "eyfel kulesi neden uzar",
+      "eyfel kulesi boyu",
+      "eyfel kulesi kaç metre",
+      "ısıl genleşme",
+      "metaller ısınınca genleşir",
+      "genleşme derzi",
+      "eyfel kulesi",
+      "paris",
+      "mühendislik",
+      "fizik",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-17T19:00:00+03:00"
+  }
+}

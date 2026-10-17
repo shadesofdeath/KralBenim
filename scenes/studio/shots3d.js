@@ -822,3 +822,144 @@ SHOTS.orbit3d = {
     };
   },
 };
+
+// ------------------------------------------------------------ owl: a stylised 3D owl on a branch; the head swivels, x-ray shows the neck
+// P: {turn: 270 (degrees the head swivels at the cue; + = to its left), arc: true (swept-angle ring + degree counter),
+//     xray: true (body fades, neck vertebrae light up one by one), vertebrae: 14, counter: {label: "boyun omuru"},
+//     eyes: true (pulsing rings around the eyes), camera: {...}}   cues: hit (turn / x-ray start)
+function featherTexture(base, dark, light, seed) {
+  const c = document.createElement('canvas'); c.width = 512; c.height = 512;
+  const g = c.getContext('2d'), r = rng(seed);
+  g.fillStyle = base; g.fillRect(0, 0, 512, 512);
+  for (let i = 0; i < 900; i++) {           // small chevron-shaped feather marks
+    const x = r() * 512, y = r() * 512, s = 6 + r() * 12;
+    g.strokeStyle = r() < 0.6 ? dark : light; g.globalAlpha = 0.25 + r() * 0.45; g.lineWidth = 2 + r() * 2.5;
+    g.beginPath(); g.moveTo(x - s, y - s * 0.5); g.lineTo(x, y + s * 0.3); g.lineTo(x + s, y - s * 0.5); g.stroke();
+  }
+  g.globalAlpha = 1;
+  const t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(2, 2);
+  return t;
+}
+SHOTS.owl = {
+  kind: '3d',
+  build(ctx) {
+    const { P, scene, camera, pal, W, H, labels } = ctx;
+    const portrait = H > W;
+    const mats = [];
+    const M = (o) => { const m = new THREE.MeshStandardMaterial(Object.assign({ roughness: 0.85, metalness: 0, transparent: true }, o)); mats.push(m); return m; };
+    const feather = featherTexture('#8a6440', '#3b2614', '#d9bf94', 7);
+    const belly = featherTexture('#e3cfa8', '#7a5532', '#fff4dc', 9);
+    const mBody = M({ map: feather }), mBelly = M({ map: belly }), mFace = M({ color: col('#efe2c6'), roughness: 0.95 });
+    const mWing = M({ map: feather, color: col('#b89a7a') }), mBeak = M({ color: col('#4a3a2a'), roughness: 0.5 });
+    const mIris = M({ color: col('#ffb21f'), emissive: col('#ff8a00'), emissiveIntensity: 0.35, roughness: 0.3 });
+    const mPupil = new THREE.MeshStandardMaterial({ color: 0x050505, roughness: 0.15, metalness: 0.2, transparent: true }); mats.push(mPupil);
+    const mFoot = M({ color: col('#c99a4a') }), mBranch = M({ color: col('#4a3020'), roughness: 1 });
+    const S = (r, w = 48, h = 36) => new THREE.SphereGeometry(r, w, h);
+    const owl = new THREE.Group(); scene.add(owl);
+    const body = new THREE.Mesh(S(1), mBody); body.scale.set(0.95, 1.25, 0.82); body.position.set(0, -0.95, 0); owl.add(body);
+    const bel = new THREE.Mesh(S(1), mBelly); bel.scale.set(0.7, 1.0, 0.5); bel.position.set(0, -1.05, 0.38); owl.add(bel);
+    for (const s of [-1, 1]) {
+      const w = new THREE.Mesh(S(1), mWing); w.scale.set(0.32, 1.05, 0.62); w.position.set(s * 0.82, -1.0, -0.05); w.rotation.z = s * 0.12; owl.add(w);
+      for (let k = -1; k <= 1; k++) {
+        const f = new THREE.Mesh(new THREE.ConeGeometry(0.05, 0.22, 12), mFoot); f.position.set(s * 0.32 + k * 0.08, -2.2, 0.32); f.rotation.x = 1.9; owl.add(f);
+      }
+    }
+    const branch = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.2, 6, 20), mBranch); branch.rotation.z = Math.PI / 2 + 0.06; branch.position.set(0.3, -2.33, 0.1); owl.add(branch);
+    // head on a pivot so it swivels around the neck axis
+    const head = new THREE.Group(); head.position.set(0, 0.35, 0); owl.add(head);
+    const skull = new THREE.Mesh(S(0.88), mBody); skull.scale.set(1.12, 0.92, 0.95); skull.position.y = 0.42; head.add(skull);
+    const eyes = [];
+    for (const s of [-1, 1]) {
+      const disc = new THREE.Mesh(S(0.44), mFace); disc.scale.set(1, 1.05, 0.38); disc.position.set(s * 0.34, 0.46, 0.62); head.add(disc);
+      const iris = new THREE.Mesh(S(0.2, 32, 24), mIris); iris.scale.z = 0.55; iris.position.set(s * 0.34, 0.5, 0.79); head.add(iris);
+      const pup = new THREE.Mesh(S(0.115, 24, 18), mPupil); pup.scale.z = 0.5; pup.position.set(s * 0.34, 0.5, 0.87); head.add(pup);
+      const glint = glowSprite('#ffffff', 0.12, 0.9); glint.position.set(s * 0.34 - 0.05, 0.56, 0.95); head.add(glint);
+      const tuft = new THREE.Mesh(new THREE.ConeGeometry(0.13, 0.5, 16), mBody); tuft.position.set(s * 0.55, 1.15, 0.12); tuft.rotation.z = -s * 0.45; head.add(tuft);
+      const ring = new THREE.Mesh(new THREE.TorusGeometry(0.27, 0.018, 8, 48), new THREE.MeshBasicMaterial({ color: col(pal.accent), transparent: true, opacity: 0 }));
+      ring.position.set(s * 0.34, 0.5, 0.9); head.add(ring); eyes.push(ring);
+    }
+    const beak = new THREE.Mesh(new THREE.ConeGeometry(0.09, 0.3, 16), mBeak); beak.position.set(0, 0.24, 0.86); beak.rotation.x = Math.PI + 0.5; head.add(beak);
+    // x-ray neck: vertebrae along a gentle S-curve from the shoulders into the head
+    const nv = P.vertebrae || 14, verts = [];
+    const vMat = new THREE.MeshStandardMaterial({ color: col('#f4efe6'), emissive: col(pal.accent), emissiveIntensity: 0.6, roughness: 0.4, transparent: true, opacity: 0 });
+    const neckPt = u => V3(0, lerp(-0.75, 0.6, u), -0.12 + 0.12 * Math.sin(u * Math.PI * 1.6));
+    for (let i = 0; i < nv; i++) {
+      const v = new THREE.Mesh(new THREE.CylinderGeometry(0.12, 0.12, (1.35 / nv) * 0.62, 20), vMat.clone());
+      v.position.copy(neckPt((i + 0.5) / nv)); owl.add(v); verts.push(v);
+    }
+    // artery up the neck + two blood pockets under the head (x-ray)
+    let artery = null; const pockets = [];
+    if (P.artery) {
+      const curve = new THREE.CatmullRomCurve3(Array.from({ length: 9 }, (_, i) => neckPt(i / 8).add(V3(0.17, 0, 0.05))));
+      const aMat = new THREE.MeshStandardMaterial({ color: col('#ff2a2a'), emissive: col('#ff1a1a'), emissiveIntensity: 0.8, roughness: 0.4, transparent: true, opacity: 0 });
+      artery = new THREE.Mesh(new THREE.TubeGeometry(curve, 48, 0.05, 10), aMat); owl.add(artery);
+      for (const s of [-1, 1]) {
+        const pk = new THREE.Mesh(S(0.14, 24, 18), aMat.clone()); pk.position.set(s * 0.22, 0.62, 0.02); owl.add(pk); pockets.push(pk);
+      }
+    }
+    // swept-angle ring around the neck
+    let arc = null, tip = null;
+    const arcMat = new THREE.MeshBasicMaterial({ color: col(pal.accent), transparent: true });
+    if (P.arc) { tip = new THREE.Mesh(new THREE.ConeGeometry(0.11, 0.3, 16), arcMat); owl.add(tip); }
+    scene.add(new THREE.HemisphereLight(0xfff1dc, 0x1a120a, 1.3));
+    const key = new THREE.DirectionalLight(0xffffff, 2.2); key.position.set(-3, 4, 5); scene.add(key);
+    const rim = new THREE.PointLight(col(pal.accent2), 40, 20); rim.position.set(2.5, 1.5, -3); scene.add(rim);
+    const glow = glowSprite(pal.glow, 8, 0.35); glow.position.set(0, -0.3, -2.5); scene.add(glow);
+    const lbl = labels.add('counter');
+    const turn = P.turn || 0;
+    return {
+      update(lt, dur, cues, env) {
+        const t = env.t;
+        const hit = cue(cues, 'hit', Math.min(1.0, dur * 0.35));
+        const enter = spring(lt, 0, 0.9);
+        owl.scale.setScalar(0.85 + 0.15 * enter);
+        owl.position.y = 0.03 * Math.sin(t * 2.1);
+        body.scale.y = 1.25 * (1 + 0.012 * Math.sin(t * 3.2));                  // breathing
+        const tp = turn ? progIO(lt, hit, P.turn_dur || 1.8) : 0;
+        const look = turn ? 0 : 0.18 * Math.sin(t * 0.9);                          // idle glance when not turning
+        head.rotation.y = turn * DEG * tp + look;
+        head.rotation.z = 0.06 * Math.sin(t * 1.3) * (1 - tp * 0.5);
+        const blink = (Math.sin(t * 0.8) > 0.985) ? 0.15 : 1;
+        mIris.emissiveIntensity = 0.35 + 0.6 * punch(lt, hit, 0.8);
+        eyes.forEach(r => { r.scale.y = blink; });
+        eyes.forEach((r, i) => { const a = P.eyes ? prog(lt, hit, 0.4) : 0; r.material.opacity = a * (0.6 + 0.4 * Math.sin(t * 6 + i)); r.scale.setScalar(1 + 0.15 * Math.sin(t * 6 + i)); });
+        // x-ray
+        const xr = P.vert_all ? prog(lt, 0, 0.5) : P.xray ? progIO(lt, hit, 0.8) : 0;
+        mats.forEach(m => { if (m !== vMat) { m.opacity = 1 - 0.8 * xr; m.depthWrite = xr < 0.5; } });
+        if (artery) {
+          const ap = prog(lt, hit - 0.6, 0.6), sw = spring(lt, hit, 0.9);
+          artery.material.opacity = ap; artery.material.emissiveIntensity = 0.6 + 0.4 * Math.sin(t * 7);
+          pockets.forEach((pk, i) => { pk.material.opacity = ap; pk.scale.setScalar(0.5 + 0.9 * sw + 0.08 * Math.sin(t * 7 + i)); pk.material.emissiveIntensity = 0.7 + 0.8 * punch(lt, hit, 0.8); });
+        }
+        const shown = P.vert_all ? nv : P.xray ? Math.min(nv, Math.floor(lin(lt, hit + 0.4, P.count_dur || 1.6) * nv + 0.0001)) : 0;
+        verts.forEach((v, i) => {
+          const on = i < shown ? 1 : 0, ap = P.vert_all ? 0.7 * prog(lt, 0.2, 0.5) : on ? prog(lt, hit + 0.4 + (i / nv) * (P.count_dur || 1.6), 0.35) : 0;
+          v.material.opacity = ap; v.scale.setScalar(0.6 + 0.4 * spring(lt, P.vert_all ? 0.2 : hit + 0.4 + (i / nv) * (P.count_dur || 1.6), 0.5));
+          v.material.emissiveIntensity = 0.45 + 0.4 * Math.sin(t * 4 + i * 0.6);
+        });
+        // arc
+        if (P.arc) {
+          const ang = Math.max(0.001, Math.abs(turn) * DEG * tp);
+          if (arc) { owl.remove(arc); arc.geometry.dispose(); }
+          arc = new THREE.Mesh(new THREE.TorusGeometry(1.32, 0.05, 10, Math.max(8, Math.round(ang * 30)), ang), arcMat);
+          arc.rotation.x = Math.PI / 2; arc.rotation.z = Math.PI / 2; arc.scale.y = -Math.sign(turn || 1);   // starts in front (+z), sweeps with the head
+          arc.position.y = 0.6; owl.add(arc);
+          const a = Math.sign(turn || 1) * ang;
+          tip.position.set(Math.sin(a) * 1.32, 0.6, Math.cos(a) * 1.32);
+          tip.quaternion.setFromUnitVectors(V3(0, 1, 0), V3(Math.cos(a) * Math.sign(turn || 1), 0, -Math.sin(a) * Math.sign(turn || 1)));
+          arcMat.opacity = tp > 0.01 ? 0.95 : 0; tip.visible = tp > 0.02;
+        }
+        const cam = Object.assign({ dist: portrait ? 12.5 : 8.5, yaw: 0, pitch: 24, fov: 32, ty: portrait ? -0.75 : -0.6, tx: portrait ? 0 : -1.2 }, P.camera || {});
+        const c = camLerp(Object.assign({}, cam, { dist: cam.dist * 1.2, yaw: cam.yaw + 10 }), cam, progIO(lt, 0, 1.5));
+        c.yaw += (P.camera && P.camera.drift != null ? P.camera.drift : 1.5) * lt;
+        applyCam(camera, c, W, H);
+        // counter: degrees for the turn, vertebra count for x-ray
+        let html = '', alpha = 0;
+        if (P.arc) { html = `<b style="font-size:${portrait ? 170 : 120}px;color:${pal.accent}">${Math.round(Math.abs(turn) * tp)}°</b><small style="font-size:46px">${(P.counter && P.counter.label) || ''}</small>`; alpha = prog(lt, hit, 0.4); }
+        else if (P.xray && !P.vert_all) { html = `<b style="font-size:${portrait ? 170 : 120}px;color:${pal.accent}">${shown}</b><small style="font-size:46px">${(P.counter && P.counter.label) || ''}</small>`; alpha = prog(lt, hit + 0.3, 0.4); }
+        lbl.set(P.counter ? html : '', portrait ? W * 0.8 : W * 0.75, portrait ? H * 0.36 : H * 0.4, P.counter ? alpha : 0);
+        glow.material.opacity = 0.3 + 0.15 * Math.sin(t * 1.5) + 0.3 * punch(lt, hit, 0.8);
+      },
+    };
+  },
+};

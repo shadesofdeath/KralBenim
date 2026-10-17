@@ -1,0 +1,282 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "baykus-basini-cevirir",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "space"
+  },
+  "scenes": [
+    {
+      "type": "owl",
+      "text": "Baykuş başını 270 derece çevirebilir.",
+      "visual": "Dalda oturan 3D baykuş başını arkaya doğru döndürüyor; boynun etrafında büyüyen amber yay ve 0'dan 270°'ye çıkan sayaç.",
+      "title": {
+        "white": "Baykuş"
+      },
+      "cues": {
+        "hit": "başını"
+      },
+      "params": {
+        "turn": 270,
+        "arc": true,
+        "turn_dur": 1.5,
+        "camera": {
+          "dist": 13.5,
+          "yaw": -45,
+          "pitch": 22,
+          "ty": 0.4,
+          "drift": 0.8
+        }
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Çünkü gözleri yerinden hiç kıpırdamaz.",
+      "visual": "Dev yazılar çarpıyor: 'GÖZLERİ' ve amber kutuda 'KIPIRDAMAZ'.",
+      "title": {},
+      "cues": {
+        "w0": "gözleri",
+        "w1": "kıpırdamaz"
+      },
+      "params": {
+        "lines": [
+          "Gözleri",
+          "kıpırdamaz"
+        ],
+        "highlight": [
+          "kıpırdamaz"
+        ]
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Gözleri yuvarlak değil, uzun birer tüp gibidir.",
+      "visual": "Bölünmüş ekran: üstte göz ikonu 'Yuvarlak — insan gözü döner', altta amber göz ikonu 'Tüp — baykuş gözü sabit'.",
+      "title": {
+        "white": "Göz",
+        "gray": "tüp gibi"
+      },
+      "cues": {
+        "left": "yuvarlak",
+        "right": "tüp"
+      },
+      "params": {
+        "left": {
+          "title": "insan gözü döner",
+          "value": "Yuvarlak",
+          "icon": "eye",
+          "color": "#f5f5f7",
+          "mark": "check"
+        },
+        "right": {
+          "title": "baykuş gözü sabit",
+          "value": "Tüp",
+          "icon": "eye",
+          "color": "accent",
+          "mark": "x"
+        }
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "owl",
+      "text": "Bu yüzden etrafa bakmak için gözlerini değil, bütün başını çevirir.",
+      "visual": "3D baykuşun gözlerinin çevresinde amber halkalar yanıp sönüyor; baykuş başını yana çeviriyor.",
+      "title": {
+        "white": "Bütün",
+        "gray": "başını çevirir"
+      },
+      "cues": {
+        "hit": "bakmak"
+      },
+      "params": {
+        "turn": -110,
+        "eyes": true,
+        "turn_dur": 1.6,
+        "camera": {
+          "dist": 9.5,
+          "ty": -0.3,
+          "pitch": 14
+        }
+      }
+    },
+    {
+      "type": "owl",
+      "text": "Sırrı boynunda: tam 14 omur var.",
+      "visual": "Baykuşun gövdesi röntgen gibi saydamlaşıyor; boynundaki omurlar tek tek parlıyor, sayaç 14'e çıkıyor.",
+      "title": {
+        "white": "14",
+        "gray": "omur"
+      },
+      "cues": {
+        "hit": "boynunda"
+      },
+      "params": {
+        "xray": true,
+        "vertebrae": 14,
+        "count_dur": 1.4,
+        "counter": {
+          "label": "omur"
+        },
+        "camera": {
+          "dist": 9.0,
+          "ty": -0.3,
+          "pitch": 14
+        }
+      }
+    },
+    {
+      "type": "bars",
+      "text": "İnsanda ise sadece yedi tane bulunur.",
+      "visual": "İki animasyonlu çubuk: 'İnsan 7 omur' kısa, 'Baykuş 14 omur' iki kat uzun ve amber.",
+      "title": {
+        "white": "İnsan",
+        "gray": "7 omur"
+      },
+      "cues": {
+        "b0": "nsanda",
+        "b1": "yedi"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "İnsan",
+            "value": "7",
+            "unit": "omur"
+          },
+          {
+            "label": "Baykuş",
+            "value": "14",
+            "unit": "omur"
+          }
+        ],
+        "highlight": 1
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Peki bu kadar dönünce kan neden kesilmiyor?",
+      "visual": "Dev yazılar: 'KAN NEDEN' ve kırmızı kutuda 'KESİLMİYOR?'.",
+      "title": {},
+      "cues": {
+        "w0": "kan",
+        "w1": "neden",
+        "w2": "kesilmiyor"
+      },
+      "params": {
+        "lines": [
+          "Kan neden",
+          "kesilmiyor?"
+        ],
+        "highlight": [
+          "kesilmiyor?"
+        ]
+      },
+      "mascot": "think",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "owl",
+      "text": "Başının altında, dönerken kanı biriktiren küçük cepler var.",
+      "visual": "Saydam baykuşun boynunda kırmızı atardamar parlıyor; başın altındaki iki kırmızı kan cebi şişiyor.",
+      "title": {
+        "white": "Kan",
+        "gray": "cepleri"
+      },
+      "cues": {
+        "hit": "biriktiren"
+      },
+      "params": {
+        "xray": true,
+        "vert_all": true,
+        "artery": true,
+        "camera": {
+          "dist": 8.5,
+          "ty": -0.2,
+          "pitch": 12
+        }
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Yani baykuş gözleriyle değil, boynuyla bakar.",
+      "visual": "Dev yazılar: 'GÖZLERİYLE DEĞİL' ve amber kutuda 'BOYNUYLA BAKAR'.",
+      "title": {},
+      "cues": {
+        "w0": "gözleriyle",
+        "w1": "değil",
+        "w2": "boynuyla",
+        "w3": "bakar"
+      },
+      "params": {
+        "lines": [
+          "Gözleriyle değil",
+          "boynuyla bakar"
+        ],
+        "highlight": [
+          "boynuyla"
+        ]
+      },
+      "mascot": "happy"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Başını",
+      "270°",
+      "çeviriyor"
+    ],
+    "highlight": [
+      "270°"
+    ],
+    "scene": 0,
+    "t": 2.4
+  },
+  "youtube": {
+    "title": "Baykuş Başını Nasıl 270 Derece Çevirir? 🦉",
+    "description": "Baykuş başını nasıl 270 derece çevirir? Çünkü gözleri yuvarlak değil, tüp şeklindedir ve yuvasında kıpırdamaz; etrafa bakmak için bütün başını döndürmek zorundadır.\n\nSırrı boynunda: baykuşta 14 boyun omuru var, insanda ise sadece 7. Başın altındaki kanı biriktiren damar cepleri de boyun dönerken beynin kansız kalmasını önler.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence başka hangi hayvanın böyle bir süper gücü var? Yorumlara yaz!\n\n#shorts #baykuş #hayvanlar #bilim #düşünbakalım",
+    "tags": [
+      "baykuş başını nasıl çevirir",
+      "baykuş başını 270 derece çevirir",
+      "baykuş kafasını neden çevirir",
+      "baykuş boynu",
+      "baykuş gözleri neden hareket etmez",
+      "baykuş omur sayısı",
+      "baykuş",
+      "baykuşlar hakkında bilgi",
+      "hayvanlar",
+      "hayvanlar hakkında ilginç bilgiler",
+      "doğa",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-17T11:00:00+03:00"
+  }
+}
