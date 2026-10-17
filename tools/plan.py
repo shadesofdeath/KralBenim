@@ -18,7 +18,7 @@ TZ = ZoneInfo("Europe/Istanbul")
 SHORT_SLOTS = ["12:00", "19:00"]
 LONG_SLOT = "20:30"
 LONG_EVERY = 5
-LONG_ANCHOR = date(2026, 10, 16)       # last long video before this plan; next: 10-21, 10-26, ...
+LONG_ANCHOR = date(2026, 10, 17)       # last long video (Voyager 1); next: 10-22, 10-27, ...
 MONTHLY_CHARS = 60000
 LIMITS = {"short": (400, 500, 550), "long": (3400, 4000, 4300)}   # target min, target max, hard max
 

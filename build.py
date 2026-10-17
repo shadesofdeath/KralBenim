@@ -239,10 +239,32 @@ def load_script(path):
         for k in ("src", "video"):
             if p.get(k) and "://" not in p[k]:
                 f = (path.parent / p[k]).resolve()
+                if not f.exists() and p.get("url"):
+                    f = fetch_media(p["url"], f)
                 if not f.exists():
                     sys.exit(f"media not found: {f}")
                 p[k] = str(f)
     return script
+
+
+def fetch_media(url, dest):
+    """Clips referenced by URL (Higgsfield results: params.url) are downloaded on first use.
+    The Claude cloud sandbox cannot reach the CDN, GitHub Actions can: if the download fails,
+    previews get a neutral placeholder clip (never written into the repo) and a warning."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    import hf
+    try:
+        hf.fetch(url, dest)
+        return dest
+    except Exception as e:
+        ph = ROOT / "out" / "placeholders" / dest.name
+        print(f"warning: cannot download {url} ({e}); using a placeholder for {dest.name}", file=sys.stderr)
+        if not ph.exists():
+            ph.parent.mkdir(parents=True, exist_ok=True)
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi",
+                            "-i", "gradients=s=1920x1080:d=5:speed=0.02:c0=0x10162e:c1=0x3a2f5b:n=2",
+                            "-c:v", "libx264", "-pix_fmt", "yuv420p", str(ph)], check=True)
+        return ph
 
 
 def prepare_media(timeline, work):

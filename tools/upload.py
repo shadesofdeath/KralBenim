@@ -89,6 +89,9 @@ def main():
     yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)
 
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}
+    # realistic AI-generated footage (Higgsfield clips, "ai": true) must be disclosed to YouTube
+    if any((sc.get("params") or {}).get("ai") for sc in script.get("scenes", [])):
+        status["containsSyntheticMedia"] = True
     pub = meta.get("publish_at")
     if pub:
         when = datetime.fromisoformat(pub)

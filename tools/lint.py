@@ -15,7 +15,8 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from plan import LIMITS  # noqa: E402
 
-VOICE, MODEL = "BwhlzGpUiZ9uHtfvCl1H", "eleven_v3"
+VOICES = {"short": "BwhlzGpUiZ9uHtfvCl1H", "long": "RXCCWbOxP7Hisa63Xsv5"}   # channel owner's choices
+MODEL = "eleven_v3"
 SCENES = {"short": (8, 11), "long": (35, 45)}
 PALETTES = {"space", "magma", "ocean", "sunset", "candy", "forest", "lab", "ice", "desert", "noir"}
 
@@ -55,8 +56,8 @@ def lint(path, kinds):
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
     tts = s.get("tts", {})
-    if tts.get("voice_id") != VOICE or tts.get("model") != MODEL or tts.get("provider") != "elevenlabs":
-        err.append(f"tts must be elevenlabs / {VOICE} / {MODEL} (copy from script.json)")
+    if tts.get("voice_id") != VOICES[fmt] or tts.get("model") != MODEL or tts.get("provider") != "elevenlabs":
+        err.append(f"tts must be elevenlabs / {VOICES[fmt]} / {MODEL} for {fmt} videos")
 
     lo, hi = SCENES[fmt]
     if not lo <= len(sc) <= hi:
@@ -98,9 +99,14 @@ def lint(path, kinds):
         for k in ("src", "video"):
             if p.get(k) and "://" not in p[k]:
                 if not (Path(path).parent / p[k]).exists():
-                    err.append(f"{tag}: media not found {p[k]}")
+                    if p.get("url"):
+                        warn.append(f"{tag}: {p[k]} not downloaded here; build fetches params.url (preview shows a placeholder)")
+                    else:
+                        err.append(f"{tag}: media not found {p[k]}")
                 if not p.get("credit"):
                     err.append(f"{tag}: photo/video without params.credit")
+        if p.get("ai") and fmt == "short":
+            warn.append(f"{tag}: AI-generated clip in a Short (keep Higgsfield clips to long videos)")
 
     # variety
     types = [x.get("type") for x in sc]
