@@ -283,6 +283,10 @@ def open_page(pw, timeline):
     page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=timeline.get("scale", 4 / 3))
     page.on("pageerror", lambda e: print(f"page error: {e}", file=sys.stderr))
     page.goto((STUDIO if timeline.get("engine") == "studio" else TEMPLATE).as_uri())
+    if timeline.get("engine") == "studio":
+        # one file per topic-specific shot type (scenes/studio/shots/<type>.js), so parallel agents never edit the same file
+        for js in sorted((STUDIO.parent / "shots").glob("*.js")):
+            page.add_script_tag(path=str(js))
     page.evaluate("d => window.init(d)", timeline)
     page.evaluate("document.fonts.ready.then(() => true)")
     return browser, page

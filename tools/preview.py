@@ -3,7 +3,9 @@
 
   python tools/preview.py videos/2026-10-16/01-konu.json            # 2 frames per scene
   python tools/preview.py script.json --times 3,12.5,40              # specific times
-Output: out/preview/<slug>/sheet.png (+ frame_NN.png)
+Output: out/preview/<slug>/sheet.png (+ frame_NN.png), cover.jpg.
+Default mode also measures motion per scene (pixel change between its two frames) and flags
+scenes that look frozen: every scene must keep moving.
 """
 import argparse
 import subprocess
@@ -55,8 +57,25 @@ def main():
         build.cover(tl, script, out / "cover.jpg")
     chars = len(text)
     print(f"{out / 'sheet.png'}  (~{dur:.0f}s estimated, {len(tl['scenes'])} scenes, {chars} chars)")
-    for s in tl["scenes"]:
-        print(f"  {s['start']:6.1f}-{s['end']:6.1f}  {s['type']:15s} cues={list(s['cues'])}")
+    motion = None if a.times else [frame_change(out / f"frame_{2 * i:02d}.png", out / f"frame_{2 * i + 1:02d}.png")
+                                   for i in range(len(tl["scenes"]))]
+    for i, s in enumerate(tl["scenes"]):
+        m = "" if motion is None else f" motion={motion[i]:4.1f}" + ("  <- STATIC? add drift/flow" if motion[i] < STATIC else "")
+        print(f"  {i:2d} {s['start']:6.1f}-{s['end']:6.1f}  {s['type']:15s}{m} cues={list(s['cues'])}")
+
+
+STATIC = 1.5   # mean abs pixel change (0-255) below which a scene reads as a still image
+
+
+def frame_change(a, b):
+    """Mean absolute grey-level difference between two frames, captions band masked out."""
+    import numpy as np
+    from PIL import Image
+    x, y = (np.asarray(Image.open(f).convert("L").reduce(4), dtype=np.float32) for f in (a, b))
+    if x.shape[0] > x.shape[1]:          # portrait: ignore the subtitle band (y 1170-1320 of 1920)
+        h = x.shape[0] / 1920
+        x[int(1170 * h):int(1320 * h)], y[int(1170 * h):int(1320 * h)] = 0, 0
+    return float(np.abs(x - y).mean())
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 # Düşün Bakalım — video otomasyonu
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
-Her gün **3 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
+Her gün **2 Shorts**, **5 günde bir** ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
 
 ## Yapı
 
@@ -11,7 +11,12 @@ Her gün **3 Shorts**, pazar günleri ek olarak **1 uzun video** üretilir, GitH
 - `examples/dunyanin-merkezi.json` — **Studio referans senaryosu ve kalite seviyesi** (3D kesitli Dünya, kesintisiz kamera, maskot, dev yazı, ölçek çubuğu, atom kafesi).
 - `script.json` — klasik motorun eski örneği (Comet / uçak pencereleri).
 - `videos/YYYY-MM-DD/*.json` — günlük senaryolar. Push edilince `.github/workflows/daily.yml` render + yükleme yapar, sonucu `*.youtube.json` olarak geri commit eder.
-- `tools/preview.py` — TTS olmadan görsel kontrol (tahmini zamanlama ile kontak sayfası).
+- `tools/plan.py` — bugünün üretim planı: kaç video, dosya adları, `publish_at` saatleri, uzun video günü mü, aylık ElevenLabs karakter kullanımı. **Tarih/saat hesabını elle yapma, bunu kullan.**
+- `tools/lint.py` — senaryo kural denetimi (karakter, sahne sayısı, çeşitlilik, cue, kapak, SEO, `publish_at`). Hata varsa push yok.
+- `tools/preview.py` — TTS olmadan görsel kontrol (tahmini zamanlama ile kontak sayfası + kapak + sahne başına hareket ölçümü, donuk sahneyi `STATIC?` diye işaretler).
+- `docs/ANIMATION_GUIDE.md` — görsel dil, ekran düzeni, hareket dili, yeni sahne tipi şablonu. **Senaryo yazan ya da sahne kodlayan her ajan önce bunu okur.**
+- `docs/REVIEW.md` — eleştiri döngüsü: 10 kriterli puanlama, geçme şartı (hepsi ≥ 8), günlük formatı.
+- `scenes/studio/shots/<tip>.js` — konuya özel yeni sahne tipleri, her tip kendi dosyasında (otomatik yüklenir).
 - `tools/upload.py` — YouTube yüklemesi (Actions'ta çalışır, `YOUTUBE_TOKEN_JSON` secret'ı). Fotoğraf/video kredilerini (`params.credit`) açıklamaya otomatik ekler.
 - `tools/media.py` — telifsiz fotoğraf/video bulur ve indirir (Wikimedia Commons; `PEXELS_API_KEY` varsa Pexels foto + video).
 
@@ -23,12 +28,12 @@ Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece
 
 Zamanlanmış görev her sabah bu bölümü uygular.
 
-**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **3 Shorts**; **pazar günleri ek olarak 1 uzun video**. Bu planın dışına çıkma, fazladan video üretme. Bütçe sıkı: karakter sınırlarına kesinlikle uy.
+**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **2 Shorts**; **5 günde bir ek olarak 1 uzun video** (2026-10-21, 10-26, 10-31, … — `python tools/plan.py` söyler). Bu planın dışına çıkma, fazladan video üretme. Bütçe sıkı: karakter sınırlarına kesinlikle uy.
 
 | | Süre | Karakter (anlatım metni toplamı) | Yayın |
 |---|---|---|---|
-| Shorts ×3 | 28–35 sn | **400–500** (sert sınır 550) | her gün 11:00, 15:00 ve 19:00 (+03:00) |
-| Uzun video (sadece pazar) | ~4 dk | **3.400–4.000** (sert sınır 4.300) | pazar 20:30 (+03:00) |
+| Shorts ×2 | 28–35 sn | **400–500** (sert sınır 550) | her gün 12:00 ve 19:00 (+03:00) |
+| Uzun video (5 günde bir) | ~4 dk | **3.400–4.000** (sert sınır 4.300) | o gün 20:30 (+03:00) |
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
 - **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–7 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
@@ -36,11 +41,41 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 - **Net kapanış (döngü yok):** son cümle **tam ve kendi başına anlamlı** olsun; videoyu bağlayan, akılda kalan bir sonuç/punchline ("Yani ayağının altında, erimeyi reddeden bir demir güneş var."). Cümleyi yarım bırakıp videonun başına bağlama — kanal sahibi "sonsuz video" etkisini istemiyor. Ayrı bir soru/"yorumlara yazın" sahnesi koyma; yorum sorusu açıklamaya yazılır.
 - Hiç dolgu cümle yok; her cümle ya yeni bir bilgi ya da gerilim eklesin.
 
-1. **Tarih:** Bugünün tarihi (Europe/Istanbul). Klasör: `videos/YYYY-MM-DD/`. Klasör zaten varsa hiçbir şey yapma, dur.
+### Üretim akışı: ajanlar ve kapılar
+
+Videolar tek seferde yazılıp gönderilmez; bir prodüksiyon gibi aşamalı ilerler. Ana oturum **yönetmen**dir:
+konuları seçer, işi alt ajanlara (Agent aracı) dağıtır, kapıları denetler, commit/push'u kendisi yapar.
+Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** başlatılır.
+
+1. **Ön hazırlık (yönetmen):** adım 1–3. Sonra `videos/<tarih>/production.md` yaz: her video için konu,
+   kategori, tek cümlelik "izleyici sonunda ne hisseder", palet, kanca + kapak fikri ve **çekim listesi**
+   (her sahne: anlatım cümlesi, `visual`, sahne tipi, cue kelimesi, kamera/hareket notu). Bu dosya
+   günün yaratıcı belgesidir ve commit'e girer (workflow sadece `.json` dosyalarını render eder).
+2. **Yazım (video başına 1 yazar ajan, paralel):** her ajana `production.md`'deki kendi bölümünü, dosya
+   adını, `publish_at` değerini ver; CLAUDE.md + `docs/ANIMATION_GUIDE.md` okusun. Görevi: bilgileri
+   doğrulamak (adım 4), gerçek görüntü bulmak (`tools/media.py`, ajan başına ayrı `--name`), senaryo
+   JSON'unu yazmak, `lint` hatasız + `preview` çalıştırıp `sheet.png`/`cover.jpg`'ye bakmak.
+   Uygun sahne tipi yoksa yeni tipi **kendi dosyasına** yazar (`scenes/studio/shots/<tip>.js`);
+   `shots2d.js`/`shots3d.js`'e paralel ajanlar dokunmaz. Uzun videoda: önce tek bir yazar tüm anlatımı
+   yazar (hikâye bütünlüğü), sonra her bölüm (`chapter`) için ayrı bir ajan o bölümün sahnelerini
+   kurar ve önizler.
+3. **Eleştiri (video başına 1 eleştirmen ajan, yazardan farklı, paralel):** `docs/REVIEW.md`'ye göre
+   puanlar, en büyük 3 sorunu yazar. Kendisi düzeltmez.
+4. **Düzeltme turu:** yazar ajan (SendMessage ile aynı ajana devam et) sorunları düzeltir → lint →
+   preview → eleştirmen tekrar puanlar. En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 8. Her tur
+   `production.md` → "Eleştiri günlüğü"ne eklenir.
+5. **Son kapı (yönetmen):** iki Shorts'un konu/kategori/palet olarak birbirinden ve geçmişten farklı
+   olduğunu, `lint` hatasız geçtiğini, her `cover.jpg` ve `sheet.png`'yi **kendi gözüyle** gördüğünü
+   doğrular; sonra adım 10–11.
+
+Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
+(`preview.py`, Chromium) aynı anda en fazla 3 tane çalışsın.
+
+1. **Plan:** `python tools/plan.py` çalıştır. `folder_exists: true` ise hiçbir şey yapma, dur. Video listesi, dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanala uygun, aranan ve merak uyandıran bir soru seç ("Neden...?", "Nasıl...?", "Ne olurdu...?"). Kategorileri günden güne değiştir: gündelik tasarımların hikâyesi, bilim, insan vücudu, tarih, hayvanlar, uzay, mühendislik, psikoloji. Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir konu.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
-5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json`, `03-<slug>.json` (Shorts, üçü de farklı kategorilerden), pazar günleri ayrıca `04-<slug>.json` (uzun video).
+5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json` (Shorts, ikisi farklı kategorilerden), uzun video günü ayrıca `03-<slug>.json` (uzun video).
    - **Motor:** her dosyada `"engine": "studio"` ve video için bir renk paleti `"art": {"palette": "space"}` (bkz. 6). Sahne bazında `"art"` ile palet değiştirilebilir (renk geçişi yumuşak olur).
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir sahne tipi kodla (bkz. 6).
    - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne, sahne başına tek cümle. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
@@ -97,10 +132,10 @@ Zamanlanmış görev her sabah bu bölümü uygular.
    - **Başlık:** ana anahtar kelime başta (insanların gerçekten arayacağı ifade: "uçak pencereleri neden yuvarlak"), merak boşluğu bırakan soru ya da iddia. Shorts ≤ 60, uzun ≤ 70 karakter. Türkçe karakterler doğru, BÜYÜK HARF spam yok, en fazla 1 emoji, yanıltıcı clickbait yok (videonun cevabı başlığın vaadini karşılamalı).
    - **Açıklama:** ilk 150 karakter (aramada görünen kısım) ana anahtar kelimeyi ve kancayı içersin. Sonra 2–4 cümlelik özet; 2–3 yan anahtar kelimeyi doğal geçir. Uzun videoda bir boş satırdan sonra "Bu videoda:" ile 3–5 madde. Sonra abone çağrısı + yoruma çağıran soru ("Her gün yeni bir 'neden?' için abone ol. Sence ...? Yorumlara yaz!"). En sonda 3–5 hashtag (ilk üçü başlığın üstünde görünür): Shorts'ta ilk hashtag `#shorts`, sonra konu hashtag'leri ve `#düşünbakalım`. Bölümler (chapters) uzun videoda otomatik eklenir; elle yazma.
    - **Etiketler:** 12–18 etiket, toplam ≤ 450 karakter: ana anahtar kelime, 3–5 varyasyonu (eş anlamlı, soru biçimi), konu/kişi/olay adları, genel kategori ("bilim", "tarih", "ilginç bilgiler"), `düşün bakalım`.
-   - `category_id`: "27" (Eğitim). `publish_at`: tablodaki saat. Render ~15 dk sürer: şu andan en az 1 saat sonrası değilse ertesi güne kaydır.
-9. **Kontrol:** `pip install -r requirements.txt` (gerekirse), sonra her dosya için `python tools/preview.py videos/<tarih>/<dosya>.json`. `sheet.png` ve `cover.jpg` dosyalarını oku ve kontrol et: taşan/üst üste binen yazı, ekran dışına taşan 3D nesne/etiket, boş ya da karanlık kare, altyazının arkasında kalan önemli detay, eşleşmeyen cue uyarısı, karakter bütçesi. Sorunları düzelt ve tekrar kontrol et.
-10. **Gönder:** Dosyaları (`media/` klasörü ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
-11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını ve yayın saatini kısaca özetle.
+   - `category_id`: "27" (Eğitim). `publish_at`: `tools/plan.py` çıktısındaki değer (geçmiş saatleri zaten ertesi güne kaydırır).
+9. **Kontrol:** `pip install -r requirements.txt` (gerekirse), sonra `python tools/lint.py videos/<tarih>/*.json` (hata kalmayana kadar) ve her dosya için `python tools/preview.py videos/<tarih>/<dosya>.json`. `STATIC?` işaretli sahneyi hareketlendir. `sheet.png` ve `cover.jpg` dosyalarını oku ve kontrol et: taşan/üst üste binen yazı, ekran dışına taşan 3D nesne/etiket, boş ya da karanlık kare, altyazının arkasında kalan önemli detay, eşleşmeyen cue uyarısı, karakter bütçesi. Sorunları düzelt ve tekrar kontrol et. Ardından eleştiri döngüsü (`docs/REVIEW.md`, aşağıdaki *Üretim akışı*).
+10. **Gönder:** Push'tan hemen önce `tools/lint.py` son kez hatasız geçmeli. Dosyaları (`media/` klasörü, `production.md` ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
+11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını, yayın saatini ve son tur eleştiri puanlarını kısaca özetle; bir sonraki uzun video tarihini yaz.
 
 ## Komutlar
 
@@ -109,6 +144,8 @@ python build.py script.json                  # tam render (ELEVENLABS_API_KEY ge
 python build.py script.json --scenes 3       # ilk 3 sahne
 python build.py script.json --still 12.5     # tek kare
 python build.py videos/<tarih>/<dosya>.json --no-tts -o out/draft.mp4   # sessiz taslak video (tahmini zamanlama)
+python tools/plan.py                                  # bugünün planı (dosyalar, saatler, bütçe)
+python tools/lint.py videos/<tarih>/*.json             # kural denetimi
 python tools/preview.py videos/<tarih>/<dosya>.json   # TTS'siz görsel kontrol
 python tools/preview.py <dosya>.json --times 3,12.5    # belirli anlar
 python tools/media.py search "flamingo flock" --dir videos/<tarih>/media   # telifsiz görsel ara
