@@ -1,0 +1,1255 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "RXCCWbOxP7Hisa63Xsv5",
+  "model": "eleven_v3",
+  "settings": {
+   "stability": 0.5
+  }
+ },
+ "slug": "voyager-1-isik-gunu",
+ "engine": "studio",
+ "format": "long",
+ "fps": 30,
+ "art": {
+  "palette": "space"
+ },
+ "cover": {
+  "lines": [
+   "1 ışık günü",
+   "uzakta"
+  ],
+  "highlight": [
+   "günü"
+  ],
+  "scene": 37,
+  "t": 5.5
+ },
+ "youtube": {
+  "title": "Voyager 1: Dünya'dan Bir Işık Günü Uzağa Giden İlk Makine 🚀",
+  "description": "Voyager 1, 18 Kasım 2026'da Dünya'dan bir ışık günü, yani yaklaşık 25,9 milyar kilometre uzağa ulaşan ilk insan yapımı cisim oluyor.\n\n1977'de fırlatılan Voyager 1, Jüpiter ve Satürn'ün yanından geçti, Soluk Mavi Nokta fotoğrafını çekti ve 2012'de yıldızlararası uzaya giren ilk sonda oldu. Kasım 2023'te bozulan bir bellek çipi yüzünden anlamsız veri göndermeye başladığında, NASA mühendisleri 22,5 saat uzaktaki sondayı kodu taşıyarak uzaktan tamir etti. Altın plak, RTG jeneratörleri ve heliopoz: Voyager 1'in 49 yıllık yolculuğu bu videoda.\n\nBu videoda:\n• 1 ışık günü ne kadar uzak?\n• 1977 fırlatması ve Jüpiter, Satürn, Titan geçişleri\n• Soluk Mavi Nokta ve Altın Plak\n• Heliopoz: Güneş'in sınırını geçmek\n• 2023–2024: 45 saatlik tarihi tamir\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence bir gün biri Voyager 1'i bulursa, bizim hakkımızda ne düşünür? Yorumlara yaz!\n\n#voyager1 #uzay #nasa #bilim #düşünbakalım",
+  "tags": [
+   "voyager 1",
+   "voyager 1 nerede",
+   "voyager 1 bir ışık günü",
+   "ışık günü",
+   "voyager sondası",
+   "en uzak insan yapımı cisim",
+   "soluk mavi nokta",
+   "altın plak",
+   "carl sagan",
+   "heliopoz",
+   "yıldızlararası uzay",
+   "voyager 1 tamir",
+   "nasa",
+   "uzay",
+   "astronomi",
+   "bilim",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-18T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "photo",
+   "text": "Bir makine, ışığın bile ancak bir günde gidebildiği yere varmak üzere.",
+   "visual": "Voyager sondası karanlık uzayda yıldızların önünde yavaşça süzülüyor (yapay zekâ klibi).",
+   "title": {
+    "white": "Bir",
+    "gray": "ışık günü"
+   },
+   "params": {
+    "video": "media/hf-probe.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_162640_698bcd1d-a0fe-4df3-9cdd-ee21c2e999b1.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.85,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.18,
+      0.55,
+      0.48
+     ]
+    }
+   },
+   "cues": {
+    "hit": "ışığın"
+   },
+   "chapter": "Bir ışık günü"
+  },
+  {
+   "type": "voyager",
+   "text": "Adı Voyager 1. 18 Kasım 2026'da, Dünya'dan tam bir ışık günü uzakta olacak.",
+   "visual": "3D Voyager 1 yakın plan: beyaz çanak anten, altın folyo gövde, manyetometre ve RTG kolları; antenden radyo halkaları çıkıyor, etiket 'VOYAGER 1'.",
+   "title": {
+    "white": "18 Kasım",
+    "gray": "2026"
+   },
+   "params": {
+    "mode": "probe",
+    "beam": true,
+    "camera": {
+     "dist": 7.4,
+     "yaw": 38,
+     "pitch": 12,
+     "tx": -0.4,
+     "ty": 0.1
+    },
+    "labels": [
+     {
+      "part": "dish",
+      "text": "VOYAGER 1",
+      "sub": "1977'den beri yolda",
+      "at": "hit",
+      "dx": 460,
+      "dy": -200
+     }
+    ]
+   },
+   "cues": {
+    "hit": "voyager"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Yani ona gönderilen bir radyo sinyali, ışık hızıyla gitse bile tam bir günde ulaşacak.",
+   "visual": "3D: solda Dünya, sağda sonda; aradaki boşlukta ilerleyen mavi radyo halkaları, üstte sayaç '24 SAAT' doluyor.",
+   "title": {
+    "white": "Tek yön",
+    "gray": "24 saat"
+   },
+   "params": {
+    "mode": "signal",
+    "dir": "out",
+    "counter": {
+     "to": "24",
+     "unit": "SAAT",
+     "label": "tek yön, ışık hızıyla"
+    }
+   },
+   "cues": {
+    "hit": "ulaşacak"
+   },
+   "transition": "zoom"
+  },
+  {
+   "type": "scale_bar",
+   "text": "Bu, yaklaşık 25,9 milyar kilometre. Dünya ile Güneş arasındaki mesafenin yaklaşık 173 katı.",
+   "visual": "Yatay ölçek çubuğu 25.900 milyon kilometreye doluyor; başındaki minicik Dünya–Güneş mesafesi (150 milyon km) büyüteçle gösteriliyor.",
+   "title": {
+    "white": "25,9 milyar"
+   },
+   "params": {
+    "total": "25.900",
+    "part": "150",
+    "unit": "",
+    "step": "5.000",
+    "top_label": "Dünya",
+    "total_label": "milyon km · Voyager 1, 18 Kasım 2026",
+    "part_label": "Güneş: 150 milyon km"
+   },
+   "cues": {
+    "total": "milyar",
+    "part": "güneş"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Üstelik 49 yıldır yolda ve hâlâ 1970'lerin bilgisayarlarıyla çalışıyor. Peki oraya nasıl ulaştı?",
+   "visual": "Dev yazı: '49 YILDIR' ve amber kutuda 'YOLDA'; maskot düşünüyor.",
+   "title": {},
+   "params": {
+    "lines": [
+     "49 yıldır",
+     "yolda"
+    ],
+    "highlight": [
+     "yolda"
+    ]
+   },
+   "cues": {
+    "w0": "49",
+    "w1": "yıldır",
+    "w2": "yolda"
+   },
+   "mascot": "think"
+  },
+  {
+   "type": "photo",
+   "text": "Hikâye 5 Eylül 1977'de, Florida'daki Cape Canaveral'da başlıyor. Onu uzaya dev bir Titan-Centaur roketi taşıdı.",
+   "visual": "1977, gün ışığında alevler ve dumanla kalkan bir roket (yapay zekâ klibi).",
+   "title": {
+    "white": "5 Eylül",
+    "gray": "1977"
+   },
+   "params": {
+    "video": "media/hf-launch.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_162901_70a0dfd1-bb31-4e6d-8199-a41f5cc5ffb3.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.65,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.12,
+      0.5,
+      0.55
+     ],
+     "to": [
+      1.0,
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "cues": {
+    "hit": "eylül"
+   },
+   "chapter": "1977: Fırlatma",
+   "art": {
+    "palette": "desert"
+   }
+  },
+  {
+   "type": "compare",
+   "text": "İşin ilginç yanı, ikizi Voyager 2 on altı gün önce fırlatılmıştı. Ama Voyager 1 daha hızlı bir rotadaydı.",
+   "visual": "Bölünmüş ekran: solda 'VOYAGER 2 · 20 AĞUSTOS', sağda vurgulu 'VOYAGER 1 · 5 EYLÜL', ortada 'VS'.",
+   "title": {
+    "white": "İki",
+    "gray": "ikiz sonda"
+   },
+   "params": {
+    "left": {
+     "title": "Voyager 2",
+     "value": "20 Ağustos",
+     "icon": "rocket",
+     "color": "accent"
+    },
+    "right": {
+     "title": "Voyager 1 · daha hızlı",
+     "value": "5 Eylül",
+     "icon": "rocket",
+     "color": "green"
+    }
+   },
+   "cues": {
+    "left": "ikizi",
+    "right": "hızlı"
+   },
+   "art": {
+    "palette": "desert"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Kontrol odasındaki ekibin hedefi büyüktü: dev gezegenler Jüpiter ve Satürn.",
+   "visual": "1970'lerin kontrol odası: konsollar, ekranlar, çalışan mühendisler (yapay zekâ klibi).",
+   "title": {
+    "white": "Hedef",
+    "gray": "dev gezegenler"
+   },
+   "params": {
+    "video": "media/hf-control-1977.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_162901_f34f9c0a-003f-4503-9fc9-1234760a129e.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.85,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.14,
+      0.52,
+      0.46
+     ]
+    }
+   },
+   "cues": {
+    "hit": "jüpiter"
+   },
+   "art": {
+    "palette": "desert"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Rota, gezegenlerin çekimini bir sapan gibi kullanıyordu. Her yakın geçiş, sondayı hızlandırıp bir sonraki hedefe fırlatacaktı.",
+   "visual": "3D Güneş Sistemi haritası: Güneş ve yörüngeler; Dünya'dan çıkan turuncu iz Jüpiter'e uzanıyor, Jüpiter parlıyor.",
+   "title": {
+    "white": "Kütleçekim",
+    "gray": "sapanı"
+   },
+   "params": {
+    "mode": "path",
+    "from": "earth",
+    "to": "jupiter",
+    "camera": {
+     "dist": 12,
+     "yaw": -8,
+     "pitch": 34,
+     "tx": 0.4,
+     "ty": 0.4,
+     "tz": 2.4
+    },
+    "labels": [
+     {
+      "body": "earth",
+      "text": "DÜNYA",
+      "sub": "1977",
+      "dx": -260,
+      "dy": -150,
+      "size": 56
+     },
+     {
+      "body": "jupiter",
+      "text": "JÜPİTER",
+      "dx": -330,
+      "dy": 20,
+      "size": 64
+     }
+    ]
+   },
+   "cues": {
+    "hit": "fırlatacaktı"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Mart 1979'da Voyager 1, Güneş Sistemi'nin en büyük gezegeni Jüpiter'in yanından geçti.",
+   "visual": "Jüpiter'in bulut bantları ve Büyük Kırmızı Leke yakından, önünden geçen sonda (yapay zekâ klibi).",
+   "title": {
+    "white": "Mart",
+    "gray": "1979"
+   },
+   "params": {
+    "video": "media/hf-jupiter.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_163111_102ebb5d-242e-44db-b33d-5fea7228bd18.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.86,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.14,
+      0.52,
+      0.46
+     ]
+    }
+   },
+   "cues": {
+    "hit": "jüpiter"
+   },
+   "chapter": "Devlerin yanından",
+   "art": {
+    "palette": "sunset"
+   }
+  },
+  {
+   "type": "io",
+   "text": "Uydusu İo'da, Dünya dışında ilk kez faal bir volkan görüldü.",
+   "visual": "3D: kükürt sarısı İo yakın plan, kenarında şemsiye biçimli iki volkan püskürmesi, arkada dev Jüpiter hilali; etiketler 'İO · Jüpiter'in uydusu' ve 'FAAL VOLKAN'.",
+   "title": {
+    "white": "İo",
+    "gray": "faal volkanlar"
+   },
+   "params": {},
+   "cues": {
+    "hit": "volkan"
+   },
+   "mascot": "shock",
+   "art": {
+    "palette": "magma"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Kasım 1980'de sıra Satürn'deydi. Voyager 1, halkaların ve dev uydu Titan'ın yanından geçti.",
+   "visual": "Satürn'ün halkaları ve yanındaki turuncu Titan uydusu (yapay zekâ klibi).",
+   "title": {
+    "white": "Kasım",
+    "gray": "1980"
+   },
+   "params": {
+    "video": "media/hf-saturn.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_163117_0197f1cd-1511-4faf-aa6b-78554c704972.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.78,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.14,
+      0.52,
+      0.46
+     ]
+    }
+   },
+   "cues": {
+    "hit": "titan"
+   },
+   "art": {
+    "palette": "sunset"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Titan'a yakından bakmak için seçilen rota, sondayı gezegenlerin düzleminden yukarı fırlattı.",
+   "visual": "3D harita: iz Jüpiter'den Satürn'e ulaşıyor, Titan'ın yanından geçip gezegenlerin düzleminden yukarı kıvrılıyor.",
+   "title": {
+    "white": "Titan",
+    "gray": "sapağı"
+   },
+   "params": {
+    "mode": "path",
+    "from": "jupiter",
+    "to": "saturn+0.12",
+    "titan": true,
+    "follow": 0.35,
+    "camera": {
+     "dist": 11,
+     "yaw": 12,
+     "pitch": 22,
+     "tz": 2.0
+    },
+    "labels": [
+     {
+      "body": "saturn",
+      "text": "SATÜRN",
+      "sub": "1980",
+      "dx": -320,
+      "dy": 20,
+      "size": 64
+     },
+     {
+      "body": "titan",
+      "text": "TİTAN",
+      "dx": 260,
+      "dy": 60,
+      "size": 56
+     }
+    ]
+   },
+   "cues": {
+    "hit": "yukarı"
+   },
+   "art": {
+    "palette": "sunset"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Bu yüzden Voyager 1 başka hiçbir gezegene uğramadı. Yolu artık doğrudan yıldızlara açıktı.",
+   "visual": "Dev yazı: 'BAŞKA GEZEGEN' ve kırmızı kutuda 'YOK'.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Başka gezegen",
+     "yok"
+    ],
+    "highlight": [
+     "yok"
+    ]
+   },
+   "cues": {
+    "w0": "başka",
+    "w1": "gezegene",
+    "w2": "uğramadı"
+   },
+   "art": {
+    "palette": "noir"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Bugün Güneş Sistemi'ni, gezegenlerin düzleminin üstünden terk ediyor.",
+   "visual": "Kamera geri çekiliyor: tüm yörüngeler ve Satürn'den sonra düzlemin üstüne doğru eğimle yükselen uzun turuncu iz; uçta 'VOYAGER 1'.",
+   "title": {
+    "white": "Düzlemin",
+    "gray": "üstünden"
+   },
+   "params": {
+    "mode": "path",
+    "from": "saturn+0.12",
+    "to": "out",
+    "titan": true,
+    "camera": {
+     "dist": 18,
+     "yaw": -14,
+     "pitch": 14,
+     "tx": 2.4,
+     "ty": 1.4,
+     "tz": 1.0
+    },
+    "labels": [
+     {
+      "body": "head",
+      "text": "VOYAGER 1",
+      "dx": -360,
+      "dy": 30,
+      "size": 60
+     },
+     {
+      "body": "plane",
+      "text": "GEZEGENLERİN DÜZLEMİ",
+      "dx": -120,
+      "dy": -230,
+      "size": 50,
+      "color": "ink",
+      "at": "hit"
+     }
+    ]
+   },
+   "cues": {
+    "hit": "düzleminin"
+   },
+   "art": {
+    "palette": "space"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "14 Şubat 1990'da Voyager 1, kameralarını geriye, evine çevirdi. Bu fikir, gökbilimci Carl Sagan'ındı.",
+   "visual": "3D Voyager 1 arkadan: çanak ve kameralar uzaktaki minicik mavi noktaya (Dünya) dönük, etiket 'DÜNYA'.",
+   "title": {
+    "white": "14 Şubat",
+    "gray": "1990"
+   },
+   "params": {
+    "mode": "probe",
+    "earth": true,
+    "camera": {
+     "dist": 7.0,
+     "yaw": 200,
+     "pitch": 12,
+     "tx": 0.6,
+     "ty": 0.3
+    },
+    "earth_pos": [
+     2.5,
+     1.2,
+     16
+    ],
+    "labels": [
+     {
+      "part": "earth",
+      "text": "DÜNYA",
+      "sub": "orada bir yerde",
+      "at": "hit",
+      "dx": 300,
+      "dy": -60,
+      "size": 60
+     }
+    ]
+   },
+   "cues": {
+    "hit": "evine"
+   },
+   "chapter": "Soluk Mavi Nokta",
+   "transition": "zoom"
+  },
+  {
+   "type": "scale_bar",
+   "text": "Fotoğraf yaklaşık 6 milyar kilometre uzaktan çekildi. Bugünkü mesafenin dörtte biri bile değil.",
+   "visual": "Ölçek çubuğu bugünkü 25.900 milyon kilometreye doluyor; 6.000 milyon km (1990) noktası büyüteçle işaretleniyor.",
+   "title": {
+    "white": "1990"
+   },
+   "params": {
+    "total": "25.900",
+    "part": "6.000",
+    "unit": "",
+    "step": "5.000",
+    "top_label": "Dünya",
+    "total_label": "milyon km · bugün",
+    "part_label": "1990: 6 milyar km"
+   },
+   "cues": {
+    "part": "milyar",
+    "total": "bugünkü"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Karede, bir ışık huzmesinin içinde minicik, soluk mavi bir nokta vardı: Dünya.",
+   "visual": "Karanlıkta çapraz ışık huzmeleri ve içlerinden birinde minicik soluk mavi nokta (yapay zekâ klibi).",
+   "title": {
+    "white": "Soluk",
+    "gray": "mavi nokta"
+   },
+   "params": {
+    "video": "media/hf-dot.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_163253_16a33dca-ccee-49e0-b19e-64126bc259ce.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.88,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.2,
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "cues": {
+    "hit": "dünya"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Sagan ona Soluk Mavi Nokta dedi. Bildiğimiz herkes, o noktanın üzerinde yaşadı.",
+   "visual": "Dev yazı: 'SOLUK MAVİ' ve amber kutuda 'NOKTA'; maskot mutlu.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Soluk mavi",
+     "nokta"
+    ],
+    "highlight": [
+     "nokta"
+    ]
+   },
+   "cues": {
+    "w0": "soluk",
+    "w1": "mavi",
+    "w2": "nokta"
+   },
+   "mascot": "happy",
+   "art": {
+    "palette": "ocean"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Voyager'ın gövdesinde bir de altın plak taşınıyor.",
+   "visual": "3D Voyager gövdesi yakın plan; yan yüzdeki altın plak parlıyor, etiket 'ALTIN PLAK · 55 dilde selam'.",
+   "title": {
+    "white": "Altın",
+    "gray": "plak"
+   },
+   "params": {
+    "mode": "probe",
+    "camera": {
+     "dist": 5.6,
+     "yaw": 62,
+     "pitch": 30,
+     "tx": 0.4,
+     "ty": -0.2,
+     "sy": 0.28
+    },
+    "labels": [
+     {
+      "part": "record",
+      "text": "ALTIN PLAK",
+      "sub": "55 dilde selam",
+      "at": "hit",
+      "dx": 380,
+      "dy": -200
+     }
+    ]
+   },
+   "cues": {
+    "hit": "altın"
+   },
+   "art": {
+    "palette": "desert"
+   },
+   "transition": "zoom"
+  },
+  {
+   "type": "photo",
+   "text": "Üzerinde Dünya'dan sesler, müzikler, görüntüler ve 55 dilde selamlar var. Belki bir gün başka bir uygarlık onu bulur ve kim olduğumuzu dinler.",
+   "visual": "Uzayda yavaşça dönen, ışık yansıtan altın plak (yapay zekâ klibi).",
+   "title": {
+    "white": "Bir",
+    "gray": "mektup"
+   },
+   "params": {
+    "video": "media/hf-record.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_163253_bd37fe52-abb2-4948-b691-46ca1aecfe2c.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.5,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.05,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.2,
+      0.5,
+      0.48
+     ]
+    }
+   },
+   "cues": {
+    "hit": "selamlar"
+   },
+   "art": {
+    "palette": "desert"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Ama asıl büyük sınır, Güneş'in kendi sınırıydı. Güneş, etrafına sürekli parçacık rüzgârı üfler ve kendine dev bir balon şişirir: heliosfer.",
+   "visual": "3D geniş plan: Güneş'in çevresinde mavi kenarlı yarı saydam dev balon ve kuyruğu; dışarıdan akan yıldızlararası parçacıklar balonun etrafından dolanıyor.",
+   "title": {
+    "white": "Güneş'in",
+    "gray": "balonu"
+   },
+   "params": {
+    "mode": "helio",
+    "from": 0.0,
+    "to": 0.4,
+    "camera": {
+     "dist": 25,
+     "yaw": -12,
+     "pitch": 18,
+     "tx": -1.0,
+     "ty": 0.8,
+     "sy": 0.16
+    },
+    "labels": [
+     {
+      "target": "bubble",
+      "text": "HELİOSFER",
+      "sub": "Güneş'in balonu",
+      "at": "hit",
+      "dx": 560,
+      "dy": 80
+     }
+    ]
+   },
+   "cues": {
+    "hit": "balon"
+   },
+   "chapter": "Güneş'in sınırı"
+  },
+  {
+   "type": "voyager",
+   "text": "Balonun sınırına heliopoz denir. Ötesi, yıldızlar arasındaki boşluk.",
+   "visual": "Aynı 3D balon, kamera yaklaşıyor: sonda izi sınıra yaklaşıyor; sınır noktasında 'HELİOPOZ' etiketi.",
+   "title": {
+    "white": "Heliopoz"
+   },
+   "params": {
+    "mode": "helio",
+    "from": 0.4,
+    "to": 0.88,
+    "cross_label": "HELİOPOZ",
+    "cross_sub": "Güneş'in sınırı",
+    "camera": {
+     "dist": 13,
+     "yaw": 6,
+     "pitch": 10,
+     "tx": 2.2,
+     "ty": 1.2
+    }
+   },
+   "cues": {
+    "hit": "heliopoz"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Ağustos 2012'de, fırlatılışından otuz beş yıl sonra, Voyager 1 bu sınırı geçti.",
+   "visual": "Sonda sınırı geçiyor: geçiş noktasında beyaz parlama, balon kenarı aydınlanıyor; etiket 'HELİOPOZ · AĞUSTOS 2012'.",
+   "title": {
+    "white": "Ağustos",
+    "gray": "2012"
+   },
+   "params": {
+    "mode": "helio",
+    "from": 0.88,
+    "to": 1.25,
+    "cross_label": "HELİOPOZ",
+    "cross_sub": "Ağustos 2012",
+    "camera": {
+     "dist": 9.5,
+     "yaw": 4,
+     "pitch": 8,
+     "tx": 3.0,
+     "ty": 1.5
+    }
+   },
+   "cues": {
+    "hit": "geçti"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Böylece yıldızlararası uzaya giren ilk insan yapımı cisim oldu.",
+   "visual": "Dev yazı: 'YILDIZLARARASI' ve amber kutuda 'UZAYDA'; maskot şaşkın.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Yıldızlararası",
+     "uzayda"
+    ],
+    "highlight": [
+     "uzayda"
+    ]
+   },
+   "cues": {
+    "w0": "yıldızlararası",
+    "w1": "uzaya"
+   },
+   "mascot": "shock"
+  },
+  {
+   "type": "voyager",
+   "text": "Sonra, Kasım 2023'te Voyager 1 bir anda anlamsız veri göndermeye başladı.",
+   "visual": "3D: sağda sonda, solda Dünya; sondadan Dünya'ya titreyen kırmızı radyo halkaları geliyor, Dünya tarafında anlamsız karakterler 'ANLAMSIZ VERİ'.",
+   "title": {
+    "white": "Kasım",
+    "gray": "2023"
+   },
+   "params": {
+    "mode": "signal",
+    "dir": "back",
+    "bad": true
+   },
+   "cues": {
+    "hit": "anlamsız"
+   },
+   "chapter": "45 saatlik tamir",
+   "art": {
+    "palette": "noir"
+   },
+   "transition": "zoom"
+  },
+  {
+   "type": "photo",
+   "text": "Mühendisler aylarca sebebini aradı. Gönderdikleri her soru ve aldıkları her cevap, neredeyse iki gün sürüyordu.",
+   "visual": "Gece, ekranların ışığında bekleyen yorgun bir mühendis (yapay zekâ klibi).",
+   "title": {
+    "white": "Aylarca",
+    "gray": "arıza avı"
+   },
+   "params": {
+    "video": "media/hf-engineer.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_162641_db247d77-659b-4416-926a-4764b629153f.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.65,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.14,
+      0.52,
+      0.46
+     ]
+    }
+   },
+   "cues": {
+    "hit": "aylarca"
+   },
+   "art": {
+    "palette": "noir"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Sonunda buldular: uçuş veri sisteminin belleğindeki tek bir çip bozulmuştu.",
+   "visual": "Dev yazı: 'BULDULAR:' ve altında 'TEK BİR' + kırmızı kutuda 'ÇİP'; maskot üzgün.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Buldular:",
+     "tek bir çip"
+    ],
+    "highlight": [
+     "çip"
+    ]
+   },
+   "cues": {
+    "w0": "buldular",
+    "w1": "tek",
+    "w2": "bir",
+    "w3": "çip"
+   },
+   "mascot": "sad",
+   "art": {
+    "palette": "noir"
+   }
+  },
+  {
+   "type": "compare",
+   "text": "Çip onarılamazdı. Mühendisler kodu parçalara bölüp sağlam bellek bölgelerine taşımaya karar verdi.",
+   "visual": "Bölünmüş ekran: solda kırmızı ✗ 'BOZUK ÇİP', sağda yeşil ✓ 'SAĞLAM BELLEK', ortada ok.",
+   "title": {
+    "white": "Kodu",
+    "gray": "taşımak"
+   },
+   "params": {
+    "left": {
+     "title": "onarılamaz",
+     "value": "Bozuk çip",
+     "icon": "warning",
+     "mark": "x",
+     "color": "red"
+    },
+    "right": {
+     "title": "kod parçalara bölündü",
+     "value": "Sağlam bellek",
+     "icon": "check",
+     "mark": "check",
+     "color": "green"
+    },
+    "vs": "→"
+   },
+   "cues": {
+    "left": "onarılamazdı",
+    "right": "sağlam"
+   },
+   "art": {
+    "palette": "noir"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "18 Nisan 2024'te komut gönderildi. Işık hızındaki sinyal, sondaya yaklaşık 22,5 saatte ulaştı.",
+   "visual": "3D: soldaki Dünya'dan sağdaki sondaya ilerleyen mavi radyo halkaları; üstte sayaç '22,5 SAAT' doluyor.",
+   "title": {
+    "white": "18 Nisan",
+    "gray": "2024"
+   },
+   "params": {
+    "mode": "signal",
+    "dir": "out",
+    "counter": {
+     "to": "22,5",
+     "unit": "SAAT",
+     "label": "tek yön"
+    }
+   },
+   "cues": {
+    "hit": "ulaştı"
+   },
+   "art": {
+    "palette": "space"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Cevap için de bir o kadar beklemek gerekiyordu. Gidiş ve dönüş, yaklaşık 45 saat.",
+   "visual": "Gece gökyüzüne dönük dev radyo çanak anteni (yapay zekâ klibi).",
+   "title": {
+    "white": "45 saat",
+    "gray": "bekleyiş"
+   },
+   "params": {
+    "video": "media/hf-dsn.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_163431_06c2bb17-df56-4881-b50a-0e89337f7124.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.82,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.55
+     ],
+     "to": [
+      1.15,
+      0.5,
+      0.45
+     ]
+    }
+   },
+   "cues": {
+    "hit": "45"
+   },
+   "art": {
+    "palette": "space"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "20 Nisan'da cevap geldi: Voyager 1 yeniden anlamlı veri gönderiyordu.",
+   "visual": "3D: sondadan Dünya'ya dönen yeşil radyo halkaları; sayaç 45 SAAT gidiş-dönüşe tamamlanıyor, Dünya parlıyor.",
+   "title": {
+    "white": "20 Nisan",
+    "gray": "2024"
+   },
+   "params": {
+    "mode": "signal",
+    "dir": "both",
+    "counter": {
+     "to": "45",
+     "unit": "SAAT",
+     "label": "gidiş-dönüş"
+    },
+    "camera": {
+     "yaw": -6,
+     "pitch": 9
+    }
+   },
+   "cues": {
+    "hit": "cevap",
+    "back": "anlamlı"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Tarihin en uzak tamiri böylece başarıyla tamamlandı. Hem de 1970'lerden kalma bir bilgisayarda.",
+   "visual": "Dev yazı: 'TARİHİN EN UZAK' ve amber kutuda 'TAMİRİ'.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Tarihin en uzak",
+     "tamiri"
+    ],
+    "highlight": [
+     "tamiri"
+    ]
+   },
+   "cues": {
+    "w0": "tarihin",
+    "w1": "en",
+    "w2": "uzak",
+    "w3": "tamiri"
+   },
+   "mascot": "happy",
+   "art": {
+    "palette": "lab"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Voyager 1'in enerjisi, üç radyoizotop termoelektrik jeneratörden geliyor.",
+   "visual": "3D sonda: RTG kolundaki üç kanatlı silindir sıcak turuncu parlıyor; etiket 'RTG · 3 jeneratör'.",
+   "title": {
+    "white": "Enerji",
+    "gray": "kaynağı"
+   },
+   "params": {
+    "mode": "probe",
+    "camera": {
+     "dist": 6.6,
+     "yaw": 30,
+     "pitch": 6,
+     "tx": 1.1,
+     "ty": -0.15
+    },
+    "labels": [
+     {
+      "part": "rtg",
+      "text": "RTG",
+      "sub": "3 jeneratör",
+      "at": "hit",
+      "dx": 260,
+      "dy": -240
+     }
+    ]
+   },
+   "cues": {
+    "hit": "üç"
+   },
+   "chapter": "Sonsuz yolculuk",
+   "transition": "zoom"
+  },
+  {
+   "type": "voyager",
+   "text": "Güç her yıl azalıyor. Bu yüzden aletlerinin çoğu, tek tek kapatıldı.",
+   "visual": "Kamera gövdenin arkasına süzülüyor: yeşil durum ışıkları tek tek sönüp kırmızıya dönüyor, sadece biri yanık kalıyor.",
+   "title": {
+    "white": "Güç",
+    "gray": "azalıyor"
+   },
+   "params": {
+    "mode": "probe",
+    "dim": true,
+    "camera": {
+     "dist": 5.4,
+     "yaw": 160,
+     "pitch": 6,
+     "tx": 0.0,
+     "ty": -0.1
+    },
+    "labels": [
+     {
+      "part": "bus",
+      "text": "ALETLER KAPANIYOR",
+      "at": "hit",
+      "dx": 330,
+      "dy": 250,
+      "size": 58
+     }
+    ]
+   },
+   "cues": {
+    "hit": "tek"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Ve 18 Kasım'dan sonra, 24 ışık saatinin içine bir daha asla dönmeyecek.",
+   "visual": "Dev sayaç 24'e çıkıyor, altında 'IŞIK SAATİ' ve kırmızı kutuda 'ASLA'.",
+   "title": {},
+   "params": {
+    "count": {
+     "to": "24"
+    },
+    "lines": [
+     "ışık saati",
+     "asla"
+    ],
+    "highlight": [
+     "asla"
+    ]
+   },
+   "cues": {
+    "count": "24",
+    "w0": "ışık",
+    "w1": "saatinin",
+    "w2": "asla"
+   },
+   "art": {
+    "palette": "noir"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Yaklaşık 40.000 yıl sonra, Gliese 445 adlı bir yıldızın yaklaşık 1,6 ışık yılı yakınından geçecek.",
+   "visual": "Sonda yıldızlarla dolu karanlıkta uzaklaşıyor (yapay zekâ klibi), yavaş Ken Burns geri çekilme.",
+   "title": {
+    "white": "40.000",
+    "gray": "yıl sonra"
+   },
+   "params": {
+    "video": "media/hf-probe.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261017_162640_698bcd1d-a0fe-4df3-9cdd-ee21c2e999b1.mp4",
+    "ai": true,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+    "rate": 0.6,
+    "grade": "cinematic",
+    "kb": {
+     "from": [
+      1.22,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.0,
+      0.5,
+      0.5
+     ]
+    },
+    "from": 1.0
+   },
+   "cues": {
+    "hit": "gliese"
+   },
+   "art": {
+    "palette": "space"
+   }
+  },
+  {
+   "type": "voyager",
+   "text": "Yani 1977'de yola çıkan bu makine, sırtında Dünya'nın sesleriyle, yıldızlara doğru yalnız başına yol almaya devam edecek.",
+   "visual": "3D Voyager 1 arkadan: çanağı, ışık huzmesindeki minicik soluk mavi noktaya (Dünya) dönük; etiket 'DÜNYA · 1 ışık günü geride'; kamera yavaşça geri çekiliyor.",
+   "title": {
+    "white": "Hâlâ",
+    "gray": "yolda"
+   },
+   "params": {
+    "mode": "probe",
+    "earth": true,
+    "earth_pos": [
+     2.4,
+     1.3,
+     18
+    ],
+    "camera": {
+     "dist": 7.4,
+     "yaw": 196,
+     "pitch": 10,
+     "tx": -0.4,
+     "ty": 0.2,
+     "drift": 2
+    },
+    "labels": [
+     {
+      "part": "earth",
+      "text": "DÜNYA",
+      "sub": "1 ışık günü geride",
+      "at": "earth",
+      "dx": -320,
+      "dy": 30,
+      "size": 60
+     }
+    ]
+   },
+   "cues": {
+    "hit": "yıldızlara",
+    "earth": "dünya"
+   },
+   "art": {
+    "palette": "space"
+   }
+  },
+  {
+   "type": "headline",
+   "text": "Sence bir gün biri Voyager 1'i bulursa, bizim hakkımızda ne düşünür? Yorumlara yaz.",
+   "visual": "Dev yazı: 'BİZİ BULAN' ve amber kutuda 'NE DÜŞÜNÜR?'; maskot düşünüyor.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Bizi bulan",
+     "ne düşünür?"
+    ],
+    "highlight": [
+     "düşünür?"
+    ]
+   },
+   "cues": {
+    "w0": "bulursa",
+    "w1": "bizim",
+    "w2": "ne",
+    "w3": "düşünür"
+   },
+   "mascot": "think",
+   "art": {
+    "palette": "noir"
+   }
+  }
+ ]
+}
