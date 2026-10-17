@@ -1,0 +1,257 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "sogan-neden-aglatir",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "lab"
+  },
+  "scenes": [
+    {
+      "type": "onion",
+      "text": "Soğan seni kimyasalla vuruyor.",
+      "visual": "3D kırmızı soğan kesme tahtasında; şef bıçağı onu ikiye kesiyor, ön yarısı öne devrilip mor-beyaz halkaları gösteriyor ve kesikten amber gaz bulutu fışkırıyor.",
+      "title": {
+        "white": "Soğan"
+      },
+      "cues": {
+        "hit": "kimyasal"
+      },
+      "params": {
+        "mode": "cut"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Bu bir savunma silahı, hayvanlara karşı.",
+      "visual": "Dev yazılar çarpıyor: amber kutuda 'SAVUNMA' ve altında 'SİLAHI'; küçük not 'hayvanlara karşı'.",
+      "title": {},
+      "cues": {
+        "w0": "savunma",
+        "w1": "silahı"
+      },
+      "params": {
+        "lines": [
+          "Savunma",
+          "silahı"
+        ],
+        "highlight": [
+          "Savunma"
+        ],
+        "sub": "hayvanlara karşı"
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "onion",
+      "text": "Bıçak, soğanın hücrelerini patlatır.",
+      "visual": "Soğan hücrelerinden oluşan 3D bir halı; şef bıçağı yassı yüzü görünerek yukarıdan iniyor ve kesik hattındaki hücreleri patlatıyor, parçalar ve içlerindeki renkli maddeler etrafa saçılıyor.",
+      "title": {
+        "white": "Hücreler patlıyor"
+      },
+      "cues": {
+        "hit": "patlatır"
+      },
+      "params": {
+        "mode": "cells"
+      }
+    },
+    {
+      "type": "onion",
+      "text": "Hücrelerde ayrı duran iki madde ilk kez karışır.",
+      "visual": "Kamera patlayan hücrenin içine dalıyor: zar içindeki mavi 'ENZİM' bulutu ile amber 'KÜKÜRTLÜ MADDE' bulutu birbirine akıp girdap halinde karışıyor, karıştıkları anda yumuşakça parlıyor.",
+      "title": {
+        "white": "İki madde"
+      },
+      "cues": {
+        "hit": "karışır"
+      },
+      "params": {
+        "mode": "mix"
+      }
+    },
+    {
+      "type": "onion",
+      "text": "Bu karışım, havaya uçan göz yakıcı bir gaz üretir.",
+      "visual": "Karışımdan ve kesik hattından küçük gaz molekülleri (sarı kükürt, kırmızı oksijen, gri karbon) parlayarak havaya yükseliyor; kamera onlarla yukarı süzülüyor, 'GAZ' etiketi yükselen akışı gösteriyor.",
+      "title": {
+        "white": "Göz yakan gaz"
+      },
+      "cues": {
+        "hit": "gaz"
+      },
+      "params": {
+        "mode": "gas"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "eye",
+      "text": "Gaz havada süzülüp gözüne ulaşır.",
+      "visual": "3D insan gözü yakın plan; aşağıdan süzülen gaz molekülleri göze konuyor, değdikleri yerde kırmızı sinir parlamaları çakıyor ve gözün damarları kızarıyor.",
+      "title": {
+        "white": "Göze ulaşıyor"
+      },
+      "cues": {
+        "hit": "gözüne"
+      },
+      "params": {
+        "mode": "gas"
+      },
+      "art": {
+        "palette": "ocean"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Gözündeki sinirler bunu saldırı sanır.",
+      "visual": "Dev yazılar: 'SİNİRLER:' ve kırmızı kutuda 'SALDIRI!'.",
+      "title": {},
+      "cues": {
+        "w0": "sinirler",
+        "w1": "saldırı"
+      },
+      "params": {
+        "lines": [
+          "Sinirler:",
+          "Saldırı!"
+        ],
+        "highlight": [
+          "Saldırı!"
+        ]
+      },
+      "mascot": "shock",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "eye",
+      "text": "Beynin de gazı yıkamak için gözyaşı pompalar.",
+      "visual": "Aynı kızarmış göz; üst köşedeki gözyaşı bezi parlıyor, alt kapakta gözyaşı birikiyor ve damlalar yanaktan aşağı süzülüyor.",
+      "title": {
+        "white": "Gözyaşı"
+      },
+      "cues": {
+        "hit": "gözyaşı"
+      },
+      "params": {
+        "mode": "tears",
+        "red": 1
+      },
+      "art": {
+        "palette": "ocean"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Soğanı önce soğutursan daha az gaz çıkar.",
+      "visual": "Bölünmüş ekran: üstte kırmızı ateş ikonu 'ÇOK GAZ — oda sıcaklığı' ✗, altta mavi kar tanesi 'AZ GAZ — soğutulmuş soğan' ✓.",
+      "title": {},
+      "cues": {
+        "left": "soğanı",
+        "right": "soğutursan"
+      },
+      "params": {
+        "left": {
+          "title": "oda sıcaklığı",
+          "value": "ÇOK GAZ",
+          "icon": "fire",
+          "mark": "x",
+          "color": "red"
+        },
+        "right": {
+          "title": "soğutulmuş soğan",
+          "value": "AZ GAZ",
+          "icon": "snow",
+          "mark": "check",
+          "color": "accent"
+        }
+      },
+      "art": {
+        "palette": "ice"
+      }
+    },
+    {
+      "type": "onion",
+      "text": "Keskin bıçak da daha az hücre patlatır.",
+      "visual": "Hücre halısı başka açıdan: önce kesik hattında geniş, soluk kırmızı bir 'KÖR BIÇAK — geniş hasar' bandı beliriyor; sonra keskin şef bıçağı iniyor, sadece ince amber hattaki tek sıra hücre patlıyor ve etiket 'KESKİN BIÇAK — tek ince hat' oluyor.",
+      "title": {
+        "white": "Keskin bıçak"
+      },
+      "cues": {
+        "hit": "az"
+      },
+      "params": {
+        "mode": "sharp"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Yani o gözyaşları duygusal değil, tamamen kimyasal.",
+      "visual": "Dev yazılar çarpıyor: 'DUYGUSAL DEĞİL,' ve amber kutuda 'KİMYASAL!'.",
+      "title": {},
+      "cues": {
+        "w0": "duygusal",
+        "w1": "değil",
+        "w2": "kimyasal"
+      },
+      "params": {
+        "lines": [
+          "Duygusal değil,",
+          "kimyasal!"
+        ],
+        "highlight": [
+          "kimyasal!"
+        ]
+      },
+      "mascot": "happy"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Soğan seni",
+      "kimyasalla",
+      "vuruyor"
+    ],
+    "highlight": [
+      "kimyasalla"
+    ],
+    "scene": 0,
+    "t": 2.2
+  },
+  "youtube": {
+    "title": "Soğan Doğrarken Neden Ağlarız? 🧅",
+    "description": "Soğan doğrarken neden ağlarız? Çünkü soğan, bıçak hücrelerini parçaladığı anda kendini kimyasal bir gazla savunur.\n\nKesilen hücrelerde normalde ayrı duran bir enzim ile kükürtlü maddeler karışır ve havaya uçan syn-propanetial-S-oksit gazı oluşur. Bu gaz gözdeki sinirleri uyarır, vücut da gözü yıkamak için refleksle gözyaşı salgılar. Soğanı önceden soğutmak ve keskin bıçak kullanmak gözyaşını azaltır.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen soğan doğrarken ağlamamak için ne yapıyorsun? Yorumlara yaz!\n\n#shorts #soğan #bilim #mutfak #düşünbakalım",
+    "tags": [
+      "soğan doğrarken neden ağlarız",
+      "soğan neden ağlatır",
+      "soğan kesince göz neden yaşarır",
+      "soğan gözü neden yakar",
+      "soğan doğrarken ağlamamak",
+      "soğan gazı",
+      "syn-propanetial-S-oksit",
+      "gözyaşı neden akar",
+      "soğan kimyası",
+      "mutfak bilimi",
+      "insan vücudu",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-17T20:30:00+03:00"
+  }
+}
