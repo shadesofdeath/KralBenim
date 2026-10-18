@@ -1,0 +1,256 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "kelime-anlamsizlasir",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "lab"
+  },
+  "scenes": [
+    {
+      "type": "headline",
+      "text": "Bu kelime birazdan anlamsızlaşacak.",
+      "visual": "Dev yazı çarpıyor: 'BU KELİME:' ve amber kutuda 'KAŞIK'; arkada dev KAŞIK silüeti kayıyor.",
+      "title": {},
+      "cues": {
+        "w0": "bu",
+        "w1": "kelime",
+        "w2": "anlamsızlaşacak"
+      },
+      "params": {
+        "lines": [
+          "Bu kelime:",
+          "Kaşık"
+        ],
+        "highlight": [
+          "Kaşık"
+        ]
+      }
+    },
+    {
+      "type": "wordecho",
+      "text": "Kaşık, kaşık, kaşık, kaşık, kaşık.",
+      "visual": "Her 'kaşık' dendiğinde öne yeni bir dev KAŞIK yazısı çarpıyor; öncekiler küçülüp yankı tüneline doğru geriye kayıyor ve içi boş gri çizgilere dönüşüyor; altta 'ANLAM' çubuğu her tekrarda boşalıyor.",
+      "title": {
+        "white": "Tekrarla"
+      },
+      "cues": {
+        "first": "kaşık",
+        "last": "kaşık."
+      },
+      "params": {
+        "word": "KAŞIK",
+        "mode": "echo",
+        "n": 5
+      }
+    },
+    {
+      "type": "wordecho",
+      "text": "Bak, kelime tuhaf bir ses yığınına dönüşüyor.",
+      "visual": "KAŞIK yazısının harfleri K-A-Ş-I-K birbirinden kopup ekrana dağılıyor, dönüp sallanıyor; altlarında anlamsız bir ses dalgası titriyor.",
+      "title": {
+        "white": "Sadece",
+        "gray": "ses"
+      },
+      "cues": {
+        "hit": "ses"
+      },
+      "params": {
+        "word": "KAŞIK",
+        "mode": "scatter"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Buna anlamsal doyum deniyor.",
+      "visual": "Dev yazılar çarpıyor: 'ANLAMSAL' ve amber kutuda 'DOYUM'; küçük not 'semantic satiation'.",
+      "title": {},
+      "cues": {
+        "w0": "anlamsal",
+        "w1": "doyum"
+      },
+      "params": {
+        "lines": [
+          "Anlamsal",
+          "doyum"
+        ],
+        "highlight": [
+          "doyum"
+        ],
+        "sub": "semantic satiation"
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "neurons",
+      "text": "Bir kelimeyi duyunca beyninde bir sinir ağı ateşlenir.",
+      "visual": "3D nöron ağı: ortadaki parlak hücre kümesinin üstünde 'KAŞIK' yazıyor; kümeden dışarı doğru sinyal dalgaları akıyor, cue anında tüm ağ parlıyor.",
+      "title": {
+        "white": "Sinir ağı"
+      },
+      "cues": {
+        "hit": "ateşlenir"
+      },
+      "params": {
+        "mode": "fire",
+        "label": "KAŞIK"
+      }
+    },
+    {
+      "type": "neurons",
+      "text": "En yaygın açıklamaya göre, aynı ağ tekrarla yorulur.",
+      "visual": "Aynı nöron ağına yaklaşan kamera: her yeni sinyal dalgası öncekinden sönük, hücreler griye dönüyor, 'KAŞIK' yazısı soluklaşıp harfleri açılıyor.",
+      "title": {
+        "white": "Yorulma",
+        "gray": "hipotezi"
+      },
+      "cues": {
+        "hit": "yorulur"
+      },
+      "params": {
+        "mode": "fade",
+        "label": "KAŞIK"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "decay",
+      "text": "Her tekrarda verdiği tepki biraz daha zayıflar.",
+      "visual": "Yan yana beş parlak tepki çubuğu, her birinin altında 'KAŞIK'; her yeni çubuk öncekinden kısa ve daha gri, tepelerini birleştiren kırmızı çizgi aşağı iniyor; çubuklar perspektifli zemine yansıyor, arkada soluk dev KAŞIK yazıları kayıyor.",
+      "title": {
+        "white": "Tepki"
+      },
+      "cues": {
+        "hit": "zayıf"
+      },
+      "params": {
+        "label": "KAŞIK",
+        "n": 5,
+        "axis": "TEPKİ"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "signal",
+      "text": "Ses kulağına hâlâ geliyor, ama anlam artık gelmiyor.",
+      "visual": "Üstte yeşil ses düğümü 'SES — kulağa ulaşıyor' ✓, etrafında ses halkaları; aşağıdaki 'ANLAM' düğümüne giden köprüde sinyaller akıyor; 'anlam' denince köprü ortadan kırılıyor, kırmızı ✗ çıkıyor, sinyaller boşluğa dökülüyor ve ANLAM düğümü kızarıp sönüyor.",
+      "title": {
+        "white": "Bağlantı",
+        "gray": "kopuyor"
+      },
+      "cues": {
+        "left": "ses",
+        "right": "anlam"
+      },
+      "params": {
+        "top": {
+          "label": "SES",
+          "sub": "kulağa ulaşıyor",
+          "icon": "sound"
+        },
+        "bottom": {
+          "label": "ANLAM",
+          "sub": "kurulmuyor",
+          "icon": "question"
+        }
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "neurons",
+      "text": "Neyse ki kısa bir moladan sonra anlam geri döner.",
+      "visual": "Kamera nöron ağından geri çekiliyor: gri ve sönük ağ, merkezden dışarı yayılan bir ışık dalgasıyla yeniden renkleniyor, sinyaller tekrar akıyor, 'KAŞIK' yazısı parlıyor.",
+      "title": {
+        "white": "Geri",
+        "gray": "dönüyor"
+      },
+      "cues": {
+        "hit": "moladan"
+      },
+      "params": {
+        "mode": "recover",
+        "label": "KAŞIK"
+      },
+      "mascot": "happy"
+    },
+    {
+      "type": "statement",
+      "text": "Yani anlam kelimede değil, onu kuran beyninde.",
+      "visual": "Arkada ekranı kaplayan, parlak çizgilerle çizilen dev bir beyin silüeti, içinde sinyaller dolaşıyor; önünde dev yazılar çarpıyor: 'ANLAM / KELİMEDE / DEĞİL, / BEYNİNDE!' (son kelime amber kutuda) ve 'beyninde' denince beyin yanıyor.",
+      "title": {},
+      "cues": {
+        "w0": "anlam",
+        "w1": "kelimede",
+        "w2": "değil",
+        "w3": "beyninde"
+      },
+      "params": {
+        "lines": [
+          "Anlam",
+          "kelimede",
+          "değil,",
+          "beyninde!"
+        ],
+        "highlight": [
+          "beyninde!"
+        ],
+        "icon": "brain"
+      },
+      "art": {
+        "palette": "candy"
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Bu kelime",
+      "anlamsızlaşacak"
+    ],
+    "highlight": [
+      "kelime"
+    ],
+    "scene": 1,
+    "t": 3.0
+  },
+  "youtube": {
+    "title": "Bir Kelimeyi Çok Tekrar Edince Neden Anlamsızlaşır? 🧠",
+    "description": "Bir kelimeyi çok tekrar edince neden anlamsızlaşır? Bu videoyu izlerken sen de yaşayacaksın: kaşık, kaşık, kaşık...\n\nBu tuhaf hissin adı anlamsal doyum (semantic satiation). Terim, psikolog Leon Jakobovits James'in 1962'de McGill Üniversitesi'ndeki doktora tezine dayanır. En güçlü açıklamaya göre aynı sinir ağı art arda uyarıldığında tepkisi geçici olarak zayıflar (reaktif ketlenme); ses kulağa ulaşsa da anlam kurulmaz. Kısa bir moladan sonra kelime yeniden anlam kazanır.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen en son hangi kelimeyi tekrar edip anlamsızlaştırdın? Yorumlara yaz!\n\n#shorts #psikoloji #beyin #düşünbakalım",
+    "tags": [
+      "kelime tekrar edince neden anlamsızlaşır",
+      "anlamsal doyum",
+      "semantic satiation",
+      "kelime neden anlamını kaybeder",
+      "kelimeyi tekrar etmek",
+      "kelime garip gelmesi",
+      "reaktif ketlenme",
+      "beyin nasıl çalışır",
+      "nöronlar",
+      "psikoloji",
+      "dil ve beyin",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-18T19:00:00+03:00"
+  }
+}

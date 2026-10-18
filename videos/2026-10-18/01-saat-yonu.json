@@ -1,0 +1,228 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "saat-yonu",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "desert"
+  },
+  "scenes": [
+    {
+      "type": "sundial",
+      "text": "Saat yönünü aslında bir gölge belirledi.",
+      "visual": "Çölde taş kaide üstünde bronz bir güneş saati, alçak açıdan; arkada alçakta parlayan sabah güneşi, gnomonun uzun ve keskin gölgesi kadranda süzülüyor, 'gölge' kelimesinde gölge koyulaşıp güneş parlıyor.",
+      "title": {
+        "white": "Saat yönü"
+      },
+      "cues": {
+        "hit": "gölge"
+      },
+      "params": {
+        "mode": "dial"
+      }
+    },
+    {
+      "type": "worldglobe",
+      "text": "Mekanik saatler 1300'lerde Avrupa'da yaygınlaştı.",
+      "visual": "Uzayda dönen 3D Dünya, kuzey yarımküre amber tonda; Avrupa kameraya döndüğünde üzerinde nabız gibi atan bir işaret ve ışık sütunu beliriyor, etiket 'AVRUPA — 1300'ler'.",
+      "title": {
+        "white": "Mekanik saat"
+      },
+      "cues": {
+        "hit": "avrupa"
+      },
+      "params": {
+        "marker": {
+          "lat": 48,
+          "lon": 10,
+          "text": "AVRUPA",
+          "sub": "1300'ler"
+        },
+        "hemisphere": "north"
+      },
+      "art": {
+        "palette": "space"
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "sundial",
+      "text": "Ondan önce zamanı çoğunlukla gölge gösterirdi.",
+      "visual": "Aynı güneş saatine yukarıdan bakış: kadrandaki saat çizgileri ve Roma rakamları (VI…XII…VI); gölge sabah IX çizgisinden X çizgisine kayıyor, üstüne düştüğü çizgi parlıyor.",
+      "title": {
+        "white": "Güneş saati"
+      },
+      "cues": {
+        "hit": "gölge"
+      },
+      "params": {
+        "mode": "lines"
+      },
+      "mascot": "explain"
+    },
+    {
+      "type": "sundial",
+      "text": "Güneş doğudan doğar, batıdan batar.",
+      "visual": "Geniş plan, kuzeyden güneye bakış: Güneş soldaki doğu ufkundan doğup noktalı bir yay çizerek sağdaki batı ufkuna iniyor; güneş saatinin üçgen gnomonunun gölgesi hep Güneş'in ters tarafına uzayıp kısalıyor; 'DOĞU' ve 'BATI' etiketleri ufukta.",
+      "title": {
+        "white": "Güneşin yolu"
+      },
+      "cues": {
+        "hit": "batıdan"
+      },
+      "params": {
+        "mode": "arc"
+      },
+      "transition": "zoom"
+    },
+    {
+      "type": "sundial",
+      "text": "Kuzeyde gölge hep aynı yöne döner.",
+      "visual": "Kamera güneş saatinin tam tepesine çıkıyor (kuzey yukarıda): gölge batıdan kuzeye, oradan doğuya süpürüyor, arkasında amber bir yay ve ok bırakıyor; altta 'KUZEYDE'.",
+      "title": {
+        "white": "Tepeden"
+      },
+      "cues": {
+        "hit": "aynı"
+      },
+      "params": {
+        "mode": "top"
+      },
+      "transition": "zoom"
+    },
+    {
+      "type": "clockface",
+      "text": "Tepeden bakınca, tıpkı saat ibresi gibi.",
+      "visual": "Üstte tepeden bakılan küçük bir güneş saati, altta duvar saati: gölge ve akrep aynı anda 9'dan 12'ye, oradan 3'e döner; ikisinin üstünde de amber yay ok çizilir; yanlarda 'GÖLGE', 'İBRE' ve ortada '= AYNI YÖN'.",
+      "title": {
+        "white": "Aynı yön"
+      },
+      "cues": {
+        "hit": "ibresi"
+      },
+      "params": {
+        "mode": "pair"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "clockface",
+      "text": "Saat ustaları, alışılan bu yönü korudu.",
+      "visual": "3D pirinç kasalı duvar saati; ibreler saat yönünde dönerken altlarında soluk bir gölge kaması aynı yönde ilerliyor, kadranın üstünde 9'dan 3'e amber bir yay ok çiziliyor ve 'SAAT YÖNÜ' yazısı çıkıyor.",
+      "title": {
+        "white": "Saat ustaları"
+      },
+      "cues": {
+        "hit": "korudu"
+      },
+      "params": {},
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "sundial",
+      "text": "Güneyde ise gölge ters yöne döner.",
+      "visual": "Tepeden bakılan güney yarımküre güneş saati (gnomon güneye bakıyor): gölge batıdan güneye, oradan doğuya, yani saatin tersine süpürüyor; arkasında kırmızı yay ve ok; altta 'GÜNEYDE'.",
+      "title": {
+        "white": "Güneyde"
+      },
+      "cues": {
+        "hit": "ters"
+      },
+      "params": {
+        "mode": "south"
+      },
+      "art": {
+        "palette": "ocean"
+      }
+    },
+    {
+      "type": "clockface",
+      "text": "Saat orada icat edilseydi, ibreler sola dönebilirdi.",
+      "visual": "Aynı saat ama rakamlar ters sırada; ibreler saatin tersine dönüyor, kadranın üstünde 3'ten 9'a kırmızı bir yay ok çiziliyor ve 'TERS YÖN' yazısı çıkıyor.",
+      "title": {
+        "white": "Ya güneyde?"
+      },
+      "cues": {
+        "hit": "sola"
+      },
+      "params": {
+        "reverse": true
+      },
+      "art": {
+        "palette": "ocean"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Yani saat yönü, kuzeyde düşen bir gölgenin yönü.",
+      "visual": "Dev yazılar üç satırda çarpıyor: 'SAAT YÖNÜ', '=', amber kutuda 'GÖLGE' ve yanında 'YÖNÜ'.",
+      "title": {},
+      "cues": {
+        "w0": "saat",
+        "w1": "yönü",
+        "w3": "gölgenin",
+        "w4": "gölgenin"
+      },
+      "params": {
+        "lines": [
+          "Saat yönü",
+          "=",
+          "gölge yönü"
+        ],
+        "highlight": [
+          "gölge"
+        ]
+      }
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Saat yönünü",
+      "bir gölge",
+      "belirledi"
+    ],
+    "highlight": [
+      "gölge"
+    ],
+    "scene": 0,
+    "t": 2.0
+  },
+  "youtube": {
+    "title": "Saat Yönü Neden Bu Yönde? Cevap Bir Gölgede ☀️",
+    "description": "Saat yönü neden bu yönde? Saat yönünü aslında bir gölge belirledi: mekanik saatlerden çok önce zamanı gösteren güneş saatinin gölgesi.\n\nKuzey yarımkürede (tropiklerin kuzeyinde) Güneş doğudan doğup batıdan batarken güneş saatinin gölgesi batıdan kuzeye, oradan doğuya; yani tepeden bakınca soldan sağa döner. Mekanik saatler 1300'lerde Avrupa'da yaygınlaşırken saat ustaları insanların alıştığı bu yönü korudu. Güney yarımkürede ise gölge ters yöne döner.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence saatler güney yarımkürede icat edilseydi bugün hangi yöne dönerdi? Yorumlara yaz!\n\n#shorts #saatyönü #güneşsaati #tarih #düşünbakalım",
+    "tags": [
+      "saat neden sağa döner",
+      "saat yönü neden bu yönde",
+      "saat yönü nereden geliyor",
+      "saatler neden sağa döner",
+      "saat yönünün tersi",
+      "güneş saati",
+      "güneş saati nasıl çalışır",
+      "gölge yönü",
+      "mekanik saat tarihi",
+      "kuzey yarımküre",
+      "güney yarımküre",
+      "gündelik tasarımlar",
+      "tarih",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-18T12:00:00+03:00"
+  }
+}
