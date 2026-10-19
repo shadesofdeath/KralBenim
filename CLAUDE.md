@@ -150,6 +150,10 @@ python build.py script.json                  # tam render (ELEVENLABS_API_KEY ge
 python build.py script.json --scenes 3       # ilk 3 sahne
 python build.py script.json --still 12.5     # tek kare
 python build.py videos/<tarih>/<dosya>.json --no-tts -o out/draft.mp4   # sessiz taslak video (tahmini zamanlama)
+# parçalı render (Actions bunu kullanır; üç adımda da aynı -o):
+python build.py <dosya>.json -o out/x.mp4 --prepare   # TTS + zaman çizelgesi + medya -> out/x.prepared.json
+python build.py <dosya>.json -o out/x.mp4 --shard 2/5 # 5 parçanın 2.'si -> out/x.parts/
+python build.py <dosya>.json -o out/x.mp4 --finish    # birleştir + ses + kapak -> out/x.mp4
 python tools/plan.py                                  # bugünün planı (dosyalar, saatler, bütçe)
 python tools/lint.py videos/<tarih>/*.json             # kural denetimi
 python tools/preview.py videos/<tarih>/<dosya>.json   # TTS'siz görsel kontrol
@@ -157,4 +161,4 @@ python tools/preview.py <dosya>.json --times 3,12.5    # belirli anlar
 python tools/media.py search "flamingo flock" --dir videos/<tarih>/media   # telifsiz görsel ara
 ```
 
-Playwright Chromium'u bulamazsa `CHROMIUM_PATH=/opt/pw-browsers/chromium` ver. 3D sahneler başsız Chromium'da yazılım WebGL (SwiftShader, ekran kartı yok) ile çizilir. **Performans kuralı:** shader'da kare başına piksel piksel `fbm`/`snoise` hesaplama — desenleri `bake()` / `surfaceMaps()` / `noiseMap()` ile açılışta bir kez dokuya pişir, karede sadece `texture2D` oku. Tarayıcıda `mix-blend-mode`, büyük `filter: blur` ve tam ekran yarı saydam katmanlardan kaçın (gren yok). Studio 1080p/30 fps çizer, ffmpeg 1440p'ye büyütür; render tüm CPU çekirdeklerine bölünür (`RENDER_WORKERS`).
+Playwright Chromium'u bulamazsa `CHROMIUM_PATH=/opt/pw-browsers/chromium` ver. 3D sahneler başsız Chromium'da yazılım WebGL (SwiftShader, ekran kartı yok) ile çizilir. **Performans kuralı:** shader'da kare başına piksel piksel `fbm`/`snoise` hesaplama — desenleri `bake()` / `surfaceMaps()` / `noiseMap()` ile açılışta bir kez dokuya pişir, karede sadece `texture2D` oku. Tarayıcıda `mix-blend-mode`, büyük `filter: blur` ve tam ekran yarı saydam katmanlardan kaçın (gren yok). Studio 1080p/30 fps çizer, ffmpeg 1440p'ye büyütür; render tüm CPU çekirdeklerine bölünür (`RENDER_WORKERS`). Actions'ta bir video ayrıca ~40 sn'lik parçalara bölünüp (en çok 8) ayrı işlerde render edilir. Video kareleri Chromium'un yazılım compositor'ıyla çizilir ve CDP ile yakalanır (kapak eski yolla); eski yola dönmek için `RENDER_COMPOSITOR=gpu`, `RENDER_CAPTURE=screenshot`.

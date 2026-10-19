@@ -1,7 +1,11 @@
 name: Daily batch
 
-# Fires when new scripts land in videos/<date>/ (pushed by the daily Claude task),
-# or manually for a given folder. Each script is rendered and uploaded in parallel.
+# Fires when scripts land in videos/<date>/ (pushed by the daily Claude task), or manually for a
+# given folder. Each video is built in three stages so one video renders on several runners at once:
+#   prepare  (1 job per script)   TTS (cached) + timeline + media -> artifact prep-<name>
+#   render   (N jobs per script)  build.py --shard i/N: one frame range each -> artifact seg-<name>-<i>
+#   finish   (1 job per script)   concat + audio + cover, YouTube upload, Telegram
+# N is about one shard per 40 s of video (max 8), so a Short is 1 render job and a 4.5-minute video 7.
 on:
   push:
     paths: ["videos/**.json"]
@@ -30,23 +34,146 @@ jobs:
         env:
           DIR: ${{ inputs.dir }}
         run: |
+          is_script() { [[ "$1" =~ ^videos/[^/]+/[^/]+\.json$ ]] && [[ "$1" != *.youtube.json ]]; }
+          files=""
           if [ -f "$DIR" ]; then
             files="$DIR"
           elif [ -n "$DIR" ]; then
             files=$(ls "$DIR"/*.json | grep -v '\.youtube\.json$' || true)
           else
-            files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'videos/*/*.json' | grep -v '\.youtube\.json$' || true)
+            # new scripts, plus edited scripts that were never uploaded (no .youtube.json yet):
+            # an edited script whose video is already on YouTube is never uploaded twice
+            for f in $(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'videos/*/*.json'); do
+              if is_script "$f"; then files="$files $f"; fi
+            done
+            for f in $(git diff --name-only --diff-filter=M HEAD~1 HEAD -- 'videos/*/*.json'); do
+              if is_script "$f" && [ ! -f "${f%.json}.youtube.json" ]; then files="$files $f"; fi
+            done
           fi
           echo "files=$(printf '%s\n' $files | jq -R . | jq -sc 'map(select(length>0))')" >> "$GITHUB_OUTPUT"
 
-  render:
+  prepare:
     needs: plan
     if: needs.plan.outputs.files != '[]'
     runs-on: ubuntu-24.04
-    timeout-minutes: 300   # studio long videos draw 3D in software
+    timeout-minutes: 60
     strategy:
       fail-fast: false
-      max-parallel: 5
+      matrix:
+        file: ${{ fromJson(needs.plan.outputs.files) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Python packages
+        run: pip install -r requirements.txt
+      - name: Names
+        id: n
+        env:
+          F: ${{ matrix.file }}
+        run: echo "name=$(basename "$(dirname "$F")")-$(basename "$F" .json)" >> "$GITHUB_OUTPUT"
+      - name: TTS cache (re-renders do not spend ElevenLabs credits)
+        id: tts
+        uses: actions/cache/restore@v4
+        with:
+          path: out/*/
+          key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
+          restore-keys: tts-${{ steps.n.outputs.name }}-
+      - name: Prepare (TTS, timeline, media)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          F: ${{ matrix.file }}
+          NAME: ${{ steps.n.outputs.name }}
+        run: |
+          python build.py "$F" -o "out/$NAME.mp4" --prepare
+          python -c "import json,sys; m=json.load(open(sys.argv[1])); json.dump({'file': sys.argv[2], 'name': sys.argv[3], 'shards': m['shards']}, open(sys.argv[4], 'w'))" \
+            "out/$NAME.prepared.json" "$F" "$NAME" "shards-$NAME.json"
+      - name: Save TTS cache (also when the prepare fails, so a fixed re-run reuses the narration)
+        if: always() && steps.tts.outputs.cache-hit != 'true'
+        continue-on-error: true
+        uses: actions/cache/save@v4
+        with:
+          path: out/*/
+          key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prep-${{ steps.n.outputs.name }}
+          path: out/
+          retention-days: 2
+          compression-level: 1
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shards-${{ steps.n.outputs.name }}
+          path: shards-${{ steps.n.outputs.name }}.json
+          retention-days: 2
+
+  # one render job per (script, shard): {file, name, shard, of}
+  shards:
+    needs: prepare
+    if: always() && needs.prepare.result != 'skipped'
+    runs-on: ubuntu-24.04
+    outputs:
+      include: ${{ steps.m.outputs.include }}
+    steps:
+      - uses: actions/download-artifact@v4
+        continue-on-error: true   # every prepare failed: nothing to render, finish reports it
+        with:
+          pattern: shards-*
+          path: shards
+          merge-multiple: true
+      - id: m
+        run: |
+          shopt -s nullglob
+          files=(shards/*.json)
+          if [ ${#files[@]} -eq 0 ]; then echo "include=[]" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "include=$(jq -sc '[.[] | . as $s | range(1; $s.shards + 1) | {file: $s.file, name: $s.name, shard: ., of: $s.shards}]' "${files[@]}")" >> "$GITHUB_OUTPUT"
+
+  render:
+    needs: shards
+    if: always() && needs.shards.result == 'success' && needs.shards.outputs.include != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300   # studio videos draw 3D in software
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include: ${{ fromJson(needs.shards.outputs.include) }}
+    name: render ${{ matrix.name }} ${{ matrix.shard }}/${{ matrix.of }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
+      - name: Python packages
+        run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+      - uses: actions/download-artifact@v4
+        with:
+          name: prep-${{ matrix.name }}
+          path: out
+      - name: Render shard
+        env:
+          F: ${{ matrix.file }}
+        run: python build.py "$F" -o "out/${{ matrix.name }}.mp4" --shard "${{ matrix.shard }}/${{ matrix.of }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: seg-${{ matrix.name }}-${{ matrix.shard }}
+          path: out/${{ matrix.name }}.parts/
+          if-no-files-found: ignore   # a trailing shard can be empty
+          retention-days: 2
+          compression-level: 0
+
+  finish:
+    needs: [plan, render]
+    if: always() && needs.plan.outputs.files != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
       matrix:
         file: ${{ fromJson(needs.plan.outputs.files) }}
     steps:
@@ -63,25 +190,21 @@ jobs:
         env:
           F: ${{ matrix.file }}
         run: echo "name=$(basename "$(dirname "$F")")-$(basename "$F" .json)" >> "$GITHUB_OUTPUT"
-      - name: TTS cache (re-renders do not spend ElevenLabs credits)
-        id: tts
-        uses: actions/cache/restore@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true   # prepare failed: the Build step fails and Telegram reports it
         with:
-          path: out/*/
-          key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
-          restore-keys: tts-${{ steps.n.outputs.name }}-
-      - name: Build
-        env:
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          F: ${{ matrix.file }}
-        run: python build.py "$F" -o "out/${{ steps.n.outputs.name }}.mp4"
-      - name: Save TTS cache (also when the render fails, so a fixed re-run reuses the narration)
-        if: always() && steps.tts.outputs.cache-hit != 'true'
+          name: prep-${{ steps.n.outputs.name }}
+          path: out
+      - uses: actions/download-artifact@v4
         continue-on-error: true
-        uses: actions/cache/save@v4
         with:
-          path: out/*/
-          key: tts-${{ steps.n.outputs.name }}-${{ hashFiles(matrix.file) }}
+          pattern: seg-${{ steps.n.outputs.name }}-*
+          path: out/${{ steps.n.outputs.name }}.parts
+          merge-multiple: true
+      - name: Build (concat shards, mux audio, cover)
+        env:
+          F: ${{ matrix.file }}
+        run: python build.py "$F" -o "out/${{ steps.n.outputs.name }}.mp4" --finish
       - name: Upload to YouTube
         if: inputs.upload != 'false'
         env:
@@ -119,8 +242,8 @@ jobs:
           retention-days: 14
 
   record:
-    needs: render
-    if: always() && needs.render.result != 'skipped'
+    needs: finish
+    if: always() && needs.finish.result != 'skipped'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
