@@ -19,6 +19,30 @@ Kanal sahibinin isteğiyle yeni stilin ilk iki videosu. Kurallar: `brand/kit/BRA
 - **Bölümler (BÖLÜM n / 5 kartları):** 1 Saraydaki parşömen (1929 keşfi, kanca) · 2 Denizci Piri (Kemal Reis, Akdeniz seferleri) · 3 Yirmi haritadan bir harita (kaynaklar, Kolomb) · 4 Efsane ve gerçek (Antarktika iddiası) · 5 Haritanın mirası (Kitab-ı Bahriye, bugün) + yorum sorusu.
 - **Görsel omurga:** `map` (eski harita, Atlantik, kıyılar çizilerek), `stage` (Kaşif parşömeni açar, dürbünle bakar, şaşırır; Piri Reis sarıklı figür), `chapter`, `timeline`, `board` (kaynaklar/efsane-gerçek), `title`. Higgsfield en fazla 2 klip (fırtınalı Akdeniz'de kadırga, sepya çizim), en ucuz model kuralıyla — gerekmiyorsa hiç.
 
+### 05 — senaryo (tam metin)
+
+Önce sahnelerden bağımsız, tek parça anlatım olarak yazıldı (BRAND §6.9–6.10), sonra doğal duraklardan 41 sahneye bölündü. 3994 karakter. Kaynak bilgiler: mevcut JSON + yukarıdaki doğrulanmış eleştiri günlüğü.
+
+**1. Saraydaki parşömen**
+
+Yıl 1513. Kolomb okyanusu geçeli yirmi bir yıl olmuş. Ama bir Osmanlı denizcisi, Amerika'yı çoktan çiziyor. Ve bu hikâye, dört yüz yıl sonra, 1929'da başlıyor. Topkapı Sarayı artık müze. Yüzyıllık sandıklar tek tek açılıyor. Toz, küf, kuru mürekkep kokusu. Belgeleri karıştıranlardan biri, Alman ilahiyatçı Gustav Adolf Deissmann. Ve eli, sert bir deri parçasına takılıyor. Açıyor ve donup kalıyor: ceylan derisine çizilmiş, renkleri hâlâ diri bir deniz haritası. Köşedeki notta bir imza var: Piri Reis. Ve bir tarih: 1513. Şimdi tarihleri yan yana koy: Kolomb 1492'de yola çıkıyor, bu harita 1513'te çiziliyor. Ama asıl tuhafı şu: bildiğimiz kadarıyla Piri, Amerika'yı hiç görmüyor. Peki okyanusun öbür yakasını nasıl çiziyor?
+
+**2. Denizci Piri**
+
+Cevap, bir denizcinin hayatında saklı. Piri, büyük olasılıkla 1460'ların sonunda Gelibolu'da doğuyor; tuz kokusu ve halat gıcırtısı arasında. Şansı da ailesinde: amcası Kemal Reis, dönemin en ünlü Osmanlı denizcilerinden. Piri gençken onun gemisine katılıyor. Okulu güverte, öğretmeni amcası. Yıllarca Akdeniz'i dolaşıyorlar, İspanya'dan Mısır'a. Korsanlarla da çarpışıyorlar, Venedik gemileriyle de. Ama Piri farklı. Başkaları savaşları hatırlıyor; o ise kıyıları. Her limanı, her sığlığı, lazım olacakmış gibi not ediyor. Sonra 1511'de bir fırtına kopuyor. Kemal Reis'in gemisi batıyor. Ve Piri, ona denizi öğreten adamı denizde kaybediyor. Gelibolu'ya dönüyor. Elinde yılların notları, kafasında büyük bir fikir.
+
+**3. Yirmi haritadan bir harita**
+
+1513'te Piri, kalemi eline alıyor. Haritanın notlarına göre yaklaşık yirmi kaynak var. Düşünsene: yirmi harita, birbirini tutmayan kıyılar. Ve hepsi tek deriye sığacak. Eski Yunan'dan Batlamyus, Portekizlilerin en yeni deniz haritaları, bir Arap haritası. Bin yılı aşkın bilgi, aynı masada. Ama biri, hepsinden değerli: Kolomb'un kendi çizdiği harita. Nasıl mı? Piri'nin notuna göre, Kolomb'la okyanusu geçmiş bir İspanyol denizciden. Kemal Reis'in esir aldığı biri. Yani amcasının esiri, yeğenine Yeni Dünya'nın kapısını açıyor. Piri'ye göre haritadaki Karayipler, doğrudan oradan geliyor. Peki Kolomb'un o haritası nerede? Hiçbir yerde. İzi belki de en net, Piri'nin ceylan derisinde. İşin ironisi şu: Piri'nin haritası da eksik. Bugüne yalnızca batıdaki üçte biri kalıyor. Gerisi, tıpkı Kolomb'unki gibi, kayıp.
+
+**4. Efsane ve gerçek**
+
+1950'ler ve 60'lar geliyor, ve bu yırtık deri beklenmedik bir şöhrete kavuşuyor. İşte burada işler tuhaflaşıyor. Bazı yazarlara göre haritanın altındaki kıyı, buzsuz Antarktika. Hatta bu bilgiyi kayıp bir uygarlığın, ya da uzaylıların verdiğini iddia ediyorlar. Heyecanlı, değil mi? Ama bir sorun var: Antarktika ilk kez 1820'de görülüyor. Ve milyonlarca yıldır buzun altında. Peki o kıyı ne? Tarihçilere göre cevap haritanın kendisinde. Deri bitiyor, ve Piri, Güney Amerika kıyısını büyük olasılıkla doğuya kıvırıyor. Üstelik Piri o kıyıya bir not düşmüş: burası çok sıcak, büyük yılanlarla dolu. Buzlu bir kıta için, tuhaf bir tarif. Yani buzların altında gizli bir kıta yok. Deriye sığdırılmış bir kıyı var. Uzaylı yok. Kayıp kıta yok. Yirmi haritayı bir deriye sığdıran, inatçı bir denizci var.
+
+**5. Haritanın mirası**
+
+Ama Piri'nin hikâyesi, bu haritayla bitmiyor. Dünyayı bir deriye sığdırmıştı. Şimdi Akdeniz'in limanlarını bir kitaba sığdırıyor: Kitab-ı Bahriye. Gençlikteki o notlar, sonunda yerini buluyor. 1521'de bitiriyor, 1526'da genişletip Kanuni'ye sunuyor. İki yıl sonra bir dünya haritası daha. Durmak bilmiyor. Seksenlerinde bile denizde: Hint Okyanusu'ndaki Osmanlı filosunun başında. Hedef: Portekizlilerin elindeki Hürmüz kalesi. Kaleyi kuşatıyor. Ama kale düşmüyor. Ve Piri, büyük olasılıkla en ağır kararını veriyor: filonun çoğunu bırakıp birkaç gemiyle Mısır'a dönüyor. Bu karar affedilmiyor. Bildiğimiz kadarıyla 1553'te, Kahire'de idam ediliyor. Ama adı unutulmuyor: 2013'te UNESCO, haritanın beş yüzüncü yılını anma takvimine alıyor. Yani bu haritanın sırrı uzaylılarda değil. Okyanusu belki hiç görmeden çizmeye cesaret eden bir merakta. Sence Piri, Kolomb'un haritasını görmeseydi, Amerika'yı yine çizebilir miydi? Yorumlara yaz.
+
 ## Eleştiri günlüğü
 
 ## Eleştiri günlüğü — 04-gemiler-karadan
@@ -155,4 +179,39 @@ Derinlik 7'de kalıyor, çünkü bazı bölümler hâlâ ders kitabı gibi akıy
 Ek notlar (küçük):
 - **Sahne 36:** Kaşif küçük ve kenarda kalıyor; 1,3× ve `point` pozuyla "500"e dönük olsun.
 - **Ön plan öğeleri:** sol kenardaki kırpık direk ve halat kangalı (7, 26, 29, 39) bazı karelerde neyin ne olduğu anlaşılmayan bir çizgi yığını gibi duruyor. Bir tanesini net bir nesneye (ör. yarım görünen fıçı) çevir.
+- **Kapak:** değişmedi ve iyi.
+
+### 05-piri-reis-haritasi — tur 4 (yeni senaryo, e040967 kuralları)
+lint: OK, 1 uyarı (bölüm 5, sahne 32'den itibaren 9 sahne sürüyor; hedef 5–8) · preview: 41 sahne, ~282 sn (4:42), 3.994 karakter, STATIC? yok (en düşük hareket: sahne 32, 5.2).
+
+**Önce metin (görüntüye bakmadan): Senaryo 8.** Podcast olarak işliyor:
+- **Anlatıcı sesi ve ironi:** "Okulu güverte, öğretmeni amcası"; "amcasının esiri, yeğenine Yeni Dünya'nın kapısını açıyor"; "Gerisi, tıpkı Kolomb'unki gibi, kayıp"; "Buzlu bir kıta için, tuhaf bir tarif".
+- **Bağlaçlar:** ama / yani / üstelik / peki.
+- **Duygusal düğüm:** "ona denizi öğreten adamı denizde kaybediyor".
+- **Yay:** kanca → keşif → hayat → kaynaklar → efsanenin çürütülmesi → trajik son → hüküm.
+
+Ekranı tarif eden altyazı cümlesi neredeyse yok. Bölüm 5 artık kronoloji değil; Hürmüz kararı bir gerilim olarak kurulmuş. 10 değil, çünkü şu zayıflıklar var:
+
+1. **Açılış mantığı topallıyor:** "Yıl 1513. Kolomb okyanusu geçeli yirmi bir yıl olmuş. Ama bir Osmanlı denizcisi, Amerika'yı çoktan çiziyor." "Ama" bir zıtlık kurmuyor, "çoktan" da "yirmi bir yıl"la çelişiyor. → **"Yıl 1513. Kolomb okyanusu geçeli daha yirmi bir yıl olmuş. Ve Gelibolu'da bir Osmanlı denizcisi, Amerika'yı şimdiden haritasına geçiriyor."**
+2. **Tekrar ve ekran tarifi:** "Şimdi tarihleri yan yana koy: Kolomb 1492'de yola çıkıyor, bu harita 1513'te çiziliyor." Bu, açılıştaki bilgiyi tekrarlıyor ve zaman çizgisini okuyor. → **"Yani Avrupa yeni kıyıları daha yeni duyarken, bu deri onları çoktan taşıyor."**
+3. **Son hükümde mantık hatası:** "Okyanusu belki hiç görmeden çizmeye cesaret eden bir merakta." Piri ömrü boyunca okyanuslarda gezdi; görmediği şey Amerika. → **"Amerika'yı hiç görmeden, yirmi haritayı tek bir deriye sığdıran bir merakta."** Küçük bir not daha: "Ve Piri, büyük olasılıkla en ağır kararını veriyor" cümlesinde ihtiyat kaydı yanlış yere düşmüş. → **"Ve Piri, belki de hayatının en ağır kararını veriyor."**
+
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 8 | 9 | 8 | 8 | 8 | 8 | 8 | 8 |
+
+**Sonuç: GEÇTİ** (tüm kriterler ≥ 7, lint hatasız).
+
+**Doğruluk, Hürmüz bölümü:**
+- Hürmüz, 1515'ten beri Portekiz kalesi. ✓
+- Piri, 1552'de Maskat'ı alıyor, ardından Hürmüz kalesini kuşatıyor ama kale düşmüyor; adayı yağmalayıp çekiliyor. ✓
+- Filonun çoğunu Basra'da bırakıyor ve birkaç (üç) kadırgayla Süveyş/Mısır'a dönüyor; dönüşte biri kayboluyor. ✓ ("birkaç gemiyle" doğru.)
+- 1553'te (bazı kaynaklara göre 1554) Kahire'de idam ediliyor. ✓ "Bildiğimiz kadarıyla" ifadesiyle uygun.
+- "Seksenlerinde": 1460'ların sonundaki doğumla 1552'de yaklaşık 82–87 yaşında. ✓
+- "Bu karar affedilmiyor" yorumu kaynaklarla uyumlu (filoyu terk etmesi suçlamanın merkezinde).
+- "Bildiğimiz kadarıyla Amerika'yı hiç görmüyor" ifadesi doğru biçimde yumuşatılmış.
+
+**Görsel (küçük notlar):**
+- **Sahne 36:** "filonun çoğunu bırakıp birkaç gemiyle Mısır'a dönüyor" deniyor ama ekranda tek, kıpırdamayan bir gemi var. Cue `go`da 3 küçük geminin sola, kadrajın dışına süzülmesi ve büyük filonun arkada kalması kararı görünür kılar.
+- **Bölüm 5 dokuz sahne (lint uyarısı).** Sahne 34'ü (kronoloji) 33'e katmak ya da sahne 38'den (UNESCO) önce bölümü bölmek uyarıyı kaldırır.
 - **Kapak:** değişmedi ve iyi.
