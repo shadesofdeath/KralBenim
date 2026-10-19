@@ -237,7 +237,7 @@ SHOTS.diaphragm = {
           stem.scale.setScalar(1 + 0.6 * hp); mStem.emissiveIntensity = 1.0 + 0.4 * Math.sin(t * 4) + 2 * hp;
         }
         if (mode === 'reflex') {
-          vPulse.forEach((g, i) => { const u = ((lt * 0.7 + i / 3) % 1); g.position.copy(vagus.getPoint(u)); g.material.opacity = 0.9 * Math.sin(Math.PI * u); });
+          vPulse.forEach((g, i) => { const u = (((lt * 0.7 + i / 3) % 1) + 1) % 1; /* lt < 0 during transitions */ g.position.copy(vagus.getPoint(u)); g.material.opacity = 0.9 * Math.sin(Math.PI * u); });
           mVagus.opacity = 0.5 + 0.2 * Math.sin(t * 2.4);
         }
         // stomach inflates, bubbles rise
