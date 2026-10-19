@@ -1,0 +1,1355 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "RXCCWbOxP7Hisa63Xsv5",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "pompeii-son-gun",
+  "engine": "studio",
+  "format": "long",
+  "fps": 30,
+  "art": {
+    "palette": "desert"
+  },
+  "cover": {
+    "lines": [
+      "Bir şehir",
+      "bir günde",
+      "gömüldü"
+    ],
+    "highlight": [
+      "gömüldü"
+    ],
+    "scene": 21,
+    "t": 1.2
+  },
+  "youtube": {
+    "title": "Pompeii'nin Son Günü: Vezüv Bir Şehri Nasıl Dondurdu? 🌋",
+    "description": "Pompeii'nin son günü: Vezüv, MS 79'da sıradan bir Roma kentini bir günde kül ve süngertaşının altına gömdü. Yaklaşık 30 kilometrelik kül sütunu, saatlerce süren taş yağmuru ve kente inen kızgın piroklastik akıntı.\n\nGenç Plinius'un görgü tanığı mektupları, Yaşlı Plinius'un kurtarma seferi, Herculaneum, 1748 kazıları ve Giuseppe Fiorelli'nin alçı kalıpları. Bir de büyük soru: Vezüv patlaması 24 Ağustos'ta mı, yoksa Ekim'de mi oldu?\n\nBu videoda:\n• Vezüv'ün gölgesinde sıradan bir Roma kenti\n• Plinyen patlama: 30 kilometrelik kül sütunu\n• Süngertaşı yağmuru ve piroklastik akıntı\n• 1.700 yıl sonra: kazılar ve alçı kalıplar\n• Tarih tartışması: Ağustos mu, Ekim mi?\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Vezüv'ün eteğinde yaşamaya cesaret eder miydin? Yorumlara yaz!\n\n#pompeii #vezüv #tarih #bilim #düşünbakalım",
+    "tags": [
+      "pompeii",
+      "pompeii'nin son günü",
+      "pompeii nasıl yok oldu",
+      "vezüv",
+      "vezüv yanardağı",
+      "vezüv patlaması 79",
+      "piroklastik akıntı",
+      "plinyen patlama",
+      "genç plinius",
+      "herculaneum",
+      "pompeii alçı kalıpları",
+      "roma tarihi",
+      "yanardağ",
+      "tarih",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-20T20:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "photo",
+      "text": "Bu sokaklar bir sabah, her zamanki gibi uyandı. Ertesi sabah ise metrelerce külün altında, sessizdi.",
+      "visual": "Sabah ışığında taş döşeli bir Roma sokağı, gelip giden insanlar; arkada yeşil yamaçlı Vezüv (yapay zekâ klibi).",
+      "title": {
+        "white": "Bir",
+        "gray": "sıradan sabah"
+      },
+      "params": {
+        "video": "media/hf-street.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200210_a91743e1-6fcc-48e4-8c5f-3bdac2c3c6be.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.6,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "sessizdi"
+      },
+      "chapter": "Sıradan bir sabah"
+    },
+    {
+      "type": "volcano",
+      "text": "Burası Pompeii. Yıl, milattan sonra 79. Arkadaki dağın adı Vezüv.",
+      "visual": "3D kuşbakışı Napoli Körfezi: yeşil ovada sessiz Vezüv konisi, kıyıda Pompeii ve Herculaneum kentleri; etiketler 'POMPEİİ' ve 'VEZÜV'.",
+      "title": {
+        "white": "Pompeii",
+        "gray": "MS 79"
+      },
+      "params": {
+        "mode": "profile",
+        "camera": {
+          "dist": 11.5,
+          "yaw": -16,
+          "pitch": 15,
+          "tx": 0.3,
+          "ty": 0.9,
+          "tz": 1.6
+        },
+        "labels": [
+          {
+            "target": "pompeii",
+            "text": "POMPEİİ",
+            "sub": "MS 79",
+            "at": "pompeii",
+            "dx": 200,
+            "dy": -120,
+            "size": 64
+          },
+          {
+            "target": "vesuvius",
+            "text": "VEZÜV",
+            "at": "hit",
+            "dx": -260,
+            "dy": -170,
+            "size": 64,
+            "color": "ink"
+          },
+          {
+            "target": "herculaneum",
+            "text": "HERCULANEUM",
+            "at": "hit",
+            "dx": -220,
+            "dy": 90,
+            "size": 48,
+            "color": "ink"
+          }
+        ]
+      },
+      "cues": {
+        "pompeii": "pompeii",
+        "hit": "vezüv"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Fırınlarda ekmek pişiyor, duvarlarda seçim yazıları duruyor. Binlerce insanın yaşadığı, canlı bir Roma kenti.",
+      "visual": "Taş bir Roma fırını: fırıncı kürekle sıcak yuvarlak ekmekleri fırından çıkarıyor (yapay zekâ klibi).",
+      "title": {
+        "white": "Canlı",
+        "gray": "bir kent"
+      },
+      "params": {
+        "video": "media/hf-bakery.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200210_37cc488c-d0b5-43ae-896d-c0c7dae45789.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.57,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.18,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.0,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "cues": {
+        "hit": "ekmek"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Vezüv'ün yamaçları üzüm bağlarıyla kaplıydı. Yüzyıllardır sessiz olduğu için, kimse ondan korkmuyordu.",
+      "visual": "Dev yazı kelime kelime: 'BAĞLARLA KAPLI' ve altında 'SESSİZ BİR DAĞ', 'SESSİZ' amber kutuda; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Bağlarla kaplı",
+          "sessiz bir dağ"
+        ],
+        "highlight": [
+          "sessiz"
+        ]
+      },
+      "cues": {
+        "w0": "yamaçları",
+        "w1": "bağlarıyla",
+        "w2": "yüzyıllardır",
+        "w3": "sessiz",
+        "w4": "korkmuyordu"
+      },
+      "mascot": "think"
+    },
+    {
+      "type": "volcano",
+      "text": "Oysa dağ uyumuyordu. Derinlerde, gazla dolu magma basınç biriktiriyordu.",
+      "visual": "3D Vezüv yakın plan, röntgen gibi: koninin altında kızıl parlayan magma odası ve kratere uzanan kanal; odası büyüyor, etiket 'MAGMA · gazla dolu'.",
+      "title": {
+        "white": "Derinlerde",
+        "gray": "magma"
+      },
+      "params": {
+        "mode": "profile",
+        "chamber": true,
+        "camera": {
+          "dist": 8.2,
+          "yaw": 0,
+          "pitch": 6,
+          "tx": 0.3,
+          "ty": -0.75,
+          "tz": 0.0,
+          "drift": 0.6
+        },
+        "labels": [
+          {
+            "target": "chamber",
+            "text": "MAGMA",
+            "sub": "gazla dolu",
+            "at": "magma",
+            "dx": 560,
+            "dy": -40,
+            "size": 68
+          }
+        ]
+      },
+      "cues": {
+        "magma": "magma",
+        "hit": "basınç"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "O gün öğle saatlerinde, dağın tepesi patladı. Gökyüzüne dev bir kül ve taş sütunu yükseldi.",
+      "visual": "Koyun karşısından görünen Vezüv'den gökyüzüne yükselen dev kül sütunu (yapay zekâ klibi).",
+      "title": {
+        "white": "Öğle",
+        "gray": "saatleri"
+      },
+      "params": {
+        "video": "media/hf-column.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200350_589bde5b-4a21-49a8-ad0f-e1a9f81f5e1e.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.65,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "patladı"
+      },
+      "chapter": "Gökyüzü kararıyor",
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Bu sütun yaklaşık otuz kilometre yükseğe çıktı. Yolcu uçaklarının uçtuğu yüksekliğin yaklaşık üç katı.",
+      "visual": "3D: Vezüv'ün kraterinden kül sütunu yükseliyor, tepesi yayılıyor; yanında km cetveli (10, 20, 30 km), 10 km'de 'yolcu uçağı'; sayaç ~30 KM'ye doluyor.",
+      "title": {
+        "white": "~30 km",
+        "gray": "yükseklik"
+      },
+      "params": {
+        "mode": "column",
+        "grow": true,
+        "marks": [
+          {
+            "km": 10,
+            "text": "yolcu uçağı ~10 km",
+            "at": "uçak"
+          }
+        ],
+        "counter": {
+          "to": "30",
+          "prefix": "~",
+          "unit": "KM",
+          "label": "kül sütunu"
+        }
+      },
+      "cues": {
+        "hit": "otuz",
+        "uçak": "uçakların"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Koyun karşı yakasındaki Misenum'dan, on yedi yaşındaki Genç Plinius bu bulutu izliyordu.",
+      "visual": "3D geniş plan: solda körfezin karşı kıyısında Misenum, sağda Vezüv'ün dev kül sütunu; etiket 'MİSENUM · Genç Plinius buradaydı'.",
+      "title": {
+        "white": "Görgü",
+        "gray": "tanığı"
+      },
+      "params": {
+        "mode": "column",
+        "ruler": false,
+        "camera": {
+          "dist": 30,
+          "yaw": -38,
+          "pitch": 12,
+          "tx": -4.5,
+          "ty": 4.6,
+          "tz": 2.0
+        },
+        "labels": [
+          {
+            "target": "misenum",
+            "text": "MİSENUM",
+            "sub": "Genç Plinius buradaydı",
+            "at": "hit",
+            "dx": 430,
+            "dy": -80,
+            "size": 64
+          }
+        ]
+      },
+      "cues": {
+        "hit": "plinius"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Onu, uzun gövdeli ve tepesi dallara ayrılan bir çam ağacına benzetti.",
+      "visual": "3D: kamera sütunun tepesine yükseliyor; uzun gövde ve şemsiye gibi yana açılan bulut tepesi, etiket 'ÇAM AĞACI GİBİ'.",
+      "title": {
+        "white": "Şemsiye",
+        "gray": "çamı"
+      },
+      "params": {
+        "mode": "column",
+        "ruler": false,
+        "camera": {
+          "dist": 19,
+          "yaw": -20,
+          "pitch": 4,
+          "tx": 1.5,
+          "ty": 9.5,
+          "tz": 0.6
+        },
+        "labels": [
+          {
+            "target": "umbrella",
+            "text": "ÇAM AĞACI GİBİ",
+            "at": "hit",
+            "dx": 120,
+            "dy": 260,
+            "size": 66
+          }
+        ]
+      },
+      "cues": {
+        "hit": "çam"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Yıllar sonra yazdığı mektuplar, bir yanardağ patlamasının bilinen ilk görgü tanığı anlatımı.",
+      "visual": "Dev yazı: 'İLK GÖRGÜ' ve amber kutuda 'TANIĞI'; maskot anlatıyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "İlk görgü",
+          "tanığı"
+        ],
+        "highlight": [
+          "tanığı"
+        ]
+      },
+      "cues": {
+        "w0": "mektuplar",
+        "w1": "görgü",
+        "w2": "tanığı"
+      },
+      "mascot": "explain",
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Bu yüzden bu tür patlamalara bugün Plinyen patlama deniyor.",
+      "visual": "3D: Vezüv'ün tam boy kül sütunu ve şemsiye tepesi, kamera yavaşça çevresinde dönüyor; etiket 'PLİNYEN PATLAMA'.",
+      "title": {
+        "white": "Adı",
+        "gray": "Plinyen"
+      },
+      "params": {
+        "mode": "column",
+        "ruler": false,
+        "camera": {
+          "dist": 30,
+          "yaw": 18,
+          "pitch": 9,
+          "tx": 0.8,
+          "ty": 6.2,
+          "tz": 0.4,
+          "drift": 2.4
+        },
+        "labels": [
+          {
+            "target": "column",
+            "text": "PLİNYEN PATLAMA",
+            "at": "hit",
+            "dx": 430,
+            "dy": -60,
+            "size": 70
+          }
+        ]
+      },
+      "cues": {
+        "hit": "plinyen"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Sonra gökten taş yağmaya başladı. Hafif, gözenekli süngertaşları saatlerce Pompeii'nin üstüne yağdı.",
+      "visual": "Kararmış öğleden sonra, kiremit çatılara ve sokağa yağan gri süngertaşları (yapay zekâ klibi).",
+      "title": {
+        "white": "Taş",
+        "gray": "yağmuru"
+      },
+      "params": {
+        "video": "media/hf-pumice.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200430_f18dc440-05eb-4792-8816-fb523fcb5ce3.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.63,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "taş"
+      },
+      "chapter": "Taş yağmuru",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Gündüz geceye döndü. Sokaklarda biriken süngertaşı, iki buçuk metreyi aştı.",
+      "visual": "3D yakın plan Pompeii: karanlıkta yağan süngertaşı, evlerin arasında yükselen soluk gri katman; sayaç 0'dan 2,5+ M'ye çıkıyor.",
+      "title": {
+        "white": "Gündüz",
+        "gray": "gece oldu"
+      },
+      "params": {
+        "mode": "fall",
+        "layer": [
+          0.1,
+          0.85
+        ],
+        "counter": {
+          "from": "0",
+          "to": "2,5",
+          "suffix": "+",
+          "unit": "M",
+          "label": "süngertaşı katmanı"
+        },
+        "camera": {
+          "dist": 2.3,
+          "yaw": -28,
+          "pitch": 13,
+          "tx": 2.0,
+          "ty": 0.12,
+          "tz": 3.1
+        }
+      },
+      "cues": {
+        "hit": "aştı"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Bu ağırlığın altında çatılar birer birer çöktü.",
+      "visual": "3D aynı kent, kamera alçalıyor: kiremit çatılar tek tek içeri çöküyor, süngertaşı katmanı yükselmeye devam ediyor; etiket 'ÇATILAR ÇÖKÜYOR'.",
+      "title": {
+        "white": "Çöken",
+        "gray": "çatılar"
+      },
+      "params": {
+        "mode": "fall",
+        "layer": [
+          0.85,
+          1.0
+        ],
+        "collapse": true,
+        "camera": {
+          "dist": 1.9,
+          "yaw": -8,
+          "pitch": 14,
+          "tx": 2.0,
+          "ty": 0.18,
+          "tz": 3.1
+        },
+        "labels": [
+          {
+            "target": "pompeii",
+            "text": "ÇATILAR ÇÖKÜYOR",
+            "at": "hit",
+            "dx": 340,
+            "dy": -260,
+            "size": 60,
+            "color": "red"
+          }
+        ]
+      },
+      "cues": {
+        "hit": "çatılar"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Pek çok kişi kaçmayı başardı. Kalanlar ise evlerine sığınıp yağmurun dinmesini bekledi.",
+      "visual": "Bölünmüş ekran: solda yeşil 'KAÇANLAR · kenti terk etti', sağda kırmızı 'KALANLAR · evlere sığındı', ortada '?'.",
+      "title": {
+        "white": "Kaçmak",
+        "gray": "ya da kalmak"
+      },
+      "params": {
+        "left": {
+          "title": "kenti terk etti",
+          "value": "Kaçanlar",
+          "color": "green"
+        },
+        "right": {
+          "title": "evlere sığındı",
+          "value": "Kalanlar",
+          "color": "red"
+        },
+        "vs": "?"
+      },
+      "cues": {
+        "left": "kaçmayı",
+        "right": "kalanlar"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Bu sırada Genç Plinius'un amcası, Roma donanmasının komutanı Yaşlı Plinius, gemileriyle koya açıldı.",
+      "visual": "Kürekli Roma savaş gemileri, kararmış gökyüzü altında kül bulutuna doğru ilerliyor (yapay zekâ klibi).",
+      "title": {
+        "white": "Yaşlı",
+        "gray": "Plinius"
+      },
+      "params": {
+        "video": "media/hf-fleet.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200614_077a2bae-05f1-4aca-85f2-950be7bf5064.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.64,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "gemileriyle"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Amacı, kıyıda mahsur kalanları kurtarmaktı. Ama Stabiae'de karaya çıktı ve bir daha geri dönemedi.",
+      "visual": "3D körfez haritası: Misenum'dan Stabiae'ye denizde kesikli bir rota çiziliyor, küçük kürekli bir Roma gemisi rotada ilerliyor; etiketler 'MİSENUM' ve 'STABİAE'.",
+      "title": {
+        "white": "Kurtarma",
+        "gray": "seferi"
+      },
+      "params": {
+        "mode": "profile",
+        "route": [
+          "misenum",
+          "stabiae"
+        ],
+        "camera": {
+          "dist": 22,
+          "yaw": -8,
+          "pitch": 30,
+          "tx": -4.6,
+          "ty": 0.0,
+          "tz": 4.4
+        },
+        "labels": [
+          {
+            "target": "misenum",
+            "text": "MİSENUM",
+            "at": "_start",
+            "dx": 0,
+            "dy": -130,
+            "size": 56,
+            "color": "ink"
+          },
+          {
+            "target": "stabiae",
+            "text": "STABİAE",
+            "sub": "Yaşlı Plinius burada öldü",
+            "at": "hit",
+            "dx": 120,
+            "dy": 160,
+            "size": 60
+          }
+        ]
+      },
+      "cues": {
+        "hit": "stabiae"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Gece yarısından sonra, dev sütun artık kendi ağırlığını taşıyamadı ve çökmeye başladı.",
+      "visual": "3D: kül sütunu kendi üstüne çöküyor, kraterin çevresinden yamaçlara doğru alçak, parlak bir bulut halkası yayılmaya başlıyor.",
+      "title": {
+        "white": "Gece",
+        "gray": "yarısı"
+      },
+      "params": {
+        "mode": "surge",
+        "collapse": true,
+        "from": 0.0,
+        "to": 1.4,
+        "camera": {
+          "dist": 22,
+          "yaw": -14,
+          "pitch": 14,
+          "tx": 0.6,
+          "ty": 3.2,
+          "tz": 1.2
+        }
+      },
+      "cues": {
+        "hit": "çökmeye"
+      },
+      "chapter": "Sıcak bulut",
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Yamaçlardan aşağı, kızgın gaz ve külden oluşan bir bulut indi: piroklastik akıntı.",
+      "visual": "3D: kamera yamaca iniyor; cephesi turuncu parlayan alçak kül bulutu koninin eteklerinden aşağı, her yöne yayılarak yuvarlanıyor; etiket 'PİROKLASTİK AKINTI'.",
+      "title": {
+        "white": "Kızgın",
+        "gray": "bulut"
+      },
+      "params": {
+        "mode": "surge",
+        "from": 1.4,
+        "to": 2.6,
+        "labels": [
+          {
+            "target": "front",
+            "text": "PİROKLASTİK AKINTI",
+            "sub": "kızgın gaz ve kül",
+            "at": "hit",
+            "dx": 260,
+            "dy": -230,
+            "size": 64
+          }
+        ]
+      },
+      "cues": {
+        "hit": "piroklastik"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "bars",
+      "text": "Bu bulut, saatte yüz kilometreyi aşan hızlarla ilerleyebiliyordu. Ondan koşarak kaçmak imkânsızdı.",
+      "visual": "Karşılaştırma çubukları: 'Piroklastik akıntı 100+ km/saat' uzun, parlak; 'Koşan insan ~15 km/saat' kısa.",
+      "title": {
+        "white": "Kaçış",
+        "gray": "imkânsız"
+      },
+      "params": {
+        "items": [
+          {
+            "label": "Piroklastik akıntı",
+            "value": "100",
+            "unit": "km/saat +"
+          },
+          {
+            "label": "Koşan bir insan",
+            "value": "15",
+            "unit": "km/saat"
+          }
+        ],
+        "highlight": 0
+      },
+      "cues": {
+        "b0": "yüz",
+        "b1": "koşarak"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Bulut önce kıyıdaki Herculaneum'a ulaştı. Kayıkhanelerde, yaklaşık üç yüz kişinin kalıntıları bulundu.",
+      "visual": "Yamaçtan kente doğru inen, içi parlayan dev sıcak kül bulutu (yapay zekâ klibi).",
+      "title": {
+        "white": "Herculaneum"
+      },
+      "params": {
+        "video": "media/hf-surge.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200614_2ea99ca1-0db8-4304-afd0-74a2d70106a4.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.61,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "herculaneum"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Sabaha karşı bulut Pompeii'ye ulaştı. Kentte kalanların çoğu, bu sıcak bulutun içinde hayatını kaybetti.",
+      "visual": "3D geniş plan: parlayan akıntının cephesi ovayı geçip Pompeii işaretine ulaşıyor, kent bir an parlıyor ve bulutun içinde kayboluyor.",
+      "title": {
+        "white": "Pompeii",
+        "gray": "sessizleşti"
+      },
+      "params": {
+        "mode": "surge",
+        "from": 2.4,
+        "reach": "pompeii",
+        "ring": "pompeii",
+        "camera": {
+          "dist": 12.5,
+          "yaw": 4,
+          "pitch": 17,
+          "tx": 1.0,
+          "ty": 0.7,
+          "tz": 2.2
+        },
+        "labels": [
+          {
+            "target": "pompeii",
+            "text": "POMPEİİ",
+            "at": "_start",
+            "dx": 40,
+            "dy": 170,
+            "size": 64
+          }
+        ]
+      },
+      "cues": {
+        "hit": "ulaştı"
+      },
+      "art": {
+        "palette": "magma"
+      }
+    },
+    {
+      "type": "scale_bar",
+      "text": "Herculaneum'u örten katman yirmi metreyi aştı. Pompeii ise dört ila altı metre kül ve süngertaşının altında kaldı.",
+      "visual": "Ölçek çubuğu 20 metreye doluyor (Herculaneum); başındaki 5 metrelik kısım (Pompeii, 4–6 m) büyüteçle gösteriliyor.",
+      "title": {
+        "white": "Kül",
+        "gray": "örtüsü"
+      },
+      "params": {
+        "total": "20",
+        "part": "5",
+        "unit": "m",
+        "step": "5",
+        "top_label": "Yüzey",
+        "total_label": "Herculaneum ~20 m",
+        "part_label": "Pompeii 4–6 m"
+      },
+      "cues": {
+        "total": "yirmi",
+        "part": "pompeii"
+      },
+      "chapter": "Kül altında 1.700 yıl",
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Yaklaşık 1.700 yıl boyunca kentin yeri unutuldu. Üstünde bağlar ve tarlalar uzandı.",
+      "visual": "3D: çatısız Pompeii duvarları kalın kül katmanının içinde neredeyse kaybolmuş; kamera yavaşça geri çekiliyor, sayaç '1.700 YIL · kül altında' doluyor; 'bağlar' denince külün üstünü bağ sıraları ve tarlalar kaplıyor.",
+      "title": {
+        "white": "Unutulan",
+        "gray": "kent"
+      },
+      "params": {
+        "mode": "fall",
+        "layer": [
+          2.0,
+          2.0
+        ],
+        "ruins": true,
+        "fields": true,
+        "pullback": 0.55,
+        "counter": {
+          "from": "0",
+          "to": "1.700",
+          "unit": "YIL",
+          "label": "kül altında"
+        },
+        "camera": {
+          "dist": 4.0,
+          "yaw": -20,
+          "pitch": 20,
+          "tx": 2.0,
+          "ty": 0.1,
+          "tz": 3.1,
+          "drift": 0.8
+        }
+      },
+      "cues": {
+        "hit": "unutuldu",
+        "fields": "bağlar"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "1748'de kazılar başladı. Sokaklar, evler ve fırınlar yeniden gün ışığına çıktı.",
+      "visual": "Gün batımında Pompeii kalıntıları: taş sokaklar, sütunlar, arkada Vezüv (yapay zekâ klibi).",
+      "title": {
+        "white": "1748",
+        "gray": "kazılar"
+      },
+      "params": {
+        "video": "media/hf-ruins.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200809_61c4b7c4-71f0-421d-9103-e49172ab41af.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.75,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "1748"
+      },
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "1863'te arkeolog Giuseppe Fiorelli, sertleşmiş külün içinde garip boşluklar fark etti.",
+      "visual": "Dev yazı: 'FIORELLI', 'KÜLDEKİ' ve amber kutuda 'BOŞLUKLAR'; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Fiorelli",
+          "küldeki",
+          "boşluklar"
+        ],
+        "highlight": [
+          "boşluklar"
+        ]
+      },
+      "cues": {
+        "w0": "fiorelli",
+        "w1": "külün",
+        "w2": "boşluklar"
+      },
+      "mascot": "think",
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Bunlar, kurbanların bedenleri zamanla yok olunca geride kalan izlerdi. Fiorelli içlerine alçı döktü.",
+      "visual": "Loş ışıkta müze vitrininde duran beyaz alçı kalıp; kamera saygılı bir mesafeden yavaşça yaklaşıyor (yapay zekâ klibi).",
+      "title": {
+        "white": "Alçı",
+        "gray": "kalıplar"
+      },
+      "params": {
+        "video": "media/hf-cast.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200809_9c03b474-d73e-4761-93b8-722accc96ddc.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.62,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.16,
+            0.53,
+            0.47
+          ]
+        }
+      },
+      "cues": {
+        "hit": "alçı"
+      },
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "clues",
+      "text": "Böylece insanların son anları, bütün kırılganlığıyla bugüne ulaştı.",
+      "visual": "Solda büyük, titrek ve sönük alevli bir Roma kil kandili; sağda 'SON ANLARI' ve 'bugüne ulaştı'.",
+      "title": {
+        "white": "Son",
+        "gray": "anlar"
+      },
+      "params": {
+        "items": [
+          {
+            "icon": "lamp",
+            "label": "Son anları",
+            "sub": "bugüne ulaştı"
+          }
+        ]
+      },
+      "cues": {
+        "c0": "son"
+      },
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Peki bütün bunlar hangi gün oldu? Yüzyıllarca kabul edilen cevap, 24 Ağustos'tu.",
+      "visual": "Dev yazı: 'HANGİ GÜN?' ve altında '24' + amber kutuda 'AĞUSTOS'; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Hangi gün?",
+          "24 Ağustos"
+        ],
+        "highlight": [
+          "Ağustos"
+        ]
+      },
+      "cues": {
+        "w0": "hangi",
+        "w1": "gün",
+        "w2": "24",
+        "w3": "ağustos"
+      },
+      "chapter": "Tarih tartışması",
+      "mascot": "think",
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "compare",
+      "text": "Bu tarih, Genç Plinius'un mektuplarının elle çoğaltılmış kopyalarından geliyor. Ama kazılardaki bulgular, başka bir mevsimi işaret ediyor.",
+      "visual": "Bölünmüş ekran: solda güneş ikonu ve açık sarı 'AĞUSTOS · mektup kopyaları', sağda yaprak ikonu ve turuncu 'SONBAHAR? · kazı bulguları'.",
+      "title": {
+        "white": "İki",
+        "gray": "kaynak"
+      },
+      "params": {
+        "left": {
+          "title": "mektup kopyaları",
+          "value": "Ağustos",
+          "icon": "sun",
+          "color": "#ffe2a8"
+        },
+        "right": {
+          "title": "kazı bulguları",
+          "value": "Sonbahar?",
+          "icon": "leaf",
+          "color": "#ff8a3a"
+        }
+      },
+      "cues": {
+        "left": "kopyalarından",
+        "right": "mevsimi"
+      },
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "clues",
+      "text": "Kazılarda nar ve ceviz gibi sonbahar meyveleri bulundu. Evlerde ise yakılmış mangallar vardı.",
+      "visual": "Kanıt panosu: sırayla 'NAR', 'CEVİZ' ve 'MANGAL' çizimleri düşüyor, aralarında kesikli bir ip geriliyor.",
+      "title": {
+        "white": "Sonbahar",
+        "gray": "ipuçları"
+      },
+      "params": {
+        "items": [
+          {
+            "icon": "pomegranate",
+            "label": "Nar",
+            "sub": "sonbahar meyvesi"
+          },
+          {
+            "icon": "nut",
+            "label": "Ceviz",
+            "sub": "sonbahar meyvesi"
+          },
+          {
+            "icon": "brazier",
+            "label": "Mangal",
+            "sub": "evleri ısıtmak için"
+          }
+        ]
+      },
+      "cues": {
+        "c0": "nar",
+        "c1": "ceviz",
+        "c2": "mangallar"
+      },
+      "art": {
+        "palette": "forest"
+      }
+    },
+    {
+      "type": "clues",
+      "text": "2018'de ise bir evin duvarında, kömürle yazılmış bir not bulundu: 17 Ekim. Ama notta yıl yazmıyor, bu yüzden tartışma sürüyor.",
+      "visual": "Solda büyük sıva duvar parçası üstünde kömürle 'XVI K NOV' yazısı; sağda dev '17 EKİM' ve 'kömürle yazılmış not'.",
+      "title": {
+        "white": "2018",
+        "gray": "yeni ipucu"
+      },
+      "params": {
+        "items": [
+          {
+            "icon": "wall",
+            "text": "XVI K NOV",
+            "label": "17 Ekim",
+            "sub": "kömürle yazılmış not"
+          }
+        ]
+      },
+      "cues": {
+        "c0": "kömürle"
+      },
+      "art": {
+        "palette": "lab"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Yine de birçok araştırmacı, felaketin büyük olasılıkla sonbaharda, belki de 24 Ekim'de yaşandığını düşünüyor.",
+      "visual": "3D: alçak, sıcak sonbahar ışığında altın renkli körfez ve Vezüv; etiket 'VEZÜV · 24 EKİM?' ve 'büyük olasılıkla sonbahar'.",
+      "title": {
+        "white": "Belki",
+        "gray": "24 Ekim"
+      },
+      "params": {
+        "mode": "profile",
+        "autumn": true,
+        "camera": {
+          "dist": 11,
+          "yaw": -30,
+          "pitch": 13,
+          "tx": 0.4,
+          "ty": 1.0,
+          "tz": 1.4,
+          "drift": 1.6
+        },
+        "labels": [
+          {
+            "target": "vesuvius",
+            "text": "24 EKİM?",
+            "sub": "büyük olasılıkla sonbahar",
+            "at": "hit",
+            "dx": 420,
+            "dy": -130,
+            "size": 76
+          }
+        ]
+      },
+      "cues": {
+        "hit": "ekim'de"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Bugün Pompeii'nin sokaklarında her yıl milyonlarca ziyaretçi yürüyor.",
+      "visual": "Gün batımında Pompeii kalıntıları ve arkada Vezüv, kamera yavaşça geri çekiliyor (yapay zekâ klibi).",
+      "title": {
+        "white": "Bugün"
+      },
+      "params": {
+        "video": "media/hf-ruins.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200809_61c4b7c4-71f0-421d-9103-e49172ab41af.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.57,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.18,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.0,
+            0.5,
+            0.5
+          ]
+        },
+        "from": 2.0
+      },
+      "cues": {
+        "hit": "milyonlarca"
+      },
+      "chapter": "Bugün",
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Ama arkadaki dağ hâlâ orada. Vezüv son kez 1944'te püskürdü ve hâlâ faal bir yanardağ.",
+      "visual": "3D: alacakaranlıkta körfez, kıyı boyunca binlerce kent ışığı ve ortada Vezüv; yamaçlarda yanıp sönen ölçüm istasyonları; etiket 'VEZÜV · son püskürme: 1944'.",
+      "title": {
+        "white": "Hâlâ",
+        "gray": "faal"
+      },
+      "params": {
+        "mode": "profile",
+        "today": true,
+        "pullback": 1.18,
+        "camera": {
+          "dist": 12.5,
+          "yaw": -22,
+          "pitch": 12,
+          "tx": -1.0,
+          "ty": 1.0,
+          "tz": 1.0,
+          "drift": 1.0
+        },
+        "labels": [
+          {
+            "target": "vesuvius",
+            "text": "VEZÜV",
+            "sub": "son püskürme: 1944",
+            "at": "hit",
+            "dx": 380,
+            "dy": -150,
+            "size": 64
+          }
+        ]
+      },
+      "cues": {
+        "hit": "orada"
+      },
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "volcano",
+      "text": "Çevresinde yarım milyondan fazla insan yaşıyor. Bu yüzden dağ, gece gündüz sensörlerle izleniyor.",
+      "visual": "3D aynı gece görüntüsü: Vezüv'ün çevresinde kırmızı tehlike halkası beliriyor, içinde kent ışıkları; etiket 'KIRMIZI BÖLGE · yarım milyondan fazla insan'.",
+      "title": {
+        "white": "Kırmızı",
+        "gray": "bölge"
+      },
+      "params": {
+        "mode": "profile",
+        "today": true,
+        "zone": true,
+        "pullback": 1.18,
+        "camera": {
+          "dist": 14,
+          "yaw": -6,
+          "pitch": 14,
+          "tx": -0.4,
+          "ty": 0.6,
+          "tz": 1.4,
+          "drift": 1.0
+        },
+        "labels": [
+          {
+            "target": "zone",
+            "text": "KIRMIZI BÖLGE",
+            "sub": "yarım milyondan fazla insan",
+            "at": "hit",
+            "dx": -360,
+            "dy": 80,
+            "size": 62,
+            "color": "red"
+          }
+        ]
+      },
+      "cues": {
+        "hit": "yarım"
+      },
+      "art": {
+        "palette": "space"
+      }
+    },
+    {
+      "type": "photo",
+      "text": "Yani Pompeii'de donup kalan şey sadece bir şehir değil. Sıradan bir günün kendisi: ekmeğiyle, yazılarıyla, insanlarıyla.",
+      "visual": "Sabah ışığında Roma sokağı yeniden, kamera yavaşça geri çekiliyor (yapay zekâ klibi).",
+      "title": {
+        "white": "Sıradan",
+        "gray": "bir gün"
+      },
+      "params": {
+        "video": "media/hf-street.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261019_200210_a91743e1-6fcc-48e4-8c5f-3bdac2c3c6be.mp4",
+        "ai": true,
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)",
+        "rate": 0.55,
+        "grade": "cinematic",
+        "kb": {
+          "from": [
+            1.18,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.0,
+            0.5,
+            0.5
+          ]
+        }
+      },
+      "cues": {
+        "hit": "sıradan"
+      },
+      "art": {
+        "palette": "desert"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Sence Vezüv'ün eteğinde yaşamaya cesaret eder miydin? Yorumlara yaz.",
+      "visual": "Dev yazı: 'SEN' ve amber kutuda 'YAŞAR', altında 'MIYDIN?'; maskot düşünüyor.",
+      "title": {},
+      "params": {
+        "lines": [
+          "Sen",
+          "yaşar mıydın?"
+        ],
+        "highlight": [
+          "yaşar"
+        ]
+      },
+      "cues": {
+        "w0": "sence",
+        "w1": "yaşamaya",
+        "w2": "cesaret"
+      },
+      "mascot": "think",
+      "art": {
+        "palette": "sunset"
+      }
+    }
+  ]
+}

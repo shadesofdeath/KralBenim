@@ -213,7 +213,7 @@ SHOTS2.scale_bar = {
         const d = Math.hypot(M.x - px, M.y - py) * Math.cos(ca);
         const p1 = [px + Math.cos(ang - ca) * d, py + Math.sin(ang - ca) * d], p2 = [px + Math.cos(ang + ca) * d, py + Math.sin(ang + ca) * d];
         cone.setAttribute('d', `M${px} ${py} L${p1[0]} ${p1[1]} L${p2[0]} ${p2[1]} Z`);
-        const gp = prog(lt, pa + 0.4, 1.0);
+        const gp = prog(lt, pa + 0.05, 0.8);   // the zoomed part grows as soon as the magnifier opens (no empty circle)
         partBar.setAttribute('height', zoomH * 0.5 * gp);
         partT.textContent = fmtNum(Math.round(gp * part)) + ' ' + (P.unit || '');
         partT.setAttribute('opacity', gp);
