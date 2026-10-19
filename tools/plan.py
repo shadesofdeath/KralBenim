@@ -4,7 +4,8 @@
   python tools/plan.py               # today (Europe/Istanbul)
   python tools/plan.py --date 2026-10-21
 
-Plan: 2 Shorts every day; 1 long video every 5 days (counted from LONG_ANCHOR).
+Plan: 2 Shorts + 1 long video every day. Videos already in the day's folder (e.g. a long video
+made the evening before) are marked done; the daily task makes only the "todo" ones.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
 import argparse
@@ -17,8 +18,8 @@ ROOT = Path(__file__).resolve().parent.parent
 TZ = ZoneInfo("Europe/Istanbul")
 SHORT_SLOTS = ["12:00", "19:00"]
 LONG_SLOT = "20:30"
-LONG_EVERY = 5
-LONG_ANCHOR = date(2026, 10, 17)       # last long video (Voyager 1); next: 10-22, 10-27, ...
+LONG_EVERY = 1                         # every day (was every 5 days until 2026-10-19)
+LONG_ANCHOR = date(2026, 10, 17)
 MONTHLY_CHARS = 60000
 LIMITS = {"short": (400, 500, 550), "long": (3400, 4000, 4300)}   # target min, target max, hard max
 
@@ -66,17 +67,32 @@ def main():
     if is_long_day(d):
         videos.append({"file": f"0{len(videos) + 1}-<slug>.json", "format": "long",
                        "publish_at": slot(d, LONG_SLOT, now)})
+    existing = {"short": [], "long": []}
+    for f in sorted(folder.glob("*.json")):
+        if not f.name.endswith(".youtube.json"):
+            existing[chars(f)[1]].append(f.name)
+    taken = {f[:2] for fs in existing.values() for f in fs}
     for v in videos:
         lo, hi, hard = LIMITS[v["format"]]
         v["chars"] = f"{lo}-{hi} (hard max {hard})"
+        v["done"] = existing[v["format"]].pop(0) if existing[v["format"]] else None
+    n = 1
+    for v in videos:                       # todo files get the next free number
+        if not v["done"]:
+            while f"{n:02d}" in taken:
+                n += 1
+            v["file"] = f"{n:02d}-<slug>.json"
+            taken.add(f"{n:02d}")
+    todo = [v for v in videos if not v["done"]]
 
     used = month_usage(d)
-    planned = sum(LIMITS[v["format"]][1] for v in videos)
+    planned = sum(LIMITS[v["format"]][1] for v in todo)
     print(json.dumps({
         "date": d.isoformat(), "weekday": d.strftime("%A"), "folder": str(folder.relative_to(ROOT)),
         "folder_exists": folder.exists(), "long_video_today": is_long_day(d),
         "next_long_video": next_long(d + timedelta(days=1)).isoformat(),
         "videos": videos,
+        "todo": [v["file"] for v in todo],
         "elevenlabs_chars": {"used_this_month": used, "today_max": planned, "monthly_budget": MONTHLY_CHARS,
                              "warning": used + planned > MONTHLY_CHARS},
     }, ensure_ascii=False, indent=1))

@@ -1,7 +1,7 @@
 # Düşün Bakalım — video otomasyonu
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
-Her gün **2 Shorts**, **5 günde bir** ek olarak **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
+Her gün **2 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
 
 ## Yapı
 
@@ -29,12 +29,12 @@ Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece
 
 Zamanlanmış görev her sabah bu bölümü uygular.
 
-**Plan (ElevenLabs bütçesi ayda ~60 bin karakter):** her gün **2 Shorts**; **5 günde bir ek olarak 1 uzun video** (2026-10-21, 10-26, 10-31, … — `python tools/plan.py` söyler). Bu planın dışına çıkma, fazladan video üretme. Bütçe sıkı: karakter sınırlarına kesinlikle uy.
+**Plan:** her gün **2 Shorts + 1 uzun video** (`python tools/plan.py` söyler). Bu planın dışına çıkma, fazladan video üretme. Karakter sınırlarına kesinlikle uy; `plan.py` aylık ElevenLabs kullanımını gösterir, `warning: true` ise raporda mutlaka belirt.
 
 | | Süre | Karakter (anlatım metni toplamı) | Yayın |
 |---|---|---|---|
 | Shorts ×2 | 28–35 sn | **400–500** (sert sınır 550) | her gün 12:00 ve 19:00 (+03:00) |
-| Uzun video (5 günde bir) | ~4 dk | **3.400–4.000** (sert sınır 4.300) | o gün 20:30 (+03:00) |
+| Uzun video (her gün) | ~4–5 dk | **3.400–4.000** (sert sınır 4.300) | her gün 20:30 (+03:00) |
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
 - **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–7 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
@@ -72,11 +72,11 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
 Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
 (`preview.py`, Chromium) aynı anda en fazla 3 tane çalışsın.
 
-1. **Plan:** `python tools/plan.py` çalıştır. `folder_exists: true` ise hiçbir şey yapma, dur. Video listesi, dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
+1. **Plan:** `python tools/plan.py` çalıştır. Sadece `todo` listesindeki videoları üret (`done` dolu olanlar önceden hazırlanmış, dokunma); `todo` boşsa hiçbir şey yapma, dur. Dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanala uygun, aranan ve merak uyandıran bir soru seç ("Neden...?", "Nasıl...?", "Ne olurdu...?"). Kategorileri günden güne değiştir: gündelik tasarımların hikâyesi, bilim, insan vücudu, tarih, hayvanlar, uzay, mühendislik, psikoloji. Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir konu.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
-5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json` (Shorts, ikisi farklı kategorilerden), uzun video günü ayrıca `03-<slug>.json` (uzun video).
+5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json` (Shorts, ikisi farklı kategorilerden) ve `03-<slug>.json` (uzun video, Shorts'lardan farklı bir konu); numaralar `plan.py`'nin `todo` listesinden.
    - **Motor:** her dosyada `"engine": "studio"` ve video için bir renk paleti `"art": {"palette": "space"}` (bkz. 6). Sahne bazında `"art"` ile palet değiştirilebilir (renk geçişi yumuşak olur).
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir sahne tipi kodla (bkz. 6).
    - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne, sahne başına tek cümle. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
@@ -104,7 +104,7 @@ Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda bel
      - `headline` sayacında yıl gibi noktasız sayılar için `"count": {"to": "1969", "plain": true}`.
      - `photo` — **gerçek fotoğraf ya da video klip**, Ken Burns hareketi, renk düzeltme ve üstüne çizilen işaretler: `{"src": "media/flamingo.jpg"}` ya da `{"video": "media/surf.mp4", "from": 2.0, "rate": 0.5}`, `"kb": {"from": [1.0, 0.5, 0.5], "to": [1.15, 0.55, 0.45]}`, `"grade": "cinematic|natural|mono|duotone"`, `"credit": "..."`, `"marks": [{"type": "circle|arrow|box", "x": 0.42, "y": 0.31, "r": 0.06, "text": "Gaga", "at": "hit"}]` (x, y görüntünün 0–1 koordinatı). Yol senaryo dosyasına göredir (`videos/<tarih>/media/`).
    - **Gerçek görüntü (mümkünse her Shorts'ta 1–3 sahne):** `python tools/media.py search "<İngilizce sorgu>" --dir videos/<tarih>/media` → `candidates.jpg` dosyasını **aç ve bak**, sahnenin `visual` cümlesini birebir gösteren görseli seç → `python tools/media.py get <no> --dir videos/<tarih>/media --name <ad>` → `params.src` + `params.credit` (aracın yazdığı kredi satırı). Sadece telifsiz/özgür lisanslı kaynak kullan (araç zaten filtreler). Ağ erişimi yoksa (Wikimedia engelliyse) fotoğrafsız devam et ve raporda belirt.
-   - **Higgsfield yapay zekâ klipleri (sadece uzun video):** Higgsfield MCP bağlayıcısı ile (kanal sahibinin Pro üyelik kredileri) uzun video başına **6–9 klip**, her biri 5 sn, `kling3_0`, `mode: "pro"`, `sound: "off"`, `aspect_ratio: "16:9"` (≈ 8,75 kredi/klip; üretmeden önce `get_cost` ile doğrula, `balance` ile bakiyeye bak; video başına en fazla ~100 kredi). Pro plan aynı anda **2 iş** kabul eder: `generate_video_batch` ile ikişer gönder, `jobs_wait` ile bekle. Prompt İngilizce, belgesel gerçekçiliği, "no text". Kullanım: `photo` tipi, `{"video": "media/hf-<ad>.mp4", "url": "<result_url>", "ai": true, "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)", "rate": 0.6–1.0}`. Sadece atmosfer/hikâye anları için (fırlatma, mekân, tarihî sahne); sayı, ölçek ve mekanizma anlatan sahneler 3D/2D kalır. `"ai": true` olan videolar YouTube'a "sentetik içerik" beyanıyla yüklenir (`upload.py`). Shorts'ta kullanma. Sonunda klipleri `show_generation_by_ids` ile kanal sahibine göster (bu ortamda klipler görülemiyor, önizlemede yer tutucu çıkar).
+   - **Higgsfield yapay zekâ klipleri (sadece uzun video):** Higgsfield MCP bağlayıcısı ile (kanal sahibinin Pro üyelik kredileri) uzun video başına **6–9 klip** (Higgsfield araçları bu oturumda yoksa ya da `balance` 80 kredinin altındaysa klipsiz, sadece 3D/2D ile devam et ve raporda belirt), her biri 5 sn, `kling3_0`, `mode: "pro"`, `sound: "off"`, `aspect_ratio: "16:9"` (≈ 8,75 kredi/klip; üretmeden önce `get_cost` ile doğrula, `balance` ile bakiyeye bak; video başına en fazla ~100 kredi). Pro plan aynı anda **2 iş** kabul eder: `generate_video_batch` ile ikişer gönder, `jobs_wait` ile bekle. Prompt İngilizce, belgesel gerçekçiliği, "no text". Kullanım: `photo` tipi, `{"video": "media/hf-<ad>.mp4", "url": "<result_url>", "ai": true, "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Kling 3.0)", "rate": 0.6–1.0}`. Sadece atmosfer/hikâye anları için (fırlatma, mekân, tarihî sahne); sayı, ölçek ve mekanizma anlatan sahneler 3D/2D kalır. `"ai": true` olan videolar YouTube'a "sentetik içerik" beyanıyla yüklenir (`upload.py`). Shorts'ta kullanma. Sonunda klipleri `show_generation_by_ids` ile kanal sahibine göster (bu ortamda klipler görülemiyor, önizlemede yer tutucu çıkar).
    - **Maskot** (kanal logosundaki soru işaretli ampul): sahneye `"mascot": "explain|think|shock|happy|point|sad"` ya da `{"pose": "shock", "size": "big", "side": "left", "dir": "left"}`. Ağzı anlatımla birlikte oynar. Her Shorts'ta 2–4 sahnede kullan (soru, şaşırtıcı bilgi, kapanış); 3D etiketlerin olduğu sahnelerde sağ üstü boş bırak.
    - **Paletler** (`"art": {"palette": ...}` ya da `{"palette": "lab", "colors": {"accent": "#ff7eb3"}}`): `space`, `magma`, `ocean`, `sunset`, `candy`, `forest`, `lab`, `ice`, `desert`, `noir`. Konuya göre seç (flamingo → `candy`, okyanus → `ocean`, volkan → `magma`); tek bir videoda 2–4 palet arasında gezin.
    - **Geçişler:** otomatik (`zoom`, `whip`, `flash`, aynı 3D dünyada `match`). Elle: sahneye `"transition": "zoom|whip|flash|cut"`.
