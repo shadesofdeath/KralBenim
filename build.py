@@ -155,6 +155,43 @@ def estimate_words(text):
     return words, t
 
 
+def tighten(mp3, words, max_pause, work):
+    """Brand pacing rule: no silence between words longer than max_pause seconds (the next sentence
+    starts right away). Cuts the narration audio and shifts the word timings to match."""
+    import numpy as np
+    sr = 44100
+    pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", str(mp3), "-f", "s16le", "-ac", "1", "-ar", str(sr), "-"],
+                         check=True, capture_output=True).stdout
+    a = np.frombuffer(pcm, dtype=np.int16).astype(np.float32)
+    cuts, prev_end = [], 0.0            # (cut start, cut end) in the original audio
+    for w in words:
+        if prev_end > 0 and w["start"] - prev_end > max_pause:
+            cuts.append((prev_end + max_pause / 2, w["start"] - max_pause / 2))
+        prev_end = max(prev_end, w["end"])
+    segs, start = [], 0.0
+    for c0, c1 in cuts:
+        segs.append((start, c0))
+        start = c1
+    segs.append((start, len(a) / sr))
+    fade = int(0.008 * sr)
+    out = []
+    for s0, s1 in segs:
+        seg = a[int(s0 * sr):int(s1 * sr)].copy()
+        if len(seg) > 2 * fade:          # tiny fades at every join: no clicks
+            seg[:fade] *= np.linspace(0, 1, fade)
+            seg[-fade:] *= np.linspace(1, 0, fade)
+        out.append(seg)
+    wav = work / "voice_tight.wav"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "s16le", "-ac", "1", "-ar", str(sr), "-i", "-", str(wav)],
+                   input=np.concatenate(out).astype(np.int16).tobytes(), check=True)
+    shifted = []
+    for w in words:
+        removed = sum(c1 - c0 for c0, c1 in cuts if c1 <= w["start"] + 1e-6)
+        shifted.append({**w, "start": w["start"] - removed, "end": w["end"] - removed})
+    print(f"pacing: {len(cuts)} pauses cut to {max_pause}s, -{sum(c1 - c0 for c0, c1 in cuts):.1f}s", file=sys.stderr)
+    return wav, shifted
+
+
 def audio_duration(path):
     out = subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                    "-of", "csv=p=0", str(path)])
@@ -224,7 +261,7 @@ def build_timeline(script, text, ranges, words, duration):
     studio = script.get("engine") == "studio"
     # studio: draw at 1080p (software WebGL cost scales with pixels), upscale to 1440p at encode time
     return {"hook": hook, "scale": script.get("scale", 1.0 if studio else 4 / 3), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
-            "engine": script.get("engine", "classic"), "art": script.get("art"),
+            "engine": script.get("engine", "classic"), "art": script.get("art"), "theme": script.get("theme"),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -449,6 +486,8 @@ def main():
         words = locate(text, words)
     else:
         mp3, words = synthesize(text, script.get("tts", {}), work)
+        if script.get("max_pause"):
+            mp3, words = tighten(mp3, words, script["max_pause"], work)
     studio = script.get("engine") == "studio"
     # classic Shorts end tight (they used to loop back to the hook); studio videos end on a full sentence
     duration = audio_duration(mp3) + (STUDIO_TAIL if studio else 0.3 if script.get("format", "short") == "short" else TAIL)
