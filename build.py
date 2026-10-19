@@ -331,7 +331,8 @@ def prepare_media(timeline, work):
 
 def open_page(pw, timeline):
     # software WebGL (SwiftShader) for the studio 3D shots: runners have no GPU
-    args = ["--enable-unsafe-swiftshader", "--use-angle=swiftshader", "--ignore-gpu-blocklist", "--enable-webgl"]
+    args = ["--enable-unsafe-swiftshader", "--use-angle=swiftshader", "--ignore-gpu-blocklist", "--enable-webgl",
+            "--disable-partial-raster"]   # stale tiles repainted at an offset ("ghost strips") in software raster
     try:
         browser = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH"), args=args)
     except Exception:

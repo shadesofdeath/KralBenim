@@ -1,7 +1,7 @@
 // kasif: the channel's fixed narrator character "Kaşif" (brand/kit/BRAND.md §2) as a hand-drawn SVG rig, plus the
 // 2D shot "stage" (parchment stage with Kaşif, other cast members and simple ink props).
 //
-// KASIF.create(parentGroup, {scale: 1, hat: true, accessory: null|'laurel'|'beret'|'turban'|'helmet'|'crown', seed: 1})
+// KASIF.create(parentGroup, {scale: 1, hat: true, accessory: null|'laurel'|'beret'|'turban'|'helmet'|'helmet_byz'|'crown', seed: 1})
 //   -> {update(t, pose, opts), node}
 //   t: global seconds (boil, breathing, blink) · pose: 'idle'|'walk'|'run'|'point'|'think'|'shock'|'shrug'|'talk'|
 //   'wave'|'sit'|'hold'|'look' · opts: {x, y (stage px of the ground point under the hip), face: 1|-1 (or between,
@@ -15,7 +15,16 @@
 //   at: "w0" (cue name or seconds), then: "point", dir: "up"|"down"|"left"|"right"|"forward"|deg, text, item,
 //   emotion, talk: true|false|[from, to], seq: [{at, pose, to, dur, dir, face, emotion, text, then}]}],
 //   props: [{type: "sign|scroll|column|house|ship|volcano|bread|coin|map|clock|door|tree|rock", x, y, scale, at, text, flip}],
-//   label: {text, x, y, size, at}, ground: true, bg: false}
+//   label: {text, x, y, size, at}, ground: true, bg: false,
+//   (optional, added for 1453 scenes) skyline: true | {y, from, to} (thin ink-soft Constantinople skyline behind the cast),
+//   foreground: "water"|"wall"|"hatch" | [{type: "water"|"wall"|"hatch"|"pier", from: 0, to: 1}] (texture below the ground
+//   line; the caption band y 1170-1320 is kept clear in Shorts), props[].rot (deg), props[].move: {x, y, rot, at, dur},
+//   hill: {x0: 0, top: 0.18, x1: 0.6, h: 0.15, planks: true} (flat-topped hill whose straight side runs down to the ground at x1)
+//   (optional, added for the Piri Reis long video; all off by default)
+//   scale: 1.2 (multiplies cast + prop size), cam: {zoom: 1.06, pan: 30, focus: [0.5, 0.6]} (slow push-in over the scene),
+//   backdrop: {type: "palace"|"sea"|"harbour", y (0..1 H, far baseline), coast: "left"|"right", opacity: 0.7, from, to},
+//   sea_front: {y: 0.74, from: 0.5, to: 1} (water band drawn in front of props: ships can sink into it),
+//   storm: {at: cue (rain), flash: cue | [cues] (lightning)}, cast[].beard: "black"|"grey"|"short"}
 // cues: whatever names the cast/props/label reference (w0, hit, ...). Walking with "to" + "at" arrives on the cue.
 'use strict';
 
@@ -198,6 +207,9 @@ const KASIF = (() => {
       folds: [[[-72, -60], [0, -80], [70, -64]], [[-60, -98], [0, -112], [56, -100]]], jewel: [6, -76] },
     helmet: { fill: INK.paperDark, pts: [[-76, -6], [-78, -60], [-50, -102], [0, -114], [50, -102], [78, -60], [76, -6], [40, -40], [-40, -40]],
       crest: [[-60, -100], [-30, -146], [20, -150], [56, -128], [52, -104], [10, -118], [-30, -112]] },
+    // Byzantine 1453: conical iron helmet with a nose guard and a small red plume
+    helmet_byz: { fill: INK.inkSoft, pts: [[-78, -22], [-78, -50], [-64, -82], [-38, -114], [-14, -140], [0, -152], [14, -140], [38, -114], [64, -82], [78, -50], [78, -22], [40, -30], [0, -34], [-40, -30]],
+      nasal: [[12, -32], [12, 6]], band: [[-76, -40], [0, -46], [76, -40]], plume: [[0, -150], [-6, -170], [8, -184], [14, -166]] },
     crown: { fill: INK.gold, pts: [[-56, -50], [-62, -104], [-34, -78], [-14, -118], [6, -80], [30, -120], [46, -80], [66, -106], [60, -50]] },
   };
 
@@ -211,14 +223,16 @@ const KASIF = (() => {
     const legL = P(), legR = P(), footL = P(), footR = P();
     const torso = P();
     const headF = P(INK.paperLight), headR = P();
+    const beardK = cfg.beard || null;          // optional beard (Kemal Reis, old Piri): drawn under the mouth
+    const beard = beardK ? { f: P(beardK === 'grey' ? INK.paperDark : beardK === 'short' ? INK.inkSoft : INK.ink), r: P(), m: P(beardK === 'grey' ? INK.inkSoft : INK.ink) } : null;
     const eyes = [P(), P()], brows = [P(), P()], mouthF = P(), mouthR = P();
     // hat / accessory (head frame)
     const hat = hasHat ? { crownF: P(INK.hat), crownR: P(), bandF: P(INK.hatBand), brimF: P(INK.hat), brimR: P(), dent: P() } : null;
-    const ac = acc && ACC[acc] ? { f: P(ACC[acc].fill), r: P(), x1: P(acc === 'turban' ? INK.red : acc === 'helmet' ? INK.red : INK.ink), x2: P() } : null;
+    const ac = acc && ACC[acc] ? { f: P(ACC[acc].fill), r: P(), x1: P(acc === 'turban' || acc === 'helmet' || acc === 'helmet_byz' ? INK.red : INK.ink), x2: P() } : null;
     const laurel = acc === 'laurel' ? { f: P(INK.green), r: P() } : null;
     const binoF = P(INK.inkSoft), binoR = P(), binoL = P(INK.paperLight);
     const sign = el(g, 'g'), signF = inkEl(sign, INK.paperLight), signR = inkEl(sign), signStick = inkEl(sign);
-    const signTxt = el(sign, 'text', { 'font-family': INK_FONT, 'font-size': 44, 'text-anchor': 'middle', fill: INK.ink });
+    const signTxt = el(sign, 'text', { 'font-family': INK_FONT, 'font-size': 50, 'text-anchor': 'middle', fill: INK.ink });
     const armL = P(), armR = P(), handL = P(), handR = P();
     const itemG = el(g, 'g'); let item = null, itemType = null;
 
@@ -273,6 +287,15 @@ const KASIF = (() => {
       const hpts = inkEllipsePts(0, 0, LEN.head, LEN.head * 0.97, S(20), 14).map(q => H(q[0], q[1]));
       headF.setAttribute('d', inkLoop(hpts, { seed: S(20), t, amp: 1.4 }));
       headR.setAttribute('d', ink(hpts, 20, 6, { closed: true, amp: 1.4 }));
+      if (beard) {
+        const full = beardK !== 'short', lo = full ? 1 : 0.7;
+        const bp = [[-68, 2], [-60, 44 * lo + 4], [-34, 84 * lo], [0, 104 * lo + (full ? 0 : 6)], [34, 84 * lo], [60, 44 * lo + 4], [68, 2], [50, 26], [26, 50], [HEAD_FX + 3, 56], [-22, 50], [-48, 26]]
+          .map(q => [q[0] + (q[0] > -60 && q[0] < 60 ? HEAD_FX * 0.3 : 0), q[1]]);
+        beard.f.setAttribute('d', inkLoop(Hp(bp), { seed: S(25), t, amp: 1 }));
+        beard.r.setAttribute('d', ink(bp.map(q => H(q[0], q[1])), 25, 4, { closed: true, amp: 1 }));
+        const fx2 = HEAD_FX + 3;
+        beard.m.setAttribute('d', inkPath(Hp([[fx2 - 26, 30], [fx2 - 10, 20], [fx2, 24], [fx2 + 10, 20], [fx2 + 26, 30]]), { w: 7, seed: S(26), t, amp: 0.8, taper: 0.6 }));
+      }
       // face
       const fx = HEAD_FX, blink = blinkAt(t);
       const er = 7.5 * p.eye;
@@ -313,6 +336,12 @@ const KASIF = (() => {
         ac.r.setAttribute('d', ink(pts, 50, 5.5, { closed: true }));
         if (A.crest) { const c = Hp(A.crest); ac.x1.setAttribute('d', inkLoop(c, { seed: S(51), t })); ac.x2.setAttribute('d', ink(c, 51, 4.5, { closed: true })); }
         else if (A.jewel) { const j = H(A.jewel[0], A.jewel[1]); ac.x1.setAttribute('d', inkDot(j[0], j[1], 11, 13, S(51), t)); ac.x2.setAttribute('d', A.folds.map((f, i) => ink(Hp(f), 52 + i, 3.5)).join(' ')); }
+        else if (A.nasal) {
+          const pl = Hp(A.plume);
+          ac.x1.setAttribute('d', inkLoop(pl, { seed: S(51), t }));
+          ac.x2.setAttribute('d', ink(Hp(A.nasal), 52, 9) + ' ' + ink(Hp(A.band), 53, 4) + ' ' + ink(pl, 51, 3.5, { closed: true }) + ' ' +
+            [[-50, -40], [-20, -44], [40, -44], [64, -40]].map((q, i) => { const j = H(q[0], q[1]); return inkDot(j[0], j[1], 4, 4, S(54 + i), t); }).join(' '));
+        }
         else if (A.nub) { ac.x2.setAttribute('d', ink(Hp(A.nub), 51, 6)); }
         else { // crown: jewels
           ac.x1.setAttribute('d', [[-34, -66], [6, -66], [44, -66]].map((q, i) => { const j = H(q[0], q[1]); return inkDot(j[0], j[1], 6, 6, S(53 + i), t); }).join(' '));
@@ -359,7 +388,7 @@ const KASIF = (() => {
         signR.setAttribute('d', ink(bd, 80, 5, { closed: true, smooth: false }));
         signStick.setAttribute('d', ink([[cx - 6, cy + bh / 2], [cx - 4, cy + bh / 2 + 52]], 81, 6));
         const b = boil(S(82), t, 0.8);
-        signTxt.setAttribute('font-size', 44 / Math.max(0.5, Math.min(1.2, s)));
+        signTxt.setAttribute('font-size', 50 / Math.max(0.5, Math.min(1.2, s)));
         signTxt.setAttribute('transform', `translate(${inkF1(cx + b[0])} ${inkF1(cy + 15 + b[1])}) scale(${face < 0 ? -1 : 1} 1)`);
       }
       // held prop (hold + item): a small stage prop between the hands
@@ -391,7 +420,7 @@ const INK_PROPS = (() => {
       const tw = Math.max(200, (o.text || '').length * 26 + 60);
       return { strokes: [{ p: [[0, 0], [2, -190]], w: 9 },
         { p: [[-tw / 2, -300], [tw / 2, -304], [tw / 2 + 3, -186], [-tw / 2 + 2, -183]], c: 1, f: INK.paperLight, s: 0 },
-        { p: [[-tw / 2 + 16, -205], [-tw / 2 + 50, -210]], w: 3, o: 0.5 }], txt: o.text ? { text: o.text, x: 0, y: -230, size: 52 } : null };
+        ], txt: o.text ? { text: o.text, x: 0, y: -230, size: 54 } : null };
     },
     scroll: (t, o) => {
       const st = [{ p: [[-90, -250], [90, -252], [92, -60], [-88, -58]], c: 1, f: INK.paperLight, s: 0 },
@@ -470,6 +499,19 @@ const INK_PROPS = (() => {
       { p: [[0, -150], [-2, -210]], w: 4 },
       { p: [[-120, -230], [-130, -300], [-80, -360], [-10, -384], [70, -364], [124, -310], [118, -240], [60, -200], [-50, -196]], c: 1, f: INK.green }] }),
     rock: () => ({ strokes: [{ p: [[-90, 0], [-84, -58], [-50, -100], [10, -108], [62, -90], [84, -44], [80, 0]], c: 1, f: INK.paperDark }] }),
+    // a map sheet with a torn-off right part (the missing piece lies faded next to it)
+    torn_map: (t) => ({ strokes: [
+      { p: [[-170, -250], [-40, -258], [10, -250], [-12, -210], [16, -170], [-10, -130], [20, -90], [-6, -50], [14, -18], [-170, -12]], c: 1, f: INK.paperLight, s: 0 },
+      { p: [[-140, -210], [-100, -180], [-112, -130], [-70, -100], [-80, -60]], w: 4, o: 0.6, col: INK.inkSoft },
+      { p: [[-60, -220], [-20, -200]], w: 3, o: 0.5 }, { p: [[-150, -60], [-90, -40]], w: 3, o: 0.5 },
+      { p: [[60, -240], [170, -236], [168, -40], [40, -30], [66, -80], [44, -130], [70, -170], [48, -210]], c: 1, o: 0.35, w: 4, s: 0 },
+      { p: [[30, -150 + Math.sin(t * 2) * 6], [56, -150]], w: 5, col: INK.red, o: 0.8 }] }),
+    tower: () => ({ strokes: [
+      { p: [[-70, 0], [-62, -300], [62, -300], [70, 0]], c: 1, f: INK.paperDark, s: 0 },
+      { p: [[-80, -300], [-80, -340], [-52, -340], [-52, -318], [-24, -318], [-24, -340], [4, -340], [4, -318], [32, -318], [32, -340], [80, -340], [80, -300]], c: 1, f: INK.paperDark, s: 0 },
+      { p: [[-14, 0], [-14, -70], [14, -70], [14, 0]], c: 1, f: INK.ink, s: 0 },
+      { p: [[-8, -200], [-8, -240], [8, -240], [8, -200]], c: 1, f: INK.ink, s: 0 },
+      { p: [[-62, -150], [62, -150]], w: 3, o: 0.5 }, { p: [[-60, -80], [60, -80]], w: 3, o: 0.4 }] }),
   };
   function make(g, type, seed) {
     const def = D[type] || D.rock, inner = el(g, 'g'), pool = [];
@@ -512,7 +554,7 @@ const INK_PROPS = (() => {
     const { P, W, H, svg, seed } = ctx;
     const portrait = H > W;
     const gy = P.ground_y ?? (portrait ? 1100 : 820);
-    const baseS = portrait ? 1.3 : 1.0;
+    const baseS = (portrait ? 1.3 : 1.0) * (P.scale || 1);
     const root = el(svg, 'g');
     if (P.bg === true) el(root, 'rect', { x: 0, y: 0, width: W, height: H, fill: INK.paper });
     const world = el(root, 'g');
@@ -526,7 +568,145 @@ const INK_PROPS = (() => {
       gBand = inkEl(groundG, INK.paperDark, { opacity: 0.35 });
       gLine = inkEl(groundG); gTicks = inkEl(groundG, INK.inkSoft, { opacity: 0.6 });
     }
-    const propsG = el(world, 'g'), castG = el(world, 'g'), labelG = el(world, 'g');
+    // optional far skyline (behind everything) and foreground texture (below the ground line)
+    let sky = null, fg = null;
+    if (P.skyline) {
+      const SKc = typeof P.skyline === 'object' ? P.skyline : {}, sr = rng(seed * 29 + 7);
+      const by = SKc.y != null ? SKc.y * H : gy - (portrait ? 330 : 230), x0 = (SKc.from ?? 0) * W - 40, x1 = (SKc.to ?? 1) * W + 40;
+      const shapes = [], k = portrait ? 1 : 0.85;
+      let line = [[x0, by]];
+      for (let x = x0; x < x1;) {
+        const r = sr();
+        if (r < 0.18) {          // dome with a finial
+          const R = (38 + sr() * 26) * k; line.push([x, by - 20 * k]);
+          shapes.push({ p: [[x, by - 20 * k], [x + R * 0.1, by - 20 * k - R * 0.7], [x + R, by - 20 * k - R], [x + R * 1.9, by - 20 * k - R * 0.7], [x + 2 * R, by - 20 * k]], f: 1 });
+          shapes.push({ p: [[x + R, by - 20 * k - R], [x + R, by - 20 * k - R - 16 * k]] });
+          x += 2 * R; line.push([x, by - 20 * k]);
+        } else if (r < 0.38) {   // tower
+          const tw = (26 + sr() * 14) * k, th = (70 + sr() * 50) * k;
+          line.push([x, by - th], [x + tw, by - th]); x += tw; line.push([x, by - 14 * k]);
+        } else {                 // crenellated wall stretch
+          const n = 2 + Math.floor(sr() * 3);
+          for (let i = 0; i < n; i++) { line.push([x, by - 26 * k], [x + 12 * k, by - 26 * k], [x + 12 * k, by - 16 * k], [x + 24 * k, by - 16 * k]); x += 24 * k; }
+          line.push([x, by - 16 * k]);
+        }
+      }
+      line.push([x1, by]);
+      // no group opacity: a group-level opacity (saveLayer) left a displaced copy of the stage in headless Chromium
+      // sequential renders; fill-opacity on each path gives the same look without an offscreen layer
+      const skA = SKc.opacity ?? 0.75;
+      sky = { g: el(world, 'g'), line, shapes, by, x0, x1 };
+      world.insertBefore(sky.g, groundG);
+      sky.fill = inkEl(sky.g, INK.paperDark, { 'fill-opacity': 0.55 * skA }); sky.ink = inkEl(sky.g, INK.inkSoft, { 'fill-opacity': skA });
+    }
+    if (P.foreground) {
+      const list = (Array.isArray(P.foreground) ? P.foreground : [P.foreground]).map(f => typeof f === 'string' ? { type: f } : f);
+      const bands = portrait ? [[gy + 18, Math.min(1165, gy + 200)], [1330, 1520]] : [[gy + 18, H - 20]];
+      const fr = rng(seed * 31 + 9), strokes = [], fills = [];
+      for (const f of list) {
+        const a = (f.from ?? 0) * W - 40, b = (f.to ?? 1) * W + 40;
+        if (f.type === 'pier') {
+          const deck = [[a, gy - 4], [b, gy - 4], [b, gy + 22], [a, gy + 22]];
+          fills.push(deck); strokes.push({ p: deck, c: 1, w: 5, col: INK.ink });
+          for (let x = a + 40; x < b; x += 150) strokes.push({ p: [[x, gy + 22], [x + 3, Math.min(gy + 150, 1160)]], w: 12, col: INK.ink });
+          for (let x = a + 20; x < b; x += 46) strokes.push({ p: [[x, gy], [x + 2, gy + 18]], w: 2.5, col: INK.inkSoft });
+          continue;
+        }
+        for (const [y0, y1] of bands) {
+          if (y1 <= y0 + 10) continue;
+          if (f.type === 'water') {
+            for (let y = y0 + 8; y < y1; y += 34) for (let x = a + fr() * 60; x < b; x += 120 + fr() * 60) {
+              const pts = []; for (let j = 0; j <= 5; j++) pts.push([x + j * 11, y + Math.sin(j * 1.7) * 5]);
+              strokes.push({ p: pts, w: 3, col: INK.inkSoft, wave: 1 });
+            }
+          } else if (f.type === 'wall') {
+            for (let y = y0, row = 0; y < y1 - 20; y += 48, row++) {
+              strokes.push({ p: [[a, y], [b, y]], w: 3, col: INK.inkSoft });
+              for (let x = a + (row % 2) * 55; x < b; x += 110) strokes.push({ p: [[x, y], [x, Math.min(y + 48, y1)]], w: 3, col: INK.inkSoft });
+            }
+          } else {   // hatch: short diagonal strokes
+            for (let y = y0 + 10; y < y1; y += 40) for (let x = a + fr() * 50; x < b; x += 70 + fr() * 50) strokes.push({ p: [[x, y + 14], [x + 22, y - 8]], w: 3, col: INK.inkSoft });
+          }
+        }
+      }
+      fg = { g: el(world, 'g'), strokes, fills };
+      fg.fillE = inkEl(fg.g, INK.paperLight); fg.inkE = inkEl(fg.g, INK.ink); fg.softE = inkEl(fg.g, INK.inkSoft, { 'fill-opacity': 0.7 });
+    }
+    let hill = null;
+    if (P.hill) {
+      const Hl = P.hill, top = gy - (Hl.h ?? 0.15) * H, xa = (Hl.x0 ?? 0) * W - 60, xt = (Hl.top ?? 0.18) * W, xb = (Hl.x1 ?? 0.6) * W;
+      const pts = [[xa, gy + 6], [xa, top + 30], [xa + 60, top + 4], [xt * 0.5 + xa * 0.5, top - 6], [xt, top], [xt + (xb - xt) * 0.5, (top + gy) / 2 + 4], [xb, gy + 2]];
+      const pl = [];
+      if (Hl.planks !== false) for (let i = 1; i < 8; i++) { const u = i / 8, x = lerp(xt, xb, u), y = lerp(top, gy, u); pl.push([[x - 14, y - 6], [x + 14, y + 6]]); }
+      hill = { pts, pl, g: el(world, 'g') };
+      hill.f = inkEl(hill.g, INK.paperDark); hill.r = inkEl(hill.g); hill.p = inkEl(hill.g, INK.inkSoft); hill.h = inkEl(hill.g, INK.inkSoft, { 'fill-opacity': 0.5 });
+      const hr = rng(seed * 37 + 1); hill.hatch = [];
+      for (let k = 0; k < 14; k++) { const x = xa + 40 + hr() * (xt - xa), y = top + 40 + hr() * (gy - top - 60); if (x < xt + (y - top) / (gy - top) * (xb - xt) - 30) hill.hatch.push([[x, y + 10], [x + 22, y - 8]]); }
+    }
+    // optional far backdrop (Piri Reis video): Topkapı-like palace silhouette, sea horizon, harbour with a castle tower
+    let bd = null;
+    if (P.backdrop) {
+      const B = typeof P.backdrop === 'string' ? { type: P.backdrop } : P.backdrop, br = rng(seed * 41 + 3);
+      const xa = (B.from ?? 0) * W - 40, xb = (B.to ?? 1) * W + 40;
+      bd = { B, g: el(world, 'g', { opacity: B.opacity ?? 0.7 }), fills: [], lines: [], waves: [], birds: [] };
+      world.insertBefore(bd.g, groundG);
+      const by = B.y != null ? B.y * H : gy - (portrait ? 300 : 210);
+      bd.by = by;
+      const pal = (x0, base) => {        // palace: walls, twin conical gate towers, domes, kitchen chimneys, a tall tower
+        const L = [[xa, base]], k = portrait ? 1.1 : 1;
+        const seq = ['wall', 'cone', 'gap', 'cone', 'wall', 'dome', 'chim', 'chim', 'chim', 'chim', 'wall', 'spire', 'wall', 'dome2', 'wall', 'chim', 'chim', 'wall'];
+        let x = xa + 30;
+        for (const e of seq.concat(seq)) {
+          if (x > xb) break;
+          if (e === 'wall') { L.push([x, base - 40 * k]); x += (60 + br() * 50) * k; L.push([x, base - 40 * k]); }
+          else if (e === 'gap') { L.push([x, base - 40 * k], [x, base - 70 * k]); x += 40 * k; L.push([x, base - 70 * k], [x, base - 40 * k]); }
+          else if (e === 'cone') { const w = 34 * k, h = 120 * k; L.push([x, base - 40 * k], [x, base - h], [x + w / 2, base - h - 60 * k], [x + w, base - h], [x + w, base - 40 * k]); x += w; }
+          else if (e === 'spire') { const w = 30 * k, h = 160 * k; L.push([x, base - 40 * k], [x, base - h], [x + w / 2, base - h - 70 * k], [x + w, base - h], [x + w, base - 40 * k]); x += w; }
+          else if (e === 'dome' || e === 'dome2') {
+            const R = (e === 'dome' ? 46 : 34) * k, b0 = base - 60 * k;
+            L.push([x, base - 40 * k], [x, b0]);
+            bd.fills.push(inkEllipsePts(x + R, b0, R, R * 0.85, seed + x, 12).filter(q => q[1] <= b0 + 1).concat([[x + 2 * R, b0], [x, b0]]));
+            bd.lines.push([[x, b0], [x + R * 0.15, b0 - R * 0.6], [x + R, b0 - R * 0.85], [x + R * 1.85, b0 - R * 0.6], [x + 2 * R, b0]], [[x + R, b0 - R * 0.85], [x + R, b0 - R * 0.85 - 22 * k]]);
+            x += 2 * R; L.push([x, b0], [x, base - 40 * k]);
+          } else if (e === 'chim') {
+            const R = 16 * k, b0 = base - 52 * k;
+            L.push([x, base - 40 * k], [x, b0]);
+            bd.lines.push([[x, b0], [x + R * 0.3, b0 - R * 0.8], [x + R, b0 - R], [x + R * 1.7, b0 - R * 0.8], [x + 2 * R, b0]], [[x + R - 5, b0 - R], [x + R - 5, b0 - R - 30 * k], [x + R + 5, b0 - R - 30 * k], [x + R + 5, b0 - R]]);
+            x += 2 * R + 6; L.push([x, b0], [x, base - 40 * k]);
+          }
+        }
+        L.push([Math.min(x, xb), base - 40 * k], [Math.min(x, xb), base]);
+        bd.fills.push(L.concat([[xa, base]])); bd.lines.push(L);
+      };
+      if (B.type === 'palace') pal(xa, by + (portrait ? 120 : 90));
+      if (B.type === 'sea' || B.type === 'harbour') {
+        bd.lines.push([[-60, by], [W + 60, by]]);
+        for (let y = by + 26, row = 0; y < gy - 10; y += 30, row++) for (let x = -40 + br() * 80; x < W + 40; x += 150 + br() * 90) bd.waves.push({ x, y, row, w: 30 + row * 6 });
+        const side = B.coast || (B.type === 'harbour' ? 'right' : null);
+        if (side) {
+          const x0 = side === 'left' ? -60 : W * 0.62, x1 = side === 'left' ? W * 0.38 : W + 60, hh = portrait ? 90 : 70;
+          const pts = [[x0, by + 2]]; for (let i = 1; i < 8; i++) { const u = i / 8; pts.push([lerp(x0, x1, u), by - hh * Math.sin(Math.PI * (side === 'left' ? 1 - u * 0.5 : 0.5 + u * 0.5)) * (0.6 + 0.4 * br())]); }
+          pts.push([x1, by + 2]);
+          bd.fills.push(pts); bd.lines.push(pts.slice(0, -1));
+        }
+        for (let i = 0; i < 3; i++) bd.birds.push({ x: W * (0.2 + br() * 0.6), y: by - 80 - br() * 120, s: 0.6 + br() * 0.6 });
+      }
+      bd.fillE = inkEl(bd.g, INK.paperDark, { opacity: 0.6 }); bd.inkE = inkEl(bd.g, INK.inkSoft); bd.waveE = inkEl(bd.g, INK.inkSoft, { opacity: 0.75 }); bd.birdE = inkEl(bd.g, INK.inkSoft);
+    }
+    const propsG = el(world, 'g'), seaG = el(world, 'g'), castG = el(world, 'g'), labelG = el(world, 'g');
+    let seaF = null;
+    if (P.sea_front) {
+      const SF = P.sea_front;
+      seaF = { SF, fill: inkEl(seaG, INK.paperLight), line: inkEl(seaG), waves: inkEl(seaG, INK.inkSoft, { opacity: 0.8 }) };
+    }
+    const stormG = el(root, 'g');
+    let storm = null;
+    if (P.storm) {
+      const sr2 = rng(seed * 43 + 5);
+      storm = { S: P.storm, dark: el(stormG, 'rect', { x: 0, y: 0, width: W, height: H, fill: INK.inkSoft, opacity: 0 }),
+        rain: inkEl(stormG, INK.inkSoft), bolt: inkEl(stormG, INK.gold), boltR: inkEl(stormG), flash: el(stormG, 'rect', { x: 0, y: 0, width: W, height: H, fill: INK.paperLight, opacity: 0 }),
+        drops: Array.from({ length: 46 }, () => [sr2() * (W + 300), sr2() * H, 0.7 + sr2() * 0.6]) };
+    }
     const tc = (v, cues, fb) => v == null ? fb : typeof v === 'number' ? v : cue(cues, v, fb);
     // props
     const props = (P.props || []).map((pp, i) => {
@@ -544,7 +724,7 @@ const INK_PROPS = (() => {
     // cast
     const cast = (P.cast || []).map((m, i) => {
       const who = m.who || 'kasif', isK = who === 'kasif';
-      const rig = KASIF.create(castG, { scale: baseS * (m.scale || 1), hat: isK, accessory: isK ? null : (m.accessory || null), seed: i * 7 + 3 + (isK ? 0 : 11) });
+      const rig = KASIF.create(castG, { scale: baseS * (m.scale || 1), hat: isK, accessory: isK ? null : (m.accessory || null), beard: isK ? null : (m.beard || null), seed: i * 7 + 3 + (isK ? 0 : 11) });
       return { m, isK, rig };
     });
     const faceOf = v => v === 'left' ? -1 : v === 'right' ? 1 : null;
@@ -594,19 +774,89 @@ const INK_PROPS = (() => {
         // word timings: host-provided (ctx.words / env.words); in the Studio engine the optional WORDS global
         const words = env.words || ctx.words || (typeof WORDS !== 'undefined' ? WORDS : null);
         // slow camera drift (2D "kamera kayması")
-        world.setAttribute('transform', `translate(${inkF1(Math.sin(lt * 0.35) * 8)} ${inkF1(Math.cos(lt * 0.27) * 4)})`);
+        // Chromium sometimes leaves stale raster tiles when a big transformed group changes between far-apart seeks
+        // (ghost copies of the previous frame); a per-frame opacity nudge on the root forces a full repaint
+        root.setAttribute('opacity', Math.floor(t * 30) % 2 ? '0.999' : '0.998');
+        let camTf = '';
+        if (P.cam) {     // optional slow push-in + pan over the whole scene
+          const Cm = P.cam, u = progIO(lt, 0, Math.max(1, dur)), z = lerp(1, Cm.zoom ?? 1.06, u);
+          const fx = (Cm.focus ? Cm.focus[0] : 0.5) * W, fy = (Cm.focus ? Cm.focus[1] : gy / H * 0.8) * H;
+          camTf = ` translate(${inkF1(-(Cm.pan ?? 0) * u)} 0) translate(${inkF1(fx)} ${inkF1(fy)}) scale(${z.toFixed(4)}) translate(${inkF1(-fx)} ${inkF1(-fy)})`;
+        }
+        world.setAttribute('transform', `translate(${inkF1(Math.sin(lt * 0.35) * 8)} ${inkF1(Math.cos(lt * 0.27) * 4)})` + camTf);
+        if (bd) {
+          bd.fillE.setAttribute('d', bd.fills.map((q, i) => inkLoop(q, { seed: seed * 17 + i, t, amp: 1, smooth: false })).join(' '));
+          bd.inkE.setAttribute('d', bd.lines.map((q, i) => inkPath(q, { seed: seed * 19 + i, t, w: 3.5, amp: 1, smooth: false })).join(' '));
+          bd.waveE.setAttribute('d', bd.waves.map((w, i) => {
+            const x = w.x + Math.sin(lt * 0.6 + i) * 14, pts = []; for (let j = 0; j <= 4; j++) pts.push([x + j * w.w / 4, w.y + Math.sin(j * 1.6 + lt * 2 + i) * 3]);
+            return inkPath(pts, { seed: seed * 23 + i, t, w: 3, amp: 0.8 }); }).join(' '));
+          bd.birdE.setAttribute('d', bd.birds.map((b, i) => {
+            const x = b.x + lt * 18 * b.s, y = b.y + Math.sin(lt * 1.5 + i) * 6, f = Math.sin(lt * 6 + i * 2) * 8 * b.s, w = 22 * b.s;
+            return inkPath([[x - w, y - f], [x, y], [x + w, y - f]], { seed: seed * 29 + i, t, w: 3, amp: 0.5 }); }).join(' '));
+        }
+        if (seaF) {
+          const SF = seaF.SF, y0 = (SF.y ?? 0.74) * H, a = (SF.from ?? 0) * W - 40, b = (SF.to ?? 1) * W + 40, top = [];
+          for (let x = a; x <= b + 1; x += 40) top.push([x, y0 + Math.sin(x * 0.03 + lt * 2.2) * 9 + Math.sin(x * 0.011 - lt * 1.3) * 6]);
+          seaF.fill.setAttribute('d', inkLoop([...top, [b, H + 20], [a, H + 20]], { seed: seed * 31 + 1, t, amp: 0.8, smooth: false }));
+          seaF.line.setAttribute('d', inkPath(top, { seed: seed * 31 + 2, t, w: 6, amp: 1 }));
+          let wd = ''; for (let r = 0; r < 3; r++) for (let x = a + 30 + r * 50; x < b; x += 160) { const y = y0 + 40 + r * 34, pts = []; for (let j = 0; j <= 4; j++) pts.push([x + j * 10 + Math.sin(lt + r) * 10, y + Math.sin(j * 1.6 + lt * 2.5 + x) * 4]); wd += inkPath(pts, { seed: seed * 37 + r * 50 + x, t, w: 3, amp: 0.6 }) + ' '; }
+          seaF.waves.setAttribute('d', wd);
+        }
+        if (storm) {
+          const S0 = storm.S, ra = prog(lt, tc(S0.at, cues, 0), 0.8);
+          storm.dark.setAttribute('opacity', (0.16 * ra).toFixed(3));
+          storm.rain.setAttribute('d', ra > 0.01 ? storm.drops.map((d, i) => {
+            const y = ((d[1] + lt * 900 * d[2]) % (H + 120)) - 60, x = d[0] - ((lt * 300 * d[2]) % 300) - y * 0.32;
+            return inkPath([[x, y], [x - 16, y + 46]], { seed: seed * 47 + i, t, w: 3, amp: 0.4, taper: 0.5 }); }).join(' ') : '');
+          storm.rain.setAttribute('opacity', (0.7 * ra).toFixed(3));
+          const fl = [].concat(S0.flash ?? []).map(c => tc(c, cues, null)).filter(v => v != null);
+          let pk = 0, last = null; for (const f of fl) { const p = punch(lt, f, 0.5); if (p > pk) { pk = p; last = f; } }
+          if (pk > 0.02) {
+            const bx = W * (S0.bolt_x ?? 0.62), pts = [[bx, -10], [bx - 40, H * 0.16], [bx + 10, H * 0.18], [bx - 50, H * 0.36], [bx, H * 0.37], [bx - 70, H * 0.58]];
+            const poly = pts.concat(pts.slice().reverse().map(q => [q[0] + 18, q[1] + 6]));
+            storm.bolt.setAttribute('d', inkLoop(poly, { seed: seed * 53, t, amp: 1, smooth: false })); storm.boltR.setAttribute('d', inkPath(poly, { seed: seed * 53, t, w: 4, closed: true, smooth: false }));
+            storm.bolt.style.opacity = storm.boltR.style.opacity = Math.min(1, pk * 2);
+          } else { storm.bolt.setAttribute('d', ''); storm.boltR.setAttribute('d', ''); }
+          storm.flash.setAttribute('opacity', (0.45 * pk).toFixed(3));
+        }
         if (gLine) {
           const gp = inkJitter(gPts, seed * 3 + 1, t, 1.6);
           gLine.setAttribute('d', inkPath(gp, { w: 6, seed: seed * 3 + 1, t, amp: 0 }));
           gBand.setAttribute('d', inkLoop([...gp, [W + 60, gy + 90], [-60, gy + 90]], { seed: seed * 3 + 2, t, amp: 0, smooth: false }));
           gTicks.setAttribute('d', ticks.map((tk, i) => inkPath(tk, { w: 4, seed: seed * 50 + i, t })).join(' '));
         }
+        if (sky) {
+          sky.fill.setAttribute('d', inkLoop([...sky.line, [sky.x1, sky.by + 4], [sky.x0, sky.by + 4]], { seed: seed * 7 + 1, t, amp: 1, smooth: false }) + ' ' +
+            sky.shapes.filter(s => s.f).map((s, i) => inkLoop(s.p, { seed: seed * 7 + 20 + i, t, amp: 1 })).join(' '));
+          sky.ink.setAttribute('d', inkPath(sky.line, { seed: seed * 7 + 2, t, w: 3.5, amp: 1, smooth: false }) + ' ' +
+            sky.shapes.map((s, i) => inkPath(s.p, { seed: seed * 7 + 40 + i, t, w: 3.5, amp: 1 })).join(' '));
+        }
+        if (fg) {
+          fg.fillE.setAttribute('d', fg.fills.map((q, i) => inkLoop(q, { seed: seed * 9 + i, t, smooth: false, amp: 1 })).join(' '));
+          let di = '', ds = '';
+          fg.strokes.forEach((s, i) => {
+            const pts = s.wave ? s.p.map((q, j) => [q[0] + Math.sin(lt * 1.3 + i) * 8, q[1] + Math.sin(lt * 2 + j + i) * 2]) : s.p;
+            const d = inkPath(pts, { seed: seed * 11 + i, t, w: s.w, closed: !!s.c, smooth: !s.c, amp: 1.2 }) + ' ';
+            if (s.col === INK.ink) di += d; else ds += d;
+          });
+          fg.inkE.setAttribute('d', di); fg.softE.setAttribute('d', ds);
+        }
+        if (hill) {
+          hill.f.setAttribute('d', inkLoop(hill.pts, { seed: seed * 13 + 1, t, smooth: false, amp: 1.4 }));
+          hill.r.setAttribute('d', inkPath(hill.pts.slice(1), { seed: seed * 13 + 1, t, w: 6, smooth: false, amp: 1.4 }));
+          hill.p.setAttribute('d', hill.pl.map((q, i) => inkPath(q, { seed: seed * 13 + 10 + i, t, w: 8 })).join(' '));
+          hill.h.setAttribute('d', hill.hatch.map((q, i) => inkPath(q, { seed: seed * 13 + 40 + i, t, w: 3 })).join(' '));
+        }
         props.forEach(({ pp, g, d }, i) => {
           const at = tc(pp.at, cues, 0.1 + i * 0.18), sp = spring(lt, at, 0.6), pk = punch(lt, tc(pp.hit, cues, null), 0.6);
           const s = baseS * (pp.scale || 1);
           g.style.opacity = clamp01(sp * 3);
-          const x = (pp.x ?? 0.7) * W, y = pp.y != null ? pp.y * H : gy;
-          g.setAttribute('transform', `translate(${inkF1(x)} ${inkF1(y)}) scale(${(s * (pp.flip ? -1 : 1) * (1 + 0.08 * pk)).toFixed(4)} ${(s * lerp(0.2, 1, sp) * (1 + 0.08 * pk)).toFixed(4)})`);
+          let x = (pp.x ?? 0.7) * W, y = pp.y != null ? pp.y * H : gy, rotD = pp.rot || 0;
+          if (pp.move) {     // optional slide to a new spot (e.g. a ship sliding down into the water)
+            const M = pp.move, mp = progIO(lt, tc(M.at, cues, 0.5), M.dur || 1.2);
+            x = lerp(x, (M.x ?? pp.x ?? 0.7) * W, mp); y = lerp(y, M.y != null ? M.y * H : gy, mp); rotD = lerp(rotD, M.rot ?? 0, mp * mp * mp);
+          }
+          g.setAttribute('transform', `translate(${inkF1(x)} ${inkF1(y)}) rotate(${inkF1(rotD)}) scale(${(s * (pp.flip ? -1 : 1) * (1 + 0.08 * pk)).toFixed(4)} ${(s * lerp(0.2, 1, sp) * (1 + 0.08 * pk)).toFixed(4)})`);
           d.update(t, lt, { text: pp.text, flip: pp.flip });
         });
         if (label) {

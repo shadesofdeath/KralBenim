@@ -1,0 +1,483 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3",
+  "settings": {
+   "stability": 0.5
+  }
+ },
+ "slug": "gemiler-karadan",
+ "engine": "studio",
+ "theme": "parchment",
+ "max_pause": 0.25,
+ "format": "short",
+ "fps": 30,
+ "art": {
+  "palette": "desert"
+ },
+ "cover": {
+  "lines": [
+   "Gemiler",
+   "karada",
+   "yürüdü"
+  ],
+  "highlight": [
+   "karada"
+  ],
+  "scene": 0,
+  "t": 1.4,
+  "kasif": {
+   "pose": "point",
+   "dir": 40,
+   "x": 900,
+   "y": 1885,
+   "scale": 1.2,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Fatih Gemileri Karadan Nasıl Yürüttü? 1453 Haliç ⛵",
+  "description": "Gemilerin karadan yürütülmesi: 1453'te Fatih Sultan Mehmed, zincirle kapatılan Haliç'e donanmasını tepeden aşırarak soktu. Peki bu nasıl oldu?\n\nBizans, Haliç'in girişini dev bir zincirle kapatmıştı ve Osmanlı donanması içeri giremiyordu. 22 Nisan 1453'te yetmiş kadar Osmanlı gemisi, Galata'nın arkasındaki tepelerden yağlanmış kalaslar ve kütükler üzerinde insanlar ve mandalarla çekilerek Haliç'e indirildi. Bu hamle, İstanbul'un fethi sırasında az sayıdaki Bizans askerini Haliç surlarına da bölünmeye zorladı.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence kuşatmanın dönüm noktası bu muydu? Yorumlara yaz!\n\n#shorts #istanbulunfethi #fatihsultanmehmed #osmanlı #düşünbakalım",
+  "tags": [
+   "gemilerin karadan yürütülmesi",
+   "gemiler karadan nasıl yürütüldü",
+   "fatih gemileri karadan yürüttü",
+   "haliç zinciri",
+   "istanbul'un fethi",
+   "1453",
+   "fatih sultan mehmed",
+   "haliç",
+   "galata",
+   "konstantinopolis kuşatması",
+   "osmanlı donanması",
+   "osmanlı tarihi",
+   "bizans",
+   "tarih",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-20T10:00:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "portage",
+   "text": "Osmanlı gemileri karada yürüyor.",
+   "visual": "Gece, ay ışığında bir tepe yamacı: yağlı kalaslar ve kütükler üstünde bir kadırga yukarı tırmanıyor; sarıklı adamlar ve bir manda halatla çekiyor.",
+   "title": {},
+   "cues": {
+    "hit": "yürüyor"
+   },
+   "params": {
+    "from": 0.22,
+    "to": 0.25,
+    "scale": 1.15,
+    "haulers": 2,
+    "ox": true,
+    "night": true,
+    "pile_x": 0.6
+   }
+  },
+  {
+   "type": "halic",
+   "text": "1453: Bizans, Haliç'in girişini dev bir zincirle kapatmış.",
+   "visual": "Eski İstanbul haritası: Haliç, Boğaz, Konstantinopolis, Galata; Haliç'in ağzına halka halka zincir çiziliyor, bir Osmanlı gemisi zincire çarpıp geri sekiyor; önde Kaşif dürbünle bakıp şaşırıyor.",
+   "title": {
+    "white": "1453",
+    "gray": "Haliç"
+   },
+   "cues": {
+    "chain": "zincirle",
+    "bump": "kapatmış"
+   },
+   "params": {
+    "chain": true,
+    "bump": true,
+    "byz": true,
+    "fleet": 4,
+    "zoom": 1.25,
+    "focus": [
+     0.66,
+     0.6
+    ],
+    "kasif": {
+     "x": 0.15,
+     "pose": "look",
+     "at": "zincirle",
+     "then": "shock",
+     "face": "right",
+     "scale": 0.72
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Osmanlı donanması zinciri aşamıyor.",
+   "visual": "İskelede sarıklı bir Osmanlı denizcisi, sudaki gemisinin yanında omuz silkiyor; Kaşif yürüyüp gelip elini çenesine koyup düşünüyor; arkada ince Konstantinopolis silueti.",
+   "title": {
+    "white": "Donanma",
+    "gray": "dışarıda"
+   },
+   "cues": {
+    "hit": "aşamıyor"
+   },
+   "params": {
+    "ground": false,
+    "skyline": true,
+    "foreground": [
+     "water",
+     {
+      "type": "pier",
+      "from": 0,
+      "to": 0.62
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.1,
+      "pose": "walk",
+      "to": 0.2,
+      "at": 0.9,
+      "then": "think",
+      "face": "right"
+     },
+     {
+      "who": "denizci",
+      "accessory": "turban",
+      "x": 0.5,
+      "pose": "talk",
+      "face": "right",
+      "talk": false,
+      "at": "hit",
+      "then": "shrug"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.82,
+      "scale": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Sultan Mehmed'in çözümü: gemileri karadan geçirmek.",
+   "visual": "Sarıklı Sultan Mehmed konuşuyor, 'karadan' kelimesinde 'KARADAN!' tabelasını kaldırıyor; Kaşif geri sıçrıyor; solda tepede bir gemi, arkada Konstantinopolis silueti.",
+   "title": {
+    "white": "Sultan",
+    "gray": "Mehmed"
+   },
+   "cues": {
+    "hit": "karadan"
+   },
+   "params": {
+    "skyline": true,
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "sultan",
+      "accessory": "turban",
+      "x": 0.74,
+      "pose": "talk",
+      "face": "left",
+      "talk": false,
+      "at": "hit",
+      "then": "hold",
+      "text": "KARADAN!"
+     },
+     {
+      "who": "kasif",
+      "x": 0.44,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.14,
+      "scale": 1.6
+     },
+     {
+      "type": "ship",
+      "x": 0.13,
+      "y": 0.49,
+      "scale": 0.55,
+      "at": "hit",
+      "hit": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "type": "halic",
+   "text": "Rota, Galata'nın arkasındaki tepeyi aşıyor.",
+   "visual": "Aynı haritada kırmızı kesikli rota Boğaz kıyısından Galata'nın arkasındaki tepeleri aşıp Haliç'e iniyor, üstünde bir gemi kayıyor; Kaşif rotayı işaret ediyor.",
+   "title": {
+    "white": "Kara",
+    "gray": "yolu"
+   },
+   "cues": {
+    "route": "rota",
+    "hill": "tepeyi"
+   },
+   "params": {
+    "chain": true,
+    "bump": false,
+    "route": true,
+    "route_dur": 2.4,
+    "inside": 3,
+    "byz": true,
+    "fleet": 3,
+    "zoom": 1.12,
+    "focus": [
+     0.58,
+     0.38
+    ],
+    "kasif": {
+     "x": 0.15,
+     "pose": "look",
+     "at": "tepeyi",
+     "then": "point",
+     "dir": 45,
+     "face": "right",
+     "scale": 0.72
+    }
+   }
+  },
+  {
+   "type": "portage",
+   "text": "Yağlı kalaslar üstünde gemileri insanlar ve mandalar çekiyor.",
+   "visual": "Yakın plan: yağla parlayan kalaslar ve dönen kütükler, kadırga yokuşu tırmanıyor; iki sarıklı adam ve bir manda halatı çekiyor; Kaşif yürüyüp kalasları işaret ediyor.",
+   "title": {
+    "white": "Yağlı",
+    "gray": "kalaslar"
+   },
+   "cues": {
+    "grease": "yağlı",
+    "k": "kalaslar",
+    "hit": "mandalar"
+   },
+   "params": {
+    "from": 0.32,
+    "to": 0.38,
+    "haulers": 2,
+    "ox": true,
+    "night": true,
+    "grease": true,
+    "kasif": {
+     "x": 0.0,
+     "to": 0.08,
+     "pose": "walk",
+     "at": "k",
+     "then": "point",
+     "dir": -30,
+     "face": "right",
+     "scale": 0.6
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "22 Nisan sabahı Bizanslılar gözlerine inanamıyor.",
+   "visual": "Sur üstünde konik miğferli Bizans askeri Haliç'teki Osmanlı gemilerini görüp şaşkınlıkla geri sıçrıyor; Kaşif dürbünle bakıyor, sonra o da şaşırıyor.",
+   "title": {
+    "white": "22 Nisan",
+    "gray": "sabah"
+   },
+   "cues": {
+    "hit": "inanamıyor"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "pose": "look",
+      "face": "right",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "bizansli",
+      "accessory": "helmet_byz",
+      "x": 0.52,
+      "pose": "idle",
+      "face": "right",
+      "talk": false,
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "skyline": true,
+    "foreground": "wall",
+    "props": [
+     {
+      "type": "column",
+      "x": 0.36,
+      "scale": 0.8
+     },
+     {
+      "type": "ship",
+      "x": 0.8,
+      "scale": 0.5,
+      "at": 0.4
+     },
+     {
+      "type": "ship",
+      "x": 0.95,
+      "scale": 0.42,
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Zincirin içinde artık yetmiş kadar gemi var.",
+   "visual": "Dev yazı: 'İÇERİDE / YETMİŞ KADAR / GEMİ' kelime kelime çarpıyor, 'Yetmiş' kırmızı kutuda; el yazısı not 'zincirin arkasında!'",
+   "title": {},
+   "cues": {
+    "w0": "Zincirin",
+    "w1": "yetmiş",
+    "w2": "kadar",
+    "w3": "gemi",
+    "note": "var"
+   },
+   "params": {
+    "lines": [
+     "İçeride",
+     "yetmiş kadar",
+     "gemi"
+    ],
+    "highlight": [
+     "Yetmiş"
+    ],
+    "note": "zincirin arkasında!"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Bizans, zaten az olan askerini Haliç surlarına da dağıtmak zorunda.",
+   "visual": "Sur tabanı önünde iki tabela: 'Kara surları' (solda) ve 'Haliç surları' (sağda); konik miğferli bir Bizans askeri Haliç surlarına koşuyor, geride kalan asker omuz silkiyor.",
+   "title": {
+    "white": "Savunma",
+    "gray": "bölünüyor"
+   },
+   "cues": {
+    "hit": "Haliç"
+   },
+   "params": {
+    "foreground": "wall",
+    "cast": [
+     {
+      "who": "asker1",
+      "accessory": "helmet_byz",
+      "x": 0.5,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "talk": false,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "run",
+        "to": 0.63,
+        "then": "idle"
+       }
+      ]
+     },
+     {
+      "who": "asker2",
+      "accessory": "helmet_byz",
+      "x": 0.3,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "talk": false,
+      "at": "hit",
+      "then": "shrug"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.155,
+      "scale": 0.66,
+      "text": "Kara surları"
+     },
+     {
+      "type": "sign",
+      "x": 0.845,
+      "scale": 0.66,
+      "text": "Haliç surları",
+      "at": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Denizden geçemeyen gemiler, karadan geçti.",
+   "visual": "Tepeden bir Osmanlı gemisi kayarak Haliç'in sularına iniyor; iskeledeki Kaşif sevinçle gemiyi işaret ediyor; arkada Konstantinopolis silueti.",
+   "title": {},
+   "cues": {
+    "hit": "karadan"
+   },
+   "params": {
+    "ground": false,
+    "skyline": true,
+    "foreground": [
+     "water",
+     {
+      "type": "pier",
+      "from": 0.74,
+      "to": 1.0
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "talk",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": -12,
+      "emotion": "happy"
+     }
+    ],
+    "hill": {
+     "x0": 0,
+     "top": 0.12,
+     "x1": 0.5,
+     "h": 0.15
+    },
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.22,
+      "y": 0.4625,
+      "scale": 0.8,
+      "rot": 35,
+      "at": 0.1,
+      "move": {
+       "x": 0.58,
+       "rot": 0,
+       "at": "hit",
+       "dur": 1.4
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
