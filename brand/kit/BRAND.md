@@ -23,12 +23,12 @@ Kanalın tek ve sabit anlatıcı karakteri. Her videoda, aynı çizimle, aynı k
 |---|---|
 | Ad | **Kaşif** |
 | Kafa | Büyük yuvarlak kafa, iç dolgu `paper-light`, kontur `ink` 6 px. Gövde boyunun ~%28'i. |
-| Yüz | İki nokta göz, ince kaşlar (duyguyu kaşlar taşır), tek çizgi ağız (konuşurken açılıp kapanır). Burun yok. |
+| Yüz | İki nokta göz, ince kaşlar (duyguyu kaşlar taşır), tek çizgi ağız (sabit; sadece şok pozunda "o" olur). Burun yok. |
 | Gövde | Çöp çizgi: gövde, kollar, bacaklar `ink` 7 px, yuvarlak uçlar. Eller küçük yuvarlak, ayaklar küçük oval. |
 | **İmza aksesuar** | **Kahverengi kâşif şapkası** (`hat` #8B5A2B, bant `hat-band` #4E3218). Silüetten tanınır. **Asla çıkarmaz.** |
 | Diğer karakterler | Aynı çöp adam stili ama **şapkasız**; döneme göre tek aksesuar (Romalıya defne tacı, denizciye bere, padişaha sarık). Kaşif'le asla karıştırılmaz. |
 | Hareket kütüphanesi | `idle` (nefes alır, hafif sallanır) · `walk` (sahneye yürüyerek girer/çıkar) · `point` (bir şeyi gösterir) · `think` (el çenede) · `shock` (geri sıçrar, kaşlar yukarı) · `shrug` · `talk` (el hareketleriyle anlatır) · `wave` · `run` · `sit` · `hold` (bir nesne/tabela tutar) · `look` (dürbünle bakar). |
-| Kural | Her videonun sahnelerinin **en az yarısında** Kaşif ekranda ve **bir şey yapıyor** (sadece durmuyor). Ağzı anlatımla oynar. |
+| Kural | Her videonun sahnelerinin **en az yarısında** Kaşif ekranda ve **bir şey yapıyor** (sadece durmuyor). Ağzı **sabittir** (konuşma animasyonu yok; kanal sahibinin kararı), duyguyu kaşlar ve poz taşır. |
 
 Referans çizim: `brand/kit/kasif-reference.png` (kodla üretilir; tasarım değişirse yeniden üretilir).
 
@@ -77,13 +77,24 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 ## 6. Anlatım kuralları (sert)
 
 1. **Selam yok, giriş yok.** İlk cümle doğrudan anın içine atar: *"MS 79. Pompeii'de sıradan bir sabah. Ekmekler fırında."*
-2. **Cümle arası sessizlik en fazla 0,25 sn.** `build.py` sesi otomatik sıkıştırır; metni buna göre
-   kısa cümlelerle yaz. Bir cümle biter bitmez sonraki başlar.
+2. **Nefes alan tempo (kanal sahibinin kararı).** Senaryoda `"pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}`:
+   cümle sonunda en az 0,6 sn, virgülde en az 0,25 sn durulur, hiçbir sessizlik 1 sn'yi geçmez (`build.py`
+   sesi buna göre uzatır/kısar). Acele eden, cümleleri birbirine yapıştıran anlatım istenmiyor.
+   **Tonlama:** ses `eleven_v3`, `stability: 0.0` (Creative, en canlı). Duygu değişen sahnelere `"tone"`
+   alanı ile İngilizce ses etiketi ver (`curious`, `excited`, `whispers`, `dramatic`, `serious`, `amazed`,
+   `sad`, `mischievously`): seslendirmede `[curious]` olarak okunur, altyazıda görünmez. Her sahneye değil,
+   videoda 3–6 kritik sahneye.
 3. **Şimdiki zaman** ile anlat (sahneye izleyiciyi sok): "Plinius koya bakıyor. Dağın üstünde dev bir bulut yükseliyor."
 4. **Sahne başına tek fikir**, ekranda en fazla 5 kelime. Kaşif o fikri **gösterir** (işaret eder, şaşırır, dürbünle bakar).
 5. Her 20–30 saniyede bir **soru/gerilim kancası**: "Ama asıl felaket henüz başlamamıştı."
 6. **Sayı, tarih, isim doğrulanmadan yazılmaz**; tartışmalıysa "büyük olasılıkla" de.
 7. **Kapanış:** Shorts tam ve akılda kalan bir cümleyle biter (döngü yok); uzun video tek bir yorum sorusuyla.
+9. **Düz anlatım yasak (kanal sahibinin kararı).** Bilgi sıralamak değil, hikâye anlatmak: izleyiciye
+   doğrudan seslen ("Şimdi şunu düşün…", "Sence ne yaptılar?"), merakı bir cümle bekletip sonra cevapla,
+   zıtlık kur ("Herkes zinciri izliyordu. Kimse tepeye bakmıyordu."), somut duyusal ayrıntı ver (ses, koku,
+   soğuk, ağırlık), cümle uzunluklarını değiştir (kısa vurucu cümle + bir orta cümle), bir kez sürpriz yap.
+   Ders kitabı cümlesi ("X yılında Y oldu. Bu çok önemliydi.") kullanılmaz. Eleştirmen bunu "Kanca" ve
+   "Derinlik" puanında sert değerlendirir.
 8. Uzun videoda bölümler **"BÖLÜM 2 / 5"** kartıyla açılır (örnekteki gibi: mavi daire içinde rakam, altında Fraunces başlık).
 
 ## 7. Formatlar

@@ -49,7 +49,10 @@ Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmem
 
 ## 4. Anlatım
 
-- Senaryoda `"max_pause": 0.25` (cümle arası sessizlik otomatik kısılır).
+- Senaryoda `"pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}` ve `tts.settings.stability: 0.0`; 3–6 kritik
+  sahneye `"tone"` (`curious`, `excited`, `whispers`, `dramatic`, `serious`, `amazed`) — BRAND.md §6.2.
+- **Düz anlatım yok:** izleyiciye seslen, merakı bekletip cevapla, zıtlık ve duyusal ayrıntı kullan,
+  cümle uzunluklarını değiştir (BRAND.md §6.9). Kaşif'in ağzı sabittir (konuşma animasyonu yok).
 - Şimdiki zaman, kısa cümleler, konuşma dili. Selam/giriş yok.
 - Ekranda en fazla 5 kelime/sahne; asıl bilgiyi ses taşır.
 - Ölüm ve acıyı saygıyla, sayıyla değil insan hikâyesiyle anlat.

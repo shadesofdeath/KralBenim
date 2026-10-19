@@ -23,9 +23,9 @@ Eleştirmen taze gözle bakar: sadece `sheet.png`, `cover.jpg`, senaryo JSON'u, 
 
 - Eleştirmen her video için puan tablosunu + **en büyük 3 sorunu** (somut: hangi sahne, ne yanlış, nasıl
   düzelir) yazar. "Daha iyi olabilir" gibi belirsiz yorum yasak.
-- **Geçme şartı:** tüm kriterler ≥ 8 ve `tools/lint.py` hatasız.
+- **Geçme şartı:** tüm kriterler ≥ 7 (kanal sahibinin kararı) ve `tools/lint.py` hatasız.
 - Yazar ajan sorunları düzeltir, `lint` + `preview` tekrar çalışır, eleştirmen tekrar puanlar.
-  **En az 2, en fazla 3 tur.** 3. turdan sonra hâlâ < 8 olan kriter varsa en zayıf sahneyi daha basit
+  **En az 2, en fazla 3 tur.** 3. turdan sonra hâlâ < 7 olan kriter varsa en zayıf sahneyi daha basit
   ama doğru bir sahneyle değiştir ve raporda belirt.
 - Her tur `videos/<tarih>/production.md` içindeki "Eleştiri günlüğü" bölümüne eklenir:
 

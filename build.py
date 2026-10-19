@@ -130,8 +130,9 @@ def locate(text, words):
     return [w for w in words if w["text"]]
 
 
-def synthesize(text, cfg, work):
-    """Returns (mp3 path, words). Cached by text+tts config."""
+def synthesize(text, cfg, work, plain=None):
+    """Returns (mp3 path, words). Cached by text+tts config. `plain` is the text without audio tags
+    (captions and scene ranges refer to it)."""
     key = hashlib.sha1(json.dumps([text, cfg], sort_keys=True).encode()).hexdigest()
     mp3, wj = work / "audio.mp3", work / "words.json"
     if mp3.exists() and wj.exists():
@@ -139,7 +140,7 @@ def synthesize(text, cfg, work):
         if cached.get("key") == key:
             return mp3, cached["words"]
     provider = cfg.get("provider", "edge")
-    words = locate(text, {"edge": tts_edge, "elevenlabs": tts_elevenlabs}[provider](text, cfg, mp3))
+    words = locate(plain or text, drop_tags({"edge": tts_edge, "elevenlabs": tts_elevenlabs}[provider](text, cfg, mp3)))
     wj.write_text(json.dumps({"key": key, "words": words}, ensure_ascii=False, indent=1))
     return mp3, words
 
@@ -155,41 +156,64 @@ def estimate_words(text):
     return words, t
 
 
-def tighten(mp3, words, max_pause, work):
-    """Brand pacing rule: no silence between words longer than max_pause seconds (the next sentence
-    starts right away). Cuts the narration audio and shifts the word timings to match."""
+def pace(mp3, words, text, pacing, work):
+    """Narration pacing: after a sentence end (. ? ! …) the silence is at least pacing["sentence"]
+    seconds, after a comma (, ; :) at least pacing["comma"]; no silence is longer than pacing["max"].
+    Inserts/cuts silence in the narration audio and shifts the word timings to match."""
     import numpy as np
     sr = 44100
     pcm = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", str(mp3), "-f", "s16le", "-ac", "1", "-ar", str(sr), "-"],
                          check=True, capture_output=True).stdout
     a = np.frombuffer(pcm, dtype=np.int16).astype(np.float32)
-    cuts, prev_end = [], 0.0            # (cut start, cut end) in the original audio
-    for w in words:
-        if prev_end > 0 and w["start"] - prev_end > max_pause:
-            cuts.append((prev_end + max_pause / 2, w["start"] - max_pause / 2))
-        prev_end = max(prev_end, w["end"])
-    segs, start = [], 0.0
-    for c0, c1 in cuts:
-        segs.append((start, c0))
-        start = c1
-    segs.append((start, len(a) / sr))
-    fade = int(0.008 * sr)
-    out = []
-    for s0, s1 in segs:
-        seg = a[int(s0 * sr):int(s1 * sr)].copy()
-        if len(seg) > 2 * fade:          # tiny fades at every join: no clicks
+    ops = []                            # (time in the original audio, +insert / -cut seconds)
+    for prev, w in zip(words, words[1:]):
+        gap = w["start"] - prev["end"]
+        after = text[prev["pos"] + len(prev["text"]):w["pos"]]
+        want = pacing.get("sentence", 0) if any(c in after for c in ".?!…") else \
+            pacing.get("comma", 0) if any(c in after for c in ",;:") else 0
+        mid = prev["end"] + max(gap, 0) / 2
+        if gap < want:
+            ops.append((mid, want - max(gap, 0)))
+        elif pacing.get("max") and gap > pacing["max"]:
+            ops.append((mid, pacing["max"] - gap))
+    fade, out, pos = int(0.008 * sr), [], 0
+    for t0, d in ops:
+        i = int(t0 * sr)
+        if d < 0:                       # cut |d| seconds centred on the gap
+            c0, c1 = int((t0 + d / 2) * sr), int((t0 - d / 2) * sr)
+            out.append(a[pos:c0].copy())
+            pos = c1
+        else:
+            out.append(a[pos:i].copy())
+            out.append(np.zeros(int(d * sr), np.float32))
+            pos = i
+    out.append(a[pos:].copy())
+    for seg in out:                     # tiny fades at every join: no clicks
+        if len(seg) > 2 * fade and seg.any():
             seg[:fade] *= np.linspace(0, 1, fade)
             seg[-fade:] *= np.linspace(1, 0, fade)
-        out.append(seg)
-    wav = work / "voice_tight.wav"
+    wav = work / "voice_paced.wav"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "s16le", "-ac", "1", "-ar", str(sr), "-i", "-", str(wav)],
                    input=np.concatenate(out).astype(np.int16).tobytes(), check=True)
     shifted = []
     for w in words:
-        removed = sum(c1 - c0 for c0, c1 in cuts if c1 <= w["start"] + 1e-6)
-        shifted.append({**w, "start": w["start"] - removed, "end": w["end"] - removed})
-    print(f"pacing: {len(cuts)} pauses cut to {max_pause}s, -{sum(c1 - c0 for c0, c1 in cuts):.1f}s", file=sys.stderr)
+        sh = sum(d for t0, d in ops if t0 <= w["start"])
+        shifted.append({**w, "start": w["start"] + sh, "end": w["end"] + sh})
+    print(f"pacing: {sum(d > 0 for _, d in ops)} pauses lengthened, {sum(d < 0 for _, d in ops)} shortened, "
+          f"{sum(d for _, d in ops):+.1f}s", file=sys.stderr)
     return wav, shifted
+
+
+def drop_tags(words):
+    """Remove ElevenLabs v3 audio tags ("[curious]", "[dramatic tone]") from the aligned words."""
+    out, inside = [], False
+    for w in words:
+        t = w["text"]
+        if t.startswith("[") or inside:
+            inside = not t.rstrip(PUNCT).endswith("]")
+            continue
+        out.append(w)
+    return out
 
 
 def audio_duration(path):
@@ -472,12 +496,15 @@ def main():
     work.mkdir(parents=True, exist_ok=True)
 
     # whole narration in one TTS call for natural prosody; scenes are char ranges in it
-    text, ranges = "", []
+    # eleven_v3 audio tags per scene ("tone": "curious" -> "[curious] ..."), spoken only, never captioned
+    text, ranges, spoken = "", [], []
     for sc in script["scenes"]:
         if text:
             text += " "
         ranges.append((len(text), len(text) + len(sc["text"])))
         text += sc["text"]
+        spoken.append((f"[{sc['tone']}] " if sc.get("tone") else "") + sc["text"])
+    spoken = " ".join(spoken)
 
     if a.no_tts:
         words, speech = estimate_words(text)
@@ -486,9 +513,10 @@ def main():
                         "-t", f"{speech:.2f}", str(mp3)], check=True)
         words = locate(text, words)
     else:
-        mp3, words = synthesize(text, script.get("tts", {}), work)
-        if script.get("max_pause"):
-            mp3, words = tighten(mp3, words, script["max_pause"], work)
+        mp3, words = synthesize(spoken, script.get("tts", {}), work, plain=text)
+        pacing = script.get("pacing") or ({"max": script["max_pause"]} if script.get("max_pause") else None)
+        if pacing:
+            mp3, words = pace(mp3, words, text, pacing, work)
     studio = script.get("engine") == "studio"
     # classic Shorts end tight (they used to loop back to the hook); studio videos end on a full sentence
     duration = audio_duration(mp3) + (STUDIO_TAIL if studio else 0.3 if script.get("format", "short") == "short" else TAIL)

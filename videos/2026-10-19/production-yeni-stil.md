@@ -100,3 +100,26 @@ Ek notlar (küçük):
   - **Sahne 24:** Efsane 1950'lerde Mallery ile başladı, Hapgood 1966'da yaydı. "1950'ler ve 60'larda" de.
   - **Sahne 35:** "seksenini aşmışken" ifadesi doğum yılı belirsiz olduğu için "seksenlerindeyken" ya da "çok yaşlıyken" olarak yazılmalı.
 - **Kapak.** 1513'TE / AMERİKA'YI / ÇİZDİ yazısı küçük ekranda okunuyor. Halka Amerika kıyısında, Kaşif'in yüzü okunuyor. İyi. Kaşif'i bir tık büyütüp `shock`/`point` pozuyla halkaya döndürürsen daha dramatik olur. Başlık 52 karakter, ana anahtar kelimeyle başlıyor ve video vaadini karşılıyor.
+
+### 05-piri-reis-haritasi — tur 2
+lint: OK (ses `j4vJUfke1j8j9OYq8V3b`, kanal sahibinin yeni kararıyla uyumlu) · preview: 40 sahne, ~235 sn, 3.418 karakter, STATIC? yok (en düşük hareket: sahne 8, 5.6). Sahneler 0'dan numaralı; soğuk açılış eklendiği için 1. turdaki numaralar +0 ile +1 arasında kaydı.
+
+| Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 9 | 8 | 7 | 8 | 9 | 9 | 8 |
+
+**Sonuç: GEÇMEDİ** (yalnızca Derinlik < 8). Büyük ilerleme var. Soğuk açılış (sahne 0) kapakla aynı fikri taşıyor. Tabelalar büyüdü ve `_` kalktı. Sakal ayrımı (Kemal siyah, genç Piri yok, yaşlı Piri gri) okunuyor. Dürbün dönem hatası düzeldi. Sahne 18 kartı ve sahne 22'deki yırtık harita yerinde. Sahne 28 sadeleşti. Harita etiketleri ve doğruluk ifadeleri (22, 24, 35) düzeldi.
+
+1. **Sahne 14 (fırtına): dalga bandı sert kenarlı bir dikdörtgen.** Açık renkli su dolgusu kadrajın yalnız sağ yarısında. Solda dikey keskin bir kenarla bitiyor ve altyazı şeridinin arkasına kadar uzanıyor; "yapıştırılmış kutu" gibi duruyor. Şimşek kontakt karelerinde hiç görünmüyor, gökyüzü tonu da değişmiyor. → Dalga bandını tam genişlik yap (x 0→1920), üst kenarı dalgalı mürekkep çizgi, dolgu `paper-dark` olsun ve dolgu kenarında dikey çizgi kalmasın. `storm` cue'sunda 0,15 sn'lik `ink` zikzak şimşek çak ve ardından 0,3 sn `paper-light` parlama ver. Gökyüzüne `ink-soft` %15 çapraz bulut taraması ekle. Gemi batarken önünden bir dalga tepesi geçsin (gemi dalganın arkasına insin).
+2. **Derinlik hâlâ ince: arka planlar tek düzlem kontur, paralaks yok.** Topkapı silueti, ufuk ve dalga çizgileri aynı ince `ink-soft` çizgiyle, figürlerle aynı hızda itiliyor. Ön plan katmanı yok. Stage sahnelerinde üst ~%30 hâlâ boş (2, 3, 5, 7, 22, 26, 27, 29, 39). → Üç katman kur:
+   - **Uzak plan:** `paper-dark` dolgulu, %50 opak tepe/uzak kıyı ya da kubbe kütleleri. Push-in'de 0,4× hızla hareket etsin.
+   - **Orta plan:** bugünkü siluet çizgisi, 0,7× hızla.
+   - **Ön plan:** kadraj kenarından kırpılan bir eleman (halat kangalı, sandık, iskele direği, saray sahnesinde perde/kemer kenarı), 1,15× hızla ve figürlerden büyük.
+
+   Boş göğe 2–3 `ink-soft` martı ya da bulut kıvrımı ekle (boil'li, yavaş süzülen). Kemer/kapı çerçevesi gibi bir öğe saray sahnelerinde üst boşluğu da doldurur.
+3. **Sahne 10 (ve 20): "Kemal Reis" el yazısı etiketi sarığın üstüne biniyor.** Figür 1,2× büyüyünce etiket y=0,17 sarığın tepesine denk geliyor ve "Kemal Reis" sarığın içinden okunuyor. → Etiketi figürün yanına taşı (x 0,72, y 0,30) ve kısa bir okla başa bağla, ya da etiketi y 0,08'e al. Aynı kontrolü diğer büyütülmüş figür + `label` sahnelerinde yap (2/3 Deissmann, 35 "büyük olasılıkla 1553"). Şu an bunlar temiz.
+
+Ek notlar (küçük):
+- **Sahne 36 (UNESCO):** düz yazı sahnesi. Kabul edilebilir, ama altta 1513 → 2013 tarih çizgisi ya da yanda Kaşif `point` eklemek kartı canlandırır.
+- **Sahne 28:** üstü çizili "ANTARKTİKA?" artık derinin dışında ve doğru fikri veriyor. Yazı küçük ama çizgiyle birlikte anlaşılıyor.
+- **Kapak:** değişmedi ve hâlâ iyi (yazı okunuyor, halka Amerika'da, Kaşif'in yüzü belirgin).

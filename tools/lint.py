@@ -125,8 +125,8 @@ def lint(path, kinds):
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
     if parch:
-        if s.get("max_pause") is None:
-            warn.append('parchment style: set "max_pause": 0.25')
+        if not (s.get("pacing") or {}).get("sentence"):
+            warn.append('parchment style: set "pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}')
         if types and types.count("stage") < len(types) / 2:
             err.append(f"Kaşif ('stage') in {types.count('stage')}/{len(types)} scenes, brand needs at least half")
     elif not any(kinds.get(t) in ("3d", "real") for t in types):

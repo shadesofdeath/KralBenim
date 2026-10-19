@@ -15,7 +15,7 @@ Her gün **2 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render ed
 - `tools/lint.py` — senaryo kural denetimi (karakter, sahne sayısı, çeşitlilik, cue, kapak, SEO, `publish_at`). Hata varsa push yok.
 - `tools/preview.py` — TTS olmadan görsel kontrol (tahmini zamanlama ile kontak sayfası + kapak + sahne başına hareket ölçümü, donuk sahneyi `STATIC?` diye işaretler).
 - `docs/ANIMATION_GUIDE.md` — görsel dil, ekran düzeni, hareket dili, yeni sahne tipi şablonu. **Senaryo yazan ya da sahne kodlayan her ajan önce bunu okur.**
-- `docs/REVIEW.md` — eleştiri döngüsü: 10 kriterli puanlama, geçme şartı (hepsi ≥ 8), günlük formatı.
+- `docs/REVIEW.md` — eleştiri döngüsü: 10 kriterli puanlama, geçme şartı (hepsi ≥ 7), günlük formatı.
 - `scenes/studio/shots/<tip>.js` — konuya özel yeni sahne tipleri, her tip kendi dosyasında (otomatik yüklenir).
 - `tools/upload.py` — YouTube yüklemesi (Actions'ta çalışır, `YOUTUBE_TOKEN_JSON` secret'ı). Fotoğraf/video kredilerini (`params.credit`) açıklamaya otomatik ekler.
 - `tools/media.py` — telifsiz fotoğraf/video bulur ve indirir (Wikimedia Commons; `PEXELS_API_KEY` varsa Pexels foto + video).
@@ -63,7 +63,7 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
 3. **Eleştiri (video başına 1 eleştirmen ajan, yazardan farklı, paralel):** `docs/REVIEW.md`'ye göre
    puanlar, en büyük 3 sorunu yazar. Kendisi düzeltmez.
 4. **Düzeltme turu:** yazar ajan (SendMessage ile aynı ajana devam et) sorunları düzeltir → lint →
-   preview → eleştirmen tekrar puanlar. En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 8. Her tur
+   preview → eleştirmen tekrar puanlar. En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 7. Her tur
    `production.md` → "Eleştiri günlüğü"ne eklenir.
 5. **Son kapı (yönetmen):** iki Shorts'un konu/kategori/palet olarak birbirinden ve geçmişten farklı
    olduğunu, `lint` hatasız geçtiğini, her `cover.jpg` ve `sheet.png`'yi **kendi gözüyle** gördüğünü
