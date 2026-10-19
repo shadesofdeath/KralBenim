@@ -326,7 +326,8 @@ SHOTS2.compare = {
 // ------------------------------------------------------------ photo / video: real footage with Ken Burns + annotations
 // P: {src: "media/x.jpg"} or {video: "media/x.mp4", from: 2.0, rate: 1} (build.py extracts frames -> P.frames),
 //    kb: {from: [1.0, 0.5, 0.5], to: [1.15, 0.55, 0.45]} (zoom, centre x, centre y in 0..1 of the image),
-//    grade: "natural"|"cinematic"|"mono"|"duotone", credit: "Foto: ... / Wikimedia Commons (CC BY-SA 4.0)",
+//    grade: "natural"|"cinematic"|"mono"|"duotone"|"sepia" (sepia: brown, low contrast, printed on the parchment,
+//    edges dissolve into the paper; default in theme "parchment"), credit: "Foto: ... / Wikimedia Commons (CC BY-SA 4.0)",
 //    marks: [{type: "circle"|"arrow"|"label"|"box", x, y, r, w, h, text, at: "cueName"}] (x, y in 0..1 of the image)
 SHOTS2.photo = {
   kind: '2d',
@@ -353,13 +354,17 @@ SHOTS2.photo = {
       const i = Math.max(0, Math.min(F.count - 1, Math.floor(lt * F.fps * (P.rate || 1))));
       return F.pattern.replace('%05d', String(i + 1).padStart(5, '0'));
     };
+    const parch = ctx.theme === 'parchment' || pal.theme === 'parchment', gname = P.grade || (parch ? 'sepia' : 'cinematic'), sepia = gname === 'sepia';
     const grade = { natural: 'saturate(1.05) contrast(1.05)', cinematic: 'contrast(1.12) saturate(0.9) brightness(0.92)',
-                    mono: 'grayscale(1) contrast(1.15) brightness(0.9)', duotone: 'grayscale(1) contrast(1.2) brightness(0.85)' }[P.grade || 'cinematic'];
+                    mono: 'grayscale(1) contrast(1.15) brightness(0.9)', duotone: 'grayscale(1) contrast(1.2) brightness(0.85)',
+                    sepia: 'grayscale(1) sepia(0.85) contrast(0.82) brightness(1.12)' }[gname];
+    const TP = typeof THEME_PARCHMENT !== 'undefined' ? THEME_PARCHMENT : null;
+    const markRed = parch && TP ? TP.red : RED;
     const tint = P.grade === 'duotone' ? pal.accent : null;
     const marksG = el(svg, 'g');
     const marks = (P.marks || []).map(m => ({ m, g: el(marksG, 'g') }));
     let credit = null;
-    if (P.credit) credit = svgText(svg, P.credit, W - 40, H > W ? 262 : H - 40, 22, { fill: '#fff', opacity: 0.55, 'text-anchor': 'end', 'font-weight': 600 });
+    if (P.credit) credit = svgText(svg, P.credit, W - 40, H > W ? 262 : H - 40, 22, { fill: parch ? '#2B1D12' : '#fff', opacity: parch ? 0.7 : 0.55, 'text-anchor': 'end', 'font-weight': 600 });
     let geom = null;
     const kb = P.kb || { from: [1.0, 0.5, 0.5], to: [1.12, 0.5, 0.45] };
     return {
@@ -380,16 +385,33 @@ SHOTS2.photo = {
         g2.drawImage(im, x * dpr, y * dpr, dw * dpr, dh * dpr);
         g2.restore();
         if (tint) { g2.save(); g2.globalCompositeOperation = 'soft-light'; g2.fillStyle = tint; g2.fillRect(0, 0, cv.width, cv.height); g2.restore(); }
-        // gradient so captions and kicker stay readable
-        const gr = g2.createLinearGradient(0, 0, 0, cv.height);
-        gr.addColorStop(0, 'rgba(0,0,0,.45)'); gr.addColorStop(0.25, 'rgba(0,0,0,0)'); gr.addColorStop(0.55, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,.55)');
-        g2.fillStyle = gr; g2.fillRect(0, 0, cv.width, cv.height);
+        if (sepia) {
+          // ink printed on paper: multiply by the parchment colour, then let the edges dissolve into the page
+          const CW = cv.width, CH = cv.height, portrait = H > W;
+          g2.save();
+          g2.globalCompositeOperation = 'multiply'; g2.fillStyle = TP ? TP.paper : '#E9DCC0'; g2.fillRect(0, 0, CW, CH);
+          g2.globalCompositeOperation = 'destination-in';
+          const gx = g2.createLinearGradient(0, 0, CW, 0);
+          gx.addColorStop(0, 'rgba(0,0,0,0)'); gx.addColorStop(0.1, 'rgba(0,0,0,1)'); gx.addColorStop(0.9, 'rgba(0,0,0,1)'); gx.addColorStop(1, 'rgba(0,0,0,0)');
+          g2.fillStyle = gx; g2.fillRect(0, 0, CW, CH);
+          const gy = g2.createLinearGradient(0, 0, 0, CH);
+          const top = portrait ? [0.1, 0.2] : [0.08, 0.2], bot = portrait ? [0.62, 0.76] : [0.72, 0.92];
+          gy.addColorStop(0, 'rgba(0,0,0,0)'); gy.addColorStop(top[0], 'rgba(0,0,0,0.25)'); gy.addColorStop(top[1], 'rgba(0,0,0,1)');
+          gy.addColorStop(bot[0], 'rgba(0,0,0,1)'); gy.addColorStop(bot[1], 'rgba(0,0,0,0)'); gy.addColorStop(1, 'rgba(0,0,0,0)');
+          g2.fillStyle = gy; g2.fillRect(0, 0, CW, CH);
+          g2.restore();
+        } else {
+          // gradient so captions and kicker stay readable
+          const gr = g2.createLinearGradient(0, 0, 0, cv.height);
+          gr.addColorStop(0, 'rgba(0,0,0,.45)'); gr.addColorStop(0.25, 'rgba(0,0,0,0)'); gr.addColorStop(0.55, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,.55)');
+          g2.fillStyle = gr; g2.fillRect(0, 0, cv.width, cv.height);
+        }
         marks.forEach(({ m, g }, k) => {
           g.innerHTML = '';
           const at = cue(cues, m.at, 0.6 + k * 0.5), a = spring(lt, at, 0.6);
           if (lt < at - 0.01) return;
-          const X = geom.x + m.x * iw * geom.s, Y = geom.y + m.y * ih * geom.s, c = m.color === 'accent' ? pal.accent : (m.color || RED);
-          const glow = `filter: drop-shadow(0 0 12px ${rgba(c, .8)})`;
+          const X = geom.x + m.x * iw * geom.s, Y = geom.y + m.y * ih * geom.s, c = m.color === 'accent' ? pal.accent : (m.color || markRed);
+          const glow = parch ? '' : `filter: drop-shadow(0 0 12px ${rgba(c, .8)})`;
           if (m.type === 'circle') {
             const r = (m.r || 0.08) * iw * geom.s;
             const ci = el(g, 'circle', { cx: X, cy: Y, r: r * lerp(1.6, 1, a), fill: 'none', stroke: c, 'stroke-width': 10, style: glow, pathLength: 1 });
@@ -408,8 +430,9 @@ SHOTS2.photo = {
           }
           if (m.text) {
             const tx = X + (m.dx ?? 0), ty = Y + (m.dy ?? -((m.r || 0.08) * iw * geom.s) - 40);
-            const t = svgText(g, m.text, tx, ty, m.size || 56, { fill: '#fff', 'font-weight': 900, opacity: clamp01(a * 1.4),
-              style: 'paint-order: stroke; stroke: rgba(0,0,0,.85); stroke-width: 10px' });
+            const t = svgText(g, m.text, tx, ty, m.size || 56, parch
+              ? { fill: '#2B1D12', 'font-family': "'Patrick Hand', sans-serif", opacity: clamp01(a * 1.4), style: 'paint-order: stroke; stroke: #F4EAD5; stroke-width: 12px' }
+              : { fill: '#fff', 'font-weight': 900, opacity: clamp01(a * 1.4), style: 'paint-order: stroke; stroke: rgba(0,0,0,.85); stroke-width: 10px' });
             t.setAttribute('transform', `translate(${tx} ${ty}) scale(${lerp(0.6, 1, a)}) translate(${-tx} ${-ty})`);
           }
         });

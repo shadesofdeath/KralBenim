@@ -4,6 +4,7 @@
 'use strict';
 
 let D, S = [], W, H, R3, BGX, WORDS = [], glDirty = false;
+let PARCH = false, PAPER = null, PCAP = null, PBRAND = null, BG_AT = { i: 0, prev: -1, p: 1 };   // theme "parchment" (parchment-theme.js)
 const $ = id => document.getElementById(id);
 
 function makeLabels(container) {
@@ -37,6 +38,7 @@ function makeLabels(container) {
 }
 
 function makeKicker(sc, pal) {
+  if (PARCH) { const pk = PARCHMENT.kicker($('kickers'), W, H, sc.title || {}); return { k: pk.node, words: pk.words, pk }; }
   const k = div($('kickers'), 'kicker');
   const ti = sc.title || {};
   if (!ti.white && !ti.gray) { k.style.display = 'none'; return { k, words: [] }; }
@@ -55,10 +57,13 @@ window.init = async (data) => {
   [W, H] = D.size;
   const root = document.documentElement;
   root.classList.add(D.format || 'short');
+  PARCH = D.theme === 'parchment';
+  if (PARCH) root.classList.add('parchment');
   $('brand').querySelector('span').textContent = D.channel || '';
   THREE.ColorManagement.enabled = false;
 
   const bg = $('bg'); bg.width = W / 2; bg.height = H / 2; BGX = bg.getContext('2d');
+  if (PARCH) PAPER = PARCHMENT.background(bg, W, H, { scale: 0.5 });
   R3 = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: D.gl_aa !== false, alpha: true, preserveDrawingBuffer: true });
   R3.setPixelRatio(devicePixelRatio * (D.gl_scale || 1));
   R3.setSize(W, H, false);
@@ -66,25 +71,27 @@ window.init = async (data) => {
   R3.outputColorSpace = THREE.SRGBColorSpace;
   MASCOT.init($('mascot'));
   // shots measure text while building: fonts must be ready first
-  await Promise.all(['400 100px Anton', '800 100px Inter', '900 100px Inter', '700 100px Inter'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
+  await Promise.all(['400 100px Anton', '800 100px Inter', '900 100px Inter', '700 100px Inter',
+    '900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
 
   S = D.scenes.map((sc, i) => {
     const shot = SHOTS[sc.type];
     if (!shot) throw new Error('unknown studio shot type: ' + sc.type);
-    const P = sc.params || {}, pal = palette(sc.art || D.art);
+    const P = sc.params || {};
+    const pal = PARCH ? Object.assign({}, THEME_PARCHMENT.pal, ((sc.art || D.art || {}).colors) || {}) : palette(sc.art || D.art);
     const o = { sc, i, P, pal, kind: shot.kind, dur: sc.end - sc.start, kick: makeKicker(sc, pal) };
     if (shot.kind === '3d') {
       o.scene = new THREE.Scene();
       o.camera = new THREE.PerspectiveCamera(34, W / H, 0.05, 300);
       o.labels = makeLabels($('labels'));
-      o.inst = shot.build({ P, pal, W, H, scene: o.scene, camera: o.camera, labels: o.labels, renderer: R3, seed: i + 1 });
+      o.inst = shot.build({ P, pal, W, H, scene: o.scene, camera: o.camera, labels: o.labels, renderer: R3, seed: i + 1, theme: D.theme });
     } else {
       o.el = div($('shots'), 'shot');
       o.el.style.cssText = 'position:absolute;inset:0;visibility:hidden';   // laid out while building (text measuring)
       o.svg = el(o.el, 'svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}` });
       o.svg.style.cssText = 'position:absolute;left:0;top:0';
       const defs = el(o.svg, 'defs');
-      o.inst = shot.build({ P, pal, W, H, root: o.el, svg: o.svg, defs, seed: i + 1 });
+      o.inst = shot.build({ P, pal, W, H, root: o.el, svg: o.svg, defs, seed: i + 1, theme: D.theme });
       o.el.style.display = 'none'; o.el.style.visibility = '';
     }
     return o;
@@ -96,10 +103,22 @@ window.init = async (data) => {
     o.env = { prevP: same ? prev.P : null, prevCam: same && prev.endCam ? prev.endCam : null };
     o.endCam = o.inst.camAt ? o.inst.camAt(o.dur, o.dur, o.env) : null;
     o.trans = i === 0 ? 'cut' : (o.sc.transition || (same ? 'match' : ['zoom', 'whip', 'flash', 'zoom'][i % 4]));
+    // parchment: no zoom/whip/white flash; paper slide or a soft cross-dissolve instead
+    if (PARCH && i > 0) o.trans = { zoom: 'slide', whip: 'slide', flash: 'fade' }[o.trans] || o.trans;
+    if (PARCH && i > 0 && !o.sc.transition && !same) o.trans = i % 3 === 2 ? 'fade' : 'slide';
     // cue times that belong to this scene (captions colour these words)
     o.cueTimes = Object.values(o.sc.cues || {});
   });
   for (const c of D.captions) for (const w of c.words) WORDS.push(w);
+  if (PARCH) {
+    const keys = S.flatMap(s => s.cueTimes);
+    const groups = D.captions.map(c => ({ start: c.start, end: c.end, words: c.words.map(w => {
+      const so = S[sceneAt(w.t)], key = keys.some(kt => Math.abs(kt - w.t) < 0.01);
+      return { t: w.t, text: w.text, cue: key ? (so && so.P.caption_color === 'red' ? 'red' : true) : false };
+    }) }));
+    PCAP = PARCHMENT.captions($('kickers'), W, H, groups);
+    PBRAND = PARCHMENT.brand($('kickers'), W, H, D.channel || '');
+  }
 
   await document.fonts.ready;
   await window.seek(0);
@@ -108,6 +127,7 @@ window.init = async (data) => {
 
 // ------------------------------------------------------------ background art
 function drawBg(t, pal) {
+  if (PARCH) return PAPER.update(t, BG_AT.i, BG_AT.prev, BG_AT.p);   // parchment-theme.js
   const w = BGX.canvas.width, h = BGX.canvas.height;
   const g = BGX.createLinearGradient(0, 0, 0, h);
   g.addColorStop(0, pal.bg[0]); g.addColorStop(1, pal.bg[1]);
@@ -158,11 +178,19 @@ function transStyle(kind, role, t, T) {
     if (role === 'out') { const p = lin(t, T - 0.14, 0.26); return { show: p < 1, tf: `translateX(${-W * 0.8 * p * p}px)`, op: 1, blur: 34 * p }; }
     const q = lin(t, T - 0.14, 0.34), e = EASE(q); return { show: q > 0, tf: `translateX(${W * 0.8 * (1 - e)}px)`, op: 1, blur: (1 - e) * 34 };
   }
+  if (kind === 'slide') {           // parchment: the sheet slides a little while the next one settles in
+    if (role === 'out') { const p = lin(t, T - 0.2, 0.42), e = EASE_IO(p); return { show: p < 1, tf: `translateX(${-W * 0.07 * e}px) rotate(${-0.6 * e}deg)`, op: 1 - e, blur: 0 }; }
+    const q = lin(t, T - 0.2, 0.5), e = EASE(q); return { show: q > 0, tf: `translateX(${W * 0.09 * (1 - e)}px) rotate(${0.8 * (1 - e)}deg)`, op: clamp01(q * 1.5), blur: 0 };
+  }
+  if (kind === 'fade') {
+    if (role === 'out') { const p = lin(t, T - 0.2, 0.4); return { show: p < 1, tf: '', op: 1 - EASE_IO(p), blur: 0 }; }
+    const q = lin(t, T - 0.2, 0.4); return { show: q > 0, tf: `scale(${lerp(1.02, 1, EASE(q))})`, op: EASE_IO(q), blur: 0 };
+  }
   // cut / flash / match: hard switch at T (flash adds a white pop, match continues the camera)
   if (role === 'out') return { show: t < T, tf: '', op: 1, blur: 0 };
   return { show: t >= T, tf: kind === 'flash' ? `scale(${lerp(1.1, 1, prog(t, T, 0.45))})` : '', op: 1, blur: 0 };
 }
-const TRANS_WIN = { zoom: [0.16, 0.18], whip: [0.14, 0.12], flash: [0, 0], cut: [0, 0], match: [0, 0] };
+const TRANS_WIN = { zoom: [0.16, 0.18], whip: [0.14, 0.12], flash: [0, 0], cut: [0, 0], match: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2] };
 
 function applyStyle(node, st, extraScale = 1) {
   node.style.display = st.show ? '' : 'none';
@@ -203,6 +231,7 @@ function compose(t, visible, pal, pend, coverTf) {
     if (st.show) o.inst.update(lt, o.dur, localCues(o), Object.assign({ t, pal: o.pal }, o.env));
   }
   if (own && own.st.show) gl.style.display = '';
+  if (PARCH) return;
   // light leak
   const lx = 50 + 40 * Math.sin(t * 0.23), ly = 20 + 15 * Math.cos(t * 0.31);
   $('leak').style.background = `radial-gradient(ellipse 60% 40% at ${lx}% ${ly}%, ${rgba(pal.glow, 0.12 + 0.06 * Math.sin(t * 0.9))}, rgba(0,0,0,0) 70%)`;
@@ -217,6 +246,7 @@ function localCues(o) {
 function hud(t, i, hooking) {
   const o = S[i];
   S.forEach((s, k) => {
+    if (s.kick.pk) { s.kick.pk.update(k !== i || hooking ? -1 : t - s.sc.start, 1 - prog(t, s.sc.end - 0.15, 0.15)); return; }
     const node = s.kick.k;
     if (k !== i || hooking || !s.kick.words.length) { node.style.opacity = 0; return; }
     const lt = t - s.sc.start, out = 1 - prog(t, s.sc.end - 0.15, 0.15);
@@ -229,8 +259,9 @@ function hud(t, i, hooking) {
     });
   });
   // captions: 1-3 words, each pops in when spoken; cue words glow in the accent colour
+  if (PCAP) PCAP.update(hooking ? -1 : t);
   const cap = $('caption');
-  const c = hooking ? null : D.captions.find(c => t >= c.start && t < c.end);
+  const c = PARCH || hooking ? null : D.captions.find(c => t >= c.start && t < c.end);
   if (c) {
     if (cap._c !== c) {
       cap._c = c; cap.innerHTML = '';
@@ -252,7 +283,7 @@ function hud(t, i, hooking) {
   // mascot
   const ms = o.sc.mascot;
   const spec = ms ? (typeof ms === 'string' ? { pose: ms } : ms) : null;
-  if (!spec || hooking) MASCOT.update({ alpha: 0 });
+  if (!spec || hooking || PARCH) MASCOT.update({ alpha: 0 });   // parchment: Kaşif replaces the bulb
   else {
     let k = i; while (k > 0 && S[k - 1].sc.mascot && ((S[k - 1].sc.mascot.size || 'small') === (spec.size || 'small'))) k--;
     const big = spec.size === 'big';
@@ -288,15 +319,17 @@ function renderNormal(t, pend) {
   }
   let pal = o.pal;
   if (prev) pal = mixPal(prev.pal, o.pal, prog(t, T - 0.2, 0.8));
+  BG_AT = { i, prev: prev ? i - 1 : -1, p: prev ? prog(t, T - 0.2, 0.6) : 1 };
   compose(t, vis, pal, pend);
   const fl = o.trans === 'flash' ? 0.75 * Math.exp(-Math.max(0, t - T) * 9) * (t >= T ? 1 : 0) : 0;
   const hookFlash = D.hook ? 0.6 * Math.exp(-Math.max(0, t - D.hook.end) * 9) * (t >= D.hook.end ? 1 : 0) : 0;
-  $('flash').style.opacity = Math.max(fl, hookFlash);
+  $('flash').style.opacity = PARCH ? 0 : Math.max(fl, hookFlash);
   hud(t, i, false);
 }
 
 function renderSolo(t, idx, lt, pend, coverTf) {
   const o = S[idx];
+  BG_AT = { i: idx, prev: -1, p: 1 };
   compose(t, [{ o, lt, st: { show: true, tf: '', op: 1, blur: 0 } }], o.pal, pend, coverTf);
   $('flash').style.opacity = 0;
 }
@@ -322,7 +355,23 @@ function buildCoverText(c) {
   }
   return box;
 }
-const coverShift = () => D.format === 'long' ? `translateX(${W * 0.2}px) scale(1.12)` : `translateY(${H * 0.1}px)`;
+// parchment cover: a big Kaşif (shock/point) next to the title when the Kaşif module (shots/kasif.js) is loaded.
+// cover.kasif: false | "shock" | {pose, x, y (ground point, stage px), scale, face: 1|-1, emotion, dir}
+function coverKasif(c, lt) {
+  const node = $('kasifcover');
+  node.innerHTML = '';
+  if (!PARCH || c.kasif === false || typeof KASIF === 'undefined' || !KASIF || typeof KASIF.create !== 'function') return;
+  node.setAttribute('width', W); node.setAttribute('height', H); node.setAttribute('viewBox', `0 0 ${W} ${H}`);
+  const portrait = H > W, k = typeof c.kasif === 'object' ? c.kasif : { pose: c.kasif };
+  const pose = k.pose || 'shock';
+  try {
+    const g = el(node, 'g');
+    const rig = KASIF.create(g, { scale: k.scale ?? (portrait ? 1.15 : 0.95), seed: 7 });
+    rig.update(2 + lt, pose, { x: k.x ?? (portrait ? W * 0.74 : W * 0.47), y: k.y ?? (portrait ? H * 0.97 : H * 0.985),
+      face: k.face ?? -1, since: 1.5, emotion: k.emotion || (pose === 'shock' ? 'surprised' : 'happy'), dir: k.dir ?? 40, mouth: 0.6 });
+  } catch (e) { console.error('Kaşif cover failed', e); node.innerHTML = ''; }
+}
+const coverShift = () => D.format === 'long' ? `translateX(${W * 0.2}px) scale(1.12)` : `translateY(${H * (PARCH ? 0.17 : 0.1)}px)`;
 
 function coverMoment(c) {
   const idx = Math.min(c.scene ?? 0, S.length - 1), o = S[idx];
@@ -334,7 +383,7 @@ window.seek = (t) => {
   const run = () => {
     pend.length = 0;
     if (h && t < h.end) {
-      if (!root.classList.contains('hook')) { root.classList.add('cover', 'hook'); buildCoverText(h); }
+      if (!root.classList.contains('hook')) { root.classList.add('cover', 'hook'); buildCoverText(h); coverKasif(h, 0); }
       const m = coverMoment(h);
       renderSolo(t, m.idx, m.lt + t * 0.35, pend, coverShift());
       const box = $('covertext');
@@ -363,6 +412,7 @@ window.cover = (c) => {
   $('covertext').style.opacity = 1;
   const m = coverMoment(c);
   const t = S[m.idx].sc.start + m.lt;
+  coverKasif(c, m.lt);
   const run = () => { renderSolo(t, m.idx, m.lt, pend, coverShift()); hud(t, m.idx, true); };
   run();
   if (pend.length) return Promise.all(pend).then(() => { run(); return true; });

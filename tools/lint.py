@@ -27,7 +27,8 @@ def shot_types():
         for name in re.findall(r"^SHOTS2?\.(\w+)\s*=", (ROOT / "scenes/studio" / js).read_text(), re.M):
             kinds[name] = kind
     for js in sorted((ROOT / "scenes/studio/shots").glob("*.js")):
-        for name, kind in re.findall(r"^SHOTS\.(\w+)\s*=\s*\{\s*kind:\s*'(\w+)'", js.read_text(), re.M):
+        # SHOTS.x = {kind: ...}, SH.x = {\n kind: ...}, (window.SHOTS || ...).x = {...}
+        for name, kind in re.findall(r"\.(\w+)\s*=\s*\{\s*kind:\s*'(\w+)'", js.read_text()):
             kinds[name] = kind
     kinds["photo"] = "real"
     return kinds
@@ -47,11 +48,12 @@ def lint(path, kinds):
     s = json.loads(Path(path).read_text())
     fmt = s.get("format", "short")
     short = fmt == "short"
+    parch = s.get("theme") == "parchment"   # brand style (brand/kit/BRAND.md): fixed palette, Kaşif instead of mascot
     sc = s.get("scenes", [])
 
     if s.get("engine") != "studio":
         err.append('"engine" must be "studio"')
-    if (s.get("art") or {}).get("palette") not in PALETTES:
+    if not parch and (s.get("art") or {}).get("palette") not in PALETTES:
         err.append(f'"art.palette" must be one of {sorted(PALETTES)}')
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
@@ -119,18 +121,24 @@ def lint(path, kinds):
     run = 1
     for i in range(1, len(types)):
         run = run + 1 if types[i] == types[i - 1] else 1
-        cap = 3 if kinds.get(types[i]) == "3d" else 2
+        cap = 3 if kinds.get(types[i]) == "3d" or types[i] == "stage" else 2
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
-    if not any(kinds.get(t) in ("3d", "real") for t in types):
+    if parch:
+        if s.get("max_pause") is None:
+            warn.append('parchment style: set "max_pause": 0.25')
+        if types and types.count("stage") < len(types) / 2:
+            err.append(f"Kaşif ('stage') in {types.count('stage')}/{len(types)} scenes, brand needs at least half")
+    elif not any(kinds.get(t) in ("3d", "real") for t in types):
         err.append("no 3D or real-footage scene")
-    if short:
+    if short and not parch:
         photos = types.count("photo")
         if photos == 0:
             warn.append("no real photo/video scene (aim for 1-3 per Short)")
         m = sum(1 for x in sc if x.get("mascot"))
         if not 2 <= m <= 4:
             warn.append(f"mascot in {m} scenes, aim for 2-4")
+    if short:
         first = sentences(sc[0]["text"])[0] if sc else ""
         if not 3 <= len(first.split()) <= 7:
             err.append(f"first sentence has {len(first.split())} words, hook needs 3-7")

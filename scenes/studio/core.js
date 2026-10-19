@@ -78,6 +78,15 @@ const PALETTES = {
   noir:   { bg: ['#050505', '#151517'], glow: '#5a5a66', accent: '#e5484d', accent2: '#f5f5f7', ink: '#f5f5f7' },
 };
 const RED = '#e5484d', GREEN = '#46c37b';
+// Theme "parchment" (script "theme": "parchment"): the brand's single fixed sepia palette (brand/kit/BRAND.md).
+// pal.bg/glow/accent/accent2/ink map onto it so generic shots stay on-brand; parchment shots use the tokens directly.
+const THEME_PARCHMENT = {
+  paper: '#E9DCC0', paperLight: '#F4EAD5', paperDark: '#D3C09A', stain: '#B88F5A', ink: '#2B1D12', inkSoft: '#6B5440',
+  blue: '#4A6F94', red: '#A8432F', gold: '#C8922E', green: '#5E7D4B', hat: '#8B5A2B', hatBand: '#4E3218',
+};
+THEME_PARCHMENT.pal = { bg: [THEME_PARCHMENT.paper, THEME_PARCHMENT.paper], glow: THEME_PARCHMENT.stain, accent: THEME_PARCHMENT.gold,
+  accent2: THEME_PARCHMENT.blue, ink: THEME_PARCHMENT.ink, theme: 'parchment' };
+
 function palette(a) {
   if (!a) return PALETTES.lab;
   if (typeof a === 'string') return PALETTES[a] || PALETTES.lab;
