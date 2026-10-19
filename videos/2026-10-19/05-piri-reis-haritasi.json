@@ -1,0 +1,2295 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.0
+    }
+  },
+  "slug": "05-piri-reis-haritasi",
+  "engine": "studio",
+  "theme": "parchment",
+  "pacing": {
+    "sentence": 0.6,
+    "comma": 0.25,
+    "max": 1.0
+  },
+  "format": "long",
+  "fps": 30,
+  "art": {
+    "palette": "desert"
+  },
+  "cover": {
+    "lines": [
+      "1513'te",
+      "Amerika'yı",
+      "çizdi"
+    ],
+    "highlight": [
+      "Amerika'yı"
+    ],
+    "scene": 38,
+    "t": 99,
+    "kasif": {
+      "pose": "point",
+      "emotion": "surprised",
+      "dir": 30,
+      "face": -1,
+      "scale": 1.15,
+      "x": 1720,
+      "y": 1070
+    }
+  },
+  "scenes": [
+    {
+      "type": "pirimap",
+      "text": "Kolomb'dan yalnızca yirmi bir yıl sonra, bir Osmanlı denizcisi Amerika'yı çiziyor.",
+      "visual": "Ceylan derisi harita hızla çizilir; büyüteç Güney Amerika kıyısına süzülür, altında kırmızı AMERİKA yazısı belirir",
+      "title": {
+        "white": "1513"
+      },
+      "cues": {
+        "am": "Amerika'yı"
+      },
+      "params": {
+        "mode": "loupe",
+        "draw_at": 0.0,
+        "draw_dur": 1.4,
+        "loupe": {
+          "focus": [
+            0.36,
+            0.42
+          ],
+          "from": [
+            0.72,
+            0.7
+          ],
+          "zoom": 2.3,
+          "at": "am",
+          "label": "AMERİKA",
+          "label_at": "am",
+          "label_dy": 290
+        }
+      },
+      "chapter": "Saraydaki parşömen",
+      "tone": "curious"
+    },
+    {
+      "type": "chapter",
+      "text": "1929. İstanbul, Topkapı Sarayı.",
+      "title": {},
+      "visual": "BÖLÜM 1 / 5 rozeti, mavi dairede 1, altında 'Saraydaki parşömen' kartı ve el çizimi alt çizgi",
+      "cues": {
+        "n": "1929",
+        "title": "Topkapı"
+      },
+      "params": {
+        "n": 1,
+        "total": 5,
+        "title": "Saraydaki parşömen"
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Saray, müzeye dönüşüyor ve yüzyıllardır açılmamış sandıklar tek tek boşaltılıyor. Toz, küf, kuru mürekkep kokusu. Kimse içinden ne çıkacağını bilmiyor.",
+      "visual": "Kaşif soldan yürüyerek gelir, kapı ve dürülmüş parşömenlerin yanında durup sandıkları işaret eder",
+      "title": {
+        "white": "Topkapı",
+        "gray": "1929"
+      },
+      "cues": {
+        "hit": "sandıklar",
+        "hit2": "boşaltılıyor"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": -0.1,
+            "pose": "walk",
+            "to": 0.36,
+            "at": "hit",
+            "then": "point",
+            "dir": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "door",
+            "x": 0.86,
+            "scale": 1.0
+          },
+          {
+            "type": "scroll",
+            "x": 0.62,
+            "scale": 0.8,
+            "at": "hit"
+          },
+          {
+            "type": "scroll",
+            "x": 0.72,
+            "scale": 0.6,
+            "at": "hit2"
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "palace"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "city",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "near": "arch",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Alman ilahiyatçı Gustav Adolf Deissmann, eski belgeleri karıştırıyor. Ve eli, kalın ve sert bir deri parçasına takılıyor.",
+      "visual": "Kaşif elinde katlanmış bir harita tutar, 'deri' kelimesinde şaşırıp geri sıçrar; yanda 'Deissmann' notu",
+      "title": {
+        "white": "Deissmann"
+      },
+      "cues": {
+        "hit": "deri"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.42,
+            "pose": "hold",
+            "item": "map",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "surprised",
+            "face": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "scroll",
+            "x": 0.78,
+            "scale": 0.9
+          }
+        ],
+        "label": {
+          "text": "G. A. Deissmann",
+          "x": 0.5,
+          "y": 0.13
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "palace"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "city",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "near": "arch",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "pirimap",
+      "text": "Açıyor: bu, ceylan derisinden bir harita! Kıyılar, gemiler, pusula çizgileri. Renkleri yüzyıllar sonra bile hâlâ canlı.",
+      "visual": "Ceylan derisi parşömen soldan açılır; kıyılar mürekkeple çizilir, pusula gülleri, rüzgâr çizgileri ve gemiler belirir",
+      "title": {
+        "white": "1513",
+        "gray": "dünya haritası"
+      },
+      "cues": {
+        "draw": "kıyılar",
+        "deri": "derisinden"
+      },
+      "params": {
+        "unroll": true,
+        "cam": {
+          "focus": [
+            0.5,
+            0.45
+          ],
+          "zoom": 1.07
+        },
+        "labels": [
+          {
+            "u": 0.2,
+            "v": 0.08,
+            "text": "ceylan derisi",
+            "at": "deri",
+            "rot": -4
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kenardaki notta bir isim okunuyor: Piri Reis. Ve bir tarih: 1513.",
+      "visual": "Kaşif 'PİRİ REİS' tabelasını işaret eder; '1513'te ikinci tabela '1513' belirir ve Kaşif şaşırır",
+      "title": {},
+      "cues": {
+        "name": "Piri",
+        "yr": "tarih",
+        "yr2": "1513"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.26,
+            "pose": "talk",
+            "at": "name",
+            "then": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "yr2",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.56,
+            "scale": 0.95,
+            "text": "PİRİ REİS",
+            "at": "name",
+            "hit": "name"
+          },
+          {
+            "type": "sign",
+            "x": 0.82,
+            "scale": 0.95,
+            "text": "1513",
+            "at": "yr2",
+            "hit": "yr2"
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "palace"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "city",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "near": "arch",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Şimdi şu tarihlere bir bak. Kolomb denize 1492'de açılıyor, Piri'nin haritası 1513'te çiziliyor. Bulunuşu ise 1929'da.",
+      "visual": "Yatay zaman çizgisi: 1492 Kolomb Amerika'da, 1513 Piri Reis haritası (kırmızı halka), 1929 Topkapı'da bulunur",
+      "title": {
+        "white": "Zaman",
+        "gray": "çizgisi"
+      },
+      "cues": {
+        "a": "1492",
+        "b": "1513",
+        "c": "1929"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1492",
+            "text": "Kolomb Amerika'da",
+            "at": "a"
+          },
+          {
+            "year": "1513",
+            "text": "Piri Reis haritası",
+            "at": "b"
+          },
+          {
+            "year": "1929",
+            "text": "Topkapı'da bulunur",
+            "at": "c"
+          }
+        ],
+        "focus": 1
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ama işin tuhafı şu: bildiğimiz kadarıyla Piri, Amerika'yı hiç görmüyor. Peki okyanusun öbür yakasını nasıl çizebiliyor?",
+      "visual": "Kaşif eli çenesinde düşünür, yanında bir gemi dalgalarda sallanır, üstte el yazısıyla 'Nasıl?'",
+      "title": {},
+      "cues": {
+        "hit": "okyanusun"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.36,
+            "pose": "shrug",
+            "at": "hit",
+            "then": "think"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.75,
+            "scale": 0.9
+          }
+        ],
+        "label": {
+          "text": "Nasıl?",
+          "x": 0.36,
+          "y": 0.13,
+          "at": "hit"
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "post",
+          "side": "left"
+        }
+      },
+      "tone": "curious"
+    },
+    {
+      "type": "chapter",
+      "chapter": "Denizci Piri",
+      "text": "Cevap, bir denizcinin hayatında saklı.",
+      "title": {},
+      "visual": "BÖLÜM 2 / 5 rozeti, mavi dairede 2, altında 'Denizci Piri' kartı ve el çizimi alt çizgi",
+      "cues": {
+        "n": "Cevap",
+        "title": "denizcinin"
+      },
+      "params": {
+        "n": 2,
+        "total": 5,
+        "title": "Denizci Piri"
+      }
+    },
+    {
+      "type": "map",
+      "text": "Piri, büyük olasılıkla 1460'ların sonunda doğuyor. Gelibolu'da büyüyor; denizin tuzu ve halatların gıcırtısı arasında.",
+      "visual": "Eski Akdeniz haritası; Gelibolu kırmızı noktayla belirir, İstanbul yanında, harita Çanakkale Boğazı'na yakınlaşır",
+      "title": {
+        "white": "Gelibolu"
+      },
+      "cues": {
+        "note": "1460'ların",
+        "gel": "Gelibolu",
+        "ist": "denizin"
+      },
+      "params": {
+        "preset": "mediterranean",
+        "cities": [
+          {
+            "name": "İstanbul",
+            "x": 28.97,
+            "y": 41.0,
+            "at": "ist",
+            "dx": 30,
+            "dy": -36
+          },
+          {
+            "name": "Gelibolu",
+            "x": 26.67,
+            "y": 40.41,
+            "at": "gel",
+            "color": "red",
+            "dy": 60
+          }
+        ],
+        "focus": [
+          26.67,
+          40.41
+        ],
+        "zoom": 1.35,
+        "compass": "br",
+        "seas": [
+          {
+            "name": "Ege",
+            "x": 25.2,
+            "y": 38.3,
+            "size": 44
+          }
+        ],
+        "note": {
+          "text": "~1465-1470",
+          "x": 0.06,
+          "y": 0.16,
+          "at": "note"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Amcası Kemal Reis, dönemin en ünlü Osmanlı denizcilerinden biri. Ve Piri, denizciliği ondan öğreniyor.",
+      "visual": "Sarıklı Kemal Reis gemisinin önünde konuşur; Kaşif onu işaret eder",
+      "title": {
+        "white": "Kemal Reis"
+      },
+      "cues": {
+        "hit": "Kemal"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.2,
+            "pose": "idle",
+            "at": "hit",
+            "then": "point",
+            "dir": "right",
+            "talk": true
+          },
+          {
+            "who": "kemal",
+            "accessory": "turban",
+            "x": 0.55,
+            "pose": "talk",
+            "talk": false,
+            "face": "left",
+            "beard": "black",
+            "scale": 1.15
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.82,
+            "scale": 1.0
+          }
+        ],
+        "label": {
+          "text": "Kemal Reis",
+          "x": 0.74,
+          "y": 0.3,
+          "at": "hit",
+          "arrow": [
+            0.6,
+            0.2
+          ]
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "rope",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Piri daha gençken, amcasının gemisine katılıyor.",
+      "visual": "Genç Piri (sarıklı, küçük) soldan gemiye yürür; Kaşif el sallayarak uğurlar",
+      "title": {
+        "white": "Genç Piri"
+      },
+      "cues": {
+        "hit": "gemisine"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "piri",
+            "accessory": "turban",
+            "scale": 0.85,
+            "x": 0.05,
+            "pose": "walk",
+            "to": 0.58,
+            "at": "hit",
+            "then": "wave"
+          },
+          {
+            "who": "kasif",
+            "x": 0.2,
+            "pose": "idle",
+            "at": "hit",
+            "then": "wave",
+            "face": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.8,
+            "scale": 1.0
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "post",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Yıllarca Akdeniz'i bir uçtan öbür uca dolaşıyorlar. İspanya kıyılarından Mısır'a kadar. Korsanlarla, Venedik gemileriyle savaşıyorlar.",
+      "visual": "Akdeniz haritasında kesikli kırmızı rota İspanya kıyısından Sicilya ve Girit'in güneyinden İskenderiye'ye çizilir",
+      "title": {
+        "white": "Akdeniz"
+      },
+      "cues": {
+        "sp": "İspanya",
+        "eg": "Mısır'a"
+      },
+      "params": {
+        "preset": "mediterranean",
+        "cities": [
+          {
+            "name": "İspanya",
+            "x": -0.38,
+            "y": 39.47,
+            "at": "sp",
+            "dy": -40
+          },
+          {
+            "name": "Gelibolu",
+            "x": 26.67,
+            "y": 40.41,
+            "dy": -40
+          },
+          {
+            "name": "Mısır",
+            "x": 29.9,
+            "y": 31.2,
+            "at": "eg",
+            "dy": 64,
+            "color": "red"
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              -0.38,
+              39.47
+            ],
+            [
+              5,
+              38.3
+            ],
+            [
+              12.5,
+              36.3
+            ],
+            [
+              20,
+              35.0
+            ],
+            [
+              25,
+              34.4
+            ],
+            [
+              29.9,
+              31.4
+            ]
+          ],
+          "at": "sp",
+          "dur": 2.6
+        },
+        "zoom": 1.05,
+        "compass": "bl",
+        "seas": [
+          {
+            "name": "Akdeniz",
+            "x": 18,
+            "y": 34.3
+          },
+          {
+            "name": "Karadeniz",
+            "x": 31.5,
+            "y": 43.4,
+            "size": 44
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ve Piri, her limanı, her burnu, her sığlığı not ediyor. Başkaları savaşları hatırlıyor. O ise kıyıları.",
+      "visual": "Sarıklı Piri kayanın üstünde oturur, önünde not dolu bir parşömen; Kaşif parşömeni işaret eder",
+      "title": {
+        "white": "Notlar"
+      },
+      "cues": {
+        "hit": "burnu"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "piri",
+            "accessory": "turban",
+            "x": 0.3,
+            "pose": "sit",
+            "talk": false,
+            "face": "right",
+            "beard": "short"
+          },
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "talk",
+            "at": "hit",
+            "then": "point",
+            "dir": "left"
+          }
+        ],
+        "props": [
+          {
+            "type": "tower",
+            "x": 0.95,
+            "scale": 0.75
+          },
+          {
+            "type": "scroll",
+            "x": 0.55,
+            "scale": 0.85,
+            "at": "hit"
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "harbour"
+        },
+        "foreground": [
+          {
+            "type": "hatch",
+            "from": 0,
+            "to": 0.62
+          },
+          {
+            "type": "pier",
+            "from": 0.62,
+            "to": 1
+          }
+        ],
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "rope",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "1511'de bir fırtına, her şeyi değiştiriyor. Kemal Reis'in gemisi batıyor. Ve Piri, artık yalnız.",
+      "visual": "Fırtına: gökte taralı bulutlar, çapraz yağmur, 'fırtına'da mürekkep şimşek çakar; tam genişlikte dalgalı deniz; 'batıyor'da gemi yan yatıp batarken önünden dev bir dalga tepesi geçer; Kaşif kıyıdan dürbünle bakar, sonra şaşırır",
+      "title": {
+        "white": "1511"
+      },
+      "cues": {
+        "hit": "batıyor",
+        "storm": "fırtına"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.28,
+            "pose": "look",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.74,
+            "scale": 1.1,
+            "hit": "hit",
+            "move": {
+              "at": "hit",
+              "y": 1.02,
+              "rot": 22,
+              "dur": 1.8
+            },
+            "y": 0.7
+          }
+        ],
+        "label": {
+          "text": "Fırtına, 1511",
+          "x": 0.72,
+          "y": 0.13
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": [
+          {
+            "type": "water",
+            "from": 0,
+            "to": 1
+          }
+        ],
+        "sea_front": {
+          "from": 0,
+          "to": 1,
+          "profile": [
+            [
+              0,
+              0.79
+            ],
+            [
+              0.36,
+              0.79
+            ],
+            [
+              0.5,
+              0.71
+            ],
+            [
+              1,
+              0.66
+            ]
+          ],
+          "bottom": 0.81,
+          "clip": true,
+          "dark": true,
+          "crest": {
+            "at": "hit",
+            "x0": 0.5,
+            "x1": 1.02,
+            "dur": 2.4,
+            "y": 0.55,
+            "w": 0.13
+          }
+        },
+        "storm": {
+          "at": "storm",
+          "flash": [
+            "storm",
+            "hit"
+          ],
+          "bolt": "ink",
+          "hatch": true
+        },
+        "depth": {
+          "far": "hills",
+          "far_h": 0.18,
+          "far_gap": [
+            0.4,
+            0.7
+          ],
+          "sky": false
+        }
+      },
+      "tone": "dramatic"
+    },
+    {
+      "type": "stage",
+      "text": "Piri Gelibolu'ya dönüyor. Elinde yılların notları var. Kafasında da büyük bir fikir.",
+      "visual": "Sarıklı Piri elinde parşömenle Gelibolu'daki eve yürür; Kaşif düşünür, sonra işaret eder",
+      "title": {
+        "white": "Gelibolu"
+      },
+      "cues": {
+        "hit": "notları",
+        "big": "fikir"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "piri",
+            "accessory": "turban",
+            "x": 0.95,
+            "pose": "walk",
+            "to": 0.6,
+            "at": "hit",
+            "then": "hold",
+            "item": "scroll",
+            "beard": "short"
+          },
+          {
+            "who": "kasif",
+            "x": 0.2,
+            "pose": "think",
+            "at": "big",
+            "then": "point",
+            "dir": "right",
+            "face": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "tower",
+            "x": 0.95,
+            "scale": 0.75
+          },
+          {
+            "type": "house",
+            "x": 0.84,
+            "scale": 0.9
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "harbour"
+        },
+        "foreground": [
+          {
+            "type": "hatch",
+            "from": 0,
+            "to": 0.62
+          },
+          {
+            "type": "pier",
+            "from": 0.62,
+            "to": 1
+          }
+        ],
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "crate",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "chapter",
+      "chapter": "Yirmi haritadan bir harita",
+      "text": "1513'te Piri, kalemi eline alıyor.",
+      "title": {},
+      "visual": "BÖLÜM 3 / 5 rozeti, mavi dairede 3, altında 'Yirmi haritadan bir harita' kartı ve el çizimi alt çizgi",
+      "cues": {
+        "n": "1513",
+        "title": "kalemi"
+      },
+      "params": {
+        "n": 3,
+        "total": 5,
+        "title": "Yirmi haritadan bir harita"
+      }
+    },
+    {
+      "type": "pirimap",
+      "text": "Haritanın notlarına göre, yaklaşık yirmi kaynak kullanıyor. Düşünsene: yirmi ayrı harita, birbirini tutmayan kıyılar. Hepsini karşılaştırıp tek bir haritada birleştiriyor.",
+      "visual": "Yirmi küçük harita kartı tek tek ızgaraya düşer, sayaç 1'den 20'ye çıkar, biri kırmızı 'Kolomb'; sonra kartlar ceylan derisinde birleşir",
+      "title": {
+        "white": "Kaynaklar"
+      },
+      "cues": {
+        "yirmi": "yirmi",
+        "Hepsini": "Hepsini"
+      },
+      "params": {
+        "mode": "sources",
+        "sources": {
+          "n": 20,
+          "tags": {
+            "12": {
+              "text": "Kolomb",
+              "color": "red"
+            }
+          },
+          "at": "yirmi",
+          "merge": "Hepsini",
+          "label": "≈ 20 kaynak"
+        }
+      }
+    },
+    {
+      "type": "board",
+      "text": "Aralarında eski Batlamyus haritaları var. Portekiz ve Arap haritaları var.",
+      "visual": "Pano: 'Piri'nin kaynakları' kartında Batlamyus, Portekiz, Arap haritaları tek tek işaretlenir; yanda soru işaretli kart",
+      "title": {},
+      "cues": {
+        "a": "Batlamyus",
+        "b": "Portekiz",
+        "c": "Arap",
+        "c1": "Portekiz",
+        "d": "Arap"
+      },
+      "params": {
+        "title": "Piri'nin kaynakları",
+        "cards": [
+          {
+            "title": "Haritalar",
+            "items": [
+              {
+                "text": "Batlamyus haritaları",
+                "mark": "check",
+                "at": "a"
+              },
+              {
+                "text": "Portekiz haritaları",
+                "mark": "check",
+                "at": "b"
+              },
+              {
+                "text": "Arap haritası",
+                "mark": "check",
+                "at": "c"
+              }
+            ]
+          },
+          {
+            "title": "Bir tane daha",
+            "items": [
+              {
+                "text": "Kimin çizimi?",
+                "mark": null,
+                "at": "d"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ama en değerlisi bambaşka. Kolomb'un kendi çizdiği bir harita.",
+      "visual": "'Kolomb'un'da 'KOLOMB' tabelası ve katlanmış harita belirir; Kaşif işaret eder, sonra şaşkınlıkla geri sıçrar",
+      "title": {},
+      "cues": {
+        "hit": "Kolomb'un",
+        "hit2": "çizdiği"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "pose": "think",
+            "at": "hit",
+            "then": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "hit2",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.6,
+            "scale": 1.0,
+            "text": "KOLOMB",
+            "at": "hit",
+            "hit": "hit2"
+          },
+          {
+            "type": "map",
+            "x": 0.84,
+            "scale": 0.9,
+            "at": "hit"
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "crate",
+          "side": "left"
+        }
+      },
+      "tone": "whispers"
+    },
+    {
+      "type": "stage",
+      "text": "Nasıl mı? Piri'nin notuna göre bu harita, Kolomb'la denize açılmış bir İspanyol denizciden ele geçiriliyor.",
+      "visual": "Bereli İspanyol denizci haritayı sarıklı Kemal Reis'e uzatır; Kaşif yanlarında konuşur",
+      "title": {
+        "white": "Esir",
+        "gray": "bir denizci"
+      },
+      "cues": {
+        "hit": "ele"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "ispanyol",
+            "accessory": "beret",
+            "x": 0.7,
+            "pose": "hold",
+            "item": "map",
+            "face": "left",
+            "talk": false,
+            "at": "hit",
+            "then": "shrug"
+          },
+          {
+            "who": "kemal",
+            "accessory": "turban",
+            "x": 0.46,
+            "pose": "idle",
+            "face": "right",
+            "talk": false,
+            "at": "hit",
+            "then": "point",
+            "dir": "right",
+            "beard": "black",
+            "scale": 1.15
+          },
+          {
+            "who": "kasif",
+            "x": 0.15,
+            "pose": "talk",
+            "face": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.92,
+            "scale": 0.7
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ]
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Piri'ye göre haritadaki Karayip adaları, doğrudan o haritadan geliyor.",
+      "visual": "Atlas Okyanusu haritası: İspanya'dan Karayipler'e kesikli kırmızı Kolomb rotası çizilir, Karayipler kırmızı halkayla işaretlenir, '1492' notu",
+      "title": {
+        "white": "Kolomb'un",
+        "gray": "rotası"
+      },
+      "cues": {
+        "go": "göre",
+        "kar": "Karayip"
+      },
+      "params": {
+        "preset": "atlantic",
+        "cities": [
+          {
+            "name": "İspanya",
+            "x": -6.9,
+            "y": 37.2,
+            "dy": -40
+          },
+          {
+            "name": "Karayipler",
+            "x": -72,
+            "y": 20,
+            "at": "kar",
+            "color": "red",
+            "dy": 70
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              -6.9,
+              37.2
+            ],
+            [
+              -15.5,
+              28.3
+            ],
+            [
+              -35,
+              24
+            ],
+            [
+              -55,
+              23
+            ],
+            [
+              -72,
+              21
+            ]
+          ],
+          "at": "go",
+          "dur": 2.0
+        },
+        "note": {
+          "text": "Kolomb, 1492",
+          "x": 0.06,
+          "y": 0.2,
+          "at": "go"
+        },
+        "focus": [
+          -60,
+          22
+        ],
+        "zoom": 1.15
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kolomb'un o haritası? Bugün hiçbir yerde yok. Yani o kayıp haritanın izi, belki de en net Piri'nin haritasında yaşıyor.",
+      "visual": "'hiçbir'de 'KAYIP' tabelası ve yarısı yırtılmış bir harita belirir; Kaşif endişeyle omuz silker",
+      "title": {
+        "white": "Kayıp",
+        "gray": "harita"
+      },
+      "cues": {
+        "hit": "hiçbir"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.32,
+            "pose": "talk",
+            "at": "hit",
+            "then": "shrug",
+            "emotion": "worried",
+            "face": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.6,
+            "scale": 1.0,
+            "text": "KAYIP",
+            "at": "hit",
+            "hit": "hit"
+          },
+          {
+            "type": "torn_map",
+            "x": 0.8,
+            "scale": 1.0,
+            "at": "hit"
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "palace"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "city",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "near": "arch",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "pirimap",
+      "text": "Ama Piri'nin haritası da eksik. Bugüne yalnızca batıdaki üçte biri ulaşıyor. Gerisi, kayıp.",
+      "visual": "Solda küçük ceylan derisi parçası, sağında kesik çizgili kayıp üçte iki; parçanın üstünde '1 / 3', altında 'Bugüne kalan'",
+      "title": {
+        "white": "Bir parça"
+      },
+      "cues": {
+        "üçte": "üçte"
+      },
+      "params": {
+        "mode": "torn",
+        "draw": false,
+        "torn": {
+          "at": "üçte",
+          "keep": "Bugüne kalan",
+          "lost": "Kayıp",
+          "share": "1 / 3"
+        }
+      }
+    },
+    {
+      "type": "chapter",
+      "chapter": "Efsane ve gerçek",
+      "text": "1950'ler ve 60'lar. Harita birden bambaşka bir şöhret kazanıyor. Ve işler tuhaflaşıyor.",
+      "title": {},
+      "visual": "BÖLÜM 4 / 5 rozeti, mavi dairede 4, altında 'Efsane ve gerçek' kartı ve el çizimi alt çizgi",
+      "cues": {
+        "n": "1950",
+        "title": "şöhret"
+      },
+      "params": {
+        "n": 4,
+        "total": 5,
+        "title": "Efsane ve gerçek"
+      }
+    },
+    {
+      "type": "pirimap",
+      "text": "Bazı yazarlara göre haritanın altındaki kıyı, buzsuz Antarktika.",
+      "visual": "Haritanın alt kenarı boyunca uzanan kıyı altın sarısıyla vurgulanır, üstünde 'ANTARKTİKA?' yazısı; Kaşif şaşırır",
+      "title": {
+        "white": "Efsane"
+      },
+      "cues": {
+        "alt": "altındaki",
+        "ant": "Antarktika"
+      },
+      "params": {
+        "draw": false,
+        "highlight": {
+          "coast": "bend",
+          "color": "gold",
+          "at": "alt"
+        },
+        "cam": {
+          "focus": [
+            0.5,
+            0.6
+          ],
+          "zoom": 1.06
+        },
+        "labels": [
+          {
+            "u": 0.7,
+            "v": 0.97,
+            "text": "ANTARKTİKA?",
+            "font": "title",
+            "at": "ant",
+            "color": "red",
+            "size": 50
+          }
+        ],
+        "kasif": {
+          "pose": "point",
+          "dir": "left",
+          "at": "ant",
+          "then": "shock",
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Hatta daha da ileri gidiyorlar. Bu bilgiyi kayıp bir uygarlığın, ya da uzaylıların verdiğini iddia ediyorlar.",
+      "visual": "'uzaylıların'da 'UZAYLILAR?' tabelası belirir, Kaşif işaret eder, 'iddia'da omuz silker",
+      "title": {
+        "white": "İddia"
+      },
+      "cues": {
+        "ufo": "uzaylıların",
+        "hit": "iddia"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "pose": "point",
+            "dir": "right",
+            "face": "right",
+            "at": "hit",
+            "then": "shrug",
+            "emotion": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.64,
+            "scale": 1.0,
+            "text": "UZAYLILAR?",
+            "at": "ufo",
+            "hit": "ufo"
+          },
+          {
+            "type": "rock",
+            "x": 0.88,
+            "scale": 0.8
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "post",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kulağa heyecanlı geliyor, değil mi? Ama Antarktika ilk kez 1820'de görülüyor. Ve milyonlarca yıldır kalın bir buzla kaplı.",
+      "visual": "Kaşif düşünür, '1820'de '1820' tabelası belirir ve Kaşif onu işaret eder; 'buzla'da şaşırır, el yazısı 'Buz: milyonlarca yıl'",
+      "title": {
+        "white": "1820"
+      },
+      "cues": {
+        "yr": "1820",
+        "ice": "buzla"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.28,
+            "pose": "think",
+            "at": "yr",
+            "then": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "ice",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.58,
+            "scale": 1.0,
+            "text": "1820",
+            "at": "yr",
+            "hit": "yr"
+          },
+          {
+            "type": "rock",
+            "x": 0.84,
+            "scale": 1.1
+          }
+        ],
+        "label": {
+          "text": "Buz: milyonlarca yıl",
+          "x": 0.72,
+          "y": 0.13,
+          "at": "ice"
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "rope",
+          "side": "left"
+        }
+      },
+      "tone": "serious"
+    },
+    {
+      "type": "pirimap",
+      "text": "Peki o kıyı ne o zaman? Tarihçilere göre cevap haritanın kendisinde: deri bitiyor ve Güney Amerika kıyısı, büyük olasılıkla doğuya kıvrılarak çiziliyor.",
+      "visual": "Harita: 'ANTARKTİKA?' yazısının üstü çizilir; kıyının dümdüz güneye devam edeceği yol kesikli kırmızıyla derinin dışına uzanır, ok doğuya kıvrılan kıyıyı gösterir, 'Güney Amerika' etiketi",
+      "title": {
+        "white": "Gerçek"
+      },
+      "cues": {
+        "tarih": "Tarihçilere",
+        "deri": "Deri",
+        "ga": "Güney",
+        "kıv": "kıvrılarak"
+      },
+      "params": {
+        "draw": false,
+        "cam": {
+          "focus": [
+            0.5,
+            0.6
+          ],
+          "zoom": 1.06
+        },
+        "labels": [
+          {
+            "u": 1.25,
+            "v": 0.86,
+            "text": "ANTARKTİKA?",
+            "font": "title",
+            "at": 0.1,
+            "color": "ink",
+            "size": 44,
+            "cross": "tarih",
+            "rot": -4
+          },
+          {
+            "u": 0.2,
+            "v": 0.48,
+            "text": "Güney Amerika",
+            "at": "ga",
+            "color": "red",
+            "size": 58
+          }
+        ],
+        "ghost": {
+          "at": "deri"
+        },
+        "highlight": {
+          "coast": "bend",
+          "color": "red",
+          "at": "kıv"
+        },
+        "arrows": [
+          {
+            "from": [
+              0.27,
+              0.95
+            ],
+            "to": [
+              0.5,
+              0.88
+            ],
+            "at": "kıv",
+            "bend": -0.35
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Piri'nin o kıyıya düştüğü not da bir ipucu: Burası çok sıcak ve büyük yılanlarla dolu. Yani buz değil, sıcak bir kıyı.",
+      "visual": "'sıcak'ta 'ÇOK SICAK' tabelası belirir, Kaşif gösterir, 'yılanlarla'da şaşırır; yanda tropik ağaç",
+      "title": {
+        "white": "Piri'nin",
+        "gray": "notu"
+      },
+      "cues": {
+        "hot": "sıcak",
+        "snake": "yılanlarla"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.28,
+            "pose": "talk",
+            "at": "hot",
+            "then": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "snake",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.58,
+            "scale": 1.0,
+            "text": "ÇOK SICAK",
+            "at": "hot",
+            "hit": "snake"
+          },
+          {
+            "type": "tree",
+            "x": 0.85,
+            "scale": 1.0
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea",
+          "coast": "left"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "post",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "board",
+      "text": "Yani buzların altında gizli bir kıta yok. Deriye sığdırılmış bir kıyı var.",
+      "visual": "Pano: 'Efsane' kartında Buzsuz Antarktika ve Uzaylı bilgisi çarpı; 'Gerçek' kartında ~20 kaynak ve kıvrılan kıyı tik; altta yeşil hap 'Deriye sığan kıyı'",
+      "title": {},
+      "cues": {
+        "a": "buzların",
+        "b": "gizli",
+        "c": "Deriye",
+        "d": "sığdırılmış",
+        "pill": "kıyı"
+      },
+      "params": {
+        "title": "Efsane mi, gerçek mi?",
+        "cards": [
+          {
+            "title": "Efsane",
+            "items": [
+              {
+                "text": "Buzsuz Antarktika",
+                "mark": "x",
+                "at": "a"
+              },
+              {
+                "text": "Uzaylı bilgisi",
+                "mark": "x",
+                "at": "b"
+              }
+            ]
+          },
+          {
+            "title": "Gerçek",
+            "items": [
+              {
+                "text": "~20 kaynak",
+                "mark": "check",
+                "at": "c"
+              },
+              {
+                "text": "Kıvrılan kıyı",
+                "mark": "check",
+                "at": "d"
+              }
+            ]
+          }
+        ],
+        "pill": {
+          "text": "Deriye sığan kıyı",
+          "color": "green",
+          "at": "pill"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Uzaylı yok. Kayıp kıta yok. Bir denizci var; dünyanın bilgisini tek bir deriye topluyor.",
+      "visual": "Kaşif el hareketleriyle anlatır, 'deriye'de yanındaki haritayı gösterir",
+      "title": {},
+      "cues": {
+        "hit": "deriye"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.4,
+            "pose": "talk",
+            "at": "hit",
+            "then": "point",
+            "dir": "right",
+            "emotion": "happy"
+          }
+        ],
+        "props": [
+          {
+            "type": "map",
+            "x": 0.76,
+            "scale": 1.1,
+            "hit": "hit"
+          }
+        ],
+        "label": {
+          "text": "20 harita = 1 harita",
+          "x": 0.5,
+          "y": 0.13,
+          "at": "hit"
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "crate",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "chapter",
+      "chapter": "Haritanın mirası",
+      "text": "Ama Piri Reis'in işi bu haritayla bitmiyor.",
+      "title": {},
+      "visual": "BÖLÜM 5 / 5 rozeti, mavi dairede 5, altında 'Haritanın mirası' kartı ve el çizimi alt çizgi",
+      "cues": {
+        "n": "Piri",
+        "title": "işi"
+      },
+      "params": {
+        "n": 5,
+        "total": 5,
+        "title": "Haritanın mirası"
+      }
+    },
+    {
+      "type": "stage",
+      "text": "1521'de Kitab-ı Bahriye'yi bitiriyor. Akdeniz'in limanlarını ve kıyılarını tek tek anlatan bir denizcilik kitabı.",
+      "visual": "Sarıklı Piri 'Kitab-ı Bahriye' tabelası ve parşömenin yanında konuşur; Kaşif parşömeni işaret eder",
+      "title": {
+        "white": "1521"
+      },
+      "cues": {
+        "hit": "Bahriye'yi"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "piri",
+            "accessory": "turban",
+            "x": 0.25,
+            "pose": "talk",
+            "talk": false,
+            "face": "right",
+            "beard": "short"
+          },
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "idle",
+            "at": "hit",
+            "then": "point",
+            "dir": "left"
+          }
+        ],
+        "props": [
+          {
+            "type": "tower",
+            "x": 0.95,
+            "scale": 0.75
+          },
+          {
+            "type": "sign",
+            "x": 0.53,
+            "scale": 1.0,
+            "text": "Kitab-ı Bahriye",
+            "at": "hit",
+            "hit": "hit"
+          },
+          {
+            "type": "scroll",
+            "x": 0.66,
+            "scale": 0.6,
+            "at": "hit"
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "harbour"
+        },
+        "foreground": [
+          {
+            "type": "hatch",
+            "from": 0,
+            "to": 0.62
+          },
+          {
+            "type": "pier",
+            "from": 0.62,
+            "to": 1
+          }
+        ],
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "rope",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "1526'da kitabı genişletip Kanuni Sultan Süleyman'a sunuyor. İki yıl sonra da ikinci bir dünya haritası çiziyor.",
+      "visual": "Zaman çizgisi: 1513 Dünya haritası, 1521 Kitab-ı Bahriye, 1526 Kanuni'ye sunulur (kırmızı), 1528 İkinci harita",
+      "title": {
+        "white": "Eserleri"
+      },
+      "cues": {
+        "a": "1526",
+        "b": "ikinci"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1513",
+            "text": "Dünya haritası"
+          },
+          {
+            "year": "1521",
+            "text": "Kitab-ı Bahriye"
+          },
+          {
+            "year": "1526",
+            "text": "Kanuni'ye sunulur",
+            "at": "a"
+          },
+          {
+            "year": "1528",
+            "text": "İkinci harita",
+            "at": "b"
+          }
+        ],
+        "focus": 2
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Yaşlılığında Hint Okyanusu'ndaki Osmanlı filosunu yönetiyor. Hürmüz seferinden sonra, seksenlerindeyken, Mısır'da idam ediliyor.",
+      "visual": "Gri sakallı yaşlı Piri gemisinin önünde durur ve gemiyi gösterir; 'idam'da Kaşif endişeyle düşünür; el yazısı 'büyük olasılıkla 1553'",
+      "title": {
+        "white": "1553"
+      },
+      "cues": {
+        "hit": "idam"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "piri",
+            "accessory": "turban",
+            "x": 0.55,
+            "pose": "idle",
+            "talk": false,
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "emotion": "worried",
+            "beard": "grey",
+            "dir": "right"
+          },
+          {
+            "who": "kasif",
+            "x": 0.18,
+            "pose": "talk",
+            "face": "right",
+            "at": "hit",
+            "then": "think",
+            "emotion": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.84,
+            "scale": 1.0
+          }
+        ],
+        "label": {
+          "text": "büyük olasılıkla 1553",
+          "x": 0.5,
+          "y": 0.13,
+          "at": "hit"
+        },
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "rope",
+          "side": "left"
+        }
+      },
+      "tone": "sad"
+    },
+    {
+      "type": "title",
+      "text": "2013'te UNESCO, haritanın beş yüzüncü yılını anma takvimine alıyor.",
+      "visual": "Dev Fraunces yazı 'UNESCO / 500. YIL', 500 kırmızı kutuda, el yazısı not '1513 → 2013'; sağda küçük Kaşif 'beş'te yazıyı işaret eder",
+      "title": {
+        "white": "Bugün"
+      },
+      "cues": {
+        "w0": "UNESCO",
+        "w1": "beş",
+        "w2": "yılını",
+        "note": "anma"
+      },
+      "params": {
+        "lines": [
+          "UNESCO",
+          "500. yıl"
+        ],
+        "highlight": [
+          "500"
+        ],
+        "note": {
+          "text": "1513 → 2013",
+          "at": "note"
+        },
+        "kasif": {
+          "x": 0.8,
+          "y": 0.8,
+          "pose": "point",
+          "dir": 25,
+          "face": -1,
+          "scale": 0.75,
+          "emotion": "surprised",
+          "at": "w1"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Dört yüz yıl unutulan harita, bugün Topkapı Sarayı'nda korunuyor. Ve çok nadir sergileniyor. Çünkü beş yüz yıllık ceylan derisi, çok hassas.",
+      "visual": "Kaşif sütunların arasındaki haritaya yürür ve işaret eder",
+      "title": {
+        "white": "Topkapı"
+      },
+      "cues": {
+        "hit": "korunuyor"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.1,
+            "pose": "walk",
+            "to": 0.42,
+            "at": "hit",
+            "then": "point",
+            "dir": "right"
+          }
+        ],
+        "props": [
+          {
+            "type": "column",
+            "x": 0.62,
+            "scale": 0.9
+          },
+          {
+            "type": "map",
+            "x": 0.77,
+            "scale": 0.8
+          },
+          {
+            "type": "column",
+            "x": 0.88,
+            "scale": 0.9
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "palace"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "city",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "near": "arch",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "pirimap",
+      "text": "Yani bu haritanın sırrı uzaylılarda değil. Okyanusları tek bir deriye sığdıran merakta.",
+      "visual": "Ceylan derisi harita yeniden çizilir, Kaşif yanında hayranlıkla dürbünle bakar, 'merakta'da haritayı gösterir",
+      "title": {
+        "white": "Piri Reis"
+      },
+      "cues": {
+        "mer": "merakta"
+      },
+      "params": {
+        "draw_at": 0.1,
+        "draw_dur": 3.0,
+        "cam": {
+          "focus": [
+            0.5,
+            0.5
+          ],
+          "zoom": 1.08
+        },
+        "box": {
+          "x": 520
+        },
+        "marks": [
+          {
+            "u": 0.36,
+            "v": 0.42,
+            "r": 0.13,
+            "at": "mer"
+          }
+        ],
+        "labels": [
+          {
+            "u": 0.19,
+            "v": 0.6,
+            "text": "Amerika",
+            "at": "mer",
+            "color": "red",
+            "size": 60
+          }
+        ],
+        "kasif": {
+          "pose": "look",
+          "face": -1,
+          "at": "mer",
+          "then": "point",
+          "dir": "left",
+          "emotion": "happy"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Sence Piri Reis, Kolomb'un haritasını hiç görmeseydi, Amerika'yı yine çizebilir miydi? Yorumlara yaz.",
+      "visual": "'SENCE?' tabelası belirir; Kaşif anlatır, 'çizebilir'de omuz silker, 'Yorumlara'da el sallar",
+      "title": {
+        "white": "Soru"
+      },
+      "cues": {
+        "q": "Sence",
+        "hit": "çizebilir",
+        "yor": "Yorumlara"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.32,
+            "pose": "talk",
+            "face": "right",
+            "at": "hit",
+            "then": "shrug",
+            "seq": [
+              {
+                "at": "yor",
+                "pose": "wave"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.62,
+            "scale": 1.0,
+            "text": "SENCE?",
+            "at": "q",
+            "hit": "hit"
+          },
+          {
+            "type": "map",
+            "x": 0.86,
+            "scale": 0.8
+          }
+        ],
+        "scale": 1.2,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "backdrop": {
+          "type": "sea"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "post",
+          "side": "left"
+        }
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Piri Reis Haritası: 1513'te Amerika'yı Nasıl Çizdi? 🗺️",
+    "description": "Piri Reis haritası, Kolomb'dan yalnızca 21 yıl sonra, 1513'te Gelibolu'da ceylan derisine çizildi ve Amerika kıyılarını gösteriyor. Peki bir Osmanlı denizcisi okyanusun öbür yakasını nasıl çizdi?\n\n1929'da Topkapı Sarayı'nda yeniden bulunan bu harita, Piri Reis'in notlarına göre yaklaşık 20 kaynaktan derlendi; aralarında bugün kayıp olan Kolomb haritası da var. Kemal Reis'in yeğeni Piri'nin Akdeniz seferlerini, Kitab-ı Bahriye'yi ve haritanın Antarktika efsanesinin neden yanlış olduğunu anlatıyoruz.\n\nBu videoda:\n• 1929: Topkapı Sarayı'ndaki ceylan derisi parşömen\n• Denizci Piri ve amcası Kemal Reis\n• Yirmi haritadan bir harita: Kolomb'un kayıp haritası\n• Antarktika ve uzaylı efsanesi: Kıyı neden kıvrılıyor?\n• Kitab-ı Bahriye ve haritanın mirası\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Piri Reis, Kolomb'un haritasını görmeseydi Amerika'yı yine çizebilir miydi? Yorumlara yaz!\n\n#pirireis #osmanlıtarihi #tarih #düşünbakalım",
+    "tags": [
+      "piri reis haritası",
+      "piri reis",
+      "piri reis haritası antarktika",
+      "piri reis haritası nasıl çizildi",
+      "1513 dünya haritası",
+      "kolomb haritası",
+      "kitab-ı bahriye",
+      "kemal reis",
+      "osmanlı denizcileri",
+      "osmanlı tarihi",
+      "topkapı sarayı",
+      "antarktika efsanesi",
+      "eski haritalar",
+      "tarih",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-20T17:00:00+03:00"
+  }
+}

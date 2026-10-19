@@ -123,3 +123,36 @@ Ek notlar (küçük):
 - **Sahne 36 (UNESCO):** düz yazı sahnesi. Kabul edilebilir, ama altta 1513 → 2013 tarih çizgisi ya da yanda Kaşif `point` eklemek kartı canlandırır.
 - **Sahne 28:** üstü çizili "ANTARKTİKA?" artık derinin dışında ve doğru fikri veriyor. Yazı küçük ama çizgiyle birlikte anlaşılıyor.
 - **Kapak:** değişmedi ve hâlâ iyi (yazı okunuyor, halka Amerika'da, Kaşif'in yüzü belirgin).
+
+### 05-piri-reis-haritasi — tur 3 (son)
+lint: OK · preview: 40 sahne, ~275 sn (4:36), 3.919 karakter, STATIC? yok (en düşük hareket: sahne 8, 5.8) · `pacing` 0.6/0.25/1.0, `stability` 0.0, `tone` 6 sahnede (0, 7, 14, 19, 27, 35).
+
+| Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 9 | 8 | 7 | 8 | 8 | 9 | 8 |
+
+**Sonuç: GEÇTİ** (yeni eşik: tüm kriterler ≥ 7). Görsel taraf artık iyi:
+- Stage sahnelerinde 3 katman var (uzak tepe/kubbe dolgusu, orta siluet, kenardan kırpılmış ön plan: kemer, halat, iskele), üstüne bulut ve martı.
+- Sahne 14'te tam genişlik dalga, kararan gök, yağmur ve batan gemi var.
+- Sahne 10'da etiket okla yana taşınmış.
+- Sahne 36'ya Kaşif eklenmiş.
+
+**Anlatım (BRAND §6.9, sert değerlendirme).** İlk dört bölüm büyük ölçüde hikâyeye dönmüş:
+- **Duyusal ayrıntı:** "Toz, küf, kuru mürekkep kokusu" (2), "denizin tuzu ve halatların gıcırtısı" (9).
+- **Zıtlık:** "Başkaları savaşları hatırlıyor. O ise kıyıları." (13).
+- **Doğrudan hitap:** "Şimdi şu tarihlere bir bak" (6), "Düşünsene" (17), "Kulağa heyecanlı geliyor, değil mi?" (27).
+- **Sürpriz:** "Piri, Amerika'yı hayatında hiç görmedi" (7).
+- **Bekletilen merak:** "Nasıl mı?" (20), "Peki o kıyı ne o zaman?" (28).
+
+Derinlik 7'de kalıyor, çünkü bazı bölümler hâlâ ders kitabı gibi akıyor.
+
+1. **Bölüm 5 (sahne 33–36) yasaklı kalıpta bir kronoloji:** "1521'de … bitiriyor. 1526'da … sunuyor. İki yıl sonra … çiziyor. … idam ediliyor. 2013'te UNESCO … alıyor." Bu tam olarak "X yılında Y oldu" dizisi. Sahne 35'te idam gerekçesiz ve duygusuz geçiyor. → Bu bölümü bir gerilimle kur. Örneğin: "Haritayı çizen adam, şimdi bir filonun başında. Hürmüz kalesini aylarca kuşatıyor. Ama kale düşmüyor. Piri, ganimeti yüklediği birkaç gemiyle geri dönüyor. Ve bu kararın bedelini canıyla ödüyor: seksenlerinde, Kahire'de." Sahne 33–34'ü tek bir zıtlıkla birleştir: "Dünyayı tek bir deriye sığdırmıştı. Şimdi Akdeniz'in her limanını bir kitaba sığdırıyor." UNESCO cümlesini bir izleyici sorusuna bağla: "Beş yüz yıl sonra o deriyi kim hatırlıyor? UNESCO."
+2. **Sahne 10–12 ve 18 bilgi listesi.** "Amcası Kemal Reis, dönemin en ünlü Osmanlı denizcilerinden biri"; "Aralarında eski Batlamyus haritaları var. Portekiz ve Arap haritaları var." → Kemal Reis'e tek bir somut sahne ver (ör. "Kemal Reis'in adı duyulunca Venedik limanlarında zincirler çekiliyor"; abartı olmadan, doğrulanabilir bir ayrıntı seç). Sahne 18'i zıtlıkla kur: "Eski Yunan'dan Batlamyus. Portekiz'in en yeni deniz haritaları. Arap kaptanların notları. Hepsi aynı masada."
+3. **Sahne 22'de dolgu.** "Ve işin ilginci" bir dolgu girişi; sahne 31'de de "Ve gerçek hikâye, efsaneden çok daha etkileyici" aynı türden. → 22'yi kısa ve vurucu başlat: "Kolomb'un o haritası? Bugün hiçbir yerde yok." 31'deki hükmü göster, söyleme: "Uzaylı yok. Kayıp kıta yok. Yirmi haritayı tek bir deriye sığdıran bir denizci var."
+
+**Doğruluk, yeni iddia: "Piri, Amerika'yı hayatında hiç görmedi" (sahne 7).** Özü doğru. Piri'nin Atlantik'i geçtiğine dair hiçbir kaynak yok. Haritanın kendi notları ve tarihçiler, Amerika kısmını başka haritalardan (Kolomb'unki dahil) derlediğini söylüyor. Ancak bu bir yokluk iddiası; kesin dille kuruluyor ve şimdiki zaman kuralından da sapıyor. → "Ama işin tuhafı şu: bildiğimiz kadarıyla Piri, Amerika'yı hiç görmüyor." Kalan bilgiler 2. turdaki gibi doğru: "en net izi … belki de" ve "1950'ler ve 60'lar" uygun biçimde yumuşatılmış.
+
+Ek notlar (küçük):
+- **Sahne 36:** Kaşif küçük ve kenarda kalıyor; 1,3× ve `point` pozuyla "500"e dönük olsun.
+- **Ön plan öğeleri:** sol kenardaki kırpık direk ve halat kangalı (7, 26, 29, 39) bazı karelerde neyin ne olduğu anlaşılmayan bir çizgi yığını gibi duruyor. Bir tanesini net bir nesneye (ör. yarım görünen fıçı) çevir.
+- **Kapak:** değişmedi ve iyi.

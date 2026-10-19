@@ -127,8 +127,14 @@ def lint(path, kinds):
     if parch:
         if not (s.get("pacing") or {}).get("sentence"):
             warn.append('parchment style: set "pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}')
-        if types and types.count("stage") < len(types) / 2:
-            err.append(f"Kaşif ('stage') in {types.count('stage')}/{len(types)} scenes, brand needs at least half")
+        # Kaşif is on screen in every 'stage' scene and in any shot that puts him in params.kasif or params.cast
+        def has_kasif(x):
+            p = x.get("params") or {}
+            return x.get("type") == "stage" or bool(p.get("kasif")) or any(
+                isinstance(c, dict) and (c.get("who") or "kasif") == "kasif" for c in (p.get("cast") or []))
+        nk = sum(1 for x in sc if has_kasif(x))
+        if types and nk < len(types) / 2:
+            err.append(f"Kaşif in {nk}/{len(types)} scenes ('stage' or params.kasif/cast), brand needs at least half")
     elif not any(kinds.get(t) in ("3d", "real") for t in types):
         err.append("no 3D or real-footage scene")
     if short and not parch:

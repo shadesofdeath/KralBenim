@@ -287,6 +287,12 @@
         }
         note = { ng, N, nx, ny, arrow, head };
       }
+      // optional small Kaşif beside the words (P.kasif: {x: 0.85, pose: "point", dir: 20, face: -1, scale: 0.8, emotion, at})
+      let kas = null;
+      if (P.kasif && typeof KASIF !== 'undefined' && KASIF && KASIF.create) {
+        const K = typeof P.kasif === 'object' ? P.kasif : { pose: P.kasif };
+        kas = { K, rig: KASIF.create(el(svg, 'g'), { scale: (portrait ? 1.3 : 1) * (K.scale || 0.8), hat: true, seed: seed + 5 }) };
+      }
       return {
         update(lt, dur, cues, env) {
           ink.tick(env.t);
@@ -303,6 +309,11 @@
             note.ng.setAttribute('opacity', clamp01(p * 2));
             note.ng.setAttribute('transform', around(note.nx, note.ny, `rotate(${f1(-3 + (1 - p) * 8)}) scale(${f1(lerp(0.7, 1, p) * 1000) / 1000}) ${jig(seed + 77, env.t)}`));
             if (note.arrow) { draw(note.arrow.node, prog(lt, at + 0.15, 0.45)); note.head.node.setAttribute('opacity', prog(lt, at + 0.55, 0.15)); }
+          }
+          if (kas) {
+            const K = kas.K, at = typeof K.at === 'number' ? K.at : cue(cues, K.at || 'w1', 0.6), on = lt >= at;
+            kas.rig.update(env.t ?? lt, on ? (K.pose || 'point') : 'idle', { x: (K.x ?? 0.85) * W, y: (K.y ?? (portrait ? 0.62 : 0.8)) * H,
+              face: K.face ?? -1, since: on ? lt - at : lt, dir: K.dir ?? 20, emotion: on ? (K.emotion || 'happy') : 'neutral' });
           }
         },
       };

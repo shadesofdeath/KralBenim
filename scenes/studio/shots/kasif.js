@@ -1,7 +1,7 @@
 // kasif: the channel's fixed narrator character "Kaşif" (brand/kit/BRAND.md §2) as a hand-drawn SVG rig, plus the
 // 2D shot "stage" (parchment stage with Kaşif, other cast members and simple ink props).
 //
-// KASIF.create(parentGroup, {scale: 1, hat: true, accessory: null|'laurel'|'beret'|'turban'|'helmet'|'helmet_byz'|'crown', seed: 1})
+// KASIF.create(parentGroup, {scale: 1, hat: true, accessory: null|'laurel'|'beret'|'turban'|'helmet'|'helmet_byz'|'crown'|'slouch', seed: 1})
 //   -> {update(t, pose, opts), node}
 //   t: global seconds (boil, breathing, blink) · pose: 'idle'|'walk'|'run'|'point'|'think'|'shock'|'shrug'|'talk'|
 //   'wave'|'sit'|'hold'|'look' · opts: {x, y (stage px of the ground point under the hip), face: 1|-1 (or between,
@@ -25,6 +25,17 @@
 //   backdrop: {type: "palace"|"sea"|"harbour", y (0..1 H, far baseline), coast: "left"|"right", opacity: 0.7, from, to},
 //   sea_front: {y: 0.74, from: 0.5, to: 1} (water band drawn in front of props: ships can sink into it),
 //   storm: {at: cue (rain), flash: cue | [cues] (lightning)}, cast[].beard: "black"|"grey"|"short"}
+//   (optional, all opt-in, added for the Piri Reis video)
+//   sea_front extras: profile: [[x, y], ...] (0..1, top edge height along x), bottom: 0.83 (band ends here with a soft
+//     wavy edge instead of running to the frame bottom), clip: true (props are hidden below `bottom`),
+//     dark: true (paper-dark fill), crest: {at, x0: 0.5, x1: 1, dur: 2.4, y: 0.58, w: 0.16} (a curling wave crest
+//     that rolls across in front of the props)
+//   storm extras: bolt: "ink" (0.15 s ink zig-zag, then a 0.3 s paper-light flash), hatch: true (cloud hatching in the
+//     sky), bolt_x: 0.62
+//   label.arrow: [x, y] (0..1: short hand-drawn arrow from the label towards that point)
+//   depth: {far: "hills"|"city", far_y, far_h, sky: true | {clouds: 2, gulls: 3}, near: "post"|"rope"|"crate"|"arch",
+//     side: "left"|"right", k: [0.4, 0.7, 1.15]} (3-plane parallax: a filled far plane, the backdrop as the mid plane,
+//     a cropped foreground element in front of the cast; each moves at its own rate during the cam push-in)
 // cues: whatever names the cast/props/label reference (w0, hit, ...). Walking with "to" + "at" arrives on the cue.
 'use strict';
 
@@ -211,6 +222,9 @@ const KASIF = (() => {
     helmet_byz: { fill: INK.inkSoft, pts: [[-78, -22], [-78, -50], [-64, -82], [-38, -114], [-14, -140], [0, -152], [14, -140], [38, -114], [64, -82], [78, -50], [78, -22], [40, -30], [0, -34], [-40, -30]],
       nasal: [[12, -32], [12, 6]], band: [[-76, -40], [0, -46], [76, -40]], plume: [[0, -150], [-6, -170], [8, -184], [14, -166]] },
     crown: { fill: INK.gold, pts: [[-56, -50], [-62, -104], [-34, -78], [-14, -118], [6, -80], [30, -120], [46, -80], [66, -106], [60, -50]] },
+    // Australian slouch hat (1932 soldiers): olive felt, wide brim pinned up at the back side, dented crown, dark band
+    slouch: { fill: INK.green, pts: [[128, -38], [96, -26], [40, -30], [-50, -32], [-80, -52], [-104, -96], [-112, -130], [-90, -132], [-70, -104], [-56, -96],
+      [-50, -116], [-16, -124], [8, -114], [30, -124], [52, -114], [58, -80], [60, -52], [100, -50]], nub: [[-54, -60], [0, -66], [58, -62]] },
   };
 
   function create(parent, cfg = {}) {
@@ -310,8 +324,8 @@ const KASIF = (() => {
         const mid = [(inner[0] + outer[0]) / 2, (inner[1] + outer[1]) / 2 - arch * 5];
         brows[i].setAttribute('d', inkPath(Hp([inner, mid, outer]), { w: 4.5, seed: S(32 + i), t, amp: 0.8, taper: 0.5 }));
       });
-      // mouth: closed lip loop; opens with narration (talk) or the pose (shock "o")
-      const op = clamp01(p.open + p.talk * (o.mouth || 0) * 0.85), sm = p.smile;
+      // mouth: fixed lip line (channel owner: no lip-sync); only the pose itself may open it (shock "o")
+      const op = clamp01(p.open), sm = p.smile;
       const hw = lerp(17, 9, p.round) * (1 - 0.15 * op), mx = fx + 3, my = 34;
       const upY = my - sm * 3 - op * 4 * p.round, loY = my + sm * 6 + op * 22;
       const lip = [[mx - hw, my - sm * 3], [mx, my + sm * 6 - (op > 0.05 ? op * 4 : 0)], [mx + hw, my - sm * 3], [mx, loY + 0.01]];
@@ -648,7 +662,9 @@ const INK_PROPS = (() => {
     if (P.backdrop) {
       const B = typeof P.backdrop === 'string' ? { type: P.backdrop } : P.backdrop, br = rng(seed * 41 + 3);
       const xa = (B.from ?? 0) * W - 40, xb = (B.to ?? 1) * W + 40;
-      bd = { B, g: el(world, 'g', { opacity: B.opacity ?? 0.7 }), fills: [], lines: [], waves: [], birds: [] };
+      // no group opacity (ghost-strip raster artefacts): the backdrop opacity goes onto each path's fill-opacity
+      const bop = B.opacity ?? 0.7;
+      bd = { B, g: el(world, 'g'), fills: [], lines: [], waves: [], birds: [] };
       world.insertBefore(bd.g, groundG);
       const by = B.y != null ? B.y * H : gy - (portrait ? 300 : 210);
       bd.by = by;
@@ -691,13 +707,136 @@ const INK_PROPS = (() => {
         }
         for (let i = 0; i < 3; i++) bd.birds.push({ x: W * (0.2 + br() * 0.6), y: by - 80 - br() * 120, s: 0.6 + br() * 0.6 });
       }
-      bd.fillE = inkEl(bd.g, INK.paperDark, { opacity: 0.6 }); bd.inkE = inkEl(bd.g, INK.inkSoft); bd.waveE = inkEl(bd.g, INK.inkSoft, { opacity: 0.75 }); bd.birdE = inkEl(bd.g, INK.inkSoft);
+      bd.fillE = inkEl(bd.g, INK.paperDark, { 'fill-opacity': 0.6 * bop }); bd.inkE = inkEl(bd.g, INK.inkSoft, { 'fill-opacity': bop });
+      bd.waveE = inkEl(bd.g, INK.inkSoft, { 'fill-opacity': 0.75 * bop }); bd.birdE = inkEl(bd.g, INK.inkSoft, { 'fill-opacity': bop });
     }
     const propsG = el(world, 'g'), seaG = el(world, 'g'), castG = el(world, 'g'), labelG = el(world, 'g');
     let seaF = null;
     if (P.sea_front) {
       const SF = P.sea_front;
-      seaF = { SF, fill: inkEl(seaG, INK.paperLight), line: inkEl(seaG), waves: inkEl(seaG, INK.inkSoft, { opacity: 0.8 }) };
+      seaF = { SF, fill: inkEl(seaG, SF.dark ? INK.paperDark : INK.paperLight), line: inkEl(seaG), waves: inkEl(seaG, INK.inkSoft, { 'fill-opacity': 0.8 }) };
+      if (SF.bottom != null) seaF.edge = inkEl(seaG, INK.inkSoft, { 'fill-opacity': 0.55 });
+      if (SF.crest) { seaF.cFill = inkEl(seaG, SF.dark ? INK.paperDark : INK.paperLight); seaF.cInk = inkEl(seaG); seaF.cSoft = inkEl(seaG, INK.inkSoft, { 'fill-opacity': 0.8 }); }
+      if (SF.clip && SF.bottom != null) {
+        const cid = `stageclip-${seed}-${Math.round(SF.bottom * 1000)}`;
+        const cp = el(ctx.defs || el(svg, 'defs'), 'clipPath', { id: cid });
+        el(cp, 'rect', { x: -W, y: -2 * H, width: 3 * W, height: 2 * H + SF.bottom * H - 6 });
+        propsG.setAttribute('clip-path', `url(#${cid})`);
+      }
+    }
+    // sea_front top edge height at x (stage px)
+    const seaTopAt = x => {
+      const SF = seaF.SF, pr = SF.profile;
+      if (!pr || !pr.length) return (SF.y ?? 0.74) * H;
+      const u = x / W;
+      if (u <= pr[0][0]) return pr[0][1] * H;
+      for (let i = 1; i < pr.length; i++) if (u <= pr[i][0]) { const a = pr[i - 1], b = pr[i], f = smooth01((u - a[0]) / Math.max(1e-6, b[0] - a[0])); return lerp(a[1], b[1], f) * H; }
+      return pr[pr.length - 1][1] * H;
+    };
+    // depth: far plane (0.4x), backdrop as mid plane (0.7x), cropped near element (1.15x), sky life
+    let dp = null;
+    if (P.depth) {
+      const Dp = P.depth === true ? {} : P.depth, dr = rng(seed * 61 + 5);
+      const farG = el(root, 'g'), midG = el(root, 'g'), nearG = el(root, 'g');   // nearG ends up between world and the storm layer
+      root.insertBefore(farG, world); root.insertBefore(midG, world);
+      if (bd) midG.appendChild(bd.g);
+      dp = { Dp, farG, midG, nearG, k: Dp.k || [0.4, 0.7, 1.15], far: [], farLines: [], farHatch: [], clouds: [], gulls: [], near: [], nearSoft: [], nearFill: [] };
+      const horizon = bd ? bd.by : gy - (portrait ? 300 : 210);
+      if (Dp.far) {
+        const base = Dp.far_y != null ? Dp.far_y * H : horizon + (Dp.far === 'city' ? 40 : 2);
+        const hmax = (Dp.far_h ?? (Dp.far === 'city' ? 0.2 : 0.16)) * H;
+        const ph = [dr() * 6, dr() * 6, dr() * 6], gap = Dp.far_gap;
+        const top = [];
+        for (let x = -160; x <= W + 160; x += 60) {
+          const u = x / W;
+          let h = 0.55 + 0.25 * Math.sin(u * 5.1 + ph[0]) + 0.15 * Math.sin(u * 11.3 + ph[1]) + 0.08 * Math.sin(u * 23 + ph[2]);
+          if (gap) h *= 1 - 0.85 * Math.max(0, 1 - Math.abs(u - (gap[0] + gap[1]) / 2) / ((gap[1] - gap[0]) / 2 + 1e-6));
+          top.push([x, base - Math.max(0.05, h) * hmax]);
+        }
+        dp.far.push([...top, [W + 160, base + 4], [-160, base + 4]]);
+        dp.farLines.push(top);
+        for (let k = 0; k < 18; k++) {    // hatch on the shaded slopes
+          const i = 1 + Math.floor(dr() * (top.length - 2)), p = top[i], q = top[i + 1];
+          if (q[1] <= p[1]) continue;
+          const y = p[1] + 24 + dr() * Math.max(10, base - p[1] - 40);
+          if (y < base - 10) dp.farHatch.push([[p[0] + 6, y + 10], [p[0] + 30, y - 10]]);
+        }
+        if (Dp.far === 'city') {   // a few big domes + minarets standing on the far hill
+          const xs = Dp.domes || [0.18, 0.47, 0.8];
+          xs.forEach((u, j) => {
+            const x = u * W, i = Math.max(0, Math.min(top.length - 1, Math.round((x + 160) / 60))), gb = top[i][1] + 14;
+            const R = (portrait ? 80 : 70) * (j === 1 ? 1.25 : 0.9);
+            const dome = inkEllipsePts(x, gb - R * 0.35, R, R * 0.8, seed + j * 5, 14).filter(q => q[1] <= gb - R * 0.35 + 1);
+            const drum = [[x - R * 1.05, gb + 30], [x - R * 1.05, gb - R * 0.35], ...dome.sort((a, b) => a[0] - b[0]), [x + R * 1.05, gb - R * 0.35], [x + R * 1.05, gb + 30]];
+            dp.far.push(drum); dp.farLines.push(drum.slice(1, -1), [[x, gb - R * 1.15], [x, gb - R * 1.15 - 30]]);
+            for (const sx of [-1, 1]) {   // minarets
+              const mx = x + sx * R * 1.55, mw = 16, mh = R * 2.6;
+              const m = [[mx - mw / 2, gb + 30], [mx - mw / 2, gb - mh], [mx, gb - mh - 46], [mx + mw / 2, gb - mh], [mx + mw / 2, gb + 30]];
+              dp.far.push(m); dp.farLines.push(m.slice(1, -1), [[mx - mw / 2 - 6, gb - mh * 0.7], [mx + mw / 2 + 6, gb - mh * 0.7]]);
+            }
+          });
+        }
+        dp.farFillE = inkEl(farG, INK.paperDark, { 'fill-opacity': Dp.far_opacity ?? 0.6 });
+        dp.farInkE = inkEl(farG, INK.inkSoft, { 'fill-opacity': 0.5 });
+        dp.farHatchE = inkEl(farG, INK.inkSoft, { 'fill-opacity': 0.35 });
+      }
+      if (Dp.sky !== false) {
+        const SKy = typeof Dp.sky === 'object' ? Dp.sky : {};
+        const nc = SKy.clouds ?? 2, ng = SKy.gulls ?? 3;
+        // clouds keep clear of the cast's heads and the label (x in 0..1)
+        const avoid = [];
+        for (const m of P.cast || []) { avoid.push(m.x ?? 0.5); if (m.to != null) avoid.push(m.to); }
+        if (P.label && P.label.text) avoid.push(P.label.x ?? 0.5);
+        const cand = []; for (let u = 0.1; u <= 0.9; u += 0.04) cand.push([u, dr()]);
+        cand.sort((p, q) => p[1] - q[1]);
+        for (const [u] of cand) {
+          if (dp.clouds.length >= nc) break;
+          if (avoid.some(a => Math.abs(a - u) < 0.15) || dp.clouds.some(c => Math.abs(c.x / W - u) < 0.25)) continue;
+          dp.clouds.push({ x: W * u, y: H * (SKy.cloud_y ?? 0.2) + (dr() - 0.5) * H * 0.06, s: (portrait ? 1.1 : 1) * (0.75 + dr() * 0.35), v: 3 + dr() * 4 });
+        }
+        for (let i = 0; i < ng; i++) dp.gulls.push({ x: W * (0.15 + dr() * 0.7), y: H * (0.12 + dr() * 0.16), s: 0.8 + dr() * 0.6, v: 10 + dr() * 10 });
+        dp.cloudFillE = inkEl(farG, INK.paperLight, { 'fill-opacity': 0.55 });
+        dp.cloudInkE = inkEl(farG, INK.inkSoft, { 'fill-opacity': 0.6 });
+        dp.gullE = inkEl(midG, INK.inkSoft, { 'fill-opacity': 0.85 });
+      }
+      if (Dp.near) {
+        const left = (Dp.side || 'left') === 'left', X = x => left ? x : W - x, list = [].concat(Dp.near);
+        for (const nt of list) {
+          if (nt === 'post') {
+            const x0 = X(-30), x1 = X(130), yt = H * (Dp.post_top ?? 0.42), cx = (x0 + x1) / 2;
+            dp.nearFill.push([[x0, H + 40], [x0, yt + 18], [cx, yt - 10], [x1, yt + 18], [x1, H + 40]]);
+            dp.near.push({ p: [[x0, H + 40], [x0, yt + 18], [cx, yt - 10], [x1, yt + 18], [x1, H + 40]], w: 8 });
+            dp.near.push({ p: [[x0, yt + 40], [x1, yt + 40]], w: 5 });
+            for (let k = 0; k < 4; k++) { const y = yt + 140 + k * 26; dp.near.push({ p: [[x0 - 6, y], [x1 + 6, y + 18]], w: 7 }); }
+            for (let k = 0; k < 5; k++) { const gx = lerp(x0, x1, 0.2 + k * 0.15), y = yt + 70 + dr() * 200; dp.nearSoft.push([[gx, y], [gx + 3, y + 90 + dr() * 120]]); }
+            // a short rope loop hanging from the wraps
+            dp.near.push({ p: [[x1 + (left ? 4 : -4), yt + 200], [X(170), yt + 260], [X(165), yt + 330], [x1 + (left ? 2 : -2), yt + 300]], w: 6 });
+          } else if (nt === 'rope') {
+            const cx = X(150), cy = H - 50;
+            for (let r = 0; r < 4; r++) { const rx = 250 - r * 42, ry = 92 - r * 15; const pts = inkEllipsePts(cx, cy - r * 24, rx, ry, seed + 70 + r, 16); if (r === 0) dp.nearFill.push(pts); dp.near.push({ p: pts, w: 7, closed: true }); }
+            dp.near.push({ p: [[cx + (left ? 60 : -60), cy - 96], [X(220), cy - 170], [X(160), cy - 240], [X(40), cy - 260], [X(-40), cy - 230]], w: 8, smooth: true });
+            for (let k = 0; k < 10; k++) { const a = dr() * Math.PI, x = cx + Math.cos(a) * 200, y = cy - 10 - Math.sin(a) * 70; dp.nearSoft.push([[x - 8, y - 6], [x + 8, y + 6]]); }
+          } else if (nt === 'crate') {
+            const xa = X(-60), xb = X(250), ya = H - 250, yb = H + 40;
+            const box = [[xa, yb], [xa, ya], [xb, ya + 8], [xb, yb]];
+            dp.nearFill.push(box); dp.near.push({ p: box, w: 8, closed: true, lin: true });
+            for (let k = 1; k < 4; k++) dp.nearSoft.push([[xa, ya + k * 66], [xb, ya + k * 66 + 2]]);
+            dp.near.push({ p: [[xa, ya + 10], [xb, yb - 30]], w: 9, lin: true }, { p: [[xa, ya + 30], [xb, ya + 30]], w: 6, lin: true });
+          } else if (nt === 'arch') {
+            const ix = X(Dp.arch_x ?? 130), tx = X(W * (Dp.arch_top ?? 0.24));
+            const curve = []; for (let i = 0; i <= 10; i++) { const a = i / 10 * Math.PI / 2; curve.push([lerp(ix, tx, 1 - Math.cos(a)), lerp(H * 0.42, -20, Math.sin(a))]); }
+            const outer = [[X(-60), H + 40], [ix, H + 40], ...curve, [X(-60), -60]];
+            dp.nearFill.push(outer);
+            dp.near.push({ p: [[ix, H + 40], ...curve], w: 9 });
+            const inner = [[ix - (left ? 30 : -30), H + 40], ...curve.map(([x, y]) => [x - (left ? 30 : -30), y - 22])];
+            dp.nearSoft.push(inner);
+            for (let k = 0; k < 6; k++) { const y = H * 0.5 + k * 70, x = lerp(X(-10), ix, 0.4); dp.nearSoft.push([[x - 14, y], [x, y - 16], [x + 14, y], [x, y + 16], [x - 14, y]]); }
+          }
+        }
+        dp.nearFillE = inkEl(nearG, INK.paperDark);
+        dp.nearSoftE = inkEl(nearG, INK.inkSoft, { 'fill-opacity': 0.75 });
+        dp.nearInkE = inkEl(nearG);
+      }
     }
     const stormG = el(root, 'g');
     let storm = null;
@@ -706,6 +845,20 @@ const INK_PROPS = (() => {
       storm = { S: P.storm, dark: el(stormG, 'rect', { x: 0, y: 0, width: W, height: H, fill: INK.inkSoft, opacity: 0 }),
         rain: inkEl(stormG, INK.inkSoft), bolt: inkEl(stormG, INK.gold), boltR: inkEl(stormG), flash: el(stormG, 'rect', { x: 0, y: 0, width: W, height: H, fill: INK.paperLight, opacity: 0 }),
         drops: Array.from({ length: 46 }, () => [sr2() * (W + 300), sr2() * H, 0.7 + sr2() * 0.6]) };
+      if (P.storm.bolt === 'ink') storm.bolt.setAttribute('fill', INK.ink);
+      if (P.storm.hatch) {     // cloud banks in the sky: scalloped ink-soft undersides + diagonal hatching
+        storm.hatchE = inkEl(stormG, INK.inkSoft, { 'fill-opacity': 0 }); stormG.insertBefore(storm.hatchE, storm.rain);
+        storm.cloudE = inkEl(stormG, INK.inkSoft, { 'fill-opacity': 0 }); stormG.insertBefore(storm.cloudE, storm.rain);
+        storm.banks = [];
+        const nb = 5;
+        for (let i = 0; i < nb; i++) {
+          const cx = W * (i + 0.2 + sr2() * 0.6) / nb, cy = H * (0.06 + sr2() * 0.2), rw = W * (0.13 + sr2() * 0.06), rh = H * (0.06 + sr2() * 0.04);
+          const strokes = [];
+          for (let k = 0; k < 22; k++) { const a = sr2() * 2 - 1, b = sr2() * 2 - 1; if (a * a + b * b > 1) continue; const x = cx + a * rw, y = cy + b * rh; strokes.push([[x, y + 14], [x + 26, y - 12]]); }
+          const under = []; for (let j = 0; j <= 5; j++) under.push([cx - rw + j * rw * 0.4, cy + rh * (0.9 + (j % 2) * 0.25)]);
+          storm.banks.push({ strokes, under, cx });
+        }
+      }
     }
     const tc = (v, cues, fb) => v == null ? fb : typeof v === 'number' ? v : cue(cues, v, fb);
     // props
@@ -720,6 +873,7 @@ const INK_PROPS = (() => {
       const t = el(labelG, 'text', { 'font-family': INK_FONT, 'font-size': size, 'text-anchor': 'middle', fill: INK.ink });
       t.textContent = L.text;
       label = { L, t, u: inkEl(labelG), size };
+      if (L.arrow) label.ar = inkEl(labelG);
     }
     // cast
     const cast = (P.cast || []).map((m, i) => {
@@ -784,6 +938,42 @@ const INK_PROPS = (() => {
           camTf = ` translate(${inkF1(-(Cm.pan ?? 0) * u)} 0) translate(${inkF1(fx)} ${inkF1(fy)}) scale(${z.toFixed(4)}) translate(${inkF1(-fx)} ${inkF1(-fy)})`;
         }
         world.setAttribute('transform', `translate(${inkF1(Math.sin(lt * 0.35) * 8)} ${inkF1(Math.cos(lt * 0.27) * 4)})` + camTf);
+        if (dp) {
+          // each plane gets the drift + push-in scaled by its own rate (parallax)
+          const Cm = P.cam || {}, u = P.cam ? progIO(lt, 0, Math.max(1, dur)) : 0, z = lerp(1, Cm.zoom ?? 1.06, u);
+          const fx = (Cm.focus ? Cm.focus[0] : 0.5) * W, fy = (Cm.focus ? Cm.focus[1] : gy / H * 0.8) * H;
+          const tf = f => `translate(${inkF1(Math.sin(lt * 0.35) * 8 * f - (Cm.pan ?? 0) * u * f)} ${inkF1(Math.cos(lt * 0.27) * 4 * f)}) translate(${inkF1(fx)} ${inkF1(fy)}) scale(${(1 + (z - 1) * f).toFixed(4)}) translate(${inkF1(-fx)} ${inkF1(-fy)})`;
+          dp.farG.setAttribute('transform', tf(dp.k[0])); dp.midG.setAttribute('transform', tf(dp.k[1])); dp.nearG.setAttribute('transform', tf(dp.k[2]));
+          if (dp.farFillE) {
+            dp.farFillE.setAttribute('d', dp.far.map((q, i) => inkLoop(q, { seed: seed * 59 + i, t, amp: 1, smooth: false })).join(' '));
+            dp.farInkE.setAttribute('d', dp.farLines.map((q, i) => inkPath(q, { seed: seed * 61 + i, t, w: 3, amp: 1, smooth: i > 0 })).join(' '));
+            dp.farHatchE.setAttribute('d', dp.farHatch.map((q, i) => inkPath(q, { seed: seed * 67 + i, t, w: 2.5, amp: 0.8 })).join(' '));
+          }
+          if (dp.cloudFillE) {
+            let cf = '', ci = '';
+            dp.clouds.forEach((c, i) => {
+              const x = c.x + lt * c.v, y = c.y + Math.sin(lt * 0.4 + i) * 4, s = c.s, R = 34 * s;
+              // scalloped cumulus: dips between rounded puffs
+              const bumps = [[x - 3.2 * R, y], [x - 3.1 * R, y - 0.6 * R], [x - 2.5 * R, y - 1.0 * R], [x - 1.9 * R, y - 0.75 * R], [x - 1.5 * R, y - 1.55 * R],
+                [x - 0.7 * R, y - 2.0 * R], [x + 0.1 * R, y - 1.5 * R], [x + 0.7 * R, y - 1.9 * R], [x + 1.5 * R, y - 1.6 * R], [x + 1.9 * R, y - 0.9 * R],
+                [x + 2.6 * R, y - 0.95 * R], [x + 3.1 * R, y - 0.5 * R], [x + 3.2 * R, y]];
+              cf += inkLoop(bumps.concat([[x, y + 8]]), { seed: seed * 71 + i, t, amp: 1.2 }) + ' ';
+              ci += inkPath(bumps, { seed: seed * 73 + i, t, w: 3.5, amp: 1.2 }) + ' ';
+              ci += inkPath([[x - 3.4 * R, y + 4], [x + 3.3 * R, y + 2]], { seed: seed * 79 + i, t, w: 2.5, amp: 1 }) + ' ';
+              const sp = []; for (let j = 0; j <= 10; j++) { const a = j / 10 * Math.PI * 1.6 + 0.6, r = R * 0.55 * (1 - j / 14); sp.push([x - 0.3 * R + Math.cos(a) * r, y - 0.9 * R + Math.sin(a) * r * 0.8]); }
+              ci += inkPath(sp, { seed: seed * 83 + i, t, w: 3, amp: 0.8 }) + ' ';
+            });
+            dp.cloudFillE.setAttribute('d', cf); dp.cloudInkE.setAttribute('d', ci);
+            dp.gullE.setAttribute('d', dp.gulls.map((g, i) => {
+              const x = g.x + lt * g.v, y = g.y + Math.sin(lt * 1.1 + i * 2) * 8, f = Math.sin(lt * 5 + i * 2.3) * 9 * g.s, w = 26 * g.s;
+              return inkPath([[x - w, y - f], [x - w * 0.45, y - 6 * g.s - f * 0.3], [x, y], [x + w * 0.45, y - 6 * g.s - f * 0.3], [x + w, y - f]], { seed: seed * 89 + i, t, w: 3.5, amp: 0.5 }); }).join(' '));
+          }
+          if (dp.nearFillE) {
+            dp.nearFillE.setAttribute('d', dp.nearFill.map((q, i) => inkLoop(q, { seed: seed * 97 + i, t, amp: 1.2, smooth: false })).join(' '));
+            dp.nearInkE.setAttribute('d', dp.near.map((s, i) => inkPath(s.p, { seed: seed * 101 + i, t, w: s.w, closed: !!s.closed, smooth: !s.lin, amp: 1.4 })).join(' '));
+            dp.nearSoftE.setAttribute('d', dp.nearSoft.map((q, i) => inkPath(q, { seed: seed * 103 + i, t, w: 3.5, amp: 1 })).join(' '));
+          }
+        }
         if (bd) {
           bd.fillE.setAttribute('d', bd.fills.map((q, i) => inkLoop(q, { seed: seed * 17 + i, t, amp: 1, smooth: false })).join(' '));
           bd.inkE.setAttribute('d', bd.lines.map((q, i) => inkPath(q, { seed: seed * 19 + i, t, w: 3.5, amp: 1, smooth: false })).join(' '));
@@ -795,12 +985,44 @@ const INK_PROPS = (() => {
             return inkPath([[x - w, y - f], [x, y], [x + w, y - f]], { seed: seed * 29 + i, t, w: 3, amp: 0.5 }); }).join(' '));
         }
         if (seaF) {
-          const SF = seaF.SF, y0 = (SF.y ?? 0.74) * H, a = (SF.from ?? 0) * W - 40, b = (SF.to ?? 1) * W + 40, top = [];
-          for (let x = a; x <= b + 1; x += 40) top.push([x, y0 + Math.sin(x * 0.03 + lt * 2.2) * 9 + Math.sin(x * 0.011 - lt * 1.3) * 6]);
-          seaF.fill.setAttribute('d', inkLoop([...top, [b, H + 20], [a, H + 20]], { seed: seed * 31 + 1, t, amp: 0.8, smooth: false }));
+          const SF = seaF.SF, a = (SF.from ?? 0) * W - 40, b = (SF.to ?? 1) * W + 40, top = [];
+          const yb = SF.bottom != null ? SF.bottom * H : null;
+          for (let x = a; x <= b + 1; x += 40) top.push([x, seaTopAt(x) + Math.sin(x * 0.03 + lt * 2.2) * 9 + Math.sin(x * 0.011 - lt * 1.3) * 6]);
+          if (yb == null) seaF.fill.setAttribute('d', inkLoop([...top, [b, H + 20], [a, H + 20]], { seed: seed * 31 + 1, t, amp: 0.8, smooth: false }));
+          else {   // band with a soft wavy bottom edge (stays above the caption strip)
+            const bot = []; for (let x = b; x >= a - 1; x -= 40) bot.push([x, yb + Math.sin(x * 0.021 + lt * 1.6) * 8]);
+            seaF.fill.setAttribute('d', inkLoop([...top, ...bot], { seed: seed * 31 + 1, t, amp: 0.8, smooth: false }));
+            seaF.edge.setAttribute('d', inkPath(bot, { seed: seed * 31 + 3, t, w: 3, amp: 0.8 }));
+          }
           seaF.line.setAttribute('d', inkPath(top, { seed: seed * 31 + 2, t, w: 6, amp: 1 }));
-          let wd = ''; for (let r = 0; r < 3; r++) for (let x = a + 30 + r * 50; x < b; x += 160) { const y = y0 + 40 + r * 34, pts = []; for (let j = 0; j <= 4; j++) pts.push([x + j * 10 + Math.sin(lt + r) * 10, y + Math.sin(j * 1.6 + lt * 2.5 + x) * 4]); wd += inkPath(pts, { seed: seed * 37 + r * 50 + x, t, w: 3, amp: 0.6 }) + ' '; }
+          let wd = '';
+          if (yb == null) { for (let r = 0; r < 3; r++) for (let x = a + 30 + r * 50; x < b; x += 160) { const y = (SF.y ?? 0.74) * H + 40 + r * 34, pts = []; for (let j = 0; j <= 4; j++) pts.push([x + j * 10 + Math.sin(lt + r) * 10, y + Math.sin(j * 1.6 + lt * 2.5 + x) * 4]); wd += inkPath(pts, { seed: seed * 37 + r * 50 + x, t, w: 3, amp: 0.6 }) + ' '; } }
+          else for (let r = 0; r < 6; r++) for (let x = a + 30 + r * 50; x < b; x += 150) {
+            const y = seaTopAt(x) + 34 + r * 30; if (y > yb - 16) continue;
+            const pts = []; for (let j = 0; j <= 4; j++) pts.push([x + j * 11 + Math.sin(lt + r) * 12, y + Math.sin(j * 1.6 + lt * 2.5 + x) * 4]);
+            wd += inkPath(pts, { seed: seed * 37 + r * 50 + x, t, w: 3, amp: 0.6 }) + ' ';
+          }
           seaF.waves.setAttribute('d', wd);
+          if (SF.crest) {   // a curling crest rolling across in front of the props
+            const C = SF.crest, at = tc(C.at, cues, 0.5), u = clamp01((lt - at) / (C.dur || 2.4));
+            const env = smooth01((lt - at) / 0.5) * (1 - 0.5 * smooth01((u - 0.8) / 0.2));
+            if (lt > at && env > 0.01) {
+              const cx = lerp(C.x0 ?? 0.5, C.x1 ?? 1, u) * W, w = (C.w ?? 0.16) * W, base = seaTopAt(cx) + 6;
+              const hp = Math.max(0, base - (C.y ?? 0.58) * H) * env, sw = Math.sin(lt * 3) * 6;
+              const prof = [[cx - w * 1.3, base + 4], [cx - w * 0.8, base - 0.25 * hp], [cx - w * 0.35, base - 0.7 * hp], [cx + 0.05 * w, base - hp + sw * 0.3],
+                [cx + 0.32 * w, base - 0.92 * hp], [cx + 0.46 * w, base - 0.7 * hp], [cx + 0.38 * w, base - 0.55 * hp]];
+              const front = [[cx + 0.3 * w, base - 0.58 * hp], [cx + 0.34 * w, base - 0.3 * hp], [cx + 0.55 * w, base - 0.08 * hp], [cx + 0.9 * w, base + 4]];
+              const bottomY = yb ?? H + 10;
+              seaF.cFill.setAttribute('d', inkLoop([...prof, ...front, [cx + 0.9 * w, bottomY], [cx - w * 1.3, bottomY]], { seed: seed * 107, t, amp: 0.8 }));
+              let ci = inkPath(prof, { seed: seed * 109, t, w: 6, amp: 1 }) + ' ' + inkPath(front, { seed: seed * 113, t, w: 5, amp: 1 });
+              const sp = []; for (let j = 0; j <= 12; j++) { const ang = -0.4 + j / 12 * Math.PI * 1.7, r = hp * 0.2 * (1 - j / 16); sp.push([cx + 0.2 * w + Math.cos(ang) * r, base - 0.62 * hp + Math.sin(ang) * r]); }
+              ci += ' ' + inkPath(sp, { seed: seed * 127, t, w: 4, amp: 0.8 });
+              seaF.cInk.setAttribute('d', ci);
+              let cs = ''; for (let k = 0; k < 7; k++) { const v = k / 7, x = lerp(cx - w * 0.9, cx + 0.1 * w, v), y = lerp(base - 0.15 * hp, base - 0.85 * hp, v) + 22; cs += inkPath([[x, y], [x + 16, y + 10], [x + 30, y + 4]], { seed: seed * 131 + k, t, w: 3, amp: 0.6 }) + ' '; }
+              for (let k = 0; k < 5; k++) { const x = cx + 0.45 * w + k * 18, y = base - 0.72 * hp - 10 + Math.sin(lt * 9 + k) * 6; cs += inkPath([[x, y], [x + 6, y - 8]], { seed: seed * 137 + k, t, w: 3, amp: 0.5 }) + ' '; }
+              seaF.cSoft.setAttribute('d', cs);
+            } else { seaF.cFill.setAttribute('d', ''); seaF.cInk.setAttribute('d', ''); seaF.cSoft.setAttribute('d', ''); }
+          }
         }
         if (storm) {
           const S0 = storm.S, ra = prog(lt, tc(S0.at, cues, 0), 0.8);
@@ -809,15 +1031,40 @@ const INK_PROPS = (() => {
             const y = ((d[1] + lt * 900 * d[2]) % (H + 120)) - 60, x = d[0] - ((lt * 300 * d[2]) % 300) - y * 0.32;
             return inkPath([[x, y], [x - 16, y + 46]], { seed: seed * 47 + i, t, w: 3, amp: 0.4, taper: 0.5 }); }).join(' ') : '');
           storm.rain.setAttribute('opacity', (0.7 * ra).toFixed(3));
+          if (storm.banks) {
+            const sh = 0.25 + 0.75 * ra;
+            storm.hatchE.setAttribute('fill-opacity', (0.5 * sh).toFixed(3)); storm.cloudE.setAttribute('fill-opacity', (0.75 * sh).toFixed(3));
+            let hd = '', cd = '';
+            storm.banks.forEach((bk, i) => {
+              const dx = lt * (8 + i * 2);
+              bk.strokes.forEach((s, k) => { hd += inkPath(s.map(q => [q[0] + dx, q[1]]), { seed: seed * 139 + i * 40 + k, t, w: 3, amp: 0.8 }) + ' '; });
+              cd += inkPath(bk.under.map((q, j) => [q[0] + dx, q[1] + (j % 2 ? 6 : -6)]), { seed: seed * 149 + i, t, w: 4, amp: 1.2 }) + ' ';
+            });
+            storm.hatchE.setAttribute('d', hd); storm.cloudE.setAttribute('d', cd);
+          }
           const fl = [].concat(S0.flash ?? []).map(c => tc(c, cues, null)).filter(v => v != null);
-          let pk = 0, last = null; for (const f of fl) { const p = punch(lt, f, 0.5); if (p > pk) { pk = p; last = f; } }
-          if (pk > 0.02) {
-            const bx = W * (S0.bolt_x ?? 0.62), pts = [[bx, -10], [bx - 40, H * 0.16], [bx + 10, H * 0.18], [bx - 50, H * 0.36], [bx, H * 0.37], [bx - 70, H * 0.58]];
-            const poly = pts.concat(pts.slice().reverse().map(q => [q[0] + 18, q[1] + 6]));
-            storm.bolt.setAttribute('d', inkLoop(poly, { seed: seed * 53, t, amp: 1, smooth: false })); storm.boltR.setAttribute('d', inkPath(poly, { seed: seed * 53, t, w: 4, closed: true, smooth: false }));
-            storm.bolt.style.opacity = storm.boltR.style.opacity = Math.min(1, pk * 2);
-          } else { storm.bolt.setAttribute('d', ''); storm.boltR.setAttribute('d', ''); }
-          storm.flash.setAttribute('opacity', (0.45 * pk).toFixed(3));
+          const bx = W * (S0.bolt_x ?? 0.62), pts = [[bx, -10], [bx - 40, H * 0.16], [bx + 10, H * 0.18], [bx - 50, H * 0.36], [bx, H * 0.37], [bx - 70, H * 0.58]];
+          const poly = pts.concat(pts.slice().reverse().map(q => [q[0] + 18, q[1] + 6]));
+          if (S0.bolt === 'ink') {   // 0.15 s ink zig-zag, then a 0.3 s paper-light flash
+            let bo = 0, fo = 0;
+            for (const f of fl) {
+              const d = lt - f;
+              if (d >= 0 && d < 0.25) bo = Math.max(bo, d < 0.15 ? 1 : 1 - (d - 0.15) / 0.1);
+              if (d >= 0.1 && d < 0.45) fo = Math.max(fo, 0.6 * (1 - (d - 0.1) / 0.35));
+            }
+            if (bo > 0.02) {
+              storm.bolt.setAttribute('d', inkLoop(poly, { seed: seed * 53, t, amp: 1, smooth: false })); storm.boltR.setAttribute('d', inkPath(poly, { seed: seed * 53, t, w: 4, closed: true, smooth: false }));
+              storm.bolt.style.opacity = storm.boltR.style.opacity = bo;
+            } else { storm.bolt.setAttribute('d', ''); storm.boltR.setAttribute('d', ''); }
+            storm.flash.setAttribute('opacity', fo.toFixed(3));
+          } else {
+            let pk = 0; for (const f of fl) { const p = punch(lt, f, 0.5); if (p > pk) pk = p; }
+            if (pk > 0.02) {
+              storm.bolt.setAttribute('d', inkLoop(poly, { seed: seed * 53, t, amp: 1, smooth: false })); storm.boltR.setAttribute('d', inkPath(poly, { seed: seed * 53, t, w: 4, closed: true, smooth: false }));
+              storm.bolt.style.opacity = storm.boltR.style.opacity = Math.min(1, pk * 2);
+            } else { storm.bolt.setAttribute('d', ''); storm.boltR.setAttribute('d', ''); }
+            storm.flash.setAttribute('opacity', (0.45 * pk).toFixed(3));
+          }
         }
         if (gLine) {
           const gp = inkJitter(gPts, seed * 3 + 1, t, 1.6);
@@ -867,6 +1114,14 @@ const INK_PROPS = (() => {
           const tw = label.t.getComputedTextLength ? Math.min(W * 0.8, label.t.getComputedTextLength()) : label.size * L.text.length * 0.45;
           const pu = prog(lt, at + 0.25, 0.5);
           label.u.setAttribute('d', pu > 0.01 ? inkPath([[x - tw / 2, y + 18], [x - tw / 2 + tw * pu * 0.5, y + 22], [x - tw / 2 + tw * pu, y + 16]], { w: 6, seed: seed + 92, t }) : '');
+          if (label.ar) {   // short hand-drawn arrow from the label's near end towards the target point
+            const tx = L.arrow[0] * W, ty = L.arrow[1] * H, sx = tx < x ? x - tw / 2 - 16 : x + tw / 2 + 16, sy = y - label.size * 0.25;
+            const pa = prog(lt, at + 0.35, 0.45), mx = (sx + tx) / 2, my = Math.min(sy, ty) - 30;
+            const q = []; for (let i = 0; i <= 10; i++) { const v = i / 10 * pa; q.push([(1 - v) * (1 - v) * sx + 2 * v * (1 - v) * mx + v * v * tx, (1 - v) * (1 - v) * sy + 2 * v * (1 - v) * my + v * v * ty]); }
+            let d = pa > 0.02 ? inkPath(q, { w: 6, seed: seed + 93, t }) : '';
+            if (pa > 0.95) { const e = q[10], f = q[8], ang = Math.atan2(e[1] - f[1], e[0] - f[0]); d += ' ' + inkPath([[e[0] - 30 * Math.cos(ang - 0.5), e[1] - 30 * Math.sin(ang - 0.5)], e, [e[0] - 30 * Math.cos(ang + 0.5), e[1] - 30 * Math.sin(ang + 0.5)]], { w: 6, seed: seed + 94, t, smooth: false }); }
+            label.ar.setAttribute('d', d);
+          }
         }
         for (const c of cast) {
           const items = plan(c, cues), px = baseS * (c.m.scale || 1);
