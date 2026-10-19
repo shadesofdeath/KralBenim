@@ -5,6 +5,14 @@
   python build.py script.json --scenes 3      # only the first 3 scenes (test)
   python build.py script.json --still 12.5    # save a single frame as PNG
   python build.py script.json --cover          # only the thumbnail (out/video.jpg)
+
+Sharded (one video across several machines/CI jobs; always pass the same -o):
+  python build.py script.json -o out/x.mp4 --prepare     # TTS, timeline, media -> out/x.prepared.json
+  python build.py script.json -o out/x.mp4 --shard 2/5   # render frame range 2 of 5 -> out/x.parts/
+  python build.py script.json -o out/x.mp4 --finish      # concat + audio mux + cover -> out/x.mp4
+
+Env: RENDER_WORKERS (parallel browsers per machine), RENDER_CAPTURE=screenshot (old page.screenshot
+capture), RENDER_COMPOSITOR=gpu (old SwiftShader compositor), SHARD_SECONDS (video seconds per shard).
 """
 import argparse
 import asyncio
@@ -17,6 +25,7 @@ import subprocess
 import sys
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -353,10 +362,21 @@ def prepare_media(timeline, work):
 
 # ---------------------------------------------------------------- render
 
-def open_page(pw, timeline):
+# Video frames (not the cover or stills, which keep the original setup) use Chromium's software
+# compositor and software raster. With SwiftShader posing as a GPU, every compositor pass and tile
+# raster ran through emulated GL: ~1 CPU-second per 1080x1920 frame even for flat 2D scenes. The
+# software path draws the same picture (differences are antialiasing-level, below the JPEG q95
+# noise) for 3x (3D) to 8x (2D) less CPU. WebGL canvases still render with SwiftShader.
+# RENDER_COMPOSITOR=gpu restores the old setup.
+FAST_ARGS = ["--disable-gpu-compositing", "--disable-gpu-rasterization"]
+
+
+def open_page(pw, timeline, fast=False):
     # software WebGL (SwiftShader) for the studio 3D shots: runners have no GPU
     args = ["--enable-unsafe-swiftshader", "--use-angle=swiftshader", "--ignore-gpu-blocklist", "--enable-webgl",
             "--disable-partial-raster"]   # stale tiles repainted at an offset ("ghost strips") in software raster
+    if fast and os.environ.get("RENDER_COMPOSITOR", "software") != "gpu":
+        args += FAST_ARGS
     try:
         browser = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM_PATH"), args=args)
     except Exception:
@@ -392,21 +412,40 @@ def _encode_args(timeline):
             "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
 
 
+def _capturer(page, timeline):
+    """Returns capture() -> encoded frame bytes. Default: raw CDP Page.captureScreenshot with
+    optimizeForSpeed (the same JPEG bytes as page.screenshot without Playwright's per-call overhead).
+    RENDER_CAPTURE=screenshot falls back to page.screenshot. (HeadlessExperimental.beginFrame was
+    measured too: no faster here, and it only works in chrome-headless-shell.)"""
+    studio = timeline.get("engine") == "studio"
+    if os.environ.get("RENDER_CAPTURE", "cdp") == "screenshot":
+        shot = {"type": "jpeg", "quality": 95} if studio else {"type": "png"}
+        return lambda: page.screenshot(**shot)
+    cdp = page.context.new_cdp_session(page)
+    req = {"format": "jpeg", "quality": 95, "optimizeForSpeed": True} if studio else {"format": "png"}
+    return lambda: base64.b64decode(cdp.send("Page.captureScreenshot", req)["data"])
+
+
 def _render_segment(args):
     """Worker: frames [a, b) -> silent H.264 segment. Every frame is a pure function of t, so
     segments can be rendered by independent browsers in parallel and concatenated."""
-    timeline, a, b, seg = args
+    timeline, a, b, seg, log = args
     from playwright.sync_api import sync_playwright
     fps = timeline["fps"]
     ff = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "image2pipe", "-framerate", str(fps), "-i", "-",
                            *_encode_args(timeline), str(seg)], stdin=subprocess.PIPE)
-    shot = {"type": "jpeg", "quality": 95} if timeline.get("engine") == "studio" else {"type": "png"}
     with sync_playwright() as pw:
-        browser, page = open_page(pw, timeline)
+        browser, page = open_page(pw, timeline, fast=True)
+        capture = _capturer(page, timeline)
+        # a fresh page is not quite stateless: some shots (e.g. the drill depth label) only show up after
+        # a previous seek, so the first frame of every segment came out different from the same frame
+        # rendered mid-sequence. Seeking the preceding frames first (no capture) makes it identical.
+        for i in range(max(0, a - 3), a):
+            page.evaluate("t => window.seek(t)", i / fps)
         for i in range(a, b):
             page.evaluate("t => window.seek(t)", i / fps)
-            ff.stdin.write(page.screenshot(**shot))
-            if a == 0 and i % (fps * 5) == 0:
+            ff.stdin.write(capture())
+            if log and (i - a) % (fps * 5) == 0:
                 print(f"\rframe {i}/{b} (worker 1)", end="", flush=True)
         browser.close()
     ff.stdin.close()
@@ -415,37 +454,56 @@ def _render_segment(args):
     return seg
 
 
-def render(timeline, mp3, out, until, sfx=None, workers=None):
+def _split(a, b, parts):
+    """[a, b) -> up to `parts` contiguous ranges, cut at even frame indices so motion-blur pairs
+    never straddle a segment boundary."""
+    step = -(-(b - a) // parts)
+    step += step % 2
+    return [(s, min(b, s + step)) for s in range(a, b, step)]
+
+
+def render_frames(timeline, a, b, tmp, prefix="seg", workers=None):
+    """Frames [a, b) -> silent H.264 segments in `tmp`, one per local worker (parallel browsers).
+    Segment names sort in frame order: <prefix><first frame>-<end frame>.mp4."""
     import multiprocessing as mp
     fps = timeline["fps"]
-    n = round(until * fps)
-    workers = max(1, min(workers or int(os.environ.get("RENDER_WORKERS", os.cpu_count() or 1)), 8, n // (fps * 2) or 1))
-    # split at even frame indices so motion-blur pairs never straddle a segment boundary
-    step = -(-n // workers)
-    step += step % 2
-    tmp = Path(out).with_suffix(".parts")
+    workers = max(1, min(workers or int(os.environ.get("RENDER_WORKERS", os.cpu_count() or 1)), 8,
+                         (b - a) // (fps * 2) or 1))
     tmp.mkdir(parents=True, exist_ok=True)
-    jobs = [(timeline, a, min(n, a + step), tmp / f"seg{k:02d}.mp4") for k, a in enumerate(range(0, n, step))]
-    t0 = time.time()
+    jobs = [(timeline, s, e, tmp / f"{prefix}{s:06d}-{e:06d}.mp4", k == 0)
+            for k, (s, e) in enumerate(_split(a, b, workers))]
     if len(jobs) == 1:
-        segs = [_render_segment(jobs[0])]
-    else:
-        with mp.get_context("spawn").Pool(len(jobs)) as pool:
-            segs = pool.map(_render_segment, jobs)
-    (tmp / "list.txt").write_text("".join(f"file '{s.name}'\n" for s in segs))
+        return [_render_segment(jobs[0])], 1
+    with mp.get_context("spawn").Pool(len(jobs)) as pool:
+        return pool.map(_render_segment, jobs), len(jobs)
+
+
+def mux(segs, mp3, sfx, out, n, fps):
+    """Lossless concat of the video segments + narration (+ music bed) -> final mp4."""
+    lst = Path(out).with_suffix(".concat.txt")
+    lst.write_text("".join(f"file '{Path(s).resolve()}'\n" for s in segs))
     subprocess.run([
-        "ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"),
+        "ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
         "-i", str(mp3),
         *(["-i", str(sfx), "-filter_complex",
            "[1:a]apad[v];[2:a]apad[s];[v][s]amix=inputs=2:duration=first:normalize=0[a]",
            "-map", "0:v", "-map", "[a]"] if sfx else ["-map", "0:v", "-map", "1:a", "-af", "apad"]),
         "-t", f"{n / fps:.3f}", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", str(out)],
         check=True)
+    lst.unlink()
+
+
+def render(timeline, mp3, out, until, sfx=None, workers=None):
+    fps = timeline["fps"]
+    n = round(until * fps)
+    tmp = Path(out).with_suffix(".parts")
+    t0 = time.time()
+    segs, used = render_frames(timeline, 0, n, tmp, workers=workers)
+    mux(segs, mp3, sfx, out, n, fps)
     for s in segs:
         s.unlink()
-    (tmp / "list.txt").unlink()
     tmp.rmdir()
-    print(f"\r{out}  ({n} frames, {n / fps:.1f}s, {len(jobs)} workers, {time.time() - t0:.0f}s)")
+    print(f"\r{out}  ({n} frames, {n / fps:.1f}s, {used} workers, {time.time() - t0:.0f}s)")
 
 
 def cover(timeline, script, out_jpg):
@@ -478,6 +536,93 @@ def still(timeline, t, out):
     print(out)
 
 
+# ---------------------------------------------------------------- sharded build (one video, several machines)
+# --prepare     TTS (cached) + timeline + media frames + music -> <out>.prepared.json + the work dir
+# --shard I/N   frames of shard I -> <out>.parts/seg<first>-<end>.mp4 (same encoder settings)
+# --finish      lossless concat of all segments + audio mux (as the single-process path) + cover
+# Every phase is called with the same -o; the work dir (out/<slug>/) and <out>.prepared.json are
+# what the next phase needs (CI passes them between jobs as an artifact).
+
+def shard_count(seconds):
+    """About one shard per SHARD_SECONDS (default 40) of video, at most 8."""
+    return max(1, min(8, round(seconds / float(os.environ.get("SHARD_SECONDS", 40)))))
+
+
+def write_prepared(timeline, work, out, mp3, sfx, until, cover=True):
+    import shutil
+    work = work.resolve()
+    # self-contained work dir: photos referenced from elsewhere (downloaded, not in the repo) are copied in
+    for i, sc in enumerate(timeline["scenes"]):
+        p = sc.get("params") or {}
+        if p.get("src", "").startswith("file:"):
+            src = Path(urllib.request.url2pathname(urllib.parse.urlparse(p["src"]).path))
+            if not src.is_relative_to(work):
+                dst = work / "media" / "src" / f"{i:02d}-{src.name}"
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(src, dst)
+                p["src"] = dst.as_uri()
+    fps = timeline["fps"]
+    m = {"work": work.name, "work_uri": work.as_uri(), "repo_uri": ROOT.as_uri(),
+         "audio": str(Path(mp3).resolve().relative_to(work)),
+         "sfx": str(Path(sfx).resolve().relative_to(work)) if sfx else None,
+         "frames": round(until * fps), "fps": fps, "shards": shard_count(until), "cover": cover,
+         "timeline": timeline}
+    path = out.with_suffix(".prepared.json")
+    path.write_text(json.dumps(m, ensure_ascii=False))
+    print(f"{path}  ({m['frames']} frames, {until:.1f}s, {m['shards']} shards)")
+
+
+def load_prepared(out):
+    """The prepared manifest, with file URIs moved to wherever the repo and work dir are now."""
+    path = out.with_suffix(".prepared.json")
+    if not path.exists():
+        sys.exit(f"{path} not found: run --prepare first (same -o)")
+    m = json.loads(path.read_text())
+    work = (out.parent / m["work"]).resolve()
+    tl = json.dumps(m["timeline"], ensure_ascii=False)
+    tl = tl.replace(m["work_uri"], work.as_uri()).replace(m["repo_uri"], ROOT.as_uri())
+    m["timeline"] = json.loads(tl)
+    m["audio"] = work / m["audio"]
+    m["sfx"] = work / m["sfx"] if m["sfx"] else None
+    return m
+
+
+def render_shard(out, i, n):
+    m = load_prepared(out)
+    ranges = _split(0, m["frames"], n)
+    if not 1 <= i <= n:
+        sys.exit(f"--shard {i}/{n}: I must be in 1..{n}")
+    if i > len(ranges):
+        print(f"shard {i}/{n}: no frames left")
+        return
+    a, b = ranges[i - 1]
+    t0 = time.time()
+    segs, used = render_frames(m["timeline"], a, b, out.with_suffix(".parts"))
+    print(f"\rshard {i}/{n}: frames {a}-{b} -> {len(segs)} segments ({used} workers, {time.time() - t0:.0f}s)")
+
+
+def finish(script_path, out):
+    m = load_prepared(out)
+    tmp = out.with_suffix(".parts")
+    segs = sorted(tmp.glob("seg*.mp4"))
+    # the segments must tile [0, frames) exactly: a missing shard must fail, not ship a short video
+    pos = 0
+    for s in segs:
+        a, b = (int(x) for x in s.stem[3:].split("-"))
+        if a != pos:
+            sys.exit(f"missing frames {pos}-{a} (segments: {[x.name for x in segs]})")
+        pos = b
+    if pos != m["frames"]:
+        sys.exit(f"missing frames {pos}-{m['frames']} (segments: {[x.name for x in segs]})")
+    t0 = time.time()
+    mux(segs, m["audio"], m["sfx"], out, m["frames"], m["fps"])
+    print(f"{out}  ({m['frames']} frames, {m['frames'] / m['fps']:.1f}s, {len(segs)} segments, {time.time() - t0:.0f}s)")
+    for s in segs:
+        s.unlink()
+    if m["cover"]:
+        cover(m["timeline"], json.loads(Path(script_path).read_text()), out.with_suffix(".jpg"))
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -488,10 +633,21 @@ def main():
     ap.add_argument("--still", type=float, help="save one frame at this time (s) instead of a video")
     ap.add_argument("--cover", action="store_true", help="only render the thumbnail")
     ap.add_argument("--no-tts", action="store_true", help="silent draft: estimated word timings, no TTS call")
+    ap.add_argument("--prepare", action="store_true",
+                    help="sharded build, phase 1: TTS + timeline + media + music -> <out>.prepared.json")
+    ap.add_argument("--shard", metavar="I/N",
+                    help="sharded build, phase 2: render frame range I of N (1-based) of a prepared build")
+    ap.add_argument("--finish", action="store_true",
+                    help="sharded build, phase 3: concat the shard segments, mux audio, render the cover")
     a = ap.parse_args()
+    out = Path(a.out)
+    if a.shard:
+        i, n = (int(x) for x in a.shard.split("/"))
+        return render_shard(out, i, n)
+    if a.finish:
+        return finish(a.script, out)
 
     script = load_script(a.script)
-    out = Path(a.out)
     work = out.parent / script.get("slug", Path(a.script).stem)
     work.mkdir(parents=True, exist_ok=True)
 
@@ -539,6 +695,8 @@ def main():
         sys.path.insert(0, str(ROOT / "tools"))
         import sfx as sfxmod
         sfx = sfxmod.render(timeline, work / "sfx.wav", until)
+    if a.prepare:
+        return write_prepared(timeline, work, out, mp3, sfx, until, cover=not a.scenes)
     render(timeline, mp3, out, until, sfx)
     if not a.scenes:
         cover(timeline, script, out.with_suffix(".jpg"))
