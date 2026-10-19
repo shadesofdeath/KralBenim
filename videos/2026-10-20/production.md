@@ -118,3 +118,102 @@ Kalan küçük notlar (yayını engellemez):
 1. Sahne 29 (9,3 sn) ve 32: sağ taraf ve "24 EKİM?" etiketi cümlenin sonunda geliyor, sahnenin ~%80'i tek taraflı ya da etiketsiz duruyor. İstenirse 29'da `right` cue'su "bulgular" yerine "Ama" kelimesine, 32'de `hit` cue'su "sonbaharda" kelimesine alınabilir.
 2. Sahne 34'te gece görünümünde koni hâlâ alçak. Siluet yeterli ama dramatik değil.
 3. Sahne 15 en durgun sahne (motion 5.0). HF klibi gerçek render'da daha canlı olacak.
+
+## 01-emu-savasi (Shorts, parşömen stili)
+
+- **Konu / kategori:** Büyük Emu Savaşı, Batı Avustralya, Kasım–Aralık 1932. Savaşlar ve tuhaf kararlar.
+- **Hissedilen:** "Bir ordu makineli tüfeklerle kuşlara savaş açtı ve kaybetti." Önce gülümseme, sonra hayret.
+- **Palet / stil:** `"theme": "parchment"`, `desert`. Kaşif 10 sahnenin 7'sinde. Askerlerde yeni `slouch` aksesuarı var: zeytin yeşili, geniş kenarlı Avustralya asker şapkası (`kasif.js`, eklemeli).
+- **Kanca + kapak:** İlk cümle "Avustralya ordusu kuşlara savaş açtı." Kapak `ORDU / KUŞLARA / SAVAŞ AÇTI` (`KUŞLARA` kırmızı kutuda). Kapak karesi sahne 0'dan: tüfek ateş ediyor, emu sürüsü koşuyor, Kaşif şaşkın.
+- **Yayın:** 2026-10-20T12:00:00+03:00. 491 karakter, 10 sahne, ~35 sn (tahmini).
+- **Yeni sahne tipi:** `scenes/studio/shots/emu.js`. Modları:
+  - `field`: emular buğdayda geziniyor ve gagalıyor.
+  - `charge`: sürü koşarak tüfeğe geliyor.
+  - `scatter`: `scatter` cue'sunda sürü 4 küçük gruba bölünüyor. `jam` cue'sunda tüfek tutukluk yapıyor: duman ve kırmızı "?".
+  - `truck`: kamera kamyonla birlikte gidiyor, tarla kayıyor, emular açılıyor.
+
+  Lewis tüfeği tripod üstünde. Ateşte namlu alevi, iz mermiler ve ıskalanan mermilerin kaldırdığı toz var.
+- **Doğrulanmış bilgiler:**
+  - İlk temas 2 Kasım 1932'de, Campion çevresinde.
+  - Ekip Binbaşı G. P. W. Meredith, iki asker ve iki Lewis tüfeğiydi.
+  - Emu sayısı yaygın anlatımlara göre ~20.000.
+  - Çiftçilerin çoğu I. Dünya Savaşı'ndan dönen eski askerdi (soldier settlers). Savunma bakanından makineli tüfek istediler.
+  - Emular küçük gruplara dağıldı. Baraj başındaki pusuda bir Lewis tutukluk yaptı.
+  - Kamyona tüfek kuruldu ama kamyon emulara yetişemedi.
+  - Ordu ilk haftanın sonunda geri çekildi. 13 Kasım'da yeniden sahaya çıktı, 10 Aralık'ta tamamen çekildi.
+  - Meredith'in raporu: 9.860 mermi, 986 doğrulanmış ölüm (iddia).
+  - Meredith'in sözü: "…they can face machine guns with the invulnerability of tanks."
+
+### Çekim listesi (sahne 0'dan, tur 1 düzeltmeleri sonrası)
+
+| # | Anlatım | Tip | Görsel |
+|---|---|---|---|
+| 0 | Avustralya ordusu kuşlara savaş açtı. (`dramatic`) | emu charge | 7 emu, `hit`e kadar x ≥ 0,45'te; solda Lewis'li asker; önde büyük Kaşif (1,15) şok |
+| 1 | Yirmi bin kadar emu buğdaya dalıyor. | map | Avustralya, Perth, Campion, "~20.000 emu!" |
+| 2 | Eski asker çiftçiler makineli tüfek istiyor. | stage | Kızgın çiftçiler, büyük el yazısı "MAKİNELİ TÜFEK!" (96 px), Kaşif şok |
+| 3 | Gelen “ordu”: bir binbaşı, iki asker, iki tüfek. (`mischievously`) | stage | Meredith ve iki asker yürüyerek giriyor, "3 kişi, 2 tüfek", Kaşif dürbünden omuz silkiyor |
+| 4 | Emular küçük gruplara dağılıyor, tüfek tık diye susuyor. (`amazed`) | emu scatter | 7 emu gruplara bölünüyor; tık'ta duman ve "?" |
+| 5 | Şimdi düşün: kaçan kuşu nasıl vurursun? (`curious`) | stage | Kaşif omuz silkiyor, Meredith düşünüp yukarıyı gösteriyor |
+| 6 | Kamyona tüfek kuruyorlar; kamyon yetişemiyor. | emu truck | Sarsılan kamyon, 7 emu kaçıyor, "?" |
+| 7 | Meredith rapora yazıyor: “Tank gibi dayanıklılar!” | stage | Meredith elinde rapor (tomar), üstte büyük alıntı "“Tank gibiler!”" + ok |
+| 8 | On bine yakın kurşun; vurulan emu bin bile değil. | title | "9.860 / kurşun / 986 emu", not "iddiaya göre", Kaşif omuz silkiyor |
+| 9 | Ordu çekildi; savaşı kuşlar kazandı. (`mischievously`) | emu field | Emular gagalıyor, asker çıkıyor, Kaşif mutlu omuz silkiyor |
+
+440 karakter (lint 449), tahmini ~32 sn.
+
+### 01-emu-savasi — tur 1 (eleştirmen)
+lint OK · 500 karakter · tahmini 36,7 sn (35 sn üst sınırını aşıyor) · motion 10,9–23,5 (hepsi ≥ 4) · taslak MP4'te hayalet şerit görülmedi.
+
+| Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | 7 | 7 | 8 | 6 | 7 | 7 | 7 | 8 | 7 |
+
+**Sonuç: FAIL** (Kompozisyon 6).
+
+1. **Sahne 0, 3, 4 ve kapak: emu sürüsü kişileri gömüyor.** Sahne 0'da nişancının gövdesi ve tüfeği emu bacaklarının arkasında kalıyor. Sahne 3'te dürbünlü Kaşif sürünün arkasında, neredeyse görünmüyor. Kapakta Kaşif'in gövdesi emuların içinde kayboluyor.
+   - **Düzeltme:** `n` değerini 10–12'den 6–7'ye indir. Kişileri (`cast`) ve tüfeği emuların önünde çiz (z sırası). Sürü `hit` cue'suna kadar x ≥ 0,45'te kalsın. Sahne 3'te Kaşif'in `scale` değerini ≥ 0,8 yap ve sürünün önüne al.
+   - **Kapak (BRAND §9):** büyük Kaşif şok pozunda, yüzü emusuz bir alanda olsun. Örneğin `kasif` kapak seçeneğini aç ya da sahne 0'da Kaşif'i x 0,8'e, `scale` 1,1'e al ve emuları onun arkasına çiz.
+2. **Anlatım düz (§6.9), sahne 7 de bilgiyi fazla güçlü söylüyor.**
+   - Sahne 1–3 ve 6 "X oluyor. Y istiyor. Z geliyor." biçiminde ders kitabı zinciri. Duyusal ayrıntı ve sürpriz yok.
+   - Sahne 7'deki "kuşlar tank gibi kurşun geçirmez" Meredith'in benzetmesini olgu gibi sunuyor.
+   - **Düzeltme:** sahne 3'ü somut bir sürprize çevir: "Gelen 'ordu': bir binbaşı, iki asker, iki tüfek." Bu cümle gerçek (Meredith, McMurray, O'Halloran) ve "ordu" abartısını da dengeliyor.
+   - Sahne 4'e bir ses ayrıntısı ekle: "…tüfek tık diye susuyor."
+   - Sahne 7'yi alıntı olarak kur: "Meredith rapora yazıyor: 'Tank gibi dayanıklılar!'"
+   - Karakterleri 500'ün altında tutmak için sahne 1'i kısalt: "Yirmi bin kadar emu buğdaya dalıyor."
+3. **Okunabilirlik ve tempo.**
+   - Sahne 8'deki "~" işareti küçük basılıyor. Ayrıca "~986" yanlış, çünkü 986 raporun kesin iddiası. Satırları `["10.000","kurşun","986 emu"]` yap. "iddiaya göre" notu kalsın; 10.000 yerine istersen "9.860" yaz.
+   - "MAKİNELİ TÜFEK!" (sahne 2) ve "TANK GİBİLER!" (sahne 7) tabela yazıları 44 px'in altında. Tabelayı büyüt, yazıyı ≥ 48 px yap.
+   - Sahne 7'deki tabela Meredith'in gövdesini kapatıyor.
+   - Sahne 1'de zoom sonrası "Perth" soldan kırpılıyor: `anchor: "start"` ya da zoom 1,15.
+   - Sahne 5 ve 7'de sağdaki tabela ya da asker kenardan kırpılıyor (x ≤ 0,84).
+   - Süre 36,7 sn. Sahne 8 (4,6 sn) ve 9 (5,4 sn) cümlelerini kısaltarak ≤ 35 sn'ye indir.
+
+**Doğruluk notları:**
+- Campion, 2 Kasım–10 Aralık 1932; Binbaşı G. P. W. Meredith, 2 asker, 2 Lewis; ~20.000 emu; gazi çiftçiler (Pearce'a başvuru); kamyon (yol bozuk, nişancı nişan alamıyor); 4 Kasım baraj pususunda tutukluk; 9.860 mermi / 986 iddia: hepsi doğru.
+- Kapanış ("Ordu çekildi… kuşlar kazandı") kabul edilebilir. 8 Kasım'daki ilk çekilişten sonra 13 Kasım'da operasyon yeniden başladı; ölümlerin çoğu bu ikinci evrede oldu. Ama 10 Aralık'ta kesin çekiliş oldu, sorun sürdü ve sonraki askerî yardım talepleri reddedildi. "Kuşlar kazandı" standart tarih yorumu, yanıltıcı değil.
+- Tek abartı sahne 7 (bkz. 2. madde).
+
+**Writer'ın bilinen zayıflıkları:**
+- Teyit edildi: yoğun sürü, gizlenen asker, kamyonda emuların erken çıkması, küçük "~", orta boy kapak Kaşif'i.
+- Sahne 5 ve 7 cue öncesi durgun ama motion 11–12 yeterli; öncelik düşük.
+
+### 01-emu-savasi — tur 2 (eleştirmen)
+lint OK · 449 karakter · tahmini 33,3 sn · motion 8,7–19,4 · taslak MP4'te hayalet şerit yok.
+
+| Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 8 | 7 | 7 | 8 | 9 | 8 | 8 |
+
+**Sonuç: PASS** (hepsi ≥ 7).
+
+**Tur 1 düzeltmeleri tuttu:**
+- Sürü seyreldi ve kişilerin arkasında kalıyor.
+- Kapakta büyük, şok pozunda Kaşif var ve yüzü temiz.
+- "Gelen 'ordu'" sürprizi ve "tık diye susuyor" anlatımı canlandırdı.
+- Alıntı artık doğru çerçevede: Meredith'in raporu.
+- Sayı artık 9.860/986.
+
+**Kalan küçük sorunlar (isteğe bağlı 3. tur):**
+1. **Sahne 3:** anlatım "iki tüfek" diyor ama ekranda tüfek yok. Ayrıca Kaşif'in yüzü dürbünün arkasında kalıyor. Askerlerden ikisine Lewis tüfeği taşıt (`hold` + tüfek prop). Kaşif'i `point` pozuna al.
+2. **Sahne 8:** Kaşif (x 0,86) "emu" kelimesine değiyor. x'i 0,9'a, y'yi 0,66'ya taşı ya da `scale` 0,5 yap.
+3. **Sahne 9:** kapanış karesinde Kaşif küçük (0,82) ve ortada sıkışmış. Asker sol kenarda emunun arkasında kaybolarak çıkıyor. Kaşif'i 0,95 boyunda öne al. Askerin çıkışını emusuz bir şeritten yap.
