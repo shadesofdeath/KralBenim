@@ -1,0 +1,283 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "kedi-ayak-ustu",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "candy"
+  },
+  "scenes": [
+    {
+      "type": "catfall",
+      "text": "Düşen kedi fiziği kandırıyor gibi.",
+      "visual": "Yakın 3/4 plan: sırtüstü düşen sevimli 3D tekir kedi, dört patisi havada, yüzü ve kulakları net; hız çizgileri yukarı akıyor; daha cümle başlarken önce başı ve ön yarısı dönmeye başlıyor, 'kandırıyor'da gözleri parlıyor.",
+      "title": {
+        "white": "Kediler"
+      },
+      "cues": {
+        "hit": "kandırıyor"
+      },
+      "params": {
+        "mode": "fall"
+      },
+      "art": {
+        "palette": "noir"
+      }
+    },
+    {
+      "type": "catfall",
+      "text": "İtecek hiçbir şey yokken havada dönüyor.",
+      "visual": "Kamera geri çekilip kedinin etrafında dönüyor: boşlukta, etrafında tutunacak hiçbir şey yok; 'hiçbir'de kedinin çevresinden boş bir halka dalgası yayılıyor, kedi dönüşünü tamamlıyor.",
+      "title": {
+        "white": "Boşlukta"
+      },
+      "cues": {
+        "hit": "hiçbir"
+      },
+      "params": {
+        "mode": "void"
+      },
+      "art": {
+        "palette": "noir"
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "filmstrip",
+      "text": "1894'te Marey bu düşüşü kare kare fotoğrafladı.",
+      "visual": "Sepya iki film şeridi; kareler tek tek flaşla beliriyor ve her karede düşen kedi silueti sırtüstünden ayak üstüne dönüyor (önce ön yarı, sonra arka); üstte dev '1894' ve 'Étienne-Jules Marey'.",
+      "title": {
+        "white": "Kare kare"
+      },
+      "cues": {
+        "hit": "1894"
+      },
+      "params": {
+        "year": "1894",
+        "name": "Étienne-Jules Marey"
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "catxray",
+      "text": "Önce iç kulağı yukarıyı bulur.",
+      "visual": "Ters dönmüş sevimli kedi kafası; 'kulağı'nda kulağın dibinde röntgen gibi denge organı (yarım daire kanalları) parlıyor; 'yukarıyı'da kafa düzelirken organdan dolu, ok uçlu 'YUKARI' oku büyüyor; kafanın altında 'İÇ KULAK / denge organı'.",
+      "title": {
+        "white": "İç kulak"
+      },
+      "cues": {
+        "hit": "kulağı",
+        "turn": "yukarıyı"
+      },
+      "params": {
+        "mode": "ear"
+      },
+      "art": {
+        "palette": "candy"
+      }
+    },
+    {
+      "type": "catfall",
+      "text": "Sonra gövdesini ortadan ikiye büker.",
+      "visual": "Sırtüstü 3D kedi ortadan V şeklinde bükülüyor; ön yarısı pembe, arka yarısı mavi ışık kabuğuyla ayrışıyor; 'ÖN' ve 'ARKA' etiketleri çizgilerle iki yarıyı gösteriyor.",
+      "title": {
+        "white": "Gövde",
+        "gray": "ikiye bölünür"
+      },
+      "cues": {
+        "hit": "ikiye"
+      },
+      "params": {
+        "mode": "bend",
+        "tags": [
+          {
+            "part": "front",
+            "text": "ÖN",
+            "x": 0.74,
+            "y": 0.2
+          },
+          {
+            "part": "rear",
+            "text": "ARKA",
+            "x": 0.27,
+            "y": 0.2,
+            "delay": 0.15
+          }
+        ]
+      },
+      "art": {
+        "palette": "candy",
+        "colors": {
+          "accent2": "#7fd1ff"
+        }
+      }
+    },
+    {
+      "type": "catfall",
+      "text": "Ön bacaklarını toplar, ön yarısı döner.",
+      "visual": "Yandan görünüm, iki yarı da ters: ön bacaklar pembe parlayarak göğse katlanıyor, arka bacaklar açık kalıyor; ön yarının etrafında pembe dönüş oku çiziliyor ve ön yarı ayak üstü dönüyor, arka yarı hâlâ patiler yukarıda (hafifçe ters yöne kayıyor).",
+      "title": {
+        "white": "Ön yarı"
+      },
+      "cues": {
+        "hit": "toplar"
+      },
+      "params": {
+        "mode": "front"
+      },
+      "art": {
+        "palette": "candy",
+        "colors": {
+          "accent2": "#7fd1ff"
+        }
+      }
+    },
+    {
+      "type": "catfall",
+      "text": "Sonra arka bacaklarını toplar, arka yarısı döner.",
+      "visual": "Aynı yandan görünüm, ön yarı dönmüş, arka patiler yukarıda başlıyor: arka bacaklar mavi parlayarak katlanıyor, arka yarının etrafındaki mavi dönüş oku büyüyor ve arka yarı da dönüp kedi tamamen ayak üstü oluyor.",
+      "title": {
+        "white": "Arka yarı"
+      },
+      "cues": {
+        "hit": "döner"
+      },
+      "params": {
+        "mode": "rear"
+      },
+      "art": {
+        "palette": "candy",
+        "colors": {
+          "accent2": "#7fd1ff"
+        }
+      }
+    },
+    {
+      "type": "catxray",
+      "text": "Esnek omurga ve serbest köprücük kemiği bunu sağlar.",
+      "visual": "Yandan röntgen kedi silueti, gövdesi omurgayla birlikte kıvrılıp esniyor; 'omurgası'nda omurlar baştan kuyruğa yanıyor (ESNEK OMURGA), 'köprücük'te omuzun önünde iskelete bağlı olmayan küçük kemik parlayıp sallanıyor (SERBEST KÖPRÜCÜK).",
+      "title": {
+        "white": "İskelet"
+      },
+      "cues": {
+        "left": "omurga",
+        "right": "köprücük"
+      },
+      "params": {
+        "mode": "bones"
+      },
+      "art": {
+        "palette": "candy"
+      }
+    },
+    {
+      "type": "catxray",
+      "text": "Bu öğrenilmez; yavrularda üç dört haftada başlar.",
+      "visual": "İri gözlü, tombul yanaklı sevimli yavru kedi kafası neşeyle sağa sola sallanıyor; altında 'ÖĞRENİLMEZ' ve '3–4 haftada başlar' yazıları beliriyor.",
+      "title": {
+        "white": "Yavru kedi"
+      },
+      "cues": {
+        "hit": "öğrenilmez"
+      },
+      "params": {
+        "mode": "ear",
+        "kitten": true,
+        "label": "Öğrenilmez",
+        "sub": "3–4 haftada başlar"
+      },
+      "art": {
+        "palette": "candy"
+      }
+    },
+    {
+      "type": "headline",
+      "text": "Fizik bozulmuyor: iki yarı birbirini dengeliyor.",
+      "visual": "Dev yazılar çarpıyor: 'FİZİK' ve amber kutuda 'BOZULMUYOR'.",
+      "title": {},
+      "cues": {
+        "w0": "fizik",
+        "w1": "bozulmuyor"
+      },
+      "params": {
+        "lines": [
+          "Fizik",
+          "bozulmuyor"
+        ],
+        "highlight": [
+          "bozulmuyor"
+        ]
+      },
+      "art": {
+        "palette": "lab"
+      },
+      "mascot": "explain"
+    },
+    {
+      "type": "catfall",
+      "text": "Yani kedi fiziği kandırmıyor; onu herkesten iyi kullanıyor.",
+      "visual": "3D kedi havada önce ön, sonra arka yarısını çevirip dört ayağının üstüne bir zemine yumuşakça konuyor; konduğu yerde ışıklı halka ve toz yayılıyor, kamera geri çekiliyor.",
+      "title": {
+        "white": "Ayak üstü"
+      },
+      "cues": {
+        "hit": "kullanıyor"
+      },
+      "params": {
+        "mode": "land"
+      },
+      "art": {
+        "palette": "candy"
+      },
+      "mascot": "happy"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Kedi",
+      "fiziği",
+      "kandırıyor"
+    ],
+    "highlight": [
+      "fiziği"
+    ],
+    "scene": 0,
+    "t": 1.15
+  },
+  "youtube": {
+    "title": "Kediler Neden Ayaklarının Üstüne Düşer? 🐈",
+    "description": "Kediler neden ayaklarının üstüne düşer? Düşen kedi, itecek hiçbir şey yokken havada döner; fiziği kandırıyor gibi görünür ama kandırmaz.\n\nBuna doğrulma refleksi denir. Kedi önce iç kulağındaki denge organı ve gözleriyle yukarıyı bulur. Sonra gövdesini ortadan büker: ön bacaklarını toplayıp ön yarısını, ardından arka bacaklarını toplayıp arka yarısını çevirir. İki yarının dönüşü birbirini dengelediği için açısal momentum korunur. Esnek omurga ve serbest köprücük kemiği bu hareketi mümkün kılar. Étienne-Jules Marey bu düşüşü 1894'te kare kare fotoğrafladı. Bu refleks öğrenilmez; yavrularda yaklaşık 3–4 haftalıkken ortaya çıkar. Yani kedi fiziği kandırmıyor, onu çok iyi kullanıyor.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence başka hangi hayvan havada böyle dönebilir? Yorumlara yaz!\n\n#shorts #kedi #doğrulmarefleksi #bilim #düşünbakalım",
+    "tags": [
+      "kediler neden ayaklarının üstüne düşer",
+      "kedi neden ayak üstü düşer",
+      "kedi düşerken nasıl döner",
+      "kedi doğrulma refleksi",
+      "kedi havada nasıl döner",
+      "cat righting reflex",
+      "kedi fiziği",
+      "açısal momentum",
+      "iç kulak denge organı",
+      "Étienne-Jules Marey",
+      "kronofotografi",
+      "kedi omurgası",
+      "hayvanlar",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-19T19:00:00+03:00"
+  }
+}

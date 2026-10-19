@@ -1,0 +1,236 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "model": "eleven_v3",
+    "settings": {
+      "stability": 0.5
+    }
+  },
+  "slug": "hickirik",
+  "engine": "studio",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "lab"
+  },
+  "scenes": [
+    {
+      "type": "diaphragm",
+      "text": "Hıçkırık aslında bir kas spazmı.",
+      "visual": "Röntgen gibi şeffaf 3D gövde kesiti, yakın plan: akciğerlerin altındaki kubbe biçimli amber diyafram 'spazmı' kelimesinde sertçe aşağı çekiliyor; kırmızı parlama, gövde sarsılıyor, nefes borusundan hava hızla iniyor ve gırtlak parlıyor.",
+      "title": {
+        "white": "Hıçkırık"
+      },
+      "cues": {
+        "hit": "spazm"
+      },
+      "params": {
+        "mode": "spasm"
+      }
+    },
+    {
+      "type": "diaphragm",
+      "text": "Ciğerlerinin altındaki diyafram, her nefeste aşağı iner.",
+      "visual": "Kamera aynı 3D gövdede geri çekiliyor: iki pembe akciğer ve altında iki kubbeli amber diyafram; 'DİYAFRAM' etiketi çiziliyor, diyafram sakin ritimle inip çıkıyor, akciğerler şişiyor; 'iner' kelimesinde aşağı bakan amber ok beliriyor.",
+      "title": {
+        "white": "Diyafram"
+      },
+      "cues": {
+        "label": "diyafram",
+        "hit": "iner"
+      },
+      "params": {
+        "mode": "breathe",
+        "labels": [
+          {
+            "at": "diaphragm",
+            "text": "DİYAFRAM"
+          }
+        ]
+      }
+    },
+    {
+      "type": "diaphragm",
+      "text": "Bazen sinirler onu aniden ve sertçe kasar.",
+      "visual": "Aynı 3D gövde: boyundan diyaframa inen iki sarı sinir hattı ('SİNİR' etiketi); hat boyunca parlak sinyaller koşuyor, 'aniden' kelimesinde diyaframa ulaşıyor ve diyafram kırmızı parlayarak aşağı çarpıyor, gövde sarsılıyor.",
+      "title": {
+        "white": "Sinir",
+        "gray": "sinyali"
+      },
+      "cues": {
+        "label": "sinirler",
+        "hit": "aniden"
+      },
+      "params": {
+        "mode": "nerve",
+        "labels": [
+          {
+            "at": "nerve",
+            "text": "SİNİR"
+          }
+        ]
+      }
+    },
+    {
+      "type": "larynx",
+      "text": "Hava hızla içeri dolar ve ses telleri bir anda kapanır.",
+      "visual": "Boğazın yandan kesiti: pembe doku duvarları arasında hava çizgileri aşağı akıyor, iki inci beyazı ses teli ortada aralık bırakıyor ('SES TELLERİ' etiketi); 'kapanır' kelimesinde ses telleri kapı gibi çarparak kapanıyor, şok halkası yayılıyor, akış duruyor, 'KAPANDI' yazısı çıkıyor.",
+      "title": {
+        "white": "Ses telleri"
+      },
+      "cues": {
+        "label": "telleri",
+        "hit": "kapanır"
+      },
+      "params": {
+        "label": "SES TELLERİ"
+      }
+    },
+    {
+      "type": "larynx",
+      "text": "İşte o hık sesi, bu kapanmanın sesi.",
+      "visual": "Aynı boğaz kesiti, ses telleri kapalı: üstte dev amber 'HIK!' yazısı 'hık' kelimesinde ekrana çarpıyor, kapalı ses tellerinden ritmik ses dalgası halkaları yayılıyor; maskot şaşkın.",
+      "title": {},
+      "cues": {
+        "hit": "hık"
+      },
+      "params": {
+        "big": "HIK!"
+      },
+      "mascot": "shock"
+    },
+    {
+      "type": "diaphragm",
+      "text": "Hızlı yemek ya da gazlı içecek, mideni şişirip bunu tetikleyebilir.",
+      "visual": "3D gövdede diyaframın sol kubbesinin altındaki mide yakın plan ('MİDE' etiketi): 'şişirip' kelimesinde mide balon gibi şişiyor, içinde kabarcıklar yükseliyor, üstündeki diyafram kubbesini yukarı itiyor; ardından diyafram bir kez kırmızı parlayıp aşağı çarpıyor.",
+      "title": {
+        "white": "Tetikleyici"
+      },
+      "cues": {
+        "label": "mideni",
+        "hit": "şişir"
+      },
+      "params": {
+        "mode": "stomach",
+        "labels": [
+          {
+            "at": "stomach",
+            "text": "MİDE",
+            "dx": 120,
+            "dy": -260
+          }
+        ]
+      }
+    },
+    {
+      "type": "womb",
+      "text": "Bebekler anne karnında bile hıçkırır.",
+      "visual": "Gri-beyaz ultrason yelpazesi: içinde yan profilden kıvrılmış bebek (çıkıntılı alın, burun ve çene, eli ağzına yakın, bacakları karnına çekili); tarama çizgisi süpürüyor; 'anne' kelimesinden itibaren bebek ritmik olarak sarsılıyor, göğsünden büyüyen halkalar yayılıyor ve yanında 'HIK!' beliriyor.",
+      "title": {
+        "white": "Anne karnında"
+      },
+      "cues": {
+        "hit": "anne"
+      },
+      "params": {},
+      "art": {
+        "palette": "sunset"
+      },
+      "mascot": "happy"
+    },
+    {
+      "type": "headline",
+      "text": "Charles Osborne adlı bir adam, yaklaşık 68 yıl boyunca hıçkırdı.",
+      "visual": "Dev sayaç '~68' isim söylenirken 0'dan sayarak doluyor, altında 'YIL' ve amber kutuda 'HIÇKIRDI', küçük not 'Charles Osborne · 1922'den 1990'a'.",
+      "title": {
+        "white": "Rekor"
+      },
+      "cues": {
+        "count": "charles",
+        "w0": "yıl",
+        "w1": "hıçkırdı"
+      },
+      "params": {
+        "lines": [
+          "yıl hıçkırdı"
+        ],
+        "highlight": [
+          "hıçkırdı"
+        ],
+        "count": {
+          "to": "68",
+          "prefix": "~",
+          "plain": true
+        },
+        "sub": "Charles Osborne · 1922'den 1990'a",
+        "y": 0.37
+      },
+      "art": {
+        "palette": "sunset"
+      }
+    },
+    {
+      "type": "diaphragm",
+      "text": "Yani hıçkırık, beyninin senden izin almadan çalıştırdığı bir refleks.",
+      "visual": "Geniş plan şeffaf 3D beden: başın içinde parlak amber beyin sapı düğümü, mideden yukarı çıkan mavi sinir ve aşağı inen sarı sinirler parlak bir döngü kuruyor; diyafram ritmik olarak hıçkırıyor, 'refleks' kelimesinde beyin sapı pulslanıyor ve 'REFLEKS' etiketi ona bağlanıyor.",
+      "title": {
+        "white": "Refleks"
+      },
+      "cues": {
+        "label": "refleks",
+        "hit": "refleks"
+      },
+      "params": {
+        "mode": "reflex",
+        "labels": [
+          {
+            "at": "brain",
+            "text": "REFLEKS",
+            "dx": -300,
+            "dy": 90
+          }
+        ]
+      },
+      "mascot": "think"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Hıçkırık",
+      "bir kas",
+      "spazmı"
+    ],
+    "highlight": [
+      "spazmı"
+    ],
+    "scene": 0,
+    "t": 0.3
+  },
+  "youtube": {
+    "title": "Neden Hıçkırırız? Hıçkırık Aslında Bir Kas Spazmı 🫁",
+    "description": "Neden hıçkırırız? Hıçkırık aslında bir kas spazmı: diyafram istemsizce kasılır, ses telleri bir anda kapanır ve o tanıdık “hık” sesi çıkar.\n\nCiğerlerinin altındaki diyafram kası normalde her nefeste yavaşça iner. Hıçkırıkta sinirler onu aniden kasar, hava hızla içeri dolar ve gırtlaktaki ses telleri kapanır. Hızlı yemek ya da gazlı içecek mideyi şişirip hıçkırığı tetikleyebilir. Bebekler anne karnında bile hıçkırır; Charles Osborne ise yaklaşık 68 yıl boyunca hıçkırdı. Hıçkırık, beynin senden izin almadan çalıştırdığı bir refleks; ne işe yaradığı ise hâlâ kesin bilinmiyor.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen hıçkırığı nasıl durduruyorsun? Yorumlara yaz!\n\n#shorts #hıçkırık #insanvücudu #bilim #düşünbakalım",
+    "tags": [
+      "neden hıçkırırız",
+      "hıçkırık neden olur",
+      "hıçkırık nedir",
+      "hıçkırık nasıl geçer",
+      "hıçkırık neden çıkar",
+      "diyafram",
+      "diyafram kasılması",
+      "diyafram spazmı",
+      "refleks",
+      "bebek hıçkırığı",
+      "charles osborne",
+      "en uzun hıçkırık",
+      "insan vücudu",
+      "bilim",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-19T12:00:00+03:00"
+  }
+}
