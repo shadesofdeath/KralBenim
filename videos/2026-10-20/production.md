@@ -6,7 +6,7 @@ Uzun video bir gece önce (2026-10-19 akşamı) kanal sahibinin isteğiyle hazı
 
 - **Konu / kategori:** Pompeii'nin son günü: Vezüv bir şehri nasıl dondurdu? — tarih + yer bilimi
 - **Hissedilen:** "Sıradan bir sonbahar sabahı, ekmek fırında, duvarda seçim afişleri… 24 saat sonra her şey 1.700 yıl boyunca kül altında donup kaldı." — gerilim ve hüzün, sonunda hayranlık (bugün o anı görebiliyoruz).
-- **Ses:** ElevenLabs `RXCCWbOxP7Hisa63Xsv5`, `eleven_v3`.
+- **Ses:** ElevenLabs `j4vJUfke1j8j9OYq8V3b`, `eleven_v3`.
 - **Palet:** `desert` (Roma şehri, sabah) → `sunset` (püskürme kolonu) → `magma` (piroklastik akıntı) → `noir` (kül altında) → `desert`/`space` (bugün, kazı).
 - **Kapak:** sağda Vezüv'den yükselen dev kül kolonu ve kentin silueti; yazı ör. `BU ŞEHİR / 18 SAATTE / YOK OLDU` (yazar doğrular; sayıyı doğru seç).
 - **Yayın:** 2026-10-20T20:30:00+03:00

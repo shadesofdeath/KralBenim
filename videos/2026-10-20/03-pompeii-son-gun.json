@@ -3,7 +3,7 @@
   "subtitles": true,
   "tts": {
     "provider": "elevenlabs",
-    "voice_id": "RXCCWbOxP7Hisa63Xsv5",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
     "model": "eleven_v3",
     "settings": {
       "stability": 0.5
