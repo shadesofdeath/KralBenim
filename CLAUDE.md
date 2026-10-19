@@ -81,7 +81,7 @@ Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda bel
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir sahne tipi kodla (bkz. 6).
    - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne, sahne başına tek cümle. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
    - `channel`, `subtitles`, `tts` alanlarını `script.json`'dan aynen kopyala.
-     Ses (kanal sahibinin seçimi, asla değiştirme): **Shorts** ElevenLabs `voice_id: BwhlzGpUiZ9uHtfvCl1H`; **uzun video** `voice_id: RXCCWbOxP7Hisa63Xsv5`. Model her ikisinde `eleven_v3`. `tools/lint.py` bunu denetler.
+     Ses (kanal sahibinin seçimi, asla değiştirme): **tüm videolarda (Shorts ve uzun)** ElevenLabs `voice_id: j4vJUfke1j8j9OYq8V3b`. Model `eleven_v3`. `tools/lint.py` bunu denetler.
    - **Karakter bütçesine uy** (tablo). `tools/preview.py` çıktısındaki `chars` değerini kontrol et; sınırı aşıyorsa metni kısalt.
    - Anlatım (Shorts): kanca iddiası → neden (mekanizma, basitçe) → şaşırtıcı detay → net kapanış cümlesi. Uzun video: kanca, hikâye (kişiler, yer, tarih, gerilim), açıklama, dönüş ("yani..."), sonda yoruma çağıran tek bir soru. Sade, konuşma dili, kısa cümleler. "km/sa" gibi kısaltmaları açık yaz.
    - Her sahne 1–3 cümle. `title` sol üstte küçük bir "kicker" etiketi olarak görünür: `title.white` 1–2 kelime, `title.gray` en fazla ~3 kelime; dev yazı sahnesinde boş bırak (`{}`). `tags` studio'da gösterilmez.

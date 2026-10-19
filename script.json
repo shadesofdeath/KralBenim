@@ -5,7 +5,7 @@
   "fps": 60,
   "tts": {
     "provider": "elevenlabs",
-    "voice_id": "BwhlzGpUiZ9uHtfvCl1H",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
     "model": "eleven_v3",
     "settings": {
       "stability": 0.5

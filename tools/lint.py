@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from plan import LIMITS  # noqa: E402
 
-VOICES = {"short": "BwhlzGpUiZ9uHtfvCl1H", "long": "RXCCWbOxP7Hisa63Xsv5"}   # channel owner's choices
+VOICES = {"short": "j4vJUfke1j8j9OYq8V3b", "long": "j4vJUfke1j8j9OYq8V3b"}   # channel owner's choice (2026-10-19), all formats
 MODEL = "eleven_v3"
 SCENES = {"short": (8, 11), "long": (35, 45)}
 PALETTES = {"space", "magma", "ocean", "sunset", "candy", "forest", "lab", "ice", "desert", "noir"}
