@@ -21,6 +21,10 @@
 //   cast: [{who: "kasif"|name, accessory: "slouch", x: 0.8, y (0..1 H ground, default the field front), scale,
 //           pose: "idle", at: cue|seconds, then: "shock", to (walk/run target x), face: "left"|"right", dir, emotion, text}],
 //   label: {text, x: 0.5, y: 0.2, at, size},
+//   spread: [0, 1],            // field mode: emus wander only inside this x range (0..1 W), e.g. to keep them off Kaşif
+//   words: {lines: ["Düşman", "kuşlar"], highlight: ["kuşlar"], y: 0.17, size: 190}   // giant Fraunces words that slam
+//                              // in one by one (cues w0, w1, ...); the highlighted word sits in a red box
+//   peek: {at: "w1", x: 0.36, size: 1.15, face: "right"}   // one big emu pops up out of the wheat on the cue
 //   cam: {zoom: 1.05, focus: [0.5, 0.55]}
 // }
 // cues: fire, scatter, jam, hit (flock/gun punch), question, cast/label "at" names.
@@ -172,6 +176,19 @@
       const fxG = el(world, 'g');
       const frontS = mk(world, INK.inkSoft), frontE = mk(world, INK.gold), frontR = mk(world);
       const uiG = el(root, 'g');
+      // giant words (Fraunces) + optional red highlight box, and the big emu that pops out of the wheat
+      let words = null, peek = null;
+      if (P.words && P.words.lines) {
+        const Wd = P.words, fs = (Wd.size ?? 190) * K, hl = (Wd.highlight || []).map(w => w.toLocaleLowerCase('tr'));
+        words = Wd.lines.map((line, i) => {
+          const g = el(uiG, 'g'), isH = hl.includes(String(line).toLocaleLowerCase('tr'));
+          const box = isH ? mk(g, INK.red) : null, boxR = isH ? mk(g) : null;
+          const t = el(g, 'text', { 'font-family': 'Fraunces, Georgia, serif', 'font-weight': 900, 'font-size': fs, 'text-anchor': 'middle',
+            fill: isH ? INK.paperLight : INK.ink, 'fill-opacity': 0 });
+          t.textContent = line;
+          return { g, t, box, boxR, isH, i, y: (Wd.y ?? 0.17) * H + i * fs * 1.12 + fs * 0.75, fs };
+        });
+      }
 
       // clouds, far hills, trees
       const clouds = Array.from({ length: 3 }, (_, i) => ({ x: W * (0.15 + i * 0.36) + r() * 80, y: (portrait ? 330 : 120) + r() * (portrait ? 170 : 90), s: (0.8 + r() * 0.5) * K, v: 6 + r() * 8 }));
@@ -189,7 +206,7 @@
       const fencePosts = []; for (let x = -40; x < W + 300; x += 150 * K) fencePosts.push(x);
 
       // ---------- flock
-      const n = P.n ?? (mode === 'truck' ? 9 : 14), size = (P.size ?? 1) * K, spd = P.speed ?? 1;
+      const n = P.n ?? (mode === 'truck' ? 9 : mode === 'words' ? 0 : 14), size = (P.size ?? 1) * K, spd = P.speed ?? 1;
       const emus = Array.from({ length: n }, (_, i) => {
         const e = makeEmu(flockG, seed * 50 + i + 1);
         const d0 = mode === 'scatter' ? 0.3 + r() * 0.35 : mode === 'charge' ? 0.12 + r() * 0.5 : 0.2 + r() * 0.8;
@@ -197,6 +214,7 @@
       });
       // scatter groups: [dx px/s, depth/s]
       const GROUPS = [[-560, -0.16], [520, -0.2], [-420, 0.14], [470, 0.1]];
+      if (P.peek) peek = Object.assign(makeEmu(flockG, seed * 50 + 99), { Pk: P.peek });
 
       // ---------- gun + soldier
       let gun = null;
@@ -327,7 +345,8 @@
           const states = emus.map(e => {
             let x, d = e.d0, face = 1, gait = 'run', ph = 0, peck = 0;
             if (mode === 'field') {
-              x = e.x0 * W * 1.1 - W * 0.05 + e.vx * lt;
+              const sp = P.spread || [-0.05, 1.05];
+              x = lerp(sp[0], sp[1], e.x0) * W + e.vx * lt;
               face = e.vx > 0 ? 1 : -1; gait = 'walk';
               const pt = (lt + e.peckO) % e.peckP;
               peck = sm((pt - 0.2) / 0.35) * (1 - sm((pt - 1.1) / 0.35));
@@ -498,6 +517,28 @@
             qT.setAttribute('transform', `translate(${f1(gunnerHead[0] + 30 * K + b[0])} ${f1(gunnerHead[1] - 40 * K + b[1])}) rotate(${f1(Math.sin(t * 3) * 8)}) scale(${lerp(0.2, 1, sp).toFixed(3)})`);
           } else qT.setAttribute('fill-opacity', 0);
 
+          // ---------- words + peek
+          if (words) words.forEach(w => {
+            const at = atOr(cues, 'w' + w.i, 0.2 + w.i * 0.5), sp = spring(lt, at, 0.55), on = lt >= at;
+            w.t.setAttribute('fill-opacity', on ? 1 : 0);
+            if (w.box) {
+              const tw = w.t.getComputedTextLength ? w.t.getComputedTextLength() : w.fs * 3, bx = [[-tw / 2 - 34, -w.fs * 0.78], [tw / 2 + 34, -w.fs * 0.82], [tw / 2 + 38, w.fs * 0.24], [-tw / 2 - 30, w.fs * 0.28]];
+              w.box.setAttribute('d', on ? inkLoop(bx, O(8100 + w.i, { smooth: false, amp: 1.5 })) : '');
+              w.boxR.setAttribute('d', on ? inkPath(bx, O(8100 + w.i, { w: 6, closed: true, smooth: false, amp: 1.5 })) : '');
+            }
+            const b = boil(sd + 8200 + w.i, t, 1.2), k = lerp(1.7, 1, sp) * (1 + 0.05 * punch(lt, at, 0.5));
+            w.g.setAttribute('transform', `translate(${f1(W / 2 + b[0])} ${f1(w.y + b[1])}) rotate(${w.isH ? -3 : 0}) scale(${k.toFixed(3)})`);
+          });
+          if (peek) {
+            const Pk = peek.Pk, at = atOr(cues, Pk.at, 0.6), sp = spring(lt, at, 0.7), s2 = (Pk.size ?? 1.15) * K;
+            const vis = lt >= at - 0.01;
+            peek.g.style.display = vis ? '' : 'none';
+            if (vis) {
+              const x = (Pk.x ?? 0.36) * W, y = G + 50 + (1 - Math.min(1, sp)) * 620 * K, face = Pk.face === 'left' ? -1 : 1;
+              peek.g.setAttribute('transform', `translate(${f1(x)} ${f1(y)}) scale(${(face * s2).toFixed(4)} ${s2.toFixed(4)})`);
+              drawEmu(peek, { t, gait: 'stand', ph: 0, peck: 0, w: 1 });
+            }
+          }
           // ---------- cast
           cast.forEach(c => {
             if (!c.rig) return;

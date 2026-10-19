@@ -14,7 +14,7 @@
 // SHOTS.stage P: {cast: [{who: "kasif"|name, accessory, x: 0.3, y, scale, pose: "walk", to: 0.45, face: "right",
 //   at: "w0" (cue name or seconds), then: "point", dir: "up"|"down"|"left"|"right"|"forward"|deg, text, item,
 //   emotion, talk: true|false|[from, to], seq: [{at, pose, to, dur, dir, face, emotion, text, then}]}],
-//   props: [{type: "sign|scroll|column|house|ship|volcano|bread|coin|map|clock|door|tree|rock", x, y, scale, at, text, flip}],
+//   props: [{type: "sign|scroll|column|house|ship|volcano|bread|coin|map|clock|door|tree|rock|lewis", x, y, scale, at, text, flip}],
 //   label: {text, x, y, size, at}, ground: true, bg: false,
 //   (optional, added for 1453 scenes) skyline: true | {y, from, to} (thin ink-soft Constantinople skyline behind the cast),
 //   foreground: "water"|"wall"|"hatch" | [{type: "water"|"wall"|"hatch"|"pier", from: 0, to: 1}] (texture below the ground
@@ -526,6 +526,18 @@ const INK_PROPS = (() => {
       { p: [[-14, 0], [-14, -70], [14, -70], [14, 0]], c: 1, f: INK.ink, s: 0 },
       { p: [[-8, -200], [-8, -240], [8, -240], [8, -200]], c: 1, f: INK.ink, s: 0 },
       { p: [[-62, -150], [62, -150]], w: 3, o: 0.5 }, { p: [[-60, -80], [60, -80]], w: 3, o: 0.4 }] }),
+    // Lewis light machine gun carried at a slant (1932 emu war soldiers): cast pose "hold" + item "lewis"
+    lewis: () => {
+      const c = Math.cos(-1.08), s = Math.sin(-1.08), P = (u, v) => [u * c - v * s, u * s + v * c];
+      const box = (u0, u1, h0, h1) => [P(u0, -h0), P(u1, -h1), P(u1, h1), P(u0, h0)];
+      return { strokes: [
+        { p: box(-110, 10, 18, 26), c: 1, f: INK.paperDark, s: 0 },
+        { p: box(10, 90, 24, 24), c: 1, f: INK.inkSoft, s: 0 },
+        { p: box(90, 310, 28, 26), c: 1, f: INK.inkSoft, s: 0 },
+        ...[130, 175, 220, 265].map(u => ({ p: [P(u, -26), P(u, 26)], w: 3.5, o: 0.7 })),
+        { p: [P(310, 0), P(390, 0)], w: 13 },
+        { p: inkEllipsePts(...P(50, -44), 58, 14, 21, 10, -1.08), c: 1, f: INK.inkSoft }] };
+    },
   };
   function make(g, type, seed) {
     const def = D[type] || D.rock, inner = el(g, 'g'), pool = [];

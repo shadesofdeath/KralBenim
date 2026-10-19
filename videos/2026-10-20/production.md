@@ -144,22 +144,25 @@ Kalan küçük notlar (yayını engellemez):
   - Meredith'in raporu: 9.860 mermi, 986 doğrulanmış ölüm (iddia).
   - Meredith'in sözü: "…they can face machine guns with the invulnerability of tanks."
 
-### Çekim listesi (sahne 0'dan, tur 1 düzeltmeleri sonrası)
+### Çekim listesi (sahne 0'dan): anlatıcı sesiyle yeniden yazım (BRAND §6.10), son tur
 
-| # | Anlatım | Tip | Görsel |
+Anlatım, tek parça hikâye olarak:
+"Avustralya kuşlara savaş açtı. Düşman mı? Kuşlar. 1932'de yirmi bin kadar emu tarlaları yağmalıyor. Çiftçilerin çoğu savaştan dönme asker; ne istediklerini biliyorlar: makineli tüfek. Ordu geliyor. Yani — bir binbaşı, iki asker, iki tüfek. Ama emular bu savaşı iyi oynuyor: tüfeği görünce dağılıp kaçıyorlar. Tüfek de tam o anda tutukluk yapıyor. Binbaşı şaşkın: raporunda kuşları tanka benzetiyor. Binlerce kurşundan sonra ordu evine dönüyor. Emular mı? Tarlada kalıyor."
+
+Kapak: `AVUSTRALYA / KUŞLARA / SAVAŞ AÇTI`. 462 karakter (lint 471), 10 sahne, tahmini ~34 sn.
+
+| # | Anlatım parçası | Tip | Görsel |
 |---|---|---|---|
-| 0 | Avustralya ordusu kuşlara savaş açtı. (`dramatic`) | emu charge | 7 emu, `hit`e kadar x ≥ 0,45'te; solda Lewis'li asker; önde büyük Kaşif (1,15) şok |
-| 1 | Yirmi bin kadar emu buğdaya dalıyor. | map | Avustralya, Perth, Campion, "~20.000 emu!" |
-| 2 | Eski asker çiftçiler makineli tüfek istiyor. | stage | Kızgın çiftçiler, büyük el yazısı "MAKİNELİ TÜFEK!" (96 px), Kaşif şok |
-| 3 | Gelen “ordu”: bir binbaşı, iki asker, iki tüfek. (`mischievously`) | stage | Meredith ve iki asker yürüyerek giriyor, "3 kişi, 2 tüfek", Kaşif dürbünden omuz silkiyor |
-| 4 | Emular küçük gruplara dağılıyor, tüfek tık diye susuyor. (`amazed`) | emu scatter | 7 emu gruplara bölünüyor; tık'ta duman ve "?" |
-| 5 | Şimdi düşün: kaçan kuşu nasıl vurursun? (`curious`) | stage | Kaşif omuz silkiyor, Meredith düşünüp yukarıyı gösteriyor |
-| 6 | Kamyona tüfek kuruyorlar; kamyon yetişemiyor. | emu truck | Sarsılan kamyon, 7 emu kaçıyor, "?" |
-| 7 | Meredith rapora yazıyor: “Tank gibi dayanıklılar!” | stage | Meredith elinde rapor (tomar), üstte büyük alıntı "“Tank gibiler!”" + ok |
-| 8 | On bine yakın kurşun; vurulan emu bin bile değil. | title | "9.860 / kurşun / 986 emu", not "iddiaya göre", Kaşif omuz silkiyor |
-| 9 | Ordu çekildi; savaşı kuşlar kazandı. (`mischievously`) | emu field | Emular gagalıyor, asker çıkıyor, Kaşif mutlu omuz silkiyor |
-
-440 karakter (lint 449), tahmini ~32 sn.
+| 0 | Avustralya kuşlara savaş açtı. (`serious`) | emu charge | Lewis'li asker ateşte, 7 emu geliyor, büyük Kaşif 'kuşlara'da şok |
+| 1 | Düşman mı? Kuşlar. (`mischievously`) | emu words + peek | "Düşman", sonra kırmızı kutuda "kuşlar"; başakların arasından kocaman bir emu fırlıyor, Kaşif (1,0) şok |
+| 2 | 1932'de yirmi bin kadar emu tarlaları yağmalıyor. | map | Avustralya, Perth, Campion, "~20.000 emu!" |
+| 3 | Çiftçilerin çoğu savaştan dönme asker; ne istediklerini biliyorlar: makineli tüfek. | stage | Çiftlik, "Gaziler" tabelası, kamera yaklaşıyor, "MAKİNELİ TÜFEK!", kızgın çiftçiler, Kaşif şok |
+| 4 | Ordu geliyor. Yani — bir binbaşı, iki asker, iki tüfek. (`mischievously`) | stage | Üç kişi yürüyerek giriyor, iki asker Lewis tüfeği taşıyor (yeni `lewis` aksesuarı), "3 kişi, 2 tüfek", Kaşif gösterip omuz silkiyor |
+| 5 | Ama emular bu savaşı iyi oynuyor: tüfeği görünce dağılıp kaçıyorlar. | emu scatter | Ateş, boşa toz; sürü gruplara bölünüyor |
+| 6 | Tüfek de tam o anda tutukluk yapıyor. (`dramatic`) | emu charge + jam | Duman, ateş kesiliyor, "?" |
+| 7 | Binbaşı şaşkın: raporunda kuşları tanka benzetiyor. (`amazed`) | stage | Meredith elinde rapor, "“Tank gibiler!”" + ok, Kaşif şok |
+| 8 | Binlerce kurşundan sonra ordu evine dönüyor. | title | "9.860 / kurşun", not "5 hafta sonra: eve dönüş", Kaşif omuz silkiyor |
+| 9 | Emular mı? Tarlada kalıyor. (`mischievously`) | emu field | Emular solda (spread 0–0,48) gagalıyor, Kaşif sağda gülümseyip omuz silkiyor |
 
 ### 01-emu-savasi — tur 1 (eleştirmen)
 lint OK · 500 karakter · tahmini 36,7 sn (35 sn üst sınırını aşıyor) · motion 10,9–23,5 (hepsi ≥ 4) · taslak MP4'te hayalet şerit görülmedi.
@@ -217,3 +220,35 @@ lint OK · 449 karakter · tahmini 33,3 sn · motion 8,7–19,4 · taslak MP4'te
 1. **Sahne 3:** anlatım "iki tüfek" diyor ama ekranda tüfek yok. Ayrıca Kaşif'in yüzü dürbünün arkasında kalıyor. Askerlerden ikisine Lewis tüfeği taşıt (`hold` + tüfek prop). Kaşif'i `point` pozuna al.
 2. **Sahne 8:** Kaşif (x 0,86) "emu" kelimesine değiyor. x'i 0,9'a, y'yi 0,66'ya taşı ya da `scale` 0,5 yap.
 3. **Sahne 9:** kapanış karesinde Kaşif küçük (0,82) ve ortada sıkışmış. Asker sol kenarda emunun arkasında kaybolarak çıkıyor. Kaşif'i 0,95 boyunda öne al. Askerin çıkışını emusuz bir şeritten yap.
+
+### 01-emu-savasi — tur 3 (yeni anlatım, HEAD e040967 kuralları, eleştirmen)
+lint OK · 494 karakter · 11 sahne · tahmini 37,4 sn (taslak MP4 37,4 sn; 35 sn üst sınırının üstünde) · motion 8,8–20,4 · hayalet şerit yok.
+
+**Senaryo (önce sadece metin okundu): 7.**
+- **Artılar:** podcast gibi akıyor; anlatıcı sesi var ("Düşman mı? Kuşlar.", "Yani — bir binbaşı…"). Cümleler bağlaçla bağlanıyor ("ama", "de", "yani"). Açılıştaki soru-cevap kalıbı sondaki "Emular mı? Tarlada kalıyor." ile güzel bir ayna kuruyor.
+- **Eksiler:**
+  - "savaş ilan etti" resmî bir ilanı ima ediyor; böyle bir ilan yok.
+  - "dağılıp kaçıyorlar" nedeni ve duyusal ayrıntıyı vermiyor.
+  - En şaşırtıcı ironi düşmüş: binlerce kurşuna karşılık bin bile olmayan emu.
+  - "Binbaşı raporuna yazıyor" hâlâ biraz altyazı dili.
+
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 8 | 7 | 8 | 7 | 7 | 6 | 7 | 8 | 8 |
+
+**Sonuç: FAIL** (Tempo 6). Kolayca düzeltilebilir.
+
+1. **Süre ve tempo.** Süre 37,4 sn. Sahne 3-4-5 üst üste üç `stage` sahnesi, 3 ile 4 aynı dekor. Toplamda 11 sahnenin 5'i birbirine benzeyen ayakta duran figür dizisi.
+   - **Kısalt, evet.** Sahne 3 ile 4'ü tek sahnede birleştir. Zaten tek cümle: "Çiftçilerin çoğu savaştan dönme asker; ne istediklerini biliyorlar: makineli tüfek." (`hit`=tüfek)
+   - Sahne 7: "Tüfek de tam o anda tutukluk yapıyor."
+   - Sahne 0: "bir gün" çıksın.
+   - Hedef ≤ 35 sn ve 10 sahne. Stage dizisi en fazla 2 olsun.
+2. **Senaryo ve doğruluk.**
+   - Sahne 0: "Avustralya bir gün savaş ilan etti." yerine "Avustralya ordusu bir gün savaşa çıktı." ya da "Avustralya bir gün kuşlara savaş açtı." (kapakla aynı).
+   - Sahne 9'a maliyet ironisini geri koy: "Binlerce kurşun ve birkaç hafta sonra ordu evine dönüyor." Bu karakteri bütçe içinde tutar, sondaki punchline'ı da güçlendirir.
+3. **Görsel.**
+   - Sahne 1 boş bir slayt: iki kelime ve minik bir Kaşif. Kaşif `scale` ≥ 0,8 olsun, "kuşlar" kelimesinde arkadan tek bir emu kafası girsin.
+   - Sahne 5'te hâlâ tüfek yok ve Kaşif'in yüzü dürbünün arkasında. Askerlerden ikisine Lewis tutturup Kaşif'i `point` pozuna al.
+   - Sahne 10'da emular Kaşif'in üstüne biniyor. Kaşif'in etrafında x ±0,12 emusuz bir alan bırak.
+
+**Kapak:** büyük şok Kaşif, okunaklı, kapak cümlesi ilk cümleyle uyumlu. İyi.
