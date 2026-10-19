@@ -1,13 +1,14 @@
 # Eleştiri döngüsü (review)
 
 Her video yayına gitmeden önce **senaryoyu yazmayan** bir eleştirmen ajan tarafından puanlanır.
-Eleştirmen taze gözle bakar: sadece `sheet.png`, `cover.jpg`, senaryo JSON'u, `tools/lint.py` ve
+Eleştirmen önce **sadece anlatım metnini** (tüm sahnelerin `text` alanları art arda) görüntüye bakmadan okur ve "Senaryo" puanını verir. Sonra taze gözle bakar: sadece `sheet.png`, `cover.jpg`, senaryo JSON'u, `tools/lint.py` ve
 `tools/preview.py` çıktısını görür.
 
 ## Puanlama (1–10)
 
 | Kriter | 10 puan nasıl görünür |
 |---|---|
+| **Senaryo (metin tek başına)** | Anlatım görüntü olmadan, düz metin olarak okununca da (podcast gibi) sürükleyici bir hikâye: anlatıcının sesi, merak, gerilim, dönüş, akılda kalan son. Cümleler ekrandakini tarif etmiyor ("kamyona tüfek kuruyorlar" gibi altyazı cümlesi yok); görüntünün söyleyemediğini söylüyor. Cümleler birbirine bağlanıyor ("ama", "yani", "çünkü", "ve tam o anda"), madde listesi gibi kopuk değil. **Bu kriter 7'nin altındaysa diğer puanlara bakılmaz, senaryo baştan yazılır.** |
 | **Kanca** | İlk kare + ilk cümle 1 saniyede merak yaratıyor; kapak yazısı ile ilk cümle aynı fikir; kaydırmayı durdurur. |
 | **Okunabilirlik (360 px)** | Kontak sayfasında (her kare 360 px genişlik) tüm sahne yazıları okunuyor; yazı görsele binmiyor; altyazı bandı ve YouTube arayüzü bölgesi temiz. |
 | **Görsel = anlatım** | Her sahnenin görseli `visual` cümlesini ve o an söylenen şeyi birebir gösteriyor; "yaklaşık" görsel yok. |

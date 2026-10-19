@@ -95,6 +95,14 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
    soğuk, ağırlık), cümle uzunluklarını değiştir (kısa vurucu cümle + bir orta cümle), bir kez sürpriz yap.
    Ders kitabı cümlesi ("X yılında Y oldu. Bu çok önemliydi.") kullanılmaz. Eleştirmen bunu "Kanca" ve
    "Derinlik" puanında sert değerlendirir.
+10. **Önce senaryo, sonra görüntü.** Anlatım, ekranda ne olduğunu anlatan altyazı cümleleri değildir;
+   tek başına dinlenince de işleyen bir hikâyedir. Yazar önce metni bütün olarak yazar, sonra sahnelere
+   böler. Yasak örnek (altyazı dili): "Kamyona tüfek kuruyorlar; kamyon yetişemiyor. Meredith rapora
+   yazıyor." İstenen (anlatıcı dili): "Binbaşı inatçı. Tüfeği bir kamyonun kasasına bağlatıyor, emuların
+   peşine düşüyor. Ama arazi o kadar engebeli ki nişan almak bir yana, tüfekçi kasada zor duruyor."
+   Bağlaçlar ("ama", "çünkü", "yani", "ve tam o anda"), anlatıcı yorumu ("İşte burada işler tuhaflaşıyor"),
+   ritim (kısa vurucu cümle + akan uzun cümle) zorunlu. Ekranda zaten görünen bir şeyi söyleme; görüntünün
+   söyleyemediğini söyle (neden, his, sonuç, ironi).
 8. Uzun videoda bölümler **"BÖLÜM 2 / 5"** kartıyla açılır (örnekteki gibi: mavi daire içinde rakam, altında Fraunces başlık).
 
 ## 7. Formatlar

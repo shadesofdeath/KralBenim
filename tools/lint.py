@@ -81,8 +81,8 @@ def lint(path, kinds):
         if not x.get("visual"):
             err.append(f"{tag}: missing \"visual\"")
         n = len(sentences(x.get("text", "")))
-        if short and n != 1:
-            err.append(f"{tag}: {n} sentences, Shorts need exactly 1 per scene")
+        if short and n > 2:
+            err.append(f"{tag}: {n} sentences, Shorts scenes hold at most 2 (a scene may also be part of a sentence)")
         elif n > 3:
             warn.append(f"{tag}: {n} sentences (max 3)")
         if short and len(x.get("text", "").split()) > 14:

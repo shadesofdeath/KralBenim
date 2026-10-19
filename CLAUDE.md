@@ -38,7 +38,7 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
 - **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–7 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
-- **Hızlı tempo:** her sahne tek cümle, 2–4 saniye; 8–11 sahne. Uzun cümleleri böl.
+- **Hızlı görüntü temposu:** 2–4 saniyede bir yeni görüntü, 8–11 sahne. Anlatım ise doğal akar; sahneler cümleyi bölebilir.
 - **Net kapanış (döngü yok):** son cümle **tam ve kendi başına anlamlı** olsun; videoyu bağlayan, akılda kalan bir sonuç/punchline ("Yani ayağının altında, erimeyi reddeden bir demir güneş var."). Cümleyi yarım bırakıp videonun başına bağlama — kanal sahibi "sonsuz video" etkisini istemiyor. Ayrı bir soru/"yorumlara yazın" sahnesi koyma; yorum sorusu açıklamaya yazılır.
 - Hiç dolgu cümle yok; her cümle ya yeni bir bilgi ya da gerilim eklesin.
 
@@ -52,7 +52,8 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
    kategori, tek cümlelik "izleyici sonunda ne hisseder", palet, kanca + kapak fikri ve **çekim listesi**
    (her sahne: anlatım cümlesi, `visual`, sahne tipi, cue kelimesi, kamera/hareket notu). Bu dosya
    günün yaratıcı belgesidir ve commit'e girer (workflow sadece `.json` dosyalarını render eder).
-2. **Yazım (video başına 1 yazar ajan, paralel):** her ajana `production.md`'deki kendi bölümünü, dosya
+2. **Önce senaryo, sonra görüntü (kanal sahibinin kuralı):** yazar önce anlatımı **tek parça, akıcı bir metin** olarak yazar: bir anlatıcının sesiyle, sahne ve görsel düşünmeden (bkz. `brand/kit/BRAND.md` §6.10). Metin `production.md`'ye konur ve sesli okunur gibi kontrol edilir; ancak bundan sonra metin sahnelere bölünür ve görseller metne göre kurulur. Görsel cümleyi değil, cümle görseli belirler. Sahne başına cümle yazıp görseli tarif etmek yasak.
+   **Yazım (video başına 1 yazar ajan, paralel):** her ajana `production.md`'deki kendi bölümünü, dosya
    adını, `publish_at` değerini ver; CLAUDE.md + `docs/ANIMATION_GUIDE.md` okusun. Görevi: bilgileri
    doğrulamak (adım 4), gerçek görüntü bulmak (`tools/media.py`, ajan başına ayrı `--name`), senaryo
    JSON'unu yazmak, `lint` hatasız + `preview` çalıştırıp `sheet.png`/`cover.jpg`'ye bakmak.
@@ -79,11 +80,11 @@ Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda bel
 5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json` (Shorts, ikisi farklı kategorilerden) ve `03-<slug>.json` (uzun video, Shorts'lardan farklı bir konu); numaralar `plan.py`'nin `todo` listesinden.
    - **Motor:** her dosyada `"engine": "studio"` ve video için bir renk paleti `"art": {"palette": "space"}` (bkz. 6). Sahne bazında `"art"` ile palet değiştirilebilir (renk geçişi yumuşak olur).
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir sahne tipi kodla (bkz. 6).
-   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne, sahne başına tek cümle. Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
+   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
    - `channel`, `subtitles`, `tts` alanlarını `script.json`'dan aynen kopyala.
      Ses (kanal sahibinin seçimi, asla değiştirme): **tüm videolarda (Shorts ve uzun)** ElevenLabs `voice_id: j4vJUfke1j8j9OYq8V3b`. Model `eleven_v3`. `tools/lint.py` bunu denetler.
    - **Karakter bütçesine uy** (tablo). `tools/preview.py` çıktısındaki `chars` değerini kontrol et; sınırı aşıyorsa metni kısalt.
-   - Anlatım (Shorts): kanca iddiası → neden (mekanizma, basitçe) → şaşırtıcı detay → net kapanış cümlesi. Uzun video: kanca, hikâye (kişiler, yer, tarih, gerilim), açıklama, dönüş ("yani..."), sonda yoruma çağıran tek bir soru. Sade, konuşma dili, kısa cümleler. "km/sa" gibi kısaltmaları açık yaz.
+   - Anlatım (Shorts): kanca iddiası → neden (mekanizma, basitçe) → şaşırtıcı detay → net kapanış cümlesi. Uzun video: kanca, hikâye (kişiler, yer, tarih, gerilim), açıklama, dönüş ("yani..."), sonda yoruma çağıran tek bir soru. Sade, konuşma dili; ama bir anlatıcı gibi: cümleler birbirine bağlanır, ekrandakini tarif etmez (BRAND.md §6.10). "km/sa" gibi kısaltmaları açık yaz.
    - Her sahne 1–3 cümle. `title` sol üstte küçük bir "kicker" etiketi olarak görünür: `title.white` 1–2 kelime, `title.gray` en fazla ~3 kelime; dev yazı sahnesinde boş bırak (`{}`). `tags` studio'da gösterilmez.
    - `cues`: sahnenin metninde geçen bir kelimenin parçası (büyük/küçük harf duyarsız, ilk eşleşme). Animasyonun vurgusunu o kelimeye bağla; erken bir kelimeyle yanlışlıkla eşleşmediğinden emin ol.
 6. **Görseller (Studio motoru):** ekran bir "kart" değil, **tam ekran bir sahne**dir. Her video konuya uygun bir renk dünyası, sinematik ışık ve hareket taşır. Sahne tipleri (`params` alanları):
