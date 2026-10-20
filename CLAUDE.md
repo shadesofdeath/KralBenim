@@ -158,6 +158,21 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 10. **Gönder:** Push'tan hemen önce `tools/lint.py` son kez hatasız geçmeli. Dosyaları (`media/` klasörü, `production.md` ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
 11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını, yayın saatini ve son tur eleştiri puanlarını kısaca özetle; bir sonraki uzun video tarihini yaz.
 
+## Elle başlatılan ek video
+
+Kanal sahibi zamanlamanın dışında da tek bir video başlatabilir ("Düşün Bakalım — elle Shorts" /
+"Düşün Bakalım — elle uzun video" zamanlanmış görevleri, ya da sohbette "bir uzun video üret ve yayınla").
+Bu, plan dışı ama **istenmiş** bir videodur; "fazladan video üretme" kuralı buna uygulanmaz.
+
+- `python tools/plan.py --extra short|long` dosya numarasını ve en erken `publish_at`'i verir (şimdi + 1 saat;
+  render daha geç biterse `upload.py` hemen yayınlar). Elle saat hesaplama.
+- Senaryonun en üstüne `"extra": true` yaz: plan.py bu dosyayı günlük planın Shorts/uzun sayısına katmaz,
+  sabahki görev yine kendi videolarını üretir.
+- Konu verilmemişse geçmişte işlenmemiş bir tarih konusu seç (adım 2–3). Akış günlük görevle aynı:
+  `production.md` (ek bölüm), yazar ajan (uzunda önce anlatım, sonra bölüm ajanları), eleştirmen (en az 1 tur;
+  zaman yetiyorsa 2), lint, preview, cover/sheet'e kendi gözünle bak, Telegram canlı durum, commit
+  `Extra video YYYY-MM-DD: <başlık>`, push.
+
 ## Komutlar
 
 ```bash

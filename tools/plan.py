@@ -3,9 +3,11 @@
 
   python tools/plan.py               # today (Europe/Istanbul)
   python tools/plan.py --date 2026-10-21
+  python tools/plan.py --extra long  # one extra video started by hand: file number + earliest publish_at
 
 Plan: 4 Shorts + 1 long video every day. Videos already in the day's folder (e.g. a long video
 made the evening before) are marked done; the daily task makes only the "todo" ones.
+Extra videos started by hand carry "extra": true in their script and never count against the plan.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
 import argparse
@@ -68,9 +70,28 @@ def slot(d, hhmm, now):
     return t.isoformat()
 
 
+def extra(fmt, d, folder, taken, now):
+    """An extra video outside the plan: the next free number and the earliest publish time lint accepts
+    (now + 1 h, rounded up to 5 minutes); if the render finishes later, upload.py publishes at once."""
+    n = 1
+    while f"{n:02d}" in taken:
+        n += 1
+    t = now + timedelta(hours=1)
+    t = (t + timedelta(minutes=(5 - t.minute % 5) % 5)).replace(second=0, microsecond=0)
+    lo, hi, hard = LIMITS[fmt]
+    used = month_usage(d)
+    return {"date": d.isoformat(), "folder": str(folder.relative_to(ROOT)), "extra": True,
+            "video": {"file": f"{n:02d}-<slug>.json", "format": fmt, "publish_at": t.isoformat(),
+                      "chars": f"{lo}-{hi} (hard max {hard})"},
+            "note": 'write "extra": true at the top level of the script; publish_at is the earliest allowed',
+            "elevenlabs_chars": {"used_this_month": used, "today_max": hi, "monthly_budget": MONTHLY_CHARS,
+                                 "warning": used + hi > MONTHLY_CHARS}}
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="YYYY-MM-DD (default: today in Europe/Istanbul)")
+    ap.add_argument("--extra", choices=["short", "long"], help="plan one extra video started by hand")
     a = ap.parse_args()
     now = datetime.now(TZ)
     d = date.fromisoformat(a.date) if a.date else now.date()
@@ -81,10 +102,15 @@ def main():
         videos.append({"file": f"0{len(videos) + 1}-<slug>.json", "format": "long",
                        "publish_at": slot(d, LONG_SLOT, now)})
     existing = {"short": [], "long": []}
+    taken = set()
     for f in sorted(folder.glob("*.json")):
         if not f.name.endswith(".youtube.json"):
-            existing[chars(f)[1]].append(f.name)
-    taken = {f[:2] for fs in existing.values() for f in fs}
+            taken.add(f.name[:2])
+            if not json.loads(f.read_text()).get("extra"):
+                existing[chars(f)[1]].append(f.name)
+    if a.extra:
+        print(json.dumps(extra(a.extra, d, folder, taken, now), ensure_ascii=False, indent=1))
+        return
     for v in videos:
         lo, hi, hard = LIMITS[v["format"]]
         v["chars"] = f"{lo}-{hi} (hard max {hard})"
