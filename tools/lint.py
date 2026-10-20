@@ -75,6 +75,15 @@ def lint(path, kinds):
     yor = [e for e in ends if re.search(r"yor(um|sun|uz|sunuz|lar)?$", e)]
     if ends and len(yor) > len(ends) / 3:
         err.append(f"{len(yor)}/{len(ends)} sentences end in '-yor' (max a third): tell it like a YouTube narrator, mostly past tense (BRAND.md §6.3)")
+    # owner: the voice reads naturally: no voice settings, no pause editing, no audio tags
+    if s.get("pacing") or s.get("max_pause") or tts.get("settings") or any(x.get("tone") for x in sc):
+        err.append('remove "pacing"/"max_pause", tts.settings and scene "tone": the voice reads naturally (BRAND.md §6.2)')
+    for i, x in enumerate(sc):
+        t = x.get("text", "").strip()
+        if t and t[-1] not in ".?!…\"”'’:;,—-":
+            warn.append(f"scene {i}: text ends without punctuation; the voice reads punctuation, end the phrase properly")
+        if "  " in t or " ," in t or " ." in t or t.count("“") != t.count("”"):
+            err.append(f"scene {i}: punctuation/spacing problem in {t!r}")
     if re.search(r"\b(km/sa|km/s|vb\.|vs\.|yy\.|örn\.)", text):
         warn.append("abbreviation in narration; write it out (TTS reads it literally)")
 
@@ -130,8 +139,7 @@ def lint(path, kinds):
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
     if parch:
-        if not (s.get("pacing") or {}).get("sentence"):
-            warn.append('parchment style: set "pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}')
+
         # Kaşif is on screen in every 'stage' scene and in any shot that puts him in params.kasif or params.cast
         def has_kasif(x):
             p = x.get("params") or {}

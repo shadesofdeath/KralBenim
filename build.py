@@ -604,11 +604,21 @@ def render_shard(out, i, n):
 def finish(script_path, out):
     m = load_prepared(out)
     tmp = out.with_suffix(".parts")
-    segs = sorted(tmp.glob("seg*.mp4"))
+    # only <seg><first>-<end>.mp4 files are segments; anything else that landed here is listed and skipped
+    found = sorted(tmp.rglob("*.mp4"))
+    segs, spans = [], {}
+    for s in found:
+        mt = re.fullmatch(r"seg(\d+)-(\d+)", s.stem)
+        if mt:
+            spans[s] = (int(mt[1]), int(mt[2]))
+            segs.append(s)
+        else:
+            print(f"finish: ignoring {s.relative_to(tmp)}", file=sys.stderr)
+    segs.sort(key=lambda s: spans[s])
     # the segments must tile [0, frames) exactly: a missing shard must fail, not ship a short video
     pos = 0
     for s in segs:
-        a, b = (int(x) for x in s.stem[3:].split("-"))
+        a, b = spans[s]
         if a != pos:
             sys.exit(f"missing frames {pos}-{a} (segments: {[x.name for x in segs]})")
         pos = b

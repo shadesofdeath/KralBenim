@@ -85,15 +85,11 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
    biraz heyecanlı yap; izleyiciyle birlikte şaşır. Hikâye kısmı geçmiş zamanla anlatılır (§3).
 1. **Selam ve kanal tanıtımı yok** ("Merhaba arkadaşlar, kanalıma hoş geldiniz" yok). İlk cümle doğrudan
    merak sorusu ya da şaşırtıcı iddiadır; hemen ardından "gelin anlatayım" gibi kısa bir davet gelebilir.
-2. **Nefes alan tempo (kanal sahibinin kararı).** Senaryoda `"pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}`:
-   cümle sonunda en az 0,6 sn, virgülde en az 0,25 sn durulur, hiçbir sessizlik 1 sn'yi geçmez (`build.py`
-   sesi buna göre uzatır/kısar). Acele eden, cümleleri birbirine yapıştıran anlatım istenmiyor.
-   **Tonlama:** ses `eleven_v3`, `stability: 0.0` (Creative, en canlı). Duygu değişen sahnelere `"tone"`
-   alanı ile İngilizce ses etiketi ver (`curious`, `excited`, `whispers`, `dramatic`, `serious`, `amazed`,
-   `sad`, `mischievously`, `surprised`, `sarcastic`, `laughs`, `sighs`): seslendirmede `[curious]` olarak okunur,
-   altyazıda görünmez. Düz okumayı kırmak için Shorts'ta sahnelerin çoğuna, uzun videoda her 2–3 sahnede
-   bir. eleven_v3 noktalamayı da okur: "…" bekletir, "!" heyecan katar, soru işareti sesi yükseltir; bunları
-   bilerek kullan.
+2. **Doğal okuma (kanal sahibinin kararı).** Seslendirmeye hiçbir ses/hız ayarı yapılmaz: `tts.settings`
+   yok, `"pacing"`/`"max_pause"` yok (sessizlik eklenmez/kesilmez), `"tone"` ses etiketleri yok. Ses kendi
+   doğal okumasıyla okur. Tonlamayı **noktalama** taşır: cümleler nokta, soru işareti ya da ünlemle biter;
+   virgüller nefes yerlerine konur; "…" sadece gerçekten bekletilecek yerde; tırnaklar kapatılır; kısaltma,
+   rakam-yazı karışıklığı yok. `tools/lint.py` bunları denetler.
 3. **YouTube anlatıcısı gibi konuş, "-yor -yor" diye sayma (kanal sahibinin kararı).** Hikâye anlatan biri
    gibi **geçmiş zamanla** anlat ("1932'ydi. Avustralya'da çiftçiler çaresizdi."), kipleri karıştır: -dı, -mış
    ("derler ki…"), -ecekti ("ama birazdan her şey değişecekti"), soru, ünlem, izleyiciye hitap ("Düşünün…",

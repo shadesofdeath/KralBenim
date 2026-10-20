@@ -49,8 +49,7 @@ Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmem
 
 ## 4. Anlatım
 
-- Senaryoda `"pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}` ve `tts.settings.stability: 0.0`; 3–6 kritik
-  sahneye `"tone"` (`curious`, `excited`, `whispers`, `dramatic`, `serious`, `amazed`) — BRAND.md §6.2.
+- Ses ayarı yok: `pacing`, `tone`, `tts.settings` kullanılmaz; ses doğal okur, tonlamayı noktalama taşır (BRAND.md §6.2).
 - **Düz anlatım yok:** izleyiciye seslen, merakı bekletip cevapla, zıtlık ve duyusal ayrıntı kullan,
   cümle uzunluklarını değiştir (BRAND.md §6.9). Kaşif'in ağzı sabittir (konuşma animasyonu yok).
 - **Anlatıcı bir YouTuber:** izleyiciye "siz" diye hitap et, merakı paylaş, "gelin anlatayım", "bakın", "sizce?" (BRAND.md §6.0).
