@@ -1,0 +1,2849 @@
+{
+ "extra": true,
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "nusret-mayin-gemisi",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "26 mayın",
+   "donanmayı",
+   "durdurdu"
+  ],
+  "highlight": [
+   "26"
+  ],
+  "scene": 0,
+  "t": 6.0,
+  "kasif": "shock"
+ },
+ "youtube": {
+  "title": "Nusret Mayın Gemisi: 26 Mayın Koca Donanmayı Nasıl Durdurdu?",
+  "description": "Nusret mayın gemisi, 18 Mart 1915'te Çanakkale Boğazı'nda dünyanın en güçlü donanmalarından birini yalnızca 26 mayınla durdurdu. Peki küçük bir gemi bunu nasıl başardı?\n\n7 Mart'ı 8'e bağlayan gece Nusret, Erenköy Koyu'na gizlice girdi ve düşman zırhlılarının hep döndüğü yere, kıyıya paralel tek sıra halinde 26 mayın döktü. 18 Mart'ta Bouvet, Irresistible ve Ocean battı; Müttefik donanması geri çekildi ve Çanakkale denizden geçilemedi. Çanakkale Deniz Zaferi'nin perde arkasını, Hakkı Bey ile Nazmi Bey'in kararını ve iki tarafın da kayıplarını anlatıyoruz.\n\nBu videoda:\n• 1915: Müttefiklerin İstanbul planı\n• Nusret, Hakkı Bey ve Nazmi Bey'in gece kararı\n• 18 Mart sabahı: Bouvet'nin batışı\n• Peki neden? Erenköy Koyu'ndaki görünmez tuzak\n• Gelibolu kara savaşı ve Nusret bugün\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence o gece Nusret fark edilseydi tarih nasıl yazılırdı? Yorumlara yaz!\n\n#çanakkale #18mart #nusret #tarih #düşünbakalım",
+  "tags": [
+   "nusret mayın gemisi",
+   "nusret",
+   "18 mart 1915",
+   "çanakkale deniz zaferi",
+   "çanakkale savaşı",
+   "18 mart çanakkale zaferi",
+   "nusret mayın gemisi hikayesi",
+   "erenköy koyu",
+   "bouvet zırhlısı",
+   "çanakkale geçilmez",
+   "gelibolu",
+   "birinci dünya savaşı",
+   "osmanlı tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-21T00:27:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Boğazdaki dev donanma",
+   "type": "nus_a_sea",
+   "text": "Yirmi altı mayın, koca bir donanmayı durdurdu. Nasıl mı? Gelin, size Çanakkale'nin en sessiz kahramanını anlatayım.",
+   "visual": "Gece Boğaz: küçük koyu Nusret soldan sağa süzülür, kıçından boynuzlu mayınlar tek tek suya düşüp zincirle dibe bağlanır; ufukta dev zırhlı siluetleri duman salar, projektör ışığı suyu tarar, üstte kırmızı sayaç 26'ya çıkar; solda kayada Kaşif şaşırır",
+   "title": {
+    "white": "Çanakkale",
+    "gray": "1915"
+   },
+   "cues": {
+    "hit": "durdurdu"
+   },
+   "params": {
+    "night": true,
+    "water": 0.56,
+    "bed": 0.86,
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.72,
+      "to": 0.7,
+      "scale": 1.5,
+      "face": -1,
+      "funnels": 3,
+      "far": true,
+      "flag": "uk"
+     },
+     {
+      "kind": "battle",
+      "x": 0.94,
+      "to": 0.93,
+      "scale": 1.2,
+      "face": -1,
+      "funnels": 2,
+      "far": true,
+      "flag": "fr"
+     },
+     {
+      "kind": "nusret",
+      "x": 0.14,
+      "to": 0.46,
+      "at": 0.3,
+      "dur": 4.8,
+      "linear": true,
+      "scale": 1.2,
+      "deck": 5
+     }
+    ],
+    "drop": {
+     "ship": 2,
+     "count": 9,
+     "at": 0.6,
+     "dur": 4.5,
+     "from": 0.06,
+     "to": 0.38,
+     "depth": [
+      0.68,
+      0.75
+     ]
+    },
+    "beam": {
+     "x": 0.66,
+     "y": 0.47,
+     "from": 176,
+     "to": 194,
+     "len": 0.7,
+     "at": 0,
+     "dur": 7
+    },
+    "counter": {
+     "x": 0.36,
+     "y": 0.2,
+     "total": 26,
+     "at": 0.6,
+     "dur": 4.8,
+     "size": 130
+    },
+    "kasif": {
+     "x": 0.08,
+     "y": 0.88,
+     "pose": "look",
+     "face": "right",
+     "at": "hit",
+     "then": "shock",
+     "scale": 0.6
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yıl 1915, aylardan mart. Birinci Dünya Savaşı bütün hızıyla sürüyordu.",
+   "visual": "Dev 'MART 1915' yazısı kelime kelime belirir, 1915 kırmızı kutuda; altında el yazısı 'Birinci Dünya Savaşı'; sağda Kaşif yazıyı işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "mart",
+    "w1": "1915",
+    "note": "Savaşı"
+   },
+   "params": {
+    "lines": [
+     "Mart",
+     "1915"
+    ],
+    "highlight": [
+     "1915"
+    ],
+    "note": {
+     "text": "Birinci Dünya Savaşı",
+     "at": "note"
+    },
+    "arrow": true,
+    "kasif": {
+     "x": 0.84,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "İngiltere ve Fransa'nın aklında cesur bir plan vardı: savaş gemileriyle Çanakkale Boğazı'nı zorlamak ve doğruca İstanbul'a ulaşmak.",
+   "visual": "Eski Akdeniz haritası Ege'ye yakınlaşır: Çanakkale kırmızı noktayla, İstanbul yanında belirir; kırmızı kesikli rota Ege'den Boğaz'a girip Marmara'yı geçerek İstanbul'a ulaşır",
+   "title": {
+    "white": "Plan",
+    "gray": "İstanbul"
+   },
+   "cues": {
+    "can": "Çanakkale",
+    "route": "zorlamak",
+    "ist": "İstanbul'a"
+   },
+   "params": {
+    "preset": "mediterranean",
+    "cities": [
+     {
+      "name": "Çanakkale",
+      "x": 26.4,
+      "y": 40.15,
+      "at": "can",
+      "color": "red",
+      "dy": 60
+     },
+     {
+      "name": "İstanbul",
+      "x": 28.97,
+      "y": 41.0,
+      "at": "ist",
+      "dx": 30,
+      "dy": -36
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       24.6,
+       39.3
+      ],
+      [
+       25.9,
+       39.9
+      ],
+      [
+       26.4,
+       40.15
+      ],
+      [
+       26.9,
+       40.45
+      ],
+      [
+       27.8,
+       40.75
+      ],
+      [
+       28.97,
+       41.0
+      ]
+     ],
+     "at": "route",
+     "dur": 2.6,
+     "color": "red"
+    },
+    "focus": [
+     27.0,
+     40.2
+    ],
+    "zoom": 1.45,
+    "compass": "br",
+    "seas": [
+     {
+      "name": "Ege",
+      "x": 25.0,
+      "y": 38.6,
+      "size": 44
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Bu plana göre İstanbul düşerse Osmanlı savaştan çekilecek, Rusya'ya giden deniz yolu da açılacaktı.",
+   "visual": "İki kartlı pano: 'Osmanlı' kartında 'çekilir' kırmızı ✗ ile, 'Rusya' kartında 'yol açılır' yeşil ✓ ile işaretlenir",
+   "title": {
+    "white": "Hesap"
+   },
+   "cues": {
+    "c0": "Osmanlı",
+    "c1": "Rusya'ya"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Osmanlı",
+      "items": [
+       {
+        "text": "çekilir",
+        "mark": "x",
+        "at": "c0"
+       }
+      ]
+     },
+     {
+      "title": "Rusya",
+      "items": [
+       {
+        "text": "yol açılır",
+        "mark": "check",
+        "at": "c1"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "nus_a_sea",
+   "text": "Ellerinde bunun için dünyanın en güçlü donanmalarından biri vardı. Onlarca zırhlı, dev toplar, binlerce denizci.",
+   "visual": "Gündüz Boğaz: dev gri zırhlılar (İngiliz ve Fransız bayraklı, iki-üç bacalı, taretli) art arda soldan girer, bacalar duman salar; önde kayada Kaşif dürbünle bakar, 'dev toplar'da şaşırır; 'Onlarca zırhlı' el yazısı belirir",
+   "title": {
+    "white": "Müttefik",
+    "gray": "donanması"
+   },
+   "cues": {
+    "hit": "dev",
+    "lab": "Onlarca"
+   },
+   "params": {
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.98,
+      "to": 0.86,
+      "scale": 0.8,
+      "far": true,
+      "funnels": 2,
+      "flag": "fr",
+      "face": 1
+     },
+     {
+      "kind": "battle",
+      "x": 0.62,
+      "to": 0.72,
+      "scale": 1.0,
+      "funnels": 3,
+      "flag": "uk"
+     },
+     {
+      "kind": "battle",
+      "x": 0.3,
+      "to": 0.42,
+      "scale": 1.15,
+      "funnels": 2,
+      "flag": "fr"
+     },
+     {
+      "kind": "battle",
+      "x": 0.08,
+      "to": 0.18,
+      "scale": 0.7,
+      "far": true,
+      "funnels": 3,
+      "flag": "uk"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Onlarca zırhlı",
+      "x": 0.5,
+      "y": 0.13,
+      "at": "lab",
+      "size": 66
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.88,
+     "pose": "look",
+     "face": "left",
+     "at": "hit",
+     "then": "shock",
+     "scale": 0.65
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "nus_a_sea",
+   "text": "Boğaz'ın iki yakasında ise Osmanlı tabyaları bekliyordu. Ama asıl savunma suyun altındaydı: sıra sıra dizilmiş mayınlar.",
+   "visual": "Boğaz'ın iki yakasında tepelerde taş tabyalar, topları ve ay-yıldızlı kırmızı bayrakları belirir; 'asıl savunma'da suyun altında iki sıra boynuzlu mayın zincirleriyle tek tek belirir; Kaşif kayadan suyun altını işaret eder",
+   "title": {
+    "white": "Savunma",
+    "gray": "suyun altında"
+   },
+   "cues": {
+    "fort": "tabyaları",
+    "hit": "altındaydı",
+    "mines": "asıl"
+   },
+   "params": {
+    "shore": {
+     "left": true,
+     "right": true,
+     "h": 0.17,
+     "w": 0.2
+    },
+    "forts": [
+     {
+      "side": "left",
+      "at": "fort"
+     },
+     {
+      "side": "right",
+      "at": "fort"
+     }
+    ],
+    "mines": {
+     "count": 7,
+     "x0": 0.3,
+     "x1": 0.78,
+     "depth": 0.66,
+     "rows": 2,
+     "at": "mines",
+     "dur": 1.6
+    },
+    "kasif": {
+     "x": 0.14,
+     "y": 0.88,
+     "pose": "talk",
+     "face": "right",
+     "at": "hit",
+     "then": "point",
+     "dir": "down-right",
+     "scale": 0.55
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.62
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Müttefikler bu mayınları haftalarca taramaya çalıştı. Peki sizce Osmanlı'nın elinde başka bir koz kalmış mıydı?",
+   "visual": "Kıyıda Kaşif omuz silker, sonra eli çenesinde düşünür; arkada sakin deniz ve tepeler, üstte el yazısıyla 'Başka koz?'",
+   "title": {
+    "white": "Haftalarca",
+    "gray": "tarama"
+   },
+   "cues": {
+    "hit": "taramaya",
+    "q": "koz"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "pose": "shrug",
+      "at": "q",
+      "then": "think",
+      "face": "right"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Başka koz?",
+     "x": 0.36,
+     "y": 0.13,
+     "at": "q"
+    }
+   }
+  },
+  {
+   "chapter": "Gece yarısı kararı",
+   "type": "nus_a_sea",
+   "text": "İşte burada hikâyemizin kahramanı sahneye çıkıyor: Nusret. Almanya'da yapılmış küçük bir mayın gemisiydi; bir zırhlının yanında oyuncak gibi kalırdı.",
+   "visual": "Gündüz suda dev gri İngiliz zırhlısının yanında küçücük koyu Nusret sağdan yaklaşır; el yazısı 'Nusret' oku küçük gemiyi gösterir; solda Kaşif işaret eder, 'oyuncak'ta şaşırır",
+   "title": {
+    "white": "Nusret",
+    "gray": "mayın gemisi"
+   },
+   "cues": {
+    "lab": "Nusret",
+    "hit": "oyuncak"
+   },
+   "params": {
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.4,
+      "to": 0.42,
+      "scale": 1.25,
+      "funnels": 3,
+      "flag": "uk"
+     },
+     {
+      "kind": "nusret",
+      "x": 0.92,
+      "to": 0.78,
+      "scale": 0.95,
+      "face": -1,
+      "deck": 4
+     }
+    ],
+    "labels": [
+     {
+      "text": "Nusret",
+      "x": 0.85,
+      "y": 0.22,
+      "at": "lab",
+      "size": 72,
+      "color": "red",
+      "arrow": [
+       0.8,
+       0.43
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.88,
+     "pose": "point",
+     "dir": "right",
+     "face": "right",
+     "at": "hit",
+     "then": "shock",
+     "scale": 0.55
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Geminin komutanı Hakkı Bey, mayın grubunun komutanı ise Nazmi Bey'di. İkisi de Boğaz'ı avuçlarının içi gibi biliyordu.",
+   "visual": "Kıyıda bıyıklı Hakkı Bey ve Nazmi Bey (şapkasız dönem figürleri) konuşur; Kaşif soldan onları işaret eder; üstte el yazısı 'Hakkı Bey ve Nazmi Bey'; arkada Nusret'i andıran gemi",
+   "title": {
+    "white": "Komutanlar"
+   },
+   "cues": {
+    "hit": "Hakkı",
+    "n2": "Nazmi",
+    "lab": "Boğaz'ı"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "face": "right"
+     },
+     {
+      "who": "hakki",
+      "x": 0.44,
+      "pose": "talk",
+      "face": "right",
+      "beard": "short",
+      "scale": 1.05,
+      "at": "hit"
+     },
+     {
+      "who": "nazmi",
+      "x": 0.6,
+      "pose": "idle",
+      "at": "n2",
+      "then": "talk",
+      "face": "left",
+      "scale": 1.05
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.84,
+      "scale": 0.85
+     }
+    ],
+    "label": {
+     "text": "Hakkı Bey · Nazmi Bey",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "n2"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Günlerce düşman gemilerini izlediler ve tuhaf bir şey fark ettiler.",
+   "visual": "Kıyıda Hakkı Bey ve Kaşif dürbünle denize bakar; 'tuhaf'ta Kaşif şaşırıp geri sıçrar, üstte el yazısı 'Tuhaf!'",
+   "title": {
+    "white": "Günlerce",
+    "gray": "gözetleme"
+   },
+   "cues": {
+    "hit": "tuhaf"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ]
+    },
+    "cast": [
+     {
+      "who": "hakki",
+      "x": 0.2,
+      "pose": "look",
+      "face": "right",
+      "beard": "short",
+      "scale": 1.05
+     },
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "pose": "look",
+      "at": "hit",
+      "then": "shock",
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Tuhaf!",
+     "x": 0.4,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Müttefik zırhlıları ateş ettikten sonra hep aynı yerde, Erenköy Koyu'nda geniş bir dönüş yapıyordu. Üstelik düşman, mayın hatlarının dışında kalan bu koyu güvenli sanıyordu.",
+   "visual": "Boğaz'ın girişini gösteren eski harita: Gelibolu yarımadası ve Anadolu yakası; kırmızı kesikli rota zırhlıların Boğaz'a girip ateş ettikten sonra Erenköy Koyu'nda geniş bir yay çizerek döndüğünü gösterir; Erenköy Koyu kırmızıyla işaretli, 'Güvenli sandılar' notu",
+   "title": {
+    "white": "Erenköy",
+    "gray": "Koyu"
+   },
+   "cues": {
+    "route": "ateş",
+    "ere": "Erenköy",
+    "note": "güvenli"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       0.12
+      ],
+      [
+       0.82,
+       0.2
+      ],
+      [
+       0.68,
+       0.28
+      ],
+      [
+       0.6,
+       0.35
+      ],
+      [
+       0.5,
+       0.41
+      ],
+      [
+       0.36,
+       0.49
+      ],
+      [
+       0.22,
+       0.58
+      ],
+      [
+       0.1,
+       0.67
+      ],
+      [
+       0,
+       0.72
+      ]
+     ],
+     [
+      [
+       1,
+       0.3
+      ],
+      [
+       0.86,
+       0.33
+      ],
+      [
+       0.74,
+       0.38
+      ],
+      [
+       0.67,
+       0.44
+      ],
+      [
+       0.61,
+       0.52
+      ],
+      [
+       0.56,
+       0.59
+      ],
+      [
+       0.5,
+       0.63
+      ],
+      [
+       0.44,
+       0.69
+      ],
+      [
+       0.38,
+       0.72
+      ],
+      [
+       0.31,
+       0.72
+      ],
+      [
+       0.26,
+       0.76
+      ],
+      [
+       0.2,
+       0.84
+      ],
+      [
+       0.17,
+       0.93
+      ],
+      [
+       0.16,
+       1
+      ],
+      [
+       1,
+       1
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Erenköy Koyu",
+      "x": 0.38,
+      "y": 0.74,
+      "at": "ere",
+      "color": "red",
+      "dy": 60
+     },
+     {
+      "name": "Çanakkale",
+      "x": 0.69,
+      "y": 0.45,
+      "dx": 40,
+      "dy": 40
+     },
+     {
+      "name": "Gelibolu",
+      "x": 0.3,
+      "y": 0.3
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.04,
+       0.93
+      ],
+      [
+       0.16,
+       0.78
+      ],
+      [
+       0.3,
+       0.64
+      ],
+      [
+       0.42,
+       0.56
+      ],
+      [
+       0.47,
+       0.6
+      ],
+      [
+       0.42,
+       0.67
+      ],
+      [
+       0.33,
+       0.69
+      ],
+      [
+       0.24,
+       0.74
+      ],
+      [
+       0.12,
+       0.88
+      ],
+      [
+       0.06,
+       0.97
+      ]
+     ],
+     "at": "route",
+     "dur": 3.0,
+     "color": "red"
+    },
+    "seas": [
+     {
+      "name": "Ege",
+      "x": 0.07,
+      "y": 0.86,
+      "size": 44
+     }
+    ],
+    "note": {
+     "text": "Güvenli sandılar",
+     "x": 0.72,
+     "y": 0.82,
+     "at": "note"
+    },
+    "compass": "tr",
+    "zoom": 1.08,
+    "focus": [
+     0.35,
+     0.65
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Plan basit ama çok tehlikeliydi: geceleyin düşmanın burnunun dibine girmek ve o dönüş yoluna mayın dökmek.",
+   "visual": "Dev 'DÜŞMANIN BURNUNUN DİBİNE' yazısı kelime kelime belirir, 'dibine' kırmızı kutuda; altında el yazısı 'gece'; sağda Kaşif endişeyle şaşırır",
+   "title": {},
+   "cues": {
+    "w0": "düşmanın",
+    "w1": "burnunun",
+    "w2": "dibine",
+    "note": "geceleyin"
+   },
+   "params": {
+    "lines": [
+     "Düşmanın",
+     "burnunun",
+     "dibine"
+    ],
+    "highlight": [
+     "dibine"
+    ],
+    "note": {
+     "text": "geceleyin",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.85,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w2"
+    }
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Yedi Mart'ı sekize bağlayan gece, Nusret ışıklarını söndürdü ve karanlık sulara süzüldü. Bir projektör ışığı geminin üstüne düşse her şey bitecekti.",
+   "visual": "Gece, ay ve yıldızlı tarama gökyüzü; ışıkları yanan küçük kara gövdeli Nusret (kıçta kırmızı ay-yıldızlı sancak) sağa süzülür, 'söndürdü'de lombar ışıkları söner; sağdaki tabyanın projektör huzmesi suyu tarar, 'düşse'de geminin hemen önüne kadar gelip geri çekilir; Kaşif soldaki kayalıkta dürbünle bakarken 'projektör'de irkilir",
+   "title": {
+    "white": "7-8 Mart",
+    "gray": "1915 gecesi"
+   },
+   "cues": {
+    "off": "söndürdü",
+    "go": "süzüldü",
+    "p": "projektör",
+    "near": "düşse",
+    "end": "bitecekti"
+   },
+   "params": {
+    "night": true,
+    "forts": [
+     {
+      "x": 0.76
+     },
+     {
+      "x": 0.9
+     }
+    ],
+    "ships": [
+     {
+      "kind": "nusret",
+      "x": 0.27,
+      "to": 0.5,
+      "at": 0.2,
+      "dur": 9.5,
+      "s": 1.7,
+      "lights": true,
+      "off": "off"
+     }
+    ],
+    "searchlight": {
+     "x": 0.9,
+     "y": 0.43,
+     "keys": [
+      {
+       "at": 0,
+       "x": 0.97
+      },
+      {
+       "at": "p",
+       "x": 0.64
+      },
+      {
+       "at": "near",
+       "x": 0.56
+      },
+      {
+       "at": "end",
+       "x": 0.93
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.085,
+     "pose": "look",
+     "at": "p",
+     "then": "shock",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "end",
+       "pose": "think",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Ama Nusret fark edilmedi. Yirmi altı mayın, kıyıya paralel tek bir sıra halinde, sessizce suya indi.",
+   "visual": "Gece kesiti: Nusret soldan sağa ilerlerken kıçından boynuzlu mayınlar tek tek suya düşer, çapaları zincirle dibe iner, aynı derinlikte tek bir sıra oluşur; üstte '26 mayın' sayacı birer birer artar; Kaşif kayalıktan aşağıdaki sırayı işaret eder",
+   "title": {
+    "white": "26 mayın",
+    "gray": "tek sıra"
+   },
+   "cues": {
+    "go": "Yirmi",
+    "quiet": "sessizce"
+   },
+   "params": {
+    "night": true,
+    "forts": [
+     {
+      "x": 0.76
+     },
+     {
+      "x": 0.9
+     }
+    ],
+    "ships": [
+     {
+      "kind": "nusret",
+      "x": 0.22,
+      "to": 0.95,
+      "at": "go",
+      "dur": 4.6,
+      "s": 1.6,
+      "drop": true
+     }
+    ],
+    "mines": {
+     "n": 26,
+     "x0": 0.3,
+     "x1": 0.82,
+     "depth": 0.32,
+     "drop": true
+    },
+    "counter": {
+     "x": 0.5,
+     "y": 0.17,
+     "label": "mayın",
+     "at": "go"
+    },
+    "kasif": {
+     "x": 0.085,
+     "pose": "look",
+     "at": "go",
+     "then": "point",
+     "dir": -30,
+     "seq": [
+      {
+       "at": "quiet",
+       "pose": "point",
+       "dir": -40,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Sonra gemi geldiği gibi geri döndü. Ve günlerce kimse, o sıranın orada olduğunu bilmedi.",
+   "visual": "Çanakkale Boğazı'nın eski haritası: Erenköy Koyu'nda kıyıya paralel kırmızı mayın noktaları, Nusret'in dönüş rotası kesikli kırmızı çizgiyle Çanakkale'ye çizilir; 'bilmedi'de 'Kimse bilmiyor' notu belirir",
+   "title": {
+    "white": "Geri dönüş"
+   },
+   "cues": {
+    "route": "döndü",
+    "note": "bilmedi"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.1,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       0.0
+      ],
+      [
+       0.92,
+       0.06
+      ],
+      [
+       0.82,
+       0.13
+      ],
+      [
+       0.74,
+       0.19
+      ],
+      [
+       0.68,
+       0.25
+      ],
+      [
+       0.6,
+       0.31
+      ],
+      [
+       0.5,
+       0.38
+      ],
+      [
+       0.4,
+       0.45
+      ],
+      [
+       0.3,
+       0.52
+      ],
+      [
+       0.2,
+       0.59
+      ],
+      [
+       0.1,
+       0.66
+      ],
+      [
+       -0.1,
+       0.72
+      ]
+     ],
+     [
+      [
+       0.16,
+       1.1
+      ],
+      [
+       0.2,
+       0.95
+      ],
+      [
+       0.27,
+       0.87
+      ],
+      [
+       0.36,
+       0.88
+      ],
+      [
+       0.45,
+       0.85
+      ],
+      [
+       0.51,
+       0.79
+      ],
+      [
+       0.55,
+       0.7
+      ],
+      [
+       0.58,
+       0.63
+      ],
+      [
+       0.62,
+       0.56
+      ],
+      [
+       0.66,
+       0.46
+      ],
+      [
+       0.72,
+       0.36
+      ],
+      [
+       0.8,
+       0.3
+      ],
+      [
+       0.9,
+       0.24
+      ],
+      [
+       1.1,
+       0.2
+      ],
+      [
+       1.1,
+       1.1
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "",
+      "x": 0.4,
+      "y": 0.8,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.45,
+      "y": 0.775,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.49,
+      "y": 0.735,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.52,
+      "y": 0.68,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.545,
+      "y": 0.62,
+      "color": "red"
+     },
+     {
+      "name": "Erenköy Koyu",
+      "x": 0.58,
+      "y": 0.82,
+      "color": "red",
+      "dy": 64
+     },
+     {
+      "name": "Çanakkale",
+      "x": 0.79,
+      "y": 0.36,
+      "dy": 64
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.5,
+       0.75
+      ],
+      [
+       0.56,
+       0.62
+      ],
+      [
+       0.62,
+       0.48
+      ],
+      [
+       0.67,
+       0.36
+      ],
+      [
+       0.72,
+       0.29
+      ]
+     ],
+     "at": "route",
+     "dur": 2.2
+    },
+    "note": {
+     "text": "Kimse bilmiyor",
+     "x": 0.06,
+     "y": 0.14,
+     "at": "note"
+    },
+    "focus": [
+     0.58,
+     0.6
+    ],
+    "zoom": 1.15,
+    "compass": "bl"
+   }
+  },
+  {
+   "chapter": "18 Mart sabahı",
+   "type": "chapter",
+   "text": "On sekiz Mart sabahı hava açık, deniz sakindi.",
+   "visual": "BÖLÜM 3 / 5 rozeti, mavi dairede 3, altında '18 Mart sabahı' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Mart",
+    "title": "sakindi"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "18 Mart sabahı"
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Kısa süre sonra Müttefik donanması Boğaz'a girdi ve tarihin en büyük deniz saldırılarından biri başladı.",
+   "visual": "Gündüz Boğaz kesiti: soldan büyük gri İngiliz ve Fransız zırhlıları (iki-üç baca, taretler, küçük bayrak) dumanlar savurarak Boğaz'a girer; suyun altında Erenköy'deki mayın sırası soluk görünür; Kaşif kayalıkta dürbünle izler, 'girdi'de işaret eder, 'başladı'da ilk top ateşleriyle irkilir",
+   "title": {
+    "white": "18 Mart",
+    "gray": "saldırı"
+   },
+   "cues": {
+    "in": "girdi",
+    "go": "başladı"
+   },
+   "params": {
+    "forts": [
+     {
+      "x": 0.8
+     },
+     {
+      "x": 0.93
+     }
+    ],
+    "ships": [
+     {
+      "kind": "battle",
+      "x": -0.15,
+      "to": 0.62,
+      "at": 0,
+      "dur": 6.5,
+      "s": 1.1,
+      "flag": "gb",
+      "funnels": 2,
+      "fire": {
+       "from": "go",
+       "every": 1.5
+      }
+     },
+     {
+      "kind": "battle",
+      "x": -0.45,
+      "to": 0.3,
+      "at": 0,
+      "dur": 6.5,
+      "s": 0.9,
+      "flag": "fr",
+      "funnels": 3,
+      "fire": {
+       "from": "go",
+       "every": 1.7
+      }
+     }
+    ],
+    "mines": {
+     "n": 26,
+     "x0": 0.3,
+     "x1": 0.82,
+     "depth": 0.32,
+     "faint": true
+    },
+    "smoke": 0.2,
+    "kasif": {
+     "x": 0.085,
+     "pose": "look",
+     "at": "in",
+     "then": "point",
+     "dir": 15,
+     "seq": [
+      {
+       "at": "go",
+       "pose": "shock"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Gemilerin dev topları tabyaları dövdü, kıyı bataryaları da durmadan karşılık verdi.",
+   "visual": "Zırhlılar art arda ateş eder: namlu alevleri, tabyalara giden mermi kavisleri ve tepelerde toz bulutları; tabyalar da karşılık verir, gemilerin yanında su sütunları yükselir; duman sahneye yayılır; Kaşif 'dövdü'de irkilir, 'karşılık'ta tabyaları işaret eder",
+   "title": {
+    "white": "Bombardıman"
+   },
+   "cues": {
+    "hit": "dövdü",
+    "back": "karşılık"
+   },
+   "params": {
+    "forts": [
+     {
+      "x": 0.78
+     },
+     {
+      "x": 0.9
+     }
+    ],
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.3,
+      "to": 0.34,
+      "at": 0,
+      "dur": 6,
+      "s": 1.15,
+      "flag": "gb",
+      "funnels": 2,
+      "fire": {
+       "from": 0.1,
+       "every": 1.2
+      }
+     },
+     {
+      "kind": "battle",
+      "x": 0.64,
+      "to": 0.67,
+      "at": 0,
+      "dur": 6,
+      "s": 0.85,
+      "flag": "fr",
+      "funnels": 3,
+      "fire": {
+       "from": 0.5,
+       "every": 1.4
+      }
+     }
+    ],
+    "mines": {
+     "n": 26,
+     "x0": 0.3,
+     "x1": 0.82,
+     "depth": 0.32,
+     "faint": true
+    },
+    "smoke": 0.45,
+    "kasif": {
+     "x": 0.085,
+     "pose": "look",
+     "at": "hit",
+     "then": "shock",
+     "seq": [
+      {
+       "at": "back",
+       "pose": "point",
+       "dir": 25
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.62,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "nus_b_fort",
+   "text": "Duman, toz ve barut kokusu bütün Boğaz'ı kapladı. Saatler geçti, tabyalar sarsıldı ama susmadı.",
+   "visual": "Yakın plan Osmanlı tabyası: taş siper, arkasında iki şapkasız topçu ve top; ufukta zırhlıların namlu parlamaları; önde mermi düşüp toz ve taş fırlatır, ekran sarsılır ('sarsıldı'); 'susmadı'da top geri tepip ateş eder ve 'Tabyalar susmadı' notu belirir; Kaşif siperin önünde irkilir, sonra işaret eder",
+   "title": {
+    "white": "Tabyalar"
+   },
+   "cues": {
+    "hit": "sarsıldı",
+    "fire": "susmadı"
+   },
+   "params": {
+    "fire": [
+     "fire"
+    ],
+    "hits": [
+     "hit"
+    ],
+    "every": 2.2,
+    "smoke": 0.7,
+    "fleet": 3,
+    "kasif": {
+     "x": 0.27,
+     "pose": "look",
+     "face": "left",
+     "at": "hit",
+     "then": "shock",
+     "seq": [
+      {
+       "at": "fire",
+       "pose": "point",
+       "dir": 30,
+       "emotion": "happy"
+      }
+     ]
+    },
+    "label": {
+     "text": "Tabyalar susmadı",
+     "x": 0.72,
+     "y": 0.2,
+     "at": "fire",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Öğleden sonra Fransız zırhlısı Bouvet, ateş hattından çekilmek için tam o koyda döndü.",
+   "visual": "Boğaz haritasına yakınlaşma: Bouvet ateş hattından ayrılır, kesikli kırmızı rotası Erenköy Koyu'nda dönerek kırmızı mayın noktalarının üstüne gelir; 'Mayınların üstünde' notu",
+   "title": {
+    "white": "Bouvet",
+    "gray": "öğleden sonra"
+   },
+   "cues": {
+    "route": "çekilmek",
+    "note": "koyda"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.1,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       0.0
+      ],
+      [
+       0.92,
+       0.06
+      ],
+      [
+       0.82,
+       0.13
+      ],
+      [
+       0.74,
+       0.19
+      ],
+      [
+       0.68,
+       0.25
+      ],
+      [
+       0.6,
+       0.31
+      ],
+      [
+       0.5,
+       0.38
+      ],
+      [
+       0.4,
+       0.45
+      ],
+      [
+       0.3,
+       0.52
+      ],
+      [
+       0.2,
+       0.59
+      ],
+      [
+       0.1,
+       0.66
+      ],
+      [
+       -0.1,
+       0.72
+      ]
+     ],
+     [
+      [
+       0.16,
+       1.1
+      ],
+      [
+       0.2,
+       0.95
+      ],
+      [
+       0.27,
+       0.87
+      ],
+      [
+       0.36,
+       0.88
+      ],
+      [
+       0.45,
+       0.85
+      ],
+      [
+       0.51,
+       0.79
+      ],
+      [
+       0.55,
+       0.7
+      ],
+      [
+       0.58,
+       0.63
+      ],
+      [
+       0.62,
+       0.56
+      ],
+      [
+       0.66,
+       0.46
+      ],
+      [
+       0.72,
+       0.36
+      ],
+      [
+       0.8,
+       0.3
+      ],
+      [
+       0.9,
+       0.24
+      ],
+      [
+       1.1,
+       0.2
+      ],
+      [
+       1.1,
+       1.1
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Bouvet",
+      "x": 0.63,
+      "y": 0.43,
+      "color": "blue",
+      "dy": -40
+     },
+     {
+      "name": "",
+      "x": 0.4,
+      "y": 0.8,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.45,
+      "y": 0.775,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.49,
+      "y": 0.735,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.52,
+      "y": 0.68,
+      "color": "red"
+     },
+     {
+      "name": "",
+      "x": 0.545,
+      "y": 0.62,
+      "color": "red"
+     },
+     {
+      "name": "Erenköy Koyu",
+      "x": 0.58,
+      "y": 0.82,
+      "color": "red",
+      "dy": 64
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.63,
+       0.43
+      ],
+      [
+       0.55,
+       0.52
+      ],
+      [
+       0.47,
+       0.61
+      ],
+      [
+       0.42,
+       0.7
+      ],
+      [
+       0.45,
+       0.775
+      ]
+     ],
+     "at": "route",
+     "dur": 2.6
+    },
+    "note": {
+     "text": "Mayınların üstünde",
+     "x": 0.06,
+     "y": 0.14,
+     "at": "note"
+    },
+    "focus": [
+     0.5,
+     0.68
+    ],
+    "zoom": 1.3,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Ve bir anda korkunç bir patlama oldu.",
+   "visual": "Büyük Fransız zırhlısı Bouvet sola dönmüş ateş ederek ilerler; tam altındaki mayın 'patlama'da infilak eder: altın-kırmızı parlama, dev su sütunu, su altında şok halkası, gemi sarsılır, kara duman yükselmeye başlar; Kaşif dürbünü bırakıp irkilir",
+   "title": {
+    "white": "Bouvet"
+   },
+   "cues": {
+    "boom": "patlama"
+   },
+   "params": {
+    "forts": [
+     {
+      "x": 0.8
+     },
+     {
+      "x": 0.93
+     }
+    ],
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.86,
+      "to": 0.88,
+      "at": 0,
+      "dur": 4,
+      "s": 0.6,
+      "flag": "gb",
+      "funnels": 2,
+      "fire": {
+       "every": 1.3
+      }
+     },
+     {
+      "kind": "battle",
+      "x": 0.58,
+      "to": 0.52,
+      "at": 0,
+      "dur": 3.2,
+      "s": 1.4,
+      "flag": "fr",
+      "funnels": 3,
+      "face": -1,
+      "fire": {
+       "every": 1.0
+      },
+      "explode": "boom",
+      "ex": 0.3
+     }
+    ],
+    "mines": {
+     "n": 26,
+     "x0": 0.3,
+     "x1": 0.82,
+     "depth": 0.32,
+     "burst": 8
+    },
+    "smoke": 0.3,
+    "kasif": {
+     "x": 0.1,
+     "pose": "look",
+     "at": "boom",
+     "then": "shock"
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Bouvet yan yattı ve birkaç dakika içinde sulara gömüldü. Altı yüzü aşkın denizci gemiyle birlikte kayboldu.",
+   "visual": "Bouvet kara duman içinde yan yatar, kıçı suya gömülür ve birkaç saniyede sulara kaybolur; yüzeyde halkalar, kabarcıklar ve birkaç tahta parçası kalır, insan figürü yok; Kaşif dürbünle bakar, sonra üzgün başını eğip kayaya oturur",
+   "title": {
+    "white": "Bouvet",
+    "gray": "battı"
+   },
+   "cues": {
+    "tilt": "yattı",
+    "gone": "gömüldü",
+    "lost": "kayboldu"
+   },
+   "params": {
+    "forts": [
+     {
+      "x": 0.8
+     },
+     {
+      "x": 0.93
+     }
+    ],
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.88,
+      "s": 0.6,
+      "flag": "gb",
+      "funnels": 2
+     },
+     {
+      "kind": "battle",
+      "x": 0.535,
+      "s": 1.4,
+      "flag": "fr",
+      "funnels": 3,
+      "face": -1,
+      "explode": -2.6,
+      "ex": 0.3,
+      "sink": {
+       "at": "tilt",
+       "dur": 4.2,
+       "tilt": -18
+      }
+     }
+    ],
+    "mines": {
+     "n": 26,
+     "x0": 0.3,
+     "x1": 0.82,
+     "depth": 0.32,
+     "burst": 8
+    },
+    "smoke": 0.2,
+    "kasif": {
+     "x": 0.1,
+     "pose": "look",
+     "at": "gone",
+     "then": "idle",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "lost",
+       "pose": "sit",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.48,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Onlar da birer insandı; evlerinde onları bekleyen aileleri vardı. Peki ama bu patlama nereden gelmişti?",
+   "visual": "Boş parşömende kelime kelime 'ONLAR DA BİRER İNSANDI', 'insandı' altın vurgulu; 'nereden'de kırmızı el yazısıyla 'Nereden?' notu",
+   "title": {},
+   "cues": {
+    "w0": "Onlar",
+    "note": "nereden"
+   },
+   "params": {
+    "lines": [
+     "Onlar da",
+     "birer insandı"
+    ],
+    "highlight": [
+     "insandı"
+    ],
+    "hl_style": "gold",
+    "note": {
+     "text": "Nereden?",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "chapter": "Peki neden?",
+   "type": "stage",
+   "text": "Müttefik komutanlar önce bunun kıyıdan atılan bir torpido ya da akıntıyla sürüklenen bir mayın olduğunu düşündü.",
+   "visual": "Deniz kıyısında iki şapkasız Müttefik komutanı düşünür; 'torpido'da biri 'Torpido?' tabelasını, 'sürüklenen'de öteki 'Akıntı?' tabelasını kaldırır; Kaşif sağdan yürüyüp gelir ve 'düşündü'de omuz silker",
+   "title": {
+    "white": "Komutanlar",
+    "gray": "ne sandı?"
+   },
+   "cues": {
+    "t1": "torpido",
+    "t2": "sürüklenen",
+    "k": "düşündü"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "amiral",
+      "beard": "grey",
+      "x": 0.28,
+      "pose": "think",
+      "at": "t1",
+      "then": "hold",
+      "text": "Torpido?",
+      "face": "right"
+     },
+     {
+      "who": "komutan",
+      "x": 0.5,
+      "pose": "think",
+      "at": "t2",
+      "then": "hold",
+      "text": "Akıntı?",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 1.08,
+      "pose": "walk",
+      "to": 0.78,
+      "at": "k",
+      "then": "shrug",
+      "face": "left"
+     }
+    ],
+    "backdrop": {
+     "type": "sea"
+    },
+    "ground": true,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "foreground": "hatch"
+   }
+  },
+  {
+   "type": "nus_b_sea",
+   "text": "Kimsenin aklına, temiz sandıkları koyda bir mayın sırası olabileceği gelmedi. Bu yüzden saldırı sürdü.",
+   "visual": "Zırhlılar ateş ederek koyun üstünde dolaşmayı sürdürür; hemen altlarında boynuzlu mayın sırası net görünür ve 'mayın'da 'Gizli mayın sırası' kırmızı notu belirir; Kaşif telaşla aşağıyı işaret eder, 'sürdü'de irkilir",
+   "title": {
+    "white": "Temiz",
+    "gray": "sanılan koy"
+   },
+   "cues": {
+    "m": "mayın",
+    "go": "sürdü"
+   },
+   "params": {
+    "forts": [
+     {
+      "x": 0.8
+     },
+     {
+      "x": 0.93
+     }
+    ],
+    "ships": [
+     {
+      "kind": "battle",
+      "x": 0.22,
+      "to": 0.36,
+      "at": 0,
+      "dur": 7,
+      "s": 1.1,
+      "flag": "gb",
+      "funnels": 2,
+      "fire": {
+       "every": 1.4
+      }
+     },
+     {
+      "kind": "battle",
+      "x": 0.66,
+      "to": 0.74,
+      "at": 0,
+      "dur": 7,
+      "s": 0.9,
+      "flag": "gb",
+      "funnels": 3,
+      "fire": {
+       "from": "go",
+       "every": 1.1
+      }
+     }
+    ],
+    "mines": {
+     "n": 26,
+     "x0": 0.3,
+     "x1": 0.82,
+     "depth": 0.32
+    },
+    "smoke": 0.25,
+    "labels": [
+     {
+      "text": "Gizli mayın sırası",
+      "x": 0.56,
+      "y": 0.79,
+      "at": "m",
+      "color": "red",
+      "size": 60
+     }
+    ],
+    "kasif": {
+     "x": 0.085,
+     "pose": "look",
+     "at": "m",
+     "then": "point",
+     "dir": -35,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "go",
+       "pose": "shock"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "nus_c_sea",
+   "text": "Ve tuzak bir kez daha çalıştı. Saat dördü geçerken İngiliz zırhlısı Inflexible mayına çarptı ve ağır yaralanarak hattan çekildi.",
+   "visual": "Yandan Boğaz: solda tabya ateş eder; üç bacalı gri İngiliz zırhlısı 'Inflexible' sağa ilerler, 'çarptı'da su altındaki boynuzlu mayın patlar, su sütunu ve duman yükselir, gemi dönüp dumanlar içinde geri çekilir; sağdaki kayalıkta Kaşif şaşırır",
+   "title": {
+    "white": "Saat",
+    "gray": "16.00"
+   },
+   "cues": {
+    "inf": "Inflexible",
+    "hit": "çarptı"
+   },
+   "params": {
+    "sky": "day",
+    "shore": "left",
+    "guns": true,
+    "ships": [
+     {
+      "kind": "ironclad",
+      "funnels": 3,
+      "flag": "uk",
+      "x": 0.3,
+      "to": 0.56,
+      "at": 0,
+      "hit": "hit",
+      "fate": "withdraw",
+      "scale": 1.2
+     }
+    ],
+    "mines": [
+     {
+      "x": 0.63,
+      "ship": 0
+     }
+    ],
+    "labels": [
+     {
+      "text": "Inflexible",
+      "x": 0.5,
+      "y": 0.15,
+      "at": "inf"
+     }
+    ],
+    "ledge": "right",
+    "zoom": 1.06,
+    "focus": [
+     0.55,
+     0.55
+    ],
+    "kasif": {
+     "x": 0.87,
+     "y": 0.95,
+     "face": "left",
+     "pose": "look",
+     "at": "hit",
+     "then": "shock",
+     "scale": 0.6
+    }
+   }
+  },
+  {
+   "type": "nus_c_bay",
+   "text": "Hemen ardından Irresistible aynı sıraya bindirdi ve akıntıda sürüklenmeye başladı.",
+   "visual": "Kuşbakışı Boğaz şeması: mavi taranmış kanal, kıyıya paralel 26 mayınlık sıra; zırhlı simgesi kanaldan çıkıp Erenköy'e döner, 'bindirdi'de sıraya çarpar, patlama halkası; 'sürüklenmeye'de mavi 'akıntı' oku belirir, gemi akıntıyla kayar; solda Kaşif haritayı gösterir",
+   "title": {},
+   "cues": {
+    "hit": "bindirdi",
+    "drift": "sürüklenmeye"
+   },
+   "params": {
+    "channel": {
+     "at": 0
+    },
+    "route": {
+     "at": 0,
+     "dur": 1.6
+    },
+    "mines": true,
+    "boom": "hit",
+    "drift": {
+     "at": "drift",
+     "label": "akıntı"
+    },
+    "labels": [
+     {
+      "text": "Erenköy Koyu",
+      "u": 0.66,
+      "v": 0.93,
+      "size": 52
+     }
+    ],
+    "zoom": 0.96,
+    "focus": [
+     0.5,
+     0.55
+    ],
+    "kasif": {
+     "x": 0.1,
+     "pose": "point",
+     "dir": "right",
+     "at": "hit",
+     "then": "shock",
+     "scale": 0.66
+    }
+   }
+  },
+  {
+   "type": "nus_c_sea",
+   "text": "Ona yardıma koşan Ocean da bir mayına çarptı. Gece çökerken iki İngiliz zırhlısı da Boğaz'ın sularına gömüldü.",
+   "visual": "Yandan Boğaz, akşam kararır: solda dumanlar içinde yan yatmış Irresistible, sağdan yardıma gelen 'Ocean' 'çarptı'da mayına çarpar; 'Gece'de gökyüzü taranır, ay ve yıldızlar çıkar, 'çökerken' iki zırhlı yavaşça sulara gömülür; insan figürü yok",
+   "title": {
+    "white": "Ocean"
+   },
+   "cues": {
+    "oc": "Ocean",
+    "hit": "çarptı",
+    "night": "Gece",
+    "sink": "çökerken"
+   },
+   "params": {
+    "sky": "night",
+    "night": "night",
+    "shore": "right",
+    "tabya": false,
+    "ships": [
+     {
+      "kind": "ironclad",
+      "flag": "uk",
+      "x": 0.3,
+      "to": 0.3,
+      "hit": -10,
+      "fate": "sink",
+      "sink_at": "sink",
+      "sink_dur": 4.5,
+      "depth": 0.25
+     },
+     {
+      "kind": "ironclad",
+      "flag": "uk",
+      "funnels": 2,
+      "x": 0.86,
+      "to": 0.56,
+      "at": 0,
+      "hit": "hit",
+      "face": -1,
+      "fate": "sink",
+      "sink_at": "sink",
+      "sink_dur": 5,
+      "scale": 1.2
+     }
+    ],
+    "mines": [
+     {
+      "x": 0.49,
+      "ship": 1
+     }
+    ],
+    "labels": [
+     {
+      "text": "Ocean",
+      "x": 0.62,
+      "y": 0.15,
+      "at": "oc"
+     }
+    ],
+    "zoom": 1.05,
+    "wind": 1
+   }
+  },
+  {
+   "type": "nus_c_bay",
+   "text": "Bakın, işin sırrı tam da burada. Gemiler tarama yapılan kanalın dışında, kıyıya yakın dönüyordu.",
+   "visual": "Kuşbakışı şema: 'tarama'da Boğaz'ın ortasında mavi 'taranmış kanal' bandı çizilir; 'kıyıya'da kırmızı kesikli rota kanaldan çıkıp Erenköy kıyısına yakın döner, zırhlı simgesi bu dönüş yolunda ilerler, 'dönüş yolu' etiketi; Kaşif anlatıp rotayı gösterir",
+   "title": {},
+   "cues": {
+    "channel": "tarama",
+    "route": "kıyıya"
+   },
+   "params": {
+    "channel": {
+     "at": "channel"
+    },
+    "route": {
+     "at": "route",
+     "dur": 3.2
+    },
+    "labels": [
+     {
+      "text": "taranmış kanal",
+      "u": 0.24,
+      "v": 0.405,
+      "size": 50,
+      "color": "blue",
+      "at": "channel"
+     },
+     {
+      "text": "dönüş yolu",
+      "u": 0.45,
+      "v": 0.69,
+      "size": 52,
+      "color": "red",
+      "at": "route"
+     }
+    ],
+    "zoom": 0.96,
+    "focus": [
+     0.5,
+     0.55
+    ],
+    "kasif": {
+     "x": 0.1,
+     "pose": "talk",
+     "at": "route",
+     "then": "point",
+     "dir": "right",
+     "scale": 0.66
+    }
+   }
+  },
+  {
+   "type": "nus_c_bay",
+   "text": "Nusret'in mayınları da tam bu dönüş yoluna, kıyıya paralel dizilmişti. Böylece düşman, tuzağın içine kendi rotasıyla girdi.",
+   "visual": "Aynı şema: 'mayınları'nda kıyıya paralel 26 mayın tek sıra halinde tek tek belirir, 'paralel'de kırmızı çift yönlü ok sıra boyunca çizilir; zırhlı kendi dönüş rotasında ilerler ve 'tuzağın'da sıraya girip patlar; Kaşif şaşırır",
+   "title": {},
+   "cues": {
+    "mines": "mayınları",
+    "par": "paralel",
+    "hit": "tuzağın"
+   },
+   "params": {
+    "channel": {
+     "at": 0
+    },
+    "route": {
+     "at": 0,
+     "dur": 0.9
+    },
+    "mines": {
+     "at": "mines",
+     "dur": 1.6
+    },
+    "parallel": {
+     "at": "par"
+    },
+    "boom": "hit",
+    "labels": [
+     {
+      "text": "26 mayın",
+      "u": 0.42,
+      "v": 0.665,
+      "size": 54,
+      "color": "red",
+      "at": "mines"
+     },
+     {
+      "text": "kıyıya paralel",
+      "u": 0.8,
+      "v": 0.83,
+      "size": 50,
+      "at": "par"
+     }
+    ],
+    "zoom": 0.96,
+    "focus": [
+     0.5,
+     0.55
+    ],
+    "kasif": {
+     "x": 0.1,
+     "pose": "point",
+     "dir": "right",
+     "at": "hit",
+     "then": "shock",
+     "scale": 0.66
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani zaferi tek bir top atışı getirmedi; günlerce süren sabırlı bir gözlem ve cesur bir gece kararı getirdi.",
+   "visual": "Dev yazı 'GÖZLEM + CESARET', 'cesaret' kırmızı kutuda; 'atışı'nda el yazısı not 'top değil!'; sağda Kaşif 'cesur'da yazıyı işaret eder",
+   "title": {},
+   "cues": {
+    "note": "getirmedi",
+    "w0": "tek",
+    "w1": "gözlem",
+    "w2": "cesur"
+   },
+   "params": {
+    "lines": [
+     "Gözlem",
+     "+ cesaret"
+    ],
+    "highlight": [
+     "cesaret"
+    ],
+    "note": {
+     "text": "top değil!",
+     "at": "note"
+    },
+    "y": 0.4,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "happy",
+     "at": "w2"
+    }
+   }
+  },
+  {
+   "chapter": "Sonrası ve bugün",
+   "type": "nus_c_sea",
+   "text": "O akşam Müttefik donanması geri çekildi. Üç zırhlı batmış, üçü de ağır hasar almıştı.",
+   "visual": "Yandan Boğaz, gün batımı: alçak altın güneş, solda tabya; üç gri zırhlı dumanlarını savurarak sağa, Boğaz'ın dışına doğru çekilir; 'Üç'te not '3 battı, 3 ağır hasar'; soldaki kayalıkta Kaşif izler ve gemileri gösterir",
+   "title": {
+    "white": "Geri",
+    "gray": "çekilme"
+   },
+   "cues": {
+    "uc": "Üç"
+   },
+   "params": {
+    "sky": "dusk",
+    "shore": "left",
+    "guns": false,
+    "ships": [
+     {
+      "kind": "ironclad",
+      "flag": "fr",
+      "funnels": 3,
+      "x": 0.14,
+      "to": 0.42,
+      "at": 0,
+      "depth": 0.55,
+      "scale": 0.9
+     },
+     {
+      "kind": "ironclad",
+      "flag": "uk",
+      "x": 0.4,
+      "to": 0.72,
+      "at": 0,
+      "depth": 0.25
+     },
+     {
+      "kind": "ironclad",
+      "flag": "uk",
+      "funnels": 3,
+      "x": 0.66,
+      "to": 1.08,
+      "at": 0,
+      "depth": 0
+     }
+    ],
+    "labels": [
+     {
+      "text": "3 battı, 3 ağır hasar",
+      "x": 0.5,
+      "y": 0.15,
+      "at": "uc"
+     }
+    ],
+    "ledge": "left",
+    "zoom": 1.05,
+    "kasif": {
+     "x": 0.12,
+     "y": 0.95,
+     "face": "right",
+     "pose": "look",
+     "at": "uc",
+     "then": "point",
+     "dir": "right",
+     "scale": 0.6
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ve o dev donanma bir daha Boğaz'ı zorlamadı. Çanakkale, denizden geçilmez olmuştu.",
+   "visual": "Dev yazı 'ÇANAKKALE / GEÇİLMEZ', 'geçilmez' kırmızı kutuda, el yazısı not '18 Mart 1915'; sağda Kaşif 'geçilmez'de sevinçle işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "dev",
+    "w1": "Çanakkale",
+    "note": "olmuştu"
+   },
+   "params": {
+    "lines": [
+     "Çanakkale",
+     "geçilmez"
+    ],
+    "highlight": [
+     "geçilmez"
+    ],
+    "note": {
+     "text": "18 Mart 1915",
+     "at": "note"
+    },
+    "y": 0.4,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "pose": "point",
+     "dir": 25,
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "happy",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Ama savaş bitmedi. Yirmi beş Nisan'da Müttefik askerleri Gelibolu kıyılarına çıktı ve aylarca sürecek kanlı kara savaşı başladı.",
+   "visual": "Eski harita: Gelibolu Yarımadası ve Çanakkale Boğazı; 'Nisan'da '25 Nisan 1915' notu; 'çıktı'da Ege'den Arıburnu'na kırmızı kesikli çıkarma rotası çizilir, Arıburnu ve Seddülbahir işaretlenir",
+   "title": {
+    "white": "Gelibolu"
+   },
+   "cues": {
+    "note": "Nisan",
+    "route": "çıktı"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.52,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       0.1
+      ],
+      [
+       0.9,
+       0.18
+      ],
+      [
+       0.77,
+       0.28
+      ],
+      [
+       0.66,
+       0.4
+      ],
+      [
+       0.57,
+       0.5
+      ],
+      [
+       0.5,
+       0.59
+      ],
+      [
+       0.42,
+       0.69
+      ],
+      [
+       0.33,
+       0.79
+      ],
+      [
+       0.26,
+       0.87
+      ],
+      [
+       0.2,
+       0.9
+      ],
+      [
+       0.16,
+       0.85
+      ],
+      [
+       0.21,
+       0.75
+      ],
+      [
+       0.26,
+       0.66
+      ],
+      [
+       0.29,
+       0.56
+      ],
+      [
+       0.34,
+       0.46
+      ],
+      [
+       0.37,
+       0.36
+      ],
+      [
+       0.43,
+       0.26
+      ],
+      [
+       0.48,
+       0.12
+      ]
+     ],
+     [
+      [
+       1.1,
+       0.28
+      ],
+      [
+       0.92,
+       0.34
+      ],
+      [
+       0.8,
+       0.44
+      ],
+      [
+       0.71,
+       0.54
+      ],
+      [
+       0.65,
+       0.62
+      ],
+      [
+       0.6,
+       0.71
+      ],
+      [
+       0.52,
+       0.82
+      ],
+      [
+       0.46,
+       0.93
+      ],
+      [
+       0.42,
+       1.1
+      ],
+      [
+       1.1,
+       1.1
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Arıburnu",
+      "x": 0.31,
+      "y": 0.52,
+      "dx": -20,
+      "dy": -40,
+      "anchor": "end",
+      "at": "route"
+     },
+     {
+      "name": "Seddülbahir",
+      "x": 0.2,
+      "y": 0.87,
+      "dx": 26,
+      "dy": 14,
+      "anchor": "start",
+      "at": "note"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.03,
+       0.3
+      ],
+      [
+       0.14,
+       0.4
+      ],
+      [
+       0.24,
+       0.48
+      ],
+      [
+       0.3,
+       0.515
+      ]
+     ],
+     "at": "route",
+     "dur": 1.6,
+     "color": "red"
+    },
+    "note": {
+     "text": "25 Nisan 1915",
+     "x": 0.7,
+     "y": 0.16,
+     "at": "note"
+    },
+    "zoom": 1.08,
+    "focus": [
+     0.35,
+     0.55
+    ],
+    "compass": "br"
+   }
+  },
+  {
+   "type": "nus_c_memorial",
+   "text": "Bu savaşta her iki taraftan da yüz binlerce genç ya hayatını kaybetti ya da yaralandı.",
+   "visual": "Gelibolu yamacı, gün batımında deniz: iki yanda sessiz sıralar halinde sade mezar taşları tek tek belirir, kırmızı gelincikler sallanır; ortada Kaşif 'hayatını'da başını eğip düşünür; üstte 'yüz binlerce genç'",
+   "title": {
+    "white": "İki",
+    "gray": "taraf"
+   },
+   "cues": {
+    "hit": "binlerce",
+    "k": "hayatını"
+   },
+   "params": {
+    "rows": 3,
+    "per": 7,
+    "label": {
+     "text": "yüz binlerce genç",
+     "at": "hit"
+    },
+    "kasif": {
+     "x": 0.5,
+     "y": 0.93,
+     "pose": "idle",
+     "face": "right",
+     "at": "k",
+     "then": "think",
+     "emotion": "worried",
+     "scale": 0.66
+    }
+   }
+  },
+  {
+   "type": "nus_c_sea",
+   "text": "Bugün on sekiz Mart, Çanakkale Deniz Zaferi olarak anılıyor. Nusret'in aslı Tarsus'ta bir müze gemisi, birebir kopyası ise Çanakkale'de ziyaretçilerini bekliyor.",
+   "visual": "Solda karada kızaklar üstünde müze gemisi Nusret ('Aslı: Tarsus'), sağda suda ay-yıldızlı sancağıyla birebir kopyası ('Kopyası: Çanakkale'); Kaşif soldan yürüyüp ortada durur ve 'kopyası'nda sağdaki gemiyi gösterir",
+   "title": {
+    "white": "Bugün"
+   },
+   "cues": {
+    "asl": "aslı",
+    "kop": "kopyası"
+   },
+   "params": {
+    "sky": "day",
+    "shore": "right",
+    "tabya": false,
+    "land": {
+     "from": 0,
+     "to": 0.5
+    },
+    "ships": [
+     {
+      "kind": "nusret",
+      "dry": true,
+      "x": 0.24,
+      "to": 0.24,
+      "scale": 1.6,
+      "smoke": false
+     },
+     {
+      "kind": "nusret",
+      "x": 0.76,
+      "to": 0.78,
+      "scale": 1.6,
+      "dur": 12
+     }
+    ],
+    "labels": [
+     {
+      "text": "Aslı: Tarsus",
+      "x": 0.24,
+      "y": 0.2,
+      "at": "asl"
+     },
+     {
+      "text": "Kopyası: Çanakkale",
+      "x": 0.76,
+      "y": 0.2,
+      "at": "kop",
+      "color": "red"
+     }
+    ],
+    "zoom": 1.04,
+    "kasif": {
+     "x": 0.05,
+     "to": 0.42,
+     "walk_at": 0.2,
+     "walk_dur": 3,
+     "y": 0.95,
+     "face": "right",
+     "pose": "idle",
+     "at": "kop",
+     "then": "point",
+     "dir": "right",
+     "scale": 0.6
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki sizce o gece Nusret fark edilseydi, tarih nasıl yazılırdı? Yorumlara yazın, çok merak ediyorum.",
+   "visual": "Deniz kıyısında 'SENCE?' tabelası belirir; Kaşif anlatır, 'fark'ta omuz silker, 'Yorumlara'da el sallar",
+   "title": {
+    "white": "Soru"
+   },
+   "cues": {
+    "q": "sizce",
+    "hit": "fark",
+    "yor": "Yorumlara"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.32,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "yor",
+        "pose": "wave"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.62,
+      "scale": 1.0,
+      "text": "SENCE?",
+      "at": "q",
+      "hit": "hit"
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ]
+    }
+   }
+  }
+ ]
+}

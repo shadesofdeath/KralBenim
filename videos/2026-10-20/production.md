@@ -578,3 +578,14 @@ Yirmi altı mayın, koca bir donanmayı durdurdu. Nasıl mı? Gelin, size Çanak
 | 34 | 5 | Bu savaşta her iki taraftan da yüz binlerce genç ya hayatını kaybetti ya da yaralandı. |
 | 35 | 5 | Bugün on sekiz Mart, Çanakkale Deniz Zaferi olarak anılıyor. Nusret'in aslı Tarsus'ta bir müze gemisi, birebir kopyası ise Çanakkale'de ziyaretçilerini bekliyor. |
 | 36 | 5 | Peki sizce o gece Nusret fark edilseydi, tarih nasıl yazılırdı? Yorumlara yazın, çok merak ediyorum. |
+
+### 05-nusret-mayin-gemisi — eleştiri günlüğü
+
+#### tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 9 | 6 | 6 | 8 | 7 | 8 | 7 | 9 | 7 | 8 |
+1. Sahne 26–29 harita çerçevesi kicker'a biniyordu → kicker kaldırıldı, zoom/focus ayarlandı.
+2. Sahne 6 ve 9'da zırhlı yerine yelkenli prop'u ve kenarda kesik direk → yelkenli ve `near: post` kaldırıldı.
+3. Sahne 30'un yarısı boştu → cue'lar "tek / gözlem / cesur", not "getirmedi".
+Kanal sahibi "hemen yayın" istediği için 2. tur yapılmadan yönetmen kontrolüyle (lint, preview, düzeltilen karelere bakış) gönderildi.
