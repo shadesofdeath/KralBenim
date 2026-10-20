@@ -139,6 +139,27 @@ def locate(text, words):
     return [w for w in words if w["text"]]
 
 
+def debreath(mp3, words, floor=0.06, min_gap=0.22, pad_out=0.06, pad_in=0.03, ramp=0.04):
+    """Owner: no audible breathing. eleven_v3 breathes in the pauses between words, so every gap
+    longer than min_gap (from the word timings) is ducked to `floor` with short ramps; the words
+    themselves are untouched."""
+    gaps, prev = [], 0.0
+    for w in words:
+        a, b = prev + pad_out if prev else 0.0, w["start"] - pad_in
+        if b - a >= min_gap:
+            gaps.append((a, b))
+        prev = max(prev, w["end"])
+    if not gaps:
+        return
+    tri = "+".join(f"clip(min(t-{a:.3f},{b:.3f}-t)/{ramp},0,1)" for a, b in gaps)
+    script = Path(mp3).with_name("debreath.txt")
+    script.write_text(f"volume='1-{1 - floor:.3f}*min(1,{tri})':eval=frame")
+    out = Path(mp3).with_name("debreath.mp3")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-filter_script:a", str(script),
+                    "-c:a", "libmp3lame", "-b:a", "192k", str(out)], check=True)
+    out.replace(mp3)
+
+
 def synthesize(text, cfg, work, plain=None):
     """Returns (mp3 path, words). Cached by text+tts config. `plain` is the text without audio tags
     (captions and scene ranges refer to it)."""
@@ -147,10 +168,16 @@ def synthesize(text, cfg, work, plain=None):
     if mp3.exists() and wj.exists():
         cached = json.loads(wj.read_text())
         if cached.get("key") == key:
+            if not cached.get("debreath") and cfg.get("provider") == "elevenlabs":   # audio cached before debreath
+                debreath(mp3, cached["words"])
+                wj.write_text(json.dumps({**cached, "debreath": True}, ensure_ascii=False, indent=1))
             return mp3, cached["words"]
     provider = cfg.get("provider", "edge")
     words = locate(plain or text, drop_tags({"edge": tts_edge, "elevenlabs": tts_elevenlabs}[provider](text, cfg, mp3)))
-    wj.write_text(json.dumps({"key": key, "words": words}, ensure_ascii=False, indent=1))
+    if provider == "elevenlabs":
+        debreath(mp3, words)
+    wj.write_text(json.dumps({"key": key, "words": words, "debreath": provider == "elevenlabs"},
+                             ensure_ascii=False, indent=1))
     return mp3, words
 
 

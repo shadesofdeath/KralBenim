@@ -21,7 +21,7 @@ Her gün **2 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render ed
 - `tools/media.py` — telifsiz fotoğraf/video bulur ve indirir (Wikimedia Commons; `PEXELS_API_KEY` varsa Pexels foto + video).
 - `tools/hf.py` — Higgsfield klibini (MCP ile üretilen) indirip 1080p'ye normalleştirir. Bulut ortamı Higgsfield CDN'ine erişemezse klip `params.url` ile senaryoya yazılır; `build.py` render sırasında (GitHub Actions) indirir, önizleme yer tutucu gösterir.
 
-Ses: anlatım + altında çok hafif ambiyans müziği (`tools/sfx.py`, kodla üretilir). **Efekt sesi (whoosh, pop, vuruş) yok — kanal sahibi istemiyor, geri ekleme.** Müziği de kapatmak için senaryoya `"sfx": false`.
+Ses: anlatım + altında çok hafif ambiyans müziği (`tools/sfx.py`, kodla üretilir). **Efekt sesi (whoosh, pop, vuruş) yok — kanal sahibi istemiyor, geri ekleme.** **Nefes sesi de istenmiyor:** `eleven_v3` kelime aralarında nefes alıyor; `build.py` (`debreath`) kelime zamanlamasına göre kelime aralarını kısar, kelimelere dokunmaz. Müziği de kapatmak için senaryoya `"sfx": false`.
 
 Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece GitHub Actions'ta çalışır. Yerel kontrol için `tools/preview.py` kullan.
 
