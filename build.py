@@ -12,7 +12,8 @@ Sharded (one video across several machines/CI jobs; always pass the same -o):
   python build.py script.json -o out/x.mp4 --finish      # concat + audio mux + cover -> out/x.mp4
 
 Env: RENDER_WORKERS (parallel browsers per machine), RENDER_CAPTURE=screenshot (old page.screenshot
-capture), RENDER_COMPOSITOR=gpu (old SwiftShader compositor), SHARD_SECONDS (video seconds per shard).
+capture), RENDER_COMPOSITOR=gpu (old SwiftShader compositor), SHARD_SECONDS (video seconds per shard),
+RENDER_PROGRESS_DIR (live per-worker frame counts for the Telegram status, see tools/live.py).
 """
 import argparse
 import asyncio
@@ -453,6 +454,27 @@ def _capturer(page, timeline):
     return lambda: base64.b64decode(cdp.send("Page.captureScreenshot", req)["data"])
 
 
+def _progress_writer(seg, total):
+    """RENDER_PROGRESS_DIR set (CI, tools/live.py shard): each worker keeps <dir>/<segment>.json =
+    {"done": frames, "total": frames} up to date (about once per video second), so a watcher can sum
+    the live progress of all parallel browsers. Unset: a no-op."""
+    d = os.environ.get("RENDER_PROGRESS_DIR")
+    if not d:
+        return lambda done: None
+    path = Path(d) / f"{Path(seg).stem}.json"
+
+    def write(done):
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            tmp = path.with_suffix(".tmp")
+            tmp.write_text(json.dumps({"done": done, "total": total}))
+            tmp.replace(path)
+        except OSError:
+            pass
+    write(0)
+    return write
+
+
 def _render_segment(args):
     """Worker: frames [a, b) -> silent H.264 segment. Every frame is a pure function of t, so
     segments can be rendered by independent browsers in parallel and concatenated."""
@@ -469,11 +491,15 @@ def _render_segment(args):
         # rendered mid-sequence. Seeking the preceding frames first (no capture) makes it identical.
         for i in range(max(0, a - 3), a):
             page.evaluate("t => window.seek(t)", i / fps)
+        progress = _progress_writer(seg, b - a)
         for i in range(a, b):
             page.evaluate("t => window.seek(t)", i / fps)
             ff.stdin.write(capture())
             if log and (i - a) % (fps * 5) == 0:
                 print(f"\rframe {i}/{b} (worker 1)", end="", flush=True)
+            if (i - a + 1) % fps == 0:
+                progress(i - a + 1)
+        progress(b - a)
         browser.close()
     ff.stdin.close()
     if ff.wait() != 0:

@@ -5,6 +5,9 @@ name: Daily batch
 #   prepare  (1 job per script)   TTS (cached) + timeline + media -> artifact prep-<name>
 #   render   (N jobs per script)  build.py --shard i/N: one frame range each -> artifact seg-<name>-<i>
 #   finish   (1 job per script)   concat + audio + cover, YouTube upload, Telegram
+#   monitor  (1 job, whole run)   keeps the day's ONE live Telegram message current (stages, render %,
+#                                 ETA, YouTube link); the only job that edits it (tools/live.py).
+#                                 Every Telegram/live step is best-effort and can never fail a render.
 # N is about one shard per 40 s of video (max 8), so a Short is 1 render job and a 4.5-minute video 7.
 on:
   push:
@@ -20,6 +23,8 @@ on:
 
 permissions:
   contents: write
+  actions: read     # monitor: job/step states of this run
+  statuses: write   # live status records (commit statuses on the anchor commit, tools/telegram.py Store)
 
 jobs:
   plan:
@@ -52,6 +57,41 @@ jobs:
           fi
           echo "files=$(printf '%s\n' $files | jq -R . | jq -sc 'map(select(length>0))')" >> "$GITHUB_OUTPUT"
 
+  # Live Telegram status: polls this run's jobs + the shards' progress records every ~12 s and edits the
+  # day's message (the one telegram-status.yml started for the cloud session's stages, or a new one).
+  # Nothing depends on this job, so even a crash here cannot touch prepare/render/finish.
+  monitor:
+    needs: plan
+    if: needs.plan.outputs.files != '[]'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 340
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            tools/
+            config/
+            videos/*/*.json
+      - name: Live status
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FILES: ${{ needs.plan.outputs.files }}
+        run: python3 tools/live.py monitor || true
+      - name: Live status (cancelled run)
+        if: cancelled()
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FILES: ${{ needs.plan.outputs.files }}
+        run: python3 tools/live.py monitor --once --footer "⛔ Çalışma iptal edildi" || true
+
   prepare:
     needs: plan
     if: needs.plan.outputs.files != '[]'
@@ -61,6 +101,7 @@ jobs:
       fail-fast: false
       matrix:
         file: ${{ fromJson(needs.plan.outputs.files) }}
+    name: prepare ${{ matrix.file }}   # tools/live.py matches jobs by these names
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -158,7 +199,17 @@ jobs:
       - name: Render shard
         env:
           F: ${{ matrix.file }}
-        run: python build.py "$F" -o "out/${{ matrix.name }}.mp4" --shard "${{ matrix.shard }}/${{ matrix.of }}"
+          GITHUB_TOKEN: ${{ github.token }}
+          LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
+        # live.py only wraps build.py (same exit code) and publishes the shard's frame progress every 5 %
+        # for the monitor; if live.py itself is broken, the shard is rendered without it
+        run: |
+          CMD=(python build.py "$F" -o "out/${{ matrix.name }}.mp4" --shard "${{ matrix.shard }}/${{ matrix.of }}")
+          if python tools/live.py --help >/dev/null 2>&1; then
+            python tools/live.py shard --name "${{ matrix.name }}" --shard "${{ matrix.shard }}" -- "${CMD[@]}"
+          else
+            "${CMD[@]}"
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: seg-${{ matrix.name }}-${{ matrix.shard }}
@@ -176,6 +227,7 @@ jobs:
       fail-fast: false
       matrix:
         file: ${{ fromJson(needs.plan.outputs.files) }}
+    name: finish ${{ matrix.file }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -213,10 +265,15 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           F: ${{ matrix.file }}
+          GITHUB_TOKEN: ${{ github.token }}
+          LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
         run: |
           if [ -z "$YOUTUBE_TOKEN_JSON" ] && [ -z "$YOUTUBE_REFRESH_TOKEN" ]; then echo "YouTube secrets missing, skipping upload"; exit 0; fi
           python tools/upload.py "$F" "out/${{ steps.n.outputs.name }}.mp4"
           cp "out/${{ steps.n.outputs.name }}.youtube.json" "${F%.json}.youtube.json"
+          # the video link for the live Telegram status (best-effort)
+          python tools/live.py note --name "${{ steps.n.outputs.name }}" \
+            --url "$(jq -r '.url // empty' "out/${{ steps.n.outputs.name }}.youtube.json" 2>/dev/null)" || true
       - name: Send to Telegram (Instagram-ready)
         if: always() && steps.n.outputs.name != ''
         continue-on-error: true

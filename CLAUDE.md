@@ -74,6 +74,22 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
 Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
 (`preview.py`, Chromium) aynı anda en fazla 3 tane çalışsın.
 
+**Canlı Telegram durumu (kanal sahibi tüm süreci tek mesajda canlı izler).** Bulut oturumunda
+Telegram token'ı yok; yönetmen her aşamada GitHub MCP `actions_run_trigger` ile
+`telegram-status.yml` workflow'unu tetikler (`ref: claude/shorts-pipeline`, inputs: `key` = günün
+tarihi, `stage`, `state` = `run|done|fail|info`, `text`, `video` = dosya adı slug'ı ör. `01-emu-savasi`,
+ilk kez anılan videoda `title` + `kind` = `short|long`; aynı anda birden çok satır için `batch` =
+JSON listesi `[{"stage","state","text","video","title","kind"}]`). Tetikleme başarısızsa yok say,
+üretimi asla bekletme. Ne zaman (metin bilgi dolu olsun: sayı, puan, saat):
+- Başta: `plan` `run` → plan.py'den sonra `plan` `done` ("2 Shorts + 1 uzun · bütçe %41").
+- Konular seçilince (tek `batch`): her video için `topic` `info` ("Emu Savaşı · tarih") + `title` + `kind`, `publish` `info` ("20 Ekim 12:00").
+- Yazar ajanlar başlarken `script` `run`; bitince `script` `done` + `chars` `info` ("486 karakter").
+- Her eleştiri turunda `review` `run` ("1. tur: kanca 6 · tempo 8 · … en düşük 6"); geçince `review` `done` ("2. tur: hepsi ≥ 7").
+- Commit'ten hemen önce `push` `run` (genel bölüm, `video` boş). Bir aşama hata verirse `fail` + kısa neden.
+Push'tan sonra `Daily batch` workflow'undaki `monitor` job'u aynı mesajı devralır (seslendirme,
+render yüzdesi + kalan süre, birleştirme, YouTube linki, Telegram); yönetmen bir şey yapmaz.
+Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit atılmaz; ayrıntı `tools/telegram.py`, `tools/live.py`).
+
 1. **Plan:** `python tools/plan.py` çalıştır. Sadece `todo` listesindeki videoları üret (`done` dolu olanlar önceden hazırlanmış, dokunma); `todo` boşsa hiçbir şey yapma, dur. Dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanala uygun, aranan ve merak uyandıran bir soru seç ("Neden...?", "Nasıl...?", "Ne olurdu...?"). Kategorileri günden güne değiştir: gündelik tasarımların hikâyesi, bilim, insan vücudu, tarih, hayvanlar, uzay, mühendislik, psikoloji. Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir konu.
