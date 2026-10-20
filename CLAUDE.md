@@ -37,7 +37,7 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 | Uzun video (her gün) | ~4–5 dk | **3.400–4.000** (sert sınır 4.300) | her gün 20:30 (+03:00) |
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
-- **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" diye hitap eder, merakı paylaşır ve açıklar ("Kediler neden hep dört ayağının üstüne düşer, hiç merak ettiniz mi? Gelin, hemen anlatayım."). Olayı altyazı gibi sayan, "yapıyor ediyor" diye giden anlatım yasak (BRAND.md §6.0–6.3, §6.10).
+- **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" diye hitap eder, merakı paylaşır ve açıklar ("Kediler neden hep dört ayağının üstüne düşer, hiç merak ettiniz mi? Gelin, hemen anlatayım."). Olayı altyazı gibi sayan, "yapıyor ediyor" diye giden anlatım yasak; **devrik cümle yok** (özne başta, yüklem sonda: "Ordu geldi.", "Geldi ordu." değil) (BRAND.md §6.0–6.3, §6.10).
 - **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–10 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
 - **Hızlı görüntü temposu:** 2–4 saniyede bir yeni görüntü, 8–11 sahne. Anlatım ise doğal akar; sahneler cümleyi bölebilir.
 - **Net kapanış (döngü yok):** son cümle **tam ve kendi başına anlamlı** olsun; videoyu bağlayan, akılda kalan bir sonuç/punchline ("Yani ayağının altında, erimeyi reddeden bir demir güneş var."). Cümleyi yarım bırakıp videonun başına bağlama — kanal sahibi "sonsuz video" etkisini istemiyor. Ayrı bir soru/"yorumlara yazın" sahnesi koyma; yorum sorusu açıklamaya yazılır.

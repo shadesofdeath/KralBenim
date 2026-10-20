@@ -97,6 +97,10 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
    (`tools/lint.py` denetler). Ton: arkadaşına inanılmaz bir şey anlatan biri; şaşıran, gülen, bekleten.
    Yasak örnek: "Ordu geliyor. Emular dağılıyor. Tüfek tutukluk yapıyor." İstenen: "Ve ordu geldi. Tam
    kadro mu? Ne gezer! Bir binbaşı, iki asker, iki tüfek. Emular ise… dağıldı. Hem de nasıl!"
+3b. **Devrik cümle yok (kanal sahibinin kararı).** Cümleler Türkçenin düz sırasıyla kurulur: özne başta,
+   yüklem sonda. Yasak: "Geldi ordu.", "Çizdi Amerika'yı bir Osmanlı denizcisi.", "Kaçtı emular tüfeği
+   görünce." Doğrusu: "Ordu geldi.", "Bir Osmanlı denizcisi Amerika'yı çizdi.", "Emular tüfeği görünce
+   kaçtı." Tek kelimelik vurgu cevapları ("Kazanan mı? Emular!") ve soru kalıpları ("Nasıl mı?") devrik sayılmaz.
 4. **Sahne başına tek fikir**, ekranda en fazla 5 kelime. Kaşif o fikri **gösterir** (işaret eder, şaşırır, dürbünle bakar).
 5. Her 20–30 saniyede bir **soru/gerilim kancası**: "Ama asıl felaket henüz başlamamıştı."
 6. **Sayı, tarih, isim doğrulanmadan yazılmaz**; tartışmalıysa "büyük olasılıkla" de.

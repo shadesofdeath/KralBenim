@@ -8,7 +8,7 @@ Eleştirmen önce **sadece anlatım metnini** (tüm sahnelerin `text` alanları 
 
 | Kriter | 10 puan nasıl görünür |
 |---|---|
-| **Senaryo (metin tek başına)** | Anlatım görüntü olmadan, düz metin olarak okununca da (podcast gibi) sürükleyici bir hikâye: anlatıcının sesi, merak, gerilim, dönüş, akılda kalan son. Cümleler ekrandakini tarif etmiyor ("kamyona tüfek kuruyorlar" gibi altyazı cümlesi yok); görüntünün söyleyemediğini söylüyor. Cümleler birbirine bağlanıyor ("ama", "yani", "çünkü", "ve tam o anda"), madde listesi gibi kopuk değil. **Bu kriter 7'nin altındaysa diğer puanlara bakılmaz, senaryo baştan yazılır.** |
+| **Senaryo (metin tek başına)** | Anlatım görüntü olmadan, düz metin olarak okununca da (podcast gibi) sürükleyici bir hikâye: anlatıcının sesi, merak, gerilim, dönüş, akılda kalan son. Cümleler ekrandakini tarif etmiyor ("kamyona tüfek kuruyorlar" gibi altyazı cümlesi yok); görüntünün söyleyemediğini söylüyor. Devrik cümle yok (özne başta, yüklem sonda; BRAND.md §6.3b), devrik cümle görülürse bu kriter en fazla 6 alır. Cümleler birbirine bağlanıyor ("ama", "yani", "çünkü", "ve tam o anda"), madde listesi gibi kopuk değil. **Bu kriter 7'nin altındaysa diğer puanlara bakılmaz, senaryo baştan yazılır.** |
 | **Kanca** | İlk kare + ilk cümle 1 saniyede merak yaratıyor; kapak yazısı ile ilk cümle aynı fikir; kaydırmayı durdurur. |
 | **Okunabilirlik (360 px)** | Kontak sayfasında (her kare 360 px genişlik) tüm sahne yazıları okunuyor; yazı görsele binmiyor; altyazı bandı ve YouTube arayüzü bölgesi temiz. |
 | **Görsel = anlatım** | Her sahnenin görseli `visual` cümlesini ve o an söylenen şeyi birebir gösteriyor; "yaklaşık" görsel yok. |
