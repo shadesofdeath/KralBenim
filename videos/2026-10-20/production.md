@@ -384,3 +384,34 @@ lint OK · 494 karakter · 11 sahne · tahmini 37,4 sn (taslak MP4 37,4 sn; 35 s
    - Sahne 10'da emular Kaşif'in üstüne biniyor. Kaşif'in etrafında x ±0,12 emusuz bir alan bırak.
 
 **Kapak:** büyük şok Kaşif, okunaklı, kapak cümlesi ilk cümleyle uyumlu. İyi.
+
+## 04-uykusuz-kalsak (ek uzun video, kanal sahibinin isteğiyle, hemen yayın)
+
+Plan dışı: kanal sahibi 2026-10-20 öğlen ek bir uzun video istedi, hazır olunca hemen yayınlanacak (`publish_at` push anında, lint sınırı olan ~1 saat sonrası olarak yazılır). Higgsfield klibi kullanılmıyor (hız için), tüm görseller kodla.
+
+- **Konu / kategori:** Hiç uyumasaydık ne olurdu? (insan vücudu / beyin)
+- **Hissedilen:** "Uyku bir tembellik değil; beyin her gece kendini yıkıyor. Bir gece bile atlamak beni sandığımdan çok değiştiriyor." — merak, hafif ürperti, sonunda saygı (uyku hayati).
+- **Ses:** ElevenLabs `j4vJUfke1j8j9OYq8V3b`, `eleven_v3`.
+- **Palet:** `noir` (gece, uykusuzluk) → `lab` (beyin içi, nöronlar) → `ocean` (beyin sıvısının "gece temizliği") → `sunset` (sabah, dönüş).
+- **Kanca + kapak fikri:** 1963-64 kışında 17 yaşındaki Randy Gardner'ın ~11 gün (264 saat) hiç uyumaması. İlk cümle bu iddiayla açılır. Kapak: `11 GÜN / HİÇ / UYUMADI`, vurgu `11 GÜN`; sağda karanlıkta açık duran yorgun göz / saat kadranı.
+- **Başlık önerisi:** "Hiç Uyumasaydık Ne Olurdu? 11 Gün Uyumayan Çocuk 🧠" (≤ 70 karakter, yazar iyileştirebilir)
+- **Doğrulanacak bilgiler (yazar web aramasıyla doğrular; emin olmadığını "yaklaşık" de ya da çıkar):**
+  - Randy Gardner, San Diego, Aralık 1963 – Ocak 1964, lise bilim fuarı projesi, 264 saat (~11 gün); uyku araştırmacısı William Dement gözlemledi; sonra ~14 saat uyudu. Gün gün belirtiler (konsantrasyon, sinirlilik, halüsinasyon, hafıza).
+  - ~17–19 saat uyanık kalmanın performansı yaklaşık kandaki 0,05 promil alkol kadar düşürdüğü (Williamson & Feyer 2000); daha uzun sürede ~0,1.
+  - Mikro uyku: birkaç saniyelik, fark edilmeden gelen uykular.
+  - Glimfatik sistem: 2013, Maiken Nedergaard ekibi (Science); uyku sırasında beyin hücreleri arasındaki boşluk genişler (~%60), beyin omurilik sıvısı atıkları (beta-amiloid dahil) yıkar.
+  - Rechtschaffen'in 1980'lerdeki fare deneyleri: tamamen uykusuz bırakılan fareler birkaç haftada öldü (sayıyı doğrula).
+  - Ölümcül ailesel uykusuzluk (FFI): prion hastalığı, talamus; nadir.
+  - Yetişkinlere önerilen uyku: 7–9 saat; hayatımızın yaklaşık üçte biri uykuda geçer.
+  - Yaygın efsaneleri anlatma (ör. "Çernobil sadece uykusuzluktan oldu" gibi kesin iddialar yok).
+
+### Perdeler (yazar anlatımı yazdıktan sonra sahnelere bölünür)
+
+| Bölüm (`chapter`) | İçerik | Görsel omurga |
+|---|---|---|
+| 11 gün uyumayan çocuk | Kanca: Randy Gardner, bilim fuarı, deneyin başlaması | headline, clockface, eye |
+| İlk 24 saat | Bir gece atlayınca beyin ne yapar; sarhoş gibi performans | bars/compare, neurons |
+| Beyin kendini kapatıyor | Mikro uyku, halüsinasyon, Gardner'ın günleri | neurons, eye, yeni 3D beyin sahnesi |
+| Gece temizliği | Glimfatik sistem: beyin uykuda kendini yıkar | 3D beyin + sıvı akışı (yeni tip) |
+| Uykusuzluk öldürür mü? | Fare deneyleri, FFI | bars, headline |
+| Peki ne kadar? | 7–9 saat, hayatın üçte biri, dönüş + yorum sorusu | clockface, headline |
