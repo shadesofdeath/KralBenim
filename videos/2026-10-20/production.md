@@ -520,3 +520,61 @@ Plan dışı ek video (`"extra": true`), 20 Ekim gece kanal sahibi istedi. Tarz:
 | 18 Mart sabahı | Saldırı, tabyalar, öğleden sonra Bouvet'nin batışı |
 | Peki neden? | Mayınların yeri, neden kimse fark etmedi, Irresistible ve Ocean |
 | Sonrası ve bugün | Donanma geri çekildi, kara savaşı, Nusret bugün; yorum sorusu |
+
+### Anlatım (tek parça)
+
+Yirmi altı mayın, koca bir donanmayı durdurdu. Nasıl mı? Gelin, size Çanakkale'nin en sessiz kahramanını anlatayım. Yıl 1915, aylardan mart. Birinci Dünya Savaşı bütün hızıyla sürüyordu. İngiltere ve Fransa'nın aklında cesur bir plan vardı: savaş gemileriyle Çanakkale Boğazı'nı zorlamak ve doğruca İstanbul'a ulaşmak. Bu plana göre İstanbul düşerse Osmanlı savaştan çekilecek, Rusya'ya giden deniz yolu da açılacaktı. Ellerinde bunun için dünyanın en güçlü donanmalarından biri vardı. Onlarca zırhlı, dev toplar, binlerce denizci. Boğaz'ın iki yakasında ise Osmanlı tabyaları bekliyordu. Ama asıl savunma suyun altındaydı: sıra sıra dizilmiş mayınlar. Müttefikler bu mayınları haftalarca taramaya çalıştı. Peki sizce Osmanlı'nın elinde başka bir koz kalmış mıydı? İşte burada hikâyemizin kahramanı sahneye çıkıyor: Nusret. Almanya'da yapılmış küçük bir mayın gemisiydi; bir zırhlının yanında oyuncak gibi kalırdı. Geminin komutanı Hakkı Bey, mayın grubunun komutanı ise Nazmi Bey'di. İkisi de Boğaz'ı avuçlarının içi gibi biliyordu. Günlerce düşman gemilerini izlediler ve tuhaf bir şey fark ettiler. Müttefik zırhlıları ateş ettikten sonra hep aynı yerde, Erenköy Koyu'nda geniş bir dönüş yapıyordu. Üstelik düşman, mayın hatlarının dışında kalan bu koyu güvenli sanıyordu. Plan basit ama çok tehlikeliydi: geceleyin düşmanın burnunun dibine girmek ve o dönüş yoluna mayın dökmek. Yedi Mart'ı sekize bağlayan gece, Nusret ışıklarını söndürdü ve karanlık sulara süzüldü. Bir projektör ışığı geminin üstüne düşse her şey bitecekti. Ama Nusret fark edilmedi. Yirmi altı mayın, kıyıya paralel tek bir sıra halinde, sessizce suya indi. Sonra gemi geldiği gibi geri döndü. Ve günlerce kimse, o sıranın orada olduğunu bilmedi. On sekiz Mart sabahı hava açık, deniz sakindi. Kısa süre sonra Müttefik donanması Boğaz'a girdi ve tarihin en büyük deniz saldırılarından biri başladı. Gemilerin dev topları tabyaları dövdü, kıyı bataryaları da durmadan karşılık verdi. Duman, toz ve barut kokusu bütün Boğaz'ı kapladı. Saatler geçti, tabyalar sarsıldı ama susmadı. Öğleden sonra Fransız zırhlısı Bouvet, ateş hattından çekilmek için tam o koyda döndü. Ve bir anda korkunç bir patlama oldu. Bouvet yan yattı ve birkaç dakika içinde sulara gömüldü. Altı yüzü aşkın denizci gemiyle birlikte kayboldu. Onlar da birer insandı; evlerinde onları bekleyen aileleri vardı. Peki ama bu patlama nereden gelmişti? Müttefik komutanlar önce bunun kıyıdan atılan bir torpido ya da akıntıyla sürüklenen bir mayın olduğunu düşündü. Kimsenin aklına, temiz sandıkları koyda bir mayın sırası olabileceği gelmedi. Bu yüzden saldırı sürdü. Ve tuzak bir kez daha çalıştı. Saat dördü geçerken İngiliz zırhlısı Inflexible mayına çarptı ve ağır yaralanarak hattan çekildi. Hemen ardından Irresistible aynı sıraya bindirdi ve akıntıda sürüklenmeye başladı. Ona yardıma koşan Ocean da bir mayına çarptı. Gece çökerken iki İngiliz zırhlısı da Boğaz'ın sularına gömüldü. Bakın, işin sırrı tam da burada. Gemiler tarama yapılan kanalın dışında, kıyıya yakın dönüyordu. Nusret'in mayınları da tam bu dönüş yoluna, kıyıya paralel dizilmişti. Böylece düşman, tuzağın içine kendi rotasıyla girdi. Yani zaferi tek bir top atışı getirmedi; günlerce süren sabırlı bir gözlem ve cesur bir gece kararı getirdi. O akşam Müttefik donanması geri çekildi. Üç zırhlı batmış, üçü de ağır hasar almıştı. Ve o dev donanma bir daha Boğaz'ı zorlamadı. Çanakkale, denizden geçilmez olmuştu. Ama savaş bitmedi. Yirmi beş Nisan'da Müttefik askerleri Gelibolu kıyılarına çıktı ve aylarca sürecek kanlı kara savaşı başladı. Bu savaşta her iki taraftan da yüz binlerce genç ya hayatını kaybetti ya da yaralandı. Bugün on sekiz Mart, Çanakkale Deniz Zaferi olarak anılıyor. Nusret'in aslı Tarsus'ta bir müze gemisi, birebir kopyası ise Çanakkale'de ziyaretçilerini bekliyor. Peki sizce o gece Nusret fark edilseydi, tarih nasıl yazılırdı? Yorumlara yazın, çok merak ediyorum.
+
+### Doğrulama notları
+
+- 26 mayın, Erenköy Koyu, kıyıya paralel tek sıra, 7–8 Mart 1915 gecesi: doğrulandı (Wikipedia Nusret/Erenköy, ANZAC Portal, Hürriyet).
+- Komutan Hakkı Bey (Tophaneli İsmail Hakkı), mayın grubu komutanı Nazmi Bey (Akpınar): isimler doğrulandı; rütbeler kaynaklarda tutarsız olduğu için anlatımda rütbe yok.
+- 18 Mart: Bouvet, Irresistible, Ocean battı; Inflexible, Suffren, Gaulois ağır hasarlı (Amirallik raporu, historyofwar.org). Anlatımda "üç battı, üçü ağır hasar".
+- Bouvet kayıpları kaynaklarda ~600–643 arası; anlatımda "altı yüzü aşkın". Irresistible ve Ocean mürettebatının çoğu kurtarıldı; bu yüzden onlar için sayı verilmedi.
+- Saatler: Inflexible ~16.10, Irresistible hemen ardından, Ocean ~18.05 (sonra gece battılar). Saldırının başlangıç saati "kısa süre sonra" diye yumuşatıldı.
+- Müttefikler patlamayı önce torpido/sürüklenen mayın sandı: yaygın anlatı; "düşündü" diye verildi.
+- Nusret Almanya'da (Kiel) yapıldı. Aslı Tarsus'ta müze gemisi (2008), birebir kopyası 2011'den beri Çanakkale'de (TCG Nusret). Brifteki "eski gemi" ifadesi kullanılmadı (1910'larda yapılmış, eski sayılmaz).
+- Seyit Onbaşı ve 275 kiloluk mermi hikâyesi çıkarıldı (tartışmalı). Osmanlı kayıplarına sayı verilmedi (doğrulanmadı); Gelibolu için "her iki taraftan yüz binlerce ölü ya da yaralı" genel ifadesi kullanıldı.
+- Kapak "26 MAYIN / DONANMAYI / DURDURDU" sayı doğrulandığı için korundu.
+
+### Sahne bölmesi
+
+| No | Bölüm | Metin |
+|---|---|---|
+| 0 | 1 · Boğazdaki dev donanma | Yirmi altı mayın, koca bir donanmayı durdurdu. Nasıl mı? Gelin, size Çanakkale'nin en sessiz kahramanını anlatayım. |
+| 1 | 1 | Yıl 1915, aylardan mart. Birinci Dünya Savaşı bütün hızıyla sürüyordu. |
+| 2 | 1 | İngiltere ve Fransa'nın aklında cesur bir plan vardı: savaş gemileriyle Çanakkale Boğazı'nı zorlamak ve doğruca İstanbul'a ulaşmak. |
+| 3 | 1 | Bu plana göre İstanbul düşerse Osmanlı savaştan çekilecek, Rusya'ya giden deniz yolu da açılacaktı. |
+| 4 | 1 | Ellerinde bunun için dünyanın en güçlü donanmalarından biri vardı. Onlarca zırhlı, dev toplar, binlerce denizci. |
+| 5 | 1 | Boğaz'ın iki yakasında ise Osmanlı tabyaları bekliyordu. Ama asıl savunma suyun altındaydı: sıra sıra dizilmiş mayınlar. |
+| 6 | 1 | Müttefikler bu mayınları haftalarca taramaya çalıştı. Peki sizce Osmanlı'nın elinde başka bir koz kalmış mıydı? |
+| 7 | 2 · Gece yarısı kararı | İşte burada hikâyemizin kahramanı sahneye çıkıyor: Nusret. Almanya'da yapılmış küçük bir mayın gemisiydi; bir zırhlının yanında oyuncak gibi kalırdı. |
+| 8 | 2 | Geminin komutanı Hakkı Bey, mayın grubunun komutanı ise Nazmi Bey'di. İkisi de Boğaz'ı avuçlarının içi gibi biliyordu. |
+| 9 | 2 | Günlerce düşman gemilerini izlediler ve tuhaf bir şey fark ettiler. |
+| 10 | 2 | Müttefik zırhlıları ateş ettikten sonra hep aynı yerde, Erenköy Koyu'nda geniş bir dönüş yapıyordu. Üstelik düşman, mayın hatlarının dışında kalan bu koyu güvenli sanıyordu. |
+| 11 | 2 | Plan basit ama çok tehlikeliydi: geceleyin düşmanın burnunun dibine girmek ve o dönüş yoluna mayın dökmek. |
+| 12 | 2 | Yedi Mart'ı sekize bağlayan gece, Nusret ışıklarını söndürdü ve karanlık sulara süzüldü. Bir projektör ışığı geminin üstüne düşse her şey bitecekti. |
+| 13 | 2 | Ama Nusret fark edilmedi. Yirmi altı mayın, kıyıya paralel tek bir sıra halinde, sessizce suya indi. |
+| 14 | 2 | Sonra gemi geldiği gibi geri döndü. Ve günlerce kimse, o sıranın orada olduğunu bilmedi. |
+| 15 | 3 · 18 Mart sabahı | On sekiz Mart sabahı hava açık, deniz sakindi. |
+| 16 | 3 | Kısa süre sonra Müttefik donanması Boğaz'a girdi ve tarihin en büyük deniz saldırılarından biri başladı. |
+| 17 | 3 | Gemilerin dev topları tabyaları dövdü, kıyı bataryaları da durmadan karşılık verdi. |
+| 18 | 3 | Duman, toz ve barut kokusu bütün Boğaz'ı kapladı. Saatler geçti, tabyalar sarsıldı ama susmadı. |
+| 19 | 3 | Öğleden sonra Fransız zırhlısı Bouvet, ateş hattından çekilmek için tam o koyda döndü. |
+| 20 | 3 | Ve bir anda korkunç bir patlama oldu. |
+| 21 | 3 | Bouvet yan yattı ve birkaç dakika içinde sulara gömüldü. Altı yüzü aşkın denizci gemiyle birlikte kayboldu. |
+| 22 | 3 | Onlar da birer insandı; evlerinde onları bekleyen aileleri vardı. Peki ama bu patlama nereden gelmişti? |
+| 23 | 4 · Peki neden? | Müttefik komutanlar önce bunun kıyıdan atılan bir torpido ya da akıntıyla sürüklenen bir mayın olduğunu düşündü. |
+| 24 | 4 | Kimsenin aklına, temiz sandıkları koyda bir mayın sırası olabileceği gelmedi. Bu yüzden saldırı sürdü. |
+| 25 | 4 | Ve tuzak bir kez daha çalıştı. Saat dördü geçerken İngiliz zırhlısı Inflexible mayına çarptı ve ağır yaralanarak hattan çekildi. |
+| 26 | 4 | Hemen ardından Irresistible aynı sıraya bindirdi ve akıntıda sürüklenmeye başladı. |
+| 27 | 4 | Ona yardıma koşan Ocean da bir mayına çarptı. Gece çökerken iki İngiliz zırhlısı da Boğaz'ın sularına gömüldü. |
+| 28 | 4 | Bakın, işin sırrı tam da burada. Gemiler tarama yapılan kanalın dışında, kıyıya yakın dönüyordu. |
+| 29 | 4 | Nusret'in mayınları da tam bu dönüş yoluna, kıyıya paralel dizilmişti. Böylece düşman, tuzağın içine kendi rotasıyla girdi. |
+| 30 | 4 | Yani zaferi tek bir top atışı getirmedi; günlerce süren sabırlı bir gözlem ve cesur bir gece kararı getirdi. |
+| 31 | 5 · Sonrası ve bugün | O akşam Müttefik donanması geri çekildi. Üç zırhlı batmış, üçü de ağır hasar almıştı. |
+| 32 | 5 | Ve o dev donanma bir daha Boğaz'ı zorlamadı. Çanakkale, denizden geçilmez olmuştu. |
+| 33 | 5 | Ama savaş bitmedi. Yirmi beş Nisan'da Müttefik askerleri Gelibolu kıyılarına çıktı ve aylarca sürecek kanlı kara savaşı başladı. |
+| 34 | 5 | Bu savaşta her iki taraftan da yüz binlerce genç ya hayatını kaybetti ya da yaralandı. |
+| 35 | 5 | Bugün on sekiz Mart, Çanakkale Deniz Zaferi olarak anılıyor. Nusret'in aslı Tarsus'ta bir müze gemisi, birebir kopyası ise Çanakkale'de ziyaretçilerini bekliyor. |
+| 36 | 5 | Peki sizce o gece Nusret fark edilseydi, tarih nasıl yazılırdı? Yorumlara yazın, çok merak ediyorum. |
