@@ -144,25 +144,25 @@ Kalan küçük notlar (yayını engellemez):
   - Meredith'in raporu: 9.860 mermi, 986 doğrulanmış ölüm (iddia).
   - Meredith'in sözü: "…they can face machine guns with the invulnerability of tanks."
 
-### Çekim listesi (sahne 0'dan): anlatıcı sesiyle yeniden yazım (BRAND §6.10), son tur
+### Çekim listesi (sahne 0'dan): YouTuber anlatıcı sesi (BRAND §6.0–6.3), üçüncü yükleme
 
 Anlatım, tek parça hikâye olarak:
-"Avustralya kuşlara savaş açtı. Düşman mı? Kuşlar. 1932'de yirmi bin kadar emu tarlaları yağmalıyor. Çiftçilerin çoğu savaştan dönme asker; ne istediklerini biliyorlar: makineli tüfek. Ordu geliyor. Yani — bir binbaşı, iki asker, iki tüfek. Ama emular bu savaşı iyi oynuyor: tüfeği görünce dağılıp kaçıyorlar. Tüfek de tam o anda tutukluk yapıyor. Binbaşı şaşkın: raporunda kuşları tanka benzetiyor. Binlerce kurşundan sonra ordu evine dönüyor. Emular mı? Tarlada kalıyor."
+"Avustralya bir zamanlar kuşlara savaş açtı, biliyor muydunuz? Gelin anlatayım: 1932'ydi. Yirmi bin kadar emu buğday tarlalarını silip süpürüyordu. Çiftçilerin çoğu eski askerdi ve makineli tüfek istediler. Peki ordu kimi gönderdi dersiniz? Bir binbaşı, iki asker, iki tüfek! Ama bakın işin komik tarafı: emular tüfeği görünce dağılıp kaçtılar. Tüfek de tam o anda tutukluk yaptı. Binbaşı raporuna “tank gibiler” diye yazdı. Binlerce kurşundan sonra ordu eve döndü. Yani savaşı kim kazandı? Emular!"
 
-Kapak: `AVUSTRALYA / KUŞLARA / SAVAŞ AÇTI`. 462 karakter (lint 471), 10 sahne, tahmini ~34 sn.
+Kapak: `AVUSTRALYA / KUŞLARA / SAVAŞ AÇTI`. 488 karakter (lint 497), 10 sahne, tahmini ~36 sn, "-yor" sonlu cümle 0.
 
-| # | Anlatım parçası | Tip | Görsel |
-|---|---|---|---|
-| 0 | Avustralya kuşlara savaş açtı. (`serious`) | emu charge | Lewis'li asker ateşte, 7 emu geliyor, büyük Kaşif 'kuşlara'da şok |
-| 1 | Düşman mı? Kuşlar. (`mischievously`) | emu words + peek | "Düşman", sonra kırmızı kutuda "kuşlar"; başakların arasından kocaman bir emu fırlıyor, Kaşif (1,0) şok |
-| 2 | 1932'de yirmi bin kadar emu tarlaları yağmalıyor. | map | Avustralya, Perth, Campion, "~20.000 emu!" |
-| 3 | Çiftçilerin çoğu savaştan dönme asker; ne istediklerini biliyorlar: makineli tüfek. | stage | Çiftlik, "Gaziler" tabelası, kamera yaklaşıyor, "MAKİNELİ TÜFEK!", kızgın çiftçiler, Kaşif şok |
-| 4 | Ordu geliyor. Yani — bir binbaşı, iki asker, iki tüfek. (`mischievously`) | stage | Üç kişi yürüyerek giriyor, iki asker Lewis tüfeği taşıyor (yeni `lewis` aksesuarı), "3 kişi, 2 tüfek", Kaşif gösterip omuz silkiyor |
-| 5 | Ama emular bu savaşı iyi oynuyor: tüfeği görünce dağılıp kaçıyorlar. | emu scatter | Ateş, boşa toz; sürü gruplara bölünüyor |
-| 6 | Tüfek de tam o anda tutukluk yapıyor. (`dramatic`) | emu charge + jam | Duman, ateş kesiliyor, "?" |
-| 7 | Binbaşı şaşkın: raporunda kuşları tanka benzetiyor. (`amazed`) | stage | Meredith elinde rapor, "“Tank gibiler!”" + ok, Kaşif şok |
-| 8 | Binlerce kurşundan sonra ordu evine dönüyor. | title | "9.860 / kurşun", not "5 hafta sonra: eve dönüş", Kaşif omuz silkiyor |
-| 9 | Emular mı? Tarlada kalıyor. (`mischievously`) | emu field | Emular solda (spread 0–0,48) gagalıyor, Kaşif sağda gülümseyip omuz silkiyor |
+| # | Anlatım parçası | Ton | Tip | Görsel |
+|---|---|---|---|---|
+| 0 | Avustralya bir zamanlar kuşlara savaş açtı, biliyor muydunuz? | curious | emu charge | Lewis'li asker ateşte, 7 emu, büyük Kaşif 'kuşlara'da şok |
+| 1 | Gelin anlatayım: 1932'ydi. | mischievously | map | Avustralya, Perth, Campion, "Kasım 1932" |
+| 2 | Yirmi bin kadar emu buğday tarlalarını silip süpürüyordu. | excited | emu field | Ezilmiş buğdayda gagalayan sürü, "~20.000 emu!", Kaşif dürbünden bakıp şaşırıyor |
+| 3 | Çiftçilerin çoğu eski askerdi ve makineli tüfek istediler. | sarcastic | stage | "Gaziler" tabelası, "MAKİNELİ TÜFEK!", kızgın çiftçiler, Kaşif şok |
+| 4 | Peki ordu kimi gönderdi dersiniz? Bir binbaşı, iki asker, iki tüfek! | laughs | stage | Kaşif soruyor; Meredith + Lewis taşıyan iki asker giriyor, "3 kişi, 2 tüfek" |
+| 5 | Ama bakın işin komik tarafı: emular tüfeği görünce dağılıp kaçtılar. | mischievously | emu scatter | Ateş, boşa toz, sürü gruplara bölünüyor |
+| 6 | Tüfek de tam o anda tutukluk yaptı. | surprised | emu charge + jam | Duman, "?" |
+| 7 | Binbaşı raporuna “tank gibiler” diye yazdı. | laughs | stage | Meredith elinde rapor, "“Tank gibiler!”" + ok, Kaşif şok |
+| 8 | Binlerce kurşundan sonra ordu eve döndü. | sarcastic | title | "9.860 / kurşun", not "5 hafta sonra: eve dönüş" |
+| 9 | Yani savaşı kim kazandı? Emular! | excited | emu words + peek | "Kazanan" + kırmızı kutuda "emular", başaklardan emu fırlıyor, Kaşif gülüp omuz silkiyor |
 
 ### 01-emu-savasi — tur 1 (eleştirmen)
 lint OK · 500 karakter · tahmini 36,7 sn (35 sn üst sınırını aşıyor) · motion 10,9–23,5 (hepsi ≥ 4) · taslak MP4'te hayalet şerit görülmedi.

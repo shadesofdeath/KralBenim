@@ -32,12 +32,12 @@
    "kuşlara"
   ],
   "scene": 0,
-  "t": 1.5,
+  "t": 2.4,
   "kasif": false
  },
  "youtube": {
   "title": "Emu Savaşı: Avustralya Ordusu Kuşlara Nasıl Yenildi? 🪶",
-  "description": "Emu Savaşı: 1932'de Avustralya, buğday tarlalarını yağmalayan emulara karşı orduyu gönderdi. Peki makineli tüfekler kuşlara neden yetmedi?\n\nBatı Avustralya'da, Campion çevresinde yaklaşık 20.000 emu tarlalara dadanmıştı. Çiftçilerin çoğu Birinci Dünya Savaşı'ndan dönmüş askerlerdi ve hükümetten makineli tüfek istediler. Gelen 'ordu' bir binbaşı, iki asker ve iki Lewis tüfeğiydi. Emular küçük gruplara dağılarak kaçtı, tüfek bir pusuda tutukluk yaptı ve Binbaşı Meredith raporunda kuşları tanklara benzetti. Birkaç hafta sonra ordu geri çekildi; Meredith'in raporuna göre 9.860 kurşuna karşılık 986 emu vurulmuştu.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence bu savaşı gerçekten kim kazandı? Yorumlara yaz!\n\n#shorts #emusavaşı #avustralya #tarih #düşünbakalım",
+  "description": "Emu Savaşı: Avustralya bir zamanlar kuşlara savaş açtı, biliyor muydunuz? 1932'de ordu, emulara karşı makineli tüfeklerle sahaya çıktı. Peki kim kazandı?\n\nBatı Avustralya'da, Campion çevresinde yirmi bin kadar emu buğday tarlalarını silip süpürüyordu. Çiftçilerin çoğu Birinci Dünya Savaşı'ndan dönmüş askerlerdi ve makineli tüfek istediler. Gelen 'ordu' mu? Bir binbaşı, iki asker ve iki Lewis tüfeği! Emular tüfeği görünce dağıldı, tüfek tam o anda tutukluk yaptı, Binbaşı Meredith de raporunda kuşları tanklara benzetti. Meredith'in raporuna göre 9.860 kurşuna karşılık 986 emu vuruldu ve birkaç hafta sonra ordu evine döndü.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone olun. Sizce bu savaşı gerçekten kim kazandı? Yorumlara yazın!\n\n#shorts #emusavaşı #avustralya #tarih #düşünbakalım",
   "tags": [
    "emu savaşı",
    "büyük emu savaşı",
@@ -62,9 +62,9 @@
  "scenes": [
   {
    "type": "emu",
-   "tone": "serious",
-   "text": "Avustralya kuşlara savaş açtı.",
-   "visual": "Buğday tarlası, ufukta okaliptüs ağaçları; solda geniş kenarlı asker şapkalı bir asker tripod üstündeki Lewis makineli tüfeğiyle ateş etmeye başlıyor; uzakta küçük bir emu sürüsü; önde büyük Kaşif 'kuşlara'da geri sıçrıyor.",
+   "tone": "curious",
+   "text": "Avustralya bir zamanlar kuşlara savaş açtı, biliyor muydunuz?",
+   "visual": "Buğday tarlası, ufukta okaliptüs ağaçları; solda geniş kenarlı asker şapkalı bir asker tripod üstündeki Lewis makineli tüfeğiyle ateş ediyor, sağdan 7 emu geliyor; önde büyük Kaşif 'kuşlara'da şaşkınlıkla geri sıçrıyor.",
    "title": {},
    "cues": {
     "fire": "Avustralya",
@@ -91,58 +91,17 @@
    }
   },
   {
-   "type": "emu",
-   "tone": "mischievously",
-   "text": "Düşman mı? Kuşlar.",
-   "visual": "Boş buğday tarlası; dev yazı 'DÜŞMAN' çarpıyor, 'Kuşlar'da kırmızı kutuda 'KUŞLAR' çarpıyor ve başakların arasından kocaman bir emu boynunu uzatıp fırlıyor; sağda Kaşif şaşkınlıkla geri sıçrıyor.",
-   "title": {},
-   "cues": {
-    "w0": "Düşman",
-    "w1": "Kuşlar"
-   },
-   "params": {
-    "mode": "words",
-    "fire": false,
-    "words": {
-     "lines": [
-      "Düşman",
-      "kuşlar"
-     ],
-     "highlight": [
-      "kuşlar"
-     ],
-     "y": 0.12,
-     "size": 180
-    },
-    "peek": {
-     "at": "w1",
-     "x": 0.3,
-     "size": 0.92
-    },
-    "cast": [
-     {
-      "who": "kasif",
-      "x": 0.76,
-      "pose": "idle",
-      "face": "left",
-      "at": "w1",
-      "then": "shock",
-      "scale": 1.0
-     }
-    ]
-   }
-  },
-  {
    "type": "map",
-   "text": "1932'de yirmi bin kadar emu tarlaları yağmalıyor.",
-   "visual": "Eski harita: Avustralya kıtası; Perth ve kırmızı halkalı Campion işaretleniyor, harita Campion'a yaklaşıyor, el yazısı not '~20.000 emu!' beliriyor.",
+   "tone": "mischievously",
+   "text": "Gelin anlatayım: 1932'ydi.",
+   "visual": "Eski harita: Avustralya kıtası; Perth ve kırmızı halkalı Campion işaretleniyor, harita Campion'a yaklaşıyor, el yazısı not 'Kasım 1932' beliriyor.",
    "title": {
     "white": "1932",
     "gray": "Batı Avustralya"
    },
    "cues": {
-    "city": "1932",
-    "note": "yirmi"
+    "city": "anlatayım",
+    "note": "1932"
    },
    "params": {
     "coords": "sheet",
@@ -413,8 +372,8 @@
      }
     ],
     "note": {
-     "text": "~20.000 emu!",
-     "x": 0.52,
+     "text": "Kasım 1932",
+     "x": 0.56,
      "y": 0.93,
      "at": "note"
     },
@@ -427,15 +386,58 @@
    }
   },
   {
+   "type": "emu",
+   "tone": "excited",
+   "text": "Yirmi bin kadar emu buğday tarlalarını silip süpürüyordu.",
+   "visual": "Buğday tarlasında bir emu sürüsü başakları gagalıyor, başakların çoğu ezilip yatmış; üstte el yazısı '~20.000 emu!' beliriyor; sağda Kaşif dürbünle bakıp 'süpürüyordu'da şaşırıyor.",
+   "title": {
+    "white": "Buğday",
+    "gray": "tarlaları"
+   },
+   "cues": {
+    "lab": "Yirmi",
+    "hit": "süpürüyordu"
+   },
+   "params": {
+    "mode": "field",
+    "n": 12,
+    "trampled": 0.55,
+    "spread": [
+     -0.05,
+     0.62
+    ],
+    "label": {
+     "text": "~20.000 emu!",
+     "x": 0.42,
+     "y": 0.2,
+     "at": "lab",
+     "size": 90
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "y": 0.6,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "scale": 0.85
+     }
+    ]
+   }
+  },
+  {
    "type": "stage",
-   "text": "Çiftçilerin çoğu savaştan dönme asker; ne istediklerini biliyorlar: makineli tüfek.",
-   "visual": "Çiftlik evinin önünde iki şapkasız çiftçi, kamera yavaşça yaklaşıyor; 'asker'de el yazısı 'Savaş gazileri' notu, 'tüfek'te büyük el yazısı 'MAKİNELİ TÜFEK!' beliriyor; biri kızgın yüzle yukarıyı işaret ediyor, diğeri yumruğunu sallıyor; Kaşif geri sıçrıyor.",
+   "tone": "sarcastic",
+   "text": "Çiftçilerin çoğu eski askerdi ve makineli tüfek istediler.",
+   "visual": "Çiftlik evinin önünde iki şapkasız çiftçi; 'askerdi'de 'Gaziler' tabelası çıkıyor, kamera yaklaşıyor; 'tüfek'te büyük el yazısı 'MAKİNELİ TÜFEK!' beliriyor, biri kızgın yüzle yukarıyı işaret ediyor, diğeri el sallıyor; Kaşif geri sıçrıyor.",
    "title": {
     "white": "Çiftçiler",
     "gray": "eski asker"
    },
    "cues": {
-    "vet": "asker",
+    "vet": "askerdi",
     "hit": "tüfek"
    },
    "params": {
@@ -471,7 +473,7 @@
     "cast": [
      {
       "who": "kasif",
-      "x": 0.22,
+      "x": 0.24,
       "pose": "idle",
       "face": "right",
       "at": "hit",
@@ -479,7 +481,7 @@
      },
      {
       "who": "ciftci1",
-      "x": 0.5,
+      "x": 0.55,
       "pose": "talk",
       "face": "left",
       "talk": false,
@@ -491,7 +493,7 @@
      },
      {
       "who": "ciftci2",
-      "x": 0.72,
+      "x": 0.76,
       "pose": "idle",
       "face": "left",
       "talk": false,
@@ -505,15 +507,15 @@
   },
   {
    "type": "stage",
-   "tone": "mischievously",
-   "text": "Ordu geliyor. Yani — bir binbaşı, iki asker, iki tüfek.",
-   "visual": "Şapkalı Binbaşı Meredith ve iki şapkalı asker sağdan yürüyerek sahneye giriyor, iki asker birer Lewis tüfeği taşıyor, hepsi bu kadar; 'tüfek'te el yazısı '3 kişi, 2 tüfek' beliriyor; Kaşif onları gösterip omuz silkiyor.",
+   "tone": "laughs",
+   "text": "Peki ordu kimi gönderdi dersiniz? Bir binbaşı, iki asker, iki tüfek!",
+   "visual": "Kaşif izleyiciye dönüp soruyor; sağdan şapkalı Binbaşı Meredith ve iki şapkalı asker yürüyerek giriyor, askerler birer Lewis tüfeği taşıyor; 'tüfek'te el yazısı '3 kişi, 2 tüfek' beliriyor, Kaşif gülerek omuz silkiyor.",
    "title": {
     "white": "Kasım",
     "gray": "1932"
    },
    "cues": {
-    "w": "Ordu",
+    "arr": "asker",
     "hit": "tüfek"
    },
    "params": {
@@ -535,8 +537,7 @@
      {
       "who": "kasif",
       "x": 0.14,
-      "pose": "point",
-      "dir": "right",
+      "pose": "talk",
       "face": "right",
       "at": "hit",
       "then": "shrug",
@@ -550,7 +551,8 @@
       "to": 0.42,
       "face": "left",
       "talk": false,
-      "dur": 1.4
+      "at": "arr",
+      "then": "idle"
      },
      {
       "who": "asker1",
@@ -561,7 +563,7 @@
       "face": "left",
       "talk": false,
       "scale": 0.92,
-      "dur": 1.6,
+      "at": "arr",
       "then": "hold",
       "item": "lewis"
      },
@@ -574,7 +576,7 @@
       "face": "left",
       "talk": false,
       "scale": 0.92,
-      "dur": 1.8,
+      "at": "arr",
       "then": "hold",
       "item": "lewis"
      }
@@ -583,14 +585,15 @@
   },
   {
    "type": "emu",
-   "text": "Ama emular bu savaşı iyi oynuyor: tüfeği görünce dağılıp kaçıyorlar.",
+   "tone": "mischievously",
+   "text": "Ama bakın işin komik tarafı: emular tüfeği görünce dağılıp kaçtılar.",
    "visual": "Asker Lewis tüfeğiyle ateş ediyor, mermiler boşa toz kaldırıyor; emu sürüsü 'dağılıp'ta küçük gruplara bölünüp her yöne kaçıyor.",
    "title": {
     "white": "Emular",
     "gray": "dağılıyor"
    },
    "cues": {
-    "fire": "Ama",
+    "fire": "tüfeği",
     "scatter": "dağılıp"
    },
    "params": {
@@ -605,8 +608,8 @@
   },
   {
    "type": "emu",
-   "tone": "dramatic",
-   "text": "Tüfek de tam o anda tutukluk yapıyor.",
+   "tone": "surprised",
+   "text": "Tüfek de tam o anda tutukluk yaptı.",
    "visual": "Emular yeniden sürü halinde koşuyor, asker ateş ediyor; 'tutukluk'ta tüfekten duman çıkıyor, ateş kesiliyor, asker omuz silkiyor, başının üstünde dev kırmızı bir '?' beliriyor.",
    "title": {
     "white": "Tüfek",
@@ -630,16 +633,16 @@
   },
   {
    "type": "stage",
-   "tone": "amazed",
-   "text": "Binbaşı şaşkın: raporunda kuşları tanka benzetiyor.",
-   "visual": "Şapkalı Binbaşı Meredith elinde raporuyla duruyor, 'tanka'da üstte büyük el yazısı alıntı '“Tank gibiler!”' beliriyor ve ona ok uzanıyor; yanındaki asker omuz silkiyor; Kaşif şaşkınlıkla geri sıçrıyor.",
+   "tone": "laughs",
+   "text": "Binbaşı raporuna “tank gibiler” diye yazdı.",
+   "visual": "Şapkalı Binbaşı Meredith elinde raporuyla duruyor, 'tank'ta üstte büyük el yazısı alıntı '“Tank gibiler!”' beliriyor ve ona ok uzanıyor; yanındaki asker omuz silkiyor; Kaşif şaşkınlıkla geri sıçrıyor.",
    "title": {
     "white": "Meredith",
     "gray": "raporu"
    },
    "cues": {
-    "w": "raporunda",
-    "hit": "tanka"
+    "w": "raporuna",
+    "hit": "tank"
    },
    "params": {
     "foreground": "hatch",
@@ -689,7 +692,8 @@
   },
   {
    "type": "title",
-   "text": "Binlerce kurşundan sonra ordu evine dönüyor.",
+   "tone": "sarcastic",
+   "text": "Binlerce kurşundan sonra ordu eve döndü.",
    "visual": "Dev yazı kelime kelime çarpıyor: '9.860 / kurşun', '9.860' kırmızı kutuda; el yazısı not '5 hafta sonra: eve dönüş'; sağ altta Kaşif omuz silkiyor.",
    "title": {
     "white": "Aralık",
@@ -698,7 +702,7 @@
    "cues": {
     "w0": "Binlerce",
     "w1": "kurşun",
-    "note": "dönüyor"
+    "note": "döndü"
    },
    "params": {
     "lines": [
@@ -723,32 +727,43 @@
   },
   {
    "type": "emu",
-   "tone": "mischievously",
-   "text": "Emular mı? Tarlada kalıyor.",
-   "visual": "Buğday tarlasında emular rahatça gezinip başaklara gagalıyor; önde Kaşif 'Tarlada'da gülümseyerek omuz silkiyor.",
+   "tone": "excited",
+   "text": "Yani savaşı kim kazandı? Emular!",
+   "visual": "Boş buğday tarlası; dev yazı 'KAZANAN' çarpıyor, 'Emular'da kırmızı kutuda 'EMULAR' çarpıyor ve başakların arasından kocaman bir emu fırlıyor; sağda Kaşif gülerek omuz silkiyor.",
    "title": {},
    "cues": {
-    "hit": "Tarlada"
+    "w0": "kazandı",
+    "w1": "Emular"
    },
    "params": {
-    "mode": "field",
-    "n": 7,
-    "trampled": 0.35,
-    "spread": [
-     -0.02,
-     0.48
-    ],
+    "mode": "words",
+    "fire": false,
+    "words": {
+     "lines": [
+      "Kazanan",
+      "emular"
+     ],
+     "highlight": [
+      "emular"
+     ],
+     "y": 0.12,
+     "size": 180
+    },
+    "peek": {
+     "at": "w1",
+     "x": 0.3,
+     "size": 0.92
+    },
     "cast": [
      {
       "who": "kasif",
-      "x": 0.78,
-      "y": 0.6,
+      "x": 0.76,
       "pose": "talk",
       "face": "left",
-      "at": "hit",
+      "at": "w1",
       "then": "shrug",
       "emotion": "happy",
-      "scale": 0.9
+      "scale": 1.0
      }
     ]
    }
