@@ -415,3 +415,77 @@ Plan dışı: kanal sahibi 2026-10-20 öğlen ek bir uzun video istedi, hazır o
 | Gece temizliği | Glimfatik sistem: beyin uykuda kendini yıkar | 3D beyin + sıvı akışı (yeni tip) |
 | Uykusuzluk öldürür mü? | Fare deneyleri, FFI | bars, headline |
 | Peki ne kadar? | 7–9 saat, hayatın üçte biri, dönüş + yorum sorusu | clockface, headline |
+
+### Anlatım (tek parça)
+
+Bu çocuk on bir gün hiç uyumadı. Peki insan hiç uyumasaydı ne olurdu, hiç merak ettiniz mi? Gelin, cevabı o çocuğun hikâyesiyle bulalım. Yıl 1963'tü ve Aralık ayı bitmek üzereydi. San Diego'da on yedi yaşındaki Randy Gardner, okulunun bilim fuarı için bir proje arıyordu. Sonunda aklına çılgınca bir fikir geldi: Uyumadan kaç gün dayanabilirdi? Arkadaşları onu nöbetleşe izleyecekti, çünkü kural basitti: Randy uykuya daldığı an, deney bitecekti. Kısa süre sonra Stanford'dan genç bir uyku araştırmacısı, William Dement, çocuğu izlemeye geldi. İlk gün her şey bir oyun gibiydi. Ama birkaç gün sonra o çocuğun kafasının içinde neler olacağını kimse tahmin edemezdi.
+
+Önce şunu düşünün: Siz bir gece hiç uyumadınız. Sabah olduğunda beyninizde ne değişmiştir? Avustralya'da yapılan bir araştırmada gönüllüler on yedi ila on dokuz saat uyanık tutuldu ve tepki hızları ölçüldü. Sonuç mu? Bazı testlerde bu insanlar, kanında yaklaşık yarım promil alkol olan birinden farksızdı, hatta daha kötüydü. Yani bir gece uykusuz kalan biri kendini ayık sanır, ama beyni biraz sarhoş gibi çalışır. Çünkü beynin ön tarafı, yani karar veren ve sizi frenleyen bölge, uykusuzluktan en çabuk etkilenen yerlerden biridir.
+
+Şimdi Randy'ye dönelim. Üçüncü günde midesi bulandı ve az önce olan şeyleri unutmaya başladı. Sonraki günlerde ise işler tuhaflaştı. Dement ondan yüzden geriye doğru yedişer saymasını istediğinde, Randy birkaç adım sonra durdu, çünkü ne yaptığını unutmuştu. Hatta bir ara gözleri ona oyun oynadı ve Randy bir sokak tabelasını insan sandı. İşte asıl ilginç kısım burası: Uyumayan bir beyin, siz izin vermeseniz bile uyumanın bir yolunu bulur. Buna mikro uyku denir. Beyniniz birkaç saniyeliğine kapanır ve siz bunu fark etmezsiniz bile. Gözleriniz açıktır, belki direksiyonun başındasınız, ama o birkaç saniye boyunca aslında orada değilsiniz. Yani uyku sizin kararınızı beklemez. Beyin ihtiyacı olanı, gerekirse parça parça, kendisi alır.
+
+Peki beyin uykuya neden bu kadar muhtaç? Gün boyunca beyin hücreleriniz durmadan çalışır ve tıpkı bir fabrika gibi atık üretir. Vücudun geri kalanında bu atıkları lenf sistemi toplar. Ama beyinde uzun yıllar böyle bir temizlik sistemi bilinmiyordu. 2013 yılında Danimarkalı nörobilimci Maiken Nedergaard ve ekibi, farelerle yaptıkları deneylerde bu sırrı çözdü. Fareler uyuduğunda, beyin hücrelerinin arasındaki boşluklar yaklaşık yüzde altmış genişledi. Ve bu açılan yollardan beyin omurilik sıvısı akıyor, gün boyu biriken atıkları yıkayıp götürüyordu. Bu atıklardan biri de Alzheimer hastalığıyla ilişkilendirilen beta amiloid proteini. Uyuyan fareler onu yaklaşık iki kat hızlı temizledi. Yani uyku bir tembellik değil. Beyniniz her gece, siz farkında olmadan, kendini yıkıyor.
+
+Peki bu temizlik hiç yapılmasaydı ne olurdu? Uykusuzluk insanı gerçekten öldürür mü? 1980'lerde Chicago Üniversitesi'nde Allan Rechtschaffen ve ekibi bu soruyu farelerle sınadı. Fareleri hiç uyutmadılar ve sonuç ürkütücüydü: Hayvanlar genellikle iki ila üç hafta içinde öldü. Üstelik fareler normalden fazla yemelerine rağmen kilo kaybetti ve vücut ısılarını koruyamadı. İnsanlarda ise çok daha nadir bir örnek var: ölümcül ailesel uykusuzluk. Bu kalıtsal hastalık, beynin derinindeki talamusu yavaş yavaş tahrip eder ve hasta bir daha derin uykuya dalamaz. Ama içiniz rahat olsun, birkaç gece uykusuzluk size bunu bulaştırmaz.
+
+Peki Randy'ye ne oldu? 8 Ocak 1964'te, tam iki yüz altmış dört saatin sonunda, deney sona erdi. Randy on dört saatten biraz fazla uyudu, sonra kalktı ve hayatına kaldığı yerden devam etti. Ama bu şanslı son kimseyi yanıltmasın. Guinness Rekorlar Kitabı bile, tehlikeli olduğu için uykusuzluk rekorlarını artık kaydetmiyor. Uzmanlar yetişkinlere her gece yedi ila dokuz saat uyku öneriyor. Yani hayatımızın yaklaşık üçte biri uykuda geçer. Ama o saatler hayattan çalınmaz. O saatler, beyninizin kendini onardığı ve sizi yarına hazırladığı saatlerdir. Peki siz en fazla kaç saat uykusuz kaldınız ve beyniniz size ne gibi oyunlar oynadı? Yorumlara yazın!
+
+Toplam: 3999 karakter, 38 sahne.
+
+### Doğrulama notları
+
+- **Randy Gardner:** 17 yaşında, San Diego, lise bilim fuarı; deney Aralık 1963 sonunda başladı, 8 Ocak 1964'te 264 saatte bitti. William Dement (Stanford) ve Donanma doktoru John J. Ross izledi. 3. günde mide bulantısı ve hafıza sorunu, sonlara doğru aşırı sinirlilik; ardından bir deniz hastanesinde 14 saatten biraz fazla uyudu (NPR, 2024 "60th anniversary"; NPR Hidden Brain 2017). Yüzden geriye yedişer sayma ve sokak tabelasını insan sanma ayrıntıları Dement'in anlatımlarında yaygın olarak geçer; ekstra ayrıntı (ünlü futbolcu sanması vb.) eklenmedi.
+- **Alkol karşılaştırması (Williamson & Feyer 2000, Occup Environ Med 57:649):** 17–19 saat uyanıklık, *bazı* testlerde %0,05 kan alkolü kadar ya da daha kötü. **Düzeltme:** brifteki "0,05 promil" yanlış; %0,05 = **binde 0,5 = yarım promil**. Metinde "yaklaşık yarım promil" ve "bazı testlerde" dendi. Daha uzun süre (≈ %0,1 = 1 promil) karakter bütçesi için çıkarıldı.
+- **Glimfatik sistem:** Xie, Nedergaard ve ark., Science, Ekim 2013 (farelerde). Uykuda hücreler arası boşluk ~%60 genişler, beta amiloid ~2 kat hızlı temizlenir (NIH haber bülteni, ScienceDaily, The Scientist). Metinde "farelerde" ve "yaklaşık" vurgusu korundu.
+- **Rechtschaffen (Chicago Üniversitesi), 1980'ler, Sleep 1989:** tamamen uykusuz sıçanlar genellikle 2–3 haftada öldü (Everson ve ark. 1989'da 11–32 gün aralığı); çok yemelerine rağmen kilo kaybı, ısı düzensizliği; kesin ölüm nedeni bulunamadı (Sleep Research Society anma yazısı, Slate 2009). Deneyler aslında sıçanla; Türkçe genel kullanımda "fare" dendi.
+- **FFI:** kalıtsal prion hastalığı, talamus hasarı; çok nadir. Aile sayısı ve yaşam süresi gibi kesin sayılar bütçe ve kesinlik nedeniyle çıkarıldı.
+- **Uyku süresi:** yetişkinlere 7–9 saat (AASM/NSF önerisi), hayatın yaklaşık üçte biri uykuda.
+- **Guinness:** uykusuzluk rekorlarını sağlık riski nedeniyle artık kaydetmiyor (yaygın olarak bildirilen bilgi).
+- **Çıkarılanlar / yumuşatılanlar:** "yerel uyku" (uyanık sıçanda nöron gruplarının uyuması, Vyazovskiy 2011) bütçe için çıkarıldı; Çernobil vb. efsaneler kullanılmadı.
+
+Sesli okuma kontrolü: devrik cümle yok, ardışık aynı ek yok, "-yor" sonları üçte birin altında (lint geçti); "1963'tü", "8 Ocak 1964'te", "2013 yılında", "1980'lerde" doğal okunuyor; diğer sayılar yazıyla.
+
+**Bölüm aralıkları (scenes indeksi):** 0–6 On bir gün uyumayan çocuk · 7–11 İlk 24 saat · 12–18 Beyin kendini kapatıyor · 19–25 Beynin gece temizliği · 26–31 Uykusuzluk öldürür mü? · 32–37 Peki ne kadar uyumalı?
+
+### Sahne bölmesi
+
+| # | Bölüm | Metin |
+|---|---|---|
+| 0 | On bir gün uyumayan çocuk | Bu çocuk on bir gün hiç uyumadı. |
+| 1 | On bir gün uyumayan çocuk | Peki insan hiç uyumasaydı ne olurdu, hiç merak ettiniz mi? Gelin, cevabı o çocuğun hikâyesiyle bulalım. |
+| 2 | On bir gün uyumayan çocuk | Yıl 1963'tü ve Aralık ayı bitmek üzereydi. San Diego'da on yedi yaşındaki Randy Gardner, okulunun bilim fuarı için bir proje arıyordu. |
+| 3 | On bir gün uyumayan çocuk | Sonunda aklına çılgınca bir fikir geldi: Uyumadan kaç gün dayanabilirdi? |
+| 4 | On bir gün uyumayan çocuk | Arkadaşları onu nöbetleşe izleyecekti, çünkü kural basitti: Randy uykuya daldığı an, deney bitecekti. |
+| 5 | On bir gün uyumayan çocuk | Kısa süre sonra Stanford'dan genç bir uyku araştırmacısı, William Dement, çocuğu izlemeye geldi. |
+| 6 | On bir gün uyumayan çocuk | İlk gün her şey bir oyun gibiydi. Ama birkaç gün sonra o çocuğun kafasının içinde neler olacağını kimse tahmin edemezdi. |
+| 7 | İlk 24 saat | Önce şunu düşünün: Siz bir gece hiç uyumadınız. Sabah olduğunda beyninizde ne değişmiştir? |
+| 8 | İlk 24 saat | Avustralya'da yapılan bir araştırmada gönüllüler on yedi ila on dokuz saat uyanık tutuldu ve tepki hızları ölçüldü. |
+| 9 | İlk 24 saat | Sonuç mu? Bazı testlerde bu insanlar, kanında yaklaşık yarım promil alkol olan birinden farksızdı, hatta daha kötüydü. |
+| 10 | İlk 24 saat | Yani bir gece uykusuz kalan biri kendini ayık sanır, ama beyni biraz sarhoş gibi çalışır. |
+| 11 | İlk 24 saat | Çünkü beynin ön tarafı, yani karar veren ve sizi frenleyen bölge, uykusuzluktan en çabuk etkilenen yerlerden biridir. |
+| 12 | Beyin kendini kapatıyor | Şimdi Randy'ye dönelim. Üçüncü günde midesi bulandı ve az önce olan şeyleri unutmaya başladı. |
+| 13 | Beyin kendini kapatıyor | Sonraki günlerde ise işler tuhaflaştı. Dement ondan yüzden geriye doğru yedişer saymasını istediğinde, Randy birkaç adım sonra durdu, çünkü ne yaptığını unutmuştu. |
+| 14 | Beyin kendini kapatıyor | Hatta bir ara gözleri ona oyun oynadı ve Randy bir sokak tabelasını insan sandı. |
+| 15 | Beyin kendini kapatıyor | İşte asıl ilginç kısım burası: Uyumayan bir beyin, siz izin vermeseniz bile uyumanın bir yolunu bulur. |
+| 16 | Beyin kendini kapatıyor | Buna mikro uyku denir. Beyniniz birkaç saniyeliğine kapanır ve siz bunu fark etmezsiniz bile. |
+| 17 | Beyin kendini kapatıyor | Gözleriniz açıktır, belki direksiyonun başındasınız, ama o birkaç saniye boyunca aslında orada değilsiniz. |
+| 18 | Beyin kendini kapatıyor | Yani uyku sizin kararınızı beklemez. Beyin ihtiyacı olanı, gerekirse parça parça, kendisi alır. |
+| 19 | Beynin gece temizliği | Peki beyin uykuya neden bu kadar muhtaç? Gün boyunca beyin hücreleriniz durmadan çalışır ve tıpkı bir fabrika gibi atık üretir. |
+| 20 | Beynin gece temizliği | Vücudun geri kalanında bu atıkları lenf sistemi toplar. Ama beyinde uzun yıllar böyle bir temizlik sistemi bilinmiyordu. |
+| 21 | Beynin gece temizliği | 2013 yılında Danimarkalı nörobilimci Maiken Nedergaard ve ekibi, farelerle yaptıkları deneylerde bu sırrı çözdü. |
+| 22 | Beynin gece temizliği | Fareler uyuduğunda, beyin hücrelerinin arasındaki boşluklar yaklaşık yüzde altmış genişledi. |
+| 23 | Beynin gece temizliği | Ve bu açılan yollardan beyin omurilik sıvısı akıyor, gün boyu biriken atıkları yıkayıp götürüyordu. |
+| 24 | Beynin gece temizliği | Bu atıklardan biri de Alzheimer hastalığıyla ilişkilendirilen beta amiloid proteini. Uyuyan fareler onu yaklaşık iki kat hızlı temizledi. |
+| 25 | Beynin gece temizliği | Yani uyku bir tembellik değil. Beyniniz her gece, siz farkında olmadan, kendini yıkıyor. |
+| 26 | Uykusuzluk öldürür mü? | Peki bu temizlik hiç yapılmasaydı ne olurdu? Uykusuzluk insanı gerçekten öldürür mü? |
+| 27 | Uykusuzluk öldürür mü? | 1980'lerde Chicago Üniversitesi'nde Allan Rechtschaffen ve ekibi bu soruyu farelerle sınadı. |
+| 28 | Uykusuzluk öldürür mü? | Fareleri hiç uyutmadılar ve sonuç ürkütücüydü: Hayvanlar genellikle iki ila üç hafta içinde öldü. |
+| 29 | Uykusuzluk öldürür mü? | Üstelik fareler normalden fazla yemelerine rağmen kilo kaybetti ve vücut ısılarını koruyamadı. |
+| 30 | Uykusuzluk öldürür mü? | İnsanlarda ise çok daha nadir bir örnek var: ölümcül ailesel uykusuzluk. |
+| 31 | Uykusuzluk öldürür mü? | Bu kalıtsal hastalık, beynin derinindeki talamusu yavaş yavaş tahrip eder ve hasta bir daha derin uykuya dalamaz. Ama içiniz rahat olsun, birkaç gece uykusuzluk size bunu bulaştırmaz. |
+| 32 | Peki ne kadar uyumalı? | Peki Randy'ye ne oldu? 8 Ocak 1964'te, tam iki yüz altmış dört saatin sonunda, deney sona erdi. |
+| 33 | Peki ne kadar uyumalı? | Randy on dört saatten biraz fazla uyudu, sonra kalktı ve hayatına kaldığı yerden devam etti. |
+| 34 | Peki ne kadar uyumalı? | Ama bu şanslı son kimseyi yanıltmasın. Guinness Rekorlar Kitabı bile, tehlikeli olduğu için uykusuzluk rekorlarını artık kaydetmiyor. |
+| 35 | Peki ne kadar uyumalı? | Uzmanlar yetişkinlere her gece yedi ila dokuz saat uyku öneriyor. Yani hayatımızın yaklaşık üçte biri uykuda geçer. |
+| 36 | Peki ne kadar uyumalı? | Ama o saatler hayattan çalınmaz. O saatler, beyninizin kendini onardığı ve sizi yarına hazırladığı saatlerdir. |
+| 37 | Peki ne kadar uyumalı? | Peki siz en fazla kaç saat uykusuz kaldınız ve beyniniz size ne gibi oyunlar oynadı? Yorumlara yazın! |
