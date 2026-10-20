@@ -19,6 +19,7 @@ else in out/telegram/<key>.json. `status` never fails: no token/chat id/network 
 Env: TELEGRAM_BOT_TOKEN. Chat id: TELEGRAM_CHAT_ID or config/telegram_chat_id.
 GITHUB_TOKEN + GITHUB_REPOSITORY (Actions). TELEGRAM_API (tests): API base, default https://api.telegram.org.
 """
+import html
 import json
 import os
 import re
@@ -83,23 +84,23 @@ def instagram_caption(script):
 #   tg/<key>/<slug>/shard<i>    run|percent                     live render progress of shard i
 # Without GITHUB_TOKEN (local use) the same records go to a JSON file (out/telegram/<key>.json).
 # Whoever writes then re-renders the whole message from all records and edits it, so the message is
-# always complete. The message is plain text (no parse_mode: titles never need escaping).
+# always complete. The message is HTML (bold headings, details in <code>); every value is escaped.
 
-STAGES = {   # id: (emoji, while running / label, when done)
-    "plan": ("🗓️", "Günün planı çıkarılıyor", "Plan hazır"),
-    "topic": ("💡", "Konu", "Konu"),
-    "script": ("✍️", "Senaryo yazılıyor", "Senaryo yazıldı"),
-    "chars": ("🔤", "Karakter", "Karakter"),
-    "visual": ("🎨", "Sahneler kuruluyor", "Sahneler kuruldu"),
-    "preview": ("👀", "Önizleme alınıyor", "Önizleme kontrol edildi"),
-    "review": ("🧐", "Eleştiri turu", "Eleştiriden geçti"),
-    "publish": ("🕒", "Yayın", "Yayın"),
-    "push": ("🚀", "GitHub'a gönderiliyor", "GitHub'a gönderildi, render kuyrukta"),
-    "tts": ("🎙️", "Seslendiriliyor", "Seslendirildi"),
-    "render": ("🎬", "Render alınıyor", "Render tamam"),
-    "mux": ("🧩", "Birleştiriliyor, kapak çiziliyor", "Video birleştirildi"),
-    "youtube": ("📤", "YouTube'a yükleniyor", "YouTube'a yüklendi"),
-    "telegram": ("📲", "Telegram'a gönderiliyor", "Telegram'a gönderildi"),
+STAGES = {   # id: (emoji, short label)
+    "plan": ("🗓️", "Plan"),
+    "topic": ("💡", "Konu"),
+    "script": ("✍️", "Senaryo"),
+    "chars": ("🔤", "Karakter"),
+    "visual": ("🎨", "Sahneler"),
+    "preview": ("👀", "Önizleme"),
+    "review": ("🧐", "Eleştiri"),
+    "publish": ("🕒", "Yayın"),
+    "push": ("🚀", "Gönderim"),
+    "tts": ("🎙️", "Ses"),
+    "render": ("🎬", "Render"),
+    "mux": ("🧩", "Birleştirme"),
+    "youtube": ("📤", "YouTube"),
+    "telegram": ("📲", "Telegram"),
 }
 ORDER = list(STAGES)
 STATES = ("wait", "run", "done", "fail", "skip", "info")
@@ -366,35 +367,39 @@ def bar(p, width=10):
     return "▓" * full + "░" * (width - full) + f" %{int(p * 100)}"
 
 
+def esc(x):
+    return html.escape(str(x), quote=False)
+
+
+def detail(text, limit=48):
+    """Short detail in monospace; a URL becomes a link."""
+    text = (text or "").strip()
+    if not text:
+        return ""
+    url = re.search(r"https?://\S+", text)
+    link = f' <a href="{html.escape(url.group(0))}">izle ↗</a>' if url else ""
+    if url:
+        text = re.sub(r"[\s·—-]*https?://\S+[\s·—-]*", " ", text).strip()
+        if not text:
+            return link
+    if len(text) > limit:
+        text = text[:limit - 1].rstrip() + "…"
+    return f" <code>{esc(text)}</code>" + (link if url else "")
+
+
 def stage_line(g, now):
-    emo, run, done = STAGES.get(g["id"], ("•", g["id"], g["id"]))
+    emo, label = STAGES.get(g["id"], ("•", g["id"]))
     st, text = g["state"], g.get("text")
     if st == "info":
-        return f"{emo} {run}: {text or '-'}"
-    dur = ""
-    if g.get("t0") and st in ("run", "done", "fail"):
-        d = (g.get("t1") or now) - g["t0"]
-        if st != "run":
-            dur = f" · {fmt_dur(d)}" if d >= 1 else ""
-        elif d >= 60:   # running stages tick once a minute, so they never force an edit by themselves
-            dur = f" · {fmt_dur(d // 60 * 60)}"
-    if st == "run":
-        line = f"{emo} {run}…"
-        if g.get("progress") is not None:
-            line += f" {bar(g['progress'])}"
-    elif st == "done":
-        line = f"✅ {done}"
-    elif st == "fail":
-        line = f"❌ {run}: HATA"
-    elif st == "skip":
-        line = f"⏭️ {run} (atlandı)"
-    else:
-        line = f"◻️ {run}"
-    if text:
-        line += f" — {text}"
-    if st == "run" and g.get("eta"):
-        line += f" · {g['eta']}"
-    return line + dur
+        return f"{emo} {label}{detail(text)}"
+    icon = {"done": "✅", "fail": "❌", "skip": "⏭️", "run": "⏳"}.get(st, "▫️")
+    line = f"{icon} {label}"
+    if st == "run" and g.get("progress") is not None:
+        bits = [bar(g["progress"])] + ([g["eta"]] if g.get("eta") else [])
+        return line + detail(" · ".join(bits), 60)
+    if st == "fail":
+        return line + detail(text or "hata")
+    return line + detail(text)
 
 
 def render(st, now=None):
@@ -402,9 +407,9 @@ def render(st, now=None):
     key = st.get("key", "")
     if DATE_RE.match(key):
         y, mo, d = (int(x) for x in key.split("-"))
-        head = f"🎥 Düşün Bakalım · {d} {MONTHS[mo - 1]} {y} üretimi"
+        head = f"<b>🎥 Düşün Bakalım</b> · {d} {MONTHS[mo - 1]}"
     else:
-        head = f"🎥 Düşün Bakalım · {key}"
+        head = f"<b>🎥 Düşün Bakalım</b> · {esc(key)}"
     out = [head]
     for s in st["sections"]:
         if not s["stages"]:
@@ -412,10 +417,11 @@ def render(st, now=None):
         out.append("")
         if s["id"] != "_":
             kind = {"short": "📱 SHORTS", "long": "📺 UZUN VİDEO"}.get(s.get("kind"), "🎞️ VİDEO")
-            out.append(f"{kind} · {s.get('title') or s['id']}")
+            out.append(f"<b>{kind}</b>")
+            out.append(f"<i>{esc(s.get('title') or s['id'])}</i>")
         out += [stage_line(g, now) for g in s["stages"]]
     if st.get("footer"):
-        out += ["", st["footer"]]
+        out += ["", esc(st["footer"])]
     return "\n".join(out)[:4000]
 
 
@@ -458,7 +464,7 @@ def publish(store, st, now=None, last=None):
     fresh = time.time() - (st.get("created") or 0) < REUSE_HOURS * 3600
     if mid and str(st.get("chat_id")) == str(cid) and fresh:
         ok, res = tg("editMessageText", {"chat_id": cid, "message_id": mid, "text": text,
-                                         "disable_web_page_preview": True})
+                                         "disable_web_page_preview": True, "parse_mode": "HTML"})
         if ok or "not modified" in str(res):
             if last is not None:
                 last.update(text=text, mid=mid)
@@ -466,7 +472,7 @@ def publish(store, st, now=None, last=None):
         if not any(s in str(res) for s in ("not found", "can't be edited", "MESSAGE_ID_INVALID")):
             warn(f"edit failed: {res}")
             return False   # transient: the next call edits again
-    ok, res = tg("sendMessage", {"chat_id": cid, "text": text, "disable_web_page_preview": True})
+    ok, res = tg("sendMessage", {"chat_id": cid, "text": text, "disable_web_page_preview": True, "parse_mode": "HTML"})
     if not (ok and isinstance(res, dict)):
         warn(f"send failed: {res}")
         return False
@@ -481,7 +487,7 @@ def publish(store, st, now=None, last=None):
         if won.get("message_id") and won["message_id"] != mine:
             tg("deleteMessage", {"chat_id": cid, "message_id": mine})
             tg("editMessageText", {"chat_id": cid, "message_id": won["message_id"], "text": text,
-                                   "disable_web_page_preview": True})
+                                   "disable_web_page_preview": True, "parse_mode": "HTML"})
             mine = won["message_id"]
     st.update(chat_id=cid, message_id=mine, created=time.time())
     if last is not None:
