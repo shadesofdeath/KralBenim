@@ -495,3 +495,28 @@ Sesli okuma kontrolü: devrik cümle yok, ardışık aynı ek yok, "-yor" sonlar
 - İlk sürüm yanlışlıkla eski Studio tarzında kuruldu (3D, paletler, maskot). Kanal sahibinin uyarısıyla tamamen silindi ve video **parşömen + Kaşif** tarzında (BRAND.md) baştan kuruldu: 38 sahne, 26'sında Kaşif, yeni tipler `uyku_a.js`, `uyku_b_brain.js`, `uyku_b_night.js`, `uyku_c_parsomen.js`.
 - Eleştiri tur 1 (Studio sürümü üzerinde): Senaryo 8 · Kanca 8 · Okunabilirlik 7 · Görsel=anlatım 7 · Hareket 9 · Kompozisyon 7 · Derinlik 8 · Tempo 8 · Doğruluk 8 · Kapanış 8 · Kapak+SEO 7. Metin düzeltmeleri uygulandı (sahne 7 "Diyelim ki", 18 Randy de mikro uyku yaşamış olabilir, 21 "uykunun bu sırrını", 26 mantık, 31 "neredeyse her zaman genlerle", bölüm "Randy'ye ne oldu?").
 - Kanal sahibi "hemen yayın" istediği için parşömen sürümü ikinci eleştiri turu yapılmadan yönetmen kontrolüyle (lint, tam preview, cover + sheet + kareler) gönderildi.
+
+## 05-nusret-mayin-gemisi (ek uzun video, kanal sahibinin isteğiyle, hemen yayın)
+
+Plan dışı ek video (`"extra": true`), 20 Ekim gece kanal sahibi istedi. Tarz: parşömen + Kaşif. Higgsfield yok (hız).
+
+- **Konu / havuz:** 18 Mart 1915, Çanakkale Boğazı: Nusret mayın gemisinin bıraktığı mayınlar dünyanın en güçlü donanmasını nasıl durdurdu? — Türkiye/Osmanlı tarihi + büyük kararlar/savaşların dönüm noktaları.
+- **Hissedilen:** "Küçük, eski bir mayın gemisi ve gece karanlığında verilen tek bir cesur karar, koca bir savaşın yönünü değiştirdi." — gerilim, gurur, sonunda saygı (iki tarafın da kayıpları).
+- **Kanca + kapak fikri:** "Bu küçük gemi koca bir donanmayı durdurdu." Kapak: `26 MAYIN / DONANMAYI / DURDURDU` (sayı doğrulanırsa), vurgu `26`; sahnede Nusret gece mayın bırakırken, büyük şaşkın Kaşif.
+- **Doğrulanacak bilgiler (yazar web aramasıyla doğrular; emin olmadığını "yaklaşık" de ya da çıkar):**
+  - Nusret, 7–8 Mart 1915 gecesi Erenköy Koyu'nda kıyıya paralel tek sıra halinde 26 mayın döktü; komutan Yüzbaşı Tophaneli Hakkı Bey, mayın subayı Binbaşı Nazmi Bey (adı ve rütbeleri doğrula).
+  - Mayınlar, İngiliz-Fransız gemilerinin daha önce manevra yaptığı ve mayın taranmadığı düşünülen bölgeye konuldu (karar ve gerekçe).
+  - 18 Mart 1915: Bouvet (Fransız) dakikalar içinde battı, yüzlerce denizci öldü (sayıyı doğrula); Irresistible ve Ocean (İngiliz) battı; Inflexible ağır hasar aldı (Suffren ve Gaulois da hasarlı). Müttefik donanması geri çekildi; deniz yoluyla geçiş girişimi bırakıldı, 25 Nisan 1915'te kara harekâtı başladı.
+  - Seyit Onbaşı ve 275 kiloluk mermi hikâyesi: anlatılıyorsa "anlatılan hikâyeye göre" diye ver ya da hiç kullanma (efsane tartışmalı).
+  - Bugün 18 Mart Çanakkale Deniz Zaferi olarak anılır; Nusret'in bir kopyası (aslı mı, replika mı doğrula) müze gemisi.
+  - Her iki tarafın kayıplarını saygıyla anlat; düşmanlaştırıcı dil yok.
+
+### Perdeler (yazar anlatımı yazdıktan sonra sahnelere bölünür)
+
+| Bölüm | İçerik |
+|---|---|
+| Boğazdaki dev donanma | Kanca, 1915 başı, Müttefiklerin planı: Boğaz'ı geçip İstanbul'a |
+| Gece yarısı kararı | Nusret, Hakkı Bey ve Nazmi Bey, Erenköy'e gizlice 26 mayın |
+| 18 Mart sabahı | Saldırı, tabyalar, öğleden sonra Bouvet'nin batışı |
+| Peki neden? | Mayınların yeri, neden kimse fark etmedi, Irresistible ve Ocean |
+| Sonrası ve bugün | Donanma geri çekildi, kara savaşı, Nusret bugün; yorum sorusu |
