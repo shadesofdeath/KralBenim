@@ -92,3 +92,6 @@ Ve geldik 2060'lara. Projeksiyonlara göre nüfus artık yavaş yavaş azalmaya 
   - 36: Ama işin en çarpıcı kısmı şu: 2076'da yaşayan insanların yaklaşık yarısı bugün çoktan doğmuş olacak.
   - 37: Yani 2076'yı bugünün çocukları yaşayacak. Bugün okula giden bir öğrenci, o yıl altmışlarında olacak.
   - 38: Ve o Türkiye'yi, bugün verdiğimiz kararlar kuracak. Peki siz 2076'da kaç yaşında olacaksınız? Yorumlara yazın!
+
+### Not
+Kanal sahibi "kontrolü atla, direkt yükle" dedi; eleştiri turu yapılmadan, lint ve tam preview (STATIC yok) sonrası gönderildi.

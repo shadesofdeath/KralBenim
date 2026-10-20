@@ -1,0 +1,2508 @@
+{
+ "extra": true,
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "turkiye-50-yil-sonra",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "2076'da",
+   "Türkiye",
+   "tanınmayacak"
+  ],
+  "highlight": [
+   "2076'da"
+  ],
+  "scene": 0,
+  "t": 3.0,
+  "kasif": {
+   "pose": "shock",
+   "x": 1480,
+   "y": 1062,
+   "scale": 1.0,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "50 Yıl Sonra Türkiye: 2076'da Bizi Neler Bekliyor?",
+  "description": "50 yıl sonra Türkiye nasıl olacak? 1976'da 40 milyonluk genç bir ülkeydik; 2076'da Türkiye'yi neler bekliyor? Yıllara göre, resmî projeksiyonlarla anlatıyoruz.\n\nElli yıl önce Türkiye'nin nüfusu 40 milyonun biraz üstündeydi ve aileler kalabalıktı. Bugün nüfus 86 milyonu aştı, doğurganlık hızı ise 1,48'e indi. TÜİK'in Nüfus Projeksiyonları 2023-2100 ana senaryosuna göre nüfus 2050'lerin ortasında zirve yapıp azalmaya başlayacak, ortanca yaş 2075'te 51,5'e çıkacak. Türkiye'nin geleceğini nüfus, yaşlanma, iklim değişikliği ve 2053 net sıfır emisyon hedefi üzerinden ele alıyoruz. Bu bir kehanet değil: her gelecek sayısı projeksiyondur.\n\nBu videoda:\n• 1976 ile bugün: 40 milyondan 86 milyona\n• 2030'lar: doğurganlık neden düştü?\n• 2040'lar ve 2050'ler: nüfusun tepe noktası ve yaşlanma\n• 2050'ler: sıcaklık, su ve 2053 net sıfır hedefi\n• 2076: aynanın öbür yüzü\n\nKaynaklar: TÜİK Nüfus Projeksiyonları 2023-2100; TÜİK Doğum İstatistikleri 2024; TÜİK Adrese Dayalı Nüfus Kayıt Sistemi 2025; DİE 1975 Genel Nüfus Sayımı; BM World Population Prospects 2024; 7552 sayılı İklim Kanunu; IPCC değerlendirme raporları.\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence 2076'da kaç yaşında olacaksın? Yorumlara yaz!\n\n#türkiye2076 #nüfus #gelecek #tarih #düşünbakalım",
+  "tags": [
+   "50 yıl sonra türkiye",
+   "türkiye 2076",
+   "türkiye'nin geleceği",
+   "50 yıl sonra türkiye nasıl olacak",
+   "türkiye nüfusu",
+   "türkiye nüfus projeksiyonu",
+   "tüik nüfus projeksiyonları",
+   "türkiye nüfusu 2050",
+   "doğurganlık hızı",
+   "yaşlanan nüfus",
+   "2053 net sıfır",
+   "iklim değişikliği türkiye",
+   "1976 türkiye",
+   "tarih",
+   "tarih hikayeleri",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-21T01:11:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "İki ayna: 1976 ve 2076",
+   "type": "tr_a_mirrors",
+   "text": "Türkiye elli yılda tanınmayacak kadar değişecek. Peki nasıl mı? Gelin, bunu size iki aynayla anlatayım.",
+   "visual": "İki oval mürekkep el aynası yan yana: solda sepya 1976 köyü (düz damlı evler, güneş, anne-baba ve koşan çocuklar), sağda 2076 şehri (kuleler, bastonlu yaşlılar, tek çocuk) ve kırmızı '2076' + 'tahmin'; ortada Kaşif şaşkın, 'tanınmayacak'ta iki ayna sarsılır",
+   "title": {
+    "white": "Türkiye"
+   },
+   "cues": {
+    "hit": "tanınmayacak",
+    "k2": "aynayla"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.5,
+     "pose": "shock",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "k2",
+       "pose": "point",
+       "dir": "left",
+       "face": "left"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06
+    }
+   }
+  },
+  {
+   "type": "tr_a_mirrors",
+   "text": "Birinci ayna elli yıl geriye, 1976'ya bakıyor. İkinci ayna ise elli yıl ileriye, 2076'ya.",
+   "visual": "Aynı iki ayna: '1976'ya'da sol ayna altın çerçeveyle parlar, Kaşif sola işaret eder; '2076'ya'da sağ ayna parlar, sol söner, Kaşif dönüp sağa işaret eder",
+   "title": {
+    "white": "İki ayna"
+   },
+   "cues": {
+    "l": "1976",
+    "r": "2076"
+   },
+   "params": {
+    "light": {
+     "left": "l",
+     "right": "r"
+    },
+    "kasif": {
+     "x": 0.5,
+     "pose": "talk",
+     "seq": [
+      {
+       "at": "l",
+       "pose": "point",
+       "dir": "left",
+       "face": "left"
+      },
+      {
+       "at": "r",
+       "pose": "point",
+       "dir": "right",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Çünkü bakın, insan geleceği en iyi geçmişe bakarak anlar.",
+   "visual": "Tepelerin önünde Kaşif önce omzunun üstünden geriye, eski bir parşömene bakar; 'geçmişe'de dönüp dürbünle ileriye bakar; üstte el yazısı 'Geçmiş → gelecek'",
+   "title": {
+    "white": "Geçmişe",
+    "gray": "bakmak"
+   },
+   "cues": {
+    "g": "geleceği",
+    "hit": "geçmişe"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     },
+     "far_h": 0.18
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.42,
+      "pose": "think",
+      "face": "left",
+      "at": "hit",
+      "then": "look",
+      "emotion": "happy"
+     }
+    ],
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.2,
+      "text": "1976"
+     },
+     {
+      "type": "clock",
+      "x": 0.72
+     }
+    ],
+    "label": {
+     "text": "Geçmiş → gelecek",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "g"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ama baştan dürüst olayım: geleceği kimse kesin bilemez.",
+   "visual": "Dev 'Kimse kesin bilemez' yazısı kelime kelime belirir, 'kesin' kırmızı kutuda; sağda Kaşif omuz silker",
+   "title": {},
+   "cues": {
+    "w0": "kimse",
+    "w1": "kesin",
+    "w2": "bilemez"
+   },
+   "params": {
+    "lines": [
+     "Kimse",
+     "kesin bilemez"
+    ],
+    "highlight": [
+     "kesin"
+    ],
+    "kasif": {
+     "x": 0.84,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Bu videodaki her gelecek sayısı, TÜİK'in ve Birleşmiş Milletler'in projeksiyonlarına dayanıyor. Yani bu bir kehanet değil, bir hesap.",
+   "visual": "İki kartlı pano: 'TÜİK' ve 'BM' kartlarında 'projeksiyon' maddesi yeşil ✓ ile işaretlenir; altta kırmızı hap 'Kehanet değil, hesap'",
+   "title": {
+    "white": "Kaynak"
+   },
+   "cues": {
+    "c0": "TÜİK'in",
+    "c1": "Milletler'in",
+    "p": "kehanet"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "TÜİK",
+      "items": [
+       {
+        "text": "projeksiyon",
+        "mark": "check",
+        "at": "c0"
+       }
+      ]
+     },
+     {
+      "title": "BM",
+      "items": [
+       {
+        "text": "projeksiyon",
+        "mark": "check",
+        "at": "c1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Kehanet değil, hesap",
+     "color": "red",
+     "at": "p"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ve bu hesabın içinde, şaşırtıcı bir dönüm noktası saklı.",
+   "visual": "Kaşif elinde '2076?' tabelası tutar, düşünür; 'şaşırtıcı'da şaşırır; üstte kırmızı el yazısı 'Dönüm noktası'",
+   "title": {
+    "white": "Hesabın",
+    "gray": "içinde"
+   },
+   "cues": {
+    "hit": "şaşırtıcı",
+    "lab": "dönüm"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     },
+     "far_h": 0.18
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "hold",
+      "text": "2076?",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [
+     {
+      "type": "tree",
+      "x": 0.18
+     },
+     {
+      "type": "rock",
+      "x": 0.8
+     }
+    ],
+    "label": {
+     "text": "Dönüm noktası",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "lab"
+    }
+   }
+  },
+  {
+   "chapter": "1976: kırk milyonluk genç ülke",
+   "type": "tr_a_people",
+   "text": "Önce geriye dönelim. Yıl 1976. Bir yıl önceki sayıma göre nüfus kırk milyonun biraz üstündeydi.",
+   "visual": "Solda 40 küçük mürekkep insan simgesi (yetişkin ve çocuk) sıra sıra belirir; sağda soluk '1976' ve dev sayaç 0'dan 40'a çıkar, altında el yazısı 'milyon'; Kaşif sağ altta sayacı işaret eder",
+   "title": {
+    "white": "1976",
+    "gray": "nüfus"
+   },
+   "cues": {
+    "y": "1976",
+    "hit": "kırk",
+    "c": "sayıma"
+   },
+   "params": {
+    "n": 40,
+    "cols": 10,
+    "mix": "acac",
+    "year": {
+     "text": "1976",
+     "at": "y"
+    },
+    "count": {
+     "from": 0,
+     "to": 40,
+     "at": "c",
+     "dur": 2.2,
+     "unit": "milyon"
+    },
+    "kasif": {
+     "x": 0.66,
+     "scale": 0.62,
+     "pose": "walk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "y",
+       "pose": "point",
+       "dir": "up-right",
+       "face": "right"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "up",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Ve o kırk milyonun yarısından fazlası köylerde ve kasabalarda yaşıyordu.",
+   "visual": "Eski Türkiye haritası; Ankara ve İstanbul işaretli, Anadolu'ya yeşil köy noktaları serpilir; el yazısı not 'Yarıdan fazlası köyde'",
+   "title": {
+    "white": "Köyler",
+    "gray": "kasabalar"
+   },
+   "cues": {
+    "a": "kırk",
+    "i": "yarısından",
+    "n": "köylerde"
+   },
+   "params": {
+    "preset": "anatolia",
+    "cities": [
+     {
+      "name": "İstanbul",
+      "x": 28.97,
+      "y": 41.0,
+      "at": "a",
+      "dy": -36
+     },
+     {
+      "name": "Ankara",
+      "x": 32.86,
+      "y": 39.93,
+      "at": "a",
+      "color": "red",
+      "dy": -36
+     },
+     {
+      "name": "",
+      "x": 30.5,
+      "y": 38.2,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 35.5,
+      "y": 37.6,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 37.2,
+      "y": 39.7,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 39.9,
+      "y": 38.8,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 41.3,
+      "y": 40.4,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 34.2,
+      "y": 41.2,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 28.4,
+      "y": 38.0,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 36.3,
+      "y": 41.0,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 38.3,
+      "y": 37.3,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 42.8,
+      "y": 39.2,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 31.4,
+      "y": 40.5,
+      "at": "i",
+      "color": "green"
+     },
+     {
+      "name": "",
+      "x": 33.6,
+      "y": 37.8,
+      "at": "i",
+      "color": "green"
+     }
+    ],
+    "note": {
+     "text": "Yarıdan fazlası köyde",
+     "x": 0.5,
+     "y": 0.86,
+     "at": "n"
+    },
+    "focus": [
+     34.5,
+     39.2
+    ],
+    "zoom": 1.05,
+    "compass": "br"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Aileler kalabalıktı. 1970'lerin sonunda bir kadın, hayatı boyunca ortalama dört çocuktan fazla doğuruyordu.",
+   "visual": "1976 ailesi: anne ve baba yan yana, önlerinde dört küçük çocuk; Kaşif soldan aileyi işaret eder; üstte kırmızı el yazısı '4+ çocuk'",
+   "title": {
+    "white": "Kalabalık",
+    "gray": "aileler"
+   },
+   "cues": {
+    "hit": "dört",
+    "f": "kalabalıktı"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     },
+     "far_h": 0.18
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "pose": "walk",
+      "to": 0.18,
+      "face": "right",
+      "at": "f",
+      "then": "point",
+      "dir": "right"
+     },
+     {
+      "who": "anne",
+      "x": 0.44,
+      "pose": "wave",
+      "face": "right"
+     },
+     {
+      "who": "baba",
+      "x": 0.56,
+      "pose": "talk",
+      "face": "left",
+      "beard": "black"
+     },
+     {
+      "who": "cocuk1",
+      "x": 0.36,
+      "scale": 0.55,
+      "pose": "wave",
+      "face": "right"
+     },
+     {
+      "who": "cocuk2",
+      "x": 0.47,
+      "scale": 0.5,
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "cocuk3",
+      "x": 0.6,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "wave"
+     },
+     {
+      "who": "cocuk4",
+      "x": 0.68,
+      "scale": 0.45,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "wave"
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.86
+     }
+    ],
+    "label": {
+     "text": "4+ çocuk",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Düşünün: sofrada altı, yedi kişi, sokakta koşan bir sürü çocuk. Ülke gençti, hem de çok gençti!",
+   "visual": "Köy sokağında çocuklar koşarak geçer, arkada evler; Kaşif sevinçle el sallar; 'gençti'de üstte kırmızı el yazısı 'Genç ülke'",
+   "title": {
+    "white": "Genç",
+    "gray": "ülke"
+   },
+   "cues": {
+    "r": "sokakta",
+    "hit": "gençti"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     },
+     "far_h": 0.18
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "pose": "talk",
+      "face": "left",
+      "at": "r",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "c1",
+      "x": 0.05,
+      "to": 0.6,
+      "scale": 0.55,
+      "pose": "run",
+      "face": "right",
+      "at": "r"
+     },
+     {
+      "who": "c2",
+      "x": -0.05,
+      "to": 0.5,
+      "scale": 0.5,
+      "pose": "run",
+      "face": "right",
+      "at": "r"
+     },
+     {
+      "who": "c3",
+      "x": -0.12,
+      "to": 0.4,
+      "scale": 0.55,
+      "pose": "run",
+      "face": "right",
+      "at": "r"
+     },
+     {
+      "who": "c4",
+      "x": -0.2,
+      "to": 0.3,
+      "scale": 0.45,
+      "pose": "run",
+      "face": "right",
+      "at": "r"
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.12
+     },
+     {
+      "type": "house",
+      "x": 0.3,
+      "flip": true
+     },
+     {
+      "type": "tree",
+      "x": 0.95
+     }
+    ],
+    "label": {
+     "text": "Genç ülke",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "tr_a_people",
+   "text": "Sonra elli yıl geçti. Bugün Türkiye'nin nüfusu seksen altı milyonu aştı. Yani yarım asırda iki katından fazla büyüdü.",
+   "visual": "Soluk 40 insan simgesinin yanına 46 kırmızı simge daha eklenir; sayaç 40'tan 86'ya çıkar, 'milyon'; el yazısı kırmızı '2 katı'; Kaşif şaşırır",
+   "title": {
+    "white": "Bugün",
+    "gray": "86 milyon"
+   },
+   "cues": {
+    "g": "seksen",
+    "hit": "iki"
+   },
+   "params": {
+    "n": 40,
+    "cols": 12,
+    "mix": "acaa",
+    "grow": {
+     "n": 46,
+     "at": "g",
+     "dur": 1.8
+    },
+    "year": {
+     "text": "bugün",
+     "at": "g"
+    },
+    "count": {
+     "from": 40,
+     "to": 86,
+     "at": "g",
+     "dur": 1.8,
+     "unit": "milyon"
+    },
+    "note": {
+     "text": "2 katı",
+     "at": "hit",
+     "x": 0.8,
+     "y": 0.62
+    },
+    "kasif": {
+     "x": 0.66,
+     "scale": 0.6,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "tr_a_people",
+   "text": "Üstelik bugün her yüz kişiden doksan üçü il ve ilçe merkezlerinde yaşıyor.",
+   "visual": "100 insan simgesi (20×5); 'doksan üçü'nde ilk 93'ü sırayla kırmızıya döner, 7'si mürekkep kalır; sağda dev '93', el yazısı '100 kişiden' ve 'şehirde'; Kaşif işaret eder",
+   "title": {
+    "white": "Şehirler"
+   },
+   "cues": {
+    "s": "doksan",
+    "hit": "merkezlerinde"
+   },
+   "params": {
+    "n": 100,
+    "cols": 20,
+    "mix": "aaca",
+    "area": [
+     0.04,
+     0.22,
+     0.6,
+     0.84
+    ],
+    "split": {
+     "k": 93,
+     "at": "s",
+     "dur": 1.6,
+     "color": "red"
+    },
+    "count": {
+     "from": 0,
+     "to": 93,
+     "at": "s",
+     "dur": 1.6,
+     "unit": "100 kişiden"
+    },
+    "note": {
+     "text": "şehirde",
+     "at": "hit",
+     "x": 0.8,
+     "y": 0.62
+    },
+    "kasif": {
+     "x": 0.66,
+     "scale": 0.6,
+     "pose": "idle",
+     "face": "right",
+     "seq": [
+      {
+       "at": "s",
+       "pose": "point",
+       "dir": "up-right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ama asıl büyük değişim başka bir yerde yaşandı ve önümüzdeki elli yılın bütün hikâyesini o yazacak.",
+   "visual": "Dev 'Asıl değişim başka yerde' yazısı kelime kelime, 'başka' kırmızı kutuda; el yazısı '?' notu; sağda Kaşif düşünür, 'yazacak'ta işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "asıl",
+    "w2": "başka",
+    "note": "yazacak"
+   },
+   "params": {
+    "lines": [
+     "Asıl değişim",
+     "başka yerde"
+    ],
+    "highlight": [
+     "başka"
+    ],
+    "note": {
+     "text": "?",
+     "at": "note"
+    },
+    "arrow": true,
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "at": "note"
+    }
+   }
+  },
+  {
+   "chapter": "2030'lar: beşikler boşalıyor",
+   "type": "tr_b_people",
+   "text": "O değişim, beşiklerde oldu. 2024'te doğurganlık hızı bir virgül kırk sekize indi. Yani bir kadın ortalama bir buçuk çocuk bile doğurmadı.",
+   "visual": "Mürekkep piktogram: elbiseli bir anne simgesi, yanında bir tam çocuk ve sadece sol yarısı dolu, sağ yarısı soluk bir çocuk; solda kırmızı Fraunces sayaç 4,5'ten 1,48'e düşer, altında el yazısı 'çocuk'; sağda Kaşif sayıyı işaret eder, 'buçuk'ta şaşırır",
+   "title": {
+    "white": "Doğurganlık",
+    "gray": "2024"
+   },
+   "params": {
+    "mode": "family",
+    "half_at": "half",
+    "big": {
+     "text": "1,48",
+     "from": 4.5,
+     "at": "num",
+     "x": 0.2,
+     "y": 0.44,
+     "color": "red",
+     "size": 230,
+     "dur": 1.6,
+     "hit": "half"
+    },
+    "note": {
+     "text": "kadın başına çocuk",
+     "at": "c1",
+     "x": 0.2,
+     "y": 0.6,
+     "color": "ink"
+    },
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "talk",
+     "at": "num",
+     "then": "point",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "half",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "child_at": "c1"
+   },
+   "cues": {
+    "num": "sekize",
+    "c1": "kadın",
+    "half": "buçuk"
+   }
+  },
+  {
+   "type": "tr_b_curve",
+   "text": "Nüfusun yerinde sayması için bu sayının yaklaşık iki virgül bir olması gerekir. Türkiye ise 2017'den beri bu çizginin altında kaldı.",
+   "visual": "Mürekkep çizgi grafik: doğurganlık eğrisi 1978'de 4,5'ten 2024'te 1,48'e iner; 'iki'de mavi kesikli yatay '2,1 yerinde sayma' çizgisi çekilir; 2017 noktası kırmızıyla işaretlenir ve çizginin altında kalan bölüm kırmızıya boyanır; sağda Kaşif çizgiyi işaret eder",
+   "title": {
+    "white": "Yenilenme",
+    "gray": "sınırı"
+   },
+   "params": {
+    "data": [
+     [
+      1978,
+      4.5
+     ],
+     [
+      1983,
+      4.1
+     ],
+     [
+      1988,
+      3.0
+     ],
+     [
+      1993,
+      2.7
+     ],
+     [
+      1998,
+      2.6
+     ],
+     [
+      2003,
+      2.25
+     ],
+     [
+      2008,
+      2.15
+     ],
+     [
+      2014,
+      2.18
+     ],
+     [
+      2016,
+      2.1
+     ],
+     [
+      2017,
+      2.07
+     ],
+     [
+      2018,
+      1.99
+     ],
+     [
+      2020,
+      1.77
+     ],
+     [
+      2022,
+      1.62
+     ],
+     [
+      2023,
+      1.51
+     ],
+     [
+      2024,
+      1.48
+     ]
+    ],
+    "x0": 1975,
+    "x1": 2028,
+    "y0": 0,
+    "y1": 5,
+    "seed": 5,
+    "show": [
+     [
+      0,
+      1978
+     ],
+     [
+      1.6,
+      2024
+     ]
+    ],
+    "proj_label": false,
+    "hline": {
+     "value": 2.1,
+     "text": "2,1",
+     "sub": "yerinde sayma",
+     "at": "line",
+     "color": "blue"
+    },
+    "below": {
+     "from": 2017,
+     "at": "below"
+    },
+    "marks": [
+     {
+      "year": 2024,
+      "text": "1,48",
+      "at": 1.7,
+      "dy": 70,
+      "size": 70
+     },
+     {
+      "year": 2017,
+      "text": "2017",
+      "at": "cross",
+      "dy": -80,
+      "size": 60
+     }
+    ],
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "idle",
+     "at": "line",
+     "then": "point",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "below",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "cues": {
+    "line": "iki",
+    "cross": "2017",
+    "below": "altında"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki nüfus hemen azalacak mı? Hayır! Çünkü bugün kalabalık bir genç kuşak var ve o kuşak hâlâ aile kuruyor.",
+   "visual": "Parşömen sahnede Kaşif 'azalacak mı'da omuz silker; sağdan genç bir çift ve küçük çocukları yürüyerek gelir, evin önünde durur; 'Hayır!' kırmızı el yazısıyla belirir, Kaşif aileyi işaret eder",
+   "title": {
+    "white": "Genç",
+    "gray": "kuşak"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "shrug",
+      "face": "right",
+      "at": "no",
+      "then": "point",
+      "dir": "right"
+     },
+     {
+      "who": "genc_baba",
+      "x": 1.08,
+      "to": 0.56,
+      "pose": "walk",
+      "at": "fam",
+      "then": "idle",
+      "face": "left",
+      "beard": "short",
+      "talk": false
+     },
+     {
+      "who": "genc_anne",
+      "x": 1.18,
+      "to": 0.67,
+      "pose": "walk",
+      "at": "fam",
+      "then": "wave",
+      "face": "left",
+      "talk": false
+     },
+     {
+      "who": "cocuk",
+      "x": 1.26,
+      "to": 0.76,
+      "pose": "walk",
+      "at": "fam",
+      "then": "wave",
+      "face": "left",
+      "scale": 0.6,
+      "talk": false
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.91,
+      "scale": 0.8
+     },
+     {
+      "type": "tree",
+      "x": 0.42,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "Hayır!",
+     "x": 0.36,
+     "y": 0.3,
+     "at": "no",
+     "size": 110
+    }
+   },
+   "cues": {
+    "q": "azalacak",
+    "no": "Hayır",
+    "fam": "aile"
+   }
+  },
+  {
+   "type": "tr_b_curve",
+   "text": "Bu yüzden projeksiyonlara göre 2030'da nüfus yaklaşık seksen sekiz milyon olacak.",
+   "visual": "Nüfus grafiği: mürekkep eğri 1975'te 40 milyondan bugüne çıkar, 2024'ten sonra kesikli ('tahmin') çizgi 2030'a uzar; 2030 noktasında kırmızı '88 milyon' ve el yazısı 'tahmin'; sağda Kaşif dürbünle geleceğe bakar, sonra noktayı işaret eder",
+   "title": {
+    "white": "2030",
+    "gray": "projeksiyon"
+   },
+   "params": {
+    "data": [
+     [
+      1975,
+      40.3
+     ],
+     [
+      1985,
+      50.7
+     ],
+     [
+      1990,
+      56.5
+     ],
+     [
+      2000,
+      64.3
+     ],
+     [
+      2010,
+      73.7
+     ],
+     [
+      2020,
+      83.4
+     ],
+     [
+      2024,
+      85.7
+     ],
+     [
+      2030,
+      88.0
+     ],
+     [
+      2040,
+      91.6
+     ],
+     [
+      2050,
+      94.0
+     ],
+     [
+      2055,
+      94.4
+     ],
+     [
+      2060,
+      94.0
+     ],
+     [
+      2066,
+      92.8
+     ],
+     [
+      2070,
+      91.8
+     ],
+     [
+      2076,
+      89.8
+     ]
+    ],
+    "x0": 1970,
+    "x1": 2080,
+    "y0": 30,
+    "y1": 100,
+    "proj": 2024,
+    "seed": 3,
+    "show": [
+     [
+      0,
+      1975
+     ],
+     [
+      1.8,
+      2024
+     ],
+     [
+      "proj",
+      2030
+     ]
+    ],
+    "ticks": [
+     1976,
+     2030
+    ],
+    "unit": "milyon",
+    "marks": [
+     {
+      "year": 2030,
+      "text": "88 milyon",
+      "at": "m",
+      "dx": -190,
+      "dy": -50
+     }
+    ],
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "look",
+     "at": "m",
+     "then": "point",
+     "dir": 35
+    }
+   },
+   "cues": {
+    "proj": "projeksiyonlara",
+    "m": "seksen"
+   }
+  },
+  {
+   "type": "tr_b_curve",
+   "text": "Ama artış her yıl biraz daha yavaşlayacak, tıpkı yokuşun tepesine yaklaşan bir araba gibi.",
+   "visual": "Aynı nüfus grafiği: kesikli tahmin çizgisinin üstünde kırmızı mürekkep bir araba 2030'dan yokuşu tırmanır, giderek yavaşlar, egzoz dumanı azalır; eğri tepeye yaklaşırken düzleşir; el yazısı 'yavaşlıyor' belirir; Kaşif düşünür, sonra arabayı işaret eder",
+   "title": {
+    "white": "Artış",
+    "gray": "yavaşlıyor"
+   },
+   "params": {
+    "data": [
+     [
+      1975,
+      40.3
+     ],
+     [
+      1985,
+      50.7
+     ],
+     [
+      1990,
+      56.5
+     ],
+     [
+      2000,
+      64.3
+     ],
+     [
+      2010,
+      73.7
+     ],
+     [
+      2020,
+      83.4
+     ],
+     [
+      2024,
+      85.7
+     ],
+     [
+      2030,
+      88.0
+     ],
+     [
+      2040,
+      91.6
+     ],
+     [
+      2050,
+      94.0
+     ],
+     [
+      2055,
+      94.4
+     ],
+     [
+      2060,
+      94.0
+     ],
+     [
+      2066,
+      92.8
+     ],
+     [
+      2070,
+      91.8
+     ],
+     [
+      2076,
+      89.8
+     ]
+    ],
+    "x0": 1970,
+    "x1": 2080,
+    "y0": 30,
+    "y1": 100,
+    "proj": 2024,
+    "seed": 3,
+    "show": [
+     [
+      0,
+      2030
+     ]
+    ],
+    "ticks": [
+     1976,
+     2030
+    ],
+    "unit": "milyon",
+    "car": {
+     "keys": [
+      [
+       0,
+       2026
+      ],
+      [
+       "slow",
+       2046
+      ]
+     ],
+     "lead": 2.5
+    },
+    "marks": [
+     {
+      "year": 2030,
+      "text": "88 milyon",
+      "at": -1,
+      "dx": -190,
+      "dy": -50
+     }
+    ],
+    "note": {
+     "text": "yavaşlıyor…",
+     "at": "car",
+     "x": 0.6,
+     "y": 0.6,
+     "size": 80
+    },
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "point",
+     "dir": 35,
+     "at": "slow",
+     "then": "think",
+     "seq": [
+      {
+       "at": "car",
+       "pose": "point",
+       "dir": 40
+      }
+     ]
+    }
+   },
+   "cues": {
+    "slow": "yavaşlayacak",
+    "car": "araba"
+   },
+   "transition": "cut"
+  },
+  {
+   "type": "tr_b_people",
+   "text": "Zaten bugün çocukların nüfustaki payı yüzde yirmi beşin altında. Bu, 1935'ten beri en düşük oran.",
+   "visual": "100 küçük mürekkep insan simgesi beş sıra halinde dizilir; ilk 24'ü küçük çocuk simgesi olup 'yüzde'de kırmızıya döner; üstte kırmızı '%25 altı', yanında el yazısı '1935'ten beri'; sağda Kaşif kırmızı çocukları işaret eder",
+   "title": {
+    "white": "Çocuklar",
+    "gray": "azalıyor"
+   },
+   "params": {
+    "mode": "share",
+    "rows": 5,
+    "cols": 20,
+    "kids": 24,
+    "kids_at": "kids",
+    "x0": 0.07,
+    "x1": 0.72,
+    "ytop": 0.28,
+    "row_h": 100,
+    "big": {
+     "text": "%25 altı",
+     "at": "pct",
+     "x": 0.38,
+     "y": 0.235,
+     "size": 110,
+     "color": "red",
+     "rot": -2
+    },
+    "note": {
+     "text": "1935'ten beri",
+     "at": "low",
+     "x": 0.62,
+     "y": 0.22,
+     "color": "ink"
+    },
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "talk",
+     "at": "kids",
+     "then": "point",
+     "dir": 0,
+     "seq": [
+      {
+       "at": "low",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "cues": {
+    "kids": "çocukların",
+    "pct": "yüzde",
+    "low": "1935"
+   }
+  },
+  {
+   "chapter": "2040'lar: tepe noktası",
+   "type": "title",
+   "text": "Şimdi size o dönüm noktasını söyleyeyim. Türkiye'nin nüfusu sonsuza kadar artmayacak.",
+   "visual": "Dev 'SONSUZA KADAR ARTMAYACAK' yazısı kelime kelime belirir, 'artmayacak' kırmızı kutuda; altında el yazısı 'nüfus'; sağda Kaşif yazıyı işaret eder",
+   "title": {},
+   "params": {
+    "lines": [
+     "Sonsuza",
+     "kadar",
+     "artmayacak"
+    ],
+    "highlight": [
+     "artmayacak"
+    ],
+    "note": {
+     "text": "nüfus",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.85,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w2"
+    }
+   },
+   "cues": {
+    "w0": "dönüm",
+    "note": "nüfusu",
+    "w1": "kadar",
+    "w2": "artmayacak"
+   }
+  },
+  {
+   "type": "tr_b_curve",
+   "text": "TÜİK'in ana senaryosuna göre nüfus 2050'de yaklaşık doksan dört milyona ulaşacak, 2050'lerin ortasında tepeye varacak ve sonra azalmaya başlayacak.",
+   "visual": "Aynı nüfus grafiği kaldığı yerden sürer: kesikli tahmin çizgisi 2050'de kırmızı '94 milyon' noktasına çıkar, 2050'lerin ortasında tepe yapar ('tepe' işareti) ve 2076'ya doğru aşağı kıvrılır; Kaşif dürbünle bakar, 'tepeye'de şaşırır, düşüşü işaret eder",
+   "title": {
+    "white": "Tepe",
+    "gray": "noktası"
+   },
+   "params": {
+    "data": [
+     [
+      1975,
+      40.3
+     ],
+     [
+      1985,
+      50.7
+     ],
+     [
+      1990,
+      56.5
+     ],
+     [
+      2000,
+      64.3
+     ],
+     [
+      2010,
+      73.7
+     ],
+     [
+      2020,
+      83.4
+     ],
+     [
+      2024,
+      85.7
+     ],
+     [
+      2030,
+      88.0
+     ],
+     [
+      2040,
+      91.6
+     ],
+     [
+      2050,
+      94.0
+     ],
+     [
+      2055,
+      94.4
+     ],
+     [
+      2060,
+      94.0
+     ],
+     [
+      2066,
+      92.8
+     ],
+     [
+      2070,
+      91.8
+     ],
+     [
+      2076,
+      89.8
+     ]
+    ],
+    "x0": 1970,
+    "x1": 2080,
+    "y0": 30,
+    "y1": 100,
+    "proj": 2024,
+    "seed": 3,
+    "show": [
+     [
+      0,
+      2045
+     ],
+     [
+      "m",
+      2050
+     ],
+     [
+      "peak",
+      2056
+     ],
+     [
+      "down",
+      2076
+     ]
+    ],
+    "ticks": [
+     2050,
+     2076
+    ],
+    "unit": "milyon",
+    "marks": [
+     {
+      "year": 2050,
+      "text": "94 milyon",
+      "at": "m",
+      "dx": -190,
+      "dy": -40
+     },
+     {
+      "year": 2055,
+      "text": "tepe",
+      "at": "peak",
+      "dx": 60,
+      "dy": -80,
+      "size": 64
+     }
+    ],
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "look",
+     "at": "peak",
+     "then": "shock",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "down",
+       "pose": "point",
+       "dir": -20
+      }
+     ]
+    }
+   },
+   "cues": {
+    "m": "doksan",
+    "peak": "tepeye",
+    "down": "azalmaya"
+   }
+  },
+  {
+   "type": "tr_b_curve",
+   "text": "Birleşmiş Milletler de Türkiye'nin nüfusunun en geç 2054'e kadar zirve yapacağını öngörüyor. Yani hesaplar biraz farklı, ama yön aynı.",
+   "visual": "Aynı grafik: önceki etiketler solar; ikinci, mavi kesikli 'BM' eğrisi bugünden 2076'ya çizilir ve 2054'te tepe yapar, noktada mavi 'BM: 2054'; üstte el yazısı 'yön aynı'; Kaşif omuz silker, sonra iki eğriyi işaret eder",
+   "title": {
+    "white": "BM",
+    "gray": "tahmini"
+   },
+   "params": {
+    "data": [
+     [
+      1975,
+      40.3
+     ],
+     [
+      1985,
+      50.7
+     ],
+     [
+      1990,
+      56.5
+     ],
+     [
+      2000,
+      64.3
+     ],
+     [
+      2010,
+      73.7
+     ],
+     [
+      2020,
+      83.4
+     ],
+     [
+      2024,
+      85.7
+     ],
+     [
+      2030,
+      88.0
+     ],
+     [
+      2040,
+      91.6
+     ],
+     [
+      2050,
+      94.0
+     ],
+     [
+      2055,
+      94.4
+     ],
+     [
+      2060,
+      94.0
+     ],
+     [
+      2066,
+      92.8
+     ],
+     [
+      2070,
+      91.8
+     ],
+     [
+      2076,
+      89.8
+     ]
+    ],
+    "x0": 1970,
+    "x1": 2080,
+    "y0": 30,
+    "y1": 100,
+    "proj": 2024,
+    "seed": 3,
+    "show": [
+     [
+      0,
+      2076
+     ]
+    ],
+    "ticks": [
+     2050,
+     2076
+    ],
+    "unit": "milyon",
+    "alt": {
+     "data": [
+      [
+       2024,
+       87.5
+      ],
+      [
+       2030,
+       89.6
+      ],
+      [
+       2040,
+       92.3
+      ],
+      [
+       2050,
+       93.4
+      ],
+      [
+       2054,
+       93.5
+      ],
+      [
+       2060,
+       93.0
+      ],
+      [
+       2066,
+       91.6
+      ],
+      [
+       2070,
+       90.6
+      ],
+      [
+       2076,
+       88.8
+      ]
+     ],
+     "at": "un",
+     "dur": 2.4,
+     "color": "blue"
+    },
+    "marks": [
+     {
+      "year": 2050,
+      "text": "94 milyon",
+      "at": -1,
+      "dx": -190,
+      "dy": -40,
+      "fade": 0.2
+     },
+     {
+      "year": 2055,
+      "text": "tepe",
+      "at": -1,
+      "dx": 60,
+      "dy": -80,
+      "size": 64,
+      "fade": 0.2
+     },
+     {
+      "year": 2054,
+      "text": "BM: 2054",
+      "at": "y",
+      "alt": true,
+      "dx": -40,
+      "dy": -95,
+      "size": 66,
+      "color": "blue"
+     }
+    ],
+    "note": {
+     "text": "yön aynı",
+     "at": "same",
+     "x": 0.45,
+     "y": 0.62,
+     "color": "red",
+     "size": 90
+    },
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "talk",
+     "at": "diff",
+     "then": "shrug",
+     "seq": [
+      {
+       "at": "same",
+       "pose": "point",
+       "dir": 40
+      }
+     ]
+    }
+   },
+   "cues": {
+    "un": "Birleşmiş",
+    "y": "2054",
+    "diff": "farklı",
+    "same": "aynı"
+   },
+   "transition": "cut"
+  },
+  {
+   "type": "stage",
+   "text": "Peki bu tepenin öbür yüzünde ne var? Cevap tek kelime: yaşlanma.",
+   "visual": "Bir tepenin düz üstünde Kaşif dürbünle öbür yamaca bakar; yamacın aşağısında ak sakallı bir dede ve bir nine durur; 'yaşlanma'da Kaşif şaşırıp geri sıçrar, kırmızı el yazısı 'yaşlanma' belirir, oku dedeyi gösterir",
+   "title": {
+    "white": "Tepenin",
+    "gray": "öbür yüzü"
+   },
+   "params": {
+    "scale": 0.9,
+    "ground_y": 880,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2
+     }
+    },
+    "hill": {
+     "x0": 0,
+     "top": 0.3,
+     "x1": 0.58,
+     "h": 0.18
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "y": 0.635,
+      "pose": "look",
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "dede",
+      "x": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "beard": "grey",
+      "talk": false
+     },
+     {
+      "who": "nine",
+      "x": 0.84,
+      "pose": "idle",
+      "face": "left",
+      "talk": false
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "yaşlanma",
+     "x": 0.62,
+     "y": 0.2,
+     "at": "hit",
+     "size": 100,
+     "arrow": [
+      0.72,
+      0.45
+     ]
+    }
+   },
+   "cues": {
+    "q": "öbür",
+    "hit": "yaşlanma"
+   }
+  },
+  {
+   "type": "tr_b_people",
+   "text": "Bugün Türkiye'de ortanca yaş otuz dört civarında, yani nüfusun yarısı otuz dörtten genç.",
+   "visual": "Yaşa göre dizilmiş 11 mürekkep insan: soldan küçük çocuklar, ortada yetişkinler, sağda bastonlu yaşlılar; ortadan kırmızı kesikli dikey çizgi iner, üstünde kırmızı 'ortanca yaş: 34'; 'yarısı'nda sol yarı maviye döner, altında mavi 'daha genç' parantezi; sağda Kaşif ortayı işaret eder",
+   "title": {
+    "white": "Ortanca",
+    "gray": "yaş"
+   },
+   "params": {
+    "mode": "median",
+    "n": 11,
+    "line_at": "line",
+    "label": "ortanca yaş: 34",
+    "bracket": {
+     "text": "daha genç",
+     "at": "half"
+    },
+    "x0": 0.08,
+    "x1": 0.7,
+    "ground": 0.72,
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "talk",
+     "at": "line",
+     "then": "point",
+     "dir": 10
+    }
+   },
+   "cues": {
+    "line": "ortanca",
+    "half": "yarısı"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Projeksiyonlara göre 2050'de bu sayı neredeyse kırk beşe çıkacak. 1976'nın genç Türkiyesi, bir yetişkinler ülkesine dönüşecek.",
+   "visual": "Dev 'ORTANCA YAŞ 45' yazısı kelime kelime belirir, '45' kırmızı kutuda; altında el yazısı '2050 tahmini'; sağda Kaşif şaşırır",
+   "title": {},
+   "params": {
+    "lines": [
+     "Ortanca yaş",
+     "45"
+    ],
+    "highlight": [
+     "45"
+    ],
+    "note": {
+     "text": "2050 tahmini",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.85,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "w1"
+    }
+   },
+   "cues": {
+    "note": "Projeksiyonlara",
+    "w0": "sayı",
+    "w1": "kırk"
+   }
+  },
+  {
+   "type": "tr_b_people",
+   "text": "Ve 2050'de her dört kişiden yaklaşık biri altmış beş yaşın üstünde olacak.",
+   "visual": "Dört büyük mürekkep insan yan yana belirir; 'altmış'ta dördüncüsü bastonlu yaşlıya dönüşür ve kırmızıya boyanır; üstte kırmızı '4'te 1', yanında el yazısı '65+ · tahmin'; sağda Kaşif yaşlıyı işaret eder",
+   "title": {
+    "white": "2050",
+    "gray": "65 yaş üstü"
+   },
+   "params": {
+    "mode": "quarter",
+    "n": 4,
+    "old": 1,
+    "old_at": "old",
+    "x0": 0.12,
+    "x1": 0.62,
+    "ground": 0.8,
+    "big": {
+     "text": "4'te 1",
+     "at": "four",
+     "x": 0.4,
+     "y": 0.27,
+     "size": 150,
+     "color": "red",
+     "rot": -2
+    },
+    "note": {
+     "text": "65+ · tahmin",
+     "at": "old",
+     "x": 0.64,
+     "y": 0.25,
+     "size": 70,
+     "color": "ink"
+    },
+    "kasif": {
+     "x": 0.885,
+     "y": 0.83,
+     "scale": 0.72,
+     "face": -1,
+     "pose": "talk",
+     "at": "old",
+     "then": "point",
+     "dir": 0
+    }
+   },
+   "cues": {
+    "four": "dört",
+    "old": "altmış"
+   }
+  },
+  {
+   "chapter": "2050'ler: sıcak, su ve 2053",
+   "type": "chapter",
+   "text": "Ama 2050'lerin tek hikâyesi nüfus değil. Bir de gökyüzü var.",
+   "visual": "BÖLÜM 5 / 6 rozeti, mavi dairede 5, altında '2050'ler: sıcak, su ve 2053' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "2050'lerin",
+    "title": "gökyüzü"
+   },
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "2050'ler: sıcak, su ve 2053"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Türkiye, Akdeniz havzasında yer alır. Bilim insanlarına göre bu havza, iklim değişikliğinden en çok etkilenecek bölgelerden biri.",
+   "visual": "Eski Akdeniz haritası: Türkiye'de Ankara ve İstanbul işaretli; kırmızı kesikli çizgi tüm Akdeniz havzasını bir halka gibi çevreler; 'en çok'ta 'Akdeniz havzası' el yazısı notu",
+   "title": {
+    "white": "Akdeniz",
+    "gray": "havzası"
+   },
+   "cues": {
+    "ist": "Türkiye",
+    "ank": "Akdeniz",
+    "route": "havzasında",
+    "note": "etkilenecek"
+   },
+   "params": {
+    "preset": "mediterranean",
+    "cities": [
+     {
+      "name": "İstanbul",
+      "x": 28.97,
+      "y": 41.0,
+      "at": "ist",
+      "dx": 30,
+      "dy": -36
+     },
+     {
+      "name": "Ankara",
+      "x": 32.85,
+      "y": 39.93,
+      "at": "ank",
+      "color": "red",
+      "dy": 60
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -4.5,
+       38.5
+      ],
+      [
+       2,
+       42.8
+      ],
+      [
+       10,
+       45.2
+      ],
+      [
+       20,
+       43.5
+      ],
+      [
+       29,
+       42.4
+      ],
+      [
+       35.5,
+       39
+      ],
+      [
+       34,
+       32.2
+      ],
+      [
+       25,
+       30.8
+      ],
+      [
+       12,
+       31.6
+      ],
+      [
+       2,
+       34.6
+      ],
+      [
+       -4.5,
+       36.4
+      ],
+      [
+       -4.5,
+       38.5
+      ]
+     ],
+     "at": "route",
+     "dur": 2.4,
+     "color": "red"
+    },
+    "note": {
+     "text": "Akdeniz havzası",
+     "x": 0.3,
+     "y": 0.2,
+     "at": "note"
+    },
+    "focus": [
+     17,
+     38
+    ],
+    "zoom": 1.08
+   }
+  },
+  {
+   "type": "tr_c_climate",
+   "text": "Projeksiyonlar Türkiye için daha sıcak yazlar ve birçok bölgede daha kurak bir iklim gösteriyor. Yağmur daha seyrek, ama daha sert yağabilir.",
+   "visual": "Solda kırmızı cıvası 'sıcak'ta yükselen dev termometre ve 'daha sıcak' notu, ortada dönen ışınlı güneş ve altında 'tahmin', sağda bulut önce seyrek damla, 'sert'te kısa sağanak; zeminde 'kurak'ta çatlaklar; sağda Kaşif düşünür, sonra termometreyi işaret eder",
+   "title": {
+    "white": "İklim",
+    "gray": "tahmini"
+   },
+   "cues": {
+    "hot": "sıcak",
+    "dry": "kurak",
+    "hard": "sert"
+   },
+   "params": {
+    "hot_label": "daha sıcak",
+    "rain_label": "seyrek, sert",
+    "note": "tahmin",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "think",
+      "at": "hot",
+      "then": "point",
+      "dir": 10,
+      "face": "left"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tr_c_water",
+   "text": "Bunun anlamı basit: su. Nüfus artarken kişi başına düşen su azalacak ve tarlalar ile şehirler aynı suyu paylaşacak.",
+   "visual": "Ortada dev su damlası, 'azalacak'ta içindeki su seviyesi düşer, yanında kırmızı aşağı ok ve 'tahmin'; solda 'kişi başı su' yazısı; damladan inen boru ikiye ayrılır: solda filizli tarla, sağda şehir evleri; 'paylaşacak'ta iki kola mavi su akar; altta Kaşif yukarıyı işaret eder",
+   "title": {
+    "white": "Su",
+    "gray": "kişi başı"
+   },
+   "cues": {
+    "less": "azalacak",
+    "share": "paylaşacak"
+   },
+   "params": {
+    "label": "kişi başı su",
+    "note": "tahmin",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "idle",
+      "at": "less",
+      "then": "point",
+      "dir": "up",
+      "face": "right"
+     }
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Peki Türkiye buna nasıl cevap verdi? 2021'de Paris İklim Anlaşması'nı onayladı ve büyük bir hedef açıkladı: 2053'te net sıfır emisyon.",
+   "visual": "Yatay zaman çizgisi: '2021 · Paris' 'Paris'te belirir, '2053 · net sıfır' 'sıfır'da kırmızıyla vurgulanır; sağda Kaşif 2053'ü işaret eder",
+   "title": {
+    "white": "Hedef",
+    "gray": "net sıfır"
+   },
+   "cues": {
+    "c0": "Paris",
+    "c1": "sıfır"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "2021",
+      "text": "Paris",
+      "at": "c0"
+     },
+     {
+      "year": "2053",
+      "text": "net sıfır",
+      "at": "c1"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.88,
+     "y": 0.82,
+     "pose": "point",
+     "at": "c1",
+     "scale": 0.55,
+     "face": -1,
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "tr_c_scale",
+   "text": "Net sıfır demek, salınan kadar karbonu ormanlarla ve teknolojiyle geri tutmak demek. 2025'te bu hedef, Türkiye'nin ilk İklim Kanunu'yla yasaya girdi.",
+   "visual": "Dev terazi: sol kefede gri duman bulutu 'salınan', 'ormanlarla'da sağ kefede ağaçlar, 'teknolojiyle'de karbon tutan küçük makine belirir ve terazi dengeye gelir ('tutulan'); 'Kanunu'nda üstte iğneli 'İklim Kanunu 2025' kâğıdı iner; sağda Kaşif teraziyi işaret eder",
+   "title": {
+    "white": "Net sıfır",
+    "gray": "denge"
+   },
+   "cues": {
+    "trees": "ormanlarla",
+    "tech": "teknolojiyle",
+    "law": "Kanunu"
+   },
+   "params": {
+    "left": "salınan",
+    "right": "tutulan",
+    "law": {
+     "title": "İklim Kanunu",
+     "year": "2025"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "talk",
+      "at": "law",
+      "then": "point",
+      "dir": 30,
+      "face": "left",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yani 2050'lerin Türkiyesini, bugünün kararları şekillendirecek.",
+   "visual": "Parşömen sahnede Kaşif yürüyüp küçük bir fidanın yanına gelir ve 'kararları'nda onu gösterir; yanında ev, üstte el yazısı 'bugünün kararı'",
+   "title": {
+    "white": "Bugün",
+    "gray": "karar"
+   },
+   "cues": {
+    "w0": "bugünün",
+    "hit": "kararları"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.18
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "pose": "walk",
+      "to": 0.42,
+      "at": "w0",
+      "then": "point",
+      "dir": "right",
+      "face": "right",
+      "emotion": "happy"
+     }
+    ],
+    "props": [
+     {
+      "type": "tree",
+      "x": 0.6,
+      "scale": 0.7,
+      "at": "w0"
+     },
+     {
+      "type": "house",
+      "x": 0.82,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "bugünün kararı",
+     "x": 0.6,
+     "y": 0.16,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "chapter": "2076: aynanın öbür yüzü",
+   "type": "tr_c_curve",
+   "text": "Ve geldik 2060'lara. Projeksiyonlara göre nüfus artık yavaş yavaş azalmaya devam edecek.",
+   "visual": "Nüfus eğrisi: 1976'dan 2026'ya düz mürekkep çizgi, sonra kesikli 'tahmin' çizgisi 2050'lerde tepe yapar; 'azalmaya'da inen kısım kırmızıya döner, kırmızı aşağı ok; 2076 kırmızı; sağda Kaşif inişi işaret eder",
+   "title": {
+    "white": "2060'lar",
+    "gray": "nüfus"
+   },
+   "cues": {
+    "now": "2060'lara",
+    "fall": "azalmaya"
+   },
+   "params": {
+    "note": "tahmin",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "pose": "look",
+      "at": "fall",
+      "then": "point",
+      "dir": -20,
+      "face": "left",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tr_c_people",
+   "text": "2075'e gelindiğinde ortanca yaş elli bir buçuğa çıkacak ve her üç kişiden yaklaşık biri altmış beşin üstünde olacak.",
+   "visual": "Solda dev kırmızı sayaç 34'ten '51,5'e sayar, altında 'ortanca yaş' ve 'tahmin'; sağda üç sıra çöp insan simgesi; 'kişiden'de her üç kişiden biri kırmızı, bastonlu ve kambur bir yaşlıya dönüşür; Kaşif sağda işaret eder",
+   "title": {
+    "white": "2075",
+    "gray": "ortanca yaş"
+   },
+   "cues": {
+    "big": "ortanca",
+    "hit": "kişiden"
+   },
+   "params": {
+    "mode": "third",
+    "rows": 3,
+    "cols": 9,
+    "grid_x0": 640,
+    "grid_x1": 1500,
+    "grid_y0": 200,
+    "row_h": 200,
+    "big": {
+     "from": 34,
+     "to": 51.5,
+     "dec": 1,
+     "text": "ortanca yaş",
+     "at": "big"
+    },
+    "note": "tahmin",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": 10,
+      "face": "left"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tr_c_mirror",
+   "text": "Şimdi iki aynayı yan yana koyun. 1976'da sokaklar çocuk sesiyle doluydu. 2076'da ise parklarda belki torunlardan çok dedeler olacak.",
+   "visual": "İki oval el aynası yan yana: soldakinde mürekkep '1976', top oynayan zıplayan çocuklar; 'dedeler'de sağdakinde kırmızı '2076', parkta bankta oturan iki bastonlu dede, ağaç ve tek bir çocuk; ortada Kaşif sağ aynayı işaret eder",
+   "title": {
+    "white": "İki ayna"
+   },
+   "cues": {
+    "right": "2076'da",
+    "hit": "dedeler"
+   },
+   "params": {
+    "mode": "kids",
+    "years": [
+     "1976",
+     "2076"
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "talk",
+      "at": "hit",
+      "then": "point",
+      "dir": 40,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tr_c_people",
+   "text": "Ama işin en çarpıcı kısmı şu: 2076'da yaşayan insanların yaklaşık yarısı bugün çoktan doğmuş olacak.",
+   "visual": "İki sıra çöp insan simgesi; 'doğmuş'ta soldaki yarısı maviye döner, üstünde mavi köşeli parantez ve 'bugün doğmuş' yazısı, ortada kesikli ayırma çizgisi; altta 'tahmin'; sağda Kaşif şaşırır",
+   "title": {
+    "white": "2076",
+    "gray": "kim yaşayacak?"
+   },
+   "cues": {
+    "hit": "doğmuş"
+   },
+   "params": {
+    "mode": "half",
+    "rows": 2,
+    "cols": 10,
+    "grid_x0": 260,
+    "grid_x1": 1460,
+    "grid_y0": 300,
+    "row_h": 220,
+    "label": "bugün doğmuş",
+    "note": "tahmin",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "idle",
+      "at": "hit",
+      "then": "shock",
+      "face": "left",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tr_c_mirror",
+   "text": "Yani 2076'yı bugünün çocukları yaşayacak. Bugün okula giden bir öğrenci, o yıl altmışlarında olacak.",
+   "visual": "İki ayna: solda '2026', sırt çantalı bir öğrenci; 'altmışlarında'da sağda kırmızı '2076', aynı kişi bastonlu bir yaşlı olarak; ortada Kaşif önce soldakini, sonra sağdakini işaret eder",
+   "title": {
+    "white": "Bugünün",
+    "gray": "çocukları"
+   },
+   "cues": {
+    "right": "altmışlarında",
+    "hit": "altmışlarında"
+   },
+   "params": {
+    "mode": "same",
+    "years": [
+     "2026",
+     "2076"
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "point",
+      "dir": 40,
+      "face": "left",
+      "at": "right",
+      "then": "point",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ve o Türkiye'yi, bugün verdiğimiz kararlar kuracak. Peki siz 2076'da kaç yaşında olacaksınız? Yorumlara yazın!",
+   "visual": "Dev yazı '2076'DA / KAÇ YAŞINDA?' kelime kelime belirir, 2076'da kırmızı kutuda; el yazısı not 'yorumlara yaz'; sağda Kaşif gülümseyerek el sallar",
+   "title": {},
+   "cues": {
+    "w0": "2076'da",
+    "w1": "kaç",
+    "note": "Yorumlara"
+   },
+   "params": {
+    "lines": [
+     "2076'da",
+     "kaç yaşında?"
+    ],
+    "highlight": [
+     "2076'da"
+    ],
+    "note": {
+     "text": "yorumlara yaz",
+     "at": "note"
+    },
+    "y": 0.4,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "pose": "wave",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "happy",
+     "at": "w0"
+    }
+   }
+  }
+ ]
+}
