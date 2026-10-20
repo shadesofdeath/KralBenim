@@ -25,7 +25,7 @@ geçmiş kayıttır (konu tekrarını önlemek için okunur), artık render edil
 - `docs/REVIEW.md` — eleştiri döngüsü: 11 kriterli puanlama, geçme şartı (hepsi ≥ 7), günlük formatı.
 - `tools/upload.py` — YouTube yüklemesi (Actions'ta çalışır, `YOUTUBE_TOKEN_JSON` secret'ı). Fotoğraf/video kredilerini (`params.credit`) açıklamaya otomatik ekler.
 - `tools/media.py` — telifsiz fotoğraf/video bulur ve indirir (Wikimedia Commons; `PEXELS_API_KEY` varsa Pexels foto + video).
-- `cloudflare/telegram-worker.js` — Telegram komut dinleyicisi (Cloudflare Worker): `/uzun [konu]`, `/shorts [konu]` elle görevleri API ile başlatır. Kurulum `cloudflare/KURULUM.md`.
+- `cloudflare/telegram-worker.js` — Telegram komut dinleyicisi (Cloudflare Worker): `/uzun [konu]`, `/shorts [konu]` günlük görevi API ile ek video isteğiyle başlatır. Kurulum `cloudflare/KURULUM.md`.
 - `tools/hf.py` — Higgsfield sepya klibini (MCP ile üretilen) indirip 1080p'ye normalleştirir. Bulut ortamı Higgsfield CDN'ine erişemezse klip `params.url` ile senaryoya yazılır; `build.py` render sırasında (GitHub Actions) indirir, önizleme yer tutucu gösterir.
 
 Ses: anlatım + altında çok hafif ambiyans müziği (`tools/sfx.py`, kodla üretilir). **Efekt sesi (whoosh, pop, vuruş) yok — kanal sahibi istemiyor, geri ekleme.** **Nefes sesi de istenmiyor:** `eleven_v3` kelime aralarında nefes alıyor; `build.py` (`debreath`) kelime zamanlamasına göre kelime aralarını kısar, kelimelere dokunmaz. Müziği de kapatmak için senaryoya `"sfx": false`.
@@ -161,8 +161,9 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 
 ## Elle başlatılan ek video
 
-Kanal sahibi zamanlamanın dışında da tek bir video başlatabilir ("Düşün Bakalım — elle Shorts" /
-"Düşün Bakalım — elle uzun video" zamanlanmış görevleri, ya da sohbette "bir uzun video üret ve yayınla").
+Kanal sahibi zamanlamanın dışında da tek bir video başlatabilir: Telegram'da `/uzun [konu]` ya da
+`/shorts [konu]` (Cloudflare Worker, günlük görevi API ile "EK VİDEO: uzun|shorts · Konu: …" payload'ıyla
+başlatır) ya da sohbette "bir uzun video üret ve yayınla".
 Bu, plan dışı ama **istenmiş** bir videodur; "fazladan video üretme" kuralı buna uygulanmaz.
 
 - `python tools/plan.py --extra short|long` dosya numarasını ve en erken `publish_at`'i verir (şimdi + 1 saat;

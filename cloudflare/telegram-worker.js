@@ -1,6 +1,7 @@
 // Düşün Bakalım — Telegram komut dinleyicisi (Cloudflare Worker, ücretsiz plan yeter).
 // Bot sürekli açık bir program değil; bu Worker Telegram'ın webhook'u olur ve komut gelince
-// claude.ai'deki "elle" zamanlanmış görevini API ile başlatır.
+// claude.ai'deki "Düşün Bakalım günlük üretim" görevini API ile "EK VİDEO" isteğiyle başlatır
+// (görev, payload'da "EK VİDEO" görünce günlük plan yerine tek bir ek video üretir).
 //
 // Komutlar (sadece ALLOWED_CHAT_ID'den kabul edilir):
 //   /uzun [konu]    ek uzun video üret ve yayınla (konu isteğe bağlı)
@@ -11,8 +12,7 @@
 //   TELEGRAM_BOT_TOKEN   BotFather'daki token (GitHub secret'ı ile aynı)
 //   ALLOWED_CHAT_ID      sadece bu sohbetten komut alınır (repo: config/telegram_chat_id)
 //   WEBHOOK_SECRET       uydurma uzun bir parola (Telegram her istekte başlıkta yollar)
-//   LONG_FIRE_URL, LONG_FIRE_TOKEN     "elle uzun video" görevinin API Fire URL'i ve token'ı
-//   SHORT_FIRE_URL, SHORT_FIRE_TOKEN   "elle Shorts" görevinin API Fire URL'i ve token'ı
+//   FIRE_URL, FIRE_TOKEN  "Düşün Bakalım günlük üretim" görevinin API Fire URL'i ve token'ı
 //
 // Kurulumdan sonra bir kez tarayıcıda açın: https://<worker-adresi>/setup?key=<WEBHOOK_SECRET>
 // (Worker kendi adresini Telegram'a webhook olarak kaydeder ve komut menüsünü ayarlar.)
@@ -48,12 +48,10 @@ const reply = (env, chat, text) =>
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 async function fire(env, kind, topic) {
-  const url = kind === 'long' ? env.LONG_FIRE_URL : env.SHORT_FIRE_URL;
-  const token = kind === 'long' ? env.LONG_FIRE_TOKEN : env.SHORT_FIRE_TOKEN;
-  if (!url || !token) return { ok: false, error: 'Fire URL/token ayarlı değil' };
-  const text = topic
-    ? `Kanal sahibi Telegram'dan başlattı. İstenen konu: ${topic}`
-    : "Kanal sahibi Telegram'dan başlattı. Konu verilmedi; geçmişte işlenmemiş bir tarih konusu seç.";
+  const url = env.FIRE_URL, token = env.FIRE_TOKEN;
+  if (!url || !token) return { ok: false, error: 'FIRE_URL / FIRE_TOKEN ayarlı değil' };
+  const text = `EK VİDEO: ${kind === 'long' ? 'uzun' : 'shorts'} · Konu: ${topic || 'verilmedi, sen seç'}` +
+    " (kanal sahibi Telegram'dan başlattı)";
   const r = await fetch(url, {
     method: 'POST',
     headers: {
