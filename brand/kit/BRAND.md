@@ -82,9 +82,17 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
    sesi buna göre uzatır/kısar). Acele eden, cümleleri birbirine yapıştıran anlatım istenmiyor.
    **Tonlama:** ses `eleven_v3`, `stability: 0.0` (Creative, en canlı). Duygu değişen sahnelere `"tone"`
    alanı ile İngilizce ses etiketi ver (`curious`, `excited`, `whispers`, `dramatic`, `serious`, `amazed`,
-   `sad`, `mischievously`): seslendirmede `[curious]` olarak okunur, altyazıda görünmez. Her sahneye değil,
-   videoda 3–6 kritik sahneye.
-3. **Şimdiki zaman** ile anlat (sahneye izleyiciyi sok): "Plinius koya bakıyor. Dağın üstünde dev bir bulut yükseliyor."
+   `sad`, `mischievously`, `surprised`, `sarcastic`, `laughs`, `sighs`): seslendirmede `[curious]` olarak okunur,
+   altyazıda görünmez. Düz okumayı kırmak için Shorts'ta sahnelerin çoğuna, uzun videoda her 2–3 sahnede
+   bir. eleven_v3 noktalamayı da okur: "…" bekletir, "!" heyecan katar, soru işareti sesi yükseltir; bunları
+   bilerek kullan.
+3. **YouTube anlatıcısı gibi konuş, "-yor -yor" diye sayma (kanal sahibinin kararı).** Hikâye anlatan biri
+   gibi **geçmiş zamanla** anlat ("1932'ydi. Avustralya'da çiftçiler çaresizdi."), kipleri karıştır: -dı, -mış
+   ("derler ki…"), -ecekti ("ama birazdan her şey değişecekti"), soru, ünlem, izleyiciye hitap ("Düşünsene…",
+   "Tahmin et ne oldu?"). Art arda iki cümle aynı ekle bitmez; cümlelerin en fazla üçte biri "-yor" ile biter
+   (`tools/lint.py` denetler). Ton: arkadaşına inanılmaz bir şey anlatan biri; şaşıran, gülen, bekleten.
+   Yasak örnek: "Ordu geliyor. Emular dağılıyor. Tüfek tutukluk yapıyor." İstenen: "Ve ordu geldi. Tam
+   kadro mu? Ne gezer! Bir binbaşı, iki asker, iki tüfek. Emular ise… dağıldı. Hem de nasıl!"
 4. **Sahne başına tek fikir**, ekranda en fazla 5 kelime. Kaşif o fikri **gösterir** (işaret eder, şaşırır, dürbünle bakar).
 5. Her 20–30 saniyede bir **soru/gerilim kancası**: "Ama asıl felaket henüz başlamamıştı."
 6. **Sayı, tarih, isim doğrulanmadan yazılmaz**; tartışmalıysa "büyük olasılıkla" de.

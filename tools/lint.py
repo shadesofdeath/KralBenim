@@ -70,6 +70,11 @@ def lint(path, kinds):
         err.append(f"{len(text)} chars > hard limit {hard}")
     elif not tlo <= len(text) <= thi:
         warn.append(f"{len(text)} chars, target {tlo}-{thi}")
+    # owner: narration must not sound like "yapıyor ediyor" — at most a third of sentences end in -yor
+    ends = [re.sub(r"[^\wçğıöşü]+$", "", low(x)) for x in sentences(text)]
+    yor = [e for e in ends if re.search(r"yor(um|sun|uz|sunuz|lar)?$", e)]
+    if ends and len(yor) > len(ends) / 3:
+        err.append(f"{len(yor)}/{len(ends)} sentences end in '-yor' (max a third): tell it like a YouTube narrator, mostly past tense (BRAND.md §6.3)")
     if re.search(r"\b(km/sa|km/s|vb\.|vs\.|yy\.|örn\.)", text):
         warn.append("abbreviation in narration; write it out (TTS reads it literally)")
 
