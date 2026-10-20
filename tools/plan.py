@@ -4,7 +4,7 @@
   python tools/plan.py               # today (Europe/Istanbul)
   python tools/plan.py --date 2026-10-21
 
-Plan: 2 Shorts + 1 long video every day. Videos already in the day's folder (e.g. a long video
+Plan: 4 Shorts + 1 long video every day. Videos already in the day's folder (e.g. a long video
 made the evening before) are marked done; the daily task makes only the "todo" ones.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
@@ -16,7 +16,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 TZ = ZoneInfo("Europe/Istanbul")
-SHORT_SLOTS = ["12:00", "19:00"]
+SHORT_SLOTS = ["12:00", "15:00", "19:00", "22:00"]   # 4 Shorts a day (owner, 2026-10-20)
 LONG_SLOT = "20:30"
 LONG_EVERY = 1                         # every day (was every 5 days until 2026-10-19)
 LONG_ANCHOR = date(2026, 10, 17)

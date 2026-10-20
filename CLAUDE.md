@@ -1,7 +1,7 @@
 # Düşün Bakalım — video otomasyonu
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
-Her gün **2 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
+Her gün **4 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
 
 **Kanalın tek tarzı (kanal sahibinin kesin kararı):** **tarih hikâyeleri**, sepya parşömen üstüne elle
 çizilmiş mürekkep ve çöp adam anlatıcı **Kaşif** (`"theme": "parchment"`). Anayasa `brand/kit/BRAND.md`;
@@ -35,11 +35,11 @@ Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece
 
 Zamanlanmış görev her sabah bu bölümü uygular.
 
-**Plan:** her gün **2 Shorts + 1 uzun video** (`python tools/plan.py` söyler). Bu planın dışına çıkma, fazladan video üretme. Karakter sınırlarına kesinlikle uy; `plan.py` aylık ElevenLabs kullanımını gösterir, `warning: true` ise raporda mutlaka belirt.
+**Plan:** her gün **4 Shorts + 1 uzun video** (`python tools/plan.py` söyler). Bu planın dışına çıkma, fazladan video üretme. Karakter sınırlarına kesinlikle uy; `plan.py` aylık ElevenLabs kullanımını gösterir, `warning: true` ise raporda mutlaka belirt.
 
 | | Süre | Karakter (anlatım metni toplamı) | Yayın |
 |---|---|---|---|
-| Shorts ×2 | 28–35 sn | **400–500** (sert sınır 550) | her gün 12:00 ve 19:00 (+03:00) |
+| Shorts ×4 | 28–35 sn | **400–500** (sert sınır 550) | her gün 12:00, 15:00, 19:00 ve 22:00 (+03:00) |
 | Uzun video (her gün) | ~4–5 dk | **3.400–4.000** (sert sınır 4.300) | her gün 20:30 (+03:00) |
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
@@ -73,7 +73,7 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
 4. **Düzeltme turu:** yazar ajan (SendMessage ile aynı ajana devam et) sorunları düzeltir → lint →
    preview → eleştirmen tekrar puanlar. En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 7. Her tur
    `production.md` → "Eleştiri günlüğü"ne eklenir.
-5. **Son kapı (yönetmen):** iki Shorts'un konu/dönem/konu havuzu olarak birbirinden ve geçmişten farklı
+5. **Son kapı (yönetmen):** dört Shorts'un konu/dönem/konu havuzu olarak birbirinden ve geçmişten farklı
    olduğunu, `lint` hatasız geçtiğini, her `cover.jpg` ve `sheet.png`'yi **kendi gözüyle** gördüğünü
    doğrular; sonra adım 10–11.
 
@@ -87,7 +87,7 @@ tarihi, `stage`, `state` = `run|done|fail|info`, `text`, `video` = dosya adı sl
 ilk kez anılan videoda `title` + `kind` = `short|long`; aynı anda birden çok satır için `batch` =
 JSON listesi `[{"stage","state","text","video","title","kind"}]`). Tetikleme başarısızsa yok say,
 üretimi asla bekletme. Ne zaman (metin bilgi dolu olsun: sayı, puan, saat):
-- Başta: `plan` `run` → plan.py'den sonra `plan` `done` ("2 Shorts + 1 uzun · bütçe %41").
+- Başta: `plan` `run` → plan.py'den sonra `plan` `done` ("4 Shorts + 1 uzun · bütçe %41").
 - Konular seçilince (tek `batch`): her video için `topic` `info` ("Emu Savaşı · tarih") + `title` + `kind`, `publish` `info` ("20 Ekim 12:00").
 - Yazar ajanlar başlarken `script` `run`; bitince `script` `done` + `chars` `info` ("486 karakter").
 - Her eleştiri turunda `review` `run` ("1. tur: kanca 6 · tempo 8 · … en düşük 6"); geçince `review` `done` ("2. tur: hepsi ≥ 7").
@@ -100,7 +100,7 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanalın nişi **tarih hikâyeleridir** (BRAND §1): gerçek bir olay, gerçek insanlar, bir gerilim ve "peki neden oldu?" sorusunun cevabı. Konu havuzunu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşların dönüm noktaları · keşifler ve icatların hikâyesi · imparatorlukların yükseliş/çöküşü · **Türkiye ve Osmanlı tarihinden anlar**, haftada en az 2 video). Bilim ancak bir tarih olayını açıklamak için girer. Konu `tarih-bolumu` becerisindeki 4 testi geçmeli (tek an, bir insan, bir "neden", doğrulanabilir). Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir olay.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
-5. **Senaryo** — dosyalar: `01-<slug>.json`, `02-<slug>.json` (Shorts, ikisi farklı konu havuzlarından ve dönemlerden) ve `03-<slug>.json` (uzun video, Shorts'lardan farklı bir olay); numaralar `plan.py`'nin `todo` listesinden.
+5. **Senaryo** — dosyalar: `01-<slug>.json` … `04-<slug>.json` (Shorts, dördü de farklı konu havuzlarından ve dönemlerden; en az biri Türkiye/Osmanlı tarihinden) ve `05-<slug>.json` (uzun video, Shorts'lardan farklı bir olay); numaralar `plan.py`'nin `todo` listesinden.
    - **Motor ve tarz:** her dosyada `"engine": "studio"` ve `"theme": "parchment"` (lint ikisini de denetler). Renk paleti seçilmez: tek sabit palet BRAND §3 (`"art"`/`"palette"` yazma).
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir parşömen sahne tipi kodla (bkz. 6).
    - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
