@@ -489,3 +489,9 @@ Sesli okuma kontrolü: devrik cümle yok, ardışık aynı ek yok, "-yor" sonlar
 | 35 | Peki ne kadar uyumalı? | Uzmanlar yetişkinlere her gece yedi ila dokuz saat uyku öneriyor. Yani hayatımızın yaklaşık üçte biri uykuda geçer. |
 | 36 | Peki ne kadar uyumalı? | Ama o saatler hayattan çalınmaz. O saatler, beyninizin kendini onardığı ve sizi yarına hazırladığı saatlerdir. |
 | 37 | Peki ne kadar uyumalı? | Peki siz en fazla kaç saat uykusuz kaldınız ve beyniniz size ne gibi oyunlar oynadı? Yorumlara yazın! |
+
+### 04-uykusuz-kalsak — tarz değişikliği ve eleştiri
+
+- İlk sürüm yanlışlıkla eski Studio tarzında kuruldu (3D, paletler, maskot). Kanal sahibinin uyarısıyla tamamen silindi ve video **parşömen + Kaşif** tarzında (BRAND.md) baştan kuruldu: 38 sahne, 26'sında Kaşif, yeni tipler `uyku_a.js`, `uyku_b_brain.js`, `uyku_b_night.js`, `uyku_c_parsomen.js`.
+- Eleştiri tur 1 (Studio sürümü üzerinde): Senaryo 8 · Kanca 8 · Okunabilirlik 7 · Görsel=anlatım 7 · Hareket 9 · Kompozisyon 7 · Derinlik 8 · Tempo 8 · Doğruluk 8 · Kapanış 8 · Kapak+SEO 7. Metin düzeltmeleri uygulandı (sahne 7 "Diyelim ki", 18 Randy de mikro uyku yaşamış olabilir, 21 "uykunun bu sırrını", 26 mantık, 31 "neredeyse her zaman genlerle", bölüm "Randy'ye ne oldu?").
+- Kanal sahibi "hemen yayın" istediği için parşömen sürümü ikinci eleştiri turu yapılmadan yönetmen kontrolüyle (lint, tam preview, cover + sheet + kareler) gönderildi.

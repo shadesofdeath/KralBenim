@@ -1,0 +1,2027 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "uykusuz-kalsak",
+ "engine": "studio",
+ "format": "long",
+ "fps": 30,
+ "art": {
+  "palette": "desert"
+ },
+ "cover": {
+  "lines": [
+   "11 gün",
+   "hiç",
+   "uyumadı"
+  ],
+  "highlight": [
+   "11"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "kasif": "shock"
+ },
+ "youtube": {
+  "title": "Hiç Uyumasaydık Ne Olurdu? 11 Gün Uyumayan Çocuk 🧠",
+  "description": "Hiç uyumasaydık ne olurdu? 1964'te 17 yaşındaki Randy Gardner 264 saat, yani yaklaşık 11 gün hiç uyumadı. Beyni ona neler yaptı?\n\nBir gece uykusuz kalmak beyni neden sarhoş gibi çalıştırır, mikro uyku nedir ve uyku sırasında beyin kendini nasıl yıkar? Glimfatik sistem, uykusuz bırakılan fare deneyleri ve çok nadir görülen ölümcül ailesel uykusuzluk hastalığıyla uykunun neden hayati olduğunu anlatıyoruz.\n\nBu videoda:\n• Randy Gardner'ın 11 günlük uykusuzluk deneyi\n• İlk 24 saat: uykusuz beyin neden sarhoş gibidir?\n• Mikro uyku ve halüsinasyonlar\n• Glimfatik sistem: beynin gece temizliği\n• Uykusuzluk öldürür mü? Fare deneyleri ve FFI\n• Yetişkinler kaç saat uyumalı?\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen en fazla kaç saat uykusuz kaldın? Yorumlara yaz!\n\n#uyku #uykusuzluk #beyin #bilim #düşünbakalım",
+  "tags": [
+   "hiç uyumasaydık ne olurdu",
+   "uykusuzluk",
+   "uykusuz kalmak",
+   "uyumazsak ne olur",
+   "uykusuzluk öldürür mü",
+   "randy gardner",
+   "11 gün uyumayan çocuk",
+   "mikro uyku",
+   "glimfatik sistem",
+   "beyin uykuda kendini temizler",
+   "ölümcül ailesel uykusuzluk",
+   "kaç saat uyumalıyız",
+   "uyku bilimi",
+   "insan vücudu",
+   "beyin",
+   "bilim",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-20T13:51:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "uyku_a_room",
+   "text": "Bu çocuk on bir gün hiç uyumadı.",
+   "chapter": "On bir gün uyumayan çocuk",
+   "visual": "Gece, 1960'lar yatak odası: pencerede hilal ve yıldızlar, duvar saatinin akrebi yelkovanı hızla dönüyor; yatağın kenarında oturan kravatlı Randy'nin gözleri kocaman açık, göz altları mor; duvardaki kâğıda 'GÜN' çentikleri tek tek çiziliyor, sayaç 11'e çıkıyor, son çentik kırmızı; sağda Kaşif 'uyumadı'da şaşkınlıkla geri sıçrıyor.",
+   "title": {},
+   "cues": {
+    "hit": "uyumadı"
+   },
+   "params": {
+    "window": {
+     "x": 0.1,
+     "y": 0.24,
+     "h": 0.3,
+     "sky": "night"
+    },
+    "clock": {
+     "x": 0.33,
+     "y": 0.22,
+     "speed": 3
+    },
+    "tally": {
+     "x": 0.6,
+     "y": 0.1,
+     "n": 11,
+     "at": 0.05,
+     "dur": 1.5
+    },
+    "bed": {
+     "x": 0.55,
+     "w": 0.36
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "randy",
+      "tie": "red",
+      "bags": true,
+      "wide": true,
+      "x": 0.52,
+      "pose": "sit",
+      "sit": "bed",
+      "face": "right",
+      "emotion0": "worried",
+      "scale": 0.74
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki insan hiç uyumasaydı ne olurdu, hiç merak ettiniz mi? Gelin, cevabı o çocuğun hikâyesiyle bulalım.",
+   "visual": "Dev Fraunces yazı kelime kelime çarpıyor: 'Hiç' ve kırmızı kutuda 'uyumasaydık?'; sağda Kaşif 'merak'ta elini çenesine koyup düşünüyor.",
+   "title": {},
+   "cues": {
+    "w0": "hiç",
+    "w1": "uyumasaydı",
+    "k": "merak"
+   },
+   "params": {
+    "lines": [
+     "Hiç",
+     "uyumasaydık?"
+    ],
+    "highlight": [
+     "uyumasaydık?"
+    ],
+    "y": 0.4,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.86,
+     "pose": "think",
+     "at": "k",
+     "face": -1,
+     "scale": 0.85,
+     "emotion": "neutral"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Yıl 1963'tü ve Aralık ayı bitmek üzereydi. San Diego'da on yedi yaşındaki Randy Gardner, okulunun bilim fuarı için bir proje arıyordu.",
+   "visual": "Eski harita: Kaliforniya ve Baja kıyısı, solda Pasifik Okyanusu; 'Aralık'ta el yazısı not 'Aralık 1963' beliriyor, 'Diego'da kırmızı halkalı San Diego işaretleniyor, kamera şehre yaklaşıyor.",
+   "title": {
+    "white": "San Diego",
+    "gray": "1963"
+   },
+   "cues": {
+    "note": "Aralık",
+    "city": "Diego"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.2,
+       0.0
+      ],
+      [
+       0.26,
+       0.12
+      ],
+      [
+       0.33,
+       0.26
+      ],
+      [
+       0.38,
+       0.36
+      ],
+      [
+       0.47,
+       0.44
+      ],
+      [
+       0.52,
+       0.52
+      ],
+      [
+       0.55,
+       0.6
+      ],
+      [
+       0.56,
+       0.68
+      ],
+      [
+       0.6,
+       0.8
+      ],
+      [
+       0.66,
+       0.92
+      ],
+      [
+       0.7,
+       1.0
+      ],
+      [
+       1.0,
+       1.0
+      ],
+      [
+       1.0,
+       0.0
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "San Diego",
+      "x": 0.56,
+      "y": 0.66,
+      "dx": 28,
+      "dy": 10,
+      "anchor": "start",
+      "color": "red",
+      "at": "city"
+     },
+     {
+      "name": "Los Angeles",
+      "x": 0.44,
+      "y": 0.42,
+      "dx": 28,
+      "dy": -6,
+      "anchor": "start"
+     }
+    ],
+    "seas": [
+     {
+      "name": "Pasifik Okyanusu",
+      "x": 0.24,
+      "y": 0.62
+     }
+    ],
+    "note": {
+     "text": "Aralık 1963",
+     "x": 0.78,
+     "y": 0.2,
+     "at": "note"
+    },
+    "focus": [
+     0.56,
+     0.62
+    ],
+    "zoom": 1.15,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "uyku_a_room",
+   "text": "Sonunda aklına çılgınca bir fikir geldi: Uyumadan kaç gün dayanabilirdi?",
+   "visual": "Gündüz, Randy'nin odası: masada lamba ve kitaplar, duvarda mavi şeritli 'BİLİM FUARI' afişi; kravatlı Randy masanın önünde düşünüyor, 'çılgınca'da başının üstünde ampul yanıyor, 'kaç'ta kırmızı soru işareti çıkıyor; üstte el yazısı 'Kaç gün?' beliriyor; solda Kaşif 'fikir'de Randy'yi gösteriyor.",
+   "title": {
+    "white": "Bilim",
+    "gray": "fuarı"
+   },
+   "cues": {
+    "bulb": "çılgınca",
+    "kasif": "fikir",
+    "q": "kaç",
+    "lab": "dayanabilirdi",
+    "hit": "dayanabilirdi"
+   },
+   "params": {
+    "window": {
+     "x": 0.13,
+     "y": 0.27,
+     "h": 0.28,
+     "sky": "day"
+    },
+    "clock": false,
+    "bed": false,
+    "desk": {
+     "x": 0.74,
+     "poster": "BİLİM FUARI"
+    },
+    "label": {
+     "text": "Kaç gün?",
+     "x": 0.42,
+     "y": 0.2,
+     "at": "lab",
+     "size": 96,
+     "color": "red"
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "randy",
+      "tie": "red",
+      "bags": true,
+      "wide": true,
+      "x": 0.56,
+      "pose": "think",
+      "face": "right",
+      "bulb": "bulb",
+      "q": "q",
+      "scale": 0.66,
+      "at": "q",
+      "then": "shock"
+     },
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "idle",
+      "face": "right",
+      "at": "kasif",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Arkadaşları onu nöbetleşe izleyecekti, çünkü kural basitti: Randy uykuya daldığı an, deney bitecekti.",
+   "visual": "Pano: iki iğneli kart; 'nöbetleşe'de 'Nöbetçi arkadaşlar' yanına yeşil onay, 'bitecekti'de 'Uyursa biter' yanına kırmızı çarpı işaretleniyor.",
+   "title": {
+    "white": "Tek",
+    "gray": "kural"
+   },
+   "cues": {
+    "c0": "Arkadaşları",
+    "a": "nöbetleşe",
+    "c1": "kural",
+    "b": "bitecekti"
+   },
+   "params": {
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Nöbetçi arkadaşlar",
+        "mark": "check",
+        "at": "a"
+       }
+      ]
+     },
+     {
+      "items": [
+       {
+        "text": "Uyursa biter",
+        "mark": "x",
+        "at": "b"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "uyku_a_room",
+   "text": "Kısa süre sonra Stanford'dan genç bir uyku araştırmacısı, William Dement, çocuğu izlemeye geldi.",
+   "visual": "Odanın kapısından gözlüklü, elinde not panosu olan genç Dement yürüyerek giriyor, başının üstünde el yazısı 'Dement' adı çıkıyor; üstte 'Stanford' yazısı beliriyor; kravatlı Randy 'izlemeye'de el sallıyor; duvar saati dönüyor; sağda Kaşif Dement'i gösteriyor.",
+   "title": {
+    "white": "William",
+    "gray": "Dement"
+   },
+   "cues": {
+    "lab": "Stanford",
+    "k": "araştırmacısı",
+    "d": "Dement",
+    "w": "izlemeye"
+   },
+   "params": {
+    "window": {
+     "x": 0.44,
+     "y": 0.2,
+     "w": 0.13,
+     "h": 0.3,
+     "sky": "day"
+    },
+    "door": {
+     "x": 0.03
+    },
+    "clock": {
+     "x": 0.66,
+     "y": 0.2,
+     "speed": 1.5
+    },
+    "bed": {
+     "x": 0.78,
+     "w": 0.3
+    },
+    "label": {
+     "text": "Stanford",
+     "x": 0.27,
+     "y": 0.22,
+     "at": "lab",
+     "size": 92,
+     "color": "blue"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "dement",
+      "glasses": true,
+      "clipboard": true,
+      "x": 0.08,
+      "to": 0.32,
+      "pose": "walk",
+      "face": "right",
+      "at": "d",
+      "then": "talk",
+      "tag": "Dement",
+      "tag_at": "d",
+      "scale": 0.62
+     },
+     {
+      "who": "randy",
+      "tie": "red",
+      "bags": true,
+      "wide": true,
+      "x": 0.56,
+      "pose": "idle",
+      "face": "left",
+      "at": "w",
+      "then": "wave",
+      "emotion": "happy",
+      "scale": 0.6
+     },
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "pose": "idle",
+      "face": "left",
+      "at": "k",
+      "then": "point",
+      "dir": "forward",
+      "scale": 0.62
+     }
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "İlk gün her şey bir oyun gibiydi. Ama birkaç gün sonra o çocuğun kafasının içinde neler olacağını kimse tahmin edemezdi.",
+   "visual": "Yatay zaman çizgisi: 'Gün 1 – oyun gibi' mavi noktayla, 'Gün 3 – ?' ve kırmızı vurgulu 'Gün 11 – ?' sırayla beliriyor; sağda Kaşif 'tahmin'de omuz silkiyor.",
+   "title": {
+    "white": "İlk",
+    "gray": "günler"
+   },
+   "cues": {
+    "a": "oyun",
+    "b": "birkaç",
+    "c": "kafasının",
+    "k": "tahmin"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Gün 1",
+      "text": "oyun gibi",
+      "at": "a"
+     },
+     {
+      "year": "Gün 3",
+      "text": "?",
+      "at": "b"
+     },
+     {
+      "year": "Gün 11",
+      "text": "?",
+      "at": "c"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.88,
+     "y": 0.86,
+     "pose": "shrug",
+     "at": "k",
+     "scale": 0.55,
+     "face": -1,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Önce şunu düşünün: Diyelim ki bir gece hiç uyumadınız. Sabah olduğunda beyninizde ne değişmiştir?",
+   "chapter": "İlk 24 saat",
+   "visual": "Bölüm kartı: 'BÖLÜM 2 / 6' rozeti, mavi dairede 2, altında Fraunces 'İlk 24 saat' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "şunu",
+    "title": "uyumadınız",
+    "line": "Sabah"
+   },
+   "params": {
+    "n": 2,
+    "total": 6,
+    "title": "İlk 24 saat"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Avustralya'da yapılan bir araştırmada gönüllüler on yedi ila on dokuz saat uyanık tutuldu ve tepki hızları ölçüldü.",
+   "visual": "Eski harita: Avustralya kıtası, 'uyanık'ta el yazısı not '17–19 saat uyanık' beliriyor, kamera kıtaya yavaşça yaklaşıyor.",
+   "title": {
+    "white": "Avustralya",
+    "gray": "deneyi"
+   },
+   "cues": {
+    "note": "uyanık"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.121,
+       0.3743
+      ],
+      [
+       0.1286,
+       0.4749
+      ],
+      [
+       0.1476,
+       0.5754
+      ],
+      [
+       0.161,
+       0.6634
+      ],
+      [
+       0.1476,
+       0.6835
+      ],
+      [
+       0.2029,
+       0.7037
+      ],
+      [
+       0.2429,
+       0.6735
+      ],
+      [
+       0.3095,
+       0.6735
+      ],
+      [
+       0.3571,
+       0.6333
+      ],
+      [
+       0.4143,
+       0.6157
+      ],
+      [
+       0.4562,
+       0.6131
+      ],
+      [
+       0.5095,
+       0.6458
+      ],
+      [
+       0.54,
+       0.6961
+      ],
+      [
+       0.5762,
+       0.6509
+      ],
+      [
+       0.5857,
+       0.6634
+      ],
+      [
+       0.5952,
+       0.7137
+      ],
+      [
+       0.6238,
+       0.7715
+      ],
+      [
+       0.6905,
+       0.7942
+      ],
+      [
+       0.7438,
+       0.8042
+      ],
+      [
+       0.7743,
+       0.7741
+      ],
+      [
+       0.8124,
+       0.764
+      ],
+      [
+       0.8181,
+       0.7187
+      ],
+      [
+       0.839,
+       0.671
+      ],
+      [
+       0.8638,
+       0.6257
+      ],
+      [
+       0.8829,
+       0.5377
+      ],
+      [
+       0.8714,
+       0.4623
+      ],
+      [
+       0.8295,
+       0.3994
+      ],
+      [
+       0.7952,
+       0.3491
+      ],
+      [
+       0.7438,
+       0.2989
+      ],
+      [
+       0.7267,
+       0.236
+      ],
+      [
+       0.7248,
+       0.1983
+      ],
+      [
+       0.6924,
+       0.1731
+      ],
+      [
+       0.6714,
+       0.0902
+      ],
+      [
+       0.6543,
+       0.148
+      ],
+      [
+       0.6524,
+       0.236
+      ],
+      [
+       0.6333,
+       0.2637
+      ],
+      [
+       0.6048,
+       0.2486
+      ],
+      [
+       0.5724,
+       0.2209
+      ],
+      [
+       0.5381,
+       0.1958
+      ],
+      [
+       0.561,
+       0.1304
+      ],
+      [
+       0.5286,
+       0.1229
+      ],
+      [
+       0.481,
+       0.1103
+      ],
+      [
+       0.4524,
+       0.1279
+      ],
+      [
+       0.4238,
+       0.1958
+      ],
+      [
+       0.3952,
+       0.1983
+      ],
+      [
+       0.3629,
+       0.1731
+      ],
+      [
+       0.3381,
+       0.1983
+      ],
+      [
+       0.3114,
+       0.2385
+      ],
+      [
+       0.2848,
+       0.2737
+      ],
+      [
+       0.2619,
+       0.3114
+      ],
+      [
+       0.22,
+       0.3315
+      ],
+      [
+       0.18,
+       0.3391
+      ],
+      [
+       0.1381,
+       0.3693
+      ]
+     ],
+     [
+      [
+       0.7114,
+       0.8445
+      ],
+      [
+       0.7819,
+       0.8495
+      ],
+      [
+       0.7762,
+       0.9073
+      ],
+      [
+       0.7381,
+       0.9174
+      ],
+      [
+       0.719,
+       0.8771
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Hint Okyanusu",
+      "x": 0.22,
+      "y": 0.86
+     }
+    ],
+    "note": {
+     "text": "17–19 saat uyanık",
+     "x": 0.5,
+     "y": 0.42,
+     "at": "note"
+    },
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "zoom": 1.08,
+    "compass": "tr"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Sonuç mu? Bazı testlerde bu insanlar, kanında yaklaşık yarım promil alkol olan birinden farksızdı, hatta daha kötüydü.",
+   "visual": "Pano: iki kartta tepki süresi çubukları; 'insanlar'da 'Uykusuz / 19 saat' çubuğu, 'alkol'de 'Alkollü / ‰0,5' çubuğu neredeyse aynı boya doluyor; 'farksızdı'da kırmızı rozet 'Farksız!' çıkıyor.",
+   "title": {
+    "white": "Tepki",
+    "gray": "testi"
+   },
+   "cues": {
+    "c0": "testlerde",
+    "b0": "insanlar",
+    "c1": "yarım",
+    "b1": "alkol",
+    "pill": "farksızdı"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Uykusuz",
+      "bars": [
+       {
+        "label": "19 saat",
+        "value": 0.82,
+        "at": "b0"
+       }
+      ]
+     },
+     {
+      "title": "Alkollü",
+      "bars": [
+       {
+        "label": "‰0,5",
+        "value": 0.78,
+        "at": "b1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Farksız!",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yani bir gece uykusuz kalan biri kendini ayık sanır, ama beyni biraz sarhoş gibi çalışır.",
+   "visual": "Parşömen sahne: uykusuz bir adam 'Ben ayığım!' tabelasını gururla tutuyor; 'sarhoş'ta üstte kırmızı el yazısı 'sarhoş gibi' beliriyor ve ona ok uzanıyor; solda Kaşif anlatırken adamı gösteriyor.",
+   "title": {},
+   "cues": {
+    "hit": "sarhoş"
+   },
+   "params": {
+    "label": {
+     "text": "sarhoş gibi",
+     "y": 0.2,
+     "at": "hit",
+     "size": 96,
+     "arrow": [
+      0.6,
+      0.36
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "happy"
+     },
+     {
+      "who": "adam",
+      "x": 0.62,
+      "pose": "hold",
+      "text": "Ben ayığım!",
+      "face": "left",
+      "emotion": "happy",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ]
+   }
+  },
+  {
+   "type": "uyku_a_brain",
+   "text": "Çünkü beynin ön tarafı, yani karar veren ve sizi frenleyen bölge, uykusuzluktan en çabuk etkilenen yerlerden biridir.",
+   "visual": "Dev mürekkep profil kafa, içinde beyin; 'ön'de beynin ön bölgesi altın renkle parlıyor, el yazısı 'ön bölge' oku ona uzanıyor; 'frenleyen'de yanında kırmızı fren pedalı beliriyor; 'uykusuzluktan'da ön bölgenin ışığı titreyip sönüyor; sağda Kaşif 'karar'da bölgeyi gösteriyor.",
+   "title": {
+    "white": "Ön",
+    "gray": "bölge"
+   },
+   "cues": {
+    "glow": "ön",
+    "lab": "tarafı",
+    "k": "karar",
+    "brake": "frenleyen",
+    "dim": "uykusuzluktan",
+    "hit": "uykusuzluktan"
+   },
+   "params": {
+    "cx": 0.36,
+    "cy": 0.52,
+    "r": 0.34,
+    "glow_at": "glow",
+    "dim": "dim",
+    "brake": "brake",
+    "label": {
+     "text": "ön bölge",
+     "x": 0.74,
+     "y": 0.14,
+     "at": "lab",
+     "color": "red",
+     "size": 84,
+     "arrow": [
+      0.5,
+      0.26
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "idle",
+      "face": "left",
+      "at": "k",
+      "then": "point",
+      "dir": "up",
+      "scale": 0.62
+     }
+    ]
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Şimdi Randy'ye dönelim. Üçüncü günde midesi bulandı ve az önce olan şeyleri unutmaya başladı.",
+   "chapter": "Beyin kendini kapatıyor",
+   "visual": "Bölüm kartı: rozet 'BÖLÜM 3 / 6', mavi daire içinde 3, altında Fraunces başlık 'Beyin kendini kapatıyor' ve el çizimi alt çizgi.",
+   "title": {},
+   "params": {
+    "n": 3,
+    "total": 6,
+    "title": "Beyin kendini kapatıyor"
+   },
+   "cues": {
+    "n": "dönelim",
+    "title": "üçüncü",
+    "line": "unutmaya"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Sonraki günlerde ise işler tuhaflaştı. Dement ondan yüzden geriye doğru yedişer saymasını istediğinde, Randy birkaç adım sonra durdu, çünkü ne yaptığını unutmuştu.",
+   "visual": "Bereli genç Randy elinde '100, 93, 86…' yazılı tabelayı tutuyor; 'durdu'da omuz silkiyor, başının üstünde kırmızı el yazısı '?' çıkıyor; sağda Kaşif önce Randy'yi gösteriyor, 'unutmuştu'da şaşkınlıkla geri sıçrıyor.",
+   "title": {
+    "white": "Yedişer",
+    "gray": "geri say"
+   },
+   "params": {
+    "depth": {
+     "far": "city",
+     "sky": {
+      "clouds": 2
+     }
+    },
+    "label": {
+     "text": "?",
+     "x": 0.36,
+     "y": 0.16,
+     "at": "hit",
+     "size": 190
+    },
+    "cast": [
+     {
+      "who": "randy",
+      "accessory": null,
+      "x": 0.36,
+      "pose": "hold",
+      "text": "100, 93, 86…",
+      "face": "right",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.78,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "p",
+        "pose": "point",
+        "dir": "left"
+       },
+       {
+        "at": "hit",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   },
+   "cues": {
+    "p": "yedişer",
+    "q": "durdu",
+    "hit": "unutmuştu"
+   }
+  },
+  {
+   "type": "uyku_b_street",
+   "text": "Anlatılanlara göre bir ara gözleri ona oyun oynadı ve Randy bir sokak tabelasını insan sandı.",
+   "visual": "Gece sokağı: taranmış gökyüzü, ay, sönük evler, titreyen sokak lambası ve bir tabela direği; 'tabelasını'da direğin çizgisi titreyerek başı ve omuzları olan bir insan silüetine dönüşüyor, yanında kırmızı 'İNSAN?' ve 'aslında tabela'; solda bereli Randy 'insan'da şaşkınlıkla geri sıçrıyor, sağda Kaşif düşünüp omuz silkiyor.",
+   "title": {
+    "white": "Göz",
+    "gray": "yanılması"
+   },
+   "params": {
+    "text": "İNSAN?",
+    "sub": "aslında tabela",
+    "post_x": 0.56,
+    "lamp_x": 0.36,
+    "cast": [
+     {
+      "who": "randy",
+      "accessory": null,
+      "x": 0.2,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "think",
+      "face": "left",
+      "at": "sub",
+      "then": "shrug"
+     }
+    ]
+   },
+   "cues": {
+    "morph": "tabelasını",
+    "hit": "insan",
+    "sub": "sandı"
+   }
+  },
+  {
+   "type": "uyku_b_brain",
+   "text": "İşte asıl ilginç kısım burası: Uyumayan bir beyin, siz izin vermeseniz bile uyumanın bir yolunu bulur.",
+   "visual": "El çizimi yandan beyin: altın sarısı bölgeler uyanık parlıyor, bölgeler tek tek maviye dönüp üstlerinden 'z' harfleri yükseliyor (parça parça uyku); 'uyumanın'da yarısı birden kararıyor; sağda Kaşif dürbünle bakıyor, sonra şaşırıyor; üstte el yazısı 'uyku bir yol bulur'.",
+   "title": {
+    "white": "Uykusuz",
+    "gray": "beyin"
+   },
+   "params": {
+    "mode": "side",
+    "lens": {
+     "x": 0.4,
+     "y": 0.47,
+     "r": 0.33
+    },
+    "label": {
+     "text": "uyku bir yol bulur",
+     "x": 0.42,
+     "y": 0.1,
+     "at": "hit",
+     "color": "blue"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ]
+   },
+   "cues": {
+    "hit": "uyumanın"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Buna mikro uyku denir. Beyniniz birkaç saniyeliğine kapanır ve siz bunu fark etmezsiniz bile.",
+   "visual": "Dev Fraunces yazı çarpıyor: 'Mikro' ve kırmızı kutuda 'uyku'; el yazısı not 'birkaç saniye'; sağda Kaşif 'kapanır'da şaşkınlıkla geri sıçrıyor.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Mikro",
+     "uyku"
+    ],
+    "highlight": [
+     "uyku"
+    ],
+    "note": "birkaç saniye",
+    "y": 0.36,
+    "size": 190,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.84,
+     "pose": "shock",
+     "at": "k",
+     "face": -1,
+     "scale": 0.7,
+     "emotion": "surprised"
+    }
+   },
+   "cues": {
+    "w0": "mikro",
+    "w1": "uyku",
+    "note": "saniyeliğine",
+    "k": "kapanır"
+   }
+  },
+  {
+   "type": "uyku_b_road",
+   "text": "Gözleriniz açıktır, belki direksiyonun başındasınız, ama o birkaç saniye boyunca aslında orada değilsiniz.",
+   "visual": "Sürücü koltuğundan gece yolu: farların aydınlattığı yol, kesikli şerit çizgileri ve kırmızı reflektörlü direkler hızla akıyor, altta direksiyon ve iki el; önce yeşil el yazısı 'gözler açık', 'ama'da mürekkep göz kapakları üstten ve alttan kapanıyor, kapakların üstünde 'beyin kapalı' yazıyor, araba şeritten kayıyor; 'değilsiniz'de kapaklar açılıp araba sarsılıyor.",
+   "title": {
+    "white": "Direksiyonda",
+    "gray": "mikro uyku"
+   },
+   "params": {
+    "open": {
+     "text": "gözler açık"
+    },
+    "off": {
+     "text": "beyin kapalı"
+    },
+    "blackout": 1.9
+   },
+   "cues": {
+    "open": "gözleriniz",
+    "close": "ama",
+    "hit": "değilsiniz"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yani uyku sizin kararınızı beklemez. Beyin ihtiyacı olanı, gerekirse parça parça, kendisi alır. Büyük olasılıkla Randy de bunu farkında olmadan yaşadı.",
+   "visual": "Bereli Randy bir taburede oturmuş, endişeli; Kaşif yürüyerek yaklaşıp onu gösteriyor; üstte mavi el yazısı 'parça parça uyku' beliriyor, 'Randy'de Kaşif düşünüyor.",
+   "title": {
+    "white": "Beyin",
+    "gray": "kendisi alır"
+   },
+   "params": {
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2
+     }
+    },
+    "label": {
+     "text": "parça parça uyku",
+     "y": 0.18,
+     "at": "hit",
+     "size": 96
+    },
+    "cast": [
+     {
+      "who": "randy",
+      "accessory": null,
+      "x": 0.38,
+      "pose": "sit",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 1.05,
+      "pose": "walk",
+      "to": 0.68,
+      "face": "left",
+      "at": "arr",
+      "then": "point",
+      "dir": "left",
+      "seq": [
+       {
+        "at": "r",
+        "pose": "think"
+       }
+      ]
+     }
+    ]
+   },
+   "cues": {
+    "arr": "beklemez",
+    "hit": "parça",
+    "r": "randy"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Peki beyin uykuya neden bu kadar muhtaç? Gün boyunca beyin hücreleriniz durmadan çalışır ve tıpkı bir fabrika gibi atık üretir.",
+   "chapter": "Beynin gece temizliği",
+   "visual": "Bölüm kartı: rozet 'BÖLÜM 4 / 6', mavi daire içinde 4, altında Fraunces başlık 'Beynin gece temizliği' ve el çizimi alt çizgi.",
+   "title": {},
+   "params": {
+    "n": 4,
+    "total": 6,
+    "title": "Beynin gece temizliği"
+   },
+   "cues": {
+    "n": "peki",
+    "title": "muhtaç",
+    "line": "atık"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Vücudun geri kalanında bu atıkları lenf sistemi toplar. Ama beyinde uzun yıllar böyle bir temizlik sistemi bilinmiyordu.",
+   "visual": "Pano: başlık 'Atığı kim toplar?'; solda 'Vücut' kartında yeşil tik 'lenf sistemi', sağda 'Beyin' kartında kırmızı çarpı '?'; altta mavi hap 'bilinmiyordu'.",
+   "title": {
+    "white": "Temizlik",
+    "gray": "sistemi?"
+   },
+   "params": {
+    "title": "Kim toplar?",
+    "cards": [
+     {
+      "title": "Vücut",
+      "items": [
+       {
+        "text": "lenf",
+        "mark": "check",
+        "at": "c0"
+       }
+      ]
+     },
+     {
+      "title": "Beyin",
+      "items": [
+       {
+        "text": "?",
+        "mark": "x",
+        "at": "c1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "bilinmiyordu",
+     "color": "red",
+     "at": "pill"
+    }
+   },
+   "cues": {
+    "c0": "lenf",
+    "c1": "beyinde",
+    "pill": "bilinmiyordu"
+   }
+  },
+  {
+   "type": "uyku_b_lab",
+   "text": "2013 yılında Danimarkalı nörobilimci Maiken Nedergaard ve ekibi, farelerle yaptıkları deneylerde uykunun bu sırrını çözdü.",
+   "visual": "Laboratuvar: duvarda büyük '2013' takvim yaprağı; masada tel kafeste biri uyanık biri kıvrılıp uyuyan iki fare, üstünden 'z'ler yükseliyor; solda önlüklü Nedergaard (isim etiketi) kafesi gösteriyor; sağda Kaşif el sallıyor, sonra kafesi gösteriyor.",
+   "title": {
+    "white": "Nedergaard",
+    "gray": "fare deneyi"
+   },
+   "params": {
+    "year": "2013",
+    "cage_x": 0.56,
+    "cast": [
+     {
+      "who": "nedergaard",
+      "coat": true,
+      "tag": "Nedergaard",
+      "tag_at": "nd",
+      "x": 0.2,
+      "pose": "idle",
+      "face": "right",
+      "at": "mice",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "wave",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": "left",
+      "emotion": "happy"
+     }
+    ]
+   },
+   "cues": {
+    "year": "2013",
+    "nd": "nedergaard",
+    "mice": "farelerle",
+    "hit": "çözdü"
+   }
+  },
+  {
+   "type": "uyku_b_brain",
+   "text": "Fareler uyuduğunda, beyin hücrelerinin arasındaki boşluklar yaklaşık yüzde altmış genişledi.",
+   "visual": "Büyüteç altında beyin dokusu: sıkışık mürekkep hücreleri ve aralarında sepya atık lekeleri; 'uyuduğunda' hücreler büzülüp aralarındaki boşluklar açılıyor, boşluklara mavi sıvı sızıyor; 'altmış'ta sağ üstte kırmızı dev '+%60' notu; sağda Kaşif dürbünle bakıp şaşırıyor.",
+   "title": {
+    "white": "Uykuda",
+    "gray": "boşluk açılır"
+   },
+   "params": {
+    "mode": "sleep",
+    "note": {
+     "text": "+%60",
+     "x": 0.82,
+     "y": 0.24,
+     "at": "hit",
+     "color": "red",
+     "size": 170
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ]
+   },
+   "cues": {
+    "open": "uyuduğunda",
+    "hit": "altmış"
+   }
+  },
+  {
+   "type": "uyku_b_brain",
+   "text": "Ve bu açılan yollardan beyin omurilik sıvısı akıyor, gün boyu biriken atıkları yıkayıp götürüyordu.",
+   "visual": "Aynı doku, boşluklar açık: mavi beyin omurilik sıvısı akıntısı çizgiler hâlinde soldan sağa akıyor, 'yıkayıp'ta sepya atık lekeleri akıntıya kapılıp büyütecin dışına sürükleniyor; el yazısı mavi 'beyin omurilik sıvısı' oku akıntıyı gösteriyor; sağda Kaşif akıntıyı gösteriyor.",
+   "title": {
+    "white": "Gece",
+    "gray": "yıkaması"
+   },
+   "params": {
+    "mode": "wash",
+    "label": {
+     "text": "beyin omurilik sıvısı",
+     "x": 0.8,
+     "y": 0.12,
+     "at": "fl",
+     "color": "blue",
+     "size": 62,
+     "arrow": [
+      0.5,
+      0.36
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": "left",
+      "emotion": "happy"
+     }
+    ]
+   },
+   "cues": {
+    "fl": "sıvısı",
+    "hit": "yıkayıp"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Bu atıklardan biri de Alzheimer hastalığıyla ilişkilendirilen beta amiloid proteini. Uyuyan fareler onu yaklaşık iki kat hızlı temizledi.",
+   "visual": "Pano: başlık 'Beta amiloid'; iki çubuk: 'Uyanık' kısa, 'Uykuda' iki kat uzun ve '~2 kat' yazılı; altta kırmızı hap 'Alzheimer ile ilişkili'.",
+   "title": {
+    "white": "Beta",
+    "gray": "amiloid"
+   },
+   "params": {
+    "title": "Beta amiloid",
+    "cards": [
+     {
+      "bars": [
+       {
+        "label": "Uyanık",
+        "value": 0.42,
+        "text": "1",
+        "at": "b0"
+       },
+       {
+        "label": "Uykuda",
+        "value": 0.86,
+        "text": "~2 kat",
+        "at": "b1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Alzheimer",
+     "color": "red",
+     "at": "pill"
+    }
+   },
+   "cues": {
+    "pill": "alzheimer",
+    "b0": "uyuyan",
+    "b1": "hızlı"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani uyku bir tembellik değil. Beyniniz her gece, siz farkında olmadan, kendini yıkıyor.",
+   "visual": "Dev Fraunces yazı: 'Beyin her gece' ve kırmızı kutuda 'yıkanır'; sağda Kaşif gülümseyerek yazıyı gösteriyor.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Beyin her gece",
+     "yıkanır"
+    ],
+    "highlight": [
+     "yıkanır"
+    ],
+    "y": 0.36,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "pose": "point",
+     "at": "k",
+     "dir": 50,
+     "face": -1,
+     "scale": 0.7,
+     "emotion": "happy"
+    }
+   },
+   "cues": {
+    "w0": "beyniniz",
+    "w1": "her",
+    "w2": "gece",
+    "w3": "yıkıyor",
+    "k": "kendini"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Peki uyku hiç gelmeseydi ne olurdu? Uykusuzluk insanı gerçekten öldürür mü?",
+   "visual": "Parşömen bölüm kartı: 'BÖLÜM 5 / 6' rozeti, mavi dairede dev 5, altında kartta 'Uykusuzluk öldürür mü?' ve mavi el çizimi alt çizgi.",
+   "title": {},
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "Uykusuzluk öldürür mü?"
+   },
+   "cues": {
+    "title": "uykusuzluk"
+   },
+   "chapter": "Uykusuzluk öldürür mü?"
+  },
+  {
+   "type": "map",
+   "text": "1980'lerde Chicago Üniversitesi'nde Allan Rechtschaffen ve ekibi bu soruyu sıçanlarla sınadı.",
+   "visual": "Eski harita: Michigan Gölü ve kıyıları, gölün güneybatı ucunda kırmızı 'Chicago Üniversitesi' noktası, köşede pusula gülü, altta el yazısı not kartı \"1980'ler\".",
+   "title": {
+    "white": "Chicago",
+    "gray": "1980'ler"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.1,
+       -0.1
+      ],
+      [
+       0.47,
+       -0.1
+      ],
+      [
+       0.45,
+       0.08
+      ],
+      [
+       0.41,
+       0.22
+      ],
+      [
+       0.39,
+       0.38
+      ],
+      [
+       0.41,
+       0.52
+      ],
+      [
+       0.45,
+       0.65
+      ],
+      [
+       0.49,
+       0.76
+      ],
+      [
+       0.53,
+       0.82
+      ],
+      [
+       0.58,
+       0.83
+      ],
+      [
+       0.63,
+       0.79
+      ],
+      [
+       0.66,
+       0.86
+      ],
+      [
+       0.68,
+       1.1
+      ],
+      [
+       -0.1,
+       1.1
+      ]
+     ],
+     [
+      [
+       0.63,
+       0.79
+      ],
+      [
+       0.67,
+       0.68
+      ],
+      [
+       0.69,
+       0.55
+      ],
+      [
+       0.68,
+       0.42
+      ],
+      [
+       0.66,
+       0.3
+      ],
+      [
+       0.62,
+       0.18
+      ],
+      [
+       0.58,
+       0.06
+      ],
+      [
+       0.57,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       1.1
+      ],
+      [
+       0.68,
+       1.1
+      ],
+      [
+       0.66,
+       0.86
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Michigan Gölü",
+      "x": 0.54,
+      "y": 0.42,
+      "size": 46
+     }
+    ],
+    "cities": [
+     {
+      "name": "Chicago Üniversitesi",
+      "x": 0.5,
+      "y": 0.8,
+      "dx": -26,
+      "dy": -30,
+      "anchor": "end",
+      "color": "red",
+      "at": "city"
+     }
+    ],
+    "note": {
+     "text": "1980'ler",
+     "x": 0.82,
+     "y": 0.86,
+     "at": "note"
+    },
+    "focus": [
+     0.5,
+     0.78
+    ],
+    "zoom": 1.15,
+    "compass": "tr"
+   },
+   "cues": {
+    "city": "chicago",
+    "note": "1980"
+   }
+  },
+  {
+   "type": "uyku_c_lab",
+   "text": "Sıçanları hiç uyutmadılar ve sonuç ürkütücüydü: Hayvanlar genellikle iki ila üç hafta içinde öldü.",
+   "visual": "Laboratuvar: duvarda iğneli kartta gün çentikleri birer birer çiziliyor ('Gün 21'e kadar), son günler kırmızı halkaya alınıyor ve '2–3 hafta' notu çıkıyor; masada tel kafeste platform üstünde sakin, soyut bir sıçan; solda önlüklü Rechtschaffen not tutuyor, sağda Kaşif irkiliyor.",
+   "title": {
+    "white": "Hiç",
+    "gray": "uyku yok"
+   },
+   "params": {
+    "mode": "cage",
+    "days": 21,
+    "ring": [
+     14,
+     21
+    ],
+    "note": "2–3 hafta",
+    "cage_x": 0.55,
+    "cast": [
+     {
+      "who": "rechtschaffen",
+      "coat": true,
+      "tag": "Rechtschaffen",
+      "x": 0.17,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "hold",
+      "item": "scroll",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "scale": 0.95
+     }
+    ]
+   },
+   "cues": {
+    "hit": "iki"
+   }
+  },
+  {
+   "type": "uyku_c_lab",
+   "text": "Üstelik sıçanlar normalden fazla yemelerine rağmen kilo kaybetti ve vücut ısılarını koruyamadı.",
+   "visual": "Üç iğneli kart yan yana: dolan yemek kâsesi 'Yemek' + yeşil yukarı ok; ibresi düşen tartı 'Kilo' + kırmızı aşağı ok; cıvası inen termometre 'Isı' + kırmızı aşağı ok; sağda Kaşif kartları tek tek gösteriyor, sonunda düşünüyor.",
+   "title": {
+    "white": "Ters",
+    "gray": "giden vücut"
+   },
+   "params": {
+    "mode": "signs",
+    "xs": [
+     0.17,
+     0.4,
+     0.63
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.87,
+      "pose": "talk",
+      "face": "left",
+      "at": "c1",
+      "then": "point",
+      "dir": "forward",
+      "scale": 0.95,
+      "seq": [
+       {
+        "at": "c2",
+        "pose": "think",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   },
+   "cues": {
+    "c0": "fazla",
+    "c1": "kilo",
+    "c2": "ısılarını"
+   }
+  },
+  {
+   "type": "title",
+   "text": "İnsanlarda ise çok daha nadir bir örnek var: ölümcül ailesel uykusuzluk.",
+   "visual": "Dev Fraunces yazı kelime kelime çarpıyor: kırmızı kutuda 'ÖLÜMCÜL', 'AİLESEL', 'UYKUSUZLUK'; altında el yazısı not 'çok nadir'; sağ altta Kaşif irkiliyor.",
+   "title": {
+    "white": "Çok",
+    "gray": "nadir"
+   },
+   "params": {
+    "lines": [
+     "Ölümcül ailesel",
+     "uykusuzluk"
+    ],
+    "highlight": [
+     "Ölümcül"
+    ],
+    "note": {
+     "text": "çok nadir",
+     "at": "w2"
+    },
+    "arrow": false,
+    "y": 0.36,
+    "size": 150,
+    "kasif": {
+     "x": 0.87,
+     "y": 0.9,
+     "pose": "shock",
+     "at": "w0",
+     "face": -1,
+     "scale": 0.75,
+     "emotion": "surprised"
+    }
+   },
+   "cues": {
+    "w0": "ölümcül",
+    "w1": "ailesel",
+    "w2": "uykusuzluk"
+   }
+  },
+  {
+   "type": "uyku_c_head",
+   "text": "Bu kalıtsal hastalık, beynin derinindeki talamusu yavaş yavaş tahrip eder ve hasta bir daha derin uykuya dalamaz. Ama içiniz rahat olsun, bu hastalık neredeyse her zaman genlerle gelir; birkaç gece uykusuzluk ona yol açmaz.",
+   "visual": "Yandan dev kafa çizimi, içinde beyin kıvrımları ve ortada parlayan küçük talamus; 'Talamus' etiketi okla gösteriyor; 'tahrip' denince talamus kırmızıya döner, çatlar, kortekse giden sinyaller ve kafanın üstündeki Z'ler söner; sonra sağda DNA sarmalı çizilir ve yeşil 'genlerle gelir' notu çıkar; Kaşif sağda işaret edip anlatıyor.",
+   "title": {
+    "white": "Talamus",
+    "gray": "beynin derini"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "point",
+      "dir": "forward",
+      "face": "left",
+      "at": "genlerle",
+      "then": "talk",
+      "emotion": "happy",
+      "scale": 0.95,
+      "emotion0": "worried"
+     }
+    ]
+   },
+   "cues": {
+    "talamus": "talamusu",
+    "hit": "tahrip",
+    "genlerle": "genlerle"
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Peki Randy'ye ne oldu? 8 Ocak 1964'te, tam iki yüz altmış dört saatin sonunda, deney sona erdi.",
+   "visual": "Yatay zaman çizgisi: '1963 · Başladı' ve kırmızı vurgulu '8 Ocak 1964 · 264 saat!'; işaretçi 1964'e kayıyor; sağda Kaşif 1964'ü gösteriyor.",
+   "title": {
+    "white": "8 Ocak",
+    "gray": "1964"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Aralık 1963",
+      "text": "Başladı"
+     },
+     {
+      "year": "8 Ocak 1964",
+      "text": "264 saat!",
+      "at": "c1"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.92,
+     "pose": "point",
+     "at": "c1",
+     "scale": 0.72,
+     "dir": 50,
+     "face": -1,
+     "emotion": "happy"
+    }
+   },
+   "cues": {
+    "c1": "ocak"
+   },
+   "chapter": "Randy'ye ne oldu?"
+  },
+  {
+   "type": "uyku_c_bed",
+   "text": "Randy on dört saatten biraz fazla uyudu, sonra kalktı ve hayatına kaldığı yerden devam etti.",
+   "visual": "Gece yatak odası: penceredeki ayla yıldızlar, yorganın altında uyuyan genç Randy ve yükselen Z'ler, duvar saati hızla dönüyor, sayaç '14+ saat'e doluyor; 'kalktı' denince pencere sabaha döner, yorgan açılır, Randy yatağın yanında belirip sağa yürüyerek çıkar; solda Kaşif el sallıyor.",
+   "title": {
+    "white": "Uzun",
+    "gray": "bir uyku"
+   },
+   "params": {
+    "mode": "bed",
+    "counter": {
+     "to": 14,
+     "suffix": "+",
+     "unit": "saat"
+    },
+    "sleeper": {
+     "tag": "Randy"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.09,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "wave",
+      "emotion": "happy",
+      "scale": 0.9
+     }
+    ]
+   },
+   "cues": {
+    "hit": "kalktı"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ama bu şanslı son kimseyi yanıltmasın. Guinness Rekorlar Kitabı bile, tehlikeli olduğu için uykusuzluk rekorlarını artık kaydetmiyor.",
+   "visual": "Parşömen sahne, uzakta tepeler: Kaşif önce anlatıyor, sonra elindeki 'Kayıt yok' tabelasını kaldırıyor; yanında genç Randy omuz silkiyor; üstte el yazısıyla 'Çok tehlikeli!' notu.",
+   "title": {
+    "white": "Guinness",
+    "gray": "rekor yok"
+   },
+   "params": {
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2
+     }
+    },
+    "label": {
+     "text": "Çok tehlikeli!",
+     "y": 0.18,
+     "at": "hit",
+     "size": 104
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.38,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "hold",
+      "text": "Kayıt yok",
+      "emotion": "worried"
+     },
+     {
+      "who": "randy",
+      "x": 0.68,
+      "pose": "idle",
+      "face": "left",
+      "talk": false,
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "happy",
+      "scale": 0.92
+     }
+    ]
+   },
+   "cues": {
+    "hit": "kaydetmiyor"
+   }
+  },
+  {
+   "type": "uyku_c_clock24",
+   "text": "Uzmanlar yetişkinlere her gece yedi ila dokuz saat uyku öneriyor. Yani hayatımızın yaklaşık üçte biri uykuda geçer.",
+   "visual": "El çizimi 24 saatlik kadran (tepede 00): ibre dönüyor, 'yedi' denince 23–07 gece dilimi maviyle taranır ve ay belirir, sağda mavi '7–9 saat'; 'üçte' denince kırmızı '~1/3' ve 'uykuda' notu, ok dilimi gösteriyor; sağda Kaşif kadranı gösteriyor.",
+   "title": {
+    "white": "Günün",
+    "gray": "üçte biri"
+   },
+   "params": {
+    "night": [
+     23,
+     7
+    ],
+    "cx": 0.3,
+    "note_x": 0.64,
+    "hours": {
+     "text": "7–9 saat",
+     "at": "hit"
+    },
+    "third": {
+     "text": "~1/3",
+     "sub": "uykuda",
+     "at": "third"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.89,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "scale": 0.9,
+      "seq": [
+       {
+        "at": "third",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "cues": {
+    "hit": "yedi",
+    "third": "üçte"
+   }
+  },
+  {
+   "type": "uyku_c_bed",
+   "text": "Ama o saatler hayattan çalınmaz. O saatler, beyninizin kendini onardığı ve sizi yarına hazırladığı saatlerdir.",
+   "visual": "Büyük pencerede tepelerin ardından güneş yükseliyor, ışınlar dönüyor, kuşlar uçuyor; pencerenin altında önce mavi 'Onarım', sonra kırmızı 'Yarına hazırlık' rozetleri çıkıyor; solda Kaşif güneşi gösterip el sallıyor, sağda toplanmış yatak.",
+   "title": {
+    "white": "Yeni",
+    "gray": "bir sabah"
+   },
+   "params": {
+    "mode": "morning",
+    "words": [
+     {
+      "text": "Onarım",
+      "at": "w0",
+      "color": "blue"
+     },
+     {
+      "text": "Yarına hazırlık",
+      "at": "w1",
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "pose": "point",
+      "dir": "up",
+      "face": "right",
+      "at": "w1",
+      "then": "wave",
+      "emotion": "happy",
+      "scale": 0.95
+     }
+    ]
+   },
+   "cues": {
+    "w0": "onardığı",
+    "w1": "yarına"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki siz en fazla kaç saat uykusuz kaldınız ve beyniniz size ne gibi oyunlar oynadı? Yorumlara yazın!",
+   "visual": "Kapanış dev yazısı kelime kelime: 'SİZ KAÇ SAAT' ve kırmızı kutuda 'UYKUSUZ' + 'KALDINIZ?'; sağ altta Kaşif düşünüyor.",
+   "title": {},
+   "params": {
+    "lines": [
+     "Siz kaç saat",
+     "uykusuz kaldınız?"
+    ],
+    "highlight": [
+     "uykusuz"
+    ],
+    "y": 0.36,
+    "size": 150,
+    "kasif": {
+     "x": 0.87,
+     "y": 0.9,
+     "pose": "think",
+     "at": "w3",
+     "face": -1,
+     "scale": 0.75,
+     "emotion": "happy"
+    }
+   },
+   "cues": {
+    "w0": "siz",
+    "w1": "kaç",
+    "w2": "saat",
+    "w3": "uykusuz",
+    "w4": "kaldınız"
+   }
+  }
+ ],
+ "theme": "parchment"
+}
