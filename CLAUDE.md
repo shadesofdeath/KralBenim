@@ -25,6 +25,7 @@ geçmiş kayıttır (konu tekrarını önlemek için okunur), artık render edil
 - `docs/REVIEW.md` — eleştiri döngüsü: 11 kriterli puanlama, geçme şartı (hepsi ≥ 7), günlük formatı.
 - `tools/upload.py` — YouTube yüklemesi (Actions'ta çalışır, `YOUTUBE_TOKEN_JSON` secret'ı). Fotoğraf/video kredilerini (`params.credit`) açıklamaya otomatik ekler.
 - `tools/media.py` — telifsiz fotoğraf/video bulur ve indirir (Wikimedia Commons; `PEXELS_API_KEY` varsa Pexels foto + video).
+- `cloudflare/telegram-worker.js` — Telegram komut dinleyicisi (Cloudflare Worker): `/uzun [konu]`, `/shorts [konu]` elle görevleri API ile başlatır. Kurulum `cloudflare/KURULUM.md`.
 - `tools/hf.py` — Higgsfield sepya klibini (MCP ile üretilen) indirip 1080p'ye normalleştirir. Bulut ortamı Higgsfield CDN'ine erişemezse klip `params.url` ile senaryoya yazılır; `build.py` render sırasında (GitHub Actions) indirir, önizleme yer tutucu gösterir.
 
 Ses: anlatım + altında çok hafif ambiyans müziği (`tools/sfx.py`, kodla üretilir). **Efekt sesi (whoosh, pop, vuruş) yok — kanal sahibi istemiyor, geri ekleme.** **Nefes sesi de istenmiyor:** `eleven_v3` kelime aralarında nefes alıyor; `build.py` (`debreath`) kelime zamanlamasına göre kelime aralarını kısar, kelimelere dokunmaz. Müziği de kapatmak için senaryoya `"sfx": false`.
