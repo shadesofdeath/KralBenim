@@ -5,7 +5,7 @@ on:
     inputs:
       script:
         description: Script JSON path
-        default: script.json
+        default: videos/2026-10-20/01-emu-savasi.json
       no_tts:
         description: "Silent draft (no ElevenLabs call)"
         default: "false"

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Upload a rendered video to YouTube using the script's "youtube" block.
 
-  YOUTUBE_TOKEN_JSON='<contents of youtube_token.json>' python tools/upload.py script.json out/video.mp4
+  YOUTUBE_TOKEN_JSON='<contents of youtube_token.json>' python tools/upload.py videos/<date>/<file>.json out/video.mp4
   # or: YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN
 
-script.json:
+<file>.json:
   "youtube": {"title": "...", "description": "...", "tags": [...], "category_id": "27",
               "publish_at": "2026-10-16T10:00:00+03:00"}   # omit publish_at to keep it private
 Also sets <video>.jpg as the thumbnail if present, and for long videos appends chapters

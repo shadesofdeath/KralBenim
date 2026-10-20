@@ -2,7 +2,7 @@
 """Telegram: finished Shorts (Instagram-ready) + ONE live status message per production day.
 
   python tools/telegram.py setup                      # find the chat that messaged the bot -> config/telegram_chat_id
-  python tools/telegram.py send script.json out/x.mp4 # video + Instagram caption
+  python tools/telegram.py send <file>.json out/x.mp4  # video + Instagram caption
   python tools/telegram.py text "message"
   python tools/telegram.py status <key> <stage> <state> [text] [--video SLUG] [--title T] [--kind short|long] [--progress 60%]
   python tools/telegram.py status <key> --batch '[{"stage": "script", "state": "done", "video": "01-x"}, ...]'

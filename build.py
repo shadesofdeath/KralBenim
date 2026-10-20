@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Shorts pipeline: script.json -> out/video.mp4
+"""Video pipeline: videos/<date>/<file>.json -> out/video.mp4 (Studio engine, parchment + Kaşif style)
 
-  python build.py script.json                 # full video
-  python build.py script.json --scenes 3      # only the first 3 scenes (test)
-  python build.py script.json --still 12.5    # save a single frame as PNG
-  python build.py script.json --cover          # only the thumbnail (out/video.jpg)
+  python build.py <file>.json                 # full video
+  python build.py <file>.json --scenes 3      # only the first 3 scenes (test)
+  python build.py <file>.json --still 12.5    # save a single frame as PNG
+  python build.py <file>.json --cover         # only the thumbnail (out/video.jpg)
 
 Sharded (one video across several machines/CI jobs; always pass the same -o):
-  python build.py script.json -o out/x.mp4 --prepare     # TTS, timeline, media -> out/x.prepared.json
-  python build.py script.json -o out/x.mp4 --shard 2/5   # render frame range 2 of 5 -> out/x.parts/
-  python build.py script.json -o out/x.mp4 --finish      # concat + audio mux + cover -> out/x.mp4
+  python build.py <file>.json -o out/x.mp4 --prepare     # TTS, timeline, media -> out/x.prepared.json
+  python build.py <file>.json -o out/x.mp4 --shard 2/5   # render frame range 2 of 5 -> out/x.parts/
+  python build.py <file>.json -o out/x.mp4 --finish      # concat + audio mux + cover -> out/x.mp4
 
 Env: RENDER_WORKERS (parallel browsers per machine), RENDER_CAPTURE=screenshot (old page.screenshot
 capture), RENDER_COMPOSITOR=gpu (old SwiftShader compositor), SHARD_SECONDS (video seconds per shard),
@@ -31,12 +31,10 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-TEMPLATE = ROOT / "scenes" / "index.html"
-STUDIO = ROOT / "scenes" / "studio" / "index.html"   # "engine": "studio" (full-bleed 2D/3D shots)
+STUDIO = ROOT / "scenes" / "studio" / "index.html"   # "engine": "studio", "theme": "parchment" (the only engine)
 FPS = 30
 SIZES = {"short": (1080, 1920), "long": (1920, 1080)}
-TAIL = 0.8  # hold after the last word (s)
-STUDIO_TAIL = 1.2  # studio videos end on a complete sentence and let the last shot breathe
+STUDIO_TAIL = 1.2  # videos end on a complete sentence and let the last shot breathe
 PUNCT = ".,;:!?…\"'"
 
 
@@ -291,12 +289,10 @@ def build_timeline(script, text, ranges, words, duration):
         out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"], "chapter": sc.get("chapter"),
                            "title": sc.get("title", {}), "tags": sc.get("tags", []),
                            "params": sc.get("params", {}), "cues": cues,
-                           **{k: sc[k] for k in ("mascot", "art", "transition") if k in sc}})
+                           **{k: sc[k] for k in ("art", "transition") if k in sc}})
 
-        # captions: short phrases, broken at punctuation or ~5 words / 30 chars
-        # (studio: punchier 1-3 word groups)
-        studio = script.get("engine") == "studio"
-        max_words, max_chars = (3, 16) if studio else (4, 24)
+        # captions: punchy 1-3 word groups, broken at punctuation or ~16 chars
+        max_words, max_chars = 3, 16
         chunk, chunks = [], []
         for w in ws:
             chunk.append(w)
@@ -319,10 +315,9 @@ def build_timeline(script, text, ranges, words, duration):
         # the hook frame stays up until the first sentence is spoken
         first = next((w for w in per[0] if w["disp"][-1] in ".?!"), per[0][-1])
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
-    studio = script.get("engine") == "studio"
-    # studio: draw at 1080p (software WebGL cost scales with pixels), upscale to 1440p at encode time
-    return {"hook": hook, "scale": script.get("scale", 1.0 if studio else 4 / 3), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
-            "engine": script.get("engine", "classic"), "art": script.get("art"), "theme": script.get("theme"),
+    # draw at 1080p, upscale to 1440p at encode time
+    return {"hook": hook, "scale": script.get("scale", 1.0), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""),
+            "engine": "studio", "art": script.get("art"), "theme": script.get("theme", "parchment"),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
@@ -332,6 +327,8 @@ def load_script(path):
     """Read a script and resolve media paths (params.src / params.video) relative to the script file."""
     path = Path(path).resolve()
     script = json.loads(path.read_text())
+    if script.get("engine") != "studio":
+        sys.exit(f'{path.name}: "engine" must be "studio" (the classic card engine was removed)')
     for sc in script["scenes"]:
         p = sc.get("params") or {}
         for k in ("src", "video"):
@@ -414,11 +411,10 @@ def open_page(pw, timeline, fast=False):
     # encodes, so the final stream stays sharp; layout stays in 1080p CSS pixels
     page = browser.new_page(viewport={"width": w, "height": h}, device_scale_factor=timeline.get("scale", 4 / 3))
     page.on("pageerror", lambda e: print(f"page error: {e}", file=sys.stderr))
-    page.goto((STUDIO if timeline.get("engine") == "studio" else TEMPLATE).as_uri())
-    if timeline.get("engine") == "studio":
-        # one file per topic-specific shot type (scenes/studio/shots/<type>.js), so parallel agents never edit the same file
-        for js in sorted((STUDIO.parent / "shots").glob("*.js")):
-            page.add_script_tag(path=str(js))
+    page.goto(STUDIO.as_uri())
+    # one file per shot type (scenes/studio/shots/<type>.js), so parallel agents never edit the same file
+    for js in sorted((STUDIO.parent / "shots").glob("*.js")):
+        page.add_script_tag(path=str(js))
     page.evaluate("d => window.init(d)", timeline)
     page.evaluate("document.fonts.ready.then(() => true)")
     return browser, page
@@ -428,14 +424,13 @@ def _encode_args(timeline):
     fps = timeline["fps"]
     blur = timeline.get("motion_blur", False) and fps >= 60
     vf = ["tmix=frames=2,fps=30"] if blur else []   # motion blur: 60 fps pairs -> 30 fps
-    if timeline.get("engine") == "studio":
-        w, h = timeline["size"]
-        # upscale to 1440p so YouTube serves the high-bitrate VP9/AV1 encode
-        # (film grain was dropped: it tripled the file size and encode time and YouTube smears it anyway)
-        vf += [f"scale={round(w * 4 / 3)}:{round(h * 4 / 3)}:flags=lanczos"]
+    w, h = timeline["size"]
+    # upscale to 1440p so YouTube serves the high-bitrate VP9/AV1 encode
+    # (film grain was dropped: it tripled the file size and encode time and YouTube smears it anyway)
+    vf += [f"scale={round(w * 4 / 3)}:{round(h * 4 / 3)}:flags=lanczos"]
     return [*(["-vf", ",".join(vf)] if vf else []),
-            "-c:v", "libx264", "-preset", "medium" if timeline.get("engine") == "studio" else "slow",
-            "-crf", "18" if timeline.get("engine") == "studio" else "15",   # studio Shorts stay < 50 MB (Telegram bot limit) "-tune", "animation", "-profile:v", "high",
+            "-c:v", "libx264", "-preset", "medium",
+            "-crf", "18",   # Shorts stay < 50 MB (Telegram bot limit) "-tune", "animation", "-profile:v", "high",
             "-pix_fmt", "yuv420p", "-g", str(60 if blur else fps * 2), "-bf", "2",
             "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709"]
 
@@ -445,12 +440,10 @@ def _capturer(page, timeline):
     optimizeForSpeed (the same JPEG bytes as page.screenshot without Playwright's per-call overhead).
     RENDER_CAPTURE=screenshot falls back to page.screenshot. (HeadlessExperimental.beginFrame was
     measured too: no faster here, and it only works in chrome-headless-shell.)"""
-    studio = timeline.get("engine") == "studio"
     if os.environ.get("RENDER_CAPTURE", "cdp") == "screenshot":
-        shot = {"type": "jpeg", "quality": 95} if studio else {"type": "png"}
-        return lambda: page.screenshot(**shot)
+        return lambda: page.screenshot(type="jpeg", quality=95)
     cdp = page.context.new_cdp_session(page)
-    req = {"format": "jpeg", "quality": 95, "optimizeForSpeed": True} if studio else {"format": "png"}
+    req = {"format": "jpeg", "quality": 95, "optimizeForSpeed": True}
     return lambda: base64.b64decode(cdp.send("Page.captureScreenshot", req)["data"])
 
 
@@ -736,9 +729,8 @@ def main():
         pacing = script.get("pacing") or ({"max": script["max_pause"]} if script.get("max_pause") else None)
         if pacing:
             mp3, words = pace(mp3, words, text, pacing, work)
-    studio = script.get("engine") == "studio"
-    # classic Shorts end tight (they used to loop back to the hook); studio videos end on a full sentence
-    duration = audio_duration(mp3) + (STUDIO_TAIL if studio else 0.3 if script.get("format", "short") == "short" else TAIL)
+    # videos end on a full sentence and let the last shot breathe
+    duration = audio_duration(mp3) + STUDIO_TAIL
     timeline = build_timeline(script, text, ranges, words, duration)
     prepare_media(timeline, work)
     (work / "timeline.json").write_text(json.dumps(timeline, ensure_ascii=False, indent=1))

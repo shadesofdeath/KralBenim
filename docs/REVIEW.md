@@ -2,7 +2,7 @@
 
 Her video yayına gitmeden önce **senaryoyu yazmayan** bir eleştirmen ajan tarafından puanlanır.
 Eleştirmen önce **sadece anlatım metnini** (tüm sahnelerin `text` alanları art arda) görüntüye bakmadan okur ve "Senaryo" puanını verir. Sonra taze gözle bakar: sadece `sheet.png`, `cover.jpg`, senaryo JSON'u, `tools/lint.py` ve
-`tools/preview.py` çıktısını görür.
+`tools/preview.py` çıktısını görür. Görsel kriterlerde ölçü `brand/kit/BRAND.md`'dir (§2 Kaşif, §3 renkler, §5 çizim dili, §9 kapak, §10 kontrol listesi).
 
 ## Puanlama (1–10)
 
@@ -13,12 +13,12 @@ Eleştirmen önce **sadece anlatım metnini** (tüm sahnelerin `text` alanları 
 | **Okunabilirlik (360 px)** | Kontak sayfasında (her kare 360 px genişlik) tüm sahne yazıları okunuyor; yazı görsele binmiyor; altyazı bandı ve YouTube arayüzü bölgesi temiz. |
 | **Görsel = anlatım** | Her sahnenin görseli `visual` cümlesini ve o an söylenen şeyi birebir gösteriyor; "yaklaşık" görsel yok. |
 | **Hareket** | Her sahne canlı (preview `motion` ≥ 1.5, tercihen ≥ 4); her 3–5 sn'de yeni görsel ödül; cue'lar dramatik kelimelerde. |
-| **Kompozisyon** | Tek odak, dolu kadraj, güvenli bölgeler korunmuş, nesne ekran dışına taşmıyor. |
-| **Derinlik** | Ön/orta/arka plan katmanları, ışık, paralaks; düz "slayt" yok. |
-| **Akış ve tempo** | 2–4 sn sahneler, sahne tipi çeşitliliği, palet geçişleri anlamlı, dolgu cümle yok. |
+| **Kompozisyon + Kaşif** | Tek odak, dolu kadraj, güvenli bölgeler korunmuş, nesne ekran dışına taşmıyor. Kaşif sahnelerin en az yarısında, şapkalı ve her seferinde bir şey yapıyor (yürüyor, işaret ediyor, şaşırıyor); dönem karakterleri şapkasız. |
+| **Derinlik + marka** | Parşömen üstünde ön/orta/arka plan mürekkep katmanları, yavaş kamera itmesi, paralaks; çizgiler kaynıyor (boil); düz "slayt" yok. Sadece BRAND.md §3 renkleri (palet dışı renk, parlak 3D, emoji ikon görülürse en fazla 5). |
+| **Akış ve tempo** | 2–4 sn sahneler, sahne tipi çeşitliliği (stage / map / timeline / board / title / konuya özel), dolgu cümle yok. |
 | **Doğruluk** | Her sayı/tarih doğrulanmış ya da "yaklaşık"; yaygın efsane yok. |
 | **Kapanış** | Son cümle tam, kendi başına anlamlı, akılda kalan sonuç; döngü/soru yok. |
-| **Kapak + SEO** | Kapak küçük ekranda okunuyor ve dramatik; başlık aranan ifadeyle başlıyor, vaadini video karşılıyor. |
+| **Kapak + SEO** | Kapak BRAND.md §9'a uygun (parşömen, Fraunces dev yazı, tek kelime kırmızı kutuda, büyük Kaşif ya da olayın tek simgesi), küçük ekranda okunuyor ve dramatik; başlık aranan ifadeyle başlıyor, vaadini video karşılıyor. |
 
 ## Kurallar
 
@@ -32,9 +32,9 @@ Eleştirmen önce **sadece anlatım metnini** (tüm sahnelerin `text` alanları 
 
 ```md
 ### 01-<slug> — tur 2
-| Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
-|---|---|---|---|---|---|---|---|---|---|
-| 9 | 8 | 8 | 9 | 8 | 7 | 9 | 10 | 9 | 8 |
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 9 | 8 | 8 | 9 | 8 | 7 | 9 | 10 | 9 | 8 |
 1. Sahne 4: ... → ...
 2. ...
 3. ...

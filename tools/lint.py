@@ -18,14 +18,12 @@ from plan import LIMITS  # noqa: E402
 VOICES = {"short": "j4vJUfke1j8j9OYq8V3b", "long": "j4vJUfke1j8j9OYq8V3b"}   # channel owner's choice (2026-10-19), all formats
 MODEL = "eleven_v3"
 SCENES = {"short": (8, 11), "long": (35, 45)}
-PALETTES = {"space", "magma", "ocean", "sunset", "candy", "forest", "lab", "ice", "desert", "noir"}
+THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
 
 
 def shot_types():
+    """Every shot type lives in its own scenes/studio/shots/<type>.js (removed Studio types are unknown)."""
     kinds = {}
-    for js, kind in (("shots3d.js", "3d"), ("shots2d.js", "2d")):
-        for name in re.findall(r"^SHOTS2?\.(\w+)\s*=", (ROOT / "scenes/studio" / js).read_text(), re.M):
-            kinds[name] = kind
     for js in sorted((ROOT / "scenes/studio/shots").glob("*.js")):
         # SHOTS.x = {kind: ...}, SH.x = {\n kind: ...}, (window.SHOTS || ...).x = {...}
         for name, kind in re.findall(r"\.(\w+)\s*=\s*\{\s*kind:\s*'(\w+)'", js.read_text()):
@@ -48,13 +46,12 @@ def lint(path, kinds):
     s = json.loads(Path(path).read_text())
     fmt = s.get("format", "short")
     short = fmt == "short"
-    parch = s.get("theme") == "parchment"   # brand style (brand/kit/BRAND.md): fixed palette, Kaşif instead of mascot
     sc = s.get("scenes", [])
 
     if s.get("engine") != "studio":
         err.append('"engine" must be "studio"')
-    if not parch and (s.get("art") or {}).get("palette") not in PALETTES:
-        err.append(f'"art.palette" must be one of {sorted(PALETTES)}')
+    if s.get("theme") != THEME:
+        err.append(f'"theme" must be "{THEME}": the channel has one style, sepia parchment + Kaşif (brand/kit/BRAND.md)')
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
     tts = s.get("tts", {})
@@ -123,6 +120,10 @@ def lint(path, kinds):
                     err.append(f"{tag}: photo/video without params.credit")
         if p.get("ai") and fmt == "short":
             warn.append(f"{tag}: AI-generated clip in a Short (keep Higgsfield clips to long videos)")
+        if x.get("mascot"):
+            err.append(f"{tag}: \"mascot\" (the old bulb) was removed; Kaşif appears through 'stage' or params.cast/kasif")
+        if x.get("type") == "photo" and p.get("grade") not in (None, "sepia", "mono"):
+            warn.append(f"{tag}: photo grade {p.get('grade')!r} is ignored; photos are printed sepia on the parchment")
 
     # variety
     types = [x.get("type") for x in sc]
@@ -135,28 +136,18 @@ def lint(path, kinds):
     run = 1
     for i in range(1, len(types)):
         run = run + 1 if types[i] == types[i - 1] else 1
-        cap = 3 if kinds.get(types[i]) == "3d" or types[i] == "stage" else 2
+        cap = 3 if types[i] == "stage" else 2   # Kaşif's journey may run 3 stage scenes
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
-    if parch:
 
-        # Kaşif is on screen in every 'stage' scene and in any shot that puts him in params.kasif or params.cast
-        def has_kasif(x):
-            p = x.get("params") or {}
-            return x.get("type") == "stage" or bool(p.get("kasif")) or any(
-                isinstance(c, dict) and (c.get("who") or "kasif") == "kasif" for c in (p.get("cast") or []))
-        nk = sum(1 for x in sc if has_kasif(x))
-        if types and nk < len(types) / 2:
-            err.append(f"Kaşif in {nk}/{len(types)} scenes ('stage' or params.kasif/cast), brand needs at least half")
-    elif not any(kinds.get(t) in ("3d", "real") for t in types):
-        err.append("no 3D or real-footage scene")
-    if short and not parch:
-        photos = types.count("photo")
-        if photos == 0:
-            warn.append("no real photo/video scene (aim for 1-3 per Short)")
-        m = sum(1 for x in sc if x.get("mascot"))
-        if not 2 <= m <= 4:
-            warn.append(f"mascot in {m} scenes, aim for 2-4")
+    # Kaşif is on screen in every 'stage' scene and in any shot that puts him in params.kasif or params.cast
+    def has_kasif(x):
+        p = x.get("params") or {}
+        return x.get("type") == "stage" or bool(p.get("kasif")) or any(
+            isinstance(c, dict) and (c.get("who") or "kasif") == "kasif" for c in (p.get("cast") or []))
+    nk = sum(1 for x in sc if has_kasif(x))
+    if types and nk < len(types) / 2:
+        err.append(f"Kaşif in {nk}/{len(types)} scenes ('stage' or params.kasif/cast), brand needs at least half")
     if short:
         first = sentences(sc[0]["text"])[0] if sc else ""
         if not 3 <= len(first.split()) <= 10:

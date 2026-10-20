@@ -2,7 +2,7 @@
 """Visual QA without TTS: estimates word timings and renders a contact sheet of frames.
 
   python tools/preview.py videos/2026-10-16/01-konu.json            # 2 frames per scene
-  python tools/preview.py script.json --times 3,12.5,40              # specific times
+  python tools/preview.py videos/2026-10-16/01-konu.json --times 3,12.5,40   # specific times
 Output: out/preview/<slug>/sheet.png (+ frame_NN.png), cover.jpg.
 Default mode also measures motion per scene (pixel change between its two frames) and flags
 scenes that look frozen: every scene must keep moving.
@@ -30,8 +30,7 @@ def main():
         ranges.append((len(text), len(text) + len(sc["text"])))
         text += sc["text"]
     words, dur = build.estimate_words(text)
-    tail = build.STUDIO_TAIL if script.get("engine") == "studio" else build.TAIL
-    tl = build.build_timeline(script, text, ranges, build.locate(text, words), dur + tail)
+    tl = build.build_timeline(script, text, ranges, build.locate(text, words), dur + build.STUDIO_TAIL)
     out = ROOT / "out" / "preview" / script.get("slug", Path(a.script).stem)
     out.mkdir(parents=True, exist_ok=True)
     for f in out.glob("frame_*.png"):
