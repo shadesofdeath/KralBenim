@@ -20,7 +20,8 @@ SHORT_SLOTS = ["12:00", "19:00"]
 LONG_SLOT = "20:30"
 LONG_EVERY = 1                         # every day (was every 5 days until 2026-10-19)
 LONG_ANCHOR = date(2026, 10, 17)
-MONTHLY_CHARS = 60000
+MONTHLY_CHARS = 231442                 # ElevenLabs Creator plan credits (panel, 2026-10-20)
+BILLING_DAY = 20                       # credits renew on this day of the month
 LIMITS = {"short": (400, 500, 550), "long": (3400, 4000, 4300)}   # target min, target max, hard max
 
 
@@ -39,10 +40,22 @@ def chars(path):
     return sum(len(sc["text"]) for sc in s["scenes"]) + max(0, len(s["scenes"]) - 1), s.get("format", "short")
 
 
+def billing_start(d):
+    if d.day >= BILLING_DAY:
+        return d.replace(day=BILLING_DAY)
+    prev = d.replace(day=1) - timedelta(days=1)
+    return prev.replace(day=BILLING_DAY)
+
+
 def month_usage(d):
-    used = 0
-    for f in sorted(ROOT.glob(f"videos/{d:%Y-%m}-*/*.json")):
-        if not f.name.endswith(".youtube.json"):
+    """Characters of the scripts in the current billing period (repo estimate, not the live account)."""
+    start, used = billing_start(d), 0
+    for f in sorted(ROOT.glob("videos/*/*.json")):
+        try:
+            day = date.fromisoformat(f.parent.name)
+        except ValueError:
+            continue
+        if start <= day <= d and not f.name.endswith(".youtube.json"):
             used += chars(f)[0]
     return used
 
