@@ -135,7 +135,11 @@ def gh(path, body=None):
             if e.code in (403, 429) and i < 2 and e.headers.get("Retry-After"):
                 time.sleep(min(30, int(e.headers["Retry-After"])))
                 continue
-            warn(f"{path.split('?')[0]}: HTTP {e.code}")
+            try:
+                detail = e.read().decode(errors="replace")[:300]
+            except Exception:
+                detail = ""
+            warn(f"{path.split('?')[0]}: HTTP {e.code} {detail}")
             return None
         except Exception as e:
             if i < 2:
