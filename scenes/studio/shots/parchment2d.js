@@ -680,6 +680,7 @@
 
   // ---------------------------------------------------------------- timeline
   // P: {items: [{year: "MS 62", text: "Büyük deprem", at: "cueName"}], focus: 2 (index highlighted in red)}
+  //    kasif: {x: 0.86, y: 0.6, pose: "point", at: "c2", scale: 0.5, face: -1, emotion} (optional Kaşif, added for 02-penisilin-kesfi)
   // vertical in Shorts, horizontal in long videos. cues: item "at" names (marker moves there), else staggered
   SH.timeline = {
     kind: '2d',
@@ -716,6 +717,12 @@
                               : ink(g, ptsLine(dx, L.y - 24, dx, L.y - 40, 20), { width: 4, stroke: C.inkSoft, amp: 0.8 });
         return { g, it, k, dx, dy, dot, lab, year, desc, ring, isF };
       });
+      // optional Kaşif beside the line (P.kasif: {x: 0.86, y: 0.6, pose: "point", dir, face: -1, scale: 0.5, emotion, at}); opt-in
+      let kas = null;
+      if (P.kasif && typeof KASIF !== 'undefined' && KASIF && KASIF.create) {
+        const K = typeof P.kasif === 'object' ? P.kasif : { pose: P.kasif };
+        kas = { K, rig: KASIF.create(el(svg, 'g'), { scale: (portrait ? 1.3 : 1) * (K.scale || 0.5), hat: true, seed: seed + 9 }) };
+      }
       const marker = el(cam, 'g');
       if (portrait) ink(marker, [[-74, -20], [-40, 0], [-74, 20]], { closed: true, fill: C.red, stroke: C.ink, width: 4, amp: 1 });
       else ink(marker, [[-18, -62], [0, -32], [18, -62]], { closed: true, fill: C.red, stroke: C.ink, width: 4, amp: 1 });
@@ -740,6 +747,11 @@
           });
           const mp = spring(lt, ats[0] - 0.1, 0.6);
           marker.setAttribute('opacity', clamp01(mp * 2));
+          if (kas) {
+            const K = kas.K, at = typeof K.at === 'number' ? K.at : cue(cues, K.at || 'c1', 0.6), on = lt >= at;
+            kas.rig.update(env.t ?? lt, on ? (K.pose || 'point') : (K.pose0 || 'idle'), { x: (K.x ?? 0.86) * W, y: (K.y ?? (portrait ? 0.6 : 0.8)) * H,
+              face: K.face ?? -1, since: on ? lt - at : lt, dir: K.dir ?? 20, emotion: on ? (K.emotion || 'happy') : 'neutral' });
+          }
           marker.setAttribute('transform', portrait ? `translate(${L.x} ${f1(mpos)}) translate(${f1(Math.sin(env.t * 4) * 4)} 0)`
                                                     : `translate(${f1(mpos)} ${L.y}) translate(0 ${f1(Math.sin(env.t * 4) * 4)})`);
         },

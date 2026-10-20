@@ -1,0 +1,828 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "penisilin-kesfi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "art": {
+    "palette": "desert"
+  },
+  "cover": {
+    "lines": [
+      "Küflü tabak",
+      "dünyayı",
+      "değiştirdi"
+    ],
+    "highlight": [
+      "tabak"
+    ],
+    "scene": 0,
+    "t": 1.2,
+    "kasif": {
+      "pose": "shock",
+      "x": 820,
+      "y": 1840,
+      "scale": 1.05
+    }
+  },
+  "youtube": {
+    "title": "Penisilin Nasıl Bulundu? Küflü Bir Tabağın Hikâyesi 🧫",
+    "description": "Penisilin nasıl bulundu? Dünyayı değiştiren ilaç, 1928'de Londra'da küflü bir tabakta ortaya çıktı. Alexander Fleming'in masasında ne oldu?\n\nFleming, St Mary's Hastanesi'ndeki laboratuvarına tatilden döndüğünde stafilokok bakterisi ektiği tabaklardan birinde mavi yeşil bir küf buldu. Küfün çevresindeki bakteriler ölmüş, temiz bir halka açılmıştı. Fleming bu maddeye penisilin adını verdi ama onu saflaştıramadı. Antibiyotiği ilaca dönüştüren, yaklaşık on yıl sonra Oxford'da Howard Florey ve Ernst Chain oldu; 1945 Nobel Tıp Ödülü üçüne birlikte verildi.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone olun. Sizce tarihteki en büyük tesadüf hangisi? Yorumlara yazın!\n\n#shorts #penisilin #tarih #düşünbakalım",
+    "tags": [
+      "penisilin nasıl bulundu",
+      "penisilinin keşfi",
+      "penisilin",
+      "alexander fleming",
+      "fleming penisilin",
+      "ilk antibiyotik",
+      "antibiyotik nasıl bulundu",
+      "küf ve bakteri",
+      "tesadüfi keşifler",
+      "florey ve chain",
+      "1928",
+      "bilim tarihi",
+      "tıp tarihi",
+      "ilginç tarih",
+      "tarih",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-20T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "petri",
+      "text": "Dünyayı değiştiren ilaç, küflü bir tabakta bulundu.",
+      "visual": "Kapak karesi: üstte dev yazı 'KÜFLÜ TABAK DÜNYAYI DEĞİŞTİRDİ', altında dev bir cam kültür tabağı yukarıdan: altın sarısı bakteri kolonileri, sol üstte mavi yeşil tüylü küf ve çevresinde bakterisiz temiz bir halka; sağ altta büyük Kaşif şaşkınlıkla geri sıçramış.",
+      "title": {},
+      "cues": {
+        "hit": "küflü"
+      },
+      "params": {
+        "mold": {
+          "x": -0.3,
+          "y": -0.3,
+          "r": 0.24,
+          "at": -5
+        },
+        "halo": {
+          "k": 2.0,
+          "at": -5
+        },
+        "zoom": [
+          1.0,
+          1.06
+        ],
+        "focus": [
+          -0.2,
+          -0.2
+        ],
+        "r": 0.38,
+        "cy": 0.4
+      }
+    },
+    {
+      "type": "map",
+      "text": "Gelin anlatayım: 1928, Londra.",
+      "visual": "Eski harita: Britanya adası; 'Londra'da kırmızı halkalı Londra beliriyor, köşede el yazısı not 'Eylül 1928'.",
+      "title": {
+        "white": "Londra",
+        "gray": "1928"
+      },
+      "cues": {
+        "note": "1928",
+        "city": "Londra"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              0.3614,
+              0.9531
+            ],
+            [
+              0.437,
+              0.9219
+            ],
+            [
+              0.4975,
+              0.8958
+            ],
+            [
+              0.5731,
+              0.8854
+            ],
+            [
+              0.6587,
+              0.8802
+            ],
+            [
+              0.7192,
+              0.8385
+            ],
+            [
+              0.694,
+              0.8021
+            ],
+            [
+              0.7343,
+              0.6875
+            ],
+            [
+              0.7141,
+              0.651
+            ],
+            [
+              0.6587,
+              0.6563
+            ],
+            [
+              0.6537,
+              0.5938
+            ],
+            [
+              0.6386,
+              0.5313
+            ],
+            [
+              0.5882,
+              0.4792
+            ],
+            [
+              0.568,
+              0.375
+            ],
+            [
+              0.5428,
+              0.3333
+            ],
+            [
+              0.5176,
+              0.3021
+            ],
+            [
+              0.5479,
+              0.2188
+            ],
+            [
+              0.5579,
+              0.1667
+            ],
+            [
+              0.4975,
+              0.1562
+            ],
+            [
+              0.4471,
+              0.1667
+            ],
+            [
+              0.4924,
+              0.0625
+            ],
+            [
+              0.3967,
+              0.0625
+            ],
+            [
+              0.3766,
+              0.1146
+            ],
+            [
+              0.3564,
+              0.1875
+            ],
+            [
+              0.3665,
+              0.2708
+            ],
+            [
+              0.3665,
+              0.3542
+            ],
+            [
+              0.3967,
+              0.4375
+            ],
+            [
+              0.4017,
+              0.4583
+            ],
+            [
+              0.4773,
+              0.4479
+            ],
+            [
+              0.4672,
+              0.4896
+            ],
+            [
+              0.4975,
+              0.5417
+            ],
+            [
+              0.4975,
+              0.6042
+            ],
+            [
+              0.4169,
+              0.6146
+            ],
+            [
+              0.437,
+              0.6563
+            ],
+            [
+              0.4118,
+              0.6667
+            ],
+            [
+              0.4421,
+              0.7083
+            ],
+            [
+              0.3816,
+              0.7604
+            ],
+            [
+              0.437,
+              0.7917
+            ],
+            [
+              0.4975,
+              0.8125
+            ],
+            [
+              0.437,
+              0.8333
+            ],
+            [
+              0.3967,
+              0.8542
+            ]
+          ],
+          [
+            [
+              0.3463,
+              0.75
+            ],
+            [
+              0.3312,
+              0.6146
+            ],
+            [
+              0.3463,
+              0.5417
+            ],
+            [
+              0.3715,
+              0.4896
+            ],
+            [
+              0.3463,
+              0.4167
+            ],
+            [
+              0.2808,
+              0.4063
+            ],
+            [
+              0.2355,
+              0.4167
+            ],
+            [
+              0.2153,
+              0.5
+            ],
+            [
+              0.17,
+              0.5417
+            ],
+            [
+              0.1448,
+              0.6042
+            ],
+            [
+              0.175,
+              0.6875
+            ],
+            [
+              0.1347,
+              0.7708
+            ],
+            [
+              0.1649,
+              0.8021
+            ],
+            [
+              0.2455,
+              0.7812
+            ]
+          ],
+          [
+            [
+              0.7293,
+              0.9479
+            ],
+            [
+              0.7293,
+              0.8646
+            ],
+            [
+              0.7746,
+              0.8438
+            ],
+            [
+              0.82,
+              0.8125
+            ],
+            [
+              0.8502,
+              0.7917
+            ],
+            [
+              0.8804,
+              0.7917
+            ],
+            [
+              0.8804,
+              0.9583
+            ]
+          ]
+        ],
+        "cities": [
+          {
+            "name": "Londra",
+            "x": 0.6401,
+            "y": 0.8,
+            "dx": -24,
+            "dy": -34,
+            "anchor": "end",
+            "color": "red",
+            "at": "city"
+          }
+        ],
+        "seas": [
+          {
+            "name": "Kuzey Denizi",
+            "x": 0.7595,
+            "y": 0.3854
+          }
+        ],
+        "note": {
+          "text": "Eylül 1928",
+          "x": 0.7,
+          "y": 0.12,
+          "at": "note"
+        },
+        "focus": [
+          0.6401,
+          0.8
+        ],
+        "zoom": 1.15,
+        "compass": "tl"
+      }
+    },
+    {
+      "type": "labbench",
+      "text": "Fleming tatilden dönüp tabaklarına bakıyordu.",
+      "visual": "St Mary's Hastanesi laboratuvarı: duvarda raf ve saat, tezgâhta üst üste kültür tabakları, Bunsen beki; papyonlu Fleming elinde bavulla kapıdan yürüyerek giriyor; sağda Kaşif el sallıyor.",
+      "title": {
+        "white": "St Mary's",
+        "gray": "Hastanesi"
+      },
+      "cues": {
+        "hi": "tatilden",
+        "hit": "tabaklarına"
+      },
+      "params": {
+        "stack": 6,
+        "stack_x": 0.66,
+        "microscope": false,
+        "burner_x": 0.5,
+        "cast": [
+          {
+            "who": "fleming",
+            "bowtie": true,
+            "tag": "Fleming",
+            "x": -0.08,
+            "to": 0.3,
+            "pose": "walk",
+            "face": "right",
+            "at": "hit",
+            "then": "idle",
+            "carry": "suitcase",
+            "emotion": "happy",
+            "tag_at": 0.1
+          },
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "pose": "idle",
+            "face": "left",
+            "at": "hi",
+            "then": "wave",
+            "emotion": "happy"
+          }
+        ]
+      }
+    },
+    {
+      "type": "petri",
+      "text": "Birinde mavi yeşil bir küf vardı. Sizce ne oldu?",
+      "visual": "Tabağa yukarıdan bakış: altın sarısı bakteri kolonileri; 'küf'te sol üstte mavi yeşil küf açıp büyüyor, el yazısı 'mavi yeşil küf' oku ona uzanıyor; sağ altta Kaşif dürbünle bakıyor, 'sizce'de düşünüyor.",
+      "title": {
+        "white": "Stafilokok",
+        "gray": "kültürü"
+      },
+      "cues": {
+        "mold": "küf",
+        "hit": "sizce"
+      },
+      "params": {
+        "mold": {
+          "x": -0.3,
+          "y": -0.3,
+          "r": 0.24,
+          "at": "mold"
+        },
+        "halo": false,
+        "zoom": [
+          1.0,
+          1.1
+        ],
+        "focus": [
+          -0.15,
+          -0.15
+        ],
+        "r": 0.38,
+        "cy": 0.36,
+        "label": {
+          "text": "mavi yeşil küf",
+          "x": 0.62,
+          "y": 0.16,
+          "size": 78,
+          "at": "mold",
+          "color": "blue",
+          "arrow": [
+            -0.12,
+            -0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.9,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "think",
+            "scale": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "petri",
+      "text": "Küfün çevresindeki bakteriler ölmüştü!",
+      "visual": "Kamera küfe yaklaşıyor; küfün çevresindeki koloniler içten dışa solup küçülüyor, kesikli çizgili temiz halka açılıyor ve 'ölmüştü'de içi boş; kırmızı el yazısı 'temiz halka!' ona ok uzatıyor.",
+      "title": {},
+      "cues": {
+        "halo": "Küfün",
+        "lab": "bakteriler",
+        "hit": "ölmüştü"
+      },
+      "params": {
+        "mold": {
+          "x": -0.3,
+          "y": -0.3,
+          "r": 0.24,
+          "at": -5
+        },
+        "halo": {
+          "k": 2.0,
+          "at": "halo"
+        },
+        "zoom": [
+          1.0,
+          1.12
+        ],
+        "focus": [
+          -0.2,
+          -0.25
+        ],
+        "r": 0.34,
+        "cy": 0.34,
+        "label": {
+          "text": "temiz halka!",
+          "x": 0.66,
+          "y": 0.135,
+          "at": "lab",
+          "color": "red",
+          "arrow": [
+            0.12,
+            -0.12
+          ]
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Çünkü küf, bir bakteri katili salıyordu: penisilin!",
+      "visual": "Dev Fraunces yazı çarpıyor: 'Gizli silah:' ve kırmızı kutuda 'penisilin'; el yazısı not 'ilk adı: “küf suyu”'; sağda büyük Kaşif kelimeyi gösteriyor.",
+      "title": {
+        "white": "Fleming",
+        "gray": "1929"
+      },
+      "cues": {
+        "w0": "bakteri",
+        "w1": "katili",
+        "note": "salıyordu",
+        "w2": "penisilin"
+      },
+      "params": {
+        "lines": [
+          "Gizli silah:",
+          "penisilin"
+        ],
+        "highlight": [
+          "penisilin"
+        ],
+        "note": "ilk adı: “küf suyu”",
+        "arrow": false,
+        "y": 0.33,
+        "size": 170,
+        "kasif": {
+          "x": 0.84,
+          "y": 0.75,
+          "pose": "point",
+          "at": "w2",
+          "face": -1,
+          "scale": 0.85,
+          "dir": 50,
+          "emotion": "happy"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "İlaç hazır mıydı? Hayır!",
+      "visual": "Kaşif elini çenesine koymuş düşünüyor, yanında büyük 'İlaç?' tabelası; 'Hayır'da omuz silkiyor, üstte kırmızı el yazısı 'Hayır!' beliriyor.",
+      "title": {},
+      "cues": {
+        "hit": "Hayır"
+      },
+      "params": {
+        "label": {
+          "text": "Hayır!",
+          "y": 0.16,
+          "at": "hit",
+          "size": 130
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2
+          }
+        },
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.72,
+            "scale": 1.7,
+            "text": "İlaç?"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "pose": "think",
+            "face": "right",
+            "at": "hit",
+            "then": "shrug",
+            "emotion": "worried",
+            "scale": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "labbench",
+      "text": "Madde çok dayanıksızdı, Fleming onu saflaştıramadı.",
+      "visual": "Tezgâhta sarı 'küf suyu' dolu bir cam şişe fokurduyor; 'dayanıksızdı'da sıvı kararıp duman çıkarıyor, papyonlu Fleming omuz silkiyor, başının üstünde kırmızı '?' beliriyor; sağda Kaşif şaşırıyor.",
+      "title": {
+        "white": "Saflaştırma",
+        "gray": "başarısız"
+      },
+      "cues": {
+        "fail": "dayanıksızdı",
+        "hit": "saflaştıramadı"
+      },
+      "params": {
+        "door": false,
+        "stack": 3,
+        "stack_x": 0.66,
+        "microscope": false,
+        "burner": false,
+        "flask": {
+          "x": 0.5,
+          "at": "fail"
+        },
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "fleming",
+            "bowtie": true,
+            "tag": "Fleming",
+            "x": 0.24,
+            "pose": "idle",
+            "face": "right",
+            "at": "fail",
+            "then": "shrug",
+            "emotion": "worried",
+            "tag_at": 0.1
+          },
+          {
+            "who": "kasif",
+            "x": 0.8,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "On yıl kadar sonra bunu Florey ve Chain başaracaktı.",
+      "visual": "Dikey zaman çizgisi: 1928 küf bulundu, 1929 adı penisilin, 1940 Oxford: Florey ve Chain (kırmızı halkalı), 1945 Nobel üçüne; işaretçi aşağı iniyor; sağ altta Kaşif 1940'ı gösteriyor.",
+      "title": {
+        "white": "Oxford",
+        "gray": "1940"
+      },
+      "cues": {
+        "c1": "kadar",
+        "c2": "Florey",
+        "c3": "başaracaktı"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1928",
+            "text": "Küf bulundu"
+          },
+          {
+            "year": "1929",
+            "text": "Adı: penisilin",
+            "at": "c1"
+          },
+          {
+            "year": "1940",
+            "text": "Oxford: Florey ve Chain",
+            "at": "c2"
+          },
+          {
+            "year": "1945",
+            "text": "Nobel, üçüne birden",
+            "at": "c3"
+          }
+        ],
+        "focus": 2,
+        "kasif": {
+          "x": 0.88,
+          "y": 0.6,
+          "pose": "point",
+          "at": "c2",
+          "scale": 0.72,
+          "dir": 60,
+          "face": -1,
+          "emotion": "happy"
+        }
+      }
+    },
+    {
+      "type": "petri",
+      "text": "Yani milyonlarca hayat kurtaran ilaç,",
+      "visual": "Kamera küflü tabaktan geri çekiliyor: küf ve temiz halka tam görünüyor; üstte kırmızı el yazısı 'milyonlarca hayat'; sağda Kaşif gülümseyerek tabağı gösteriyor.",
+      "title": {},
+      "cues": {
+        "lab": "milyonlarca"
+      },
+      "params": {
+        "mold": {
+          "x": -0.3,
+          "y": -0.3,
+          "r": 0.24,
+          "at": -5
+        },
+        "halo": {
+          "k": 2.0,
+          "at": -5
+        },
+        "zoom": [
+          1.25,
+          1.0
+        ],
+        "focus": [
+          -0.3,
+          -0.3
+        ],
+        "r": 0.38,
+        "cy": 0.36,
+        "label": {
+          "text": "milyonlarca hayat",
+          "x": 0.5,
+          "y": 0.135,
+          "at": "lab",
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.9,
+            "pose": "idle",
+            "face": "left",
+            "at": "lab",
+            "then": "point",
+            "dir": "up-left",
+            "emotion": "happy",
+            "scale": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "labbench",
+      "text": "tatilde unutulan bir tabakta doğdu.",
+      "visual": "Laboratuvar tezgâhı, kamera üst üste duran kültür tabaklarına yaklaşıyor; en üstteki tabakta belirgin mavi yeşil küf lekesi; üstte el yazısı 'tatilde kalan tabak'; solda papyonlu Fleming gülümsüyor, sağda Kaşif 'doğdu'da yığını gösteriyor.",
+      "title": {},
+      "cues": {
+        "lab": "unutulan",
+        "hit": "doğdu"
+      },
+      "params": {
+        "door": false,
+        "stack": 6,
+        "stack_x": 0.5,
+        "microscope": false,
+        "burner": false,
+        "cam": {
+          "zoom": 1.45,
+          "focus": [
+            0.5,
+            0.42
+          ]
+        },
+        "label": {
+          "text": "tatilde kalan tabak",
+          "x": 0.6,
+          "y": 0.33,
+          "at": "lab"
+        },
+        "cast": [
+          {
+            "who": "fleming",
+            "bowtie": true,
+            "tag": "Fleming",
+            "x": 0.27,
+            "pose": "idle",
+            "face": "right",
+            "emotion0": "happy",
+            "at": "lab",
+            "then": "idle",
+            "emotion": "happy",
+            "tag_at": 99
+          },
+          {
+            "who": "kasif",
+            "x": 0.72,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "down",
+            "emotion": "happy"
+          }
+        ]
+      }
+    }
+  ]
+}

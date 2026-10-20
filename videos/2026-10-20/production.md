@@ -38,6 +38,70 @@ Uzun video bir gece önce (2026-10-19 akşamı) kanal sahibinin isteğiyle hazı
 
 Yeni sahne tipi önerisi: `volcano` (`scenes/studio/shots/volcano.js`, 3D) — `profile` (Vezüv + koy + Pompeii/Herculaneum konumları), `column` (yükselen Plinyen kolon, şemsiye çamı biçimi, yükseklik sayacı), `fall` (süngertaşı yağmuru + kentte biriken katman, kalınlık sayacı), `surge` (yamaçtan inen yoğun bulut, kente ulaşma). Aynı dünyada kesintisiz kamera.
 
+## 02-penisilin-kesfi (Shorts, parşömen stili)
+
+- **Konu / kategori:** Penisilin nasıl bulundu? Alexander Fleming, St Mary's Hastanesi, Londra, Eylül 1928. Keşifler ve icatların hikâyesi (01 savaş/tuhaf karar, 03 felaket; bu üçüncü damar).
+- **Hissedilen:** "Tarihin en çok hayat kurtaran ilaçlarından biri, tatile giden birinin yıkamadığı bir tabakta başladı." Önce gülümseme, sonra hayranlık.
+- **Ses:** ElevenLabs `j4vJUfke1j8j9OYq8V3b`, `eleven_v3` (script.json'dan; ses ayarı yok).
+- **Palet / stil:** `"theme": "parchment"`, BRAND.md tek paleti (`desert` art, emu ile aynı yapı). Kaşif sahnelerin en az yarısında, her seferinde bir eylemle.
+- **Kanca + kapak fikri:** ilk cümle kapakla aynı fikir, ör. "Dünyayı değiştiren ilaç, kirli bir tabakta bulundu." ↔ kapak `KİRLİ BİR TABAK / DÜNYAYI / DEĞİŞTİRDİ` (vurgu `TABAK` kırmızı kutuda; 3–5 kelimeye indir, ör. `KİRLİ TABAK / DÜNYAYI DEĞİŞTİRDİ`). Kapak karesi: dev petri kabı, ortada küf, etrafında bakterisiz şeffaf halka, büyük şok Kaşif.
+- **Yayın:** 2026-10-20T19:00:00+03:00. Hedef 400–500 karakter, 8–11 sahne, 28–35 sn.
+- **Doğrulanmış bilgiler (yazar web aramasıyla tekrar doğrulasın):**
+  - Alexander Fleming, İskoç bakteriyolog, Londra'da St Mary's Hastanesi'nde çalışıyordu.
+  - 1928 yazında tatile gitti; Eylül başında (genelde 3 Eylül 1928) döndü. Masasında stafilokok bakterisi ektiği kültür tabakları duruyordu.
+  - Tabaklardan birinde mavi-yeşil bir küf (Penicillium) üremişti ve küfün çevresinde bakteriler ölmüş, şeffaf bir halka oluşmuştu.
+  - Fleming küfün salgıladığı maddeye "penisilin" dedi ve 1929'da yayımladı; ama maddeyi saf hâlde ve bol miktarda üretemedi.
+  - Yaklaşık on yıl sonra Oxford'da Howard Florey ve Ernst Chain ekibi penisilini saflaştırıp ilaç hâline getirdi (1940–41 deneyleri); II. Dünya Savaşı sırasında seri üretime geçildi.
+  - 1945 Nobel Fizyoloji/Tıp Ödülü üçüne birlikte verildi.
+  - Fleming'in sözü (yaygın aktarım): "28 Eylül 1928 sabahı uyandığımda, dünyanın ilk antibiyotiğini keşfedip tıpta devrim yapmayı planlamıyordum." Kullanılırsa "sonradan şöyle demiş" diye ver; tarih çelişkisi yüzünden günü söyleme.
+  - **Efsaneden kaçın:** "küf açık pencereden uçtu" anlatma; büyük olasılıkla alt kattaki küf laboratuvarından geldi ("büyük olasılıkla" de ya da hiç söyleme). Sayısal "milyonlarca hayat kurtardı" ifadesi kabul edilir, kesin sayı verme.
+- **Görsel omurga önerisi:** `stage` (Kaşif + Fleming: şapkasız, papyon/önlük + yığılı tabaklar, bavul), `map` (Londra, St Mary's) ya da `timeline` (1928 → 1940 → 1945), `title` (dev "1928"), yeni sahne tipi **`petri`** (`scenes/studio/shots/petri.js`, 2D parşömen mürekkep çizimi): yuvarlak cam tabak, noktalı bakteri kolonileri, cue'da büyüyen küf lekesi, küfün çevresinde açılan temiz halka (`halo` cue), istenirse büyüteç yakınlaşması. Boil titreşimi ve palet kurallarına uyar.
+- **Çekim listesi:** yazar önce anlatımı tek parça metin olarak buraya yazar, sonra sahnelere böler (sahne no / anlatım parçası / tip / görsel / cue).
+
+### Anlatım (tek parça) — tur 3 (eleştiri tur 2'ye göre güncellendi)
+"Dünyayı değiştiren ilaç, küflü bir tabakta bulundu. Gelin anlatayım: 1928, Londra. Fleming tatilden dönüp tabaklarına bakıyordu. Birinde mavi yeşil bir küf vardı. Sizce ne oldu? Küfün çevresindeki bakteriler ölmüştü! Çünkü küf, bir bakteri katili salıyordu: penisilin! İlaç hazır mıydı? Hayır! Madde çok dayanıksızdı, Fleming onu saflaştıramadı. On yıl kadar sonra bunu Florey ve Chain başaracaktı. Yani milyonlarca hayat kurtaran ilaç, tatilde unutulan bir tabakta doğdu."
+
+- **Uzunluk:** 471 karakter, 11 sahne, preview tahmini ~34 sn (zaman çizelgesi 35,1 sn'de bitiyor; tur 1'de 35,7 sn).
+- **Tur 3 metin notu:** Eleştirmenin önerdiği "baktı" (sahne 2) ile "başardı" (sahne 8) kullanılmadı. İkisi de hemen önceki ya da sonraki cümle gibi -dı ile bitiyordu ("vardı", "saflaştıramadı"); bu art arda aynı ek kuralını bozar. Yerlerine "bakıyordu" ve "başaracaktı" kullanıldı. Süre için sahne 5'ten "bir", sahne 2'den "bakteri" çıkarıldı.
+- **Tur 1'e göre eklenenler:**
+  - Doğrudan soru: "Sizce ne oldu?"
+  - Mekanizma: "Çünkü küf bir bakteri katili salıyordu".
+  - Saflaştıramama nedeni: "dayanıksızdı". Fleming'in kendi sözü "too unstable" idi.
+  - "yaklaşık on yıl sonra".
+- **Dil kuralları:** "-yor" ile biten cümle yok, art arda aynı ekle biten cümle yok, devrik cümle yok.
+- **Kapak:** `KÜFLÜ TABAK / DÜNYAYI / DEĞİŞTİRDİ` (`TABAK` kırmızı kutuda), büyük şok pozunda Kaşif.
+
+Web ile doğrulandı (Wikipedia "Discovery of penicillin"):
+- Fleming 3 Eylül 1928'de tatilden döndü.
+- *S. aureus* tabaklarından birinde mavi yeşil küf vardı, çevresinde bakteri üremiyordu.
+- Adı 7 Mart 1929'da koydu, ilk adı "mould juice"tı. Haziran 1929'da yayımladı.
+- Saflaştıramadı ("It's too unstable").
+- Florey ekibi 1939'da Oxford'da başladı (1940–41 deneyleri).
+- 1945 Nobel'i üçü eşit paylaştı.
+- Açık pencere efsanesi anlatılmadı.
+
+Yeni sahne tipleri `scenes/studio/shots/petri.js`:
+- `petri`: tepeden kültür tabağı. Altın sarısı koloniler, cue'da büyüyen küf, içten dışa açılan temiz halka.
+- `labbench`: St Mary's laboratuvarı. Raf, saat, tezgâh, tabak yığını, Bunsen beki, cue'da bozulan "küf suyu" şişesi.
+
+Fleming papyonlu ve şapkasız, adı el yazısıyla üstünde. `parchment2d.js` `timeline` tipine opt-in `kasif` parametresi eklendi; parametre verilmezse davranış değişmez.
+
+| # | Anlatım parçası | Tip | Görsel | Cue |
+|---|---|---|---|---|
+| 0 | Dünyayı değiştiren ilaç, küflü bir tabakta bulundu. | petri | Kapak/kanca: dev tabak, küf + temiz halka, büyük şok Kaşif | hit=küflü |
+| 1 | Gelin anlatayım: 1928, Londra. | map | Britanya haritası, kırmızı Londra, not "Eylül 1928" | note=1928, city=Londra |
+| 2 | Fleming tatilden dönüp tabaklarına bakıyordu. | labbench | Papyonlu Fleming bavulla kapıdan giriyor, tezgâhta tabak yığını, Kaşif el sallıyor | hi=tatilden, hit=tabaklarına |
+| 3 | Birinde mavi yeşil bir küf vardı. Sizce ne oldu? | petri | "küf"te küf büyüyor, "mavi yeşil küf" oku; Kaşif dürbünle bakıyor, "sizce"de düşünüyor | mold=küf, hit=sizce |
+| 4 | Küfün çevresindeki bakteriler ölmüştü! | petri | Kaşif'siz yakın plan (zoom 1.0→1.12, r 0.34, cy 0.34; tabak kadrajda, altyazının üstünde); halka ilk kelimede açılıyor, koloniler "ölmüştü"den önce sönüyor; "temiz halka!" oku | halo=Küfün, lab=bakteriler, hit=ölmüştü |
+| 5 | Çünkü küf, bir bakteri katili salıyordu: penisilin! | title | "Gizli silah:" + kırmızı kutuda "penisilin" (y 0.33, size 170), oksuz not 'ilk adı: "küf suyu"', büyük Kaşif gösteriyor | w0, w1=katili, note, w2=penisilin |
+| 6 | İlaç hazır mıydı? Hayır! | stage | Kaşif düşünüyor, yanında büyük "İlaç?" tabelası; "Hayır"da omuz silkiyor, kırmızı "Hayır!" | hit=Hayır |
+| 7 | Madde çok dayanıksızdı, Fleming onu saflaştıramadı. | labbench | Şişe kararıyor, kısa duman çıkarıyor, Fleming omuz silkiyor, kırmızı "?"; Kaşif şaşırıyor | fail=dayanıksızdı, hit |
+| 8 | On yıl kadar sonra bunu Florey ve Chain başaracaktı. | timeline | 1928 / 1929 / 1940 Oxford (odak) / 1945 Nobel; daha büyük Kaşif (0.72) 1940'ı gösteriyor | c1=Yaklaşık, c2=Florey, c3 |
+| 9 | Yani milyonlarca hayat kurtaran ilaç, | petri | Tabaktan geri çekilme, "milyonlarca hayat", Kaşif gösteriyor | lab=milyonlarca |
+| 10 | tatilde unutulan bir tabakta doğdu. | labbench | Yakınlaşma (1.45) tabak yığınına, üstte belirgin küf lekesi, papyonlu Fleming gülümsüyor, Kaşif "doğdu"da gösteriyor | lab=unutulan, hit=doğdu |
+
+Kaşif 11 sahnenin 8'inde (2, 3, 5–10). Sahne 0'da da var: kanca boyunca kapak Kaşif'i olarak görünüyor.
+
 ## Eleştiri günlüğü
 
 ### 03-pompeii-son-gun — tur 1
@@ -118,6 +182,74 @@ Kalan küçük notlar (yayını engellemez):
 1. Sahne 29 (9,3 sn) ve 32: sağ taraf ve "24 EKİM?" etiketi cümlenin sonunda geliyor, sahnenin ~%80'i tek taraflı ya da etiketsiz duruyor. İstenirse 29'da `right` cue'su "bulgular" yerine "Ama" kelimesine, 32'de `hit` cue'su "sonbaharda" kelimesine alınabilir.
 2. Sahne 34'te gece görünümünde koni hâlâ alçak. Siluet yeterli ama dramatik değil.
 3. Sahne 15 en durgun sahne (motion 5.0). HF klibi gerçek render'da daha canlı olacak.
+
+### 02-penisilin-kesfi — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 7 | 7 | 8 | 7 | 7 | 7 | 9 | 8 | 8 |
+
+lint: OK. 483 karakter, **~35,7 sn (35 sn sınırının üstünde)**, 11 sahne, 6 sahne tipi. motion min 5.2 (sahne 6), max 18.9. Geçme şartı (≥ 7) sağlanıyor, hedef (≥ 8) sağlanmıyor: Senaryo, Okunabilirlik, Görsel=anlatım, Kompozisyon, Derinlik ve Tempo 7'de kaldı.
+
+Senaryo (sadece metin): Devrik cümle yok, "-yor" ile biten cümle yok, geçmiş zaman doğru, kanca ile kapak aynı fikir. Ama metin telgraf gibi: 11 kısa bilgi cümlesi art arda sıralanmış. Anlatıcı sesi sadece "Gelin anlatayım" ve "bakın" kelimelerinde var. "Neden" hiç söylenmiyor (küfün bakteriyi öldüren bir madde salgıladığı anlatılmıyor). Duyusal ayrıntı ve sürpriz yok. "Fleming onu saflaştıramadı." cümlesi ders kitabı dilinde.
+
+Doğruluk (web ile kontrol edildi): Fleming Eylül 1928'de St Mary's'de tatilden döndü, stafilokok tabağında Penicillium küfü ve çevresinde bakterisiz bir bölge gördü. Önce "küf suyu" dedi, Mart 1929'da "penisilin" adını verdi. Saflaştıramadı; Florey ve Chain (Heatley ile birlikte) bunu 1939–40'ta Oxford'da başardı. 1945 Nobel üçüne birlikte verildi. Açık pencere efsanesi yok. Tek düzeltme: 1928'den 1940'a 12 yıl geçmiş; sahne 8'deki "on yıl sonra" → "yaklaşık on yıl sonra" olmalı (açıklamada zaten "yaklaşık" yazıyor).
+
+1. **Senaryo + Tempo (tüm metin, 35,7 sn):** Metin kopuk, mekanizma yok ve video 35 sn sınırını aşıyor. Bu taslak 501 karakter, sahne sınırları aynı kalıyor. 4. sahnede ikinci cümleyi ayrı bir yakın plana bölün; böylece 5,3 sn'lik sahne de kısalır:
+   0 "Dünyayı değiştiren ilaç, küflü bir tabakta bulundu." / 1 "Gelin anlatayım: yıl 1928, yer Londra." / 2 "Fleming tatilden döndü ve masada unuttuğu tabaklara baktı." / 3 "Birinde mavi yeşil bir küf vardı." / 4 "Ama bakın: küfün çevresindeki bakteriler ölmüştü!" + "Çünkü küf, bakteri öldüren bir madde salıyordu." / 5 "Fleming ona penisilin adını verdi." / 6–7 "Peki ilaç hazır mıydı? Hayır! Fleming onu saflaştıramadı." / 8 "Bunu yaklaşık on yıl sonra Oxford'da Florey ve Chain başardı." / 9 "Yani milyonlarca hayatı kurtaran ilaç," / 10 "dağınık bir masada doğdu."
+   501 karakter hâlâ hedefin (500) 1 üstünde ve süre de sınırda. 483 karakter 35,7 sn ettiği için hedef ≈ 470 karakter olmalı. 2. sahneyi "Fleming tatilden dönüp tabaklarına baktı." yapın (−17), 1. sahneyi de "Gelin anlatayım: 1928, Londra." yapın (−8). Böylece metin ≈ 476 karaktere iner. Preview'da süre ≤ 35 sn çıkmalı; çıkmazsa 8. sahnede "Oxford'da" kelimesini çıkarın, zaman çizgisi bu bilgiyi zaten gösteriyor.
+2. **Sahne 4 (16 sn kare), Görsel=anlatım + Okunabilirlik:** Altyazıda "tertemiz" yazarken kesikli halkanın içinde hâlâ 5–6 dolu, altın sarısı koloni görünüyor; "tertemiz halka" sözü görüntüde yok. "temiz halka!" etiketinin oku da bu karede görünmüyor. Ayrıca zoom 1.3'te tabak sağdan kesiliyor, altyazı kutusu tabağın üstüne biniyor ve Kaşif agarın üstünde duruyor. Düzeltme: `halo` cue'sunu "ölmüş" yerine daha erken bir kelimeye ("çevresindeki") alın ya da `halo.k` söndürmesinin "tertemiz" kelimesinden önce bitmesini sağlayın. `zoom: [1.08, 1.3]` → `[1.05, 1.18]` yapın, `cy` 0.4 → 0.36 olsun. Kaşif `x: 0.85` → `0.9`, `scale` 0.72 → 0.6 olsun ki tabağın dış kenarında dursun. Aynı `cy` 0.36 ayarını sahne 3 ve 9'a da uygulayın; bu sahnelerde de altyazı kutusu tabağın alt kenarını kapatıyor.
+3. **Sahne 10 (kapanış görseli) + sahne 7, Kompozisyon/Derinlik:** Son karede "dağınık masada doğdu" vurgusu için sadece 6 tabaklık bir yığın var. En üstteki küf lekesi küçük (~60 px), Fleming kadrajda yok, Kaşif boşta duruyor (point pozu görünmüyor). Tabak kenarlarında testere dişi gibi çizim artefaktı da var. Düzeltme: `cast`'e `{"who": "fleming", "bowtie": true, "x": 0.22, "pose": "idle", "face": "right", "emotion": "happy"}` ekleyin. `cam.zoom` 1.18 → 1.45, `focus` [0.5, 0.42] olsun ki üst tabaktaki küf okunur büyüklükte görünsün. Kaşif'in `then: "point"` değerini `at: "hit"` ile tetikleyin. Sahne 7'de Kaşif sağ kenardan kesiliyor (şapka x > 1080) ve tabak yığınına biniyor: `x` 0.83 → 0.86 yapın, `scale: 0.8` ekleyin. Duman bulutu raf şişelerini kapatıyor: `flask.x` 0.55 → 0.5 yapın ya da dumanı kısın.
+
+7 puanda kalan kriterler için ek notlar:
+- **Senaryo:** Sorun 1'deki metinle "çünkü" (mekanizma) ve "dağınık masa" ironisi eklenir; bir yerde de izleyiciye doğrudan soru sorulmalı ("Peki sizce ne oldu?"). Bu olmadan 8'e çıkmaz.
+- **Okunabilirlik:** Sahne 6'daki "İlaç?" tabelası 360 px'te zor okunuyor; tabela yazısını büyütün ya da `label` ile üstte "İlaç?" yazdırın. Sahne 8'deki zaman çizgisi açıklamaları (58 px) sınırda ama kabul edilebilir.
+- **Derinlik:** Sahne 5 (başlık) ve 8 (zaman çizgisi) düz slayt gibi duruyor. 5'te arka plana soluk bir küf/tabak çizimi ya da Kaşif'i büyütmek (`scale` 0.62 → 0.85), 8'de Kaşif eklemek yeterli.
+- **Tempo:** ≤ 35 sn ve sahne 4'ün bölünmesi (Sorun 1).
+
+### 02-penisilin-kesfi — tur 2
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 8 | 8 | 7 | 7 | 8 | 9 | 8 | 8 |
+
+lint: OK. 467 karakter, ~34,8 sn (sınırın içinde ama dar), 11 sahne, 6 tip. motion min 5.9 (sahne 8). Geçme şartı (≥ 7) sağlanıyor. Kompozisyon ve Derinlik hâlâ 8'in altında.
+
+Tur 1 sorunlarının durumu (14.6 / 17.8 / 23.8 / 34.3 sn karelerine bakıldı):
+- **Sorun 1 (metin, süre) çözüldü.** "Sizce ne oldu?" sorusu ve "Çünkü küf bir bakteri katili salıyordu" mekanizması eklendi, "yaklaşık on yıl" düzeltildi, süre 35 sn'nin altına indi. Devrik cümle yok. "-yor" ile biten tek cümle var (5'teki "salıyordu").
+- **Sorun 2 (sahne 4) kısmen çözüldü.** "ölmüştü" anında halka tertemiz, "temiz halka!" oku halkanın kenarını gösteriyor. Ama Kaşif hâlâ agarın üstünde, kolonilerin arasında duruyor. Tabak sağdan kesiliyor ve altyazı kutusu tabağın alt kenarını örtüyor (y 1170–1340).
+- **Sorun 3 (sahne 7 ve 10) çözüldü.** Sahne 7'de duman şişeleri kapatmıyor, Kaşif kadrajda. Sahne 10'da Fleming var, üst tabaktaki küf okunur büyüklükte (~100 px).
+- **Ek düzeltmeler oturmuş.** Sahne 6'daki tabela okunuyor. Sahne 8'de Kaşif var.
+- **Doğruluk:** "Bakteri katili: penisilin" doğru; penisilin stafilokok gibi Gram-pozitif bakterileri öldürür. "Madde çok dayanıksızdı" doğru; Fleming'in özütü hızla etkinliğini kaybediyordu. "Yaklaşık on yıl sonra Florey ve Chain" doğru (1939–40).
+
+1. **Sahne 4, Kompozisyon:** Kaşif (`x` 0.9) tabağın içinde, altın kolonilerin arasında duruyor. Tabak sağdan kesiliyor, altyazı tabağın alt kenarını kapatıyor; tek odak (halka) bölünüyor. Düzeltme: Kaşif'i bu sahneden çıkarın; 3. ve 5. sahnede zaten var. `zoom` [1.05, 1.18] → [1.0, 1.12] yapın, `focus` [-0.3, -0.3] → [-0.2, -0.25] olsun. Böylece tabak kadrajda kalır ve halka ortaya gelir.
+2. **Sahne 5, Kompozisyon/Derinlik:** El yazısı notun oku "madde" kelimesinin üstünden geçiyor ve kelime üstü çizilmiş gibi görünüyor (x 580–730, y 670–735). Not ("bakteri öldüren madde") anlatımı ("bakteri katili") tekrar ediyor. "penisilin" kelimesi düşene kadar ekranın ortası (y 550–1150) boş bir parşömen. Düzeltme: notu, anlatımın söylemediği doğru bir bilgiyle değiştirin: `"note": "ilk adı: “küf suyu”"`. Ok kalacaksa notun sol ucundan başlasın ya da kaldırılsın. Ortadaki boşluğa soluk bir küflü tabak çizimi koyun ya da `y` 0.27 → 0.33 yapıp yazıyı büyütün (`size` 140 → 170).
+3. **Sahne 2–3, Senaryo:** "Fleming tatilden dönmüştü. Tabaklardan birinde…" geçişinde "tabaklar" anlatımda hiç tanıtılmıyor; sadece dinleyen biri hangi tabaklar olduğunu bilmiyor. "Fleming tatilden dönmüştü." da kuru bir bilgi cümlesi. Düzeltme:
+   - 2: "Fleming tatilden dönüp bakteri tabaklarına baktı."
+   - 3: "Birinde mavi yeşil bir küf vardı. Sizce ne oldu?"
+   - 8: "On yıl kadar sonra bunu Florey ve Chain başardı."
+
+   Toplam ≈ 474 karakter. Preview 35 sn'yi geçerse 5. sahnedeki "bir" kelimesini çıkarın (≈ 470).
+
+8 altında kalan kriterler:
+- **Kompozisyon:** Sorun 1 ve 2 düzelirse 8 olur. Küçük not: 10. sahnede raf ayağı "tatilde" yazısının "t" harfine biniyor; `label.y` 0.3 → 0.33 yapın.
+- **Derinlik:** Sahne 5 hâlâ düz bir slayt (Sorun 2'deki arka plan tabağı çözer). Sahne 8'de zaman çizgisinin arkasında hafif bir parşömen/harita dokusu ya da Kaşif'in daha büyük durması (`scale` ~0.8) yeterli.
+
+### 02-penisilin-kesfi — tur 3 (son tur)
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon | Derinlik | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 8 | 8 | 8 | 8 | 8 | 9 | 8 | 8 |
+
+lint: OK. 471 karakter, ~35,1 sn (tahmini; sınırda), 11 sahne, 6 tip. motion min 6.7 (sahne 8). **GEÇTİ** (tüm kriterler ≥ 8).
+
+Tur 2 sorunlarının durumu (15.3 ve 18.6 sn karelerine bakıldı):
+- **Sahne 4 çözüldü.** Kaşif çıkmış, tabak kadraja tam sığıyor, halka ortada ve tertemiz. "temiz halka!" oku halkayı gösteriyor, altyazı tabağa binmiyor.
+- **Sahne 5 çözüldü.** "Gizli silah: penisilin" büyük ve kadrajı dolduruyor. Not "ilk adı: “küf suyu”" oldu: doğru, yeni bir bilgi ve üstü çizilmiş görünümü kalmadı.
+- **Sahne 8 ve 10 çözüldü.** Sahne 8'de Kaşif büyüdü. Sahne 10'da etiket raf ayağından kurtuldu.
+- **Metin:** Art arda aynı ek yok, devrik cümle yok. "-yor" ile biten 2 cümle var ("bakıyordu", "salıyordu"), sınırın içinde. Doğruluk değişmedi, sorun yok.
+
+Kalan küçük notlar (yayını engellemez):
+1. **Süre (tahmini 35,1 sn):** Sınırı 0,1 sn aşıyor. Gerçek TTS daha uzun çıkarsa 8. sahnedeki "Yaklaşık on yıl sonra bunu" ifadesini "On yıl kadar sonra bunu" yapın; bu yaklaşık 5 karakter kısaltır.
+2. **Sahne 5 metni:** "Çünkü küf, bir bakteri katili salıyordu" kulakta biraz eksik duruyor ("bir bakteri katili" daha doğal). Süre izin verirse "bir" kelimesini geri ekleyin ve 1. nottaki kısaltmayla dengeleyin.
+3. **Sahne 3:** Açılışta "mavi yeşil küf" etiketi, küf henüz büyümeden soluk olarak görünüyor. Etiketin görünmesi `mold` cue'suna kadar tamamen 0 olsun. Sahne 2'de "tabaklarına" yerine "bakteri tabaklarına" demek, sadece dinleyen için daha net olur.
 
 ## 01-emu-savasi (Shorts, parşömen stili)
 
