@@ -186,7 +186,17 @@ class Store:
         self.file = Path(os.environ.get("TELEGRAM_STATE") or
                          ROOT / "out" / "telegram" / f"{re.sub(r'[^A-Za-z0-9_.-]', '_', key)}.json")
 
+    # commit status descriptions reject 4-byte UTF-8 (emoji): stored as \U0001f9e0, decoded on read
+    @staticmethod
+    def enc(d):
+        return "".join(f"\\U{ord(ch):08x}" if ord(ch) > 0xFFFF else ch for ch in d)
+
+    @staticmethod
+    def dec(d):
+        return re.sub(r"\\U([0-9a-f]{8})", lambda m: chr(int(m.group(1), 16)), d or "")
+
     def _merge(self, c, rid, d, url):
+        d = self.dec(d)
         if c.startswith(self.prefix):
             k = c[len(self.prefix):]
             if k not in self.seen or rid > self.seen[k]["id"]:
@@ -211,13 +221,14 @@ class Store:
                 break
 
     def put(self, k, d, url=None, state="success"):
-        d = d[:140]
+        while len(self.enc(d)) > 140:
+            d = d[:-1]
         cur = self.seen.get(k)
         if cur and cur["d"] == d and cur.get("url") == url:
             return True
         rid = max([x["id"] for x in self.seen.values()] + [0]) + 1
         if self.remote:
-            body = {"state": state, "context": self.prefix + k, "description": d}
+            body = {"state": state, "context": self.prefix + k, "description": self.enc(d)}
             if url:
                 body["target_url"] = url
             r = gh(f"statuses/{ANCHOR}", body)
