@@ -53,6 +53,7 @@ Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmem
   sahneye `"tone"` (`curious`, `excited`, `whispers`, `dramatic`, `serious`, `amazed`) — BRAND.md §6.2.
 - **Düz anlatım yok:** izleyiciye seslen, merakı bekletip cevapla, zıtlık ve duyusal ayrıntı kullan,
   cümle uzunluklarını değiştir (BRAND.md §6.9). Kaşif'in ağzı sabittir (konuşma animasyonu yok).
+- **Anlatıcı bir YouTuber:** izleyiciye "siz" diye hitap et, merakı paylaş, "gelin anlatayım", "bakın", "sizce?" (BRAND.md §6.0).
 - YouTube anlatıcısı gibi: geçmiş zamanla hikâye anlat, kipleri karıştır, soru/ünlem/hitap kullan; cümlelerin en fazla üçte biri "-yor" ile biter (BRAND.md §6.3). Selam/giriş yok.
 - Ekranda en fazla 5 kelime/sahne; asıl bilgiyi ses taşır.
 - Ölüm ve acıyı saygıyla, sayıyla değil insan hikâyesiyle anlat.

@@ -76,7 +76,15 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 
 ## 6. Anlatım kuralları (sert)
 
-1. **Selam yok, giriş yok.** İlk cümle doğrudan anın içine atar: *"MS 79. Pompeii'de sıradan bir sabah. Ekmekler fırında."*
+0. **Anlatıcı bir YouTuber'dır (kanal sahibinin kararı, en önemli kural).** Kanalın sahibi kameraya değil
+   izleyiciye konuşur: **"siz" diye hitap eder, "ben" diye anlatır**, merakı paylaşır ve açıklar. Örnek açılış:
+   *"Kediler neden hep dört ayağının üstüne düşer, hiç merak ettiniz mi? Gelin, hemen anlatayım."*
+   Yasak: olayı üçüncü şahıs altyazısı gibi saymak (*"Belini döndürür. Dört ayağının üstüne düşer."*).
+   İstenen kalıplar: "Hiç merak ettiniz mi…", "Bakın, işin sırrı şurada…", "Şimdi size çok ilginç bir şey
+   söyleyeceğim:", "Peki sizce ne oldu?", "İnanması zor ama…", "İşte tam burada…". Açıklamayı sıcak, içten,
+   biraz heyecanlı yap; izleyiciyle birlikte şaşır. Hikâye kısmı geçmiş zamanla anlatılır (§3).
+1. **Selam ve kanal tanıtımı yok** ("Merhaba arkadaşlar, kanalıma hoş geldiniz" yok). İlk cümle doğrudan
+   merak sorusu ya da şaşırtıcı iddiadır; hemen ardından "gelin anlatayım" gibi kısa bir davet gelebilir.
 2. **Nefes alan tempo (kanal sahibinin kararı).** Senaryoda `"pacing": {"sentence": 0.6, "comma": 0.25, "max": 1.0}`:
    cümle sonunda en az 0,6 sn, virgülde en az 0,25 sn durulur, hiçbir sessizlik 1 sn'yi geçmez (`build.py`
    sesi buna göre uzatır/kısar). Acele eden, cümleleri birbirine yapıştıran anlatım istenmiyor.
@@ -88,8 +96,8 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
    bilerek kullan.
 3. **YouTube anlatıcısı gibi konuş, "-yor -yor" diye sayma (kanal sahibinin kararı).** Hikâye anlatan biri
    gibi **geçmiş zamanla** anlat ("1932'ydi. Avustralya'da çiftçiler çaresizdi."), kipleri karıştır: -dı, -mış
-   ("derler ki…"), -ecekti ("ama birazdan her şey değişecekti"), soru, ünlem, izleyiciye hitap ("Düşünsene…",
-   "Tahmin et ne oldu?"). Art arda iki cümle aynı ekle bitmez; cümlelerin en fazla üçte biri "-yor" ile biter
+   ("derler ki…"), -ecekti ("ama birazdan her şey değişecekti"), soru, ünlem, izleyiciye hitap ("Düşünün…",
+   "Tahmin edin ne oldu?"). Art arda iki cümle aynı ekle bitmez; cümlelerin en fazla üçte biri "-yor" ile biter
    (`tools/lint.py` denetler). Ton: arkadaşına inanılmaz bir şey anlatan biri; şaşıran, gülen, bekleten.
    Yasak örnek: "Ordu geliyor. Emular dağılıyor. Tüfek tutukluk yapıyor." İstenen: "Ve ordu geldi. Tam
    kadro mu? Ne gezer! Bir binbaşı, iki asker, iki tüfek. Emular ise… dağıldı. Hem de nasıl!"

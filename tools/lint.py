@@ -151,8 +151,8 @@ def lint(path, kinds):
             warn.append(f"mascot in {m} scenes, aim for 2-4")
     if short:
         first = sentences(sc[0]["text"])[0] if sc else ""
-        if not 3 <= len(first.split()) <= 7:
-            err.append(f"first sentence has {len(first.split())} words, hook needs 3-7")
+        if not 3 <= len(first.split()) <= 10:
+            err.append(f"first sentence has {len(first.split())} words, hook needs 3-10")
         if sc and (sc[-1]["text"].rstrip().endswith("?") or "yorum" in low(sc[-1]["text"])):
             err.append("last scene must be a complete punchline, not a question / comment call")
     else:
