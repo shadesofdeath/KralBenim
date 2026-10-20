@@ -48,7 +48,7 @@
       "chapter": "Saraydaki parşömen",
       "type": "pirimap",
       "tone": "curious",
-      "text": "Yıl 1513. Kolomb okyanusu geçeli daha yirmi bir yıl olmuş. Ve bir Osmanlı denizcisi, Amerika'yı şimdiden haritasına geçiriyor.",
+      "text": "Amerika keşfedildikten sadece yirmi bir yıl sonra, bir Osmanlı denizcisi Amerika'yı belki de hiç görmeden haritaya çizdi! Nasıl mı? Gelin anlatayım.",
       "visual": "Ceylan derisi harita hızla çizilir; büyüteç Güney Amerika kıyısına süzülür, altında kırmızı AMERİKA yazısı belirir",
       "title": {
         "white": "1513"
@@ -79,12 +79,12 @@
     },
     {
       "type": "chapter",
-      "text": "Ve bu hikâye, dört yüz yıl sonra, 1929'da başlıyor.",
+      "text": "Ama hikâyemiz dört yüz yıl sonra, 1929'da başlar.",
       "visual": "BÖLÜM 1 / 5 rozeti, mavi dairede 1, altında 'Saraydaki parşömen' kartı ve el çizimi alt çizgi",
       "title": {},
       "cues": {
         "n": "1929",
-        "title": "başlıyor"
+        "title": "başlar"
       },
       "params": {
         "n": 1,
@@ -94,7 +94,8 @@
     },
     {
       "type": "stage",
-      "text": "Topkapı Sarayı artık müze. Yüzyıllık sandıklar tek tek açılıyor. Toz, küf, kuru mürekkep kokusu.",
+      "tone": "whispers",
+      "text": "Gözünüzün önüne getirin: Topkapı artık bir müze, yüzyıllık sandıklar açılıyordu. Toz, küf, kuru mürekkep kokusu…",
       "visual": "Saray avlusu: Kaşif soldan yürüyerek kapının önüne gelir, 'sandıklar'da yerdeki dürülmüş parşömenleri işaret eder; 'Toz'da ikinci rulo belirir",
       "title": {
         "white": "Topkapı",
@@ -159,7 +160,7 @@
     },
     {
       "type": "stage",
-      "text": "Belgeleri karıştıranlardan biri, Alman ilahiyatçı Gustav Adolf Deissmann. Ve eli, sert bir deri parçasına takılıyor.",
+      "text": "Belgeleri karıştıranlardan biri de Alman ilahiyatçı Gustav Adolf Deissmann. Bir gün eli, sert bir deri parçasına takıldı.",
       "visual": "Kaşif elinde katlanmış bir harita tutar, 'deri' kelimesinde şaşırıp geri sıçrar; yanda 'Deissmann' notu",
       "title": {
         "white": "Deissmann"
@@ -216,7 +217,8 @@
     },
     {
       "type": "pirimap",
-      "text": "Açıyor ve donup kalıyor: ceylan derisine çizilmiş, renkleri hâlâ diri bir deniz haritası.",
+      "tone": "amazed",
+      "text": "Açtı ve… donup kaldı! Ceylan derisine çizilmiş, renkleri hâlâ diri bir deniz haritası.",
       "visual": "Ceylan derisi parşömen soldan açılır; 'donup'ta kıyılar mürekkeple çizilmeye başlar, pusula gülleri, rüzgâr çizgileri ve gemiler belirir; 'ceylan'da 'ceylan derisi' notu",
       "title": {
         "white": "1513",
@@ -224,7 +226,7 @@
       },
       "cues": {
         "draw": "donup",
-        "deri": "ceylan"
+        "deri": "Ceylan"
       },
       "params": {
         "unroll": true,
@@ -248,12 +250,13 @@
     },
     {
       "type": "stage",
-      "text": "Köşedeki notta bir imza var: Piri Reis. Ve bir tarih: 1513.",
+      "tone": "excited",
+      "text": "Tahmin edin köşede kimin imzası vardı? Piri Reis! Tarih: 1513.",
       "visual": "Kaşif 'PİRİ REİS' tabelasını işaret eder; '1513'te ikinci tabela '1513' belirir ve Kaşif şaşırır",
       "title": {},
       "cues": {
         "name": "Piri",
-        "yr": "tarih",
+        "yr": "Tarih",
         "yr2": "1513"
       },
       "params": {
@@ -317,7 +320,7 @@
     },
     {
       "type": "timeline",
-      "text": "Kolomb 1492'de yola çıkıyor. 1513'te Avrupa yeni kıyıları daha yeni duyarken, bu deri onları çoktan taşıyor.",
+      "text": "Tarihlere bir bakın: Kolomb 1492'de yola çıkmıştı, bu deri ise yeni kıyıları 1513'te çoktan taşıyordu!",
       "visual": "Yatay zaman çizgisi: '1492'de Kolomb Amerika'da, '1513'te Piri Reis haritası (kırmızı halka) belirir; sonda 1929 Topkapı'da bulunur noktası eklenir",
       "title": {
         "white": "Zaman",
@@ -326,7 +329,7 @@
       "cues": {
         "a": "1492",
         "b": "1513",
-        "c": "taşıyor"
+        "c": "taşıyordu"
       },
       "params": {
         "items": [
@@ -352,11 +355,11 @@
     {
       "type": "stage",
       "tone": "curious",
-      "text": "Ama asıl tuhafı şu: bildiğimiz kadarıyla Piri, Amerika'yı hiç görmüyor. Peki okyanusun öbür yakasını nasıl çiziyor?",
+      "text": "Bildiğimiz kadarıyla Piri, okyanusu hiç geçmemişti. Peki sizce öbür yakayı nasıl çizdi?",
       "visual": "Kıyıda Kaşif omuz silker, 'okyanusun'da eli çenesinde düşünür; yanında bir gemi dalgalarda sallanır, üstte el yazısıyla 'Nasıl?'",
       "title": {},
       "cues": {
-        "hit": "okyanusun"
+        "hit": "okyanusu"
       },
       "params": {
         "cast": [
@@ -411,11 +414,11 @@
     {
       "chapter": "Denizci Piri",
       "type": "chapter",
-      "text": "Cevap, bir denizcinin hayatında saklı.",
+      "text": "Bakın, işin sırrı bir denizcinin hayatında saklı.",
       "visual": "BÖLÜM 2 / 5 rozeti, mavi dairede 2, altında 'Denizci Piri' kartı ve el çizimi alt çizgi",
       "title": {},
       "cues": {
-        "n": "Cevap",
+        "n": "Bakın",
         "title": "denizcinin"
       },
       "params": {
@@ -426,7 +429,7 @@
     },
     {
       "type": "map",
-      "text": "Piri, büyük olasılıkla 1460'ların sonunda Gelibolu'da doğuyor; tuz kokusu ve halat gıcırtısı arasında.",
+      "text": "Piri, büyük olasılıkla 1460'ların sonunda Gelibolu'da doğdu; tuz kokusu ve halat gıcırtısı arasında.",
       "visual": "Eski Akdeniz haritası; Gelibolu kırmızı noktayla belirir, İstanbul yanında, harita Çanakkale Boğazı'na yakınlaşır",
       "title": {
         "white": "Gelibolu"
@@ -480,7 +483,8 @@
     },
     {
       "type": "stage",
-      "text": "Şansı da ailesinde: amcası Kemal Reis, dönemin en ünlü Osmanlı denizcilerinden.",
+      "tone": "excited",
+      "text": "Amcası kimdi, biliyor musunuz? Kemal Reis! Dönemin en ünlü Osmanlı denizcilerinden.",
       "visual": "Siyah sakallı, sarıklı Kemal Reis gemisinin önünde durur, yanında okla 'Kemal Reis' etiketi; Kaşif onu işaret eder",
       "title": {
         "white": "Kemal Reis"
@@ -556,7 +560,7 @@
     },
     {
       "type": "stage",
-      "text": "Piri gençken onun gemisine katılıyor. Okulu güverte, öğretmeni amcası.",
+      "text": "Genç Piri onun gemisine katıldı. Okulu güverte, öğretmeni amcası olacaktı.",
       "visual": "Sakalsız genç Piri (sarıklı, küçük) soldan gemiye yürür ve el sallar; Kaşif onu el sallayarak uğurlar",
       "title": {
         "white": "Genç Piri"
@@ -621,7 +625,7 @@
     },
     {
       "type": "map",
-      "text": "Yıllarca Akdeniz'i dolaşıyorlar, İspanya'dan Mısır'a. Korsanlarla da çarpışıyorlar, Venedik gemileriyle de.",
+      "text": "Yıllarca Akdeniz'i dolaştılar, İspanya'dan Mısır'a! Korsanlarla da, Venedik gemileriyle de çarpıştılar.",
       "visual": "Akdeniz haritasında kesikli kırmızı rota İspanya kıyısından Sicilya ve Girit'in güneyinden İskenderiye'ye çizilir",
       "title": {
         "white": "Akdeniz"
@@ -704,7 +708,7 @@
     },
     {
       "type": "stage",
-      "text": "Ama Piri farklı. Başkaları savaşları hatırlıyor; o ise kıyıları. Her limanı, her sığlığı, lazım olacakmış gibi not ediyor.",
+      "text": "Ama Piri farklıydı. Başkaları savaşları hatırlardı, o ise kıyıları: her limanı, her sığlığı. Bunu aklınızda tutun!",
       "visual": "Gelibolu iskelesinde sarıklı Piri kayaya oturmuş; 'sığlığı'nda önünde not dolu parşömen belirir ve Kaşif onu işaret eder",
       "title": {
         "white": "Notlar"
@@ -786,14 +790,14 @@
     {
       "type": "stage",
       "tone": "dramatic",
-      "text": "Sonra 1511'de bir fırtına kopuyor. Kemal Reis'in gemisi batıyor. Ve Piri, ona denizi öğreten adamı denizde kaybediyor.",
-      "visual": "Fırtına: gökte taralı bulutlar, çapraz yağmur, 'fırtına'da mürekkep şimşek çakar; tam genişlikte dalgalı deniz; 'batıyor'da gemi yan yatıp batarken önünden dev bir dalga tepesi geçer; Kaşif kıyıdan dürbünle bakar, sonra şaşırır",
+      "text": "Sonra 1511'de bir fırtına koptu, ve Kemal Reis'in gemisi… battı. Piri, ona denizi öğreten adamı kaybetmişti.",
+      "visual": "Fırtına: gökte taralı bulutlar, çapraz yağmur, 'fırtına'da mürekkep şimşek çakar; tam genişlikte dalgalı deniz; 'battı'da gemi yan yatıp batarken önünden dev bir dalga tepesi geçer; Kaşif kıyıdan dürbünle bakar, sonra şaşırır",
       "title": {
         "white": "1511"
       },
       "cues": {
         "storm": "fırtına",
-        "hit": "batıyor"
+        "hit": "battı"
       },
       "params": {
         "cast": [
@@ -898,7 +902,7 @@
     },
     {
       "type": "stage",
-      "text": "Gelibolu'ya dönüyor. Elinde yılların notları, kafasında büyük bir fikir.",
+      "text": "Gelibolu'ya döndüğünde elinde yılların notları, kafasında büyük bir fikir vardı…",
       "visual": "Sarıklı Piri elinde parşömenle Gelibolu'daki eve yürür; Kaşif düşünür, sonra işaret eder",
       "title": {
         "white": "Gelibolu"
@@ -983,7 +987,7 @@
     {
       "chapter": "Yirmi haritadan bir harita",
       "type": "chapter",
-      "text": "1513'te Piri, kalemi eline alıyor.",
+      "text": "1513. Ve Piri, kalemi eline aldı.",
       "visual": "BÖLÜM 3 / 5 rozeti, mavi dairede 3, altında 'Yirmi haritadan bir harita' kartı ve el çizimi alt çizgi",
       "title": {},
       "cues": {
@@ -998,7 +1002,8 @@
     },
     {
       "type": "pirimap",
-      "text": "Haritanın notlarına göre yaklaşık yirmi kaynak var. Düşünsene: yirmi harita, birbirini tutmayan kıyılar. Ve hepsi tek deriye sığacak.",
+      "tone": "excited",
+      "text": "Notlarına göre yaklaşık yirmi kaynak kullanmış. Düşünün: yirmi harita, birbirini tutmayan kıyılar… hepsi tek bir deriye sığacaktı!",
       "visual": "Yirmi küçük harita kartı tek tek ızgaraya düşer, sayaç 1'den 20'ye çıkar, biri kırmızı 'Kolomb'; 'hepsi'nde kartlar ceylan derisinde birleşir",
       "title": {
         "white": "Kaynaklar"
@@ -1025,7 +1030,7 @@
     },
     {
       "type": "board",
-      "text": "Eski Yunan'dan Batlamyus, Portekizlilerin en yeni deniz haritaları, bir Arap haritası. Bin yılı aşkın bilgi, aynı masada.",
+      "text": "Batlamyus, Portekizlilerin yeni haritaları, bir de Arap haritası. Bin yılı aşkın bilgi, aynı masada!",
       "visual": "Pano: 'Piri'nin kaynakları' kartında Batlamyus, Portekiz, Arap haritaları tek tek işaretlenir; 'aynı'da yanda 'Bir tane daha: Kimin çizimi?' kartı açılır",
       "title": {},
       "cues": {
@@ -1074,7 +1079,7 @@
     {
       "type": "stage",
       "tone": "whispers",
-      "text": "Ama biri, hepsinden değerli: Kolomb'un kendi çizdiği harita.",
+      "text": "Şimdi size çok ilginç bir şey söyleyeceğim: içlerinden biri, Kolomb'un kendi çizdiği haritaydı!",
       "visual": "'Kolomb'un'da 'KOLOMB' tabelası ve katlanmış harita belirir; Kaşif işaret eder, sonra şaşkınlıkla geri sıçrar",
       "title": {},
       "cues": {
@@ -1145,7 +1150,8 @@
     },
     {
       "type": "stage",
-      "text": "Nasıl mı? Piri'nin notuna göre, Kolomb'la okyanusu geçmiş bir İspanyol denizciden. Kemal Reis'in esir aldığı biri.",
+      "tone": "surprised",
+      "text": "Nasıl mı? Notuna göre harita, Kolomb'la okyanusu geçmiş bir İspanyol denizciden gelmiş. Hem de Kemal Reis'in esiri olan!",
       "visual": "Bereli İspanyol denizci elinde bir harita tutar; 'esir'de sarıklı Kemal Reis onu işaret eder, denizci omuz silker; Kaşif yanlarında anlatır",
       "title": {
         "white": "Esir",
@@ -1221,7 +1227,7 @@
     },
     {
       "type": "map",
-      "text": "Yani amcasının esiri, yeğenine Yeni Dünya'nın kapısını açıyor. Piri'ye göre haritadaki Karayipler, doğrudan oradan geliyor.",
+      "text": "Yani amcasının esiri, yeğenine Yeni Dünya'nın kapısını açmıştı! Karayipler, Piri'ye göre oradandı.",
       "visual": "Atlas Okyanusu haritası: 'kapısını'da İspanya'dan Karayipler'e kesikli kırmızı Kolomb rotası çizilir ve '1492' notu belirir; 'Karayip'te Karayipler kırmızıyla işaretlenir",
       "title": {
         "white": "Kolomb'un",
@@ -1290,7 +1296,8 @@
     },
     {
       "type": "stage",
-      "text": "Peki Kolomb'un o haritası nerede? Hiçbir yerde. İzi belki de en net, Piri'nin ceylan derisinde.",
+      "tone": "sighs",
+      "text": "Peki Kolomb'un o haritası nerede? Hiçbir yerde! İzi en net, belki de Piri'nin ceylan derisinde.",
       "visual": "'Hiçbir'de 'KAYIP' tabelası ve yarısı yırtılmış bir harita belirir; Kaşif endişeyle omuz silker",
       "title": {
         "white": "Kayıp",
@@ -1351,7 +1358,8 @@
     },
     {
       "type": "pirimap",
-      "text": "İşin ironisi şu: Piri'nin haritası da eksik. Bugüne yalnızca batıdaki üçte biri kalıyor. Gerisi, tıpkı Kolomb'unki gibi, kayıp.",
+      "tone": "sarcastic",
+      "text": "İronik ama… Piri'nin haritası da eksik! Bugüne yalnızca batıdaki üçte biri kaldı; gerisi kayıp.",
       "visual": "Solda küçük ceylan derisi parçası, sağında kesik çizgili kayıp üçte iki; parçanın üstünde '1 / 3', altında 'Bugüne kalan'",
       "title": {
         "white": "Bir parça"
@@ -1373,7 +1381,7 @@
     {
       "chapter": "Efsane ve gerçek",
       "type": "chapter",
-      "text": "1950'ler ve 60'lar geliyor, ve bu yırtık deri beklenmedik bir şöhrete kavuşuyor.",
+      "text": "Derken 1950'ler ve 60'lar… Bu yırtık deri, beklenmedik bir şöhrete kavuşacaktı.",
       "visual": "BÖLÜM 4 / 5 rozeti, mavi dairede 4, altında 'Efsane ve gerçek' kartı ve el çizimi alt çizgi",
       "title": {},
       "cues": {
@@ -1388,13 +1396,14 @@
     },
     {
       "type": "pirimap",
-      "text": "İşte burada işler tuhaflaşıyor. Bazı yazarlara göre haritanın altındaki kıyı, buzsuz Antarktika.",
+      "tone": "curious",
+      "text": "İşte tam burada işler tuhaflaşıyor. Bazı yazarlara göre alttaki kıyı, buzsuz Antarktika'ymış!",
       "visual": "Haritanın alt kenarı boyunca uzanan kıyı altın sarısıyla vurgulanır, üstünde 'ANTARKTİKA?' yazısı; Kaşif şaşırır",
       "title": {
         "white": "Efsane"
       },
       "cues": {
-        "alt": "altındaki",
+        "alt": "alttaki",
         "ant": "Antarktika"
       },
       "params": {
@@ -1433,14 +1442,14 @@
     },
     {
       "type": "stage",
-      "text": "Hatta bu bilgiyi kayıp bir uygarlığın, ya da uzaylıların verdiğini iddia ediyorlar.",
-      "visual": "Kaşif sağı işaret eder; 'uzaylıların'da 'UZAYLILAR?' tabelası belirir, 'iddia'da Kaşif omuz silker",
+      "text": "Hatta iş büyüdü… bu bilgiyi Piri'ye kayıp bir uygarlık ya da uzaylılar vermiş!",
+      "visual": "Kaşif sağı işaret eder; 'uzaylılar'da 'UZAYLILAR?' tabelası belirir, 'büyüdü'de Kaşif omuz silker",
       "title": {
         "white": "İddia"
       },
       "cues": {
-        "ufo": "uzaylıların",
-        "hit": "iddia"
+        "hit": "büyüdü",
+        "ufo": "uzaylılar"
       },
       "params": {
         "cast": [
@@ -1499,8 +1508,8 @@
     },
     {
       "type": "stage",
-      "tone": "mischievously",
-      "text": "Heyecanlı, değil mi? Ama bir sorun var: Antarktika ilk kez 1820'de görülüyor. Ve milyonlarca yıldır buzun altında.",
+      "tone": "sarcastic",
+      "text": "Kulağa harika geliyor, değil mi? Ama bir sorun var: Antarktika ilk kez 1820'de görüldü, ve milyonlarca yıldır buzun altında!",
       "visual": "Kaşif düşünür, '1820'de '1820' tabelası belirir ve Kaşif onu işaret eder; 'buzun'da şaşırır, el yazısı 'Buz: milyonlarca yıl'",
       "title": {
         "white": "1820"
@@ -1578,16 +1587,16 @@
     },
     {
       "type": "pirimap",
-      "text": "Peki o kıyı ne? Tarihçilere göre cevap haritanın kendisinde. Deri bitiyor, ve Piri, Güney Amerika kıyısını büyük olasılıkla doğuya kıvırıyor.",
+      "text": "Peki o kıyı ne? Tarihçilere göre cevap haritanın kendisinde: deri bitmişti, ve Piri Güney Amerika kıyısını büyük olasılıkla doğuya kıvırdı.",
       "visual": "Harita: 'ANTARKTİKA?' yazısının üstü çizilir; kıyının dümdüz güneye devam edeceği yol kesikli kırmızıyla derinin dışına uzanır, ok doğuya kıvrılan kıyıyı gösterir, 'Güney Amerika' etiketi",
       "title": {
         "white": "Gerçek"
       },
       "cues": {
         "tarih": "Tarihçilere",
-        "deri": "Deri",
+        "deri": "deri",
         "ga": "Güney",
-        "kıv": "kıvırıyor"
+        "kıv": "kıvırdı"
       },
       "params": {
         "draw": false,
@@ -1645,7 +1654,8 @@
     },
     {
       "type": "stage",
-      "text": "Üstelik Piri o kıyıya bir not düşmüş: burası çok sıcak, büyük yılanlarla dolu. Buzlu bir kıta için, tuhaf bir tarif.",
+      "tone": "laughs",
+      "text": "Üstelik o kıyıya bir not düşmüş. Ne yazmış, biliyor musunuz? Burası çok sıcak, büyük yılanlarla dolu!",
       "visual": "'sıcak'ta 'ÇOK SICAK' tabelası belirir, Kaşif gösterir, 'yılanlarla'da şaşırır; yanda tropik ağaç",
       "title": {
         "white": "Piri'nin",
@@ -1719,7 +1729,7 @@
     },
     {
       "type": "board",
-      "text": "Yani buzların altında gizli bir kıta yok. Deriye sığdırılmış bir kıyı var.",
+      "text": "Buzlu kıtada yılan, ha? Yani buzların altında gizli bir kıta yoktu; deriye sığdırılmış bir kıyı vardı.",
       "visual": "Pano: 'Efsane' kartında Buzsuz Antarktika ve Uzaylı bilgisi çarpı; 'Gerçek' kartında ~20 kaynak ve kıvrılan kıyı tik; altta yeşil hap 'Deriye sığan kıyı'",
       "title": {},
       "cues": {
@@ -1772,7 +1782,8 @@
     },
     {
       "type": "stage",
-      "text": "Uzaylı yok. Kayıp kıta yok. Yirmi haritayı bir deriye sığdıran, inatçı bir denizci var.",
+      "tone": "excited",
+      "text": "Ne uzaylı, ne kayıp kıta… Sadece yirmi haritayı bir deriye sığdıran, inatçı bir denizci!",
       "visual": "Kaşif mutlu anlatır, 'inatçı'da yanındaki haritayı gösterir; üstte el yazısı '20 harita = 1 harita'",
       "title": {},
       "cues": {
@@ -1834,7 +1845,7 @@
     {
       "chapter": "Haritanın mirası",
       "type": "chapter",
-      "text": "Ama Piri'nin hikâyesi, bu haritayla bitmiyor.",
+      "text": "Ama Piri'nin hikâyesi, bu haritayla bitmeyecekti.",
       "visual": "BÖLÜM 5 / 5 rozeti, mavi dairede 5, altında 'Haritanın mirası' kartı ve el çizimi alt çizgi",
       "title": {},
       "cues": {
@@ -1849,7 +1860,8 @@
     },
     {
       "type": "stage",
-      "text": "Dünyayı bir deriye sığdırmıştı. Şimdi Akdeniz'in limanlarını bir kitaba sığdırıyor: Kitab-ı Bahriye. Gençlikteki o notlar, sonunda yerini buluyor.",
+      "tone": "amazed",
+      "text": "Hatırlıyor musunuz, gençliğinde not ettiği limanları? Hepsini Kitab-ı Bahriye'ye döktü! O notlar sonunda işe yaramıştı.",
       "visual": "Gelibolu iskelesinde sarıklı Piri konuşur; 'Bahriye'de 'Kitab-ı Bahriye' tabelası ve parşömen belirir, Kaşif parşömeni işaret eder",
       "title": {
         "white": "1521"
@@ -1938,7 +1950,7 @@
     },
     {
       "type": "timeline",
-      "text": "1521'de bitiriyor, 1526'da genişletip Kanuni'ye sunuyor. İki yıl sonra bir dünya haritası daha. Durmak bilmiyor.",
+      "text": "1521'de bitirdi, 1526'da genişletip Kanuni'ye sundu. İki yıl sonra bir dünya haritası daha… Durmak bilmiyordu!",
       "visual": "Zaman çizgisi: 1513 Dünya haritası, 1521 Kitab-ı Bahriye, 1526 Kanuni'ye sunulur (kırmızı), 1528 İkinci harita",
       "title": {
         "white": "Eserleri"
@@ -1973,7 +1985,7 @@
     },
     {
       "type": "stage",
-      "text": "Seksenlerinde bile denizde: Hint Okyanusu'ndaki Osmanlı filosunun başında. Hedef: Portekizlilerin elindeki Hürmüz kalesi.",
+      "text": "Seksenlerinde bile denizdeydi, Hint Okyanusu'ndaki Osmanlı filosunun başında. Hedef mi? Portekizlilerin Hürmüz kalesi.",
       "visual": "Gri sakallı yaşlı Piri filosunun gemisinin yanında durur; 'Hürmüz'de sağda kale kulesi belirir, Piri ve Kaşif kaleyi işaret eder; üstte 'Hürmüz kalesi'",
       "title": {
         "white": "Hürmüz"
@@ -2053,13 +2065,14 @@
     },
     {
       "type": "stage",
-      "text": "Kaleyi kuşatıyor. Ama kale düşmüyor. Ve Piri, belki de hayatının en ağır kararını veriyor: filonun çoğunu bırakıp birkaç gemiyle Mısır'a dönüyor.",
-      "visual": "Sağda düşmeyen kale kulesi; 'düşmüyor'da üstte 'Kale düşmüyor' yazısı belirir ve Kaşif endişeyle omuz silker; 'bırakıp'ta yaşlı Piri kaleden uzaklaşıp soldaki tek gemiye doğru yürür",
+      "tone": "dramatic",
+      "text": "Kaleyi kuşattı, ama kale düşmedi. Peki sizce ne yapacaktı? İnanması zor ama, filonun çoğunu bırakıp birkaç gemiyle Mısır'a döndü.",
+      "visual": "Sağda düşmeyen kale kulesi; 'düşmedi'de üstte 'Kale düşmedi' yazısı belirir ve Kaşif endişeyle omuz silker; 'bırakıp'ta yaşlı Piri kaleden uzaklaşıp soldaki tek gemiye doğru yürür",
       "title": {
         "white": "Karar"
       },
       "cues": {
-        "hit": "düşmüyor",
+        "hit": "düşmedi",
         "go": "bırakıp"
       },
       "params": {
@@ -2108,7 +2121,7 @@
           }
         ],
         "label": {
-          "text": "Kale düşmüyor",
+          "text": "Kale düşmedi",
           "x": 0.5,
           "y": 0.13,
           "at": "hit"
@@ -2143,7 +2156,7 @@
     {
       "type": "stage",
       "tone": "sad",
-      "text": "Bu karar affedilmiyor. Bildiğimiz kadarıyla 1553'te, Kahire'de idam ediliyor.",
+      "text": "Ve bu karar… affedilmeyecekti. Bildiğimiz kadarıyla 1553'te, Kahire'de idam edildi.",
       "visual": "Kubbeli şehir silueti önünde Kaşif yalnız; yanında Piri'nin dürülmüş parşömeni; 'idam'da Kaşif başını eğip endişeyle düşünür, üstte el yazısı 'Kahire, ~1553'",
       "title": {
         "white": "1553"
@@ -2200,7 +2213,8 @@
     },
     {
       "type": "title",
-      "text": "Ama adı unutulmuyor: 2013'te UNESCO, haritanın beş yüzüncü yılını anma takvimine alıyor.",
+      "tone": "amazed",
+      "text": "Peki adı unutuldu mu? Asla! 2013'te UNESCO, haritanın beş yüzüncü yılını anma takvimine aldı.",
       "visual": "Dev Fraunces yazı 'UNESCO / 500. YIL', 500 kırmızı kutuda, el yazısı not '1513 → 2013'; sağda küçük Kaşif 'beş'te yazıyı işaret eder",
       "title": {
         "white": "Bugün"
@@ -2237,7 +2251,7 @@
     },
     {
       "type": "pirimap",
-      "text": "Yani bu haritanın sırrı uzaylılarda değil. Amerika'yı hiç görmeden, yirmi haritayı tek bir deriye sığdıran bir merakta.",
+      "text": "Yani bakın, bu haritanın sırrı uzaylılarda değil; yirmi haritayı bir deriye sığdıran o merakta.",
       "visual": "Ceylan derisi harita yeniden çizilir; Kaşif yanında hayranlıkla bakar, 'merakta'da Amerika kıyısı halkayla işaretlenir ve Kaşif onu gösterir",
       "title": {
         "white": "Piri Reis"
@@ -2288,13 +2302,14 @@
     },
     {
       "type": "stage",
-      "text": "Sence Piri, Kolomb'un haritasını görmeseydi, Amerika'yı yine çizebilir miydi? Yorumlara yaz.",
+      "tone": "curious",
+      "text": "Peki siz ne düşünüyorsunuz? Piri, Kolomb'un haritasını görmeseydi Amerika'yı yine çizebilir miydi? Yorumlara yazın!",
       "visual": "'SENCE?' tabelası belirir; Kaşif anlatır, 'çizebilir'de omuz silker, 'Yorumlara'da el sallar",
       "title": {
         "white": "Soru"
       },
       "cues": {
-        "q": "Sence",
+        "q": "siz",
         "hit": "çizebilir",
         "yor": "Yorumlara"
       },
