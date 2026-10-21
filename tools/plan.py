@@ -24,7 +24,7 @@ LONG_EVERY = 1                         # every day (was every 5 days until 2026-
 LONG_ANCHOR = date(2026, 10, 17)
 MONTHLY_CHARS = 231442                 # ElevenLabs Creator plan credits (panel, 2026-10-20)
 BILLING_DAY = 20                       # credits renew on this day of the month
-LIMITS = {"short": (400, 500, 550), "long": (3400, 4000, 4300)}   # target min, target max, hard max
+LIMITS = {"short": (400, 500, 550), "long": (6500, 7800, 8300)}   # target min, target max, hard max (long: 8-10 min, owner 2026-10-21)
 
 
 def is_long_day(d):

@@ -41,7 +41,7 @@ Zamanlanmış görev her sabah bu bölümü uygular.
 | | Süre | Karakter (anlatım metni toplamı) | Yayın |
 |---|---|---|---|
 | Shorts ×4 | 28–35 sn | **400–500** (sert sınır 550) | her gün 12:00, 15:00, 19:00 ve 22:00 (+03:00) |
-| Uzun video (her gün) | ~4–5 dk | **3.400–4.000** (sert sınır 4.300) | her gün 20:30 (+03:00) |
+| Uzun video (her gün) | **8–10 dk** | **6.500–7.800** (sert sınır 8.300) | her gün 20:30 (+03:00) |
 
 **Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
 - **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" diye hitap eder, merakı paylaşır ve açıklar ("Kediler neden hep dört ayağının üstüne düşer, hiç merak ettiniz mi? Gelin, hemen anlatayım."). Olayı altyazı gibi sayan, "yapıyor ediyor" diye giden anlatım yasak; **devrik cümle yok** (özne başta, yüklem sonda: "Ordu geldi.", "Geldi ordu." değil) (BRAND.md §6.0–6.3, §6.10).
@@ -78,7 +78,7 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
    olduğunu, `lint` hatasız geçtiğini, her `cover.jpg` ve `sheet.png`'yi **kendi gözüyle** gördüğünü
    doğrular; sonra adım 10–11.
 
-Zaman: tüm akış ~1 saati geçmesin; turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
+Zaman: tüm akış ~1,5 saati geçmesin (uzun video 8–10 dk); turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
 (`preview.py`, Chromium) aynı anda en fazla 3 tane çalışsın.
 
 **Canlı Telegram durumu (kanal sahibi tüm süreci tek mesajda canlı izler).** Bulut oturumunda
@@ -104,7 +104,7 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 5. **Senaryo** — dosyalar: `01-<slug>.json` … `04-<slug>.json` (Shorts, dördü de farklı konu havuzlarından ve dönemlerden; en az biri Türkiye/Osmanlı tarihinden) ve `05-<slug>.json` (uzun video, Shorts'lardan farklı bir olay); numaralar `plan.py`'nin `todo` listesinden.
    - **Motor ve tarz:** her dosyada `"engine": "studio"` ve `"theme": "parchment"` (lint ikisini de denetler). Renk paleti seçilmez: tek sabit palet BRAND §3 (`"art"`/`"palette"` yazma).
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir parşömen sahne tipi kodla (bkz. 6).
-   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 35–45 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
+   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 60–80 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
    - Ortak alanlar (referans senaryolardaki gibi): `"channel": "Düşün Bakalım"`, `"subtitles": true`, `"tts": {"provider": "elevenlabs", "voice_id": "j4vJUfke1j8j9OYq8V3b", "model": "eleven_v3"}`; `tts.settings`, `pacing`, `max_pause`, sahne `tone` yok (BRAND §6.2).
      Ses (kanal sahibinin seçimi, asla değiştirme): **tüm videolarda (Shorts ve uzun)** ElevenLabs `voice_id: j4vJUfke1j8j9OYq8V3b`. Model `eleven_v3`. `tools/lint.py` bunu denetler.
    - **Karakter bütçesine uy** (tablo). `tools/preview.py` çıktısındaki `chars` değerini kontrol et; sınırı aşıyorsa metni kısalt.
@@ -194,4 +194,4 @@ python tools/media.py search "Piri Reis map" --dir videos/<tarih>/media   # teli
 python tools/brand_sheet.py                          # Kaşif referans çizimleri (brand/kit/)
 ```
 
-Playwright Chromium'u bulamazsa `CHROMIUM_PATH=/opt/pw-browsers/chromium` ver. **Performans kuralı:** pahalı desenleri (kâğıt dokusu gibi) açılışta bir kez pişir, karede sadece kopyala; tarayıcıda `mix-blend-mode`, büyük `filter: blur`, tam ekran yarı saydam katman ve SVG grup `opacity`'sinden kaçın (yazılım raster'ında şerit artefaktı). Motor 1080p/30 fps çizer, ffmpeg 1440p'ye büyütür; render tüm CPU çekirdeklerine bölünür (`RENDER_WORKERS`). Actions'ta bir video ayrıca ~40 sn'lik parçalara bölünüp (en çok 8) ayrı işlerde render edilir. Video kareleri Chromium'un yazılım compositor'ıyla çizilir ve CDP ile yakalanır (kapak eski yolla); eski yola dönmek için `RENDER_COMPOSITOR=gpu`, `RENDER_CAPTURE=screenshot`.
+Playwright Chromium'u bulamazsa `CHROMIUM_PATH=/opt/pw-browsers/chromium` ver. **Performans kuralı:** pahalı desenleri (kâğıt dokusu gibi) açılışta bir kez pişir, karede sadece kopyala; tarayıcıda `mix-blend-mode`, büyük `filter: blur`, tam ekran yarı saydam katman ve SVG grup `opacity`'sinden kaçın (yazılım raster'ında şerit artefaktı). Motor 1080p/30 fps çizer, ffmpeg 1440p'ye büyütür; render tüm CPU çekirdeklerine bölünür (`RENDER_WORKERS`). Actions'ta bir video ayrıca ~40 sn'lik parçalara bölünüp (en çok 16) ayrı işlerde render edilir. Video kareleri Chromium'un yazılım compositor'ıyla çizilir ve CDP ile yakalanır (kapak eski yolla); eski yola dönmek için `RENDER_COMPOSITOR=gpu`, `RENDER_CAPTURE=screenshot`.

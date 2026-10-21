@@ -17,7 +17,7 @@ from plan import LIMITS  # noqa: E402
 
 VOICES = {"short": "j4vJUfke1j8j9OYq8V3b", "long": "j4vJUfke1j8j9OYq8V3b"}   # channel owner's choice (2026-10-19), all formats
 MODEL = "eleven_v3"
-SCENES = {"short": (8, 11), "long": (35, 45)}
+SCENES = {"short": (8, 11), "long": (60, 80)}
 THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
 
 

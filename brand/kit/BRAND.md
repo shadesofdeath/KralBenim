@@ -126,7 +126,7 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 | | Süre | Yapı |
 |---|---|---|
 | Shorts (9:16) | 28–35 sn | 8–11 sahne; tek bir tarih anı ya da şaşırtıcı ayrıntı; kapak yazısı = ilk cümle |
-| Uzun (16:9) | 4–6 dk | 4–6 bölüm kartı; kanca → hikâye → dönüm noktası → "peki neden?" → bugün → soru |
+| Uzun (16:9) | 8–10 dk | 6–8 bölüm kartı; kanca → hikâye → dönüm noktası → "peki neden?" → bugün → soru |
 
 ## 8. Görseller kodla üretilir; Higgsfield istisnadır
 

@@ -8,7 +8,7 @@ name: Daily batch
 #   monitor  (1 job, whole run)   keeps the day's ONE live Telegram message current (stages, render %,
 #                                 ETA, YouTube link); the only job that edits it (tools/live.py).
 #                                 Every Telegram/live step is best-effort and can never fail a render.
-# N is about one shard per 40 s of video (max 8), so a Short is 1 render job and a 4.5-minute video 7.
+# N is about one shard per 40 s of video (max 16), so a Short is 1 render job and a 10-minute video 15.
 on:
   push:
     paths: ["videos/**.json"]

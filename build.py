@@ -590,8 +590,8 @@ def still(timeline, t, out):
 # what the next phase needs (CI passes them between jobs as an artifact).
 
 def shard_count(seconds):
-    """About one shard per SHARD_SECONDS (default 40) of video, at most 8."""
-    return max(1, min(8, round(seconds / float(os.environ.get("SHARD_SECONDS", 40)))))
+    """About one shard per SHARD_SECONDS (default 40) of video, at most 16."""
+    return max(1, min(16, round(seconds / float(os.environ.get("SHARD_SECONDS", 40)))))
 
 
 def write_prepared(timeline, work, out, mp3, sfx, until, cover=True):
