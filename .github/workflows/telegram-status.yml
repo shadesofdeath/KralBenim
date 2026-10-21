@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       key:
-        description: "Production date, e.g. 2026-10-20 (one message per date)"
+        description: "Production date, e.g. 2026-10-20 (one message per video of that date)"
         required: true
       stage:
         description: "plan | topic | script | chars | visual | preview | review | publish | push | any name (empty with batch)"
@@ -45,6 +45,10 @@ on:
         description: 'Several updates at once (JSON list of {stage, state, text, video, title, kind, progress})'
         required: false
         default: ""
+      clear:
+        description: "true: first delete the bot's messages in the chat, then re-send the key's messages fresh"
+        required: false
+        default: "false"
 
 permissions:
   contents: read
@@ -56,7 +60,7 @@ permissions:
 jobs:
   status:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 20   # clear probes up to 1500 message ids
     steps:
       - uses: actions/checkout@v4
         with:
@@ -80,7 +84,9 @@ jobs:
           KIND: ${{ inputs.kind }}
           PROGRESS: ${{ inputs.progress }}
           BATCH: ${{ inputs.batch }}
+          CLEAR: ${{ inputs.clear }}
         run: |
+          if [ "$CLEAR" = "true" ]; then python3 tools/telegram.py clear || true; fi
           args=(status "$KEY")
           if [ -n "$STAGE" ]; then args+=("$STAGE" "${STATE:-info}" "$TEXT"); fi
           [ -n "$VIDEO" ] && args+=(--video "$VIDEO")

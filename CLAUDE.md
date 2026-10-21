@@ -81,7 +81,7 @@ Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** ba�
 Zaman: tüm akış ~1,5 saati geçmesin (uzun video 8–10 dk); turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
 (`preview.py`, Chromium) aynı anda en fazla 3 tane çalışsın.
 
-**Canlı Telegram durumu (kanal sahibi tüm süreci tek mesajda canlı izler).** Bulut oturumunda
+**Canlı Telegram durumu (her video ayrı bir mesajda, yerinde güncellenir).** Bulut oturumunda
 Telegram token'ı yok; yönetmen her aşamada GitHub MCP `actions_run_trigger` ile
 `telegram-status.yml` workflow'unu tetikler (`ref: claude/shorts-pipeline`, inputs: `key` = günün
 tarihi, `stage`, `state` = `run|done|fail|info`, `text`, `video` = dosya adı slug'ı ör. `01-emu-savasi`,

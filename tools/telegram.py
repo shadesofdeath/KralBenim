@@ -5,10 +5,11 @@
   python tools/telegram.py send <file>.json out/x.mp4  # video + Instagram caption
   python tools/telegram.py text "message"
   python tools/telegram.py status <key> <stage> <state> [text] [--video SLUG] [--title T] [--kind short|long] [--progress 60%]
+  python tools/telegram.py clear                      # delete the bot's messages, start fresh ones
   python tools/telegram.py status <key> --batch '[{"stage": "script", "state": "done", "video": "01-x"}, ...]'
 
-`status` keeps one message per <key> (the production date, e.g. 2026-10-20) and edits it in place:
-the first call sends it, every later call (from any job or run) re-renders all stages and edits it.
+`status` keeps one message per video (and one general message) per <key> (the production date) and edits
+them in place: the first call sends one, every later call (from any job or run) re-renders and edits them.
 <state>: wait | run | done | fail | skip | info (info = "label: text" line, e.g. topic, chars, publish).
 Known stages: plan topic script chars visual preview review publish push tts render mux youtube telegram.
 With --video the line goes under that video's heading (📱 SHORTS / 📺 UZUN VİDEO + title).
@@ -79,12 +80,14 @@ def instagram_caption(script):
 # description  state|t0|t1|progress|text.  Why: GITHUB_TOKEN can write and read them from any job
 # (statuses: write), at any time, without commits, caches or artifacts; one context per stage means
 # parallel writers never lose each other's updates (latest write per stage wins, which is what we want).
-#   tg/<key>/_msg               chat_id|message_id|created     the one Telegram message of this key
+#   tg/<key>/<slug>/_msg        chat_id|message_id|created     the Telegram message of one video
+#   tg/<key>/_/_msg             chat_id|message_id|created     the day's general message (plan, push)
+#   tg/<key>/_msg               (old: one message per day; only read by `clear`)
 #   tg/<key>/<slug>/_meta       kind|title                      video heading
 #   tg/<key>/<slug>/shard<i>    run|percent                     live render progress of shard i
 # Without GITHUB_TOKEN (local use) the same records go to a JSON file (out/telegram/<key>.json).
-# Whoever writes then re-renders the whole message from all records and edits it, so the message is
-# always complete. The message is HTML (bold headings, details in <code>); every value is escaped.
+# Whoever writes then re-renders every message from all records and edits it (one message per video,
+# owner 2026-10-21), so each message is always complete. The message is HTML (bold headings, details in <code>); every value is escaped.
 
 STAGES = {   # id: (emoji, short label)
     "plan": ("🗓️", "Plan"),
@@ -259,7 +262,7 @@ class Store:
             self.put(f"{sid}/_meta", f"{kind or ''}|{title or ''}")
 
     def state(self):
-        st = {"key": self.key, "sections": [], "shards": {}}
+        st = {"key": self.key, "sections": [], "shards": {}, "msgs": {}}
         for k, v in self.seen.items():
             parts, d = k.split("/"), v["d"]
             if parts == ["_msg"]:
@@ -270,6 +273,11 @@ class Store:
             if len(parts) != 2:
                 continue
             sid, stage = parts
+            if stage == "_msg":
+                c, m, cr = (d.split("|") + ["", "", ""])[:3]
+                if m.isdigit():
+                    st["msgs"][sid] = {"chat_id": c, "message_id": int(m), "created": from36(cr) or 0}
+                continue
             if stage == "_meta":
                 kind, _, title = d.partition("|")
                 section(st, sid, kind or None, title or None)
@@ -417,30 +425,29 @@ def current(sec):
     return None
 
 
-def render(st, now=None):
-    """Short: a heading, the general step on one line, then two lines per video (title, where it is)."""
-    now = now or time.time()
-    key = st.get("key", "")
-    if DATE_RE.match(key):
+def day_label(key):
+    if DATE_RE.match(key or ""):
         y, mo, d = (int(x) for x in key.split("-"))
-        head = f"<b>🎥 Düşün Bakalım</b> · {d} {MONTHS[mo - 1]}"
-    else:
-        head = f"<b>🎥 Düşün Bakalım</b> · {esc(key)}"
-    out = [head]
-    for s in st["sections"]:
-        g = current(s)
-        if not g:
-            continue
-        if s["id"] == "_":
-            out.append(stage_line(g, now))
-            continue
-        kind = {"short": "📱", "long": "📺"}.get(s.get("kind"), "🎞️")
-        pub = stage_of(s, "publish")
-        when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
-        out += ["", f"{kind} <b>{esc(s.get('title') or s['id'])}</b>{when}", stage_line(g, now)]
-    if st.get("footer"):
-        out += ["", esc(st["footer"])]
-    return "\n".join(out)[:4000]
+        return f"{d} {MONTHS[mo - 1]}"
+    return esc(key)
+
+
+def render(st, sec, now=None):
+    """One section's message, kept short: the general one is a heading + its current step (+ footer),
+    a video's is its title (+ publish time) and the one step it is at."""
+    now = now or time.time()
+    g = current(sec)
+    if sec["id"] == "_":
+        out = [f"<b>🎥 Düşün Bakalım</b> · {day_label(st.get('key', ''))}"] + ([stage_line(g, now)] if g else [])
+        if st.get("footer"):
+            out.append(esc(st["footer"]))
+        return "\n".join(out)[:4000]
+    if not g:
+        return None
+    kind = {"short": "📱", "long": "📺"}.get(sec.get("kind"), "🎞️")
+    pub = stage_of(sec, "publish")
+    when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
+    return f"{kind} <b>{esc(sec.get('title') or sec['id'])}</b>{when}\n{stage_line(g, now)}"[:4000]
 
 
 def tg(method, fields, tries=4):
@@ -467,27 +474,43 @@ def tg(method, fields, tries=4):
     return False, "rate limited"
 
 
-def publish(store, st, now=None, last=None):
-    """Send (first time) or edit the key's one message with the full rendered state.
-    `last` (dict, optional): remembers the last text sent, so unchanged text is not re-sent."""
+def publish(store, st, now=None, last=None, only=None):
+    """Send (first time) or edit each section's own message (one per video, one general).
+    `last` (dict, optional): remembers the last text sent per section, so unchanged text is not re-sent.
+    `only` (set of section ids, optional): touch just these messages."""
     if not TOKEN:
         return False
     cid = chat_id(required=False)
     if not cid:
         return False
-    text = render(st, now)
-    if last is not None and last.get("text") == text and last.get("mid") == st.get("message_id"):
+    secs = list(st["sections"])
+    if st.get("footer") and not any(x["id"] == "_" for x in secs):
+        secs.insert(0, section(st, "_"))
+    ok = True
+    for sec in secs:
+        if only is not None and sec["id"] not in only:
+            continue
+        text = render(st, sec, now)
+        if text is not None:
+            ok = publish_one(store, st, sec["id"], text, cid, last) and ok
+    return ok
+
+
+def publish_one(store, st, sid, text, cid, last=None):
+    m = st["msgs"].get(sid, {})
+    mid = m.get("message_id")
+    seen = (last or {}).get(sid, {})
+    if last is not None and seen.get("text") == text and seen.get("mid") == mid:
         return True
-    mid = st.get("message_id")
-    fresh = time.time() - (st.get("created") or 0) < REUSE_HOURS * 3600
-    if mid and str(st.get("chat_id")) == str(cid) and fresh:
+    fresh = time.time() - (m.get("created") or 0) < REUSE_HOURS * 3600
+    if mid and str(m.get("chat_id")) == str(cid) and fresh:
         ok, res = tg("editMessageText", {"chat_id": cid, "message_id": mid, "text": text,
                                          "disable_web_page_preview": True, "parse_mode": "HTML"})
         if ok or "not modified" in str(res):
             if last is not None:
-                last.update(text=text, mid=mid)
+                last[sid] = {"text": text, "mid": mid}
             return True
-        if not any(s in str(res) for s in ("not found", "can't be edited", "MESSAGE_ID_INVALID")):
+        if not any(x in str(res) for x in ("not found", "can't be edited", "MESSAGE_ID_INVALID")):
             warn(f"edit failed: {res}")
             return False   # transient: the next call edits again
     ok, res = tg("sendMessage", {"chat_id": cid, "text": text, "disable_web_page_preview": True, "parse_mode": "HTML"})
@@ -495,22 +518,60 @@ def publish(store, st, now=None, last=None):
         warn(f"send failed: {res}")
         return False
     mine = res["message_id"]
-    store.put("_msg", f"{cid}|{mine}|{b36(time.time())}")
-    # two writers may have started a message at the same moment: the latest _msg record wins, the other
+    store.put(f"{sid}/_msg", f"{cid}|{mine}|{b36(time.time())}")
+    # two writers may have started the same message at the same moment: the latest record wins, the other
     # writer deletes its own message
     if store.remote:
         time.sleep(1)
         store.refresh(pages=1)
-        won = store.state()
-        if won.get("message_id") and won["message_id"] != mine:
+        won = store.state()["msgs"].get(sid, {}).get("message_id")
+        if won and won != mine:
             tg("deleteMessage", {"chat_id": cid, "message_id": mine})
-            tg("editMessageText", {"chat_id": cid, "message_id": won["message_id"], "text": text,
+            tg("editMessageText", {"chat_id": cid, "message_id": won, "text": text,
                                    "disable_web_page_preview": True, "parse_mode": "HTML"})
-            mine = won["message_id"]
-    st.update(chat_id=cid, message_id=mine, created=time.time())
+            mine = won
+    st["msgs"][sid] = {"chat_id": cid, "message_id": mine, "created": time.time()}
     if last is not None:
-        last.update(text=text, mid=mine)
+        last[sid] = {"text": text, "mid": mine}
     return True
+
+
+def clear(scan=1500):
+    """Delete the bot's own messages in the chat, then forget the stored message ids, so the next status
+    update starts fresh messages. Own messages are found by probing ids: editing the reply markup of an
+    own message answers "not modified", of anyone else's "can't be edited" (the owner's messages stay)."""
+    cid = chat_id(required=False)
+    if not TOKEN or not cid:
+        return 0
+    probe = tg("sendMessage", {"chat_id": cid, "text": "🧹"})
+    top = probe[1]["message_id"] if probe[0] and isinstance(probe[1], dict) else 0
+    store = Store("")
+    store.prefix = "tg/"
+    store.refresh(pages=30, max_age_h=24 * 60)
+    known = set()
+    for k, v in store.seen.items():
+        if k.endswith("_msg"):
+            c, m, _ = (v["d"].split("|") + ["", "", ""])[:3]
+            if m.isdigit() and str(c) == str(cid):
+                known.add(int(m))
+    top = max([top] + list(known))
+    own = set(known) | ({top} if top else set())
+    for mid in range(max(1, top - scan), top):
+        if mid in own:
+            continue
+        ok, res = tg("editMessageReplyMarkup", {"chat_id": cid, "message_id": mid, "reply_markup": {"inline_keyboard": []}})
+        if ok or "not modified" in str(res):
+            own.add(mid)
+    ids = sorted(own)
+    for i in range(0, len(ids), 100):
+        ok, res = tg("deleteMessages", {"chat_id": cid, "message_ids": ids[i:i + 100]})
+        if not ok:
+            for mid in ids[i:i + 100]:
+                tg("deleteMessage", {"chat_id": cid, "message_id": mid})
+    for k in [k for k in store.seen if k.endswith("_msg") and store.seen[k]["d"]]:
+        store.put(k, "")
+    print(f"deleted {len(ids)} bot messages (scanned {max(1, top - scan)}..{top})")
+    return 0
 
 
 def apply_update(store, st, u, now=None):
@@ -568,7 +629,8 @@ def status(argv):
         for u in updates:
             if u.get("stage"):
                 apply_update(store, st, u)
-        publish(store, st)
+        touched = {u.get("video") or "_" for u in updates if u.get("stage")}
+        publish(store, st, only=touched or None)
     except Exception as e:   # never break the caller
         print(f"telegram status: {e}", file=sys.stderr)
     return 0
@@ -578,6 +640,8 @@ def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "status":
         sys.exit(status(sys.argv[2:]))
+    if cmd == "clear":
+        sys.exit(clear())
     if cmd == "setup":
         ups = call("getUpdates").get("result", [])
         chats = [u["message"]["chat"]["id"] for u in ups if "message" in u]
