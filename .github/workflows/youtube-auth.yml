@@ -1,0 +1,38 @@
+name: YouTube login (phone)
+
+# One-time YouTube login for a channel without a computer (tools/youtube_device_auth.py): sends a code to
+# Telegram, waits while the owner signs in at google.com/device on the phone, then sends the token JSON to
+# Telegram for the channel's GitHub secret (tools/channels.py "youtube_env"). The token never goes to the log.
+# Needs secrets YOUTUBE_DEVICE_CLIENT_ID / YOUTUBE_DEVICE_CLIENT_SECRET (OAuth client type
+# "TVs and Limited Input devices") and the Telegram bot.
+run-name: "🔑 YouTube login: ${{ inputs.channel }}"
+
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Channel name or id (tools/channels.py), e.g. ag"
+        required: true
+        default: "ag"
+
+permissions:
+  contents: read
+
+jobs:
+  login:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools/
+            config/
+      - name: Device login
+        env:
+          YOUTUBE_DEVICE_CLIENT_ID: ${{ secrets.YOUTUBE_DEVICE_CLIENT_ID }}
+          YOUTUBE_DEVICE_CLIENT_SECRET: ${{ secrets.YOUTUBE_DEVICE_CLIENT_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CH: ${{ inputs.channel }}
+        run: python3 tools/youtube_device_auth.py "$CH"
