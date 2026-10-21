@@ -212,6 +212,13 @@ const KASIF = (() => {
     band: [[-58, -46], [-60, -68], [60, -70], [58, -46]],
     brim: [[-108, -38], [-72, -52], [-20, -56], [40, -54], [102, -48], [126, -38], [98, -28], [40, -32], [-20, -32], [-82, -28]],
   };
+  // second channel's narrator (Anlatayım Gel): same rig, a red fez with an ink tassel instead of the explorer hat
+  const FEZ = {
+    crown: [[-52, -40], [-47, -96], [-42, -122], [-16, -128], [18, -128], [42, -122], [47, -96], [52, -40]],
+    band: [[-52, -40], [-51, -54], [51, -54], [52, -40]],
+    tassel: [[2, -128], [26, -122], [42, -100], [48, -72]],
+  };
+  let NARR = 'kasif';   // set per video from the script's "narrator" (KASIF.setNarrator, engine.js)
   const ACC = {
     beret: { fill: INK.blue, pts: [[-74, -40], [-70, -78], [-30, -100], [30, -100], [80, -80], [92, -54], [60, -42], [0, -46]], nub: [[4, -100], [8, -116]] },
     turban: { fill: INK.paperLight, pts: [[-74, -26], [-82, -70], [-56, -118], [0, -138], [56, -118], [82, -70], [74, -26], [0, -40]],
@@ -241,7 +248,8 @@ const KASIF = (() => {
     const beard = beardK ? { f: P(beardK === 'grey' ? INK.paperDark : beardK === 'short' ? INK.inkSoft : INK.ink), r: P(), m: P(beardK === 'grey' ? INK.inkSoft : INK.ink) } : null;
     const eyes = [P(), P()], brows = [P(), P()], mouthF = P(), mouthR = P();
     // hat / accessory (head frame)
-    const hat = hasHat ? { crownF: P(INK.hat), crownR: P(), bandF: P(INK.hatBand), brimF: P(INK.hat), brimR: P(), dent: P() } : null;
+    const fez = hasHat && NARR === 'fes';
+    const hat = hasHat ? { crownF: P(fez ? INK.red : INK.hat), crownR: P(), bandF: P(INK.hatBand), brimF: P(INK.hat), brimR: P(), dent: P() } : null;
     const ac = acc && ACC[acc] ? { f: P(ACC[acc].fill), r: P(), x1: P(acc === 'turban' || acc === 'helmet' || acc === 'helmet_byz' ? INK.red : INK.ink), x2: P() } : null;
     const laurel = acc === 'laurel' ? { f: P(INK.green), r: P() } : null;
     const binoF = P(INK.inkSoft), binoR = P(), binoL = P(INK.paperLight);
@@ -335,7 +343,14 @@ const KASIF = (() => {
       mouthR.setAttribute('d', op > 0.04 ? inkPath(Hp(lip), { w: 4.5, seed: S(34), t, amp: 0.6, closed: true })
         : inkPath(Hp([lip[0], lip[1], lip[2]]), { w: 4.5, seed: S(34), t, amp: 0.6, taper: 0.4 }));
       // hat (Kaşif): turns with the head, never falls
-      if (hat) {
+      if (hat && fez) {
+        const cr = Hp(FEZ.crown), bd = Hp(FEZ.band);
+        hat.crownF.setAttribute('d', inkLoop(cr, { seed: S(40), t }));
+        hat.bandF.setAttribute('d', inkLoop(bd, { seed: S(41), t, smooth: false, amp: 1.2 }));
+        hat.crownR.setAttribute('d', ink(FEZ.crown.map(q => H(q[0], q[1])), 40, 5.5, { closed: true }));
+        const tip = H(FEZ.tassel[3][0], FEZ.tassel[3][1]);
+        hat.dent.setAttribute('d', ink(Hp(FEZ.tassel), 43, 5, { taper: 0.3 }) + ' ' + inkDot(tip[0], tip[1], 9, 12, S(44), t));
+      } else if (hat) {
         const cr = Hp(HAT.crown), bd = Hp(HAT.band), bm = Hp(HAT.brim);
         hat.crownF.setAttribute('d', inkLoop(cr, { seed: S(40), t }));
         hat.bandF.setAttribute('d', inkLoop(bd, { seed: S(41), t, smooth: false, amp: 1.2 }));
@@ -421,7 +436,8 @@ const KASIF = (() => {
     }
     return { update, node: g };
   }
-  return { create, gait, mouthFromWords: (words, t) => inkTalk(t, words), POSES: Object.keys(POSES), LEN };
+  const setNarrator = n => { NARR = n === 'fes' ? 'fes' : 'kasif'; };
+  return { create, gait, setNarrator, mouthFromWords: (words, t) => inkTalk(t, words), POSES: Object.keys(POSES), LEN };
 })();
 
 // ---------------------------------------------------------------- props: simple ink drawings

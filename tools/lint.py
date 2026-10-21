@@ -14,6 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 from plan import LIMITS  # noqa: E402
+from channels import CHANNELS, of_file  # noqa: E402
 
 VOICES = {"short": "j4vJUfke1j8j9OYq8V3b", "long": "j4vJUfke1j8j9OYq8V3b"}   # channel owner's choice (2026-10-19), all formats
 MODEL = "eleven_v3"
@@ -54,6 +55,15 @@ def lint(path, kinds):
         err.append(f'"theme" must be "{THEME}": the channel has one style, sepia parchment + Kaşif (brand/kit/BRAND.md)')
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
+    # channel: on-screen name, file prefix and narrator must agree (tools/channels.py)
+    ch = s.get("channel")
+    if ch not in CHANNELS:
+        err.append(f'"channel" must be one of: {", ".join(CHANNELS)}')
+    else:
+        if of_file(Path(path).name) != ch:
+            err.append(f'file name prefix does not match channel {ch!r} (expected "{CHANNELS[ch]["prefix"]}NN-slug.json")')
+        if s.get("narrator", "kasif") != CHANNELS[ch]["narrator"]:
+            err.append(f'"narrator" must be "{CHANNELS[ch]["narrator"]}" for {ch}')
     tts = s.get("tts", {})
     if tts.get("voice_id") != VOICES[fmt] or tts.get("model") != MODEL or tts.get("provider") != "elevenlabs":
         err.append(f"tts must be elevenlabs / {VOICES[fmt]} / {MODEL} for {fmt} videos")
@@ -159,8 +169,8 @@ def lint(path, kinds):
             err.append("long video: first scene needs \"chapter\"")
         idx = [i for i, x in enumerate(sc) if x.get("chapter")] + [len(sc)]
         for a, b in zip(idx, idx[1:]):
-            if b - a > 8:
-                warn.append(f"chapter at scene {a} runs {b - a} scenes (aim 5-8)")
+            if b - a > 12:
+                warn.append(f"chapter at scene {a} runs {b - a} scenes (aim 8-12)")
 
     # cover
     c = s.get("cover")
@@ -206,8 +216,9 @@ def lint(path, kinds):
     tags = y.get("tags", [])
     if not 12 <= len(tags) <= 18 or sum(len(t) for t in tags) > 450:
         err.append(f"{len(tags)} tags / {sum(len(t) for t in tags)} chars (need 12-18, <= 450)")
-    if "düşün bakalım" not in [t.lower() for t in tags]:
-        warn.append('tags: add "düşün bakalım"')
+    brand = low(s.get("channel") or "Düşün Bakalım")
+    if brand not in [low(t) for t in tags]:
+        warn.append(f'tags: add "{brand}"')
     if y.get("category_id") != "27":
         warn.append('category_id should be "27"')
     try:

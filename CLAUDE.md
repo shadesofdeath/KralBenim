@@ -2,6 +2,8 @@
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
 Her gün **4 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
+Aynı pipeline ikinci kanal **Anlatayım Gel**'e de üretir (aynı tarz, sadece Osmanlı ve Türk tarihi; bkz. *İkinci kanal: Anlatayım Gel*).
+Kanalların ayarları (ekrandaki ad, anlatıcı, dosya öneki, yayın saatleri, YouTube secret'ı) `tools/channels.py`'dedir.
 
 **Kanalın tek tarzı (kanal sahibinin kesin kararı):** **tarih hikâyeleri**, sepya parşömen üstüne elle
 çizilmiş mürekkep ve çöp adam anlatıcı **Kaşif** (`"theme": "parchment"`). Anayasa `brand/kit/BRAND.md`;
@@ -98,13 +100,13 @@ render yüzdesi + kalan süre, birleştirme, YouTube linki, Telegram); yönetmen
 Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit atılmaz; ayrıntı `tools/telegram.py`, `tools/live.py`).
 
 1. **Plan:** `python tools/plan.py` çalıştır. Sadece `todo` listesindeki videoları üret (`done` dolu olanlar önceden hazırlanmış, dokunma); `todo` boşsa hiçbir şey yapma, dur. Dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
-2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
+2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanalın da: `ag-` önekli dosyalar Anlatayım Gel'in) `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanalın nişi **tarih hikâyeleridir** (BRAND §1): gerçek bir olay, gerçek insanlar, bir gerilim ve "peki neden oldu?" sorusunun cevabı. Konu havuzunu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşların dönüm noktaları · keşifler ve icatların hikâyesi · imparatorlukların yükseliş/çöküşü · **Türkiye ve Osmanlı tarihinden anlar**, haftada en az 2 video). Bilim ancak bir tarih olayını açıklamak için girer. Konu `tarih-bolumu` becerisindeki 4 testi geçmeli (tek an, bir insan, bir "neden", doğrulanabilir). Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir olay.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
 5. **Senaryo** — dosyalar: `01-<slug>.json` … `04-<slug>.json` (Shorts, dördü de farklı konu havuzlarından ve dönemlerden; en az biri Türkiye/Osmanlı tarihinden) ve `05-<slug>.json` (uzun video, Shorts'lardan farklı bir olay); numaralar `plan.py`'nin `todo` listesinden.
    - **Motor ve tarz:** her dosyada `"engine": "studio"` ve `"theme": "parchment"` (lint ikisini de denetler). Renk paleti seçilmez: tek sabit palet BRAND §3 (`"art"`/`"palette"` yazma).
    - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir parşömen sahne tipi kodla (bkz. 6).
-   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 60–80 sahne, her 5–8 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
+   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 60–80 sahne, her 8–12 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
    - Ortak alanlar (referans senaryolardaki gibi): `"channel": "Düşün Bakalım"`, `"subtitles": true`, `"tts": {"provider": "elevenlabs", "voice_id": "j4vJUfke1j8j9OYq8V3b", "model": "eleven_v3"}`; `tts.settings`, `pacing`, `max_pause`, sahne `tone` yok (BRAND §6.2).
      Ses (kanal sahibinin seçimi, asla değiştirme): **tüm videolarda (Shorts ve uzun)** ElevenLabs `voice_id: j4vJUfke1j8j9OYq8V3b`. Model `eleven_v3`. `tools/lint.py` bunu denetler.
    - **Karakter bütçesine uy** (tablo). `tools/preview.py` çıktısındaki `chars` değerini kontrol et; sınırı aşıyorsa metni kısalt.
@@ -159,6 +161,29 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 9. **Kontrol:** `pip install -r requirements.txt` (gerekirse), sonra `python tools/lint.py videos/<tarih>/*.json` (hata kalmayana kadar) ve her dosya için `python tools/preview.py videos/<tarih>/<dosya>.json`. `STATIC?` işaretli sahneyi hareketlendir. `sheet.png` ve `cover.jpg` dosyalarını oku ve kontrol et: taşan/üst üste binen yazı, ekran dışına taşan nesne/etiket, boş kare, palet dışı renk, Kaşif'in olmadığı ya da sadece durduğu sahneler, altyazının arkasında kalan önemli detay, eşleşmeyen cue uyarısı, karakter bütçesi. Sorunları düzelt ve tekrar kontrol et. Ardından eleştiri döngüsü (`docs/REVIEW.md`, aşağıdaki *Üretim akışı*).
 10. **Gönder:** Push'tan hemen önce `tools/lint.py` son kez hatasız geçmeli. Dosyaları (`media/` klasörü, `production.md` ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
 11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını, yayın saatini ve son tur eleştiri puanlarını kısaca özetle; bir sonraki uzun video tarihini yaz.
+
+## İkinci kanal: Anlatayım Gel
+
+Kanal sahibinin ikinci kanalı (2026-10-21). Ayrı bir zamanlanmış görev her sabah bu bölümü uygular.
+Tarz, ses, kalite kuralları, ajan akışı, kapak ve SEO kuralları **Düşün Bakalım ile birebir aynıdır**
+(yukarıdaki *Günlük üretim görevi*, BRAND.md); sadece şunlar farklıdır:
+
+- **Plan:** `python tools/plan.py --channel ag`. Kanalın ilk ayı için yavaş başlangıç: her gün **2 Shorts**
+  (13:00, 17:30) + **Salı, Perşembe, Cumartesi** bir uzun video (19:30; Cumartesi 14:00). Saatler Düşün
+  Bakalım'ınkinden en az 30 dk ayrı. Sadece `todo` listesindekileri üret; dosya adları `ag-NN-<slug>.json`.
+- **Niş:** sadece **Osmanlı ve Türk tarihi** (Selçuklu, Osmanlı, Kurtuluş Savaşı, Cumhuriyet'in ilk yılları,
+  Türk denizcileri, bilginleri, padişahları, büyük kuşatma ve savaşlar). Konu **iki kanalın geçmişinde**
+  (tüm `videos/*/*.json`) işlenmiş olmamalı; Düşün Bakalım'ın aynı gün işlediği konuyla da çakışmamalı.
+- **Senaryo alanları:** `"channel": "Anlatayım Gel"` (ekranda sol üstte bu ad yazar), `"narrator": "fes"`.
+  Anlatıcı Kaşif'in aynı çöp adam çizimi ama kâşif şapkası yerine **kırmızı fes** takar (`KASIF.setNarrator`);
+  Kaşif için yazılan tüm kurallar (sahnelerin en az yarısında ekranda ve bir şey yapıyor) bu anlatıcı için de geçerli.
+  `lint` kanal adını, dosya önekini ve anlatıcıyı denetler.
+- **SEO:** etiketlerde `anlatayım gel`, hashtag `#anlatayımgel`, abone çağrısı "Anlatayım Gel'e abone ol".
+  "Düşün Bakalım" adı bu kanalın hiçbir metninde geçmez.
+- **Telegram:** sadece video satırları (`video` = `ag-NN-<slug>`); `plan`/`push` gibi genel satırları
+  gönderme (genel kutu Düşün Bakalım'ındır). Kutularda başlığın önünde kanal adı yazar.
+- **Commit:** `Daily batch YYYY-MM-DD (Anlatayım Gel)`; aynı dala push. Yükleme `YOUTUBE_TOKEN_JSON_AG`
+  secret'ıyla yapılır; secret yoksa render yapılır ama yükleme atlanır (video Actions artifact'inde kalır).
 
 ## Elle başlatılan ek video
 

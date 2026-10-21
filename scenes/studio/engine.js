@@ -45,6 +45,8 @@ function makeKicker(sc) {
 window.init = async (data) => {
   D = data;
   [W, H] = D.size;
+  // the channel's narrator (Kaşif's explorer hat, or Anlatayım Gel's fez) before any shot builds a rig
+  if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
   root.classList.add(D.format || 'short');
   root.classList.add('parchment');   // the only theme (older non-parchment scripts render on parchment too)

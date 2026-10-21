@@ -3,6 +3,9 @@
 
   YOUTUBE_TOKEN_JSON='<contents of youtube_token.json>' python tools/upload.py videos/<date>/<file>.json out/video.mp4
   # or: YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN
+Each channel uploads with its own token (tools/channels.py "youtube_env", e.g. YOUTUBE_TOKEN_JSON_AG for
+Anlatayım Gel); a script is never uploaded with another channel's token. No token for the script's channel:
+prints a note and exits 0 without writing <video>.youtube.json.
 
 <file>.json:
   "youtube": {"title": "...", "description": "...", "tags": [...], "category_id": "27",
@@ -22,11 +25,17 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build as gbuild
 from googleapiclient.http import MediaFileUpload
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from channels import CHANNELS, DEFAULT  # noqa: E402
 
 
-def credentials():
-    if os.environ.get("YOUTUBE_TOKEN_JSON"):
-        info = json.loads(os.environ["YOUTUBE_TOKEN_JSON"])
+def credentials(channel=DEFAULT):
+    """The channel's own credentials, or None. The client id/secret/refresh-token trio belongs to Düşün Bakalım."""
+    env = CHANNELS.get(channel, CHANNELS[DEFAULT])["youtube_env"]
+    if os.environ.get(env):
+        info = json.loads(os.environ[env])
+    elif channel != DEFAULT or not os.environ.get("YOUTUBE_REFRESH_TOKEN"):
+        return None
     else:
         info = {"client_id": os.environ["YOUTUBE_CLIENT_ID"], "client_secret": os.environ["YOUTUBE_CLIENT_SECRET"],
                 "refresh_token": os.environ["YOUTUBE_REFRESH_TOKEN"], "token_uri": "https://oauth2.googleapis.com/token"}
@@ -71,19 +80,32 @@ def credits(script):
     return ("\n\n📷 Görseller\n" + "\n".join(seen)) if seen else ""
 
 
-def set_thumbnail(video_id, jpg):
-    yt = gbuild("youtube", "v3", credentials=credentials(), cache_discovery=False)
+def set_thumbnail(video_id, jpg, channel=DEFAULT):
+    creds = credentials(channel)
+    if creds is None:
+        print(f"no YouTube token for {channel}: thumbnail skipped")
+        return
+    yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)
     yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(jpg), mimetype="image/jpeg")).execute()
     print("thumbnail set", video_id)
 
 
 def main():
     if sys.argv[1] == "--thumbnail":           # upload.py --thumbnail <video.youtube.json> <cover.jpg>
-        return set_thumbnail(json.loads(Path(sys.argv[2]).read_text())["id"], sys.argv[3])
+        rec = json.loads(Path(sys.argv[2]).read_text())
+        try:
+            channel = json.loads((Path(__file__).resolve().parent.parent / rec["script"]).read_text()).get("channel") or DEFAULT
+        except (KeyError, OSError, ValueError):
+            channel = DEFAULT
+        return set_thumbnail(rec["id"], sys.argv[3], channel)
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     script = json.loads(script_path.read_text())
     meta = script["youtube"]
-    creds = credentials()
+    channel = script.get("channel") or DEFAULT
+    creds = credentials(channel)
+    if creds is None:
+        print(f"no YouTube token for {channel} ({CHANNELS.get(channel, CHANNELS[DEFAULT])['youtube_env']}): upload skipped")
+        return
     if not creds.valid:
         creds.refresh(Request())
     yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)

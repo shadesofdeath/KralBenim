@@ -30,6 +30,8 @@ Kanalın tek ve sabit anlatıcı karakteri. Her videoda, aynı çizimle, aynı k
 | Hareket kütüphanesi | `idle` (nefes alır, hafif sallanır) · `walk` (sahneye yürüyerek girer/çıkar) · `point` (bir şeyi gösterir) · `think` (el çenede) · `shock` (geri sıçrar, kaşlar yukarı) · `shrug` · `talk` (el hareketleriyle anlatır) · `wave` · `run` · `sit` · `hold` (bir nesne/tabela tutar) · `look` (dürbünle bakar). |
 | Kural | Her videonun sahnelerinin **en az yarısında** Kaşif ekranda ve **bir şey yapıyor** (sadece durmuyor). Ağzı **sabittir** (konuşma animasyonu yok; kanal sahibinin kararı), duyguyu kaşlar ve poz taşır. |
 
+**İkinci kanal Anlatayım Gel:** anlatıcı aynı çizim ve aynı kurallarla, ama kâşif şapkası yerine **kırmızı fes** (`red` #A8432F, mürekkep püskül) takar; senaryoda `"narrator": "fes"`.
+
 Referans çizim: `brand/kit/kasif-reference.png` (kodla üretilir; tasarım değişirse yeniden üretilir).
 
 ## 3. Renkler (tek palet, sabit)

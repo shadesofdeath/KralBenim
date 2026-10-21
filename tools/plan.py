@@ -4,35 +4,37 @@
   python tools/plan.py               # today (Europe/Istanbul)
   python tools/plan.py --date 2026-10-21
   python tools/plan.py --extra long  # one extra video started by hand: file number + earliest publish_at
+  python tools/plan.py --channel ag  # the same for another channel (tools/channels.py; default Düşün Bakalım)
 
-Plan: 4 Shorts + 1 long video every day. Videos already in the day's folder (e.g. a long video
+Plan per channel (tools/channels.py): Düşün Bakalım 4 Shorts + 1 long video every day; Anlatayım Gel
+2 Shorts a day + a long video on Tue/Thu/Sat. A channel's files carry its prefix (ag-01-x.json). Videos already in the day's folder (e.g. a long video
 made the evening before) are marked done; the daily task makes only the "todo" ones.
 Extra videos started by hand carry "extra": true in their script and never count against the plan.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
 import argparse
 import json
+import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT / "tools"))
+from channels import CHANNELS, DEFAULT, by_id, of_file  # noqa: E402
+
 TZ = ZoneInfo("Europe/Istanbul")
-SHORT_SLOTS = ["12:00", "15:00", "19:00", "22:00"]   # 4 Shorts a day (owner, 2026-10-20)
-LONG_SLOT = "20:30"
-LONG_EVERY = 1                         # every day (was every 5 days until 2026-10-19)
-LONG_ANCHOR = date(2026, 10, 17)
 MONTHLY_CHARS = 231442                 # ElevenLabs Creator plan credits (panel, 2026-10-20)
 BILLING_DAY = 20                       # credits renew on this day of the month
 LIMITS = {"short": (400, 500, 550), "long": (6500, 7800, 8300)}   # target min, target max, hard max (long: 8-10 min, owner 2026-10-21)
 
 
-def is_long_day(d):
-    return (d - LONG_ANCHOR).days % LONG_EVERY == 0
+def is_long_day(d, ch=DEFAULT):
+    return d.weekday() in CHANNELS[ch]["long_slots"]
 
 
-def next_long(d):
-    while not is_long_day(d):
+def next_long(d, ch=DEFAULT):
+    while not is_long_day(d, ch):
         d += timedelta(days=1)
     return d
 
@@ -70,9 +72,10 @@ def slot(d, hhmm, now):
     return t.isoformat()
 
 
-def extra(fmt, d, folder, taken, now):
+def extra(fmt, d, folder, taken, now, ch):
     """An extra video outside the plan: the next free number and the earliest publish time lint accepts
     (now + 1 h, rounded up to 5 minutes); if the render finishes later, upload.py publishes at once."""
+    pre = CHANNELS[ch]["prefix"]
     n = 1
     while f"{n:02d}" in taken:
         n += 1
@@ -80,8 +83,8 @@ def extra(fmt, d, folder, taken, now):
     t = (t + timedelta(minutes=(5 - t.minute % 5) % 5)).replace(second=0, microsecond=0)
     lo, hi, hard = LIMITS[fmt]
     used = month_usage(d)
-    return {"date": d.isoformat(), "folder": str(folder.relative_to(ROOT)), "extra": True,
-            "video": {"file": f"{n:02d}-<slug>.json", "format": fmt, "publish_at": t.isoformat(),
+    return {"channel": ch, "date": d.isoformat(), "folder": str(folder.relative_to(ROOT)), "extra": True,
+            "video": {"file": f"{pre}{n:02d}-<slug>.json", "format": fmt, "publish_at": t.isoformat(),
                       "chars": f"{lo}-{hi} (hard max {hard})"},
             "note": 'write "extra": true at the top level of the script; publish_at is the earliest allowed',
             "elevenlabs_chars": {"used_this_month": used, "today_max": hi, "monthly_budget": MONTHLY_CHARS,
@@ -92,24 +95,28 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="YYYY-MM-DD (default: today in Europe/Istanbul)")
     ap.add_argument("--extra", choices=["short", "long"], help="plan one extra video started by hand")
+    ap.add_argument("--channel", default=DEFAULT, help="channel name or id (tools/channels.py), e.g. ag")
     a = ap.parse_args()
+    ch = by_id(a.channel)
+    if not ch:
+        sys.exit(f"unknown channel {a.channel!r}: {', '.join(CHANNELS)}")
+    cfg, pre = CHANNELS[ch], CHANNELS[ch]["prefix"]
     now = datetime.now(TZ)
     d = date.fromisoformat(a.date) if a.date else now.date()
     folder = ROOT / "videos" / d.isoformat()
-    videos = [{"file": f"0{i + 1}-<slug>.json", "format": "short", "publish_at": slot(d, t, now)}
-              for i, t in enumerate(SHORT_SLOTS)]
-    if is_long_day(d):
-        videos.append({"file": f"0{len(videos) + 1}-<slug>.json", "format": "long",
-                       "publish_at": slot(d, LONG_SLOT, now)})
+    videos = [{"file": "", "format": "short", "publish_at": slot(d, t, now)} for t in cfg["short_slots"]]
+    if is_long_day(d, ch):
+        videos.append({"file": "", "format": "long", "publish_at": slot(d, cfg["long_slots"][d.weekday()], now)})
     existing = {"short": [], "long": []}
-    taken = set()
+    taken = set()                          # numbers already used by this channel's files of the day
     for f in sorted(folder.glob("*.json")):
-        if not f.name.endswith(".youtube.json"):
-            taken.add(f.name[:2])
-            if not json.loads(f.read_text()).get("extra"):
-                existing[chars(f)[1]].append(f.name)
+        if f.name.endswith(".youtube.json") or of_file(f.name) != ch:
+            continue
+        taken.add(f.name[len(pre):len(pre) + 2])
+        if not json.loads(f.read_text()).get("extra"):
+            existing[chars(f)[1]].append(f.name)
     if a.extra:
-        print(json.dumps(extra(a.extra, d, folder, taken, now), ensure_ascii=False, indent=1))
+        print(json.dumps(extra(a.extra, d, folder, taken, now, ch), ensure_ascii=False, indent=1))
         return
     for v in videos:
         lo, hi, hard = LIMITS[v["format"]]
@@ -120,16 +127,19 @@ def main():
         if not v["done"]:
             while f"{n:02d}" in taken:
                 n += 1
-            v["file"] = f"{n:02d}-<slug>.json"
+            v["file"] = f"{pre}{n:02d}-<slug>.json"
             taken.add(f"{n:02d}")
+        else:
+            v["file"] = v["done"]
     todo = [v for v in videos if not v["done"]]
 
-    used = month_usage(d)
+    used = month_usage(d)                  # one ElevenLabs account for every channel
     planned = sum(LIMITS[v["format"]][1] for v in todo)
     print(json.dumps({
+        "channel": ch, "narrator": cfg["narrator"],
         "date": d.isoformat(), "weekday": d.strftime("%A"), "folder": str(folder.relative_to(ROOT)),
-        "folder_exists": folder.exists(), "long_video_today": is_long_day(d),
-        "next_long_video": next_long(d + timedelta(days=1)).isoformat(),
+        "folder_exists": folder.exists(), "long_video_today": is_long_day(d, ch),
+        "next_long_video": next_long(d + timedelta(days=1), ch).isoformat(),
         "videos": videos,
         "todo": [v["file"] for v in todo],
         "elevenlabs_chars": {"used_this_month": used, "today_max": planned, "monthly_budget": MONTHLY_CHARS,

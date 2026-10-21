@@ -264,12 +264,14 @@ jobs:
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}   # Anlatayım Gel (tools/channels.py)
           F: ${{ matrix.file }}
           GITHUB_TOKEN: ${{ github.token }}
           LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
         run: |
-          if [ -z "$YOUTUBE_TOKEN_JSON" ] && [ -z "$YOUTUBE_REFRESH_TOKEN" ]; then echo "YouTube secrets missing, skipping upload"; exit 0; fi
+          # upload.py picks the token of the script's channel and skips (no .youtube.json) when it is missing
           python tools/upload.py "$F" "out/${{ steps.n.outputs.name }}.mp4"
+          if [ ! -f "out/${{ steps.n.outputs.name }}.youtube.json" ]; then exit 0; fi
           cp "out/${{ steps.n.outputs.name }}.youtube.json" "${F%.json}.youtube.json"
           # the video link for the live Telegram status (best-effort)
           python tools/live.py note --name "${{ steps.n.outputs.name }}" \
