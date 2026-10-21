@@ -95,3 +95,31 @@ Ve geldik 2060'lara. Projeksiyonlara göre nüfus artık yavaş yavaş azalmaya 
 
 ### Not
 Kanal sahibi "kontrolü atla, direkt yükle" dedi; eleştiri turu yapılmadan, lint ve tam preview (STATIC yok) sonrası gönderildi.
+
+## 02-pekmez-seli (ek Shorts, kanal sahibinin isteğiyle, en erken yayın 22:25)
+
+Plan dışı ek Shorts (`"extra": true`), Telegram `/shorts` ile istendi; konu bizde. Paralel üretilen ek uzun videodan ayrı bölüm.
+
+- **Konu / havuz:** Boston Büyük Pekmez Seli, 15 Ocak 1919 · felaketler ve kazalar. Geçmişte işlenmedi.
+- **Hissedilen:** "Tatlı bir şey nasıl bu kadar ölümcül olabilir? Meğer suçlu pekmez değil, açgözlülük ve soğuktu."
+- **Kanca + kapak fikri:** ilk cümle "Bu şehri pekmez dalgası vurdu." ↔ kapak `BOSTON'U / PEKMEZ / BOĞDU` (vurgu `PEKMEZ`); sahnede devrilen dev tank, kahverengi dalga, şok olmuş Kaşif.
+- **Gerilim / neden:** tank hiç suyla doldurulup denenmemişti, sızdırıyordu ve sızıntıyı gizlemek için kahverengiye boyanmıştı; hava bir günde ısındı; dalga ~8 metre, saatte ~55 km; soğuk liman havasında pekmez koyulaştı ve kurbanları tuzağa düşürdü (2016 Harvard çalışması).
+- **Kapanış:** "Yani o gün insanları boğan şey pekmez değil, hiç denenmemiş bir tanktı." türünde net punchline.
+
+### Doğrulama notları (Wikipedia "Great Molasses Flood", Britannica, CSMonitor 2016)
+- 15 Ocak 1919, öğleden sonra ~12:30, North End, Commercial Street; Purity Distilling tankı (~15 m yükseklik).
+- ~8,7 milyon litre (2,3 milyon galon) pekmez; dalga ~7,6 m (25 ft) yükseklikte, ~56 km/sa (35 mil/sa).
+- 21 ölü, ~150 yaralı.
+- Tank 1915'te aceleyle yapıldı, suyla doldurularak test edilmedi, sızdırıyordu, sızıntı kahverengiye boyanarak gizlendi.
+- Hava bir önceki gün ~-17 °C, o gün ~+4 °C'nin üstü.
+- 2016: soğuk hava pekmezi hızla koyulaştırdı, kurtarmayı zorlaştırdı (Harvard, Nicole Sharp ve ekibi).
+
+### Anlatım (tek parça)
+
+Boston'u dev bir pekmez dalgası vurdu. Yıl 1919'du. Boston'un liman kıyısında, on beş metrelik bir pekmez tankı vardı. Ama bakın işin sırrı şurada: tank hiç suyla denenmemişti ve sızdırıyordu. Sızıntı görünmesin diye tankı kahverengiye boyadılar! Ocak ortasında hava birden ısındı ve tank yarıldı. Yaklaşık sekiz metrelik bir dalga sokaklara aktı. Soğukta koyulaşan pekmez, insanları bataklık gibi yakaladı. Yirmi bir kişi öldü. Yani o gün Boston'u boğan şey pekmez değil, hiç denenmemiş bir tanktı.
+
+(500 karakter; sesli okuma kontrolü: devrik cümle yok, 10 cümleden 1'i "-yor". Tur 1 sonrası: "Yanlış duymadınız!" çıktı, "Limanda" → "Boston'un liman kıyısında".)
+
+### Eleştiri günlüğü (02-pekmez-seli)
+- Tur 1: senaryo 8 · kanca 8 · okunabilirlik 8 · görsel 7 · hareket 7 · kompozisyon 7 · derinlik 7 · tempo 7 · doğruluk 8 · kapanış 8 · kapak 7 → kapak yenilendi (tank kadraja, Kaşif önü açıldı, kaçan adam korkulu), sahne 6 Kaşif öne, sahne 9 ton, "limanda" → "liman kıyısında", "Yanlış duymadınız!" çıkarıldı. 4 yeni kapak adayı; seçilen sahne 0 t 2.4.
+- Tur 2: senaryo 8 · kanca 8 · okunabilirlik 7 · görsel 8 · hareket 7 · kompozisyon 7 · derinlik 7 · tempo 8 · doğruluk 9 · kapanış 8 · kapak 8 → geçti. Kalan küçük notlar (zaman nedeniyle 3. tur atlandı): sahne 5'te sıcaklık yazıları küçük, bazı sahnelerde Kaşif küçük, dalgada akış çizgisi az.

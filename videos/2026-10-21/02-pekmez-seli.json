@@ -1,0 +1,606 @@
+{
+  "extra": true,
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "pekmez-seli",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Boston'u",
+      "pekmez",
+      "boğdu"
+    ],
+    "highlight": [
+      "pekmez"
+    ],
+    "scene": 0,
+    "t": 2.4,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Büyük Pekmez Seli: Boston'u Neden Pekmez Boğdu?",
+    "description": "Büyük Pekmez Seli: 1919'da Boston'u dev bir pekmez dalgası vurdu. Tatlı bir şey nasıl bu kadar ölümcül olabilir? Asıl suçlu pekmez değildi.\n\n15 Ocak 1919'da Boston'un North End semtinde, yaklaşık 8,7 milyon litre pekmezle dolu dev bir tank yarıldı. Tank aceleyle yapılmış, hiç suyla denenmemiş ve sızdırıyordu; sızıntı kahverengi boyayla gizlenmişti. Yaklaşık sekiz metrelik pekmez dalgası sokakları yuttu, soğukta koyulaşan pekmez kurtarmayı zorlaştırdı ve 21 kişi hayatını kaybetti.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone olun. Sizce bu felaket önlenebilir miydi? Yorumlara yazın!\n\n#shorts #pekmezseli #boston #tarih #düşünbakalım",
+    "tags": [
+      "büyük pekmez seli",
+      "boston pekmez seli",
+      "pekmez seli",
+      "great molasses flood",
+      "boston molasses disaster",
+      "pekmez dalgası",
+      "1919 boston",
+      "pekmez tankı patladı",
+      "boston tarihi",
+      "ilginç felaketler",
+      "tarihteki garip kazalar",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "felaketler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-21T22:50:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "pekmez",
+      "text": "Boston'u dev bir pekmez dalgası vurdu.",
+      "visual": "Limanda tuğla binalar ve havai demiryolu; solda yarılmış, iki yarısı açılmış kahverengi tank, ondan kopan dev kahverengi pekmez dalgası kıvrık tepesiyle sağa, sokağa doğru akıyor, üstünde fıçı ve araba tekerleği dönüyor; bereli bir adam korkuyla koşarak kaçıyor; sağda, dalganın önündeki açık alanda büyük Kaşif 'dalgası'nda şokla geri sıçrıyor.",
+      "title": {},
+      "cues": {
+        "hit": "dalgası"
+      },
+      "params": {
+        "mode": "wave",
+        "tank": {
+          "x": 0.2,
+          "splay": 32
+        },
+        "wave": {
+          "from": 0.0,
+          "to": 0.5,
+          "h": 1.6
+        },
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.45,
+            0.6
+          ]
+        },
+        "cast": [
+          {
+            "who": "adam",
+            "accessory": "beret",
+            "x": 0.38,
+            "pose": "run",
+            "to": 0.6,
+            "face": "right",
+            "scale": 0.5,
+            "emotion0": "worried"
+          },
+          {
+            "who": "kasif",
+            "x": 0.75,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "map",
+      "text": "Yıl 1919'du. Boston'un liman kıyısında,",
+      "visual": "Eski harita: ABD'nin kuzeydoğu kıyısı ve Atlas Okyanusu; kırmızı halkalı Boston limanı beliriyor, harita Boston'a yaklaşıyor, el yazısı not '15 Ocak 1919'.",
+      "title": {
+        "white": "Boston",
+        "gray": "ABD"
+      },
+      "cues": {
+        "note": "1919",
+        "city": "liman"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              0,
+              0
+            ],
+            [
+              0.6,
+              0
+            ],
+            [
+              0.58,
+              0.1
+            ],
+            [
+              0.64,
+              0.2
+            ],
+            [
+              0.57,
+              0.3
+            ],
+            [
+              0.59,
+              0.38
+            ],
+            [
+              0.53,
+              0.41
+            ],
+            [
+              0.5,
+              0.46
+            ],
+            [
+              0.55,
+              0.5
+            ],
+            [
+              0.62,
+              0.55
+            ],
+            [
+              0.7,
+              0.6
+            ],
+            [
+              0.78,
+              0.62
+            ],
+            [
+              0.85,
+              0.58
+            ],
+            [
+              0.88,
+              0.5
+            ],
+            [
+              0.92,
+              0.51
+            ],
+            [
+              0.9,
+              0.63
+            ],
+            [
+              0.82,
+              0.7
+            ],
+            [
+              0.7,
+              0.73
+            ],
+            [
+              0.6,
+              0.76
+            ],
+            [
+              0.5,
+              0.82
+            ],
+            [
+              0.38,
+              0.88
+            ],
+            [
+              0.25,
+              0.92
+            ],
+            [
+              0,
+              0.94
+            ]
+          ]
+        ],
+        "cities": [
+          {
+            "name": "Boston",
+            "x": 0.5,
+            "y": 0.46,
+            "dx": -24,
+            "dy": -34,
+            "anchor": "end",
+            "color": "red",
+            "at": "city"
+          }
+        ],
+        "seas": [
+          {
+            "name": "Atlas Okyanusu",
+            "x": 0.8,
+            "y": 0.84
+          }
+        ],
+        "note": {
+          "text": "15 Ocak 1919",
+          "x": 0.3,
+          "y": 0.22,
+          "at": "note"
+        },
+        "focus": [
+          0.5,
+          0.46
+        ],
+        "zoom": 1.25,
+        "compass": "tr"
+      }
+    },
+    {
+      "type": "pekmez",
+      "text": "on beş metrelik bir pekmez tankı vardı.",
+      "visual": "Liman sokağında perçinli dev pekmez tankı; yanında kırmızı ölçü çizgisi aşağıdan yukarı çiziliyor, '15 m' yazısı beliriyor; Kaşif sağdan yürüyerek gelip 'tankı'nda yukarıyı işaret ediyor.",
+      "title": {
+        "white": "Purity",
+        "gray": "pekmez tankı"
+      },
+      "cues": {
+        "m": "metrelik",
+        "k": "tankı"
+      },
+      "params": {
+        "mode": "tank",
+        "tank": {
+          "x": 0.42
+        },
+        "leaks": false,
+        "measure": {
+          "text": "15 m",
+          "at": "m"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 1.08,
+            "pose": "walk",
+            "to": 0.8,
+            "face": "left",
+            "at": "k",
+            "then": "point",
+            "dir": "up",
+            "scale": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Ama bakın işin sırrı şurada: tank hiç suyla denenmemişti ve sızdırıyordu.",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Test yok', ardından 'sızıntı var', 'sızıntı' kırmızı kutuda; sağ altta Kaşif 'suyla'da şaşkınlıkla geri sıçrıyor.",
+      "title": {
+        "white": "1915",
+        "gray": "aceleyle yapıldı"
+      },
+      "cues": {
+        "w0": "sırrı",
+        "w1": "suyla",
+        "w2": "sızdırıyordu",
+        "w3": "sızdırıyordu",
+        "k": "sızdırıyordu"
+      },
+      "params": {
+        "lines": [
+          "Test yok",
+          "sızıntı var"
+        ],
+        "highlight": [
+          "sızıntı"
+        ],
+        "y": 0.3,
+        "kasif": {
+          "x": 0.76,
+          "y": 0.62,
+          "pose": "shock",
+          "at": "suyla",
+          "face": -1,
+          "scale": 0.6,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "pekmez",
+      "text": "Sızıntı görünmesin diye tankı kahverengiye boyadılar!",
+      "visual": "Sızıntı izleri akan açık renk tank; sağda bereli bir işçi uzun saplı fırçayla tankı aşağıdan yukarı kahverengiye boyuyor, akıntılar boyanın altında kayboluyor; solda Kaşif 'kahverengiye'de öfkeyle şaşırıyor.",
+      "title": {
+        "white": "Kahverengi",
+        "gray": "boya"
+      },
+      "cues": {
+        "paint": "görünmesin",
+        "hit": "kahverengiye"
+      },
+      "params": {
+        "mode": "paint",
+        "tank": {
+          "x": 0.45
+        },
+        "worker": {
+          "x": 0.83
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.13,
+            "pose": "idle",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "angry",
+            "scale": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Ocak ortasında hava birden ısındı,",
+      "visual": "Dikey zaman çizgisi: '14 Ocak · −17 °C', ardından kırmızı vurgulu '15 Ocak · +4 °C'; işaretçi aşağı kayıyor; sağda büyük Kaşif önce düşünüyor, 'ısındı'da şaşkınlıkla işaret ediyor.",
+      "title": {
+        "white": "15 Ocak",
+        "gray": "1919"
+      },
+      "cues": {
+        "c0": "Ocak",
+        "c1": "ısındı"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "14 Ocak",
+            "text": "−17 °C",
+            "at": "c0"
+          },
+          {
+            "year": "15 Ocak",
+            "text": "+4 °C",
+            "at": "c1"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.76,
+          "y": 0.6,
+          "pose0": "think",
+          "pose": "point",
+          "at": "c1",
+          "scale": 0.78,
+          "face": -1,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "pekmez",
+      "text": "ve tank yarıldı. Yaklaşık sekiz metrelik bir dalga sokaklara aktı.",
+      "visual": "Kahverengi tank titriyor, ortasında çatlak yukarı doğru açılıyor, 'yarıldı'da iki yarısı yana devriliyor, çatısı havaya uçuyor, perçinler saçılıyor; dev pekmez dalgası sokak boyunca sağa akıyor, el yazısı '~8 metre!' beliriyor; sağda Kaşif şokla geri sıçrıyor.",
+      "title": {
+        "white": "Öğle",
+        "gray": "North End"
+      },
+      "cues": {
+        "crack": "tank",
+        "hit": "yarıldı",
+        "lab": "sekiz"
+      },
+      "params": {
+        "mode": "burst",
+        "tank": {
+          "x": 0.3
+        },
+        "wave": {
+          "to": 0.56
+        },
+        "label": {
+          "text": "~8 metre!",
+          "x": 0.6,
+          "y": 0.2,
+          "at": "lab",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.85,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.66
+          }
+        ]
+      }
+    },
+    {
+      "type": "pekmez",
+      "text": "Soğukta koyulaşan pekmez, insanları bataklık gibi yakaladı.",
+      "visual": "Sokak koyu pekmez bataklığı; Kaşif dizlerine kadar saplanmış, çırpınıyor, 'yakaladı'da el sallayarak yardım istiyor; yanında bereli bir adam beline kadar batmış; yavaş halkalar ve kabarcıklar; el yazısı 'koyulaştı!'.",
+      "title": {
+        "white": "Soğuk",
+        "gray": "koyu pekmez"
+      },
+      "cues": {
+        "lab": "koyulaşan",
+        "hit": "yakaladı"
+      },
+      "params": {
+        "mode": "stuck",
+        "sink": 0.13,
+        "label": {
+          "text": "koyulaştı!",
+          "x": 0.5,
+          "y": 0.2,
+          "at": "lab",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.32,
+            "pose": "shock",
+            "face": "right",
+            "at": "hit",
+            "then": "wave",
+            "emotion": "worried",
+            "sink": 10,
+            "wiggle": true,
+            "scale": 0.62
+          },
+          {
+            "who": "adam",
+            "accessory": "beret",
+            "x": 0.7,
+            "pose": "wave",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "worried",
+            "sink": 60,
+            "wiggle": true,
+            "scale": 0.56
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Yirmi bir kişi öldü.",
+      "visual": "Sessiz sokak; sağda '15 Ocak 1919' tabelası; Kaşif üzgün, elini çenesine koyup düşünüyor; el yazısı '21 kişi' beliriyor; kamera yavaşça yaklaşıyor.",
+      "title": {
+        "white": "Boston",
+        "gray": "1919"
+      },
+      "cues": {
+        "lab": "kişi"
+      },
+      "params": {
+        "foreground": "hatch",
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "depth": {
+          "sky": {
+            "clouds": 2
+          }
+        },
+        "label": {
+          "text": "21 kişi",
+          "y": 0.22,
+          "at": "lab",
+          "size": 110
+        },
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.74,
+            "scale": 0.9,
+            "text": "15 Ocak 1919"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.36,
+            "pose": "idle",
+            "face": "right",
+            "at": "lab",
+            "then": "think",
+            "emotion": "worried",
+            "scale": 0.75
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Yani o gün Boston'u boğan şey pekmez değil,",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Suçlu / pekmez / değil', 'değil' kırmızı kutuda; sağ altta Kaşif 'pekmez'de öfkeyle yazıyı işaret ediyor.",
+      "title": {},
+      "cues": {
+        "w0": "Yani",
+        "w1": "pekmez",
+        "w2": "değil"
+      },
+      "params": {
+        "lines": [
+          "Suçlu",
+          "pekmez",
+          "değil"
+        ],
+        "highlight": [
+          "değil"
+        ],
+        "y": 0.3,
+        "kasif": {
+          "x": 0.78,
+          "y": 0.6,
+          "pose": "point",
+          "dir": 40,
+          "at": "w1",
+          "face": -1,
+          "scale": 0.6,
+          "emotion": "angry"
+        }
+      }
+    },
+    {
+      "type": "pekmez",
+      "text": "hiç denenmemiş bir tanktı.",
+      "visual": "Pekmez gölünde yarılmış kahverengi tankın iki yarısı yatıyor; 'denenmemiş'te üstte kırmızı mühür 'TEST EDİLMEDİ' çarpıyor; sağda Kaşif tankı işaret ediyor.",
+      "title": {
+        "white": "Asıl",
+        "gray": "suçlu"
+      },
+      "cues": {
+        "stamp": "denenmemiş",
+        "k": "tanktı"
+      },
+      "params": {
+        "mode": "wreck",
+        "tank": {
+          "x": 0.36
+        },
+        "stamp": {
+          "text": "Test edilmedi",
+          "x": 0.5,
+          "y": 0.24,
+          "at": "stamp",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "idle",
+            "face": "left",
+            "at": "stamp",
+            "then": "point",
+            "dir": "forward",
+            "scale": 0.6,
+            "emotion": "angry"
+          }
+        ]
+      }
+    }
+  ]
+}
