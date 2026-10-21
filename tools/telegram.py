@@ -632,8 +632,9 @@ def status(argv):
         for u in updates:
             if u.get("stage"):
                 apply_update(store, st, u)
-        touched = {u.get("video") or "_" for u in updates if u.get("stage")}
-        publish(store, st, only=touched or None)
+        # only the messages of the videos this call updated: a bare call (e.g. after `clear`) sends nothing,
+        # so videos of an abandoned run never come back as new messages
+        publish(store, st, only={u.get("video") or "_" for u in updates if u.get("stage")})
     except Exception as e:   # never break the caller
         print(f"telegram status: {e}", file=sys.stderr)
     return 0

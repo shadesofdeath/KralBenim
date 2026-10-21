@@ -270,16 +270,17 @@ def cmd_monitor(a):
         idle = idle + 1 if others and all(j["status"] == "completed" for j in others) else 0
         done = final or idle >= 4 or now > deadline or a.once
         sync(store, st, videos, posted)
+        mine = {"_"} | {v.slug for v in videos}   # only this run's videos (not stale records of the day)
         if done:
-            states = [g["state"] for s in st["sections"] for g in s["stages"]]
+            states = [g["state"] for s in st["sections"] if s["id"] in mine for g in s["stages"]]
             if a.footer:
                 st["footer"] = a.footer
             elif "fail" in states:
                 st["footer"] = f"⚠️ Bitti ama hata var (❌ satırına bak): https://github.com/{REPO}/actions/runs/{RUN}"
             else:
-                t0s = [g["t0"] for s in st["sections"] for g in s["stages"] if g.get("t0")]
+                t0s = [g["t0"] for s in st["sections"] if s["id"] in mine for g in s["stages"] if g.get("t0")]
                 st["footer"] = "🎉 Hepsi tamam" + (f" · toplam {tgm.fmt_dur(now - min(t0s))}" if t0s else "")
-        tgm.publish(store, st, now, last)
+        tgm.publish(store, st, now, last, only=mine)
         if done:
             if a.once:   # cancelled: leave no shard record pending
                 for k, rec in list(store.seen.items()):
