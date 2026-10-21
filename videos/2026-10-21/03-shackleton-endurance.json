@@ -1,0 +1,5149 @@
+{
+ "extra": true,
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "shackleton-endurance",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Gemi ezildi",
+   "hiçbiri",
+   "ölmedi"
+  ],
+  "highlight": [
+   "ölmedi"
+  ],
+  "scene": 23,
+  "t": 4.6,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1060,
+   "y": 1050,
+   "scale": 1.2,
+   "face": 1
+  }
+ },
+ "youtube": {
+  "title": "Shackleton ve Endurance: Buzda Ezilen Gemiden 28 Kişi Nasıl Kurtuldu?",
+  "description": "Shackleton ve Endurance: 1915'te gemileri Antarktika'da buzun içinde ezildi, ama 28 kişiden hiçbiri ölmedi. Peki dünyanın en ıssız denizinde nasıl hayatta kaldılar?\n\nErnest Shackleton, Antarktika'yı bir uçtan öbür uca yürüyerek geçmek istiyordu. Ama Endurance, Weddell Denizi'nde buza sıkıştı, aylarca sürüklendi ve sonunda ezilip battı. Adamlar buz üstünde kamp kurdu, üç küçük sandalla Fil Adası'na ulaştı; Shackleton ise yedi metrelik James Caird sandalıyla bin üç yüz kilometreyi aşan azgın denizi geçip yardım getirdi. Tarihin en büyük kurtuluş hikâyelerinden birini, Endurance'ın 2022'de bulunan enkazına kadar anlatıyoruz.\n\nBu videoda:\n• Endurance neden buzda sıkıştı?\n• Peki neden? Fram ezilmedi ama Endurance ezildi\n• Sabır Kampı ve Fil Adası'na kaçış\n• James Caird: küçük bir sandalla okyanus geçişi\n• Haritasız dağlar, Yelcho ve 22 kişinin kurtarılması\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sen olsaydın o sandala mı binerdin, yoksa adada mı beklerdin? Yorumlara yaz!\n\n#shackleton #endurance #antarktika #tarih #düşünbakalım",
+  "tags": [
+   "shackleton",
+   "endurance",
+   "shackleton endurance",
+   "endurance gemisi",
+   "shackleton seferi",
+   "endurance nasıl battı",
+   "ernest shackleton",
+   "antarktika keşfi",
+   "james caird",
+   "fil adası",
+   "weddell denizi",
+   "kutup keşifleri",
+   "hayatta kalma hikayesi",
+   "tarih",
+   "tarih hikayeleri",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-21T23:35:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Son Büyük Macera",
+   "type": "end_a_ice",
+   "text": "Bir gemi buzda ezildi, ama yirmi sekiz kişiden hiçbiri ölmedi.",
+   "visual": "Gece, buz sırtları arasında yan yatmış siyah gövdeli üç direkli Endurance; buz blokları gövdeye dayanıp yükselir, 'ezildi'de gövdede kırmızı çatlak ve ÇAT! patlar; solda Kaşif dürbünle bakarken şok olur; 'yirmi'de '28 kişi', 'hiçbiri'nde yeşil 'hepsi hayatta' notu belirir ve Kaşif sevinçle işaret eder",
+   "title": {
+    "white": "1915",
+    "gray": "Weddell Denizi"
+   },
+   "cues": {
+    "ez": "ezildi",
+    "yirmi": "yirmi",
+    "hic": "hiçbiri"
+   },
+   "params": {
+    "surface": "ice",
+    "night": true,
+    "zoom": 1.07,
+    "focus": [
+     0.56,
+     0.6
+    ],
+    "ship": {
+     "x": 0.58,
+     "scale": 1.15,
+     "frozen": true,
+     "heel": {
+      "to": -9,
+      "at": 0,
+      "dur": 2.2
+     },
+     "lift": {
+      "to": 26,
+      "at": 0,
+      "dur": 2.2
+     }
+    },
+    "ridges": {
+     "at": 0,
+     "dur": 2.2,
+     "h": 1.25
+    },
+    "cracks": [
+     {
+      "at": "ez",
+      "x": 0.12,
+      "y": 0.45,
+      "bang": "ÇAT!"
+     }
+    ],
+    "kasif": {
+     "x": 0.13,
+     "y": 0.84,
+     "scale": 0.64,
+     "pose": "look",
+     "face": "right",
+     "dir": "up-right",
+     "at": "ez",
+     "then": "shock",
+     "seq": [
+      {
+       "at": "hic",
+       "pose": "point",
+       "dir": "up-right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "28 kişi",
+      "x": 0.3,
+      "y": 0.28,
+      "at": "yirmi",
+      "size": 76
+     },
+     {
+      "text": "hepsi hayatta",
+      "x": 0.3,
+      "y": 0.39,
+      "at": "hic",
+      "color": "green",
+      "size": 76
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_proof",
+   "text": "İnanması zor, değil mi? Ama bu bir efsane değil; fotoğrafları, günlükleri, hatta gemisinin enkazı bile bulundu. Gelin, anlatayım.",
+   "visual": "Üç kanıt kartı sırayla gelir: kamera sehpası ve küçük fotoğraf baskısı 'Fotoğraflar', açık günlük ve kalem 'Günlükler', deniz dibinde dik duran batık gövde 'Enkaz'; her biri anıldığı kelimede yeşil ✓ alır; 'bulundu'da mavi 'Bulundu' rozeti; sağda Kaşif kartları işaret eder, sonunda el sallar",
+   "title": {
+    "white": "Kanıtlar"
+   },
+   "cues": {
+    "foto": "fotoğrafları",
+    "gun": "günlükleri",
+    "gemi": "enkazı",
+    "pill": "bulundu",
+    "gel": "Gelin"
+   },
+   "params": {
+    "cards": [
+     {
+      "kind": "photo",
+      "label": "Fotoğraflar",
+      "at": "foto"
+     },
+     {
+      "kind": "diary",
+      "label": "Günlükler",
+      "at": "gun"
+     },
+     {
+      "kind": "wreck",
+      "label": "Enkaz",
+      "at": "gemi"
+     }
+    ],
+    "pill": {
+     "text": "Bulundu",
+     "color": "blue",
+     "at": "pill"
+    },
+    "kasif": {
+     "x": 0.91,
+     "y": 0.84,
+     "scale": 0.6,
+     "pose": "talk",
+     "face": "left",
+     "at": "foto",
+     "then": "point",
+     "dir": "forward",
+     "seq": [
+      {
+       "at": "gel",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Yıl 1914.",
+   "visual": "BÖLÜM 1 / 7 rozeti, mavi dairede 1, altında 'Son Büyük Macera' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Yıl",
+    "title": "1914"
+   },
+   "params": {
+    "n": 1,
+    "total": 7,
+    "title": "Son Büyük Macera"
+   }
+  },
+  {
+   "type": "end_a_map",
+   "text": "Norveçli Roald Amundsen, Güney Kutbu'na üç yıl önce ulaşmıştı.",
+   "visual": "Eski Antarktika haritası; 'Kutbu'na'da kıtanın ortasında kırmızı 'Güney Kutbu' noktası belirir ve kırmızı-mavi Norveç bayrağı dikilir, dalgalanır; 'üç'te 'Amundsen 1911' notu",
+   "title": {
+    "white": "Amundsen",
+    "gray": "Aralık 1911"
+   },
+   "cues": {
+    "pole": "Kutbu'na",
+    "note": "üç"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       0.17,
+       0.1
+      ],
+      [
+       0.2,
+       0.2
+      ],
+      [
+       0.22,
+       0.3
+      ],
+      [
+       0.2,
+       0.42
+      ],
+      [
+       0.17,
+       0.55
+      ],
+      [
+       0.2,
+       0.68
+      ],
+      [
+       0.27,
+       0.8
+      ],
+      [
+       0.37,
+       0.88
+      ],
+      [
+       0.45,
+       0.86
+      ],
+      [
+       0.48,
+       0.78
+      ],
+      [
+       0.53,
+       0.74
+      ],
+      [
+       0.58,
+       0.8
+      ],
+      [
+       0.61,
+       0.9
+      ],
+      [
+       0.71,
+       0.9
+      ],
+      [
+       0.8,
+       0.82
+      ],
+      [
+       0.86,
+       0.7
+      ],
+      [
+       0.88,
+       0.55
+      ],
+      [
+       0.85,
+       0.4
+      ],
+      [
+       0.78,
+       0.28
+      ],
+      [
+       0.68,
+       0.2
+      ],
+      [
+       0.56,
+       0.17
+      ],
+      [
+       0.47,
+       0.2
+      ],
+      [
+       0.42,
+       0.3
+      ],
+      [
+       0.36,
+       0.35
+      ],
+      [
+       0.31,
+       0.32
+      ],
+      [
+       0.27,
+       0.24
+      ],
+      [
+       0.23,
+       0.12
+      ],
+      [
+       0.2,
+       0.05
+      ]
+     ]
+    ],
+    "coords": "sheet",
+    "seas": [],
+    "cities": [
+     {
+      "name": "Güney Kutbu",
+      "x": 0.54,
+      "y": 0.5,
+      "at": "pole",
+      "color": "red",
+      "dy": 52
+     }
+    ],
+    "flag": {
+     "u": 0.54,
+     "v": 0.5,
+     "at": "pole"
+    },
+    "note": {
+     "text": "Amundsen 1911",
+     "x": 0.6,
+     "y": 0.26,
+     "at": "note"
+    },
+    "focus": [
+     0.54,
+     0.5
+    ],
+    "zoom": 1.2,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Peki geriye ne kaldı? Ernest Shackleton'ın cevabı çılgıncaydı: Antarktika'yı bir uçtan öbür uca yürüyerek geçmek!",
+   "visual": "Eski Antarktika haritası; 'kaldı'da kıtanın ortasında kırmızı 'Kutup' noktası belirir; 'uçtan'da kesikli kırmızı rota Weddell kıyısından kutbun üstünden Ross kıyısına çizilir",
+   "title": {
+    "white": "Plan",
+    "gray": "kıtayı geçmek"
+   },
+   "cues": {
+    "pole": "kaldı",
+    "route": "uçtan"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       0.17,
+       0.1
+      ],
+      [
+       0.2,
+       0.2
+      ],
+      [
+       0.22,
+       0.3
+      ],
+      [
+       0.2,
+       0.42
+      ],
+      [
+       0.17,
+       0.55
+      ],
+      [
+       0.2,
+       0.68
+      ],
+      [
+       0.27,
+       0.8
+      ],
+      [
+       0.37,
+       0.88
+      ],
+      [
+       0.45,
+       0.86
+      ],
+      [
+       0.48,
+       0.78
+      ],
+      [
+       0.53,
+       0.74
+      ],
+      [
+       0.58,
+       0.8
+      ],
+      [
+       0.61,
+       0.9
+      ],
+      [
+       0.71,
+       0.9
+      ],
+      [
+       0.8,
+       0.82
+      ],
+      [
+       0.86,
+       0.7
+      ],
+      [
+       0.88,
+       0.55
+      ],
+      [
+       0.85,
+       0.4
+      ],
+      [
+       0.78,
+       0.28
+      ],
+      [
+       0.68,
+       0.2
+      ],
+      [
+       0.56,
+       0.17
+      ],
+      [
+       0.47,
+       0.2
+      ],
+      [
+       0.42,
+       0.3
+      ],
+      [
+       0.36,
+       0.35
+      ],
+      [
+       0.31,
+       0.32
+      ],
+      [
+       0.27,
+       0.24
+      ],
+      [
+       0.23,
+       0.12
+      ],
+      [
+       0.2,
+       0.05
+      ]
+     ]
+    ],
+    "coords": "sheet",
+    "seas": [
+     {
+      "name": "Weddell",
+      "x": 0.45,
+      "y": 0.16,
+      "size": 52
+     },
+     {
+      "name": "Ross",
+      "x": 0.53,
+      "y": 0.85,
+      "size": 52
+     }
+    ],
+    "cities": [
+     {
+      "name": "Kutup",
+      "x": 0.54,
+      "y": 0.5,
+      "at": "pole",
+      "color": "red",
+      "dy": -40
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.37,
+       0.33
+      ],
+      [
+       0.46,
+       0.42
+      ],
+      [
+       0.54,
+       0.5
+      ],
+      [
+       0.55,
+       0.62
+      ],
+      [
+       0.53,
+       0.75
+      ]
+     ],
+     "at": "route",
+     "dur": 2.6
+    },
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "zoom": 1.1,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Bu iş için Norveç'te yapılmış sağlam bir ahşap gemi aldı. Ailesinin sloganı Fortitudine vincimus, yani \"Dayanıklılıkla yeneriz\" idi; gemiye de Endurance, yani dayanıklılık adını verdi.",
+   "visual": "Açık denizde yelkenleri açık, üç direkli siyah gövdeli Endurance hafifçe sallanır; solda Kaşif anlatır, 'ahşap'ta gemiyi işaret eder; 'Fortitudine'de üstte el yazısıyla 'Fortitudine vincimus', 'Endurance'ta kırmızı 'ENDURANCE' yazısı oku ile gövdeye bağlanır",
+   "title": {
+    "white": "Endurance",
+    "gray": "Norveç yapımı"
+   },
+   "cues": {
+    "gemi": "ahşap",
+    "f": "Fortitudine",
+    "name": "Endurance"
+   },
+   "params": {
+    "floes": false,
+    "sun": {
+     "x": 0.86,
+     "y": 0.22
+    },
+    "zoom": 1.06,
+    "focus": [
+     0.55,
+     0.5
+    ],
+    "ship": {
+     "x": 0.58,
+     "sails": true,
+     "zig": 0.15
+    },
+    "kasif": {
+     "x": 0.13,
+     "y": 0.84,
+     "scale": 0.64,
+     "pose": "talk",
+     "face": "right",
+     "at": "gemi",
+     "then": "point",
+     "dir": "right",
+     "seq": [
+      {
+       "at": "name",
+       "pose": "point",
+       "dir": "up",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "Fortitudine vincimus",
+      "x": 0.3,
+      "y": 0.27,
+      "at": "f",
+      "size": 70
+     },
+     {
+      "text": "ENDURANCE",
+      "x": 0.3,
+      "y": 0.4,
+      "at": "name",
+      "color": "red",
+      "size": 80,
+      "arrow": [
+       0.5,
+       0.63
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Tam yola çıkacakları günlerde Avrupa'da savaş patladı. Shackleton gemiyi ve adamlarını donanmanın emrine sundu.",
+   "visual": "Liman: Kaşif anlatırken 'savaş'ta 'SAVAŞ!' tabelası çakılır ve Kaşif şok olur; ortada elinde mektup tutan şapkasız Shackleton 'sundu'da limandaki gemiyi işaret eder",
+   "title": {
+    "white": "Ağustos 1914"
+   },
+   "cues": {
+    "hit": "savaş",
+    "sun": "sundu"
+   },
+   "params": {
+    "scale": 1.0,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ],
+     "near": "rope",
+     "side": "left"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "shackleton",
+      "accessory": "beret",
+      "x": 0.5,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "right",
+      "talk": false,
+      "at": "sun",
+      "then": "point",
+      "dir": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.31,
+      "scale": 0.95,
+      "text": "SAVAŞ!",
+      "at": "hit"
+     },
+     {
+      "type": "ship",
+      "x": 0.82,
+      "scale": 1.0
+     }
+    ],
+    "label": {
+     "text": "Shackleton",
+     "x": 0.5,
+     "y": 0.14,
+     "arrow": [
+      0.5,
+      0.36
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Amirallikten gelen cevap tek kelimeydi: \"Devam edin.\" Ve Ağustos 1914'te Endurance güneye doğru demir aldı.",
+   "visual": "Dev yazı kelime kelime: 'Devam edin.' ('edin' kırmızı kutuda); 'Ağustos'ta el yazısı 'Ağustos 1914' notu oku ile belirir; sağda Kaşif sevinçle işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "Devam",
+    "w1": "edin",
+    "note": "Ağustos"
+   },
+   "params": {
+    "lines": [
+     "Devam",
+     "edin."
+    ],
+    "highlight": [
+     "edin"
+    ],
+    "note": {
+     "text": "Ağustos 1914",
+     "at": "note",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "pose": "point",
+     "at": "w1",
+     "dir": 20,
+     "face": -1,
+     "emotion": "happy",
+     "scale": 0.75
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Güney Georgia adasındaki balinacılar onları uyardı: o yıl Weddell Denizi'nin buzu alışılmadık derecede ağırdı.",
+   "visual": "Güney Georgia limanı: bereli, kır sakallı balinacı Kaşif'e konuşur, 'buzu'nda 'AĞIR BUZ' tabelasını kaldırır; Kaşif 'uyardı'da düşünür, 'ağırdı'da endişeyle geri sıçrar; ikinci balinacı denizi işaret eder",
+   "title": {
+    "white": "Balinacılar"
+   },
+   "cues": {
+    "hit": "uyardı",
+    "buz": "buzu",
+    "agir": "ağırdı"
+   },
+   "params": {
+    "scale": 1.0,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ],
+     "near": "post",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "think",
+      "seq": [
+       {
+        "at": "agir",
+        "pose": "shock",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "balinaci",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.55,
+      "pose": "talk",
+      "face": "left",
+      "at": "buz",
+      "then": "hold",
+      "text": "AĞIR BUZ"
+     },
+     {
+      "who": "balinaci2",
+      "accessory": "beret",
+      "x": 0.75,
+      "pose": "idle",
+      "face": "left",
+      "talk": false,
+      "at": "agir",
+      "then": "point",
+      "dir": "left"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.92,
+      "scale": 0.8
+     }
+    ],
+    "label": {
+     "text": "Güney Georgia",
+     "x": 0.5,
+     "y": 0.13
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Shackleton yine de beş Aralık 1914'te yola çıktı. Yirmi sekiz kişi bir daha toprağa basmak için neredeyse beş yüz gün bekleyecekti!",
+   "visual": "Yatay zaman çizgisi: 'Aralık 1914 yola çıkış', 'yüz'de kırmızı halkalı '~500 gün', sonda 'Nisan 1916 ilk kara'; sağda Kaşif şaşkınlıkla işaret eder",
+   "title": {
+    "white": "Yolculuk",
+    "gray": "Aralık 1914"
+   },
+   "cues": {
+    "a": "Aralık",
+    "b": "yüz",
+    "c": "bekleyecekti"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Aralık 1914",
+      "text": "yola çıkış",
+      "at": "a"
+     },
+     {
+      "year": "~500 gün",
+      "text": "karasız",
+      "at": "b"
+     },
+     {
+      "year": "Nisan 1916",
+      "text": "ilk kara",
+      "at": "c"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.86,
+     "pose": "point",
+     "at": "b",
+     "dir": 30,
+     "face": -1,
+     "emotion": "surprised",
+     "scale": 0.55
+    }
+   }
+  },
+  {
+   "chapter": "Buzun Pençesi",
+   "type": "chapter",
+   "text": "Endurance haftalarca buz kütleleri arasında zikzak çizdi.",
+   "visual": "BÖLÜM 2 / 7 rozeti, mavi dairede 2, altında 'Buzun Pençesi' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "haftalarca",
+    "title": "zikzak"
+   },
+   "params": {
+    "n": 2,
+    "total": 7,
+    "title": "Buzun Pençesi"
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Her çarpışmada gövde baştan aşağı titredi.",
+   "visual": "Yakın plan: Endurance sık buz kütlelerinin arasından ilerler; 'çarpışmada' ve 'titredi'de gövde buza çarpar, gemi ve direkler sarsılır, kamera titrer; sağda Kaşif dürbünle bakarken sarsıntıda şok olur",
+   "title": {
+    "white": "Buz denizi"
+   },
+   "cues": {
+    "c": "çarpışmada",
+    "t": "titredi"
+   },
+   "params": {
+    "pack": 1,
+    "travel": 60,
+    "zoom": 1.08,
+    "focus": [
+     0.5,
+     0.62
+    ],
+    "ship": {
+     "x": 0.48,
+     "scale": 1.15,
+     "zig": 0.5,
+     "bump": [
+      "c",
+      "t"
+     ]
+    },
+    "shake": [
+     "c",
+     "t"
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "look",
+     "face": "left",
+     "dir": "forward",
+     "at": "c",
+     "then": "shock",
+     "seq": [
+      {
+       "at": "t",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Ocak'ta ufukta kıtanın beyaz kıyıları göründü. Hedefleri artık burunlarının dibindeydi.",
+   "visual": "Endurance buz kütleleri arasında zikzak çizerek ilerler, kütleler kayar; 'kıyıları'nda ufukta beyaz buz yarları yükselir; sağda Kaşif dürbünle bakar, sonra kıyıyı işaret edip sevinir",
+   "title": {
+    "white": "Ocak 1915"
+   },
+   "cues": {
+    "coast": "kıyıları",
+    "d": "dibindeydi"
+   },
+   "params": {
+    "pack": 0.85,
+    "travel": 70,
+    "zoom": 1.05,
+    "focus": [
+     0.45,
+     0.55
+    ],
+    "ship": {
+     "x": 0.5,
+     "zig": 0.7
+    },
+    "coast": {
+     "at": "coast",
+     "from": 0.02,
+     "to": 0.62
+    },
+    "kasif": {
+     "x": 0.88,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "look",
+     "face": "left",
+     "dir": "up",
+     "at": "coast",
+     "then": "point",
+     "seq": [
+      {
+       "at": "d",
+       "pose": "point",
+       "dir": "up",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "Antarktika!",
+      "x": 0.3,
+      "y": 0.27,
+      "at": "coast",
+      "size": 72
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ve on sekiz Ocak 1915'te, gemi olduğu yerde durdu.",
+   "visual": "Sahne başında dev yazı kelime kelime: 'Gemi durdu.' ('durdu' kırmızı kutuda); 'Ocak'ta el yazısı '18 Ocak 1915' notu; sağda Kaşif 'durdu'da şok olur",
+   "title": {},
+   "cues": {
+    "note": "Ocak",
+    "d": "durdu"
+   },
+   "params": {
+    "lines": [
+     "Gemi",
+     "durdu."
+    ],
+    "highlight": [
+     "durdu"
+    ],
+    "note": {
+     "text": "18 Ocak 1915",
+     "at": "note",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "pose": "shock",
+     "at": "d",
+     "face": -1,
+     "emotion": "surprised",
+     "scale": 0.75
+    }
+   }
+  },
+  {
+   "type": "end_a_top",
+   "text": "Buz, geminin etrafında donup kapanmıştı. Bir tayfanın benzetmesiyle Endurance, çikolatanın ortasındaki bir badem gibiydi.",
+   "visual": "Kuşbakışı: çatlaklı buz levhası, ortada badem biçimli gemi gövdesi; 'kapanmıştı'da gövdenin çevresindeki koyu su halkası daralıp kapanır; 'çikolatanın'da buz çikolata kareleriyle dolar, gövde badem dokusu alır; 'badem' notu oku ile; sağda Kaşif işaret edip omuz silker",
+   "title": {
+    "white": "Kapan",
+    "gray": "buzun ortasında"
+   },
+   "cues": {
+    "close": "kapanmıştı",
+    "bar": "çikolatanın",
+    "bad": "badem"
+   },
+   "params": {
+    "close": "close",
+    "bar": "bar",
+    "zoom": 1.02,
+    "labels": [
+     {
+      "text": "badem",
+      "x": 0.5,
+      "y": 0.24,
+      "at": "bad",
+      "size": 80,
+      "arrow": [
+       0.44,
+       0.4
+      ],
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.92,
+     "y": 0.84,
+     "scale": 0.6,
+     "pose": "idle",
+     "face": "left",
+     "at": "close",
+     "then": "point",
+     "dir": "forward",
+     "seq": [
+      {
+       "at": "bad",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Adamlar kazma ve testerelerle saatlerce uğraştı. Ama buz kıpırdamadı bile.",
+   "visual": "Buza gömülü Endurance; önünde üç bereli tayfa testere ve kazmayla buzu keser, aletler inip kalkar; sağda Kaşif 'kıpırdamadı'da omuz silker",
+   "title": {
+    "white": "Kazma",
+    "gray": "ve testere"
+   },
+   "cues": {
+    "k": "kıpırdamadı",
+    "uy": "uğraştı"
+   },
+   "params": {
+    "surface": "ice",
+    "zoom": 1.05,
+    "focus": [
+     0.45,
+     0.65
+    ],
+    "sun": {
+     "x": 0.86,
+     "y": 0.22
+    },
+    "ship": {
+     "x": 0.62,
+     "frozen": true
+    },
+    "crew": [
+     {
+      "x": 0.18,
+      "y": 0.84,
+      "tool": "saw",
+      "face": "right"
+     },
+     {
+      "x": 0.31,
+      "y": 0.85,
+      "tool": "pick",
+      "face": "left"
+     },
+     {
+      "x": 0.43,
+      "y": 0.84,
+      "tool": "saw",
+      "face": "right",
+      "beard": "short"
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "talk",
+     "face": "left",
+     "at": "k",
+     "then": "shrug",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Şimdi şunu düşünün: gemi bir yere gitmiyordu, ama buz gidiyordu! Endurance, dev buz kütlesiyle birlikte aylarca kuzeye sürüklenip duracaktı.",
+   "visual": "Parşömen üstüne mürekkep çizimi klip: buza hapsolmuş tek gemi; 'kuzeye'de kırmızı ok ve 'kuzeye' notu yukarıyı gösterir",
+   "title": {
+    "white": "Sürüklenme"
+   },
+   "cues": {
+    "k": "kuzeye"
+   },
+   "params": {
+    "video": "media/hf-buzdaki-gemi.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261021_182222_06b6280d-10f5-4ee5-8551-1e9cf1f6b5ee.mp4",
+    "ai": true,
+    "grade": "sepia",
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (seedance_2_0_mini)",
+    "rate": 0.7,
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.1,
+      0.5,
+      0.46
+     ]
+    },
+    "marks": [
+     {
+      "type": "arrow",
+      "x": 0.5,
+      "y": 0.3,
+      "angle": 90,
+      "text": "kuzeye",
+      "at": "k",
+      "color": "red",
+      "dy": -40
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Sonra güneş ufkun altına indi ve uzun kutup gecesi başladı.",
+   "visual": "Buza gömülü Endurance; sağdaki güneş 'ufkun'da ufkun altına iner, gökyüzü mürekkep taramayla kararır ve yıldızlar belirir; solda Kaşif dürbünle güneşe bakar, sonra endişeyle düşünür",
+   "title": {
+    "white": "Kutup gecesi"
+   },
+   "cues": {
+    "ufuk": "ufkun",
+    "gece": "kutup"
+   },
+   "params": {
+    "surface": "ice",
+    "zoom": 1.06,
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "sun": {
+     "x": 0.8,
+     "y": 0.3,
+     "set": "ufuk",
+     "dur": 2.6
+    },
+    "night": "gece",
+    "night_dense": true,
+    "ship": {
+     "x": 0.52,
+     "frozen": true
+    },
+    "kasif": {
+     "x": 0.13,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "look",
+     "face": "right",
+     "dir": "up-right",
+     "at": "gece",
+     "then": "think",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Ama Shackleton moralin çökmesine izin vermedi. Buzda futbol oynadılar, köpek yarışları yaptılar, kışın ortasında ziyafet bile verdiler.",
+   "visual": "Kutup gecesi, arkada buza gömülü Endurance; önde iki bereli tayfa buzda top oynar, top aralarında uçar; 'köpek'te iki kızak köpeği buzun üstünde yarışarak geçer; 'ziyafet'te dumanı tüten tencereli bir sofra belirir; 'futbol', 'köpek yarışı', 'ziyafet' notları sırayla çıkar; solda Kaşif el sallar ve sevinçle işaret eder",
+   "title": {
+    "white": "Kış",
+    "gray": "kutup gecesinde"
+   },
+   "cues": {
+    "m": "moralin",
+    "f": "futbol",
+    "k": "köpek",
+    "z": "ziyafet"
+   },
+   "params": {
+    "surface": "ice",
+    "night": true,
+    "zoom": 1.04,
+    "focus": [
+     0.45,
+     0.6
+    ],
+    "ship": {
+     "x": 0.82,
+     "scale": 0.75,
+     "frozen": true
+    },
+    "crew": [
+     {
+      "x": 0.22,
+      "y": 0.84,
+      "pose": "talk",
+      "face": "right",
+      "at": "f",
+      "then": "wave"
+     },
+     {
+      "x": 0.5,
+      "y": 0.84,
+      "pose": "idle",
+      "face": "left",
+      "at": "f",
+      "then": "wave",
+      "beard": "short"
+     }
+    ],
+    "games": {
+     "ball": "f",
+     "dogs": "k",
+     "table": {
+      "at": "z",
+      "x": 0.68
+     }
+    },
+    "kasif": {
+     "x": 0.07,
+     "y": 0.84,
+     "scale": 0.6,
+     "pose": "idle",
+     "face": "right",
+     "at": "m",
+     "then": "wave",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "k",
+       "pose": "point",
+       "dir": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "futbol",
+      "x": 0.36,
+      "y": 0.3,
+      "at": "f",
+      "size": 70
+     },
+     {
+      "text": "köpek yarışı",
+      "x": 0.52,
+      "y": 0.42,
+      "at": "k",
+      "size": 70
+     },
+     {
+      "text": "ziyafet",
+      "x": 0.68,
+      "y": 0.54,
+      "at": "z",
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Çünkü Shackleton biliyordu: buzda insanın en büyük düşmanı soğuk değil, umutsuzluktur.",
+   "visual": "Dev yazı kelime kelime: 'Soğuk değil, umutsuzluk.' ('umutsuzluk' kırmızı kutuda); sağda Kaşif endişeyle işaret eder",
+   "title": {},
+   "cues": {
+    "u": "umutsuzluktur"
+   },
+   "params": {
+    "lines": [
+     "Soğuk değil,",
+     "umutsuzluk."
+    ],
+    "highlight": [
+     "umutsuzluk"
+    ],
+    "kasif": {
+     "x": 0.87,
+     "y": 0.84,
+     "pose": "point",
+     "at": "u",
+     "dir": 20,
+     "face": -1,
+     "emotion": "worried",
+     "scale": 0.75
+    }
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Ama bahar gelince buz uyandı. Ve asıl felaket o zaman başladı.",
+   "visual": "Gece sona erer, solda güneş doğar; 'uyandı'da ön plandaki buzda zikzak çatlaklar koşar, kamera sarsılır; 'felaket'te gövdenin yanında buz blokları kalkmaya başlar; Kaşif şok olur, sonra endişeyle gemiyi işaret eder",
+   "title": {
+    "white": "Bahar"
+   },
+   "cues": {
+    "bahar": "bahar",
+    "uy": "uyandı",
+    "fel": "felaket"
+   },
+   "params": {
+    "surface": "ice",
+    "zoom": 1.06,
+    "focus": [
+     0.55,
+     0.6
+    ],
+    "night": true,
+    "dawn": "bahar",
+    "sun": {
+     "x": 0.24,
+     "y": 0.26,
+     "rise": "bahar",
+     "dur": 2.4
+    },
+    "ship": {
+     "x": 0.6,
+     "frozen": true
+    },
+    "ice_cracks": {
+     "at": "uy",
+     "x": 0.36,
+     "y": 0.76,
+     "dur": 1.2
+    },
+    "ridges": {
+     "at": "fel",
+     "dur": 2.2,
+     "h": 0.7
+    },
+    "shake": [
+     "uy"
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "idle",
+     "face": "right",
+     "at": "uy",
+     "then": "shock",
+     "seq": [
+      {
+       "at": "fel",
+       "pose": "point",
+       "dir": "right",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "Geminin Ölümü",
+   "type": "chapter",
+   "text": "Rüzgârlar ve akıntılar dev buz levhalarını birbirine itti.",
+   "visual": "BÖLÜM 3 / 7 rozeti, mavi dairede 3, altında 'Geminin Ölümü' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Rüzgârlar",
+    "title": "birbirine"
+   },
+   "params": {
+    "n": 3,
+    "total": 7,
+    "title": "Geminin Ölümü"
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Endurance bir mengenenin içinde kalmıştı.",
+   "visual": "Buza gömülü Endurance; iki yandan kırmızı oklar ve buz levhaları gövdeyi mengene gibi sıkıştırır, bloklar kalkar; 'mengenenin'de kırmızı 'mengene' notu; solda Kaşif dürbünle bakarken şok olur",
+   "title": {
+    "white": "Mengene"
+   },
+   "cues": {
+    "m": "mengenenin",
+    "k": "kalmıştı"
+   },
+   "params": {
+    "surface": "ice",
+    "zoom": 1.07,
+    "focus": [
+     0.55,
+     0.6
+    ],
+    "ship": {
+     "x": 0.56,
+     "scale": 1.1,
+     "frozen": true
+    },
+    "ridges": {
+     "at": 0,
+     "dur": 2.6,
+     "h": 0.9
+    },
+    "vise": {
+     "at": 0.1
+    },
+    "kasif": {
+     "x": 0.1,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "look",
+     "face": "right",
+     "dir": "forward",
+     "at": "m",
+     "then": "shock",
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "mengene",
+      "x": 0.25,
+      "y": 0.3,
+      "at": "m",
+      "color": "red",
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Geceleri kimse uyuyamadı. Gövde inliyor, kalın kirişler silah sesi gibi patlıyordu.",
+   "visual": "Gece: iki yandan dev buz blokları yükselip Endurance'ı sıkıştırır, gemi yan yatar, direkler sallanır; 'inliyor'da gövde sarsılır, 'silah' ve 'patlıyordu'da gövdede kırmızı çatlaklar ve ÇAT! patlar; solda Kaşif korkuyla geri sıçrar",
+   "title": {
+    "white": "Baskı",
+    "gray": "uykusuz geceler"
+   },
+   "cues": {
+    "inl": "inliyor",
+    "silah": "silah",
+    "pat": "patlıyordu"
+   },
+   "params": {
+    "surface": "ice",
+    "night": true,
+    "zoom": 1.08,
+    "focus": [
+     0.56,
+     0.58
+    ],
+    "ship": {
+     "x": 0.57,
+     "scale": 1.15,
+     "frozen": true,
+     "heel": {
+      "to": -11,
+      "at": 0,
+      "dur": 4.5
+     },
+     "lift": {
+      "to": 34,
+      "at": 0,
+      "dur": 4.5
+     },
+     "bump": [
+      "inl"
+     ]
+    },
+    "ridges": {
+     "at": 0,
+     "dur": 3.5,
+     "h": 1.35
+    },
+    "cracks": [
+     {
+      "at": "silah",
+      "x": -0.18,
+      "y": 0.4,
+      "bang": "ÇAT!"
+     },
+     {
+      "at": "pat",
+      "x": 0.2,
+      "y": 0.5,
+      "bang": "ÇAT!"
+     }
+    ],
+    "shake": [
+     "inl"
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.84,
+     "scale": 0.64,
+     "pose": "think",
+     "emotion0": "worried",
+     "face": "right",
+     "at": "inl",
+     "then": "shock",
+     "seq": [
+      {
+       "at": "pat",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "end_a_hull",
+   "text": "Su sızmaya başladı. Adamlar gece gündüz pompaladı ama su durmak bilmedi.",
+   "visual": "Kesit: buz levhaları arasında sıkışmış gövde; duvarlardan su damlaları sızar, ambarda mavi su yükselir; güvertede iki bereli tayfa el pompasının kolunu iner kaldırır, borudan su fışkırır; 'sızmaya'da mavi 'su sızıyor' notu; sağda Kaşif 'durmak'ta endişeyle omuz silker",
+   "title": {
+    "white": "Pompalar"
+   },
+   "cues": {
+    "siz": "sızmaya",
+    "dur": "durmak"
+   },
+   "params": {
+    "mode": "pump",
+    "zoom": 1.04,
+    "labels": [
+     {
+      "text": "su sızıyor",
+      "x": 0.66,
+      "y": 0.4,
+      "at": "siz",
+      "color": "blue",
+      "size": 70,
+      "arrow": [
+       0.5,
+       0.66
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "idle",
+     "emotion0": "worried",
+     "face": "left",
+     "at": "dur",
+     "then": "shrug",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ve yirmi yedi Ekim 1915'te Shackleton o emri verdi: gemiyi terk edin!",
+   "visual": "Dev yazı kelime kelime: 'Gemiyi terk edin!' ('terk' kırmızı kutuda); el yazısı '27 Ekim 1915' notu; sağda Kaşif 'terk'te şok olur",
+   "title": {},
+   "cues": {
+    "note": "Ekim",
+    "w0": "gemiyi",
+    "w1": "terk",
+    "w2": "edin"
+   },
+   "params": {
+    "lines": [
+     "Gemiyi",
+     "terk edin!"
+    ],
+    "highlight": [
+     "terk"
+    ],
+    "note": {
+     "text": "27 Ekim 1915",
+     "at": "note",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.87,
+     "y": 0.84,
+     "pose": "shock",
+     "at": "w1",
+     "face": -1,
+     "emotion": "surprised",
+     "scale": 0.75
+    }
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Yirmi sekiz kişi, dünyanın en ıssız denizinde, yüzen bir buzun üstüne çadır kurdu.",
+   "visual": "Arkada yan yatmış, buz bloklarına gömülü Endurance; önde iki bereli tayfa gemiden uzaklaşıp yürür; 'çadır'da buzun üstünde üç çadır açılır; '28 kişi' notu; solda Kaşif yürüyüp çadırları işaret eder",
+   "title": {
+    "white": "Buz kampı"
+   },
+   "cues": {
+    "y": "Yirmi",
+    "c": "çadır"
+   },
+   "params": {
+    "surface": "ice",
+    "zoom": 1.05,
+    "focus": [
+     0.4,
+     0.65
+    ],
+    "ship": {
+     "x": 0.73,
+     "frozen": true,
+     "heel": {
+      "to": -14,
+      "at": 0,
+      "dur": 0.05
+     },
+     "smoke": false
+    },
+    "ridges": {
+     "at": -5,
+     "dur": 0.1,
+     "h": 1.1
+    },
+    "tents": {
+     "xs": [
+      0.22,
+      0.33,
+      0.44
+     ],
+     "y": 0.82,
+     "at": "c",
+     "size": 1.3
+    },
+    "crew": [
+     {
+      "x": 0.6,
+      "to": 0.5,
+      "walk_at": 0,
+      "walk_dur": 3.2,
+      "y": 0.84,
+      "face": "left"
+     },
+     {
+      "x": 0.66,
+      "to": 0.56,
+      "walk_at": 0.5,
+      "walk_dur": 3.2,
+      "y": 0.85,
+      "face": "left",
+      "beard": "short"
+     }
+    ],
+    "kasif": {
+     "x": 0.03,
+     "to": 0.11,
+     "walk_at": 0,
+     "walk_dur": 1.4,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "idle",
+     "face": "right",
+     "at": "c",
+     "then": "point",
+     "dir": "right",
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "28 kişi",
+      "x": 0.33,
+      "y": 0.52,
+      "at": "y",
+      "size": 76
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_ice",
+   "text": "Endurance bir ay daha direndi. Yirmi bir Kasım'da gemi, kıç tarafı havada, sulara gömüldü.",
+   "visual": "Sık buz kütleleri arasında yan yatmış Endurance; 'Yirmi'de baş suya girer, 'kıç'ta gövde ~35° dikilip kıç havaya kalkar, 'gömüldü'de tamamen kaybolur; geriye dalga halkaları ve yüzen kalas parçaları kalır; '21 Kasım 1915' notu; solda Kaşif dürbünle bakarken şok olur, sonra üzgünce düşünür",
+   "title": {
+    "white": "Batış"
+   },
+   "cues": {
+    "sink": "Yirmi",
+    "k": "kıç",
+    "gom": "gömüldü"
+   },
+   "params": {
+    "pack": 1,
+    "zoom": 1.06,
+    "focus": [
+     0.55,
+     0.6
+    ],
+    "ship": {
+     "x": 0.56,
+     "heel": {
+      "to": -6,
+      "at": 0,
+      "dur": 1.5
+     },
+     "sink": {
+      "at": "sink",
+      "tilt_at": "k",
+      "gone": "gom"
+     },
+     "smoke": false
+    },
+    "kasif": {
+     "x": 0.12,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "look",
+     "face": "right",
+     "dir": "forward",
+     "at": "k",
+     "then": "shock",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "gom",
+       "pose": "think",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "21 Kasım 1915",
+      "x": 0.3,
+      "y": 0.28,
+      "at": "sink",
+      "size": 72
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_camp",
+   "text": "Shackleton o gün günlüğüne kısa bir not düştü: \"Bunun hakkında yazamıyorum.\"",
+   "visual": "Buz kampı: geride çadırlar, buz blokları ve ufukta yan yatmış ezik Endurance; önde bereli Shackleton bir sandığa oturmuş, 'not'ta önünde açık günlük belirir ve kalem yazmaya başlar; 'Shackleton' etiketi; üstte el yazısıyla '“Bunun hakkında yazamıyorum.”'; sağda Kaşif üzgünce düşünür",
+   "title": {
+    "white": "Günlük"
+   },
+   "cues": {
+    "not": "not",
+    "yaz": "yazamıyorum"
+   },
+   "params": {
+    "crew": [
+     {
+      "x": 0.38,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "sit",
+      "face": "right",
+      "accessory": "beret"
+     }
+    ],
+    "book": {
+     "x": 0.52,
+     "y": 0.84,
+     "at": "not"
+    },
+    "ship": {
+     "x": 0.66
+    },
+    "kasif": {
+     "x": 0.89,
+     "y": 0.84,
+     "scale": 0.64,
+     "pose": "idle",
+     "face": "left",
+     "at": "not",
+     "then": "think",
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "Shackleton",
+      "x": 0.38,
+      "y": 0.44,
+      "size": 64,
+      "arrow": [
+       0.38,
+       0.56
+      ]
+     },
+     {
+      "text": "“Bunun hakkında yazamıyorum.”",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "yaz",
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_camp",
+   "text": "Peki sizce bu kadar sağlam bir gemi neden ezildi? Bakın, sır gövdenin biçiminde saklı.",
+   "visual": "Buz kampı, sağda buz sırtlarına gömülü, yan yatmış ezik Endurance; Kaşif soldan yürüyerek gelir, 'neden'de omuz silker, 'Bakın'da düşünür, 'gövdenin'de Endurance'ın gövdesini işaret eder; oklu 'gövde?' notu",
+   "title": {
+    "white": "Neden?"
+   },
+   "cues": {
+    "neden": "neden",
+    "bak": "Bakın",
+    "gov": "gövdenin"
+   },
+   "params": {
+    "ship": {
+     "x": 0.68,
+     "y": 0.68,
+     "scale": 0.85
+    },
+    "ridges": {
+     "at": -5,
+     "dur": 0.1,
+     "h": 1.0
+    },
+    "tents": {
+     "xs": [
+      0.08,
+      0.17
+     ],
+     "y": 0.66,
+     "at": -1,
+     "size": 1
+    },
+    "kasif": {
+     "x": 0.04,
+     "to": 0.28,
+     "walk_at": 0,
+     "walk_dur": 1.8,
+     "y": 0.86,
+     "scale": 0.66,
+     "pose": "idle",
+     "face": "right",
+     "at": "neden",
+     "then": "shrug",
+     "seq": [
+      {
+       "at": "bak",
+       "pose": "think"
+      },
+      {
+       "at": "gov",
+       "pose": "point",
+       "dir": "forward",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "gövde?",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "gov",
+      "size": 80,
+      "arrow": [
+       0.62,
+       0.6
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_a_hull",
+   "text": "Ünlü kutup gemisi Fram'ın tabanı kâse gibi yuvarlaktı. Buz sıkıştırınca Fram, parmak arasındaki bir çekirdek gibi yukarı kayardı.",
+   "visual": "Kesit: kâse gibi yuvarlak tabanlı Fram iki buz levhası arasında; 'sıkıştırınca'da kırmızı oklarla levhalar içeri iter, tabanın altına kayar ve Fram yukarı fırlar; 'kâse gibi' notu oku ile; sağda Kaşif 'yukarı'da sevinçle işaret eder",
+   "title": {
+    "white": "Fram",
+    "gray": "kâse taban"
+   },
+   "cues": {
+    "kase": "kâse",
+    "sq": "sıkıştırınca",
+    "up": "yukarı"
+   },
+   "params": {
+    "mode": "fram",
+    "squeeze": "sq",
+    "labels": [
+     {
+      "text": "kâse gibi",
+      "x": 0.2,
+      "y": 0.34,
+      "at": "kase",
+      "size": 72,
+      "arrow": [
+       0.34,
+       0.66
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "scale": 0.62,
+     "pose": "talk",
+     "face": "left",
+     "at": "up",
+     "then": "point",
+     "dir": "up",
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "end_a_hull",
+   "text": "Endurance'ın gövdesi ise uzun ve düzdü; kaçacak yeri yoktu. Yeni bir araştırmaya göre kirişleri de bu baskıya fazla zayıftı.",
+   "visual": "Solda küçük, yukarı kalkmış Fram ve yeşil ✓; sağda düz duvarlı Endurance kesiti: 'kaçacak'ta buz levhaları duvarları içeri büker, 'yoktu'da kırmızı ✗, 'kirişleri'nde güverte kirişi ortadan kırılır, kırmızı çatlaklar ve sarsıntı; kırmızı 'zayıf kiriş' notu; sağda Kaşif şok olur",
+   "title": {
+    "white": "Endurance",
+    "gray": "düz gövde"
+   },
+   "cues": {
+    "sq": "kaçacak",
+    "mark": "yoktu",
+    "cr": "kirişleri",
+    "z": "zayıftı"
+   },
+   "params": {
+    "mode": "endurance",
+    "compare": true,
+    "squeeze": "sq",
+    "crack": "cr",
+    "mark": "mark",
+    "labels": [
+     {
+      "text": "zayıf kiriş",
+      "x": 0.79,
+      "y": 0.2,
+      "at": "cr",
+      "color": "red",
+      "size": 72,
+      "arrow": [
+       0.57,
+       0.55
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.84,
+     "scale": 0.6,
+     "pose": "talk",
+     "face": "left",
+     "at": "cr",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "chapter": "Sabır Kampı",
+   "type": "chapter",
+   "text": "Şimdi bir düşünün: telsiz yok, kurtarma ekibi yok.",
+   "visual": "'BÖLÜM 4 / 7' rozeti, mavi dairede 4, altında 'Sabır Kampı' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "düşünün",
+    "title": "telsiz"
+   },
+   "params": {
+    "n": 4,
+    "total": 7,
+    "title": "Sabır Kampı"
+   }
+  },
+  {
+   "type": "end_b_ice",
+   "text": "Dünyada kimse nerede olduklarını bilmiyor.",
+   "visual": "Uçsuz buz düzlüğünde Kaşif dürbünle boş ufku tarar, çok uzakta minik çadırlar; önde bir telsiz direği 'Dünyada'da kırmızıyla çarpılır; 'kimse'de Kaşif çaresizce omuz silker ve kırmızı dev '?' belirir",
+   "title": {
+    "white": "Telsiz yok",
+    "gray": "kimse bilmiyor"
+   },
+   "cues": {
+    "d": "Dünyada",
+    "kimse": "kimse"
+   },
+   "params": {
+    "mode": "camp",
+    "horizon": 0.56,
+    "sunX": 0.3,
+    "zoom": 1.08,
+    "focus": [
+     0.4,
+     0.7
+    ],
+    "tents": [
+     [
+      0.78,
+      0.585,
+      0.3
+     ],
+     [
+      0.83,
+      0.59,
+      0.24
+     ]
+    ],
+    "radio": {
+     "x": 0.58,
+     "y": 0.84,
+     "at": 0.15,
+     "cross": "d"
+    },
+    "kasif": {
+     "x": 0.3,
+     "y": 0.84,
+     "pose": "look",
+     "face": 1,
+     "at": "kimse",
+     "then": "shrug",
+     "face_then": -1,
+     "emotion": "worried",
+     "scale": 0.62
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.8,
+      "y": 0.36,
+      "at": "kimse",
+      "size": 170,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_ice",
+   "text": "Shackleton herkese yaklaşık bir kiloluk kişisel eşya hakkı tanıdı. Örnek olsun diye kendi altın paralarını karın üstüne bıraktı.",
+   "visual": "Gündüz buz düzlüğü, arkada çadırlar; bereli Shackleton konuşur, 'kiloluk'ta Kaşif '≈ 1 KİLO' tabelasını kaldırır; 'altın'da Shackleton karı işaret eder ve karın üstüne birer birer üç altın para düşüp sekerek döner; 'bıraktı'da Kaşif şaşırıp geri sıçrar",
+   "title": {
+    "white": "1 kilo",
+    "gray": "kişisel eşya"
+   },
+   "cues": {
+    "kilo": "kiloluk",
+    "gold": "altın",
+    "c2": "karın",
+    "drop": "bıraktı"
+   },
+   "params": {
+    "mode": "camp",
+    "horizon": 0.55,
+    "sunX": 0.74,
+    "zoom": 1.06,
+    "focus": [
+     0.45,
+     0.7
+    ],
+    "tents": [
+     [
+      0.84,
+      0.68,
+      0.8
+     ],
+     [
+      0.94,
+      0.7,
+      0.62
+     ],
+     [
+      0.07,
+      0.66,
+      0.55
+     ]
+    ],
+    "cast": [
+     {
+      "who": "shackleton",
+      "x": 0.46,
+      "y": 0.83,
+      "pose": "talk",
+      "face": 1,
+      "at": "gold",
+      "then": "point",
+      "dir": -38,
+      "emotion": "neutral",
+      "scale": 0.62
+     }
+    ],
+    "kasif": {
+     "x": 0.2,
+     "y": 0.83,
+     "pose": "idle",
+     "face": 1,
+     "at": "kilo",
+     "then": "hold",
+     "text": "≈ 1 KİLO",
+     "emotion": "happy",
+     "scale": 0.62,
+     "seq": [
+      {
+       "at": "drop",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "coins": [
+     {
+      "x": 0.6,
+      "y": 0.83,
+      "at": "gold"
+     },
+     {
+      "x": 0.66,
+      "y": 0.84,
+      "at": "c2"
+     },
+     {
+      "x": 0.72,
+      "y": 0.83,
+      "at": "drop"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Shackleton",
+      "x": 0.63,
+      "y": 0.3,
+      "at": 0.3,
+      "arrow": [
+       0.49,
+       0.46
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_plates",
+   "text": "Fotoğrafçı Frank Hurley de cam negatiflerinin sadece bir kısmını yanına aldı; bugün o yolculuğu görebiliyorsak, onun sayesinde.",
+   "visual": "Buzda üç ayaklı kutu fotoğraf makinesi ve cam negatif sandığı; bereli Hurley bir camı ışığa tutar; 'kısmını'da sandık kırmızı çarpıyla silinir, üç cam mavi çerçeveyle seçilir; 'görebiliyorsak'ta üç cam havalanıp iğnelenmiş sepya fotoğraflara dönüşür (buzdaki gemi, kamp, sandal çeken adamlar), Kaşif onları işaret eder",
+   "title": {
+    "white": "Frank Hurley",
+    "gray": "cam negatifler"
+   },
+   "cues": {
+    "keep": "kısmını",
+    "prints": "görebiliyorsak",
+    "think": "Fotoğrafçı"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "Frank Hurley",
+      "x": 0.3,
+      "y": 0.38,
+      "at": 0.3,
+      "arrow": [
+       0.4,
+       0.52
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.66,
+     "y": 0.82,
+     "pose": "idle",
+     "at": "keep",
+     "then": "think",
+     "face": -1,
+     "emotion": "worried",
+     "scale": 0.52,
+     "seq": [
+      {
+       "at": "prints",
+       "pose": "point",
+       "dir": 64,
+       "face": 1,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "end_b_ice",
+   "text": "Önce sandalları sürükleyip karaya yürümeyi denediler. Ama engebeli buzda günde ancak bir iki kilometre ilerleyebiliyorlardı.",
+   "visual": "Buz üstünde kızağa konmuş sandalı dört bereli adam halatla çeker, Kaşif kıç tarafından iter; sandal tümseklerde sarsılır ama neredeyse ilerlemez; uzakta 'kara' tepeleri; 'kilometre'de kırmızı 'günde 1-2 km' notu belirir, 'ancak'ta Kaşif durup omuz silker",
+   "title": {
+    "white": "Sürükleme",
+    "gray": "Aralık 1915"
+   },
+   "cues": {
+    "jolt": "engebeli",
+    "stop": "ancak",
+    "km": "kilometre"
+   },
+   "params": {
+    "mode": "drag",
+    "sunX": 0.6,
+    "from": 0.3,
+    "to": 0.33,
+    "kasif": {
+     "x": 0.09,
+     "y": 0.8,
+     "pose": "walk",
+     "face": 1,
+     "at": "stop",
+     "then": "shrug",
+     "face_then": -1,
+     "emotion": "worried",
+     "scale": 0.5
+    },
+    "labels": [
+     {
+      "text": "günde 1-2 km",
+      "x": 0.52,
+      "y": 0.2,
+      "at": "km",
+      "size": 80,
+      "color": "red"
+     },
+     {
+      "text": "kara",
+      "x": 0.86,
+      "y": 0.39,
+      "at": 0.8,
+      "size": 54,
+      "color": "soft"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Shackleton yürüyüşü durdurdu. Buzun üstünde yeni bir kamp kurdular ve adını Sabır Kampı koydular.",
+   "visual": "Sahne başında dev 'Sabır' (kırmızı kutuda) ve 'Kampı' kelime kelime düşer; 'durdurdu'da '29 Aralık 1915' notu ve sağda işaret eden Kaşif",
+   "title": {},
+   "cues": {
+    "note": "durdurdu"
+   },
+   "params": {
+    "lines": [
+     "Sabır",
+     "Kampı"
+    ],
+    "highlight": [
+     "Sabır"
+    ],
+    "note": "29 Aralık 1915",
+    "arrow": false,
+    "kasif": {
+     "x": 0.87,
+     "pose": "point",
+     "dir": 25,
+     "face": -1,
+     "scale": 0.85,
+     "at": "note",
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "end_b_ice",
+   "text": "Gerçekten de sabır gerekecekti. Aylarca ıslak uyku tulumlarında titrediler, fok ve penguen etiyle karın doyurdular.",
+   "visual": "Kutup gecesi: taranmış gökyüzü, evreleri dönen ay (aylar geçer), üç çan çadır; önde uyku tulumlarında titreyen iki bereli adam, nefesleri buhar; sobanın yanında oturan Kaşif titrer; 'fok'ta bir fok, 'penguen'de bir penguen belirir; kar yağar",
+   "title": {
+    "white": "Sabır Kampı",
+    "gray": "aylarca"
+   },
+   "cues": {
+    "months": "Aylarca",
+    "shiver": "titrediler",
+    "seal": "fok",
+    "penguin": "penguen"
+   },
+   "params": {
+    "mode": "night",
+    "kasif": {
+     "x": 0.62,
+     "y": 0.8,
+     "pose": "sit",
+     "face": 1,
+     "emotion0": "worried",
+     "at": "shiver",
+     "then": "sit",
+     "emotion": "worried",
+     "scale": 0.5
+    },
+    "labels": [
+     {
+      "text": "aylarca",
+      "x": 0.6,
+      "y": 0.18,
+      "at": "months",
+      "size": 76
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_ice",
+   "text": "Nisan 1916'da, üstünde yaşadıkları buz gözlerinin önünde çatlamaya başladı. Dokuz Nisan'da üç küçük sandala binip açık denize çıktılar.",
+   "visual": "Buz kenarı ve açık deniz; Kaşif dürbünle bakarken 'çatlamaya'da buzda zikzak bir çatlak koşar, Kaşif şaşırıp geri sıçrar, sandallı parça ayrılır; 'Dokuz'da '9 Nisan 1916' notu; 'sandala'da üç sandal denize kayar ve kürek çekerek açılır, Kaşif onları işaret eder",
+   "title": {
+    "white": "9 Nisan",
+    "gray": "1916"
+   },
+   "cues": {
+    "crack": "çatlamaya",
+    "date": "Dokuz",
+    "launch": "sandala"
+   },
+   "params": {
+    "mode": "crack",
+    "zoom": 1.2,
+    "focus": [
+     0.42,
+     0.74
+    ],
+    "kasif": {
+     "x": 0.3,
+     "y": 0.83,
+     "pose": "look",
+     "face": 1,
+     "at": "crack",
+     "then": "shock",
+     "emotion": "surprised",
+     "scale": 0.64,
+     "seq": [
+      {
+       "at": "launch",
+       "pose": "point",
+       "dir": 15,
+       "face": 1,
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "9 Nisan 1916",
+      "x": 0.52,
+      "y": 0.2,
+      "at": "date",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "Dondurucu dalgalarla boğuşma tam bir hafta sürdü. Tatlı su bitmiş, bazı adamların dili susuzluktan şişmişti.",
+   "visual": "Eski harita: sağ altta 'kamp' noktasından kırmızı kesikli rota batıya, sonra kuzeye kıvrılıp Fil Adası'na çizilir; 'hafta'da '7 gün' notu",
+   "title": {
+    "white": "Fil Adası",
+    "gray": "bir hafta"
+   },
+   "cues": {
+    "route": "Dondurucu",
+    "week": "hafta",
+    "ei": "Tatlı"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.47,
+       0.22
+      ],
+      [
+       0.52,
+       0.17
+      ],
+      [
+       0.6,
+       0.16
+      ],
+      [
+       0.65,
+       0.2
+      ],
+      [
+       0.6,
+       0.26
+      ],
+      [
+       0.52,
+       0.27
+      ]
+     ],
+     [
+      [
+       0.73,
+       0.13
+      ],
+      [
+       0.78,
+       0.12
+      ],
+      [
+       0.79,
+       0.16
+      ],
+      [
+       0.74,
+       0.17
+      ]
+     ],
+     [
+      [
+       0.06,
+       0.44
+      ],
+      [
+       0.16,
+       0.37
+      ],
+      [
+       0.29,
+       0.37
+      ],
+      [
+       0.27,
+       0.43
+      ],
+      [
+       0.12,
+       0.49
+      ]
+     ],
+     [
+      [
+       -0.1,
+       0.8
+      ],
+      [
+       0.05,
+       0.73
+      ],
+      [
+       0.16,
+       0.77
+      ],
+      [
+       0.21,
+       0.88
+      ],
+      [
+       0.15,
+       1.1
+      ],
+      [
+       -0.1,
+       1.1
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "kamp",
+      "x": 0.82,
+      "y": 0.82,
+      "dy": 66
+     },
+     {
+      "name": "Fil Adası",
+      "x": 0.555,
+      "y": 0.215,
+      "dy": -48,
+      "color": "red",
+      "at": "ei"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.82,
+       0.82
+      ],
+      [
+       0.67,
+       0.75
+      ],
+      [
+       0.52,
+       0.64
+      ],
+      [
+       0.47,
+       0.47
+      ],
+      [
+       0.53,
+       0.3
+      ]
+     ],
+     "at": "route",
+     "dur": 4.0
+    },
+    "note": {
+     "text": "7 gün",
+     "x": 0.66,
+     "y": 0.47,
+     "at": "week"
+    },
+    "waves": [
+     [
+      0.3,
+      0.6
+     ],
+     [
+      0.72,
+      0.45
+     ],
+     [
+      0.33,
+      0.2
+     ],
+     [
+      0.86,
+      0.6
+     ],
+     [
+      0.6,
+      0.88
+     ]
+    ],
+    "compass": "tr",
+    "zoom": 1.1,
+    "focus": [
+     0.6,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Sonunda Fil Adası'nın kayalık kıyısına çıktılar. Shackleton, bazı adamların çakıl taşlarını altın sayan bir cimri gibi avuçladığını yazar.",
+   "visual": "Fil Adası'nın kayalık kıyısı, arkada deniz ve sarp tepeler; Kaşif soldan yürüyüp 'kayalık'ta kıyıyı işaret eder; 'çakıl'da iki bereli denizci yerden çakıl taşı alıp sevinçle avuçlarında tutar; 'cimri'de 'çakıl = altın' notu",
+   "title": {
+    "white": "Fil Adası",
+    "gray": "ilk kara"
+   },
+   "cues": {
+    "shore": "kayalık",
+    "peb": "çakıl",
+    "miser": "cimri"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.08,
+      "pose": "walk",
+      "to": 0.2,
+      "at": "shore",
+      "then": "point",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "miser",
+        "pose": "talk",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "hurley",
+      "accessory": "beret",
+      "beard": "short",
+      "x": 0.48,
+      "pose": "sit",
+      "talk": false,
+      "face": "left",
+      "at": "peb",
+      "then": "hold",
+      "item": "rock",
+      "emotion": "happy"
+     },
+     {
+      "who": "sailor",
+      "accessory": "beret",
+      "x": 0.66,
+      "pose": "idle",
+      "talk": false,
+      "face": "left",
+      "at": "peb",
+      "then": "hold",
+      "item": "rock",
+      "emotion": "happy"
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.84,
+      "scale": 1.2
+     },
+     {
+      "type": "rock",
+      "x": 0.95,
+      "scale": 0.8
+     },
+     {
+      "type": "rock",
+      "x": 0.34,
+      "scale": 0.55
+     }
+    ],
+    "label": {
+     "text": "çakıl = altın",
+     "x": 0.57,
+     "y": 0.13,
+     "at": "miser"
+    },
+    "backdrop": {
+     "type": "sea",
+     "coast": "right"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     },
+     "far_h": 0.18,
+     "far_gap": [
+      0.5,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ama sevinç kısa sürdü. Çünkü Fil Adası, kimsenin onları aramaya geleceği bir yer değildi.",
+   "visual": "Issız kıyıda Kaşif dürbünle boş denizi tarar, solda iki bereli denizci kayada üzgün oturur; 'kimsenin'de kırmızı 'Kimse aramaz' notu belirir, Kaşif dönüp çaresizce omuz silker",
+   "title": {
+    "white": "Fil Adası",
+    "gray": "ıssız"
+   },
+   "cues": {
+    "none": "kimsenin",
+    "look": "sevinç"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "s1",
+      "accessory": "beret",
+      "beard": "short",
+      "x": 0.14,
+      "pose": "sit",
+      "talk": false,
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "s2",
+      "accessory": "beret",
+      "x": 0.3,
+      "pose": "sit",
+      "talk": false,
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.58,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "none",
+        "pose": "shrug",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.9,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "Kimse aramaz",
+     "x": 0.8,
+     "y": 0.18,
+     "at": "none"
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "sea_front": {
+     "y": 0.8,
+     "from": 0.72,
+     "to": 1
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 3,
+      "gulls": 0,
+      "cloud_y": 0.22
+     },
+     "far_h": 0.16,
+     "far_gap": [
+      0.3,
+      1.0
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "Yedi Metrelik Umut",
+   "type": "chapter",
+   "text": "Shackleton bir karar verdi ve bu karar ilk bakışta delilik gibiydi.",
+   "visual": "'BÖLÜM 5 / 7' rozeti, mavi dairede 5, altında 'Yedi Metrelik Umut' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "karar",
+    "title": "delilik"
+   },
+   "params": {
+    "n": 5,
+    "total": 7,
+    "title": "Yedi Metrelik Umut"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Yaklaşık yedi metrelik James Caird sandalıyla Güney Georgia'ya gidecekti. Arada bin üç yüz kilometreyi aşan, dünyanın en azgın denizlerinden biri vardı.",
+   "visual": "Eski harita: altta Antarktika Yarımadası ve Fil Adası, sağ üstte Güney Georgia, solda Güney Amerika ucu; 'Arada'da kırmızı kesikli rota Fil Adası'ndan okyanusu aşıp Güney Georgia'ya çizilir; 'kilometreyi'de '1.300+ km' notu",
+   "title": {
+    "white": "James Caird",
+    "gray": "≈ 7 metre"
+   },
+   "cues": {
+    "ei": "Yaklaşık",
+    "sg": "Georgia'ya",
+    "route": "Arada",
+    "note": "kilometreyi"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.1,
+       -0.1
+      ],
+      [
+       0.08,
+       -0.1
+      ],
+      [
+       0.1,
+       0.08
+      ],
+      [
+       0.06,
+       0.18
+      ],
+      [
+       0.02,
+       0.3
+      ],
+      [
+       -0.1,
+       0.34
+      ]
+     ],
+     [
+      [
+       0.17,
+       0.05
+      ],
+      [
+       0.23,
+       0.03
+      ],
+      [
+       0.26,
+       0.08
+      ],
+      [
+       0.21,
+       0.11
+      ],
+      [
+       0.17,
+       0.09
+      ]
+     ],
+     [
+      [
+       0.14,
+       0.87
+      ],
+      [
+       0.19,
+       0.84
+      ],
+      [
+       0.22,
+       0.85
+      ],
+      [
+       0.17,
+       0.89
+      ]
+     ],
+     [
+      [
+       0.23,
+       0.815
+      ],
+      [
+       0.27,
+       0.795
+      ],
+      [
+       0.285,
+       0.81
+      ],
+      [
+       0.245,
+       0.83
+      ]
+     ],
+     [
+      [
+       0.3,
+       0.745
+      ],
+      [
+       0.33,
+       0.73
+      ],
+      [
+       0.345,
+       0.75
+      ],
+      [
+       0.315,
+       0.765
+      ]
+     ],
+     [
+      [
+       -0.1,
+       0.95
+      ],
+      [
+       0.1,
+       0.92
+      ],
+      [
+       0.2,
+       0.94
+      ],
+      [
+       0.28,
+       0.97
+      ],
+      [
+       0.25,
+       1.1
+      ],
+      [
+       -0.1,
+       1.1
+      ]
+     ],
+     [
+      [
+       0.805,
+       0.225
+      ],
+      [
+       0.83,
+       0.212
+      ],
+      [
+       0.86,
+       0.235
+      ],
+      [
+       0.895,
+       0.275
+      ],
+      [
+       0.89,
+       0.295
+      ],
+      [
+       0.86,
+       0.272
+      ],
+      [
+       0.83,
+       0.252
+      ],
+      [
+       0.8,
+       0.24
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Fil Adası",
+      "x": 0.32,
+      "y": 0.745,
+      "dy": 62,
+      "color": "red",
+      "at": "ei"
+     },
+     {
+      "name": "G. Georgia",
+      "x": 0.85,
+      "y": 0.25,
+      "dy": -42,
+      "at": "sg"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.33,
+       0.73
+      ],
+      [
+       0.38,
+       0.6
+      ],
+      [
+       0.5,
+       0.47
+      ],
+      [
+       0.66,
+       0.36
+      ],
+      [
+       0.79,
+       0.28
+      ],
+      [
+       0.84,
+       0.258
+      ]
+     ],
+     "at": "route",
+     "dur": 3.0
+    },
+    "note": {
+     "text": "1.300+ km",
+     "x": 0.4,
+     "y": 0.2,
+     "at": "note"
+    },
+    "waves": [
+     [
+      0.5,
+      0.7
+     ],
+     [
+      0.65,
+      0.55
+     ],
+     [
+      0.3,
+      0.45
+     ],
+     [
+      0.7,
+      0.15
+     ],
+     [
+      0.55,
+      0.25
+     ],
+     [
+      0.85,
+      0.6
+     ]
+    ],
+    "compass": "br",
+    "zoom": 1.06,
+    "focus": [
+     0.58,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "end_b_boat",
+   "text": "Marangoz Harry McNish, birkaç tahta ve kanvasla sandala derme çatma bir güverte yaptı.",
+   "visual": "Fil Adası'nın buzullu kayalıkları önünde, çakıllı kumsalda takozlara oturtulmuş James Caird; sağda gri sakallı bereli McNish çekiçle vurur; 'tahta'da güverte tahtaları tek tek dizilir, 'kanvasla'da dikişli kanvas baştan kıça örtülür; Kaşif işaret eder, 'güverte'de 'derme çatma' notuyla omuz silker",
+   "title": {
+    "white": "McNish",
+    "gray": "marangoz"
+   },
+   "cues": {
+    "planks": "tahta",
+    "canvas": "kanvasla",
+    "deck": "güverte"
+   },
+   "params": {
+    "mode": "build",
+    "boat": {
+     "x": 0.4,
+     "scale": 1.15
+    },
+    "cast": [
+     {
+      "who": "mcnish",
+      "beard": "grey",
+      "x": 0.665,
+      "scale": 0.55,
+      "face": -1,
+      "pose": "point",
+      "swing": true,
+      "up": 45,
+      "down": -25,
+      "rate": 7,
+      "tool": "hammer"
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "scale": 0.55,
+      "face": 1,
+      "pose": "idle",
+      "at": "planks",
+      "then": "point",
+      "dir": 12,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "deck",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "McNish",
+      "x": 0.84,
+      "y": 0.44,
+      "at": 0.4,
+      "arrow": [
+       0.71,
+       0.56
+      ]
+     },
+     {
+      "text": "derme çatma",
+      "x": 0.38,
+      "y": 0.3,
+      "at": "deck",
+      "color": "red",
+      "arrow": [
+       0.4,
+       0.58
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_launch",
+   "text": "Yirmi dört Nisan'da altı kişi yola çıktı: Shackleton, kaptan Frank Worsley, Tom Crean, Harry McNish, Timothy McCarthy ve John Vincent.",
+   "visual": "Fil Adası kumsalının önünde, sığ suda kanvas güverteli James Caird; içinde altı bereli adam; 'yola'da sandal açılmaya başlar, adamlar el sallar; 'altı'da kırmızı '6 kişi' notu; kumsalda Kaşif ve kalan bir denizci el sallar, Kaşif sandalı işaret eder",
+   "title": {
+    "white": "24 Nisan",
+    "gray": "1916"
+   },
+   "cues": {
+    "go": "yola",
+    "six": "altı"
+   },
+   "params": {
+    "mode": "launch",
+    "boat": {
+     "x": 0.62,
+     "to": 0.7,
+     "at": "go",
+     "dur": 6,
+     "scale": 1.35,
+     "y": 0.75
+    },
+    "sea": 16,
+    "beach": 0.38,
+    "zoom": 1.05,
+    "focus": [
+     0.55,
+     0.6
+    ],
+    "cast": [
+     {
+      "who": "m0",
+      "beard": "short",
+      "x": -250,
+      "pose": "idle",
+      "face": 1,
+      "at": "go",
+      "then": "wave",
+      "face_then": -1
+     },
+     {
+      "who": "m1",
+      "beard": null,
+      "x": -165,
+      "pose": "idle",
+      "face": 1,
+      "at": "go",
+      "then": "idle",
+      "face_then": 1
+     },
+     {
+      "who": "m2",
+      "beard": "grey",
+      "x": -80,
+      "pose": "idle",
+      "face": 1,
+      "at": "go",
+      "then": "wave",
+      "face_then": -1
+     },
+     {
+      "who": "m3",
+      "beard": null,
+      "x": 120,
+      "pose": "idle",
+      "face": 1,
+      "at": "go",
+      "then": "sit",
+      "face_then": 1
+     },
+     {
+      "who": "m4",
+      "beard": "short",
+      "x": 200,
+      "pose": "idle",
+      "face": 1,
+      "at": "go",
+      "then": "wave",
+      "face_then": -1
+     },
+     {
+      "who": "m5",
+      "beard": null,
+      "x": 275,
+      "pose": "idle",
+      "face": 1,
+      "at": "go",
+      "then": "idle",
+      "face_then": 1
+     }
+    ],
+    "shore": [
+     {
+      "who": "stay",
+      "x": 0.06,
+      "scale": 0.405,
+      "pose": "wave",
+      "face": 1
+     }
+    ],
+    "kasif": {
+     "x": 0.24,
+     "scale": 0.405,
+     "pose": "wave",
+     "face": 1,
+     "seq": [
+      {
+       "at": "six",
+       "pose": "point",
+       "dir": 15,
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "6 kişi",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "six",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_launch",
+   "text": "Geride, Frank Wild'ın komutasında yirmi iki kişi kaldı. Onların hayatı bu küçük sandala bağlıydı.",
+   "visual": "Kumsalda Frank Wild ve dört bereli denizci el sallar, 'Frank Wild' etiketi; 'yirmi'de kırmızı '22 kişi' notu; sağda James Caird yelken açıp uzaklaşır; 'sandala'da Kaşif endişeyle sandalı işaret eder",
+   "title": {
+    "white": "Frank Wild",
+    "gray": "22 kişi"
+   },
+   "cues": {
+    "wild": "Wild'ın",
+    "n22": "yirmi",
+    "boat": "sandala"
+   },
+   "params": {
+    "mode": "launch",
+    "boat": {
+     "x": 0.62,
+     "to": 0.76,
+     "at": 0,
+     "scale": 0.8,
+     "y": 0.73
+    },
+    "sea": 20,
+    "beach": 0.46,
+    "zoom": 1.04,
+    "focus": [
+     0.3,
+     0.6
+    ],
+    "cast": [
+     {
+      "who": "b0",
+      "x": -200,
+      "pose": "sit",
+      "face": 1
+     },
+     {
+      "who": "b1",
+      "x": -110,
+      "pose": "sit",
+      "face": 1
+     },
+     {
+      "who": "b2",
+      "x": -20,
+      "pose": "sit",
+      "face": 1
+     },
+     {
+      "who": "b3",
+      "x": 160,
+      "pose": "sit",
+      "face": 1
+     }
+    ],
+    "shore": [
+     {
+      "who": "w1",
+      "x": 0.05,
+      "scale": 0.4,
+      "pose": "idle",
+      "face": 1,
+      "at": "n22",
+      "then": "wave"
+     },
+     {
+      "who": "w2",
+      "beard": "short",
+      "x": 0.12,
+      "scale": 0.4,
+      "pose": "wave",
+      "face": 1
+     },
+     {
+      "who": "wild",
+      "x": 0.2,
+      "scale": 0.44,
+      "pose": "wave",
+      "face": 1
+     },
+     {
+      "who": "w3",
+      "beard": "grey",
+      "x": 0.28,
+      "scale": 0.4,
+      "pose": "idle",
+      "face": 1,
+      "at": "n22",
+      "then": "wave"
+     },
+     {
+      "who": "w4",
+      "x": 0.35,
+      "scale": 0.4,
+      "pose": "wave",
+      "face": 1
+     }
+    ],
+    "kasif": {
+     "x": 0.43,
+     "scale": 0.42,
+     "pose": "idle",
+     "face": 1,
+     "at": "boat",
+     "then": "point",
+     "dir": 12,
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "Frank Wild",
+      "x": 0.13,
+      "y": 0.42,
+      "at": "wild",
+      "size": 60,
+      "arrow": [
+       0.2,
+       0.55
+      ]
+     },
+     {
+      "text": "22 kişi",
+      "x": 0.4,
+      "y": 0.3,
+      "at": "n22",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_boat",
+   "text": "Worsley'nin elinde bir sekstant vardı, ama güneş yalnızca dört kez göründü! Tek bir hesap hatası, adayı ıskalamak demekti.",
+   "visual": "Bulutlu açık denizde sallanan James Caird; bereli Worsley ayakta sekstantı güneşe tutar; 'güneş'te bulutlar aralanır ve Kaşif güneşi işaret eder; 'dört'te dört küçük güneş işareti ve '4 kez' notu; 'hesap'ta ufukta küçük bir ada ve onu ıskalayan kırmızı kesikli rota + çarpı, 'ıskalamak'ta Kaşif şaşırır",
+   "title": {
+    "white": "Worsley",
+    "gray": "sekstant"
+   },
+   "cues": {
+    "sext": "sekstant",
+    "sun": "güneş",
+    "four": "dört",
+    "miss": "hesap",
+    "iskala": "ıskalamak"
+   },
+   "params": {
+    "mode": "sextant",
+    "boat": {
+     "x": 0.33,
+     "scale": 1.3,
+     "y": 0.74
+    },
+    "sea": 24,
+    "zoom": 1.1,
+    "focus": [
+     0.33,
+     0.62
+    ],
+    "cast": [
+     {
+      "who": "crean",
+      "x": 190,
+      "pose": "sit",
+      "face": 1
+     },
+     {
+      "who": "worsley",
+      "beard": "short",
+      "x": 10,
+      "pose": "point",
+      "dir": 36,
+      "face": 1,
+      "tool": "sextant",
+      "emotion0": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": -190,
+      "pose": "idle",
+      "face": 1,
+      "at": "sun",
+      "then": "point",
+      "dir": 42,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "iskala",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "sekstant",
+      "x": 0.16,
+      "y": 0.3,
+      "at": "sext",
+      "size": 64,
+      "arrow": [
+       0.34,
+       0.46
+      ]
+     },
+     {
+      "text": "4 kez",
+      "x": 0.6,
+      "y": 0.55,
+      "at": "four",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_deck",
+   "text": "Serpinti güvertede donup kalın bir buza dönüştü. Sandal devrilmesin diye adamlar o buzu elleriyle kırdı.",
+   "visual": "Yakın plan: fırtınada kanvas güverteli sandal; soldan gelen serpinti donar, güvertede ve direkte kalın buz kabuğu, küpeşteden sarkan buz sarkıtları büyür, sandal ağırlıkla yana yatar; 'buza'da mavi 'buz' notu; 'devrilmesin'de Kaşif şaşırır; 'adamlar'da iki bereli adam ve Kaşif baltayla buzu kırar, parçalar uçar, sandal doğrulur",
+   "title": {
+    "white": "Buz",
+    "gray": "güvertede"
+   },
+   "cues": {
+    "ice": "buza",
+    "tilt": "devrilmesin",
+    "chip": "adamlar"
+   },
+   "params": {
+    "boat": {
+     "x": 0.5,
+     "scale": 2.1,
+     "y": 0.84
+    },
+    "sea": 30,
+    "zoom": 1.1,
+    "cast": [
+     {
+      "who": "s1",
+      "beard": "short",
+      "x": -170,
+      "pose": "idle",
+      "face": 1,
+      "emotion0": "worried",
+      "swing": "chip",
+      "rate": 7.5,
+      "up": 55,
+      "down": -50,
+      "tool": "axe",
+      "scale": 0.36
+     },
+     {
+      "who": "s2",
+      "x": 30,
+      "pose": "idle",
+      "face": -1,
+      "emotion0": "worried",
+      "swing": "chip",
+      "rate": 6.6,
+      "up": 55,
+      "down": -50,
+      "tool": "axe",
+      "scale": 0.36
+     },
+     {
+      "who": "kasif",
+      "x": 210,
+      "pose": "idle",
+      "face": -1,
+      "at": "tilt",
+      "then": "shock",
+      "emotion": "surprised",
+      "swing": "chip",
+      "rate": 7,
+      "up": 55,
+      "down": -50,
+      "tool": "axe",
+      "scale": 0.36
+     }
+    ],
+    "labels": [
+     {
+      "text": "buz",
+      "x": 0.14,
+      "y": 0.3,
+      "at": "ice",
+      "size": 84,
+      "color": "blue",
+      "arrow": [
+       0.24,
+       0.56
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_b_boat",
+   "text": "Bir gece Shackleton gökyüzünde beyaz bir aydınlık gördü ve bulutların açıldığını sandı. Oysa o, dev bir dalganın köpüklü tepesiydi!",
+   "visual": "Gece, taranmış gökyüzü ve karanlık bulutlar; küçük James Caird dalgalarda; ufukta sağda bembeyaz bir aydınlık şerit; Shackleton onu işaret eder, Kaşif dürbünle bakar, 'bulutların'da 'bulut?' notu; 'Oysa'da şerit yükselip sandalın üstüne kıvrılan dev bir dalganın köpüklü tepesine dönüşür, kamera sarsılır, 'bulut?' kırmızıyla çizilir, ikisi de şaşırır; 'köpüklü'de kırmızı 'DALGA!'",
+   "title": {
+    "white": "Dev dalga"
+   },
+   "cues": {
+    "glow": "aydınlık",
+    "cloud": "bulutların",
+    "reveal": "Oysa",
+    "foam": "köpüklü"
+   },
+   "params": {
+    "mode": "wave",
+    "boat": {
+     "x": 0.25,
+     "scale": 0.9,
+     "y": 0.72
+    },
+    "sea": 30,
+    "zoom": 1.04,
+    "focus": [
+     0.4,
+     0.55
+    ],
+    "cast": [
+     {
+      "who": "sailor",
+      "x": 190,
+      "pose": "sit",
+      "face": 1
+     },
+     {
+      "who": "kasif",
+      "x": 30,
+      "pose": "look",
+      "face": 1,
+      "seq": [
+       {
+        "at": "reveal",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "shackleton",
+      "x": -200,
+      "pose": "idle",
+      "face": 1,
+      "at": "glow",
+      "then": "point",
+      "dir": 12,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "reveal",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "bulut?",
+      "x": 0.74,
+      "y": 0.33,
+      "at": "cloud",
+      "size": 72,
+      "strike": "reveal"
+     },
+     {
+      "text": "DALGA!",
+      "x": 0.86,
+      "y": 0.14,
+      "at": "foam",
+      "size": 110,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Sandal o dalgadan sağ çıktı. On Mayıs'ta, iki haftayı aşan bir kâbusun sonunda, Güney Georgia'ya ulaştılar.",
+   "visual": "Higgsfield sepya mürekkep klibi: parşömen üstünde dev dalgaların arasında küçük yelkenli sandal dalgayı aşıp ilerler (insan yüzü ve yazı yok)",
+   "title": {
+    "white": "10 Mayıs",
+    "gray": "1916"
+   },
+   "params": {
+    "video": "media/hf-dev-dalga.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261021_182225_6ab5de89-acef-49a1-90a1-cbfd0e5e71ff.mp4",
+    "ai": true,
+    "grade": "sepia",
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (seedance_2_0_mini)",
+    "rate": 0.7,
+    "kb": {
+     "from": [
+      1.0,
+      0.5,
+      0.5
+     ],
+     "to": [
+      1.12,
+      0.52,
+      0.46
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Ama bir sorun vardı: adanın yanlış tarafına çıkmışlardı.",
+   "visual": "Güney Georgia'nın eski haritası: ortada karlı dağlar; güneybatıdan kırmızı kesikli rota adanın güney kıyısındaki 'varış' koyuna çizilir; 'yanlış'ta kuzey kıyıda mavi 'Stromness' ve 'yanlış taraf!' notu",
+   "title": {
+    "white": "Güney Georgia",
+    "gray": "yanlış taraf"
+   },
+   "cues": {
+    "route": "sorun",
+    "wrong": "yanlış"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.06,
+       0.24
+      ],
+      [
+       0.14,
+       0.19
+      ],
+      [
+       0.22,
+       0.22
+      ],
+      [
+       0.3,
+       0.2
+      ],
+      [
+       0.36,
+       0.24
+      ],
+      [
+       0.4,
+       0.29
+      ],
+      [
+       0.44,
+       0.25
+      ],
+      [
+       0.52,
+       0.3
+      ],
+      [
+       0.6,
+       0.34
+      ],
+      [
+       0.7,
+       0.42
+      ],
+      [
+       0.8,
+       0.5
+      ],
+      [
+       0.9,
+       0.58
+      ],
+      [
+       0.96,
+       0.67
+      ],
+      [
+       0.88,
+       0.72
+      ],
+      [
+       0.76,
+       0.67
+      ],
+      [
+       0.63,
+       0.61
+      ],
+      [
+       0.5,
+       0.58
+      ],
+      [
+       0.4,
+       0.57
+      ],
+      [
+       0.33,
+       0.58
+      ],
+      [
+       0.31,
+       0.49
+      ],
+      [
+       0.27,
+       0.47
+      ],
+      [
+       0.24,
+       0.55
+      ],
+      [
+       0.17,
+       0.47
+      ],
+      [
+       0.1,
+       0.39
+      ],
+      [
+       0.04,
+       0.31
+      ]
+     ]
+    ],
+    "mountains": [
+     {
+      "x": 0.36,
+      "y": 0.4,
+      "size": 62
+     },
+     {
+      "x": 0.48,
+      "y": 0.44,
+      "size": 74
+     },
+     {
+      "x": 0.6,
+      "y": 0.49,
+      "size": 62
+     },
+     {
+      "x": 0.73,
+      "y": 0.56,
+      "size": 52
+     }
+    ],
+    "cities": [
+     {
+      "name": "varış",
+      "x": 0.285,
+      "y": 0.5,
+      "dy": 74,
+      "color": "red",
+      "at": "route"
+     },
+     {
+      "name": "Stromness",
+      "x": 0.4,
+      "y": 0.27,
+      "dy": -40,
+      "color": "blue",
+      "at": "wrong"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.08,
+       0.95
+      ],
+      [
+       0.16,
+       0.76
+      ],
+      [
+       0.285,
+       0.52
+      ]
+     ],
+     "at": "route",
+     "dur": 1.4
+    },
+    "note": {
+     "text": "yanlış taraf!",
+     "x": 0.52,
+     "y": 0.84,
+     "at": "wrong"
+    },
+    "waves": [
+     [
+      0.2,
+      0.85
+     ],
+     [
+      0.7,
+      0.85
+     ],
+     [
+      0.6,
+      0.15
+     ],
+     [
+      0.85,
+      0.3
+     ]
+    ],
+    "compass": "tr",
+    "zoom": 1.12,
+    "focus": [
+     0.32,
+     0.45
+    ]
+   }
+  },
+  {
+   "chapter": "Haritasız Dağlar",
+   "type": "chapter",
+   "text": "Balina istasyonları adanın öbür yakasındaydı.",
+   "visual": "BÖLÜM 6 / 7 rozeti, mavi dairede 6, altında 'Haritasız Dağlar' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Balina",
+    "title": "öbür"
+   },
+   "params": {
+    "n": 6,
+    "total": 7,
+    "title": "Haritasız Dağlar"
+   }
+  },
+  {
+   "type": "end_c_ridge",
+   "text": "Arada, daha önce kimsenin aşmadığı karlı dağlar uzanıyordu.",
+   "visual": "Kimsenin aşmadığı karlı dağ sırtları ve uzak zirveler, gün ışığında; önde kayada Kaşif dürbünle dağlara bakar, 'kimsenin'de kırmızı el yazısı 'Kimse aşmadı' belirir ve Kaşif şaşırır",
+   "title": {
+    "white": "Güney Georgia",
+    "gray": "dağları"
+   },
+   "cues": {
+    "label": "kimsenin",
+    "hit": "karlı"
+   },
+   "params": {
+    "men": [],
+    "fog": false,
+    "label": {
+     "text": "Kimse aşmadı",
+     "x": 0.5,
+     "y": 0.26,
+     "at": "label"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.86,
+      "scale": 0.62,
+      "face": "left",
+      "pose": "look",
+      "at": "label",
+      "then": "shock",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 30,
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "McNish ve Vincent yürüyemeyecek kadar halsizdi; McCarthy de onlarla kaldı.",
+   "visual": "King Haakon Koyu kıyısı, arkada karlı tepeler: McNish ve Vincent kayalara oturmuş, yorgun; 'McCarthy'de bereli McCarthy sağdan yürüyüp yanlarında durur, üstte 'Geride üç kişi' yazısı; Kaşif anlatır, 'halsizdi'de endişeyle düşünür, 'kaldı'da el sallar",
+   "title": {
+    "white": "King Haakon",
+    "gray": "Koyu"
+   },
+   "cues": {
+    "hit": "halsizdi",
+    "mc": "McCarthy",
+    "bye": "kaldı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "think",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "bye",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "mcnish",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.48,
+      "scale": 0.8,
+      "pose": "sit",
+      "face": "left",
+      "talk": false,
+      "emotion": "worried"
+     },
+     {
+      "who": "vincent",
+      "accessory": "beret",
+      "beard": "short",
+      "x": 0.6,
+      "scale": 0.8,
+      "pose": "sit",
+      "face": "left",
+      "talk": false,
+      "emotion": "worried"
+     },
+     {
+      "who": "mccarthy",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 1.05,
+      "scale": 0.85,
+      "pose": "walk",
+      "to": 0.74,
+      "at": "mc",
+      "then": "wave",
+      "face": "left",
+      "talk": false
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.9,
+      "scale": 0.8
+     }
+    ],
+    "label": {
+     "text": "Geride üç kişi",
+     "x": 0.6,
+     "y": 0.16,
+     "at": "mc"
+    },
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "backdrop": {
+     "type": "sea",
+     "coast": "left"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.22
+    }
+   }
+  },
+  {
+   "type": "end_c_gear",
+   "text": "Shackleton, Worsley ve Crean botlarına sandaldan söktükleri vidaları çaktı. Yanlarında bir halat, bir keser, küçük bir ocak ve üç günlük yiyecek vardı, o kadar.",
+   "visual": "Karda ters duran bir bot: 'vidaları'nda bir keser tabanına vidaları tek tek çakar ('vida' yazısı); 'halat'ta kangal halat düşer, 'keser'de keser halatın yanına uçup dikilir, 'ocak'ta alevi titreyen küçük bir ocak ve tencere, 'yiyecek'te bağlı erzak torbası belirir; el yazısıyla 'halat', 'keser', 'ocak', 'erzak'; Kaşif sağdan işaret eder, 'kadar'da omuz silker",
+   "title": {
+    "white": "Teçhizat",
+    "gray": "o kadar"
+   },
+   "cues": {
+    "vida": "vidaları",
+    "halat": "halat",
+    "keser": "keser",
+    "ocak": "ocak",
+    "yiyecek": "yiyecek",
+    "kadar": "kadar"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "scale": 0.72,
+      "face": "left",
+      "pose": "idle",
+      "at": "vida",
+      "then": "point",
+      "dir": 12,
+      "seq": [
+       {
+        "at": "kadar",
+        "pose": "shrug",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_ridge",
+   "text": "Akşam olurken bir sırtın tepesinde mahsur kaldılar. Sis yaklaşıyordu; gece orada kalırlarsa donarak ölebilirlerdi.",
+   "visual": "Gün batımında bıçak sırtı gibi karlı bir tepe: halatla birbirine bağlı üç adam tepede mahsur; 'Sis'te soldaki vadiden sis yükselir, Shackleton sisi gösterir, el yazısı 'Sis'; önde kayada Kaşif dürbünle bakar, 'donarak'ta korkuyla geri sıçrar",
+   "title": {
+    "white": "Akşam",
+    "gray": "sırtta mahsur"
+   },
+   "cues": {
+    "hit": "mahsur",
+    "sis": "Sis",
+    "don": "donarak"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.89,
+      "y": 0.86,
+      "scale": 0.55,
+      "face": "left",
+      "pose": "look",
+      "at": "don",
+      "then": "shock",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_slide",
+   "text": "İşte tam burada Shackleton'ın aklına inanılmaz bir fikir geldi. Halatı sarıp üstüne oturdular, birbirlerine sarıldılar ve yamaçtan aşağı kaydılar!",
+   "visual": "Uzun karlı yamaç: üç adam üst çıkıntıda durur, 'fikir'de Shackleton'ın üstünde kırmızı '!' belirir; 'oturdular'da halat kangallarının üstüne oturup hemen kaymaya başlarlar, giderek hızlanıp yamacın ortasına inerler, kar tozu ve hız çizgileri; aşağıda Kaşif 'kaydılar'da şaşkınlıkla geri sıçrar",
+   "title": {
+    "white": "Çılgın",
+    "gray": "bir fikir"
+   },
+   "cues": {
+    "fikir": "fikir",
+    "otur": "oturdular",
+    "kay": "kaydılar"
+   },
+   "params": {
+    "mode": "top",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "y": 0.815,
+      "scale": 0.55,
+      "face": "left",
+      "pose": "idle",
+      "at": "kay",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_slide",
+   "text": "Birkaç dakikada yüzlerce metre indiler ve üçü de sapasağlam ayağa kalktı!",
+   "visual": "Aynı yamacın alt kısmı: üç adam hızla kayıp düzlükte kar yığınına dalar (kar bulutu); solda kırmızı dikey ok ve 'yüzlerce metre'; 'sapasağlam'da üçü ayağa kalkıp el sallar, Kaşif sevinçle el sallar",
+   "title": {
+    "white": "Sapasağlam"
+   },
+   "cues": {
+    "land": "indiler",
+    "yuz": "yüzlerce",
+    "up": "sapasağlam"
+   },
+   "params": {
+    "mode": "bottom",
+    "height": {
+     "text": "yüzlerce metre",
+     "at": "yuz"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "y": 0.815,
+      "scale": 0.55,
+      "face": "left",
+      "pose": "shock",
+      "emotion0": "surprised",
+      "at": "up",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_nap",
+   "text": "Bir ara Shackleton arkadaşlarını uyuttu, sonra uyandırıp yarım saat uyuduklarını söyledi. Aslında sadece beş dakika geçmişti.",
+   "visual": "Gece, kaya sığınağının dibinde: iki adam oturarak uyur (üstlerinde mavi z'ler), Shackleton uyanık; büyük cep saati, yelkovan yavaşça ilerler; 'yarım'da '30 dk' yazısı, 'beş'te üstü kırmızıyla çizilir, kırmızı '5 dk' belirir ve saatte 5 dakikalık altın dilim dolar; Kaşif düşünür, sonra gülerek saati gösterir",
+   "title": {
+    "white": "Beş",
+    "gray": "dakikalık uyku"
+   },
+   "cues": {
+    "wake": "uyandırıp",
+    "half": "yarım",
+    "five": "beş"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.91,
+      "scale": 0.58,
+      "face": "left",
+      "pose": "think",
+      "at": "five",
+      "then": "point",
+      "dir": 25,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_whistle",
+   "text": "Sabah yedide uzaktan bir buhar düdüğü duydular: Stromness'teki balina istasyonu işçileri işe çağırıyordu. Shackleton, hayatında bundan tatlı bir müzik duymadığını yazacaktı.",
+   "visual": "Sabah, doğan güneş: üç adam ve Kaşif tepede; aşağıda koyda Stromness balina istasyonu (barakalar, baca, iskele); 'düdüğü'nde barakadaki düdükten buhar fışkırır, mürekkep notalar adamlara doğru süzülür; 'müzik'te notalar altın rengine döner, adamlar ve Kaşif sevinçle el sallar",
+   "title": {
+    "white": "Sabah",
+    "gray": "saat yedi"
+   },
+   "cues": {
+    "duduk": "düdüğü",
+    "strom": "Stromness",
+    "muzik": "müzik"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.355,
+      "scale": 0.5,
+      "face": "right",
+      "pose": "idle",
+      "at": "duduk",
+      "then": "point",
+      "dir": 10,
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "muzik",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "Otuz altı saatlik yürüyüşün sonunda, yirmi Mayıs 1916'da istasyona girdiler.",
+   "visual": "Güney Georgia'nın eski haritası: güneydeki King Haakon Koyu'ndan kesikli kırmızı rota karlı dağların arasından kuzeydeki Stromness'e (kırmızı nokta) çizilir; not kartı '36 saat'",
+   "title": {
+    "white": "Güney",
+    "gray": "Georgia"
+   },
+   "cues": {
+    "route": "yürüyüşün",
+    "note": "Otuz",
+    "st": "istasyona"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.05,
+       0.3
+      ],
+      [
+       0.02,
+       0.2
+      ],
+      [
+       0.15,
+       0.15
+      ],
+      [
+       0.28,
+       0.19
+      ],
+      [
+       0.4,
+       0.23
+      ],
+      [
+       0.46,
+       0.3
+      ],
+      [
+       0.5,
+       0.25
+      ],
+      [
+       0.58,
+       0.3
+      ],
+      [
+       0.66,
+       0.33
+      ],
+      [
+       0.75,
+       0.4
+      ],
+      [
+       0.9,
+       0.5
+      ],
+      [
+       1.06,
+       0.6
+      ],
+      [
+       1.06,
+       0.98
+      ],
+      [
+       0.9,
+       0.86
+      ],
+      [
+       0.75,
+       0.76
+      ],
+      [
+       0.6,
+       0.7
+      ],
+      [
+       0.46,
+       0.68
+      ],
+      [
+       0.4,
+       0.66
+      ],
+      [
+       0.37,
+       0.57
+      ],
+      [
+       0.33,
+       0.55
+      ],
+      [
+       0.3,
+       0.62
+      ],
+      [
+       0.2,
+       0.56
+      ],
+      [
+       0.1,
+       0.47
+      ],
+      [
+       0.02,
+       0.4
+      ],
+      [
+       -0.05,
+       0.38
+      ]
+     ]
+    ],
+    "seas": [],
+    "mountains": [
+     {
+      "x": 0.3,
+      "y": 0.38,
+      "size": 70
+     },
+     {
+      "x": 0.45,
+      "y": 0.43,
+      "size": 90
+     },
+     {
+      "x": 0.6,
+      "y": 0.5,
+      "size": 80
+     },
+     {
+      "x": 0.72,
+      "y": 0.58,
+      "size": 70
+     }
+    ],
+    "cities": [
+     {
+      "name": "King Haakon",
+      "x": 0.355,
+      "y": 0.6,
+      "dy": 62,
+      "at": 0.3
+     },
+     {
+      "name": "Stromness",
+      "x": 0.53,
+      "y": 0.27,
+      "color": "red",
+      "dy": -36,
+      "at": "st"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.355,
+       0.6
+      ],
+      [
+       0.38,
+       0.5
+      ],
+      [
+       0.46,
+       0.53
+      ],
+      [
+       0.56,
+       0.45
+      ],
+      [
+       0.6,
+       0.36
+      ],
+      [
+       0.53,
+       0.28
+      ]
+     ],
+     "at": "route",
+     "dur": 3.0
+    },
+    "note": {
+     "text": "36 saat",
+     "x": 0.06,
+     "y": 0.86,
+     "at": "note"
+    },
+    "focus": [
+     0.46,
+     0.44
+    ],
+    "zoom": 1.12,
+    "compass": "tr"
+   }
+  },
+  {
+   "type": "end_c_station",
+   "text": "Yüzleri isten öyle kararmıştı ki, Shackleton'ı önceden tanıyan istasyon müdürü bile onu ilk anda tanıyamadı.",
+   "visual": "Stromness istasyonu: kırmızı çatılı barakalar ve kapı, bacadan duman; yüzleri isten kararmış, sakallı üç adam soldan yürüyüp gelir; 'Shackleton'da ortadaki adama kırmızı el yazısı 'Shackleton' + ok, 'müdürü'nde kapıdaki figüre 'müdür' + ok; 'tanıyamadı'da müdür geri sıçrar, başının üstünde kırmızı '?'; Kaşif sağda omuz silker",
+   "title": {
+    "white": "Stromness",
+    "gray": "20 Mayıs 1916"
+   },
+   "cues": {
+    "sh": "Shackleton",
+    "md": "müdürü",
+    "hit": "tanıyamadı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "scale": 0.62,
+      "face": "left",
+      "pose": "talk",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Yirmi İki Kişi",
+   "type": "chapter",
+   "text": "Peki ya Fil Adası?",
+   "visual": "BÖLÜM 7 / 7 rozeti, mavi dairede 7, altında 'Yirmi İki Kişi' kartı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Peki",
+    "title": "Fil"
+   },
+   "params": {
+    "n": 7,
+    "total": 7,
+    "title": "Yirmi İki Kişi"
+   }
+  },
+  {
+   "type": "end_c_hut",
+   "text": "Orada yirmi iki kişi, ters çevirdikleri iki sandalın altına sığınmıştı.",
+   "visual": "Fil Adası kıyısı, kar yağıyor: iki ters sandaldan yapılmış barınak; adamlar tek tek barınağın kapısına yürüyüp içine girer; 'yirmi'de kırmızı '22 kişi' yazısı ve sandalı gösteren ok; solda Kaşif şaşkınlıkla geri sıçrar",
+   "title": {
+    "white": "Fil Adası",
+    "gray": "sandal barınak"
+   },
+   "cues": {
+    "n22": "yirmi",
+    "hit": "sığınmıştı"
+   },
+   "params": {
+    "mode": "shelter",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.84,
+      "scale": 0.58,
+      "face": "right",
+      "pose": "talk",
+      "at": "n22",
+      "then": "shock",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 15,
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_hut",
+   "text": "Frank Wild her sabah eşyalarını toplar, \"Patron bugün gelebilir\" derdi.",
+   "visual": "Fil Adası kıyısı: buzul ve kayalıklar, iki ters sandaldan yapılmış barınak, sobadan duman; denizden güneş doğar; bereli Frank Wild elinde bohçayla barınağın önünde, 'Patron'da kıyıya yürüyüp denizi gösterir, el yazısıyla '“Patron bugün gelebilir”'; iki adam barınağın yanında oturur; Kaşif solda düşünür, sonra gülümseyerek Wild'ı gösterir",
+   "title": {
+    "white": "Fil Adası",
+    "gray": "her sabah"
+   },
+   "cues": {
+    "quote": "Patron"
+   },
+   "params": {
+    "mode": "wait",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.82,
+      "scale": 0.55,
+      "face": "right",
+      "pose": "think",
+      "at": "quote",
+      "then": "point",
+      "dir": 15,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Shackleton üç kez kurtarmayı denedi. Üçünde de buz yolu kapattı.",
+   "visual": "Yatay zaman çizgisi 1916: Mayıs, Haziran, Temmuz noktalarında 'buz' notu (üç deneme); 'kapattı'da dördüncü nokta 'Ağustos: 4. deneme' kırmızı halkayla belirir; sağda Kaşif endişeyle omuz silker",
+   "title": {
+    "white": "Kurtarma",
+    "gray": "denemeleri"
+   },
+   "cues": {
+    "a": "üç",
+    "b": "denedi",
+    "c": "Üçünde",
+    "d": "kapattı"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Mayıs",
+      "text": "buz",
+      "at": "a"
+     },
+     {
+      "year": "Haziran",
+      "text": "buz",
+      "at": "b"
+     },
+     {
+      "year": "Temmuz",
+      "text": "buz",
+      "at": "c"
+     },
+     {
+      "year": "Ağustos",
+      "text": "4. deneme",
+      "at": "d"
+     }
+    ],
+    "focus": 3,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.84,
+     "pose": "shrug",
+     "pose0": "talk",
+     "at": "c",
+     "scale": 0.55,
+     "face": -1,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Dördüncü denemede Şili'nin küçük römorkörü Yelcho yola çıktı. Kaptanı Luis Pardo'ydu; gemide ne telsiz vardı ne de doğru dürüst ısıtma.",
+   "visual": "Güney Amerika'nın ucu ile Antarktika arasında eski harita: Punta Arenas'tan (Şili) kesikli kırmızı rota açık denizden güneydoğudaki Fil Adası'na (kırmızı) çizilir; not kartı 'Yelcho'",
+   "title": {
+    "white": "Yelcho",
+    "gray": "Şili"
+   },
+   "cues": {
+    "pa": "Şili'nin",
+    "route": "Yelcho",
+    "note": "Kaptanı"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.05,
+       -0.05
+      ],
+      [
+       0.42,
+       -0.05
+      ],
+      [
+       0.44,
+       0.06
+      ],
+      [
+       0.4,
+       0.12
+      ],
+      [
+       0.36,
+       0.18
+      ],
+      [
+       0.32,
+       0.22
+      ],
+      [
+       0.27,
+       0.26
+      ],
+      [
+       0.24,
+       0.3
+      ],
+      [
+       0.2,
+       0.31
+      ],
+      [
+       0.18,
+       0.27
+      ],
+      [
+       0.12,
+       0.3
+      ],
+      [
+       0.08,
+       0.26
+      ],
+      [
+       0.0,
+       0.2
+      ],
+      [
+       -0.05,
+       0.18
+      ]
+     ],
+     [
+      [
+       0.66,
+       0.77
+      ],
+      [
+       0.7,
+       0.75
+      ],
+      [
+       0.75,
+       0.76
+      ],
+      [
+       0.74,
+       0.79
+      ],
+      [
+       0.69,
+       0.8
+      ]
+     ],
+     [
+      [
+       0.46,
+       0.84
+      ],
+      [
+       0.52,
+       0.82
+      ],
+      [
+       0.58,
+       0.83
+      ],
+      [
+       0.6,
+       0.86
+      ],
+      [
+       0.53,
+       0.87
+      ],
+      [
+       0.48,
+       0.87
+      ]
+     ],
+     [
+      [
+       0.36,
+       1.05
+      ],
+      [
+       0.45,
+       0.96
+      ],
+      [
+       0.56,
+       0.93
+      ],
+      [
+       0.66,
+       0.94
+      ],
+      [
+       0.62,
+       0.98
+      ],
+      [
+       0.58,
+       1.05
+      ]
+     ]
+    ],
+    "seas": [],
+    "cities": [
+     {
+      "name": "Punta Arenas",
+      "x": 0.29,
+      "y": 0.17,
+      "dy": -36,
+      "at": "pa"
+     },
+     {
+      "name": "Fil Adası",
+      "x": 0.705,
+      "y": 0.775,
+      "color": "red",
+      "dy": -40,
+      "at": 0.4
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.29,
+       0.17
+      ],
+      [
+       0.38,
+       0.12
+      ],
+      [
+       0.46,
+       0.18
+      ],
+      [
+       0.54,
+       0.38
+      ],
+      [
+       0.64,
+       0.6
+      ],
+      [
+       0.7,
+       0.75
+      ]
+     ],
+     "at": "route",
+     "dur": 3.4
+    },
+    "note": {
+     "text": "Yelcho",
+     "x": 0.7,
+     "y": 0.2,
+     "at": "note"
+    },
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "zoom": 1.08,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "end_c_hut",
+   "text": "Otuz Ağustos 1916'da sis dağıldı ve Yelcho adanın önünde belirdi. Anlatılana göre Shackleton, kıyıdaki adamları dürbünle tek tek saydı.",
+   "visual": "Fil Adası kıyısı, denizde sis: 'sis'te sis dağılır, ufukta dumanlı Şili römorkörü Yelcho (küçük Şili bayrağı) belirir; 'Yelcho'da kıyıdaki adamlar el sallar; 'saydı'da büyük altın sayaç 1'den 22'ye sayar ('kişi'); önde Kaşif dürbünle bakar, sonra sevinçle gösterir",
+   "title": {
+    "white": "30 Ağustos",
+    "gray": "1916"
+   },
+   "cues": {
+    "sis": "sis",
+    "ship": "belirdi",
+    "wave": "belirdi",
+    "say": "dürbünle"
+   },
+   "params": {
+    "mode": "rescue",
+    "count": 22,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "y": 0.84,
+      "scale": 0.55,
+      "face": "left",
+      "pose": "look",
+      "at": "done",
+      "then": "point",
+      "dir": 20,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_words",
+   "text": "Yirmi iki kişi. Hepsi oradaydı!",
+   "visual": "Dev Fraunces yazı '22 kişi. / Hepsi oradaydı!', 22 kırmızı kutuda; sağda büyük Kaşif 'Hepsi'de sevinçle zıplayıp el sallar",
+   "title": {},
+   "cues": {
+    "w0": "Yirmi",
+    "w1": "kişi",
+    "w2": "Hepsi",
+    "w3": "oradaydı"
+   },
+   "params": {
+    "lines": [
+     "22 kişi.",
+     "Hepsi oradaydı!"
+    ],
+    "highlight": [
+     "22"
+    ],
+    "x": 0.4,
+    "y": 0.38,
+    "size": 150,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.95,
+      "scale": 1.3,
+      "face": "left",
+      "pose": "point",
+      "dir": 20,
+      "at": "w2",
+      "then": "wave",
+      "emotion": "happy",
+      "hop": "w2"
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Peki sizce bu adamları ne kurtardı? Bence şans değil. Shackleton ekibi bir arada tuttu, en zor işi kendi üstlendi; Worsley de adayı tam isabetle buldu.",
+   "visual": "Pano 'Onları ne kurtardı?': 'Bence'de altta kırmızı hap 'Şans değil'; sonra cümleyle eşzamanlı 'Birlik' ('Shackleton ekibi'), 'En zor iş onda' ('zor'), 'Worsley'nin isabeti' ('Worsley') tiklerle tek tek işaretlenir",
+   "title": {
+    "white": "Neden",
+    "gray": "kurtuldular?"
+   },
+   "cues": {
+    "pill": "Bence",
+    "a": "Shackleton",
+    "b": "zor",
+    "c": "Worsley"
+   },
+   "params": {
+    "title": "Onları ne kurtardı?",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Birlik",
+        "mark": "check",
+        "at": "a"
+       },
+       {
+        "text": "En zor iş onda",
+        "mark": "check",
+        "at": "b"
+       },
+       {
+        "text": "Worsley'nin isabeti",
+        "mark": "check",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Şans değil",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "end_c_roster",
+   "text": "Bir parantez açayım: kıtanın öbür ucunda erzak deposu kuran ikinci ekipten üç kişi hayatını kaybetti. Ama Endurance'ın yirmi sekiz adamının hepsi eve döndü.",
+   "visual": "Solda küçük kart 'İkinci ekip': üç soluk figür ('ikinci'de belirir); sağda 28 mürekkep figür 'Endurance'ın'da tek tek belirir, 'hepsi'nde hepsi yeşile döner ve sevinçle zıplar, altta dev yeşil '28 / 28'; Kaşif sağda gösterir",
+   "title": {
+    "white": "28 kişi",
+    "gray": "eve döndü"
+   },
+   "cues": {
+    "ross": "ikinci",
+    "crew": "Endurance'ın",
+    "home": "hepsi"
+   },
+   "params": {
+    "n": 28,
+    "left": "İkinci ekip",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "y": 0.8,
+      "scale": 0.6,
+      "face": "left",
+      "pose": "talk",
+      "at": "home",
+      "then": "point",
+      "dir": 20,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_wreck",
+   "text": "Peki ya gemi? 2022'de bir ekip Endurance'ı yaklaşık üç bin metre derinlikte buldu. Gemi neredeyse sağlamdı, kıçındaki adı hâlâ okunuyordu!",
+   "visual": "Kesit: yüzeyde buz kütleleri ve kırmızı gövdeli bir gemi, sağda buzun üstünde Kaşif; solda derinlik cetveli (0 m – 3.000 m); 'ekip'te ROV kabloyla dibe iner, 'metre'de kırmızı '3.000 m' etiketi; dipte dik duran enkaz; 'kıçındaki'nde kamera kıça yaklaşır, ROV ışığında altın 'ENDURANCE' harf harf belirir",
+   "title": {
+    "white": "2022",
+    "gray": "enkaz bulundu"
+   },
+   "cues": {
+    "dive": "ekip",
+    "depth": "metre",
+    "buldu": "buldu",
+    "stern": "kıçındaki"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.296,
+      "scale": 0.42,
+      "face": "left",
+      "pose": "look",
+      "at": "buldu",
+      "then": "shock",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "stern",
+        "pose": "point",
+        "dir": -30,
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_words",
+   "text": "Üstelik bulunduğu gün, Shackleton'ın Güney Georgia'da toprağa verilişinin tam yüzüncü yılıydı.",
+   "visual": "Üstte sahne başında gelen dev yazı 'Tam 100. yıl' (100 kırmızı kutuda); 'bulunduğu'nda solda dipte yatan enkaz vinyeti ve '2022', 'toprağa'da sağda tepede mezar haçı vinyeti ve '1922'; 'yüzüncü'de kırmızı ok 1922'den 2022'ye bağlanır; ortada Kaşif şaşkınlıkla önce sola, sonra sağa işaret eder",
+   "title": {
+    "white": "5 Mart",
+    "gray": "2022"
+   },
+   "cues": {
+    "bul": "bulunduğu",
+    "top": "toprağa",
+    "yuz": "yüzüncü"
+   },
+   "params": {
+    "lines": [
+     "Tam 100. yıl"
+    ],
+    "highlight": [
+     "100"
+    ],
+    "y": 0.24,
+    "size": 130,
+    "vignettes": {
+     "left": "2022",
+     "right": "1922",
+     "at_left": "bul",
+     "at_right": "top",
+     "at_arrow": "yuz"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 0.6,
+      "face": "right",
+      "pose": "talk",
+      "seq": [
+       {
+        "at": "bul",
+        "pose": "point",
+        "dir": 10,
+        "face": "left",
+        "emotion": "surprised"
+       },
+       {
+        "at": "top",
+        "pose": "point",
+        "dir": 10,
+        "face": "right",
+        "emotion": "surprised"
+       },
+       {
+        "at": "yuz",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "end_c_choice",
+   "text": "Yani bu sefer hedefine hiç ulaşmadı ama tarihin en büyük kurtuluş hikâyelerinden biri oldu. Siz olsaydınız o sandala mı binerdiniz, yoksa adada mı beklerdiniz? Yorumlara yazın!",
+   "visual": "Ortada Kaşif izleyiciye anlatır; sahne başında solda dev dalgalarda küçük sandal kartı (mavi 'SANDAL') ve sağda ters sandal barınaklı ada kartı (kırmızı 'ADA') girer; 'kurtuluş'ta üstte 'En büyük kurtuluş' ve Kaşif kollarını açar; 'Siz'de kırmızı '?'; 'sandala'da SANDAL zıplar ve Kaşif sola, 'adada'da ADA zıplar ve sağa işaret eder; 'Yorumlara'da el sallar",
+   "title": {
+    "white": "Siz",
+    "gray": "olsaydınız?"
+   },
+   "cues": {
+    "head": "kurtuluş",
+    "q": "Siz",
+    "boat": "sandala",
+    "island": "adada",
+    "yorum": "Yorumlara"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.84,
+      "scale": 0.75,
+      "face": "right",
+      "pose": "talk",
+      "seq": [
+       {
+        "at": "head",
+        "pose": "shrug",
+        "emotion": "happy"
+       },
+       {
+        "at": "boat",
+        "pose": "point",
+        "dir": 25,
+        "face": "left"
+       },
+       {
+        "at": "island",
+        "pose": "point",
+        "dir": 25,
+        "face": "right"
+       },
+       {
+        "at": "yorum",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
