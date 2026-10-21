@@ -490,6 +490,9 @@ def publish(store, st, now=None, last=None, only=None):
     for sec in secs:
         if only is not None and sec["id"] not in only:
             continue
+        yt = stage_of(sec, "youtube")
+        if sec["id"] not in st["msgs"] and yt and yt["state"] == "done":
+            continue   # a video that is already up gets no new message (e.g. after `clear`)
         text = render(st, sec, now)
         if text is not None:
             ok = publish_one(store, st, sec["id"], text, cid, last) and ok
