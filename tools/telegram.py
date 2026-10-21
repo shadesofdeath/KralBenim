@@ -402,7 +402,23 @@ def stage_line(g, now):
     return line + detail(text)
 
 
+def current(sec):
+    """The one stage worth showing for a section: a failure, else the latest running stage, else the
+    furthest finished one (info lines such as topic/chars only when nothing else happened yet)."""
+    gs = [g for g in sec["stages"] if g["state"] != "wait"]
+    yt = stage_of(sec, "youtube")
+    if yt and yt["state"] == "done" and not any(g["state"] in ("fail", "run") for g in gs):
+        return yt                          # keep the YouTube link once the video is up
+    for pick in (lambda g: g["state"] == "fail", lambda g: g["state"] == "run",
+                 lambda g: g["state"] in ("done", "skip"), lambda g: True):
+        hit = [g for g in gs if pick(g)]
+        if hit:
+            return hit[-1]
+    return None
+
+
 def render(st, now=None):
+    """Short: a heading, the general step on one line, then two lines per video (title, where it is)."""
     now = now or time.time()
     key = st.get("key", "")
     if DATE_RE.match(key):
@@ -412,14 +428,16 @@ def render(st, now=None):
         head = f"<b>🎥 Düşün Bakalım</b> · {esc(key)}"
     out = [head]
     for s in st["sections"]:
-        if not s["stages"]:
+        g = current(s)
+        if not g:
             continue
-        out.append("")
-        if s["id"] != "_":
-            kind = {"short": "📱 SHORTS", "long": "📺 UZUN VİDEO"}.get(s.get("kind"), "🎞️ VİDEO")
-            out.append(f"<b>{kind}</b>")
-            out.append(f"<i>{esc(s.get('title') or s['id'])}</i>")
-        out += [stage_line(g, now) for g in s["stages"]]
+        if s["id"] == "_":
+            out.append(stage_line(g, now))
+            continue
+        kind = {"short": "📱", "long": "📺"}.get(s.get("kind"), "🎞️")
+        pub = stage_of(s, "publish")
+        when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
+        out += ["", f"{kind} <b>{esc(s.get('title') or s['id'])}</b>{when}", stage_line(g, now)]
     if st.get("footer"):
         out += ["", esc(st["footer"])]
     return "\n".join(out)[:4000]
