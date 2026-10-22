@@ -738,6 +738,38 @@ Kanal sahibinin isteği: Anlatayım Gel artık global ve İngilizce; bir Shorts 
 - **Kanca + kapak:** "In 1518, a whole town couldn't stop dancing." ↔ kapak "A TOWN COULDN'T STOP DANCING" (vurgu DANCING ya da STOP).
 - Çekim listesi ve anlatım metni: yazar ajan aşağıya ekler.
 
+**Anlatım (önce tek parça yazıldı, 479 karakter, tahmini ~33–36 sn):**
+
+> In 1518, a whole town couldn't stop dancing. It began in July, in Strasbourg. A woman called Frau Troffea
+> stepped into the street and danced. For days. Within weeks, dozens, maybe hundreds, had joined her. Doctors
+> blamed hot blood. And their cure? More dancing! The city cleared its halls, built a stage and hired musicians.
+> Here's the crazy part: it only got worse. Historians think hunger and the fear of a saint's curse did this.
+> So the cure they chose was the disease itself.
+
+Doğrulama: Temmuz 1518, Strazburg, Frau Troffea (kroniklerde); katılan sayısı belirsiz (50–400 arası tahminler) →
+"dozens, maybe hundreds"; hekimler "sıcak kan" dedi, yetkililer salonlar/sahne/müzisyenle dansı sürdürttü
+(Waller); ölüm iddiaları sonraki kaynaklarda → anlatılmadı; Waller: kıtlık + hastalık + Aziz Vitus lanetinden korku
+(kitlesel psikojenik hastalık). Yeni sahne tipi: `scenes/studio/shots/ag04_dance.js`.
+
+**Çekim listesi:**
+
+| # | Anlatım | Tip | Görsel | Anlatıcı (fes) | Cue |
+|---|---|---|---|---|---|
+| 0 | In 1518, a whole town couldn't stop dancing. | ag04_dance | Strazburg sokağı, kafes evler, katedral kulesi; 11 kasabalı kol savurup zıplıyor | önde izliyor → şok | dancing |
+| 1 | It began in July, in Strasbourg. | map | Ren nehri, kırmızı Strasbourg, not "July 1518" | — | July, Strasbourg |
+| 2 | A woman called Frau Troffea stepped into the street and danced. For days. | ag04_dance | boş sokakta mavi başörtülü tek kadın dans ediyor; güneş/ay dönüyor, "DAY 1→4" | dürbünle bakıyor → şok | danced, days |
+| 3 | Within weeks, dozens, maybe hundreds, had joined her. | ag04_dance | kalabalık 1'den 15'e çoğalıyor, "DOZENS? HUNDREDS?" | işaret → şok | dozens, hundreds |
+| 4 | Doctors blamed hot blood. | stage | bereli sakallı hekim tomar tutup yukarı işaret; "HOT BLOOD!" | düşünüyor → omuz silkiyor | blood |
+| 5 | And their cure? More dancing! | title | dev "MORE" (kırmızı kutu) "DANCING!" | şok | More, dancing |
+| 6 | The city cleared its halls, built a stage and hired musicians. | ag04_dance | sahne yükseliyor, 2 davulcu + zurna/şalmey çalan çıkıyor, notalar uçuyor | anlatıyor → bandoyu gösteriyor | stage, musicians |
+| 7 | Here's the crazy part: it only got worse. | ag04_dance | tempo hızlanıyor, 3 dansçı yere yığılıyor, "WORSE", kamera sarsılıyor | şok | crazy, worse |
+| 8 | Historians think hunger and the fear of a saint's curse did this. | stage | zayıf kasabalı son ekmeği tutuyor, "St. Vitus" tabelası, "HUNGER + FEAR" | anlatıyor → işaret | hunger, curse |
+| 9 | So the cure they chose was the disease itself. | title | "THE CURE / WAS THE / DISEASE" (DISEASE kırmızı) | omuz silkiyor | cure, was, disease |
+
+**Kapak:** `A TOWN / COULDN'T STOP / DANCING` (vurgu DANCING), sahne 0 t 2.4, büyük şok fesli anlatıcı (x 820, y 1720,
+ölçek 1.3). 4 aday denendi (sahne 0; sahne 7 t 3.0 ve t 2.0 bando + yığılan dansçılar; sahne 3 kalabalık + işaret;
+sahne 2 "SHE DANCED FOR DAYS"); 0 en temiz ve yüz en okunur, 7'de yüz kadraj kenarında kesiliyor ve ikinci fes görünüyor.
+
 ## ag-05-mary-celeste (long, extra) — category: unsolved mysteries
 - **Konu:** 4 Aralık 1872, Azorlar ile Portekiz arası: Dei Gratia mürettebatı Mary Celeste'i boş buldu. Kaptan
   Benjamin Briggs, eşi Sarah, kızı Sophia ve 7 denizci yok; filika eksik, yük (1.701 varil alkol) neredeyse sağlam.
