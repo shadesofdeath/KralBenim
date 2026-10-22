@@ -66,7 +66,7 @@
           wall.win.setAttribute('d', P.bench === false ? '' : inkLoop(wp, { seed: sd + 4, t, amp: 1 }));
           wall.winR.setAttribute('d', P.bench === false ? '' : inkPath(wp, { w: 5, seed: sd + 5, t, amp: 1.2, closed: true }) + ' ' + inkPath([[0.15 * W, 0.18 * H], [0.15 * W, 0.52 * H]], { w: 4, seed: sd + 6, t, amp: 1 }) + ' ' + inkPath([[0.08 * W, 0.36 * H], [0.22 * W, 0.36 * H]], { w: 4, seed: sd + 7, t, amp: 1 }));
           if (arms) {
-            const cx = B.x * W, cy = 0.24 * H, s = 1 + 0.02 * Math.sin(lt * 2);
+            const cx = B.x * W, cy = 0.18 * H, s = 1 + 0.02 * Math.sin(lt * 2);
             const sh = [[-70, -70], [70, -70], [70, 10], [40, 60], [0, 80], [-40, 60], [-70, 10]].map(q => [cx + q[0] * s, cy + q[1] * s]);
             arms.f.setAttribute('d', inkLoop(sh, { seed: sd + 60, t, amp: 1 })); arms.r.setAttribute('d', inkPath(sh, { w: 5, seed: sd + 61, t, amp: 1.2, closed: true }));
             const cr = [[-50, -76], [-56, -126], [-28, -100], [0, -136], [28, -100], [56, -126], [50, -76]].map(q => [cx + q[0], cy + q[1]]);

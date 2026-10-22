@@ -34,17 +34,19 @@
   }
   // flame band: tail at x0, jagged tongues leading at x1 (moving right), between yT and yB
   function flame(x0, x1, yT, yB, t, sd, inner) {
+    // a front of separate flame tongues: leaning forward (+x), flickering at the boil rate
     if (x1 - x0 < 10) return '';
-    const n = 7, pts = [[x0, yB]];
-    for (let k = 0; k <= n; k++) {
-      const y = lerp(yB, yT, k / n), r = rng(inkHash(sd + k, inkFrame(t)));
-      const len = (inner ? 0.5 : 1) * (60 + r() * 90);
-      pts.push([x1 - (inner ? 70 : 0) - (k % 2 ? 0 : len * 0.6), y + (k % 2 ? 0 : 10)]);
-      if (k % 2) pts.push([x1 - (inner ? 70 : 0) + len * 0.4, y - 18]);
+    const n = inner ? 6 : 9, out = [];
+    for (let k = 0; k < n; k++) {
+      const r = rng(inkHash(sd + k * 13, inkFrame(t))), r0 = rng(sd + k * 7);
+      const u = (k + 0.5) / n, y = lerp(yB, yT, u * 0.85) + (r() - 0.5) * 20;
+      const x = lerp(x0, x1, 0.45 + 0.55 * r0()) - (inner ? 40 : 0);
+      const h = (inner ? 70 : 130) * (0.7 + r() * 0.6), w = (inner ? 26 : 46) * (0.8 + r0() * 0.5);
+      out.push(inkLoop([[x - w, y + h * 0.3], [x - w * 0.6, y - h * 0.3], [x + w * 0.2, y - h * 0.7], [x + w * 1.6, y - h * 1.05], [x + w * 0.9, y - h * 0.35], [x + w, y + h * 0.2], [x, y + h * 0.42]], { seed: sd + k, t, amp: 2.5 }));
     }
-    pts.push([x0, yT]);
-    for (let k = 5; k >= 1; k--) pts.push([x0 + (x1 - x0) * (k / 6) * (inner ? 0.7 : 1), yT - (inner ? 0 : 30 * Math.sin(k * 1.7 + t * 9))]);
-    return inkLoop(pts, { seed: sd + 50, t, amp: 3, smooth: true });
+    // low glowing band behind the tongues
+    if (!inner) out.push(inkLoop([[x0, yB], [x1 - 60, yB - 20], [x1, lerp(yB, yT, 0.5)], [x1 - 60, yT + 20], [x0, yT + 40]], { seed: sd + 99, t, amp: 3 }));
+    return out.join(' ');
   }
   const camShake = (P, cues, lt, atOr) => { let s = 0; (P.shake || []).forEach(c => { const a = atOr(cues, c, null); if (a != null && lt >= a && lt < a + 0.7) s = Math.max(s, 1 - (lt - a) / 0.7); }); return s; };
 
@@ -76,7 +78,7 @@
       const nE = P.empty ? Math.min(bars.length, P.empty.count ?? 9) : 0, emptyIdx = new Set();
       { const r = rng(sd + 5); while (emptyIdx.size < nE) emptyIdx.add(Math.floor(r() * bars.length)); }
       const wisps = Array.from({ length: 16 }, () => inkEl(inner, INK.inkSoft, { 'fill-opacity': 0.9 }));
-      const fl = { o: inkEl(inner, INK.blue, { 'fill-opacity': 0.75 }), i: inkEl(inner, INK.paperLight, { 'fill-opacity': 0.85 }), r: inkEl(inner, INK.blue) };
+      const fl = { o: inkEl(inner, INK.blue, { 'fill-opacity': 0.6 }), i: inkEl(inner, INK.paperLight, { 'fill-opacity': 0.85 }), r: inkEl(inner, INK.blue) };
       const hullR = inkEl(cam), deck = inkEl(cam, INK.paperDark), deckR = inkEl(cam), masts = inkEl(cam), hatch = inkEl(cam, INK.hat), hatchR = inkEl(cam);
       const pump = { f: inkEl(cam, INK.paperDark), r: inkEl(cam) };
       const cs = cast(el(cam, 'g'), P.cast, W, H, sd + 200);
@@ -136,7 +138,7 @@
           if (flA != null && lt >= flA && lt < flA + flD + 0.4) {
             const x1 = Math.min(front, X1 + 300), x0 = Math.max(X0, x1 - 460);
             fl.o.setAttribute('d', flame(x0, x1, DY + 30, FL + 20, t, sd + 600, false));
-            fl.i.setAttribute('d', flame(Math.max(X0, x1 - 220), x1 - 30, DY + 150, FL - 80, t, sd + 640, true));
+            fl.i.setAttribute('d', flame(x0, x1, DY + 60, FL - 20, t, sd + 640, true));
             fl.r.setAttribute('d', '');
           } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); }
           // hull outline, deck, masts, hatch
