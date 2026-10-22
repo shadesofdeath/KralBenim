@@ -108,7 +108,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: System packages
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        # a runner's apt mirror sometimes hangs for good: time-box each try and retry
+        run: for i in 1 2 3; do sudo timeout 240 apt-get update && sudo timeout 300 apt-get install -y ffmpeg && exit 0; echo "apt retry $i"; sleep 10; done; exit 1
       - name: Python packages
         run: pip install -r requirements.txt
       - name: Names
@@ -189,7 +190,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: System packages
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
+        # a runner's apt mirror sometimes hangs for good: time-box each try and retry
+        run: for i in 1 2 3; do sudo timeout 240 apt-get update && sudo timeout 300 apt-get install -y ffmpeg fonts-inter && exit 0; echo "apt retry $i"; sleep 10; done; exit 1
       - name: Python packages
         run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
       - uses: actions/download-artifact@v4
@@ -234,7 +236,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: System packages
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
+        # a runner's apt mirror sometimes hangs for good: time-box each try and retry
+        run: for i in 1 2 3; do sudo timeout 240 apt-get update && sudo timeout 300 apt-get install -y ffmpeg fonts-inter && exit 0; echo "apt retry $i"; sleep 10; done; exit 1
       - name: Python packages
         run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
       - name: Names
