@@ -7,7 +7,7 @@
 // counter with a sun/moon wheeling across the sky, a red hand-written label, slow camera push + push on a cue.
 //
 // SHOTS.ag04_dance P: {
-//   ground: 0.6 (0..1 H), k: 1 (size of houses + cathedral), houses: 5, cathedral: {x: 0.5} | false, tempo: 0.44 (s per dance beat),
+//   ground: 0.6 (0..1 H), k: 1 (size of houses + cathedral), houses: 5, cathedral: {x: 0.5, s (size)} | false, tempo: 0.44 (s per dance beat),
 //   faster: {at, tempo: 0.3} (beat speeds up from the cue),
 //   crowd: {n0: 1, n: 12 (0 = nobody), at, dur: 2.2, x: [0.08, 0.92], scale: 0.56, first: {x: 0.5, scale: 0.66, female: true},
 //          female: 3 (every 3rd dancer is a woman: headscarf tied under the chin + skirt), front_dy: 46 (back row lift, px),
@@ -165,7 +165,7 @@
       // ---- background: cathedral, houses, cobbles
       const SF = strokes(farG, seed + 1), SHs = strokes(houseG, seed + 2);
       const KS = P.k ?? 1, hb = G - (portrait ? 70 : 60) * KS;
-      if (P.cathedral !== false) cathedral(SF, (P.cathedral && P.cathedral.x != null ? P.cathedral.x : 0.5) * W, hb - 40 * KS, (portrait ? 0.85 : 0.62) * KS);
+      if (P.cathedral !== false) cathedral(SF, (P.cathedral && P.cathedral.x != null ? P.cathedral.x : 0.5) * W, hb - 40 * KS, (P.cathedral && P.cathedral.s) || (portrait ? 0.85 : 0.62) * KS);
       const nh = Math.max(3, Math.min(7, P.houses ?? 5)), hw = W * 1.08 / nh;
       for (let i = 0; i < nh; i++) {
         const hh = (portrait ? 430 : 330) * KS * (0.85 + r() * 0.3);
@@ -353,7 +353,7 @@
                 m.S.tick(t);
               });
               notes.forEach((n, k) => {
-                const cyc = 2.4, u = ((ml / cyc + n.ph) % 1), x = stX + n.x0 + Math.sin(u * 7 + k) * 24, y = stTop - 240 - u * (portrait ? 330 : 200);
+                const cyc = 2.4, u = ((ml / cyc + n.ph) % 1), x = stX + n.x0 + Math.sin(u * 7 + k) * 24, y = stTop - 240 - u * (portrait ? 200 : 160);
                 const k2 = n.k * (portrait ? 1.3 : 1);
                 n.head.setAttribute('d', inkLoop(noteHead(x, y, k2, seed + 500 + k), { seed: seed + 500 + k, t }));
                 n.stem.setAttribute('d', inkPath([[x + 13 * k2, y - 2], [x + 14 * k2, y - 62 * k2]], { w: 5, seed: seed + 520 + k, t }));

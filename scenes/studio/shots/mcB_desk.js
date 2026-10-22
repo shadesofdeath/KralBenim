@@ -10,7 +10,7 @@
 //     cues: hit, title_at, name.strike, name.fix_at, labels/cast "at"
 //
 //   mcB_table — a ship's cabin table: steaming tea cups, a teapot, a plate with a half-eaten loaf, chairs pushed back,
-//     a hanging lamp that swings. P: {steam: true, cast, labels, cam}   cues: hit, labels/cast "at"
+//     a hanging lamp that swings. P: {steam: true, chairs: [[x, tilt deg], ...], cast, labels, cam}   cues: hit, labels/cast "at"
 // Needs mcB__lib.js (window.MCB).
 'use strict';
 
@@ -119,7 +119,7 @@
       const root = el(svg, 'g'), cam = el(root, 'g');
       const TY = 0.62 * H, TX0 = 0.22 * W, TX1 = 0.78 * W, FY = 0.88 * H;
       const wall = inkEl(cam, INK.inkSoft), port = { f: inkEl(cam, INK.paperLight), r: inkEl(cam) };
-      const chairs = [0, 1].map(() => ({ f: inkEl(cam, INK.hat), r: inkEl(cam) }));
+      const CH = P.chairs || [[0.14, -14], [0.86, 18]], chairs = CH.map(() => ({ f: inkEl(cam, INK.hat), r: inkEl(cam) }));
       const table = { f: inkEl(cam, INK.hat), r: inkEl(cam), cloth: inkEl(cam, INK.paperLight), clothR: inkEl(cam) };
       const cups = [0.33, 0.45, 0.66].map(() => ({ f: inkEl(cam, INK.paperLight), r: inkEl(cam), tea: inkEl(cam, INK.hat), steam: inkEl(cam, INK.inkSoft) }));
       const potE = { f: inkEl(cam, INK.blue), r: inkEl(cam) };
@@ -137,7 +137,7 @@
           port.f.setAttribute('d', inkCircle(0.86 * W, 0.3 * H, 80, sd + 21, t, { fill: true }));
           port.r.setAttribute('d', inkCircle(0.86 * W, 0.3 * H, 80, sd + 22, t, { w: 12 }) + ' ' + inkPath([[0.86 * W - 70, 0.3 * H + 14 + Math.sin(t) * 10], [0.86 * W + 70, 0.3 * H + 10 - Math.sin(t) * 10]], { w: 3, seed: sd + 23, t, amp: 1 }));
           // chairs pushed back (tilted)
-          [[0.14, -14], [0.86, 18]].forEach(([cx, rot], i) => {
+          CH.forEach(([cx, rot], i) => {
             const x = cx * W, a = rot * Math.PI / 180, R = q => [x + q[0] * Math.cos(a) - q[1] * Math.sin(a), FY + q[0] * Math.sin(a) + q[1] * Math.cos(a)];
             const pts = [[-60, 0], [-60, -300], [-44, -300], [-44, -150], [60, -150], [60, 0], [46, 0], [46, -130], [-44, -130], [-44, 0]].map(R);
             chairs[i].f.setAttribute('d', inkLoop(pts, { seed: sd + 30 + i, t, amp: 1, smooth: false }));

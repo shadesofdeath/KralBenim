@@ -86,7 +86,7 @@
           }
           if (P.dock) dockCast.update(lt, t, cues);
           if (dockFront) {
-            const x0 = (D.x - D.w / 2) * W, x1 = (D.x + D.w / 2) * W, top = 0.64 * H;
+            const x0 = (D.x - D.w / 2) * W, x1 = (D.x + D.w / 2) * W, top = (D.top ?? 0.72) * H;
             const pts = [[x0, FY], [x0, top], [x1, top], [x1, FY]];
             dockFront.f.setAttribute('d', inkLoop(pts, { seed: sd + 80, t, amp: 1, smooth: false }));
             dockFront.r.setAttribute('d', inkPath(pts, { w: 6, seed: sd + 81, t, amp: 1.3, closed: true, smooth: false }));

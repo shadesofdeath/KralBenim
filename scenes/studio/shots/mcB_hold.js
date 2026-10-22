@@ -134,9 +134,9 @@
             w.setAttribute('d', inkPath([[x, y + 50], [x + 18, y + 25], [x - 6, y], [x + 14, y - 30]], { w: 6, seed: sd + 520 + i, t, amp: 1.5 }));
           });
           if (flA != null && lt >= flA && lt < flA + flD + 0.4) {
-            const x1 = Math.min(front, X1 + 300), x0 = Math.max(X0, x1 - 700);
+            const x1 = Math.min(front, X1 + 300), x0 = Math.max(X0, x1 - 460);
             fl.o.setAttribute('d', flame(x0, x1, DY + 30, FL + 20, t, sd + 600, false));
-            fl.i.setAttribute('d', flame(x0 + 40, x1, DY + 110, FL - 40, t, sd + 640, true));
+            fl.i.setAttribute('d', flame(Math.max(X0, x1 - 220), x1 - 30, DY + 150, FL - 80, t, sd + 640, true));
             fl.r.setAttribute('d', '');
           } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); }
           // hull outline, deck, masts, hatch
