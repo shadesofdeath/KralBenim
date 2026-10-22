@@ -1,0 +1,6172 @@
+{
+  "channel": "Anlatayım Gel",
+  "narrator": "fes",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "ag-03-malazgirt-1071",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "long",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "İmparator",
+      "esir düştü"
+    ],
+    "highlight": [
+      "esir"
+    ],
+    "scene": 50,
+    "t": 4.6,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Malazgirt Savaşı 1071: Bir Bizans İmparatoru Nasıl Esir Düştü?",
+    "description": "Malazgirt Savaşı'nda, 26 Ağustos 1071'de, bir Bizans imparatoru savaş meydanında esir düştü. Peki dev bir ordu nasıl dağıldı ve Alp Arslan esir imparatoru neden serbest bıraktı?\n\nRomen Diyojen büyük bir orduyla doğuya yürüdü; Sultan Alp Arslan ise barış teklif etti ve reddedildi. Sahte geri çekilme, hilal gibi kapanan kanatlar ve arkadaki ihanet savaşın kaderini değiştirdi. Malazgirt Zaferi'nin hikâyesini, Selçuklu ve Bizans kaynaklarındaki ayrıntılarla anlatıyoruz.\n\nBu videoda:\n- Bizans ile Selçuklu sınırında iki dünya\n- Romen Diyojen'in büyük seferi ve reddedilen barış\n- Cuma günü: sahte geri çekilme ve turan taktiği\n- Andronikos Dukas'ın geri çekilişi ve esir imparator\n- Peki neden? Abartılı ordu sayıları ve Anadolu'nun kapıları\n\nAnlatayım Gel'e abone ol, Osmanlı ve Türk tarihinin bilinmeyen hikâyelerini kaçırma. Sence Alp Arslan imparatoru serbest bırakmakla doğru mu yaptı? Yorumlara yaz!\n\n#malazgirt #alparslan #selçuklu #tarih #anlatayımgel",
+    "tags": [
+      "malazgirt savaşı",
+      "malazgirt zaferi",
+      "1071 malazgirt",
+      "malazgirt meydan muharebesi",
+      "alp arslan",
+      "romen diyojen",
+      "selçuklu",
+      "bizans",
+      "anadolunun kapıları",
+      "sultan alparslan",
+      "tarih",
+      "türk tarihi",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "anlatayım gel"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-22T19:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "chapter": "Sınırdaki iki dünya",
+      "type": "ag03c_court",
+      "text": "Bir Bizans imparatoru savaş meydanında esir düştü! Üstelik onu yenen sultan, birkaç gün sonra onu serbest bıraktı. Gelin, size Malazgirt'in hikâyesini anlatayım.",
+      "visual": "Selçuklu çadırı: tahtta sarıklı, kara sakallı sultan oturur; önünde bilekleri zincirli, tacı yamuk Bizans imparatoru diz çökmüş, başı eğik; yanda mızraklı muhafızlar ve tuğ; fesli anlatıcı solda şokta, esiri işaret eder; 'serbest'te zincir kırılır, sultan ayağa kalkıp elini uzatır",
+      "title": {
+        "white": "1071",
+        "gray": "Malazgirt"
+      },
+      "cues": {
+        "hit": "esir",
+        "esir": "esir",
+        "free": "serbest",
+        "mz": "Malazgirt"
+      },
+      "params": {
+        "setting": "tent",
+        "throne": {
+          "x": 0.7,
+          "accessory": "turban",
+          "beard": "black",
+          "pose": "sit",
+          "face": -1,
+          "emotion": "angry",
+          "seq": [
+            {
+              "at": "free",
+              "pose": "point",
+              "dir": 0,
+              "emotion": "happy"
+            }
+          ]
+        },
+        "captive": {
+          "x": 0.44,
+          "crown": true,
+          "chains": true,
+          "scale": 1.15,
+          "bow": -1,
+          "free": "free",
+          "askew": 10
+        },
+        "figures": [
+          {
+            "x": 0.88,
+            "accessory": "turban",
+            "beard": "short",
+            "pose": "idle",
+            "face": -1,
+            "spear": true,
+            "scale": 0.9
+          },
+          {
+            "x": 0.3,
+            "accessory": "turban",
+            "beard": "black",
+            "pose": "idle",
+            "face": 1,
+            "spear": true,
+            "scale": 0.85
+          }
+        ],
+        "tug": {
+          "x": 0.96
+        },
+        "lamp": {
+          "x": 0.56
+        },
+        "kasif": {
+          "x": 0.12,
+          "scale": 0.9,
+          "pose": "point",
+          "dir": 5,
+          "face": 1,
+          "emotion": "surprised",
+          "seq": [
+            {
+              "at": "esir",
+              "pose": "shock",
+              "emotion": "surprised"
+            },
+            {
+              "at": "free",
+              "pose": "point",
+              "dir": 10,
+              "emotion": "surprised"
+            },
+            {
+              "at": "mz",
+              "pose": "talk"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cover_hide": true
+      }
+    },
+    {
+      "type": "chapter",
+      "text": "Yıl 1071. Ama önce size iki dünyayı tanıtmam lazım.",
+      "visual": "BÖLÜM 1 / 7 rozeti, mavi dairede 1, altında 'Sınırdaki iki dünya' kartı, el çizimi alt çizgi",
+      "title": {},
+      "cues": {
+        "n": "1071",
+        "title": "dünyayı"
+      },
+      "params": {
+        "n": 1,
+        "total": 7,
+        "title": "Sınırdaki iki dünya"
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Bir yanda Bizans vardı: başkenti İstanbul olan, altınla, mozaikle ve törenle yaşayan köklü bir imparatorluk.",
+      "visual": "Eski harita: Balkanlar ve Anadolu; 'Bizans'ta kırmızı tarama batıdan doğuya yayılır ve BİZANS yazısı belirir; 'İstanbul'da şehir kırmızı noktayla belirip halkaya alınır; 'altınla'da üstünde altın kubbeli küçük Ayasofya simgesi çizilir; solda fesli anlatıcı yürüyerek gelir, İstanbul'u işaret eder",
+      "title": {
+        "white": "Bizans"
+      },
+      "cues": {
+        "biz": "Bizans",
+        "ist": "İstanbul",
+        "gold": "altınla"
+      },
+      "params": {
+        "view": [
+          19,
+          45,
+          34,
+          46
+        ],
+        "realms": [
+          {
+            "poly": "bizans",
+            "color": "red",
+            "at": "biz",
+            "dur": 2.2,
+            "from": "west",
+            "label": {
+              "text": "Bizans",
+              "lon": 33,
+              "lat": 39.2,
+              "size": 70
+            }
+          }
+        ],
+        "cities": [
+          {
+            "name": "İstanbul",
+            "lon": 28.98,
+            "lat": 41.01,
+            "at": "ist",
+            "color": "red",
+            "ring": true,
+            "dx": -20,
+            "dy": 62
+          }
+        ],
+        "icons": [
+          {
+            "type": "dome",
+            "lon": 28.98,
+            "lat": 41.01,
+            "at": "gold",
+            "size": 0.9,
+            "dy": -26
+          }
+        ],
+        "kasif": {
+          "side": "left",
+          "walk": true,
+          "arrive": 1.0,
+          "then": "talk",
+          "at": "ist",
+          "then2": "point",
+          "dir": 18
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Öbür yanda ise Büyük Selçuklu Devleti yükseliyordu. Bozkırdan çıkan atlı okçular, birkaç kuşakta İran'dan Bağdat'a uzanmıştı.",
+      "visual": "Harita doğuya kayar: İran ve Irak; 'Selçuklu'da mavi tarama doğudan batıya yayılır, SELÇUKLU yazısı belirir; 'Bozkırdan'da mavi kesikli ok ve küçük atlı simgeleri doğudan batıya, Bağdat'a uzanır; 'Bağdat'ta şehir halkaya alınır; solda fesli anlatıcı okun yönünü işaret eder",
+      "title": {
+        "white": "Selçuklular"
+      },
+      "cues": {
+        "sel": "Selçuklu",
+        "boz": "Bozkırdan",
+        "bag": "Bağdat"
+      },
+      "params": {
+        "view": [
+          24,
+          50,
+          33,
+          45
+        ],
+        "view2": [
+          33,
+          59,
+          29,
+          41
+        ],
+        "pan": {
+          "at": "sel",
+          "dur": 1.8
+        },
+        "realms": [
+          {
+            "poly": "bizans",
+            "color": "red",
+            "label": {
+              "text": "Bizans",
+              "lon": 37.5,
+              "lat": 39.6,
+              "size": 60
+            }
+          },
+          {
+            "poly": "selcuklu",
+            "color": "blue",
+            "at": "sel",
+            "dur": 2.4,
+            "from": "east",
+            "label": {
+              "text": "Selçuklu",
+              "lon": 52.5,
+              "lat": 33.2,
+              "size": 70
+            }
+          }
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                58,
+                35.8
+              ],
+              [
+                53.5,
+                35.4
+              ],
+              [
+                49,
+                34.6
+              ],
+              [
+                45.2,
+                33.5
+              ]
+            ],
+            "at": "boz",
+            "dur": 2.8,
+            "color": "blue",
+            "riders": 2,
+            "dust": true
+          }
+        ],
+        "cities": [
+          {
+            "name": "Bağdat",
+            "lon": 44.36,
+            "lat": 33.31,
+            "at": "bag",
+            "color": "red",
+            "ring": true,
+            "dy": 64
+          }
+        ],
+        "kasif": {
+          "side": "left",
+          "pose": "talk",
+          "at": "boz",
+          "then": "point",
+          "dir": 22,
+          "face": "right"
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "İki dünyanın sınırı Doğu Anadolu'ydu: sarp dağlar, taş kaleler ve iliklere işleyen bir rüzgâr.",
+      "visual": "Doğu Anadolu: arkada sarp, taranmış sıra dağlar; 'kaleler'de önde taş bir kale yerden yükselir; fesli anlatıcı soldan yürüyerek gelir, dağları işaret eder; 'rüzgâr'da rüzgâr çizgileri hızlanır, otlar eğilir, anlatıcı kollarını açıp titrer",
+      "title": {
+        "white": "Sınır",
+        "gray": "Doğu Anadolu"
+      },
+      "cues": {
+        "dag": "dağlar",
+        "kale": "kaleler",
+        "wind": "rüzgâr"
+      },
+      "params": {
+        "far": {
+          "kind": "mountains",
+          "h": 0.34,
+          "ridges": 2,
+          "seed": 5
+        },
+        "grass": 20,
+        "wind": {
+          "at": "wind"
+        },
+        "buildings": [
+          {
+            "type": "castle",
+            "x": 0.7,
+            "scale": 1.0,
+            "at": "kale"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": -0.08,
+            "pose": "walk",
+            "to": 0.3,
+            "at": "dag",
+            "then": "point",
+            "dir": 40,
+            "face": "right",
+            "seq": [
+              {
+                "at": "wind",
+                "pose": "shrug",
+                "emotion": "worried",
+                "face": "right"
+              }
+            ],
+            "shiver": "wind"
+          }
+        ],
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.55,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Türkmen akıncılar yıllardır bu sınırı aşıyordu; 1067'de Kayseri'ye kadar inmişlerdi.",
+      "visual": "Doğu Anadolu haritası, Bizans toprakları kırmızı taralı: doğudan batıya mavi kesikli oklarla küçük atlı simgeleri sınırı aşar; '1067'de en uzun ok Kayseri'ye iner, 'Kayseri' kırmızı halkayla işaretlenir ve '1067' notu belirir; solda anlatıcı dürbünle okları izler, 'Kayseri'de işaret eder",
+      "title": {
+        "white": "Akınlar"
+      },
+      "cues": {
+        "ak": "akıncılar",
+        "yil": "yıllardır",
+        "y67": "1067",
+        "kay": "Kayseri"
+      },
+      "params": {
+        "view": [
+          31,
+          47,
+          35.6,
+          42.6
+        ],
+        "realms": [
+          {
+            "poly": "bizans",
+            "color": "red"
+          }
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                46.5,
+                40.6
+              ],
+              [
+                43.5,
+                40.4
+              ],
+              [
+                40.5,
+                40.1
+              ]
+            ],
+            "at": "ak",
+            "dur": 2.0,
+            "color": "blue",
+            "riders": 1
+          },
+          {
+            "pts": [
+              [
+                46.5,
+                37.4
+              ],
+              [
+                43.5,
+                37.9
+              ],
+              [
+                40.2,
+                38.2
+              ]
+            ],
+            "at": "yil",
+            "dur": 2.0,
+            "color": "blue",
+            "riders": 1
+          },
+          {
+            "pts": [
+              [
+                46,
+                39.0
+              ],
+              [
+                42,
+                38.9
+              ],
+              [
+                38.5,
+                38.8
+              ],
+              [
+                35.9,
+                38.75
+              ]
+            ],
+            "at": "y67",
+            "dur": 2.0,
+            "color": "blue",
+            "riders": 2,
+            "dust": true
+          }
+        ],
+        "cities": [
+          {
+            "name": "Kayseri",
+            "lon": 35.49,
+            "lat": 38.73,
+            "at": "kay",
+            "color": "red",
+            "ring": true,
+            "dy": 66
+          }
+        ],
+        "note": {
+          "text": "1067",
+          "x": 0.06,
+          "y": 0.16,
+          "at": "y67",
+          "color": "red",
+          "size": 72
+        },
+        "kasif": {
+          "side": "left",
+          "pose": "look",
+          "at": "kay",
+          "then": "point",
+          "dir": 15,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "Selçuklu tahtında Alp Arslan oturuyordu. Adı 'kahraman aslan' demekti ve o, bu adı hak eden bir savaşçıydı.",
+      "visual": "Tuğlu Selçuklu çadırının önünde sarıklı, kara sakallı Alp Arslan oturur; üstte 'Alp Arslan' etiketi ve oku; 'aslan'da çadırın üstünde altın yeleli mürekkep aslan başı çizilerek belirir; 'savaşçıydı'da Alp Arslan ayağa kalkıp kolunu kaldırır; solda fesli anlatıcı onu, sonra aslanı işaret eder",
+      "title": {
+        "white": "Sultan"
+      },
+      "cues": {
+        "alp": "Alp",
+        "aslan": "aslan",
+        "war": "savaşçıydı"
+      },
+      "params": {
+        "far": {
+          "kind": "hills",
+          "h": 0.2,
+          "ridges": 2,
+          "seed": 7
+        },
+        "grass": 14,
+        "buildings": [
+          {
+            "type": "tent",
+            "x": 0.68,
+            "scale": 1.05,
+            "tug": true
+          }
+        ],
+        "lion": {
+          "x": 0.76,
+          "y": 0.24,
+          "size": 120,
+          "at": "aslan"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.17,
+            "pose": "talk",
+            "at": "alp",
+            "then": "point",
+            "dir": 12,
+            "face": "right",
+            "seq": [
+              {
+                "at": "aslan",
+                "pose": "point",
+                "dir": 48,
+                "face": "right",
+                "emotion": "surprised"
+              },
+              {
+                "at": "war",
+                "pose": "shock",
+                "emotion": "surprised",
+                "face": "right"
+              }
+            ]
+          },
+          {
+            "who": "alparslan",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.46,
+            "scale": 0.95,
+            "pose": "sit",
+            "face": "left",
+            "at": "war",
+            "then": "point",
+            "dir": "up",
+            "emotion": "angry"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Alp Arslan",
+            "x": 0.4,
+            "y": 0.2,
+            "at": "alp",
+            "size": 64,
+            "arrow": [
+              0.45,
+              0.42
+            ]
+          }
+        ],
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "Bizans tahtına ise 1068'de Romen Diyojen çıkmıştı. O bir saray adamı değil, bir askerdi; tahta imparatoriçe Evdokia ile evlenerek gelmişti.",
+      "visual": "Bizans sarayının sütunlu kemerleri ve kubbesi önünde taçlı, sakallı Romen Diyojen ve taçlı imparatoriçe Evdokia yan yana; '1068' kartı belirir; 'askerdi'de Diyojen kılıcını havaya kaldırır; 'Evdokia'da onun adı yazılır; sağda fesli anlatıcı el sallayarak tanıtır",
+      "title": {
+        "white": "İmparator"
+      },
+      "cues": {
+        "y68": "1068",
+        "rom": "Romen",
+        "asker": "askerdi",
+        "evd": "Evdokia"
+      },
+      "params": {
+        "far": {
+          "kind": "hills",
+          "h": 0.16,
+          "ridges": 1,
+          "seed": 8
+        },
+        "grass": false,
+        "buildings": [
+          {
+            "type": "palace",
+            "x": 0.55,
+            "scale": 0.95
+          }
+        ],
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "beard": "black",
+            "x": 0.47,
+            "scale": 0.92,
+            "pose": "idle",
+            "face": "right",
+            "at": "asker",
+            "then": "point",
+            "dir": 75,
+            "emotion": "angry",
+            "sword": "asker"
+          },
+          {
+            "who": "evdokia",
+            "accessory": "crown",
+            "x": 0.63,
+            "scale": 0.85,
+            "pose": "idle",
+            "face": "left",
+            "at": "evd",
+            "then": "wave",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.87,
+            "pose": "talk",
+            "at": "rom",
+            "then": "wave",
+            "face": "left",
+            "seq": [
+              {
+                "at": "asker",
+                "pose": "point",
+                "dir": 20,
+                "face": "left",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "1068",
+            "x": 0.16,
+            "y": 0.3,
+            "at": "y68",
+            "size": 70,
+            "box": true
+          },
+          {
+            "text": "Romen Diyojen",
+            "x": 0.4,
+            "y": 0.13,
+            "at": "rom",
+            "size": 60,
+            "arrow": [
+              0.46,
+              0.36
+            ]
+          },
+          {
+            "text": "Evdokia",
+            "x": 0.68,
+            "y": 0.2,
+            "at": "evd",
+            "size": 58
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ama sarayda onu hiç sevmeyen güçlü bir aile vardı: Dukaslar. Bu ismi aklınızda tutun.",
+      "visual": "Saray sütunları arasında, gölgede üç sakallı saraylı fısıldaşır, biri imparatoru işaret eder; üstlerinde 'Dukaslar' yazısı ve oku; önde fesli anlatıcı düşünür, 'Dukaslar'da parmağını kaldırıp 'dikkat' der, 'aklınızda'da izleyiciye işaret eder",
+      "title": {
+        "white": "Saray"
+      },
+      "cues": {
+        "duk": "Dukaslar",
+        "akl": "aklınızda"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.22,
+            "pose": "think",
+            "at": "duk",
+            "then": "point",
+            "dir": "up",
+            "emotion": "worried",
+            "face": "right",
+            "seq": [
+              {
+                "at": "akl",
+                "pose": "point",
+                "dir": 8,
+                "face": "right",
+                "emotion": "neutral"
+              }
+            ]
+          },
+          {
+            "who": "dukas1",
+            "beard": "grey",
+            "x": 0.58,
+            "scale": 0.85,
+            "pose": "talk",
+            "face": "right",
+            "talk": false,
+            "emotion": "angry"
+          },
+          {
+            "who": "dukas2",
+            "beard": "black",
+            "x": 0.7,
+            "scale": 0.85,
+            "pose": "think",
+            "face": "left",
+            "talk": false,
+            "emotion": "angry",
+            "at": "duk",
+            "then": "point",
+            "dir": 20
+          },
+          {
+            "who": "dukas3",
+            "beard": "short",
+            "x": 0.82,
+            "scale": 0.8,
+            "pose": "talk",
+            "face": "left",
+            "talk": false,
+            "emotion": "angry"
+          }
+        ],
+        "props": [
+          {
+            "type": "column",
+            "x": 0.5,
+            "scale": 1.1
+          },
+          {
+            "type": "column",
+            "x": 0.92,
+            "scale": 1.1
+          }
+        ],
+        "label": {
+          "text": "Dukaslar",
+          "x": 0.7,
+          "y": 0.14,
+          "at": "duk",
+          "arrow": [
+            0.7,
+            0.33
+          ]
+        },
+        "scale": 1.0,
+        "ground_y": 820,
+        "cam": {
+          "zoom": 1.07,
+          "pan": 24,
+          "focus": [
+            0.6,
+            0.55
+          ]
+        },
+        "backdrop": {
+          "type": "palace"
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "city",
+          "sky": {
+            "clouds": 2,
+            "gulls": 0,
+            "cloud_y": 0.22
+          },
+          "near": "arch",
+          "side": "right"
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Diyojen'in tek bir hedefi vardı: Türkleri sınırdan söküp atmak.",
+      "visual": "Dev yazı 'TEK HEDEF' kelime kelime belirir, 'HEDEF' kırmızı kutuda; altında el yazısıyla 'Türkleri sınırdan atmak' notu; sağda fesli anlatıcı yazıyı işaret eder",
+      "title": {},
+      "cues": {
+        "w0": "tek",
+        "w1": "hedefi",
+        "note": "sınırdan"
+      },
+      "params": {
+        "lines": [
+          "Tek",
+          "hedef"
+        ],
+        "highlight": [
+          "hedef"
+        ],
+        "note": "Türkleri sınırdan atmak",
+        "y": 0.4,
+        "kasif": {
+          "x": 0.83,
+          "pose": "point",
+          "dir": 25,
+          "face": -1,
+          "scale": 0.85,
+          "at": "w1",
+          "emotion": "angry"
+        }
+      }
+    },
+    {
+      "chapter": "İmparatorun büyük seferi",
+      "type": "chapter",
+      "text": "Ve 1071 baharında bu hedef için dev bir ordu yola çıktı.",
+      "visual": "BÖLÜM 2 / 7 rozeti, mavi dairede 2, altında 'İmparatorun büyük seferi' kartı",
+      "title": {},
+      "cues": {
+        "n": "1071",
+        "title": "ordu"
+      },
+      "params": {
+        "n": 2,
+        "total": 7,
+        "title": "İmparatorun büyük seferi"
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "13 Mart'ta Diyojen, Ayasofya'daki törenden sonra İstanbul'dan ayrıldı.",
+      "visual": "İstanbul: arkada büyük kubbeli Ayasofya; 'törenden'de taçlı Diyojen kırmızı sancaklı atıyla doğuya (sağa) yola çıkar, arkasından kalkanlı, mızraklı piyade sırası soldan yürür; '13 Mart' kartı ve 'Ayasofya' yazısı belirir; sağda fesli anlatıcı orduyu el sallayarak uğurlar",
+      "title": {
+        "white": "Sefer"
+      },
+      "cues": {
+        "m13": "13",
+        "aya": "Ayasofya",
+        "tor": "törenden",
+        "go": "ayrıldı"
+      },
+      "params": {
+        "far": {
+          "kind": "hills",
+          "h": 0.14,
+          "ridges": 1,
+          "seed": 12
+        },
+        "grass": 12,
+        "buildings": [
+          {
+            "type": "dome",
+            "x": 0.33,
+            "scale": 0.9
+          }
+        ],
+        "riders": [
+          {
+            "x": 0.2,
+            "to": 0.66,
+            "start": "tor",
+            "dur": 3.6,
+            "gait": "walk",
+            "face": "right",
+            "cloth": "red",
+            "banner": "red",
+            "rider": {
+              "accessory": "crown",
+              "beard": "black",
+              "pose": "idle",
+              "at": "go",
+              "then": "point",
+              "dir": 15
+            }
+          }
+        ],
+        "troops": [
+          {
+            "kind": "spear",
+            "n": 6,
+            "from": [
+              -0.08,
+              0.79
+            ],
+            "to": [
+              0.42,
+              0.79
+            ],
+            "at": "tor",
+            "dur": 4.2,
+            "gap": [
+              -95,
+              0
+            ],
+            "scale": 1.0,
+            "color": "red"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.88,
+            "pose": "talk",
+            "face": "left",
+            "at": "tor",
+            "then": "wave",
+            "emotion": "happy"
+          }
+        ],
+        "labels": [
+          {
+            "text": "13 Mart",
+            "x": 0.6,
+            "y": 0.15,
+            "at": "m13",
+            "size": 66,
+            "box": true
+          },
+          {
+            "text": "Ayasofya",
+            "x": 0.33,
+            "y": 0.34,
+            "at": "aya",
+            "size": 58
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "Ama bu ordu tam bir karışımdı: Bizans askerleri, Ermeniler, Gürcüler, Frank şövalyeleri ve dikkat edin, Uz ve Peçenek Türklerinden paralı askerler.",
+      "visual": "Ordu yürüyüşü, kamera yavaşça sağa kayar: arkadaki tepede kalkanlı piyade sırası yürür; önde miğferli Bizans askeri, bereli Ermeni, miğferli Gürcü ve sorguçlu miğferli Frank şövalyesi adları anıldıkça soldan yürüyerek sıraya girip selam verir, adları üstlerinde belirir; 'Peçenek'te sarıklı Uz-Peçenek atlısı sağdan dörtnala gelir, etiketi kırmızı halkayla çevrilir; sağda fesli anlatıcı 'dikkat'te ona işaret eder",
+      "title": {
+        "white": "Karma ordu"
+      },
+      "cues": {
+        "biz": "Bizans",
+        "erm": "Ermeniler",
+        "gur": "Gürcüler",
+        "fr": "Frank",
+        "pec": "Peçenek",
+        "dik": "dikkat"
+      },
+      "params": {
+        "far": {
+          "kind": "hills",
+          "h": 0.2,
+          "ridges": 2,
+          "seed": 13
+        },
+        "grass": 16,
+        "troops": [
+          {
+            "kind": "spear",
+            "n": 9,
+            "from": [
+              0.05,
+              0.6
+            ],
+            "to": [
+              0.6,
+              0.6
+            ],
+            "at": 0,
+            "dur": 11,
+            "gap": [
+              -80,
+              0
+            ],
+            "scale": 0.55,
+            "color": "red"
+          }
+        ],
+        "cast": [
+          {
+            "who": "bizans",
+            "accessory": "helmet_byz",
+            "x": -0.08,
+            "scale": 0.72,
+            "pose": "walk",
+            "to": 0.12,
+            "start": 0,
+            "at": "biz",
+            "then": "wave",
+            "face_after": "right"
+          },
+          {
+            "who": "ermeni",
+            "accessory": "beret",
+            "beard": "black",
+            "x": -0.08,
+            "scale": 0.72,
+            "pose": "walk",
+            "to": 0.25,
+            "start": "biz",
+            "at": "erm",
+            "then": "wave",
+            "face_after": "right"
+          },
+          {
+            "who": "gurcu",
+            "accessory": "helmet_byz",
+            "beard": "grey",
+            "x": -0.08,
+            "scale": 0.72,
+            "pose": "walk",
+            "to": 0.4,
+            "start": "erm",
+            "at": "gur",
+            "then": "wave",
+            "face_after": "right"
+          },
+          {
+            "who": "frank",
+            "accessory": "helmet",
+            "beard": "short",
+            "x": -0.08,
+            "scale": 0.72,
+            "pose": "walk",
+            "to": 0.55,
+            "start": "gur",
+            "at": "fr",
+            "then": "wave",
+            "face_after": "right"
+          },
+          {
+            "who": "kasif",
+            "x": 0.91,
+            "pose": "talk",
+            "face": "left",
+            "at": "dik",
+            "then": "point",
+            "dir": 15,
+            "emotion": "surprised"
+          }
+        ],
+        "riders": [
+          {
+            "x": 1.2,
+            "to": 0.73,
+            "start": "fr",
+            "at": "pec",
+            "gait": "gallop",
+            "face": "left",
+            "cloth": "blue",
+            "scale": 0.85,
+            "rider": {
+              "accessory": "turban",
+              "beard": "black",
+              "pose": "idle",
+              "at": "pec",
+              "then": "wave",
+              "emotion": "happy"
+            }
+          }
+        ],
+        "labels": [
+          {
+            "text": "Bizans",
+            "x": 0.12,
+            "y": 0.3,
+            "at": "biz",
+            "size": 60
+          },
+          {
+            "text": "Ermeni",
+            "x": 0.25,
+            "y": 0.3,
+            "at": "erm",
+            "size": 60
+          },
+          {
+            "text": "Gürcü",
+            "x": 0.4,
+            "y": 0.3,
+            "at": "gur",
+            "size": 60
+          },
+          {
+            "text": "Frank",
+            "x": 0.55,
+            "y": 0.3,
+            "at": "fr",
+            "size": 60
+          },
+          {
+            "text": "Uz-Peçenek",
+            "x": 0.74,
+            "y": 0.22,
+            "at": "pec",
+            "size": 62,
+            "color": "red",
+            "ring": true
+          }
+        ],
+        "cam": {
+          "zoom": 1.08,
+          "pan": 15,
+          "focus": [
+            0.42,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Yani Diyojen, Türklerle savaşmak için Türk askerlerine para ödüyordu. Bu ironiyi birazdan hatırlayacağız.",
+      "visual": "Taçlı Diyojen elinde altın tutar; 'para'da altın sikke uçarak karşısındaki sarıklı Uz askerine geçer, Uz askeri onu yakalayıp tutar; üstte 'İroni!' yazısı; sağda fesli anlatıcı 'ironiyi'de kaşlarını kaldırıp omuz silker",
+      "title": {
+        "white": "Paralı asker"
+      },
+      "cues": {
+        "para": "para",
+        "iron": "ironiyi"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "beard": "black",
+            "x": 0.3,
+            "scale": 0.95,
+            "pose": "hold",
+            "item": "coin",
+            "face": "right",
+            "at": "para",
+            "then": "point",
+            "dir": 10
+          },
+          {
+            "who": "uz",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.6,
+            "scale": 0.92,
+            "pose": "idle",
+            "face": "left",
+            "at": "para",
+            "then": "hold",
+            "item": "coin",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.85,
+            "pose": "talk",
+            "face": "left",
+            "at": "iron",
+            "then": "shrug",
+            "emotion": "surprised"
+          }
+        ],
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.37,
+            "y": 0.6,
+            "scale": 0.42,
+            "at": "para",
+            "move": {
+              "x": 0.55,
+              "y": 0.6,
+              "at": "para",
+              "dur": 0.7
+            }
+          }
+        ],
+        "label": {
+          "text": "İroni!",
+          "x": 0.45,
+          "y": 0.16,
+          "at": "iron"
+        },
+        "scale": 1.0,
+        "ground_y": 820,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 20,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.2
+          },
+          "far_h": 0.18,
+          "near": "crate",
+          "side": "left"
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Ordu aylarca doğuya yürüdü. Ağır arabalar, kuşatma aletleri, yüklü katırlar… Kalkan toz bulutu kilometrelerce uzanıyordu.",
+      "visual": "Anadolu haritası: kırmızı kesikli rota İstanbul'dan doğuya, Erzurum'a doğru ağır ağır çizilir; ucunda küçük atlı simgeleri ve büyüyen bir toz bulutu ilerler; İstanbul ve Erzurum adları belirir; solda fesli anlatıcı yürüyerek gelir, dürbünle rotayı izler, 'toz'da işaret eder",
+      "title": {
+        "white": "Doğuya"
+      },
+      "cues": {
+        "dog": "doğuya",
+        "kus": "kuşatma",
+        "toz": "toz",
+        "km": "kilometrelerce"
+      },
+      "params": {
+        "view": [
+          26,
+          43.5,
+          36.2,
+          43.2
+        ],
+        "realms": [
+          {
+            "poly": "bizans",
+            "color": "red"
+          }
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                28.98,
+                41.01
+              ],
+              [
+                30.6,
+                40.6
+              ],
+              [
+                33,
+                40.1
+              ],
+              [
+                35.4,
+                39.9
+              ],
+              [
+                37.02,
+                39.75
+              ],
+              [
+                39.4,
+                39.8
+              ],
+              [
+                41.27,
+                39.9
+              ]
+            ],
+            "at": "dog",
+            "dur": 6.0,
+            "linear": true,
+            "color": "red",
+            "riders": 3,
+            "dust": true
+          }
+        ],
+        "cities": [
+          {
+            "name": "İstanbul",
+            "lon": 28.98,
+            "lat": 41.01,
+            "at": 0.2,
+            "dy": 64
+          },
+          {
+            "name": "Erzurum",
+            "lon": 41.27,
+            "lat": 39.9,
+            "at": "km",
+            "dy": -38
+          }
+        ],
+        "kasif": {
+          "side": "left",
+          "walk": true,
+          "arrive": 1.2,
+          "then": "look",
+          "at": "toz",
+          "then2": "point",
+          "dir": 18,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Peki Alp Arslan neredeydi? Çok uzakta! Suriye'de, Halep surlarının önündeydi ve gözü Mısır'daydı.",
+      "visual": "Harita güneye kayar: 'uzakta'da İstanbul'dan Halep'e uzun bir mesafe çizgisi uzanır; 'Halep' kırmızı halkayla işaretlenir; 'gözü'nde Halep'ten Mısır'a mavi kesikli ok çizilir; solda fesli anlatıcı düşünür, 'uzakta'da şaşırıp geri sıçrar, sonra Halep'i işaret eder",
+      "title": {
+        "white": "Alp Arslan",
+        "gray": "Suriye"
+      },
+      "cues": {
+        "ner": "neredeydi",
+        "uz": "uzakta",
+        "sur": "Suriye",
+        "hal": "Halep",
+        "goz": "gözü"
+      },
+      "params": {
+        "view": [
+          24,
+          44,
+          33,
+          43.5
+        ],
+        "view2": [
+          26,
+          44,
+          28.6,
+          41.8
+        ],
+        "pan": {
+          "at": "sur",
+          "dur": 1.5
+        },
+        "sheet": {
+          "x": 560,
+          "y": 215,
+          "w": 1320,
+          "h": 655
+        },
+        "cities": [
+          {
+            "name": "İstanbul",
+            "lon": 28.98,
+            "lat": 41.01,
+            "at": 0.2,
+            "dy": 64
+          },
+          {
+            "name": "Halep",
+            "lon": 37.16,
+            "lat": 36.2,
+            "at": "hal",
+            "color": "red",
+            "ring": true,
+            "dy": -40
+          },
+          {
+            "name": "Mısır",
+            "lon": 31.24,
+            "lat": 30.04,
+            "at": "goz",
+            "color": "blue",
+            "dy": 62
+          }
+        ],
+        "gauge": {
+          "from": [
+            28.98,
+            41.01
+          ],
+          "to": [
+            37.16,
+            36.2
+          ],
+          "at": "uz",
+          "dur": 1.2,
+          "color": "red"
+        },
+        "routes": [
+          {
+            "pts": [
+              [
+                37.16,
+                36.2
+              ],
+              [
+                35.6,
+                33.8
+              ],
+              [
+                33.6,
+                31.4
+              ],
+              [
+                31.6,
+                30.3
+              ]
+            ],
+            "at": "goz",
+            "dur": 1.4,
+            "color": "blue"
+          }
+        ],
+        "kasif": {
+          "side": "left",
+          "pose": "think",
+          "face": "right",
+          "at": "uz",
+          "then": "shock",
+          "emotion": "surprised",
+          "seq": [
+            {
+              "at": "hal",
+              "pose": "point",
+              "dir": 10,
+              "face": "right",
+              "emotion": "surprised"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "Haber ona orada ulaştı. Alp Arslan hemen Mısır planından vazgeçti ve atının başını kuzeye çevirdi.",
+      "visual": "Halep surları önünde sarıklı Alp Arslan mavi sancaklı atının üstünde güneye bakar; sağdan soluk soluğa bir ulak koşarak gelir ve haberi anlatır; 'vazgeçti'de anlatıcı şaşırır, Alp Arslan kuzeyi işaret eder; 'kuzeye'de at döner ve sağa, kuzeye dörtnala gider; 'Kuzeye!' yazısı ve oku belirir",
+      "title": {
+        "white": "Halep"
+      },
+      "cues": {
+        "hab": "ulaştı",
+        "vaz": "vazgeçti",
+        "kuz": "kuzeye"
+      },
+      "params": {
+        "far": {
+          "kind": "hills",
+          "h": 0.15,
+          "ridges": 1,
+          "seed": 17
+        },
+        "grass": 10,
+        "sun": {
+          "x": 0.62,
+          "y": 0.13,
+          "r": 44
+        },
+        "buildings": [
+          {
+            "type": "walls",
+            "from": -0.02,
+            "to": 0.4,
+            "scale": 0.9
+          }
+        ],
+        "riders": [
+          {
+            "x": 0.5,
+            "face": "left",
+            "cloth": "blue",
+            "banner": "blue",
+            "turn": "kuz",
+            "off": 1.35,
+            "off_dur": 1.8,
+            "rider": {
+              "accessory": "turban",
+              "beard": "black",
+              "pose": "idle",
+              "at": "vaz",
+              "then": "point",
+              "dir": 40
+            }
+          }
+        ],
+        "cast": [
+          {
+            "who": "ulak",
+            "accessory": "turban",
+            "x": 1.08,
+            "pose": "run",
+            "to": 0.74,
+            "at": "hab",
+            "then": "talk",
+            "face": "left",
+            "emotion": "worried"
+          },
+          {
+            "who": "kasif",
+            "x": 0.15,
+            "pose": "idle",
+            "face": "right",
+            "at": "vaz",
+            "then": "shock",
+            "emotion": "surprised"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Kuzeye!",
+            "x": 0.82,
+            "y": 0.2,
+            "at": "kuz",
+            "size": 70,
+            "color": "blue",
+            "arrow": [
+              0.96,
+              0.24
+            ]
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.55,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "Fırat'ı geçti ve hızla ilerledi; yol boyunca yanına Türkmen beyleri ve gönüllüler katıldı.",
+      "visual": "Fırat nehri ekranı ortadan keser; Alp Arslan mavi sancaklı atıyla dörtnala nehri geçer, sular sıçrar, ardından mavi atlı sırası gelir; 'Türkmen'de ve 'gönüllüler'de tepelerden yeni küçük atlı grupları inip sıraya katılır; 'Fırat' ve 'Türkmen beyleri' yazıları belirir; sağda fesli anlatıcı yürür ve katılanları işaret eder",
+      "title": {
+        "white": "Kuzeye"
+      },
+      "cues": {
+        "fir": "Fırat",
+        "turk": "Türkmen",
+        "gon": "gönüllüler",
+        "kat": "katıldı"
+      },
+      "params": {
+        "far": {
+          "kind": "hills",
+          "h": 0.26,
+          "ridges": 2,
+          "seed": 18
+        },
+        "grass": 10,
+        "river": {
+          "x": 0.4,
+          "w": 0.17
+        },
+        "riders": [
+          {
+            "x": 0.02,
+            "to": 0.6,
+            "start": 0.1,
+            "dur": 2.8,
+            "gait": "gallop",
+            "face": "right",
+            "cloth": "blue",
+            "banner": "blue",
+            "scale": 0.95,
+            "rider": {
+              "accessory": "turban",
+              "beard": "black",
+              "pose": "idle",
+              "at": "kat",
+              "then": "point",
+              "dir": 30
+            }
+          }
+        ],
+        "troops": [
+          {
+            "kind": "rider",
+            "n": 4,
+            "from": [
+              -0.12,
+              0.77
+            ],
+            "to": [
+              0.44,
+              0.77
+            ],
+            "at": 0.6,
+            "dur": 3.4,
+            "gap": [
+              -120,
+              0
+            ],
+            "scale": 0.95,
+            "color": "blue"
+          },
+          {
+            "kind": "rider",
+            "n": 3,
+            "from": [
+              0.86,
+              0.5
+            ],
+            "to": [
+              0.68,
+              0.77
+            ],
+            "at": "turk",
+            "dur": 1.6,
+            "gap": [
+              70,
+              -8
+            ],
+            "scale": 0.8,
+            "color": "blue",
+            "appear": true
+          },
+          {
+            "kind": "rider",
+            "n": 3,
+            "from": [
+              0.62,
+              0.48
+            ],
+            "to": [
+              0.52,
+              0.77
+            ],
+            "at": "gon",
+            "dur": 1.6,
+            "gap": [
+              70,
+              -8
+            ],
+            "scale": 0.8,
+            "color": "blue",
+            "appear": true
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.74,
+            "pose": "walk",
+            "to": 0.88,
+            "at": "turk",
+            "then": "point",
+            "dir": 40,
+            "face": "right",
+            "face_after": "left",
+            "emotion": "happy"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Fırat",
+            "x": 0.4,
+            "y": 0.56,
+            "at": "fir",
+            "size": 62,
+            "color": "blue"
+          },
+          {
+            "text": "Türkmen beyleri",
+            "x": 0.72,
+            "y": 0.2,
+            "at": "turk",
+            "size": 60
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Bu arada Diyojen Van Gölü'nün kuzeyine ulaştı ve kritik bir karar verdi: ordusunu ikiye böldü.",
+      "visual": "Van Gölü yakın haritası: kuzeyde Malazgirt, göl kıyısında Ahlat; kırmızı Bizans oku Erzurum yönünden gölün kuzeyine gelir; 'böldü'de ok ikiye ayrılır, biri Ahlat'a, biri Malazgirt'e kısa uçlarla döner; solda fesli anlatıcı düşünür, 'böldü'de iki elini iki yana açar",
+      "title": {
+        "white": "Van Gölü"
+      },
+      "cues": {
+        "van": "Van",
+        "kuz": "kuzeyine",
+        "kar": "karar",
+        "bol": "böldü"
+      },
+      "params": {
+        "view": [
+          40.0,
+          44.4,
+          37.9,
+          40.3
+        ],
+        "texts": [
+          {
+            "text": "Van Gölü",
+            "lon": 42.9,
+            "lat": 38.62,
+            "at": "van",
+            "size": 60,
+            "color": "blue"
+          }
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                40.6,
+                40.15
+              ],
+              [
+                41.2,
+                39.75
+              ],
+              [
+                41.7,
+                39.42
+              ],
+              [
+                41.98,
+                39.25
+              ]
+            ],
+            "at": "kuz",
+            "dur": 1.8,
+            "color": "red",
+            "riders": 2,
+            "width": 10
+          },
+          {
+            "pts": [
+              [
+                41.98,
+                39.25
+              ],
+              [
+                42.15,
+                39.08
+              ],
+              [
+                42.3,
+                38.95
+              ]
+            ],
+            "at": "bol",
+            "dur": 0.8,
+            "color": "red",
+            "width": 8
+          },
+          {
+            "pts": [
+              [
+                41.98,
+                39.25
+              ],
+              [
+                42.18,
+                39.22
+              ],
+              [
+                42.32,
+                39.18
+              ]
+            ],
+            "at": "bol",
+            "dur": 0.8,
+            "color": "red",
+            "width": 8
+          }
+        ],
+        "cities": [
+          {
+            "name": "Malazgirt",
+            "lon": 42.53,
+            "lat": 39.14,
+            "at": "kuz",
+            "dy": -38,
+            "dx": 30
+          },
+          {
+            "name": "Ahlat",
+            "lon": 42.49,
+            "lat": 38.75,
+            "at": "kuz",
+            "dy": 20,
+            "dx": -30,
+            "anchor": "end"
+          }
+        ],
+        "kasif": {
+          "side": "left",
+          "pose": "think",
+          "at": "bol",
+          "then": "shrug",
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Büyük bir kısmını Tarkaniotis komutasında Ahlat'a gönderdi, kendisi de Malazgirt Kalesi'ni kolayca aldı.",
+      "visual": "Aynı Van Gölü haritası: 'Tarkaniotis'te kalın kırmızı ok küçük atlılarla Ahlat'a iner, üstünde 'Tarkaniotis' yazısı; 'Malazgirt'te ikinci ok kaleye ulaşır; 'kolayca'da Malazgirt kalesinin kulesine kırmızı Bizans sancağı çekilir; solda fesli anlatıcı dürbünle kaleyi izler, sonra işaret eder",
+      "title": {
+        "white": "Malazgirt"
+      },
+      "cues": {
+        "tar": "Tarkaniotis",
+        "mal": "Malazgirt",
+        "kol": "kolayca"
+      },
+      "params": {
+        "view": [
+          40.0,
+          44.4,
+          37.9,
+          40.3
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                40.6,
+                40.15
+              ],
+              [
+                41.2,
+                39.75
+              ],
+              [
+                41.7,
+                39.42
+              ],
+              [
+                41.98,
+                39.25
+              ]
+            ],
+            "at": 0,
+            "dur": 0.4,
+            "color": "red",
+            "width": 10
+          },
+          {
+            "pts": [
+              [
+                41.98,
+                39.25
+              ],
+              [
+                42.15,
+                39.08
+              ],
+              [
+                42.32,
+                38.92
+              ],
+              [
+                42.44,
+                38.82
+              ]
+            ],
+            "at": "tar",
+            "dur": 1.8,
+            "color": "red",
+            "width": 10,
+            "riders": 2,
+            "label": {
+              "text": "Tarkaniotis",
+              "u": 0.45,
+              "dx": -190,
+              "dy": 10,
+              "color": "red",
+              "size": 62
+            }
+          },
+          {
+            "pts": [
+              [
+                41.98,
+                39.25
+              ],
+              [
+                42.18,
+                39.22
+              ],
+              [
+                42.44,
+                39.16
+              ]
+            ],
+            "at": "mal",
+            "dur": 1.0,
+            "color": "red",
+            "width": 8,
+            "riders": 1
+          }
+        ],
+        "cities": [
+          {
+            "name": "Malazgirt",
+            "lon": 42.53,
+            "lat": 39.14,
+            "at": 0.1,
+            "dy": 54,
+            "dx": 40
+          },
+          {
+            "name": "Ahlat",
+            "lon": 42.49,
+            "lat": 38.75,
+            "at": 0.1,
+            "dy": 20,
+            "dx": -30,
+            "anchor": "end"
+          }
+        ],
+        "icons": [
+          {
+            "type": "castle",
+            "lon": 42.53,
+            "lat": 39.14,
+            "at": 0.3,
+            "size": 0.9,
+            "dy": -14,
+            "flag": {
+              "at": "kol",
+              "color": "red"
+            }
+          }
+        ],
+        "kasif": {
+          "side": "left",
+          "pose": "look",
+          "at": "kol",
+          "then": "point",
+          "dir": 15,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "ag03a_field",
+      "text": "Peki Ahlat'a gidenlere ne oldu? İşin tuhafı, savaşa hiç katılmadılar ve Bizans kaynakları bu konuda neredeyse susar.",
+      "visual": "Boş, rüzgârlı bir ova yolu: toynak izleri ufka doğru küçülerek ilerler ve silinip kaybolur; üstte el yazısıyla 'Nereye?'; solda fesli anlatıcı eli çenesinde düşünür, 'tuhafı'nda omuz silker",
+      "title": {
+        "white": "Ahlat",
+        "gray": "kayıp birlikler"
+      },
+      "cues": {
+        "ne": "oldu",
+        "tuh": "tuhafı",
+        "sus": "susar"
+      },
+      "params": {
+        "ground": 0.7,
+        "far": {
+          "kind": "hills",
+          "h": 0.2,
+          "ridges": 2,
+          "seed": 21
+        },
+        "grass": 18,
+        "wind": {
+          "at": "sus"
+        },
+        "trail": {
+          "from": [
+            0.42,
+            0.81
+          ],
+          "to": [
+            0.68,
+            0.705
+          ],
+          "at": 0.2,
+          "dur": 2.6,
+          "n": 14
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.18,
+            "pose": "think",
+            "face": "right",
+            "at": "tuh",
+            "then": "shrug",
+            "emotion": "worried"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Nereye?",
+            "x": 0.68,
+            "y": 0.3,
+            "at": "ne",
+            "size": 80,
+            "color": "red"
+          }
+        ],
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.65,
+            0.65
+          ]
+        }
+      }
+    },
+    {
+      "chapter": "Reddedilen barış",
+      "text": "Ağustosun sonunda iki ordu, Malazgirt ovasında karşı karşıya geldi.",
+      "visual": "BÖLÜM 3 / 7 rozeti, mavi dairede 3, altında 'Reddedilen barış' kartı ve el çizimi alt çizgi",
+      "type": "chapter",
+      "title": {},
+      "cues": {
+        "n": "Ağustosun",
+        "title": "karşı"
+      },
+      "params": {
+        "n": 3,
+        "total": 7,
+        "title": "Reddedilen barış"
+      }
+    },
+    {
+      "text": "Çevrede çıplak tepeler, sararmış otlar ve uzakta sönmüş volkanlar vardı.",
+      "visual": "Higgsfield klibi: sepya mürekkeple çizilmiş geniş Malazgirt ovası, sabah sisi, sararmış otlar, çıplak tepeler, uzakta sönmüş volkan dağları; kamera yavaşça kayar (insan yüzü ve yazı yok)",
+      "type": "photo",
+      "title": {
+        "white": "Malazgirt",
+        "gray": "ovası"
+      },
+      "cues": {
+        "hit": "volkan"
+      },
+      "params": {
+        "video": "media/hf-malazgirt-ova.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261022_023237_056ad60b-38c0-4c12-8e83-c8f1d6910469.mp4",
+        "ai": true,
+        "grade": "sepia",
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (seedance_2_0_mini)",
+        "rate": 0.8,
+        "kb": {
+          "from": [
+            1.0,
+            0.5,
+            0.5
+          ],
+          "to": [
+            1.08,
+            0.56,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "text": "Bir yanda göz alabildiğine Bizans çadırları uzanıyordu; öbür yanda ise sayıca az ama çok daha hızlı Selçuklu atlıları bekliyordu.",
+      "visual": "Higgsfield klibi: ovaya yayılmış dev ordu kampı, sıra sıra çadırlar, rüzgârda dalgalanan sancaklar, ince kamp dumanları, uzak bir tepeden bakış (insan yüzü ve yazı yok)",
+      "type": "photo",
+      "title": {
+        "white": "İki ordu"
+      },
+      "cues": {
+        "hit": "çadırları"
+      },
+      "params": {
+        "video": "media/hf-bizans-kamp.mp4",
+        "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261022_023240_c9126bb0-c447-47a2-9622-d28a869301b9.mp4",
+        "ai": true,
+        "grade": "sepia",
+        "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (seedance_2_0_mini)",
+        "rate": 0.8,
+        "kb": {
+          "from": [
+            1.04,
+            0.45,
+            0.5
+          ],
+          "to": [
+            1.0,
+            0.55,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "text": "Ve tam burada Alp Arslan beklenmedik bir şey yaptı: imparatora barış elçisi gönderdi.",
+      "visual": "Gündüz ova: solda uzakta kırmızı sancaklı Bizans çadırları, sağda mavi sancaklı Selçuklu çadırları; aradan beyaz bayraklı tek bir sarıklı atlı elçi sağdan sola ilerler; önde fesli anlatıcı 'barış'ta şaşırıp geri sıçrar; üstte el yazısı 'Barış elçisi'",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Elçi"
+      },
+      "cues": {
+        "mv": "beklenmedik",
+        "hit": "barış",
+        "lab": "elçisi"
+      },
+      "params": {
+        "time": "day",
+        "sun": {
+          "x": 0.78,
+          "y": 0.2
+        },
+        "camps": [
+          {
+            "side": "byz",
+            "x0": 0.03,
+            "x1": 0.3,
+            "n": 6,
+            "scale": 0.5
+          },
+          {
+            "side": "sel",
+            "x0": 0.72,
+            "x1": 0.97,
+            "n": 4,
+            "scale": 0.45
+          }
+        ],
+        "riders": [
+          {
+            "who": "elci",
+            "side": "sel",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.88,
+            "face": -1,
+            "flag": "white",
+            "scale": 0.72,
+            "moves": [
+              {
+                "at": "mv",
+                "x": 0.52,
+                "dur": 3.0
+              }
+            ],
+            "pose": "idle"
+          }
+        ],
+        "label": {
+          "text": "Barış elçisi",
+          "x": 0.4,
+          "y": 0.2,
+          "at": "lab"
+        },
+        "kasif": {
+          "x": 0.13,
+          "y": 0.86,
+          "scale": 0.82,
+          "face": 1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shock",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "text": "Bu korku muydu? Büyük olasılıkla hayır; sultan hem barışı deniyor, hem de düşmanın gücünü yokluyordu.",
+      "visual": "Fesli anlatıcı ortada eli çenesinde düşünür; solda 'korku?' tabelası belirir, 'hayır'da omuz silker; 'deniyor'da sağda 'hamle?' tabelası çıkar, 'yokluyordu'da anlatıcı onu işaret eder ve tabela sıçrar",
+      "type": "stage",
+      "title": {
+        "white": "Korku mu?"
+      },
+      "cues": {
+        "korku": "korku",
+        "hayir": "hayır",
+        "den": "deniyor",
+        "yok": "yokluyordu"
+      },
+      "params": {
+        "scale": 1.0,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "pose": "think",
+            "face": "left",
+            "at": "hayir",
+            "then": "shrug",
+            "emotion": "worried",
+            "seq": [
+              {
+                "at": "yok",
+                "pose": "point",
+                "dir": "right",
+                "face": "right",
+                "emotion": "happy"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.24,
+            "scale": 1.0,
+            "text": "korku?",
+            "at": "korku",
+            "hit": "hayir"
+          },
+          {
+            "type": "sign",
+            "x": 0.78,
+            "scale": 1.0,
+            "text": "hamle?",
+            "at": "den",
+            "hit": "yok"
+          }
+        ]
+      }
+    },
+    {
+      "text": "Diyojen'in cevabı ise sertti. Rivayete göre şöyle dedi: \"Barışı Rey'de konuşuruz.\" Yani sultanın kendi başkentinde, onu yendikten sonra.",
+      "visual": "Bizans otağının önünde taçlı Diyojen, karşısındaki sarıklı Selçuklu elçisine eliyle 'git' işareti yapar; 'Rey'de elçi irkilir ve üstte el yazısı 'Rey: Selçuklu başkenti' belirir; solda fesli anlatıcı 'sertti'de şaşırır, sonra kaşlarını çatar",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Diyojen'in",
+        "gray": "cevabı"
+      },
+      "cues": {
+        "sert": "sertti",
+        "rey": "Rey",
+        "bas": "başkentinde"
+      },
+      "params": {
+        "time": "day",
+        "sun": {
+          "x": 0.86,
+          "y": 0.22
+        },
+        "camps": [
+          {
+            "side": "byz",
+            "x0": 0.2,
+            "x1": 0.62,
+            "n": 5,
+            "scale": 0.42
+          }
+        ],
+        "tents": [
+          {
+            "x": 0.45,
+            "side": "byz",
+            "scale": 0.95
+          }
+        ],
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.5,
+            "face": "right",
+            "pose": "idle",
+            "emotion": "angry",
+            "seq": [
+              {
+                "at": "rey",
+                "pose": "point",
+                "dir": "right",
+                "emotion": "angry"
+              }
+            ]
+          },
+          {
+            "who": "elci",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.8,
+            "face": "left",
+            "pose": "talk",
+            "seq": [
+              {
+                "at": "rey",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "label": {
+          "text": "Rey: Selçuklu başkenti",
+          "x": 0.66,
+          "y": 0.16,
+          "at": "bas"
+        },
+        "kasif": {
+          "x": 0.13,
+          "y": 0.86,
+          "scale": 0.82,
+          "face": 1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "sert",
+              "pose": "shock",
+              "emotion": "surprised"
+            },
+            {
+              "at": "bas",
+              "pose": "think",
+              "emotion": "angry"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.55,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "text": "Kapı kapanmıştı. Artık söz kılıçlarındı.",
+      "visual": "Dev yazı 'SÖZ / KILIÇLARINDI' ilk saniyede çarpar, 'KILIÇLARINDI' kırmızı kutuda; 'Kapı'da el yazısı not 'Kapı kapandı'; sağ altta fesli anlatıcı 'kılıçlarındı'da endişeyle omuz silker",
+      "type": "title",
+      "title": {},
+      "cues": {
+        "note": "Kapı",
+        "hit": "kılıçlarındı"
+      },
+      "params": {
+        "lines": [
+          "Söz",
+          "kılıçlarındı"
+        ],
+        "highlight": [
+          "kılıçlarındı"
+        ],
+        "note": {
+          "text": "Kapı kapandı",
+          "at": "note"
+        },
+        "kasif": {
+          "x": 0.9,
+          "y": 0.84,
+          "pose": "shrug",
+          "at": "hit",
+          "face": -1,
+          "scale": 0.7,
+          "emotion": "worried"
+        }
+      }
+    },
+    {
+      "text": "O gece kampta beklenmedik bir şey oldu: kaynaklara göre Uz paralı askerlerinin bir bölümü, karanlıkta Selçuklu tarafına geçti.",
+      "visual": "Gece ovası: tarama gökyüzü, yıldızlar, hilal ay; solda ateşli Bizans çadırları, sağda ateşli Selçuklu çadırları; 'Uz'da üç sarıklı atlı Bizans kampından sessizce ayrılıp sağdaki Selçuklu ateşlerine gider, üstte el yazısı 'Uz atlıları'; önde fesli anlatıcı dürbünle izler, 'geçti'de irkilir",
+      "type": "ag03_ova",
+      "title": {
+        "white": "O gece"
+      },
+      "cues": {
+        "uz": "Uz",
+        "hit": "geçti"
+      },
+      "params": {
+        "time": "night",
+        "moon": {
+          "x": 0.5,
+          "y": 0.17
+        },
+        "camps": [
+          {
+            "side": "byz",
+            "x0": 0.03,
+            "x1": 0.3,
+            "n": 6,
+            "scale": 0.5,
+            "fires": true
+          },
+          {
+            "side": "sel",
+            "x0": 0.74,
+            "x1": 0.97,
+            "n": 4,
+            "scale": 0.45,
+            "fires": true
+          }
+        ],
+        "riders": [
+          {
+            "who": "uz",
+            "side": "sel",
+            "accessory": "turban",
+            "x": 0.3,
+            "face": 1,
+            "n": 3,
+            "gap": 0.1,
+            "scale": 0.56,
+            "y": 0.84,
+            "moves": [
+              {
+                "at": "uz",
+                "x": 0.76,
+                "dur": 4.5
+              }
+            ]
+          }
+        ],
+        "label": {
+          "text": "Uz atlıları",
+          "x": 0.5,
+          "y": 0.36,
+          "at": "uz",
+          "color": "red"
+        },
+        "kasif": {
+          "x": 0.1,
+          "y": 0.86,
+          "scale": 0.82,
+          "face": 1,
+          "pose": "look",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shock",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.62
+          ]
+        }
+      }
+    },
+    {
+      "text": "Düşünün, aynı dili konuşan insanlarla savaşmaları bekleniyordu. Peki geride kalanlara ne kadar güvenilebilirdi?",
+      "visual": "Gece ovası: solda kırmızı sancaklı sarıklı Uz atlısı, sağda mavi sancaklı sarıklı Selçuklu atlısı birbirine yaklaşır; 'aynı'da aralarında el yazısı 'Aynı dil' belirir; 'güvenilebilirdi'de üstte kırmızı 'Güven?' çıkar; sağda fesli anlatıcı iki atlıyı işaret eder, sonra omuz silker",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Aynı dil"
+      },
+      "cues": {
+        "go": "Düşünün",
+        "a": "aynı",
+        "pill": "güvenilebilirdi"
+      },
+      "params": {
+        "time": "night",
+        "moon": {
+          "x": 0.64,
+          "y": 0.13
+        },
+        "camps": [
+          {
+            "side": "byz",
+            "x0": 0.02,
+            "x1": 0.22,
+            "n": 4,
+            "scale": 0.42,
+            "fires": true
+          },
+          {
+            "side": "sel",
+            "x0": 0.62,
+            "x1": 0.8,
+            "n": 3,
+            "scale": 0.4,
+            "fires": true
+          }
+        ],
+        "riders": [
+          {
+            "who": "uz",
+            "side": "byz",
+            "accessory": "turban",
+            "flag": "red",
+            "x": 0.18,
+            "face": 1,
+            "scale": 0.62,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.27,
+                "dur": 2.2
+              }
+            ],
+            "seq": [
+              {
+                "at": "a",
+                "pose": "talk"
+              }
+            ]
+          },
+          {
+            "who": "sel",
+            "side": "sel",
+            "accessory": "turban",
+            "beard": "black",
+            "flag": "blue",
+            "x": 0.76,
+            "face": -1,
+            "scale": 0.62,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.66,
+                "dur": 2.2
+              }
+            ],
+            "seq": [
+              {
+                "at": "a",
+                "pose": "talk"
+              }
+            ]
+          }
+        ],
+        "label": {
+          "text": "Aynı dil",
+          "x": 0.47,
+          "y": 0.4,
+          "at": "a",
+          "size": 84
+        },
+        "note": {
+          "text": "Güven?",
+          "x": 0.47,
+          "y": 0.17,
+          "at": "pill",
+          "size": 96,
+          "color": "red"
+        },
+        "kasif": {
+          "x": 0.9,
+          "y": 0.86,
+          "scale": 0.8,
+          "face": -1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "a",
+              "pose": "point",
+              "dir": "left"
+            },
+            {
+              "at": "pill",
+              "pose": "shrug",
+              "emotion": "worried"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.47,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "chapter": "Cuma günü",
+      "text": "26 Ağustos 1071. O gün bir cumaydı.",
+      "visual": "BÖLÜM 4 / 7 rozeti, mavi dairede 4, altında 'Cuma günü' kartı ve el çizimi alt çizgi",
+      "type": "chapter",
+      "title": {},
+      "cues": {
+        "n": "Ağustos",
+        "title": "cumaydı"
+      },
+      "params": {
+        "n": 4,
+        "total": 7,
+        "title": "Cuma günü"
+      }
+    },
+    {
+      "text": "Kaynaklara göre Alp Arslan o sabah askerlerinin karşısına bembeyaz giysilerle çıktı. \"Ölürsem, bu kefenim olsun.\" dedi.",
+      "visual": "Sabah ovası, güneş doğuda alçakta: bembeyaz kaftanlı, sarıklı Alp Arslan askerlerine konuşur; karşısında mızraklı sarıklı Selçuklu askerleri; 'kefenim'de askerler başlarını eğer ve el yazısı '“Kefenim olsun”' belirir; solda fesli anlatıcı 'bembeyaz'da işaret eder, 'kefenim'de saygıyla düşünür",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Beyaz",
+        "gray": "kefen"
+      },
+      "cues": {
+        "bem": "bembeyaz",
+        "hit": "kefenim"
+      },
+      "params": {
+        "time": "day",
+        "sun": {
+          "x": 0.24,
+          "y": 0.34,
+          "to": [
+            0.27,
+            0.27
+          ],
+          "at": 0,
+          "dur": 6
+        },
+        "camps": [
+          {
+            "side": "sel",
+            "x0": 0.55,
+            "x1": 0.95,
+            "n": 5,
+            "scale": 0.42
+          }
+        ],
+        "cast": [
+          {
+            "who": "alparslan",
+            "accessory": "turban",
+            "beard": "black",
+            "robe": "white",
+            "x": 0.38,
+            "face": "right",
+            "pose": "talk",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "point",
+                "dir": "down",
+                "emotion": "neutral"
+              }
+            ]
+          },
+          {
+            "who": "a1",
+            "accessory": "turban",
+            "x": 0.6,
+            "face": "left",
+            "pose": "idle",
+            "spear": true,
+            "bow": "hit"
+          },
+          {
+            "who": "a2",
+            "accessory": "turban",
+            "beard": "short",
+            "x": 0.71,
+            "face": "left",
+            "pose": "idle",
+            "spear": true,
+            "bow": "hit"
+          },
+          {
+            "who": "a3",
+            "accessory": "turban",
+            "x": 0.82,
+            "face": "left",
+            "pose": "idle",
+            "spear": true,
+            "bow": "hit"
+          },
+          {
+            "who": "a4",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.93,
+            "face": "left",
+            "pose": "idle",
+            "spear": true,
+            "bow": "hit"
+          }
+        ],
+        "note": {
+          "text": "“Kefenim olsun”",
+          "x": 0.66,
+          "y": 0.17,
+          "at": "hit"
+        },
+        "kasif": {
+          "x": 0.13,
+          "y": 0.86,
+          "scale": 0.8,
+          "face": 1,
+          "pose": "idle",
+          "seq": [
+            {
+              "at": "bem",
+              "pose": "point",
+              "dir": "right"
+            },
+            {
+              "at": "hit",
+              "pose": "think",
+              "emotion": "worried"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "text": "Aynı kaynaklara göre şunu da ekledi: \"Gitmek isteyen gidebilir. Ben de içinizden biri olarak savaşacağım.\"",
+      "visual": "Kamera yavaşça içeri iter; fesli anlatıcı soldan yürüyerek gelir; sarıklı Alp Arslan 'Gitmek'te birkaç adım öne çıkıp eliyle arkadaki yolu gösterir; sağda önde üç, arkada iki sarıklı asker yerinden kıpırdamaz, 'savaşacağım'da hepsi bir adım öne atılıp kollarını havaya kaldırır; anlatıcı da kolunu kaldırır",
+      "type": "stage",
+      "title": {
+        "white": "Seçim",
+        "gray": "askerlerin"
+      },
+      "cues": {
+        "git": "Gitmek",
+        "ben": "Ben",
+        "hit": "savaşacağım"
+      },
+      "params": {
+        "scale": 1.0,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.07,
+          "pan": 36,
+          "focus": [
+            0.55,
+            0.6
+          ]
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ],
+          "near": "post",
+          "side": "left"
+        },
+        "cast": [
+          {
+            "who": "b1",
+            "accessory": "turban",
+            "x": 0.69,
+            "y": 0.75,
+            "scale": 0.74,
+            "pose": "idle",
+            "talk": false,
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "up"
+          },
+          {
+            "who": "b2",
+            "accessory": "turban",
+            "beard": "short",
+            "x": 0.83,
+            "y": 0.75,
+            "scale": 0.74,
+            "pose": "idle",
+            "talk": false,
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "up"
+          },
+          {
+            "who": "kasif",
+            "x": -0.06,
+            "pose": "walk",
+            "to": 0.14,
+            "at": "git",
+            "then": "talk",
+            "face": "right",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "point",
+                "dir": "up",
+                "emotion": "happy"
+              }
+            ]
+          },
+          {
+            "who": "alparslan",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.34,
+            "pose": "talk",
+            "talk": false,
+            "face": "right",
+            "seq": [
+              {
+                "at": "git",
+                "pose": "walk",
+                "to": 0.42,
+                "dur": 1.0,
+                "then": "point",
+                "dir": "left"
+              },
+              {
+                "at": "hit",
+                "pose": "point",
+                "dir": "up",
+                "face": "right"
+              }
+            ]
+          },
+          {
+            "who": "s1",
+            "accessory": "turban",
+            "x": 0.62,
+            "pose": "idle",
+            "talk": false,
+            "face": "left",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "walk",
+                "to": 0.58,
+                "dur": 0.6,
+                "then": "point",
+                "dir": "up"
+              }
+            ]
+          },
+          {
+            "who": "s2",
+            "accessory": "turban",
+            "beard": "short",
+            "x": 0.76,
+            "pose": "idle",
+            "talk": false,
+            "face": "left",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "walk",
+                "to": 0.72,
+                "dur": 0.6,
+                "then": "point",
+                "dir": "up"
+              }
+            ]
+          },
+          {
+            "who": "s3",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.9,
+            "pose": "idle",
+            "talk": false,
+            "face": "left",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "walk",
+                "to": 0.86,
+                "dur": 0.6,
+                "then": "point",
+                "dir": "up"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "text": "Rivayete göre atının kuyruğunu kendi eliyle bağladı. Saldırıyı da bilerek öğle saatine bıraktı. Neden mi?",
+      "visual": "Yakın plan: büyük mürekkep at; beyaz kaftanlı Alp Arslan atın kuyruğunu işaret eder, 'bağladı'da kuyruk düğümlenir; 'öğle'de güneş gökte tepeye tırmanır ve el yazısı 'Öğle vakti' belirir; sağda fesli anlatıcı 'Neden'de omuz silker",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Atın",
+        "gray": "kuyruğu"
+      },
+      "cues": {
+        "kuy": "kuyruğunu",
+        "knot": "bağladı",
+        "ogle": "öğle",
+        "neden": "Neden"
+      },
+      "params": {
+        "time": "day",
+        "sun": {
+          "x": 0.74,
+          "y": 0.52,
+          "to": [
+            0.6,
+            0.13
+          ],
+          "at": "ogle",
+          "dur": 2.2
+        },
+        "volcano": [
+          {
+            "x": 0.86,
+            "h": 130
+          }
+        ],
+        "horse": {
+          "x": 0.55,
+          "scale": 1.15,
+          "face": 1,
+          "knot": "knot"
+        },
+        "cast": [
+          {
+            "who": "alparslan",
+            "accessory": "turban",
+            "beard": "black",
+            "robe": "white",
+            "x": 0.29,
+            "face": "right",
+            "pose": "idle",
+            "seq": [
+              {
+                "at": "kuy",
+                "pose": "point",
+                "dir": "forward"
+              }
+            ]
+          }
+        ],
+        "note": {
+          "text": "Öğle vakti",
+          "x": 0.36,
+          "y": 0.16,
+          "at": "ogle"
+        },
+        "kasif": {
+          "x": 0.87,
+          "y": 0.86,
+          "scale": 0.8,
+          "face": -1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "neden",
+              "pose": "shrug",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.45,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "text": "Çünkü o saatte camilerde cuma namazı kılınacak, onun için dua edilecekti. Sultan, hücumun o duaların saatine denk gelmesini istedi.",
+      "visual": "Eski harita: Karadeniz, Hazar, Akdeniz kıyısı, Dicle ve Fırat; Halep, Bağdat ve İsfahan'da sırayla altın kubbeli küçük cami ve minare belirir; 'dua'da her şehirden Malazgirt'e kesikli çizgi uzanır, çizgilerde altın noktalar akar, Malazgirt kırmızı halkayla atar; solda fesli anlatıcı şehirleri işaret eder, sonra yukarıyı gösterir",
+      "type": "ag03_dua",
+      "title": {
+        "white": "Cuma",
+        "gray": "namazı"
+      },
+      "cues": {
+        "c0": "camilerde",
+        "c1": "namazı",
+        "c2": "kılınacak",
+        "dua": "dua",
+        "up": "duaların"
+      },
+      "params": {
+        "cities": [
+          {
+            "name": "Halep",
+            "lon": 37.16,
+            "lat": 36.2,
+            "at": "c0"
+          },
+          {
+            "name": "Bağdat",
+            "lon": 44.36,
+            "lat": 33.31,
+            "at": "c1"
+          },
+          {
+            "name": "İsfahan",
+            "lon": 51.67,
+            "lat": 32.65,
+            "at": "c2"
+          }
+        ],
+        "target": {
+          "name": "Malazgirt",
+          "lon": 42.53,
+          "lat": 39.14
+        },
+        "link": "dua",
+        "kasif": {
+          "x": 0.1,
+          "y": 0.86,
+          "scale": 0.66,
+          "face": 1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "c0",
+              "pose": "point",
+              "dir": "right"
+            },
+            {
+              "at": "up",
+              "pose": "point",
+              "dir": "up",
+              "emotion": "happy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "text": "Öğleden sonra savaş başladı. Selçuklu atlıları dalga dalga yaklaştı, ok yağdırdı ve hemen geri çekildi.",
+      "visual": "Kuşbakışı savaş alanı: solda kamp ve üç kırmızı Bizans bloğu (ortadakinde sancak); sağdan mavi Selçuklu atlı okları dalga dalga yaklaşır, 'yağdırdı'da mürekkep ok yağmuru bloklara saplanır, 'geri'de atlılar dönüp geri kayar; sağ altta tepede fesli anlatıcı dürbünle izler, sonra işaret eder",
+      "type": "ag03_battle",
+      "title": {
+        "white": "Öğleden",
+        "gray": "sonra"
+      },
+      "cues": {
+        "d1": "dalga",
+        "d2": "yaklaştı",
+        "ok": "yağdırdı",
+        "geri": "geri"
+      },
+      "params": {
+        "camp": {
+          "x": 0.08,
+          "y": 0.52,
+          "n": 8,
+          "r": 110
+        },
+        "hills": [
+          {
+            "x": 0.52,
+            "y": 0.06,
+            "r": 140
+          },
+          {
+            "x": 0.84,
+            "y": 0.1,
+            "r": 150
+          },
+          {
+            "x": 0.14,
+            "y": 0.86,
+            "r": 120
+          }
+        ],
+        "units": [
+          {
+            "id": "b1",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.3,
+            "y": 0.3,
+            "w": 170,
+            "h": 88
+          },
+          {
+            "id": "b2",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.32,
+            "y": 0.5,
+            "w": 180,
+            "h": 92,
+            "banner": true
+          },
+          {
+            "id": "b3",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.3,
+            "y": 0.7,
+            "w": 170,
+            "h": 88
+          },
+          {
+            "id": "s1",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.78,
+            "y": 0.3,
+            "face": 180,
+            "moves": [
+              {
+                "at": "d1",
+                "x": 0.58,
+                "dur": 1.4
+              },
+              {
+                "at": "geri",
+                "x": 0.78,
+                "dur": 1.4,
+                "face": 0
+              }
+            ]
+          },
+          {
+            "id": "s2",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.8,
+            "y": 0.5,
+            "face": 180,
+            "moves": [
+              {
+                "at": "d2",
+                "x": 0.6,
+                "dur": 1.2
+              },
+              {
+                "at": "geri",
+                "x": 0.78,
+                "dur": 1.4,
+                "face": 0
+              }
+            ]
+          },
+          {
+            "id": "s3",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.76,
+            "y": 0.7,
+            "face": 180,
+            "moves": [
+              {
+                "at": "d2",
+                "x": 0.58,
+                "dur": 1.5
+              },
+              {
+                "at": "geri",
+                "x": 0.74,
+                "dur": 1.4,
+                "face": 0
+              }
+            ]
+          }
+        ],
+        "volleys": [
+          {
+            "from": "s1",
+            "to": "b1",
+            "at": "ok",
+            "n": 10,
+            "waves": 2
+          },
+          {
+            "from": "s2",
+            "to": "b2",
+            "at": "ok",
+            "n": 12,
+            "waves": 2
+          },
+          {
+            "from": "s3",
+            "to": "b3",
+            "at": "ok",
+            "n": 10,
+            "waves": 2
+          }
+        ],
+        "labels": [
+          {
+            "text": "Bizans",
+            "x": 0.3,
+            "y": 0.2,
+            "color": "red",
+            "at": 0.2
+          },
+          {
+            "text": "Selçuklu",
+            "x": 0.68,
+            "y": 0.2,
+            "color": "blue",
+            "at": 0.5
+          }
+        ],
+        "kasif": {
+          "x": 0.885,
+          "y": 0.88,
+          "scale": 0.95,
+          "face": -1,
+          "pose": "look",
+          "seq": [
+            {
+              "at": "geri",
+              "pose": "point",
+              "dir": "left"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "text": "Bizans'ın ağır zırhlı birlikleri bunlara bir türlü yetişemedi. Ortada dövüşecek bir düşman yoktu; sadece ok, toz ve kavurucu sıcak vardı.",
+      "visual": "Kavurucu öğle güneşi altında zırhlı atları ve mızraklarıyla miğferli Bizans süvarileri soldan hücum eder; önlerinde yaylı, sarıklı Selçuklu atlıları hep bir adım önde kaçar; arkalarında toz bulutları, 'ok'ta gökten oklar geçer; sağda fesli anlatıcı 'sıcak'ta terler ve omuz silker",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Ok, toz",
+        "gray": "ve sıcak"
+      },
+      "cues": {
+        "go": "zırhlı",
+        "ok": "ok,",
+        "hit": "sıcak"
+      },
+      "params": {
+        "time": "day",
+        "sun": {
+          "x": 0.5,
+          "y": 0.15,
+          "r": 75
+        },
+        "volcano": [
+          {
+            "x": 0.7,
+            "h": 120
+          }
+        ],
+        "riders": [
+          {
+            "who": "byz",
+            "side": "byz",
+            "accessory": "helmet_byz",
+            "armor": true,
+            "weapon": "lance",
+            "x": 0.22,
+            "face": 1,
+            "n": 2,
+            "gap": 0.15,
+            "scale": 0.6,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.4,
+                "dur": 4.5
+              }
+            ]
+          },
+          {
+            "who": "sel",
+            "side": "sel",
+            "accessory": "turban",
+            "weapon": "bow",
+            "x": 0.56,
+            "face": 1,
+            "n": 2,
+            "gap": 0.14,
+            "scale": 0.58,
+            "y": 0.84,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.74,
+                "dur": 4.5
+              }
+            ]
+          }
+        ],
+        "dust": {
+          "at": "go",
+          "x0": 0.05,
+          "x1": 0.6,
+          "y": 0.84,
+          "n": 7
+        },
+        "arrows": {
+          "at": "ok",
+          "n": 10,
+          "dir": -1
+        },
+        "kasif": {
+          "x": 0.9,
+          "y": 0.86,
+          "scale": 0.78,
+          "face": -1,
+          "pose": "look",
+          "sweat": "hit",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shrug",
+              "emotion": "worried"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.45,
+            0.62
+          ]
+        }
+      }
+    },
+    {
+      "text": "İşte Türklerin asıl silahı buydu: sahte geri çekilme. Merkez geri kaçar, düşman peşine düşer ve kanatlar bir hilal gibi yavaşça kapanır.",
+      "visual": "Kuşbakışı şema: mavi Selçuklu merkezi 'Merkez'de geri kaçar, büyük kırmızı Bizans bloğu 'peşine'de ileri atılır; 'kanatlar'da üstteki ve alttaki mavi kanatlar bloğun iki yanına kıvrılır; 'hilal'de bloğun çevresine kırmızı hilal yayı çizilir; üstte kırmızı el yazısı 'sahte geri çekilme'; anlatıcı tepede işaret eder",
+      "type": "ag03_battle",
+      "title": {
+        "white": "Turan",
+        "gray": "taktiği"
+      },
+      "cues": {
+        "sahte": "sahte",
+        "mer": "Merkez",
+        "pes": "peşine",
+        "kan": "kanatlar",
+        "hil": "hilal"
+      },
+      "params": {
+        "camp": false,
+        "hills": [
+          {
+            "x": 0.1,
+            "y": 0.6,
+            "r": 120
+          },
+          {
+            "x": 0.84,
+            "y": 0.1,
+            "r": 140
+          }
+        ],
+        "units": [
+          {
+            "id": "b",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.3,
+            "y": 0.5,
+            "w": 220,
+            "h": 118,
+            "banner": true,
+            "arrow": true,
+            "moves": [
+              {
+                "at": "pes",
+                "x": 0.5,
+                "dur": 2.4
+              }
+            ]
+          },
+          {
+            "id": "c",
+            "side": "sel",
+            "kind": "riders",
+            "n": 8,
+            "x": 0.62,
+            "y": 0.5,
+            "face": 180,
+            "moves": [
+              {
+                "at": "mer",
+                "x": 0.72,
+                "dur": 1.6,
+                "face": 0
+              },
+              {
+                "at": "hil",
+                "face": 180,
+                "dur": 0.8
+              }
+            ]
+          },
+          {
+            "id": "wt",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.66,
+            "y": 0.25,
+            "face": 180,
+            "moves": [
+              {
+                "at": "kan",
+                "x": 0.47,
+                "y": 0.27,
+                "dur": 2.0,
+                "face": 120
+              }
+            ]
+          },
+          {
+            "id": "wb",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.66,
+            "y": 0.75,
+            "face": 180,
+            "moves": [
+              {
+                "at": "kan",
+                "x": 0.47,
+                "y": 0.73,
+                "dur": 2.0,
+                "face": -120
+              }
+            ]
+          }
+        ],
+        "crescent": {
+          "at": "hil",
+          "cx": 0.52,
+          "cy": 0.5,
+          "r": 290,
+          "a0": -120,
+          "a1": 120,
+          "dur": 1.2
+        },
+        "labels": [
+          {
+            "text": "sahte geri çekilme",
+            "x": 0.5,
+            "y": 0.1,
+            "color": "red",
+            "at": "sahte"
+          }
+        ],
+        "kasif": {
+          "x": 0.885,
+          "y": 0.88,
+          "scale": 0.95,
+          "face": -1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "mer",
+              "pose": "look"
+            },
+            {
+              "at": "hil",
+              "pose": "point",
+              "dir": "left",
+              "emotion": "happy"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "text": "Bugün buna turan taktiği diyoruz; bozkır avcıları da bir av sürüsünü tam böyle çevirirdi.",
+      "visual": "Kuşbakışı av sahnesi: ortada bir geyik sürüsü; üstte mavi 'TURAN' hap rozeti; 'avcıları'nda mavi atlı avcılar iki yandan yaklaşır, 'çevirirdi'de sürüyü hilal biçiminde kuşatır ve kırmızı yay çizilir; el yazısı 'av sürüsü'; anlatıcı tepede işaret eder",
+      "type": "ag03_battle",
+      "title": {
+        "white": "Bozkır",
+        "gray": "avcıları"
+      },
+      "cues": {
+        "tur": "turan",
+        "avc": "avcıları",
+        "sur": "sürüsünü",
+        "cev": "çevirirdi"
+      },
+      "params": {
+        "camp": false,
+        "hills": [
+          {
+            "x": 0.08,
+            "y": 0.56,
+            "r": 120
+          },
+          {
+            "x": 0.84,
+            "y": 0.12,
+            "r": 150
+          }
+        ],
+        "herd": {
+          "x": 0.48,
+          "y": 0.56,
+          "n": 9,
+          "moves": [
+            {
+              "at": "sur",
+              "x": 0.52,
+              "dur": 1.2
+            }
+          ]
+        },
+        "units": [
+          {
+            "id": "h1",
+            "side": "sel",
+            "kind": "riders",
+            "n": 5,
+            "x": 0.16,
+            "y": 0.3,
+            "face": 0,
+            "moves": [
+              {
+                "at": "avc",
+                "x": 0.5,
+                "y": 0.3,
+                "dur": 1.6,
+                "face": 60
+              }
+            ]
+          },
+          {
+            "id": "h2",
+            "side": "sel",
+            "kind": "riders",
+            "n": 5,
+            "x": 0.16,
+            "y": 0.82,
+            "face": 0,
+            "moves": [
+              {
+                "at": "avc",
+                "x": 0.5,
+                "y": 0.8,
+                "dur": 1.6,
+                "face": -60
+              }
+            ]
+          },
+          {
+            "id": "h3",
+            "side": "sel",
+            "kind": "riders",
+            "n": 5,
+            "x": 0.78,
+            "y": 0.56,
+            "face": 180,
+            "appear": "avc",
+            "moves": [
+              {
+                "at": "avc",
+                "x": 0.7,
+                "dur": 1.4
+              }
+            ]
+          }
+        ],
+        "crescent": {
+          "at": "sur",
+          "cx": 0.5,
+          "cy": 0.56,
+          "r": 270,
+          "a0": -115,
+          "a1": 115,
+          "dur": 1.1
+        },
+        "pill": {
+          "text": "TURAN",
+          "at": "tur",
+          "color": "blue",
+          "x": 0.5,
+          "y": 0.13
+        },
+        "labels": [
+          {
+            "text": "av sürüsü",
+            "x": 0.48,
+            "y": 0.44,
+            "at": "sur",
+            "color": "ink"
+          }
+        ],
+        "kasif": {
+          "x": 0.885,
+          "y": 0.88,
+          "scale": 0.95,
+          "face": -1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "tur",
+              "pose": "point",
+              "dir": "up",
+              "emotion": "happy"
+            },
+            {
+              "at": "cev",
+              "pose": "point",
+              "dir": "left"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "text": "Diyojen saatlerce ilerledi, ama Selçuklular hiç dağılmadı. Akşam yaklaşırken imparator, kampından çok uzaklaştığını fark etti.",
+      "visual": "Akşamüstü: güneş batıda alçalır; taçlı Diyojen atının üstünde doğuya ilerler, yanında miğferli süvariler; uzakta sağda küçük Selçuklu atlıları dağılmadan bekler; 'fark'ta Diyojen arkasına döner; solda ufukta küçücük kalmış kamp çadırları kırmızı halkayla 'kamp' diye işaretlenir; fesli anlatıcı kampı işaret eder, 'fark'ta şaşırır",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Akşam"
+      },
+      "cues": {
+        "mv": "saatlerce",
+        "kamp": "kampından",
+        "hit": "fark"
+      },
+      "params": {
+        "time": "evening",
+        "sun": {
+          "x": 0.2,
+          "y": 0.3,
+          "to": [
+            0.18,
+            0.42
+          ],
+          "at": 0,
+          "dur": 7
+        },
+        "camps": [
+          {
+            "side": "byz",
+            "x0": 0.03,
+            "x1": 0.13,
+            "n": 4,
+            "scale": 0.28,
+            "y": 0.61
+          }
+        ],
+        "riders": [
+          {
+            "who": "muhafiz",
+            "side": "byz",
+            "accessory": "helmet_byz",
+            "armor": true,
+            "x": 0.62,
+            "face": 1,
+            "n": 1,
+            "scale": 0.58,
+            "y": 0.8,
+            "moves": [
+              {
+                "at": "mv",
+                "x": 0.7,
+                "dur": 3
+              }
+            ]
+          },
+          {
+            "who": "diyojen",
+            "side": "byz",
+            "accessory": "crown",
+            "armor": true,
+            "flag": "red",
+            "x": 0.55,
+            "face": 1,
+            "scale": 0.72,
+            "moves": [
+              {
+                "at": "mv",
+                "x": 0.62,
+                "dur": 3
+              }
+            ],
+            "pose": "idle",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "point",
+                "dir": "forward",
+                "look": true,
+                "emotion": "surprised"
+              }
+            ]
+          },
+          {
+            "who": "sel",
+            "side": "sel",
+            "accessory": "turban",
+            "weapon": "bow",
+            "x": 0.97,
+            "face": -1,
+            "n": 3,
+            "gap": 0.05,
+            "scale": 0.42,
+            "y": 0.7
+          }
+        ],
+        "ring": {
+          "x": 0.085,
+          "y": 0.56,
+          "r": 120,
+          "at": "kamp"
+        },
+        "label": {
+          "text": "kamp",
+          "x": 0.09,
+          "y": 0.72,
+          "at": "kamp",
+          "color": "red"
+        },
+        "kasif": {
+          "x": 0.36,
+          "y": 0.86,
+          "scale": 0.8,
+          "face": -1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "kamp",
+              "pose": "point",
+              "dir": "left"
+            },
+            {
+              "at": "hit",
+              "pose": "shock",
+              "face": "right",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.45,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "text": "Gece bastırmadan kampa dönmek için sancağını geri çevirdi. Mantıklı bir karardı. Ama savaşın kaderi tam o anda değişti.",
+      "visual": "Kuşbakışı: kırmızı Bizans bloğunun sancağı 'sancağını'nda geri döner, önündeki büyük ok 'çevirdi'de kampa doğru tersine döner ve blok geri kaymaya başlar; 'kaderi'nde ekran sarsılır, tepelerde mavi Selçuklu atlıları belirir; anlatıcı tepede şaşırıp geri sıçrar",
+      "type": "ag03_battle",
+      "title": {
+        "white": "Geri",
+        "gray": "dönüş"
+      },
+      "cues": {
+        "san": "sancağını",
+        "cev": "çevirdi",
+        "man": "Mantıklı",
+        "kad": "kaderi"
+      },
+      "params": {
+        "camp": {
+          "x": 0.07,
+          "y": 0.5,
+          "n": 8,
+          "r": 100
+        },
+        "hills": [
+          {
+            "x": 0.5,
+            "y": 0.1,
+            "r": 160
+          },
+          {
+            "x": 0.84,
+            "y": 0.16,
+            "r": 150
+          },
+          {
+            "x": 0.68,
+            "y": 0.8,
+            "r": 140
+          }
+        ],
+        "units": [
+          {
+            "id": "r",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.22,
+            "y": 0.5,
+            "w": 160,
+            "h": 84
+          },
+          {
+            "id": "b",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.55,
+            "y": 0.5,
+            "w": 200,
+            "h": 104,
+            "banner": {
+              "turn": "san"
+            },
+            "arrow": {
+              "reverse": "cev"
+            },
+            "moves": [
+              {
+                "at": "man",
+                "x": 0.47,
+                "dur": 3
+              }
+            ]
+          },
+          {
+            "id": "b1",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.5,
+            "y": 0.29,
+            "w": 150,
+            "h": 80,
+            "moves": [
+              {
+                "at": "man",
+                "x": 0.43,
+                "dur": 3
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.5,
+            "y": 0.71,
+            "w": 150,
+            "h": 80,
+            "moves": [
+              {
+                "at": "man",
+                "x": 0.43,
+                "dur": 3
+              }
+            ]
+          },
+          {
+            "id": "s",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.76,
+            "y": 0.5,
+            "face": 180
+          },
+          {
+            "id": "h1",
+            "side": "sel",
+            "kind": "riders",
+            "n": 6,
+            "x": 0.5,
+            "y": 0.1,
+            "face": 90,
+            "appear": "kad"
+          },
+          {
+            "id": "h2",
+            "side": "sel",
+            "kind": "riders",
+            "n": 6,
+            "x": 0.84,
+            "y": 0.17,
+            "face": 150,
+            "appear": "kad"
+          },
+          {
+            "id": "h3",
+            "side": "sel",
+            "kind": "riders",
+            "n": 6,
+            "x": 0.68,
+            "y": 0.79,
+            "face": -90,
+            "appear": "kad"
+          }
+        ],
+        "shake": "kad",
+        "kasif": {
+          "x": 0.885,
+          "y": 0.88,
+          "scale": 0.95,
+          "face": -1,
+          "pose": "look",
+          "seq": [
+            {
+              "at": "kad",
+              "pose": "shock",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "chapter": "Arkadaki ihanet",
+      "text": "Çünkü arkada bekleyen birlikler bu dönüşü bambaşka anladı.",
+      "visual": "BÖLÜM 5 / 7 rozeti, mavi dairede 5, altında 'Arkadaki ihanet' kartı ve el çizimi alt çizgi",
+      "type": "chapter",
+      "title": {},
+      "cues": {
+        "n": "arkada",
+        "title": "bambaşka"
+      },
+      "params": {
+        "n": 5,
+        "total": 7,
+        "title": "Arkadaki ihanet"
+      }
+    },
+    {
+      "text": "Arka safların komutanı Andronikos Dukas'tı. Hatırlıyor musunuz, imparatoru hiç sevmeyen o aile?",
+      "visual": "Arka saflar: önde zırhlı atının üstünde, kırmızı sancaklı, miğferli Andronikos Dukas; arkasında sıra sıra miğferli süvariler; 'Andronikos'ta üstte el yazısı 'Andronikos Dukas', 'Dukas'ta başının çevresine kırmızı halka çizilir; solda fesli anlatıcı 'Hatırlıyor'da parmağını kaldırır",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Arka",
+        "gray": "saflar"
+      },
+      "cues": {
+        "and": "Andronikos",
+        "duk": "Dukas",
+        "hat": "Hatırlıyor"
+      },
+      "params": {
+        "time": "evening",
+        "sun": {
+          "x": 0.86,
+          "y": 0.5
+        },
+        "riders": [
+          {
+            "who": "saf",
+            "side": "byz",
+            "accessory": "helmet_byz",
+            "armor": true,
+            "weapon": "lance",
+            "x": 0.98,
+            "face": -1,
+            "n": 3,
+            "gap": -0.13,
+            "scale": 0.52,
+            "y": 0.78
+          },
+          {
+            "who": "andronikos",
+            "side": "byz",
+            "accessory": "helmet_byz",
+            "armor": true,
+            "flag": "red",
+            "x": 0.56,
+            "face": 1,
+            "scale": 0.8,
+            "pose": "idle",
+            "seq": [
+              {
+                "at": "duk",
+                "pose": "talk",
+                "emotion": "angry"
+              }
+            ]
+          }
+        ],
+        "label": {
+          "text": "Andronikos Dukas",
+          "x": 0.3,
+          "y": 0.24,
+          "at": "and",
+          "color": "red"
+        },
+        "ring": {
+          "x": 0.55,
+          "y": 0.43,
+          "r": 105,
+          "at": "duk"
+        },
+        "kasif": {
+          "x": 0.15,
+          "y": 0.86,
+          "scale": 0.82,
+          "face": 1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "hat",
+              "pose": "point",
+              "dir": "up",
+              "emotion": "angry"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "text": "Bizans kaynaklarına göre Andronikos, imparatorun öldüğü söylentisini yaydı ve birlikleriyle savaş alanından çekildi.",
+      "visual": "Andronikos atını çevirip savaş alanından sola doğru uzaklaşır, arkasındaki miğferli süvari sıraları da onunla döner; 'öldüğü'nde askerlerin üstünde el yazısı 'İmparator öldü!' baloncuğu çıkar; solda fesli anlatıcı şokla geri sıçrar",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Söylenti"
+      },
+      "cues": {
+        "hit": "öldüğü",
+        "yay": "yaydı",
+        "bir": "birlikleriyle"
+      },
+      "params": {
+        "time": "evening",
+        "sun": {
+          "x": 0.86,
+          "y": 0.5
+        },
+        "riders": [
+          {
+            "who": "saf",
+            "side": "byz",
+            "accessory": "helmet_byz",
+            "armor": true,
+            "weapon": "lance",
+            "x": 0.95,
+            "face": 1,
+            "n": 3,
+            "gap": 0.13,
+            "scale": 0.52,
+            "y": 0.78,
+            "moves": [
+              {
+                "at": "bir",
+                "x": 0.05,
+                "dur": 4.5,
+                "face": -1
+              }
+            ]
+          },
+          {
+            "who": "andronikos",
+            "side": "byz",
+            "accessory": "helmet_byz",
+            "armor": true,
+            "x": 0.56,
+            "face": 1,
+            "scale": 0.8,
+            "moves": [
+              {
+                "at": "yay",
+                "x": -0.25,
+                "dur": 4.5,
+                "face": -1
+              }
+            ]
+          }
+        ],
+        "bubble": {
+          "text": "İmparator öldü!",
+          "x": 0.7,
+          "y": 0.3,
+          "at": "hit",
+          "tail": [
+            0.3,
+            1
+          ]
+        },
+        "kasif": {
+          "x": 0.24,
+          "y": 0.86,
+          "scale": 0.82,
+          "face": 1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shock",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "text": "Ön saflar arkalarına baktı ve kimseyi göremedi. Panik bir anda bütün orduya yayıldı; kaynaklara göre bazı paralı askerler de saf değiştirdi.",
+      "visual": "Kuşbakışı: soldaki kırmızı yedek bloğun kenarları silinerek uzaklaşır; 'Panik'te öndeki kırmızı bloklar dağınık noktalara bölünür, kırmızı el yazısı 'Panik!'; 'değiştirdi'de kırmızı paralı atlı grubu maviye döner; anlatıcı tepede şaşırır",
+      "type": "ag03_battle",
+      "title": {
+        "white": "Yalnız",
+        "gray": "kalan ordu"
+      },
+      "cues": {
+        "ark": "arkalarına",
+        "gor": "göremedi",
+        "pan": "Panik",
+        "ord": "orduya",
+        "deg": "değiştirdi"
+      },
+      "params": {
+        "camp": {
+          "x": 0.06,
+          "y": 0.5,
+          "n": 7,
+          "r": 90
+        },
+        "hills": [
+          {
+            "x": 0.5,
+            "y": 0.06,
+            "r": 140
+          },
+          {
+            "x": 0.84,
+            "y": 0.12,
+            "r": 150
+          }
+        ],
+        "units": [
+          {
+            "id": "r",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.24,
+            "y": 0.5,
+            "w": 170,
+            "h": 90,
+            "fade": {
+              "at": "ark",
+              "dur": 2.2
+            },
+            "moves": [
+              {
+                "at": "ark",
+                "x": 0.08,
+                "dur": 2.6
+              }
+            ]
+          },
+          {
+            "id": "f1",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.52,
+            "y": 0.3,
+            "w": 160,
+            "h": 84,
+            "scatter": "pan"
+          },
+          {
+            "id": "f2",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.55,
+            "y": 0.5,
+            "w": 180,
+            "h": 96,
+            "banner": true,
+            "scatter": "ord"
+          },
+          {
+            "id": "f3",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.52,
+            "y": 0.7,
+            "w": 160,
+            "h": 84,
+            "scatter": "ord"
+          },
+          {
+            "id": "m",
+            "side": "byz",
+            "kind": "riders",
+            "n": 6,
+            "x": 0.4,
+            "y": 0.84,
+            "face": 0,
+            "defect": "deg",
+            "moves": [
+              {
+                "at": "deg",
+                "x": 0.66,
+                "y": 0.8,
+                "dur": 1.6
+              }
+            ]
+          },
+          {
+            "id": "s",
+            "side": "sel",
+            "kind": "riders",
+            "n": 8,
+            "x": 0.76,
+            "y": 0.5,
+            "face": 180
+          }
+        ],
+        "labels": [
+          {
+            "text": "Panik!",
+            "x": 0.62,
+            "y": 0.14,
+            "at": "pan",
+            "color": "red",
+            "size": 72
+          }
+        ],
+        "kasif": {
+          "x": 0.885,
+          "y": 0.88,
+          "scale": 0.95,
+          "face": -1,
+          "pose": "look",
+          "seq": [
+            {
+              "at": "gor",
+              "pose": "think",
+              "emotion": "worried"
+            },
+            {
+              "at": "pan",
+              "pose": "shock",
+              "emotion": "worried"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "text": "İşte Alp Arslan'ın beklediği an buydu. Geri çekilen atlılar döndü, tepelerde saklanan birlikler aşağı indi ve hilal kapandı.",
+      "visual": "Kuşbakışı: ortada kalan kırmızı Bizans bloğu; 'döndü'de mavi merkez geri döner; 'tepelerde'de iki yandaki tepelerde mavi atlılar belirir, 'aşağı'da inip bloğun iki yanına kıvrılır; 'hilal'de kırmızı yay çizilir ve 'kapandı'da tam halkaya kapanıp kalınlaşır; anlatıcı tepede kolunu kaldırır",
+      "type": "ag03_battle",
+      "title": {
+        "white": "Hilal",
+        "gray": "kapandı"
+      },
+      "cues": {
+        "don": "döndü",
+        "tep": "tepelerde",
+        "asa": "aşağı",
+        "hil": "hilal",
+        "kap": "kapandı"
+      },
+      "params": {
+        "camp": false,
+        "hills": [
+          {
+            "x": 0.36,
+            "y": 0.2,
+            "r": 130
+          },
+          {
+            "x": 0.72,
+            "y": 0.1,
+            "r": 150
+          },
+          {
+            "x": 0.16,
+            "y": 0.84,
+            "r": 130
+          }
+        ],
+        "units": [
+          {
+            "id": "b",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.48,
+            "y": 0.5,
+            "w": 200,
+            "h": 110,
+            "banner": true
+          },
+          {
+            "id": "c",
+            "side": "sel",
+            "kind": "riders",
+            "n": 8,
+            "x": 0.78,
+            "y": 0.5,
+            "face": 0,
+            "moves": [
+              {
+                "at": "don",
+                "x": 0.68,
+                "dur": 1.4,
+                "face": 180
+              }
+            ]
+          },
+          {
+            "id": "t1",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.72,
+            "y": 0.1,
+            "face": 120,
+            "appear": "tep",
+            "moves": [
+              {
+                "at": "asa",
+                "x": 0.5,
+                "y": 0.25,
+                "dur": 1.6,
+                "face": 90
+              }
+            ]
+          },
+          {
+            "id": "t2",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.36,
+            "y": 0.2,
+            "face": 60,
+            "appear": "tep",
+            "moves": [
+              {
+                "at": "asa",
+                "x": 0.36,
+                "y": 0.3,
+                "dur": 1.6,
+                "face": 45
+              }
+            ]
+          },
+          {
+            "id": "t3",
+            "side": "sel",
+            "kind": "riders",
+            "n": 7,
+            "x": 0.16,
+            "y": 0.83,
+            "face": -60,
+            "appear": "tep",
+            "moves": [
+              {
+                "at": "asa",
+                "x": 0.42,
+                "y": 0.75,
+                "dur": 1.6,
+                "face": -60
+              },
+              {
+                "at": "kap",
+                "x": 0.31,
+                "y": 0.55,
+                "dur": 0.8,
+                "face": 0
+              }
+            ]
+          }
+        ],
+        "crescent": {
+          "at": "hil",
+          "cx": 0.48,
+          "cy": 0.5,
+          "r": 300,
+          "a0": -120,
+          "a1": 120,
+          "dur": 0.9,
+          "close": "kap"
+        },
+        "kasif": {
+          "x": 0.885,
+          "y": 0.88,
+          "scale": 0.95,
+          "face": -1,
+          "pose": "look",
+          "seq": [
+            {
+              "at": "kap",
+              "pose": "point",
+              "dir": "up",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.48,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "text": "Diyojen ise kaçmadı, sonuna kadar dövüştü. Atı öldürüldü, kendisi de elinden yaralandı.",
+      "visual": "Akşam, toz ve oklar arasında taçlı Diyojen yaya olarak kılıcıyla dövüşür, iki yanında mızraklı, miğferli iki muhafız; 'yaralandı'da kılıç elinden düşer, Diyojen sarsılır; sağda fesli anlatıcı şokla geri sıçrar",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Son",
+        "gray": "direniş"
+      },
+      "cues": {
+        "dov": "dövüştü",
+        "hit": "yaralandı"
+      },
+      "params": {
+        "time": "evening",
+        "sun": {
+          "x": 0.62,
+          "y": 0.2
+        },
+        "cast": [
+          {
+            "who": "m1",
+            "accessory": "helmet_byz",
+            "x": 0.27,
+            "face": "left",
+            "pose": "point",
+            "dir": "forward",
+            "spear": true
+          },
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.45,
+            "face": "right",
+            "pose": "point",
+            "dir": "forward",
+            "sword": true,
+            "drop": "hit",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "emotion": "worried"
+              }
+            ]
+          },
+          {
+            "who": "m2",
+            "accessory": "helmet_byz",
+            "beard": "short",
+            "x": 0.66,
+            "face": "right",
+            "pose": "idle",
+            "spear": true
+          }
+        ],
+        "dust": {
+          "at": 0,
+          "x0": 0.1,
+          "x1": 0.8,
+          "y": 0.84,
+          "n": 8
+        },
+        "arrows": {
+          "at": "dov",
+          "n": 12,
+          "dir": -1
+        },
+        "kasif": {
+          "x": 0.88,
+          "y": 0.86,
+          "scale": 0.8,
+          "face": -1,
+          "pose": "look",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shock",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.47,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "text": "Ve gece çökerken bir Bizans imparatoru, Türk askerlerinin arasında esir düştü.",
+      "visual": "Gece; gökte hilal ay, yıldızlar; yere düşmüş altın taç; başı açık Diyojen başını önüne eğer, 'askerlerinin'de iki yanında mızraklı sarıklı Selçuklu askerleri belirir; uzakta bir kamp ateşi; solda fesli anlatıcı 'esir'de şaşırır (kapak adayı)",
+      "type": "ag03_ova",
+      "title": {
+        "white": "Esir"
+      },
+      "cues": {
+        "ask": "askerlerinin",
+        "hit": "esir"
+      },
+      "params": {
+        "time": "night",
+        "moon": {
+          "x": 0.72,
+          "y": 0.2,
+          "r": 70
+        },
+        "fires": [
+          {
+            "x": 0.9,
+            "y": 0.82,
+            "scale": 1.0
+          }
+        ],
+        "cast": [
+          {
+            "who": "s1",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.36,
+            "face": "right",
+            "pose": "idle",
+            "spear": true,
+            "appear": "ask"
+          },
+          {
+            "who": "diyojen",
+            "x": 0.52,
+            "face": "right",
+            "pose": "idle",
+            "emotion": "worried",
+            "bow": "hit",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "think",
+                "emotion": "worried"
+              }
+            ]
+          },
+          {
+            "who": "s2",
+            "accessory": "turban",
+            "x": 0.7,
+            "face": "left",
+            "pose": "idle",
+            "spear": true,
+            "appear": "ask"
+          }
+        ],
+        "crown": {
+          "x": 0.6,
+          "at": 0.2
+        },
+        "kasif": {
+          "x": 0.13,
+          "y": 0.86,
+          "scale": 0.82,
+          "face": 1,
+          "pose": "talk",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shock",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.62
+          ]
+        }
+      }
+    },
+    {
+      "text": "Rivayete göre onu yakalayan asker, kimi yakaladığını bilmiyordu. İmparator ancak sultanın önüne çıkarılınca tanındı.",
+      "visual": "Sarıklı bir Selçuklu askeri başı açık esiri sağa, oturan sarıklı Alp Arslan'ın önüne getirir; 'tanındı'da ak sakallı bir saray adamı esiri işaret eder, Alp Arslan şaşırır ve üstte kırmızı el yazısı 'İmparator!' çıkar; sağda fesli anlatıcı gözlerini kocaman açar",
+      "type": "stage",
+      "title": {
+        "white": "Kimdi",
+        "gray": "bu esir?"
+      },
+      "cues": {
+        "sul": "sultanın",
+        "hit": "tanındı"
+      },
+      "params": {
+        "scale": 1.0,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.25
+          },
+          "far_h": 0.2,
+          "far_gap": [
+            0.38,
+            0.62
+          ]
+        },
+        "cast": [
+          {
+            "who": "asker",
+            "accessory": "turban",
+            "x": -0.08,
+            "pose": "walk",
+            "to": 0.34,
+            "at": "sul",
+            "then": "idle",
+            "face": "right",
+            "talk": false
+          },
+          {
+            "who": "diyojen",
+            "x": 0.0,
+            "pose": "walk",
+            "to": 0.48,
+            "at": "sul",
+            "then": "idle",
+            "face": "right",
+            "talk": false,
+            "emotion": "worried"
+          },
+          {
+            "who": "vezir",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 0.6,
+            "pose": "idle",
+            "talk": false,
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "left",
+            "emotion": "surprised"
+          },
+          {
+            "who": "alparslan",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.73,
+            "pose": "sit",
+            "talk": false,
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "surprised"
+          },
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "pose": "talk",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "surprised"
+          }
+        ],
+        "label": {
+          "text": "İmparator!",
+          "x": 0.5,
+          "y": 0.13,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "chapter": "Sultan ve imparator",
+      "type": "chapter",
+      "text": "Şimdi, kaynakların aktardığı en ünlü konuşmaya geldik.",
+      "visual": "BÖLÜM 6 / 7 rozeti: mavi dairede 6, altında 'Sultan ve imparator' kartı ve elle çizilmiş alt çizgi",
+      "title": {},
+      "cues": {
+        "n": "Şimdi",
+        "title": "ünlü",
+        "line": "konuşmaya"
+      },
+      "params": {
+        "n": 6,
+        "total": 7,
+        "title": "Sultan ve imparator"
+      }
+    },
+    {
+      "type": "ag03c_court",
+      "text": "Alp Arslan ona şunu sordu: \"Ben senin esirin olsaydım, bana ne yapardın?\"",
+      "visual": "Selçuklu çadırı: tahtta sarıklı, kara sakallı Alp Arslan oturur; önünde bilekleri zincirli, tacı yamuk Diyojen diz çökmüş; yanda mızraklı muhafız ve sallanan tuğ; 'yapardın'da sultanın yanında kırmızı el yazısı '?' belirir; fesli anlatıcı solda anlatır, 'esirin'de elini çenesine götürür",
+      "title": {
+        "white": "Rivayete göre",
+        "gray": "sultanın sorusu"
+      },
+      "cues": {
+        "esir": "esirin",
+        "q": "yapardın"
+      },
+      "params": {
+        "setting": "tent",
+        "throne": {
+          "x": 0.66,
+          "accessory": "turban",
+          "beard": "black",
+          "pose": "sit",
+          "face": -1,
+          "seq": [
+            {
+              "at": "q",
+              "pose": "talk"
+            }
+          ]
+        },
+        "captive": {
+          "x": 0.42,
+          "crown": true,
+          "chains": true,
+          "scale": 1.1
+        },
+        "figures": [
+          {
+            "x": 0.86,
+            "accessory": "turban",
+            "pose": "idle",
+            "face": -1,
+            "spear": true,
+            "scale": 0.9
+          }
+        ],
+        "tug": {
+          "x": 0.94
+        },
+        "lamp": {
+          "x": 0.5
+        },
+        "mark": {
+          "text": "?",
+          "at": "q",
+          "x": 0.6,
+          "y": 0.27
+        },
+        "kasif": {
+          "x": 0.14,
+          "pose": "talk",
+          "face": 1,
+          "seq": [
+            {
+              "at": "esir",
+              "pose": "think"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.52,
+            0.55
+          ]
+        },
+        "cover": {
+          "zoom": 1.3,
+          "focus": [
+            0.75,
+            0.62
+          ],
+          "captive_scale": 1.25,
+          "captive_x": 0.44,
+          "mark": false,
+          "kasif": {
+            "x": 0.56,
+            "y": 1.0,
+            "scale": 1.3,
+            "pose": "shock",
+            "face": 1
+          }
+        }
+      }
+    },
+    {
+      "type": "ag03c_court",
+      "text": "Diyojen dürüst bir cevap verdi: \"Belki öldürür, belki de kırbaçlatırdım.\" Sultanın cevabı ise herkesi şaşırttı: \"Ben sana öyle yapmayacağım.\"",
+      "visual": "Aynı çadır: 'Belki'de zincirli Diyojen başını önüne eğer; 'şaşırttı'da anlatıcı elini çenesine götürür; 'yapmayacağım'da Alp Arslan tahtından kalkıp elini uzatır, Diyojen'in zinciri kopup yere dökülür, anlatıcı şaşırıp geri sıçrar",
+      "title": {
+        "white": "Sultanın",
+        "gray": "cevabı"
+      },
+      "cues": {
+        "bow": "Belki",
+        "sas": "şaşırttı",
+        "no": "yapmayacağım",
+        "hit": "yapmayacağım"
+      },
+      "params": {
+        "setting": "tent",
+        "throne": {
+          "x": 0.66,
+          "accessory": "turban",
+          "beard": "black",
+          "pose": "sit",
+          "face": -1,
+          "seq": [
+            {
+              "at": "no",
+              "pose": "point",
+              "dir": -8,
+              "emotion": "happy"
+            }
+          ]
+        },
+        "captive": {
+          "x": 0.42,
+          "crown": true,
+          "chains": true,
+          "bow": "bow",
+          "free": "no",
+          "scale": 1.1
+        },
+        "figures": [
+          {
+            "x": 0.86,
+            "accessory": "turban",
+            "pose": "idle",
+            "face": -1,
+            "spear": true,
+            "scale": 0.9
+          }
+        ],
+        "tug": {
+          "x": 0.94
+        },
+        "lamp": {
+          "x": 0.5
+        },
+        "kasif": {
+          "x": 0.14,
+          "pose": "talk",
+          "face": 1,
+          "seq": [
+            {
+              "at": "sas",
+              "pose": "think"
+            },
+            {
+              "at": "no",
+              "pose": "shock"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.55,
+            0.55
+          ]
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Birkaç gün sonra bir antlaşma yapıldı. Kaynaklara göre bir buçuk milyon altın fidye ve her yıl üç yüz altmış bin altın vergi kararlaştırıldı.",
+      "visual": "İlk saniyede dev yazı '1,5 MİLYON / ALTIN FİDYE' kelime kelime gelir, 'FİDYE' kırmızı kutuda; 'vergi'de altında kırmızı el yazısı '+ yıllık vergi' notu çıkar; sağda fesli anlatıcı elinde tomarla durur, 'fidye'de işaret eder",
+      "title": {},
+      "cues": {
+        "note": "vergi",
+        "hit": "fidye"
+      },
+      "params": {
+        "lines": [
+          "1,5 milyon",
+          "altın fidye"
+        ],
+        "highlight": [
+          "fidye"
+        ],
+        "note": {
+          "text": "+ yıllık vergi",
+          "at": "note",
+          "color": "red",
+          "size": 76
+        },
+        "arrow": false,
+        "y": 0.4,
+        "kasif": {
+          "x": 0.88,
+          "pose": "point",
+          "at": "hit",
+          "dir": 30,
+          "emotion": "surprised",
+          "face": -1,
+          "scale": 0.8
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Esirler bırakılacak, imparatorun bir kızı sultanın oğluyla evlenecek, Malazgirt, Urfa, Menbiç ve Antakya Selçuklulara geçecekti.",
+      "visual": "Büyütülmüş Doğu Anadolu–Suriye haritası: ilk saniyede Malazgirt ve 'Selçuklulara' notu görünür; Urfa, Menbiç ve Antakya büyük kırmızı etiketlerle sırayla belirir",
+      "title": {
+        "white": "Şehirler",
+        "gray": "Selçuklulara geçti"
+      },
+      "cues": {
+        "u": "Urfa",
+        "mb": "Menbiç",
+        "a": "Antakya"
+      },
+      "params": {
+        "preset": "anatolia",
+        "seas": [],
+        "cities": [
+          {
+            "name": "Malazgirt",
+            "x": 42.53,
+            "y": 39.14,
+            "color": "red",
+            "size": 72,
+            "dy": -44,
+            "dx": -80
+          },
+          {
+            "name": "Urfa",
+            "x": 38.79,
+            "y": 37.16,
+            "at": "u",
+            "color": "red",
+            "size": 72,
+            "dy": -44,
+            "dx": 40
+          },
+          {
+            "name": "Menbiç",
+            "x": 37.95,
+            "y": 36.53,
+            "at": "mb",
+            "color": "red",
+            "size": 72,
+            "dy": 76,
+            "dx": 40
+          },
+          {
+            "name": "Antakya",
+            "x": 36.16,
+            "y": 36.2,
+            "at": "a",
+            "color": "red",
+            "size": 72,
+            "dy": -44,
+            "dx": -60
+          }
+        ],
+        "note": {
+          "text": "Selçuklulara",
+          "x": 0.06,
+          "y": 0.14,
+          "size": 72
+        },
+        "focus": [
+          39.4,
+          37.7
+        ],
+        "zoom": 1.35,
+        "compass": "tr"
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Sonra sultan, imparatoru muhafızlarla ülkesine uğurladı. Hikâye mutlu mu bitti sanıyorsunuz? Hiç de değil.",
+      "visual": "Ova yolu: taçlı Diyojen ve sarıklı bir muhafız batıya (sola) yürür; sağda sarıklı Alp Arslan arkalarından el sallar; 'uğurladı'da 'serbest' notu belirir; fesli anlatıcı sol önde anlatır, 'değil'de parmağını kaldırıp uyarır",
+      "title": {
+        "white": "Serbest",
+        "gray": "eve dönüş"
+      },
+      "cues": {
+        "go": "uğurladı",
+        "w0": "mutlu",
+        "no": "değil"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.62,
+            "pose": "walk",
+            "to": 0.36,
+            "at": "w0",
+            "then": "idle",
+            "face": "left",
+            "emotion": "neutral"
+          },
+          {
+            "who": "muhafiz",
+            "accessory": "turban",
+            "x": 0.74,
+            "pose": "walk",
+            "to": 0.5,
+            "at": "w0",
+            "then": "idle",
+            "face": "left",
+            "scale": 0.9
+          },
+          {
+            "who": "sultan",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.88,
+            "pose": "wave",
+            "face": "left"
+          },
+          {
+            "who": "kasif",
+            "x": 0.1,
+            "pose": "talk",
+            "face": "right",
+            "at": "no",
+            "then": "point",
+            "dir": "up",
+            "emotion": "worried"
+          }
+        ],
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.22
+          },
+          "far_h": 0.16
+        },
+        "foreground": "hatch",
+        "label": {
+          "text": "serbest",
+          "x": 0.5,
+          "y": 0.16,
+          "at": "go"
+        }
+      }
+    },
+    {
+      "type": "ag03c_court",
+      "text": "Çünkü yenilgi haberi İstanbul'a ulaşır ulaşmaz Dukaslar harekete geçmiş, genç Mihail Dukas'ı imparator ilan etmişti.",
+      "visual": "Bizans sarayı: kemerli salon, kırmızı perde önünde tahtta genç Mihail oturur; 'ilan'da altın taç yukarıdan inip başına oturur; sağda gölgede iki sakallı Dukas gülümser; 'Mihail Dukas' el yazısı belirir; fesli anlatıcı solda kaşlarını çatıp düşünür",
+      "title": {
+        "white": "İstanbul",
+        "gray": "yeni imparator"
+      },
+      "cues": {
+        "mi": "Mihail",
+        "cr": "ilan"
+      },
+      "params": {
+        "setting": "palace",
+        "throne": {
+          "x": 0.58,
+          "pose": "sit",
+          "face": -1,
+          "crown": {
+            "at": "cr"
+          }
+        },
+        "captive": false,
+        "figures": [
+          {
+            "x": 0.8,
+            "beard": "grey",
+            "pose": "talk",
+            "face": -1,
+            "emotion": "happy"
+          },
+          {
+            "x": 0.92,
+            "beard": "short",
+            "pose": "idle",
+            "face": -1,
+            "emotion": "happy",
+            "scale": 0.9
+          }
+        ],
+        "shadow": {
+          "from": 0.72,
+          "to": 1
+        },
+        "mark": {
+          "text": "Mihail Dukas",
+          "at": "mi",
+          "x": 0.58,
+          "y": 0.2,
+          "size": 84,
+          "color": "ink"
+        },
+        "kasif": {
+          "x": 0.14,
+          "pose": "talk",
+          "face": 1,
+          "seq": [
+            {
+              "at": "cr",
+              "pose": "think",
+              "emotion": "angry"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.55,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Diyojen tahtı için savaştı. Ama bu kez karşısında kendi ülkesinin askerleri vardı.",
+      "visual": "Ova: solda taçlı Diyojen ve miğferli bir Bizans askeri, sağda miğferli iki Bizans askeri birbirine doğru yürür; 'kendi'de iki yanda aynı 'Bizans' sancak tabelaları belirir ve 'iç savaş' el yazısı çıkar; ortada fesli anlatıcı omuz silker",
+      "title": {
+        "white": "İç savaş",
+        "gray": "Bizans'a karşı Bizans"
+      },
+      "cues": {
+        "w": "savaştı",
+        "k": "kendi"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.12,
+            "pose": "walk",
+            "to": 0.3,
+            "at": "k",
+            "then": "point",
+            "dir": "right",
+            "face": "right",
+            "emotion": "angry"
+          },
+          {
+            "who": "asker1",
+            "accessory": "helmet_byz",
+            "x": 0.02,
+            "pose": "walk",
+            "to": 0.18,
+            "at": "k",
+            "then": "idle",
+            "face": "right",
+            "scale": 0.9
+          },
+          {
+            "who": "asker2",
+            "accessory": "helmet_byz",
+            "x": 0.92,
+            "pose": "walk",
+            "to": 0.72,
+            "at": "k",
+            "then": "idle",
+            "face": "left",
+            "scale": 0.9
+          },
+          {
+            "who": "asker3",
+            "accessory": "helmet_byz",
+            "x": 1.02,
+            "pose": "walk",
+            "to": 0.85,
+            "at": "k",
+            "then": "idle",
+            "face": "left",
+            "scale": 0.9
+          },
+          {
+            "who": "kasif",
+            "x": 0.51,
+            "pose": "talk",
+            "face": "right",
+            "at": "k",
+            "then": "shrug",
+            "emotion": "worried",
+            "scale": 0.9
+          }
+        ],
+        "scale": 1.0,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.12,
+          "pan": 40
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.22
+          },
+          "far_h": 0.16,
+          "near": "post",
+          "side": "left",
+          "post_top": 0.5
+        },
+        "foreground": "hatch",
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.17,
+            "text": "Bizans",
+            "at": "k",
+            "scale": 0.9
+          },
+          {
+            "type": "sign",
+            "x": 0.9,
+            "text": "Bizans",
+            "at": "k",
+            "scale": 0.9,
+            "flip": true
+          }
+        ],
+        "label": {
+          "text": "iç savaş",
+          "x": 0.5,
+          "y": 0.15,
+          "at": "k"
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Yenildi, Kilikya'ya, bugünkü Adana'ya kadar kaçtı ve canının bağışlanacağı sözüyle teslim oldu. Onu teslim alan kim miydi? Andronikos Dukas!",
+      "visual": "Anadolu haritası: Diyojen'in kaçış rotası kesikli kırmızı çizgiyle güneye, Adana'ya iner; 'Andronikos'ta kırmızı el yazısı 'Andronikos!' notu belirir",
+      "title": {
+        "white": "Kaçış",
+        "gray": "Kilikya'ya kadar"
+      },
+      "cues": {
+        "route": "Yenildi",
+        "ad": "Kilikya'ya",
+        "an": "Andronikos"
+      },
+      "params": {
+        "preset": "anatolia",
+        "seas": [],
+        "route": {
+          "points": [
+            [
+              36.55,
+              40.3
+            ],
+            [
+              36.1,
+              39.4
+            ],
+            [
+              35.7,
+              38.3
+            ],
+            [
+              35.32,
+              37.0
+            ]
+          ],
+          "at": "route",
+          "dur": 2.6
+        },
+        "cities": [
+          {
+            "name": "Adana",
+            "x": 35.32,
+            "y": 37.0,
+            "at": "ad",
+            "color": "red",
+            "dy": -40,
+            "dx": -70,
+            "size": 76
+          }
+        ],
+        "note": {
+          "text": "Andronikos!",
+          "at": "an",
+          "x": 0.56,
+          "y": 0.86,
+          "size": 76
+        },
+        "focus": [
+          35.8,
+          38.5
+        ],
+        "zoom": 1.14,
+        "compass": "tr"
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Söz tutulmadı. 29 Haziran 1072'de Kütahya'da Diyojen'in gözlerine mil çekildi.",
+      "visual": "Yatay zaman çizgisi: '1071 Malazgirt' ve kırmızı '1072 Kütahya' büyük yazıyla sırayla yanar; ortada altta fesli anlatıcı 'Kütahya'da üzgün başını eğip düşünür",
+      "title": {
+        "white": "Haziran 1072",
+        "gray": "tutulmayan söz"
+      },
+      "cues": {
+        "a": "Söz",
+        "b": "Kütahya"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1071 Malazgirt",
+            "text": "",
+            "at": "a"
+          },
+          {
+            "year": "1072 Kütahya",
+            "text": "",
+            "at": "b"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.5,
+          "pose": "think",
+          "pose0": "idle",
+          "at": "b",
+          "emotion": "worried",
+          "face": -1,
+          "scale": 0.8
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Kör imparator Kınalıada'ya sürüldü ve birkaç hafta sonra orada öldü. Şu zıtlığa bakın: düşmanı onu serbest bırakmıştı, kendi sarayı ise onu kör etti.",
+      "visual": "İlk saniyede dev yazı 'DÜŞMANI BIRAKTI' gelir ve 'Kınalıada, 1072' notu çıkar; 'sarayı'da ikinci satır 'SARAYI KÖR ETTİ' kelime kelime gelir, 'SARAYI' kırmızı kutuda; sağda fesli anlatıcı üzgün düşünür",
+      "title": {},
+      "cues": {
+        "note": "Kınalıada",
+        "w2": "sarayı",
+        "w3": "ise",
+        "w4": "etti"
+      },
+      "params": {
+        "lines": [
+          "Düşmanı bıraktı",
+          "sarayı kör etti"
+        ],
+        "highlight": [
+          "sarayı"
+        ],
+        "note": {
+          "text": "Kınalıada, 1072",
+          "at": "note",
+          "color": "ink",
+          "size": 90
+        },
+        "arrow": false,
+        "kasif": {
+          "x": 0.88,
+          "pose": "think",
+          "at": "note",
+          "emotion": "worried",
+          "face": -1,
+          "scale": 0.7
+        },
+        "y": 0.4
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Kaderin cilvesi bu ya, Alp Arslan da aynı yılın sonunda, esir aldığı bir kale komutanının bıçağıyla can verdi.",
+      "visual": "Yatay zaman çizgisi: '1072 Diyojen' ve kırmızı '1072 Alp Arslan' büyük yazıyla yan yana yanar; ortada altta fesli anlatıcı anlatır, 'bıçağıyla'da şaşırıp geri sıçrar",
+      "title": {
+        "white": "Kaderin",
+        "gray": "cilvesi"
+      },
+      "cues": {
+        "a": "Kaderin",
+        "b": "bıçağıyla"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1072 Diyojen",
+            "text": "",
+            "at": "a"
+          },
+          {
+            "year": "1072 Alp Arslan",
+            "text": "",
+            "at": "b"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.5,
+          "pose": "shock",
+          "pose0": "talk",
+          "at": "b",
+          "emotion": "surprised",
+          "face": 1,
+          "scale": 0.8
+        }
+      }
+    },
+    {
+      "chapter": "Peki neden?",
+      "type": "chapter",
+      "text": "Peki Malazgirt'i gerçekten ne belirledi? Gelin, yaygın yanlışları birlikte düzeltelim.",
+      "visual": "BÖLÜM 7 / 7 rozeti: mavi dairede 7, altında 'Peki neden?' kartı ve elle çizilmiş alt çizgi",
+      "title": {},
+      "cues": {
+        "n": "Peki",
+        "title": "Malazgirt'i",
+        "line": "yanlışları"
+      },
+      "params": {
+        "n": 7,
+        "total": 7,
+        "title": "Peki neden?"
+      }
+    },
+    {
+      "type": "ag03c_strike",
+      "text": "Birincisi sayılar. Bazı eski kaynaklar Bizans ordusunu iki yüz bin, hatta altı yüz bin diye yazar. Bugün birçok tarihçi bu rakamları abartılı bulur.",
+      "visual": "Dev yazıyla '200.000' ve '600.000' sırayla belirir, üstte 'Eski kaynaklar' el yazısı; 'abartılı'da ikisinin üstü kırmızı mürekkeple çizilir ve kırmızı hap 'abartı' çıkar; sağda fesli anlatıcı başını iki yana sallar",
+      "title": {
+        "white": "Birincisi",
+        "gray": "sayılar"
+      },
+      "cues": {
+        "a": "iki",
+        "b": "altı",
+        "pill": "abartılı"
+      },
+      "params": {
+        "header": {
+          "text": "Eski kaynaklar"
+        },
+        "items": [
+          {
+            "text": "200.000",
+            "at": "a",
+            "strike": "pill"
+          },
+          {
+            "text": "600.000",
+            "at": "b",
+            "strike": "pill"
+          }
+        ],
+        "pill": {
+          "text": "abartı",
+          "at": "pill",
+          "color": "red"
+        },
+        "kasif": {
+          "x": 0.84,
+          "pose": "talk",
+          "face": -1,
+          "seq": [
+            {
+              "at": "pill",
+              "pose": "shrug",
+              "emotion": "worried"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag03c_compare",
+      "text": "Bizans ordusu büyük olasılıkla birkaç on bin kişiydi, Selçuklu ordusu ise daha küçüktü. Yani sır kalabalıkta değil, savaşma biçimindeydi.",
+      "visual": "Solda 'yaklaşık' kartında uzun kırmızı 'Bizans' ve kısa mavi 'Selçuklu' çubukları dolar; sağda 'Sır' kartında 'Atlı okçular', 'Sahte geri çekilme', 'Hilal kuşatma' satırları mavi ✓ ile sırayla gelir; sağ kenarda fesli anlatıcı anlatır, 'sır'da listeyi işaret eder",
+      "title": {
+        "white": "Sır",
+        "gray": "kalabalıkta değil"
+      },
+      "cues": {
+        "a": "Bizans",
+        "b": "Selçuklu",
+        "i0": "sır",
+        "i1": "savaşma",
+        "i2": "biçimindeydi"
+      },
+      "params": {
+        "header": "yaklaşık",
+        "bars": [
+          {
+            "label": "Bizans",
+            "value": 0.9,
+            "color": "red",
+            "at": "a"
+          },
+          {
+            "label": "Selçuklu",
+            "value": 0.5,
+            "color": "blue",
+            "at": "b"
+          }
+        ],
+        "list": {
+          "title": "Sır",
+          "items": [
+            {
+              "text": "Atlı okçular",
+              "at": "i0",
+              "mark": "check"
+            },
+            {
+              "text": "Sahte geri çekilme",
+              "at": "i1",
+              "mark": "check"
+            },
+            {
+              "text": "Hilal kuşatma",
+              "at": "i2",
+              "mark": "check"
+            }
+          ]
+        },
+        "kasif": {
+          "x": 0.9,
+          "pose": "talk",
+          "face": -1,
+          "seq": [
+            {
+              "at": "i0",
+              "pose": "point",
+              "dir": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "İkincisi ihanet. Bizans'ı tek başına Türk okları yenmedi. Bölünen ordu, saf değiştiren paralı askerler ve geri çekilen bir rakip, imparatoru yalnız bıraktı.",
+      "visual": "Ova: ortada taçlı Diyojen tek başına durur; 'bölünen ordu', 'saf değiştirenler', 'Andronikos' tabelaları sırayla etrafında belirir, fesli anlatıcı solda onları tek tek işaret eder; 'yalnız'da üç tabela devrilip düşer, Diyojen yapayalnız omuz silker, anlatıcı da üzgün omuz silker",
+      "title": {
+        "white": "İkincisi",
+        "gray": "ihanet"
+      },
+      "cues": {
+        "a": "Bölünen",
+        "b": "saf",
+        "c": "geri",
+        "y": "yalnız"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.55,
+            "pose": "idle",
+            "face": "left",
+            "at": "y",
+            "then": "shrug",
+            "emotion": "worried"
+          },
+          {
+            "who": "kasif",
+            "x": 0.17,
+            "pose": "talk",
+            "face": "right",
+            "seq": [
+              {
+                "at": "a",
+                "pose": "point",
+                "dir": 10
+              },
+              {
+                "at": "b",
+                "pose": "point",
+                "dir": 22
+              },
+              {
+                "at": "c",
+                "pose": "point",
+                "dir": 32
+              },
+              {
+                "at": "y",
+                "pose": "shrug",
+                "emotion": "worried"
+              }
+            ]
+          }
+        ],
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.22
+          },
+          "far_h": 0.16
+        },
+        "foreground": "hatch",
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.36,
+            "text": "bölünen ordu",
+            "at": "a",
+            "move": {
+              "x": 0.3,
+              "at": "y",
+              "dur": 0.8,
+              "y": 1.35,
+              "rot": 25
+            },
+            "scale": 0.8
+          },
+          {
+            "type": "sign",
+            "x": 0.72,
+            "text": "saf değiştirenler",
+            "at": "b",
+            "move": {
+              "x": 0.76,
+              "at": "y",
+              "dur": 0.8,
+              "y": 1.35,
+              "rot": 25
+            },
+            "scale": 0.8
+          },
+          {
+            "type": "sign",
+            "x": 0.92,
+            "text": "Andronikos",
+            "at": "c",
+            "move": {
+              "x": 0.96,
+              "at": "y",
+              "dur": 0.8,
+              "y": 1.35,
+              "rot": 25
+            },
+            "scale": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Üçüncüsü ve en önemlisi: Anadolu bir günde Türk yurdu olmadı. Türkmen akınları 1071'den önce de başlamıştı.",
+      "visual": "Yatay zaman çizgisi: '1067 Kayseri' (akın), kırmızı halkalı '1071 Malazgirt' ve 'Sonra…' büyük yazıyla sırayla yanar; altta ortada fesli anlatıcı 1071'i işaret eder",
+      "title": {
+        "white": "Üçüncüsü",
+        "gray": "bir günde değil"
+      },
+      "cues": {
+        "a": "akınları",
+        "b": "1071'den",
+        "c": "başlamıştı"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1067 Kayseri",
+            "text": "",
+            "at": "a"
+          },
+          {
+            "year": "1071 Malazgirt",
+            "text": "",
+            "at": "b"
+          },
+          {
+            "year": "Sonra…",
+            "text": "",
+            "at": "c"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.5,
+          "pose": "point",
+          "pose0": "talk",
+          "dir": 40,
+          "at": "b",
+          "face": 1,
+          "scale": 0.8
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Asıl kapıyı, savaştan sonra Bizans'ta başlayan taht kavgaları açtı. Savunmasız kalan bölgelere Türkmen beyleri birer birer yerleşti.",
+      "visual": "Anadolu haritası: batıda İstanbul kırmızı noktayla belirir ve 'taht kavgası' notu çıkar; ardından doğudan batıya, Anadolu'nun içine doğru uzun kesikli kırmızı bir ok çizilir",
+      "title": {
+        "white": "Asıl kapı",
+        "gray": "taht kavgaları"
+      },
+      "cues": {
+        "kav": "kavgaları",
+        "route": "Savunmasız"
+      },
+      "params": {
+        "preset": "anatolia",
+        "seas": [],
+        "cities": [
+          {
+            "name": "İstanbul",
+            "x": 28.97,
+            "y": 41.01,
+            "at": "kav",
+            "color": "red",
+            "dy": -40,
+            "size": 76
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              42.5,
+              39.1
+            ],
+            [
+              39.5,
+              39.3
+            ],
+            [
+              36.5,
+              39.0
+            ],
+            [
+              33.5,
+              39.2
+            ],
+            [
+              30.8,
+              39.6
+            ]
+          ],
+          "at": "route",
+          "dur": 3.2
+        },
+        "note": {
+          "text": "taht kavgası",
+          "at": "kav",
+          "x": 0.06,
+          "y": 0.86,
+          "size": 76
+        },
+        "focus": [
+          35.5,
+          39.5
+        ],
+        "zoom": 1.06,
+        "compass": "br"
+      }
+    },
+    {
+      "type": "map",
+      "text": "Sonraki yıllarda Danişmendliler, Saltuklular, Mengücekliler ve Artuklular doğdu. Süleyman Şah da İznik merkezli Anadolu Selçuklu Devleti'ni kurdu.",
+      "visual": "Anadolu haritası: Danişmend, Saltuk, Mengücek ve Artuk adları bölgelerine sırayla el yazısıyla yazılır; en son batıda İznik kırmızı noktayla belirir",
+      "title": {
+        "white": "Beylikler",
+        "gray": "ve Süleyman Şah"
+      },
+      "cues": {
+        "d": "Danişmendliler",
+        "s": "Saltuklular",
+        "m": "Mengücekliler",
+        "a": "Artuklular",
+        "i": "İznik"
+      },
+      "params": {
+        "preset": "anatolia",
+        "seas": [],
+        "cities": [
+          {
+            "name": "Danişmend",
+            "x": 36.9,
+            "y": 40.0,
+            "at": "d",
+            "dy": -46,
+            "size": 66,
+            "dx": -50
+          },
+          {
+            "name": "Saltuk",
+            "x": 41.27,
+            "y": 39.9,
+            "at": "s",
+            "dy": -46,
+            "size": 66,
+            "dx": 45
+          },
+          {
+            "name": "Mengücek",
+            "x": 39.5,
+            "y": 39.75,
+            "at": "m",
+            "dy": 72,
+            "size": 66
+          },
+          {
+            "name": "Artuk",
+            "x": 40.73,
+            "y": 37.31,
+            "at": "a",
+            "dy": 72,
+            "size": 66
+          },
+          {
+            "name": "İznik",
+            "x": 29.72,
+            "y": 40.43,
+            "at": "i",
+            "color": "red",
+            "dy": -46,
+            "size": 66
+          }
+        ],
+        "focus": [
+          35.5,
+          39.0
+        ],
+        "zoom": 1.06,
+        "compass": "bl"
+      }
+    },
+    {
+      "type": "title",
+      "text": "Yani Malazgirt, Anadolu'yu bir günde fethetmedi. Ama bir kapıyı açtı ve o kapı bir daha hiç kapanmadı.",
+      "visual": "Önce kırmızı el yazısı 'bir günde değil' notu; sonra dev yazı 'KAPI AÇILDI' kelime kelime belirir, 'KAPI' kırmızı kutuda; sağda fesli anlatıcı 'açtı'da kollarını açar",
+      "title": {},
+      "cues": {
+        "note": "fethetmedi",
+        "w0": "kapıyı",
+        "w1": "açtı"
+      },
+      "params": {
+        "lines": [
+          "Kapı",
+          "açıldı"
+        ],
+        "highlight": [
+          "kapı"
+        ],
+        "note": {
+          "text": "bir günde değil",
+          "at": "note",
+          "color": "red"
+        },
+        "arrow": false,
+        "kasif": {
+          "x": 0.86,
+          "pose": "shrug",
+          "at": "w1",
+          "emotion": "happy",
+          "face": -1,
+          "scale": 0.75
+        },
+        "y": 0.38
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Bugün her yıl 26 Ağustos'ta Malazgirt'te anma törenleri yapılıyor. Ve bakın: 1922'de Büyük Taarruz da bir 26 Ağustos sabahı başladı.",
+      "visual": "Yatay zaman çizgisi: iki uçta '1071' ve kırmızı halkalı '1922' (ikisi de 26 Ağustos, kicker'da); ortada fesli anlatıcı anlatır, '1922'de şaşırıp geri sıçrar",
+      "title": {
+        "white": "26 Ağustos",
+        "gray": "iki sabah"
+      },
+      "cues": {
+        "a": "Malazgirt'te",
+        "b": "1922'de"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1071",
+            "text": "",
+            "at": "a"
+          },
+          {
+            "year": "1922",
+            "text": "",
+            "at": "b"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.5,
+          "pose": "shock",
+          "pose0": "talk",
+          "at": "b",
+          "emotion": "surprised",
+          "face": 1,
+          "scale": 0.8
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Bir imparatoru, kılıçtan çok kendi saflarındaki güvensizlik yendi. Galip ise onu öldürmek yerine serbest bıraktı.",
+      "visual": "Ova, iki katman: arka planda küçük taçlı Diyojen ufka doğru batıya yürüyüp uzaklaşır; ön planda büyük sarıklı Alp Arslan 'Galip'te elini kaldırıp uğurlar; fesli anlatıcı ortaya yürür ve 'Galip'te durup elini çenesine götürür; kamera yavaşça içeri iter",
+      "title": {
+        "white": "Son söz"
+      },
+      "cues": {
+        "g": "güvensizlik",
+        "gal": "Galip"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.42,
+            "y": 0.66,
+            "scale": 0.6,
+            "pose": "walk",
+            "to": 0.12,
+            "at": "g",
+            "then": "idle",
+            "face": "left",
+            "emotion": "worried"
+          },
+          {
+            "who": "kasif",
+            "x": 0.62,
+            "pose": "walk",
+            "to": 0.5,
+            "at": "gal",
+            "then": "think",
+            "face": "left"
+          },
+          {
+            "who": "sultan",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.84,
+            "y": 0.9,
+            "scale": 1.25,
+            "pose": "idle",
+            "face": "left",
+            "at": "gal",
+            "then": "wave"
+          }
+        ],
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.1,
+          "pan": 40
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 3,
+            "cloud_y": 0.2
+          },
+          "far_h": 0.14,
+          "far_y": 0.62
+        },
+        "foreground": "hatch"
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Peki siz ne düşünüyorsunuz? Alp Arslan, Diyojen'i serbest bırakmakla doğru bir karar mı verdi? Yorumlara yazın.",
+      "visual": "İki katman: ön planda büyük fesli anlatıcı izleyiciye omuz silker, 'doğru'da 'Doğru mu?' tabelasını kaldırır, 'Yorumlara'da izleyiciyi işaret eder; arka planda küçük sarıklı Alp Arslan yürüyüp taçlı Diyojen'e elini uzatır; kamera yavaşça içeri iter",
+      "title": {
+        "white": "Sizce?"
+      },
+      "cues": {
+        "d": "doğru",
+        "y": "Yorumlara"
+      },
+      "params": {
+        "cast": [
+          {
+            "who": "diyojen",
+            "accessory": "crown",
+            "x": 0.58,
+            "y": 0.68,
+            "scale": 0.62,
+            "pose": "idle",
+            "face": "right",
+            "at": "d",
+            "then": "think"
+          },
+          {
+            "who": "sultan",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.92,
+            "y": 0.68,
+            "scale": 0.62,
+            "pose": "walk",
+            "to": 0.72,
+            "at": "d",
+            "then": "point",
+            "dir": "forward",
+            "face": "left"
+          },
+          {
+            "who": "kasif",
+            "x": 0.28,
+            "y": 0.9,
+            "scale": 1.2,
+            "pose": "shrug",
+            "face": "right",
+            "seq": [
+              {
+                "at": "d",
+                "pose": "hold",
+                "text": "Doğru mu?"
+              },
+              {
+                "at": "y",
+                "pose": "point",
+                "dir": "forward"
+              }
+            ]
+          }
+        ],
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.1,
+          "pan": 30
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.2
+          },
+          "far_h": 0.14,
+          "far_y": 0.6
+        },
+        "foreground": "hatch"
+      }
+    }
+  ]
+}

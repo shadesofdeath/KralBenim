@@ -1,0 +1,581 @@
+{
+  "channel": "Anlatayım Gel",
+  "narrator": "fes",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "takiyuddin-rasathanesi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Bir yıldız",
+      "rasathaneyi",
+      "yıktı"
+    ],
+    "highlight": [
+      "yıldız"
+    ],
+    "scene": 0,
+    "t": 2.4,
+    "kasif": {
+      "pose": "shock",
+      "scale": 1.3,
+      "x": 850,
+      "y": 1720,
+      "face": -1
+    }
+  },
+  "youtube": {
+    "title": "Takiyüddin Rasathanesi: Bir Kuyruklu Yıldız Onu Nasıl Yıktı?",
+    "description": "Takiyüddin Rasathanesi, 1577'de İstanbul'da kuruldu ve üç yıl sonra yerle bir edildi. Peki bir kuyruklu yıldız bu yıkıma nasıl yol açtı?\n\nOsmanlı astronomu Takiyüddin, Üçüncü Murad'ın izniyle Tophane sırtlarına bir gözlemevi kurdu. Aynı yıl gökte büyük bir kuyruklu yıldız göründü ve Takiyüddin bunu İran'a karşı zaferin müjdesi diye yorumladı. Ama savaş uzadı, İstanbul'u veba sardı. Saraydaki rakipleri harekete geçti, Şeyhülislam Kadızade Ahmed Şemseddin Efendi rasathanelerin ülkeye felaket getirdiğini söyledi ve Ocak 1580'de rasathane aletleriyle birlikte yıkıldı. Yani onu bir yıldız değil, tutmayan bir kehanet yıktı.\n\nOsmanlı tarihinin bilinmeyen anları için Anlatayım Gel'e abone ol. Sence rasathane yıkılmasaydı neler değişirdi? Yorumlara yaz!\n\n#shorts #takiyüddin #osmanlıtarihi #anlatayımgel",
+    "tags": [
+      "takiyüddin rasathanesi",
+      "takiyüddin",
+      "istanbul rasathanesi",
+      "tophane rasathanesi",
+      "rasathane neden yıkıldı",
+      "osmanlı rasathanesi",
+      "1577 kuyruklu yıldızı",
+      "üçüncü murad",
+      "kadızade ahmed şemseddin",
+      "osmanlı bilim tarihi",
+      "osmanlı tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "anlatayım gel"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-22T13:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "ag01_rasat",
+      "text": "Bir kuyruklu yıldız, bir rasathaneyi yıktı.",
+      "visual": "Tepede kubbeli rasathane, kulesinde dönen küre; gökten kocaman altın bir kuyruklu yıldız, uzun kuyruğu çapraz uzanıp binanın üstünde bitiyor; 'rasathaneyi'de kubbe, kule ve kadran devrilip toz bulutuna dönüyor; solda sarıklı Takiyüddin dehşetle geri sıçrıyor; önde kapağın büyük fesli anlatıcısı şok içinde (kapak kancası).",
+      "title": {},
+      "cues": {
+        "hit": "rasathaneyi"
+      },
+      "params": {
+        "hit": "hit",
+        "comet": {
+          "at": 0,
+          "x": 720,
+          "y": 600,
+          "len": 440,
+          "ang": 150,
+          "r": 70
+        },
+        "cam": {
+          "zoom": 1.2,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "takiyuddin",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 0.3,
+            "pose": "idle",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.9
+          }
+        ]
+      }
+    },
+    {
+      "type": "halic",
+      "text": "1577'de Takiyüddin, Tophane sırtlarına bir rasathane kurdu.",
+      "visual": "Eski mürekkep İstanbul haritası: Haliç, Boğaz, Galata kulesi; 'Tophane'de kırmızı 'Tophane' yazısı beliriyor, harita oraya yaklaşıyor; 'kurdu'da kırmızı el yazısı not 'Rasathane!' çıkıyor; önde fesli anlatıcı haritayı işaret ediyor.",
+      "title": {
+        "white": "Tophane",
+        "gray": "1577"
+      },
+      "cues": {
+        "top": "Tophane",
+        "ras": "kurdu"
+      },
+      "params": {
+        "chain": false,
+        "bump": false,
+        "route": false,
+        "inside": 0,
+        "fleet": 0,
+        "byz": false,
+        "labels": [
+          {
+            "text": "Haliç",
+            "u": 0.31,
+            "v": 0.465,
+            "rot": 18,
+            "size": 58
+          },
+          {
+            "text": "Boğaz",
+            "u": 0.84,
+            "v": 0.17,
+            "size": 52
+          },
+          {
+            "text": "İstanbul",
+            "u": 0.46,
+            "v": 0.74,
+            "size": 60
+          },
+          {
+            "text": "Galata",
+            "u": 0.47,
+            "v": 0.36,
+            "size": 52
+          },
+          {
+            "text": "Tophane",
+            "u": 0.62,
+            "v": 0.29,
+            "size": 66,
+            "color": "red",
+            "at": "top"
+          }
+        ],
+        "zoom": 1.25,
+        "focus": [
+          0.62,
+          0.36
+        ],
+        "kasif": {
+          "x": 0.16,
+          "pose": "idle",
+          "face": "right",
+          "at": "top",
+          "then": "point",
+          "dir": "up-right",
+          "scale": 0.8
+        },
+        "note": {
+          "text": "Rasathane!",
+          "u": 0.38,
+          "v": 0.13,
+          "at": "ras",
+          "size": 64
+        }
+      }
+    },
+    {
+      "type": "ag01_rasat",
+      "text": "Aynı yıl gökte kuyruklu bir yıldız belirdi. Ve o yıldız her şeyi değiştirecekti.",
+      "visual": "Tepede rasathane hızla çiziliyor: kule, salon, kubbe, kadran, dönen küre; önde sarıklı, ak sakallı Takiyüddin; 'yıldız'da gökte kuyruğu uzayan kuyruklu yıldız beliriyor, Takiyüddin göğü işaret ediyor, fesli anlatıcı dürbünle bakıp şaşırıyor. 'değiştirecekti'de kamera yıldıza doğru itiyor.",
+      "title": {
+        "white": "Kuyruklu",
+        "gray": "yıldız"
+      },
+      "cues": {
+        "com": "yıldız",
+        "hit": "belirdi"
+      },
+      "params": {
+        "build": {
+          "at": 0,
+          "dur": 0.9
+        },
+        "comet": {
+          "at": "com",
+          "dur": 1.0,
+          "x": 330,
+          "y": 470,
+          "r": 36
+        },
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.5,
+            0.32
+          ]
+        },
+        "cast": [
+          {
+            "who": "takiyuddin",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 0.2,
+            "pose": "idle",
+            "face": "right",
+            "at": "com",
+            "then": "point",
+            "dir": "up",
+            "scale": 0.85
+          },
+          {
+            "who": "kasif",
+            "x": 0.8,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.95
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Takiyüddin müjdeledi: bu, İran'a karşı zafer demekti.",
+      "visual": "Saray: arkada saray silüeti, iki sütun arasında oturan sarıklı padişah; sarıklı, ak sakallı Takiyüddin parmağıyla göğü gösteriyor; 'zafer'de üstte kırmızı el yazısı 'ZAFER!' çarpıyor, padişah gülümsüyor; solda fesli anlatıcı heyecanla göğü işaret ediyor.",
+      "title": {
+        "white": "Kehanet"
+      },
+      "cues": {
+        "m": "müjdeledi",
+        "hit": "zafer"
+      },
+      "params": {
+        "backdrop": {
+          "type": "palace",
+          "y": 0.5,
+          "opacity": 0.75
+        },
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.55,
+            0.55
+          ]
+        },
+        "label": {
+          "text": "ZAFER!",
+          "y": 0.2,
+          "at": "hit",
+          "size": 120
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.14,
+            "pose": "idle",
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": "up",
+            "emotion": "happy"
+          },
+          {
+            "who": "takiyuddin",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 0.44,
+            "pose": "point",
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": "up"
+          },
+          {
+            "who": "padisah",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.76,
+            "pose": "sit",
+            "talk": false,
+            "face": "left",
+            "at": "hit",
+            "then": "sit",
+            "emotion": "happy",
+            "scale": 1.05
+          }
+        ],
+        "props": [
+          {
+            "type": "column",
+            "x": 0.6,
+            "scale": 0.8
+          },
+          {
+            "type": "column",
+            "x": 0.94,
+            "scale": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Ama tahmin edersiniz: savaş uzadı, veba geldi.",
+      "visual": "Dikey zaman çizgisi: '1577 Kuyruklu yıldız', 'savaş'ta '1578 İran seferi', 'veba'da kırmızı '1578 Veba' işaretleniyor; sağda fesli anlatıcı endişeyle işaret ediyor.",
+      "title": {
+        "white": "Kehanet",
+        "gray": "tutmadı"
+      },
+      "cues": {
+        "c1": "savaş",
+        "c2": "veba"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1577",
+            "text": "Kuyruklu yıldız"
+          },
+          {
+            "year": "1578",
+            "text": "İran seferi",
+            "at": "c1"
+          },
+          {
+            "year": "1578",
+            "text": "Veba",
+            "at": "c2"
+          }
+        ],
+        "focus": 2,
+        "kasif": {
+          "x": 0.84,
+          "y": 0.6,
+          "pose": "point",
+          "at": "c2",
+          "scale": 0.55,
+          "face": -1,
+          "emotion": "worried"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Rakipleri suçluyu buldu: gökyüzünü kurcalayan o rasathane.",
+      "visual": "Saray silüeti önünde iki öfkeli sarıklı saray adamı fısıldaşıyor; 'suçluyu'da biri sağa, tepedeki rasathaneyi gösterircesine işaret ediyor ve kırmızı el yazısı 'Suçlu: rasathane!' çarpıyor; solda fesli anlatıcı endişeyle elini çenesine koyuyor.",
+      "title": {
+        "white": "Saray",
+        "gray": "rakipleri"
+      },
+      "cues": {
+        "w": "Rakipleri",
+        "hit": "suçluyu"
+      },
+      "params": {
+        "backdrop": {
+          "type": "palace",
+          "y": 0.5,
+          "opacity": 0.6
+        },
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.55,
+            0.55
+          ]
+        },
+        "label": {
+          "text": "Suçlu: rasathane!",
+          "y": 0.2,
+          "at": "hit",
+          "size": 92
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.16,
+            "pose": "idle",
+            "face": "right",
+            "at": "hit",
+            "then": "think",
+            "emotion": "worried"
+          },
+          {
+            "who": "rakip1",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.5,
+            "pose": "talk",
+            "talk": false,
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": "right",
+            "emotion": "angry"
+          },
+          {
+            "who": "rakip2",
+            "accessory": "turban",
+            "beard": "short",
+            "x": 0.72,
+            "pose": "talk",
+            "talk": false,
+            "face": "left",
+            "emotion": "angry",
+            "at": "hit",
+            "then": "shrug"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ag01_rasat",
+      "text": "Şeyhülislam'a göre de felaketin sebebi oydu.",
+      "visual": "Arkada tepede rasathane silüeti; önde büyük, ak sakallı, sarıklı Şeyhülislam elindeki fetva tomarını kaldırıyor; 'felaketin'de üstte kırmızı el yazısı '“Felaket getirir!”' çarpıyor; sağda fesli anlatıcı şokla geri sıçrıyor.",
+      "title": {
+        "white": "Fetva"
+      },
+      "cues": {
+        "s": "Şeyhülislam",
+        "hit": "felaketin"
+      },
+      "params": {
+        "comet": false,
+        "note": {
+          "text": "“Felaket getirir!”",
+          "x": 0.5,
+          "y": 0.2,
+          "at": "hit",
+          "size": 88
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "seyhulislam",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 0.22,
+            "pose": "idle",
+            "face": "right",
+            "at": "s",
+            "then": "hold",
+            "item": "scroll",
+            "scale": 1.3,
+            "emotion0": "angry",
+            "emotion": "angry"
+          },
+          {
+            "who": "kasif",
+            "x": 0.8,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.9,
+            "emotion0": "worried"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ag01_rasat",
+      "text": "Ocak 1580'de rasathane yerle bir edildi.",
+      "visual": "Tepede rasathane; önde iki öfkeli sarıklı işçi kuleye ve kubbeye bağlı halatları çekiyor, kubbe yalpalıyor; 'yerle'de kule, kubbe ve kadran devrilip toz bulutu kalkıyor; üstte kırmızı el yazısı 'Ocak 1580'; sağda fesli anlatıcı şokla geri sıçrıyor.",
+      "title": {
+        "white": "Ocak",
+        "gray": "1580"
+      },
+      "cues": {
+        "note": "Ocak",
+        "hit": "yerle"
+      },
+      "params": {
+        "comet": false,
+        "hit": "hit",
+        "note": {
+          "text": "Ocak 1580",
+          "x": 0.5,
+          "y": 0.2,
+          "at": "note",
+          "size": 96
+        },
+        "ropes": [
+          {
+            "cast": 0,
+            "at": 0.2
+          },
+          {
+            "cast": 1,
+            "at": 0.3
+          }
+        ],
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "isci1",
+            "accessory": "turban",
+            "x": 0.12,
+            "pose": "point",
+            "dir": "forward",
+            "face": "right",
+            "scale": 0.75,
+            "emotion0": "angry"
+          },
+          {
+            "who": "isci2",
+            "accessory": "turban",
+            "x": 0.27,
+            "pose": "point",
+            "dir": "forward",
+            "face": "right",
+            "scale": 0.7,
+            "emotion0": "angry"
+          },
+          {
+            "who": "kasif",
+            "x": 0.83,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.85,
+            "emotion0": "worried"
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Yani rasathaneyi yıldız değil, tutmayan kendi kehaneti yıktı.",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'yıldız'da 'KENDİ', 'kehaneti'nde kırmızı kutuda 'KEHANETİ', sonra 'YIKTI'; sağ altta fesli anlatıcı hemen işaret ediyor.",
+      "title": {},
+      "cues": {
+        "w0": "yıldız",
+        "w1": "kehaneti",
+        "w2": "yıktı"
+      },
+      "params": {
+        "lines": [
+          "Kendi",
+          "kehaneti",
+          "yıktı"
+        ],
+        "highlight": [
+          "kehaneti"
+        ],
+        "y": 0.3,
+        "kasif": {
+          "x": 0.78,
+          "y": 0.6,
+          "pose": "point",
+          "at": 0.3,
+          "face": -1,
+          "scale": 0.62,
+          "emotion": "surprised"
+        }
+      }
+    }
+  ]
+}

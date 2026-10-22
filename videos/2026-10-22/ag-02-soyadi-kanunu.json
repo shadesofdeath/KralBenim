@@ -1,0 +1,562 @@
+{
+  "channel": "Anlatayım Gel",
+  "narrator": "fes",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "soyadi-kanunu",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Dedelerimizin",
+      "dedelerinin",
+      "soyadı yoktu"
+    ],
+    "highlight": [
+      "soyadı"
+    ],
+    "scene": 5,
+    "t": 2.0,
+    "kasif": {
+      "pose": "shock",
+      "scale": 1.15,
+      "x": 905,
+      "y": 1720,
+      "face": -1
+    }
+  },
+  "youtube": {
+    "title": "Soyadı Kanunu: Dedelerimizin Neden Soyadı Yoktu?",
+    "description": "Soyadı Kanunu çıkana kadar dedelerimizin soyadı yoktu! 1934'e kadar insanlar lakapla, baba adıyla ya da memleketiyle anılırdı. Peki bu nasıl değişti?\n\nKöse Ali, Hasırcı Mehmet, Kayserili Osman... Bir köyde beş tane Ahmet olunca askerlikte de vergide de kim kimdi, ayırt etmek zordu. 21 Haziran 1934'te Meclis Soyadı Kanunu'nu kabul etti ve her aile kendine bir soyadı seçti. 24 Kasım 1934'te ise Meclis, Mustafa Kemal'e Atatürk soyadını verdi ve bu adı ondan başka kimse alamadı.\n\nOsmanlı'dan Cumhuriyet'e her gün bir tarih hikâyesi için Anlatayım Gel'e abone ol. Sence senin soyadın nereden geliyor? Yorumlara yaz!\n\n#shorts #soyadıkanunu #cumhuriyet #tarih #anlatayımgel",
+    "tags": [
+      "soyadı kanunu",
+      "soyadı kanunu 1934",
+      "soyadı kanunu ne zaman çıktı",
+      "soyadları nereden geliyor",
+      "eskiden soyadı yok muydu",
+      "atatürk soyadı",
+      "atatürk soyadı nasıl verildi",
+      "lakaplar",
+      "cumhuriyet tarihi",
+      "atatürk inkılapları",
+      "türk tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "anlatayım gel"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-22T17:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "stage",
+      "text": "Dedelerimizin dedelerinin soyadı yoktu. Gelin anlatayım.",
+      "visual": "Köy meydanı, arkada kerpiç ev ve tepeler; büyük, ak sakallı bir dede endişeli; 'soyadı'nda üstte kırmızı el yazısı 'Soyadı: ?' beliriyor ve oku dedeyi gösteriyor; 'yoktu'da dede çaresizce omuz silkiyor; 'anlatayım'da fesli anlatıcı sağdan yürüyerek gelip izleyiciye anlatmaya başlıyor.",
+      "title": {},
+      "cues": {
+        "hit": "yoktu",
+        "go": "anlatayım"
+      },
+      "params": {
+        "scale": 1.12,
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.55,
+            0.55
+          ]
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2
+          }
+        },
+        "props": [
+          {
+            "type": "house",
+            "x": 0.1,
+            "y": 0.5,
+            "scale": 0.5
+          }
+        ],
+        "cast": [
+          {
+            "who": "dede",
+            "x": 0.34,
+            "pose": "idle",
+            "face": "right",
+            "talk": false,
+            "beard": "grey",
+            "emotion": "worried",
+            "at": "hit",
+            "then": "shrug",
+            "scale": 1.0
+          },
+          {
+            "who": "kasif",
+            "x": 1.25,
+            "pose": "walk",
+            "to": 0.78,
+            "face": "left",
+            "at": "go",
+            "then": "talk",
+            "emotion": "happy",
+            "scale": 0.88
+          }
+        ],
+        "label": {
+          "text": "Soyadı: ?",
+          "x": 0.6,
+          "y": 0.19,
+          "at": 0.1,
+          "size": 110,
+          "arrow": [
+            0.45,
+            0.27
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Eskiden insanlar lakapla anılırdı: Köse Ali, Hasırcı Mehmet, Kayserili Osman.",
+      "visual": "Üç şapkasız köylü yan yana; her lakap söylendiğinde o köylünün elinde lakabını yazan tabela beliriyor ('Köse', 'Hasırcı', 'Kayserili'); solda fesli anlatıcı sırayla onları işaret ediyor.",
+      "title": {
+        "white": "Lakaplar",
+        "gray": "1934'ten önce"
+      },
+      "cues": {
+        "k1": "Köse",
+        "k2": "Hasırcı",
+        "k3": "Kayserili"
+      },
+      "params": {
+        "foreground": "hatch",
+        "scale": 0.85,
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.55,
+            0.6
+          ]
+        },
+        "depth": {
+          "far": "hills"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.11,
+            "pose": "talk",
+            "face": "right",
+            "seq": [
+              {
+                "at": "k1",
+                "pose": "point",
+                "dir": "forward"
+              },
+              {
+                "at": "k3",
+                "pose": "point",
+                "dir": "up",
+                "emotion": "happy"
+              }
+            ]
+          },
+          {
+            "who": "kose",
+            "x": 0.36,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "at": "k1",
+            "then": "hold",
+            "text": "Köse"
+          },
+          {
+            "who": "hasirci",
+            "x": 0.6,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "beard": "black",
+            "at": "k2",
+            "then": "hold",
+            "text": "Hasırcı"
+          },
+          {
+            "who": "kayserili",
+            "x": 0.84,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "beard": "short",
+            "at": "k3",
+            "then": "hold",
+            "text": "Kayserili"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Düşünün, bir köyde beş tane Ahmet var.",
+      "visual": "Beş şapkasız köylü sağdan yürüyerek arkada sıraya giriyor; 'Ahmet'te üstte büyük el yazısı 'Beş tane Ahmet!' beliriyor; önde solda büyük fesli anlatıcı elini çenesine koymuş düşünürken omuz silkiyor.",
+      "title": {
+        "white": "Bir köyde"
+      },
+      "cues": {
+        "arr": "köyde",
+        "hit": "Ahmet"
+      },
+      "params": {
+        "scale": 0.78,
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 1
+          }
+        },
+        "label": {
+          "text": "Beş tane Ahmet!",
+          "y": 0.2,
+          "at": "hit",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.16,
+            "pose": "think",
+            "face": "right",
+            "at": "hit",
+            "then": "shrug",
+            "emotion": "worried",
+            "y": 0.68,
+            "scale": 1.4
+          },
+          {
+            "who": "ahmet1",
+            "x": 1.1,
+            "pose": "walk",
+            "to": 0.36,
+            "face": "left",
+            "talk": false,
+            "at": "arr",
+            "then": "idle"
+          },
+          {
+            "who": "ahmet2",
+            "x": 1.25,
+            "pose": "walk",
+            "to": 0.5,
+            "face": "left",
+            "talk": false,
+            "beard": "black",
+            "at": "arr",
+            "then": "idle"
+          },
+          {
+            "who": "ahmet3",
+            "x": 1.4,
+            "pose": "walk",
+            "to": 0.64,
+            "face": "left",
+            "talk": false,
+            "beard": "grey",
+            "at": "arr",
+            "then": "wave"
+          },
+          {
+            "who": "ahmet4",
+            "x": 1.55,
+            "pose": "walk",
+            "to": 0.78,
+            "face": "left",
+            "talk": false,
+            "at": "arr",
+            "then": "idle"
+          },
+          {
+            "who": "ahmet5",
+            "x": 1.7,
+            "pose": "walk",
+            "to": 0.92,
+            "face": "left",
+            "talk": false,
+            "beard": "short",
+            "at": "arr",
+            "then": "shrug"
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Hangisi askere gidecek, hangisi vergi verecek?",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Hangi / Ahmet?', 'Ahmet?' kırmızı kutuda; 'vergi'de el yazısı not 'Askere? Vergiye?' beliriyor; altta ortada büyük fesli anlatıcı endişeyle omuz silkiyor.",
+      "title": {
+        "white": "Resmî kayıt"
+      },
+      "cues": {
+        "w0": "Hangisi",
+        "w1": "askere",
+        "note": "vergi"
+      },
+      "params": {
+        "lines": [
+          "Hangi",
+          "Ahmet?"
+        ],
+        "highlight": [
+          "Ahmet?"
+        ],
+        "note": "Askere? Vergiye?",
+        "y": 0.27,
+        "kasif": {
+          "x": 0.8,
+          "y": 0.7,
+          "pose": "shrug",
+          "at": "note",
+          "face": -1,
+          "scale": 0.85,
+          "emotion": "worried"
+        }
+      }
+    },
+    {
+      "type": "ag02_meclis",
+      "text": "Cumhuriyet ise herkesi kayda geçirmek istiyordu. 21 Haziran 1934'te Meclis Soyadı Kanunu'nu kabul etti.",
+      "visual": "Meclis salonu: sütunlar, kemerli pencere, ortada kürsü, sıralarda şapkasız milletvekilleri; 'Haziran'da üstte el yazısı '21 Haziran 1934'; 'Meclis'te eller sırayla kalkıyor, 'kabul'de kırmızı 'KABUL' damgası sayfaya çarpıyor; önde sağda büyük fesli anlatıcı kürsüyü işaret edip damgada sevinçle şaşırıyor.",
+      "title": {
+        "white": "Soyadı",
+        "gray": "Kanunu"
+      },
+      "cues": {
+        "nt": "Haziran",
+        "vote": "Meclis",
+        "stamp": "kabul"
+      },
+      "params": {
+        "vote": "vote",
+        "stamp": {
+          "text": "KABUL",
+          "at": "stamp",
+          "x": 0.4,
+          "y": 0.44
+        },
+        "note": {
+          "text": "21 Haziran 1934",
+          "at": "nt",
+          "x": 0.42,
+          "y": 0.215,
+          "size": 76
+        },
+        "kasif": {
+          "pose": "point",
+          "dir": 25,
+          "face": -1,
+          "seq": [
+            {
+              "at": "stamp",
+              "pose": "shock",
+              "emotion": "happy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag02_defter",
+      "text": "Her aile bir soyadı seçti.",
+      "visual": "Nüfus dairesi: önde kocaman açık kayıt defteri, sağ sayfadaki 'Soyadı' sütununa bir dip kalem sırayla 'Köse', 'Hasırcı', 'Kayserili' yazıyor; arkada masasındaki memurun önünde köylüler sırada ilerliyor; sağda fesli anlatıcı deftere işaret ediyor.",
+      "title": {
+        "white": "Nüfus",
+        "gray": "dairesi"
+      },
+      "cues": {
+        "r0": "aile",
+        "r1": "bir",
+        "hit": "soyadı"
+      },
+      "params": {
+        "header": "Soyadı",
+        "rows": [
+          "Köse",
+          "Hasırcı",
+          "Kayserili"
+        ],
+        "at": [
+          "r0",
+          "r1",
+          "hit"
+        ],
+        "write": 0.45,
+        "red": 2,
+        "cover_empty": true,
+        "kasif": {
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "point",
+              "dir": -10,
+              "emotion": "happy"
+            }
+          ],
+          "emotion": "surprised"
+        },
+        "cover_x": 0.37,
+        "cover_y": 0.45,
+        "cover_scale": 1.05
+      }
+    },
+    {
+      "type": "ag02_meclis",
+      "text": "Peki Mustafa Kemal? Ona soyadını Meclis verdi:",
+      "visual": "Aynı Meclis salonu, eller aşağıda; üstte el yazısı 'Mustafa Kemal'in soyadı?' beliriyor; fesli anlatıcı elini çenesine koyup düşünüyor; 'Meclis'te tüm sıralarda eller kalkıyor ve anlatıcı kürsüyü işaret ediyor.",
+      "title": {
+        "white": "24 Kasım",
+        "gray": "1934"
+      },
+      "cues": {
+        "lab": "Kemal",
+        "vote": "Meclis"
+      },
+      "params": {
+        "vote": "vote",
+        "label": {
+          "text": "Mustafa Kemal'in soyadı?",
+          "at": "lab",
+          "x": 0.45,
+          "y": 0.215,
+          "size": 84
+        },
+        "kasif": {
+          "pose": "think",
+          "face": -1,
+          "seq": [
+            {
+              "at": "vote",
+              "pose": "point",
+              "dir": 30,
+              "emotion": "happy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "ag02_meclis",
+      "text": "Atatürk. Bu adı ondan başka kimse alamadı.",
+      "visual": "Meclis salonunda eller havada; kürsünün üstünde kırmızı 'Atatürk' pankartı açılıyor; 'alamadı'da altında el yazısı 'yalnız ona mahsus' beliriyor; önde büyük fesli anlatıcı pankartı işaret ederken şaşkınlıkla geri sıçrıyor.",
+      "title": {
+        "white": "24 Kasım",
+        "gray": "1934"
+      },
+      "cues": {
+        "ban": "Atatürk",
+        "note": "alamadı"
+      },
+      "params": {
+        "hands": "up",
+        "banner": {
+          "text": "Atatürk",
+          "at": "ban",
+          "y": 0.235
+        },
+        "note": {
+          "text": "yalnız ona mahsus",
+          "at": "note",
+          "x": 0.4,
+          "y": 0.335,
+          "size": 70
+        },
+        "kasif": {
+          "pose": "point",
+          "dir": 45,
+          "face": -1,
+          "emotion": "surprised",
+          "seq": [
+            {
+              "at": "note",
+              "pose": "shock"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Yani soyadınız, büyük dedenizin size bıraktığı bir seçim.",
+      "visual": "Ak sakallı bir adam elindeki kâğıdı gururla kaldırıyor; 'dedenizin'de üstte el yazısı 'Büyük dedeniz!' beliriyor, kamera yaklaşıyor; solda fesli anlatıcı 'seçim'de izleyiciyi gülümseyerek işaret ediyor.",
+      "title": {},
+      "cues": {
+        "dede": "dedenizin",
+        "hit": "seçim"
+      },
+      "params": {
+        "scale": 1.05,
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.55,
+            0.55
+          ]
+        },
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2
+          }
+        },
+        "label": {
+          "text": "Büyük dedeniz!",
+          "y": 0.175,
+          "at": "dede",
+          "size": 96
+        },
+        "props": [
+          {
+            "type": "house",
+            "x": 0.88,
+            "y": 0.5,
+            "scale": 0.5
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.22,
+            "pose": "talk",
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "happy"
+          },
+          {
+            "who": "dede",
+            "x": 0.6,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "beard": "grey",
+            "at": "dede",
+            "then": "hold",
+            "item": "scroll",
+            "emotion": "happy"
+          }
+        ]
+      }
+    }
+  ]
+}
