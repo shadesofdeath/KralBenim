@@ -207,8 +207,9 @@ def lint(path, kinds):
     tags_h = re.findall(r"#\w+", desc)
     if short and (not tags_h or tags_h[0].lower() != "#shorts"):
         err.append("description: first hashtag must be #shorts")
-    if "#düşünbakalım" not in [h.lower() for h in tags_h]:
-        warn.append("description: add #düşünbakalım")
+    tag = "#" + low(s.get("channel") or "Düşün Bakalım").replace(" ", "")   # #düşünbakalım, #anlatayımgel
+    if tag not in [low(h) for h in tags_h]:
+        warn.append(f"description: add {tag}")
     if not 3 <= len(tags_h) <= 5:
         warn.append(f"description has {len(tags_h)} hashtags (3-5)")
     if not short and "Bu videoda:" not in desc:
