@@ -25,13 +25,13 @@ CHANNELS = {
     # YouTube metadata) for a worldwide audience; the most-watched Shorts categories that fit the parchment +
     # stick-figure style, not only history. Slow start: 2 Shorts a day + 3 long videos a week, at least
     # 30 min away from Düşün Bakalım's slots (Europe/Istanbul times; 13:00 = 06:00 New York, 11:00 London)
-    "Anlatayım Gel": {
+    "Stickstory": {          # was "Anlatayım Gel" until 2026-10-22 (renamed when it went global)
         "id": "ag", "prefix": "ag-", "narrator": "fes",
         "short_slots": ["13:00", "17:30"],
         "long_slots": {1: "19:30", 3: "19:30", 5: "14:00"},           # Tue, Thu, Sat
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
         "lang": "en", "voice_id": "ppLqTilh7rH7fbUVlXsf",              # owner's English voice (2026-10-22)
-        "hashtag": "#anlatayimgel", "brand_tag": "anlatayim gel",
+        "hashtag": "#stickstory", "brand_tag": "stickstory",
         "categories": [
             "history's strangest moments",          # real events nobody believes happened
             "unsolved mysteries",                   # lost ships, vanished people, unexplained places
@@ -46,14 +46,21 @@ CHANNELS = {
     },
 }
 DEFAULT = "Düşün Bakalım"
+ALIASES = {"Anlatayım Gel": "Stickstory"}   # old channel names in older scripts -> current name
 
 
 def by_id(cid):
+    cid = ALIASES.get(cid, cid)
     return next((n for n, c in CHANNELS.items() if c["id"] == cid or n == cid), None)
 
 
+def resolve(name):
+    """Current channel name for a script's "channel" (old names map through ALIASES)."""
+    return ALIASES.get(name, name)
+
+
 def lang(channel):
-    return CHANNELS.get(channel, CHANNELS[DEFAULT])["lang"]
+    return CHANNELS.get(resolve(channel), CHANNELS[DEFAULT])["lang"]
 
 
 def of_file(name):

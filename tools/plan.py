@@ -6,7 +6,7 @@
   python tools/plan.py --extra long  # one extra video started by hand: file number + earliest publish_at
   python tools/plan.py --channel ag  # the same for another channel (tools/channels.py; default Düşün Bakalım)
 
-Plan per channel (tools/channels.py): Düşün Bakalım 4 Shorts + 1 long video every day; Anlatayım Gel
+Plan per channel (tools/channels.py): Düşün Bakalım 4 Shorts + 1 long video every day; Stickstory (ex Anlatayım Gel)
 2 Shorts a day + a long video on Tue/Thu/Sat. A channel's files carry its prefix (ag-01-x.json). Videos already in the day's folder (e.g. a long video
 made the evening before) are marked done; the daily task makes only the "todo" ones.
 Extra videos started by hand carry "extra": true in their script and never count against the plan.

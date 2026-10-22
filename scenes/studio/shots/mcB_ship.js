@@ -5,11 +5,11 @@
 // Needs mcB__lib.js (window.MCB).
 // P: {horizon: 0.5, water: 0.74 (near water line, 0..1 H),
 //     ships: [{x: 0.5, to, at: 0, dur (travel time; default whole scene), scale: 1, face: 1|-1, sails: "full"|"half"|"torn"|"none",
-//              name: "MARY CELESTE", boat: "deck"|"none" (lifeboat on deck), wander: false (rolls hard, no one steering),
+//              name: "MARY CELESTE", boat: "deck"|"none" (lifeboat on deck), boat_scale: 1 (deck lifeboat size), wander: false (rolls hard, no one steering),
 //              heel: 0 (deg), strike: cue (reef hit: jolt + heel 9° + red cracks), flag: true, far: false}],
 //     boats: [{x: 0.7, y (waterline 0..1 H; default water), scale: 1, crew: 3, row: true, to, at, dur, face: 1|-1,
 //              tow: {ship: 0, len: 0.2 (W), snap: cue, drift: 40 px/s}, fade: {at, dur: 2}}],
-//     island: {x: 0.2, w: 0.22, h: 0.06, at} (low island on the horizon), gib: {x: 0.8, at} (Rock of Gibraltar),
+//     island: {x: 0.2, w: 0.22, h: 0.06, at, bold: false (green fill, ink outline, hatching)} (island on the horizon), gib: {x: 0.8, at} (Rock of Gibraltar),
 //     reef: {x: 0.66, w: 0.22, at} (jagged rocks at the water line),
 //     rocks: [{x, y, w: 0.12}] (rocks in front of the water for cast to stand on),
 //     cast: [...MCB cast entries], labels: [...MCB label entries], sky: {clouds: 3, gulls: 2},
@@ -101,8 +101,9 @@
     S.flag.setAttribute('d', o.flag === false ? '' : lp([[MAIN - 4, -612], [MAIN - 64, -604 + w * 0.4], [MAIN - 110, -598 + w], [MAIN - 60, -590 + w * 0.5], [MAIN - 4, -590]], 88));
     // lifeboat on deck
     if (o.boat === 'deck') {
-      const bp = [[-90, -132], [80, -132], [100, -150], [62, -110], [-60, -106], [-104, -146]];
-      S.boatF.setAttribute('d', lp(bp, 90)); S.boatR.setAttribute('d', ip(bp, 91, 4.5, { closed: true }) + ' ' + ip([[-40, -106], [-50, -88]], 92, 4) + ' ' + ip([[40, -108], [46, -90]], 93, 4));
+      const k = o.boatScale || 1, B = q => [q[0] * k, -88 + (q[1] + 88) * k];
+      const bp = [[-90, -132], [80, -132], [100, -150], [62, -110], [-60, -106], [-104, -146]].map(B);
+      S.boatF.setAttribute('d', lp(bp, 90)); S.boatR.setAttribute('d', ip(bp, 91, 4.5 * Math.sqrt(k), { closed: true }) + ' ' + ip([[-40, -106], [-50, -88]].map(B), 92, 4) + ' ' + ip([[40, -108], [46, -90]].map(B), 93, 4) + ' ' + ip([[-80, -128], [84, -130]].map(B), 94, 3));
     } else { S.boatF.setAttribute('d', ''); S.boatR.setAttribute('d', ''); }
     // reef cracks
     const ck = o.crack || 0;
@@ -144,7 +145,7 @@
       const clouds = Array.from({ length: sky.clouds ?? 3 }, () => ({ f: inkEl(cam, INK.paperLight), r: inkEl(cam, INK.inkSoft) }));
       const gulls = Array.from({ length: sky.gulls ?? 2 }, () => inkEl(cam));
       // horizon things
-      const isl = P.island ? { f: inkEl(cam, INK.paperDark), r: inkEl(cam, INK.inkSoft) } : null;
+      const isl = P.island ? { f: inkEl(cam, P.island.bold ? INK.green : INK.paperDark, P.island.bold ? { 'fill-opacity': 0.55 } : {}), r: inkEl(cam, P.island.bold ? INK.ink : INK.inkSoft) } : null;
       const gib = P.gib ? { f: inkEl(cam, INK.paperDark), r: inkEl(cam, INK.inkSoft), h: inkEl(cam, INK.inkSoft) } : null;
       const far = sea(cam, W, H, HZ, sd + 100, { amp: 2.5, hatch: 12, bottom: WY + 10 });
       far.update = far.update.bind(far);
@@ -179,7 +180,7 @@
           if (isl) {
             const I = P.island, p = spring(lt, atOr(cues, I.at, 0), 0.8), cx = I.x * W, w = (I.w ?? 0.22) * W, h = (I.h ?? 0.06) * H * p;
             const pts = [[cx - w / 2, HZ + 4], [cx - w * 0.3, HZ - h * 0.6], [cx - w * 0.1, HZ - h], [cx + w * 0.08, HZ - h * 0.8], [cx + w * 0.28, HZ - h * 0.45], [cx + w / 2, HZ + 4]];
-            isl.f.setAttribute('d', inkLoop(pts, { seed: sd + 30, t, amp: 1 })); isl.r.setAttribute('d', inkPath(pts, { w: 4, seed: sd + 31, t, amp: 1.2 }));
+            isl.f.setAttribute('d', inkLoop(pts, { seed: sd + 30, t, amp: 1 })); isl.r.setAttribute('d', inkPath(pts, { w: I.bold ? 7 : 4, seed: sd + 31, t, amp: 1.2 }) + (I.bold ? ' ' + [0.2, 0.4, 0.6].map((u, k) => inkPath([[cx - w * 0.3 + u * w * 0.5, HZ - h * (0.5 + 0.2 * Math.sin(k))], [cx - w * 0.34 + u * w * 0.5, HZ - 4]], { w: 3, seed: sd + 32 + k, t, amp: 1 })).join(' ') : ''));
           }
           if (gib) {
             const G = P.gib, p = spring(lt, atOr(cues, G.at, 0), 0.9), cx = G.x * W, s = Math.min(W, H) * 0.0013 * (G.scale ?? 1);
@@ -208,7 +209,7 @@
           shipG.forEach((o, i) => {
             const q = pose(o, i, lt), s = o.s;
             o.g.setAttribute('transform', `translate(${f1(q.xw)} ${f1(q.y)}) rotate(${f1(q.roll * q.face)}) scale(${(q.face * q.sc).toFixed(4)} ${q.sc.toFixed(4)})`);
-            drawShip(o.S, t, { sails: s.sails, boat: s.boat, flag: s.flag, crack: q.crack });
+            drawShip(o.S, t, { sails: s.sails, boat: s.boat, boatScale: s.boat_scale, flag: s.flag, crack: q.crack });
             if (o.name) o.name.setAttribute('transform', q.face < 0 ? 'scale(-1 1) translate(420 0)' : '');
             sternPt[i] = { now: q.stern, at: tt => pose(o, i, tt).stern };
           });

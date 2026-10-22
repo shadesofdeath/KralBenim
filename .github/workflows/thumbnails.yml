@@ -25,7 +25,7 @@ jobs:
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
           YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
-          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}   # Anlatayım Gel (tools/channels.py)
+          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}   # Stickstory, ex Anlatayım Gel (tools/channels.py)
         run: |
           for f in $FILES; do
             python tools/preview.py "$f" --times 0

@@ -2,7 +2,7 @@
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
 Her gün **4 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
-Aynı pipeline ikinci kanal **Anlatayım Gel**'e de üretir: aynı parşömen tarzı ama **global ve İngilizce** (ses, ekran, kapak, SEO), tarihle sınırlı değil, en çok izlenen Shorts kategorilerinden (bkz. *İkinci kanal: Anlatayım Gel*).
+Aynı pipeline ikinci kanal **Stickstory**'ye (eski adı Anlatayım Gel, 2026-10-22'de değişti) de üretir: aynı parşömen tarzı ama **global ve İngilizce** (ses, ekran, kapak, SEO), tarihle sınırlı değil, en çok izlenen Shorts kategorilerinden (bkz. *İkinci kanal: Stickstory*).
 Kanalların ayarları (ekrandaki ad, anlatıcı, dil, ses, hashtag, kategori havuzu, dosya öneki, yayın saatleri, YouTube secret'ı) `tools/channels.py`'dedir.
 
 **Kanalın tek tarzı (kanal sahibinin kesin kararı):** **tarih hikâyeleri**, sepya parşömen üstüne elle
@@ -100,7 +100,7 @@ render yüzdesi + kalan süre, birleştirme, YouTube linki, Telegram); yönetmen
 Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit atılmaz; ayrıntı `tools/telegram.py`, `tools/live.py`).
 
 1. **Plan:** `python tools/plan.py` çalıştır. Sadece `todo` listesindeki videoları üret (`done` dolu olanlar önceden hazırlanmış, dokunma); `todo` boşsa hiçbir şey yapma, dur. Dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
-2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanalın da: `ag-` önekli dosyalar Anlatayım Gel'in) `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
+2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanalın da: `ag-` önekli dosyalar Stickstory'nin (eski Anlatayım Gel)) `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
 3. **Konu:** Kanalın nişi **tarih hikâyeleridir** (BRAND §1): gerçek bir olay, gerçek insanlar, bir gerilim ve "peki neden oldu?" sorusunun cevabı. Konu havuzunu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşların dönüm noktaları · keşifler ve icatların hikâyesi · imparatorlukların yükseliş/çöküşü · **Türkiye ve Osmanlı tarihinden anlar**, haftada en az 2 video). Bilim ancak bir tarih olayını açıklamak için girer. Konu `tarih-bolumu` becerisindeki 4 testi geçmeli (tek an, bir insan, bir "neden", doğrulanabilir). Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir olay.
 4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
 5. **Senaryo** — dosyalar: `01-<slug>.json` … `04-<slug>.json` (Shorts, dördü de farklı konu havuzlarından ve dönemlerden; en az biri Türkiye/Osmanlı tarihinden) ve `05-<slug>.json` (uzun video, Shorts'lardan farklı bir olay); numaralar `plan.py`'nin `todo` listesinden.
@@ -158,9 +158,9 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 10. **Gönder:** Push'tan hemen önce `tools/lint.py` son kez hatasız geçmeli. Dosyaları (`media/` klasörü, `production.md` ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
 11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını, yayın saatini ve son tur eleştiri puanlarını kısaca özetle; bir sonraki uzun video tarihini yaz.
 
-## İkinci kanal: Anlatayım Gel (global, İngilizce)
+## İkinci kanal: Stickstory (global, İngilizce; eski adı Anlatayım Gel)
 
-Kanal sahibinin ikinci kanalı (2026-10-21); **2026-10-22'den itibaren global ve tamamen İngilizce**:
+Kanal sahibinin ikinci kanalı (2026-10-21, adı "Anlatayım Gel" idi); **2026-10-22'den itibaren adı Stickstory, global ve tamamen İngilizce**:
 seslendirme, ekrandaki her yazı (kicker, harita/pano etiketleri, el yazısı notlar, bölüm kartı
 "CHAPTER 2 / 5"), altyazı, kapak, YouTube başlığı/açıklaması/etiketleri. Düşün Bakalım Türkçe kalır.
 Ayrı bir zamanlanmış görev her sabah bu bölümü uygular. Tarz (parşömen + fesli anlatıcı), kalite kuralları,
@@ -177,19 +177,19 @@ BRAND.md); İngilizce anlatım kuralları **BRAND.md §11**'dedir. Farklar:
   Her konu yine **gerçek, doğrulanabilir bir hikâye**dir: bir an, bir insan (ya da bir canlı/nesne), bir "neden?"
   (`tarih-bolumu` 4 testi; bilim/vücut/hayvan konularında "insan" yerine somut bir kahraman ya da deney olabilir).
   Konu **iki kanalın geçmişinde** (tüm `videos/*/*.json`) işlenmemiş olmalı; aynı gün Düşün Bakalım'la çakışmamalı.
-- **Senaryo alanları:** `"channel": "Anlatayım Gel"`, `"narrator": "fes"`, **`"lang": "en"`**,
+- **Senaryo alanları:** `"channel": "Stickstory"` (ekranda sol üstte bu ad yazar), `"narrator": "fes"`, **`"lang": "en"`**,
   `"tts": {"provider": "elevenlabs", "voice_id": "ppLqTilh7rH7fbUVlXsf", "model": "eleven_v3"}` (kanal sahibinin
   İngilizce sesi, asla değiştirme; ses kanalın `voice_id`'sidir, `tools/channels.py`). Anlatıcı Kaşif'in aynı çizimi, kırmızı
   fesli (`KASIF.setNarrator`); Kaşif kuralları aynen geçerli. `lint` kanal adını, dosya önekini, anlatıcıyı, dili ve sesi denetler.
 - **Bütçe:** Shorts 400–500, uzun 6.500–7.800 karakter (İngilizce de aynı; ~15 karakter/sn).
 - **SEO (İngilizce, global arama):** başlık İngilizce aranan ifadeyle başlar ("Mary Celeste: …", "Why Do Cats…?");
-  açıklama İngilizce, uzun videoda "In this video:" listesi, abone çağrısı "Subscribe to Anlatayım Gel for …",
-  yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + **`#anlatayimgel`**; etiketlerde **`anlatayim gel`**
+  açıklama İngilizce, uzun videoda "In this video:" listesi, abone çağrısı "Subscribe to Stickstory for …",
+  yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + **`#stickstory`**; etiketlerde **`stickstory`**
   ve İngilizce varyasyonlar. Metadata'da Türkçe karakter ve "Düşün Bakalım" geçmez.
 - **Yayın saatleri** Europe/Istanbul; 13:00 = Londra 11:00 / New York 06:00, 17:30 = New York 10:30, 19:30 = New York 12:30.
 - **Telegram:** sadece video satırları (`video` = `ag-NN-<slug>`); `plan`/`push` gibi genel satırları
-  gönderme (genel kutu Düşün Bakalım'ındır). Kutularda başlığın önünde kanal adı yazar. Telegram metinleri Türkçe kalır (kanal sahibine).
-- **Commit:** `Daily batch YYYY-MM-DD (Anlatayım Gel)`; aynı dala push. Yükleme `YOUTUBE_TOKEN_JSON_AG`
+  gönderme (genel kutu Düşün Bakalım'ındır). Kutularda başlığın önünde kanal adı yazar. Telegram metinleri Türkçe kalır (kanal sahibine). Kanal açıklaması: "How about hearing history from a stick figure? ✏️📜".
+- **Commit:** `Daily batch YYYY-MM-DD (Stickstory)`; aynı dala push. Yükleme `YOUTUBE_TOKEN_JSON_AG`
   secret'ıyla, `defaultLanguage`/`defaultAudioLanguage` = `en`; secret yoksa render yapılır ama yükleme atlanır.
 
 ### SEO puanı (iki kanal, 100/100 zorunlu)

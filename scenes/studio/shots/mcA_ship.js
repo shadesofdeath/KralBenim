@@ -420,11 +420,11 @@
               const p0 = T(-20, -150), p1 = T(-40, 14), down = progIO(lt, ya, dn);
               let bx = lerp(p0[0], p1[0], down), by = lerp(p0[1], p1[1], down);
               const rp = progIO(lt, ra, Math.max(1, dur - ra)), tx = (Y.to ?? -0.3) * W;
-              bx = lerp(bx, tx, rp); by += rp * 30 * k + Math.sin(t * 2.4) * 4 * down;
-              const L = 230 * k * (1 + rp * 0.3), fc2 = tx < p1[0] ? -1 : 1;
+              bx = lerp(bx, tx, rp); by = (Y.y != null ? lerp(by, Y.y * H, rp) : by + rp * 30 * k) + Math.sin(t * 2.4) * 4 * down;
+              const ys = Y.scale ?? 1, L = 230 * k * ys * (1 + rp * (Y.grow ?? 0.3)), fc2 = tx < p1[0] ? -1 : 1;
               const hp = [[-L * 0.5, -L * 0.22], [L * 0.5, -L * 0.26], [L * 0.4, 0], [-L * 0.38, 0.02 * L]].map(q => [bx + q[0] * fc2, by + q[1]]);
               yawlD.f += inkLoop(hp, { seed: sd + 700, t }) + ' ';
-              yawlD.i += inkPath(hp, { seed: sd + 700, t, w: 4, closed: true }) + ' ';
+              yawlD.i += inkPath(hp, { seed: sd + 700, t, w: 4 * Math.sqrt(ys), closed: true }) + ' ' + inkPath([[bx - L * 0.46 * fc2, by - L * 0.15], [bx + L * 0.46 * fc2, by - L * 0.18]], { seed: sd + 703, t, w: 2.5 * Math.sqrt(ys) }) + ' ';
               if (lt < ya + dn) { yawlD.i += inkPath([T(-80, -560), [bx - L * 0.4 * fc2, by - L * 0.22]], { seed: sd + 701, t, w: 2.5 }) + ' ' + inkPath([T(40, -560), [bx + L * 0.4 * fc2, by - L * 0.24]], { seed: sd + 702, t, w: 2.5 }) + ' '; }
               const nF = Y.figures ?? 4;
               for (let j = 0; j < nF; j++) {
@@ -513,7 +513,7 @@
       if (mode === 'stern') {
         const sky = makeSky(cam, seed, 2, 3);
         const seaF = mk(INK.paperDark), seaL = mk(INK.inkSoft), seaH = mk(INK.inkSoft, { 'fill-opacity': 0.5 });
-        const sG = el(cam, 'g'), sD = inkEl(sG, INK.paperDark), sF = inkEl(sG, INK.paperLight), sS = inkEl(sG, INK.inkSoft, { 'fill-opacity': 0.7 }), sI = inkEl(sG), winF = inkEl(sG, INK.gold, { 'fill-opacity': 0.55 });
+        const sG = el(cam, 'g'), mastB = inkEl(sG), sD = inkEl(sG, INK.paperDark), sF = inkEl(sG, INK.paperLight), sS = inkEl(sG, INK.inkSoft, { 'fill-opacity': 0.7 }), sI = inkEl(sG), winF = inkEl(sG, INK.gold, { 'fill-opacity': 0.55 });
         const name = U(P.name || 'Mary Celeste');
         const letters = [...name].map(ch => { const tx = el(sG, 'text', { 'font-family': FR, 'font-weight': 900, 'font-size': 96, 'text-anchor': 'middle', fill: INK.gold, style: `paint-order: stroke; stroke: ${INK.ink}; stroke-width: 7px; stroke-linejoin: round` }); tx.textContent = ch; return tx; });
         const frontS = mk(INK.paperDark), frontSI = mk(INK.inkSoft);
@@ -527,29 +527,40 @@
           const sp = seaPaths(t, W, H, hy, sd, 6); seaF.setAttribute('d', sp.body); seaL.setAttribute('d', sp.line); seaH.setAttribute('d', sp.hatch);
           const cx = 0.56 * W, bob = Math.sin(t * 1.3) * 14, rl = Math.sin(t * 0.9) * 2;
           sG.setAttribute('transform', `translate(0 ${f1(bob)}) rotate(${f1(rl)} ${f1(cx)} ${f1(wl)})`);
-          // transom: wide at the top rail, narrowing to the rudder post below
-          const top = 0.14 * H, tw = 0.36 * W, bw = 0.17 * W;
-          const tr = [[cx - tw, top + 30], [cx - tw * 0.5, top], [cx + tw * 0.5, top], [cx + tw, top + 30], [cx + bw + 40, wl - 40], [cx + bw, wl + 80], [cx - bw, wl + 80], [cx - bw - 40, wl - 40]];
-          sD.setAttribute('d', inkLoop(tr, { seed: sd + 10, t }));
-          let ink = inkPath(tr, { seed: sd + 10, t, w: 8, closed: true }) + ' ', soft = '';
-          const nb = [[cx - tw * 0.82, top + 120], [cx + tw * 0.82, top + 120], [cx + tw * 0.78, top + 250], [cx - tw * 0.78, top + 250]];
-          sF.setAttribute('d', inkLoop(nb, { seed: sd + 11, t }) + ' ' + inkLoop([[cx - tw, top + 30], [cx - tw * 0.5, top], [cx + tw * 0.5, top], [cx + tw, top + 30], [cx + tw * 0.96, top + 60], [cx - tw * 0.96, top + 60]], { seed: sd + 12, t }));
-          ink += inkPath(nb, { seed: sd + 11, t, w: 5, closed: true }) + ' ' + inkPath([[cx - tw * 0.96, top + 60], [cx + tw * 0.96, top + 60]], { seed: sd + 13, t, w: 6 }) + ' ';
-          for (let j = 0; j < 6; j++) { const y = top + 290 + j * 56, f = (y - top) / (wl - top), hw = lerp(tw, bw + 40, f) - 10; soft += inkLoop([[cx - hw, y], [cx + hw, y], [cx + hw, y + 5], [cx - hw, y + 5]], { seed: sd + 20 + j, t, amp: 0.8 }) + ' '; }
-          // stern windows
+          // transom seen from astern: square taffrail, flat stern board, sides tucking in to the rudder; masts behind
+          const top = 0.2 * H, tw = 0.3 * W, bh = wl - top;
+          let mb = '';
+          [[-0.42, 1.0], [0.36, 0.92]].forEach(([u, k2], j) => {
+            const mx = cx + u * tw * 0.7, mtop = -60;
+            mb += inkPath([[mx, top + 10], [mx + 3, mtop]], { seed: sd + 60 + j, t, w: 16 * k2 }) + ' ';
+            [0.1, 0.42, 0.7].forEach((v, q) => { const yy = lerp(top, mtop, v), hw2 = (140 - q * 30) * k2; mb += inkPath([[mx - hw2, yy + 4], [mx + hw2, yy - 4]], { seed: sd + 64 + j * 5 + q, t, w: 7 }) + ' '; });
+            mb += inkPath([[mx, lerp(top, mtop, 0.5)], [cx - tw * 0.98, top]], { seed: sd + 75 + j, t, w: 3 }) + ' ' + inkPath([[mx, lerp(top, mtop, 0.5)], [cx + tw * 0.98, top]], { seed: sd + 77 + j, t, w: 3 }) + ' ';
+          });
+          mastB.setAttribute('d', mb);
+          const tr = [[cx - tw, top + 46], [cx, top + 40], [cx + tw, top + 46], [cx + tw * 0.98, top + bh * 0.35], [cx + tw * 0.9, top + bh * 0.62], [cx + tw * 0.7, wl - 10], [cx + tw * 0.42, wl + 80], [cx - tw * 0.42, wl + 80], [cx - tw * 0.7, wl - 10], [cx - tw * 0.9, top + bh * 0.62], [cx - tw * 0.98, top + bh * 0.35]];
+          sD.setAttribute('d', inkLoop(tr, { seed: sd + 10, t, smooth: false }));
+          let ink = inkPath(tr, { seed: sd + 10, t, w: 8, closed: true, smooth: false }) + ' ', soft = '';
+          // taffrail with balusters
+          ink += inkPath([[cx - tw - 16, top], [cx, top - 8], [cx + tw + 16, top]], { seed: sd + 13, t, w: 12 }) + ' ';
+          for (let j = 0; j <= 14; j++) { const x = cx - tw + j * (2 * tw) / 14; ink += inkPath([[x, top + 2], [x, top + 44]], { seed: sd + 14 + j, t, w: 4 }) + ' '; }
+          const nb = [[cx - tw * 0.9, top + 150], [cx + tw * 0.9, top + 150], [cx + tw * 0.88, top + 280], [cx - tw * 0.88, top + 280]];
+          sF.setAttribute('d', inkLoop(nb, { seed: sd + 11, t, smooth: false }));
+          ink += inkPath(nb, { seed: sd + 11, t, w: 6, closed: true, smooth: false }) + ' ' + inkPath([[cx - tw, top + 120], [cx + tw, top + 120]], { seed: sd + 12, t, w: 5 }) + ' ';
+          for (let j = 0; j < 6; j++) { const y = top + 320 + j * 44, f = clamp01((y - top) / bh), hw = lerp(tw * 0.98, tw * 0.66, f * f) - 14; if (y > wl + 40) break; soft += inkLoop([[cx - hw, y], [cx + hw, y], [cx + hw, y + 5], [cx - hw, y + 5]], { seed: sd + 20 + j, t, amp: 0.8 }) + ' '; }
+          // stern windows (between taffrail and name board)
           let wf = '';
-          [-0.55, -0.18, 0.18, 0.55].forEach((u, j) => { const wx = cx + u * tw, wy = top + 74 - Math.abs(u) * 10, q = [[wx - 34, wy - 6], [wx + 34, wy - 6], [wx + 34, wy + 30], [wx - 34, wy + 30]]; wf += inkLoop(q, { seed: sd + 30 + j, t, smooth: false }) + ' '; ink += inkPath(q, { seed: sd + 30 + j, t, w: 4, closed: true, smooth: false }) + ' '; });
+          [-0.6, -0.2, 0.2, 0.6].forEach((u, j) => { const wx = cx + u * tw, wy = top + 62, q = [[wx - 36, wy], [wx + 36, wy], [wx + 36, wy + 44], [wx - 36, wy + 44]]; wf += inkLoop(q, { seed: sd + 30 + j, t, smooth: false }) + ' '; ink += inkPath(q, { seed: sd + 30 + j, t, w: 4, closed: true, smooth: false }) + ' ' + inkPath([[wx, wy], [wx, wy + 44]], { seed: sd + 35 + j, t, w: 3 }) + ' '; });
           // rudder
-          const rd = [[cx - 26, wl - 160], [cx + 26, wl - 160], [cx + 40, wl + 80], [cx - 40, wl + 80]];
+          const rd = [[cx - 24, top + 300], [cx + 24, top + 300], [cx + 38, wl + 80], [cx - 38, wl + 80]];
           ink += inkPath(rd, { seed: sd + 40, t, w: 6, closed: true, smooth: false }) + ' ';
           sS.setAttribute('d', soft + inkLoop(rd, { seed: sd + 40, t, smooth: false }));
           sI.setAttribute('d', ink); winF.setAttribute('d', wf);
           // name letters
-          const na = atOr(cues, 'name', 0.6), n = letters.length, step = Math.min(0.11, 1.4 / n), span = tw * 1.5, ny = top + 222;
+          const na = atOr(cues, 'name', 0.4), n = letters.length, endT = Math.max(na + 0.9, dur * 0.7), step = Math.max(0.03, (endT - na - 0.35) / n), span = tw * 1.62, ny = top + 252;
           letters.forEach((tx, j) => {
             const p = spring(lt, na + j * step, 0.45), x = cx - span / 2 + (j + 0.5) * span / n;
             tx.setAttribute('x', f1(x)); tx.setAttribute('y', f1(ny));
-            tx.setAttribute('font-size', Math.round(Math.min(110, span / n * 1.5)));
+            tx.setAttribute('font-size', Math.round(Math.min(104, span / n * 1.5)));
             tx.style.display = lt < na + j * step ? 'none' : '';
             tx.setAttribute('transform', `translate(${f1(x)} ${f1(ny)}) scale(${lerp(0.3, 1, p).toFixed(3)}) rotate(${f1((1 - p) * -10)}) translate(${f1(-x)} ${f1(-ny)})`);
           });

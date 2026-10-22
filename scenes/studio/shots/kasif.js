@@ -212,7 +212,7 @@ const KASIF = (() => {
     band: [[-58, -46], [-60, -68], [60, -70], [58, -46]],
     brim: [[-108, -38], [-72, -52], [-20, -56], [40, -54], [102, -48], [126, -38], [98, -28], [40, -32], [-20, -32], [-82, -28]],
   };
-  // second channel's narrator (Anlatayım Gel): same rig, a red fez with an ink tassel instead of the explorer hat
+  // second channel's narrator (Stickstory, ex Anlatayım Gel): same rig, a red fez with an ink tassel instead of the explorer hat
   const FEZ = {
     crown: [[-52, -40], [-47, -96], [-42, -122], [-16, -128], [18, -128], [42, -122], [47, -96], [52, -40]],
     band: [[-52, -40], [-51, -54], [51, -54], [52, -40]],

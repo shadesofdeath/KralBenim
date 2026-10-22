@@ -450,7 +450,7 @@ def render(st, sec, now=None):
     kind = {"short": "📱", "long": "📺"}.get(sec.get("kind"), "🎞️")
     pub = stage_of(sec, "publish")
     when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
-    ch = of_file(sec["id"])           # a second channel's videos say whose they are (ag-01-x -> Anlatayım Gel)
+    ch = of_file(sec["id"])           # a second channel's videos say whose they are (ag-01-x -> Stickstory)
     tag = f"<i>{esc(ch)}</i> · " if ch != DEFAULT else ""
     return f"{kind} {tag}<b>{esc(sec.get('title') or sec['id'])}</b>{when}\n{stage_line(g, now)}"[:4000]
 

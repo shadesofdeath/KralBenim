@@ -4,7 +4,7 @@
   YOUTUBE_TOKEN_JSON='<contents of youtube_token.json>' python tools/upload.py videos/<date>/<file>.json out/video.mp4
   # or: YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN
 Each channel uploads with its own token (tools/channels.py "youtube_env", e.g. YOUTUBE_TOKEN_JSON_AG for
-Anlatayım Gel); a script is never uploaded with another channel's token. No token for the script's channel:
+Stickstory); a script is never uploaded with another channel's token. No token for the script's channel:
 prints a note and exits 0 without writing <video>.youtube.json.
 
 <file>.json:
@@ -26,12 +26,15 @@ from googleapiclient.discovery import build as gbuild
 from googleapiclient.http import MediaFileUpload
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from channels import CHANNELS, DEFAULT, lang  # noqa: E402
+from channels import CHANNELS, DEFAULT, lang, resolve  # noqa: E402
 
 
 def credentials(channel=DEFAULT):
     """The channel's own credentials, or None. The client id/secret/refresh-token trio belongs to Düşün Bakalım."""
-    env = CHANNELS.get(channel, CHANNELS[DEFAULT])["youtube_env"]
+    channel = resolve(channel)
+    if channel not in CHANNELS:              # unknown channel: never fall back to another channel's token
+        return None
+    env = CHANNELS[channel]["youtube_env"]
     if os.environ.get(env):
         info = json.loads(os.environ[env])
     elif channel != DEFAULT or not os.environ.get("YOUTUBE_REFRESH_TOKEN"):
@@ -99,14 +102,15 @@ def main():
         rec = json.loads(Path(sys.argv[2]).read_text())
         try:
             channel = json.loads((Path(__file__).resolve().parent.parent / rec["script"]).read_text()).get("channel") or DEFAULT
+            channel = resolve(channel)
         except (KeyError, OSError, ValueError):
             channel = DEFAULT
         return set_thumbnail(rec["id"], sys.argv[3], channel)
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     script = json.loads(script_path.read_text())
     meta = script["youtube"]
-    channel = script.get("channel") or DEFAULT
-    lg = script.get("lang") or lang(channel)        # Anlatayım Gel is English (global), Düşün Bakalım Turkish
+    channel = resolve(script.get("channel") or DEFAULT)
+    lg = script.get("lang") or lang(channel)        # Stickstory is English (global), Düşün Bakalım Turkish
     creds = credentials(channel)
     if creds is None:
         print(f"no YouTube token for {channel} ({CHANNELS.get(channel, CHANNELS[DEFAULT])['youtube_env']}): upload skipped")

@@ -30,7 +30,7 @@ Kanalın tek ve sabit anlatıcı karakteri. Her videoda, aynı çizimle, aynı k
 | Hareket kütüphanesi | `idle` (nefes alır, hafif sallanır) · `walk` (sahneye yürüyerek girer/çıkar) · `point` (bir şeyi gösterir) · `think` (el çenede) · `shock` (geri sıçrar, kaşlar yukarı) · `shrug` · `talk` (el hareketleriyle anlatır) · `wave` · `run` · `sit` · `hold` (bir nesne/tabela tutar) · `look` (dürbünle bakar). |
 | Kural | Her videonun sahnelerinin **en az yarısında** Kaşif ekranda ve **bir şey yapıyor** (sadece durmuyor). Ağzı **sabittir** (konuşma animasyonu yok; kanal sahibinin kararı), duyguyu kaşlar ve poz taşır. |
 
-**İkinci kanal Anlatayım Gel:** anlatıcı aynı çizim ve aynı kurallarla, ama kâşif şapkası yerine **kırmızı fes** (`red` #A8432F, mürekkep püskül) takar; senaryoda `"narrator": "fes"`.
+**İkinci kanal Stickstory (eski adı Anlatayım Gel):** anlatıcı aynı çizim ve aynı kurallarla, ama kâşif şapkası yerine **kırmızı fes** (`red` #A8432F, mürekkep püskül) takar; senaryoda `"narrator": "fes"`.
 
 Referans çizim: `brand/kit/kasif-reference.png` (kodla üretilir; tasarım değişirse yeniden üretilir).
 
@@ -152,7 +152,9 @@ Her kapakta Kaşif'in yüzü okunur büyüklükte olur.
 - [ ] Ekranda en fazla 5 kelime/sahne, en küçük yazı 44 px
 - [ ] Tarih ve sayılar doğrulanmış
 
-## 11. Anlatayım Gel: global İngilizce kanal (2026-10-22)
+## 11. Stickstory: global İngilizce kanal (2026-10-22, eski adı Anlatayım Gel)
+
+Kanal adı **Stickstory** (ekranda sol üstte, kapakta değil). Kanal açıklamasının ilk cümlesi: *"How about hearing history from a stick figure? ✏️📜"*.
 
 Görsel kimlik aynı (§2–5, §9; anlatıcı kırmızı fesli). Dil, niş ve anlatım:
 

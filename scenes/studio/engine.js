@@ -47,7 +47,7 @@ window.init = async (data) => {
   [W, H] = D.size;
   LOCALE = D.lang === 'en' ? 'en-US' : 'tr-TR';
   document.documentElement.lang = D.lang || 'tr';
-  // the channel's narrator (Kaşif's explorer hat, or Anlatayım Gel's fez) before any shot builds a rig
+  // the channel's narrator (Kaşif's explorer hat, or Stickstory's fez) before any shot builds a rig
   if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
   root.classList.add(D.format || 'short');
