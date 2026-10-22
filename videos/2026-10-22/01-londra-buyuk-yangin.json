@@ -1,0 +1,592 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "londra-buyuk-yangin",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Londra'yı",
+      "bir fırın",
+      "yaktı"
+    ],
+    "highlight": [
+      "fırın"
+    ],
+    "scene": 0,
+    "t": 2.3,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Büyük Londra Yangını: Koca Şehri Bir Fırın mı Yaktı? 🔥",
+    "description": "Büyük Londra Yangını 1666'da küçük bir fırında başladı ve koca şehri dört günde kül etti. Peki bir kıvılcım nasıl bu kadar büyüdü?\n\n2 Eylül 1666 gecesi, Pudding Lane'deki fırıncı Thomas Farriner'ın dükkânında yangın çıktı. Belediye başkanı Thomas Bludworth yangını küçümseyip yatağına döndü. Ama Londra'nın ahşap, birbirine yapışık evleri, kurak bir yaz ve sert rüzgâr kıvılcımı dev bir felakete çevirdi: on üç bini aşkın ev, 87 kilise ve eski Aziz Paul Katedrali yandı.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone olun. Sizce bu felaketin asıl suçlusu kimdi: fırıncı mı, başkan mı, şehir mi? Yorumlara yazın!\n\n#shorts #londrayangını #tarih #düşünbakalım",
+    "tags": [
+      "büyük londra yangını",
+      "londra yangını 1666",
+      "great fire of london",
+      "londra yangını nasıl çıktı",
+      "1666 londra",
+      "pudding lane",
+      "thomas farriner",
+      "aziz paul katedrali",
+      "londra tarihi",
+      "ingiltere tarihi",
+      "tarihteki büyük yangınlar",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-22T12:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "londonfire",
+      "text": "Londra'yı küçük bir fırın yaktı.",
+      "visual": "Gece, kadrajın ortasında büyük ahşap fırın evi: tuğla ocağın ağzından alevler fışkırıyor, alevler cepheden çatıya tırmanıyor, ekmek tabelası sallanıyor; iki yandaki evler de yanıyor, sağ üst duman ve kıvılcımla dolu; solda büyük Kaşif 'fırın'da şok olup geri sıçrıyor.",
+      "title": {},
+      "cues": {
+        "hit": "fırın"
+      },
+      "params": {
+        "mode": "street",
+        "houses": 3,
+        "bakery": 1,
+        "big": 1.4,
+        "oven": 1.5,
+        "ground": 0.74,
+        "hero_x": 0.56,
+        "fire": {
+          "start": 1,
+          "at": -3,
+          "step": 0.15,
+          "size": 1.1
+        },
+        "wind": {
+          "at": 0,
+          "y": 0.2,
+          "dir": -1
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.62
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.25,
+            "pose": "idle",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "scale": 1.3
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonmap",
+      "text": "Gelin anlatayım. Eylül 1666, gece saat bir.",
+      "visual": "Kadrajı dolduran eski Londra planı: Thames, kesikli eski şehir surları, Londra Köprüsü, sık ev blokları ve Aziz Paul; 'gece'de kırmızı nabız atan 'Pudding Lane' işareti beliriyor, Kaşif önde onu işaret ediyor; '1666'da 'Gece 1, 2 Eylül 1666' not kartı çıkıyor; kamera işarete yaklaşıyor.",
+      "title": {
+        "white": "Londra",
+        "gray": "Eylül 1666"
+      },
+      "cues": {
+        "note": "1666",
+        "marker": "gece"
+      },
+      "params": {
+        "marker": {
+          "at": "marker"
+        },
+        "note": {
+          "text": "2 Eylül 1666",
+          "at": "note",
+          "x": 0.62,
+          "y": 0.25,
+          "size": 70
+        },
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.66,
+            0.45
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.17,
+            "pose": "idle",
+            "face": "right",
+            "at": "marker",
+            "then": "point",
+            "dir": 28,
+            "scale": 0.72,
+            "emotion": "surprised"
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonfire",
+      "text": "Fırıncı Thomas Farriner'ın dükkânı alev aldı.",
+      "visual": "Yakın plan üç ahşap ev; ortadaki fırın büyük, tuğla ocağı parlıyor, ekmek tabelası sallanıyor; 'Farriner'da ocaktan kıvılcımlar fışkırıyor, 'alev'de ocaktan ve üst kattan alevler yükseliyor; sağ üstte el yazısı 'Farriner'ın fırını'; solda Kaşif ocağı işaret edip şaşırıyor.",
+      "title": {
+        "white": "Pudding Lane",
+        "gray": "gece 1"
+      },
+      "cues": {
+        "lab": "Thomas",
+        "spark": "Farriner",
+        "fire": "alev"
+      },
+      "params": {
+        "mode": "street",
+        "houses": 3,
+        "bakery": 1,
+        "big": 1.0,
+        "oven": 1.4,
+        "spark": "spark",
+        "fire": {
+          "start": 1,
+          "at": "fire",
+          "only": true,
+          "grow": 1.2,
+          "size": 0.5
+        },
+        "label": {
+          "text": "Farriner'ın fırını",
+          "x": 0.76,
+          "y": 0.16,
+          "at": "lab",
+          "size": 74
+        },
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.13,
+            "pose": "point",
+            "dir": "forward",
+            "face": "right",
+            "at": "fire",
+            "then": "shock",
+            "scale": 0.62
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonfire",
+      "text": "Belediye başkanı Bludworth yangına baktı, küçümsedi ve gidip yattı!",
+      "visual": "Fırının üst katında küçük alevler; sağdan şapkasız, sakallı Belediye Başkanı Bludworth yürüyerek geliyor, alevlere bakıyor, 'küçümsedi'de gülerek omuz silkiyor, 'yattı'da arkasını dönüp sağa yürüyerek gidiyor; üstte kırmızı el yazısı 'Önemsemedi!'; solda Kaşif 'yattı'da şok oluyor.",
+      "title": {
+        "white": "Bludworth",
+        "gray": "başkan"
+      },
+      "cues": {
+        "look": "baktı",
+        "hit": "küçümsedi",
+        "go": "yattı"
+      },
+      "params": {
+        "mode": "street",
+        "houses": 3,
+        "bakery": 1,
+        "fire": {
+          "start": 1,
+          "at": -2,
+          "only": true,
+          "size": 0.5
+        },
+        "label": {
+          "text": "Önemsemedi!",
+          "x": 0.7,
+          "y": 0.2,
+          "at": "hit",
+          "size": 96,
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.15,
+            "pose": "think",
+            "face": "right",
+            "at": "go",
+            "then": "shock",
+            "scale": 0.6
+          },
+          {
+            "who": "baskan",
+            "beard": "short",
+            "x": 1.1,
+            "pose": "walk",
+            "to": 0.56,
+            "face": "left",
+            "at": "look",
+            "then": "idle",
+            "scale": 0.66,
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shrug",
+                "emotion": "happy"
+              },
+              {
+                "at": "go",
+                "pose": "walk",
+                "face": "right",
+                "to": 1.2,
+                "dur": 1.5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "firecauses",
+      "text": "Ama bakın, asıl tehlike başkaydı:",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Asıl tehlike / başkaydı', 'tehlike' kırmızı kutuda; altta sönük ahşap ev sırası; Kaşif sağdan yürüyerek geliyor ve 'başkaydı'da şok olup geri sıçrıyor.",
+      "title": {},
+      "cues": {
+        "w0": "asıl",
+        "w1": "tehlike",
+        "w2": "başkaydı"
+      },
+      "params": {
+        "words": {
+          "lines": [
+            "Asıl tehlike",
+            "başkaydı"
+          ],
+          "highlight": [
+            "tehlike"
+          ],
+          "y": 0.25,
+          "size": 118
+        },
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.95,
+            "pose": "walk",
+            "to": 0.62,
+            "face": "left",
+            "at": "w2",
+            "then": "shock",
+            "scale": 0.72
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonfire",
+      "text": "evler ahşaptı, birbirine yapışıktı,",
+      "visual": "Dört ahşap ev yan yana; 'ahşaptı'da evlerin ahşap iskeleti kırmızı parlıyor ve üstte 'Ahşap!' yazısı çıkıyor; 'yapışıktı'da üst katlar sokağa doğru büyüyüp neredeyse birbirine değiyor, aradaki dar boşluğu iki kırmızı ok gösteriyor; önde Kaşif yukarıyı işaret ediyor.",
+      "title": {
+        "white": "Ahşap",
+        "gray": "evler"
+      },
+      "cues": {
+        "wood": "ahşaptı",
+        "tight": "yapışıktı"
+      },
+      "params": {
+        "mode": "street",
+        "houses": 4,
+        "bakery": -1,
+        "fire": {
+          "start": 0,
+          "at": 99
+        },
+        "timber": {
+          "at": "wood"
+        },
+        "tight": {
+          "at": "tight",
+          "from": 0
+        },
+        "label": {
+          "text": "Ahşap!",
+          "x": 0.62,
+          "y": 0.2,
+          "at": "wood",
+          "size": 100,
+          "color": "red"
+        },
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.5,
+            0.4
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "pose": "talk",
+            "face": "right",
+            "at": "wood",
+            "then": "point",
+            "dir": "up",
+            "scale": 0.62
+          }
+        ]
+      }
+    },
+    {
+      "type": "firecauses",
+      "text": "yaz da kupkuruydu. Üstüne sert bir rüzgâr esti.",
+      "visual": "Üç büyük satır, her birinin başında kırmızı alev rozeti: 'Ahşap ev' (ev çizimi) baştan duruyor, 'kupkuruydu'da 'Kuru yaz' (dönen güneş), 'rüzgâr'da 'Rüzgâr' (kıvrılan rüzgâr çizgileri) kayarak geliyor; sağda Kaşif her yeni satırı işaret ederek sayıyor; altta sönük ahşap evler.",
+      "title": {
+        "white": "Neden",
+        "gray": "büyüdü?"
+      },
+      "cues": {
+        "dry": "kupkuruydu",
+        "wind": "rüzgâr"
+      },
+      "params": {
+        "rows": [
+          {
+            "icon": "house",
+            "text": "Ahşap ev"
+          },
+          {
+            "icon": "sun",
+            "text": "Kuru yaz",
+            "at": "dry"
+          },
+          {
+            "icon": "wind",
+            "text": "Rüzgâr",
+            "at": "wind"
+          }
+        ],
+        "y0": 0.25,
+        "gap": 0.105,
+        "width": 0.64,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "pose": "talk",
+            "face": "left",
+            "scale": 0.72,
+            "seq": [
+              {
+                "at": "dry",
+                "pose": "point",
+                "dir": 10
+              },
+              {
+                "at": "wind",
+                "pose": "point",
+                "dir": -15,
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonfire",
+      "text": "Alevler evden eve atladı.",
+      "visual": "Beş ahşap ev; sağdaki evde başlayan yangın rüzgârla sola, evden eve atlıyor, her ev sırayla tutuşuyor, kıvılcımlar sola savruluyor; önde Kaşif korkuyla sola koşuyor.",
+      "title": {
+        "white": "Rüzgâr",
+        "gray": "batıya"
+      },
+      "cues": {
+        "fire": "Alevler",
+        "jump": "atladı"
+      },
+      "params": {
+        "mode": "street",
+        "houses": 5,
+        "bakery": -1,
+        "fire": {
+          "start": 4,
+          "at": 0,
+          "step": 0.35,
+          "dir": -1
+        },
+        "wind": {
+          "at": 0,
+          "y": 0.2
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.3,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.75,
+            "pose": "run",
+            "to": 0.2,
+            "face": "left",
+            "emotion0": "worried",
+            "at": "jump",
+            "then": "shock",
+            "scale": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonsky",
+      "text": "Dört günde on üç bini aşkın ev ve Aziz Paul Katedrali kül oldu.",
+      "visual": "Thames'in karşı kıyısından Londra silüeti: küçük evler, kilise kuleleri ve büyük Aziz Paul Katedrali; alev cephesi sağdan sola bütün çatıları sarıyor, nehirde altın yansımalar, üstte kırmızı sayaç '13.200 ev'e çıkıyor; 'Katedrali'de kamera katedrale itiyor ve kule alev alıyor; kıyıda Kaşif bakıp şok oluyor.",
+      "title": {
+        "white": "Dört gün",
+        "gray": "sonra"
+      },
+      "cues": {
+        "count": "bini",
+        "hit": "Katedrali"
+      },
+      "params": {
+        "skyline": {
+          "front": {
+            "from": 1.05,
+            "to": 0.02,
+            "at": 0,
+            "dur": 2.6
+          },
+          "cathedral": {
+            "x": 0.32,
+            "at": "hit"
+          },
+          "count": {
+            "to": 13200,
+            "suffix": " ev",
+            "at": "count",
+            "dur": 1.4,
+            "y": 0.22,
+            "x": 0.6,
+            "size": 130
+          }
+        },
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.4,
+            0.5
+          ],
+          "push": {
+            "at": "hit",
+            "focus": [
+              0.32,
+              0.4
+            ],
+            "zoom": 1.22,
+            "dur": 1.0
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.64,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "type": "londonsky",
+      "text": "Yani Londra'yı bir fırın tutuşturdu, ama asıl yakan, tahtadan bir şehirdi.",
+      "visual": "Üstte dev yazı kelime kelime: 'Kıvılcım: fırın / Yakan: / tahta şehir', 'tahta' kırmızı kutuda; altta nehrin karşısında baştan sona yanan tahta şehir silüeti ve Aziz Paul, kamera yavaşça yaklaşıyor; önde Kaşif 'tahtadan'da yanan şehri işaret ediyor.",
+      "title": {},
+      "cues": {
+        "w0": "Yani",
+        "w1": "fırın",
+        "w2": "yakan",
+        "w3": "tahtadan",
+        "w4": "şehirdi"
+      },
+      "params": {
+        "skyline": {
+          "y": 0.55,
+          "front": {
+            "from": -0.2,
+            "to": -0.2
+          },
+          "cathedral": {
+            "x": 0.3,
+            "at": -1
+          }
+        },
+        "ground": 0.6,
+        "words": {
+          "lines": [
+            "Kıvılcım: fırın",
+            "Yakan:",
+            "tahta şehir"
+          ],
+          "highlight": [
+            "tahta"
+          ],
+          "y": 0.185,
+          "size": 100
+        },
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.45,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "talk",
+            "face": "left",
+            "at": "w3",
+            "then": "point",
+            "dir": 20,
+            "scale": 0.75
+          }
+        ]
+      }
+    }
+  ]
+}

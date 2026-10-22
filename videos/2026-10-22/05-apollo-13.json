@@ -1,0 +1,3177 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "apollo-13",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Uzayda",
+   "bir tank",
+   "patladı"
+  ],
+  "highlight": [
+   "patladı"
+  ],
+  "scene": 0,
+  "t": 0.7,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1150,
+   "y": 1240,
+   "scale": 1.25,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Apollo 13: Uzayda Patlayan Tank ve Kartonla Gelen Kurtuluş",
+  "description": "Apollo 13, Nisan 1970'te Ay yolundayken bir oksijen tankı patladı. Üç astronotu eve kim, nasıl getirdi? Karton, plastik torba ve gri bantla kurulan kurtuluşun gerçek hikâyesi.\n\nJim Lovell, Fred Haise ve Jack Swigert, Ay modülü Aquarius'u can filikasına çevirdi; Houston'daki yer ekibi kare filtreyi yuvarlak yuvaya uyduran \"posta kutusu\"nu tasarladı. Peki o tank neden patladı? Cevap uzayda değil, iki yıl önce düşürülen bir tankta ve yanlış bir voltajda gizli. Apollo 13 kazasını, \"Houston, bir sorunumuz oldu\" anını ve insanlığın Dünya'dan en uzak yolculuğunu anlatıyoruz.\n\nBu videoda:\n• Sıkıcı bir görev ve son anda değişen pilot\n• Patlama ve \"Houston, bir sorunumuz oldu\"\n• Can filikası Aquarius ve karbondioksit krizi\n• Ay'ın arkasında 400.171 kilometre rekoru\n• Peki neden? 28 volt, 65 volt ve yapışan anahtar\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence bu hikâyenin asıl kahramanı kim: astronotlar mı, yer ekibi mi? Yorumlara yaz!\n\n#apollo13 #uzaytarihi #nasa #tarih #düşünbakalım",
+  "tags": [
+   "apollo 13",
+   "apollo 13 kazası",
+   "apollo 13 hikayesi",
+   "houston bir sorunumuz var",
+   "apollo 13 neden patladı",
+   "apollo 13 oksijen tankı",
+   "jim lovell",
+   "gene kranz",
+   "ay modülü aquarius",
+   "nasa tarihi",
+   "uzay tarihi",
+   "ay yolculuğu",
+   "uzay kazaları",
+   "tarih",
+   "tarih hikayeleri",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-22T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Sıkıcı bir görev",
+   "type": "apollo",
+   "text": "Uzayda, Ay yolunda bir tank patladı. İçeride üç astronot vardı ve eve dönüş yolu bir anda kapandı.",
+   "visual": "Yıldızlı gökte büyük Apollo dizisi; ilk anda servis modülünün yan paneli kopup uçar, iri kıymıklar saçılır, delikten dev oksijen bulutları yukarı fışkırır, araç sarsılır; arkada Ay; solda büyük Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "Apollo 13",
+    "gray": "Nisan 1970"
+   },
+   "cues": {
+    "hit": "Uzayda"
+   },
+   "params": {
+    "mode": "explode",
+    "moon": {
+     "x": 0.88,
+     "y": 0.16,
+     "r": 80
+    },
+    "kasif": {
+     "x": 0.13,
+     "pose": "shock",
+     "face": "right",
+     "emotion": "surprised",
+     "scale": 0.9,
+     "at": "hit",
+     "then": "shock",
+     "then_emotion": "surprised"
+    },
+    "drift": true,
+    "x": 0.52,
+    "y": 0.4,
+    "scale": 1.0,
+    "big": true,
+    "plume": 78,
+    "ring": 320
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Peki onları eve kim getirdi? Gelin, bir karton parçasının, bir rulo bandın ve yerdeki yüzlerce insanın hikâyesini anlatayım.",
+   "visual": "'BÖLÜM 1 / 7' kartı: mavi dairede 1, altında 'Sıkıcı bir görev' başlığı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 1,
+    "total": 7,
+    "title": "Sıkıcı bir görev"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yıl 1970, aylardan nisan. Amerika, Ay'a iki kez insan indirmişti bile.",
+   "visual": "Dev 'NİSAN 1970' yazısı kelime kelime belirir, 1970 kırmızı kutuda; altında el yazısı 'Ay'a iki iniş'; sağda Kaşif yazıyı işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "nisan",
+    "w1": "1970",
+    "note": "indirmişti"
+   },
+   "params": {
+    "lines": [
+     "Nisan",
+     "1970"
+    ],
+    "highlight": [
+     "1970"
+    ],
+    "note": {
+     "text": "Ay'a iki iniş",
+     "at": "note"
+    },
+    "arrow": true,
+    "kasif": {
+     "x": 0.84,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "İnanması zor ama insanlar artık sıkılmıştı. Ay'a üçüncü iniş denemesi, gazetelerde ön sayfaya bile zor çıkıyordu.",
+   "visual": "Kaşif sahneye yürüyerek girer ve anlatır; 'sıkılmıştı'da omuz silker; 'gazetelerde' elinde gazete tabelası kaldırır: 'Yine mi Ay?'; kamera yavaşça yaklaşır",
+   "title": {
+    "white": "Üçüncü",
+    "gray": "iniş denemesi"
+   },
+   "cues": {
+    "hit": "sıkılmıştı",
+    "news": "gazetelerde"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "depth": {
+     "sky": {
+      "clouds": 2,
+      "gulls": 0
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "walk",
+      "to": 0.46,
+      "face": "right",
+      "dur": 1.6,
+      "seq": [
+       {
+        "at": 1.6,
+        "pose": "talk",
+        "face": "right"
+       },
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "neutral"
+       },
+       {
+        "at": "news",
+        "pose": "hold",
+        "text": "Yine mi Ay?",
+        "emotion": "neutral"
+       }
+      ]
+     }
+    ],
+    "props": []
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ekipte üç isim vardı: komutan Jim Lovell, Ay modülü pilotu Fred Haise ve son anda kadroya giren Jack Swigert.",
+   "visual": "Üç şapkasız astronot figürü yan yana belirir (Lovell, Haise, Swigert), her biri adı söylenince el sallar; solda Kaşif sırayla onları gösterir; üstte el yazısı 'Lovell · Haise · Swigert'",
+   "title": {
+    "white": "Ekip"
+   },
+   "cues": {
+    "l": "Lovell",
+    "h": "Haise",
+    "s": "Swigert"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "depth": {
+     "sky": {
+      "clouds": 2,
+      "gulls": 0
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "face": "right",
+      "at": "l",
+      "then": "point",
+      "dir": "right"
+     },
+     {
+      "who": "lovell",
+      "x": 0.42,
+      "pose": "idle",
+      "face": "left",
+      "at": "l",
+      "then": "wave"
+     },
+     {
+      "who": "haise",
+      "x": 0.6,
+      "pose": "idle",
+      "face": "left",
+      "at": "h",
+      "then": "wave"
+     },
+     {
+      "who": "swigert",
+      "x": 0.78,
+      "pose": "idle",
+      "face": "left",
+      "at": "s",
+      "then": "wave"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Lovell · Haise · Swigert",
+     "x": 0.6,
+     "y": 0.14,
+     "at": "s"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Neden son anda? Çünkü asıl pilot Ken Mattingly kızamıkçık kapmış olabilirdi ve bu hastalığa karşı bağışıklığı yoktu.",
+   "visual": "İki kartlı pano: 'Mattingly' kartında 'kızamıkçık riski' kırmızı ✗; 'Swigert' kartında 'göreve' yeşil ✓; altta mavi hap 'Son anda değişim'",
+   "title": {
+    "white": "Son anda",
+    "gray": "değişim"
+   },
+   "cues": {
+    "c0": "Mattingly",
+    "c1": "bağışıklığı",
+    "pill": "Neden"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Mattingly",
+      "items": [
+       {
+        "text": "kızamıkçık riski",
+        "mark": "x",
+        "at": "c0"
+       }
+      ]
+     },
+     {
+      "title": "Swigert",
+      "items": [
+       {
+        "text": "göreve",
+        "mark": "check",
+        "at": "c1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Son anda değişim",
+     "color": "blue",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Fırlatmaya üç gün kala Mattingly yerde kaldı. İşin ironik yanı şu: Mattingly hiç hastalanmadı.",
+   "visual": "Dev 'MATTINGLY / HİÇ HASTALANMADI' yazısı kelime kelime belirir, 'hiç' kırmızı kutuda; 'ironik'te el yazısı not 'Ne ironi!'; sağda Kaşif 'ironik'te omuz silker",
+   "title": {},
+   "cues": {
+    "w0": "Mattingly",
+    "note": "ironik",
+    "w1": "hiç",
+    "w2": "hastalanmadı"
+   },
+   "params": {
+    "lines": [
+     "Mattingly",
+     "hiç",
+     "hastalanmadı"
+    ],
+    "highlight": [
+     "hiç"
+    ],
+    "note": {
+     "text": "Ne ironi!",
+     "at": "note"
+    },
+    "arrow": false,
+    "kasif": {
+     "x": 0.9,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "at": "note",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "photo",
+   "text": "On bir nisan 1970'te, Houston saatiyle tam on üçü on üç geçe, dev Satürn Beş roketi havalandı.",
+   "visual": "Higgsfield sepya mürekkep klip: Satürn V fırlatma kulesinden duman bulutları içinde yükselir (insan yüzü ve yazı yok)",
+   "title": {
+    "white": "Fırlatma",
+    "gray": "11 Nisan 1970"
+   },
+   "cues": {},
+   "params": {
+    "video": "media/hf-launch.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261022_031644_b8e3c551-9d33-418d-9040-06bc059ad3de.mp4",
+    "ai": true,
+    "grade": "sepia",
+    "rate": 0.8,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Seedance 2.0 Mini)"
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Roketin tepesinde iki araç vardı: komuta modülü Odyssey ve Ay'a inecek Ay modülü Aquarius. Bu iki ismi aklınızda tutun.",
+   "visual": "Yıldızlı gökte yatay Apollo dizisi süzülür; 'Odyssey'de koninin üstüne, 'Aquarius'ta Ay modülünün üstüne el yazısı etiket gelir; sağ üstte Ay; solda Kaşif önce işaret eder, sonra düşünür",
+   "title": {
+    "white": "İki araç"
+   },
+   "cues": {
+    "cm": "Odyssey",
+    "lm": "Aquarius",
+    "hit": "aklınızda"
+   },
+   "params": {
+    "mode": "stack",
+    "moon": {
+     "x": 0.88,
+     "y": 0.18,
+     "r": 80
+    },
+    "labels": [
+     {
+      "text": "Odyssey",
+      "on": "cm",
+      "at": "cm"
+     },
+     {
+      "text": "Aquarius",
+      "on": "lm",
+      "at": "lm"
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "pose": "point",
+     "face": "right",
+     "at": "hit",
+     "then": "think",
+     "dir": "up-right"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yolculuk o kadar sakin geçti ki yerdeki görevli telsizden, burada sıkıntıdan ağlayacağız diye şaka yaptı. O gece kimse sıkılmayacaktı.",
+   "visual": "Görev kontrolde şapkasız görevli figürü telsize konuşur, yanında 'HOUSTON' tabelası ve duvar saati; Kaşif oturup dinler; 'şaka'da el yazısı 'Sıkıntıdan ağlayacağız!'; 'Birkaç'ta Kaşif ayağa fırlayıp şaşırır",
+   "title": {
+    "white": "Houston",
+    "gray": "görev kontrol"
+   },
+   "cues": {
+    "hit": "şaka",
+    "turn": "gece"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "capcom",
+      "x": 0.6,
+      "pose": "talk",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "pose": "sit",
+      "face": "right",
+      "at": "turn",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [
+     {
+      "type": "clock",
+      "x": 0.86,
+      "at": 0.2
+     },
+     {
+      "type": "sign",
+      "x": 0.13,
+      "text": "HOUSTON",
+      "at": 0.4
+     }
+    ],
+    "label": {
+     "text": "Sıkıntıdan ağlayacağız!",
+     "x": 0.6,
+     "y": 0.14,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "chapter": "Bir sorunumuz oldu",
+   "type": "chapter",
+   "text": "On üç nisan akşamı astronotlar canlı bir televizyon yayını yaptı. Ama büyük kanalların hiçbiri onu ekrana vermedi.",
+   "visual": "'BÖLÜM 2 / 7' kartı: 'Bir sorunumuz oldu'",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 2,
+    "total": 7,
+    "title": "Bir sorunumuz oldu"
+   }
+  },
+  {
+   "type": "trajectory",
+   "text": "O sırada araç, Dünya'dan üç yüz bin kilometreden fazla uzaktaydı ve Ay'a yaklaşıyordu.",
+   "visual": "Dünya–Ay haritası: kırmızı kesikli rota Dünya'dan çıkıp Ay'a yaklaşana kadar çizilir, küçük araç simgesi Ay'ın hemen önüne ilerler; üstte sayaç 300.000 km'ye çıkar; sağda Kaşif dürbünle araca bakar",
+   "title": {
+    "white": "Ay yolunda"
+   },
+   "cues": {
+    "route": "araç",
+    "counter": "kilometreden"
+   },
+   "params": {
+    "route": {
+     "from": 0,
+     "to": 0.37,
+     "at": "route",
+     "dur": 3
+    },
+    "craft": {
+     "from": 0.02,
+     "to": 0.37,
+     "at": "route",
+     "dur": 3
+    },
+    "counter": {
+     "from": 0,
+     "to": 300000,
+     "unit": "km",
+     "label": "Dünya'dan uzaklık",
+     "at": "counter",
+     "dur": 2.2
+    },
+    "zoom": 1.08,
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "kasif": {
+     "x": 0.9,
+     "pose": "look",
+     "face": "left"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yayından birkaç dakika sonra yerden sıradan bir istek geldi: oksijen tanklarını bir karıştırın.",
+   "visual": "Kaşif yürüyerek görev kontrole gelir; şapkasız görevli figürü telsize konuşur, yanında 'HOUSTON' tabelası; 'oksijen'de Kaşif görevliyi işaret eder ve el yazısı 'Tankları karıştırın' belirir",
+   "title": {
+    "white": "Rutin",
+    "gray": "bir istek"
+   },
+   "cues": {
+    "hit": "istek",
+    "tank": "oksijen"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "capcom",
+      "x": 0.62,
+      "pose": "talk",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "pose": "walk",
+      "to": 0.36,
+      "face": "right",
+      "at": "tank",
+      "then": "point",
+      "dir": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.86,
+      "text": "HOUSTON",
+      "at": 0.3
+     }
+    ],
+    "label": {
+     "text": "Tankları karıştırın",
+     "x": 0.55,
+     "y": 0.14,
+     "at": "tank"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Tanklarda çok soğuk, yoğun oksijen vardı ve karıştırmak sıradan bir işti.",
+   "visual": "Oksijen tankının kesiti: küre, ortada ısıtıcı çubuğu ve sargısı, altta pervane; 'Karıştırma'da pervane döner; solda Kaşif tankı işaret eder",
+   "title": {
+    "white": "Oksijen",
+    "gray": "tankı 2"
+   },
+   "cues": {
+    "stir": "karıştırma"
+   },
+   "params": {
+    "mode": "tank",
+    "stir": true,
+    "kasif": {
+     "x": 0.12,
+     "pose": "point",
+     "face": "right",
+     "dir": "right"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Swigert düğmeye bastı. Bir buçuk dakika kadar sonra, bütün araç bir gürültüyle sarsıldı.",
+   "visual": "Yıldızlı gökte Apollo dizisi; 'sarsıldı'da servis modülünün paneli patlayıp uçar, kıymıklar ve oksijen bulutu, araç sarsılıp hafifçe döner; Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "21.08",
+    "gray": "Houston saati"
+   },
+   "cues": {
+    "hit": "sarsıldı"
+   },
+   "params": {
+    "mode": "explode",
+    "moon": {
+     "x": 0.86,
+     "y": 0.2,
+     "r": 90
+    },
+    "kasif": {
+     "x": 0.1,
+     "pose": "look",
+     "face": "right",
+     "at": "hit",
+     "then": "shock",
+     "then_emotion": "surprised"
+    },
+    "big": true,
+    "plume": 80,
+    "x": 0.6,
+    "y": 0.56,
+    "scale": 1.35
+   }
+  },
+  {
+   "type": "cabin",
+   "text": "Önce kimse bir şey anlamadı. Lovell, Haise'nin bir vanayla yine şaka yaptığını sandı.",
+   "visual": "Kapsül içi: yuvarlak lombozlar, solda göstergeli kontrol paneli; 'anlamadı'da kabin sarsılır ve ışıklar kırmızı yanıp söner; Lovell şaşırıp Haise'ye döner, Haise omuz silker; Kaşif şaşırıp düşünür; el yazısı 'Şaka mı?'",
+   "title": {
+    "white": "Kabinde",
+    "gray": "ilk an"
+   },
+   "cues": {
+    "hit": "anlamadı",
+    "joke": "şaka"
+   },
+   "params": {
+    "windows": [
+     {
+      "x": 0.8,
+      "y": 0.3,
+      "r": 85,
+      "view": "stars"
+     }
+    ],
+    "panel": {
+     "x": 0.06,
+     "w": 0.3
+    },
+    "shake": "hit",
+    "alarm": "hit",
+    "crew": [
+     {
+      "x": 0.52,
+      "pose": "shock",
+      "face": "right",
+      "at": "joke",
+      "then": "talk",
+      "emotion": "surprised"
+     },
+     {
+      "x": 0.7,
+      "pose": "idle",
+      "face": "left",
+      "at": "joke",
+      "then": "shrug"
+     }
+    ],
+    "kasif": {
+     "x": 0.24,
+     "pose": "shock",
+     "face": "right",
+     "emotion": "surprised",
+     "at": "joke",
+     "then": "think"
+    },
+    "label": {
+     "text": "Şaka mı?",
+     "x": 0.62,
+     "y": 0.09,
+     "at": "joke"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Sonra Swigert telsize o meşhur cümleyi söyledi: Tamam Houston, burada bir sorunumuz oldu.",
+   "visual": "Önce el yazısı 'Swigert' notu; sonra dev 'HOUSTON, BİR SORUNUMUZ OLDU' yazısı kelime kelime söylendikçe belirir, 'sorunumuz' kırmızı kutuda; sağda Kaşif 'Houston'da şokla sıçrar",
+   "title": {},
+   "cues": {
+    "note": "Swigert",
+    "w0": "Sonra",
+    "w1": "telsize",
+    "w2": "meşhur",
+    "w3": "Houston"
+   },
+   "params": {
+    "lines": [
+     "Houston,",
+     "bir sorunumuz",
+     "oldu"
+    ],
+    "highlight": [
+     "sorunumuz"
+    ],
+    "note": {
+     "text": "Swigert",
+     "at": "note"
+    },
+    "arrow": false,
+    "kasif": {
+     "x": 0.9,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Lovell aynı cümleyi bir kez daha söyledi. Ve göstergelere baktıklarında kanları dondu.",
+   "visual": "Solda Lovell telsize konuşur; ortada Kaşif dürbünle sağdaki 'OKSİJEN 0' gösterge tabelasına bakar; 'dondu'da Kaşif ve Lovell şokla geri çekilir; el yazısı 'Göstergeler!'",
+   "title": {
+    "white": "Lovell"
+   },
+   "cues": {
+    "hit": "göstergelere",
+    "cold": "dondu"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "lovell",
+      "x": 0.24,
+      "pose": "talk",
+      "face": "right",
+      "at": "cold",
+      "then": "shock",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "look",
+      "face": "right",
+      "at": "cold",
+      "then": "shock",
+      "emotion": "worried"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.8,
+      "text": "OKSİJEN 0",
+      "at": "hit"
+     }
+    ],
+    "label": {
+     "text": "Göstergeler!",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Oksijen tanklarından biri sıfıra inmişti, diğeri de hızla boşalıyordu. Elektrik üreten yakıt hücreleri ise birer birer sustu.",
+   "visual": "Pano: 'Tank 1' çubuğu hızla azalır, 'Tank 2' çubuğu sıfır; 'Yakıt hücreleri' kartında üç madde birer birer kırmızı ✗; altta kırmızı hap 'Güç kayboluyor'",
+   "title": {
+    "white": "Göstergeler"
+   },
+   "cues": {
+    "c0": "sıfıra",
+    "c1": "boşalıyordu",
+    "f": "yakıt",
+    "pill": "sustu"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Oksijen",
+      "bars": [
+       {
+        "label": "Tank 2",
+        "value": 0.02,
+        "text": "0",
+        "at": "c0"
+       },
+       {
+        "label": "Tank 1",
+        "value": 0.35,
+        "at": "c1"
+       }
+      ]
+     },
+     {
+      "title": "Yakıt hücreleri",
+      "items": [
+       {
+        "text": "1",
+        "mark": "x",
+        "at": "f"
+       },
+       {
+        "text": "2",
+        "mark": "x",
+        "at": "f"
+       },
+       {
+        "text": "3",
+        "mark": "x",
+        "at": "pill"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Güç kayboluyor",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Lovell pencereden baktığında, aracın yanından uzaya beyaz bir bulut yayıldığını gördü. Bu, onların oksijeniydi.",
+   "visual": "Hasarlı servis modülünün açık deliğinden sürekli oksijen bulutları uzaya akar; Odyssey penceresinde küçük kasklı silüet; 'oksijeniydi'de sağ üstte kırmızı el yazısı 'Oksijen!'; solda Kaşif dürbünle bakar, sonra endişeyle sıçrar",
+   "title": {
+    "white": "Sızıntı"
+   },
+   "cues": {
+    "hit": "pencereden",
+    "note": "oksijeniydi"
+   },
+   "params": {
+    "mode": "explode",
+    "window": true,
+    "note": {
+     "text": "Oksijen!",
+     "x": 0.6,
+     "y": 0.12,
+     "at": "note",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.1,
+     "pose": "look",
+     "face": "right",
+     "at": "note",
+     "then": "shock",
+     "then_emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ay'a inmek artık bir hayaldi. Soru tamamen değişmişti: bu üç adam eve canlı dönebilecek miydi?",
+   "visual": "El yazısı 'Ay iptal' notu; sonra dev 'EVE DÖNEBİLECEKLER Mİ?' yazısı söylendikçe kelime kelime belirir, 'eve' kırmızı kutuda; sağda Kaşif 'hayaldi'de eli çenesinde endişeyle düşünür",
+   "title": {},
+   "cues": {
+    "note": "hayaldi",
+    "kas": "hayaldi",
+    "w0": "inmek",
+    "w1": "hayaldi",
+    "w2": "Soru"
+   },
+   "params": {
+    "lines": [
+     "Eve",
+     "dönebilecekler",
+     "mi?"
+    ],
+    "highlight": [
+     "Eve"
+    ],
+    "note": {
+     "text": "Ay iptal",
+     "at": "note"
+    },
+    "arrow": false,
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "kas"
+    }
+   }
+  },
+  {
+   "chapter": "Can filikası",
+   "type": "chapter",
+   "text": "Odyssey can çekişiyordu. Ama burnunda, kendi oksijeni ve pilleri olan küçük bir araç bekliyordu: Aquarius.",
+   "visual": "'BÖLÜM 3 / 7' kartı: 'Can filikası'",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 3,
+    "total": 7,
+    "title": "Can filikası"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Houston'da, beyaz yeleğiyle tanınan uçuş direktörü Gene Kranz ve ekibi hızlı bir karar verdi.",
+   "visual": "Kontrol odası: Gene Kranz figürü ekibine konuşur, 'karar'da öne işaret eder; iki mühendis önce dinler, sonra başını sallayıp düşünür; Kaşif yürüyerek gelir ve Kranz'ı işaret eder; el yazısı 'Gene Kranz'",
+   "title": {
+    "white": "Gene Kranz",
+    "gray": "uçuş direktörü"
+   },
+   "cues": {
+    "hit": "Kranz",
+    "dec": "karar"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.08,
+     "pan": 24,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kranz",
+      "x": 0.5,
+      "pose": "talk",
+      "face": "right",
+      "at": "dec",
+      "then": "point",
+      "dir": "right"
+     },
+     {
+      "who": "eng1",
+      "x": 0.7,
+      "pose": "idle",
+      "face": "left",
+      "at": "dec",
+      "then": "think"
+     },
+     {
+      "who": "eng2",
+      "x": 0.84,
+      "pose": "idle",
+      "face": "left",
+      "at": "dec",
+      "then": "talk"
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "pose": "walk",
+      "face": "right",
+      "to": 0.3,
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "emotion": "happy"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Gene Kranz",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "hit",
+     "arrow": [
+      0.5,
+      0.32
+     ]
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Astronotlar Aquarius'a geçecek, Odyssey ise kapatılacaktı. Çünkü Odyssey'nin pilleri, dönüşte lazım olacak son enerjiydi.",
+   "visual": "Apollo dizisinde üç küçük kasklı astronot simgesi tünelden Odyssey'den Aquarius'a süzülür, Aquarius'un penceresi altın renkte yanar; 'kapatılacaktı'da Odyssey taranıp kararır; Kaşif işaret eder",
+   "title": {
+    "white": "Can filikası"
+   },
+   "cues": {
+    "move": "geçecek",
+    "off": "kapatılacaktı"
+   },
+   "params": {
+    "mode": "lifeboat",
+    "labels": [
+     {
+      "text": "Aquarius",
+      "on": "lm",
+      "at": "move"
+     },
+     {
+      "text": "Odyssey",
+      "on": "cm",
+      "at": "off",
+      "below": true
+     }
+    ],
+    "kasif": {
+     "x": 0.11,
+     "pose": "point",
+     "face": "right",
+     "at": "off",
+     "then": "talk",
+     "dir": "right",
+     "scale": 0.85
+    },
+    "moon": {
+     "x": 0.88,
+     "y": 0.18,
+     "r": 70
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Ama Aquarius iki kişiyi iki gün taşımak için yapılmıştı. Şimdi üç kişiyi dört gün taşıması gerekiyordu.",
+   "visual": "İki çubuklu pano: 'Tasarım: 2 kişi · 2 gün' kısa mavi çubuk, 'Gereken: 3 kişi · 4 gün' iki kat uzun kırmızı çubuk; altta kırmızı hap 'İki katı yük'",
+   "title": {
+    "white": "Aquarius",
+    "gray": "kapasite"
+   },
+   "cues": {
+    "c0": "iki",
+    "c1": "üç",
+    "pill": "gerekiyordu"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Aquarius",
+      "bars": [
+       {
+        "label": "Tasarım: 2 kişi, 2 gün",
+        "value": 0.4,
+        "at": "c0"
+       },
+       {
+        "label": "Gereken: 3 kişi, 4 gün",
+        "value": 0.95,
+        "at": "c1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "İki katı yük",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Yani Ay'a inecek küçük araç, uzayın ortasında bir can filikasına dönüştü.",
+   "visual": "Apollo dizisi uzayda süzülür: Odyssey taranmış ve karanlık, Aquarius'un pencereleri altın renkte yanar; 'filikasına'da Aquarius'un üstünde kırmızı 'Can filikası' yazısı çıkar; uzakta Ay; Kaşif Aquarius'u işaret edip sevinçle el sallar",
+   "title": {
+    "white": "Aquarius",
+    "gray": "can filikası"
+   },
+   "cues": {
+    "move": "yani",
+    "off": "yani",
+    "hit": "filikasına"
+   },
+   "params": {
+    "mode": "lifeboat",
+    "drift": true,
+    "moon": {
+     "x": 0.88,
+     "y": 0.18,
+     "r": 70
+    },
+    "labels": [
+     {
+      "text": "Can filikası",
+      "on": "lm",
+      "at": "hit",
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.11,
+     "pose": "point",
+     "face": "right",
+     "at": "hit",
+     "then": "wave",
+     "dir": "right",
+     "then_emotion": "happy",
+     "scale": 0.85
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Filmlerdeki o meşhur başarısızlık bir seçenek değil cümlesini bilirsiniz. Ama Kranz o gece bunu hiç söylemedi; o cümleyi yıllar sonra senaristler yazdı.",
+   "visual": "Kaşif anlatırken 'filmlerdeki'de 'Film repliği' yazan tabelayı kaldırır, 'söylemedi'de tabelayı bırakıp omuz silker; üstte el yazısı 'Hiç söylenmedi'",
+   "title": {
+    "white": "Efsane",
+    "gray": "ve gerçek"
+   },
+   "cues": {
+    "film": "filmlerdeki",
+    "hit": "söylemedi"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "depth": {
+     "sky": {
+      "clouds": 2,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.1,
+     "pan": 20,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "film",
+        "pose": "hold",
+        "text": "Film repliği"
+       },
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Hiç söylenmedi",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Gerçek odada yüzlerce mühendis sessizce hesap yaptı ve her amper elektriği tek tek saydı.",
+   "visual": "Dev yazı kelime kelime: 'HER AMPER SAYILDI', 'amper' kırmızı kutuda; el yazısı 'yüzlerce mühendis' ve oku; sağda Kaşif 'hesap'ta düşünme pozuna geçer",
+   "title": {},
+   "cues": {
+    "w0": "yüzlerce",
+    "w1": "sessizce",
+    "note": "hesap",
+    "w2": "saydı"
+   },
+   "params": {
+    "lines": [
+     "Her amper",
+     "sayıldı"
+    ],
+    "highlight": [
+     "amper"
+    ],
+    "note": {
+     "text": "yüzlerce mühendis",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "at": "w0",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "trajectory",
+   "text": "Üstelik araç, Ay'ın etrafından dolanıp kendiliğinden Dünya'ya dönecek yoldan çıkmıştı.",
+   "visual": "Dünya–Ay haritası: gri kesikli yol Ay'ın yanından geçip boşluğa gider, ucunda ✗; küçük araç bu yolda ilerler; 'çıkmıştı'da kırmızı el yazısı 'Rotadan çıktı'; Kaşif gri yolu işaret eder, sonra şaşırır",
+   "title": {
+    "white": "Rota",
+    "gray": "sorunu"
+   },
+   "cues": {
+    "hit": "çıkmıştı"
+   },
+   "params": {
+    "off": true,
+    "craft": {
+     "from": 0.28,
+     "to": 0.4,
+     "at": 0,
+     "dur": 5
+    },
+    "kasif": {
+     "x": 0.92,
+     "pose": "point",
+     "face": "left",
+     "at": "hit",
+     "then": "shock",
+     "dir": "up-left",
+     "then_emotion": "worried",
+     "scale": 0.75
+    },
+    "zoom": 1.08,
+    "focus": [
+     0.6,
+     0.45
+    ],
+    "note": {
+     "text": "Rotadan çıktı",
+     "x": 0.5,
+     "y": 0.16,
+     "at": "hit",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Bu yüzden Aquarius'un iniş motoru, aracı eve döndürmek için ateşlendi. Ve işe yaradı.",
+   "visual": "Apollo dizisi, Odyssey karanlık: 'ateşlendi'de Aquarius'un iniş motorundan alev çıkar, dizi ileri itilir; 'yaradı'da kırmızı el yazısı 'İşe yaradı!'; Kaşif önce bakar, sonra sevinçle işaret eder",
+   "title": {
+    "white": "Motor",
+    "gray": "ateşleme"
+   },
+   "cues": {
+    "move": "bu",
+    "off": "bu",
+    "burn": "ateşlendi",
+    "ok": "yaradı"
+   },
+   "params": {
+    "mode": "lifeboat",
+    "burn": {
+     "at": "burn",
+     "dur": 3
+    },
+    "kasif": {
+     "x": 0.11,
+     "pose": "look",
+     "face": "right",
+     "at": "ok",
+     "then": "point",
+     "then_emotion": "happy",
+     "dir": "right",
+     "scale": 0.85
+    },
+    "note": {
+     "text": "İşe yaradı!",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "ok",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Rota düzeldi. Ama kabinde, gözle görülmeyen bir tehlike birikiyordu.",
+   "visual": "Kaşif rahatça yürüyüp el sallar; 'tehlike'de durup endişeyle yukarı, etrafına bakar; kamera yavaşça yaklaşır; üstte el yazısı 'Görünmeyen tehlike'",
+   "title": {
+    "white": "Rota",
+    "gray": "düzeldi"
+   },
+   "cues": {
+    "düzeldi": "düzeldi",
+    "hit": "tehlike"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "depth": {
+     "sky": {
+      "clouds": 2,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.12,
+     "pan": 20,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "walk",
+      "to": 0.45,
+      "face": "right",
+      "at": "düzeldi",
+      "then": "wave",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "look",
+        "emotion": "worried",
+        "dir": "up"
+       }
+      ]
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Görünmeyen tehlike",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "chapter": "Karbondioksit",
+   "type": "chapter",
+   "text": "Astronotlar her nefeste karbondioksit verir. Aquarius'un filtreleri ise iki kişiye göre hesaplanmıştı.",
+   "visual": "'BÖLÜM 4 / 7' kartı: 'Karbondioksit'",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 4,
+    "total": 7,
+    "title": "Karbondioksit"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Havadaki karbondioksit yükseldikçe önce baş ağrısı, sonra uyuşukluk gelecekti. Ve en sonunda, bilinç kaybı.",
+   "visual": "Pano: 'Kabin havası' kartında karbondioksit çubuğu yükselir; liste 'baş ağrısı', 'uyuşukluk', 'bilinç kaybı' sırayla kırmızı ✗ ile; altta kırmızı hap 'Zaman daralıyor'",
+   "title": {
+    "white": "Karbondioksit"
+   },
+   "cues": {
+    "co2": "yükseldikçe",
+    "a": "ağrısı",
+    "b": "uyuşukluk",
+    "c": "bilinç"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Kabin havası",
+      "bars": [
+       {
+        "label": "Karbondioksit",
+        "value": 0.9,
+        "at": "co2"
+       }
+      ]
+     },
+     {
+      "title": "Belirtiler",
+      "items": [
+       {
+        "text": "baş ağrısı",
+        "mark": "x",
+        "at": "a"
+       },
+       {
+        "text": "uyuşukluk",
+        "mark": "x",
+        "at": "b"
+       },
+       {
+        "text": "bilinç kaybı",
+        "mark": "x",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Zaman daralıyor",
+     "color": "red",
+     "at": "c"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Odyssey'de bol miktarda yedek filtre vardı. Tek bir küçük sorun dışında.",
+   "visual": "Kaşif elinde 'Kare filtre' tabelasını gülümseyerek tutar; 'sorun'da tabelayı bırakıp omuz silker; üstte el yazısı 'Yedek filtre'",
+   "title": {
+    "white": "Yedek",
+    "gray": "filtreler"
+   },
+   "cues": {
+    "hit": "yedek",
+    "no": "sorun"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "depth": {
+     "sky": {
+      "clouds": 2,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.1,
+     "pan": 20,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "pose": "hold",
+      "face": "right",
+      "text": "Kare filtre",
+      "emotion": "happy",
+      "at": "no",
+      "then": "shrug",
+      "then_emotion": "worried"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Yedek filtre",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Odyssey'nin filtreleri kareydi, Aquarius'un yuvaları ise yuvarlak. Kare bir kutuyu yuvarlak bir deliğe sokmaya çalıştığınızı düşünün.",
+   "visual": "Solda kare filtre kutusu ('Odyssey'), sağda yuvarlak yuva paneli ('Aquarius'); 'yuvarlak'ta kare kutu yuvaya ilerler, çarpıp geri seker, kırmızı ✗ ve el yazısı 'Uymuyor!'; Kaşif işaret eder, sonra şaşırır",
+   "title": {
+    "white": "Kare",
+    "gray": "ve yuvarlak"
+   },
+   "cues": {
+    "try": "yuvarlak."
+   },
+   "params": {
+    "mode": "filter",
+    "kasif": {
+     "x": 0.11,
+     "pose": "point",
+     "face": "right",
+     "at": "try",
+     "then": "shock",
+     "dir": "right",
+     "then_emotion": "surprised",
+     "scale": 0.85
+    },
+    "note": {
+     "text": "Uymuyor!",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "try",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Bu kez sorunu yerdekiler çözecekti. Houston'da bir mühendis ekibi, kabinde ne varsa aynısını bir masaya döktü.",
+   "visual": "Houston'da iki şapkasız mühendis; Kaşif yürüyerek gelir ve onları işaret eder; 'masaya'da mühendisler 'Karton' ve 'Bant' tabelalarını kaldırır; el yazısı 'Sadece kabindekiler'",
+   "title": {
+    "white": "Yer ekibi"
+   },
+   "cues": {
+    "hit": "yerdekiler",
+    "table": "masaya"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.08,
+     "pan": 24,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "eng1",
+      "x": 0.6,
+      "pose": "think",
+      "face": "left",
+      "seq": [
+       {
+        "at": "table",
+        "pose": "hold",
+        "text": "Karton"
+       }
+      ]
+     },
+     {
+      "who": "eng2",
+      "x": 0.82,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "table",
+        "pose": "hold",
+        "text": "Bant"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "pose": "walk",
+      "face": "right",
+      "to": 0.34,
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "emotion": "happy"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Sadece kabindekiler",
+     "x": 0.6,
+     "y": 0.14,
+     "at": "table"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Ortaya tuhaf bir liste çıktı: uçuş planının karton kapağı, plastik torbalar, giysi hortumu ve bol bol gri bant.",
+   "visual": "Pano: 'Malzemeler' kartında dört madde sırayla ✓ ile belirir: karton kapak, plastik torba, giysi hortumu, gri bant; altta mavi hap 'Hepsi kabinde var'",
+   "title": {
+    "white": "Malzeme",
+    "gray": "listesi"
+   },
+   "cues": {
+    "a": "karton",
+    "b": "plastik",
+    "c": "hortumu",
+    "d": "bant"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Malzemeler",
+      "items": [
+       {
+        "text": "karton kapak",
+        "mark": "check",
+        "at": "a"
+       },
+       {
+        "text": "plastik torba",
+        "mark": "check",
+        "at": "b"
+       },
+       {
+        "text": "giysi hortumu",
+        "mark": "check",
+        "at": "c"
+       },
+       {
+        "text": "gri bant",
+        "mark": "check",
+        "at": "d"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Hepsi kabinde var",
+     "color": "blue",
+     "at": "d"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Ekip, kare filtreyi yuvarlak yuvaya bağlayan bir düzenek yaptı. Bu tuhaf kutunun adı da posta kutusu oldu.",
+   "visual": "Kare filtre plastik torbayla sarılır, karton şerit ve bant bantları gelir, hortum yuvarlak yuvaya uzanır; 'posta'da yeşil ✓, el yazısı 'Posta kutusu' ve hortumda mavi nefes kabarcıkları; Kaşif işaret eder, sonra el sallar",
+   "title": {
+    "white": "Posta",
+    "gray": "kutusu"
+   },
+   "cues": {
+    "fix": "düzenek",
+    "ok": "posta"
+   },
+   "params": {
+    "mode": "filter",
+    "adapter": true,
+    "kasif": {
+     "x": 0.11,
+     "pose": "point",
+     "face": "right",
+     "at": "ok",
+     "then": "wave",
+     "dir": "right",
+     "then_emotion": "happy",
+     "scale": 0.85
+    },
+    "note": {
+     "text": "Posta kutusu",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "ok",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "cabin",
+   "text": "Tarif telsizden adım adım okundu ve astronotlar kutuyu yaklaşık bir saatte kurdu.",
+   "visual": "Kapsül içi, sönük paneller: yerde karton 'posta kutusu', hortumu duvara uzanır; Swigert 'Karton' tabelası tutar, Haise tarifi okur; Kaşif 'Bant' tabelasını uzatır; 'kurdu'da hepsi sevinçle el sallar; el yazısı 'Adım adım'",
+   "title": {
+    "white": "Kabinde",
+    "gray": "montaj"
+   },
+   "cues": {
+    "hit": "adım",
+    "done": "kurdu"
+   },
+   "params": {
+    "windows": [
+     {
+      "x": 0.82,
+      "y": 0.3,
+      "r": 85,
+      "view": "stars"
+     }
+    ],
+    "panel": {
+     "x": 0.06,
+     "w": 0.3
+    },
+    "box": {
+     "x": 0.42,
+     "at": "done",
+     "text": "Posta kutusu"
+    },
+    "crew": [
+     {
+      "x": 0.62,
+      "pose": "hold",
+      "face": "left",
+      "text": "Karton",
+      "at": "done",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "x": 0.8,
+      "pose": "talk",
+      "face": "left",
+      "at": "done",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ],
+    "kasif": {
+     "x": 0.14,
+     "pose": "walk",
+     "to": 0.3,
+     "face": "right",
+     "at": "hit",
+     "then": "hold",
+     "text": "Bant",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "done",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "label": {
+     "text": "Adım adım",
+     "x": 0.55,
+     "y": 0.09,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Ve karbondioksit düşmeye başladı. Bir karton kutu ve bir rulo bant, üç hayatı kurtarmıştı; en azından şimdilik.",
+   "visual": "Pano: 'Karbondioksit' kartında 'Önce' çubuğu dolu, 'düşmeye'de 'Şimdi' çubuğu kısacık kalır; 'Posta kutusu' kartında ✓ 'çalışıyor'; altta yeşil hap 'Hava temizlendi'",
+   "title": {
+    "white": "Nefes"
+   },
+   "cues": {
+    "c1": "karton",
+    "down": "düşmeye",
+    "pill": "kurtarmıştı"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Karbondioksit",
+      "bars": [
+       {
+        "label": "Önce",
+        "value": 0.9,
+        "at": 0.2
+       },
+       {
+        "label": "Şimdi",
+        "value": 0.2,
+        "at": "down"
+       }
+      ]
+     },
+     {
+      "title": "Posta kutusu",
+      "items": [
+       {
+        "text": "çalışıyor",
+        "mark": "check",
+        "at": "c1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Hava temizlendi",
+     "color": "green",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "chapter": "Ay'ın arkasında",
+   "type": "chapter",
+   "text": "Kazadan bir gün sonra araç Ay'a ulaştı. Ama inmek için değil, arkasından dolanıp dönmek için.",
+   "visual": "'BÖLÜM 5 / 7' kartı: 'Ay'ın arkasında'",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 5,
+    "total": 7,
+    "title": "Ay'ın arkasında"
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Araç Ay'ın arkasına geçince Dünya ile telsiz bağlantısı kesildi. Üç adam, insanlıktan hiç bu kadar uzak olmamıştı.",
+   "visual": "Higgsfield sepya mürekkep klip: küçük uzay aracı silueti Ay'ın kraterli uzak yüzünün üstünden süzülür, ufukta küçük Dünya (insan yüzü ve yazı yok)",
+   "title": {
+    "white": "Ay'ın",
+    "gray": "uzak yüzü"
+   },
+   "cues": {},
+   "params": {
+    "video": "media/hf-moonfar.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261022_031647_b4020207-9f37-4dd7-a24a-f1b003436fda.mp4",
+    "ai": true,
+    "grade": "sepia",
+    "rate": 0.8,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Seedance 2.0 Mini)"
+   }
+  },
+  {
+   "type": "trajectory",
+   "text": "Ve tam o sırada, hiç istemedikleri bir rekor kırdılar. Dünya'dan tam dört yüz bin yüz yetmiş bir kilometre uzaktaydılar.",
+   "visual": "Dünya–Ay haritası: araç simgesi kesikli kırmızı rotada Ay'ın arkasına dolanır, Ay'ın uzak yarısı taranır, Dünya'ya giden telsiz çizgisi kesilir ve kırmızı ✗ 'Sinyal yok'; üstte sayaç 380.000'den 400.171 km'ye tırmanır; kamera Ay'a yaklaşır; solda Kaşif dürbünle bakarken 'rekor'da şokla sıçrar",
+   "title": {
+    "white": "Rekor"
+   },
+   "cues": {
+    "route": "sırada",
+    "los": "istemedikleri",
+    "far": "sırada",
+    "counter": "rekor"
+   },
+   "params": {
+    "route": {
+     "from": 0.4,
+     "to": 0.6,
+     "at": "route",
+     "dur": 4.5
+    },
+    "farside": true,
+    "signal": true,
+    "labels": false,
+    "counter": {
+     "from": 380000,
+     "to": 400171,
+     "unit": "km",
+     "at": "counter",
+     "dur": 4.5
+    },
+    "zoom": 1.1,
+    "focus": [
+     0.72,
+     0.45
+    ],
+    "kasif": {
+     "x": 0.08,
+     "pose": "look",
+     "face": "right",
+     "at": "counter",
+     "then": "shock",
+     "then_emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Bu, insanların Dünya'dan o güne kadar gittiği en uzak noktaydı. Hem de istemeden kırılan bir rekor.",
+   "visual": "Dev '400.171 KİLOMETRE' yazısı kelime kelime gelir, '400.171' kırmızı kutuda; 'rekor'da el yazısı 'en uzak nokta'; sağda Kaşif 'uzak'ta şokla sıçrar",
+   "title": {},
+   "cues": {
+    "w0": "insanların",
+    "w1": "uzak",
+    "note": "rekor",
+    "k": "uzak"
+   },
+   "params": {
+    "lines": [
+     "400.171",
+     "kilometre"
+    ],
+    "highlight": [
+     "400.171"
+    ],
+    "note": {
+     "text": "en uzak nokta",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "k"
+    }
+   }
+  },
+  {
+   "type": "cabin",
+   "text": "Pencereden Ay'ın uzak yüzü geçti. Haise ile Swigert fotoğraf çekti; Lovell ise sessizdi, o yüzeye hiç ayak basamayacağını biliyordu.",
+   "visual": "Kapsül içi: sağdaki büyük lombozdan Ay'ın kraterli uzak yüzü kayarak geçer; Haise ve Swigert 'fotoğraf'ta lomboza dönüp bakar; Kaşif dürbünle bakar, 'sessizdi'de soldaki başı önde Lovell'e dönüp endişeyle düşünür; el yazısı 'Ay'ın uzak yüzü'",
+   "title": {
+    "white": "Lovell",
+    "gray": "son bakış"
+   },
+   "cues": {
+    "hit": "fotoğraf",
+    "lov": "sessizdi"
+   },
+   "params": {
+    "windows": [
+     {
+      "x": 0.8,
+      "y": 0.3,
+      "r": 110,
+      "view": "farside"
+     }
+    ],
+    "panel": {
+     "x": 0.06,
+     "w": 0.3
+    },
+    "crew": [
+     {
+      "x": 0.14,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "at": "lov",
+      "then": "think"
+     },
+     {
+      "x": 0.6,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "look"
+     },
+     {
+      "x": 0.74,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "look"
+     }
+    ],
+    "kasif": {
+     "x": 0.38,
+     "pose": "look",
+     "face": "right",
+     "seq": [
+      {
+       "at": "lov",
+       "pose": "think",
+       "face": "left",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "label": {
+     "text": "Ay'ın uzak yüzü",
+     "x": 0.56,
+     "y": 0.09,
+     "at": 0.4
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Ay'ın arkasından çıktıktan kısa süre sonra motoru bir kez daha ateşlediler. Amaç, eve dönüşü saatlerce kısaltmaktı.",
+   "visual": "Solda geride kalan Ay, sağ üstte küçük Dünya; karanlık Odyssey'li Apollo dizisinde 'ateşlediler'de Aquarius'un iniş motoru alev püskürtür ve dizi Dünya'ya doğru itilir; 'kısaltmaktı'da el yazısı 'Eve daha hızlı'; sağda Kaşif dürbünle bakar, sonra sevinçle yukarı işaret eder",
+   "title": {
+    "white": "İkinci",
+    "gray": "ateşleme"
+   },
+   "cues": {
+    "burn": "ateşlediler",
+    "note": "kısaltmaktı"
+   },
+   "params": {
+    "mode": "lifeboat",
+    "move": 0,
+    "off": 0,
+    "x": 0.46,
+    "moon": {
+     "x": 0.12,
+     "y": 0.2,
+     "r": 95
+    },
+    "earth": {
+     "x": 0.9,
+     "y": 0.2,
+     "r": 60
+    },
+    "burn": {
+     "at": "burn",
+     "dur": 3.5
+    },
+    "note": {
+     "text": "Eve daha hızlı",
+     "x": 0.62,
+     "y": 0.12,
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.88,
+     "y": 0.92,
+     "pose": "look",
+     "face": "left",
+     "at": "burn",
+     "then": "point",
+     "dir": "up",
+     "then_emotion": "happy",
+     "scale": 0.65
+    }
+   }
+  },
+  {
+   "type": "cabin",
+   "text": "Ama asıl zor kısım şimdi başladı. Isıtıcılar kapalıydı ve kabin, bir buzdolabının içi kadar soğudu.",
+   "visual": "Karanlık, buz tutmuş kabin: kontrol paneli sönük, lombozlarda kırağı, herkesin ağzından buhar çıkar; üç astronot üşüyerek durur; soldan Kaşif yürüyerek gelir, 'kapalıydı'da omuz silker, 'buzdolabının'da üşüyüp sıçrar; el yazısı 'Buz gibi'",
+   "title": {
+    "white": "Soğuk"
+   },
+   "cues": {
+    "hit": "soğudu",
+    "off": "kapalıydı",
+    "ice": "buzdolabının"
+   },
+   "params": {
+    "dark": true,
+    "cold": true,
+    "windows": [
+     {
+      "x": 0.78,
+      "y": 0.3,
+      "r": 85,
+      "view": "stars"
+     }
+    ],
+    "panel": {
+     "x": 0.06,
+     "w": 0.3
+    },
+    "crew": [
+     {
+      "x": 0.52,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "at": "hit",
+      "then": "think"
+     },
+     {
+      "x": 0.67,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "at": "ice",
+      "then": "shock"
+     },
+     {
+      "x": 0.82,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ],
+    "kasif": {
+     "x": 0.06,
+     "pose": "walk",
+     "to": 0.3,
+     "dur": 2.2,
+     "face": "right",
+     "seq": [
+      {
+       "at": "off",
+       "pose": "shrug",
+       "emotion": "worried"
+      },
+      {
+       "at": "ice",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "label": {
+     "text": "Buz gibi",
+     "x": 0.55,
+     "y": 0.09,
+     "at": "ice"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Su da azdı. Astronotlar suyu o kadar kıstı ki üçü de kilo verdi; Haise ise ateşlenip hastalandı.",
+   "visual": "Pano: su kartında 'Gereken' çubuğu dolu, 'Kalan' çubuğu en dipte kalır; ikinci kartta 'kilo kaybı' ve 'Haise: ateş' sırayla kırmızı ✗ ile belirir",
+   "title": {
+    "white": "Su",
+    "gray": "kısıtlaması"
+   },
+   "cues": {
+    "c0": "Su",
+    "c1": "kilo",
+    "i1": "kilo",
+    "i2": "ateşlenip"
+   },
+   "params": {
+    "cards": [
+     {
+      "bars": [
+       {
+        "label": "Gereken",
+        "value": 1.0,
+        "at": "c0"
+       },
+       {
+        "label": "Kalan",
+        "value": 0.15,
+        "at": "c0"
+       }
+      ]
+     },
+     {
+      "items": [
+       {
+        "text": "kilo kaybı",
+        "mark": "x",
+        "at": "i1"
+       },
+       {
+        "text": "Haise: ateş",
+        "mark": "x",
+        "at": "i2"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "cabin",
+   "text": "Soğuk, nem ve endişe yüzünden günlerce doğru dürüst uyuyamadılar.",
+   "visual": "Karanlık soğuk kabin, nefes buharları: Kaşif oturur, 'endişe'de irkilip ayağa sıçrar, sonra yine çöker; yanında iki astronot oturarak uyuklar; el yazısı 'Uykusuz günler'",
+   "title": {
+    "white": "Uykusuz"
+   },
+   "cues": {
+    "hit": "endişe",
+    "nem": "nem",
+    "sleep": "uyuyamadılar"
+   },
+   "params": {
+    "dark": true,
+    "cold": true,
+    "windows": [
+     {
+      "x": 0.82,
+      "y": 0.3,
+      "r": 85,
+      "view": "earth"
+     }
+    ],
+    "panel": {
+     "x": 0.06,
+     "w": 0.3
+    },
+    "crew": [
+     {
+      "x": 0.56,
+      "pose": "sit",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "x": 0.72,
+      "pose": "sit",
+      "face": "left",
+      "emotion": "worried",
+      "at": "nem",
+      "then": "think"
+     }
+    ],
+    "kasif": {
+     "x": 0.32,
+     "pose": "sit",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "worried"
+      },
+      {
+       "at": "sleep",
+       "pose": "sit",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "label": {
+     "text": "Uykusuz günler",
+     "x": 0.55,
+     "y": 0.09,
+     "at": "sleep"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Bir rota düzeltmesi daha gerekiyordu ama bilgisayara yetecek elektrik yoktu. Lovell, Dünya'nın gölgeli kenarını penceredeki çizgiye hizaladı ve motoru elle ateşlediler. Tıpkı eski denizciler gibi.",
+   "visual": "Yuvarlak kabin penceresi: içinde hilal Dünya kayarak gölge kenarı nişangâh çizgisine oturur, 'hizaladı'da çizgi kırmızı yanar ve halka çizilir; 'elle'de el yazısı 'Elle ateşleme'; sağda Kaşif dürbünle bakar, sonra pencereyi işaret eder",
+   "title": {
+    "white": "Elle",
+    "gray": "ateşleme"
+   },
+   "cues": {
+    "align": "hizaladı",
+    "note": "elle"
+   },
+   "params": {
+    "mode": "window",
+    "x": 0.44,
+    "note": {
+     "text": "Elle ateşleme",
+     "x": 0.82,
+     "y": 0.16,
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "look",
+     "face": "left",
+     "at": "align",
+     "then": "point",
+     "dir": "left",
+     "then_emotion": "happy"
+    }
+   }
+  },
+  {
+   "chapter": "Peki neden?",
+   "type": "chapter",
+   "text": "Ama asıl soru hâlâ cevapsızdı: o tank neden patlamıştı? Cevap uzayda değil, iki yıl önce, yerde başlıyor.",
+   "visual": "'BÖLÜM 6 / 7' kartı: 'Peki neden?'",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 6,
+    "total": 7,
+    "title": "Peki neden?"
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "1968'de bu tank bir bakım sırasında, sökülmesi unutulan bir cıvata yüzünden yaklaşık beş santim yükseklikten düştü.",
+   "visual": "Askıda asılı oksijen tankı kesiti; 'cıvata'da el yazısı 'Unutulan cıvata'; 'düştü'de tank kısa bir mesafe düşüp sekiyor, darbe çizgileri ve kırmızı ölçü '5 cm'; solda Kaşif tankı işaret ederken irkilir",
+   "title": {
+    "white": "1968",
+    "gray": "bir kaza"
+   },
+   "cues": {
+    "drop": "düştü",
+    "note": "cıvata"
+   },
+   "params": {
+    "mode": "tank",
+    "drop": true,
+    "x": 0.46,
+    "y": 0.5,
+    "note": {
+     "text": "Unutulan cıvata",
+     "x": 0.8,
+     "y": 0.13,
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.12,
+     "pose": "point",
+     "face": "right",
+     "dir": "right",
+     "at": "drop",
+     "then": "shock",
+     "then_emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Tank sağlam göründü ve Apollo 13'e takıldı. Ama içindeki bir boru gevşemişti.",
+   "visual": "Yatay zaman çizgisi çizilir: 1968 'Tank düştü', Mart 1970 'Test', 13 Nisan 1970 'Patlama' (kırmızı); kırmızı işaretçi sırayla ilerler; sağda Kaşif düşünür, 'gevşemişti'de patlama tarihini işaret eder",
+   "title": {
+    "white": "İki yıl",
+    "gray": "önce"
+   },
+   "cues": {
+    "a": "Tank",
+    "b": "takıldı",
+    "c": "gevşemişti"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1968",
+      "text": "Tank düştü",
+      "at": "a"
+     },
+     {
+      "year": "Mart 1970",
+      "text": "Test",
+      "at": "b"
+     },
+     {
+      "year": "13 Nisan 1970",
+      "text": "Patlama",
+      "at": "c"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.82,
+     "pose0": "think",
+     "pose": "point",
+     "dir": 40,
+     "at": "c",
+     "scale": 0.55,
+     "face": -1,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Fırlatmadan birkaç hafta önceki bir testte, oksijen tanktan bir türlü boşalmadı.",
+   "visual": "Test salonunda 'TANK 2' tabelasının iki yanında iki şapkasız teknisyen: biri tankı gösterir, 'boşalmadı'da ikisi de çaresiz kalır; soldan Kaşif yürüyerek gelir, düşünür, sonra omuz silker; el yazısı 'Boşalmıyor!'",
+   "title": {
+    "white": "Mart 1970",
+    "gray": "test"
+   },
+   "cues": {
+    "hit": "testte",
+    "no": "boşalmadı"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.07,
+     "pan": 26
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.06,
+      "pose": "walk",
+      "to": 0.26,
+      "dur": 2.0,
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "think"
+       },
+       {
+        "at": "no",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "tech1",
+      "x": 0.54,
+      "pose": "point",
+      "face": "right",
+      "dir": "right",
+      "at": "no",
+      "then": "shrug"
+     },
+     {
+      "who": "tech2",
+      "x": 0.86,
+      "pose": "talk",
+      "face": "left",
+      "at": "no",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.7,
+      "text": "TANK 2",
+      "at": 0.2
+     },
+     {
+      "type": "clock",
+      "x": 0.4,
+      "y": 0.42,
+      "scale": 0.6,
+      "at": 0.4
+     }
+    ],
+    "label": {
+     "text": "Boşalmıyor!",
+     "x": 0.7,
+     "y": 0.14,
+     "at": "no"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Teknisyenler de içerideki ısıtıcıyı saatlerce açık bıraktı, oksijen kaynayıp çıksın diye. Isıtıcının bir güvenlik anahtarı vardı; tank fazla ısınırsa akımı kesecekti.",
+   "visual": "'ISITICI' tabelası ve dönen saat; iki teknisyen ısıtıcıyı açık bırakıp sağdan çıkar, 'kaynayıp'ta el yazısı 'Kaynasın diye'; Kaşif 'ısıtıcıyı'da tabelayı işaret eder, 'anahtarı'nda yanında beliren 'Güvenlik anahtarı' tabelasını şaşkınlıkla gösterir",
+   "title": {
+    "white": "Isıtıcı",
+    "gray": "saatlerce açık"
+   },
+   "cues": {
+    "heat": "ısıtıcıyı",
+    "left": "bıraktı",
+    "sw": "anahtarı",
+    "boil": "kaynayıp"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.08,
+     "pan": -26
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "pose": "talk",
+      "face": "right",
+      "at": "heat",
+      "then": "point",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "sw",
+        "pose": "point",
+        "dir": "up-right",
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "tech1",
+      "x": 0.74,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "left",
+        "pose": "walk",
+        "to": 1.15,
+        "dur": 3.2,
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "tech2",
+      "x": 0.86,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "left",
+        "pose": "walk",
+        "to": 1.35,
+        "dur": 3.0,
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.63,
+      "text": "ISITICI",
+      "at": 0.2
+     },
+     {
+      "type": "sign",
+      "x": 0.34,
+      "text": "Güvenlik anahtarı",
+      "at": "sw"
+     },
+     {
+      "type": "clock",
+      "x": 0.88,
+      "at": 0.3
+     }
+    ],
+    "label": {
+     "text": "Kaynasın diye",
+     "x": 0.6,
+     "y": 0.14,
+     "at": "boil"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "İşte asıl hata burada. Bu anahtar yirmi sekiz volta göre yapılmıştı, ama yerdeki test düzeneği altmış beş volt veriyordu.",
+   "visual": "İki kartlı pano: 'Anahtar' kartında '28 volt' mavi ✓; 'Test' kartında '65 volt' kırmızı ✗; 'veriyordu'da altta kırmızı hap 'Asıl hata'",
+   "title": {
+    "white": "28 volt",
+    "gray": "ve 65 volt"
+   },
+   "cues": {
+    "c0": "anahtar",
+    "i0": "sekiz",
+    "c1": "test",
+    "i1": "altmış",
+    "pill": "veriyordu"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Anahtar",
+      "items": [
+       {
+        "text": "28 volt",
+        "mark": "check",
+        "at": "i0"
+       }
+      ]
+     },
+     {
+      "title": "Test",
+      "items": [
+       {
+        "text": "65 volt",
+        "mark": "x",
+        "at": "i1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Asıl hata",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Anahtar ilk açılmak istediği anda kaynayıp yapıştı. Isıtıcı hiç durmadı ve tankın içi, beş yüz dereceyi aşmış olabilirdi.",
+   "visual": "Yakın plan: tankın üst yarısı ve termostat anahtarı kadrajı doldurur; sargı kızarır, ısı dalgaları yükselir; 'yapıştı'da anahtarda altın kıvılcımlar ve kırmızı halka, dil kapalı kalır; 'dereceyi'de el yazısı '500°'yi aşmış olabilir'; solda Kaşif işaret ederken şokla sıçrar",
+   "title": {
+    "white": "Anahtar",
+    "gray": "yapıştı"
+   },
+   "cues": {
+    "heat": "Anahtar",
+    "weld": "yapıştı",
+    "note": "dereceyi"
+   },
+   "params": {
+    "mode": "tank",
+    "heat": true,
+    "weld": true,
+    "x": 0.49,
+    "y": 0.7,
+    "scale": 1.6,
+    "note": {
+     "text": "500°'yi aşmış olabilir",
+     "x": 0.77,
+     "y": 0.12,
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.1,
+     "pose": "point",
+     "face": "right",
+     "at": "weld",
+     "then": "shock",
+     "dir": "up-right",
+     "then_emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Peki kimse fark etmedi mi? Hayır, çünkü dışarıdaki termometre en fazla yirmi yedi dereceyi gösterebiliyordu ve ibre tepede takılıp kaldı.",
+   "visual": "Tank kesiti kıpkırmızı ısınmış, sargıdan ısı dalgaları; sağda termometre: 'termometre'de ibre yükselir, 27°'de tepeye dayanıp kırmızı halkayla takılı kalır; solda Kaşif termometreyi işaret eder, 'takılıp'ta şaşırır",
+   "title": {
+    "white": "Termometre",
+    "gray": "27°'de takıldı"
+   },
+   "cues": {
+    "heat": "Peki",
+    "g": "termometre",
+    "hit": "takılıp"
+   },
+   "params": {
+    "mode": "tank",
+    "heat": true,
+    "weld": true,
+    "x": 0.4,
+    "y": 0.48,
+    "scale": 0.95,
+    "gauge": {
+     "max": "27°",
+     "at": "g"
+    },
+    "kasif": {
+     "x": 0.1,
+     "pose": "point",
+     "face": "right",
+     "dir": "right",
+     "at": "hit",
+     "then": "shock",
+     "then_emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Bu sıcaklıkta tellerin yalıtımı yandı ve tank, içinde çıplak tellerle Ay yoluna çıktı.",
+   "visual": "Dev 'ÇIPLAK TELLER' yazısı kelime kelime, 'Çıplak' kırmızı kutuda; el yazısı 'yalıtım yandı'; sağda Kaşif endişeyle düşünür",
+   "title": {},
+   "cues": {
+    "note": "yalıtımı",
+    "w0": "tellerin",
+    "w1": "çıplak"
+   },
+   "params": {
+    "lines": [
+     "Çıplak",
+     "teller"
+    ],
+    "highlight": [
+     "Çıplak"
+    ],
+    "note": {
+     "text": "yalıtım yandı",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "On üç nisan akşamı Swigert karıştırma düğmesine bastığında, o teller kıvılcım çıkardı ve tank patladı. Yani felaket, iki yıl önce düşen bir tankla ve yanlış bir voltajla başlamıştı.",
+   "visual": "Tank kesiti: 'karıştırma'da pervane döner, 'kıvılcım'da çıplak tellerde altın kıvılcımlar, içeride alevler yükselir; 'patladı'da tankın duvarı çatlayıp açılır; 'felaket'te el yazısı 'Düşme + yanlış voltaj'; solda Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "13 Nisan",
+    "gray": "21.08"
+   },
+   "cues": {
+    "stir": "karıştırma",
+    "spark": "kıvılcım",
+    "burst": "patladı",
+    "note": "felaket"
+   },
+   "params": {
+    "mode": "tank",
+    "stir": true,
+    "spark": true,
+    "burst": true,
+    "x": 0.52,
+    "y": 0.48,
+    "scale": 1.0,
+    "note": {
+     "text": "Düşme + yanlış voltaj",
+     "x": 0.5,
+     "y": 0.1,
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.12,
+     "pose": "point",
+     "face": "right",
+     "at": "burst",
+     "then": "shock",
+     "dir": "right",
+     "then_emotion": "surprised"
+    }
+   }
+  },
+  {
+   "chapter": "Eve dönüş",
+   "type": "chapter",
+   "text": "On yedi nisan sabahı, eve birkaç saat kalmıştı. Ama önce üç zor adım atılacaktı.",
+   "visual": "'BÖLÜM 7 / 7' kartı: 'Eve dönüş'",
+   "title": {},
+   "cues": {},
+   "params": {
+    "n": 7,
+    "total": 7,
+    "title": "Eve dönüş"
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Önce hasarlı servis modülünü bıraktılar. Lovell telsize, aracın bir tarafının tamamen eksik olduğunu söyledi.",
+   "visual": "Servis modülü 'bıraktılar'da ayrılıp dönerek uzaklaşır, yan panelin yerindeki yırtık delik görünür; sağ üstte büyük Dünya; Kaşif sağ altta; Kaşif dürbünle bakar, 'eksik'te şokla geri sıçrar; kırmızı el yazısı 'Bir yan yok!'",
+   "title": {
+    "white": "Ayrılış"
+   },
+   "cues": {
+    "sep": "bıraktılar",
+    "hit": "eksik"
+   },
+   "params": {
+    "mode": "jettison",
+    "sep": "sm",
+    "earth": {
+     "x": 0.8,
+     "y": 0.24,
+     "r": 110
+    },
+    "kasif": {
+     "x": 0.9,
+     "pose": "look",
+     "face": "left",
+     "at": "hit",
+     "then": "shock",
+     "then_emotion": "surprised",
+     "then_dir": "up",
+     "scale": 0.75
+    },
+    "note": {
+     "text": "Bir yan yok!",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "hit",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Sonra donmuş Odyssey'yi yeniden uyandırdılar. Bu adımları yerde hazırlayanlar arasında, hiç hastalanmayan Ken Mattingly de vardı.",
+   "visual": "Yerde şapkasız Mattingly elindeki listeye bakarak konuşur, yanında 'Simülatör' tabelası 'uyandırdılar'da belirir; Kaşif yürüyerek gelir, 'Mattingly'de onu işaret eder; el yazısı 'Ken Mattingly'",
+   "title": {
+    "white": "Mattingly",
+    "gray": "yerde"
+   },
+   "cues": {
+    "wake": "uyandırdılar",
+    "hit": "Mattingly"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "mattingly",
+      "x": 0.64,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "left",
+      "talk": true,
+      "at": "hit",
+      "then": "talk"
+     },
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "pose": "walk",
+      "to": 0.3,
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "emotion": "happy"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.86,
+      "text": "Simülatör",
+      "at": "wake"
+     }
+    ],
+    "label": {
+     "text": "Ken Mattingly",
+     "x": 0.62,
+     "y": 0.14,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Son olarak Aquarius'a veda ettiler. Onları dört gün hayatta tutan küçük araç, atmosferde yanıp yok olacaktı.",
+   "visual": "Odyssey ile Aquarius 'veda'da ayrılır, Aquarius yavaşça dönerek uzaklaşır; sol üstte Dünya; Kaşif el sallayarak veda eder; 'yanıp'ta el yazısı 'Elveda'",
+   "title": {
+    "white": "Elveda",
+    "gray": "Aquarius"
+   },
+   "cues": {
+    "sep": "veda",
+    "note": "yanıp"
+   },
+   "params": {
+    "mode": "jettison",
+    "sep": "lm",
+    "hide_sm": true,
+    "earth": {
+     "x": 0.22,
+     "y": 0.26,
+     "r": 110
+    },
+    "labels": [
+     {
+      "text": "Aquarius",
+      "on": "lm",
+      "at": "sep"
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "pose": "look",
+     "face": "right",
+     "at": "sep",
+     "then": "wave",
+     "scale": 0.75,
+     "emotion": "neutral",
+     "then_emotion": "happy"
+    },
+    "note": {
+     "text": "Elveda",
+     "x": 0.62,
+     "y": 0.13,
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Ve en uzun dakikalar geldi. Kapsül atmosfere girerken, ısı yüzünden radyo bağlantısı her zaman bir süre kesilirdi.",
+   "visual": "Kızgın kalkanıyla atmosfere dalan kapsül: ısı kalkanı kırmızı, arkasında kırmızı-altın plazma dilleri ve hız çizgileri, altta Dünya'nın kavisli ufku; 'radyo'da kapsülün yanındaki telsiz dalgaları kırmızı ✗ ile kesilir 'Sinyal yok'; solda Kaşif endişeyle bakıp düşünür",
+   "title": {
+    "white": "Atmosfere",
+    "gray": "giriş"
+   },
+   "cues": {
+    "hit": "radyo"
+   },
+   "params": {
+    "mode": "reentry",
+    "los": "hit",
+    "x": 0.55,
+    "y": 0.42,
+    "scale": 1.5,
+    "kasif": {
+     "x": 0.12,
+     "pose": "look",
+     "face": "right",
+     "at": "hit",
+     "then": "think",
+     "then_emotion": "worried",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Normalde bu sessizlik dört dakika kadar sürerdi. Dört dakika geçti, ses yoktu. Beş dakika, hâlâ ses yoktu.",
+   "visual": "Dev 'DÖRT DAKİKA… BEŞ…' yazısı kelime kelime, 'Beş…' kırmızı kutuda; 'hâlâ'da el yazısı 'ses yok'; sağda Kaşif 'Beş'te endişeyle irkilir",
+   "title": {},
+   "cues": {
+    "w0": "Normalde",
+    "w1": "sürerdi",
+    "w2": "Beş",
+    "note": "hâlâ"
+   },
+   "params": {
+    "lines": [
+     "Dört dakika…",
+     "Beş…"
+    ],
+    "highlight": [
+     "Beş…"
+    ],
+    "note": {
+     "text": "ses yok",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w2"
+    }
+   }
+  },
+  {
+   "type": "photo",
+   "text": "Ve sonunda telsizden Swigert'in sesi geldi. Birkaç dakika sonra gökyüzünde üç dev paraşüt açıldı.",
+   "visual": "Higgsfield sepya mürekkep klip: okyanus üstünde üç paraşütle süzülen kapsül (insan yüzü ve yazı yok)",
+   "title": {
+    "white": "17 Nisan",
+    "gray": "Pasifik"
+   },
+   "cues": {},
+   "params": {
+    "video": "media/hf-ocean.mp4",
+    "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3KpSnRdhkaAxxuXTWDFOOiW0yMk/hf_20261022_041514_37dabd1a-ba88-4a16-995e-e4d40b43598c.mp4",
+    "ai": true,
+    "grade": "sepia",
+    "rate": 0.8,
+    "credit": "Yapay zekâ ile üretilmiş temsili görüntü: Higgsfield (Seedance 2.0 Mini)"
+   }
+  },
+  {
+   "type": "apollo",
+   "text": "Kapsül, Samoa yakınlarında Pasifik'e indi ve üç astronot Iwo Jima gemisinde alkışlarla karşılandı.",
+   "visual": "Denizde düz güverteli büyük uçak gemisi silüeti (ada yapısı, bayrak) sağdan kayarak gelir; solda yüzdürme yakalı kapsül dalgalarda sallanır; güvertede üç şapkasız astronot 'alkışlarla'da el sallar; güvertenin ucunda Kaşif sevinçle el sallar",
+   "title": {
+    "white": "Kurtuluş"
+   },
+   "cues": {
+    "hit": "indi",
+    "cheer": "alkışlarla"
+   },
+   "params": {
+    "mode": "recovery",
+    "ship_at": "hit",
+    "deck_y": 0.52,
+    "crew_y": 0.52,
+    "crew_scale": 0.42,
+    "capsule_x": 0.15,
+    "crew": [
+     {
+      "x": 0.56,
+      "pose": "idle",
+      "face": "left",
+      "at": "cheer",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "x": 0.64,
+      "pose": "idle",
+      "face": "left",
+      "at": "cheer",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "x": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "at": "cheer",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ],
+    "kasif": {
+     "x": 0.44,
+     "y": 0.52,
+     "pose": "point",
+     "face": "left",
+     "dir": "down-left",
+     "scale": 0.48,
+     "at": "cheer",
+     "then": "wave",
+     "then_emotion": "happy"
+    },
+    "note": {
+     "text": "Eve döndüler",
+     "x": 0.32,
+     "y": 0.14,
+     "at": "cheer"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "NASA bir inceleme kurulu kurdu. Sonraki araçlara üçüncü bir oksijen tankı ve yedek bir batarya eklendi, o anahtarlar da değiştirildi.",
+   "visual": "Pano: 'Değişiklikler' kartında üç madde sırayla yeşil ✓: '3. oksijen tankı', 'yedek batarya', 'yeni anahtarlar'; 'anahtarlar'da mavi hap 'Ders alındı'",
+   "title": {
+    "white": "İnceleme",
+    "gray": "kurulu"
+   },
+   "cues": {
+    "a": "üçüncü",
+    "b": "batarya",
+    "c": "anahtarlar"
+   },
+   "params": {
+    "cards": [
+     {
+      "title": "Değişiklikler",
+      "items": [
+       {
+        "text": "3. oksijen tankı",
+        "mark": "check",
+        "at": "a"
+       },
+       {
+        "text": "yedek batarya",
+        "mark": "check",
+        "at": "b"
+       },
+       {
+        "text": "yeni anahtarlar",
+        "mark": "check",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Ders alındı",
+     "color": "blue",
+     "at": "c"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Lovell bu göreve sonradan başarılı bir başarısızlık dedi. Ay'a inemediler, ama NASA uzayda bir felaketten nasıl dönüleceğini öğrendi.",
+   "visual": "Dev 'BAŞARILI BİR BAŞARISIZLIK' yazısı kelime kelime, 'başarısızlık' kırmızı kutuda; 'dedi'de el yazısı 'Jim Lovell'; sağda Kaşif 'başarısızlık'ta yazıyı işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "başarılı",
+    "w1": "bir",
+    "w2": "başarısızlık",
+    "note": "dedi"
+   },
+   "params": {
+    "lines": [
+     "Başarılı bir",
+     "başarısızlık"
+    ],
+    "highlight": [
+     "başarısızlık"
+    ],
+    "note": {
+     "text": "Jim Lovell",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w2",
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Peki o mesafe rekoru? Tam elli altı yıl dayandı. Ancak 2026 baharında, Artemis II astronotları onu geride bıraktı.",
+   "visual": "Yatay zaman çizgisi: 'rekoru'da 1970 'Apollo 13 rekoru', '2026'da kırmızı halkalı 2026 'Artemis II'; işaretçi 56 yıl boyunca kayar; altta ortada Kaşif düşünür, '2026'da şaşkınlıkla 2026'yı işaret eder",
+   "title": {
+    "white": "Rekor",
+    "gray": "56 yıl"
+   },
+   "cues": {
+    "a": "rekoru",
+    "b": "2026"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1970",
+      "text": "Apollo 13 rekoru",
+      "at": "a"
+     },
+     {
+      "year": "2026",
+      "text": "Artemis II",
+      "at": "b"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.5,
+     "y": 0.8,
+     "pose": "point",
+     "pose0": "think",
+     "at": "b",
+     "scale": 0.7,
+     "face": 1,
+     "dir": 40,
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki sizce bu hikâyenin asıl kahramanı kim: üç astronot mu, yoksa bir karton kutu ve bantla onları eve getiren yer ekibi mi? Yorumlara yazın.",
+   "visual": "Kaşif ortada konuşur, 'kahramanı'nda omuz silker, 'Yorumlara'da izleyiciyi işaret eder; solunda üç şapkasız astronot, sağında 'Posta kutusu' tabelası tutan mühendis; el yazısı 'Sizce kim?'",
+   "title": {
+    "white": "Sizce",
+    "gray": "kim?"
+   },
+   "cues": {
+    "q": "kahramanı",
+    "yer": "ekibi",
+    "hit": "Yorumlara"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 860,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "depth": {
+     "sky": {
+      "clouds": 2,
+      "gulls": 0
+     }
+    },
+    "cast": [
+     {
+      "who": "lovell",
+      "x": 0.12,
+      "pose": "wave",
+      "face": "right"
+     },
+     {
+      "who": "haise",
+      "x": 0.22,
+      "pose": "idle",
+      "face": "right",
+      "at": "q",
+      "then": "wave"
+     },
+     {
+      "who": "swigert",
+      "x": 0.32,
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.56,
+      "pose": "talk",
+      "face": "right",
+      "at": "q",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "eng1",
+      "x": 0.84,
+      "pose": "hold",
+      "face": "left",
+      "text": "Posta kutusu",
+      "at": "yer",
+      "then": "hold"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "Sizce kim?",
+     "x": 0.5,
+     "y": 0.14,
+     "at": "q"
+    }
+   }
+  }
+ ]
+}

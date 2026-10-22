@@ -1,0 +1,698 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "tunguska-patlamasi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Milyonlarca",
+      "ağaç",
+      "devrildi"
+    ],
+    "highlight": [
+      "devrildi"
+    ],
+    "scene": 4,
+    "t": 2.9,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Tunguska Olayı: Milyonlarca Ağacı Ne Devirdi?",
+    "description": "Tunguska olayı: 1908'de Sibirya'da milyonlarca ağaç bir anda yere yattı, ama ortada tek bir krater yoktu. Peki o ormanı ne devirdi?\n\n30 Haziran 1908 sabahı, Rusya'nın Sibirya bölgesinde Taşlı Tunguska nehri yakınlarında gökyüzünde dev bir ateş topu belirdi ve havada patladı. Yaklaşık iki bin kilometrekarelik orman, merkezden dışa doğru yelpaze gibi devrildi; altmış kilometre ötedeki Vanavara'da bir adam yerinden savruldu. 1927'de bölgeye giden Leonid Kulik ve ekibi krater bulamadı. Bugünkü açıklamaya göre büyük olasılıkla bir gök taşı, yerden birkaç kilometre yukarıda parçalanarak patladı.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence böyle bir patlama bugün olsa ne olurdu? Yorumlara yaz!\n\n#shorts #tunguska #sibirya #tarih #düşünbakalım",
+    "tags": [
+      "tunguska",
+      "tunguska olayı",
+      "tunguska patlaması",
+      "tunguska event",
+      "1908 sibirya patlaması",
+      "sibirya'da ne patladı",
+      "krater neden yok",
+      "göktaşı patlaması",
+      "havada patlama",
+      "leonid kulik",
+      "sibirya",
+      "rusya tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-22T22:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "tunguska",
+      "text": "Milyonlarca ağaç bir anda devrildi.",
+      "visual": "Yandan tayga, önde üç dev ağaç; soldan dumanlı bir ateş topu ağaçların hemen üstünde 'ağaç'ta patlıyor (altın ışınlar, mürekkep şok halkaları); şok cephesi yarım saniyede geçiyor, öndeki dev ağaçlar ve arkadaki orman dışa doğru yere yatıyor, tam altındakiler dalsız ayakta kalıyor; sağ önde büyük Kaşif şokla geri sıçrıyor.",
+      "title": {},
+      "cues": {
+        "boom": "ağaç"
+      },
+      "params": {
+        "blast": [
+          0.34,
+          0.3
+        ],
+        "from": [
+          -0.2,
+          -0.02
+        ],
+        "streak": 0,
+        "speed": 2600,
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.7,
+            "pose": "idle",
+            "face": "left",
+            "at": "boom",
+            "then": "shock",
+            "scale": 1.4
+          }
+        ],
+        "n": 8,
+        "far": 16,
+        "tree_scale": 1.25,
+        "front": {
+          "xs": [
+            0.2,
+            0.5,
+            0.98
+          ],
+          "y": 0.67,
+          "scale": 1.6
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Gelin anlatayım: yıl 1908, yer Sibirya.",
+      "visual": "Eski harita: kuzey Asya, üstte Kuzey Buz Denizi kıyısı, Urallar, Yenisey nehri; solda Moskova, ortada kırmızı halkalı 'Tunguska' 'Sibirya'da beliriyor, harita oraya yaklaşıyor; el yazısı not '30 Haziran 1908'.",
+      "title": {
+        "white": "Sibirya",
+        "gray": "Rusya"
+      },
+      "cues": {
+        "note": "1908",
+        "city": "Sibirya"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              -0.05,
+              1.05
+            ],
+            [
+              -0.05,
+              0.24
+            ],
+            [
+              0.05,
+              0.24
+            ],
+            [
+              0.08,
+              0.21
+            ],
+            [
+              0.12,
+              0.3
+            ],
+            [
+              0.16,
+              0.27
+            ],
+            [
+              0.22,
+              0.24
+            ],
+            [
+              0.3,
+              0.22
+            ],
+            [
+              0.33,
+              0.2
+            ],
+            [
+              0.37,
+              0.24
+            ],
+            [
+              0.39,
+              0.14
+            ],
+            [
+              0.42,
+              0.24
+            ],
+            [
+              0.45,
+              0.28
+            ],
+            [
+              0.47,
+              0.18
+            ],
+            [
+              0.52,
+              0.17
+            ],
+            [
+              0.58,
+              0.13
+            ],
+            [
+              0.65,
+              0.06
+            ],
+            [
+              0.7,
+              0.11
+            ],
+            [
+              0.76,
+              0.16
+            ],
+            [
+              0.83,
+              0.15
+            ],
+            [
+              0.9,
+              0.18
+            ],
+            [
+              1.05,
+              0.17
+            ],
+            [
+              1.05,
+              1.05
+            ]
+          ]
+        ],
+        "coast": [
+          [
+            0.6,
+            0.7
+          ],
+          [
+            0.59,
+            0.56
+          ],
+          [
+            0.56,
+            0.44
+          ],
+          [
+            0.53,
+            0.32
+          ],
+          [
+            0.5,
+            0.2
+          ]
+        ],
+        "seas": [
+          {
+            "name": "Kuzey Buz Denizi",
+            "x": 0.32,
+            "y": 0.1
+          }
+        ],
+        "mountains": [
+          {
+            "name": "Urallar",
+            "x": 0.33,
+            "y": 0.62,
+            "size": 60
+          }
+        ],
+        "cities": [
+          {
+            "name": "Moskova",
+            "x": 0.13,
+            "y": 0.51,
+            "dy": 62,
+            "anchor": "start",
+            "dx": -20
+          },
+          {
+            "name": "Tunguska",
+            "x": 0.67,
+            "y": 0.4,
+            "color": "red",
+            "at": "city",
+            "dy": -36
+          }
+        ],
+        "note": {
+          "text": "30 Haziran 1908",
+          "x": 0.06,
+          "y": 0.92,
+          "at": "note"
+        },
+        "focus": [
+          0.67,
+          0.4
+        ],
+        "zoom": 1.1,
+        "compass": "br"
+      }
+    },
+    {
+      "type": "tunguska",
+      "text": "O sabah gökte bir ateş topu patladı, hem de güneşten parlak!",
+      "visual": "Sakin orman, gökte bulutlar; Kaşif dürbünle göğe bakıyor; 'sabah'ta soldan duman izi bırakan ateş topu gökyüzünü geçiyor, 'patladı'da sağ üstte patlıyor ve orman yarım saniyede dalga dalga yere yatıyor; Kaşif şokla geri sıçrıyor.",
+      "title": {
+        "white": "30 Haziran",
+        "gray": "sabah"
+      },
+      "cues": {
+        "streak": "sabah",
+        "boom": "patladı"
+      },
+      "params": {
+        "blast": [
+          0.68,
+          0.24
+        ],
+        "from": [
+          -0.15,
+          0.17
+        ],
+        "speed": 2600,
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.6,
+            0.4
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.24,
+            "pose": "look",
+            "face": "right",
+            "dir": "up-right",
+            "at": "boom",
+            "then": "shock",
+            "scale": 0.95
+          }
+        ],
+        "tree_scale": 1.15,
+        "n": 9
+      }
+    },
+    {
+      "type": "tunguska_porch",
+      "text": "Altmış kilometre ötede bir adam savruldu, gömleği tutuştu sandı.",
+      "visual": "'Vanavara' tabelalı kütük ticaret evi ve verandası; verandada sakallı bir adam oturuyor; sağ ufuk altın bir parıltıyla aydınlanıyor, sıcak dalgaları akıyor, üstte el yazısı '60 km öte'; 'savruldu'da adam verandadan geriye savrulup sırt üstü düşüyor, 'tutuştu'da gömleğinde küçük alevler; sağda Kaşif şokla geri sıçrıyor.",
+      "title": {
+        "white": "Vanavara",
+        "gray": "ticaret köyü"
+      },
+      "cues": {
+        "flash": "Altmış",
+        "lab": "kilometre",
+        "thrown": "savruldu",
+        "heat": "tutuştu"
+      },
+      "params": {
+        "house_x": 0.27,
+        "man": {
+          "x": 0.52,
+          "beard": "short",
+          "throw": 0.06
+        },
+        "sign": "Vanavara",
+        "labels": [
+          {
+            "text": "60 km öte",
+            "x": 0.7,
+            "y": 0.2,
+            "at": "lab",
+            "color": "red"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.78,
+            "pose": "talk",
+            "face": "left",
+            "at": "thrown",
+            "then": "shock",
+            "scale": 0.85
+          }
+        ]
+      }
+    },
+    {
+      "type": "tunguska_top",
+      "text": "Bütün orman yelpaze gibi yere yattı.",
+      "visual": "Kuşbakışı orman: kelebek biçimli alanda yüzlerce ağaç tepesi, kenarda kıvrılan bir nehir; 'orman'da merkezde altın yıldız parlıyor ve kırmızı şok halkası dışa yayılıyor, geçtiği her ağaç merkezden dışa bakacak şekilde yere yatıyor, ortadakiler ayakta kalıyor; üstte el yazısı '~2.000 km²'; sağda, yelpazenin dışında büyük Kaşif 'yelpaze'de şokla geri sıçrıyor.",
+      "title": {
+        "white": "Kuşbakışı",
+        "gray": "yatan orman"
+      },
+      "cues": {
+        "fall": "orman",
+        "hit": "yelpaze"
+      },
+      "params": {
+        "center": [
+          0.34,
+          0.45
+        ],
+        "rx": 0.35,
+        "ry": 0.21,
+        "n": 340,
+        "speed": 380,
+        "label": {
+          "text": "~2.000 km²",
+          "at": "hit",
+          "y": 0.29,
+          "x": 0.78,
+          "size": 78
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.8,
+            "y": 0.64,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "dir": "left",
+            "emotion": "surprised",
+            "scale": 1.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "tunguska_top",
+      "text": "Peki sizce krater nerede?",
+      "visual": "Aynı kuşbakışı devrik orman, kamera yelpazenin merkezine yaklaşıyor; merkezde dalsız ayakta kalan ağaçlar (çarpı işaretleri), çukur yok; üstte kırmızı el yazısı 'krater?'; sağda Kaşif dürbünle bakıyor, 'nerede'de düşünüyor.",
+      "title": {
+        "white": "Krater",
+        "gray": "nerede?"
+      },
+      "cues": {
+        "lab": "krater",
+        "hit": "nerede"
+      },
+      "params": {
+        "aftermath": true,
+        "center": [
+          0.34,
+          0.42
+        ],
+        "rx": 0.35,
+        "ry": 0.2,
+        "n": 340,
+        "cam": {
+          "from": 1.0,
+          "to": 1.22
+        },
+        "label": {
+          "text": "krater?",
+          "at": "lab",
+          "y": 0.21,
+          "size": 100,
+          "x": 0.62
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.87,
+            "y": 0.62,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "think",
+            "emotion": "worried",
+            "scale": 1.15
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "On dokuz yıl sonra bilim insanları geldi,",
+      "visual": "Dikey zaman çizgisi: '1908 · Patlama' ve '1927 · Kulik seferi' (kırmızı halkalı); işaretçi 1927'ye iniyor; sağda büyük Kaşif 'insanları'da 1927'yi işaret ediyor.",
+      "title": {
+        "white": "19 yıl",
+        "gray": "sonra"
+      },
+      "cues": {
+        "c0": "On",
+        "c1": "insanları"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1908",
+            "text": "Patlama",
+            "at": "c0"
+          },
+          {
+            "year": "1927",
+            "text": "Kulik seferi",
+            "at": "c1"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.78,
+          "y": 0.6,
+          "pose": "point",
+          "at": "c1",
+          "face": -1,
+          "scale": 0.85,
+          "dir": -10,
+          "emotion": "happy",
+          "pose0": "talk"
+        }
+      }
+    },
+    {
+      "type": "tunguska",
+      "text": "ama tek bir çukur bile bulamadılar.",
+      "visual": "Patlamadan sonraki orman: ağaçların hepsi dışa doğru yere yatmış, ortada dalları soyulmuş gövdeler ayakta; sakallı Leonid Kulik soldan yürüyerek gelip 'çukur'da dürbünle bakıyor; yerde kırmızı el yazısı 'çukur yok!' beliriyor; sağda Kaşif omuz silkiyor.",
+      "title": {
+        "white": "1927",
+        "gray": "Kulik seferi"
+      },
+      "cues": {
+        "look": "çukur",
+        "crater": "bulamadılar"
+      },
+      "params": {
+        "aftermath": true,
+        "blast": [
+          0.5,
+          0.22
+        ],
+        "strip": 0.12,
+        "n": 10,
+        "far": 16,
+        "crater": {
+          "text": "çukur yok!",
+          "at": "crater",
+          "x": 0.5,
+          "dy": -560,
+          "size": 110
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "kulik",
+            "beard": "grey",
+            "x": 0.02,
+            "pose": "walk",
+            "to": 0.3,
+            "at": "look",
+            "then": "look",
+            "face": "right",
+            "scale": 0.9
+          },
+          {
+            "who": "kasif",
+            "x": 0.8,
+            "pose": "talk",
+            "face": "left",
+            "at": "crater",
+            "then": "shrug",
+            "emotion": "worried",
+            "scale": 0.9
+          }
+        ]
+      }
+    },
+    {
+      "type": "tunguska_rock",
+      "text": "Bakın, sır şurada: büyük olasılıkla bir gök taşı,",
+      "visual": "Orman silüeti üstünde gökyüzü; 'sır'da sağ üstten kenarı yanan, kraterli büyük bir mürekkep kaya duman iziyle giriyor ve ormanın üstünde süzülüyor; 'taşı'da kaya büyüyerek çarpıyor ve üstte el yazısı 'gök taşı?' beliriyor; sağda Kaşif baştan göğü işaret ediyor, 'taşı'da şokla geri sıçrıyor.",
+      "title": {
+        "white": "Asıl",
+        "gray": "sır"
+      },
+      "cues": {
+        "streak": "sır",
+        "hit": "taşı"
+      },
+      "params": {
+        "from": [
+          1.25,
+          -0.02
+        ],
+        "to": [
+          0.4,
+          0.32
+        ],
+        "size": 1.1,
+        "labels": [
+          {
+            "text": "gök taşı?",
+            "x": 0.6,
+            "y": 0.17,
+            "at": "hit",
+            "color": "red",
+            "size": 96
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "point",
+            "dir": "up-left",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 1.15
+          }
+        ]
+      }
+    },
+    {
+      "type": "tunguska",
+      "text": "birkaç kilometre yukarıda paramparça oldu.",
+      "visual": "Yandan orman; sağdan gök taşı duman iziyle geliyor, 'kilometre'de patlama noktasından yere kırmızı kesikli çizgi iniyor ve '5–10 km' yazıyor; 'paramparça'da havada patlıyor, ağaçlar dışa devriliyor, tam altındakiler dalsız ayakta kalıyor; yerde 'krater yok'; sağda Kaşif yukarıyı işaret edip şokla geri sıçrıyor.",
+      "title": {
+        "white": "Hava",
+        "gray": "patlaması"
+      },
+      "cues": {
+        "alt": "kilometre",
+        "boom": "paramparça",
+        "crater": "oldu"
+      },
+      "params": {
+        "blast": [
+          0.42,
+          0.3
+        ],
+        "from": [
+          1.15,
+          0.12
+        ],
+        "strip": 0.1,
+        "speed": 2400,
+        "alt": {
+          "text": "5–10 km",
+          "at": "alt"
+        },
+        "crater": {
+          "text": "krater yok",
+          "at": "crater"
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.4,
+            0.45
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "point",
+            "face": "left",
+            "at": "boom",
+            "then": "shock",
+            "dir": "up-left",
+            "scale": 0.9
+          }
+        ],
+        "streak": 0
+      }
+    },
+    {
+      "type": "title",
+      "text": "Yani ormanı yerle bir eden şey, yere hiç değmedi.",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Yere / hiç / değmedi', 'hiç' kırmızı kutuda; altında el yazısı not 'havada patladı'; sağ altta büyük Kaşif gülümseyip yazıyı işaret ediyor.",
+      "title": {},
+      "cues": {
+        "w0": "Yani",
+        "w1": "hiç",
+        "w2": "değmedi",
+        "note": "değmedi"
+      },
+      "params": {
+        "lines": [
+          "Yere",
+          "hiç",
+          "değmedi"
+        ],
+        "highlight": [
+          "hiç"
+        ],
+        "note": "havada patladı",
+        "y": 0.22,
+        "kasif": {
+          "x": 0.86,
+          "y": 0.62,
+          "pose": "point",
+          "at": "w0",
+          "face": -1,
+          "scale": 0.85,
+          "dir": 40,
+          "emotion": "happy"
+        },
+        "size": 150,
+        "arrow": false
+      }
+    }
+  ]
+}

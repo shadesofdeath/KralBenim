@@ -1,0 +1,1395 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "viyana-kusatmasi-1529",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Kanuni'yi",
+   "yağmur",
+   "durdurdu"
+  ],
+  "highlight": [
+   "yağmur"
+  ],
+  "scene": 0,
+  "t": 2.45,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Viyana Kuşatması 1529: Kanuni'yi Yağmur mu Durdurdu?",
+  "description": "Viyana kuşatması 1529: Kanuni Sultan Süleyman'ın ordusunu daha Viyana'ya varmadan yağmur ve çamur yıprattı. Peki nasıl?\n\n1529 baharında Osmanlı ordusu İstanbul'dan Viyana'ya doğru yola çıktı. Yağmurlar dinmedi; nehirler taştı, yollar çamura döndü ve kale yıkan ağır kuşatma topları çamura saplanıp geride kaldı. Ordu Viyana önüne ancak Eylül sonunda, elinde hafif toplarla ulaştı. Surların altına lağımlar kazıldı, ama savunanlar karşı lağımlarla direndi. Kış yaklaşıp erzak azalınca Kanuni Ekim ortasında geri dönme kararı verdi. Yani o yıl Viyana'yı surları ve savunanları kadar, belki de en çok, hesapta olmayan yağmur korudu.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence ağır toplar yetişseydi Viyana düşer miydi? Yorumlara yaz!\n\n#shorts #viyanakuşatması #kanunisultansüleyman #osmanlı #düşünbakalım",
+  "tags": [
+   "viyana kuşatması",
+   "1529 viyana kuşatması",
+   "birinci viyana kuşatması",
+   "kanuni viyana kuşatması",
+   "viyana neden alınamadı",
+   "kanuni sultan süleyman",
+   "osmanlı tarihi",
+   "osmanlı ordusu",
+   "kuşatma topları",
+   "lağım",
+   "1529",
+   "viyana",
+   "tarih",
+   "tarih hikayeleri",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-22T19:00:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "mudsiege",
+   "text": "Kanuni'yi Viyana'dan önce yağmur durdurdu.",
+   "visual": "Sağanak altında çamurlu yol, uzakta Viyana surları ve sivri kulesi; ortada dev bronz kuşatma topu tekerleklerine kadar çamura gömülü, 'durdurdu'da iyice batıp yana yatıyor, çamur sıçrıyor; solda sarıklı asker endişeyle omuz silkiyor; sağda Kaşif dürbünle bakarken 'yağmur'da şokla geri sıçrıyor.",
+   "title": {},
+   "cues": {
+    "hit": "yağmur",
+    "sink": "durdurdu"
+   },
+   "params": {
+    "rain": true,
+    "heavy": 1.3,
+    "ground": 0.62,
+    "horizon": 0.4,
+    "city": {
+     "x": 0.78,
+     "scale": 0.8
+    },
+    "cannon": {
+     "x": 0.4,
+     "scale": 1.25,
+     "sunk": 0.7,
+     "sink": "sink",
+     "depth": 0.42,
+     "tilt": -13
+    },
+    "cast": [
+     {
+      "who": "asker",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.15,
+      "pose": "idle",
+      "face": "right",
+      "at": "sink",
+      "then": "shrug",
+      "emotion": "worried",
+      "scale": 1.0
+     },
+     {
+      "who": "kasif",
+      "x": 0.72,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "scale": 1.2
+     }
+    ],
+    "cam": {
+     "zoom": 1.2,
+     "focus": [
+      0.45,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "1529 baharında Kanuni ordusuyla İstanbul'dan çıktı.",
+   "visual": "Eski harita: Balkanlar, Karadeniz ve Tuna; İstanbul, Edirne, Sofya, Belgrad, Buda ve kırmızı Viyana işaretli; İstanbul'dan Viyana'ya kırmızı kesikli rota çiziliyor; el yazısı not '10 Mayıs 1529'.",
+   "title": {
+    "white": "10 Mayıs",
+    "gray": "İstanbul"
+   },
+   "cues": {
+    "note": "baharında",
+    "city": "1529",
+    "route": "Kanuni"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -1.2778,
+       0.5755
+      ],
+      [
+       -1.25,
+       1.0
+      ],
+      [
+       -1.2444,
+       1.1887
+      ],
+      [
+       -1.0833,
+       1.2075
+      ],
+      [
+       -1.0611,
+       1.283
+      ],
+      [
+       -1.0,
+       1.217
+      ],
+      [
+       -0.8611,
+       1.2075
+      ],
+      [
+       -0.7778,
+       1.066
+      ],
+      [
+       -0.75,
+       1.0
+      ],
+      [
+       -0.7333,
+       0.8585
+      ],
+      [
+       -0.5833,
+       0.7358
+      ],
+      [
+       -0.5778,
+       0.6415
+      ],
+      [
+       -0.5278,
+       0.5755
+      ],
+      [
+       -0.4167,
+       0.6132
+      ],
+      [
+       -0.3333,
+       0.5472
+      ],
+      [
+       -0.2611,
+       0.4906
+      ],
+      [
+       -0.1833,
+       0.5377
+      ],
+      [
+       -0.1611,
+       0.6321
+      ],
+      [
+       -0.1056,
+       0.6887
+      ],
+      [
+       -0.0611,
+       0.7453
+      ],
+      [
+       0.0056,
+       0.7925
+      ],
+      [
+       0.0444,
+       0.8302
+      ],
+      [
+       0.1167,
+       0.9057
+      ],
+      [
+       0.1389,
+       1.0
+      ],
+      [
+       0.1222,
+       1.0943
+      ],
+      [
+       0.1444,
+       1.0943
+      ],
+      [
+       0.1722,
+       1.0566
+      ],
+      [
+       0.2056,
+       1.0
+      ],
+      [
+       0.1722,
+       0.9057
+      ],
+      [
+       0.1944,
+       0.8585
+      ],
+      [
+       0.2778,
+       0.8962
+      ],
+      [
+       0.2722,
+       0.8774
+      ],
+      [
+       0.2444,
+       0.8396
+      ],
+      [
+       0.15,
+       0.783
+      ],
+      [
+       0.0944,
+       0.7264
+      ],
+      [
+       0.0278,
+       0.6604
+      ],
+      [
+       0.0056,
+       0.5755
+      ],
+      [
+       -0.0667,
+       0.4811
+      ],
+      [
+       -0.0611,
+       0.3962
+      ],
+      [
+       0.0111,
+       0.3679
+      ],
+      [
+       0.0056,
+       0.4245
+      ],
+      [
+       0.0444,
+       0.4151
+      ],
+      [
+       0.0944,
+       0.5
+      ],
+      [
+       0.1611,
+       0.5755
+      ],
+      [
+       0.2278,
+       0.6226
+      ],
+      [
+       0.2778,
+       0.6792
+      ],
+      [
+       0.3278,
+       0.7358
+      ],
+      [
+       0.3278,
+       0.8679
+      ],
+      [
+       0.3611,
+       0.9434
+      ],
+      [
+       0.4,
+       1.0189
+      ],
+      [
+       0.4222,
+       1.066
+      ],
+      [
+       0.45,
+       1.1415
+      ],
+      [
+       0.4556,
+       1.2075
+      ],
+      [
+       0.5,
+       1.2453
+      ],
+      [
+       0.5278,
+       1.2264
+      ],
+      [
+       0.5167,
+       1.1321
+      ],
+      [
+       0.5389,
+       1.0943
+      ],
+      [
+       0.5833,
+       1.1226
+      ],
+      [
+       0.5778,
+       1.0566
+      ],
+      [
+       0.5167,
+       1.0094
+      ],
+      [
+       0.5056,
+       0.9528
+      ],
+      [
+       0.5222,
+       0.8679
+      ],
+      [
+       0.5778,
+       0.8396
+      ],
+      [
+       0.6056,
+       0.8208
+      ],
+      [
+       0.6944,
+       0.8302
+      ],
+      [
+       0.7056,
+       0.8774
+      ],
+      [
+       0.7333,
+       0.8679
+      ],
+      [
+       0.7778,
+       0.816
+      ],
+      [
+       0.8556,
+       0.8113
+      ],
+      [
+       0.8611,
+       0.7925
+      ],
+      [
+       0.8056,
+       0.717
+      ],
+      [
+       0.7944,
+       0.6415
+      ],
+      [
+       0.8333,
+       0.5566
+      ],
+      [
+       0.85,
+       0.4811
+      ],
+      [
+       0.9,
+       0.4151
+      ],
+      [
+       0.9444,
+       0.3019
+      ],
+      [
+       1.0,
+       0.283
+      ],
+      [
+       1.0833,
+       0.3396
+      ],
+      [
+       1.1167,
+       0.4811
+      ],
+      [
+       1.2222,
+       0.4151
+      ],
+      [
+       1.2833,
+       0.3962
+      ],
+      [
+       1.3611,
+       0.2453
+      ],
+      [
+       2.5833,
+       0.2453
+      ],
+      [
+       2.5833,
+       -2.3962
+      ],
+      [
+       -2.4167,
+       -2.3962
+      ],
+      [
+       -2.4167,
+       0.5755
+      ]
+     ],
+     [
+      [
+       0.8667,
+       0.7925
+      ],
+      [
+       0.9167,
+       0.8019
+      ],
+      [
+       0.9944,
+       0.783
+      ],
+      [
+       1.0833,
+       0.717
+      ],
+      [
+       1.1944,
+       0.717
+      ],
+      [
+       1.2778,
+       0.783
+      ],
+      [
+       1.3611,
+       0.8208
+      ],
+      [
+       1.4722,
+       0.8113
+      ],
+      [
+       1.5556,
+       0.7642
+      ],
+      [
+       1.5556,
+       0.6698
+      ],
+      [
+       2.5833,
+       0.6698
+      ],
+      [
+       2.5833,
+       1.2264
+      ],
+      [
+       1.2611,
+       1.2264
+      ],
+      [
+       1.2389,
+       1.2075
+      ],
+      [
+       1.1722,
+       1.2075
+      ],
+      [
+       1.1167,
+       1.2642
+      ],
+      [
+       1.0556,
+       1.2736
+      ],
+      [
+       0.9722,
+       1.2075
+      ],
+      [
+       0.9444,
+       1.2358
+      ],
+      [
+       0.8944,
+       1.2642
+      ],
+      [
+       0.8167,
+       1.217
+      ],
+      [
+       0.7722,
+       1.1887
+      ],
+      [
+       0.7611,
+       1.1038
+      ],
+      [
+       0.7167,
+       1.066
+      ],
+      [
+       0.7389,
+       1.0377
+      ],
+      [
+       0.7444,
+       0.9623
+      ],
+      [
+       0.7,
+       0.9528
+      ],
+      [
+       0.7056,
+       0.8962
+      ],
+      [
+       0.7389,
+       0.8726
+      ],
+      [
+       0.7778,
+       0.8679
+      ],
+      [
+       0.8611,
+       0.8679
+      ],
+      [
+       0.8833,
+       0.8302
+      ]
+     ],
+     [
+      [
+       -2.4167,
+       1.566
+      ],
+      [
+       -1.2944,
+       1.8491
+      ],
+      [
+       -1.1278,
+       1.4717
+      ],
+      [
+       -1.0833,
+       1.3019
+      ],
+      [
+       -1.0444,
+       1.2925
+      ],
+      [
+       -0.8611,
+       1.3679
+      ],
+      [
+       -0.75,
+       1.2925
+      ],
+      [
+       -0.5833,
+       1.2075
+      ],
+      [
+       -0.4722,
+       1.2075
+      ],
+      [
+       -0.3167,
+       1.1981
+      ],
+      [
+       -0.2056,
+       1.1604
+      ],
+      [
+       -0.1778,
+       1.2075
+      ],
+      [
+       -0.1389,
+       1.1887
+      ],
+      [
+       -0.1722,
+       1.2642
+      ],
+      [
+       -0.1333,
+       1.3585
+      ],
+      [
+       -0.1944,
+       1.4528
+      ],
+      [
+       -0.1444,
+       1.5566
+      ],
+      [
+       -0.0556,
+       1.5849
+      ],
+      [
+       0.0944,
+       1.6321
+      ],
+      [
+       0.1222,
+       1.717
+      ],
+      [
+       0.2778,
+       1.8208
+      ],
+      [
+       0.3611,
+       1.7642
+      ],
+      [
+       0.3611,
+       1.6604
+      ],
+      [
+       0.4167,
+       1.5849
+      ],
+      [
+       0.5222,
+       1.6038
+      ],
+      [
+       0.6389,
+       1.6887
+      ],
+      [
+       0.7778,
+       1.7358
+      ],
+      [
+       0.9111,
+       1.7358
+      ],
+      [
+       0.9833,
+       1.7075
+      ],
+      [
+       1.0444,
+       1.7358
+      ],
+      [
+       1.15,
+       1.7264
+      ],
+      [
+       1.1722,
+       1.6604
+      ],
+      [
+       1.2056,
+       1.566
+      ],
+      [
+       1.2444,
+       1.4245
+      ],
+      [
+       1.2389,
+       1.3302
+      ],
+      [
+       1.2444,
+       1.2264
+      ],
+      [
+       2.5833,
+       1.2264
+      ],
+      [
+       2.5833,
+       5.6226
+      ],
+      [
+       -2.4167,
+       5.6226
+      ]
+     ],
+     [
+      [
+       -0.0611,
+       1.0849
+      ],
+      [
+       -0.0056,
+       1.0755
+      ],
+      [
+       0.1167,
+       1.066
+      ],
+      [
+       0.0889,
+       1.1604
+      ],
+      [
+       0.0889,
+       1.217
+      ],
+      [
+       0.0444,
+       1.1887
+      ],
+      [
+       -0.0611,
+       1.1132
+      ]
+     ]
+    ],
+    "coast": [
+     [
+      0.0278,
+      0.1274
+     ],
+     [
+      0.1594,
+      0.1311
+     ],
+     [
+      0.2,
+      0.1377
+     ],
+     [
+      0.25,
+      0.1698
+     ],
+     [
+      0.3,
+      0.1698
+     ],
+     [
+      0.3078,
+      0.1981
+     ],
+     [
+      0.3,
+      0.3208
+     ],
+     [
+      0.3167,
+      0.3774
+     ],
+     [
+      0.3528,
+      0.4104
+     ],
+     [
+      0.3867,
+      0.4509
+     ],
+     [
+      0.4389,
+      0.4623
+     ],
+     [
+      0.5,
+      0.4717
+     ],
+     [
+      0.55,
+      0.5425
+     ],
+     [
+      0.6111,
+      0.5566
+     ],
+     [
+      0.6944,
+      0.5377
+     ],
+     [
+      0.7778,
+      0.5189
+     ],
+     [
+      0.8111,
+      0.4811
+     ],
+     [
+      0.8222,
+      0.4057
+     ],
+     [
+      0.8944,
+      0.4151
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Karadeniz",
+      "x": 0.83,
+      "y": 0.5,
+      "size": 46
+     },
+     {
+      "name": "Tuna",
+      "x": 0.5,
+      "y": 0.51,
+      "size": 46
+     }
+    ],
+    "cities": [
+     {
+      "name": "İstanbul",
+      "x": 0.8594,
+      "y": 0.8104,
+      "dx": -10,
+      "dy": 70,
+      "anchor": "middle",
+      "at": "city"
+     },
+     {
+      "name": "Edirne",
+      "x": 0.7256,
+      "y": 0.7472,
+      "dx": 0,
+      "dy": 62,
+      "anchor": "middle",
+      "at": "route",
+      "size": 48
+     },
+     {
+      "name": "Sofya",
+      "x": 0.5456,
+      "y": 0.6509,
+      "dx": -20,
+      "dy": -26,
+      "anchor": "end",
+      "at": "route",
+      "size": 48
+     },
+     {
+      "name": "Belgrad",
+      "x": 0.3867,
+      "y": 0.4528,
+      "dx": -24,
+      "dy": 8,
+      "anchor": "end",
+      "at": "route"
+     },
+     {
+      "name": "Buda",
+      "x": 0.3078,
+      "y": 0.1981,
+      "dx": 30,
+      "dy": 50,
+      "anchor": "start",
+      "at": "route"
+     },
+     {
+      "name": "Viyana",
+      "x": 0.1594,
+      "y": 0.1311,
+      "dx": 24,
+      "dy": 56,
+      "anchor": "start",
+      "color": "red",
+      "at": "city"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.8594,
+       0.8104
+      ],
+      [
+       0.7256,
+       0.7472
+      ],
+      [
+       0.5456,
+       0.6509
+      ],
+      [
+       0.3867,
+       0.4528
+      ],
+      [
+       0.3389,
+       0.3113
+      ],
+      [
+       0.3078,
+       0.1981
+      ],
+      [
+       0.1594,
+       0.1311
+      ]
+     ],
+     "at": "route",
+     "dur": 2.2,
+     "color": "red"
+    },
+    "note": {
+     "text": "10 Mayıs 1529",
+     "x": 0.05,
+     "y": 0.92,
+     "at": "note"
+    },
+    "focus": [
+     0.5,
+     0.55
+    ],
+    "zoom": 1.08,
+    "compass": "tr"
+   }
+  },
+  {
+   "type": "mudsiege",
+   "text": "Ama yağmur hiç dinmedi. Nehirler taştı, yollar çamura döndü.",
+   "visual": "Sağanakta sancaklı sarıklı asker kolu tepelerin önünden ağır ağır yürüyor; kıvrılarak gelen nehir 'taştı'da kabarıp kıyılarından taşıyor; 'çamura'da tekerlek izleri ve su birikintileri büyüyor, kırmızı el yazısı 'Yollar çamur!'; önde Kaşif dürbünle bakıp 'taştı'da şaşırıyor.",
+   "title": {
+    "white": "Yağmur",
+    "gray": "aylarca"
+   },
+   "cues": {
+    "rise": "taştı",
+    "mud": "çamura"
+   },
+   "params": {
+    "rain": true,
+    "heavy": 1.4,
+    "river": {
+     "x0": 0,
+     "x1": 0.5,
+     "rise": "rise"
+    },
+    "mud": "mud",
+    "column": {
+     "n": 7,
+     "y": 0.365,
+     "scale": 0.24,
+     "dir": 1,
+     "speed": 26
+    },
+    "label": {
+     "text": "Yollar çamur!",
+     "x": 0.5,
+     "y": 0.2,
+     "at": "mud",
+     "color": "red"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.72,
+      "pose": "look",
+      "face": "left",
+      "at": "rise",
+      "then": "shock",
+      "scale": 0.95
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.4,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "mudsiege",
+   "text": "Ya kale yıkan dev toplar? Düşünün, çamura saplanıp yolda kaldılar.",
+   "visual": "Yakın plan: dev bronz kuşatma topu tekerlekleri dönerek soldan ilerliyor, yanında sarıklı bir asker yürüyor; 'saplanıp'ta top çamura gömülüp yana yatıyor, çamur sıçrıyor, kamera sarsılıyor, asker omuz silkiyor; sağda Kaşif topu gösterirken şokla geri sıçrıyor; kırmızı el yazısı 'Saplandı!'.",
+   "title": {
+    "white": "Dev toplar",
+    "gray": "çamurda"
+   },
+   "cues": {
+    "top": "toplar",
+    "sink": "saplanıp"
+   },
+   "params": {
+    "rain": true,
+    "heavy": 1.1,
+    "city": false,
+    "cannon": {
+     "x": 0.12,
+     "to": 0.4,
+     "scale": 1.2,
+     "sink": "sink",
+     "depth": 0.4,
+     "tilt": -12
+    },
+    "label": {
+     "text": "Saplandı!",
+     "x": 0.42,
+     "y": 0.2,
+     "at": "sink",
+     "color": "red",
+     "size": 96
+    },
+    "cast": [
+     {
+      "who": "asker1",
+      "accessory": "turban",
+      "x": -0.1,
+      "to": 0.12,
+      "pose": "walk",
+      "face": "right",
+      "at": "sink",
+      "then": "shrug",
+      "emotion": "worried",
+      "scale": 0.8
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "pose": "point",
+      "dir": "left",
+      "face": "left",
+      "at": "sink",
+      "then": "shock",
+      "scale": 0.95
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.42,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Ordu Viyana'ya ancak Eylül sonunda,",
+   "visual": "Dikey zaman çizelgesi: '10 Mayıs · İstanbul'dan çıkış', ortada '4,5 ay · yağmur ve çamur', altta kırmızı '27 Eylül · Viyana önünde'; kırmızı işaret aşağı kayıyor; sağda Kaşif önce düşünüyor, 'Eylül'de endişeyle işaret ediyor.",
+   "title": {
+    "white": "Eylül",
+    "gray": "sonu"
+   },
+   "cues": {
+    "c0": "Ordu",
+    "c1": "ancak",
+    "c2": "Eylül"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "10 Mayıs",
+      "text": "İstanbul'dan çıkış",
+      "at": "c0"
+     },
+     {
+      "year": "4,5 ay",
+      "text": "yağmur ve çamur",
+      "at": "c1"
+     },
+     {
+      "year": "27 Eylül",
+      "text": "Viyana önünde",
+      "at": "c2"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.82,
+     "y": 0.6,
+     "pose0": "think",
+     "pose": "point",
+     "dir": -30,
+     "at": "c2",
+     "face": -1,
+     "scale": 0.62,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "mudsiege",
+   "text": "hafif toplarla vardı.",
+   "visual": "Viyana surunun dibi: solda küçük bir hafif top ateş ediyor, duman çıkıyor; gülle surlara çarpıp sekiyor ve çamura düşüyor, surda küçük bir çizik kalıyor, kırmızı el yazısı 'Tık!'; topun arkasında Kaşif surları gösterip 'vardı'da omuz silkiyor.",
+   "title": {
+    "white": "Elde",
+    "gray": "hafif toplar"
+   },
+   "cues": {
+    "fire": "hafif",
+    "shrug": "vardı"
+   },
+   "params": {
+    "rain": true,
+    "heavy": 0.5,
+    "city": false,
+    "wall": {
+     "x": 0.62
+    },
+    "cannon": {
+     "x": 0.3,
+     "scale": 0.55,
+     "fire": "fire",
+     "tilt": 0
+    },
+    "label": {
+     "text": "Tık!",
+     "x": 0.5,
+     "y": 0.27,
+     "at": 0.6,
+     "color": "red",
+     "size": 96
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "pose": "point",
+      "dir": "right",
+      "face": "right",
+      "at": "shrug",
+      "then": "shrug",
+      "then_emotion": "worried",
+      "scale": 0.95
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "siegetunnel",
+   "text": "Askerler surların altına tünel kazdı, ama savunanlar karşı tünelle direndi.",
+   "visual": "Toprak kesiti: üstte solda sancaklı Osmanlı çadırı, sağda Viyana surları; yerin altında sarıklı kazıcı surlara doğru tünel açıyor ('lağım'); 'savunanlar'da surların altından miğferli kazıcı karşı tünel kazıyor ('karşı lağım'); 'direndi'de tüneller buluşup kırmızı patlama; yüzeyde Kaşif aşağıyı gösterip şokla geri sıçrıyor.",
+   "title": {
+    "white": "Lağım",
+    "gray": "ve karşı lağım"
+   },
+   "cues": {
+    "dig": "Askerler",
+    "counter": "savunanlar",
+    "meet": "direndi"
+   },
+   "params": {
+    "dig": "dig",
+    "counter": "counter",
+    "meet": "meet",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "pose": "point",
+      "dir": "down",
+      "face": "right",
+      "at": "counter",
+      "then": "shock",
+      "scale": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "mudsiege",
+   "text": "Kış kapıdaydı, erzak tükeniyordu.",
+   "visual": "Ordugâhta kar yağmaya başlıyor, uzakta Viyana surları; sarıklı bir asker elindeki tek ekmeğe bakıyor; kırmızı el yazısı 'Erzak azaldı'; Kaşif üşüyerek kollarını sarıyor, 'erzak'ta endişeyle omuz silkiyor.",
+   "title": {
+    "white": "Kış",
+    "gray": "ve kıtlık"
+   },
+   "cues": {
+    "snow": "Kış",
+    "food": "erzak"
+   },
+   "params": {
+    "rain": false,
+    "snow": "snow",
+    "city": {
+     "x": 0.78,
+     "scale": 0.85
+    },
+    "label": {
+     "text": "Erzak azaldı",
+     "x": 0.5,
+     "y": 0.22,
+     "at": "food",
+     "color": "red"
+    },
+    "cast": [
+     {
+      "who": "asker",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.3,
+      "pose": "hold",
+      "item": "bread",
+      "face": "right",
+      "at": "food",
+      "then": "shrug",
+      "emotion": "worried",
+      "scale": 0.95
+     },
+     {
+      "who": "kasif",
+      "x": 0.7,
+      "pose": "think",
+      "face": "left",
+      "at": "food",
+      "then": "shrug",
+      "then_emotion": "worried",
+      "scale": 0.95
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ekim ortasında Kanuni geri dönme kararı verdi.",
+   "visual": "Arkada ince Viyana silueti; sarıklı, sakallı Kanuni Sultan Süleyman düşünüyor, 'kararı'nda kararlı yüzle geriyi (solu) işaret ediyor; el yazısı 'Geri dönüş · Ekim 1529' beliriyor; Kaşif dürbünle bakıp şaşkınlıkla geri sıçrıyor.",
+   "title": {
+    "white": "Ekim",
+    "gray": "Kanuni'nin kararı"
+   },
+   "cues": {
+    "hit": "kararı"
+   },
+   "params": {
+    "foreground": "hatch",
+    "depth": {
+     "far": "city",
+     "sky": {
+      "clouds": 2
+     }
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    },
+    "label": {
+     "text": "Geri dönüş · Ekim 1529",
+     "y": 0.2,
+     "at": "hit",
+     "size": 80
+    },
+    "cast": [
+     {
+      "who": "kanuni",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.62,
+      "pose": "think",
+      "face": "left",
+      "talk": false,
+      "at": "hit",
+      "then": "point",
+      "dir": "left",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "look",
+      "face": "right",
+      "at": "hit",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani o yıl Viyana'yı en çok, hesapta olmayan yağmur korudu.",
+   "visual": "Dev yazı kelime kelime çarpıyor: 'EN ÇOK / YAĞMUR / KORUDU', 'YAĞMUR' kırmızı kutuda; el yazısı not 'Viyana, 1529'; sağ altta Kaşif yazıyı işaret ediyor.",
+   "title": {},
+   "cues": {
+    "w0": "en",
+    "w1": "çok",
+    "w2": "yağmur",
+    "w3": "korudu",
+    "note": "korudu"
+   },
+   "params": {
+    "lines": [
+     "En çok",
+     "yağmur",
+     "korudu"
+    ],
+    "highlight": [
+     "yağmur"
+    ],
+    "note": "Viyana, 1529",
+    "y": 0.33,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.62,
+     "pose": "point",
+     "dir": 50,
+     "at": "w2",
+     "face": -1,
+     "scale": 0.55,
+     "emotion": "happy"
+    }
+   }
+  }
+ ]
+}

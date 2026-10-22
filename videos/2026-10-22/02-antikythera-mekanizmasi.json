@@ -1,0 +1,527 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "antikythera-mekanizmasi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "2000 yıllık",
+      "bilgisayar"
+    ],
+    "highlight": [
+      "2000"
+    ],
+    "scene": 0,
+    "t": 2.6,
+    "kasif": {
+      "pose": "shock",
+      "emotion": "surprised",
+      "face": -1,
+      "scale": 1.45,
+      "x": 790,
+      "y": 1820
+    }
+  },
+  "youtube": {
+    "title": "Antikythera Mekanizması: 2000 Yıllık Bilgisayar ⚙️",
+    "description": "Antikythera mekanizması: denizin dibinden çıkan paslı bir topak, aslında 2000 yıllık bir bilgisayardı. Nasıl mı?\n\n1900'de süngerci dalgıçlar, Yunanistan'daki Antikythera adası açığında MÖ 1. yüzyıldan kalma bir batık buldu. Heykellerin arasından çıkan aşınmış bronz parçaların içinde, 1902'de bir dişli çark fark edildi. Bugüne 30 dişlisi ulaşan bu antik Yunan aleti, bir kol çevrildiğinde Güneş'in ve Ay'ın konumunu, Ay'ın evrelerini ve tutulmaları gösteriyordu. Bu kadar karmaşık bir dişli düzeneği, ancak bin yılı aşkın süre sonra orta çağ astronomik saatlerinde yeniden görüldü.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence bu bilgi neden kayboldu? Yorumlara yaz!\n\n#shorts #antikythera #antikyunan #tarih #düşünbakalım",
+    "tags": [
+      "antikythera mekanizması",
+      "antikythera",
+      "antikythera mechanism",
+      "dünyanın ilk bilgisayarı",
+      "2000 yıllık bilgisayar",
+      "antik bilgisayar",
+      "antik yunan icatları",
+      "antikythera batığı",
+      "güneş tutulması hesaplama",
+      "dişli çark tarihi",
+      "arkeoloji gizemleri",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-22T15:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "gears",
+      "text": "Bu pas yığını, iki bin yıllık bir bilgisayar.",
+      "visual": "Ortada yeşil pas lekeli, çatlak, iri bir bronz topak; içinde silik bir dişli izi; 'yığını'nda büyüteç kayarak gelir ve camın içinde iç içe geçmiş altın dişliler döner (kanca karesinde büyük, şaşkın Kaşif kapaktan gelir).",
+      "title": {},
+      "cues": {
+        "reveal": "yığını",
+        "hit": "bilgisayar"
+      },
+      "params": {
+        "mode": "lump",
+        "size": 0.95,
+        "x": 0.4,
+        "zoom": 1.1,
+        "y": 0.34
+      }
+    },
+    {
+      "type": "map",
+      "text": "Gelin anlatayım: 1900'de süngerci dalgıçlar,",
+      "visual": "Eski Akdeniz haritası Yunanistan ile Girit arasına yaklaşır; batıdan gelen kırmızı kesikli rota kırmızı halkalı 'Antikythera' noktasına ulaşır; el yazısı not '1900: süngerciler' belirir.",
+      "title": {
+        "white": "1900",
+        "gray": "Ege, Antikythera"
+      },
+      "cues": {
+        "city": "anlatayım",
+        "route": "1900",
+        "note": "dalgıç"
+      },
+      "params": {
+        "preset": "mediterranean",
+        "focus": [
+          23.6,
+          36.6
+        ],
+        "zoom": 1.9,
+        "compass": "tl",
+        "seas": [
+          {
+            "name": "Akdeniz",
+            "x": 20.6,
+            "y": 34.3
+          }
+        ],
+        "cities": [
+          {
+            "name": "Atina",
+            "x": 23.73,
+            "y": 37.98,
+            "at": "city",
+            "dy": -34
+          },
+          {
+            "name": "Antikythera",
+            "x": 23.3,
+            "y": 35.87,
+            "color": "red",
+            "at": "city",
+            "dx": -24,
+            "dy": -38,
+            "anchor": "end",
+            "size": 64
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              20.0,
+              36.7
+            ],
+            [
+              21.4,
+              36.35
+            ],
+            [
+              22.5,
+              36.0
+            ],
+            [
+              23.3,
+              35.87
+            ]
+          ],
+          "at": "route",
+          "dur": 1.4,
+          "color": "red"
+        },
+        "note": {
+          "text": "1900: süngerciler",
+          "x": 0.5,
+          "y": 0.9,
+          "at": "note"
+        }
+      }
+    },
+    {
+      "type": "wreck",
+      "text": "Antikythera açığında bir batık buldu.",
+      "visual": "Deniz kesiti: yüzeyde yelkenli bir sünger kayığı, kayıkta Kaşif aşağı bakar; miğferli bir dalgıç hortumuyla dibe iner; 'batık'ta dipte kırık gemi kaburgaları, yatık amforalar, bir mermer büst ve bir sütun tamburu çizilerek belirir, Kaşif aşağıyı işaret eder; el yazısı 'MÖ 1. yüzyıl'.",
+      "title": {
+        "white": "Batık",
+        "gray": "MÖ 1. yüzyıl"
+      },
+      "cues": {
+        "wreck": "batık"
+      },
+      "params": {
+        "mode": "dive",
+        "boat": {
+          "x": 0.7
+        },
+        "diver": {
+          "x": 0.3
+        },
+        "label": {
+          "text": "MÖ 1. yüzyıl",
+          "x": 0.3,
+          "y": 0.2,
+          "at": "wreck"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "ride": true,
+            "dx": -90,
+            "scale": 0.48,
+            "pose": "look",
+            "face": "left",
+            "at": "wreck",
+            "then": "point",
+            "dir": "down",
+            "emotion": "surprised"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wreck",
+      "text": "Heykellerin arasındaki topağı kimse umursamadı.",
+      "visual": "Deniz dibine yakın plan: mermer büst, yatık amforalar, sütun tamburu, kırık kaburgalar; önde küçük, yeşil pas lekeli bir topak; dalgıç ona uzanır; 'topağı'nda çevresine kırmızı mürekkep halka çizilir ve kırmızı 'kimse bakmadı' notu çıkar; sağda dipte duran Kaşif'in ağzından kabarcıklar çıkar, topağı işaret eder.",
+      "title": {
+        "white": "Heykeller",
+        "gray": "ve bir topak"
+      },
+      "cues": {
+        "k": "Heykellerin",
+        "find": "topağı"
+      },
+      "params": {
+        "mode": "floor",
+        "lump": {
+          "x": 0.52
+        },
+        "diver": {
+          "x": 0.24
+        },
+        "label": {
+          "text": "kimse bakmadı",
+          "x": 0.52,
+          "y": 0.27,
+          "at": "find",
+          "color": "red"
+        },
+        "bubbles": [
+          0
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "y": 0.5,
+            "scale": 0.5,
+            "pose": "look",
+            "face": "left",
+            "at": "find",
+            "then": "point",
+            "dir": "down",
+            "emotion": "surprised"
+          }
+        ]
+      }
+    },
+    {
+      "type": "gears",
+      "text": "Ta ki iki yıl sonra içinde bir dişli görülene kadar!",
+      "visual": "Atina müzesinde masada pas lekeli topak; solda sakallı müze görevlisi düşünür; '1902' notu belirir; 'dişli'de büyüteç topağın üstüne kayar, camın içinde altın dişliler döner, görevli şaşkınlıkla geri sıçrar, sağda Kaşif büyütece işaret eder.",
+      "title": {
+        "white": "1902",
+        "gray": "Atina müzesi"
+      },
+      "cues": {
+        "year": "yıl",
+        "reveal": "dişli"
+      },
+      "params": {
+        "mode": "lump",
+        "table": true,
+        "size": 0.8,
+        "y": 0.37,
+        "zoom": 1.06,
+        "label": {
+          "text": "1902",
+          "x": 0.5,
+          "y": 0.19,
+          "at": "year",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "gorevli",
+            "beard": "grey",
+            "x": 0.15,
+            "y": 0.6,
+            "scale": 0.72,
+            "pose": "think",
+            "face": "right",
+            "at": "reveal",
+            "then": "shock"
+          },
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "y": 0.6,
+            "scale": 0.72,
+            "pose": "idle",
+            "face": "left",
+            "at": "reveal",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "happy"
+          }
+        ],
+        "table_w": 1.15,
+        "table_h": 120
+      }
+    },
+    {
+      "type": "title",
+      "text": "Ve bugüne otuz dişli ulaştı.",
+      "visual": "Dev yazı kelime kelime çarpar: '30 / dişli', '30' kırmızı kutuda; el yazısı not 'bugüne ulaşan'; solda büyük Kaşif şaşkınlıkla sayıyı işaret eder.",
+      "title": {
+        "white": "Sağlam",
+        "gray": "kalanlar"
+      },
+      "cues": {
+        "w0": "otuz",
+        "w1": "dişli",
+        "note": "ulaştı"
+      },
+      "params": {
+        "lines": [
+          "30",
+          "dişli"
+        ],
+        "highlight": [
+          "30"
+        ],
+        "note": "bugüne ulaşan",
+        "y": 0.27,
+        "kasif": {
+          "x": 0.09,
+          "y": 0.64,
+          "pose": "point",
+          "dir": 45,
+          "face": 1,
+          "scale": 0.64,
+          "at": "w0",
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "gears",
+      "text": "Bir kolu çevirdiğinizde, Güneş'in ve Ay'ın yerini,",
+      "visual": "Açık ahşap kasada iç içe dönen dört bronz dişli; önde Kaşif büyük çarkın kolunu tutup ileri geri itiyor, bütün dişliler oranlarıyla dönüyor, kamera çarklara yaklaşıyor; 'Güneş'te büyük çarkta altın güneş ibresi, 'Ay'da orta çarkta büyük, evresi değişen ay topu belirir.",
+      "title": {
+        "white": "Bir kol",
+        "gray": "çevir"
+      },
+      "cues": {
+        "sun": "Güneş",
+        "moon": "Ay'ın"
+      },
+      "params": {
+        "mode": "machine",
+        "zoom": 1.06,
+        "focus": [
+          0.36,
+          0.5
+        ],
+        "box": [
+          30,
+          330,
+          800,
+          600
+        ],
+        "shift": [
+          -40,
+          -10
+        ],
+        "drive": 0,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.45,
+            "y": 0.6,
+            "scale": 0.85,
+            "face": "left",
+            "dir_base": 48,
+            "emotion": "happy"
+          }
+        ]
+      }
+    },
+    {
+      "type": "dial",
+      "text": "hatta tutulmaları gösterirdi.",
+      "visual": "Mekanizmanın ön kadranı: burç halkası ve çentikler; arkada dönen dişliler; ay ibresi halkada ilerleyip güneş ibresinin üstüne biner; 'tutulma'da güneş kararır, etrafında altın taç alevleri parlar; solda Kaşif şaşkınlıkla geri sıçrar.",
+      "title": {
+        "white": "Tutulma",
+        "gray": "hesabı"
+      },
+      "cues": {
+        "eclipse": "tutulma"
+      },
+      "params": {
+        "zoom": 1.05,
+        "label": {
+          "text": "Tutulma!",
+          "x": 0.62,
+          "y": 0.165,
+          "at": "eclipse",
+          "color": "red",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.13,
+            "y": 0.6,
+            "scale": 0.66,
+            "pose": "look",
+            "face": "right",
+            "at": "eclipse",
+            "then": "shock"
+          }
+        ]
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Asıl şok şu: böyle dişliler ancak orta çağda yeniden görüldü.",
+      "visual": "Dikey zaman çizgisi: üstte 'MÖ 1. yy · Antikythera', çok aşağıda kırmızı halkalı '1300'ler · astronomik saat'; işaretçi aradaki uzun yolu iner; sağda Kaşif şaşkınlıkla aşağıdaki tarihi işaret eder.",
+      "title": {
+        "white": "Bin yıl",
+        "gray": "boşluk"
+      },
+      "cues": {
+        "a": "şok",
+        "b": "orta"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "MÖ 1. yy",
+            "text": "Antikythera",
+            "at": "a"
+          },
+          {
+            "year": "1300'ler",
+            "text": "astronomik saat",
+            "at": "b"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.84,
+          "y": 0.6,
+          "pose": "point",
+          "dir": -20,
+          "face": -1,
+          "scale": 0.62,
+          "at": "b",
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "labbench",
+      "text": "Yani bilinen en eski bilgisayar laboratuvardan değil,",
+      "visual": "Laboratuvar tezgâhı: raf dolu şişeler, mikroskop, ispirto ocağı; 'laboratuvar'da kırmızı el yazısı 'Laboratuvar? Hayır!' çıkar; Kaşif tezgâhın önünde omuz silker.",
+      "title": {
+        "white": "Peki",
+        "gray": "nereden?"
+      },
+      "cues": {
+        "no": "laboratuvar"
+      },
+      "params": {
+        "door": false,
+        "stack": 0,
+        "flask": false,
+        "microscope": true,
+        "burner": true,
+        "label": {
+          "text": "Laboratuvar? Hayır!",
+          "y": 0.2,
+          "at": "no",
+          "color": "red",
+          "size": 84
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "pose": "talk",
+            "face": "right",
+            "at": "no",
+            "then": "shrug",
+            "emotion": "happy",
+            "scale": 0.95
+          }
+        ]
+      }
+    },
+    {
+      "type": "wreck",
+      "text": "denizin dibinden çıktı.",
+      "visual": "Deniz dibi yakın plan: büst, amforalar, kaburgalar; önde pas lekeli topak, 'dibinden'de çevresine kırmızı halka çizilir ve 'en eski bilgisayar' notu çıkar; sağda dipteki Kaşif kabarcıklar içinde topağı işaret eder.",
+      "title": {},
+      "cues": {
+        "find": "dibinden"
+      },
+      "params": {
+        "mode": "floor",
+        "lump": {
+          "x": 0.52
+        },
+        "diver": {
+          "x": 0.24
+        },
+        "bubbles": [
+          0
+        ],
+        "label": {
+          "text": "en eski bilgisayar",
+          "x": 0.5,
+          "y": 0.25,
+          "at": "find",
+          "color": "red",
+          "size": 80
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "y": 0.5,
+            "scale": 0.56,
+            "pose": "idle",
+            "face": "left",
+            "at": "find",
+            "then": "point",
+            "dir": "down",
+            "emotion": "happy"
+          }
+        ]
+      }
+    }
+  ]
+}
