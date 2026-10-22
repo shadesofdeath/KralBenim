@@ -33,20 +33,26 @@
     o.r.setAttribute('d', d);
   }
   // flame band: tail at x0, jagged tongues leading at x1 (moving right), between yT and yB
-  function flame(x0, x1, yT, yB, t, sd, inner) {
-    // a front of separate flame tongues: leaning forward (+x), flickering at the boil rate
-    if (x1 - x0 < 10) return '';
-    const n = inner ? 6 : 9, out = [];
-    for (let k = 0; k < n; k++) {
-      const r = rng(inkHash(sd + k * 13, inkFrame(t))), r0 = rng(sd + k * 7);
-      const u = (k + 0.5) / n, y = lerp(yB, yT, u * 0.85) + (r() - 0.5) * 20;
-      const x = lerp(x0, x1, 0.45 + 0.55 * r0()) - (inner ? 40 : 0);
-      const h = (inner ? 70 : 130) * (0.7 + r() * 0.6), w = (inner ? 26 : 46) * (0.8 + r0() * 0.5);
-      out.push(inkLoop([[x - w, y + h * 0.3], [x - w * 0.6, y - h * 0.3], [x + w * 0.2, y - h * 0.7], [x + w * 1.6, y - h * 1.05], [x + w * 0.9, y - h * 0.35], [x + w, y + h * 0.2], [x, y + h * 0.42]], { seed: sd + k, t, amp: 2.5 }));
+  // flame front: rows of separate tongues (teardrops leaning forward) across [x0, x1] x [yT, yB]; the
+  // tongues are tallest at the leading edge x1 and die down towards the tail x0. Returns {fill, line, core}.
+  function flame(x0, x1, yT, yB, t, sd) {
+    const res = { fill: '', line: '', core: '' };
+    if (x1 - x0 < 10) return res;
+    const rows = Math.max(1, Math.round((yB - yT) / 110));
+    for (let rI = 0; rI < rows; rI++) {
+      const y = lerp(yB, yT, (rI + 0.7) / rows);
+      for (let x = x1; x > x0; x -= 74) {
+        const k = 1 - (x1 - x) / Math.max(1, x1 - x0);           // 1 at the front, 0 at the tail
+        const r = rng(inkHash(sd + rI * 31 + Math.round(x / 74), inkFrame(t)));
+        const h = (40 + 90 * k) * (0.75 + r() * 0.5), w = 18 + 16 * k, xx = x + (rI % 2 ? 30 : 0);
+        const pts = [[xx - w, y], [xx - w * 0.9, y - h * 0.45], [xx - w * 0.1, y - h * 0.8], [xx + w * 1.1, y - h * 1.1 - r() * 14], [xx + w * 0.7, y - h * 0.4], [xx + w, y]];
+        const o = { seed: sd + rI * 101 + Math.round(x), t, amp: 2 };
+        res.fill += inkLoop(pts, o) + ' ';
+        res.line += inkPath(pts, Object.assign({ w: 3.5, closed: true }, o)) + ' ';
+        if (k > 0.4) res.core += inkLoop(pts.map(([px, py]) => [xx + (px - xx) * 0.45, y + (py - y) * 0.5]), o) + ' ';
+      }
     }
-    // low glowing band behind the tongues
-    if (!inner) out.push(inkLoop([[x0, yB], [x1 - 60, yB - 20], [x1, lerp(yB, yT, 0.5)], [x1 - 60, yT + 20], [x0, yT + 40]], { seed: sd + 99, t, amp: 3 }));
-    return out.join(' ');
+    return res;
   }
   const camShake = (P, cues, lt, atOr) => { let s = 0; (P.shake || []).forEach(c => { const a = atOr(cues, c, null); if (a != null && lt >= a && lt < a + 0.7) s = Math.max(s, 1 - (lt - a) / 0.7); }); return s; };
 
@@ -78,7 +84,7 @@
       const nE = P.empty ? Math.min(bars.length, P.empty.count ?? 9) : 0, emptyIdx = new Set();
       { const r = rng(sd + 5); while (emptyIdx.size < nE) emptyIdx.add(Math.floor(r() * bars.length)); }
       const wisps = Array.from({ length: 16 }, () => inkEl(inner, INK.inkSoft, { 'fill-opacity': 0.9 }));
-      const fl = { o: inkEl(inner, INK.blue, { 'fill-opacity': 0.6 }), i: inkEl(inner, INK.paperLight, { 'fill-opacity': 0.85 }), r: inkEl(inner, INK.blue) };
+      const fl = { o: inkEl(inner, INK.blue, { 'fill-opacity': 0.6 }), i: inkEl(inner, INK.paperLight, { 'fill-opacity': 0.9 }), r: inkEl(inner, INK.blue) };
       const hullR = inkEl(cam), deck = inkEl(cam, INK.paperDark), deckR = inkEl(cam), masts = inkEl(cam), hatch = inkEl(cam, INK.hat), hatchR = inkEl(cam);
       const pump = { f: inkEl(cam, INK.paperDark), r: inkEl(cam) };
       const cs = cast(el(cam, 'g'), P.cast, W, H, sd + 200);
@@ -136,11 +142,9 @@
             w.setAttribute('d', inkPath([[x, y + 50], [x + 18, y + 25], [x - 6, y], [x + 14, y - 30]], { w: 6, seed: sd + 520 + i, t, amp: 1.5 }));
           });
           if (flA != null && lt >= flA && lt < flA + flD + 0.4) {
-            const x1 = Math.min(front, X1 + 300), x0 = Math.max(X0, x1 - 460);
-            fl.o.setAttribute('d', flame(x0, x1, DY + 30, FL + 20, t, sd + 600, false));
-            fl.i.setAttribute('d', flame(x0, x1, DY + 60, FL - 20, t, sd + 640, true));
-            fl.r.setAttribute('d', '');
-          } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); }
+            const x1 = Math.min(front, X1 + 300), x0 = Math.max(X0, x1 - 520), F = flame(x0, x1, DY + 40, FL + 10, t, sd + 600);
+            fl.o.setAttribute('d', F.fill); fl.i.setAttribute('d', F.core); fl.r.setAttribute('d', F.line);
+          } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); fl.r.setAttribute('d', ''); }
           // hull outline, deck, masts, hatch
           hullR.setAttribute('d', inkPath(hull, { w: 8, seed: sd + 2, t, amp: 1.3 }) + ' ' + inkPath([[X0 - 20, DY - 50], [X1 + 20, DY - 62]], { w: 5, seed: sd + 3, t, amp: 1.2 }));
           const dp = [[X0 - 20, DY - 14], [X1 + 20, DY - 26], [X1 + 20, DY + 4], [X0 - 20, DY + 14]];
@@ -240,7 +244,9 @@
       const boxF = inkEl(cam, INK.paperLight, { 'fill-opacity': 0.55 }), gas = inkEl(cam, INK.stain, { 'fill-opacity': 0 });
       const cubes = Array.from({ length: 12 }, (_, i) => ({ f: inkEl(cam, INK.paperLight), r: inkEl(cam) }));
       const wisps = Array.from({ length: 10 }, () => inkEl(cam, INK.inkSoft, { 'fill-opacity': 0.8 }));
-      const fl = { o: inkEl(cam, INK.blue, { 'fill-opacity': 0.75 }), i: inkEl(cam, INK.paperLight, { 'fill-opacity': 0.85 }) };
+      const clipId = 'mcblab' + seed, cpp = el(el(el(svg, 'defs'), 'clipPath', { id: clipId }), 'rect', { x: BX0 + 4, y: BT + 4, width: BX1 - BX0 - 8, height: BB - BT - 8 });
+      const flG = el(cam, 'g', { 'clip-path': `url(#${clipId})` });
+      const fl = { o: inkEl(flG, INK.blue, { 'fill-opacity': 0.6 }), i: inkEl(flG, INK.paperLight, { 'fill-opacity': 0.9 }), r: inkEl(flG, INK.blue) };
       const boxR = inkEl(cam), lid = inkEl(cam, INK.paperLight), lidR = inkEl(cam);
       const ign = { s: inkEl(cam), fl: inkEl(cam, INK.gold), sp: inkEl(cam, INK.red) };
       const cs = cast(el(cam, 'g'), P.cast, W, H, sd + 200);
@@ -270,9 +276,9 @@
             w.setAttribute('d', inkPath([[x, y + 40], [x + 14, y + 20], [x - 6, y], [x + 10, y - 22]], { w: 3.5, seed: sd + 90 + i, t, amp: 1.4 })); });
           if (wa != null && lt >= wa && lt < wa + WD + 0.3) {
             const x1 = Math.min(front, BX1 - 4), x0 = Math.max(BX0 + 4, x1 - 420);
-            fl.o.setAttribute('d', front < BX1 + 280 ? flame(x0, x1, BT + 16, BB - 8, t, sd + 600, false) : '');
-            fl.i.setAttribute('d', front < BX1 + 280 ? flame(x0 + 30, x1, BT + 80, BB - 40, t, sd + 640, true) : '');
-          } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); }
+            const F = front < BX1 + 280 ? flame(x0, x1, BT + 30, BB - 6, t, sd + 600) : { fill: '', line: '', core: '' };
+            fl.o.setAttribute('d', F.fill); fl.i.setAttribute('d', F.core); fl.r.setAttribute('d', F.line);
+          } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); fl.r.setAttribute('d', ''); }
           boxR.setAttribute('d', inkPath(box, { w: 6, seed: sd + 22, t, amp: 1.2, closed: true, smooth: false }));
           const jump = wa != null && lt >= wa + WD * 0.75 ? Math.max(0, Math.sin(Math.min(Math.PI, (lt - wa - WD * 0.75) * 5))) * 50 : 0;
           const lp = [[BX0 - 20, BT - 24 - jump], [BX1 + 20, BT - 24 - jump * 1.2], [BX1 + 20, BT - jump * 1.2], [BX0 - 20, BT - jump]];
