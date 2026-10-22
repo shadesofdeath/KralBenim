@@ -547,7 +547,9 @@
         ink(mg, pts, { width: 3, stroke: C.inkSoft, opacity: 0.7, amp: 1 });
       }
       for (const sl of (P.seas || pre.seas || [])) {
-        const t = txt(mg, sl.name, PX([sl.x, sl.y])[0], PX([sl.x, sl.y])[1], sl.size || 50, PH, { fill: C.inkSoft, 'letter-spacing': '0.08em', opacity: 0.9 });
+        const SEA_EN = { 'Akdeniz': 'Mediterranean Sea', 'Karadeniz': 'Black Sea', 'Napoli Körfezi': 'Bay of Naples', 'Atlas Okyanusu': 'Atlantic Ocean' };
+        const nm = LOCALE === 'en-US' ? (SEA_EN[sl.name] || sl.name) : sl.name;   // preset names are Turkish
+        const t = txt(mg, nm, PX([sl.x, sl.y])[0], PX([sl.x, sl.y])[1], sl.size || 50, PH, { fill: C.inkSoft, 'letter-spacing': '0.08em', opacity: 0.9 });
         fit(t, S.w * 0.5, 44);
       }
       // mountains / volcano
@@ -609,7 +611,7 @@
           ink(compass, [l, tip, [ccx, ccy]], { closed: true, fill: q % 2 ? C.paperDark : C.ink, stroke: C.ink, width: 2.5, amp: 0.8 });
           ink(compass, [[ccx, ccy], tip, r2], { closed: true, fill: q % 2 ? C.paperLight : C.paperDark, stroke: C.ink, width: 2.5, amp: 0.8 });
         }
-        txt(compass, 'K', ccx, ccy - R - 12, 44, FR, { 'font-weight': 800 });
+        txt(compass, LOCALE === 'en-US' ? 'N' : 'K', ccx, ccy - R - 12, 44, FR, { 'font-weight': 800 });
         compass.cx = ccx; compass.cy = ccy;
       }
       // note card
