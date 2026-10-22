@@ -108,8 +108,19 @@ jobs:
         with:
           python-version: "3.12"
       - name: System packages
-        # a runner's apt mirror sometimes hangs for good: time-box each try and retry
-        run: for i in 1 2 3; do sudo timeout 240 apt-get update && sudo timeout 300 apt-get install -y ffmpeg && exit 0; echo "apt retry $i"; sleep 10; done; exit 1
+        # ffmpeg: a static build from GitHub releases (fast on Actions); apt only as fallback, because a
+        # runner's Azure apt mirror sometimes crawls at ~100 KB/s and stalls a render for good
+        run: |
+          set -u
+          for i in 1 2 3; do
+            if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
+                https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+               && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
+              ffmpeg -version | head -1 && exit 0
+            fi
+            echo "static ffmpeg retry $i"; sleep 5
+          done
+          sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
       - name: Python packages
         run: pip install -r requirements.txt
       - name: Names
@@ -190,8 +201,19 @@ jobs:
         with:
           python-version: "3.12"
       - name: System packages
-        # a runner's apt mirror sometimes hangs for good: time-box each try and retry
-        run: for i in 1 2 3; do sudo timeout 240 apt-get update && sudo timeout 300 apt-get install -y ffmpeg fonts-inter && exit 0; echo "apt retry $i"; sleep 10; done; exit 1
+        # ffmpeg: a static build from GitHub releases (fast on Actions); apt only as fallback, because a
+        # runner's Azure apt mirror sometimes crawls at ~100 KB/s and stalls a render for good
+        run: |
+          set -u
+          for i in 1 2 3; do
+            if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
+                https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+               && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
+              ffmpeg -version | head -1 && exit 0
+            fi
+            echo "static ffmpeg retry $i"; sleep 5
+          done
+          sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
       - name: Python packages
         run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
       - uses: actions/download-artifact@v4
@@ -236,8 +258,19 @@ jobs:
         with:
           python-version: "3.12"
       - name: System packages
-        # a runner's apt mirror sometimes hangs for good: time-box each try and retry
-        run: for i in 1 2 3; do sudo timeout 240 apt-get update && sudo timeout 300 apt-get install -y ffmpeg fonts-inter && exit 0; echo "apt retry $i"; sleep 10; done; exit 1
+        # ffmpeg: a static build from GitHub releases (fast on Actions); apt only as fallback, because a
+        # runner's Azure apt mirror sometimes crawls at ~100 KB/s and stalls a render for good
+        run: |
+          set -u
+          for i in 1 2 3; do
+            if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
+                https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+               && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
+              ffmpeg -version | head -1 && exit 0
+            fi
+            echo "static ffmpeg retry $i"; sleep 5
+          done
+          sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
       - name: Python packages
         run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
       - name: Names
