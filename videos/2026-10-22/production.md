@@ -724,3 +724,68 @@ Kuşbakışı parşömen savaş alanı (Malazgirt ovası, tepeler, Bizans kampı
 2. Sahne 64/65 boş panel ve taşma → yeni ag03c_compare, üç tabela.
 3. Savaş şemalarında anlatıcı çok küçük → ~2× büyütüldü; tepe halkaları kicker'dan uzaklaştırıldı; sahne 44/47/54/16 düzeltildi.
 Kalan küçük kusur: sahne 64'te pano kicker'a değiyor.
+
+---
+
+# EK VİDEOLAR — Anlatayım Gel global (İngilizce) ilk bölümler (2026-10-22 akşam)
+
+Kanal sahibinin isteği: Anlatayım Gel artık global ve İngilizce; bir Shorts + bir uzun video, SEO 100/100.
+
+## ag-04-dancing-plague (Short, extra) — category: history's strangest moments
+- **Konu:** 1518 Strazburg dans vebası. Frau Troffea sokakta dans etmeye başladı; haftalar içinde onlarca
+  (bazı kaynaklara göre yüzlerce) kişi katıldı. Yetkililer "sıcak kan" dedi, sahne kurdu, müzisyen tuttu: daha kötü oldu.
+- **İzleyici sonunda ne hisseder:** "Tedavi diye seçtikleri şey hastalığın ta kendisiydi."
+- **Kanca + kapak:** "In 1518, a whole town couldn't stop dancing." ↔ kapak "A TOWN COULDN'T STOP DANCING" (vurgu DANCING ya da STOP).
+- Çekim listesi ve anlatım metni: yazar ajan aşağıya ekler.
+
+## ag-05-mary-celeste (long, extra) — category: unsolved mysteries
+- **Konu:** 4 Aralık 1872, Azorlar ile Portekiz arası: Dei Gratia mürettebatı Mary Celeste'i boş buldu. Kaptan
+  Benjamin Briggs, eşi Sarah, kızı Sophia ve 7 denizci yok; filika eksik, yük (1.701 varil alkol) neredeyse sağlam.
+  Cebelitarık kurtarma duruşması (Frederick Solly-Flood şüphesi), Conan Doyle'un 1884 öyküsünün yarattığı efsaneler,
+  teoriler (alkol buharı, pompa/sızıntı korkusu, kronometre hatası), geminin 1885'te Haiti'de sigorta için batırılması.
+- **İzleyici sonunda ne hisseder:** "En korkutucu olan canavar değil, küçük bir yanlış karar."
+- **Kanca + kapak:** "THE SHIP WITH NO CREW" (vurgu CREW), Kaşif şokta, boş gemi.
+- Anlatım metni ve bölüm çekim listeleri: yazar ve bölüm ajanları aşağıya ekler.
+
+### Anlatım metni (yazar ajan, İngilizce; 7565 karakter, 75 sahne)
+
+**Bölümler:**
+1. The Empty Ship (10 sahne)
+2. The Captain's Family (10 sahne)
+3. Boarding the Ghost (13 sahne)
+4. Trial in Gibraltar (10 sahne)
+5. Doyle's Famous Lie (8 sahne)
+6. So What Happened? (15 sahne)
+7. A Cursed Afterlife (9 sahne)
+
+Sahne sahne bölünmüş hâli: `_parts/ag-05-narration.md` (satır başına bir sahne). Kapak + YouTube önerisi: `_parts/ag-05-youtube.json`.
+
+**Tam metin:**
+
+*CHAPTER 1: The Empty Ship*
+
+Imagine you find a ship in the middle of the ocean, sails up, cargo aboard, and not a single person on it. That really happened, in December 1872. Let me tell you the strangest sea story I know. The Atlantic, somewhere between the Azores and Portugal. A small British brigantine called the Dei Gratia was heading east. Her captain, David Morehouse, spotted another ship ahead, and something about it felt wrong. She was moving, but badly. Her sails were half set, some of them torn, and she wandered as if nobody held the wheel. They signalled. No answer. They shouted across the water. Still nothing. Her name was painted on the stern: Mary Celeste. So Morehouse sent his first mate, Oliver Deveau, over in a small boat to take a look. What Deveau found on that deck would puzzle the whole world for the next hundred and fifty years. But to understand why it was so frightening, we need to go back one month, to New York.
+
+*CHAPTER 2: The Captain's Family*
+
+On the seventh of November 1872, the Mary Celeste left New York for Genoa, in Italy. In her hold sat 1,701 barrels of alcohol. Not the kind you drink, but industrial alcohol, raw and highly flammable. Her captain was Benjamin Briggs, thirty-seven years old, a careful and experienced sailor from Massachusetts. By all accounts he was a serious man, deeply religious, and he did not drink. And here is the detail that makes this story hurt: Briggs did not sail alone. His wife Sarah came with him, and so did their daughter Sophia. She was two years old. Their son Arthur, seven, stayed behind at home with his grandmother, so he could go to school. With seven crew, that made ten people on board. A small ship, a calm captain, a family voyage. About a week later, the Dei Gratia left the same port, heading for Gibraltar. Nobody could know that the two ships were about to meet in the middle of the ocean, and only one of them would still have a crew.
+
+*CHAPTER 3: Boarding the Ghost*
+
+Now let us go back to that afternoon, the fourth of December. Deveau climbed aboard, and the silence hit him first. No voices. Only creaking wood and slapping rope. He went below. There was water sloshing in the hold, about three and a half feet of it. That sounds like a lot, right? But for a ship this size, it was not a disaster. She was still perfectly able to sail. In the stores there was food and fresh water for about six months. Nobody had left because they were starving. The crew's chests, their clothes, even their pipes were still there. People do not usually leave their pipes behind. So what was missing? Three things, and they tell a story. The ship's only lifeboat was gone. So were the chronometer and the sextant, the tools a captain needs to find his position. Most of the ship's papers were gone too, except for the logbook. And on the deck lay a sounding rod, the iron rod sailors drop into the pump well to measure water inside. So somebody had been checking for water, then they took the boat, the navigation tools and the papers, and they left in a hurry. The last entry on the log slate was dated the twenty-fifth of November, near the island of Santa Maria, in the Azores. That means the Mary Celeste had sailed on alone, with no one aboard, for more than a week.
+
+*CHAPTER 4: Trial in Gibraltar*
+
+Morehouse saw an opportunity. Under the law of the sea, whoever saves an abandoned ship can claim a reward. So Deveau and two sailors brought the Mary Celeste all the way to Gibraltar. And that is when the real trouble started. At the salvage hearing, the Attorney General of Gibraltar, Frederick Solly-Flood, did not believe a word of it. To him, a perfect ship with no crew could only mean one thing: a crime. Maybe the crew got drunk on the cargo and murdered the family. Or maybe the Dei Gratia's men killed everyone to collect the reward. He had evidence, or so he thought. There were cuts on the ship's rail, and dark stains on the deck and on an old sword. Blood, he said. So the stains were tested. And the result? They were not blood at all. The court found no crime. But the doubt stuck, and the salvors were paid only about a sixth of what the ship and cargo were worth. Morehouse got his money, but not his good name. And the ten people from the Mary Celeste were never seen again.
+
+*CHAPTER 5: Doyle's Famous Lie*
+
+For a while, the story faded. Then, in 1884, a young doctor wrote a short story about it. His name was Arthur Conan Doyle, and a few years later he would create Sherlock Holmes. His story was called "J. Habakuk Jephson's Statement," and it was pure fiction, a revenge tale told by a made-up survivor. But Doyle changed the ship's name to "Marie Celeste," and to this day, many people still call her that. His version also had the lifeboat still on board, which made the mystery far stranger than the truth. Later retellings went even further, with warm cups of tea on the table and breakfast half eaten, as if everyone had vanished mid-bite. Here is the thing: none of that is in the real reports. It is a myth. The real Mary Celeste was wet, messy, and clearly abandoned on purpose. And honestly, that makes the question even better. Why?
+
+*CHAPTER 6: So What Happened?*
+
+Over the years, people blamed everything. Pirates, a giant squid, a waterspout, even a sea monster. But pirates would have taken the cargo. And a monster does not pack the sextant. So let us look at the real clues again. And one clue was hiding in the cargo itself. When the barrels were unloaded in Genoa, nine of them were empty. Those nine were made of red oak, which is more porous than the white oak used for the rest. They had slowly leaked. Now picture the hold: closed up, airless, slowly filling with alcohol fumes. Maybe there was a rumble, or a pop, or just a powerful smell. And Briggs had his wife and his little girl on board. In 2006, a chemist named Andrea Sella, at University College London, tested this idea for a television documentary. He built a model of the hold, filled it with gas, and lit it. A wave of flame rushed through, but it was a cool, fast flame. It left no soot and no burn marks at all. So a small explosion could have terrified everyone, without leaving a single trace for Deveau to find. There is another theory, too. One of the pumps was found taken apart, so maybe it had failed. With water rising, Briggs may have believed the ship was sinking. And with land in sight near Santa Maria, the safest choice seemed obvious: get the family into the boat, now. Some researchers think the boat stayed tied to the ship by a long rope. And then, maybe, the rope snapped. Nobody can prove it. But the most likely answer is not a monster. It is a careful man, a frightening moment, and one wrong decision.
+
+*CHAPTER 7: A Cursed Afterlife*
+
+And what about the ship? Sailors started calling her cursed, and to be fair, she did not make it easy for them. She had been born as the Amazon, in Nova Scotia, and her very first captain fell ill and died on her maiden voyage. After 1872, owner after owner tried to make money from her, and nobody wanted to sail on her. Then, in 1885, a captain named Gilman Parker had a darker plan. He loaded her with cheap cargo, insured it as something valuable, and deliberately ran her onto a reef off the coast of Haiti. The insurers did not buy it, and Parker ended up in court. The famous ghost ship ended as a crime scene, just as Solly-Flood had always suspected, only thirteen years too late. In 2001, a team led by the writer Clive Cussler said they had found her wreck on that reef, but later tests on the timber cast serious doubt on it. So even her bones are a mystery. Ten people, one lifeboat, and an ocean that never gave them back. So now I want to hear from you. If you had been Captain Briggs that morning, with your family on board, would you have stayed on the ship, or climbed into that boat?
