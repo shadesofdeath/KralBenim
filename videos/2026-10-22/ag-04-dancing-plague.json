@@ -1,0 +1,774 @@
+{
+ "extra": true,
+ "lang": "en",
+ "channel": "Anlatayım Gel",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "dancing-plague",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "A town",
+   "couldn't stop",
+   "dancing"
+  ],
+  "highlight": [
+   "dancing"
+  ],
+  "scene": 0,
+  "t": 2.2,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Dancing Plague of 1518: Why Couldn't a Town Stop Dancing?",
+  "description": "The dancing plague of 1518 began in Strasbourg when one woman stepped out and danced for days. Soon dozens joined her. Why couldn't they stop?\n\nIn July 1518, Frau Troffea started dancing in the street. Within weeks, dozens, maybe hundreds, of people in Strasbourg were dancing with her. Doctors blamed hot blood, and the city answered with more dancing: a stage was built and musicians were hired. It only got worse. Historian John Waller sees it as a mass psychogenic illness in a starving town that feared the curse of Saint Vitus.\n\nSubscribe to Anlatayim Gel for a strange true story every day. Would you have joined the dance or run away? Tell me in the comments!\n\n#shorts #dancingplague #history #anlatayimgel",
+  "tags": [
+   "dancing plague of 1518",
+   "dancing plague",
+   "dancing mania",
+   "strasbourg dancing plague 1518",
+   "dancing plague 1518",
+   "why did people dance to death",
+   "1518 strasbourg",
+   "frau troffea",
+   "mass hysteria",
+   "mass psychogenic illness",
+   "choreomania",
+   "saint vitus dance",
+   "medieval history",
+   "history's strangest moments",
+   "strange history",
+   "history",
+   "anlatayim gel"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-22T22:55:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "ag04_dance",
+   "text": "In 1518, a whole town couldn't stop dancing.",
+   "visual": "Close on a Strasbourg street: six big townsfolk (two women in headscarves and skirts) kick, fling their arms and hop with exhausted faces, one keels over; the fez narrator in front jumps back in shock, hands off his face.",
+   "title": {},
+   "cues": {
+    "hit": "dancing"
+   },
+   "params": {
+    "ground": 0.71,
+    "k": 1.7,
+    "tempo": 0.36,
+    "crowd": {
+     "front_dy": 90,
+     "turn": false,
+     "list": [
+      {
+       "x": 0.12,
+       "scale": 1.15,
+       "female": true,
+       "face": 1
+      },
+      {
+       "x": 0.33,
+       "scale": 1.0,
+       "back": true,
+       "face": -1
+      },
+      {
+       "x": 0.45,
+       "scale": 1.22,
+       "female": true,
+       "face": -1
+      },
+      {
+       "x": 0.6,
+       "scale": 1.0,
+       "back": true,
+       "female": true,
+       "face": 1
+      },
+      {
+       "x": 0.72,
+       "scale": 1.05,
+       "fall": true,
+       "face": 1
+      }
+     ]
+    },
+    "collapse": {
+     "at": 1.95
+    },
+    "cam": {
+     "zoom": 1.02,
+     "focus": [
+      0.4,
+      0.65
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "pose": "shock",
+      "face": "left",
+      "scale": 1.1,
+      "emotion0": "surprised",
+      "blend": {
+       "pose": "shrug",
+       "k": 0.25
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "It started in Strasbourg, with one woman.",
+   "visual": "Old map of the upper Rhine: the river winds north, Strasbourg pops up in red on its left bank, a hand-written note 'July 1518' appears.",
+   "title": {
+    "white": "Strasbourg",
+    "gray": "1518"
+   },
+   "cues": {
+    "city": "Strasbourg",
+    "note": "woman"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.2,
+       -0.2
+      ],
+      [
+       1.2,
+       -0.2
+      ],
+      [
+       1.2,
+       1.2
+      ],
+      [
+       -0.2,
+       1.2
+      ]
+     ]
+    ],
+    "coast": [
+     [
+      0.78,
+      1.05
+     ],
+     [
+      0.74,
+      0.85
+     ],
+     [
+      0.69,
+      0.7
+     ],
+     [
+      0.66,
+      0.55
+     ],
+     [
+      0.63,
+      0.42
+     ],
+     [
+      0.66,
+      0.28
+     ],
+     [
+      0.72,
+      0.12
+     ],
+     [
+      0.76,
+      -0.05
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Strasbourg",
+      "x": 0.6,
+      "y": 0.45,
+      "dx": -20,
+      "dy": -34,
+      "anchor": "end",
+      "color": "red",
+      "at": "city"
+     }
+    ],
+    "seas": [
+     {
+      "name": "Rhine",
+      "x": 0.82,
+      "y": 0.66
+     }
+    ],
+    "note": {
+     "text": "July 1518",
+     "x": 0.36,
+     "y": 0.82,
+     "at": "note"
+    },
+    "focus": [
+     0.6,
+     0.45
+    ],
+    "zoom": 1.18,
+    "compass": "tl"
+   }
+  },
+  {
+   "type": "ag04_dance",
+   "text": "Frau Troffea stepped out and danced. For days.",
+   "visual": "Empty street; Frau Troffea (blue headscarf tied under the chin, green skirt) dances alone, big in frame, twirling and flinging her arms; sun and moon wheel over the roofs, a red counter ticks 'DAY 1' to 'DAY 4'; the narrator watches through binoculars, then shocks on 'days'.",
+   "title": {
+    "white": "Frau Troffea",
+    "gray": "July 1518"
+   },
+   "cues": {
+    "days": "danced",
+    "hit": "days"
+   },
+   "params": {
+    "ground": 0.65,
+    "k": 1.15,
+    "cathedral": {
+     "x": 0.68,
+     "s": 0.72
+    },
+    "crowd": {
+     "n0": 1,
+     "n": 1,
+     "first": {
+      "x": 0.4,
+      "scale": 1.0
+     }
+    },
+    "days": {
+     "at": "days",
+     "to": 4,
+     "x": 0.72,
+     "y": 0.24,
+     "size": 120
+    },
+    "cam": {
+     "z0": 1.18,
+     "zoom": 1.24,
+     "focus": [
+      0.45,
+      0.66
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.79,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "scale": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag04_dance",
+   "text": "Soon, dozens, maybe hundreds, joined her.",
+   "visual": "Next to her, more and more townsfolk pop in and start dancing until the street is packed with thirteen dancers; red hand-writing 'DOZENS? HUNDREDS?' appears; the narrator points at the crowd, then shocks.",
+   "title": {
+    "white": "Weeks",
+    "gray": "later"
+   },
+   "cues": {
+    "grow": "dozens",
+    "hit": "hundreds"
+   },
+   "params": {
+    "ground": 0.65,
+    "k": 1.15,
+    "cathedral": {
+     "x": 0.68,
+     "s": 0.72
+    },
+    "crowd": {
+     "n0": 1,
+     "n": 13,
+     "at": "grow",
+     "dur": 1.6,
+     "x": [
+      0.04,
+      0.68
+     ],
+     "scale": 0.72,
+     "front_dy": 60,
+     "first": {
+      "x": 0.34,
+      "scale": 0.82
+     }
+    },
+    "label": {
+     "text": "DOZENS? HUNDREDS?",
+     "x": 0.52,
+     "y": 0.2,
+     "at": "hit",
+     "size": 96
+    },
+    "cam": {
+     "z0": 1.18,
+     "zoom": 1.24,
+     "focus": [
+      0.45,
+      0.66
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "idle",
+      "face": "left",
+      "at": "grow",
+      "then": "point",
+      "dir": 20,
+      "scale": 0.8,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Doctors blamed hot blood.",
+   "visual": "A bearded town physician in a beret holds up a scroll, then points to the sky; on 'blood' red hand-writing 'HOT BLOOD!' appears; the narrator, chin in hand, shrugs in disbelief.",
+   "title": {
+    "white": "Doctors'",
+    "gray": "verdict"
+   },
+   "cues": {
+    "doc": "Doctors",
+    "hit": "blood"
+   },
+   "params": {
+    "foreground": "hatch",
+    "ground_y": 1370,
+    "scale": 1.3,
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "label": {
+     "text": "HOT BLOOD!",
+     "y": 0.22,
+     "at": "hit",
+     "size": 120
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "doctor",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.66,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "left",
+      "talk": false,
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Their cure? More dancing!",
+   "visual": "Giant words slam in: 'MORE' in a red box, then 'DANCING!'; the big narrator below jumps back in shock.",
+   "title": {
+    "white": "The cure",
+    "gray": ""
+   },
+   "cues": {
+    "w0": "More",
+    "w1": "dancing"
+   },
+   "params": {
+    "lines": [
+     "MORE",
+     "DANCING!"
+    ],
+    "highlight": [
+     "MORE"
+    ],
+    "y": 0.25,
+    "kasif": {
+     "x": 0.76,
+     "y": 0.77,
+     "pose": "shock",
+     "at": "w1",
+     "face": -1,
+     "scale": 0.8
+    }
+   }
+  },
+  {
+   "type": "ag04_dance",
+   "text": "The city built a stage and hired musicians. It only got worse.",
+   "visual": "A wooden stage rises behind the dancers on 'stage'; on 'musicians' two drummers and a shawm player step onto it and play, ink notes float up; the beat speeds up, and on 'worse' three dancers keel over, red 'WORSE' slams in, the camera shakes and pushes in; the narrator points at the band, then shocks.",
+   "title": {
+    "white": "City",
+    "gray": "council"
+   },
+   "cues": {
+    "st": "stage",
+    "mu": "musicians",
+    "fast": "only",
+    "hit": "worse"
+   },
+   "params": {
+    "ground": 0.65,
+    "k": 1.15,
+    "cathedral": {
+     "x": 0.68,
+     "s": 0.72
+    },
+    "crowd": {
+     "n0": 10,
+     "n": 10,
+     "x": [
+      0.04,
+      0.7
+     ],
+     "scale": 0.66,
+     "front_dy": 50,
+     "first": {
+      "x": 0.36,
+      "scale": 0.74
+     }
+    },
+    "stage": {
+     "at": "st",
+     "x": 0.42,
+     "w": 0.76,
+     "y": 0.5
+    },
+    "musicians": {
+     "at": "mu",
+     "list": [
+      "drum",
+      "shawm",
+      "drum"
+     ],
+     "scale": 0.6
+    },
+    "tempo": 0.4,
+    "faster": {
+     "at": "fast",
+     "tempo": 0.24
+    },
+    "collapse": {
+     "at": "hit",
+     "n": 3,
+     "step": 0.2
+    },
+    "label": {
+     "text": "WORSE",
+     "x": 0.62,
+     "y": 0.22,
+     "at": "hit",
+     "size": 140
+    },
+    "shake": "hit",
+    "cam": {
+     "z0": 1.18,
+     "zoom": 1.24,
+     "focus": [
+      0.48,
+      0.66
+     ],
+     "push": {
+      "at": "hit",
+      "zoom": 1.32,
+      "focus": [
+       0.5,
+       0.62
+      ],
+      "dur": 0.8
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.87,
+      "pose": "talk",
+      "face": "left",
+      "at": "mu",
+      "then": "point",
+      "dir": 45,
+      "scale": 0.78,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "What was really going on? Historian John Waller blames fear.",
+   "visual": "The narrator, big in frame, rubs his chin beside an open historian's scroll; on 'fear' a giant red hand-written 'FEAR' slams in and he points at it.",
+   "title": {
+    "white": "John Waller",
+    "gray": "historian"
+   },
+   "cues": {
+    "q": "really",
+    "hit": "fear"
+   },
+   "params": {
+    "foreground": "hatch",
+    "ground_y": 1370,
+    "scale": 1.35,
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    },
+    "label": {
+     "text": "FEAR",
+     "y": 0.24,
+     "at": "hit",
+     "size": 190
+    },
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.72,
+      "scale": 1.0,
+      "at": "q"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": 50,
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag04_dance",
+   "text": "The town was starving,",
+   "visual": "A gaunt townsman holds a nearly empty bread basket with one small heel of bread; red 'STARVING' appears; a few small figures dance behind him; the narrator explains, then shrugs sadly.",
+   "title": {
+    "white": "1518",
+    "gray": "famine"
+   },
+   "cues": {
+    "hit": "starving"
+   },
+   "params": {
+    "ground": 0.65,
+    "k": 1.15,
+    "cathedral": {
+     "x": 0.68,
+     "s": 0.72
+    },
+    "crowd": {
+     "n0": 3,
+     "n": 3,
+     "x": [
+      0.62,
+      0.92
+     ],
+     "scale": 0.44,
+     "front_dy": 90,
+     "first": {
+      "x": 0.8,
+      "scale": 0.46
+     }
+    },
+    "label": {
+     "text": "STARVING",
+     "x": 0.5,
+     "y": 0.22,
+     "at": "hit",
+     "size": 130
+    },
+    "cam": {
+     "z0": 1.18,
+     "zoom": 1.24,
+     "focus": [
+      0.4,
+      0.66
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "shrug",
+      "scale": 0.8,
+      "emotion": "worried"
+     },
+     {
+      "who": "townsman",
+      "x": 0.5,
+      "pose": "idle",
+      "face": "left",
+      "scale": 1.0,
+      "thin": 0.76,
+      "carry": "basket",
+      "emotion0": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag04_dance",
+   "text": "and they believed Saint Vitus could curse you with a dance you couldn't stop.",
+   "visual": "Dancers whirl in the street; a 'St. Vitus' sign rises on a post on 'Vitus'; on 'curse' red 'CURSED?' appears and the narrator jumps back in shock.",
+   "title": {
+    "white": "Saint Vitus",
+    "gray": "the curse"
+   },
+   "cues": {
+    "v": "Vitus",
+    "c": "curse"
+   },
+   "params": {
+    "ground": 0.65,
+    "k": 1.15,
+    "cathedral": {
+     "x": 0.68,
+     "s": 0.72
+    },
+    "crowd": {
+     "n0": 7,
+     "n": 7,
+     "x": [
+      0.04,
+      0.48
+     ],
+     "scale": 0.7,
+     "front_dy": 50,
+     "first": {
+      "x": 0.26,
+      "scale": 0.76
+     }
+    },
+    "signs": [
+     {
+      "text": "St. Vitus",
+      "x": 0.54,
+      "at": "v",
+      "size": 58
+     }
+    ],
+    "label": {
+     "text": "CURSED?",
+     "x": 0.5,
+     "y": 0.22,
+     "at": "c",
+     "size": 130
+    },
+    "cam": {
+     "z0": 1.18,
+     "zoom": 1.24,
+     "focus": [
+      0.5,
+      0.66
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.74,
+      "pose": "point",
+      "dir": 20,
+      "face": "left",
+      "at": "c",
+      "then": "shock",
+      "scale": 0.78
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "So the cure they chose was the disease itself.",
+   "visual": "Giant words build up: 'THE CURE / WAS THE / DISEASE', with 'DISEASE' in a red box; the big narrator shrugs below.",
+   "title": {},
+   "cues": {
+    "w1": "cure",
+    "w2": "was",
+    "w4": "disease"
+   },
+   "params": {
+    "lines": [
+     "THE CURE",
+     "WAS THE",
+     "DISEASE"
+    ],
+    "highlight": [
+     "DISEASE"
+    ],
+    "y": 0.25,
+    "kasif": {
+     "x": 0.76,
+     "y": 0.77,
+     "pose": "shrug",
+     "at": "w4",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried"
+    }
+   }
+  }
+ ]
+}
