@@ -182,7 +182,7 @@
             isl.f.setAttribute('d', inkLoop(pts, { seed: sd + 30, t, amp: 1 })); isl.r.setAttribute('d', inkPath(pts, { w: 4, seed: sd + 31, t, amp: 1.2 }));
           }
           if (gib) {
-            const G = P.gib, p = spring(lt, atOr(cues, G.at, 0), 0.9), cx = G.x * W, s = Math.min(W, H) * 0.0026 * (G.scale ?? 1);
+            const G = P.gib, p = spring(lt, atOr(cues, G.at, 0), 0.9), cx = G.x * W, s = Math.min(W, H) * 0.0013 * (G.scale ?? 1);
             const pts = [[-170, 0], [-150, -30], [-120, -150 * p], [-96, -168 * p], [-60, -150 * p], [10, -120 * p], [80, -80 * p], [150, -40 * p], [200, 0]].map(q => [cx + q[0] * s, HZ + 4 + q[1] * s]);
             gib.f.setAttribute('d', inkLoop(pts, { seed: sd + 33, t, amp: 1, smooth: false }));
             gib.r.setAttribute('d', inkPath(pts, { w: 4, seed: sd + 34, t, amp: 1.2 }));

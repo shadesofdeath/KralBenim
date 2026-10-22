@@ -55,24 +55,28 @@
       const { atOr, f1, rr, cast, labels, camPush } = window.MCB;
       const sd = seed * 1000 + 931;
       const root = el(svg, 'g'), cam = el(root, 'g');
-      const DY = 0.36 * H, FL = 0.84 * H, X0 = 0.05 * W, X1 = 0.95 * W;
+      const DY = 0.36 * H, FL = 0.78 * H, X0 = 0.05 * W, X1 = 0.95 * W;
       const hull = [[X0, DY], [X0 + 20, 0.62 * H], [0.16 * W, FL + 40], [0.5 * W, FL + 62], [0.86 * W, FL + 36], [X1 - 10, 0.6 * H], [X1, DY - 12]];
+      const clipId = 'mcbhold' + seed, cp = el(el(svg, 'defs'), 'clipPath', { id: clipId }), cpp = el(cp, 'path', {});
+      cpp.setAttribute('d', 'M' + inkSpline(hull, false).map(q => q[0].toFixed(1) + ' ' + q[1].toFixed(1)).join(' L') + ' Z');
+      const inner = el(cam, 'g', { 'clip-path': `url(#${clipId})` });
       const G = {
-        inside: inkEl(cam, INK.paperDark, { 'fill-opacity': 0.55 }), ribs: inkEl(cam, INK.inkSoft),
-        haze: inkEl(cam, INK.stain, { 'fill-opacity': 0 }), water: inkEl(cam, INK.blue, { 'fill-opacity': 0.35 }), wline: inkEl(cam, INK.blue),
+        inside: inkEl(inner, INK.paperDark, { 'fill-opacity': 0.55 }), ribs: inkEl(inner, INK.inkSoft),
+        haze: inkEl(inner, INK.stain, { 'fill-opacity': 0 }), water: inkEl(inner, INK.blue, { 'fill-opacity': 0.5 }), wline: inkEl(inner, INK.blue),
       };
       const rows = P.rows ?? 3, cols = P.cols ?? 12;
-      const bw = (X1 - X0 - 160) / cols * 0.9, bh = Math.min((FL - DY - 60) / rows * 0.92, bw * 1.35);
+      const BX0 = 0.13 * W, BX1 = 0.87 * W;
+      const bw = (BX1 - BX0) / cols * 0.84, bh = Math.min((FL - DY - 70) / rows * 0.9, bw * 1.35);
       const bars = [];
       for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
-        const x = X0 + 80 + (c + 0.5) * (X1 - X0 - 160) / cols + (r % 2 ? bw * 0.12 : 0), y = FL - r * bh * 1.02;
-        bars.push({ x, y, f: inkEl(cam, INK.hat), r: inkEl(cam), drip: inkEl(cam, INK.blue) });
+        const x = BX0 + (c + 0.5) * (BX1 - BX0) / cols + (r % 2 ? bw * 0.1 : 0), y = FL - r * bh * 1.04;
+        bars.push({ x, y, f: inkEl(inner, INK.hat), r: inkEl(inner), drip: inkEl(inner, INK.blue) });
       }
       // deterministic set of empty barrels (spread out)
       const nE = P.empty ? Math.min(bars.length, P.empty.count ?? 9) : 0, emptyIdx = new Set();
       { const r = rng(sd + 5); while (emptyIdx.size < nE) emptyIdx.add(Math.floor(r() * bars.length)); }
-      const wisps = Array.from({ length: 14 }, () => inkEl(cam, INK.inkSoft, { 'fill-opacity': 0.8 }));
-      const fl = { o: inkEl(cam, INK.blue, { 'fill-opacity': 0.75 }), i: inkEl(cam, INK.paperLight, { 'fill-opacity': 0.85 }), r: inkEl(cam, INK.blue) };
+      const wisps = Array.from({ length: 16 }, () => inkEl(inner, INK.inkSoft, { 'fill-opacity': 0.9 }));
+      const fl = { o: inkEl(inner, INK.blue, { 'fill-opacity': 0.75 }), i: inkEl(inner, INK.paperLight, { 'fill-opacity': 0.85 }), r: inkEl(inner, INK.blue) };
       const hullR = inkEl(cam), deck = inkEl(cam, INK.paperDark), deckR = inkEl(cam), masts = inkEl(cam), hatch = inkEl(cam, INK.hat), hatchR = inkEl(cam);
       const pump = { f: inkEl(cam, INK.paperDark), r: inkEl(cam) };
       const cs = cast(el(cam, 'g'), P.cast, W, H, sd + 200);
@@ -119,7 +123,7 @@
           if (fumeK > 0.01) {
             const hz = []; const top = lerp(FL, DY + 20, fumeK);
             for (let x = Math.max(X0, front); x <= X1; x += 60) hz.push([x, top + Math.sin(x * 0.01 + t * 1.5) * 14]);
-            G.haze.setAttribute('fill-opacity', (0.4 * fumeK).toFixed(3));
+            G.haze.setAttribute('fill-opacity', (0.5 * fumeK).toFixed(3));
             G.haze.setAttribute('d', hz.length > 1 ? inkLoop(hz.concat([[X1 - 10, FL + 30], [Math.max(X0, front), FL + 40]]), { seed: sd + 40, t, amp: 2, smooth: false }) : '');
           } else G.haze.setAttribute('d', '');
           wisps.forEach((w, i) => {
@@ -127,7 +131,7 @@
             const r = rng(sd + 500 + i), bx = lerp(X0 + 100, X1 - 100, r()), u = ((lt * 0.25 + r()) % 1);
             const y = lerp(FL - 40, DY + 40, u * Math.max(0.3, fumeK)), x = bx + Math.sin(lt * 1.3 + i) * 30;
             if (x < front + 40) { w.setAttribute('d', ''); return; }
-            w.setAttribute('d', inkPath([[x, y + 50], [x + 18, y + 25], [x - 6, y], [x + 14, y - 30]], { w: 4, seed: sd + 520 + i, t, amp: 1.5 }));
+            w.setAttribute('d', inkPath([[x, y + 50], [x + 18, y + 25], [x - 6, y], [x + 14, y - 30]], { w: 6, seed: sd + 520 + i, t, amp: 1.5 }));
           });
           if (flA != null && lt >= flA && lt < flA + flD + 0.4) {
             const x1 = Math.min(front, X1 + 300), x0 = Math.max(X0, x1 - 700);
@@ -144,7 +148,7 @@
           const hp = open ? [[hx - 90, DY - 20], [hx - 70, DY - 120], [hx + 40, DY - 140], [hx + 20, DY - 30]] : [[hx - 90, DY - 22], [hx + 90, DY - 26], [hx + 90, DY - 64], [hx - 90, DY - 60]];
           hatch.setAttribute('d', inkLoop(hp, { seed: sd + 8, t, amp: 1, smooth: false })); hatchR.setAttribute('d', inkPath(hp, { w: 5, seed: sd + 9, t, amp: 1, closed: true, smooth: false }));
           // pump on deck (intact or in pieces)
-          const px = 0.2 * W;
+          const px = (P.pump && P.pump.x || 0.3) * W;
           if (P.pump) {
             const apart = P.pump.apart !== false && lt >= atOr(cues, P.pump.at, 0), k = apart ? spring(lt, atOr(cues, P.pump.at, 0), 0.7) : 0;
             const parts = apart ? [
@@ -247,13 +251,13 @@
           const bp = [[0.06 * W, TY], [0.94 * W, TY], [0.94 * W, TY + 40], [0.06 * W, TY + 40]];
           bench.f.setAttribute('d', inkLoop(bp, { seed: sd + 1, t, amp: 1, smooth: false }));
           bench.r.setAttribute('d', inkPath(bp, { w: 5, seed: sd + 2, t, amp: 1.2, closed: true, smooth: false }) + ' ' + inkPath([[0.1 * W, TY + 40], [0.1 * W, H + 20]], { w: 9, seed: sd + 3, t, amp: 1 }) + ' ' + inkPath([[0.9 * W, TY + 40], [0.9 * W, H + 20]], { w: 9, seed: sd + 4, t, amp: 1 }));
-          shelf.setAttribute('d', inkPath([[0.08 * W, 0.24 * H], [0.5 * W, 0.24 * H]], { w: 5, seed: sd + 5, t, amp: 1 }));
-          jars.forEach((j, k) => { const x = 0.11 * W + k * 0.08 * W, hgt = 70 + (k % 3) * 24; const q = rr(x, 0.24 * H - hgt, 60, hgt, 12);
+          shelf.setAttribute('d', inkPath([[0.5 * W, 0.24 * H], [0.92 * W, 0.24 * H]], { w: 5, seed: sd + 5, t, amp: 1 }));
+          jars.forEach((j, k) => { const x = 0.53 * W + k * 0.08 * W, hgt = 70 + (k % 3) * 24; const q = rr(x, 0.24 * H - hgt, 60, hgt, 12);
             j.f.setAttribute('d', inkLoop(q, { seed: sd + 10 + k, t, amp: 0.8 })); j.r.setAttribute('d', inkPath(q, { w: 3.5, seed: sd + 15 + k, t, amp: 0.8, closed: true })); });
           const box = [[BX0, BT], [BX1, BT], [BX1, BB], [BX0, BB]];
           boxF.setAttribute('d', inkLoop(box, { seed: sd + 20, t, amp: 1, smooth: false }));
-          const gk = ga != null ? progIO(lt, ga, 2.5) : 0, front = wa != null ? lerp(BX0 - 100, BX1 + 300, lin(lt, wa, 1.2)) : -1e9;
-          gas.setAttribute('fill-opacity', (0.45 * gk).toFixed(3));
+          const WD = P.wave_dur ?? 2.4, gk = ga != null ? progIO(lt, ga, 2.5) : 0, front = wa != null ? lerp(BX0 - 100, BX1 + 300, lin(lt, wa, WD)) : -1e9;
+          gas.setAttribute('fill-opacity', (0.6 * gk).toFixed(3));
           gas.setAttribute('d', gk > 0.01 && front < BX1 ? inkLoop([[Math.max(BX0 + 6, front), BB - 6], [Math.max(BX0 + 6, front), lerp(BB, BT + 10, gk)], [BX1 - 6, lerp(BB, BT + 10, gk)], [BX1 - 6, BB - 6]], { seed: sd + 21, t, amp: 2, smooth: false }) : '');
           cubes.forEach((c, i) => { const col = i % 6, row = Math.floor(i / 6), s = 54, x = lerp(BX0 + 50, BX1 - 110, col / 5), y = BB - 10 - s - row * (s + 8);
             const q = [[x, y], [x + s, y], [x + s, y + s], [x, y + s]];
@@ -262,13 +266,13 @@
             const r = rng(sd + 70 + i), x = lerp(BX0 + 40, BX1 - 40, r()) + Math.sin(lt * 1.2 + i) * 20, u = (lt * 0.3 + r()) % 1, y = lerp(BB - 20, BT + 40, u * gk);
             if (x < front + 30) { w.setAttribute('d', ''); return; }
             w.setAttribute('d', inkPath([[x, y + 40], [x + 14, y + 20], [x - 6, y], [x + 10, y - 22]], { w: 3.5, seed: sd + 90 + i, t, amp: 1.4 })); });
-          if (wa != null && lt >= wa && lt < wa + 1.6) {
+          if (wa != null && lt >= wa && lt < wa + WD + 0.3) {
             const x1 = Math.min(front, BX1 - 4), x0 = Math.max(BX0 + 4, x1 - 420);
             fl.o.setAttribute('d', front < BX1 + 280 ? flame(x0, x1, BT + 16, BB - 8, t, sd + 600, false) : '');
             fl.i.setAttribute('d', front < BX1 + 280 ? flame(x0 + 30, x1, BT + 80, BB - 40, t, sd + 640, true) : '');
           } else { fl.o.setAttribute('d', ''); fl.i.setAttribute('d', ''); }
           boxR.setAttribute('d', inkPath(box, { w: 6, seed: sd + 22, t, amp: 1.2, closed: true, smooth: false }));
-          const jump = wa != null && lt >= wa + 0.9 ? Math.max(0, Math.sin(Math.min(Math.PI, (lt - wa - 0.9) * 5))) * 50 : 0;
+          const jump = wa != null && lt >= wa + WD * 0.75 ? Math.max(0, Math.sin(Math.min(Math.PI, (lt - wa - WD * 0.75) * 5))) * 50 : 0;
           const lp = [[BX0 - 20, BT - 24 - jump], [BX1 + 20, BT - 24 - jump * 1.2], [BX1 + 20, BT - jump * 1.2], [BX0 - 20, BT - jump]];
           lid.setAttribute('d', inkLoop(lp, { seed: sd + 23, t, amp: 1, smooth: false })); lidR.setAttribute('d', inkPath(lp, { w: 5, seed: sd + 24, t, amp: 1, closed: true, smooth: false }));
           // igniter at the left end

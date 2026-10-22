@@ -29,7 +29,6 @@
       const arms = P.arms !== false && P.bench !== false ? { f: inkEl(cam, INK.gold), r: inkEl(cam), c: inkEl(cam, INK.gold), cr: inkEl(cam), lion: inkEl(cam, INK.red) } : null;
       const back = cast(el(cam, 'g'), pick('back'), W, H, sd + 100);
       const bench = P.bench !== false ? { f: inkEl(cam, INK.paperDark), r: inkEl(cam), top: inkEl(cam, INK.inkSoft), pan: inkEl(cam, INK.inkSoft) } : null;
-      const dock = P.dock ? { f: inkEl(cam, INK.paperDark, { 'fill-opacity': 0.0 }), back: null } : null;
       const dockCast = cast(el(cam, 'g'), pick('dock'), W, H, sd + 300);
       const dockFront = P.dock ? { f: inkEl(cam, INK.paperDark), r: inkEl(cam), rail: inkEl(cam) } : null;
       const table = P.table !== false ? { f: inkEl(cam, INK.paperDark), r: inkEl(cam), legs: inkEl(cam) } : null;
@@ -72,7 +71,7 @@
             arms.f.setAttribute('d', inkLoop(sh, { seed: sd + 60, t, amp: 1 })); arms.r.setAttribute('d', inkPath(sh, { w: 5, seed: sd + 61, t, amp: 1.2, closed: true }));
             const cr = [[-50, -76], [-56, -126], [-28, -100], [0, -136], [28, -100], [56, -126], [50, -76]].map(q => [cx + q[0], cy + q[1]]);
             arms.c.setAttribute('d', inkLoop(cr, { seed: sd + 62, t, amp: 1 })); arms.cr.setAttribute('d', inkPath(cr, { w: 4, seed: sd + 63, t, amp: 1, closed: true }));
-            arms.lion.setAttribute('d', inkPath([[cx - 36, cy - 30], [cx + 30, cy + 30]], { w: 14, seed: sd + 64, t, amp: 1 }) + ' ' + inkPath([[cx + 30, cy - 30], [cx - 30, cy + 30]], { w: 14, seed: sd + 65, t, amp: 1 }));
+            arms.lion.setAttribute('d', inkPath([[cx, cy - 62], [cx, cy + 66]], { w: 16, seed: sd + 64, t, amp: 1 }) + ' ' + inkPath([[cx - 62, cy - 14], [cx + 62, cy - 14]], { w: 16, seed: sd + 65, t, amp: 1 }));
           }
           back.update(lt, t, cues);
           if (bench) {

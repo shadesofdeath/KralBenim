@@ -421,7 +421,7 @@
               let bx = lerp(p0[0], p1[0], down), by = lerp(p0[1], p1[1], down);
               const rp = progIO(lt, ra, Math.max(1, dur - ra)), tx = (Y.to ?? -0.3) * W;
               bx = lerp(bx, tx, rp); by += rp * 30 * k + Math.sin(t * 2.4) * 4 * down;
-              const L = 150 * k * (1 + rp * 0.3), fc2 = tx < p1[0] ? -1 : 1;
+              const L = 230 * k * (1 + rp * 0.3), fc2 = tx < p1[0] ? -1 : 1;
               const hp = [[-L * 0.5, -L * 0.22], [L * 0.5, -L * 0.26], [L * 0.4, 0], [-L * 0.38, 0.02 * L]].map(q => [bx + q[0] * fc2, by + q[1]]);
               yawlD.f += inkLoop(hp, { seed: sd + 700, t }) + ' ';
               yawlD.i += inkPath(hp, { seed: sd + 700, t, w: 4, closed: true }) + ' ';
@@ -569,7 +569,7 @@
         const rodI = mk(), rodW = mk(INK.blue);
         const hullI = mk(), deckF = mk(INK.paperLight), deckI = mk(), ladI = mk();
         const gaugeI = mk(), gaugeR = mk(INK.red);
-        const gaugeT = el(cam, 'text', { 'font-family': INK_FONT, 'font-size': 64, 'text-anchor': 'middle', fill: INK.red, style: `paint-order: stroke; stroke: ${INK.paperLight}; stroke-width: 12px; stroke-linejoin: round` });
+        const gaugeT = el(cam, 'text', { 'font-family': INK_FONT, 'font-size': 84, 'text-anchor': 'middle', fill: INK.red, style: `paint-order: stroke; stroke: ${INK.paperLight}; stroke-width: 12px; stroke-linejoin: round` });
         gaugeT.textContent = (P.gauge && P.gauge.text) || '3½ FEET';
         const warnG = el(cam, 'g'), warnF = inkEl(warnG, INK.red), warnFl = inkEl(warnG, INK.gold), warnI = inkEl(warnG);
         const warnT = el(warnG, 'text', { 'font-family': FR, 'font-weight': 900, 'font-size': 64, 'text-anchor': 'middle', fill: INK.paperLight });
@@ -583,7 +583,7 @@
         const brl = [];
         if (BR) {
           for (let r = 0; r < BR.rows; r++) {
-            const sc = 0.78 + r * 0.14, bw = 92 * sc, bh = 118 * sc, y = L.fl - 30 + r * 0 - (BR.rows - 1 - r) * 58, n = Math.floor((L.x1 - L.x0 - 120) / (bw * 1.02));
+            const sc = 1.15 + r * 0.2, bw = 120 * sc, bh = 150 * sc, y = L.fl - 30 - (BR.rows - 1 - r) * 80, n = Math.floor((L.x1 - L.x0 - 120) / (bw * 1.02));
             for (let j = 0; j < n; j++) {
               const x = L.x0 + 80 + bw / 2 + j * bw * 1.02 + (r % 2) * bw * 0.5;
               if (x > L.x1 - 60 || (P.rod && Math.abs(x - 0.74 * W) < bw * 0.9)) continue;
@@ -644,7 +644,7 @@
             const topY = lerp(ly - Math.sin(ang) * len, L.fl - 30 - len, drop), botY = topY + Math.sin(ang) * len;
             const x0 = lx - Math.cos(ang) * len / 2, x1 = lx + Math.cos(ang) * len / 2;
             const a0 = [x0, ly + (lift < 1 ? 0 : 0)], seg = lift < 1 ? [[x0, ly], [x1, ly - Math.sin(ang) * len]] : [[wx, topY], [wx, botY]];
-            rd = inkPath(seg, { seed: sd + 63, t, w: 12 }) + ' ' + inkPath([seg[0], [seg[0][0] + 20, Math.min(L.dy - 80, seg[0][1]) - 140]], { seed: sd + 64, t, w: 3 });
+            rd = inkPath(seg, { seed: sd + 63, t, w: 18 }) + ' ' + (lift >= 1 ? inkPath([seg[0], [seg[0][0] + 20, Math.min(L.dy - 80, seg[0][1]) - 140]], { seed: sd + 64, t, w: 3 }) : '');
             if (drop > 0.95) { const wy = L.fl - 10 - (P.water ? (P.water.level ?? 0.3) * (L.fl - L.dy) : 120); if (botY > wy) rw = inkLoop([[wx - 7, Math.max(wy, topY)], [wx + 7, Math.max(wy, topY)], [wx + 7, botY], [wx - 7, botY]], { seed: sd + 65, t, smooth: false }); }
             void a0;
           }
@@ -665,7 +665,7 @@
               const my = L.fl - lvl;
               gaugeR.setAttribute('d', lt >= ga ? inkPath([[gx - 60 * gp, my], [gx + 60 * gp, my]], { seed: sd + 95, t, w: 9 }) + ' ' + inkPath([[gx - 70, my - 22], [gx - 40, my], [gx - 70, my + 22]], { seed: sd + 96, t, w: 6, smooth: false }) : '');
               gaugeT.style.display = lt >= ga ? '' : 'none';
-              const tx = gx - 210, ty = my - 40;
+              const tx = gx - 300, ty = my - 70;
               gaugeT.setAttribute('x', tx); gaugeT.setAttribute('y', ty);
               gaugeT.setAttribute('transform', `translate(${f1(tx)} ${f1(ty)}) rotate(-4) scale(${(lerp(0.5, 1, gp) * (1 + punch(lt, ga) * 0.12)).toFixed(3)}) translate(${f1(-tx)} ${f1(-ty)})`);
             } else { gaugeT.style.display = 'none'; }
@@ -720,8 +720,8 @@
       const hatchF = mk(INK.ink, { 'fill-opacity': 0.82 }), hatchI = mk();
       const mastF = mk(INK.paperDark), mastI = mk(), ropeI = mk();
       const propF = mk(INK.paperLight), propD = mk(INK.paperDark), propS = mk(INK.inkSoft, { 'fill-opacity': 0.8 }), propB = mk(INK.blue, { 'fill-opacity': 0.7 }), propR = mk(INK.red, { 'fill-opacity': 0.8 }), propI = mk(), lampG = mk(INK.gold, { 'fill-opacity': 0.6 });
-      const ghostI = mk(INK.inkSoft), ghostX = mk(INK.red);
-      const slateG = el(cam, 'g'), slateF = mk(INK.ink, { 'fill-opacity': 0.9 }, slateG), slateFr = mk(INK.hat, {}, slateG), slateI = mk(undefined, {}, slateG);
+      const ghostI = mk(INK.ink), ghostX = mk(INK.red);
+      const slateG = el(cam, 'g'), slateFr = mk(INK.paperDark, {}, slateG), slateF = mk(INK.ink, { 'fill-opacity': 0.92 }, slateG), slateI = mk(undefined, {}, slateG);
       const slateLines = ((P.slate && P.slate.lines) || []).map(Ln => { const tx = el(slateG, 'text', { 'font-family': INK_FONT, 'font-size': 76, 'text-anchor': 'start', fill: INK.paperLight }); tx.textContent = Ln.text; return { Ln, tx }; });
       const soundG = el(cam, 'g');
       const sounds = (P.sounds || []).map(S => { const tx = el(soundG, 'text', { 'font-family': INK_FONT, 'font-size': Math.max(44, S.size || 66), 'text-anchor': 'middle', fill: COL[S.color] || INK.inkSoft, style: `paint-order: stroke; stroke: ${INK.paperLight}; stroke-width: 10px` }); tx.textContent = S.text; return { S, tx }; });
@@ -731,7 +731,7 @@
       if (MU) {
         const kinds = MU.kinds || ['captain', 'woman', 'girl', 'sailor', 'sailor', 'sailor', 'sailor', 'sailor', 'sailor', 'sailor'];
         for (let i = 0; i < MU.count; i++) {
-          const kd = kinds[i] || 'sailor', sc = kd === 'girl' ? 0.2 : 0.32;
+          const kd = kinds[i] || 'sailor', sc = kd === 'girl' ? 0.28 : 0.42;
           const rig = KASIF.create(el(musterG, 'g'), { scale: sc, hat: false, accessory: kd === 'sailor' ? 'beret' : null, beard: kd === 'captain' ? 'black' : (kd === 'sailor' && i % 3 === 0 ? 'short' : null), seed: seed + 200 + i * 5 });
           musterRigs.push({ rig, kd, i, sc });
         }
@@ -744,7 +744,7 @@
       const climb = P.climb ? Object.assign({ who: 0, at: 0, dur: 1.4, x0: 0.3 }, P.climb) : null;
       if (climb && cast[climb.who] && backCast) backCast.appendChild(cast[climb.who].rig.node || cast[climb.who].rig.g || frontCast.childNodes[climb.who]);
       const r0 = rng(seed * 5 + 3);
-      const ropes = Array.from({ length: 3 }, (_, i) => ({ x: 0.2 + i * 0.05 + r0() * 0.02, len: 0.22 + r0() * 0.12, ph: r0() * 6 }));
+      const ropes = Array.from({ length: 3 }, (_, i) => ({ x: 0.46 + i * 0.05 + r0() * 0.02, len: 0.22 + r0() * 0.12, ph: r0() * 6 }));
       return {
         update(lt, dur, cues, env = {}) {
           const t = env.t ?? lt;
@@ -779,16 +779,16 @@
             hf += inkLoop(dpts, { seed: sd + 51, t, smooth: false }) + ' ';
             hi += inkPath(dpts, { seed: sd + 51, t, w: 5, closed: true, smooth: false }) + ' ' + inkPath([[dx, dtop], [dx + dw, dtop], [dx + dw, dbot]], { seed: sd + 52, t, w: 5, smooth: false }) + ' ';
             // open hatch in the deck
-            const hc = [0.46 * W, 0.78 * H], hwid = 230, hdep = 70;
+            const hc = [0.5 * W, 0.72 * H], hwid = 150, hdep = 40;
             const hp = [[hc[0] - hwid, hc[1] - hdep], [hc[0] + hwid, hc[1] - hdep], [hc[0] + hwid + 30, hc[1] + hdep], [hc[0] - hwid - 30, hc[1] + hdep]];
             hatchF.setAttribute('d', P.hatch === false ? '' : inkLoop(hp, { seed: sd + 60, t, smooth: false }));
             hatchI.setAttribute('d', P.hatch === false ? '' : inkPath(hp, { seed: sd + 60, t, w: 9, closed: true, smooth: false }) + ' ' + inkPath([[hc[0] - hwid - 50, hc[1] + hdep + 20], [hc[0] + hwid + 50, hc[1] + hdep + 20]], { seed: sd + 61, t, w: 5 }));
             // mainmast with shrouds + swinging loose ropes
-            const mx = 0.12 * W;
+            const mx = 0.58 * W;
             mf += inkLoop([[mx - 28, -60], [mx + 28, -60], [mx + 36, L.base + 120], [mx - 36, L.base + 120]], { seed: sd + 70, t, smooth: false }) + ' ';
             mi += inkPath([[mx - 28, -60], [mx - 36, L.base + 120]], { seed: sd + 71, t, w: 7 }) + ' ' + inkPath([[mx + 28, -60], [mx + 36, L.base + 120]], { seed: sd + 72, t, w: 7 }) + ' ';
             mi += inkPath([[mx - 40, 0.55 * H], [mx + 40, 0.55 * H]], { seed: sd + 73, t, w: 10 }) + ' ';
-            ri += inkPath([[mx + 20, -40], [0.42 * W, L.rail]], { seed: sd + 74, t, w: 4 }) + ' ' + inkPath([[mx + 20, -40], [0.32 * W, L.rail]], { seed: sd + 75, t, w: 4 }) + ' ';
+            ri += inkPath([[mx - 20, -40], [mx - 0.16 * W, L.rail]], { seed: sd + 74, t, w: 4 }) + ' ' + inkPath([[mx - 20, -40], [mx - 0.26 * W, L.rail]], { seed: sd + 75, t, w: 4 }) + ' ';
             const slap = atOr(cues, P.slap, null), kick = slap != null && lt >= slap ? Math.exp(-(lt - slap) * 1.4) * 2.2 : 0;
             ropes.forEach((r, i) => {
               const ox = r.x * W, oy = 0.04 * H, len = r.len * H + 200, amp = 0.16 + kick * 0.25, ang = Math.sin(t * 1.6 + r.ph) * amp, pts = [];
@@ -807,7 +807,7 @@
             ff += inkLoop([[-80, 0.74 * H], [W + 80, 0.74 * H], [W + 80, H + 80], [-80, H + 80]], { seed: sd + 20, t, smooth: false }) + ' ';
             for (let j = -6; j <= 6; j++) fs += inkPath([[W / 2 + j * 120, 0.74 * H], [W / 2 + j * 260, H + 40]], { seed: sd + 30 + j, t, w: 2.5 }) + ' ';
             // shelf with clay pipes (left)
-            const sx = 0.08 * W, sy = 0.34 * H, sw2 = 0.3 * W;
+            const sx = 0.08 * W, sy = 0.46 * H, sw2 = 0.3 * W;
             pd += inkLoop([[sx, sy], [sx + sw2, sy], [sx + sw2, sy + 22], [sx, sy + 22]], { seed: sd + 40, t, smooth: false }) + ' ';
             pi += inkPath([[sx, sy], [sx + sw2, sy], [sx + sw2, sy + 22], [sx, sy + 22]], { seed: sd + 40, t, w: 5, closed: true, smooth: false }) + ' ';
             for (let j = 0; j < 3; j++) {
@@ -858,9 +858,9 @@
               const n = Math.max(2, Math.round(pl.length * p + 1)), closed = p >= 1 && j === 0 && pl.length > 3;
               // dashed look: draw every other short segment of the outline
               const dense = []; const pts = closed || j === 0 ? pl.concat([pl[0]]) : pl;
-              for (let q = 0; q < pts.length - 1; q++) for (let m = 0; m < 6; m++) dense.push([lerp(pts[q][0], pts[q + 1][0], m / 6), lerp(pts[q][1], pts[q + 1][1], m / 6)]);
+              for (let q = 0; q < pts.length - 1; q++) for (let m = 0; m < 4; m++) dense.push([lerp(pts[q][0], pts[q + 1][0], m / 4), lerp(pts[q][1], pts[q + 1][1], m / 4)]);
               const lim = Math.round(dense.length * p);
-              for (let q = 0; q + 1 < lim; q += 2) gi += inkPath([dense[q], dense[q + 1]], { seed: sd + 400 + i * 40 + j * 7 + q, t, w: 5 }) + ' ';
+              for (let q = 0; q + 1 < lim; q += 2) gi += inkPath([dense[q], dense[q + 1]], { seed: sd + 400 + i * 40 + j * 7 + q, t, w: 7 }) + ' ';
               void n;
             });
             const xp = spring(lt, at + 0.7, 0.5), hk = punch(lt, at + 0.7), r = 70 * s * xp * (1 + hk * 0.2);
@@ -899,14 +899,14 @@
             const ma = atOr(cues, MU.at, 0.3), n = musterRigs.length;
             musterRigs.forEach(m => {
               const at = ma + m.i * (MU.dur / n), p = spring(lt, at, 0.5);
-              const x = (0.12 + m.i * (0.76 / Math.max(1, n - 1))) * W, y = 0.9 * H - (m.i % 2) * 20;
+              const x = (0.14 + m.i * (0.74 / Math.max(1, n - 1))) * W, y = 0.8 * H - (m.i % 2) * 24;
               m.rig.update(t, lt < at ? 'idle' : (m.i % 3 === 0 ? 'wave' : 'idle'), { x, y: y + (1 - p) * 400, face: m.i < n / 2 ? 1 : -1, since: lt - at, alpha: lt < at ? 0 : 1, emotion: m.kd === 'girl' ? 'happy' : null });
             });
           }
           // red ring (cabin)
           if (P.ring) {
             const at = atOr(cues, P.ring.at, dur * 0.5), p = clamp01((lt - at) / 0.7);
-            const c = P.ring.item === 'chests' ? [0.43 * W, 0.8 * H, 560, 160] : [0.23 * W, 0.28 * H, 380, 110];
+            const c = P.ring.item === 'chests' ? [0.43 * W, 0.8 * H, 560, 160] : [0.23 * W, 0.4 * H, 380, 110];
             const rp = []; for (let i = 0; i <= Math.round(34 * p); i++) { const a = -2.4 + i / 30 * 6.2832; rp.push([c[0] + Math.cos(a) * c[2] * (1 + i / 300), c[1] + Math.sin(a) * c[3] * (1 + i / 300)]); }
             ringI.setAttribute('d', lt >= at && rp.length > 1 ? inkPath(rp, { seed: sd + 600, t, w: 9 }) : '');
           }
@@ -938,7 +938,7 @@
   // ================================================================== mcA_portraits
   function bust(kind, cx, cy, s, t, sd, beard) {
     // returns {skin, hair, cloth, accent, ink} path strings; head centre at (cx, cy), s = scale
-    let skin = '', hair = '', cloth = '', acc = '', ink = '';
+    let skin = '', hair = '', cloth = '', acc = '', ink = '', beardP = '';
     const small = kind === 'girl' || kind === 'boy', hr = (small ? 62 : 72) * s;
     const head = circ(cx, cy, hr, 16, hr * 1.08);
     // shoulders / clothes
@@ -971,10 +971,10 @@
     ink += inkPath([[cx - 38 * s, cy - 28 * s], [cx - 12 * s, cy - 32 * s]], { seed: sd + 32, t, w: 4 }) + ' ' + inkPath([[cx + 12 * s, cy - 32 * s], [cx + 38 * s, cy - 28 * s]], { seed: sd + 33, t, w: 4 }) + ' ';
     if (beard && kind === 'man') {
       const bd = [[cx - hr * 0.95, cy + hr * 0.05], [cx - hr * 0.7, cy + hr * 0.8], [cx, cy + hr * 1.25], [cx + hr * 0.7, cy + hr * 0.8], [cx + hr * 0.95, cy + hr * 0.05], [cx + hr * 0.5, cy + hr * 0.5], [cx, cy + hr * 0.45], [cx - hr * 0.5, cy + hr * 0.5]];
-      hair += inkLoop(bd, { seed: sd + 40, t }) + ' ';
+      beardP = inkLoop(bd, { seed: sd + 40, t });
       ink += inkPath([[cx - 16 * s, cy + 36 * s], [cx + 16 * s, cy + 36 * s]], { seed: sd + 41, t, w: 4 }) + ' ';
     } else ink += inkPath([[cx - 16 * s, cy + 34 * s], [cx, cy + 38 * s], [cx + 16 * s, cy + 34 * s]], { seed: sd + 41, t, w: 4 }) + ' ';
-    return { skin, hair, cloth, acc, ink };
+    return { skin, hair, cloth, acc, ink, beard: beardP };
   }
   SH.mcA_portraits = {
     kind: '2d',
@@ -986,7 +986,7 @@
         const g = el(cam, 'g');
         const o = { F, i, g, str: inkEl(g), shadow: inkEl(g, INK.ink, { 'fill-opacity': 0.12 }), frameF: inkEl(g, INK.hat), mat: inkEl(g, INK.paperLight),
           cloth: inkEl(g, F.kind === 'woman' || F.kind === 'granny' ? INK.blue : F.kind === 'girl' ? INK.red : INK.inkSoft), hair: inkEl(g, F.kind === 'granny' ? INK.paperDark : INK.ink, { 'fill-opacity': F.kind === 'granny' ? 1 : 0.85 }),
-          skin: inkEl(g, INK.paperLight), acc: inkEl(g, F.kind === 'man' ? INK.red : INK.red), ink: inkEl(g), frameI: inkEl(g), veil: inkEl(g, INK.paper, { 'fill-opacity': 0 }) };
+          skin: inkEl(g, INK.paperLight), acc: inkEl(g, INK.red), beard: inkEl(g, INK.ink, { 'fill-opacity': 0.85 }), ink: inkEl(g), frameI: inkEl(g), veil: inkEl(g, INK.paper, { 'fill-opacity': 0 }) };
         o.name = el(g, 'text', { 'font-family': INK_FONT, 'font-size': Math.max(44, F.size || 60), 'text-anchor': 'middle', fill: INK.ink, style: `paint-order: stroke; stroke: ${INK.paperLight}; stroke-width: 10px` });
         o.name.textContent = F.name || '';
         return o;
@@ -1011,7 +1011,7 @@
             o.frameF.setAttribute('d', inkLoop(outer, { seed: sd + o.i * 50 + 4, t }));
             o.mat.setAttribute('d', inkLoop(inner, { seed: sd + o.i * 50 + 5, t }));
             const b = bust(F.kind || 'man', x, y - 30 * s, s * 0.95, t, sd + o.i * 50 + 10, F.beard);
-            o.cloth.setAttribute('d', b.cloth); o.hair.setAttribute('d', b.hair); o.skin.setAttribute('d', b.skin); o.acc.setAttribute('d', b.acc); o.ink.setAttribute('d', b.ink);
+            o.cloth.setAttribute('d', b.cloth); o.hair.setAttribute('d', b.hair); o.skin.setAttribute('d', b.skin); o.acc.setAttribute('d', b.acc); o.beard.setAttribute('d', b.beard); o.ink.setAttribute('d', b.ink);
             o.frameI.setAttribute('d', inkPath(outer, { seed: sd + o.i * 50 + 4, t, w: 6, closed: true }) + ' ' + inkPath(inner, { seed: sd + o.i * 50 + 5, t, w: 4, closed: true }));
             // clip the bust's shoulders to the oval: cover the outside with the frame (simple: veil below the mat)
             const dm = atOr(cues, F.dim, null), dv = dm == null ? 0 : clamp01((lt - dm) / 0.8) * 0.55;
