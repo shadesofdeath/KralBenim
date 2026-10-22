@@ -861,3 +861,22 @@ Lint OK (3 warnings: scene 5 has 4 sentences; chapters at 20 and 51 run 13/15 sc
 3. Scene 8 ("150 YEARS?"): the narrator holds a blank white sign. The `text` is on the first cast entry, but the `seq` step at "fifty" (pose shrug) drops it, so no text is ever visible. → Put `"text": "150 YEARS?"` on the seq step too (or change it to a hold/shrug that keeps the sign). Scene 58 has a similar issue: the "TV TEST" sign covers the narrator's chin and mouth. → Hold it lower or beside him.
 4. Key actions are too tiny to read. Scene 30 (lifeboat lowered and rowed away; no narrator), scene 47 ("boat on board?": the boat on deck is a few pixels), scene 63 (family lifeboat to Santa Maria, island barely visible), scene 73 (final emotional beat: an almost empty frame, the lifeboat invisible, the narrator just standing). → Scale the lifeboats to about 2× and put them in the foreground. In scene 73, make the fading lifeboat clearly visible mid-frame and give the narrator an action (takes off his fez or bows his head on "never"). Add the narrator to scene 30 (watching from the water, shocked on "hurry").
 5. Script: stiff, uncontracted English in about 20 places ("let us go back", "Here is the thing… It is a myth", "it was not a disaster", "People do not usually leave their pipes", "a monster does not pack the sextant", "It is a careful man"). For a native YouTube storyteller voice (BRAND §11) these should be "let's", "Here's the thing", "it wasn't", "don't", "doesn't", "It's". Small fact fix: the Dei Gratia was a Canadian (Nova Scotia) brigantine under the British flag; "British" alone is slightly off. Say "a Canadian brigantine". Minor: scene 2's map label "Atlantic Ocean" sits under "Azores"; scene 67's map puts "New York" right next to Spencer's Island. Move the labels apart.
+
+### ag-05-mary-celeste — tur 2
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 9 | 8 | 8 | 8 | 7 | 8 | 7 | 8 | 9 | 8 | 8 |
+Sonuç: GEÇTİ (hepsi ≥ 7, kapak 8). Lint OK (same 3 warnings: scene 5 has 4 sentences; chapters at 20 and 51 run 13/15 scenes). 7,549 chars. Round 1 fixes checked in the frames:
+- Scene 6: MARY CELESTE is fully painted on a real stern.
+- Scene 8: the "150 YEARS?" sign shows its text.
+- Scene 30: lifeboat and narrator are clearly visible.
+- Scene 47: the boat on deck reads.
+- Scene 58: the sign is beside the narrator.
+- Scene 63: the Santa Maria island is bold.
+- Scene 73: the fading lifeboat plus the seated narrator works.
+- Script: contractions are now natural, and "Canadian brigantine" is in.
+- Cover (scene 4, t 1.5): the big shocked fez narrator's face reads at small size and the empty deck is clear.
+Branding: "Stickstory" / #stickstory are consistent, and no old channel name is left. Remaining polish (optional):
+1. Kicker strike-through: in the scene 35/38/39/71 courtroom (and scenes 20/21/27, scene 73) a background horizontal line (the wall rail, deck rail or horizon) runs straight through the top-left kicker text ("Salvage hearing", "Ten people"), so it looks crossed out. → Move the wall rail/horizon below y ≈ 140 in those scenes, or give the kicker a small paper backing.
+2. Scene 62 (pump): Briggs is tiny at the top edge and the "pump taken apart" pieces are small, while the hold full of barrels takes up most of the frame. → Zoom in on the deck: a bigger Briggs (scale ~0.9) beside large pump parts, with the hold as a thin strip below.
+3. Scene 11 (1,701 barrels): the barrels' outlines overlap into a tangle, and the narrator is at the top-right edge, partly cut off. → Lay them out as a clean grid of rows (like scene 54) and move the narrator in to about x 0.85.

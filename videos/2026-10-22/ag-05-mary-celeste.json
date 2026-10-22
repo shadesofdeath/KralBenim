@@ -1,0 +1,5887 @@
+{
+ "extra": true,
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "mary-celeste",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "THE SHIP",
+   "WITH NO",
+   "CREW"
+  ],
+  "highlight": [
+   "CREW"
+  ],
+  "scene": 4,
+  "t": 1.5,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.3,
+   "face": 1,
+   "dir": 30,
+   "x": 910,
+   "y": 1090
+  }
+ },
+ "youtube": {
+  "title": "Mary Celeste: What Happened to the Ghost Ship's Crew?",
+  "description": "Mary Celeste: in December 1872 a ship was found drifting in the Atlantic with her sails up, her cargo aboard and not a single person on her. What happened to the ten people on the ghost ship?\n\nCaptain Benjamin Briggs left New York with his wife, his two-year-old daughter and seven crew. A month later the Dei Gratia found the Mary Celeste empty, with six months of food on board and her only lifeboat gone. We follow the real evidence, from the suspicious salvage hearing in Gibraltar to the myths Arthur Conan Doyle made famous, and the alcohol vapour theory that may finally explain this unsolved mystery of the sea.\n\nIn this video:\n- The empty ship and the family who sailed on her\n- What first mate Oliver Deveau really found on board\n- The Gibraltar trial and the stains that were not blood\n- Myth versus fact: Conan Doyle and the \"Marie Celeste\"\n- So what really happened? The best theories, and the ship's cursed end\n\nSubscribe to Stickstory for a new true story every day. If you were Captain Briggs, would you have stayed on the ship or climbed into the lifeboat? Tell me in the comments!\n\n#maryceleste #ghostship #unsolvedmysteries #history #stickstory",
+  "tags": [
+   "mary celeste",
+   "mary celeste mystery",
+   "mary celeste ghost ship",
+   "mary celeste what happened",
+   "mary celeste explained",
+   "marie celeste",
+   "ghost ship",
+   "unsolved mysteries",
+   "benjamin briggs",
+   "dei gratia",
+   "arthur conan doyle",
+   "sea mysteries",
+   "history",
+   "history stories",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-22T23:20:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "mcA_sea",
+   "text": "Imagine you find a ship in the middle of the ocean, sails up, cargo aboard, and not a single person on it.",
+   "visual": "Open ocean: a big two-masted ship drifts with torn, half-set sails and an empty deck; Kaşif on the near rail looks through binoculars, then jumps back in shock on 'single'",
+   "title": {
+    "white": "1872",
+    "gray": "Atlantic"
+   },
+   "cues": {
+    "sails": "sails",
+    "single": "single"
+   },
+   "params": {
+    "horizon": 0.4,
+    "zoom": 1.08,
+    "focus": [
+     0.6,
+     0.5
+    ],
+    "ships": [
+     {
+      "x": 0.62,
+      "y": 0.78,
+      "scale": 1.32,
+      "sails": "drift",
+      "wander": 0.6,
+      "roll": 3,
+      "flag": "us"
+     }
+    ],
+    "deck": {
+     "y": 0.99,
+     "rail": 0.88,
+     "mast": false
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "single",
+      "then": "shock",
+      "face": "right",
+      "scale": 0.78,
+      "emotion0": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "no one aboard?",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "single",
+      "color": "red",
+      "size": 70,
+      "arrow": [
+       0.52,
+       0.56
+      ]
+     }
+    ]
+   },
+   "chapter": "The Empty Ship"
+  },
+  {
+   "type": "title",
+   "text": "That really happened, in December 1872. Let me tell you the strangest sea story I know.",
+   "visual": "Giant words 'DECEMBER 1872' appear word by word, 1872 in a red box; small Kaşif beside them points at the year; note 'a true story'",
+   "title": {},
+   "cues": {
+    "w0": "December",
+    "w1": "1872",
+    "note": "strangest"
+   },
+   "params": {
+    "lines": [
+     "December",
+     "1872"
+    ],
+    "highlight": [
+     "1872"
+    ],
+    "note": {
+     "text": "a true story",
+     "at": "note"
+    },
+    "arrow": true,
+    "kasif": {
+     "x": 0.84,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "The Atlantic, somewhere between the Azores and Portugal. A small Canadian brigantine called the Dei Gratia was heading east.",
+   "visual": "Old Atlantic map: the Azores and Portugal appear, the small Dei Gratia's red dashed route runs east between them",
+   "title": {
+    "white": "Atlantic",
+    "gray": "1872"
+   },
+   "cues": {
+    "az": "Azores",
+    "pt": "Portugal",
+    "route": "heading"
+   },
+   "params": {
+    "preset": "atlantic",
+    "land": [
+     [
+      [
+       -120,
+       75
+      ],
+      [
+       -60,
+       75
+      ],
+      [
+       -55,
+       52
+      ],
+      [
+       -66,
+       45
+      ],
+      [
+       -70,
+       42
+      ],
+      [
+       -76,
+       38
+      ],
+      [
+       -81,
+       31
+      ],
+      [
+       -80,
+       25
+      ],
+      [
+       -82,
+       24
+      ],
+      [
+       -90,
+       21
+      ],
+      [
+       -87,
+       15
+      ],
+      [
+       -83,
+       10
+      ],
+      [
+       -77,
+       8
+      ],
+      [
+       -72,
+       12
+      ],
+      [
+       -62,
+       10
+      ],
+      [
+       -52,
+       5
+      ],
+      [
+       -50,
+       0
+      ],
+      [
+       -35,
+       -5
+      ],
+      [
+       -35,
+       -30
+      ],
+      [
+       -120,
+       -30
+      ]
+     ],
+     [
+      [
+       -10,
+       44
+      ],
+      [
+       -9,
+       43
+      ],
+      [
+       -9,
+       39
+      ],
+      [
+       -8.9,
+       37
+      ],
+      [
+       -6,
+       36.8
+      ],
+      [
+       -5.6,
+       36
+      ],
+      [
+       5,
+       36
+      ],
+      [
+       30,
+       36
+      ],
+      [
+       30,
+       75
+      ],
+      [
+       5,
+       62
+      ],
+      [
+       5,
+       58
+      ],
+      [
+       8,
+       57
+      ],
+      [
+       8,
+       54
+      ],
+      [
+       4,
+       52
+      ],
+      [
+       2,
+       51
+      ],
+      [
+       -1,
+       50
+      ],
+      [
+       -5,
+       48.5
+      ],
+      [
+       -4,
+       47.5
+      ],
+      [
+       -1,
+       46
+      ],
+      [
+       -1.5,
+       43.5
+      ]
+     ],
+     [
+      [
+       -5.5,
+       35.8
+      ],
+      [
+       -6,
+       35.5
+      ],
+      [
+       -9.8,
+       30
+      ],
+      [
+       -13,
+       27
+      ],
+      [
+       -17,
+       21
+      ],
+      [
+       -17.5,
+       14.7
+      ],
+      [
+       -16,
+       12
+      ],
+      [
+       -13,
+       9
+      ],
+      [
+       -8,
+       4.5
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9.5,
+       0
+      ],
+      [
+       30,
+       -30
+      ],
+      [
+       30,
+       35.8
+      ]
+     ],
+     [
+      [
+       -5.7,
+       50
+      ],
+      [
+       1.5,
+       51
+      ],
+      [
+       1.7,
+       52.8
+      ],
+      [
+       0,
+       53.5
+      ],
+      [
+       -1.5,
+       55
+      ],
+      [
+       -2,
+       57
+      ],
+      [
+       -4,
+       58.6
+      ],
+      [
+       -6,
+       57.5
+      ],
+      [
+       -5,
+       55
+      ],
+      [
+       -3,
+       54
+      ],
+      [
+       -4.5,
+       53
+      ],
+      [
+       -5,
+       51.7
+      ]
+     ],
+     [
+      [
+       -10,
+       51.5
+      ],
+      [
+       -6,
+       52
+      ],
+      [
+       -6,
+       54
+      ],
+      [
+       -8,
+       55.2
+      ],
+      [
+       -10,
+       54
+      ]
+     ],
+     [
+      [
+       -25.05,
+       37.78
+      ],
+      [
+       -25.18,
+       37.88
+      ],
+      [
+       -25.5,
+       37.92
+      ],
+      [
+       -25.82,
+       37.88
+      ],
+      [
+       -25.95,
+       37.78
+      ],
+      [
+       -25.82,
+       37.68
+      ],
+      [
+       -25.5,
+       37.64
+      ],
+      [
+       -25.18,
+       37.68
+      ]
+     ],
+     [
+      [
+       -24.9,
+       36.97
+      ],
+      [
+       -24.96,
+       37.05
+      ],
+      [
+       -25.1,
+       37.09
+      ],
+      [
+       -25.24,
+       37.05
+      ],
+      [
+       -25.3,
+       36.97
+      ],
+      [
+       -25.24,
+       36.89
+      ],
+      [
+       -25.1,
+       36.85
+      ],
+      [
+       -24.96,
+       36.89
+      ]
+     ],
+     [
+      [
+       -27.95,
+       38.5
+      ],
+      [
+       -28.05,
+       38.57
+      ],
+      [
+       -28.3,
+       38.6
+      ],
+      [
+       -28.55,
+       38.57
+      ],
+      [
+       -28.65,
+       38.5
+      ],
+      [
+       -28.55,
+       38.43
+      ],
+      [
+       -28.3,
+       38.4
+      ],
+      [
+       -28.05,
+       38.43
+      ]
+     ],
+     [
+      [
+       -26.9,
+       38.7
+      ],
+      [
+       -26.99,
+       38.77
+      ],
+      [
+       -27.2,
+       38.8
+      ],
+      [
+       -27.41,
+       38.77
+      ],
+      [
+       -27.5,
+       38.7
+      ],
+      [
+       -27.41,
+       38.63
+      ],
+      [
+       -27.2,
+       38.6
+      ],
+      [
+       -26.99,
+       38.63
+      ]
+     ],
+     [
+      [
+       -27.85,
+       38.45
+      ],
+      [
+       -27.92,
+       38.51
+      ],
+      [
+       -28.1,
+       38.53
+      ],
+      [
+       -28.28,
+       38.51
+      ],
+      [
+       -28.35,
+       38.45
+      ],
+      [
+       -28.28,
+       38.39
+      ],
+      [
+       -28.1,
+       38.37
+      ],
+      [
+       -27.92,
+       38.39
+      ]
+     ],
+     [
+      [
+       -30.95,
+       39.45
+      ],
+      [
+       -30.99,
+       39.52
+      ],
+      [
+       -31.1,
+       39.55
+      ],
+      [
+       -31.21,
+       39.52
+      ],
+      [
+       -31.25,
+       39.45
+      ],
+      [
+       -31.21,
+       39.38
+      ],
+      [
+       -31.1,
+       39.35
+      ],
+      [
+       -30.99,
+       39.38
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Azores",
+      "x": -25.5,
+      "y": 37.8,
+      "at": "az",
+      "dy": -44,
+      "dx": -40
+     },
+     {
+      "name": "Portugal",
+      "x": -9.1,
+      "y": 38.7,
+      "at": "pt",
+      "dy": -44,
+      "dx": 50,
+      "color": "red"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -33,
+       40.0
+      ],
+      [
+       -27,
+       39.4
+      ],
+      [
+       -21,
+       38.7
+      ],
+      [
+       -17.3,
+       38.35
+      ]
+     ],
+     "at": "route",
+     "dur": 2.2
+    },
+    "focus": [
+     -20,
+     38.5
+    ],
+    "zoom": 1.55,
+    "compass": "br",
+    "seas": [
+     {
+      "name": "Atlantic Ocean",
+      "x": -33,
+      "y": 24
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Her captain, David Morehouse, spotted another ship ahead, and something about it felt wrong.",
+   "visual": "On the Dei Gratia's deck the bearded captain Morehouse looks through binoculars at a ship on the horizon; Kaşif beside him turns worried and points at it on 'wrong'",
+   "title": {
+    "white": "Morehouse",
+    "gray": "Dei Gratia"
+   },
+   "cues": {
+    "cap": "Morehouse",
+    "hit": "wrong"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.07,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "morehouse",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.42,
+      "pose": "look",
+      "face": "right",
+      "scale": 1.05
+     },
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "pose": "talk",
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "face": "right",
+      "emotion": "worried"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.86,
+      "scale": 0.55
+     }
+    ],
+    "label": {
+     "text": "Capt. Morehouse",
+     "x": 0.42,
+     "y": 0.13,
+     "at": "cap",
+     "arrow": [
+      0.42,
+      0.33
+     ]
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.3,
+      0.7
+     ],
+     "near": "rope",
+     "side": "left"
+    }
+   }
+  },
+  {
+   "type": "mcA_sea",
+   "text": "She was moving, but badly. Her sails were half set, some of them torn, and she wandered as if nobody held the wheel.",
+   "visual": "Close on the Mary Celeste: torn sail strips flap, a sail hangs loose by its corners, the hull swings and rolls with no one at the wheel",
+   "title": {
+    "white": "Drifting"
+   },
+   "cues": {
+    "torn": "torn",
+    "wheel": "wheel"
+   },
+   "params": {
+    "horizon": 0.5,
+    "zoom": 1.1,
+    "focus": [
+     0.5,
+     0.45
+    ],
+    "clouds": 2,
+    "ships": [
+     {
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 1.25,
+      "sails": "drift",
+      "wander": 1.0,
+      "roll": 4,
+      "flag": "us"
+     }
+    ],
+    "labels": [
+     {
+      "text": "torn!",
+      "x": 0.83,
+      "y": 0.2,
+      "at": "torn",
+      "color": "red",
+      "arrow": [
+       0.6,
+       0.33
+      ]
+     },
+     {
+      "text": "nobody at the wheel",
+      "x": 0.25,
+      "y": 0.2,
+      "at": "wheel",
+      "arrow": [
+       0.22,
+       0.62
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_sea",
+   "text": "They signalled. No answer. They shouted across the water. Still nothing.",
+   "visual": "From the Dei Gratia's rail: signal flags run up the halyard, sailors and Kaşif wave and shout across the water; the drifting ship gives no answer",
+   "title": {
+    "white": "No answer"
+   },
+   "cues": {
+    "sig": "signalled",
+    "no": "answer",
+    "shout": "shouted",
+    "still": "Still"
+   },
+   "params": {
+    "horizon": 0.44,
+    "zoom": 1.05,
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "ships": [
+     {
+      "x": 0.56,
+      "y": 0.66,
+      "scale": 0.62,
+      "sails": "drift",
+      "wander": 0.6,
+      "roll": 3,
+      "flag": "us"
+     }
+    ],
+    "deck": {
+     "y": 0.95,
+     "rail": 0.8,
+     "mast": 0.9
+    },
+    "flags": {
+     "at": "sig",
+     "top": 0.3
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "wave",
+      "at": "still",
+      "then": "shrug",
+      "face": "right",
+      "scale": 0.55
+     },
+     {
+      "who": "sailor",
+      "accessory": "beret",
+      "x": 0.46,
+      "pose": "idle",
+      "at": "shout",
+      "then": "wave",
+      "face": "right",
+      "scale": 0.55
+     }
+    ],
+    "calls": [
+     {
+      "x": 0.36,
+      "y": 0.62,
+      "at": "shout",
+      "dur": 1.8
+     },
+     {
+      "x": 0.52,
+      "y": 0.62,
+      "at": "shout",
+      "dur": 1.8
+     }
+    ],
+    "labels": [
+     {
+      "text": "AHOY!",
+      "x": 0.4,
+      "y": 0.4,
+      "at": "shout",
+      "color": "red",
+      "size": 72
+     },
+     {
+      "text": "...",
+      "x": 0.6,
+      "y": 0.2,
+      "at": "still",
+      "size": 90
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_hull",
+   "text": "Her name was painted on the stern: Mary Celeste.",
+   "visual": "Big close-up of the ship's stern rising on the swell; gold letters MARY CELESTE appear one by one on the transom; Kaşif in a small rowing boat below points up at the name",
+   "title": {
+    "white": "The name"
+   },
+   "cues": {
+    "name": "painted"
+   },
+   "params": {
+    "mode": "stern",
+    "zoom": 1.06,
+    "boats": [
+     {
+      "x": 0.15,
+      "y": 0.84,
+      "scale": 1.4,
+      "oars": true,
+      "cast": [
+       {
+        "who": "kasif",
+        "dx": 10,
+        "pose": "look",
+        "at": "name",
+        "then": "point",
+        "dir": 60,
+        "face": "right",
+        "scale": 0.5
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_sea",
+   "text": "So Morehouse sent his first mate, Oliver Deveau, over in a small boat to take a look.",
+   "visual": "A small rowing boat with first mate Deveau (beret) and two rowers crosses from the Dei Gratia (left) to the drifting Mary Celeste (right); Kaşif sits in the stern; label 'Oliver Deveau'",
+   "title": {
+    "white": "Deveau",
+    "gray": "first mate"
+   },
+   "cues": {
+    "dev": "Deveau",
+    "row": "boat"
+   },
+   "params": {
+    "horizon": 0.42,
+    "zoom": 1.05,
+    "focus": [
+     0.5,
+     0.6
+    ],
+    "ships": [
+     {
+      "x": 0.2,
+      "y": 0.6,
+      "scale": 0.48,
+      "sails": "full",
+      "flag": "uk",
+      "crew": 3,
+      "face": 1
+     },
+     {
+      "x": 0.84,
+      "y": 0.64,
+      "scale": 0.6,
+      "sails": "drift",
+      "wander": 0.4,
+      "roll": 3,
+      "flag": "us"
+     }
+    ],
+    "boats": [
+     {
+      "x": 0.3,
+      "to": 0.58,
+      "at": "row",
+      "dur": 3.2,
+      "y": 0.84,
+      "scale": 1.5,
+      "cast": [
+       {
+        "who": "deveau",
+        "accessory": "beret",
+        "dx": 150,
+        "pose": "look",
+        "at": "dev",
+        "then": "point",
+        "dir": "forward",
+        "face": "right",
+        "scale": 0.52
+       },
+       {
+        "who": "rower",
+        "accessory": "beret",
+        "dx": 30,
+        "pose": "idle",
+        "face": "left",
+        "scale": 0.48
+       },
+       {
+        "who": "kasif",
+        "dx": -120,
+        "pose": "idle",
+        "at": "row",
+        "then": "point",
+        "dir": "right",
+        "face": "right",
+        "scale": 0.5
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Oliver Deveau",
+      "x": 0.62,
+      "y": 0.4,
+      "at": "dev",
+      "arrow": [
+       0.56,
+       0.56
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "What Deveau found on that deck would puzzle the whole world for the next hundred and fifty years.",
+   "visual": "Kaşif stands by a ship on the shore, thinks, then holds up a sign '150 YEARS?' and shrugs; a big question mark is written above",
+   "title": {
+    "white": "A mystery"
+   },
+   "cues": {
+    "hit": "puzzle",
+    "yrs": "hundred",
+    "fifty": "years"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.07,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "think",
+      "at": "yrs",
+      "then": "hold",
+      "text": "150 YEARS?",
+      "face": "right",
+      "seq": [
+       {
+        "at": "fifty",
+        "pose": "hold",
+        "text": "150 YEARS?",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.75,
+      "scale": 0.95
+     }
+    ],
+    "label": {
+     "text": "?",
+     "x": 0.72,
+     "y": 0.16,
+     "size": 120,
+     "at": "hit"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.3,
+      0.7
+     ],
+     "near": "post",
+     "side": "right"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "But to understand why it was so frightening, we need to go back one month, to New York.",
+   "visual": "Horizontal time line: 'Nov 1872 — leaves New York', then 'Dec 1872 — found empty' in red; Kaşif points back to the first date",
+   "title": {
+    "white": "One month",
+    "gray": "earlier"
+   },
+   "cues": {
+    "b": "frightening",
+    "a": "York"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Nov 1872",
+      "text": "New York",
+      "at": "a"
+     },
+     {
+      "year": "Dec 1872",
+      "text": "Found empty",
+      "at": "b"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.62,
+     "y": 0.8,
+     "pose": "point",
+     "dir": 30,
+     "at": "a",
+     "scale": 0.55,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "On the seventh of November 1872, the Mary Celeste left New York for Genoa, in Italy.",
+   "visual": "CHAPTER 2 / 7 badge, blue disc with 2, card 'The Captain's Family' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "seventh",
+    "title": "Mary"
+   },
+   "params": {
+    "n": 2,
+    "total": 7,
+    "title": "The Captain's Family"
+   },
+   "chapter": "The Captain's Family"
+  },
+  {
+   "type": "mcA_hull",
+   "text": "In her hold sat 1,701 barrels of alcohol. Not the kind you drink, but industrial alcohol, raw and highly flammable.",
+   "visual": "Cutaway of the ship's hold: rows of barrels pop in fast while a red counter runs up to 1,701 BARRELS; on 'flammable' a red FLAMMABLE badge with a flickering flame appears; Kaşif on the deck above points down",
+   "title": {
+    "white": "The cargo",
+    "gray": "alcohol"
+   },
+   "cues": {
+    "brl": "1,701",
+    "fl": "flammable"
+   },
+   "params": {
+    "mode": "hold",
+    "barrels": {
+     "rows": 3,
+     "at": "brl",
+     "dur": 2.6,
+     "stack": true,
+     "counter": {
+      "x": 0.5,
+      "y": 0.2,
+      "suffix": " BARRELS",
+      "size": 100
+     }
+    },
+    "warn": {
+     "at": "fl",
+     "x": 0.52,
+     "y": 0.42,
+     "text": "flammable"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.27,
+      "pose": "idle",
+      "at": "brl",
+      "then": "point",
+      "dir": "down",
+      "face": "left",
+      "scale": 0.42,
+      "seq": [
+       {
+        "at": "fl",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_portraits",
+   "text": "Her captain was Benjamin Briggs, thirty-seven years old, a careful and experienced sailor from Massachusetts.",
+   "visual": "A framed ink portrait of bearded Captain Benjamin Briggs swings on its nail; name 'Capt. Benjamin Briggs, 37' below; Kaşif points at it",
+   "title": {
+    "white": "Briggs",
+    "gray": "the captain"
+   },
+   "cues": {
+    "p": "Benjamin",
+    "k": "careful"
+   },
+   "params": {
+    "frames": [
+     {
+      "kind": "man",
+      "beard": true,
+      "name": "Benjamin Briggs, 37",
+      "at": "p",
+      "x": 0.42,
+      "y": 0.42
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.74,
+      "y": 0.88,
+      "pose": "talk",
+      "at": "k",
+      "then": "point",
+      "dir": 30,
+      "face": "left",
+      "scale": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "By all accounts he was a serious man, deeply religious, and he didn't drink.",
+   "visual": "Pinned board 'Captain Briggs': Serious ✓, Religious ✓, Drinks ✗ appear one by one; pill 'careful man'",
+   "title": {
+    "white": "His character"
+   },
+   "cues": {
+    "c0": "serious",
+    "i1": "religious",
+    "i2": "drink",
+    "pill": "drink"
+   },
+   "params": {
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Serious",
+        "mark": "check",
+        "at": "c0"
+       },
+       {
+        "text": "Religious",
+        "mark": "check",
+        "at": "i1"
+       },
+       {
+        "text": "Drinks",
+        "mark": "x",
+        "at": "i2"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Careful man",
+     "color": "blue",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "And here's the detail that makes this story hurt: Briggs didn't sail alone.",
+   "visual": "On the New York pier Captain Briggs stands by his ship; Kaşif turns to the viewer, worried, and points at the ship on 'alone'",
+   "title": {
+    "white": "Not alone"
+   },
+   "cues": {
+    "hit": "hurt",
+    "al": "alone"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.07,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": [
+     {
+      "type": "hatch",
+      "from": 0,
+      "to": 0.6
+     },
+     {
+      "type": "pier",
+      "from": 0.6,
+      "to": 1
+     }
+    ],
+    "cast": [
+     {
+      "who": "briggs",
+      "beard": "black",
+      "x": 0.5,
+      "pose": "idle",
+      "face": "right",
+      "scale": 1.05,
+      "at": "al",
+      "then": "point",
+      "dir": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "talk",
+      "at": "hit",
+      "then": "shock",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "al",
+        "pose": "point",
+        "dir": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.84,
+      "scale": 1.0
+     }
+    ],
+    "label": {
+     "text": "not alone",
+     "x": 0.68,
+     "y": 0.14,
+     "at": "al"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.3,
+      0.7
+     ],
+     "near": "rope",
+     "side": "left"
+    }
+   }
+  },
+  {
+   "type": "mcA_portraits",
+   "text": "His wife Sarah came with him, and so did their daughter Sophia. She was two years old.",
+   "visual": "Three framed portraits swing in: Briggs, his wife Sarah (hair in a bun, blue dress), and little Sophia (red dress, bow) labelled 'Sophia, 2'; Kaşif smiles and waves at them",
+   "title": {
+    "white": "The family"
+   },
+   "cues": {
+    "s": "Sarah",
+    "so": "Sophia",
+    "two": "two"
+   },
+   "params": {
+    "frames": [
+     {
+      "kind": "man",
+      "beard": true,
+      "name": "Benjamin",
+      "at": 0.0,
+      "x": 0.18,
+      "y": 0.42,
+      "scale": 0.8
+     },
+     {
+      "kind": "woman",
+      "name": "Sarah",
+      "at": "s",
+      "x": 0.44,
+      "y": 0.42,
+      "scale": 0.8
+     },
+     {
+      "kind": "girl",
+      "name": "Sophia, 2",
+      "at": "so",
+      "x": 0.68,
+      "y": 0.47,
+      "scale": 0.62
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.9,
+      "pose": "idle",
+      "at": "so",
+      "then": "wave",
+      "face": "left",
+      "emotion": "happy",
+      "scale": 0.72
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Their son Arthur, seven, stayed behind at home with his grandmother, so he could go to school.",
+   "visual": "In front of a small house a grandmother and little Arthur wave goodbye; Kaşif waves back from the left; label 'Arthur, 7'",
+   "title": {
+    "white": "Arthur",
+    "gray": "stays home"
+   },
+   "cues": {
+    "a": "Arthur",
+    "home": "home",
+    "sc": "school"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.07,
+     "pan": 24
+    },
+    "backdrop": false,
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "granny",
+      "x": 0.6,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.95,
+      "at": "home",
+      "then": "wave"
+     },
+     {
+      "who": "arthur",
+      "x": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.6,
+      "at": "a",
+      "then": "wave"
+     },
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "pose": "walk",
+      "to": 0.3,
+      "walk_at": 0.0,
+      "walk_dur": 1.6,
+      "at": "home",
+      "then": "wave",
+      "face": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.86,
+      "scale": 1.0
+     },
+     {
+      "type": "tree",
+      "x": 0.44,
+      "scale": 0.8
+     }
+    ],
+    "label": {
+     "text": "Arthur, 7",
+     "x": 0.72,
+     "y": 0.3,
+     "at": "a",
+     "arrow": [
+      0.72,
+      0.5
+     ]
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2
+    }
+   }
+  },
+  {
+   "type": "mcA_deck",
+   "text": "With seven crew, that made ten people on board. A small ship, a calm captain, a family voyage.",
+   "visual": "On the ship's deck ten people pop up one by one in a row (the bearded captain, his wife, a little girl, seven sailors in berets) while a red counter climbs to 10 ON BOARD; Kaşif counts them, pointing",
+   "title": {
+    "white": "Ten aboard"
+   },
+   "cues": {
+    "m": "seven",
+    "ten": "ten",
+    "fam": "family"
+   },
+   "params": {
+    "mode": "deck",
+    "hatch": false,
+    "muster": {
+     "count": 10,
+     "at": "m",
+     "dur": 2.0,
+     "counter": {
+      "x": 0.3,
+      "y": 0.2,
+      "label": "ON BOARD",
+      "size": 150
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.06,
+      "y": 0.9,
+      "pose": "point",
+      "dir": 10,
+      "face": "right",
+      "scale": 0.5,
+      "at": "fam",
+      "then": "talk",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "About a week later, the Dei Gratia left the same port, heading for Gibraltar.",
+   "visual": "Atlantic map: New York, Genoa and Gibraltar marked; the Dei Gratia's red dashed route runs from New York to Gibraltar",
+   "title": {
+    "white": "Dei Gratia",
+    "gray": "a week later"
+   },
+   "cues": {
+    "ny": "week",
+    "route": "left",
+    "gib": "Gibraltar"
+   },
+   "params": {
+    "preset": "atlantic",
+    "land": [
+     [
+      [
+       -120,
+       75
+      ],
+      [
+       -60,
+       75
+      ],
+      [
+       -55,
+       52
+      ],
+      [
+       -66,
+       45
+      ],
+      [
+       -70,
+       42
+      ],
+      [
+       -76,
+       38
+      ],
+      [
+       -81,
+       31
+      ],
+      [
+       -80,
+       25
+      ],
+      [
+       -82,
+       24
+      ],
+      [
+       -90,
+       21
+      ],
+      [
+       -87,
+       15
+      ],
+      [
+       -83,
+       10
+      ],
+      [
+       -77,
+       8
+      ],
+      [
+       -72,
+       12
+      ],
+      [
+       -62,
+       10
+      ],
+      [
+       -52,
+       5
+      ],
+      [
+       -50,
+       0
+      ],
+      [
+       -35,
+       -5
+      ],
+      [
+       -35,
+       -30
+      ],
+      [
+       -120,
+       -30
+      ]
+     ],
+     [
+      [
+       -10,
+       44
+      ],
+      [
+       -9,
+       43
+      ],
+      [
+       -9,
+       39
+      ],
+      [
+       -8.9,
+       37
+      ],
+      [
+       -6,
+       36.8
+      ],
+      [
+       -5.6,
+       36
+      ],
+      [
+       5,
+       36
+      ],
+      [
+       30,
+       36
+      ],
+      [
+       30,
+       75
+      ],
+      [
+       5,
+       62
+      ],
+      [
+       5,
+       58
+      ],
+      [
+       8,
+       57
+      ],
+      [
+       8,
+       54
+      ],
+      [
+       4,
+       52
+      ],
+      [
+       2,
+       51
+      ],
+      [
+       -1,
+       50
+      ],
+      [
+       -5,
+       48.5
+      ],
+      [
+       -4,
+       47.5
+      ],
+      [
+       -1,
+       46
+      ],
+      [
+       -1.5,
+       43.5
+      ]
+     ],
+     [
+      [
+       -5.5,
+       35.8
+      ],
+      [
+       -6,
+       35.5
+      ],
+      [
+       -9.8,
+       30
+      ],
+      [
+       -13,
+       27
+      ],
+      [
+       -17,
+       21
+      ],
+      [
+       -17.5,
+       14.7
+      ],
+      [
+       -16,
+       12
+      ],
+      [
+       -13,
+       9
+      ],
+      [
+       -8,
+       4.5
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9.5,
+       0
+      ],
+      [
+       30,
+       -30
+      ],
+      [
+       30,
+       35.8
+      ]
+     ],
+     [
+      [
+       -5.7,
+       50
+      ],
+      [
+       1.5,
+       51
+      ],
+      [
+       1.7,
+       52.8
+      ],
+      [
+       0,
+       53.5
+      ],
+      [
+       -1.5,
+       55
+      ],
+      [
+       -2,
+       57
+      ],
+      [
+       -4,
+       58.6
+      ],
+      [
+       -6,
+       57.5
+      ],
+      [
+       -5,
+       55
+      ],
+      [
+       -3,
+       54
+      ],
+      [
+       -4.5,
+       53
+      ],
+      [
+       -5,
+       51.7
+      ]
+     ],
+     [
+      [
+       -10,
+       51.5
+      ],
+      [
+       -6,
+       52
+      ],
+      [
+       -6,
+       54
+      ],
+      [
+       -8,
+       55.2
+      ],
+      [
+       -10,
+       54
+      ]
+     ],
+     [
+      [
+       -25.05,
+       37.78
+      ],
+      [
+       -25.18,
+       37.88
+      ],
+      [
+       -25.5,
+       37.92
+      ],
+      [
+       -25.82,
+       37.88
+      ],
+      [
+       -25.95,
+       37.78
+      ],
+      [
+       -25.82,
+       37.68
+      ],
+      [
+       -25.5,
+       37.64
+      ],
+      [
+       -25.18,
+       37.68
+      ]
+     ],
+     [
+      [
+       -24.9,
+       36.97
+      ],
+      [
+       -24.96,
+       37.05
+      ],
+      [
+       -25.1,
+       37.09
+      ],
+      [
+       -25.24,
+       37.05
+      ],
+      [
+       -25.3,
+       36.97
+      ],
+      [
+       -25.24,
+       36.89
+      ],
+      [
+       -25.1,
+       36.85
+      ],
+      [
+       -24.96,
+       36.89
+      ]
+     ],
+     [
+      [
+       -27.95,
+       38.5
+      ],
+      [
+       -28.05,
+       38.57
+      ],
+      [
+       -28.3,
+       38.6
+      ],
+      [
+       -28.55,
+       38.57
+      ],
+      [
+       -28.65,
+       38.5
+      ],
+      [
+       -28.55,
+       38.43
+      ],
+      [
+       -28.3,
+       38.4
+      ],
+      [
+       -28.05,
+       38.43
+      ]
+     ],
+     [
+      [
+       -26.9,
+       38.7
+      ],
+      [
+       -26.99,
+       38.77
+      ],
+      [
+       -27.2,
+       38.8
+      ],
+      [
+       -27.41,
+       38.77
+      ],
+      [
+       -27.5,
+       38.7
+      ],
+      [
+       -27.41,
+       38.63
+      ],
+      [
+       -27.2,
+       38.6
+      ],
+      [
+       -26.99,
+       38.63
+      ]
+     ],
+     [
+      [
+       -27.85,
+       38.45
+      ],
+      [
+       -27.92,
+       38.51
+      ],
+      [
+       -28.1,
+       38.53
+      ],
+      [
+       -28.28,
+       38.51
+      ],
+      [
+       -28.35,
+       38.45
+      ],
+      [
+       -28.28,
+       38.39
+      ],
+      [
+       -28.1,
+       38.37
+      ],
+      [
+       -27.92,
+       38.39
+      ]
+     ],
+     [
+      [
+       -30.95,
+       39.45
+      ],
+      [
+       -30.99,
+       39.52
+      ],
+      [
+       -31.1,
+       39.55
+      ],
+      [
+       -31.21,
+       39.52
+      ],
+      [
+       -31.25,
+       39.45
+      ],
+      [
+       -31.21,
+       39.38
+      ],
+      [
+       -31.1,
+       39.35
+      ],
+      [
+       -30.99,
+       39.38
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "New York",
+      "x": -74.0,
+      "y": 40.7,
+      "at": "ny",
+      "dy": -40
+     },
+     {
+      "name": "Genoa",
+      "x": 8.93,
+      "y": 44.4,
+      "dy": -40
+     },
+     {
+      "name": "Gibraltar",
+      "x": -5.35,
+      "y": 36.14,
+      "at": "gib",
+      "dy": 60,
+      "color": "red"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -74,
+       40.7
+      ],
+      [
+       -60,
+       40.2
+      ],
+      [
+       -40,
+       38.8
+      ],
+      [
+       -25,
+       38.3
+      ],
+      [
+       -12,
+       36.8
+      ],
+      [
+       -5.35,
+       36.14
+      ]
+     ],
+     "at": "route",
+     "dur": 2.6
+    },
+    "focus": [
+     -33,
+     39
+    ],
+    "zoom": 1.05,
+    "compass": "bl",
+    "seas": [
+     {
+      "name": "Atlantic Ocean",
+      "x": -45,
+      "y": 28
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_sea",
+   "text": "Nobody could know that the two ships were about to meet in the middle of the ocean, and only one of them would still have a crew.",
+   "visual": "Two ships sail toward each other across the open sea, tiny crews on both decks; on 'only one' the figures on the right ship fade away; Kaşif in a small boat in front watches, then is shocked",
+   "title": {
+    "white": "Two ships"
+   },
+   "cues": {
+    "meet": "meet",
+    "one": "only",
+    "crew": "crew"
+   },
+   "params": {
+    "horizon": 0.44,
+    "zoom": 1.06,
+    "ships": [
+     {
+      "x": 0.05,
+      "to": 0.3,
+      "at": 0,
+      "dur": 6,
+      "y": 0.7,
+      "scale": 0.6,
+      "sails": "full",
+      "flag": "uk",
+      "crew": 4
+     },
+     {
+      "x": 0.95,
+      "to": 0.7,
+      "at": 0,
+      "dur": 6,
+      "y": 0.68,
+      "scale": 0.6,
+      "sails": "full",
+      "flag": "us",
+      "crew": 4,
+      "face": -1,
+      "crew_fade": "one"
+     }
+    ],
+    "boats": [
+     {
+      "x": 0.5,
+      "y": 0.88,
+      "scale": 1.3,
+      "cast": [
+       {
+        "who": "kasif",
+        "dx": 0,
+        "pose": "look",
+        "at": "one",
+        "then": "shock",
+        "face": "right",
+        "scale": 0.46
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.7,
+      "y": 0.2,
+      "at": "crew",
+      "color": "red",
+      "size": 110
+     }
+    ]
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Now let's go back to that afternoon, the fourth of December. Deveau climbed aboard, and the silence hit him first.",
+   "visual": "CHAPTER 3 / 7 badge, blue disc with 3, card 'Boarding the Ghost' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "fourth",
+    "title": "Deveau"
+   },
+   "params": {
+    "n": 3,
+    "total": 7,
+    "title": "Boarding the Ghost"
+   },
+   "chapter": "Boarding the Ghost"
+  },
+  {
+   "type": "mcA_deck",
+   "text": "No voices. Only creaking wood and slapping rope.",
+   "visual": "On the empty deck Deveau (beret) climbs over the far rail and steps down; loose ropes swing from the mast, the cabin door creaks; hand-written 'creak...' and 'slap!' pulse; Kaşif stands listening, worried",
+   "title": {
+    "white": "Silence"
+   },
+   "cues": {
+    "c": "creaking",
+    "s": "slapping"
+   },
+   "params": {
+    "mode": "deck",
+    "climb": {
+     "who": 0,
+     "at": 0,
+     "dur": 1.6,
+     "x0": 0.24
+    },
+    "slap": "s",
+    "sounds": [
+     {
+      "text": "creak...",
+      "x": 0.8,
+      "y": 0.13,
+      "at": "c"
+     },
+     {
+      "text": "slap!",
+      "x": 0.44,
+      "y": 0.3,
+      "at": "s",
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "deveau",
+      "accessory": "beret",
+      "x": 0.3,
+      "y": 0.84,
+      "pose": "look",
+      "face": "right",
+      "scale": 0.5
+     },
+     {
+      "who": "kasif",
+      "x": 0.74,
+      "y": 0.9,
+      "pose": "idle",
+      "at": "c",
+      "then": "think",
+      "face": "left",
+      "emotion0": "worried",
+      "emotion": "worried",
+      "scale": 0.55
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_hull",
+   "text": "He went below. There was water sloshing in the hold, about three and a half feet of it.",
+   "visual": "Cutaway of the hold: dark water rises and sloshes from side to side; a red marker on a gauge stops at '3½ FEET'; Kaşif on the ladder points down at the water",
+   "title": {
+    "white": "The hold"
+   },
+   "cues": {
+    "w": "water",
+    "g": "three"
+   },
+   "params": {
+    "mode": "hold",
+    "water": {
+     "level": 0.3,
+     "at": "w",
+     "dur": 1.8
+    },
+    "gauge": {
+     "at": "g",
+     "text": "3½ FEET"
+    },
+    "barrels": {
+     "rows": 2,
+     "at": 0,
+     "dur": 0.6
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.6,
+      "pose": "look",
+      "at": "w",
+      "then": "point",
+      "dir": "down",
+      "face": "right",
+      "scale": 0.42,
+      "seq": [
+       {
+        "at": "g",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "That sounds like a lot, right? But for a ship this size, it wasn't a disaster. She was still perfectly able to sail.",
+   "visual": "Giant words 'NOT A DISASTER' word by word, 'DISASTER' in a red box; note 'she could still sail'; Kaşif beside shrugs",
+   "title": {},
+   "cues": {
+    "w0": "sounds",
+    "w1": "sounds",
+    "w2": "disaster",
+    "note": "sail"
+   },
+   "params": {
+    "lines": [
+     "Not a",
+     "disaster"
+    ],
+    "highlight": [
+     "disaster"
+    ],
+    "note": {
+     "text": "still able to sail",
+     "at": "note"
+    },
+    "arrow": true,
+    "kasif": {
+     "x": 0.84,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "at": "w2"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "In the stores there was food and fresh water for about six months. Nobody had left because they were starving.",
+   "visual": "Board 'The stores': Food ✓ and Fresh water ✓ appear, then a blue pill 'SIX MONTHS'",
+   "title": {
+    "white": "The stores"
+   },
+   "cues": {
+    "c0": "food",
+    "i1": "fresh",
+    "pill": "months"
+   },
+   "params": {
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Food",
+        "mark": "check",
+        "at": "c0"
+       },
+       {
+        "text": "Fresh water",
+        "mark": "check",
+        "at": "i1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Six months",
+     "color": "green",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "mcA_deck",
+   "text": "The crew's chests, their clothes, even their pipes were still there. People don't usually leave their pipes behind.",
+   "visual": "The crew's quarters: sea chests with open lids and clothes, coats swaying on pegs, a lamp swinging, a shelf of clay pipes; a red ring circles the pipes; Kaşif points at them, puzzled",
+   "title": {
+    "white": "Left behind"
+   },
+   "cues": {
+    "ch": "chests",
+    "p": "pipes"
+   },
+   "params": {
+    "mode": "cabin",
+    "ring": {
+     "at": "p",
+     "item": "pipes"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.46,
+      "y": 0.92,
+      "pose": "look",
+      "at": "p",
+      "then": "point",
+      "dir": "up-left",
+      "face": "left",
+      "emotion": "surprised",
+      "scale": 0.52
+     }
+    ],
+    "labels": [
+     {
+      "text": "still here",
+      "x": 0.24,
+      "y": 0.3,
+      "at": "p",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "So what was missing? Three things, and they tell a story.",
+   "visual": "Giant words '3 THINGS MISSING' word by word, 'MISSING' in a red box; Kaşif beside thinks, hand on chin",
+   "title": {},
+   "cues": {
+    "w0": "Three",
+    "w1": "things",
+    "w2": "story"
+   },
+   "params": {
+    "lines": [
+     "3 things",
+     "missing"
+    ],
+    "highlight": [
+     "missing"
+    ],
+    "kasif": {
+     "x": 0.84,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "mcA_deck",
+   "text": "The ship's only lifeboat was gone. So were the chronometer and the sextant, the tools a captain needs to find his position.",
+   "visual": "On deck, empty cradles where the lifeboat sat: a dashed outline of the missing boat appears and a big red X slams over it; then dashed outlines of a chronometer and a sextant appear, each crossed out in red; Kaşif points, shocked",
+   "title": {
+    "white": "Missing",
+    "gray": "lifeboat"
+   },
+   "cues": {
+    "b": "lifeboat",
+    "c": "chronometer",
+    "s": "sextant"
+   },
+   "params": {
+    "mode": "deck",
+    "hatch": false,
+    "ghosts": [
+     {
+      "item": "boat",
+      "x": 0.32,
+      "y": 0.72,
+      "at": "b",
+      "scale": 0.95
+     },
+     {
+      "item": "chrono",
+      "x": 0.64,
+      "y": 0.76,
+      "at": "c",
+      "scale": 1.0
+     },
+     {
+      "item": "sextant",
+      "x": 0.85,
+      "y": 0.74,
+      "at": "s",
+      "scale": 1.0
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "y": 0.92,
+      "pose": "talk",
+      "at": "b",
+      "then": "shock",
+      "face": "right",
+      "scale": 0.52,
+      "seq": [
+       {
+        "at": "s",
+        "pose": "point",
+        "dir": "up-right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "lifeboat",
+      "x": 0.32,
+      "y": 0.56,
+      "at": "b",
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Most of the ship's papers were gone too, except for the logbook.",
+   "visual": "Board 'Ship's papers': Papers ✗ in red, Logbook ✓ in blue appear one after another; pill 'only the log'",
+   "title": {
+    "white": "The papers"
+   },
+   "cues": {
+    "c0": "papers",
+    "i1": "logbook",
+    "pill": "except"
+   },
+   "params": {
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Papers",
+        "mark": "x",
+        "at": "c0"
+       },
+       {
+        "text": "Logbook",
+        "mark": "check",
+        "at": "i1"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Log left",
+     "color": "blue",
+     "at": "i1"
+    }
+   }
+  },
+  {
+   "type": "mcA_hull",
+   "text": "And on the deck lay a sounding rod, the iron rod sailors drop into the pump well to measure water inside.",
+   "visual": "Cutaway: an iron sounding rod lies on the deck; it lifts upright over the pump well and slides down the pipe into the bilge water, its tip turning wet; Kaşif on deck holds the line, pointing",
+   "title": {
+    "white": "Sounding rod"
+   },
+   "cues": {
+    "r": "sounding",
+    "d": "drop"
+   },
+   "params": {
+    "mode": "hold",
+    "rod": {
+     "at": "r",
+     "drop": "d"
+    },
+    "water": {
+     "level": 0.26,
+     "at": 0,
+     "dur": 0.4
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.56,
+      "y": 0.27,
+      "pose": "idle",
+      "at": "r",
+      "then": "point",
+      "dir": "right",
+      "face": "right",
+      "scale": 0.42,
+      "seq": [
+       {
+        "at": "d",
+        "pose": "look"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "sounding rod",
+      "x": 0.86,
+      "y": 0.13,
+      "at": "r",
+      "arrow": [
+       0.79,
+       0.24
+      ]
+     },
+     {
+      "text": "pump well",
+      "x": 0.6,
+      "y": 0.62,
+      "at": "d"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_sea",
+   "text": "So somebody had been checking for water, then they took the boat, the navigation tools and the papers, and they left in a hurry.",
+   "visual": "The Mary Celeste in the swell: her lifeboat is lowered down the side with figures in it, then rowed away fast to the left; the ship drifts on behind them",
+   "title": {
+    "white": "Abandoned"
+   },
+   "cues": {
+    "chk": "checking",
+    "boat": "boat",
+    "go": "hurry"
+   },
+   "params": {
+    "horizon": 0.42,
+    "zoom": 1.06,
+    "focus": [
+     0.55,
+     0.6
+    ],
+    "ships": [
+     {
+      "x": 0.62,
+      "y": 0.64,
+      "scale": 0.78,
+      "sails": "full",
+      "wander": 0.2,
+      "roll": 3,
+      "flag": "us",
+      "yawl": {
+       "at": "boat",
+       "down": 1.4,
+       "row": "go",
+       "to": 0.22,
+       "y": 0.9,
+       "scale": 1.9,
+       "grow": 0.5,
+       "figures": 4
+      }
+     }
+    ],
+    "boats": [
+     {
+      "x": 0.84,
+      "y": 0.88,
+      "scale": 1.45,
+      "cast": [
+       {
+        "who": "kasif",
+        "dx": 0,
+        "pose": "look",
+        "at": "go",
+        "then": "shock",
+        "face": "left",
+        "emotion": "surprised",
+        "scale": 0.56
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "they left",
+      "x": 0.3,
+      "y": 0.36,
+      "at": "go",
+      "color": "red",
+      "size": 70,
+      "arrow": [
+       0.24,
+       0.66
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcA_deck",
+   "text": "The last entry on the log slate was dated the twenty-fifth of November, near the island of Santa Maria, in the Azores.",
+   "visual": "A slate leans against the deckhouse; chalk writing appears letter by letter: 'Nov 25' then 'Santa Maria'; Kaşif points at it",
+   "title": {
+    "white": "Log slate"
+   },
+   "cues": {
+    "d": "twenty",
+    "sm": "Santa"
+   },
+   "params": {
+    "mode": "deck",
+    "hatch": false,
+    "slate": {
+     "x": 0.6,
+     "y": 0.4,
+     "scale": 1.0,
+     "lines": [
+      {
+       "text": "Nov 25",
+       "at": "d"
+      },
+      {
+       "text": "Santa Maria",
+       "at": "sm"
+      }
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "y": 0.92,
+      "pose": "walk",
+      "to": 0.24,
+      "walk_dur": 1.2,
+      "at": "d",
+      "then": "point",
+      "dir": "up-right",
+      "face": "right",
+      "scale": 0.52
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "That means the Mary Celeste had sailed on alone, with no one aboard, for more than a week.",
+   "visual": "Map of the Azores: 'Nov 25' at Santa Maria, a red dashed drift line east to 'Dec 4' where the ship was found; note 'alone'",
+   "title": {
+    "white": "Alone",
+    "gray": "nine days"
+   },
+   "cues": {
+    "a": "Mary",
+    "route": "alone",
+    "b": "aboard",
+    "note": "week"
+   },
+   "params": {
+    "preset": "atlantic",
+    "land": [
+     [
+      [
+       -120,
+       75
+      ],
+      [
+       -60,
+       75
+      ],
+      [
+       -55,
+       52
+      ],
+      [
+       -66,
+       45
+      ],
+      [
+       -70,
+       42
+      ],
+      [
+       -76,
+       38
+      ],
+      [
+       -81,
+       31
+      ],
+      [
+       -80,
+       25
+      ],
+      [
+       -82,
+       24
+      ],
+      [
+       -90,
+       21
+      ],
+      [
+       -87,
+       15
+      ],
+      [
+       -83,
+       10
+      ],
+      [
+       -77,
+       8
+      ],
+      [
+       -72,
+       12
+      ],
+      [
+       -62,
+       10
+      ],
+      [
+       -52,
+       5
+      ],
+      [
+       -50,
+       0
+      ],
+      [
+       -35,
+       -5
+      ],
+      [
+       -35,
+       -30
+      ],
+      [
+       -120,
+       -30
+      ]
+     ],
+     [
+      [
+       -10,
+       44
+      ],
+      [
+       -9,
+       43
+      ],
+      [
+       -9,
+       39
+      ],
+      [
+       -8.9,
+       37
+      ],
+      [
+       -6,
+       36.8
+      ],
+      [
+       -5.6,
+       36
+      ],
+      [
+       5,
+       36
+      ],
+      [
+       30,
+       36
+      ],
+      [
+       30,
+       75
+      ],
+      [
+       5,
+       62
+      ],
+      [
+       5,
+       58
+      ],
+      [
+       8,
+       57
+      ],
+      [
+       8,
+       54
+      ],
+      [
+       4,
+       52
+      ],
+      [
+       2,
+       51
+      ],
+      [
+       -1,
+       50
+      ],
+      [
+       -5,
+       48.5
+      ],
+      [
+       -4,
+       47.5
+      ],
+      [
+       -1,
+       46
+      ],
+      [
+       -1.5,
+       43.5
+      ]
+     ],
+     [
+      [
+       -5.5,
+       35.8
+      ],
+      [
+       -6,
+       35.5
+      ],
+      [
+       -9.8,
+       30
+      ],
+      [
+       -13,
+       27
+      ],
+      [
+       -17,
+       21
+      ],
+      [
+       -17.5,
+       14.7
+      ],
+      [
+       -16,
+       12
+      ],
+      [
+       -13,
+       9
+      ],
+      [
+       -8,
+       4.5
+      ],
+      [
+       -3,
+       5
+      ],
+      [
+       5,
+       6
+      ],
+      [
+       9,
+       4
+      ],
+      [
+       9.5,
+       0
+      ],
+      [
+       30,
+       -30
+      ],
+      [
+       30,
+       35.8
+      ]
+     ],
+     [
+      [
+       -5.7,
+       50
+      ],
+      [
+       1.5,
+       51
+      ],
+      [
+       1.7,
+       52.8
+      ],
+      [
+       0,
+       53.5
+      ],
+      [
+       -1.5,
+       55
+      ],
+      [
+       -2,
+       57
+      ],
+      [
+       -4,
+       58.6
+      ],
+      [
+       -6,
+       57.5
+      ],
+      [
+       -5,
+       55
+      ],
+      [
+       -3,
+       54
+      ],
+      [
+       -4.5,
+       53
+      ],
+      [
+       -5,
+       51.7
+      ]
+     ],
+     [
+      [
+       -10,
+       51.5
+      ],
+      [
+       -6,
+       52
+      ],
+      [
+       -6,
+       54
+      ],
+      [
+       -8,
+       55.2
+      ],
+      [
+       -10,
+       54
+      ]
+     ],
+     [
+      [
+       -25.05,
+       37.78
+      ],
+      [
+       -25.18,
+       37.88
+      ],
+      [
+       -25.5,
+       37.92
+      ],
+      [
+       -25.82,
+       37.88
+      ],
+      [
+       -25.95,
+       37.78
+      ],
+      [
+       -25.82,
+       37.68
+      ],
+      [
+       -25.5,
+       37.64
+      ],
+      [
+       -25.18,
+       37.68
+      ]
+     ],
+     [
+      [
+       -24.9,
+       36.97
+      ],
+      [
+       -24.96,
+       37.05
+      ],
+      [
+       -25.1,
+       37.09
+      ],
+      [
+       -25.24,
+       37.05
+      ],
+      [
+       -25.3,
+       36.97
+      ],
+      [
+       -25.24,
+       36.89
+      ],
+      [
+       -25.1,
+       36.85
+      ],
+      [
+       -24.96,
+       36.89
+      ]
+     ],
+     [
+      [
+       -27.95,
+       38.5
+      ],
+      [
+       -28.05,
+       38.57
+      ],
+      [
+       -28.3,
+       38.6
+      ],
+      [
+       -28.55,
+       38.57
+      ],
+      [
+       -28.65,
+       38.5
+      ],
+      [
+       -28.55,
+       38.43
+      ],
+      [
+       -28.3,
+       38.4
+      ],
+      [
+       -28.05,
+       38.43
+      ]
+     ],
+     [
+      [
+       -26.9,
+       38.7
+      ],
+      [
+       -26.99,
+       38.77
+      ],
+      [
+       -27.2,
+       38.8
+      ],
+      [
+       -27.41,
+       38.77
+      ],
+      [
+       -27.5,
+       38.7
+      ],
+      [
+       -27.41,
+       38.63
+      ],
+      [
+       -27.2,
+       38.6
+      ],
+      [
+       -26.99,
+       38.63
+      ]
+     ],
+     [
+      [
+       -27.85,
+       38.45
+      ],
+      [
+       -27.92,
+       38.51
+      ],
+      [
+       -28.1,
+       38.53
+      ],
+      [
+       -28.28,
+       38.51
+      ],
+      [
+       -28.35,
+       38.45
+      ],
+      [
+       -28.28,
+       38.39
+      ],
+      [
+       -28.1,
+       38.37
+      ],
+      [
+       -27.92,
+       38.39
+      ]
+     ],
+     [
+      [
+       -30.95,
+       39.45
+      ],
+      [
+       -30.99,
+       39.52
+      ],
+      [
+       -31.1,
+       39.55
+      ],
+      [
+       -31.21,
+       39.52
+      ],
+      [
+       -31.25,
+       39.45
+      ],
+      [
+       -31.21,
+       39.38
+      ],
+      [
+       -31.1,
+       39.35
+      ],
+      [
+       -30.99,
+       39.38
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Nov 25",
+      "x": -25.1,
+      "y": 36.97,
+      "at": "a",
+      "dy": 60
+     },
+     {
+      "name": "Dec 4",
+      "x": -17.25,
+      "y": 38.33,
+      "at": "b",
+      "dy": -50,
+      "dx": -40,
+      "color": "red"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -25.1,
+       36.97
+      ],
+      [
+       -22.5,
+       37.4
+      ],
+      [
+       -20,
+       37.9
+      ],
+      [
+       -17.25,
+       38.33
+      ]
+     ],
+     "at": "route",
+     "dur": 2.4
+    },
+    "focus": [
+     -21,
+     37.7
+    ],
+    "zoom": 1.9,
+    "compass": "br",
+    "note": {
+     "text": "alone",
+     "at": "note",
+     "x": 0.42,
+     "y": 0.78
+    },
+    "seas": []
+   }
+  },
+  {
+   "chapter": "Trial in Gibraltar",
+   "type": "chapter",
+   "text": "Morehouse saw an opportunity. Under the law of the sea, whoever saves an abandoned ship can claim a reward.",
+   "visual": "CHAPTER 4 / 7 badge, blue disc with 4, 'Trial in Gibraltar' card and a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "opportunity",
+    "title": "reward"
+   },
+   "params": {
+    "n": 4,
+    "total": 7,
+    "title": "Trial in Gibraltar"
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "So Deveau and two sailors brought the Mary Celeste all the way to Gibraltar. And that's when the real trouble started.",
+   "visual": "At sea: the small Dei Gratia sails ahead, the Mary Celeste with half-set sails follows behind it towards the Rock of Gibraltar rising on the horizon; on 'trouble' a red 'TROUBLE' stamp lands",
+   "title": {
+    "white": "Gibraltar",
+    "gray": "December 1872"
+   },
+   "cues": {
+    "gib": "Gibraltar",
+    "trouble": "trouble"
+   },
+   "params": {
+    "horizon": 0.52,
+    "water": 0.8,
+    "gib": {
+     "x": 0.86,
+     "at": "gib",
+     "scale": 1.2
+    },
+    "ships": [
+     {
+      "x": 0.46,
+      "to": 0.66,
+      "scale": 0.55,
+      "sails": "full",
+      "flag": true
+     },
+     {
+      "x": 0.1,
+      "to": 0.28,
+      "scale": 0.55,
+      "sails": "half"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Dei Gratia",
+      "x": 0.62,
+      "y": 0.22,
+      "at": 0.6,
+      "size": 56,
+      "arrow": [
+       0.6,
+       0.4
+      ]
+     },
+     {
+      "text": "Mary Celeste",
+      "x": 0.3,
+      "y": 0.26,
+      "at": 1.2,
+      "size": 56,
+      "arrow": [
+       0.24,
+       0.45
+      ]
+     },
+     {
+      "text": "Trouble",
+      "x": 0.47,
+      "y": 0.52,
+      "at": "trouble",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_court",
+   "text": "At the salvage hearing, the Attorney General of Gibraltar, Frederick Solly-Flood, didn't believe a word of it.",
+   "visual": "Gibraltar courtroom: grey-bearded judge behind the high bench under the royal arms; Attorney General Solly-Flood (black beard) stands at the exhibits table, shakes his head and crosses into a shrug on 'believe'; Kaşif at the left whispers to the viewer; label 'Solly-Flood' with arrow",
+   "title": {
+    "white": "Salvage",
+    "gray": "hearing"
+   },
+   "cues": {
+    "sf": "Solly-Flood",
+    "no": "believe"
+   },
+   "params": {
+    "table": {
+     "x": 0.38,
+     "w": 0.28
+    },
+    "cast": [
+     {
+      "who": "judge",
+      "layer": "back",
+      "x": 0.72,
+      "y": 0.68,
+      "scale": 0.8,
+      "pose": "idle",
+      "beard": "grey",
+      "face": "left",
+      "at": "sf",
+      "then": "think"
+     },
+     {
+      "who": "solly",
+      "x": 0.5,
+      "y": 0.9,
+      "scale": 0.9,
+      "beard": "black",
+      "pose": "talk",
+      "face": "left",
+      "at": "no",
+      "then": "shrug",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "at": "sf",
+      "then": "point",
+      "dir": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Solly-Flood",
+      "x": 0.46,
+      "y": 0.22,
+      "at": "sf",
+      "size": 64,
+      "arrow": [
+       0.55,
+       0.4
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "To him, a perfect ship with no crew could only mean one thing: a crime.",
+   "visual": "Giant words 'ONLY ONE THING: A CRIME', 'CRIME' in a red box; small Kaşif at right points at it with a worried face",
+   "title": {},
+   "cues": {
+    "w0": "perfect",
+    "w2": "crime"
+   },
+   "params": {
+    "lines": [
+     "Only one",
+     "thing:",
+     "a crime"
+    ],
+    "highlight": [
+     "crime"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "crime"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Maybe the crew got drunk on the cargo and murdered the family. Or maybe the Dei Gratia's men killed everyone to collect the reward.",
+   "visual": "Kaşif stands between two signs: 'DRUNK CREW?' pops up on the left on 'drunk', he points at it; 'RESCUERS?' pops up on the right on 'Dei Gratia', he turns and points, then shrugs",
+   "title": {
+    "white": "Suspects"
+   },
+   "cues": {
+    "a": "drunk",
+    "b": "Gratia",
+    "c": "reward"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.18,
+     "near": "crate",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "think",
+      "at": "a",
+      "then": "point",
+      "dir": "left",
+      "face": "left",
+      "seq": [
+       {
+        "at": "b",
+        "pose": "point",
+        "dir": "right",
+        "face": "right"
+       },
+       {
+        "at": "c",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.2,
+      "scale": 0.95,
+      "text": "DRUNK CREW?",
+      "at": "a",
+      "hit": "a"
+     },
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 0.95,
+      "text": "RESCUERS?",
+      "at": "b",
+      "hit": "b"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcB_court",
+   "text": "He had evidence, or so he thought. There were cuts on the ship's rail, and dark stains on the deck and on an old sword.",
+   "visual": "Close on the exhibits table: a piece of the ship's rail with three cut marks and dark stains, an old sword with a stain on the blade; red ink rings circle the cuts on 'cuts', then the stains on 'stains'; Solly-Flood points at them, Kaşif leans in",
+   "title": {
+    "white": "Evidence"
+   },
+   "cues": {
+    "cuts": "cuts",
+    "stains": "stains",
+    "sword": "sword"
+   },
+   "params": {
+    "bench": false,
+    "arms": false,
+    "table": {
+     "x": 0.44,
+     "w": 0.42
+    },
+    "cuts_at": "cuts",
+    "stains_at": "stains",
+    "cast": [
+     {
+      "who": "solly",
+      "x": 0.8,
+      "y": 0.9,
+      "scale": 0.9,
+      "beard": "black",
+      "pose": "talk",
+      "face": "left",
+      "at": "cuts",
+      "then": "point",
+      "dir": 10,
+      "seq": [
+       {
+        "at": "sword",
+        "pose": "point",
+        "dir": -20
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.11,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "look",
+      "face": "right",
+      "at": "stains",
+      "then": "shock"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.46,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_court",
+   "text": "Blood, he said. So the stains were tested.",
+   "visual": "Solly-Flood slams his point at the sword; a red hand-written 'BLOOD?' appears over the stains; on 'tested' a big magnifying glass sweeps across each stain while the judge leans in",
+   "title": {
+    "white": "Blood?"
+   },
+   "cues": {
+    "blood": "Blood",
+    "test": "tested"
+   },
+   "params": {
+    "bench": {
+     "x": 0.8,
+     "w": 0.3
+    },
+    "table": {
+     "x": 0.4,
+     "w": 0.36
+    },
+    "glass": {
+     "at": "test",
+     "dur": 2.2
+    },
+    "cast": [
+     {
+      "who": "judge",
+      "layer": "back",
+      "x": 0.8,
+      "y": 0.68,
+      "scale": 0.8,
+      "beard": "grey",
+      "face": "left",
+      "pose": "idle",
+      "at": "test",
+      "then": "look"
+     },
+     {
+      "who": "solly",
+      "x": 0.11,
+      "y": 0.9,
+      "scale": 0.9,
+      "beard": "black",
+      "pose": "talk",
+      "face": "right",
+      "at": "blood",
+      "then": "point",
+      "dir": -10,
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "BLOOD?",
+      "x": 0.42,
+      "y": 0.36,
+      "at": "blood",
+      "color": "red",
+      "size": 96,
+      "rot": -5
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.42,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "And the result? They weren't blood at all.",
+   "visual": "Giant words 'NOT BLOOD' word by word, 'NOT' in a red box; Kaşif beside jumps back in shock on 'not'",
+   "title": {},
+   "cues": {
+    "w0": "result",
+    "w1": "weren"
+   },
+   "params": {
+    "lines": [
+     "Not",
+     "blood"
+    ],
+    "highlight": [
+     "not"
+    ],
+    "kasif": {
+     "x": 0.84,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.85,
+     "emotion": "surprised",
+     "at": "not"
+    }
+   }
+  },
+  {
+   "type": "ag03c_compare",
+   "text": "The court found no crime. But the doubt stuck, and the salvors were paid only about a sixth of what the ship and cargo were worth.",
+   "visual": "Two pinned cards: left, two big bars, 'Ship + cargo' full in ink and 'Reward' only about one sixth long in red; right, 'No crime' gets a blue tick; Kaşif at the right edge shrugs on 'doubt'",
+   "title": {
+    "white": "The reward"
+   },
+   "cues": {
+    "c0": "court",
+    "b1": "sixth",
+    "doubt": "doubt"
+   },
+   "params": {
+    "bars": [
+     {
+      "label": "Ship + cargo",
+      "value": 1.0,
+      "color": "ink",
+      "at": "c0"
+     },
+     {
+      "label": "Reward",
+      "value": 0.17,
+      "color": "red",
+      "at": "b1"
+     }
+    ],
+    "list": {
+     "items": [
+      {
+       "text": "No crime",
+       "mark": "check",
+       "at": "c0"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.9,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "doubt",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Morehouse got his money, but not his good name. And the ten people from the Mary Celeste were never seen again.",
+   "visual": "Harbour at dusk: Captain Morehouse (black beard) holds a coin but hangs his head; Kaşif walks in, stops and bows his head on 'never'; a hand-written '10 never found' appears over the empty sea",
+   "title": {
+    "white": "Morehouse"
+   },
+   "cues": {
+    "money": "money",
+    "never": "never"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.18,
+     "near": "crate",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "morehouse",
+      "x": 0.3,
+      "beard": "black",
+      "pose": "hold",
+      "item": "coin",
+      "face": "right",
+      "at": "money",
+      "then": "think",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 1.05,
+      "to": 0.66,
+      "pose": "walk",
+      "at": "never",
+      "then": "idle",
+      "emotion": "worried",
+      "face": "left"
+     }
+    ],
+    "label": {
+     "text": "10 never found",
+     "x": 0.66,
+     "y": 0.14,
+     "at": "never"
+    }
+   }
+  },
+  {
+   "chapter": "Doyle's Famous Lie",
+   "type": "chapter",
+   "text": "For a while, the story faded. Then, in 1884, a young doctor wrote a short story about it.",
+   "visual": "CHAPTER 5 / 7 badge, blue disc with 5, 'Doyle's Famous Lie' card and a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "faded",
+    "title": "doctor"
+   },
+   "params": {
+    "n": 5,
+    "total": 7,
+    "title": "Doyle's Famous Lie"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "His name was Arthur Conan Doyle, and a few years later he would create Sherlock Holmes.",
+   "visual": "A study: young Arthur Conan Doyle (short beard) holds a manuscript; on 'Sherlock' a sign 'SHERLOCK HOLMES' pops up and Kaşif points at it, surprised",
+   "title": {
+    "white": "Conan Doyle",
+    "gray": "1884"
+   },
+   "cues": {
+    "name": "Arthur",
+    "sh": "Sherlock"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "near": "arch",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "doyle",
+      "x": 0.3,
+      "beard": "short",
+      "pose": "hold",
+      "item": "scroll",
+      "face": "right",
+      "scale": 1.05
+     },
+     {
+      "who": "kasif",
+      "x": 0.52,
+      "pose": "talk",
+      "face": "left",
+      "at": "sh",
+      "then": "point",
+      "dir": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.74,
+      "scale": 0.95,
+      "text": "SHERLOCK HOLMES",
+      "at": "sh",
+      "hit": "sh"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "His story was called \"J. Habakuk Jephson's Statement,\" and it was pure fiction, a revenge tale told by a made-up survivor.",
+   "visual": "Writer's desk by lamplight: a large sheet titled 'J. Habakuk Jephson's Statement' in two Fraunces lines, hand-written lines fill the page as a quill writes; on 'fiction' a red 'FICTION' stamp slams onto the page; Kaşif at the left reads over it",
+   "title": {
+    "white": "The story"
+   },
+   "cues": {
+    "title": "called",
+    "fic": "fiction",
+    "tale": "revenge"
+   },
+   "params": {
+    "title": [
+     "J. Habakuk",
+     "Jephson's Statement"
+    ],
+    "title_at": "called",
+    "write": {
+     "at": 0.6,
+     "dur": 5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "look",
+      "face": "right",
+      "at": "fic",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Fiction",
+      "x": 0.68,
+      "y": 0.62,
+      "at": "fic",
+      "stamp": true,
+      "color": "red",
+      "size": 96
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "But Doyle changed the ship's name to \"Marie Celeste,\" and to this day, many people still call her that.",
+   "visual": "The same page: 'MARY CELESTE' in big letters; on 'changed' a red line strikes out 'MARY' and a red hand-written 'MARIE' appears above it with a caret; Kaşif points at the change",
+   "title": {
+    "white": "Wrong name"
+   },
+   "cues": {
+    "ch": "changed",
+    "fix": "Marie",
+    "day": "day"
+   },
+   "params": {
+    "name": {
+     "text": "MARY",
+     "rest": "CELESTE",
+     "strike": "ch",
+     "fix": "MARIE",
+     "fix_at": "fix"
+    },
+    "write": {
+     "at": 0.3,
+     "dur": 3
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "talk",
+      "face": "right",
+      "at": "ch",
+      "then": "point",
+      "dir": 20,
+      "seq": [
+       {
+        "at": "day",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.65,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "His version also had the lifeboat still on board, which made the mystery far stranger than the truth.",
+   "visual": "The ghost ship drifts with torn sails, and a big lifeboat sits clearly on her deck; hand-written 'Doyle: boat on board?' with an arrow to it; Kaşif on a rock in the foreground points, then shrugs",
+   "title": {
+    "white": "Doyle's",
+    "gray": "version"
+   },
+   "cues": {
+    "boat": "lifeboat",
+    "str": "stranger"
+   },
+   "params": {
+    "water": 0.82,
+    "ships": [
+     {
+      "x": 0.56,
+      "to": 0.6,
+      "sails": "torn",
+      "boat": "deck",
+      "boat_scale": 1.9,
+      "wander": true,
+      "scale": 0.86
+     }
+    ],
+    "rocks": [
+     {
+      "x": 0.12,
+      "y": 0.84,
+      "w": 0.18
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "talk",
+      "face": "right",
+      "at": "boat",
+      "then": "point",
+      "dir": 10,
+      "seq": [
+       {
+        "at": "str",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "boat on board?",
+      "x": 0.3,
+      "y": 0.34,
+      "at": "boat",
+      "arrow": [
+       0.5,
+       0.64
+      ],
+      "color": "red",
+      "size": 72
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_table",
+   "text": "Later retellings went even further, with warm cups of tea on the table and breakfast half eaten, as if everyone had vanished mid-bite.",
+   "visual": "A ship's cabin: steaming tea cups, a teapot and a half-eaten loaf on the table, chairs pushed back and tilted, the lamp swinging; Kaşif peers in from the left and jumps back in shock on 'vanished'",
+   "title": {
+    "white": "The legend"
+   },
+   "cues": {
+    "tea": "tea",
+    "van": "vanished"
+   },
+   "params": {
+    "chairs": [
+     [
+      0.88,
+      18
+     ]
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.88,
+      "scale": 0.62,
+      "pose": "look",
+      "face": "right",
+      "at": "van",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "still warm?",
+      "x": 0.45,
+      "y": 0.18,
+      "at": "tea",
+      "arrow": [
+       0.42,
+       0.42
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.48,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_table",
+   "text": "Here's the thing: none of that is in the real reports. It's a myth.",
+   "visual": "The same cabin table, the tea has gone cold (no steam); a red 'MYTH' stamp slams across it; Kaşif shakes his head and wags a finger",
+   "title": {
+    "white": "Myth"
+   },
+   "cues": {
+    "none": "none",
+    "rep": "reports",
+    "myth": "myth"
+   },
+   "params": {
+    "steam": false,
+    "chairs": [
+     [
+      0.88,
+      18
+     ]
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.88,
+      "scale": 0.6,
+      "pose": "talk",
+      "face": "right",
+      "at": "none",
+      "then": "point",
+      "dir": 10,
+      "seq": [
+       {
+        "at": "myth",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Myth",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "myth",
+      "stamp": true,
+      "color": "red",
+      "size": 130
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.48,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "The real Mary Celeste was wet, messy, and clearly abandoned on purpose. And honestly, that makes the question even better. Why?",
+   "visual": "Kaşif on the quay in front of the drifting ship: he points at it on 'wet', then turns to the viewer and throws up his arms; a big red 'WHY?' appears on 'Why'",
+   "title": {
+    "white": "The real",
+    "gray": "ship"
+   },
+   "cues": {
+    "wet": "wet",
+    "pur": "purpose",
+    "why": "Why?"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ],
+     "near": "rope",
+     "side": "left"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "talk",
+      "face": "right",
+      "at": "wet",
+      "then": "point",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "pur",
+        "pose": "think"
+       },
+       {
+        "at": "why",
+        "pose": "shrug",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.76,
+      "scale": 1.1
+     }
+    ],
+    "label": {
+     "text": "WHY?",
+     "x": 0.3,
+     "y": 0.14,
+     "at": "why",
+     "size": 110
+    }
+   }
+  },
+  {
+   "chapter": "So What Happened?",
+   "type": "chapter",
+   "text": "Over the years, people blamed everything. Pirates, a giant squid, a waterspout, even a sea monster.",
+   "visual": "CHAPTER 6 / 7 badge, blue disc with 6, 'So What Happened?' card and a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "blamed",
+    "title": "monster"
+   },
+   "params": {
+    "n": 6,
+    "total": 7,
+    "title": "So What Happened?"
+   }
+  },
+  {
+   "type": "title",
+   "text": "But pirates would have taken the cargo. And a monster doesn't pack the sextant.",
+   "visual": "Giant words 'NO PIRATES, NO MONSTER', 'MONSTER' in a red box; Kaşif beside shrugs",
+   "title": {},
+   "cues": {
+    "w0": "pirates",
+    "w2": "monster",
+    "pack": "sextant"
+   },
+   "params": {
+    "lines": [
+     "No pirates,",
+     "no monster"
+    ],
+    "highlight": [
+     "monster"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.85,
+     "at": "pack"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So let's look at the real clues again. And one clue was hiding in the cargo itself.",
+   "visual": "Dockside in Genoa: Kaşif walks in past stacked crates, raises his spyglass, then points at a sign 'THE CARGO' that pops up on 'cargo'",
+   "title": {
+    "white": "The clues"
+   },
+   "cues": {
+    "look": "look",
+    "cargo": "cargo"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.18,
+     "near": "crate",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "to": 0.36,
+      "pose": "walk",
+      "at": "look",
+      "then": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "cargo",
+        "pose": "point",
+        "dir": "right"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.72,
+      "scale": 1.0,
+      "text": "THE CARGO",
+      "at": "cargo",
+      "hit": "cargo"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcB_hold",
+   "text": "When the barrels were unloaded in Genoa, nine of them were empty.",
+   "visual": "Cut-away of the hold: rows of barrels; on 'nine' nine of them turn hollow with red outlines and drip; red stamp '9 empty'; Kaşif in the hold jumps back in shock",
+   "title": {
+    "white": "Genoa",
+    "gray": "1873"
+   },
+   "cues": {
+    "nine": "nine",
+    "emp": "empty"
+   },
+   "params": {
+    "rows": 3,
+    "cols": 12,
+    "empty": {
+     "count": 9,
+     "at": "nine"
+    },
+    "hatch": "open",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.345,
+      "scale": 0.58,
+      "pose": "look",
+      "face": "left",
+      "at": "nine",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "9 empty",
+      "x": 0.5,
+      "y": 0.18,
+      "at": "emp",
+      "stamp": true,
+      "color": "red",
+      "size": 84
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_oak",
+   "text": "Those nine were made of red oak, which is more porous than the white oak used for the rest. They had slowly leaked.",
+   "visual": "Two big barrels: left one 'RED OAK' is porous, dark pores weep blue drips into a growing puddle and its level drops in the cut-away window; right one 'WHITE OAK' stays full with a green ✓; Kaşif between them points left, then right",
+   "title": {
+    "white": "Red oak"
+   },
+   "cues": {
+    "red": "red",
+    "white": "white",
+    "leak": "leaked"
+   },
+   "params": {
+    "barrels": [
+     {
+      "x": 0.24,
+      "leak": true,
+      "at": "red"
+     },
+     {
+      "x": 0.76,
+      "leak": false
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.82,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "left",
+      "at": "red",
+      "then": "point",
+      "dir": 10,
+      "seq": [
+       {
+        "at": "white",
+        "pose": "point",
+        "dir": 10,
+        "face": "right"
+       },
+       {
+        "at": "leak",
+        "pose": "point",
+        "dir": -20,
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "RED OAK",
+      "x": 0.26,
+      "y": 0.2,
+      "at": "red",
+      "font": "serif",
+      "color": "red",
+      "size": 72
+     },
+     {
+      "text": "WHITE OAK",
+      "x": 0.76,
+      "y": 0.2,
+      "at": "white",
+      "font": "serif",
+      "size": 72
+     },
+     {
+      "text": "✓",
+      "x": 0.92,
+      "y": 0.4,
+      "at": "white",
+      "color": "green",
+      "size": 120,
+      "font": "serif"
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_hold",
+   "text": "Now picture the hold: closed up, airless, slowly filling with alcohol fumes.",
+   "visual": "The closed hold: hatch shut, wavy grey vapour wisps rise from the barrels and a brown haze slowly fills the hold from the bottom up; hand-written 'alcohol fumes' with an arrow",
+   "title": {
+    "white": "The hold"
+   },
+   "cues": {
+    "closed": "closed",
+    "fume": "fumes"
+   },
+   "params": {
+    "rows": 2,
+    "cols": 12,
+    "hatch": "closed",
+    "fumes": {
+     "at": "closed",
+     "dur": 5
+    },
+    "labels": [
+     {
+      "text": "alcohol fumes",
+      "x": 0.5,
+      "y": 0.17,
+      "at": "fume",
+      "color": "red",
+      "arrow": [
+       0.5,
+       0.5
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.62
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Maybe there was a rumble, or a pop, or just a powerful smell. And Briggs had his wife and his little girl on board.",
+   "visual": "On deck: Captain Briggs (black beard) jumps back in shock on 'rumble', his wife Sarah and little Sophia beside him hold each other; Kaşif at the left looks worried and points at the family",
+   "title": {
+    "white": "On deck"
+   },
+   "cues": {
+    "rum": "rumble",
+    "wife": "wife"
+   },
+   "params": {
+    "scale": 0.95,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ],
+     "near": "rope",
+     "side": "left"
+    },
+    "cast": [
+     {
+      "who": "briggs",
+      "x": 0.42,
+      "beard": "black",
+      "pose": "idle",
+      "face": "right",
+      "at": "rum",
+      "then": "shock"
+     },
+     {
+      "who": "sarah",
+      "x": 0.58,
+      "pose": "idle",
+      "face": "left",
+      "at": "rum",
+      "then": "shock",
+      "emotion": "worried"
+     },
+     {
+      "who": "sophia",
+      "x": 0.67,
+      "pose": "idle",
+      "scale": 0.55,
+      "face": "left",
+      "at": "wife",
+      "then": "wave",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "look",
+      "face": "right",
+      "at": "wife",
+      "then": "point",
+      "dir": "right",
+      "emotion": "worried"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.88,
+      "scale": 0.8
+     }
+    ],
+    "label": {
+     "text": "rumble?",
+     "x": 0.5,
+     "y": 0.16,
+     "at": "rum"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "In 2006, a chemist named Andrea Sella, at University College London, tested this idea for a television documentary.",
+   "visual": "A lab: chemist Andrea Sella (short beard) talks beside a sign 'UCL, 2006'; Kaşif walks in beside him and, on 'television', points at a sign 'TV TEST' that pops up",
+   "title": {
+    "white": "Andrea Sella",
+    "gray": "2006"
+   },
+   "cues": {
+    "sella": "Sella",
+    "tv": "television"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "near": "arch",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "sella",
+      "x": 0.36,
+      "beard": "short",
+      "pose": "talk",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 1.05,
+      "to": 0.54,
+      "pose": "walk",
+      "at": "sella",
+      "then": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "tv",
+        "pose": "point",
+        "dir": "right",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.87,
+      "scale": 0.9,
+      "text": "UCL, 2006",
+      "at": 0.3
+     },
+     {
+      "type": "sign",
+      "x": 0.69,
+      "scale": 0.9,
+      "text": "TV TEST",
+      "at": "tv",
+      "hit": "tv"
+     }
+    ],
+    "label": {
+     "text": "Andrea Sella",
+     "x": 0.42,
+     "y": 0.2,
+     "at": "sella",
+     "arrow": [
+      0.37,
+      0.34
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_lab",
+   "text": "He built a model of the hold, filled it with gas, and lit it.",
+   "visual": "Lab bench: a long clear model of the hold with little paper barrels inside; gas wisps fill it on 'gas', an igniter pushes in from the left and sparks on 'lit'; the chemist and Kaşif watch",
+   "title": {
+    "white": "The model"
+   },
+   "cues": {
+    "model": "model",
+    "gas": "gas",
+    "lit": "lit"
+   },
+   "params": {
+    "gas": "gas",
+    "lit": "lit",
+    "wave": 99,
+    "cast": [
+     {
+      "who": "sella",
+      "x": 0.87,
+      "y": 0.7,
+      "scale": 0.62,
+      "beard": "short",
+      "pose": "talk",
+      "face": "left",
+      "at": "lit",
+      "then": "look"
+     },
+     {
+      "who": "kasif",
+      "x": 0.07,
+      "y": 0.7,
+      "scale": 0.58,
+      "pose": "point",
+      "dir": -10,
+      "face": "right",
+      "at": "lit",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "model hold",
+      "x": 0.47,
+      "y": 0.32,
+      "at": "model",
+      "size": 60
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.47,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_lab",
+   "text": "A wave of flame rushed through, but it was a cool, fast flame. It left no soot and no burn marks at all.",
+   "visual": "The same model: a blue wave of flame races through the box, the lid jumps; afterwards the paper barrels are spotless and a green ✓ 'no burn marks' appears; Kaşif gasps",
+   "title": {
+    "white": "Cool flame"
+   },
+   "cues": {
+    "wave": "rushed",
+    "cool": "cool",
+    "soot": "soot"
+   },
+   "params": {
+    "gas": 0,
+    "lit": 0.1,
+    "wave": "wave",
+    "wave_dur": 3.0,
+    "cast": [
+     {
+      "who": "sella",
+      "x": 0.87,
+      "y": 0.7,
+      "scale": 0.62,
+      "beard": "short",
+      "pose": "look",
+      "face": "left",
+      "at": "soot",
+      "then": "point",
+      "dir": 10
+     },
+     {
+      "who": "kasif",
+      "x": 0.07,
+      "y": 0.7,
+      "scale": 0.58,
+      "pose": "shock",
+      "face": "right",
+      "at": "soot",
+      "then": "point",
+      "dir": -10,
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "no burn marks",
+      "x": 0.47,
+      "y": 0.3,
+      "at": "soot",
+      "color": "green",
+      "size": 72
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.47,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_hold",
+   "text": "So a small explosion could have terrified everyone, without leaving a single trace for Deveau to find.",
+   "visual": "Back in the real hold: a cool blue flame front sweeps from left to right, the fumes vanish behind it, the barrels are untouched; Kaşif on deck leaps back in shock; hand-written 'no trace' appears",
+   "title": {
+    "white": "No trace"
+   },
+   "cues": {
+    "boom": "explosion",
+    "trace": "trace"
+   },
+   "params": {
+    "rows": 2,
+    "cols": 12,
+    "hatch": "closed",
+    "flame": {
+     "at": "boom",
+     "dur": 3.0
+    },
+    "shake": [
+     "boom"
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.345,
+      "scale": 0.58,
+      "pose": "look",
+      "face": "left",
+      "at": "boom",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "no trace",
+      "x": 0.5,
+      "y": 0.18,
+      "at": "trace",
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_hold",
+   "text": "There is another theory, too. One of the pumps was found taken apart, so maybe it had failed. With water rising, Briggs may have believed the ship was sinking.",
+   "visual": "The pump on deck lies in pieces; water rises in the hold around the barrels; Captain Briggs on deck stares down at it in fear, then shocked; label 'pump taken apart'",
+   "title": {
+    "white": "The pump"
+   },
+   "cues": {
+    "pump": "pumps",
+    "water": "water",
+    "sink": "sinking"
+   },
+   "params": {
+    "rows": 2,
+    "cols": 12,
+    "hatch": "open",
+    "pump": {
+     "apart": true,
+     "at": "pump",
+     "x": 0.32
+    },
+    "water": {
+     "level": 0.35,
+     "at": "water",
+     "dur": 3.5
+    },
+    "cast": [
+     {
+      "who": "briggs",
+      "x": 0.66,
+      "y": 0.345,
+      "scale": 0.55,
+      "beard": "black",
+      "pose": "look",
+      "face": "left",
+      "at": "water",
+      "then": "think",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "sink",
+        "pose": "shock"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "pump taken apart",
+      "x": 0.32,
+      "y": 0.18,
+      "at": "pump",
+      "arrow": [
+       0.3,
+       0.3
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.4,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "And with land in sight near Santa Maria, the safest choice seemed obvious: get the family into the boat, now.",
+   "visual": "The ship with half-set sails on the right; the green island of Santa Maria rises clearly on the horizon at left; in the foreground a big lifeboat with the family rows away from the ship towards the island; Kaşif on a rock points at the island",
+   "title": {
+    "white": "Santa Maria",
+    "gray": "the Azores"
+   },
+   "cues": {
+    "land": "land",
+    "boat": "safest"
+   },
+   "params": {
+    "horizon": 0.52,
+    "water": 0.78,
+    "island": {
+     "x": 0.26,
+     "w": 0.42,
+     "h": 0.13,
+     "at": "land",
+     "bold": true
+    },
+    "ships": [
+     {
+      "x": 0.78,
+      "sails": "half",
+      "scale": 0.6,
+      "far": false
+     }
+    ],
+    "boats": [
+     {
+      "x": 0.66,
+      "to": 0.42,
+      "y": 0.79,
+      "at": "boat",
+      "dur": 4.5,
+      "crew": 3,
+      "face": -1,
+      "scale": 1.6
+     }
+    ],
+    "rocks": [
+     {
+      "x": 0.08,
+      "y": 0.86,
+      "w": 0.14
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "y": 0.86,
+      "scale": 0.55,
+      "pose": "look",
+      "face": "right",
+      "at": "land",
+      "then": "point",
+      "dir": 20
+     }
+    ],
+    "labels": [
+     {
+      "text": "Santa Maria",
+      "x": 0.26,
+      "y": 0.26,
+      "at": "land",
+      "font": "serif",
+      "size": 72
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "Some researchers think the boat stayed tied to the ship by a long rope. And then, maybe, the rope snapped.",
+   "visual": "The lifeboat trails far behind the sailing ship on a long sagging tow rope; on 'snapped' the rope breaks, both ends fall into the water, a red 'SNAP!' stamp lands and the boat drifts away as the ship sails on",
+   "title": {
+    "white": "The rope"
+   },
+   "cues": {
+    "rope": "rope",
+    "snap": "snapped"
+   },
+   "params": {
+    "water": 0.78,
+    "ships": [
+     {
+      "x": 0.62,
+      "to": 0.82,
+      "sails": "half",
+      "scale": 0.66,
+      "wander": true
+     }
+    ],
+    "boats": [
+     {
+      "tow": {
+       "ship": 0,
+       "len": 0.34,
+       "snap": "snap",
+       "drift": 60
+      },
+      "crew": 3,
+      "scale": 0.95
+     }
+    ],
+    "labels": [
+     {
+      "text": "long rope",
+      "x": 0.4,
+      "y": 0.4,
+      "at": "rope",
+      "arrow": [
+       0.42,
+       0.68
+      ]
+     },
+     {
+      "text": "Snap!",
+      "x": 0.4,
+      "y": 0.22,
+      "at": "snap",
+      "stamp": true,
+      "color": "red"
+     }
+    ],
+    "shake": [
+     "snap"
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Nobody can prove it. But the most likely answer isn't a monster. It's a careful man, a frightening moment, and one wrong decision.",
+   "visual": "Giant words 'ONE WRONG DECISION', 'WRONG' in a red box; Kaşif beside thinks, chin in hand",
+   "title": {},
+   "cues": {
+    "w0": "likely",
+    "w1": "wrong",
+    "w2": "decision."
+   },
+   "params": {
+    "lines": [
+     "One wrong",
+     "decision"
+    ],
+    "highlight": [
+     "wrong"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "emotion": "worried",
+     "at": "wrong"
+    }
+   }
+  },
+  {
+   "chapter": "A Cursed Afterlife",
+   "type": "chapter",
+   "text": "And what about the ship? Sailors started calling her cursed, and to be fair, she didn't make it easy for them.",
+   "visual": "CHAPTER 7 / 7 badge, blue disc with 7, 'A Cursed Afterlife' card and a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "ship?",
+    "title": "cursed"
+   },
+   "params": {
+    "n": 7,
+    "total": 7,
+    "title": "A Cursed Afterlife"
+   }
+  },
+  {
+   "type": "map",
+   "text": "She had been born as the Amazon, in Nova Scotia, and her very first captain fell ill and died on her maiden voyage.",
+   "visual": "Old map of the North Atlantic: Nova Scotia marked with a red dot 'Spencer's Island' and a note '1861: the Amazon'; a dashed route sets out across the ocean",
+   "title": {
+    "white": "Nova Scotia",
+    "gray": "1861"
+   },
+   "cues": {
+    "ns": "Nova",
+    "note": "Amazon,",
+    "route": "first"
+   },
+   "params": {
+    "preset": "atlantic",
+    "cities": [
+     {
+      "name": "Spencer's Island",
+      "x": -64.7,
+      "y": 45.35,
+      "at": "ns",
+      "color": "red",
+      "dy": -56,
+      "dx": 60
+     },
+     {
+      "name": "New York",
+      "x": -74.0,
+      "y": 40.7,
+      "dy": 110,
+      "dx": -20
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -64.7,
+       45.3
+      ],
+      [
+       -62,
+       44
+      ],
+      [
+       -55,
+       42
+      ],
+      [
+       -45,
+       40
+      ]
+     ],
+     "at": "route",
+     "dur": 2.0
+    },
+    "note": {
+     "text": "1861: the Amazon",
+     "x": 0.62,
+     "y": 0.2,
+     "at": "note"
+    },
+    "focus": [
+     -60,
+     42
+    ],
+    "zoom": 1.15,
+    "compass": "br"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "After 1872, owner after owner tried to make money from her, and nobody wanted to sail on her.",
+   "visual": "A row of owners in turn hold up a 'FOR SALE' sign; a sailor walks off the other way shaking his head; Kaşif shrugs at the viewer",
+   "title": {
+    "white": "Owners"
+   },
+   "cues": {
+    "own": "owner",
+    "nob": "nobody"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.18,
+     "near": "crate",
+     "side": "right"
+    },
+    "cast": [
+     {
+      "who": "owner",
+      "x": 0.6,
+      "pose": "hold",
+      "text": "FOR SALE",
+      "face": "left",
+      "beard": "short"
+     },
+     {
+      "who": "sailor",
+      "accessory": "beret",
+      "x": 0.42,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "nob",
+        "pose": "walk",
+        "to": -0.1,
+        "dur": 2.4,
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "pose": "talk",
+      "face": "right",
+      "at": "nob",
+      "then": "shrug"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.86,
+      "scale": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Then, in 1885, a captain named Gilman Parker had a darker plan.",
+   "visual": "Captain Gilman Parker (black beard) rubs his chin with a sly look, a sign 'GILMAN PARKER, 1885' behind him; Kaşif leans away suspiciously",
+   "title": {
+    "white": "Gilman Parker",
+    "gray": "1885"
+   },
+   "cues": {
+    "p": "Parker",
+    "dark": "darker"
+   },
+   "params": {
+    "scale": 0.95,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     },
+     "far_h": 0.2,
+     "far_gap": [
+      0.38,
+      0.62
+     ],
+     "near": "rope",
+     "side": "left"
+    },
+    "cast": [
+     {
+      "who": "parker",
+      "x": 0.5,
+      "beard": "black",
+      "pose": "talk",
+      "face": "left",
+      "at": "dark",
+      "then": "think",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "idle",
+      "face": "right",
+      "at": "p",
+      "then": "point",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "dark",
+        "pose": "shock",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 0.95,
+      "text": "PARKER, 1885",
+      "at": "p",
+      "hit": "p"
+     }
+    ],
+    "label": {
+     "text": "a darker plan",
+     "x": 0.5,
+     "y": 0.16,
+     "at": "dark"
+    }
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "He loaded her with cheap cargo, insured it as something valuable, and deliberately ran her onto a reef off the coast of Haiti.",
+   "visual": "The Mary Celeste sails straight at a jagged reef off the green-grey coast of Haiti; on 'reef' she slams onto the rocks, jolts, heels over, red cracks burst in the hull, spray flies; label 'HAITI' on the coast",
+   "title": {
+    "white": "Haiti",
+    "gray": "1885"
+   },
+   "cues": {
+    "cheap": "cheap",
+    "reef": "reef"
+   },
+   "params": {
+    "horizon": 0.5,
+    "water": 0.78,
+    "island": {
+     "x": 0.86,
+     "w": 0.4,
+     "h": 0.09
+    },
+    "ships": [
+     {
+      "x": 0.18,
+      "to": 0.58,
+      "strike": "reef",
+      "sails": "full",
+      "scale": 0.66
+     }
+    ],
+    "reef": {
+     "x": 0.68,
+     "w": 0.22
+    },
+    "shake": [
+     "reef"
+    ],
+    "labels": [
+     {
+      "text": "Haiti",
+      "x": 0.88,
+      "y": 0.36,
+      "at": 0.4
+     },
+     {
+      "text": "insured as valuable",
+      "x": 0.4,
+      "y": 0.2,
+      "at": "cheap",
+      "size": 60
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_court",
+   "text": "The insurers didn't buy it, and Parker ended up in court. The famous ghost ship ended as a crime scene, just as Solly-Flood had always suspected, only thirteen years too late.",
+   "visual": "Courtroom again: Captain Parker stands in the dock, head down; the judge thinks; Kaşif points at him; a red stamp 'CRIME SCENE' lands and a hand-written '13 years late' appears",
+   "title": {
+    "white": "Parker",
+    "gray": "in court"
+   },
+   "cues": {
+    "court": "court",
+    "crime": "crime",
+    "late": "thirteen"
+   },
+   "params": {
+    "table": false,
+    "dock": {
+     "x": 0.36,
+     "w": 0.2
+    },
+    "bench": {
+     "x": 0.76,
+     "w": 0.3
+    },
+    "cast": [
+     {
+      "who": "judge",
+      "layer": "back",
+      "x": 0.76,
+      "y": 0.68,
+      "scale": 0.8,
+      "beard": "grey",
+      "face": "left",
+      "pose": "idle",
+      "at": "court",
+      "then": "think"
+     },
+     {
+      "who": "parker",
+      "layer": "dock",
+      "x": 0.36,
+      "y": 0.86,
+      "scale": 0.95,
+      "beard": "black",
+      "pose": "idle",
+      "face": "right",
+      "at": "court",
+      "then": "think",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.11,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "at": "crime",
+      "then": "point",
+      "dir": 10
+     }
+    ],
+    "labels": [
+     {
+      "text": "Crime scene",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "crime",
+      "stamp": true,
+      "color": "red",
+      "size": 84
+     },
+     {
+      "text": "13 years late",
+      "x": 0.5,
+      "y": 0.34,
+      "at": "late",
+      "size": 64
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "wreck",
+   "text": "In 2001, a team led by the writer Clive Cussler said they had found her wreck on that reef, but later tests on the timber cast serious doubt on it.",
+   "visual": "Sea cross-section: a diver's boat on the surface with Kaşif standing in it; a diver goes down on his hose and the broken ribs of an old wreck draw themselves on the reef floor on 'wreck'; label '2001: Cussler?'",
+   "title": {
+    "white": "2001",
+    "gray": "Clive Cussler"
+   },
+   "cues": {
+    "wreck": "wreck",
+    "doubt": "doubt"
+   },
+   "params": {
+    "mode": "dive",
+    "boat": {
+     "x": 0.66
+    },
+    "diver": {
+     "x": 0.42
+    },
+    "label": {
+     "text": "her wreck?",
+     "x": 0.22,
+     "y": 0.62,
+     "at": "doubt",
+     "color": "red"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.62,
+      "y": 0.355,
+      "scale": 0.38,
+      "pose": "look",
+      "face": "left",
+      "at": "wreck",
+      "then": "point",
+      "dir": -30
+     }
+    ]
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "So even her bones are a mystery. Ten people, one lifeboat, and an ocean that never gave them back.",
+   "visual": "An empty ocean: no ship, an empty lifeboat drifts mid-frame and fades away on 'never'; Kaşif on a rock points at it, then sits down sadly; '10 people' and '1 lifeboat' appear",
+   "title": {
+    "white": "Ten people"
+   },
+   "cues": {
+    "ten": "Ten",
+    "one": "lifeboat",
+    "ocean": "ocean",
+    "never": "never"
+   },
+   "params": {
+    "horizon": 0.52,
+    "water": 0.72,
+    "ships": [],
+    "boats": [
+     {
+      "x": 0.52,
+      "to": 0.62,
+      "y": 0.7,
+      "scale": 1.5,
+      "crew": 0,
+      "row": false,
+      "fade": {
+       "at": "never",
+       "dur": 3
+      }
+     }
+    ],
+    "rocks": [
+     {
+      "x": 0.16,
+      "y": 0.86,
+      "w": 0.2
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "y": 0.86,
+      "scale": 0.72,
+      "pose": "look",
+      "face": "right",
+      "at": "ten",
+      "then": "point",
+      "dir": 0,
+      "seq": [
+       {
+        "at": "never",
+        "pose": "sit",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "10 people",
+      "x": 0.56,
+      "y": 0.3,
+      "at": "ten",
+      "font": "serif",
+      "size": 80
+     },
+     {
+      "text": "1 lifeboat",
+      "x": 0.56,
+      "y": 0.46,
+      "at": "one",
+      "size": 64
+     }
+    ],
+    "sky": {
+     "clouds": 2,
+     "gulls": 1
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_ship",
+   "text": "So now I want to hear from you. If you had been Captain Briggs that morning, with your family on board, would you have stayed on the ship, or climbed into that boat?",
+   "visual": "The choice: the ship on the left, the little lifeboat on the right, Kaşif on a rock between them; he points at the ship ('STAY?' appears), then at the boat ('BOAT?' appears), then turns to the viewer and shrugs",
+   "title": {
+    "white": "Your call"
+   },
+   "cues": {
+    "you": "you.",
+    "ship": "ship,",
+    "boat": "boat?"
+   },
+   "params": {
+    "water": 0.76,
+    "ships": [
+     {
+      "x": 0.22,
+      "sails": "half",
+      "scale": 0.6
+     }
+    ],
+    "boats": [
+     {
+      "x": 0.8,
+      "crew": 3,
+      "scale": 1.0,
+      "row": false
+     }
+    ],
+    "rocks": [
+     {
+      "x": 0.52,
+      "y": 0.86,
+      "w": 0.16
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.52,
+      "y": 0.86,
+      "scale": 0.55,
+      "pose": "talk",
+      "face": "left",
+      "at": "ship",
+      "then": "point",
+      "dir": 20,
+      "seq": [
+       {
+        "at": "boat",
+        "pose": "point",
+        "dir": 10,
+        "face": "right"
+       },
+       {
+        "at": "you",
+        "pose": "wave"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Stay?",
+      "x": 0.4,
+      "y": 0.42,
+      "at": "ship",
+      "color": "blue",
+      "size": 84
+     },
+     {
+      "text": "Boat?",
+      "x": 0.8,
+      "y": 0.5,
+      "at": "boat",
+      "color": "red",
+      "size": 84
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  }
+ ]
+}
