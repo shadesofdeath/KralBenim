@@ -777,7 +777,7 @@
         if (!r.rm.label) return null;
         const Lb = r.rm.label, t = el(realmLabG, 'text', { 'font-family': FR, 'font-weight': 800, 'font-size': Lb.size || 60, 'text-anchor': 'middle', fill: r.col, 'letter-spacing': '0.06em',
           style: `paint-order: stroke; stroke: ${INK.paperLight}; stroke-width: 10px; stroke-linejoin: round` });
-        t.textContent = Lb.text.toLocaleUpperCase('tr-TR');
+        t.textContent = Lb.text.toLocaleUpperCase(LOCALE);
         return t;
       });
       const routesG = el(mg, 'g');

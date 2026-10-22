@@ -179,9 +179,9 @@
       // giant words (Fraunces) + optional red highlight box, and the big emu that pops out of the wheat
       let words = null, peek = null;
       if (P.words && P.words.lines) {
-        const Wd = P.words, fs = (Wd.size ?? 190) * K, hl = (Wd.highlight || []).map(w => w.toLocaleLowerCase('tr'));
+        const Wd = P.words, fs = (Wd.size ?? 190) * K, hl = (Wd.highlight || []).map(w => w.toLocaleLowerCase(LOCALE));
         words = Wd.lines.map((line, i) => {
-          const g = el(uiG, 'g'), isH = hl.includes(String(line).toLocaleLowerCase('tr'));
+          const g = el(uiG, 'g'), isH = hl.includes(String(line).toLocaleLowerCase(LOCALE));
           const box = isH ? mk(g, INK.red) : null, boxR = isH ? mk(g) : null;
           const t = el(g, 'text', { 'font-family': 'Fraunces, Georgia, serif', 'font-weight': 900, 'font-size': fs, 'text-anchor': 'middle',
             fill: isH ? INK.paperLight : INK.ink, 'fill-opacity': 0 });

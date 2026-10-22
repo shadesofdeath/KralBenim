@@ -2,8 +2,8 @@
 
 YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
 Her gün **4 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
-Aynı pipeline ikinci kanal **Anlatayım Gel**'e de üretir (aynı tarz, sadece Osmanlı ve Türk tarihi; bkz. *İkinci kanal: Anlatayım Gel*).
-Kanalların ayarları (ekrandaki ad, anlatıcı, dosya öneki, yayın saatleri, YouTube secret'ı) `tools/channels.py`'dedir.
+Aynı pipeline ikinci kanal **Anlatayım Gel**'e de üretir: aynı parşömen tarzı ama **global ve İngilizce** (ses, ekran, kapak, SEO), tarihle sınırlı değil, en çok izlenen Shorts kategorilerinden (bkz. *İkinci kanal: Anlatayım Gel*).
+Kanalların ayarları (ekrandaki ad, anlatıcı, dil, ses, hashtag, kategori havuzu, dosya öneki, yayın saatleri, YouTube secret'ı) `tools/channels.py`'dedir.
 
 **Kanalın tek tarzı (kanal sahibinin kesin kararı):** **tarih hikâyeleri**, sepya parşömen üstüne elle
 çizilmiş mürekkep ve çöp adam anlatıcı **Kaşif** (`"theme": "parchment"`). Anayasa `brand/kit/BRAND.md`;
@@ -162,28 +162,49 @@ Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit a
 10. **Gönder:** Push'tan hemen önce `tools/lint.py` son kez hatasız geçmeli. Dosyaları (`media/` klasörü, `production.md` ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
 11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını, yayın saatini ve son tur eleştiri puanlarını kısaca özetle; bir sonraki uzun video tarihini yaz.
 
-## İkinci kanal: Anlatayım Gel
+## İkinci kanal: Anlatayım Gel (global, İngilizce)
 
-Kanal sahibinin ikinci kanalı (2026-10-21). Ayrı bir zamanlanmış görev her sabah bu bölümü uygular.
-Tarz, ses, kalite kuralları, ajan akışı, kapak ve SEO kuralları **Düşün Bakalım ile birebir aynıdır**
-(yukarıdaki *Günlük üretim görevi*, BRAND.md); sadece şunlar farklıdır:
+Kanal sahibinin ikinci kanalı (2026-10-21); **2026-10-22'den itibaren global ve tamamen İngilizce**:
+seslendirme, ekrandaki her yazı (kicker, harita/pano etiketleri, el yazısı notlar, bölüm kartı
+"CHAPTER 2 / 5"), altyazı, kapak, YouTube başlığı/açıklaması/etiketleri. Düşün Bakalım Türkçe kalır.
+Ayrı bir zamanlanmış görev her sabah bu bölümü uygular. Tarz (parşömen + fesli anlatıcı), kalite kuralları,
+ajan akışı, kapak ve SEO kuralları **Düşün Bakalım ile birebir aynıdır** (yukarıdaki *Günlük üretim görevi*,
+BRAND.md); İngilizce anlatım kuralları **BRAND.md §11**'dedir. Farklar:
 
-- **Plan:** `python tools/plan.py --channel ag`. Kanalın ilk ayı için yavaş başlangıç: her gün **2 Shorts**
-  (13:00, 17:30) + **Salı, Perşembe, Cumartesi** bir uzun video (19:30; Cumartesi 14:00). Saatler Düşün
-  Bakalım'ınkinden en az 30 dk ayrı. Sadece `todo` listesindekileri üret; dosya adları `ag-NN-<slug>.json`.
-- **Niş:** sadece **Osmanlı ve Türk tarihi** (Selçuklu, Osmanlı, Kurtuluş Savaşı, Cumhuriyet'in ilk yılları,
-  Türk denizcileri, bilginleri, padişahları, büyük kuşatma ve savaşlar). Konu **iki kanalın geçmişinde**
-  (tüm `videos/*/*.json`) işlenmiş olmamalı; Düşün Bakalım'ın aynı gün işlediği konuyla da çakışmamalı.
-- **Senaryo alanları:** `"channel": "Anlatayım Gel"` (ekranda sol üstte bu ad yazar), `"narrator": "fes"`.
-  Anlatıcı Kaşif'in aynı çöp adam çizimi ama kâşif şapkası yerine **kırmızı fes** takar (`KASIF.setNarrator`);
-  Kaşif için yazılan tüm kurallar (sahnelerin en az yarısında ekranda ve bir şey yapıyor) bu anlatıcı için de geçerli.
-  `lint` kanal adını, dosya önekini ve anlatıcıyı denetler.
-- **SEO:** etiketlerde `anlatayım gel`, hashtag `#anlatayımgel`, abone çağrısı "Anlatayım Gel'e abone ol".
-  "Düşün Bakalım" adı bu kanalın hiçbir metninde geçmez.
+- **Plan:** `python tools/plan.py --channel ag`. Her gün **2 Shorts** (13:00, 17:30) + **Salı, Perşembe,
+  Cumartesi** bir uzun video (19:30; Cumartesi 14:00). Sadece `todo` listesindekileri üret; dosya adları
+  `ag-NN-<slug>.json`. Her video için plan.py bir **kategori** önerir (`category`); günün videoları farklı kategoriden.
+- **Niş (global):** sadece tarih değil; dünyada en çok izlenen Shorts kategorilerinden parşömen + çöp adam
+  tarzına uyanlar (`tools/channels.py` → `categories`): *history's strangest moments* · *unsolved mysteries* ·
+  *how it was built* · *origins of everyday things* · *the human body* · *animal superpowers* · *space and planet
+  earth* · *survival stories* · *empires and battles* (Osmanlı/Türk tarihi burada, global izleyiciye anlatılır).
+  Her konu yine **gerçek, doğrulanabilir bir hikâye**dir: bir an, bir insan (ya da bir canlı/nesne), bir "neden?"
+  (`tarih-bolumu` 4 testi; bilim/vücut/hayvan konularında "insan" yerine somut bir kahraman ya da deney olabilir).
+  Konu **iki kanalın geçmişinde** (tüm `videos/*/*.json`) işlenmemiş olmalı; aynı gün Düşün Bakalım'la çakışmamalı.
+- **Senaryo alanları:** `"channel": "Anlatayım Gel"`, `"narrator": "fes"`, **`"lang": "en"`**,
+  `"tts": {"provider": "elevenlabs", "voice_id": "nPczCjzI2devNBz1zQrb", "model": "eleven_v3"}` (İngilizce
+  anlatıcı sesi "Brian"; ses kanalın `voice_id`'sidir, `tools/channels.py`). Anlatıcı Kaşif'in aynı çizimi, kırmızı
+  fesli (`KASIF.setNarrator`); Kaşif kuralları aynen geçerli. `lint` kanal adını, dosya önekini, anlatıcıyı, dili ve sesi denetler.
+- **Bütçe:** Shorts 400–500, uzun 6.500–7.800 karakter (İngilizce de aynı; ~15 karakter/sn).
+- **SEO (İngilizce, global arama):** başlık İngilizce aranan ifadeyle başlar ("Mary Celeste: …", "Why Do Cats…?");
+  açıklama İngilizce, uzun videoda "In this video:" listesi, abone çağrısı "Subscribe to Anlatayım Gel for …",
+  yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + **`#anlatayimgel`**; etiketlerde **`anlatayim gel`**
+  ve İngilizce varyasyonlar. Metadata'da Türkçe karakter ve "Düşün Bakalım" geçmez.
+- **Yayın saatleri** Europe/Istanbul; 13:00 = Londra 11:00 / New York 06:00, 17:30 = New York 10:30, 19:30 = New York 12:30.
 - **Telegram:** sadece video satırları (`video` = `ag-NN-<slug>`); `plan`/`push` gibi genel satırları
-  gönderme (genel kutu Düşün Bakalım'ındır). Kutularda başlığın önünde kanal adı yazar.
+  gönderme (genel kutu Düşün Bakalım'ındır). Kutularda başlığın önünde kanal adı yazar. Telegram metinleri Türkçe kalır (kanal sahibine).
 - **Commit:** `Daily batch YYYY-MM-DD (Anlatayım Gel)`; aynı dala push. Yükleme `YOUTUBE_TOKEN_JSON_AG`
-  secret'ıyla yapılır; secret yoksa render yapılır ama yükleme atlanır (video Actions artifact'inde kalır).
+  secret'ıyla, `defaultLanguage`/`defaultAudioLanguage` = `en`; secret yoksa render yapılır ama yükleme atlanır.
+
+### SEO puanı (iki kanal, 100/100 zorunlu)
+
+`tools/lint.py` her senaryoya 100 üzerinden SEO puanı verir; **100'ün altı hatadır, push yok.** Puanlanan:
+başlık (30–60/70 karakter, `tags[0]` ana anahtar kelimeyle başlar, merak boşluğu `?`/`!`/`:`, en fazla 1 emoji,
+BÜYÜK HARF yok) · açıklama (ana anahtar kelime ilk 150 karakterde, Shorts ≥ 250 / uzun ≥ 600 karakter, uzunda
+"Bu videoda:"/"In this video:", abone çağrısı + yorum sorusu, son satırda 3–5 hashtag, Shorts'ta ilk `#shorts`,
+kanal hashtag'i, diğer kanalın adı yok) · etiketler (12–18, ≤ 450 karakter, tekrar yok, kanal etiketi, ana anahtar
+kelimenin en az 3 varyasyonu, hashtag yok) · kategori · İngilizce kanalda Türkçe karakter yok · kapak metni (3–5 kelime, tek vurgu).
+**`tags[0]` her zaman ana anahtar kelimedir.**
 
 ## Elle başlatılan ek video
 

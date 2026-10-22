@@ -45,6 +45,8 @@ function makeKicker(sc) {
 window.init = async (data) => {
   D = data;
   [W, H] = D.size;
+  LOCALE = D.lang === 'en' ? 'en-US' : 'tr-TR';
+  document.documentElement.lang = D.lang || 'tr';
   // the channel's narrator (Kaşif's explorer hat, or Anlatayım Gel's fez) before any shot builds a rig
   if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
@@ -213,7 +215,7 @@ function renderSolo(t, idx, lt, pend, coverTf) {
 }
 
 function buildCoverText(c) {
-  const hl = (c.highlight || []).map(w => w.toLocaleUpperCase('tr-TR'));
+  const hl = (c.highlight || []).map(w => w.toLocaleUpperCase(LOCALE));
   const box = $('covertext');
   box.innerHTML = '';
   for (const ln of c.lines || []) {
@@ -221,7 +223,7 @@ function buildCoverText(c) {
     for (const w of ln.split(/\s+/)) {
       const sp = document.createElement('span');
       sp.textContent = w + ' ';
-      if (hl.includes(w.toLocaleUpperCase('tr-TR').replace(/[?!.,:]/g, ''))) sp.className = 'hl';
+      if (hl.includes(w.toLocaleUpperCase(LOCALE).replace(/[?!.,:]/g, ''))) sp.className = 'hl';
       row.appendChild(sp);
     }
     box.appendChild(row);

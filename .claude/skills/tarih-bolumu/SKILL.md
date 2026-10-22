@@ -7,6 +7,10 @@ description: Düşün Bakalım kanalı için tarih hikâyesi bölümü (Shorts y
 
 Önce `brand/kit/BRAND.md` dosyasını oku; bu beceri onun uygulamasıdır.
 
+**Anlatayım Gel (global, İngilizce):** aynı yapı ve kurallar; metin, ekran yazıları ve kapak İngilizce
+(BRAND.md §11), konu `tools/plan.py --channel ag` çıktısındaki `category`'den; "-yor"/devrik cümle kuralları
+yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPTER" yazar.
+
 ## 1. Konu seçimi
 
 İyi bir tarih bölümü konusu şu dört testi geçer:

@@ -72,6 +72,13 @@ def slot(d, hhmm, now):
     return t.isoformat()
 
 
+def category(ch, d, k):
+    """Content category suggestion for the k-th video of the day: the channel's pool in rotation
+    (tools/channels.py "categories"); a different category for every video of the day."""
+    pool = CHANNELS[ch]["categories"]
+    return pool[(d.toordinal() * 2 + k) % len(pool)]
+
+
 def extra(fmt, d, folder, taken, now, ch):
     """An extra video outside the plan: the next free number and the earliest publish time lint accepts
     (now + 1 h, rounded up to 5 minutes); if the render finishes later, upload.py publishes at once."""
@@ -83,7 +90,7 @@ def extra(fmt, d, folder, taken, now, ch):
     t = (t + timedelta(minutes=(5 - t.minute % 5) % 5)).replace(second=0, microsecond=0)
     lo, hi, hard = LIMITS[fmt]
     used = month_usage(d)
-    return {"channel": ch, "date": d.isoformat(), "folder": str(folder.relative_to(ROOT)), "extra": True,
+    return {"channel": ch, "lang": CHANNELS[ch]["lang"], "category": category(ch, d, n - 1), "date": d.isoformat(), "folder": str(folder.relative_to(ROOT)), "extra": True,
             "video": {"file": f"{pre}{n:02d}-<slug>.json", "format": fmt, "publish_at": t.isoformat(),
                       "chars": f"{lo}-{hi} (hard max {hard})"},
             "note": 'write "extra": true at the top level of the script; publish_at is the earliest allowed',
@@ -132,11 +139,13 @@ def main():
         else:
             v["file"] = v["done"]
     todo = [v for v in videos if not v["done"]]
+    for k, v in enumerate(videos):
+        v["category"] = category(ch, d, k)
 
     used = month_usage(d)                  # one ElevenLabs account for every channel
     planned = sum(LIMITS[v["format"]][1] for v in todo)
     print(json.dumps({
-        "channel": ch, "narrator": cfg["narrator"],
+        "channel": ch, "narrator": cfg["narrator"], "lang": cfg["lang"], "voice_id": cfg["voice_id"],
         "date": d.isoformat(), "weekday": d.strftime("%A"), "folder": str(folder.relative_to(ROOT)),
         "folder_exists": folder.exists(), "long_video_today": is_long_day(d, ch),
         "next_long_video": next_long(d + timedelta(days=1), ch).isoformat(),

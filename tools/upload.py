@@ -26,7 +26,7 @@ from googleapiclient.discovery import build as gbuild
 from googleapiclient.http import MediaFileUpload
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from channels import CHANNELS, DEFAULT  # noqa: E402
+from channels import CHANNELS, DEFAULT, lang  # noqa: E402
 
 
 def credentials(channel=DEFAULT):
@@ -51,7 +51,11 @@ def insert_chapters(desc, chap):
     return (head + chap + sep + tags) if sep else desc + chap
 
 
-def chapters(video):
+HEAD = {"tr": {"chapters": "⏱️ Bölümler", "credits": "📷 Görseller"},
+        "en": {"chapters": "⏱️ Chapters", "credits": "📷 Image credits"}}
+
+
+def chapters(video, lg="tr"):
     tl_path = video.with_suffix(".timeline.json")
     if not tl_path.exists():
         return ""
@@ -67,17 +71,17 @@ def chapters(video):
     if len(kept) < 3:
         return ""
     fmt = lambda t: f"{int(t) // 60}:{int(t) % 60:02d}"
-    return "\n\n⏱️ Bölümler\n" + "\n".join(f"{fmt(t)} {name}" for t, name in kept)
+    return f"\n\n{HEAD[lg]['chapters']}\n" + "\n".join(f"{fmt(t)} {name}" for t, name in kept)
 
 
-def credits(script):
+def credits(script, lg="tr"):
     """Attribution for photos / clips used by studio "photo" shots (CC BY / CC BY-SA require it)."""
     seen = []
     for sc in script.get("scenes", []):
         c = (sc.get("params") or {}).get("credit")
         if c and c not in seen:
             seen.append(c)
-    return ("\n\n📷 Görseller\n" + "\n".join(seen)) if seen else ""
+    return (f"\n\n{HEAD[lg]['credits']}\n" + "\n".join(seen)) if seen else ""
 
 
 def set_thumbnail(video_id, jpg, channel=DEFAULT):
@@ -102,6 +106,7 @@ def main():
     script = json.loads(script_path.read_text())
     meta = script["youtube"]
     channel = script.get("channel") or DEFAULT
+    lg = script.get("lang") or lang(channel)        # Anlatayım Gel is English (global), Düşün Bakalım Turkish
     creds = credentials(channel)
     if creds is None:
         print(f"no YouTube token for {channel} ({CHANNELS.get(channel, CHANNELS[DEFAULT])['youtube_env']}): upload skipped")
@@ -124,11 +129,11 @@ def main():
     body = {
         "snippet": {
             "title": meta["title"][:100],
-            "description": insert_chapters(meta.get("description", ""), chapters(video) + credits(script))[:5000],
+            "description": insert_chapters(meta.get("description", ""), chapters(video, lg) + credits(script, lg))[:5000],
             "tags": meta.get("tags", []),
             "categoryId": str(meta.get("category_id", "27")),
-            "defaultLanguage": "tr",
-            "defaultAudioLanguage": "tr",
+            "defaultLanguage": lg,
+            "defaultAudioLanguage": lg,
         },
         "status": status,
     }

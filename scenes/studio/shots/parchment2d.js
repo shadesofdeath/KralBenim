@@ -1,5 +1,5 @@
 // Parchment 2D shots (theme "parchment", brand/kit/BRAND.md): hand-drawn ink on sepia paper.
-//   chapter  — "BÖLÜM 2 / 5" card: badge, blue disc with the number, title card + hand-drawn underline
+//   chapter  — "BÖLÜM 2 / 5" ("CHAPTER 2 / 5" in English videos) card: badge, blue disc with the number, title card + hand-drawn underline
 //   title    — giant Fraunces title, word by word, highlight word in a red box, optional handwritten note + arrow
 //   board    — pinned board: title, 2-4 cards with ✓/✗ items or progress bars, pill badge at the bottom
 //   map      — old map: coastlines (presets or custom), cities, dashed route, compass rose, note
@@ -141,7 +141,7 @@
       const portrait = H > W, ink = inkSet(seed + 11);
       const cam = el(svg, 'g');
       const n = P.n ?? 1, total = P.total;
-      const badgeS = `${P.label || 'BÖLÜM'} ${n}${total ? ' / ' + total : ''}`.toLocaleUpperCase('tr-TR');
+      const badgeS = `${P.label || (LOCALE === 'en-US' ? 'CHAPTER' : 'BÖLÜM')} ${n}${total ? ' / ' + total : ''}`.toLocaleUpperCase(LOCALE);
       const L = portrait ? { by: 420, cy: 690, R: 160, maxW: 920, ts: 118 } : { by: 175, cy: 370, R: 135, maxW: 1240, ts: 112 };
       // badge
       const badge = el(cam, 'g');
@@ -211,7 +211,7 @@
       const portrait = H > W, ink = inkSet(seed + 23);
       const cam = el(svg, 'g');
       const lines = P.lines || [];
-      const hl = (P.highlight || []).map(s => s.toLocaleUpperCase('tr-TR'));
+      const hl = (P.highlight || []).map(s => s.toLocaleUpperCase(LOCALE));
       const gold = P.hl_style === 'gold';
       const maxW = W - (portrait ? 150 : 380);
       const start = P.size || (portrait ? (lines.length > 2 ? 150 : 176) : (lines.length > 2 ? 140 : 160));
@@ -219,7 +219,7 @@
       for (const ln of lines) {
         const row = { nodes: [], size: start };
         for (const w of ln.split(/\s+/).filter(Boolean)) {
-          const isHl = hl.includes(w.toLocaleUpperCase('tr-TR').replace(/[?!.,:;]/g, ''));
+          const isHl = hl.includes(w.toLocaleUpperCase(LOCALE).replace(/[?!.,:;]/g, ''));
           const grp = el(cam, 'g');
           const sh = txt(grp, w, 0, 0, start, FR, { 'font-weight': 900, fill: isHl && !gold ? rgba(C.ink, 0.0) : C.paperDark, 'text-anchor': 'start' });
           const t = txt(grp, w, 0, 0, start, FR, { 'font-weight': 900, fill: isHl ? (gold ? C.gold : C.paperLight) : C.ink, 'text-anchor': 'start' });

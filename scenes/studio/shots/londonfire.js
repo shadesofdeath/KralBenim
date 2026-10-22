@@ -86,10 +86,10 @@
   // Wd: {lines: ["Asıl tehlike", "başkaydı"], highlight: ["tehlike"], y: 0.22 (first baseline, 0..1 H), size: 140, x: 0.5}
   function wordsMake(parent, Wd) {
     if (!Wd || !Wd.lines) return null;
-    const hl = (Wd.highlight || []).map(w => w.toLocaleUpperCase('tr-TR'));
+    const hl = (Wd.highlight || []).map(w => w.toLocaleUpperCase(LOCALE));
     const items = [];
     Wd.lines.forEach((line, li) => line.split(/\s+/).filter(Boolean).forEach(w => {
-      const up = w.toLocaleUpperCase('tr-TR'), isH = hl.some(h => up.replace(/[^\p{L}\d]/gu, '') === h.replace(/[^\p{L}\d]/gu, ''));
+      const up = w.toLocaleUpperCase(LOCALE), isH = hl.some(h => up.replace(/[^\p{L}\d]/gu, '') === h.replace(/[^\p{L}\d]/gu, ''));
       const g = el(parent, 'g'), box = isH ? inkEl(g, INK.red) : null, boxO = isH ? inkEl(g, INK.ink) : null;
       const tx = el(g, 'text', { 'font-family': 'Fraunces, Georgia, serif', 'font-weight': 900, 'font-size': Wd.size || 140, 'text-anchor': 'start',
         fill: isH ? INK.paperLight : INK.ink, style: isH ? '' : `paint-order: stroke; stroke: ${INK.paper}; stroke-width: 14px; stroke-linejoin: round` });

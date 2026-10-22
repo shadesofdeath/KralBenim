@@ -162,3 +162,26 @@ Her kapakta Kaşif'in yüzü okunur büyüklükte olur.
 - [ ] İlk cümle doğrudan olayın içinde; cümle arası boşluk sıkı
 - [ ] Ekranda en fazla 5 kelime/sahne, en küçük yazı 44 px
 - [ ] Tarih ve sayılar doğrulanmış
+
+## 11. Anlatayım Gel: global İngilizce kanal (2026-10-22)
+
+Görsel kimlik aynı (§2–5, §9; anlatıcı kırmızı fesli). Dil, niş ve anlatım:
+
+- **Dil:** her şey İngilizce: anlatım, kicker, etiketler, el yazısı notlar, harita adları (İngilizce yaygın
+  adlarıyla: "Constantinople", "Azores"), kapak, YouTube metadata. Senaryoda `"lang": "en"`; motor büyük harfi
+  `en-US` kuralıyla basar ve bölüm kartını "CHAPTER 2 / 5" yazar.
+- **Niş:** `tools/channels.py` → `categories` (tarihin en tuhaf anları, çözülmemiş gizemler, nasıl inşa edildi,
+  gündelik şeylerin kökeni, insan vücudu, hayvanların süper güçleri, uzay ve gezegenimiz, hayatta kalma hikâyeleri,
+  imparatorluklar ve savaşlar). Her video gerçek ve doğrulanabilir bir hikâye/olgu anlatır; Kaşif yine anlatıcıdır.
+- **Anlatıcı (İngilizce YouTuber sesi):** izleyiciye "you" diye seslenir, "I" diye anlatır, merakı paylaşır:
+  *"Why do cats always land on their feet? Let me show you."*, *"Here's the crazy part."*, *"Now think about that
+  for a second."*, *"So what actually happened?"*. Selam/kanal tanıtımı yok; ilk cümle doğrudan kanca.
+  Hikâye **geçmiş zamanla** anlatılır ("In 1518, a woman stepped into the street and started to dance."),
+  kısa vurucu cümle + akan uzun cümle; bağlaçlar ("but", "so", "and that's when", "because"); ekrandakini tarif etme,
+  görüntünün söyleyemediğini söyle (neden, his, ironi). Ders kitabı dili ("This was very important.") yasak.
+  Pasif ve dolambaçlı cümle yerine özne-yüklem-nesne düz cümle.
+- **TTS için yazım:** kısaltma yok ("miles per hour", "for example"; "mph", "e.g." yok); büyük sayılar rakamla
+  ama okunur ("1,701 barrels", "1872"); tırnaklar kapatılır; noktalama tonlamayı taşır. Ses ayarı/etiket yok (§6.2).
+- **Kapak:** İngilizce 3–5 kelime iddia ("THE SHIP WITH NO CREW", "A TOWN DANCED TO DEATH"); tek kelime kırmızı kutuda.
+- **Doğruluk:** yaygın İngilizce efsaneleri (ör. Mary Celeste'te "sıcak çay, yarım kahvaltı") anlatma ya da efsane
+  olduğunu söyle.

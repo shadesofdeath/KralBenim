@@ -120,7 +120,7 @@
       if (P.stamp && P.stamp.text) {
         const g = el(uiG, 'g'), box = mk(g, INK.paperLight), ring = mk(g, INK.red);
         const t = el(g, 'text', { 'font-family': 'Fraunces, Georgia, serif', 'font-weight': 900, 'font-size': P.stamp.size || 104 * K, 'text-anchor': 'middle', fill: INK.red });
-        t.textContent = P.stamp.text.toLocaleUpperCase('tr-TR');
+        t.textContent = P.stamp.text.toLocaleUpperCase(LOCALE);
         stamp = { S: P.stamp, g, box, ring, t, w: null };
       }
 

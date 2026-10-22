@@ -316,7 +316,7 @@ def build_timeline(script, text, ranges, words, duration):
         first = next((w for w in per[0] if w["disp"][-1] in ".?!"), per[0][-1])
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
     # draw at 1080p, upscale to 1440p at encode time
-    return {"hook": hook, "scale": script.get("scale", 1.0), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""), "narrator": script.get("narrator", "kasif"),
+    return {"hook": hook, "scale": script.get("scale", 1.0), "motion_blur": script.get("motion_blur", True),"duration": duration, "fps": script.get("fps", FPS), "format": fmt, "size": SIZES[fmt], "channel": script.get("channel", ""), "narrator": script.get("narrator", "kasif"), "lang": script.get("lang", "tr"),
             "engine": "studio", "art": script.get("art"), "theme": script.get("theme", "parchment"),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 

@@ -4,6 +4,10 @@
 // shot registry: every scenes/studio/shots/<type>.js adds SHOTS.<type> = {kind: '2d'|'3d', build(ctx)}
 const SHOTS = window.SHOTS || (window.SHOTS = {});
 
+// text locale of the video ("lang" in the script: tr -> tr-TR, en -> en-US); set by engine.js init before shots build.
+// Upper-casing goes through it: 'i' is 'İ' only in Turkish.
+let LOCALE = 'tr-TR';
+
 function bezier(x1, y1, x2, y2) {
   const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
   const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;

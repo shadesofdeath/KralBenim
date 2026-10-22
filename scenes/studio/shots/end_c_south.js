@@ -1005,11 +1005,11 @@
       const { P, W, H, svg, seed } = ctx;
       const root = el(svg, 'g'), bg = el(root, 'g'), ui = el(root, 'g'), kG = el(root, 'g');
       const pb = Pen(bg, seed);
-      const hl = (P.highlight || []).map(x => x.toLocaleUpperCase('tr-TR'));
+      const hl = (P.highlight || []).map(x => x.toLocaleUpperCase(LOCALE));
       const size = P.size || 140, rows = [];
       let k = 0;
       (P.lines || []).forEach(ln => rows.push(ln.split(/\s+/).filter(Boolean).map(w => {
-        const isH = hl.includes(w.toLocaleUpperCase('tr-TR').replace(/[?!.,:;]/g, ''));
+        const isH = hl.includes(w.toLocaleUpperCase(LOCALE).replace(/[?!.,:;]/g, ''));
         return { t: Txt(ui, w, size, { font: FR, weight: 900, fill: isH ? C.paperLight : C.ink, haloK: isH ? 0.001 : 0.08 }), isH, k: k++, w };
       })));
       const cx0 = (P.x ?? 0.5) * W, y0 = (P.y ?? 0.24) * H;
