@@ -133,8 +133,8 @@ def lint(path, kinds):
                         err.append(f"{tag}: media not found {p[k]}")
                 if not p.get("credit"):
                     err.append(f"{tag}: photo/video without params.credit")
-        if p.get("ai") and fmt == "short":
-            warn.append(f"{tag}: AI-generated clip in a Short (keep Higgsfield clips to long videos)")
+        if p.get("ai") or "higgsfield" in str(p.get("credit", "")).lower() or "/hf-" in str(p.get("video", "")):
+            err.append(f"{tag}: AI-generated clip; the owner banned Higgsfield/AI footage (2026-10-22), draw it in code")
         if x.get("mascot"):
             err.append(f"{tag}: \"mascot\" (the old bulb) was removed; Kaşif appears through 'stage' or params.cast/kasif")
         if x.get("type") == "photo" and p.get("grade") not in (None, "sepia", "mono"):

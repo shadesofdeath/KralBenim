@@ -32,7 +32,7 @@ okur. Amaç: farklı ajanların yazdığı sahneler aynı defterden çıkmış g
 | `board` | `shots/parchment2d.js` | karşılaştırma, kanıtlar, ✓/✗ listesi, çubuklar + hap rozet |
 | `title` | `shots/parchment2d.js` | tek güçlü cümle/sayı, kelime kelime, vurgulu kelime kırmızı kutuda |
 | `chapter` | `shots/parchment2d.js` | uzun videoda "BÖLÜM 2 / 5" kartı |
-| `photo` | `shots/photo.js` | gerçek fotoğraf/klip ya da Higgsfield sepya klip (`"ai": true`) |
+| `photo` | `shots/photo.js` | gerçek telifsiz fotoğraf/klip (yapay zekâ klibi yasak) |
 | konuya özel | `shots/<tip>.js` | ör. `emu`, `petri`/`labbench`, `halic`, `portage`, `pirimap` |
 
 Parametreler her dosyanın başındaki yorumda yazılıdır (`P: {...}`, `cues: ...`); oradan oku.

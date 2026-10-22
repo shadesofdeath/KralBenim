@@ -46,7 +46,7 @@ Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmem
 | Karşılaştırma, kanıtlar, kontrol listesi | `board` |
 | Bölüm açılışı | `chapter` ("BÖLÜM 2 / 5") |
 | Tek güçlü cümle, sayı | `title` |
-| Atmosfer (mekân, doğa olayı) | `photo` + Higgsfield sepya klip (`"grade": "sepia"`, `"ai": true`) |
+| Atmosfer (mekân, doğa olayı) | konuya özel kod sahnesi ya da gerçek telifsiz fotoğraf (`photo`); yapay zekâ klibi yok |
 
 - Kaşif sahnelerin **en az yarısında** ve her seferinde bir eylem yapıyor (yürüyor, işaret ediyor, dürbünle bakıyor, şaşırıyor).
 - Aynı tip üst üste en fazla 2 sahne; `stage` hariç (Kaşif'in yolculuğu 3 sahne sürebilir).

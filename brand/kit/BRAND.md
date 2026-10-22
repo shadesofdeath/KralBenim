@@ -1,6 +1,6 @@
 # Düşün Bakalım — Marka Kitabı
 
-Kanalın "anayasası". Senaryo yazan, sahne kodlayan, kapak ya da Higgsfield görseli üreten **her ajan
+Kanalın "anayasası". Senaryo yazan, sahne kodlayan, ya da kapak üreten **her ajan
 önce bunu okur**. Burada yazmayan bir görünüm kullanılmaz; çelişki varsa bu dosya kazanır.
 
 ## 1. Kimlik
@@ -130,23 +130,12 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 | Shorts (9:16) | 28–35 sn | 8–11 sahne; tek bir tarih anı ya da şaşırtıcı ayrıntı; kapak yazısı = ilk cümle |
 | Uzun (16:9) | 8–10 dk | 6–8 bölüm kartı; kanca → hikâye → dönüm noktası → "peki neden?" → bugün → soru |
 
-## 8. Görseller kodla üretilir; Higgsfield istisnadır
+## 8. Görseller sadece kodla üretilir
 
-**Kanal sahibinin kuralı: görseller genel olarak kodla üretilir.** Her sahne önce kodla çizilir
-(Kaşif `stage`, `map`, `timeline`, `board`, `title`, `chapter` ve konuya özel yeni kod sahneleri).
-Kodla çizmek için yeni bir sahne tipi yazmak gerekiyorsa yazılır; yapay zekâ görseli kolay yol değildir.
-
-Higgsfield yalnızca kodla makul sürede çizilemeyecek **geniş mekân/atmosfer** anları için, uzun videoda
-**en fazla 2–3 klip** (Shorts'ta hiç). Kullanılırsa: gerçekçi video değil, **parşömen üzerine mürekkep çizim** sahneleri üretilir; karakter ve yazılar kodla
-üstüne biner. Klipte **insan yüzü ve yazı olmaz** (karakter tutarlılığını kod sağlar).
-
-Her prompt şu kalıpla başlar:
-
-> `Hand-drawn sepia ink illustration on aged parchment paper with coffee stains, simple confident line art, muted brown and cream tones, subtle paper texture, gentle slow camera drift, no text, no faces,`
-
-ardından sahne (ör. *"a Roman street with columns and a distant volcano"*). Model: önce ücretsiz hak, sonra en ucuz
-(`seedance_2_0_mini` 720p 5 sn sessiz, `use_unlim: true` → olmazsa kredili ≈ 5 kredi; ayrıntı CLAUDE.md Higgsfield maddesi);
-16:9 (uzun) / 9:16 (Shorts). Studio'da `photo` tipiyle `"grade": "sepia"`, `"ai": true`.
+**Kanal sahibinin kuralı (2026-10-22): Higgsfield ya da başka bir yapay zekâ görsel/video aracı hiç
+kullanılmaz.** Her sahne kodla çizilir (Kaşif `stage`, `map`, `timeline`, `board`, `title`, `chapter` ve
+konuya özel yeni kod sahneleri); gerekiyorsa yeni sahne tipi yazılır. Gerçek tarihî belge/yer/eser için
+telifsiz fotoğraf (`photo`, sepya) kullanılabilir.
 
 ## 9. Kapak (thumbnail)
 

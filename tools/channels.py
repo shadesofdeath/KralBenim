@@ -30,7 +30,7 @@ CHANNELS = {
         "short_slots": ["13:00", "17:30"],
         "long_slots": {1: "19:30", 3: "19:30", 5: "14:00"},           # Tue, Thu, Sat
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
-        "lang": "en", "voice_id": "nPczCjzI2devNBz1zQrb",              # ElevenLabs "Brian": deep US narrator
+        "lang": "en", "voice_id": "ppLqTilh7rH7fbUVlXsf",              # owner's English voice (2026-10-22)
         "hashtag": "#anlatayimgel", "brand_tag": "anlatayim gel",
         "categories": [
             "history's strangest moments",          # real events nobody believes happened
