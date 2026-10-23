@@ -140,6 +140,9 @@ class Video:
         self.chars = sum(len(s.get("text", "")) for s in self.script.get("scenes", []))
 
 
+PRE_PUSH = ("plan", "topic", "script", "chars", "visual", "preview", "review", "publish", "push")
+
+
 def update(st, videos, jobs, now):
     """Fold this run's jobs + shard records into the state (in place). True when every video is final."""
     by_name = {j["name"]: j for j in jobs}
@@ -228,13 +231,14 @@ def fetch_jobs():
 def sync(store, st, videos, posted):
     """Write the monitor's stages as records: on a state/text change, render progress in 5 % steps."""
     for v in videos:
-        sec = tgm.section(st, v.slug)
-        store.put_meta(v.slug, v.kind, v.title)
+        sec = tgm.section(st, v.slug)          # may be an earlier slug of the same video (same message)
+        sid = sec["id"]
+        store.put_meta(sid, v.kind, v.title)
         for g in sec["stages"]:
             if g["id"] not in OWNED:
                 continue
             k = (g["state"], g.get("text"), int((g.get("progress") or 0) * 20))
-            if posted.get((v.slug, g["id"])) != k and store.put_stage(v.slug, g):
+            if posted.get((v.slug, g["id"])) != k and store.put_stage(sid, g):
                 posted[(v.slug, g["id"])] = k
 
 
@@ -270,8 +274,15 @@ def cmd_monitor(a):
         idle = idle + 1 if others and all(j["status"] == "completed" for j in others) else 0
         done = final or idle >= 4 or now > deadline or a.once
         sync(store, st, videos, posted)
-        mine = {"_"} | {v.slug for v in videos}   # only this run's videos (not stale records of the day)
+        mine = {"_"} | {tgm.section(st, v.slug)["id"] for v in videos}   # this run's videos only
         if done:
+            # the director's steps before the push are over once the run ends: no stale ⏳ lines
+            for s in st["sections"]:
+                if s["id"] not in mine:
+                    continue
+                for g in s["stages"]:
+                    if g["id"] in PRE_PUSH and g["state"] in ("run", "wait"):
+                        store.put_stage(s["id"], tgm.set_stage(s, g["id"], "done", g.get("text")))
             states = [g["state"] for s in st["sections"] if s["id"] in mine for g in s["stages"]]
             if a.footer:
                 st["footer"] = a.footer

@@ -151,11 +151,20 @@ def debreath(mp3, words, floor=0.06, min_gap=0.22, pad_out=0.06, pad_in=0.03, ra
     if not gaps:
         return
     tri = "+".join(f"clip(min(t-{a:.3f},{b:.3f}-t)/{ramp},0,1)" for a, b in gaps)
+    filt = f"volume='1-{1 - floor:.3f}*min(1,{tri})':eval=frame"
     script = Path(mp3).with_name("debreath.txt")
-    script.write_text(f"volume='1-{1 - floor:.3f}*min(1,{tri})':eval=frame")
+    script.write_text(filt)
     out = Path(mp3).with_name("debreath.mp3")
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), "-filter_script:a", str(script),
-                    "-c:a", "libmp3lame", "-b:a", "192k", str(out)], check=True)
+    # the filter goes inline (any ffmpeg); only a huge one goes through a file: "-/af" (ffmpeg >= 7)
+    # or the old "-filter_script" (removed in ffmpeg 8)
+    tries = [["-af", filt]] if len(filt) < 120_000 else [["-/af", str(script)], ["-filter_script:a", str(script)]]
+    for i, opt in enumerate(tries):
+        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(mp3), *opt,
+                            "-c:a", "libmp3lame", "-b:a", "192k", str(out)])
+        if r.returncode == 0:
+            break
+        if i == len(tries) - 1:
+            raise subprocess.CalledProcessError(r.returncode, "ffmpeg debreath")
     out.replace(mp3)
 
 

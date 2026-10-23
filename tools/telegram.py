@@ -266,7 +266,8 @@ class Store:
 
     def state(self):
         st = {"key": self.key, "sections": [], "shards": {}, "msgs": {}}
-        for k, v in self.seen.items():
+        # oldest record first: a video's first slug creates its section, the newest record of a stage wins
+        for k, v in sorted(self.seen.items(), key=lambda kv: (kv[1].get("id") or 0)):
             parts, d = k.split("/"), v["d"]
             if parts == ["_msg"]:
                 c, m, cr = (d.split("|") + ["", "", ""])[:3]
@@ -298,14 +299,32 @@ class Store:
                 sec = section(st, sid)
                 sec["stages"] = [x for x in sec["stages"] if x["id"] != stage] + [g]
                 sec["stages"].sort(key=lambda x: ORDER.index(x["id"]) if x["id"] in ORDER else len(ORDER))
+        for sec in st["sections"]:            # a message saved under another slug of the same video
+            if sec["id"] != "_" and sec["id"] not in st["msgs"]:
+                alias = next((m for m in st["msgs"] if same_video(m, sec["id"])), None)
+                if alias:
+                    st["msgs"][sec["id"]] = st["msgs"][alias]
         return st
 
 
+NUM_RE = re.compile(r"^((?:[a-z]+-)?\d{2})-")
+
+
+def same_video(a, b):
+    """Two slugs of one video: the director names it before the file exists ("01-arhipov"), the file
+    may end up "01-vasili-arhipov"; the channel prefix + number is unique per day."""
+    ma, mb = NUM_RE.match(a or ""), NUM_RE.match(b or "")
+    return a == b or bool(ma and mb and ma.group(1) == mb.group(1))
+
+
 def section(st, sid, kind=None, title=None):
+    """The section of a video (one Telegram message): an earlier slug of the same video is reused."""
     for s in st["sections"]:
         if s["id"] == sid:
             break
     else:
+        s = next((x for x in st["sections"] if x["id"] != "_" and sid != "_" and same_video(x["id"], sid)), None)
+    if s is None:
         s = {"id": sid, "kind": None, "title": None, "stages": []}
         st["sections"].append(s)
         st["sections"].sort(key=lambda x: (x["id"] != "_", x["id"]))
@@ -592,9 +611,11 @@ def apply_update(store, st, u, now=None):
         if kind or title:
             store.put_meta(sid, kind, title)
     sec = section(st, sid, kind, title)
+    if sec["id"] != sid and (kind or title):
+        store.put_meta(sec["id"], kind, title)   # the video's message keeps its first slug; title updates
     g = set_stage(sec, u["stage"], u.get("state") or "info", u.get("text"), parse_progress(u.get("progress")),
                   now=now)
-    store.put_stage(sid, g)
+    store.put_stage(sec["id"], g)
 
 
 def script_info(key, slug):

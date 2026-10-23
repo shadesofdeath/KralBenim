@@ -317,11 +317,13 @@ jobs:
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
           F: ${{ matrix.file }}
         run: |
           if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ ! -f config/telegram_chat_id ]; then echo "Telegram not set up, skipping"; exit 0; fi
           V="out/${{ steps.n.outputs.name }}.mp4"
-          if [ ! -f "$V" ]; then python tools/telegram.py text "⚠️ Render başarısız: $F"; exit 0; fi
+          # a failed render already shows ❌ in the video's live message; a separate text only without it
+          if [ ! -f "$V" ]; then [ -n "$LIVE_STATUS" ] || python tools/telegram.py text "⚠️ Render başarısız: $F"; exit 0; fi
           if grep -q '"format": "long"' "$F"; then
             python tools/telegram.py text "📺 Uzun video yüklendi: $(python -c "import json;print(json.load(open('$F'))['youtube']['title'])")"
           else
