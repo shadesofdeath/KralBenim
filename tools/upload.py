@@ -116,7 +116,20 @@ def main():
         print(f"no YouTube token for {channel} ({CHANNELS.get(channel, CHANNELS[DEFAULT])['youtube_env']}): upload skipped")
         return
     if not creds.valid:
-        creds.refresh(Request())
+        try:
+            creds.refresh(Request())
+        except Exception as e:   # RefreshError "invalid_grant": the login expired or was revoked
+            env = CHANNELS[channel]["youtube_env"]
+            msg = (f"🔑 {channel}: YouTube girişi geçersiz ({e.__class__.__name__}). GitHub > Actions > "
+                   f"'YouTube login (phone)' > channel {CHANNELS[channel]['id']} çalıştır, gelen JSON'u {env} "
+                   f"secret'ına yapıştır; sonra videoyu yeniden başlat.")
+            print(msg)
+            try:
+                import telegram
+                telegram.call("sendMessage", {"chat_id": telegram.chat_id(), "text": msg})
+            except Exception:
+                pass
+            sys.exit(1)
     yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)
 
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}

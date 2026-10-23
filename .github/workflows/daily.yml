@@ -304,6 +304,7 @@ jobs:
           F: ${{ matrix.file }}
           GITHUB_TOKEN: ${{ github.token }}
           LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}   # upload.py: "login expired" notice
         run: |
           # upload.py picks the token of the script's channel and skips (no .youtube.json) when it is missing
           python tools/upload.py "$F" "out/${{ steps.n.outputs.name }}.mp4"
