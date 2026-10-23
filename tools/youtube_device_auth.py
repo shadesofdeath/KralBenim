@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """YouTube login from a phone (Google's device flow), run by .github/workflows/youtube-auth.yml.
 
-  YOUTUBE_DEVICE_CLIENT_ID=... YOUTUBE_DEVICE_CLIENT_SECRET=... TELEGRAM_BOT_TOKEN=... python tools/youtube_device_auth.py "Anlatayım Gel"
+  YOUTUBE_DEVICE_CLIENT_ID=... YOUTUBE_DEVICE_CLIENT_SECRET=... TELEGRAM_BOT_TOKEN=... python tools/youtube_device_auth.py ag
+A channel may have its own OAuth client (its own Google Cloud project, where its account is a test user):
+YOUTUBE_DEVICE_CLIENT_ID_<ID> / YOUTUBE_DEVICE_CLIENT_SECRET_<ID> (e.g. _DB) win over the shared pair.
 
 1. asks Google for a short code and sends "open google.com/device, enter CODE" to the Telegram chat;
 2. waits (up to the code's lifetime, ~30 min) until the owner signs in on the phone and picks the channel;
@@ -41,7 +43,9 @@ def say(text):
 
 def main():
     ch = by_id(sys.argv[1] if len(sys.argv) > 1 else DEFAULT) or DEFAULT
-    cid, secret = os.environ["YOUTUBE_DEVICE_CLIENT_ID"], os.environ["YOUTUBE_DEVICE_CLIENT_SECRET"]
+    own = CHANNELS[ch]["id"].upper()
+    cid = os.environ.get(f"YOUTUBE_DEVICE_CLIENT_ID_{own}") or os.environ["YOUTUBE_DEVICE_CLIENT_ID"]
+    secret = os.environ.get(f"YOUTUBE_DEVICE_CLIENT_SECRET_{own}") or os.environ["YOUTUBE_DEVICE_CLIENT_SECRET"]
     code = post("https://oauth2.googleapis.com/device/code", {"client_id": cid, "scope": SCOPE})
     if "device_code" not in code:
         say(f"❌ YouTube girişi başlamadı: {code.get('error_description') or code.get('error') or code}")

@@ -32,6 +32,11 @@ jobs:
         env:
           YOUTUBE_DEVICE_CLIENT_ID: ${{ secrets.YOUTUBE_DEVICE_CLIENT_ID }}
           YOUTUBE_DEVICE_CLIENT_SECRET: ${{ secrets.YOUTUBE_DEVICE_CLIENT_SECRET }}
+          # a channel's own client (its own Cloud project) wins over the shared one, e.g. Düşün Bakalım:
+          YOUTUBE_DEVICE_CLIENT_ID_DB: ${{ secrets.YOUTUBE_DEVICE_CLIENT_ID_DB }}
+          YOUTUBE_DEVICE_CLIENT_SECRET_DB: ${{ secrets.YOUTUBE_DEVICE_CLIENT_SECRET_DB }}
+          YOUTUBE_DEVICE_CLIENT_ID_AG: ${{ secrets.YOUTUBE_DEVICE_CLIENT_ID_AG }}
+          YOUTUBE_DEVICE_CLIENT_SECRET_AG: ${{ secrets.YOUTUBE_DEVICE_CLIENT_SECRET_AG }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           CH: ${{ inputs.channel }}
