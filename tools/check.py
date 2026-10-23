@@ -31,12 +31,15 @@ def http(url, headers=None, body=None):
     req = urllib.request.Request(url, headers=headers or {}, data=json.dumps(body).encode() if body is not None else None)
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            return r.status, json.load(r)
+            code, raw = r.status, r.read()
     except urllib.error.HTTPError as e:
-        try:
-            return e.code, json.load(e)
-        except ValueError:
-            return e.code, {}
+        code, raw = e.code, e.read()
+    except OSError as e:    # network down, DNS, timeout
+        return 0, {"error": str(e)}
+    try:
+        return code, json.loads(raw) if raw.strip() else {}   # 204 No Content has no body
+    except ValueError:
+        return code, {}
 
 
 def check_elevenlabs():
