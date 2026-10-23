@@ -1,0 +1,705 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "cadaver-synod",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "A pope's",
+   "corpse",
+   "on trial"
+  ],
+  "highlight": [
+   "corpse"
+  ],
+  "scene": 0,
+  "t": 2.6,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": -1,
+   "scale": 1.2,
+   "x": 840,
+   "y": 1860
+  }
+ },
+ "youtube": {
+  "title": "Cadaver Synod: Why Did a Pope Put a Corpse on Trial?",
+  "description": "The Cadaver Synod of 897 is one of history's strangest trials: a pope had a dead pope dug up and put the corpse on trial in Rome. Here is what happened.\n\nIn early 897, Pope Stephen VI had the body of Pope Formosus exhumed, dressed in papal robes and propped on a throne in the Lateran. A deacon answered the charges for the dead man. The verdict was guilty: three fingers of his blessing hand were cut off and the body ended up in the Tiber. Within months, Rome turned on Stephen, and he was strangled in prison. Later popes reburied Formosus and banned trials of the dead.\n\nSubscribe to Stickstory for a strange true story every day. If you were that deacon, what would you have said? Tell me in the comments!\n\n#shorts #cadaversynod #history #stickstory",
+  "tags": [
+   "cadaver synod",
+   "cadaver synod 897",
+   "the cadaver synod",
+   "what was the cadaver synod",
+   "cadaver synod explained",
+   "pope put a corpse on trial",
+   "dead pope trial",
+   "pope formosus",
+   "pope stephen vi",
+   "formosus trial",
+   "medieval papacy",
+   "strange history",
+   "history's strangest moments",
+   "medieval history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-23T17:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "cs_trial",
+   "text": "In 897, a pope put a corpse on trial.",
+   "visual": "A Roman hall of arches: a robed skeleton in a white mitre slumps on a red-curtained throne; a pope in a mitre points at it furiously; on 'corpse' its head lolls and the fez narrator jumps back in shock.",
+   "title": {},
+   "cues": {
+    "hit": "corpse",
+    "slump": "pope",
+    "pt": "put"
+   },
+   "params": {
+    "setting": "hall",
+    "throne": {
+     "x": 0.62
+    },
+    "corpse": {
+     "slump": "slump",
+     "sway": 2.2
+    },
+    "pope": {
+     "x": 0.2,
+     "pose": "talk",
+     "face": 1,
+     "emotion": "angry",
+     "seq": [
+      {
+       "at": "pt",
+       "pose": "point",
+       "dir": 10,
+       "emotion": "angry"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.9,
+     "scale": 0.8,
+     "pose": "look",
+     "face": -1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    },
+    "cover": {
+     "zoom": 1.22,
+     "focus": [
+      0.56,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Formosus had been dead for months,",
+   "visual": "Vertical timeline: '896 Formosus dies' appears, then '897 Trial' lights up in red; the narrator points at the gap.",
+   "title": {
+    "white": "Pope Formosus",
+    "gray": "died 896"
+   },
+   "cues": {
+    "a": "Formosus",
+    "b": "dead",
+    "k": "months"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "896",
+      "text": "Formosus dies",
+      "at": "a"
+     },
+     {
+      "year": "897",
+      "text": "Trial",
+      "at": "b"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.76,
+     "y": 0.6,
+     "pose": "point",
+     "at": "b",
+     "scale": 0.95,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "cs_trial",
+   "text": "but Pope Stephen the Sixth still wanted revenge.",
+   "visual": "The same hall with an empty throne; Pope Stephen the Sixth in a white mitre stomps and points down at the throne; red 'REVENGE!' slams in on 'revenge'; the narrator shrugs in disbelief.",
+   "title": {
+    "white": "Stephen VI",
+    "gray": "the new pope"
+   },
+   "cues": {
+    "st": "Stephen",
+    "hit": "revenge",
+    "any": "revenge"
+   },
+   "params": {
+    "setting": "hall",
+    "throne": {
+     "x": 0.7,
+     "scale": 0.82
+    },
+    "corpse": false,
+    "pope": {
+     "x": 0.36,
+     "scale": 1.05,
+     "pose": "talk",
+     "face": 1,
+     "emotion": "angry",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "down",
+       "emotion": "angry"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.12,
+     "scale": 0.78,
+     "pose": "think",
+     "face": 1,
+     "seq": [
+      {
+       "at": "any",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "label": {
+     "text": "REVENGE!",
+     "x": 0.5,
+     "y": 0.165,
+     "size": 120,
+     "at": "hit"
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "He had him dug up, robed and propped on a throne.",
+   "visual": "Giant words appear one by one on each spoken word: 'DUG UP,' then 'ROBED,' then 'ENTHRONED.' in a red box; the big narrator below counts on his fingers, then shrugs.",
+   "title": {
+    "white": "The synod",
+    "gray": "early 897"
+   },
+   "cues": {
+    "w0": "dug",
+    "w1": "up",
+    "w2": "robed",
+    "w3": "throne"
+   },
+   "params": {
+    "lines": [
+     "DUG UP,",
+     "ROBED,",
+     "ENTHRONED."
+    ],
+    "highlight": [
+     "ENTHRONED"
+    ],
+    "y": 0.29,
+    "kasif": {
+     "x": 0.68,
+     "y": 0.6,
+     "pose": "shrug",
+     "at": "w3",
+     "face": -1,
+     "scale": 0.54,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "cs_trial",
+   "text": "Get this: a deacon answered for the corpse.",
+   "visual": "The robed corpse on its throne; a young deacon stands beside it and talks, a speech bubble with dots pops up; the narrator points at the deacon, then jumps back in shock on 'corpse'.",
+   "title": {
+    "white": "The defense"
+   },
+   "cues": {
+    "d": "deacon",
+    "hit": "corpse"
+   },
+   "params": {
+    "setting": "hall",
+    "throne": {
+     "x": 0.56,
+     "scale": 0.86
+    },
+    "corpse": {},
+    "deacon": {
+     "x": 0.87,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": -1,
+     "at": "d"
+    },
+    "kasif": {
+     "x": 0.13,
+     "scale": 0.82,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "d",
+       "pose": "point",
+       "dir": 15
+      },
+      {
+       "at": "hit",
+       "pose": "shock"
+      }
+     ]
+    },
+    "label": {
+     "text": "THE DEACON",
+     "x": 0.5,
+     "y": 0.145,
+     "size": 96,
+     "at": "d",
+     "color": "ink"
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "The verdict? You guessed it: guilty!",
+   "visual": "Giant words: 'THE VERDICT:' then 'GUILTY!' slams in inside a red box; the big narrator below jumps back in shock.",
+   "title": {},
+   "cues": {
+    "w0": "The",
+    "w1": "verdict",
+    "w2": "guilty"
+   },
+   "params": {
+    "lines": [
+     "THE VERDICT:",
+     "GUILTY!"
+    ],
+    "highlight": [
+     "GUILTY"
+    ],
+    "y": 0.22,
+    "kasif": {
+     "x": 0.7,
+     "y": 0.6,
+     "pose": "shock",
+     "at": "w2",
+     "face": -1,
+     "scale": 0.8
+    }
+   }
+  },
+  {
+   "type": "cs_hand",
+   "text": "They cut off three fingers of his blessing hand,",
+   "visual": "A big ink hand in a red sleeve raises three fingers in blessing; red numbers 1, 2, 3 pop beside them; on 'blessing' red dashed cut lines appear and the three fingers fade to dashed outlines; the narrator winces.",
+   "title": {
+    "white": "The sentence"
+   },
+   "cues": {
+    "n": "three",
+    "cut": "blessing"
+   },
+   "params": {
+    "x": 0.4,
+    "y": 0.5,
+    "count": "n",
+    "cut": "cut",
+    "label": {
+     "text": "3 FINGERS",
+     "x": 0.62,
+     "y": 0.155,
+     "size": 100,
+     "at": "n"
+    },
+    "kasif": {
+     "x": 0.83,
+     "scale": 0.8,
+     "pose": "think",
+     "face": -1,
+     "seq": [
+      {
+       "at": "cut",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "and dumped him in the Tiber.",
+   "visual": "Old map of Rome: the Tiber winds down the left; the Lateran glows red on the right; a red dashed route runs from the Lateran into the river on 'Tiber'.",
+   "title": {
+    "white": "Rome",
+    "gray": "the Tiber"
+   },
+   "cues": {
+    "route": "dumped",
+    "river": "Tiber"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.2,
+       -0.2
+      ],
+      [
+       1.2,
+       -0.2
+      ],
+      [
+       1.2,
+       1.2
+      ],
+      [
+       -0.2,
+       1.2
+      ]
+     ]
+    ],
+    "coast": [
+     [
+      0.42,
+      -0.05
+     ],
+     [
+      0.36,
+      0.15
+     ],
+     [
+      0.44,
+      0.3
+     ],
+     [
+      0.33,
+      0.46
+     ],
+     [
+      0.4,
+      0.62
+     ],
+     [
+      0.3,
+      0.8
+     ],
+     [
+      0.34,
+      1.05
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Lateran",
+      "x": 0.76,
+      "y": 0.6,
+      "dx": 0,
+      "dy": -40,
+      "anchor": "middle",
+      "color": "red"
+     }
+    ],
+    "seas": [
+     {
+      "name": "Tiber",
+      "x": 0.18,
+      "y": 0.36
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.76,
+       0.6
+      ],
+      [
+       0.62,
+       0.52
+      ],
+      [
+       0.5,
+       0.58
+      ],
+      [
+       0.39,
+       0.6
+      ]
+     ],
+     "at": "route",
+     "dur": 1.2,
+     "color": "red"
+    },
+    "note": {
+     "text": "897",
+     "x": 0.64,
+     "y": 0.82,
+     "at": "river"
+    },
+    "focus": [
+     0.55,
+     0.55
+    ],
+    "zoom": 1.15,
+    "compass": "tr"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "But Rome turned on Stephen,",
+   "visual": "Three angry Romans (helmet, beret, laurel) march in from the left and shake their arms up; red 'FURIOUS!' appears; the narrator turns and points at them in surprise.",
+   "title": {
+    "white": "Rome",
+    "gray": "fights back"
+   },
+   "cues": {
+    "tw": "Rome",
+    "hit": "turned"
+   },
+   "params": {
+    "foreground": "hatch",
+    "ground_y": 1360,
+    "scale": 1.0,
+    "depth": {
+     "far": "city"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "label": {
+     "text": "FURIOUS!",
+     "y": 0.21,
+     "at": "hit",
+     "size": 130
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.74,
+      "pose": "talk",
+      "face": "left",
+      "at": "tw",
+      "then": "point",
+      "dir": 20,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock"
+       }
+      ]
+     },
+     {
+      "who": "roman1",
+      "accessory": "helmet",
+      "x": -0.1,
+      "to": 0.55,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "roman2",
+      "accessory": "beret",
+      "x": -0.3,
+      "to": 0.4,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "roman3",
+      "accessory": "laurel",
+      "beard": "grey",
+      "x": -0.5,
+      "to": 0.25,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cs_trial",
+   "text": "and he was strangled in prison.",
+   "visual": "A stone prison cell with a barred window; Stephen, still in his mitre, sits worried on the straw as iron bars slam down in front of him; outside, the narrator shocks.",
+   "title": {
+    "white": "Summer",
+    "gray": "897"
+   },
+   "cues": {
+    "b": "he",
+    "hit": "strangled"
+   },
+   "params": {
+    "setting": "cell",
+    "throne": false,
+    "bars": {
+     "at": "b",
+     "x0": 0.4,
+     "x1": 0.98
+    },
+    "pope": {
+     "x": 0.68,
+     "scale": 0.95,
+     "pose": "sit",
+     "face": -1,
+     "emotion": "worried"
+    },
+    "kasif": {
+     "x": 0.17,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "cs_trial",
+   "text": "So within months, the pope who judged a corpse was a corpse himself.",
+   "visual": "A cemetery under cypresses: a tombstone 'FORMOSUS 896' rises on the left, then 'STEPHEN VI 897' on the right; the narrator stands between them and shrugs.",
+   "title": {},
+   "cues": {
+    "g1": "months",
+    "g2": "was",
+    "hit": "himself"
+   },
+   "params": {
+    "setting": "graves",
+    "throne": false,
+    "graves": [
+     {
+      "name": "FORMOSUS",
+      "year": "896",
+      "x": 0.22,
+      "at": "g1"
+     },
+     {
+      "name": "STEPHEN VI",
+      "year": "897",
+      "x": 0.78,
+      "at": "g2",
+      "color": "red",
+      "size": 44
+     }
+    ],
+    "kasif": {
+     "x": 0.5,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "g2",
+       "pose": "point",
+       "dir": 20,
+       "face": 1
+      },
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  }
+ ]
+}
