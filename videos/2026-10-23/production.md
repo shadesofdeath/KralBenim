@@ -788,3 +788,125 @@ Not: out/preview'deki sheet.png bir `--times` çalıştırmasıyla 2 karelik say
 
 - 01 tur 3 sonrası yönetmen düzeltmesi: kapanış "Yani dünyayı bir ordu değil, tek bir kelime kurtardı." (eleştirmen önerisi).
 - Telifsiz gerçek fotoğraflar (Wikimedia) bu ortamdan indirilemedi; tüm görseller kodla çizildi.
+
+---
+
+# Prodüksiyon — 2026-10-23 (Stickstory)
+
+Plan (`tools/plan.py --channel ag`): 2 Shorts (uzun video günü değil; sıradaki uzun 24 Ekim). ElevenLabs: bu ay 60.533 / 231.442 karakter (uyarı yok).
+Görseller sadece kodla. Konular iki kanalın geçmişinde yok; bugünkü Düşün Bakalım konularıyla (Arhipov, röntgen, Romulus Augustulus, Preveze, Lizbon) çakışmıyor.
+
+| Dosya | Konu | Kategori | Dönem | Yayın |
+|---|---|---|---|---|
+| ag-01-anglo-zanzibar-war | Anglo-Zanzibar Savaşı, 27 Ağustos 1896 | empires and battles | 19. yy sonu, Doğu Afrika | 23 Ekim 13:00 |
+| ag-02-cadaver-synod | Kadavra Sinodu, Ocak 897, Roma | history's strangest moments | 9. yy, Orta Çağ Roma | 23 Ekim 17:30 |
+
+## ag-01-anglo-zanzibar-war (Shorts, 13:00) — empires and battles
+
+- **Hissedilen:** "Tarihin en kısa savaşı bir kibir yüzünden çıktı ve bir kahvaltıdan bile kısa sürdü."
+- **Kanca + kapak fikri:** "This war lasted less than an hour." ↔ kapak `A WAR THAT LASTED / 38 MINUTES` (vurgu `38`; kaynaklar 38–45 dk der → "about 40 minutes" ya da "less than an hour" güvenli). Kapak karesi: alevler içindeki saray, körfezde gemiler, büyük şok Kaşif, cep saati.
+- **Doğrulanacak bilgiler:** 25 Ağustos 1896 İngiliz yanlısı Sultan Hamad bin Thuwaini öldü; yeğeni/kuzeni Khalid bin Barghash İngiliz onayı olmadan sarayı ele geçirdi (1886 antlaşmasına göre İngiliz onayı gerekiyordu). İngilizler 27 Ağustos sabah 09:00'a kadar ültimatom verdi; Khalid sarayda ~2.800 adamla barikat kurdu (doğrula). 09:00'da süre doldu, 09:02 civarı bombardıman başladı; tek Zanzibar gemisi HHS Glasgow batırıldı; ~09:40 bayrak indi. Zanzibar tarafında ~500 ölü/yaralı, İngiliz tarafında 1 ağır yaralı denizci. Khalid Alman konsolosluğuna sığındı. Komutan Amiral Harry Rawson; yeni sultan Hamud bin Mohammed. Rivayet: İngilizler bombardımanın masrafını Zanzibar'a ödettirdi (doğrula, "reportedly"). Sayılarda "about".
+- **Görsel omurga:** `map` (Doğu Afrika kıyısı, Zanzibar adası, saray ve körfezdeki gemiler), `stage` (Kaşif + Khalid `turban`, İngiliz subay), `timeline` (25 Ağustos → 27 Ağustos 09:00 → 09:02 → 09:40), yeni tip öneri **`zw_palace`** (saray cephesi, körfezden ateşlenen gemiler, sayaç/saat, düşen bayrak), `board`/`title` ("38 MINUTES").
+- **Kapanış örneği (yazar kendi cümlesini kursun):** "So the shortest war in history was over before most people finished breakfast."
+
+## ag-02-cadaver-synod (Shorts, 17:30) — history's strangest moments
+
+- **Hissedilen:** "Bir papa ölmüş bir papayı mahkemeye çıkardı ve bu delilik onu da yaktı."
+- **Kanca + kapak fikri:** "In 897, a pope put a corpse on trial." ↔ kapak `THEY PUT A CORPSE / ON TRIAL` (vurgu `CORPSE`). Kapak karesi: tahtta cüppeli iskelet, karşısında öfkeyle işaret eden papa, büyük şok Kaşif.
+- **Doğrulanacak bilgiler:** Papa Formosus 896'da öldü. Ocak 897 (bazı kaynaklar Şubat), Papa VI. Stephen cesedini mezardan çıkarttı, papalık cübbesi giydirip tahta oturttu, Lateran Bazilikası'nda yargıladı. Bir diyakon ceset adına cevap verdi. Suçlama: bir piskoposken kanuna aykırı şekilde Roma piskoposu (papa) olmak (dönemin İtalyan siyaseti, Spoleto ailesi gerilimi). Hüküm: suçlu; papalığı geçersiz sayıldı, kutsama yaptığı sağ elinin üç parmağı kesildi, ceset Tiber'e atıldı (önce sıradan bir mezara gömüldü sonra nehre, kaynaklara göre değişir — sade tut). Halk tepkisi; aynı yıl (Ağustos 897) Stephen tahttan indirildi, hapsedildi, boğularak öldürüldü. Formosus'un cesedi daha sonra kurtarıldı ve yeniden gömüldü (bir keşişin bulduğu anlatılır → "the story goes"). Sonraki papa(lar) bu tür yargılamayı yasakladı. Aşırı makabre değil, tuhaf ve ironik ton.
+- **Görsel omurga:** `stage` (Kaşif + papa Stephen `mitre` yoksa uygun aksesuar, diyakon), yeni tip öneri **`cs_trial`** (mahkeme salonu, tahtta cüppeli iskelet, tokmak, papanın öfke pozu; cue'da iskeletin başı düşer gibi değil — saygılı), `map` (Roma, Lateran, Tiber), `timeline` (896 ölüm → 897 Ocak dava → 897 Ağustos Stephen'ın sonu), `board` (charges / verdict ✓✗), `title`.
+- **Kapanış örneği:** "So the pope who put a dead man on trial didn't even outlive his own scandal."
+
+## Çekim listeleri (Stickstory)
+
+
+### ag-01-anglo-zanzibar-war: narration (467 chars, ~35 s estimate) — after critic round 1
+
+> This war lasted just 38 minutes. In 1896, Zanzibar's sultan died, and his cousin Khalid grabbed the palace without asking Britain. Britain ordered him out by nine, but he refused. At 9:02, the warships opened fire. His royal yacht sank in minutes. By about 9:40, his flag was down. About 500 people were killed or wounded, but only one British sailor was hurt. And the strangest part? Britain sent his side the bill for the shells. So yes, you can lose a war before breakfast.
+
+Verified (Wikipedia "Anglo-Zanzibar War", History Today): Hamad died 25 Aug 1896; Khalid (Hamad's cousin; both grandsons of Sultan Said) took the palace without British approval; ultimatum 09:00, 27 Aug; fire opened 09:02; shelling ceased ~09:40 (38-45 min); royal yacht HHS Glasgow (the navy's only ship) sunk; ~500 Zanzibari killed or wounded, one British petty officer severely wounded; Khalid took refuge in the German consulate; his supporters were made to pay reparations "to cover the cost of shells fired against them".
+
+| # | Narration | Visual | Type | Kaşif | Cue | Camera |
+|---|---|---|---|---|---|---|
+| 1 | This war lasted just 38 minutes. | Burning palace with clock tower, two cruisers firing, shells bursting, big clock 9:02 to 9:40 | zw_palace (new) | big in the foreground, shock, then points | minutes | slow push-in, shake |
+| 2 | In 1896, Zanzibar's sultan died, | Old map zoomed on Zanzibar island, red "Zanzibar", note "August 1896" | map | - | Zanzibar / died | zoom |
+| 3 | and his cousin Khalid grabbed the palace without asking Britain. | Khalid (turban) strides in, points up at the palace; red "NO PERMISSION" | stage | point -> shock | palace / Britain | push-in |
+| 4 | Britain ordered him out by nine, but he refused. | Admiral holds "LEAVE BY 9:00", Khalid shrugs; red "NO." | stage | think -> shrug | nine / refused | push-in |
+| 5 | At 9:02, the warships opened fire. | Big + tower clocks tick to 9:02, cruisers fire, palace catches fire, shake | zw_palace | on a small ledge, binoculars -> shock | 9:02 / fire | zoom 1.14-1.22 |
+| 6 | His royal yacht sank in minutes. | Royal yacht is hit, smokes and sinks | zw_palace | points, then shock | royal / sank | zoom 1.14-1.22 |
+| 7 | By about 9:40, his flag was down. | Timeline 9:02 fire -> red ~9:40 flag down | timeline | think -> point | 9:40 | - |
+| 8 | About 500 people were killed or wounded, but only one British sailor was hurt. | Ink bars: red "Zanzibar ~500" vs tiny "Britain 1", tick "One-sided" | ag03c_compare | talk -> shrug | 500 / sailor | push-in |
+| 9 | And the strangest part? Britain sent his side the bill for the shells. | Admiral hands a "BILL" sign, Khalid's man shocks; red "FOR THE SHELLS" | stage | talk -> shrug | strangest / bill | push-in |
+| 10 | So yes, you can lose a war before breakfast. | Giant "OVER BEFORE / BREAKFAST" | title | shrug | breakfast | - |
+
+Cover: "THIS WAR / LASTED / 38 MINUTES" (highlight 38), scene 1 t 2.0, scene's own big shocked narrator (cover kasif false). Candidates compared: (A) scene 1 + ledge narrator + motor Kaşif (double narrator), (B) scene 6 yacht blast (less fire, emptier), (C) scene 5 first salvo (no flames yet) -> A reworked into the final.
+
+### ag-02-cadaver-synod: narration (459 chars, tur 1 sonrası)
+
+> In 897, a pope put a corpse on trial. Formosus had been dead for months, but Pope Stephen the Sixth still wanted revenge. He had him dug up, robed and propped on a throne. Get this: a deacon answered for the corpse. The verdict? You guessed it: guilty! They cut off three fingers of his blessing hand, and dumped him in the Tiber. But Rome turned on Stephen, and he was strangled in prison. So within months, the pope who judged a corpse was a corpse himself.
+
+Doğrulama: Formosus 896'da öldü; dava 897 başı (Ocak, bazı kaynaklar Şubat), Lateran; ceset cübbeyle tahta oturtuldu, bir diyakon onun adına cevap verdi; hüküm suçlu, kutsama yapan üç parmak kesildi, ceset önce sıradan mezara sonra Tiber'e (metinde sadeleştirildi); Stephen aynı yıl yaz sonunda (~Ağustos 897) hapsedilip boğuldu. Kaynak: National Geographic (2016), medievalists.net, Atlas Obscura. Wikimedia'ya erişim bu ortamda kapalı (proxy 403), Laurens tablosu kullanılamadı; tüm görseller kodla.
+
+| # | Anlatım | Görsel | Tip | Kaşif | Cue | Kamera |
+|---|---|---|---|---|---|---|
+| 0 | In 897, a pope put a corpse on trial. | Kemerli salon, kırmızı perdeli tahtta mitralı, cüppeli iskelet; mitralı papa öfkeyle işaret ediyor | `cs_trial` (yeni) | bakar → şok | corpse | itme + kapak kadrajı |
+| 1 | Formosus had been dead for months, | Dikey zaman çizgisi 896 Formosus dies → 897 Trial | `timeline` | işaret eder | Formosus, months | – |
+| 2 | but Pope Stephen the Sixth still wanted revenge. | Boş taht, Stephen ayak vurup tahtı gösterir, "REVENGE!" | `cs_trial` | düşünür → omuz silker | revenge | itme + punch |
+| 3 | He had him dug up, robed and propped on a throne. | Dev yazı kelime kelime: DUG UP, / ROBED, / ENTHRONED. (kırmızı kutu) | `title` | omuz silker | dug, up, robed, throne | – |
+| 4 | Get this: a deacon answered for the corpse. | Cesedin yanında konuşan diyakon, noktalı konuşma balonu, "THE DEACON" | `cs_trial` | işaret → şok | deacon, corpse | itme |
+| 5 | The verdict? You guessed it: guilty! | THE VERDICT: / GUILTY! (kırmızı kutu) | `title` | şok | Guilty | – |
+| 6 | They cut off three fingers of his blessing hand, | Kırmızı yenden çıkan kutsama eli, 1-2-3 numaralar, kesik çizgi, parmaklar kesik çizgili hayalete döner | `cs_hand` (yeni) | düşünür → şok | three, blessing | itme |
+| 7 | and dumped him in the Tiber. | Roma haritası: Tiber, kırmızı Lateran, nehre kesikli rota, 897 | `map` | – | dumped, Tiber | zoom |
+| 8 | But Rome turned on Stephen, | Üç öfkeli Romalı soldan yürür, kollar yukarı, "FURIOUS!" | `stage` | anlatır → işaret → şok | Rome, turned | itme, paralaks şehir |
+| 9 | and he was strangled in prison. | Taş hücre, mitralı Stephen samanda oturur, parmaklıklar iner | `cs_trial` (cell) | anlatır → şok | he, strangled | itme |
+| 10 | So within months, the pope who judged a corpse was a corpse himself. | Selvili mezarlık: FORMOSUS 896 ve STEPHEN VI 897 mezar taşları yükselir | `cs_trial` (graves) | işaret → omuz silker | months, was, himself | itme |
+
+Kapak: `A POPE'S / CORPSE / ON TRIAL` (vurgu CORPSE), sahne 0 t=2.6, yakın kadraj (zoom 1.22), büyük şok Kaşif sağ altta. 5 aday denendi (geniş kadraj şok, yakın kadraj işaret, diyakon sahnesi, "THEY JUDGED A DEAD POPE", yakın kadraj şok); en güçlüsü yakın kadraj + şok.
+
+
+## Eleştiri günlüğü (Stickstory)
+
+Tur 1 düzeltmeleri: anlatım 498 → 459 karakter (tahmini ~35 sn); kapanış netleşti ("was a corpse himself"); "You guessed it" ile hitap; sahne 8 kadraj (Kaşif 0.74, Romalılar 0.55/0.40/0.25, odak 0.5); sahne 1/3/5 Kaşif altyazı şeridinin üstünde ve daha büyük; zaman çizelgesinde 897 artık "dead" kelimesinde yanıyor; sahne 0 papa "put" kelimesinde işaret ediyor.
+
+### ag-01-anglo-zanzibar-war — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 6 | 7 | 6 | 7 | 8 | 6 | 7 | 7 | 6 | 8 | 8 |
+
+lint OK (SEO 100). preview: 498 karakter, tahmini ~37 sn (hedef 28–35), 10 sahne, motion 3.4–21.6 (timeline 3.4 en düşük).
+
+1. **Anlatıcı sesi yok, altyazı gibi kesik (Senaryo 6):** metinde hiç "you" yok; "He didn't." / "His only warship sank." / "Britain had one sailor hurt." / "Then his side got the bill for the shells." madde listesi gibi art arda. BRAND §6.0/§11 YouTuber hitabı istiyor. Kanca da kapakla tam eşleşmiyor (kapak "38 MINUTES", ilk cümle "less than an hour"). → İlk cümle: "This war lasted just thirty-eight minutes." Sonra bir hitap + bağlaçlar: "...and you'd think Britain would negotiate. It didn't. It gave him until nine in the morning, and he stayed put." "But here's the strangest part: Britain then sent his side the bill for the shells." Toplam 400–470 karakterde kal; tahmini süre 35 sn altına insin (sahne 7 "Britain had one sailor hurt" ve sahne 8'i sıkılaştır).
+2. **Sahne 4–5 (zw_palace, ledge) alt yarı boş + kicker çakışması (Kompozisyon/Okunabilirlik):** saray+körfez üst %45'te, altta dev boş uçurum/kâğıt; sahne 4'te kırmızı "9:02" saat etiketi kicker'ın yanında, sahne 5'te el yazısı "HHS Glasgow" etiketi kicker "HHS Glasgow royal yacht" üstüne biniyor (aynı yazı iki kez). Sahne 1 (harita) ve 7 (board) de alt yarı boş, board kartının %70'i boş. → zw_palace'ta ledge'i kaldır, kamerayı yaklaştır (zoom ~1.35, focus y ~0.5) ya da sahneyi aşağı kaydır ki gemiler/su y 900–1150'yi doldursun, Kaşif'i büyüt (scale ≥0.95) ön planda; sahne 5'te label'ı kaldır ya da kicker'ı "Royal yacht" yap ve etiketi yatın yanına (y~0.45) koy. Board'u yukarı kısalt (tek kart, barlar kalın) ve kalan alana Kaşif koy (board'da Kaşif yok); haritada focus/zoom'u artır, notu altyazı bandının üstüne al.
+3. **Doğruluk:** Khalid bin Barghash, ölen Sultan Hamad bin Thuwaini'nin **yeğeni değil kuzeniydi** (Khalid, Sultan Barghash'ın oğlu; Hamad, Thuwaini'nin oğlu; Wikipedia "Hamad's cousin"). "His only warship sank" de yanlış: Glasgow kraliyet yatıydı ve iki küçük buharlı tekne de batırıldı. → "his cousin Khalid", kicker "the cousin"; "His royal yacht, the pride of his tiny navy, sank." gibi. Ayrıca sahne 6 zaman çizelgesinde "~9:40" rakamı soluk/eriyik görünüyor; vurgu anında tam mürekkep olmalı (motion 3.4, en zayıf sahne: Kaşif'e yürüyüş/işaret ekle).
+
+Kapak: 8 — dev yazı okunuyor, 38 kırmızı kutuda, yanan saray + şok Kaşif. Yükseltmek için: Kaşif yüzü daha yukarı/büyük (şu an çene altı kadraj dışında, gövde boş kâğıtta), gemilerden ateş/duman görünür olsun; saat kulesi kapak karesinde yok. Başlık/açıklama/etiketler iyi (SEO 100); açıklamadaki "his nephew Khalid bin Barghash" da "his cousin" olmalı; "the royal yacht HHS Glasgow sank" doğru, kalabilir.
+
+### ag-02-cadaver-synod — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 7 | 8 | 7 | 6 | 7 | 6 | 9 | 6 | 8 |
+1. **Tempo + sahne 10 (süre ~38,7 sn > 35; lint: sahne 10 = 15 kelime, 6,7 sn):** 498 karakter üst sınırda ve tahmin 35 sn'yi aşıyor. → ~40 karakter kes: sahne 2 "but the new pope, Stephen the Sixth, still wanted revenge."; sahne 10 "So within months, the pope who judged a corpse was a corpse himself." (sahne 10 ≤ 4,5 sn olsun). Sahne 3 (5,1 sn) "He had him dug up, robed and propped on a throne." diye kısalabilir.
+2. **Kapanış + anlatıcı sesi:** "became one himself" kulakla belirsiz: "one" hemen "on trial"dan sonra geliyor, "yargılanan papa oldu" gibi de duyuluyor (Stephen yargılanmadı). Ayrıca metinde hiç "you"/"I" yok (BRAND §11 YouTuber sesi). → Kapanışı madde 1'deki net cümleyle değiştir; sahne 5'i "The verdict? You guessed it. Guilty!" yap (kesintilerle bütçe içinde kalır), "Get this:" yerine "And here's the crazy part:" olabilir.
+3. **Kompozisyon:** sahne 8 (stage) soldaki Romalı ve sağdaki Kaşif kadraj kenarında yarım kesiliyor (Kaşif'in yüzü ikinci karede kesik) → Kaşif x 0.72, Romalılar to 0.58/0.42/0.26, cam focus [0.5,0.6]. Sahne 1 (timeline), 3 ve 5 (title): Kaşif küçük (0.8) ve altyazı şeridi göğsünün üstüne biniyor, alt yarı boş kâğıt; timeline'da "Formosus dies"/"Trial" yazıları 44 px altında görünüyor ve 897 soluk → Kaşif scale ~1.0, ayakları altyazı şeridinin altında değil yanında olacak şekilde y/x ayarla; timeline etiketlerini büyüt. Ek: sahne 0 motion 1.8 (sınırda) — ilk saniyede papa/ceset hareketini erken başlat (kanca karesi canlı olsun).
+Doğruluk notu: Ocak 897, deacon, üç kutsama parmağı, Tiber, Ağustos 897 boğulma hepsi doğru; Tiber öncesi geçici gömü sadeleştirmesi kabul edilebilir. Kapak (8): okunuyor, tek dramatik an, şok Kaşif; üstte ~200 px boş şerit var, yazı biraz aşağı/daha büyük olabilir. SEO başlık 52 karakter, iyi. Lint: 0 hata, 1 uyarı (sahne 10).
+
+### ag-01-anglo-zanzibar-war — tur 2
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 7 | 8 | 8 | 7 | 7 | 8 | 8 | 8 | 8 |
+
+lint OK, 467 karakter. Tur 1 düzeltmeleri yerinde: kuzen, kraliyet yatı, kanca "38 minutes" = kapak, "And the strangest part?" bağlacı, 9:02→~9:40 = 38 dk tutarlı, compare sahnesinde Kaşif var, HHS Glasgow etiketi çakışması gitti. **Geçti (hepsi ≥ 7).** Kalan küçük sorunlar (isteğe bağlı 3. tur):
+1. Sahne 4–5 (zw_palace): altyazı bandının altında hâlâ dev boş uçurum/kâğıt (y ≈ 1320–1920); sahne 4'te kicker "9:02 deadline passes" saat kulesinin çatısına değiyor; sahne 5'in sonunda Kaşif sol kenarda yarı kesik. → ledge'i kaldır ya da sahneyi ~150 px aşağı kaydır, Kaşif x ≥ 0.2; kicker'ı "9:02" tek kelimeye indir.
+2. Senaryo: "About 500 people were killed or wounded, but only one British sailor was hurt." eksiltili, sesli okunurken takılıyor; "you" sadece son cümlede. → "About 500 people were killed or wounded. On the British side? One sailor was hurt." ve ortada bir hitap ("you'd think he'd fight back. He couldn't.") ekle; karakteri 500 altında tut.
+3. Compare sahnesi (7): alt kart neredeyse boş (yalnız "One-sided" kutucuğu), Kaşif küçük; harita (1) alt yarı boş. → alt kartı kaldırıp barları büyüt (kalın, ekranın ortasına), Kaşif scale ≥ 0.8 ve "500"de şok; haritada zoom ~1.5.
+
+Kapak 8: Kaşif artık büyük ve yüzü okunuyor, 38 kırmızı kutuda; gemilerden görünür namlu ateşi eklenirse 9 olur.
+
+### ag-02-cadaver-synod — tur 2
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 8 | 7 | 7 | 7 | 8 | 9 | 8 | 8 |
+Geçti (hepsi ≥ 7, lint 0 hata 0 uyarı, 459 karakter, ~35 sn). Kalan küçük sorunlar:
+1. Sahne 3 (DUG UP / ROBED / ENTHRONED): Kaşif tur 1'den bile küçük (yazının altında minik figür), alt yarı boş kâğıt → Kaşif scale ~1.0, x 0.7, yazının sağ altında büyük; ya da yazıyı y 0.35'e indirip boşluğu kapat.
+2. Sahne 7 (harita): Tiber sadece ince bir kıyı çizgisi, su/nehir gövdesi yok ve Kaşif yok; "dumped" anı soyut kalıyor → nehri dolu mürekkep şerit olarak çiz, rota ucunda küçük bir sıçrama/halka ekle.
+3. Kapak: üstte ~200 px boş şerit; yazı bloğunu ~120 px aşağı al ya da 1 kademe büyüt. (Önizlemede altyazıda "onStephen," / "the  Sixth" boşluk hatası görünüyor; tahmini zamanlama kaynaklı olabilir, gerçek render'da kontrol edilsin.)

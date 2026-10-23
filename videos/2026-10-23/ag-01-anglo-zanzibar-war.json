@@ -1,0 +1,730 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "anglo-zanzibar-war",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "This war",
+   "lasted",
+   "38 minutes"
+  ],
+  "highlight": [
+   "38"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Anglo-Zanzibar War: How Did a War Last Only 38 Minutes?",
+  "description": "The Anglo-Zanzibar War of 1896 is the shortest war in history: it lasted less than an hour. So how did a war end before breakfast?\n\nIn August 1896 the sultan of Zanzibar died, and his cousin Khalid bin Barghash seized the palace without British approval. Britain set a deadline of nine in the morning. At 9:02 the Royal Navy opened fire, his royal yacht HHS Glasgow sank in minutes, and by about 9:40 the flag was down. Around 500 people were killed or wounded, while one British sailor was hurt. Khalid fled to the German consulate, and his supporters were made to pay for the shells.\n\nSubscribe to Stickstory for a strange true story every day. What is the shortest thing you have ever waited in line for? Tell me in the comments!\n\n#shorts #anglozanzibarwar #shortestwar #history #stickstory",
+  "tags": [
+   "anglo-zanzibar war",
+   "anglo-zanzibar war explained",
+   "anglo-zanzibar war 1896",
+   "shortest war in history",
+   "38 minute war",
+   "zanzibar war 1896",
+   "what was the shortest war",
+   "zanzibar",
+   "khalid bin barghash",
+   "hhs glasgow",
+   "british empire",
+   "empires and battles",
+   "strange history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-23T13:00:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "zw_palace",
+   "text": "This war lasted just 38 minutes.",
+   "visual": "A waterfront palace with a clock tower burns while two grey British cruisers fire broadsides from the bay, shells arc into it and burst; a big pocket clock in the sky sweeps from 9:02 to 9:40; red hand-writing '38 MINUTES'; the big fez narrator in the foreground clutches his head in shock, then points at the palace on 'minutes'.",
+   "title": {
+    "white": "Zanzibar",
+    "gray": "27 August 1896"
+   },
+   "cues": {
+    "f": "war",
+    "hit": "minutes"
+   },
+   "params": {
+    "fire": -2,
+    "time": {
+     "from": "9:02",
+     "to": "9:40",
+     "at": 0.1,
+     "dur": 2.2
+    },
+    "clock": {
+     "x": 0.84,
+     "y": 0.15,
+     "r": 100,
+     "at": 0
+    },
+    "ships": [
+     {
+      "kind": "cruiser",
+      "x": 0.68,
+      "y": 0.535,
+      "scale": 1.05,
+      "face": -1,
+      "fire": "f",
+      "every": 0.55
+     },
+     {
+      "kind": "cruiser",
+      "x": 0.3,
+      "y": 0.5,
+      "scale": 0.7,
+      "face": -1,
+      "fire": "f",
+      "every": 0.7,
+      "depth": 0.5
+     }
+    ],
+    "label": {
+     "text": "38 MINUTES",
+     "x": 0.5,
+     "y": 0.075,
+     "at": "hit",
+     "size": 96
+    },
+    "ledge": false,
+    "kasif": {
+     "x": 0.6,
+     "y": 0.84,
+     "scale": 1.35,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 40,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "shake": "hit",
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "In 1896, Zanzibar's sultan died,",
+   "visual": "Old map of the East African coast: the mainland on the left, Zanzibar island off the coast with 'Zanzibar' in red, 'Indian Ocean' written in the sea, a hand-written note 'August 1896'.",
+   "title": {
+    "white": "Zanzibar",
+    "gray": "1896"
+   },
+   "cues": {
+    "city": "Zanzibar",
+    "note": "died"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.3,
+       -0.2
+      ],
+      [
+       0.42,
+       -0.2
+      ],
+      [
+       0.4,
+       0.05
+      ],
+      [
+       0.36,
+       0.2
+      ],
+      [
+       0.38,
+       0.35
+      ],
+      [
+       0.33,
+       0.5
+      ],
+      [
+       0.35,
+       0.65
+      ],
+      [
+       0.3,
+       0.8
+      ],
+      [
+       0.32,
+       1.0
+      ],
+      [
+       0.3,
+       1.2
+      ],
+      [
+       -0.3,
+       1.2
+      ]
+     ],
+     [
+      [
+       0.6,
+       0.14
+      ],
+      [
+       0.68,
+       0.24
+      ],
+      [
+       0.72,
+       0.42
+      ],
+      [
+       0.7,
+       0.6
+      ],
+      [
+       0.64,
+       0.78
+      ],
+      [
+       0.56,
+       0.84
+      ],
+      [
+       0.52,
+       0.66
+      ],
+      [
+       0.53,
+       0.46
+      ],
+      [
+       0.55,
+       0.26
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Zanzibar",
+      "x": 0.545,
+      "y": 0.5,
+      "dx": -20,
+      "dy": -30,
+      "anchor": "end",
+      "color": "red",
+      "at": "city"
+     }
+    ],
+    "seas": [
+     {
+      "name": "Indian Ocean",
+      "x": 0.8,
+      "y": 0.84
+     }
+    ],
+    "note": {
+     "text": "August 1896",
+     "x": 0.2,
+     "y": 0.86,
+     "at": "note"
+    },
+    "focus": [
+     0.52,
+     0.5
+    ],
+    "zoom": 1.3,
+    "compass": "tr"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "and his cousin Khalid grabbed the palace without asking Britain.",
+   "visual": "In front of a palace backdrop, Khalid (turban, black beard) strides in and points up at the palace he has taken; the fez narrator points at him, then shocks on 'Britain'; red hand-writing 'NO PERMISSION'.",
+   "title": {
+    "white": "Khalid",
+    "gray": "the cousin"
+   },
+   "cues": {
+    "go": "cousin",
+    "pal": "palace",
+    "hit": "Britain"
+   },
+   "params": {
+    "backdrop": {
+     "type": "palace",
+     "y": 0.6,
+     "opacity": 0.9
+    },
+    "ground_y": 1150,
+    "foreground": "hatch",
+    "scale": 1.0,
+    "label": {
+     "text": "NO PERMISSION",
+     "y": 0.25,
+     "at": "hit",
+     "size": 90
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "point",
+      "dir": 10,
+      "face": "right",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "khalid",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 1.05,
+      "to": 0.62,
+      "pose": "walk",
+      "face": "left",
+      "at": "pal",
+      "then": "point",
+      "dir": "up",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Britain ordered him out by nine, but he refused.",
+   "visual": "A grey-bearded British admiral holds up a sign 'LEAVE BY 9:00' to Khalid; on 'refused' Khalid shrugs and stays put, red 'NO.' slams in; the fez narrator rubs his chin, then shrugs.",
+   "title": {
+    "white": "Ultimatum",
+    "gray": "27 August"
+   },
+   "cues": {
+    "sign": "nine",
+    "hit": "refused"
+   },
+   "params": {
+    "ground_y": 1150,
+    "foreground": "hatch",
+    "scale": 1.0,
+    "label": {
+     "text": "NO.",
+     "x": 0.74,
+     "y": 0.22,
+     "at": "hit",
+     "size": 150
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "admiral",
+      "beard": "grey",
+      "x": 0.28,
+      "pose": "talk",
+      "face": "right",
+      "at": "sign",
+      "then": "hold",
+      "text": "LEAVE BY 9:00"
+     },
+     {
+      "who": "khalid",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.66,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "scale": 0.75,
+      "pose": "think",
+      "face": "left",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ]
+   }
+  },
+  {
+   "type": "zw_palace",
+   "text": "At 9:02, the warships opened fire.",
+   "visual": "The big pocket clock and the tower clock tick from 9:00 to 9:02; on 'fire' the two cruisers open fire, shells arc into the palace and burst, flames catch on the roof, the frame shakes; the narrator on the ledge looks, then shocks.",
+   "title": {
+    "white": "9:02",
+    "gray": "deadline passes"
+   },
+   "cues": {
+    "tm": "9:02",
+    "f": "opened",
+    "hit": "fire"
+   },
+   "params": {
+    "fire": "hit",
+    "time": {
+     "from": "9:00",
+     "to": "9:02",
+     "at": "tm",
+     "dur": 1.0
+    },
+    "clock": {
+     "x": 0.85,
+     "y": 0.13,
+     "r": 95,
+     "at": 0,
+     "text": false
+    },
+    "ships": [
+     {
+      "kind": "cruiser",
+      "x": 0.68,
+      "y": 0.535,
+      "scale": 1.05,
+      "face": -1,
+      "fire": "f",
+      "every": 0.55
+     },
+     {
+      "kind": "cruiser",
+      "x": 0.3,
+      "y": 0.5,
+      "scale": 0.7,
+      "face": -1,
+      "fire": "f",
+      "every": 0.7,
+      "depth": 0.5
+     }
+    ],
+    "palace": {
+     "x": 0.57
+    },
+    "flag": false,
+    "ledge": {
+     "side": "left",
+     "w": 0.3,
+     "y": 0.6
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 0.95,
+     "pose": "look",
+     "face": "right",
+     "at": "hit",
+     "then": "shock"
+    },
+    "shake": "hit",
+    "cam": {
+     "z0": 1.14,
+     "zoom": 1.22,
+     "focus": [
+      0.5,
+      0.36
+     ]
+    }
+   }
+  },
+  {
+   "type": "zw_palace",
+   "text": "His royal yacht sank in minutes.",
+   "visual": "Close on the bay: the small white royal yacht with a red pennant is hit by a shell, smokes and sinks below the waves while a cruiser keeps firing; the narrator on the ledge points at it, then shocks.",
+   "title": {
+    "white": "HHS Glasgow",
+    "gray": ""
+   },
+   "cues": {
+    "hit": "royal",
+    "s": "sank"
+   },
+   "params": {
+    "fire": -3,
+    "time": {
+     "from": "9:10",
+     "to": "9:12",
+     "at": 0.2,
+     "dur": 1.5
+    },
+    "clock": false,
+    "ships": [
+     {
+      "kind": "yacht",
+      "x": 0.5,
+      "y": 0.535,
+      "scale": 1.15,
+      "face": -1,
+      "hit": "hit",
+      "sink": "s",
+      "sink_dur": 2.0
+     },
+     {
+      "kind": "cruiser",
+      "x": 0.92,
+      "y": 0.5,
+      "scale": 0.75,
+      "face": -1,
+      "fire": 0,
+      "every": 0.8,
+      "depth": 0.4,
+      "target": [
+       0.5,
+       0.48
+      ]
+     }
+    ],
+    "palace": {
+     "x": 0.57
+    },
+    "flag": false,
+    "ledge": {
+     "side": "left",
+     "w": 0.3,
+     "y": 0.6
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 0.95,
+     "pose": "point",
+     "dir": 5,
+     "face": "right",
+     "at": "s",
+     "then": "shock"
+    },
+    "cam": {
+     "z0": 1.14,
+     "zoom": 1.22,
+     "focus": [
+      0.5,
+      0.36
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "By about 9:40, his flag was down.",
+   "visual": "Vertical timeline: '9:02 guns fire' at the top, then the marker drops to red '~9:40 flag down'; the narrator beside it thinks, then points at 9:40 as it turns red.",
+   "title": {
+    "white": "38 minutes",
+    "gray": "later"
+   },
+   "cues": {
+    "c0": "By",
+    "c1": "9:40"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "9:02",
+      "text": "fire",
+      "at": "c0"
+     },
+     {
+      "year": "~9:40",
+      "text": "flag down",
+      "at": "c1"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.76,
+     "y": 0.66,
+     "pose": "point",
+     "pose0": "think",
+     "dir": -10,
+     "at": "c1",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "ag03c_compare",
+   "text": "About 500 people were killed or wounded, but only one British sailor was hurt.",
+   "visual": "Pinned card with two big ink bars: a long red bar 'Zanzibar ~500' grows on '500', then a tiny bar 'Britain 1' barely moves on 'sailor'; the fez narrator beside it explains, then shrugs in disbelief.",
+   "title": {
+    "white": "The cost",
+    "gray": "killed or wounded"
+   },
+   "cues": {
+    "z": "500",
+    "b": "sailor",
+    "hit": "sailor"
+   },
+   "params": {
+    "bars": [
+     {
+      "label": "Zanzibar ~500",
+      "value": 1.0,
+      "color": "red",
+      "at": "z"
+     },
+     {
+      "label": "Britain 1",
+      "value": 0.03,
+      "color": "ink",
+      "at": "b"
+     }
+    ],
+    "list": {
+     "items": [
+      {
+       "text": "One-sided",
+       "mark": "check",
+       "at": "b"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.84,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "b",
+       "pose": "shrug",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "And the strangest part? Britain sent his side the bill for the shells.",
+   "visual": "The British admiral hands a sign 'BILL' to one of Khalid's turbaned men, who jumps back in shock; red hand-writing 'FOR THE SHELLS'; the fez narrator shrugs.",
+   "title": {
+    "white": "The bill",
+    "gray": "after the war"
+   },
+   "cues": {
+    "b": "strangest",
+    "hit": "bill"
+   },
+   "params": {
+    "ground_y": 1150,
+    "foreground": "hatch",
+    "scale": 1.0,
+    "label": {
+     "text": "FOR THE SHELLS",
+     "y": 0.25,
+     "at": "hit",
+     "size": 100
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "admiral",
+      "beard": "grey",
+      "x": 0.3,
+      "pose": "talk",
+      "face": "right",
+      "at": "b",
+      "then": "hold",
+      "text": "BILL"
+     },
+     {
+      "who": "supporter",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.64,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "left",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "So yes, you can lose a war before breakfast.",
+   "visual": "Giant words build up: 'OVER BEFORE / BREAKFAST' with 'BREAKFAST' in a red box; the big narrator below shrugs.",
+   "title": {},
+   "cues": {
+    "w0": "lose",
+    "w1": "breakfast"
+   },
+   "params": {
+    "lines": [
+     "OVER BEFORE",
+     "BREAKFAST"
+    ],
+    "highlight": [
+     "BREAKFAST"
+    ],
+    "y": 0.25,
+    "kasif": {
+     "x": 0.76,
+     "y": 0.77,
+     "pose": "shrug",
+     "at": "w1",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "happy"
+    }
+   }
+  }
+ ]
+}
