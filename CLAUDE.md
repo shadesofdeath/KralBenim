@@ -5,8 +5,13 @@ push'tan sonra GitHub Actions render edip YouTube'a zamanlanmış olarak yükler
 
 | Kanal | Dil | Shorts | Uzun video (5–6 dk) | Saat dilimi |
 |---|---|---|---|---|
-| **Düşün Bakalım** (Türkçe, tarih) | tr | günde **1** — 19:00 | **3 günde bir** — 20:30 | İstanbul |
-| **Stickstory** (global, İngilizce) | en | günde **3** — 09:00, 13:00, 19:00 | **2 günde bir** — 14:00 | **New York** |
+| **Düşün Bakalım** (Türkçe, tarih) | tr | günde **1** — 19:00 | **her gün 1** — 20:30 | İstanbul |
+| **Stickstory** (global, İngilizce) | en | günde **3** — 09:00, 13:00, 19:00 | **her gün 1** — 14:00 | **New York** |
+
+**İki kanal asla karışmaz:** Türkçe videolar sadece Düşün Bakalım'a, İngilizce videolar sadece Stickstory'ye gider.
+Kanal dosya önekinden gelir (`ag-` = Stickstory); `upload.py` token'ın bağlı olduğu YouTube kanalını kontrol eder,
+yanlış kanalsa yüklemez. **Üretim saatleri ayrı:** Düşün Bakalım sabah 05:50'de, Stickstory 11:10'da (İstanbul)
+üretilir; bir oturum sadece kendi kanalının videolarını yazar.
 
 Takvim, saatler, ses, hashtag, kategori havuzu, dosya öneki ve YouTube secret'ı tek yerde: `tools/channels.py`.
 Stickstory saatleri New York saatidir (en büyük İngilizce kitle ABD; aynı saatler İngiltere/Avrupa öğleden sonra
@@ -38,8 +43,8 @@ Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kald
   doğru kanala mı bağlı), Telegram botu. `.github/workflows/api-check.yml` her sabah 03:15'te ve her `Daily batch`
   başında çalışır; süresi dolmuş YouTube girişinde `YouTube login (phone)` workflow'unu o kanal için kendisi başlatır
   (kod Telegram'a gelir, gelen JSON kanalın secret'ına yapıştırılır: `YOUTUBE_TOKEN_JSON` / `YOUTUBE_TOKEN_JSON_AG`).
-- `tools/telegram.py` + `tools/live.py` — her video için yerinde güncellenen tek Telegram mesajı, Shorts'un
-  Instagram'a hazır dosyası. `cloudflare/telegram-worker.js` — Telegram `/uzun`, `/shorts` komutları (`cloudflare/KURULUM.md`).
+- `tools/telegram.py` + `tools/live.py` — **kanal başına günde tek** Telegram mesajı (her video bir blok, yerinde
+  güncellenir), Shorts'un Instagram'a hazır dosyası. API kontrolü Telegram'a sadece sorun varsa yazar. `cloudflare/telegram-worker.js` — Telegram `/uzun`, `/shorts` komutları (`cloudflare/KURULUM.md`).
 
 Ses: anlatım + çok hafif ambiyans (`"sfx": false` kapatır). **Efekt sesi (whoosh, pop) ve nefes sesi yok** —
 kanal sahibi istemiyor. **Görseller sadece kodla üretilir:** Higgsfield ya da başka bir yapay zekâ görsel/video
@@ -101,7 +106,7 @@ Bulut oturumunda Telegram token'ı yok: her aşamada `actions_run_trigger` ile `
   (plan.py'deki `istanbul` saati, ör. "24.10 19:00").
 - `script` `run`/`done` + `chars` `info` · her eleştiri turunda `review` `run` ("1. tur: kanca 6 · … en düşük 6"),
   geçince `done` · push'tan önce açık aşamaları `done` yap, `push` `run`. Hata: `fail` + kısa neden.
-Push'tan sonra `Daily batch` workflow'u aynı mesajları devralır (seslendirme, render yüzdesi + kalan süre, YouTube linki).
+Push'tan sonra `Daily batch` workflow'u aynı mesajı devralır (seslendirme, render yüzdesi + kalan süre, YouTube linki).
 
 ### Senaryo kuralları (lint denetler)
 - Alanlar: `"engine": "studio"`, `"theme": "parchment"`, `"format": "short|long"`, `"fps": 30`, `"subtitles": true`,
@@ -167,7 +172,7 @@ web varsa tarih ve sayıları doğrula, emin olmadığın sayıyı yazma, yaygı
 
 ## İkinci kanal: Stickstory (global, İngilizce)
 
-Ayrı bir zamanlanmış görev her sabah bunu tetikler. Tarz, akış, kalite, kapak ve SEO kuralları yukarıdakiyle
+Ayrı bir zamanlanmış görev her gün 11:10'da (İstanbul) bunu tetikler. Tarz, akış, kalite, kapak ve SEO kuralları yukarıdakiyle
 **birebir aynı**; İngilizce anlatım kuralları **BRAND.md §11**. Farklar:
 - `python tools/plan.py --channel ag`; dosyalar `ag-NN-<slug>.json`; plan her video için farklı bir `category` önerir.
 - **Her şey İngilizce:** ses, ekrandaki her yazı (kicker, etiketler, el yazısı notlar, "CHAPTER 2 / 5"), altyazı, kapak,

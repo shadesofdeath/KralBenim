@@ -4,7 +4,7 @@ Scripts of every channel live in videos/<date>/; a channel's files start with it
 
   tz            time zone of the slots (Stickstory: New York, its biggest audience; DST is automatic)
   short_slots   publish times of the day's Shorts (in tz)
-  long_every    a long video every N days, on days where (date - long_anchor) % N == 0
+  long_every    a long video every N days (1 = every day), on days where (date - long_anchor) % N == 0
   long_slot     publish time of the long video
   youtube_env   env var / GitHub secret holding that channel's YouTube token JSON (never another channel's)
   lang          narration / on-screen / YouTube metadata language ("lang" in the script must match)
@@ -15,8 +15,8 @@ Scripts of every channel live in videos/<date>/; a channel's files start with it
 CHANNELS = {
     "Düşün Bakalım": {
         "id": "db", "prefix": "", "narrator": "kasif", "tz": "Europe/Istanbul",
-        "short_slots": ["19:00"],                                   # 1 Short a day (owner, 2026-10-23)
-        "long_every": 3, "long_anchor": "2026-10-23", "long_slot": "20:30",
+        "short_slots": ["19:00"],                                   # 1 Short + 1 long video a day (owner, 2026-10-24)
+        "long_every": 1, "long_anchor": "2026-10-23", "long_slot": "20:30",
         "youtube_env": "YOUTUBE_TOKEN_JSON",
         "lang": "tr", "voice_id": "j4vJUfke1j8j9OYq8V3b",
         "hashtag": "#düşünbakalım", "brand_tag": "düşün bakalım",
@@ -32,8 +32,8 @@ CHANNELS = {
     # A night-time slot in Turkey is fine: YouTube publishes the scheduled video itself.
     "Stickstory": {
         "id": "ag", "prefix": "ag-", "narrator": "fes", "tz": "America/New_York",
-        "short_slots": ["09:00", "13:00", "19:00"],                 # 3 Shorts a day (owner, 2026-10-23)
-        "long_every": 2, "long_anchor": "2026-10-22", "long_slot": "14:00",
+        "short_slots": ["09:00", "13:00", "19:00"],                 # 3 Shorts + 1 long video a day (owner, 2026-10-24)
+        "long_every": 1, "long_anchor": "2026-10-22", "long_slot": "14:00",
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
         "lang": "en", "voice_id": "ppLqTilh7rH7fbUVlXsf",
         "hashtag": "#stickstory", "brand_tag": "stickstory",

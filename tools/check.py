@@ -100,8 +100,11 @@ def check_youtube(relogin):
         title = ((r.get("items") or [{}])[0].get("snippet") or {}).get("title")
         if code != 200 or not title:
             out.append(("❌", f"YouTube · {name}", f"token tazelendi ama kanal okunamadı (HTTP {code})"))
-        elif title != name:
-            out.append(("⚠️", f"YouTube · {name}", f"token tazelendi ama bağlı kanal '{title}'"))
+        elif title != name:   # uploads refuse this token (upload.py): log in again with the right channel
+            msg = f"token yanlış kanala bağlı ('{title}'), yükleme yapılmaz"
+            if relogin and dispatch_relogin(name):
+                msg += " → telefonla giriş başlatıldı, girişte {name} kanalını seçin".replace("{name}", name)
+            out.append(("❌", f"YouTube · {name}", msg))
         else:
             out.append(("✅", f"YouTube · {name}", "token tazelendi, kanal doğru"))
     return out

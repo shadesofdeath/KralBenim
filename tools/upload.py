@@ -3,10 +3,12 @@
 
   python tools/upload.py videos/<date>/<file>.json out/video.mp4
   python tools/upload.py --thumbnail videos/<date>/<file>.youtube.json cover.jpg
+  python tools/upload.py --delete ag <video id>...      # delete videos from a channel
 
 The channel comes from the file name prefix (tools/channels.py) and uploads only with its own token
 ("youtube_env" secret; Düşün Bakalım may also use YOUTUBE_CLIENT_ID / _SECRET / _REFRESH_TOKEN). No token:
-prints a note and exits 0 without a .youtube.json. Expired login: tells Telegram how to log in again, exits 1.
+prints a note and exits 0 without a .youtube.json. Expired login, or a token whose YouTube channel is not
+the script's channel: tells Telegram, uploads nothing, exits 1.
 
 <file>.json:  "youtube": {"title", "description", "tags", "category_id", "publish_at"}  (no publish_at: private)
 Sets <video>.jpg as the thumbnail, appends chapters (long videos, from <video>.timeline.json) and photo
@@ -19,7 +21,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
+from channels import CHANNELS, DEFAULT, by_id, of_file  # noqa: E402
 
 TOKEN_URI = "https://oauth2.googleapis.com/token"
 HEAD = {"tr": {"chapters": "⏱️ Bölümler", "credits": "📷 Görseller"},
@@ -49,6 +51,40 @@ def credentials(channel):
     creds = Credentials.from_authorized_user_info(info)
     creds.refresh(Request())
     return creds
+
+
+def channel_title(yt):
+    items = yt.channels().list(part="snippet", mine=True).execute().get("items") or [{}]
+    return (items[0].get("snippet") or {}).get("title")
+
+
+def notify(msg):
+    print(msg)
+    try:
+        import telegram
+        telegram.call("sendMessage", {"chat_id": telegram.chat_id(), "text": msg})
+    except Exception:
+        pass
+
+
+def open_channel(channel):
+    """YouTube client for the channel, or exit: no token -> None; expired login or a token that belongs to
+    another channel -> Telegram notice + exit 1 (a video never goes to the wrong channel)."""
+    try:
+        creds = credentials(channel)
+    except Exception as e:   # RefreshError invalid_grant: the login expired or was revoked
+        notify(relogin_hint(channel, e.__class__.__name__))
+        sys.exit(1)
+    if creds is None:
+        return None
+    yt = youtube(creds)
+    title = channel_title(yt)
+    if title != channel:
+        c = CHANNELS[channel]
+        notify(f"⛔ {channel}: {c['youtube_env']} token'ı '{title}' kanalına bağlı, yükleme YAPILMADI. "
+               f"'YouTube login (phone)' > channel {c['id']} ile girişte {channel} kanalını seçin.")
+        sys.exit(1)
+    return yt
 
 
 def relogin_hint(channel, err):
@@ -108,29 +144,25 @@ def set_thumbnail(yt, video_id, jpg):
 def main():
     if sys.argv[1] == "--thumbnail":
         rec = json.loads(Path(sys.argv[2]).read_text())
-        creds = credentials(of_file(Path(rec["script"]).name))
-        if creds and set_thumbnail(youtube(creds), rec["id"], sys.argv[3]):
+        yt = open_channel(of_file(Path(rec["script"]).name))
+        if yt and set_thumbnail(yt, rec["id"], sys.argv[3]):
             print("thumbnail set", rec["id"])
+        return
+    if sys.argv[1] == "--delete":              # upload.py --delete <channel id> <video id>...
+        channel = by_id(sys.argv[2])
+        yt = open_channel(channel)
+        for vid in sys.argv[3:]:
+            yt.videos().delete(id=vid).execute()
+            print(f"deleted {vid} from {channel}")
         return
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     script = json.loads(script_path.read_text())
     meta, channel = script["youtube"], of_file(script_path.name)
     lg = CHANNELS[channel]["lang"]
-    try:
-        creds = credentials(channel)
-    except Exception as e:   # RefreshError invalid_grant: the login expired or was revoked
-        msg = relogin_hint(channel, e.__class__.__name__)
-        print(msg)
-        try:
-            import telegram
-            telegram.call("sendMessage", {"chat_id": telegram.chat_id(), "text": msg})
-        except Exception:
-            pass
-        sys.exit(1)
-    if creds is None:
+    yt = open_channel(channel)
+    if yt is None:
         print(f"no YouTube token for {channel} ({CHANNELS[channel]['youtube_env']}): upload skipped")
         return
-    yt = youtube(creds)
 
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}
     when = datetime.fromisoformat(meta["publish_at"]) if meta.get("publish_at") else None

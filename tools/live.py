@@ -275,7 +275,9 @@ def cmd_monitor(a):
         idle = idle + 1 if others and all(j["status"] == "completed" for j in others) else 0
         done = final or idle >= 4 or now > deadline or a.once
         sync(store, st, videos, posted)
-        mine = {"_"} | {tgm.section(st, v.slug)["id"] for v in videos}   # this run's videos only
+        mine = {tgm.section(st, v.slug)["id"] for v in videos}   # this run's videos only
+        if any(tgm.channel_of(v.slug) == tgm.DEFAULT for v in videos):
+            mine.add("_")                                        # the general steps are Düşün Bakalım's
         if done:
             # the director's steps before the push are over once the run ends: no stale ⏳ lines
             for s in st["sections"]:

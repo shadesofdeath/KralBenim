@@ -32,4 +32,4 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GITHUB_TOKEN: ${{ github.token }}
-        run: python tools/check.py --notify always --relogin
+        run: python tools/check.py --notify problems --relogin   # Telegram only when something is wrong

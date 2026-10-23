@@ -6,8 +6,8 @@
   python tools/plan.py --date 2026-10-26
   python tools/plan.py --extra long  # one extra video started by hand: file number + earliest publish_at
 
-Schedules live in tools/channels.py (Düşün Bakalım: 1 Short a day + a long video every 3 days; Stickstory:
-3 Shorts a day + a long video every 2 days). Videos already in the day's folder are "done"; the daily task
+Schedules live in tools/channels.py (Düşün Bakalım: 1 Short + 1 long video a day; Stickstory: 3 Shorts +
+1 long video a day, in New York time). Videos already in the day's folder are "done"; the daily task
 makes only the "todo" ones. Extra videos carry "extra": true and never count against the plan.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
@@ -80,9 +80,16 @@ def category(ch, d, k):
 
 
 def budget(d, planned):
+    """Repo estimate of this billing period + what both channels' plans would still use until it renews."""
     used = month_usage(d)
+    renew = d.replace(day=BILLING_DAY) if d.day < BILLING_DAY else \
+        (d.replace(day=1) + timedelta(days=32)).replace(day=BILLING_DAY)
+    per_day = sum(LIMITS["short"][1] * len(c["short_slots"]) + LIMITS["long"][1] / c["long_every"]
+                  for c in CHANNELS.values())
+    projected = round(used + planned + per_day * ((renew - d).days - 1))
     return {"used_this_month": used, "today_max": planned, "monthly_budget": MONTHLY_CHARS,
-            "warning": used + planned > MONTHLY_CHARS}
+            "projected_at_renewal": projected, "renews": renew.isoformat(),
+            "warning": used + planned > MONTHLY_CHARS or projected > MONTHLY_CHARS}
 
 
 def limits(fmt):

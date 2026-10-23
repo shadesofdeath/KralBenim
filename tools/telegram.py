@@ -8,11 +8,11 @@
   python tools/telegram.py clear                      # delete the bot's messages, start fresh ones
   python tools/telegram.py status <key> --batch '[{"stage": "script", "state": "done", "video": "01-x"}, ...]'
 
-`status` keeps one message per video (and one general message) per <key> (the production date) and edits
-them in place: the first call sends one, every later call (from any job or run) re-renders and edits them.
+`status` keeps ONE message per channel per <key> (the production date) and edits it in place: the first call
+sends it, every later call (from any job or run) re-renders it from all records. Each video is a block in it.
 <state>: wait | run | done | fail | skip | info (info = "label: text" line, e.g. topic, chars, publish).
 Known stages: plan topic script chars visual preview review publish push tts render mux youtube telegram.
-With --video the line goes under that video's heading (📱 SHORTS / 📺 UZUN VİDEO + title).
+With --video the line goes under that video's block in its channel's message (ag- files: Stickstory).
 The cloud session does not call this directly (no token there): it dispatches telegram-status.yml.
 Stage records live as commit statuses on an anchor commit (see Store) when GITHUB_TOKEN is set,
 else in out/telegram/<key>.json. `status` never fails: no token/chat id/network -> silent exit 0.
@@ -89,13 +89,12 @@ def instagram_caption(script, channel=DEFAULT):
 # description  state|t0|t1|progress|text.  Why: GITHUB_TOKEN can write and read them from any job
 # (statuses: write), at any time, without commits, caches or artifacts; one context per stage means
 # parallel writers never lose each other's updates (latest write per stage wins, which is what we want).
-#   tg/<key>/<slug>/_msg        chat_id|message_id|created     the Telegram message of one video
-#   tg/<key>/_/_msg             chat_id|message_id|created     the day's general message (plan, push)
+#   tg/<key>/ch-<id>/_msg       chat_id|message_id|created     the day's Telegram message of a channel
 #   tg/<key>/<slug>/_meta       kind|title                      video heading
 #   tg/<key>/<slug>/shard<i>    run|percent                     live render progress of shard i
 # Without GITHUB_TOKEN (local use) the same records go to a JSON file (out/telegram/<key>.json).
-# Whoever writes then re-renders every message from all records and edits it (one message per video,
-# owner 2026-10-21), so each message is always complete. The message is HTML (bold headings, details in <code>); every value is escaped.
+# Whoever writes then re-renders the channel's message from all records and edits it, so it is always
+# complete. The message is HTML (bold headings, details in <code>); every value is escaped.
 
 STAGES = {   # id: (emoji, short label)
     "plan": ("🗓️", "Plan"),
@@ -454,24 +453,43 @@ def day_label(key):
     return esc(key)
 
 
-def render(st, sec, now=None):
-    """One section's message, kept short: the general one is a heading + its current step (+ footer),
-    a video's is its title (+ publish time) and the one step it is at."""
+CH_ICON = {"tr": "🇹🇷", "en": "🌍"}
+
+
+def channel_of(sid):
+    return DEFAULT if sid == "_" else of_file(sid)
+
+
+def msg_key(sid):
+    """One Telegram message per channel and day: every video of the channel (and the general "_" steps,
+    which are Düşün Bakalım's) lives in it."""
+    return "ch-" + CHANNELS[channel_of(sid)]["id"]
+
+
+def render(st, ch, secs, now=None):
+    """The channel's message: heading, the general step, then per video its kind, publish time, title
+    and the one step it is at (+ the run's footer)."""
     now = now or time.time()
-    g = current(sec)
-    if sec["id"] == "_":
-        out = [f"<b>🎥 Düşün Bakalım</b> · {day_label(st.get('key', ''))}"] + ([stage_line(g, now)] if g else [])
-        if st.get("footer"):
-            out.append(esc(st["footer"]))
-        return "\n".join(out)[:4000]
-    if not g:
+    out = [f"<b>{CH_ICON[CHANNELS[ch]['lang']]} {esc(ch)}</b> · {day_label(st.get('key', ''))}"]
+    videos = 0
+    for sec in secs:
+        # the publish time is already in the video's heading, so it is never the status line
+        g = current({**sec, "stages": [x for x in sec["stages"] if x["id"] != "publish"]})
+        if not g:
+            continue
+        if sec["id"] == "_":
+            out.append(stage_line(g, now))
+            continue
+        videos += 1
+        kind = {"short": "📱 Short", "long": "📺 Uzun video"}.get(sec.get("kind"), "🎞️ Video")
+        pub = stage_of(sec, "publish")
+        when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
+        out += ["", f"{kind}{when}", f"<b>{esc(sec.get('title') or sec['id'])}</b>", stage_line(g, now)]
+    if len(out) == 1:
         return None
-    kind = {"short": "📱", "long": "📺"}.get(sec.get("kind"), "🎞️")
-    pub = stage_of(sec, "publish")
-    when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
-    ch = of_file(sec["id"])           # a second channel's videos say whose they are (ag-01-x -> Stickstory)
-    tag = f"<i>{esc(ch)}</i> · " if ch != DEFAULT else ""
-    return f"{kind} {tag}<b>{esc(sec.get('title') or sec['id'])}</b>{when}\n{stage_line(g, now)}"[:4000]
+    if st.get("footer") and videos:
+        out += ["", esc(st["footer"])]
+    return "\n".join(out)[:4000]
 
 
 def tg(method, fields, tries=4):
@@ -499,27 +517,28 @@ def tg(method, fields, tries=4):
 
 
 def publish(store, st, now=None, last=None, only=None):
-    """Send (first time) or edit each section's own message (one per video, one general).
-    `last` (dict, optional): remembers the last text sent per section, so unchanged text is not re-sent.
-    `only` (set of section ids, optional): touch just these messages."""
+    """Send (first time) or edit each channel's message of the day.
+    `last` (dict, optional): remembers the last text sent per message, so unchanged text is not re-sent.
+    `only` (set of section ids, optional): touch just the messages of these sections' channels."""
     if not TOKEN:
         return False
     cid = chat_id(required=False)
     if not cid:
         return False
-    secs = list(st["sections"])
-    if st.get("footer") and not any(x["id"] == "_" for x in secs):
-        secs.insert(0, section(st, "_"))
+    groups = {}
+    for sec in st["sections"]:
+        groups.setdefault(msg_key(sec["id"]), []).append(sec)
+    keys = None if only is None else {msg_key(sid) for sid in only}
     ok = True
-    for sec in secs:
-        if only is not None and sec["id"] not in only:
+    for key, secs in groups.items():
+        if keys is not None and key not in keys:
             continue
-        yt = stage_of(sec, "youtube")
-        if sec["id"] not in st["msgs"] and yt and yt["state"] == "done":
-            continue   # a video that is already up gets no new message (e.g. after `clear`)
-        text = render(st, sec, now)
+        vids = [x for x in secs if x["id"] != "_"]
+        if key not in st["msgs"] and vids and all((stage_of(x, "youtube") or {}).get("state") == "done" for x in vids):
+            continue   # videos that are already up get no new message (e.g. after `clear`)
+        text = render(st, channel_of(secs[0]["id"]), secs, now)
         if text is not None:
-            ok = publish_one(store, st, sec["id"], text, cid, last) and ok
+            ok = publish_one(store, st, key, text, cid, last) and ok
     return ok
 
 
