@@ -1,0 +1,1111 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "vasili-arhipov",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Tek bir",
+      "hayır",
+      "dünyayı kurtardı"
+    ],
+    "highlight": [
+      "hayır"
+    ],
+    "scene": 8,
+    "t": 9,
+    "kasif": {
+      "pose": "shock",
+      "scale": 1.3
+    }
+  },
+  "youtube": {
+    "title": "Vasili Arhipov: Nükleer Savaşı Durduran Tek Bir Hayır",
+    "description": "Vasili Arhipov, 1962'de Küba Füze Krizi'nin en gergin gününde bir Sovyet denizaltısında tek bir \"hayır\" dedi ve nükleer savaşı durdurdu. Peki nasıl?\n\n27 Ekim 1962'de Sovyet denizaltısı B-59, Küba açıklarında Amerikan muhriplerince sıkıştırıldı. Muhripler onu yüzeye çıkarmak için küçük uyarı bombaları attı. Günlerdir Moskova'dan haber alamayan mürettebat savaşın başladığını sandı. Tanıkların anlattığına göre kaptan Valentin Savitski nükleer torpidoyu hazırlattı, ama ateş için gemideki üç subayın da onayı gerekiyordu ve Vasili Arhipov karşı çıktı. Sonunda denizaltı yüzeye çıktı.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence Arhipov'un yerinde olsan ne yapardın? Yorumlara yaz!\n\n#shorts #vasiliarhipov #kübafüzekrizi #tarih #düşünbakalım",
+    "tags": [
+      "vasili arhipov",
+      "vasiliy arhipov",
+      "vasili arkhipov",
+      "arhipov kimdir",
+      "dünyayı kurtaran adam",
+      "küba füze krizi",
+      "b-59 denizaltısı",
+      "sovyet denizaltısı",
+      "nükleer torpido",
+      "nükleer savaş",
+      "soğuk savaş",
+      "1962",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-23T12:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "ar_room",
+      "text": "Tek bir \"hayır\" dünyayı kurtardı.",
+      "visual": "Kırmızı alarm lambası ilk karede hızla yanıp sönen karanlık denizaltı bölmesi; tavanda kırmızı bantlı torpido ve üstünde kırmızı el yazısı 'nükleer', solda torpido kapağı; solda sakallı kaptan öfkeyle torpidoyu gösteriyor, ortada bereli Arhipov 'hayır'da öfkeyle elini uzatıyor ve kırmızı 'HAYIR!' balonu patlıyor; sağ önde büyük Kaşif (kapak Kaşif'i) şaşkınlıkla torpidoyu işaret ediyor.",
+      "title": {},
+      "cues": {
+        "alarm": "Tek",
+        "no": "hayır",
+        "save": "kurtardı"
+      },
+      "params": {
+        "alarm": 0,
+        "gauges": false,
+        "hits": [
+          "no"
+        ],
+        "booms": [
+          "save"
+        ],
+        "torpedo": {
+          "label": "nükleer",
+          "label_at": 0.1
+        },
+        "bubbles": [
+          {
+            "text": "HAYIR!",
+            "at": "no",
+            "x": 0.74,
+            "y": 0.35,
+            "tail": [
+              0.56,
+              0.39
+            ],
+            "size": 100
+          }
+        ],
+        "cast": [
+          {
+            "who": "kaptan",
+            "accessory": "beret",
+            "x": 0.2,
+            "beard": "black",
+            "pose": "talk",
+            "face": "right",
+            "emotion": "angry",
+            "at": 0.3,
+            "then": "point",
+            "dir": "up-left"
+          },
+          {
+            "who": "arhipov",
+            "accessory": "beret",
+            "x": 0.48,
+            "pose": "talk",
+            "face": "left",
+            "at": "no",
+            "then": "point",
+            "dir": 35,
+            "emotion0": "worried",
+            "then_emotion": "angry",
+            "scale": 1.1
+          }
+        ],
+        "cover_cam": {
+          "zoom": 1.25,
+          "dy": -125
+        },
+        "cam": {
+          "from": 1.0,
+          "zoom": 1.18,
+          "linear": true,
+          "focus": [
+            0.45,
+            0.45
+          ]
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "Gelin anlatayım: 1962, Küba Füze Krizi.",
+      "visual": "Eski harita: Florida, Bahamalar, Küba ve Hispanyola; Havana kırmızı halkayla beliriyor, Küba'yı saran kırmızı kesikli 'abluka' halkası çiziliyor; 'Krizi'de halkanın doğu kenarında kırmızı 'B-59' noktası; el yazısı not 'Ekim 1962'.",
+      "title": {
+        "white": "1962",
+        "gray": "Küba krizi"
+      },
+      "cues": {
+        "note": "Gelin",
+        "city": "1962",
+        "route": "Küba",
+        "sub": "Krizi"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              -0.2692,
+              -0.4
+            ],
+            [
+              -0.2692,
+              0.075
+            ],
+            [
+              0.0,
+              0.085
+            ],
+            [
+              0.1154,
+              0.115
+            ],
+            [
+              0.1538,
+              0.1
+            ],
+            [
+              0.1923,
+              0.15
+            ],
+            [
+              0.2038,
+              0.205
+            ],
+            [
+              0.2385,
+              0.295
+            ],
+            [
+              0.2692,
+              0.34
+            ],
+            [
+              0.2923,
+              0.34
+            ],
+            [
+              0.3038,
+              0.275
+            ],
+            [
+              0.2846,
+              0.18
+            ],
+            [
+              0.2538,
+              0.075
+            ],
+            [
+              0.2615,
+              0.0
+            ],
+            [
+              0.3077,
+              -0.4
+            ]
+          ],
+          [
+            [
+              0.1154,
+              0.505
+            ],
+            [
+              0.1538,
+              0.465
+            ],
+            [
+              0.2115,
+              0.445
+            ],
+            [
+              0.2692,
+              0.445
+            ],
+            [
+              0.3269,
+              0.475
+            ],
+            [
+              0.3962,
+              0.51
+            ],
+            [
+              0.4615,
+              0.545
+            ],
+            [
+              0.5308,
+              0.59
+            ],
+            [
+              0.5192,
+              0.605
+            ],
+            [
+              0.4038,
+              0.605
+            ],
+            [
+              0.3923,
+              0.565
+            ],
+            [
+              0.3077,
+              0.51
+            ],
+            [
+              0.25,
+              0.495
+            ],
+            [
+              0.1923,
+              0.5
+            ],
+            [
+              0.1346,
+              0.51
+            ]
+          ],
+          [
+            [
+              0.5231,
+              0.61
+            ],
+            [
+              0.6154,
+              0.605
+            ],
+            [
+              0.6923,
+              0.615
+            ],
+            [
+              0.7538,
+              0.67
+            ],
+            [
+              0.7385,
+              0.69
+            ],
+            [
+              0.6538,
+              0.7
+            ],
+            [
+              0.5846,
+              0.69
+            ],
+            [
+              0.5231,
+              0.68
+            ]
+          ],
+          [
+            [
+              0.3769,
+              0.26
+            ],
+            [
+              0.4231,
+              0.27
+            ],
+            [
+              0.4115,
+              0.35
+            ],
+            [
+              0.3731,
+              0.335
+            ]
+          ],
+          [
+            [
+              0.4462,
+              0.36
+            ],
+            [
+              0.4846,
+              0.42
+            ],
+            [
+              0.4654,
+              0.43
+            ],
+            [
+              0.4385,
+              0.39
+            ]
+          ],
+          [
+            [
+              -0.2692,
+              0.35
+            ],
+            [
+              -0.0769,
+              0.525
+            ],
+            [
+              0.0,
+              0.525
+            ],
+            [
+              0.0462,
+              0.525
+            ],
+            [
+              0.0192,
+              0.65
+            ],
+            [
+              -0.0115,
+              0.75
+            ],
+            [
+              -0.0231,
+              0.805
+            ],
+            [
+              0.0385,
+              0.81
+            ],
+            [
+              0.1538,
+              0.805
+            ],
+            [
+              0.1846,
+              0.85
+            ],
+            [
+              -0.2692,
+              1.1
+            ]
+          ],
+          [
+            [
+              0.3731,
+              0.68
+            ],
+            [
+              0.45,
+              0.69
+            ],
+            [
+              0.4269,
+              0.71
+            ],
+            [
+              0.3769,
+              0.69
+            ]
+          ],
+          [
+            [
+              0.8,
+              0.675
+            ],
+            [
+              0.8615,
+              0.68
+            ],
+            [
+              0.8577,
+              0.7
+            ],
+            [
+              0.8,
+              0.7
+            ]
+          ]
+        ],
+        "seas": [
+          {
+            "name": "Atlas Okyanusu",
+            "x": 0.66,
+            "y": 0.12,
+            "size": 46
+          },
+          {
+            "name": "Karayip Denizi",
+            "x": 0.6,
+            "y": 0.92,
+            "size": 46
+          },
+          {
+            "name": "abluka",
+            "x": 0.87,
+            "y": 0.68,
+            "size": 50
+          }
+        ],
+        "cities": [
+          {
+            "name": "Miami",
+            "x": 0.3,
+            "y": 0.31,
+            "dx": -24,
+            "dy": 10,
+            "anchor": "end",
+            "at": "note"
+          },
+          {
+            "name": "Havana",
+            "x": 0.2154,
+            "y": 0.445,
+            "dy": -36,
+            "color": "red",
+            "at": "city"
+          },
+          {
+            "name": "Küba",
+            "x": 0.36,
+            "y": 0.52,
+            "dy": 62,
+            "at": "city"
+          },
+          {
+            "name": "B-59",
+            "x": 0.79,
+            "y": 0.47,
+            "dx": 10,
+            "dy": -36,
+            "anchor": "start",
+            "color": "red",
+            "at": "sub"
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              0.14,
+              0.4
+            ],
+            [
+              0.3,
+              0.27
+            ],
+            [
+              0.52,
+              0.29
+            ],
+            [
+              0.72,
+              0.38
+            ],
+            [
+              0.8,
+              0.54
+            ],
+            [
+              0.66,
+              0.7
+            ],
+            [
+              0.42,
+              0.76
+            ],
+            [
+              0.2,
+              0.7
+            ],
+            [
+              0.1,
+              0.55
+            ],
+            [
+              0.14,
+              0.41
+            ]
+          ],
+          "at": "route",
+          "dur": 1.1,
+          "color": "red"
+        },
+        "note": {
+          "text": "Ekim 1962",
+          "x": 0.07,
+          "y": 0.93,
+          "at": "note"
+        },
+        "focus": [
+          0.45,
+          0.5
+        ],
+        "zoom": 1.1,
+        "compass": "tr"
+      }
+    },
+    {
+      "type": "ar_sea",
+      "text": "Bir Sovyet denizaltısı orada saklanıyordu.",
+      "visual": "Deniz kesiti: yüzeyde iki Amerikan muhribi sallanıyor, 'Sovyet'te muhriplerden aşağı sonar halkaları yayılıyor; derinde büyük denizaltı, geniş kesit penceresinde kırmızı lamba altında büyük Kaşif dürbünle yukarı bakıyor, 'saklanıyordu'da endişeyle omuz silkiyor; sağda kırmızı el yazısı 'B-59'.",
+      "title": {
+        "white": "B-59",
+        "gray": "Sovyet denizaltısı"
+      },
+      "cues": {
+        "ping": "Sovyet",
+        "lab": "denizaltısı",
+        "hide": "saklanıyordu"
+      },
+      "params": {
+        "surface": 0.26,
+        "clouds": false,
+        "sub": {
+          "y": 0.52,
+          "h": 470,
+          "sail": 0.7,
+          "window": [
+            -0.23,
+            0.23,
+            -0.47,
+            0.43
+          ]
+        },
+        "ping": "ping",
+        "ships": [
+          {
+            "x": 0.22,
+            "scale": 0.75
+          },
+          {
+            "x": 0.78,
+            "scale": 0.7,
+            "face": -1
+          }
+        ],
+        "labels": [
+          {
+            "text": "B-59",
+            "x": 0.86,
+            "y": 0.33,
+            "at": "lab",
+            "color": "red",
+            "size": 84
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "y": 0.608,
+            "scale": 0.92,
+            "pose": "look",
+            "dir": "up",
+            "face": "right",
+            "at": "hide",
+            "then": "shrug",
+            "emotion": "worried"
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "type": "ar_room",
+      "text": "İçerisi fırın gibiydi, Moskova'dan ses yoktu.",
+      "visual": "Denizaltının içi: sağ duvardaki termometrenin kırmızı cıvası 'fırın'da hızla tırmanıyor, yerden sıcak dalgaları yükseliyor; terleyen bereli bir denizci ve Kaşif; sağ üstte telsiz kutusu 'ses'te kırmızı çarpıyla siliniyor ve el yazısı 'Moskova?' beliriyor; Kaşif önce düşünüyor, sonra endişeyle omuz silkiyor.",
+      "title": {
+        "white": "Bağlantı",
+        "gray": "yok"
+      },
+      "cues": {
+        "heat": "fırın",
+        "lab": "Moskova",
+        "radio": "yoktu"
+      },
+      "params": {
+        "torpedo": false,
+        "hatch": false,
+        "gauges": true,
+        "thermo": {
+          "x": 0.92,
+          "heat": "heat"
+        },
+        "heat": "heat",
+        "radio": {
+          "x": 0.72,
+          "y": 0.27,
+          "at": "radio"
+        },
+        "labels": [
+          {
+            "text": "Moskova?",
+            "x": 0.42,
+            "y": 0.27,
+            "at": "lab",
+            "color": "red",
+            "size": 84
+          }
+        ],
+        "cast": [
+          {
+            "who": "denizci",
+            "accessory": "beret",
+            "x": 0.24,
+            "pose": "idle",
+            "face": "right",
+            "emotion": "worried",
+            "sweat": true,
+            "at": "radio",
+            "then": "shrug"
+          },
+          {
+            "who": "kasif",
+            "x": 0.6,
+            "pose": "think",
+            "face": "left",
+            "emotion": "worried",
+            "sweat": true,
+            "at": "radio",
+            "then": "shrug",
+            "scale": 1.05
+          }
+        ],
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.55,
+            0.45
+          ]
+        }
+      }
+    },
+    {
+      "type": "ar_sea",
+      "text": "Derken bombalar patladı.",
+      "visual": "Deniz kesiti: muhriplerden bırakılan küçük bomba fıçıları kabarcık izleri bırakarak batıyor, 'patladı'da denizaltının tepesinde art arda altın-kırmızı patlamalar ve şok halkaları, kadraj sarsılıyor; pencerede büyük Kaşif önce anlatıyor, sonra şokla geri sıçrıyor.",
+      "title": {
+        "white": "Uyarı",
+        "gray": "bombaları"
+      },
+      "cues": {
+        "drop": "Derken",
+        "b1": "bombalar",
+        "b2": "patladı"
+      },
+      "params": {
+        "surface": 0.26,
+        "clouds": false,
+        "sub": {
+          "y": 0.52,
+          "h": 470,
+          "sail": 0.7,
+          "window": [
+            -0.23,
+            0.23,
+            -0.47,
+            0.43
+          ]
+        },
+        "ships": [
+          {
+            "x": 0.26,
+            "scale": 0.75
+          },
+          {
+            "x": 0.74,
+            "scale": 0.7,
+            "face": -1
+          }
+        ],
+        "charges": [
+          {
+            "x": 0.3,
+            "at": "drop",
+            "depth": 0.31
+          },
+          {
+            "x": 0.68,
+            "at": "b1",
+            "depth": 0.32
+          },
+          {
+            "x": 0.46,
+            "at": "b2",
+            "depth": 0.3
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "y": 0.608,
+            "scale": 0.92,
+            "pose": "talk",
+            "face": "right",
+            "at": "b2",
+            "then": "shock"
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.45
+          ]
+        }
+      }
+    },
+    {
+      "type": "ar_sea",
+      "text": "Amerikalılar sadece \"yüzeye çık\" diyordu. Ama siz o karanlıkta bunu nereden bilecektiniz?",
+      "visual": "Yüzeyde büyük Amerikan muhribi; pruvadaki denizci aşağıyı gösteriyor ve 'yüzeye'de 'Yüzeye çık!' balonu beliriyor, muhripten küçük bir fıçı bırakılıyor; aşağıda denizaltı penceresinde büyük Kaşif yukarıyı işaret ediyor, 'bilecektiniz'de omuz silkiyor ve yanında kırmızı '?' balonu patlıyor.",
+      "title": {
+        "white": "Amerikan",
+        "gray": "muhribi"
+      },
+      "cues": {
+        "say": "yüzeye",
+        "drop": "diyordu",
+        "q": "bilecektiniz"
+      },
+      "params": {
+        "surface": 0.26,
+        "clouds": false,
+        "sub": {
+          "y": 0.52,
+          "h": 470,
+          "sail": 0.7,
+          "window": [
+            -0.23,
+            0.23,
+            -0.47,
+            0.43
+          ]
+        },
+        "ships": [
+          {
+            "x": 0.4,
+            "scale": 1.05
+          }
+        ],
+        "charges": [
+          {
+            "x": 0.62,
+            "at": "drop",
+            "depth": 0.32
+          }
+        ],
+        "bubbles": [
+          {
+            "text": "Yüzeye çık!",
+            "at": "say",
+            "x": 0.68,
+            "y": 0.31,
+            "tail": [
+              0.6,
+              0.235
+            ],
+            "size": 70,
+            "color": "ink"
+          },
+          {
+            "text": "?",
+            "at": "q",
+            "x": 0.84,
+            "y": 0.4,
+            "tail": [
+              0.68,
+              0.43
+            ],
+            "size": 110
+          }
+        ],
+        "cast": [
+          {
+            "who": "amerikali",
+            "x": 0.57,
+            "y": 0.241,
+            "scale": 0.42,
+            "pose": "idle",
+            "face": "right",
+            "at": "say",
+            "then": "point",
+            "dir": "down"
+          },
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "y": 0.608,
+            "scale": 0.92,
+            "pose": "point",
+            "dir": "up",
+            "face": "right",
+            "at": "q",
+            "then": "shrug",
+            "emotion": "worried"
+          }
+        ],
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.4
+          ]
+        }
+      }
+    },
+    {
+      "type": "ar_room",
+      "text": "Tanıklara göre kaptan savaşın başladığını sandı ve nükleer torpidoyu hazırlattı.",
+      "visual": "Denizaltı bölmesi: kırmızı lamba 'savaş'ta hızla yanıp sönmeye başlıyor, sakallı bereli kaptan öfkeyle torpidoyu gösteriyor; 'torpidoyu'da kapak açılıyor ve kırmızı bantlı torpido kapağa doğru kayıyor, üstünde kırmızı el yazısı 'nükleer'; sağda Kaşif şokla geri sıçrıyor.",
+      "title": {
+        "white": "Kaptan",
+        "gray": "Savitski"
+      },
+      "cues": {
+        "alarm": "savaşın",
+        "lab": "nükleer",
+        "load": "torpidoyu"
+      },
+      "params": {
+        "alarm": "alarm",
+        "gauges": false,
+        "torpedo": {
+          "label": "nükleer",
+          "label_at": "lab",
+          "load": "load"
+        },
+        "cast": [
+          {
+            "who": "kaptan",
+            "accessory": "beret",
+            "x": 0.36,
+            "beard": "black",
+            "pose": "talk",
+            "face": "left",
+            "emotion": "angry",
+            "at": "alarm",
+            "then": "point",
+            "dir": "up-left"
+          },
+          {
+            "who": "kasif",
+            "x": 0.74,
+            "pose": "idle",
+            "face": "left",
+            "at": "lab",
+            "then": "shock",
+            "scale": 1.05
+          }
+        ],
+        "cover_cam": {
+          "zoom": 1.25,
+          "dy": -125,
+          "hide_kasif": true
+        },
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.4,
+            0.4
+          ]
+        }
+      }
+    },
+    {
+      "type": "board",
+      "text": "Ama üç subayın onayı şarttı.",
+      "visual": "Pano: başlık 'Ateş için şart', üç kart sırayla beliriyor: 'Kaptan', 'Siyasi subay', 'Arhipov'; altta kırmızı hap rozet 'Üçü de evet'.",
+      "title": {
+        "white": "Kural",
+        "gray": "üç onay"
+      },
+      "cues": {
+        "c0": "üç",
+        "i0": "üç",
+        "c1": "subayın",
+        "i1": "subayın",
+        "c2": "onayı",
+        "i2": "onayı",
+        "pill": "şarttı"
+      },
+      "params": {
+        "title": "Ateş için şart",
+        "cards": [
+          {
+            "items": [
+              {
+                "text": "Kaptan",
+                "at": "i0"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Siyasi subay",
+                "at": "i1"
+              }
+            ]
+          },
+          {
+            "items": [
+              {
+                "text": "Arhipov",
+                "at": "i2"
+              }
+            ]
+          }
+        ],
+        "pill": {
+          "text": "Üçü de evet",
+          "color": "red",
+          "at": "pill"
+        }
+      }
+    },
+    {
+      "type": "ar_room",
+      "text": "Anlatılana göre ikisi evet, Arhipov ise hayır dedi.",
+      "visual": "Denizaltı bölmesi, kırmızı lamba: kaptan, siyasi subay ve Arhipov yan yana; 'ikisi'nde kaptanın, 'evet'te siyasi subayın başının üstünde yeşil ✓ beliriyor; 'hayır'da Arhipov elini uzatıyor, başının üstünde kırmızı ✗ ve 'Hayır!' balonu patlıyor; sağda Kaşif şokla geri sıçrıyor.",
+      "title": {
+        "white": "Arhipov",
+        "gray": "tek ret"
+      },
+      "cues": {
+        "v1": "ikisi",
+        "v2": "evet",
+        "v3": "hayır"
+      },
+      "params": {
+        "torpedo": false,
+        "hatch": false,
+        "gauges": false,
+        "alarm": "v1",
+        "bubbles": [
+          {
+            "text": "Hayır!",
+            "at": "v3",
+            "x": 0.77,
+            "y": 0.265,
+            "tail": [
+              0.6,
+              0.33
+            ],
+            "size": 80
+          }
+        ],
+        "cast": [
+          {
+            "who": "kaptan",
+            "accessory": "beret",
+            "x": 0.12,
+            "beard": "black",
+            "pose": "talk",
+            "face": "right",
+            "emotion": "angry",
+            "at": "v1",
+            "then": "point",
+            "dir": "up",
+            "vote": {
+              "mark": "yes",
+              "at": "v1"
+            }
+          },
+          {
+            "who": "siyasi",
+            "accessory": "beret",
+            "x": 0.32,
+            "pose": "idle",
+            "face": "right",
+            "at": "v2",
+            "then": "point",
+            "dir": "up",
+            "vote": {
+              "mark": "yes",
+              "at": "v2"
+            }
+          },
+          {
+            "who": "arhipov",
+            "accessory": "beret",
+            "x": 0.52,
+            "pose": "think",
+            "face": "left",
+            "emotion": "worried",
+            "at": "v3",
+            "then": "point",
+            "dir": 0,
+            "then_emotion": "angry",
+            "vote": {
+              "mark": "no",
+              "at": "v3"
+            }
+          },
+          {
+            "who": "kasif",
+            "x": 0.78,
+            "pose": "idle",
+            "face": "left",
+            "at": "v3",
+            "then": "shock",
+            "scale": 0.9
+          }
+        ],
+        "cover_cam": {
+          "zoom": 1.12,
+          "dx": 30,
+          "dy": -30,
+          "hide_kasif": true
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.45,
+            0.45
+          ]
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Yani dünyayı bir ordu değil, tek bir kelime kurtardı.",
+      "visual": "Dev yazı sırayla çarpıyor: 'Dünyayı / tek kelime / kurtardı', 'kelime' kırmızı kutuda; altında el yazısı not '27 Ekim 1962'; sağ altta Kaşif gülümseyip yazıyı işaret ediyor.",
+      "title": {},
+      "cues": {
+        "w0": "dünyayı",
+        "w1": "tek",
+        "w2": "kelime",
+        "w3": "kurtardı",
+        "note": "kurtardı"
+      },
+      "params": {
+        "lines": [
+          "Dünyayı",
+          "tek kelime",
+          "kurtardı"
+        ],
+        "highlight": [
+          "kelime"
+        ],
+        "note": "27 Ekim 1962",
+        "arrow": false,
+        "y": 0.24,
+        "kasif": {
+          "x": 0.84,
+          "y": 0.62,
+          "pose": "point",
+          "dir": 40,
+          "at": "w2",
+          "face": -1,
+          "scale": 0.8,
+          "emotion": "happy"
+        }
+      }
+    }
+  ]
+}

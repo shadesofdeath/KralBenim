@@ -1,0 +1,720 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "roma-son-imparator",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Roma'nın",
+      "sonuncusu",
+      "bir çocuktu"
+    ],
+    "highlight": [
+      "çocuktu"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "kasif": {
+      "pose": "shock",
+      "emotion": "surprised",
+      "scale": 1.6,
+      "face": -1,
+      "x": 740,
+      "y": 1910
+    }
+  },
+  "youtube": {
+    "title": "Son Roma İmparatoru: Tahttaki Çocuğa Ne Oldu?",
+    "description": "Son Roma imparatoru bir çocuktu: Batı Roma'nın son imparatoru Romulus Augustulus. 476'da tahttan indirilen bu gence ne oldu, hiç merak ettiniz mi?\n\n475'te general Orestes, henüz çok genç olan oğlu Romulus'u Batı Roma tahtına oturttu. İpleri ise babası tutuyordu; halk da çocuğa alayla 'küçük Augustus' anlamında Augustulus dedi. 476'da Germen paralı askerler toprak istedi, Orestes reddetti ve komutanları Odoaker ayaklandı. Odoaker çocuğu öldürmedi; ona maaş bağlayıp Napoli'deki bir villaya gönderdi, imparatorluk nişanlarını da Konstantinopolis'e yolladı. Roma'nın çöküşü, Batı Roma'nın sonu ve Odoaker'in hikâyesi bu kısa videoda.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence Roma gerçekten 476'da mı bitti? Yorumlara yaz!\n\n#shorts #batıroma #romaimparatorluğu #tarih #düşünbakalım",
+    "tags": [
+      "son roma imparatoru",
+      "son roma imparatoru kim",
+      "batı roma son imparatoru",
+      "roma'nın son imparatoru",
+      "romulus augustulus",
+      "batı roma'nın çöküşü",
+      "roma nasıl yıkıldı",
+      "476",
+      "odoaker",
+      "orestes",
+      "roma tarihi",
+      "roma imparatorluğu",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-23T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "rm_throne",
+      "text": "Batı Roma'nın son imparatoru bir çocuktu.",
+      "visual": "Saray salonu, iki sütun ve kırmızı perde; ortada dev bir taht, üstünde küçücük, endişeli bir çocuk imparator oturuyor; başındaki defne tacı kayıp bir gözünün üstüne düşüyor, 'çocuktu'da taht sarsılıyor; kapakta sağ önde büyük Kaşif şokla geri sıçrıyor (motorun kapak Kaşif'i).",
+      "title": {},
+      "cues": {
+        "slip": "Roma'nın",
+        "hit": "çocuktu"
+      },
+      "params": {
+        "throne": {
+          "x": 0.42,
+          "seat": 0.46,
+          "scale": 1.22,
+          "shake": "hit"
+        },
+        "boy": {
+          "scale": 1.05,
+          "emotion": "worried"
+        },
+        "wreath": {
+          "slip": "slip"
+        },
+        "cam": {
+          "zoom": 1.14,
+          "focus": [
+            0.45,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Adı Romulus'tu, Roma'nın efsanevi kurucusu gibi!",
+      "visual": "Dikey zaman çizgisi (büyük yazı): üstte 'MÖ 753 · efsanevi kurucu Romulus', altta kırmızı vurgulu 'MS 475 · yine Romulus!'; işaretçi aşağı iniyor; sağ altta büyük Kaşif önce düşünüyor, 'kurucusu'nda şaşkınlıkla alttaki tarihi işaret ediyor.",
+      "title": {
+        "white": "İsim",
+        "gray": "tesadüfü"
+      },
+      "cues": {
+        "c0": "Romulus",
+        "c1": "kurucusu"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "MÖ 753",
+            "text": "efsanevi kurucu Romulus",
+            "at": "c0"
+          },
+          {
+            "year": "MS 475",
+            "text": "yine Romulus!",
+            "at": "c1"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.8,
+          "y": 0.62,
+          "pose": "point",
+          "pose0": "think",
+          "dir": -15,
+          "at": "c1",
+          "face": -1,
+          "scale": 0.62,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "rm_throne",
+      "text": "Ama ipleri babası Orestes tutuyordu.",
+      "visual": "Aynı dev taht; solda miğferli, kır sakallı Orestes ayakta, elindeki kukla çubuğundan ipler tahttaki çocuğun başına ve ellerine iniyor ('ipleri'de ipler beliriyor); üstte el yazısı 'Babası Orestes'; sağda Kaşif ipleri işaret ediyor.",
+      "title": {
+        "white": "Orestes",
+        "gray": "asıl patron"
+      },
+      "cues": {
+        "strings": "ipleri",
+        "hit": "Orestes"
+      },
+      "params": {
+        "throne": {
+          "x": 0.6,
+          "seat": 0.45,
+          "scale": 0.82
+        },
+        "boy": {
+          "scale": 0.6,
+          "emotion": "worried"
+        },
+        "puppeteer": {
+          "x": 0.17,
+          "at": "strings",
+          "scale": 1.2
+        },
+        "label": {
+          "text": "Babası Orestes",
+          "x": 0.3,
+          "y": 0.25,
+          "at": "hit",
+          "size": 76
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.9,
+            "pose": "idle",
+            "face": "left",
+            "at": "strings",
+            "then": "point",
+            "dir": 40,
+            "scale": 0.9,
+            "emotion": "surprised"
+          }
+        ],
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.45,
+            0.4
+          ]
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Ona alayla Augustulus dediler: küçük Augustus.",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'AUGUSTUS' ve kırmızı kutuda '+ULUS'; el yazısı not '= küçük Augustus'; sağ altta Kaşif gülerek omuz silkiyor.",
+      "title": {
+        "white": "Lakap",
+        "gray": "Augustulus"
+      },
+      "cues": {
+        "w0": "Augustulus",
+        "w1": "dediler",
+        "note": "küçük"
+      },
+      "params": {
+        "lines": [
+          "Augustus",
+          "+ulus"
+        ],
+        "highlight": [
+          "+ulus"
+        ],
+        "note": "= küçük Augustus",
+        "y": 0.3,
+        "kasif": {
+          "x": 0.82,
+          "y": 0.6,
+          "pose": "talk",
+          "at": "note",
+          "then": "shrug",
+          "face": -1,
+          "scale": 0.62,
+          "emotion": "happy"
+        }
+      }
+    },
+    {
+      "type": "rm_plus",
+      "text": "476'da paralı askerler toprak istedi, Orestes reddetti.",
+      "visual": "Sağdan iki sivri miğferli, kara sakallı Germen paralı asker yürüyerek giriyor, öndeki 'TOPRAK!' tabelası kaldırıyor; solda tunç Roma miğferli (kırmızı sorguçlu), kır sakallı Orestes 'reddetti'de askerleri işaret ediyor, başının üstünde kırmızı 'HAYIR!' beliriyor; aralarında Kaşif dürbünle bakıp şaşırıyor.",
+      "title": {
+        "white": "476",
+        "gray": "paralı askerler"
+      },
+      "cues": {
+        "arr": "askerler",
+        "land": "toprak",
+        "no": "reddetti"
+      },
+      "params": {
+        "shot": "stage",
+        "params": {
+          "foreground": "hatch",
+          "depth": {
+            "far": "hills",
+            "sky": {
+              "clouds": 1,
+              "gulls": 0
+            }
+          },
+          "cast": [
+            {
+              "who": "asker1",
+              "accessory": "helmet_byz",
+              "beard": "black",
+              "x": 1.05,
+              "pose": "walk",
+              "to": 0.72,
+              "face": "left",
+              "talk": false,
+              "at": "land",
+              "then": "hold",
+              "text": "TOPRAK!",
+              "emotion": "angry"
+            },
+            {
+              "who": "asker2",
+              "accessory": "helmet_byz",
+              "beard": "black",
+              "x": 1.25,
+              "pose": "walk",
+              "to": 0.9,
+              "face": "left",
+              "talk": false,
+              "at": "land",
+              "then": "point",
+              "dir": "up",
+              "scale": 0.92,
+              "emotion": "angry"
+            }
+          ],
+          "scale": 0.85,
+          "label": {
+            "text": "HAYIR!",
+            "x": 0.3,
+            "y": 0.19,
+            "at": "no",
+            "size": 96,
+            "color": "red"
+          }
+        },
+        "cast": [
+          {
+            "who": "orestes",
+            "accessory": null,
+            "helmet": "roman",
+            "beard": "grey",
+            "x": 0.17,
+            "y": 0.573,
+            "scale": 1.4,
+            "pose": "idle",
+            "face": "right",
+            "at": "no",
+            "then": "point",
+            "dir": 8,
+            "emotion": "angry"
+          },
+          {
+            "who": "kasif",
+            "x": 0.43,
+            "y": 0.573,
+            "scale": 1.0,
+            "pose": "look",
+            "face": "right",
+            "at": "no",
+            "then": "shock"
+          }
+        ]
+      }
+    },
+    {
+      "type": "rm_throne",
+      "text": "Sonra komutanları Odoaker ayaklandı ve Orestes öldürüldü.",
+      "visual": "Dev taht, Orestes'in iplerini tuttuğu çocuk; sağdan kara sakallı, miğferli Odoaker öfkeyle yürüyüp gelip işaret ediyor ('Odoaker' el yazısı); 'öldürüldü'de ipler kopup düşüyor, Orestes silinip kayboluyor, taht sarsılıyor; çocuk tek başına kalıyor.",
+      "title": {
+        "white": "Odoaker",
+        "gray": "ayaklanıyor"
+      },
+      "cues": {
+        "arr": "ayaklandı",
+        "cut": "öldürüldü"
+      },
+      "params": {
+        "throne": {
+          "x": 0.5,
+          "seat": 0.45,
+          "scale": 0.8,
+          "shake": "cut"
+        },
+        "boy": {
+          "scale": 0.6,
+          "emotion": "worried",
+          "at": "cut",
+          "then_emotion": "surprised"
+        },
+        "puppeteer": {
+          "x": 0.13,
+          "at": 0,
+          "cut": "cut",
+          "scale": 1.15
+        },
+        "label": {
+          "text": "Odoaker",
+          "x": 0.72,
+          "y": 0.25,
+          "at": "arr",
+          "size": 84,
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "odoaker",
+            "accessory": "helmet",
+            "beard": "black",
+            "x": 1.1,
+            "pose": "walk",
+            "to": 0.84,
+            "face": "left",
+            "talk": false,
+            "at": "arr",
+            "then": "point",
+            "dir": 20,
+            "scale": 1.05,
+            "emotion": "angry"
+          }
+        ],
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.5,
+            0.42
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Peki sizce çocuğa ne oldu?",
+      "visual": "Kaşif öne çıkıp izleyiciye soruyor, sonra düşünüyor; arkada küçük çocuk imparator tek başına, endişeli; üstte dev kırmızı el yazısı '?' beliriyor.",
+      "title": {
+        "white": "Peki",
+        "gray": "ya çocuk?"
+      },
+      "cues": {
+        "q": "çocuğa",
+        "hit": "oldu"
+      },
+      "params": {
+        "foreground": "hatch",
+        "props": [
+          {
+            "type": "column",
+            "x": 0.08,
+            "scale": 1.0
+          },
+          {
+            "type": "column",
+            "x": 0.92,
+            "scale": 1.0
+          }
+        ],
+        "label": {
+          "text": "?",
+          "x": 0.68,
+          "y": 0.22,
+          "at": "hit",
+          "size": 220,
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "pose": "talk",
+            "face": "right",
+            "at": "hit",
+            "then": "think",
+            "scale": 1.15
+          },
+          {
+            "who": "romulus",
+            "accessory": "laurel",
+            "x": 0.7,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "at": "q",
+            "then": "shrug",
+            "scale": 0.62,
+            "emotion": "worried"
+          }
+        ],
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.4,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Odoaker ona dokunmadı bile, maaş bağlayıp Napoli'ye yolladı.",
+      "visual": "Kara sakallı Odoaker çocuğa altın bir sikke uzatıyor; çocuk sikkeyi alıp sağdaki villaya doğru yürüyor, 'Napoli'ye'de villanın üstünde el yazısı 'Napoli'de emeklilik' beliriyor; solda Kaşif şaşkınlıkla işaret ediyor.",
+      "title": {
+        "white": "Maaş",
+        "gray": "ve villa"
+      },
+      "cues": {
+        "coin": "maaş",
+        "go": "Napoli",
+        "end": "yolladı"
+      },
+      "params": {
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2
+          }
+        },
+        "props": [
+          {
+            "type": "house",
+            "x": 0.86,
+            "scale": 0.75,
+            "at": "go"
+          }
+        ],
+        "label": {
+          "text": "Napoli'de emeklilik",
+          "x": 0.62,
+          "y": 0.2,
+          "at": "go",
+          "size": 80
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.12,
+            "pose": "idle",
+            "face": "right",
+            "at": "coin",
+            "then": "point",
+            "dir": 20,
+            "scale": 0.8,
+            "emotion": "surprised"
+          },
+          {
+            "who": "odoaker",
+            "accessory": "helmet",
+            "beard": "black",
+            "x": 0.34,
+            "pose": "idle",
+            "face": "right",
+            "talk": false,
+            "at": "coin",
+            "then": "hold",
+            "item": "coin",
+            "emotion": "neutral"
+          },
+          {
+            "who": "romulus",
+            "accessory": "laurel",
+            "x": 0.52,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "scale": 0.62,
+            "emotion": "worried",
+            "seq": [
+              {
+                "at": "coin",
+                "pose": "hold",
+                "item": "coin",
+                "emotion": "happy"
+              },
+              {
+                "at": "go",
+                "pose": "walk",
+                "to": 0.74,
+                "face": "right",
+                "emotion": "happy",
+                "then": "wave"
+              }
+            ]
+          }
+        ],
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.6,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "type": "rm_plus",
+      "text": "Tacı ve mor pelerini de Konstantinopolis'e gönderdi.",
+      "visual": "Eski Akdeniz haritası (yakın): Ravenna, Roma ve kırmızı Konstantinopolis işaretli; 'Tacı'da Ravenna'dan Konstantinopolis'e kırmızı kesikli rota çiziliyor; el yazısı not 'taç + pelerin, Doğu'ya'; sağ altta Kaşif rotayı işaret ediyor.",
+      "title": {
+        "white": "476",
+        "gray": "nişanlar Doğu'ya"
+      },
+      "cues": {
+        "route": "Tacı",
+        "city": "Konstantinopolis",
+        "note": "gönderdi"
+      },
+      "params": {
+        "shot": "map",
+        "params": {
+          "preset": "mediterranean",
+          "cities": [
+            {
+              "name": "Ravenna",
+              "x": 12.2,
+              "y": 44.42,
+              "dx": -16,
+              "dy": -30,
+              "anchor": "end"
+            },
+            {
+              "name": "Roma",
+              "x": 12.5,
+              "y": 41.9,
+              "dx": -16,
+              "dy": 48,
+              "anchor": "end"
+            },
+            {
+              "name": "Konstantinopolis",
+              "x": 28.97,
+              "y": 41.01,
+              "dx": 20,
+              "dy": 58,
+              "anchor": "end",
+              "color": "red",
+              "at": "city"
+            }
+          ],
+          "route": {
+            "points": [
+              [
+                12.2,
+                44.42
+              ],
+              [
+                13.5,
+                42.8
+              ],
+              [
+                16.5,
+                41.0
+              ],
+              [
+                19.0,
+                39.6
+              ],
+              [
+                21.5,
+                37.6
+              ],
+              [
+                23.6,
+                38.3
+              ],
+              [
+                25.6,
+                40.2
+              ],
+              [
+                28.97,
+                41.01
+              ]
+            ],
+            "at": "route",
+            "dur": 1.6,
+            "color": "red"
+          },
+          "note": {
+            "text": "taç + pelerin, Doğu'ya",
+            "x": 20,
+            "y": 35.8,
+            "at": "note"
+          },
+          "focus": [
+            22,
+            40
+          ],
+          "zoom": 1.3,
+          "compass": "bl",
+          "seas": [
+            {
+              "name": "Akdeniz",
+              "x": 18.5,
+              "y": 35.2
+            },
+            {
+              "name": "Karadeniz",
+              "x": 27.5,
+              "y": 43.7
+            }
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.75,
+            "y": 0.72,
+            "scale": 1.0,
+            "pose": "idle",
+            "at": "route",
+            "then": "point",
+            "dir": 60,
+            "face": "left",
+            "emotion": "surprised"
+          }
+        ]
+      }
+    },
+    {
+      "type": "rm_throne",
+      "text": "Yani Batı Roma bir savaşla değil, bir çocuğun emekliliğiyle bitti.",
+      "visual": "Boş dev taht; defne tacı tahtın önünde yerde yatıyor; üstte büyük el yazısı 'Savaş yok, emeklilik var!'; sağda Kaşif boş tahtı işaret edip omuz silkiyor; kamera yavaşça tahta yaklaşıyor.",
+      "title": {},
+      "cues": {
+        "war": "savaşla",
+        "hit": "emekliliğiyle"
+      },
+      "params": {
+        "throne": {
+          "x": 0.42,
+          "seat": 0.44,
+          "scale": 0.9
+        },
+        "boy": false,
+        "wreath": {
+          "on": "floor",
+          "x": 0.3
+        },
+        "label": {
+          "text": "Savaş yok, emeklilik var!",
+          "x": 0.5,
+          "y": 0.17,
+          "at": "hit",
+          "size": 76,
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "pose": "point",
+            "dir": 10,
+            "face": "left",
+            "at": "hit",
+            "then": "shrug",
+            "scale": 1.1,
+            "emotion": "happy"
+          }
+        ],
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.42,
+            0.45
+          ]
+        },
+        "curtain": false
+      }
+    }
+  ]
+}

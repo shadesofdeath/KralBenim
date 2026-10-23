@@ -1,0 +1,1078 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "preveze-1538",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Barbaros",
+   "dev donanmayı",
+   "dağıttı"
+  ],
+  "highlight": [
+   "Barbaros"
+  ],
+  "scene": 0,
+  "t": 1.3,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Preveze Deniz Savaşı: Barbaros Dev Donanmayı Nasıl Dağıttı?",
+  "description": "Preveze Deniz Savaşı 1538: Barbaros Hayreddin Paşa, kendisinden çok daha büyük Kutsal İttifak donanmasını nasıl dağıttı? Cevap topta değil, rüzgârda.\n\nPapa III. Paulus'un kurduğu Kutsal İttifak, Andrea Doria komutasında yüzlerce gemiyi Preveze önüne getirdi. Barbaros, Arta Körfezi'nin dar ve sığ ağzının içinde bekledi; Doria ağır yelkenlilerini oraya sokmaya cesaret edemedi. Doria güneye dönünce Osmanlı kadırgaları körfezden çıktı. Rüzgâr düşünce rüzgâra bağlı yelkenliler olduğu yerde kaldı, kürekli kadırgalar ise hareket edebildi. Müttefik komutanlar da anlaşamıyordu ve Doria gece fenerlerini söndürüp Korfu'ya çekildi. Osmanlı'nın Akdeniz'deki deniz üstünlüğü 1571 İnebahtı'ya kadar sürdü; 27 Eylül bugün Deniz Kuvvetleri Günü olarak kutlanıyor.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence Preveze'yi rüzgâr mı kazandırdı, Barbaros'un sabrı mı? Yorumlara yaz!\n\n#shorts #prevezedenizsavaşı #barbaros #osmanlı #düşünbakalım",
+  "tags": [
+   "preveze deniz savaşı",
+   "preveze deniz zaferi",
+   "preveze savaşı 1538",
+   "preveze zaferi nasıl kazanıldı",
+   "barbaros hayreddin paşa",
+   "barbaros preveze",
+   "andrea doria",
+   "kutsal ittifak",
+   "osmanlı donanması",
+   "kadırga",
+   "deniz kuvvetleri günü",
+   "1538",
+   "osmanlı tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-23T22:00:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "pv_sea",
+   "text": "Barbaros dev bir donanmayı dağıttı.",
+   "visual": "Yandan deniz: solda kırmızı flamalı Osmanlı kadırgaları kürek çekiyor, öndeki kadırganın güvertesinde sarıklı, kızıl sakallı Barbaros 'dev'de ileriyi işaret ediyor; sağda mavi flamalı dev yelkenliler; toplardan duman ve altın parlamalar; 'dev'de en büyük yelkenli dalgalı alevler ve kara dumanla tutuşuyor, 'dağıttı'da dev yelkenliler dönüp ufka doğru dağılıyor; sağ önde kayada büyük Kaşif şokla geri sıçrıyor.",
+   "title": {},
+   "cues": {
+    "hit": "dev",
+    "scatter": "dağıttı"
+   },
+   "params": {
+    "horizon": 0.3,
+    "shore": {
+     "side": "left",
+     "w": 0.3,
+     "fort": true
+    },
+    "wind": {
+     "s": 0.8,
+     "dir": 1,
+     "lines": 4
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 1.0,
+      "y": 0.42,
+      "scale": 1.1,
+      "face": -1,
+      "depth": 0.45,
+      "scatter": "scatter",
+      "scatter_dir": 1
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.66,
+      "y": 0.5,
+      "scale": 1.55,
+      "face": -1,
+      "fire": "hit",
+      "scatter": "scatter",
+      "scatter_dir": 1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.1,
+      "to": 0.3,
+      "y": 0.43,
+      "scale": 1.0,
+      "face": 1,
+      "depth": 0.3,
+      "sail": "furled"
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.2,
+      "to": 0.24,
+      "y": 0.56,
+      "scale": 1.35,
+      "face": 1,
+      "sail": "furled"
+     }
+    ],
+    "guns": [
+     {
+      "x": 0.42,
+      "y": 0.4,
+      "at": 0.15,
+      "n": 3,
+      "gap": 0.3,
+      "dx": 50,
+      "r": 1.3
+     }
+    ],
+    "ledge": {
+     "side": "right",
+     "y": 0.6,
+     "w": 0.3
+    },
+    "cast": [
+     {
+      "who": "barbaros",
+      "accessory": "turban",
+      "beard": "red",
+      "x": 0.2,
+      "y": 0.535,
+      "scale": 0.78,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "y": 0.6,
+      "scale": 0.86,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "shake": "hit",
+    "zoom": 1.08,
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "pv_deck",
+   "text": "Hem de rüzgârı okuyarak! Gelin anlatayım.",
+   "visual": "Bir Osmanlı kadırgasının kıç güvertesi: arkada deniz ve uzak gemiler, yukarıda latin yelkeni, solda uzun kırmızı hilalli flama; sarıklı, kırmızı sakallı Barbaros 'rüzgârı'da parmağını havaya kaldırıyor, rüzgâr çizgileri hızlanıyor, flama dalgalanıyor, el yazısı 'rüzgâr' oku flamayı gösteriyor; sağda Kaşif 'Gelin'de el sallıyor.",
+   "title": {
+    "white": "Barbaros",
+    "gray": "Kaptan-ı Derya"
+   },
+   "cues": {
+    "gust": "rüzgârı",
+    "lab": "okuyarak",
+    "wave": "Gelin"
+   },
+   "params": {
+    "horizon": 0.42,
+    "deck": 0.68,
+    "side": "tr",
+    "wind": {
+     "s": 1,
+     "dir": 1,
+     "at": "gust"
+    },
+    "far": [
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.3,
+      "scale": 0.32
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.62,
+      "scale": 0.26
+     }
+    ],
+    "labels": [
+     {
+      "text": "rüzgâr",
+      "x": 0.42,
+      "y": 0.33,
+      "at": "lab",
+      "size": 78,
+      "arrow": [
+       0.32,
+       0.24
+      ],
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "barbaros",
+      "accessory": "turban",
+      "beard": "red",
+      "x": 0.33,
+      "y": 0.68,
+      "scale": 1.02,
+      "pose": "idle",
+      "face": "right",
+      "at": "gust",
+      "then": "point",
+      "dir": "up",
+      "emotion0": "neutral"
+     },
+     {
+      "who": "kasif",
+      "x": 0.76,
+      "y": 0.68,
+      "scale": 0.92,
+      "pose": "talk",
+      "face": "left",
+      "at": "wave",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ],
+    "zoom": 1.15,
+    "focus": [
+     0.45,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "1538'di. Andrea Doria'nın donanması çok daha büyüktü.",
+   "visual": "Eski Akdeniz haritası Preveze'ye yaklaşıyor: Venedik, Roma, İstanbul ve kırmızı Preveze işaretli; Venedik'ten Adriyatik boyunca Korfu'ya ve Preveze'ye kırmızı kesikli rota çiziliyor; 'büyüktü'de el yazısı not 'yüzlerce gemi!'.",
+   "title": {
+    "white": "Eylül 1538",
+    "gray": "Kutsal İttifak"
+   },
+   "cues": {
+    "city": "1538",
+    "route": "Andrea",
+    "note": "büyüktü"
+   },
+   "params": {
+    "preset": "mediterranean",
+    "cities": [
+     {
+      "name": "Venedik",
+      "x": 12.33,
+      "y": 45.44,
+      "at": "city",
+      "dx": 0,
+      "dy": -26,
+      "anchor": "middle"
+     },
+     {
+      "name": "Roma",
+      "x": 12.5,
+      "y": 41.9,
+      "at": "city",
+      "dx": -16,
+      "dy": 44,
+      "anchor": "end"
+     },
+     {
+      "name": "Korfu",
+      "x": 19.92,
+      "y": 39.62,
+      "at": "route",
+      "dx": -18,
+      "dy": -14,
+      "anchor": "end"
+     },
+     {
+      "name": "Preveze",
+      "x": 20.75,
+      "y": 38.96,
+      "at": "city",
+      "dx": 18,
+      "dy": 40,
+      "anchor": "start",
+      "color": "red"
+     },
+     {
+      "name": "İstanbul",
+      "x": 28.97,
+      "y": 41.01,
+      "at": "city",
+      "dx": 0,
+      "dy": -26,
+      "anchor": "middle"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       12.4,
+       45.2
+      ],
+      [
+       14.2,
+       43.6
+      ],
+      [
+       16.8,
+       42.0
+      ],
+      [
+       18.6,
+       40.8
+      ],
+      [
+       19.7,
+       39.9
+      ],
+      [
+       20.3,
+       39.2
+      ],
+      [
+       20.62,
+       38.98
+      ]
+     ],
+     "at": "route",
+     "dur": 1.6,
+     "color": "red"
+    },
+    "note": {
+     "text": "yüzlerce gemi!",
+     "x": 22.8,
+     "y": 37.4,
+     "at": "note"
+    },
+    "focus": [
+     19.2,
+     40.6
+    ],
+    "zoom": 1.55,
+    "compass": "tl"
+   }
+  },
+  {
+   "type": "pv_gulf",
+   "text": "Barbaros sığ bir körfeze çekilip bekledi.",
+   "visual": "Kuşbakışı harita: solda İyon Denizi'nde mavi müttefik filosu, ortada Preveze kalesinin yanındaki dar boğaz, sağda Arta Körfezi; kırmızı Osmanlı kadırgaları 'çekilip'te boğazdan sıra halinde körfeze girip toplanıyor; alttaki kıyıda Kaşif dürbünle bakıyor, 'bekledi'de düşünüyor.",
+   "title": {
+    "white": "Arta",
+    "gray": "Körfezi"
+   },
+   "cues": {
+    "in": "çekilip",
+    "wait": "bekledi"
+   },
+   "params": {
+    "fleets": [
+     {
+      "side": "hl",
+      "kind": "mix",
+      "n": 16,
+      "x": 0.14,
+      "y": 0.52,
+      "form": "grid",
+      "spread": 0.8,
+      "heading": 0
+     },
+     {
+      "side": "tr",
+      "kind": "galley",
+      "n": 12,
+      "x": 0.5,
+      "y": 0.495,
+      "form": "line",
+      "spread": 0.85,
+      "heading": 0,
+      "moves": [
+       {
+        "at": 0.0,
+        "x": 0.62,
+        "y": 0.47,
+        "dur": 0.8
+       },
+       {
+        "at": "in",
+        "x": 0.84,
+        "y": 0.5,
+        "dur": 1.2,
+        "form": "grid",
+        "heading": 180
+       }
+      ]
+     }
+    ],
+    "bar": true,
+    "labels": [
+     {
+      "text": "İyon Denizi",
+      "u": 0.13,
+      "v": 0.2,
+      "size": 52,
+      "rot": -6,
+      "at": 0
+     },
+     {
+      "text": "Preveze",
+      "u": 0.46,
+      "v": 0.36,
+      "size": 56,
+      "rot": -3,
+      "at": 0
+     },
+     {
+      "text": "Arta Körfezi",
+      "u": 0.84,
+      "v": 0.76,
+      "size": 52,
+      "rot": 4,
+      "at": 0
+     }
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.575,
+     "scale": 0.4,
+     "face": "right",
+     "pose": "look",
+     "at": "wait",
+     "then": "think"
+    },
+    "zoom": 1.08,
+    "focus": [
+     0.55,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Doria'nın ağır gemileri oraya giremezdi.",
+   "visual": "Denizin kesiti: su yüzeyinin altında kum dolu bir sığlık tümseği; sağdan gelen mavi flamalı ağır yelkenlinin kesikli çizilmiş derin omurgası sığlığa yaklaşıp 'giremezdi'de sarsılarak duruyor; el yazısı kırmızı 'sığ!' oku sığlığı gösteriyor; solda kayada Kaşif aşağıyı işaret edip şaşırıyor.",
+   "title": {
+    "white": "Sığ",
+    "gray": "boğaz ağzı"
+   },
+   "cues": {
+    "heavy": "ağır",
+    "there": "oraya",
+    "stop": "giremezdi"
+   },
+   "params": {
+    "horizon": 0.3,
+    "shore": {
+     "side": "left",
+     "w": 0.5,
+     "fort": true
+    },
+    "wind": {
+     "s": 0.6,
+     "dir": -1,
+     "lines": 3
+    },
+    "section": {
+     "surface": 0.44,
+     "bed": 0.6,
+     "bar": {
+      "x": 0.36,
+      "w": 0.4,
+      "h": 0.115
+     },
+     "at": 0
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 1.05,
+      "to": 0.64,
+      "y": 0.44,
+      "scale": 1.2,
+      "face": -1,
+      "draft": true,
+      "stop": "stop"
+     }
+    ],
+    "labels": [
+     {
+      "text": "sığ!",
+      "x": 0.36,
+      "y": 0.39,
+      "at": "heavy",
+      "size": 90,
+      "color": "red",
+      "arrow": [
+       0.36,
+       0.48
+      ]
+     }
+    ],
+    "ledge": {
+     "side": "left",
+     "y": 0.44,
+     "w": 0.2
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.09,
+      "y": 0.44,
+      "scale": 0.5,
+      "pose": "point",
+      "dir": "down-right",
+      "face": "right",
+      "at": "stop",
+      "then": "shock"
+     }
+    ],
+    "shake": "stop",
+    "zoom": 1.06,
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "pv_gulf",
+   "text": "Doria güneye dönünce Barbaros körfezden fırladı.",
+   "visual": "Kuşbakışı harita: 'güneye'de mavi müttefik filosu mavi kesikli okla güneye kayıyor; 'fırladı'da kırmızı Osmanlı kadırgaları körfezden boğaz boyunca sıra halinde fırlayıp açık denizde hilal düzenine açılıyor, kırmızı kesikli ok çiziliyor; sağ altta Kaşif işaret ediyor.",
+   "title": {
+    "white": "28 Eylül",
+    "gray": "1538"
+   },
+   "cues": {
+    "south": "güneye",
+    "out": "Barbaros",
+    "burst": "fırladı"
+   },
+   "params": {
+    "fleets": [
+     {
+      "side": "hl",
+      "kind": "mix",
+      "n": 16,
+      "x": 0.14,
+      "y": 0.5,
+      "form": "grid",
+      "spread": 0.8,
+      "heading": 90,
+      "moves": [
+       {
+        "at": "south",
+        "x": 0.14,
+        "y": 0.84,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "side": "tr",
+      "kind": "galley",
+      "n": 12,
+      "x": 0.84,
+      "y": 0.52,
+      "form": "grid",
+      "spread": 0.85,
+      "heading": 180,
+      "moves": [
+       {
+        "at": "out",
+        "x": 0.5,
+        "y": 0.495,
+        "dur": 0.8,
+        "form": "line"
+       },
+       {
+        "at": "burst",
+        "x": 0.17,
+        "y": 0.6,
+        "dur": 1.3,
+        "form": "crescent",
+        "heading": 120
+       }
+      ]
+     }
+    ],
+    "arrows": [
+     {
+      "pts": [
+       [
+        0.12,
+        0.62
+       ],
+       [
+        0.12,
+        0.75
+       ],
+       [
+        0.15,
+        0.92
+       ]
+      ],
+      "at": "south",
+      "dur": 1.0,
+      "color": "blue"
+     },
+     {
+      "pts": [
+       [
+        0.62,
+        0.49
+       ],
+       [
+        0.45,
+        0.495
+       ],
+       [
+        0.3,
+        0.52
+       ],
+       [
+        0.2,
+        0.62
+       ]
+      ],
+      "at": "burst",
+      "dur": 1.0,
+      "color": "red"
+     }
+    ],
+    "bar": true,
+    "labels": [
+     {
+      "text": "İyon Denizi",
+      "u": 0.13,
+      "v": 0.2,
+      "size": 52,
+      "rot": -6,
+      "at": 0
+     },
+     {
+      "text": "Preveze",
+      "u": 0.46,
+      "v": 0.36,
+      "size": 56,
+      "rot": -3,
+      "at": 0
+     },
+     {
+      "text": "Arta Körfezi",
+      "u": 0.84,
+      "v": 0.76,
+      "size": 52,
+      "rot": 4,
+      "at": 0
+     }
+    ],
+    "kasif": {
+     "x": 0.58,
+     "y": 0.585,
+     "scale": 0.4,
+     "face": "left",
+     "pose": "idle",
+     "at": "burst",
+     "then": "point",
+     "dir": "left",
+     "emotion": "surprised"
+    },
+    "zoom": 1.06,
+    "focus": [
+     0.45,
+     0.55
+    ]
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Ve tam o anda rüzgâr düştü!",
+   "visual": "Yandan deniz: iki dev mavi flamalı yelkenlinin şişkin yelkenleri ve gökte hızlı rüzgâr çizgileri; el yazısı 'rüzgâr' yazısı; 'düştü'de çizgiler kayboluyor, yazının üstüne kırmızı çarpı atılıyor, yelkenler sönüp sarkıyor, flamalar aşağı düşüyor; solda kayada Kaşif şokla geri sıçrıyor.",
+   "title": {
+    "white": "Rüzgâr",
+    "gray": "kesildi"
+   },
+   "cues": {
+    "drop": "düştü"
+   },
+   "params": {
+    "horizon": 0.4,
+    "shore": false,
+    "wind": {
+     "s": 1,
+     "dir": 1,
+     "drop": "drop",
+     "dur": 0.9,
+     "lines": 8,
+     "label": {
+      "text": "rüzgâr",
+      "x": 0.6,
+      "y": 0.2,
+      "at": 0.05,
+      "x_mark": "drop",
+      "color": "ink"
+     }
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.88,
+      "y": 0.5,
+      "scale": 1.0,
+      "face": 1,
+      "depth": 0.4
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.54,
+      "y": 0.57,
+      "scale": 1.45,
+      "face": 1
+     }
+    ],
+    "ledge": {
+     "side": "left",
+     "y": 0.6,
+     "w": 0.3
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "y": 0.6,
+      "scale": 0.56,
+      "pose": "talk",
+      "face": "right",
+      "at": "drop",
+      "then": "shock"
+     }
+    ],
+    "zoom": 1.08,
+    "focus": [
+     0.55,
+     0.45
+    ]
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Yelkenliler kıpırdayamadı, kadırgalar kürekle geldi.",
+   "visual": "Rüzgârsız deniz: sağda yelkenleri sarkmış mavi flamalı yelkenliler olduğu yerde sallanıyor; kırmızı flamalı Osmanlı kadırgaları kadrajın ortasına doğru kürekleri hızla çarparak büyük ve net yaklaşıyor, kırmızı 'kürek!' oku küreklere iniyor, 'geldi'de büyük top dumanları ve sarsıntı.",
+   "title": {
+    "white": "Rüzgârsız",
+    "gray": "deniz"
+   },
+   "cues": {
+    "row": "kadırgalar",
+    "hit": "geldi"
+   },
+   "params": {
+    "horizon": 0.34,
+    "shore": {
+     "side": "right",
+     "w": 0.3,
+     "fort": false
+    },
+    "wind": {
+     "s": 0
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 1.0,
+      "y": 0.44,
+      "scale": 1.1,
+      "face": -1,
+      "depth": 0.45
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.86,
+      "y": 0.5,
+      "scale": 1.35,
+      "face": -1,
+      "depth": 0.1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.2,
+      "to": 0.3,
+      "y": 0.45,
+      "scale": 1.1,
+      "face": 1,
+      "depth": 0.3,
+      "sail": "furled"
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.27,
+      "to": 0.45,
+      "y": 0.57,
+      "scale": 1.35,
+      "face": 1,
+      "sail": "furled"
+     }
+    ],
+    "guns": [
+     {
+      "x": 0.56,
+      "y": 0.42,
+      "at": "hit",
+      "n": 4,
+      "gap": 0.22,
+      "dx": 45,
+      "r": 2.0
+     }
+    ],
+    "labels": [
+     {
+      "text": "kürek!",
+      "x": 0.3,
+      "y": 0.27,
+      "at": "row",
+      "size": 90,
+      "color": "red",
+      "arrow": [
+       0.36,
+       0.58
+      ]
+     }
+    ],
+    "ledge": false,
+    "shake": "hit",
+    "zoom": 1.07,
+    "focus": [
+     0.5,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "pv_deck",
+   "text": "Doria ile Venedikliler de birbirine güvenmiyordu.",
+   "visual": "Müttefik amiral gemisinin güvertesi, mavi flama rüzgârsız sarkıyor: solda kır sakallı Doria, ortada Venedikli komutan; 'Doria' ve 'Venedikliler'de birbirlerini öfkeyle işaret ediyorlar, üstlerinde el yazısı 'Doria' ve 'Venedik'; sağda Kaşif 'güvenmiyordu'da omuz silkiyor.",
+   "title": {
+    "white": "Kutsal",
+    "gray": "İttifak"
+   },
+   "cues": {
+    "arg": "Doria",
+    "arg2": "Venedikliler",
+    "hit": "güvenmiyordu"
+   },
+   "params": {
+    "horizon": 0.42,
+    "deck": 0.68,
+    "side": "hl",
+    "wind": {
+     "s": 0.05
+    },
+    "sail": false,
+    "far": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.5,
+      "scale": 0.28,
+      "face": -1
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.82,
+      "scale": 0.24,
+      "face": -1
+     }
+    ],
+    "labels": [
+     {
+      "text": "Doria",
+      "x": 0.2,
+      "y": 0.29,
+      "at": "arg",
+      "size": 66,
+      "color": "blue"
+     },
+     {
+      "text": "Venedik",
+      "x": 0.53,
+      "y": 0.29,
+      "at": "arg2",
+      "size": 66,
+      "color": "blue"
+     }
+    ],
+    "cast": [
+     {
+      "who": "doria",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.2,
+      "y": 0.68,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "at": "arg",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     },
+     {
+      "who": "cappello",
+      "accessory": "helmet",
+      "beard": "short",
+      "x": 0.53,
+      "y": 0.68,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "left",
+      "at": "arg2",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.85,
+      "y": 0.68,
+      "scale": 0.82,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ],
+    "zoom": 1.15,
+    "focus": [
+     0.45,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Gece Doria fenerleri söndürüp çekildi.",
+   "visual": "Gece denizi, ay ve yıldızlar: mavi flamalı müttefik gemilerinin kıç fenerleri yanıyor; 'söndürüp'te fenerler tek tek sönüp duman çıkıyor, 'çekildi'de gemiler sağa, karanlığa doğru uzaklaşıyor; solda kayada Kaşif dürbünle bakıp düşünüyor.",
+   "title": {
+    "white": "Gece",
+    "gray": "geri çekiliş"
+   },
+   "cues": {
+    "dark": "söndürüp",
+    "go": "çekildi"
+   },
+   "params": {
+    "horizon": 0.42,
+    "night": true,
+    "shore": false,
+    "wind": {
+     "s": 0.3,
+     "dir": 1,
+     "lines": 3
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.5,
+      "to": 1.3,
+      "at": "go",
+      "dur": 2.2,
+      "y": 0.57,
+      "scale": 1.3,
+      "face": 1,
+      "lantern": true,
+      "dark": "dark"
+     },
+     {
+      "kind": "galley",
+      "side": "hl",
+      "x": 0.8,
+      "to": 1.5,
+      "at": "go",
+      "dur": 2.0,
+      "y": 0.5,
+      "scale": 1.0,
+      "face": 1,
+      "depth": 0.3,
+      "lantern": true,
+      "dark": "dark",
+      "sail": "furled"
+     }
+    ],
+    "ledge": {
+     "side": "left",
+     "y": 0.6,
+     "w": 0.3
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.6,
+      "scale": 0.7,
+      "pose": "look",
+      "face": "right",
+      "at": "go",
+      "then": "think",
+      "emotion": "worried"
+     }
+    ],
+    "zoom": 1.06,
+    "focus": [
+     0.5,
+     0.45
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani Preveze'yi büyük donanma değil, denizi okuyan kaptan kazandı.",
+   "visual": "Dev yazı kelime kelime çarpıyor: 'DONANMA DEĞİL / KAPTAN', 'KAPTAN' kırmızı kutuda; el yazısı not 'denizi okuyan'; sağ altta Kaşif yazıyı işaret ediyor.",
+   "title": {},
+   "cues": {
+    "w0": "donanma",
+    "w1": "okuyan",
+    "w2": "kaptan",
+    "note": "kazandı"
+   },
+   "params": {
+    "lines": [
+     "Donanma değil",
+     "kaptan"
+    ],
+    "highlight": [
+     "kaptan"
+    ],
+    "note": "denizi okuyan",
+    "y": 0.3,
+    "kasif": {
+     "x": 0.8,
+     "y": 0.66,
+     "pose": "point",
+     "at": 0.15,
+     "dir": 40,
+     "face": -1,
+     "scale": 0.66,
+     "emotion": "happy"
+    }
+   }
+  }
+ ]
+}

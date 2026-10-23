@@ -1,0 +1,4081 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "lizbon-depremi-1755",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "scenes": [
+  {
+   "chapter": "Bayram sabahı",
+   "type": "lz_city",
+   "text": "Bir sabah, birkaç saat içinde, Avrupa'nın en zengin şehirlerinden biri üç kez yıkıldı. Önce yer, sonra deniz, sonra ateş. Gelin, bu inanılmaz günü baştan anlatayım.",
+   "visual": "Nehirden Lizbon: kiliseler, saray, gemiler; 'yıkıldı'da şehir sallanır, binalar birer birer çöker, toz bulutu kalkar, 'ateş'te rıhtımda kırmızı yarıklar açılır; önde Kaşif şok olur",
+   "title": {
+    "white": "Lizbon",
+    "gray": "1755"
+   },
+   "cues": {
+    "shake": "yıkıldı",
+    "hit": "Önce",
+    "crack": "ateş"
+   },
+   "params": {
+    "mode": "quake",
+    "bank": true,
+    "fall": [
+     1,
+     2,
+     4,
+     6,
+     8
+    ],
+    "cover": {
+     "tilt": [
+      3,
+      5
+     ],
+     "crack_w": 3,
+     "fire": true,
+     "crack": true,
+     "wave": {
+      "x": 0.6,
+      "top": 0.1,
+      "h": 0.72
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "pose": "talk",
+      "at": "yıkıldı",
+      "then": "shock",
+      "y": 0.97,
+      "scale": 0.75,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "1755",
+      "x": 0.45,
+      "y": 0.1,
+      "size": 80,
+      "at": 0.2,
+      "font": "serif",
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Takvimler 1 Kasım 1755'i gösteriyordu. Yer, Portekiz'in başkenti Lizbon.",
+   "visual": "BÖLÜM 1 / 8 kartı: mavi dairede 1, altında 'Bayram sabahı' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Takvimler",
+    "title": "Lizbon"
+   },
+   "params": {
+    "n": 1,
+    "total": 8,
+    "title": "Bayram sabahı"
+   }
+  },
+  {
+   "type": "map",
+   "text": "O günlerde Lizbon bir hazine şehriydi. Brezilya'dan gelen altın ve elmas, gemilerle bu limana akardı.",
+   "visual": "Eski Atlas haritası: Brezilya kıyısından Lizbon'a kesikli altın rota çizilir; 'altın'da Brezilya, 'limana'da Lizbon kırmızı belirir",
+   "title": {
+    "white": "Altın",
+    "gray": "yolu"
+   },
+   "cues": {
+    "br": "Brezilya'dan",
+    "go": "altın",
+    "lis": "limana"
+   },
+   "params": {
+    "preset": "atlantic",
+    "cities": [
+     {
+      "name": "Brezilya",
+      "x": -35.5,
+      "y": 2,
+      "at": "br",
+      "dx": 80,
+      "dy": -10
+     },
+     {
+      "name": "Lizbon",
+      "x": -9.14,
+      "y": 38.72,
+      "at": "lis",
+      "color": "red",
+      "dy": -44
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -35.5,
+       2
+      ],
+      [
+       -30,
+       10
+      ],
+      [
+       -24,
+       22
+      ],
+      [
+       -16,
+       33
+      ],
+      [
+       -9.5,
+       38.6
+      ]
+     ],
+     "at": "go",
+     "dur": 2.2,
+     "color": "gold"
+    },
+    "note": {
+     "text": "altın + elmas",
+     "x": -45,
+     "y": 25,
+     "at": "go"
+    },
+    "zoom": 1.05,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "lz_city",
+   "text": "Tejo Nehri'nin ağzında yüzlerce gemi demirliydi. Liman meydanında baharat, ipek ve şeker kokusu birbirine karışırdı.",
+   "visual": "Nehir ağzında demirli gemiler sallanır, martılar uçar, çan kuleli kiliseler ve uzun saray; Kaşif rıhtımda yürüyerek gelir ve gemileri işaret eder; 'Tejo' etiketi",
+   "title": {
+    "white": "Tejo",
+    "gray": "limanı"
+   },
+   "cues": {
+    "hit": "gemi",
+    "sm": "baharat"
+   },
+   "params": {
+    "mode": "city",
+    "bank": true,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.0,
+      "pose": "walk",
+      "at": "hit",
+      "then": "point",
+      "to": 0.2,
+      "y": 0.97,
+      "scale": 0.72,
+      "dir": "right",
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Tejo Nehri",
+      "x": 0.72,
+      "y": 0.81,
+      "at": "hit",
+      "size": 60
+     },
+     {
+      "text": "baharat, ipek, şeker",
+      "x": 0.6,
+      "y": 0.1,
+      "at": "sm",
+      "size": 56
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Üstelik o sabah sıradan bir gün değildi. Azizler Günü'ydü, yani Katolik dünyasının en büyük bayramlarından biri.",
+   "visual": "Dev yazı kelime kelime: '1 KASIM / AZİZLER GÜNÜ', 'Azizler' kırmızı kutuda; yanda Kaşif işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "Üstelik",
+    "w2": "Azizler",
+    "bayramlarından": "bayramlarından"
+   },
+   "params": {
+    "lines": [
+     "1 Kasım",
+     "Azizler Günü"
+    ],
+    "highlight": [
+     "Azizler"
+    ],
+    "note": {
+     "text": "büyük bayram",
+     "at": "bayramlarından"
+    },
+    "kasif": {
+     "x": 0.85,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w2"
+    }
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Şehrin dört bir yanındaki kiliseler tıklım tıklımdı. Binlerce mum yanıyor, tütsü kokusu tavanlara yükseliyordu.",
+   "visual": "Kilise içi: kemerler, sunakta sıra sıra yanan mumlar, iki avize hafifçe salınır, sıralarda cemaat; sağda Kaşif dürbünle bakar, 'mum'da 'binlerce mum' notu",
+   "title": {
+    "white": "Ayin",
+    "gray": "saat 9"
+   },
+   "cues": {
+    "hit": "tıklım",
+    "mum": "mum"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.83,
+      "pose": "look",
+      "at": "mum",
+      "then": "point",
+      "y": 0.98,
+      "scale": 1.3,
+      "face": "left",
+      "dir": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "binlerce mum",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "mum",
+      "size": 60
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Kral Birinci José ise sabah ayinini erkenden dinlemiş, ailesiyle şehrin dışına çıkmıştı. Çünkü kızı, bayramı kırda geçirmek istemişti.",
+   "visual": "Taçlı Kral José ve küçük kızı soldan sağa sarayın önünden yürüyerek şehirden çıkar; Kaşif el sallayarak uğurlar; 'Kral I. José' etiketi",
+   "title": {
+    "white": "Kral",
+    "gray": "şehir dışında"
+   },
+   "cues": {
+    "hit": "José",
+    "go": "dışına"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "jose",
+      "x": 0.42,
+      "pose": "walk",
+      "accessory": "crown",
+      "to": 0.84,
+      "at": "go",
+      "then": "wave",
+      "face": "right",
+      "talk": false
+     },
+     {
+      "who": "kiz",
+      "x": 0.32,
+      "pose": "walk",
+      "scale": 0.7,
+      "to": 0.72,
+      "at": "go",
+      "then": "idle",
+      "face": "right",
+      "talk": false
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "at": "go",
+      "then": "wave",
+      "face": "right"
+     }
+    ],
+    "props": [],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "Kral I. José",
+     "x": 0.55,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Bu küçük aile kararını aklınızda tutun. Birkaç saat sonra kralın hayatını kurtaracaktı.",
+   "visual": "Kaşif parmağını kaldırıp anlatır, 'aklınızda'da 'KIRDA BAYRAM' tabelasını işaret eder, 'kurtaracaktı'da şaşkınlıkla geri sıçrar; yanında ağaç ve tepeler",
+   "title": {
+    "white": "Kader",
+    "gray": "kararı"
+   },
+   "cues": {
+    "hit": "aklınızda",
+    "save": "kurtaracaktı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "talk",
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "face": "right",
+      "seq": [
+       {
+        "at": "save",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.62,
+      "text": "KIRDA BAYRAM",
+      "at": "hit",
+      "hit": "save"
+     },
+     {
+      "type": "tree",
+      "x": 0.86,
+      "scale": 1.0
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 3,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "Aklınızda tutun!",
+     "x": 0.55,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "chapter": "Yer sarsıldı",
+   "type": "chapter",
+   "text": "Saat dokuzu kırk geçiyordu. Ayin tam ortasındaydı.",
+   "visual": "BÖLÜM 2 / 8 kartı: mavi dairede 2, altında 'Yer sarsıldı' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Saat",
+    "title": "Ayin"
+   },
+   "params": {
+    "n": 2,
+    "total": 8,
+    "title": "Yer sarsıldı"
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Önce derinden gelen bir uğultu duyuldu. Sanki yerin altından ağır bir araba geçti.",
+   "visual": "Kilise içi, ayin sürer; 'uğultu'da avizeler kıpırdar, Kaşif sağda dinler ve endişeyle kaşlarını kaldırır; 'uğultu…' notu",
+   "title": {
+    "white": "09:40"
+   },
+   "cues": {
+    "hit": "uğultu",
+    "car": "araba"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.83,
+      "pose": "look",
+      "at": "hit",
+      "then": "think",
+      "y": 0.98,
+      "scale": 1.3,
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "uğultu…",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "hit",
+      "size": 72
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Sonra zemin sallanmaya başladı. Avizeler salındı, mumlar birer birer devrildi.",
+   "visual": "Kilise sarsılır: 'sallanmaya'da kamera titrer, avizeler deli gibi salınır, 'mumlar'da sunaktaki mumlar birer birer devrilir; Kaşif şok olur",
+   "title": {
+    "white": "Sarsıntı"
+   },
+   "cues": {
+    "shake": "sallanmaya",
+    "topple": "mumlar"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.83,
+      "pose": "look",
+      "at": "shake",
+      "then": "shock",
+      "y": 0.98,
+      "scale": 1.3,
+      "face": "left",
+      "emotion": "surprised"
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Tanıkların anlattığına göre sarsıntı, üç buçuk ile altı dakika arasında sürdü. Düşünün: altı dakika boyunca ayakta duramıyorsunuz!",
+   "visual": "Dev yazı: 'ALTI DAKİKA SARSINTI', 'Altı' kırmızı kutuda; el yazısı not 'tanıklara göre 3,5–6 dk'; yanda Kaşif şok olur",
+   "title": {
+    "white": "Süre"
+   },
+   "cues": {
+    "w0": "Tanıkların",
+    "note": "altı",
+    "w1": "Düşünün"
+   },
+   "params": {
+    "lines": [
+     "Altı dakika",
+     "sarsıntı"
+    ],
+    "highlight": [
+     "Altı"
+    ],
+    "note": {
+     "text": "tanıklara göre 3,5–6 dk",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Taş kiliselerin tavanları, içindeki kalabalığın üstüne çöktü. Kaçmaya çalışanlar da dar sokaklarda yıkılan duvarların altında kaldı.",
+   "visual": "Kilise sarsılmaya devam eder; 'çöktü'de tavanda kalın bir çatlak açılır, taşlar düşer, toz bulutu sıraları kaplar",
+   "title": {
+    "white": "Kiliseler"
+   },
+   "cues": {
+    "shake": "Taş",
+    "collapse": "çöktü"
+   },
+   "params": {
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "lz_city",
+   "text": "Şehrin ortasında, bazı kaynaklara göre beş metre genişliğe varan yarıklar açıldı.",
+   "visual": "Nehirden şehir sallanır; 'yarıklar'da rıhtımdan aşağı üç kalın kırmızı yarık açılır, el yazısı '≈ 5 metre' ve 'bazı kaynaklara göre'; önde Kaşif şok olup yarığı işaret eder",
+   "title": {
+    "white": "Yer",
+    "gray": "yarıldı"
+   },
+   "cues": {
+    "shake": "Şehrin",
+    "crack": "yarıklar",
+    "src": "kaynaklara"
+   },
+   "params": {
+    "mode": "quake",
+    "bank": true,
+    "fall": [],
+    "crack_w": 2.4,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "look",
+      "at": "crack",
+      "then": "shock",
+      "y": 0.97,
+      "scale": 0.75,
+      "face": "right",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "src",
+        "pose": "point",
+        "dir": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "≈ 5 metre",
+      "x": 0.6,
+      "y": 0.13,
+      "at": "crack",
+      "size": 80,
+      "color": "red"
+     },
+     {
+      "text": "bazı kaynaklara göre",
+      "x": 0.6,
+      "y": 0.24,
+      "at": "src",
+      "size": 52
+     }
+    ]
+   }
+  },
+  {
+   "type": "lz_city",
+   "text": "Kraliyet sarayı Ribeira da yıkıldı. Sarayın kütüphanesinde tahminen yetmiş bin cilt kitap vardı.",
+   "visual": "Nehir kıyısındaki uzun kemerli Ribeira Sarayı 'yıkıldı'da sallanıp çöker, toz yükselir; '70.000 cilt' notu belirir; Kaşif soldan işaret eder",
+   "title": {
+    "white": "Ribeira",
+    "gray": "Sarayı"
+   },
+   "cues": {
+    "shake": "Kraliyet",
+    "hit": "yıkıldı",
+    "lib": "yetmiş"
+   },
+   "params": {
+    "mode": "quake",
+    "bank": true,
+    "fall": [
+     8,
+     7
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "point",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.97,
+      "scale": 0.7,
+      "dir": "right",
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "≈ 70.000 cilt kitap",
+      "x": 0.62,
+      "y": 0.12,
+      "at": "lib",
+      "size": 64
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.75,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Titian'ın, Rubens'in tabloları, krallığın arşivleri… Ve yedi ay önce açılan görkemli opera binası. Hepsi tek bir sabahta yok oldu.",
+   "visual": "Pano 'Kaybolanlar': Titian ve Rubens tabloları ✗, kraliyet arşivleri ✗, opera binası ✗ tek tek işaretlenir; altta kırmızı hap 'Tek sabahta'",
+   "title": {
+    "white": "Kayıp"
+   },
+   "cues": {
+    "a": "Titian",
+    "b": "arşivleri",
+    "c": "opera",
+    "pill": "Hepsi"
+   },
+   "params": {
+    "title": "Kaybolanlar",
+    "cards": [
+     {
+      "title": "Saray",
+      "items": [
+       {
+        "text": "Titian, Rubens",
+        "mark": "x",
+        "at": "a"
+       },
+       {
+        "text": "Arşivler",
+        "mark": "x",
+        "at": "b"
+       }
+      ]
+     },
+     {
+      "title": "Şehir",
+      "items": [
+       {
+        "text": "Opera binası",
+        "mark": "x",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Tek sabahta",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "lz_city",
+   "text": "Toz bulutu şehrin üstüne çöktü, gökyüzü karardı. Hayatta kalanlar tek bir şey düşündü: açık alana çıkmak.",
+   "visual": "Yıkılmış şehrin üstünde toz bulutu, gökyüzü taralı ve karanlık; Kaşif ve iki kişi koşarak sağa, açık alana kaçar; 'açık alana!' notu",
+   "title": {
+    "white": "Toz",
+    "gray": "bulutu"
+   },
+   "cues": {
+    "hit": "Toz",
+    "run": "açık"
+   },
+   "params": {
+    "mode": "quake",
+    "bank": true,
+    "fall": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "shake_end": 1.2,
+    "cast": [
+     {
+      "who": "kadin",
+      "x": 0.1,
+      "pose": "run",
+      "to": 0.6,
+      "walk_at": "hit",
+      "walk_dur": 3.0,
+      "run": true,
+      "y": 0.97,
+      "scale": 0.55,
+      "face": "right"
+     },
+     {
+      "who": "adam",
+      "x": 0.0,
+      "pose": "run",
+      "to": 0.5,
+      "walk_at": "hit",
+      "walk_dur": 3.2,
+      "run": true,
+      "y": 0.97,
+      "scale": 0.6,
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "pose": "run",
+      "at": "run",
+      "then": "point",
+      "to": 0.32,
+      "walk_at": "hit",
+      "walk_dur": 3.0,
+      "run": true,
+      "y": 0.97,
+      "scale": 0.6,
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "açık alana!",
+      "x": 0.7,
+      "y": 0.14,
+      "at": "run",
+      "size": 68,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Binlerce kişi yıkıntıların arasından geçip nehrin kıyısındaki büyük liman meydanına koştu. Orada güvende olacaklarını sandılar.",
+   "visual": "Kalabalık: on şapkasız figür yıkıntılardan sağa, nehir kıyısındaki meydana doğru yürür; Kaşif aralarında yürür, sonra rahatlayıp el sallar; 'Liman meydanı' etiketi",
+   "title": {
+    "white": "Meydan",
+    "gray": "nehir kıyısı"
+   },
+   "cues": {
+    "hit": "koştu",
+    "safe": "güvende"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "h0",
+      "x": -0.1,
+      "pose": "walk",
+      "to": 0.42,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.95
+     },
+     {
+      "who": "h1",
+      "x": -0.2,
+      "pose": "walk",
+      "to": 0.475,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.8
+     },
+     {
+      "who": "h2",
+      "x": -0.30000000000000004,
+      "pose": "walk",
+      "to": 0.53,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.9
+     },
+     {
+      "who": "h3",
+      "x": -0.4,
+      "pose": "walk",
+      "to": 0.585,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.75
+     },
+     {
+      "who": "h4",
+      "x": -0.5,
+      "pose": "walk",
+      "to": 0.64,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.85
+     },
+     {
+      "who": "h5",
+      "x": -0.1,
+      "pose": "walk",
+      "to": 0.6950000000000001,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.95
+     },
+     {
+      "who": "h6",
+      "x": -0.2,
+      "pose": "walk",
+      "to": 0.75,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.8
+     },
+     {
+      "who": "h7",
+      "x": -0.30000000000000004,
+      "pose": "walk",
+      "to": 0.8049999999999999,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.9
+     },
+     {
+      "who": "h8",
+      "x": -0.4,
+      "pose": "walk",
+      "to": 0.86,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.75
+     },
+     {
+      "who": "h9",
+      "x": -0.5,
+      "pose": "walk",
+      "to": 0.915,
+      "at": "hit",
+      "then": "idle",
+      "face": "right",
+      "talk": false,
+      "scale": 0.85
+     },
+     {
+      "who": "kasif",
+      "x": -0.35,
+      "pose": "walk",
+      "at": "hit",
+      "then": "wave",
+      "to": 0.22,
+      "face": "right",
+      "seq": [
+       {
+        "at": "safe",
+        "pose": "shrug",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": [
+     {
+      "type": "pier",
+      "from": 0.75,
+      "to": 1
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "Liman meydanı",
+     "x": 0.62,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ama asıl felaket henüz başlamamıştı.",
+   "visual": "Dev yazı: 'ASIL FELAKET HENÜZ BAŞLAMAMIŞTI', 'felaket' kırmızı kutuda; Kaşif endişeyle omuz silker",
+   "title": {},
+   "cues": {
+    "w1": "felaket"
+   },
+   "params": {
+    "lines": [
+     "Asıl felaket",
+     "henüz",
+     "başlamamıştı"
+    ],
+    "highlight": [
+     "felaket"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "chapter": "Deniz çekildi",
+   "type": "chapter",
+   "text": "Kıyıya varanlar, gözlerine inanamadı.",
+   "visual": "BÖLÜM 3 / 8 kartı: mavi dairede 3, altında 'Deniz çekildi' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Kıyıya",
+    "title": "inanamadı"
+   },
+   "params": {
+    "n": 3,
+    "total": 8,
+    "title": "Deniz çekildi"
+   }
+  },
+  {
+   "type": "lz_sea",
+   "text": "Deniz geri çekiliyordu! Su limandan uzaklaştı ve geride çamurlu bir düzlük kaldı.",
+   "visual": "Rıhtımdan liman: 'çekiliyordu'da su kıyıdan uzaklaşır, geride çamur düzlüğü açılır, batık gemi ve fıçılar görünür; rıhtımda Kaşif ve iki kişi şaşkın bakar",
+   "title": {
+    "white": "Deniz",
+    "gray": "geri çekildi"
+   },
+   "cues": {
+    "recede": "çekiliyordu",
+    "mud": "çamurlu"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "h1",
+      "x": 0.24,
+      "pose": "idle",
+      "y": 0.9,
+      "scale": 0.62,
+      "face": "right",
+      "at": "mud",
+      "then": "point",
+      "dir": "right"
+     },
+     {
+      "who": "h2",
+      "x": 0.3,
+      "pose": "idle",
+      "y": 0.86,
+      "scale": 0.55,
+      "face": "right",
+      "at": "mud",
+      "then": "shock"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "mud",
+      "then": "shock",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "deniz çekiliyor!",
+      "x": 0.62,
+      "y": 0.14,
+      "at": "recede",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "lz_sea",
+   "text": "Batık gemilerin enkazı, denize düşmüş yükler, çırpınan balıklar… Hepsi açıkta kalmıştı. Bazı insanlar meraktan çamura doğru yürüdü.",
+   "visual": "Açık kalmış deniz tabanı: batık gemi enkazları, fıçılar, çırpınan balıklar; 'yürüdü'de bir kişi rıhtımdan çamura doğru yürür, Kaşif onu durdurmak ister gibi işaret eder",
+   "title": {
+    "white": "Deniz",
+    "gray": "tabanı"
+   },
+   "cues": {
+    "hit": "Batık",
+    "walk": "yürüdü",
+    "recede": "Batık"
+   },
+   "params": {
+    "recede": 0.0,
+    "cast": [
+     {
+      "who": "h1",
+      "x": 0.28,
+      "pose": "walk",
+      "y": 0.82,
+      "scale": 0.5,
+      "to": 0.5,
+      "walk_at": 0.4,
+      "walk_dur": 4.5,
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "walk",
+      "then": "point",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "dir": "right",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "batıklar, balıklar…",
+      "x": 0.62,
+      "y": 0.13,
+      "at": "hit",
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki sizce bu ne demekti? Bugün çok iyi biliyoruz: deniz birden çekilirse, büyük bir dalga yoldadır.",
+   "visual": "Kaşif düşünür, 'demekti'de el çenesinde; 'dalga'da 'DALGA YOLDA' tabelası belirir ve Kaşif şok olup işaret eder; arkada sakin deniz",
+   "title": {
+    "white": "Uyarı",
+    "gray": "işareti"
+   },
+   "cues": {
+    "q": "demekti",
+    "hit": "dalga"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "think",
+      "at": "hit",
+      "then": "point",
+      "face": "right",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "think"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.64,
+      "text": "DALGA YOLDA",
+      "at": "hit",
+      "hit": "hit"
+     },
+     {
+      "type": "rock",
+      "x": 0.88,
+      "scale": 0.8
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "Deniz çekilirse…",
+     "x": 0.6,
+     "y": 0.13,
+     "at": "q"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Depremden yaklaşık kırk dakika sonra, ufukta bir su duvarı belirdi.",
+   "visual": "Yatay zaman çizgisi: '09:40 Deprem', '≈ 10:20 Dalga' (kırmızı), 'Ateş' noktaları sırayla belirir; yanda Kaşif işaret eder",
+   "title": {
+    "white": "40 dakika"
+   },
+   "cues": {
+    "a": "Depremden",
+    "b": "kırk",
+    "c": "duvarı"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "09:40",
+      "text": "Deprem",
+      "at": "a"
+     },
+     {
+      "year": "≈ 10:20",
+      "text": "Dalga",
+      "at": "b"
+     },
+     {
+      "year": "sonra",
+      "text": "Ateş",
+      "at": "c"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.88,
+     "y": 0.62,
+     "pose": "point",
+     "at": "b",
+     "scale": 0.55,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "lz_sea",
+   "text": "Dalga limanı ve aşağı şehri yuttu, nehrin içinden yukarı doğru tırmandı. Arkasından iki dalga daha geldi.",
+   "visual": "Ufukta su duvarı yükselir ve 'yuttu'da rıhtıma doğru yuvarlanır; gemiler dalganın tepesine fırlar; rıhtımda Kaşif şok olup geri sıçrar",
+   "title": {
+    "white": "Tsunami"
+   },
+   "cues": {
+    "wave": "Dalga",
+    "hit": "yuttu"
+   },
+   "params": {
+    "mode": "wave",
+    "wave_to": 0.46,
+    "wave_h": 0.6,
+    "cast": [
+     {
+      "who": "h1",
+      "x": 0.26,
+      "pose": "run",
+      "y": 0.9,
+      "scale": 0.6,
+      "to": -0.1,
+      "walk_at": "hit",
+      "walk_dur": 2.4,
+      "run": true,
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.97,
+      "scale": 0.78,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "lz_sea",
+   "text": "Meydana sığınan kalabalık kaçacak yer bulamadı. Demirli gemiler parçalandı, rıhtım sulara gömüldü.",
+   "visual": "Rıhtımda sıkışmış altı kişi ve Kaşif; arkalarından dev dalga tepesi kıvrılarak gelir, 'parçalandı'da demirli gemiler dalganın üstünde yan yatar; 'rıhtım sular altında' notu",
+   "title": {
+    "white": "Liman"
+   },
+   "cues": {
+    "wave": "Meydana",
+    "hit": "parçalandı"
+   },
+   "params": {
+    "mode": "wave",
+    "wave_to": 0.42,
+    "wave_h": 0.62,
+    "cast": [
+     {
+      "who": "r0",
+      "x": 0.03,
+      "pose": "idle",
+      "y": 0.84,
+      "scale": 0.55,
+      "face": "right",
+      "at": "hit",
+      "then": "run",
+      "emotion": "worried"
+     },
+     {
+      "who": "r1",
+      "x": 0.075,
+      "pose": "shock",
+      "y": 0.865,
+      "scale": 0.5900000000000001,
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "worried"
+     },
+     {
+      "who": "r2",
+      "x": 0.12,
+      "pose": "idle",
+      "y": 0.89,
+      "scale": 0.63,
+      "face": "right",
+      "at": "hit",
+      "then": "run",
+      "emotion": "worried"
+     },
+     {
+      "who": "r3",
+      "x": 0.165,
+      "pose": "shock",
+      "y": 0.84,
+      "scale": 0.55,
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "worried"
+     },
+     {
+      "who": "r4",
+      "x": 0.21,
+      "pose": "idle",
+      "y": 0.865,
+      "scale": 0.5900000000000001,
+      "face": "right",
+      "at": "hit",
+      "then": "run",
+      "emotion": "worried"
+     },
+     {
+      "who": "r5",
+      "x": 0.255,
+      "pose": "shock",
+      "y": 0.89,
+      "scale": 0.63,
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.33,
+      "pose": "look",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.97,
+      "scale": 0.8,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "rıhtım sular altında",
+      "x": 0.3,
+      "y": 0.13,
+      "at": "hit",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "Ve bu dalga sadece Lizbon'u vurmadı. Fas kıyılarında, kaynaklara göre yirmi metreye varan dalgalar görüldü.",
+   "visual": "Eski harita, Portekiz ve Fas kıyısı: Lizbon ve Fas (kırmızı) belirir; okyanustaki merkezden Fas'a kesikli kırmızı ok çizilir; not '≈ 20 metre'",
+   "title": {
+    "white": "Fas",
+    "gray": "kıyıları"
+   },
+   "cues": {
+    "lis": "Lizbon'u",
+    "go": "Fas",
+    "note": "yirmi"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.56,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       0.68
+      ],
+      [
+       0.88,
+       0.7
+      ],
+      [
+       0.8,
+       0.64
+      ],
+      [
+       0.66,
+       0.635
+      ],
+      [
+       0.565,
+       0.62
+      ],
+      [
+       0.585,
+       0.52
+      ],
+      [
+       0.555,
+       0.445
+      ],
+      [
+       0.575,
+       0.38
+      ],
+      [
+       0.555,
+       0.2
+      ]
+     ],
+     [
+      [
+       0.87,
+       0.77
+      ],
+      [
+       1.1,
+       0.77
+      ],
+      [
+       1.1,
+       1.1
+      ],
+      [
+       0.55,
+       1.1
+      ],
+      [
+       0.66,
+       0.95
+      ],
+      [
+       0.78,
+       0.84
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Atlas Okyanusu",
+      "x": 0.26,
+      "y": 0.35
+     }
+    ],
+    "compass": "bl",
+    "cities": [
+     {
+      "name": "Lizbon",
+      "x": 0.565,
+      "y": 0.44,
+      "at": "lis",
+      "dx": 90,
+      "dy": -20
+     },
+     {
+      "name": "Merkez",
+      "x": 0.3,
+      "y": 0.75,
+      "color": "red",
+      "at": "lis",
+      "dy": 60
+     },
+     {
+      "name": "Fas",
+      "x": 0.74,
+      "y": 0.9,
+      "at": "go",
+      "color": "red",
+      "dx": 70
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.3,
+       0.75
+      ],
+      [
+       0.5,
+       0.82
+      ],
+      [
+       0.72,
+       0.9
+      ]
+     ],
+     "at": "go",
+     "dur": 1.2,
+     "color": "red"
+    },
+    "note": {
+     "text": "≈ 20 metre",
+     "x": 0.42,
+     "y": 0.95,
+     "at": "note"
+    },
+    "zoom": 1.04
+   }
+  },
+  {
+   "type": "map",
+   "text": "Dalga İngiltere'ye ve İrlanda'ya ulaştı. Hatta okyanusu geçip Karayipler'e, Barbados ve Martinik kıyılarına kadar vardı!",
+   "visual": "Atlas haritası: merkezden kesikli kırmızı rotalar İngiltere'ye, İrlanda'ya ve okyanus boyunca Karayipler'e (Barbados, Martinik) çizilir",
+   "title": {
+    "white": "Okyanus",
+    "gray": "boyunca"
+   },
+   "cues": {
+    "en": "İngiltere'ye",
+    "car": "Karayipler'e"
+   },
+   "params": {
+    "preset": "atlantic",
+    "cities": [
+     {
+      "name": "İngiltere",
+      "x": -5,
+      "y": 50.3,
+      "at": "en",
+      "dx": 70,
+      "dy": -30
+     },
+     {
+      "name": "İrlanda",
+      "x": -9,
+      "y": 53,
+      "at": "en",
+      "dx": -100,
+      "dy": 10
+     },
+     {
+      "name": "Karayipler",
+      "x": -60.5,
+      "y": 14,
+      "at": "car",
+      "color": "red",
+      "dy": 60
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       -11,
+       36.3
+      ],
+      [
+       -25,
+       30
+      ],
+      [
+       -40,
+       22
+      ],
+      [
+       -52,
+       16
+      ],
+      [
+       -59.5,
+       13.6
+      ]
+     ],
+     "at": "car",
+     "dur": 2.0,
+     "color": "red"
+    },
+    "note": {
+     "text": "okyanusun öbür yakası",
+     "x": -40,
+     "y": 30,
+     "at": "car"
+    },
+    "focus": [
+     -30,
+     32
+    ],
+    "zoom": 1.05,
+    "compass": "br"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yani tek bir sarsıntı, koca bir okyanusu baştan sona çalkalamıştı.",
+   "visual": "Kaşif 'TEK SARSINTI' tabelasını kaldırır, 'çalkalamıştı'da omuz silker; arkada dalgalı okyanus ve sallanan gemi",
+   "title": {
+    "white": "Okyanus",
+    "gray": "çalkalandı"
+   },
+   "cues": {
+    "hit": "sarsıntı",
+    "big": "çalkalamıştı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "pose": "hold",
+      "at": "big",
+      "then": "shrug",
+      "text": "TEK SARSINTI",
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.78,
+      "scale": 0.9,
+      "move": {
+       "at": "big",
+       "rot": -12,
+       "dur": 1.2
+      }
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    }
+   }
+  },
+  {
+   "chapter": "Şehir yanıyor",
+   "type": "chapter",
+   "text": "Ama sarsıntı başka bir şeyi daha başlatmıştı: ateşi.",
+   "visual": "BÖLÜM 4 / 8 kartı: mavi dairede 4, altında 'Şehir yanıyor' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "sarsıntı",
+    "title": "ateşi"
+   },
+   "params": {
+    "n": 4,
+    "total": 8,
+    "title": "Şehir yanıyor"
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Hatırlayın, kiliselerde binlerce mum vardı. Evlerde de bayram yemekleri için ocaklar yanıyordu.",
+   "visual": "Kilise sunağında sıra sıra yanan mumlar ve avizeler; Kaşif mumları işaret eder; 'ocaklar' notu belirir",
+   "title": {
+    "white": "Mumlar"
+   },
+   "cues": {
+    "hit": "mum",
+    "oc": "ocaklar"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.83,
+      "pose": "point",
+      "at": "hit",
+      "then": "talk",
+      "y": 0.98,
+      "scale": 1.3,
+      "face": "left",
+      "dir": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "mumlar + ocaklar",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "oc",
+      "size": 60
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Yıkılan kirişler, perdeler, kitaplar… Devrilen her mum, kuru bir yığına düşen bir kıvılcım oldu.",
+   "visual": "'Devrilen'de mumlar sunağın üstüne devrilir, 'kıvılcım'da sunak örtüsü ve perdeler alev alır; Kaşif şok olur",
+   "title": {
+    "white": "Kıvılcım"
+   },
+   "cues": {
+    "topple": "Yıkılan",
+    "fire": "kıvılcım"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.83,
+      "pose": "look",
+      "at": "fire",
+      "then": "shock",
+      "y": 0.98,
+      "scale": 1.3,
+      "face": "left",
+      "emotion": "surprised"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "londonfire",
+   "text": "Rüzgâr da çıkınca küçük yangınlar birleşti. Kısa sürede şehrin merkezi dev bir ateş fırtınasına döndü.",
+   "visual": "Dar sokakta yan yana ahşap katlı evler; 'Rüzgâr'da rüzgâr çizgileri, alev evden eve atlar, kıvılcımlar savrulur; Kaşif soldan bakar, sonra şaşırır",
+   "title": {
+    "white": "Rüzgâr"
+   },
+   "cues": {
+    "wind": "Rüzgâr",
+    "fire": "yangınlar",
+    "hit": "fırtınasına"
+   },
+   "params": {
+    "mode": "street",
+    "houses": 5,
+    "bakery": -1,
+    "fire": {
+     "start": 1,
+     "at": "fire",
+     "step": 0.5,
+     "dir": 1
+    },
+    "wind": {
+     "at": "wind",
+     "dir": 1
+    },
+    "embers": true,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "label": {
+     "text": "ateş fırtınası",
+     "x": 0.6,
+     "y": 0.12,
+     "at": "hit",
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "lz_fire",
+   "text": "Alevler o kadar güçlüydü ki yaklaşanlar dumandan ve sıcaktan nefes alamadı.",
+   "visual": "Nehirden yanan Lizbon: yıkık binaların üstünde alev dilleri, kara duman sütunları, nehirde kırmızı yansımalar; önde Kaşif sıcaktan geri çekilir",
+   "title": {
+    "white": "Yangın"
+   },
+   "cues": {
+    "hit": "güçlüydü",
+    "back": "nefes"
+   },
+   "params": {
+    "ruins": true,
+    "bank": true,
+    "fire": {
+     "start": 4,
+     "at": -3,
+     "step": 0.2
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "back",
+      "then": "shock",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "emotion": "worried"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Sudan kaçanlar ateşe, ateşten kaçanlar suya sıkıştı. İşte Lizbon'un o günkü çaresizliği buydu.",
+   "visual": "Kaşif ortada: solda dalgalı su, sağda 'ATEŞ' tabelası; 'Sudan'da sola, 'ateşten'de sağa bakar, sonra çaresiz omuz silker",
+   "title": {
+    "white": "Kapan"
+   },
+   "cues": {
+    "a": "Sudan",
+    "b": "ateşten",
+    "hit": "çaresizliği"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "point",
+      "at": "b",
+      "then": "shrug",
+      "dir": "left",
+      "face": "left",
+      "seq": [
+       {
+        "at": "a",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       },
+       {
+        "at": "b",
+        "pose": "point",
+        "dir": "right",
+        "face": "right"
+       },
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.82,
+      "text": "ATEŞ",
+      "at": "b",
+      "hit": "b"
+     },
+     {
+      "type": "sign",
+      "x": 0.18,
+      "text": "SU",
+      "at": "a",
+      "hit": "a"
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    }
+   }
+  },
+  {
+   "type": "lz_fire",
+   "text": "Anlatılanlara göre şehir tam beş gün yandı.",
+   "visual": "Nehirden yanan şehir: alevler ve duman sütunları; üstte dev sayaç '1. GÜN'den '5. GÜN'e sayar; önde Kaşif şaşırır; not 'anlatılanlara göre'",
+   "title": {
+    "white": "Beş",
+    "gray": "gün"
+   },
+   "cues": {
+    "days": "Anlatılanlara",
+    "hit": "beş"
+   },
+   "params": {
+    "ruins": true,
+    "bank": true,
+    "fire": {
+     "start": 2,
+     "at": -3,
+     "step": 0.2,
+     "size": 0.8
+    },
+    "days": {
+     "at": "days",
+     "dur": 2.0,
+     "to": 5,
+     "x": 0.56,
+     "y": 0.2,
+     "size": 140
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "anlatılanlara göre",
+      "x": 0.56,
+      "y": 0.32,
+      "at": "hit",
+      "size": 50
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Peki kaç kişi öldü? Bunu kimse kesin olarak bilmiyor. Tahminlere göre yalnızca Lizbon'da otuz ile kırk bin kişi hayatını kaybetti.",
+   "visual": "Pano 'Kaç kişi öldü?': Lizbon kartında '30.000' ve '40.000' çubukları büyür; altta mavi hap 'Kesin sayı yok'",
+   "title": {
+    "white": "Kayıp"
+   },
+   "cues": {
+    "q": "kaç",
+    "a": "otuz",
+    "b": "kırk",
+    "pill": "Tahminlere"
+   },
+   "params": {
+    "title": "Kaç kişi öldü?",
+    "cards": [
+     {
+      "title": "Lizbon, tahmin",
+      "bars": [
+       {
+        "label": "en az",
+        "value": 0.75,
+        "text": "30.000",
+        "at": "a"
+       },
+       {
+        "label": "en çok",
+        "value": 1.0,
+        "text": "40.000",
+        "at": "b"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Kesin sayı yok",
+     "color": "blue",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Bu, yaklaşık iki yüz bin kişilik bir şehirdi. Yani kabaca her altı kişiden biri…",
+   "visual": "Altı şapkasız figür yan yana durur, biri öne çıkar; Kaşif onu işaret eder ve başını eğer; '≈ 200.000 kişi' etiketi",
+   "title": {
+    "white": "Altıda",
+    "gray": "bir"
+   },
+   "cues": {
+    "hit": "iki",
+    "one": "altı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "a1",
+      "x": 0.36,
+      "pose": "idle",
+      "talk": false
+     },
+     {
+      "who": "a2",
+      "x": 0.46,
+      "pose": "idle",
+      "talk": false,
+      "scale": 0.9
+     },
+     {
+      "who": "a3",
+      "x": 0.56,
+      "pose": "idle",
+      "talk": false
+     },
+     {
+      "who": "a4",
+      "x": 0.66,
+      "pose": "idle",
+      "talk": false,
+      "scale": 0.95
+     },
+     {
+      "who": "a5",
+      "x": 0.76,
+      "pose": "idle",
+      "talk": false
+     },
+     {
+      "who": "a6",
+      "x": 0.88,
+      "pose": "idle",
+      "talk": false,
+      "at": "one",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "at": "one",
+      "then": "point",
+      "face": "right",
+      "dir": "right",
+      "emotion": "worried"
+     }
+    ],
+    "props": [],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "≈ 200.000 kişilik şehir",
+     "x": 0.6,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "lz_fire",
+   "text": "Şehir artık enkaz, kül ve korkudan ibaretti. Peki bu kaosu kim toparlayacaktı?",
+   "visual": "Duman tüten yıkıntılar, küçük alevler, karanlık gökyüzü; Kaşif önde düşünür, 'kim'de omuz silker; büyük el yazısı '?'",
+   "title": {
+    "white": "Enkaz"
+   },
+   "cues": {
+    "hit": "kaosu",
+    "who": "kim"
+   },
+   "params": {
+    "ruins": true,
+    "bank": true,
+    "fire": {
+     "start": 3,
+     "at": -3,
+     "step": 0.3,
+     "size": 0.35
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "think",
+      "at": "who",
+      "then": "shrug",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.5,
+      "y": 0.16,
+      "at": "who",
+      "size": 150,
+      "font": "serif",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Ölüleri gömün",
+   "type": "chapter",
+   "text": "Kral José geri döndüğünde gördüğü manzara karşısında sarsıldı.",
+   "visual": "BÖLÜM 5 / 8 kartı: mavi dairede 5, altında 'Ölüleri gömün' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Kral",
+    "title": "manzara"
+   },
+   "params": {
+    "n": 5,
+    "total": 8,
+    "title": "Ölüleri gömün"
+   }
+  },
+  {
+   "type": "ag03c_court",
+   "text": "Öyle ki bir daha taş duvarların arasında yaşamak istemedi. Sarayı bıraktı, şehrin tepelerinde kurulan dev çadırlara taşındı.",
+   "visual": "Tepedeki büyük çadır: taçlı Kral José tahtında oturur, 'çadırlara'da ayağa kalkar; solda Kaşif anlatır, sonra işaret eder",
+   "title": {
+    "white": "Kral",
+    "gray": "çadırda"
+   },
+   "cues": {
+    "hit": "taş",
+    "tent": "çadırlara"
+   },
+   "params": {
+    "setting": "tent",
+    "throne": {
+     "x": 0.62,
+     "accessory": "crown",
+     "scale": 1,
+     "pose": "sit",
+     "face": -1,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "tent",
+       "pose": "idle"
+      }
+     ]
+    },
+    "captive": false,
+    "tug": false,
+    "figures": [
+     {
+      "x": 0.86,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": -1,
+      "spear": true
+     }
+    ],
+    "kasif": {
+     "x": 0.16,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "tent",
+       "pose": "point",
+       "dir": 10
+      }
+     ]
+    },
+    "mark": {
+     "text": "çadır saray",
+     "at": "tent",
+     "x": 0.4,
+     "y": 0.18,
+     "size": 70,
+     "color": "ink"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ama birinin hemen karar vermesi gerekiyordu. İşte tam burada sahneye bir bakan çıktı: Sebastião de Melo.",
+   "visual": "Şapkasız, kısa saçlı bakan Sebastião de Melo sağdan yürüyerek gelir ve elindeki parşömeni kaldırır; Kaşif onu işaret eder; isim etiketi",
+   "title": {
+    "white": "Bakan"
+   },
+   "cues": {
+    "hit": "bakan",
+    "name": "Sebastião"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "pombal",
+      "x": 0.95,
+      "pose": "walk",
+      "to": 0.62,
+      "at": "hit",
+      "then": "hold",
+      "item": "scroll",
+      "face": "left",
+      "talk": false
+     },
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "talk",
+      "at": "name",
+      "then": "point",
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "column",
+      "x": 0.86,
+      "scale": 1.0
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "Sebastião de Melo",
+     "x": 0.62,
+     "y": 0.13,
+     "at": "name"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Onu bugün daha çok sonraki unvanıyla tanıyoruz: Pombal Markisi.",
+   "visual": "Dev yazı: 'POMBAL MARKİSİ', 'Pombal' kırmızı kutuda; not 'sonraki unvanı'; Kaşif işaret eder",
+   "title": {},
+   "cues": {
+    "w0": "Pombal"
+   },
+   "params": {
+    "lines": [
+     "Pombal",
+     "Markisi"
+    ],
+    "highlight": [
+     "Pombal"
+    ],
+    "note": {
+     "text": "sonraki unvanı",
+     "at": "w0"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Ona atfedilen meşhur bir söz var: \"Ölüleri gömün, yaşayanları iyileştirin.\" Bunu gerçekten söyledi mi, tarihçiler emin değil. Ama yaptıkları tam olarak buydu.",
+   "visual": "Yazı masası: kâğıda 'Ölüleri gömün, yaşayanları iyileştirin' başlığı yazılır, tüy kalem satırları doldurur; 'emin'de kırmızı 'ATFEDİLİR' damgası; Kaşif solda düşünür, sonra omuz silker",
+   "title": {
+    "white": "Meşhur",
+    "gray": "söz"
+   },
+   "cues": {
+    "hit": "söz",
+    "stamp": "emin"
+   },
+   "params": {
+    "title": [
+     "Ölüleri gömün,",
+     "yaşayanları",
+     "iyileştirin."
+    ],
+    "title_at": "hit",
+    "write": {
+     "at": 1.2,
+     "dur": 5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "at": "stamp",
+      "then": "shrug",
+      "y": 0.88,
+      "scale": 0.62,
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "atfedilir",
+      "x": 0.68,
+      "y": 0.78,
+      "at": "stamp",
+      "stamp": true,
+      "color": "red",
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Salgın çıkmasın diye cesetler hızla toplandı. Anlatılanlara göre bir kısmı mavnalara yüklenip açık denize götürüldü.",
+   "visual": "Sakin liman: bir mavna yavaşça açık denize doğru süzülür; Kaşif kıyıda başını eğip dürbünle bakar; 'mavnalar' etiketi",
+   "title": {
+    "white": "Salgına",
+    "gray": "karşı"
+   },
+   "cues": {
+    "hit": "Salgın",
+    "go": "mavnalara"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "pose": "look",
+      "at": "go",
+      "then": "idle",
+      "face": "right",
+      "emotion": "worried"
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.55,
+      "scale": 0.8,
+      "y": 0.72,
+      "move": {
+       "at": "go",
+       "x": 0.9,
+       "dur": 4.0
+      }
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "sea"
+    },
+    "foreground": [
+     {
+      "type": "water",
+      "from": 0.35,
+      "to": 1
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "açık denize",
+     "x": 0.7,
+     "y": 0.13,
+     "at": "go"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yağmacılara karşı askerler şehrin çevresine yerleştirildi. Evsiz kalanlar için çadır kamplar kuruldu, yiyecek getirildi.",
+   "visual": "Miğferli iki asker nöbet tutar; 'yiyecek'te 'ÇADIR + YİYECEK' tabelası belirir ve Kaşif onu işaret eder; arkada liman",
+   "title": {
+    "white": "Düzen"
+   },
+   "cues": {
+    "hit": "askerler",
+    "food": "yiyecek"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "asker1",
+      "x": 0.62,
+      "pose": "idle",
+      "accessory": "helmet",
+      "talk": false,
+      "face": "left"
+     },
+     {
+      "who": "asker2",
+      "x": 0.8,
+      "pose": "idle",
+      "accessory": "helmet",
+      "talk": false,
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "talk",
+      "at": "food",
+      "then": "point",
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.43,
+      "text": "ÇADIR + YİYECEK",
+      "at": "food",
+      "hit": "food"
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "çadır kamplar",
+     "x": 0.55,
+     "y": 0.13,
+     "at": "food"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Ve bir yıl dolmadan, yıkıntıların büyük kısmı temizlenmişti.",
+   "visual": "Yatay zaman çizgisi: '1 Kasım 1755 Deprem', '4 Aralık 1755 Yeni planlar', '1756 Enkaz temizlendi' (kırmızı); Kaşif işaret eder",
+   "title": {
+    "white": "Bir",
+    "gray": "yıl içinde"
+   },
+   "cues": {
+    "a": "Ve",
+    "b": "yıl",
+    "c": "temizlenmişti"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1 Kasım 1755",
+      "text": "Deprem",
+      "at": "a"
+     },
+     {
+      "year": "Aralık 1755",
+      "text": "Yeni planlar",
+      "at": "b"
+     },
+     {
+      "year": "1756",
+      "text": "Enkaz kalktı",
+      "at": "c"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.94,
+     "y": 0.66,
+     "pose": "point",
+     "at": "c",
+     "scale": 0.5,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ama Pombal'ın aklında çok daha büyük bir soru vardı: Bu felaket neden oldu?",
+   "visual": "Kaşif düşünür; 'neden'de büyük kırmızı 'NEDEN?' tabelası belirir, Kaşif ona döner ve işaret eder",
+   "title": {
+    "white": "Asıl",
+    "gray": "soru"
+   },
+   "cues": {
+    "hit": "soru",
+    "why": "neden"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.32,
+      "pose": "think",
+      "at": "why",
+      "then": "point",
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.66,
+      "text": "NEDEN?",
+      "at": "why",
+      "hit": "why"
+     },
+     {
+      "type": "scroll",
+      "x": 0.86,
+      "scale": 0.8,
+      "at": "hit"
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    }
+   }
+  },
+  {
+   "chapter": "Peki neden?",
+   "type": "chapter",
+   "text": "O dönemde çoğu insanın cevabı hazırdı.",
+   "visual": "BÖLÜM 6 / 8 kartı: mavi dairede 6, altında 'Peki neden?' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "dönemde",
+    "title": "cevabı"
+   },
+   "params": {
+    "n": 6,
+    "total": 8,
+    "title": "Peki neden?"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Bazı vaizlere göre deprem, Tanrı'nın günahkâr şehre verdiği bir cezaydı.",
+   "visual": "Şapkasız bir vaiz parmağıyla gökyüzünü gösterir; 'ceza'da 'CEZA' tabelası belirir; Kaşif kenarda kollarını kavuşturup düşünür",
+   "title": {
+    "white": "Vaizler"
+   },
+   "cues": {
+    "hit": "vaizlere",
+    "c": "cezaydı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "vaiz",
+      "x": 0.56,
+      "pose": "point",
+      "dir": "up",
+      "face": "left",
+      "talk": false,
+      "beard": "grey"
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "talk",
+      "at": "c",
+      "then": "think",
+      "face": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.8,
+      "text": "CEZA",
+      "at": "c",
+      "hit": "c"
+     },
+     {
+      "type": "column",
+      "x": 0.95,
+      "scale": 0.9
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ama bir sorun vardı. Bayramda dua eden insanlar kiliselerin altında kalmıştı. Bu nasıl bir ceza olabilirdi?",
+   "visual": "Dev yazı: 'BU NASIL BİR CEZA?', 'ceza' kırmızı kutuda; Kaşif omuz silker",
+   "title": {
+    "white": "Çelişki"
+   },
+   "cues": {
+    "w0": "sorun",
+    "w3": "ceza"
+   },
+   "params": {
+    "lines": [
+     "Bu nasıl",
+     "bir ceza?"
+    ],
+    "highlight": [
+     "ceza"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w3"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Bugün asıl cevabı biliyoruz. Deprem şehrin altında değil, Atlantik'te, Lizbon'un yaklaşık iki yüz doksan kilometre güneybatısında oldu.",
+   "visual": "Eski harita, Portekiz kıyısı ve okyanus: Lizbon, okyanusta kırmızı 'Merkez' noktası, aralarında kesikli çizgi ve '≈ 290 km' notu",
+   "title": {
+    "white": "Merkez",
+    "gray": "Atlantik"
+   },
+   "cues": {
+    "lis": "Lizbon'un",
+    "ep": "Atlantik'te",
+    "km": "kilometre"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.56,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       0.68
+      ],
+      [
+       0.88,
+       0.7
+      ],
+      [
+       0.8,
+       0.64
+      ],
+      [
+       0.66,
+       0.635
+      ],
+      [
+       0.565,
+       0.62
+      ],
+      [
+       0.585,
+       0.52
+      ],
+      [
+       0.555,
+       0.445
+      ],
+      [
+       0.575,
+       0.38
+      ],
+      [
+       0.555,
+       0.2
+      ]
+     ],
+     [
+      [
+       0.87,
+       0.77
+      ],
+      [
+       1.1,
+       0.77
+      ],
+      [
+       1.1,
+       1.1
+      ],
+      [
+       0.55,
+       1.1
+      ],
+      [
+       0.66,
+       0.95
+      ],
+      [
+       0.78,
+       0.84
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Atlas Okyanusu",
+      "x": 0.26,
+      "y": 0.35
+     }
+    ],
+    "compass": "bl",
+    "cities": [
+     {
+      "name": "Lizbon",
+      "x": 0.565,
+      "y": 0.44,
+      "at": "lis",
+      "dx": 90,
+      "dy": -20
+     },
+     {
+      "name": "Merkez",
+      "x": 0.3,
+      "y": 0.75,
+      "color": "red",
+      "at": "ep",
+      "dy": 60
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.555,
+       0.45
+      ],
+      [
+       0.42,
+       0.6
+      ],
+      [
+       0.3,
+       0.75
+      ]
+     ],
+     "at": "km",
+     "dur": 1.0,
+     "color": "red"
+    },
+    "note": {
+     "text": "≈ 290 km",
+     "x": 0.33,
+     "y": 0.55,
+     "at": "km"
+    },
+    "zoom": 1.06
+   }
+  },
+  {
+   "type": "lz_fault",
+   "text": "Orada iki dev levha, Afrika ve Avrasya, birbirine sürtünür. Yüzyıllar boyunca biriken gerilim, o sabah bir anda boşaldı.",
+   "visual": "Okyanus kesiti: deniz, deniz tabanı, iki levha ve aralarında kırmızı fay; 'sürtünür'de kırmızı oklar levhaları iter, 'boşaldı'da fay kayar, odaktan altın parlama ve halkalar çıkar; Kaşif solda işaret eder",
+   "title": {
+    "white": "Fay",
+    "gray": "hattı"
+   },
+   "cues": {
+    "push": "sürtünür",
+    "hit": "boşaldı"
+   },
+   "params": {
+    "ship": true,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "pose": "point",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Afrika",
+      "x": 0.22,
+      "y": 0.62,
+      "at": "push",
+      "size": 64
+     },
+     {
+      "text": "Avrasya",
+      "x": 0.74,
+      "y": 0.62,
+      "at": "push",
+      "size": 64
+     },
+     {
+      "text": "Lizbon",
+      "x": 0.9,
+      "y": 0.18,
+      "at": 0.3,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Büyüklüğü mü? O zaman ölçen bir alet yoktu tabii. Ama bugünkü tahminlere göre yaklaşık sekiz ile dokuz arasındaydı.",
+   "visual": "Dev yazı: 'BÜYÜKLÜK ≈ 8–9', '8–9' kırmızı kutuda; not 'bugünkü tahmin'; Kaşif düşünür",
+   "title": {
+    "white": "Büyüklük"
+   },
+   "cues": {
+    "w0": "Büyüklüğü",
+    "w1": "sekiz",
+    "note": "tahminlere"
+   },
+   "params": {
+    "lines": [
+     "Büyüklük",
+     "≈ 8–9"
+    ],
+    "highlight": [
+     "8–9"
+    ],
+    "note": {
+     "text": "bugünkü tahmin",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "lz_fault",
+   "text": "Kırılma okyanus tabanında olduğu için koca bir su kütlesini yerinden oynattı. İşte dalga buradan geldi.",
+   "visual": "Aynı kesit: 'oynattı'da fay kayar, su yüzeyi tümsek yapar ve iki dalgaya ayrılıp sağa sola koşar, sağdaki dalga kıyıdaki Lizbon'a ulaşır; gemi dalgada sallanır; Kaşif şok olur",
+   "title": {
+    "white": "Dalga",
+    "gray": "doğdu"
+   },
+   "cues": {
+    "hit": "oynattı",
+    "w": "dalga"
+   },
+   "params": {
+    "push": false,
+    "rings": false,
+    "wave_amp": 110,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "pose": "point",
+      "at": "w",
+      "then": "shock",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "dalga",
+      "x": 0.66,
+      "y": 0.1,
+      "at": "w",
+      "size": 70,
+      "color": "red"
+     },
+     {
+      "text": "Lizbon",
+      "x": 0.9,
+      "y": 0.18,
+      "at": 0.3,
+      "size": 48
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki Lizbon neden bu kadar ağır yıkıldı? Çünkü üç felaket zincirleme geldi.",
+   "visual": "Dev yazı: 'ÜÇ FELAKET ZİNCİRLEME', 'Üç' kırmızı kutuda; Kaşif işaret eder",
+   "title": {
+    "white": "Neden",
+    "gray": "bu kadar ağır?"
+   },
+   "cues": {
+    "w0": "Peki",
+    "w1": "üç"
+   },
+   "params": {
+    "lines": [
+     "Üç felaket",
+     "zincirleme"
+    ],
+    "highlight": [
+     "Üç"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Sarsıntı taş binaları yıktı. Dalga, kaçanların sığındığı kıyıyı vurdu. Ateş ise bayram mumlarından doğdu.",
+   "visual": "Pano 'Zincir': Sarsıntı → taş binalar, Dalga → kıyı, Ateş → mumlar maddeleri sırayla işaretlenir; kırmızı hap 'Üst üste üç darbe'",
+   "title": {
+    "white": "Zincir"
+   },
+   "cues": {
+    "a": "Sarsıntı",
+    "b": "Dalga",
+    "c": "Ateş",
+    "pill": "doğdu"
+   },
+   "params": {
+    "title": "Zincir",
+    "cards": [
+     {
+      "title": "1 · Sarsıntı",
+      "items": [
+       {
+        "text": "Taş binalar",
+        "mark": "x",
+        "at": "a"
+       }
+      ]
+     },
+     {
+      "title": "2 · Dalga",
+      "items": [
+       {
+        "text": "Kıyıdakiler",
+        "mark": "x",
+        "at": "b"
+       }
+      ]
+     },
+     {
+      "title": "3 · Ateş",
+      "items": [
+       {
+        "text": "Bayram mumları",
+        "mark": "x",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Üst üste üç darbe",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Bir de zamanlama vardı. Felaket, insanların en kalabalık ve en savunmasız olduğu ana, bayram ayininin ortasına denk gelmişti.",
+   "visual": "Tıklım tıklım kilise, mumlar yanar; 'savunmasız'da Kaşif endişeyle cemaate bakar; 'bayram ayini' notu",
+   "title": {
+    "white": "Zamanlama"
+   },
+   "cues": {
+    "hit": "zamanlama",
+    "w": "savunmasız"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.83,
+      "pose": "talk",
+      "at": "w",
+      "then": "look",
+      "y": 0.98,
+      "scale": 1.3,
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "en kalabalık an",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "w",
+      "size": 60,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.7
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "Bakanın soruları",
+   "type": "chapter",
+   "text": "Şimdi size bu hikâyenin en sevdiğim kısmını anlatacağım.",
+   "visual": "BÖLÜM 7 / 8 kartı: mavi dairede 7, altında 'Bakanın soruları' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Şimdi",
+    "title": "sevdiğim"
+   },
+   "params": {
+    "n": 7,
+    "total": 8,
+    "title": "Bakanın soruları"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Pombal, ülkenin dört bir yanındaki papazlara aynı soruları gönderdi.",
+   "visual": "Portekiz haritası: Lizbon'dan Porto, Coimbra, Évora ve Faro'ya kesikli çizgiler uzanır, şehirler sırayla belirir; not 'aynı sorular'",
+   "title": {
+    "white": "Anket",
+    "gray": "ülke çapında"
+   },
+   "cues": {
+    "go": "papazlara",
+    "q": "soruları"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.56,
+       -0.1
+      ],
+      [
+       1.1,
+       -0.1
+      ],
+      [
+       1.1,
+       0.68
+      ],
+      [
+       0.88,
+       0.7
+      ],
+      [
+       0.8,
+       0.64
+      ],
+      [
+       0.66,
+       0.635
+      ],
+      [
+       0.565,
+       0.62
+      ],
+      [
+       0.585,
+       0.52
+      ],
+      [
+       0.555,
+       0.445
+      ],
+      [
+       0.575,
+       0.38
+      ],
+      [
+       0.555,
+       0.2
+      ]
+     ],
+     [
+      [
+       0.87,
+       0.77
+      ],
+      [
+       1.1,
+       0.77
+      ],
+      [
+       1.1,
+       1.1
+      ],
+      [
+       0.55,
+       1.1
+      ],
+      [
+       0.66,
+       0.95
+      ],
+      [
+       0.78,
+       0.84
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Atlas Okyanusu",
+      "x": 0.26,
+      "y": 0.35
+     }
+    ],
+    "compass": "bl",
+    "cities": [
+     {
+      "name": "Lizbon",
+      "x": 0.565,
+      "y": 0.44,
+      "color": "red",
+      "dx": 90,
+      "dy": -20
+     },
+     {
+      "name": "Porto",
+      "x": 0.58,
+      "y": 0.1,
+      "at": "go",
+      "dx": 80
+     },
+     {
+      "name": "Coimbra",
+      "x": 0.6,
+      "y": 0.26,
+      "at": "go",
+      "dx": 90
+     },
+     {
+      "name": "Évora",
+      "x": 0.68,
+      "y": 0.47,
+      "at": "q",
+      "dx": 70
+     },
+     {
+      "name": "Faro",
+      "x": 0.7,
+      "y": 0.62,
+      "at": "q",
+      "dy": -40
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.57,
+       0.44
+      ],
+      [
+       0.62,
+       0.3
+      ],
+      [
+       0.6,
+       0.12
+      ]
+     ],
+     "at": "go",
+     "dur": 1.4,
+     "color": "red"
+    },
+    "note": {
+     "text": "aynı sorular",
+     "x": 0.85,
+     "y": 0.3,
+     "at": "q"
+    },
+    "zoom": 1.04
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Sarsıntı saat kaçta başladı, ne kadar sürdü? Hangi yönden geldi? Binalar daha çok hangi tarafa yıkıldı?",
+   "visual": "Yazı masası: kâğıtta 'Saat kaçta? / Ne kadar sürdü?' başlığı belirir, tüy kalem soruları yazar; Kaşif solda işaret eder",
+   "title": {
+    "white": "Sorular"
+   },
+   "cues": {
+    "hit": "Sarsıntı",
+    "dir": "yönden"
+   },
+   "params": {
+    "title": [
+     "Saat kaçta?",
+     "Ne kadar sürdü?",
+     "Hangi yönden?"
+    ],
+    "title_at": "hit",
+    "write": {
+     "at": 1.0,
+     "dur": 5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "at": "dir",
+      "then": "point",
+      "y": 0.88,
+      "scale": 0.62,
+      "face": "right",
+      "dir": "right"
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Deniz önce yükseldi mi, alçaldı mı? Ne kadar? Yangın kaç gün sürdü?",
+   "visual": "Pano 'Pombal'ın anketi': 'Deniz yükseldi mi?', 'Ne kadar?', 'Yangın kaç gün?' maddeleri tek tek ✓ alır; mavi hap 'Ölç, kaydet'",
+   "title": {
+    "white": "Anket"
+   },
+   "cues": {
+    "a": "Deniz",
+    "b": "kadar",
+    "c": "Yangın",
+    "pill": "sürdü"
+   },
+   "params": {
+    "title": "Pombal'ın anketi",
+    "cards": [
+     {
+      "title": "Deniz",
+      "items": [
+       {
+        "text": "Yükseldi mi?",
+        "mark": "check",
+        "at": "a"
+       },
+       {
+        "text": "Ne kadar?",
+        "mark": "check",
+        "at": "b"
+       }
+      ]
+     },
+     {
+      "title": "Ateş",
+      "items": [
+       {
+        "text": "Kaç gün?",
+        "mark": "check",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Ölç, kaydet",
+     "color": "blue",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Fark ettiniz mi? Bunlar duaya ya da cezaya dair sorular değil. Bunlar bir bilim insanının soruları!",
+   "visual": "Kaşif önce omuz silker, 'bilim'de 'BİLİM' tabelası belirir ve Kaşif şaşkınlıkla geri sıçrayıp tabelayı işaret eder; el yazısı 'ceza değil, ölçüm'",
+   "title": {
+    "white": "Fark",
+    "gray": "ettiniz mi?"
+   },
+   "cues": {
+    "hit": "cezaya",
+    "sci": "bilim"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "pose": "shrug",
+      "at": "sci",
+      "then": "shock",
+      "face": "right",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "sci",
+        "pose": "shock"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.64,
+      "text": "BİLİM",
+      "at": "sci",
+      "hit": "sci"
+     },
+     {
+      "type": "scroll",
+      "x": 0.86,
+      "scale": 0.8
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "ceza değil, ölçüm",
+     "x": 0.4,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Cevaplar bugün hâlâ Lizbon'daki Torre do Tombo arşivinde duruyor. Bu yüzden Pombal, modern deprem biliminin öncülerinden biri sayılır.",
+   "visual": "Arşiv: yan yana dürülmüş parşömen tomarları birer birer belirir, 'TORRE DO TOMBO' tabelası; Kaşif bir tomarı tutar, sonra işaret eder",
+   "title": {
+    "white": "Arşiv"
+   },
+   "cues": {
+    "hit": "Cevaplar",
+    "arc": "arşivinde",
+    "pio": "öncülerinden"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.22,
+      "pose": "hold",
+      "at": "pio",
+      "then": "point",
+      "item": "scroll",
+      "face": "right",
+      "dir": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.48,
+      "scale": 0.8,
+      "at": "hit"
+     },
+     {
+      "type": "scroll",
+      "x": 0.6,
+      "scale": 0.7,
+      "at": "arc"
+     },
+     {
+      "type": "sign",
+      "x": 0.8,
+      "text": "TORRE DO TOMBO",
+      "at": "arc"
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "deprem biliminin öncüsü",
+     "x": 0.55,
+     "y": 0.13,
+     "at": "pio"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ve yeni şehri de bu soruların ışığında kurdu.",
+   "visual": "Kaşif elinde katlanmış harita ile yürür, 'kurdu'da durup haritayı kaldırır; arkada yıkıntı kolonları ve tepeler",
+   "title": {
+    "white": "Yeni",
+    "gray": "şehir"
+   },
+   "cues": {
+    "hit": "kurdu"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.05,
+      "pose": "walk",
+      "at": "hit",
+      "then": "hold",
+      "to": 0.46,
+      "item": "map",
+      "face": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "column",
+      "x": 0.72,
+      "scale": 0.8
+     },
+     {
+      "type": "column",
+      "x": 0.86,
+      "scale": 1.0
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    }
+   }
+  },
+  {
+   "chapter": "Yeniden doğan şehir",
+   "type": "chapter",
+   "text": "Başmühendis Manuel da Maia, yıkılan şehir merkezi için dört seçenek sundu. Kral ve Pombal en cesurunu seçti: aşağı şehri tamamen yıkıp baştan kurmak.",
+   "visual": "BÖLÜM 8 / 8 kartı: mavi dairede 8, altında 'Yeniden doğan şehir' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Başmühendis",
+    "title": "cesurunu"
+   },
+   "params": {
+    "n": 8,
+    "total": 8,
+    "title": "Yeniden doğan şehir"
+   }
+  },
+  {
+   "type": "lz_grid",
+   "text": "Eski dar ve kıvrımlı sokaklar tamamen kaldırıldı. Yerine dümdüz, geniş caddeler ve dik açılı bir ızgara çizildi.",
+   "visual": "Pafta: nehir kenarındaki kıvrımlı eski sokaklar 'kaldırıldı'da silikleşip kırmızıyla çizilir, 'Yerine'de düz caddeler tek tek çizilir ve ızgara oluşur, 'çizildi'de nehir kıyısındaki büyük meydan kırmızıyla çevrilir; Kaşif sağda işaret eder",
+   "title": {
+    "white": "Baixa",
+    "gray": "ızgara plan"
+   },
+   "cues": {
+    "erase": "kaldırıldı",
+    "grid": "Yerine",
+    "square": "çizildi"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "pose": "talk",
+      "at": "grid",
+      "then": "point",
+      "y": 0.9,
+      "scale": 0.62,
+      "face": "left",
+      "dir": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Baixa",
+      "x": 0.82,
+      "y": 0.18,
+      "at": "grid",
+      "size": 72,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "lz_gaiola",
+   "text": "Binaların içine, gaiola denen esnek bir ahşap kafes yerleştirildi. Duvar çatlasa bile kafes ayakta kalacaktı.",
+   "visual": "Duvar kesiti: tuğla dolgunun içinde ahşap çerçeve ve çapraz X kirişler 'gaiola'da kendini çizer; 'Duvar'da duvar sallanır, 'çatlasa'da tuğlalar düşer, kafes ayakta kalır; Kaşif sağda işaret eder, sonra şaşırır",
+   "title": {
+    "white": "Gaiola",
+    "gray": "ahşap kafes"
+   },
+   "cues": {
+    "frame": "gaiola",
+    "shake": "Duvar",
+    "hit": "çatlasa"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "pose": "point",
+      "at": "hit",
+      "then": "shock",
+      "y": 0.86,
+      "scale": 0.62,
+      "face": "left",
+      "dir": "left",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "gaiola",
+      "x": 0.84,
+      "y": 0.16,
+      "at": "frame",
+      "size": 72,
+      "font": "serif",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "lz_march",
+   "text": "Peki nasıl test ettiler? Anlatılana göre önce küçük modeller yaptılar. Sonra askerler bu modellerin etrafında tempoyla yürüdü ve yeri sarsan adımlar depremin yerine geçti!",
+   "visual": "Kaide üstünde küçük ahşap model ev; önde ve arkada miğferli askerler tempoyla yürür, her adımda model ve zemin titrer, toz kalkar; Kaşif sağda işaret eder",
+   "title": {
+    "white": "Test",
+    "gray": "askerlerle"
+   },
+   "cues": {
+    "hit": "askerler",
+    "d": "depremin"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "think",
+      "at": "hit",
+      "then": "point",
+      "y": 0.99,
+      "scale": 0.8,
+      "face": "left",
+      "dir": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "adım = deprem",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "d",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Bu sistem, dünyadaki ilk depreme dayanıklı yapı yöntemlerinden biri olarak görülür.",
+   "visual": "Dev yazı: 'DEPREME DAYANIKLI İLK YAPILARDAN', 'dayanıklı' kırmızı kutuda; Kaşif işaret eder",
+   "title": {
+    "white": "İlk",
+    "gray": "örneklerden"
+   },
+   "cues": {
+    "w1": "depreme"
+   },
+   "params": {
+    "lines": [
+     "Depreme",
+     "dayanıklı",
+     "ilk yapılardan"
+    ],
+    "highlight": [
+     "dayanıklı"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Deprem Avrupa'nın düşünürlerini de sarstı. Voltaire, Lizbon felaketi üzerine bir şiir yazdı. Sonra da Candide'de, \"her şey en iyisi için\" diyen iyimserlerle alay etti.",
+   "visual": "Yazı masası: 'Lizbon Felaketi Üzerine Şiir' başlığı, tüy kalem satırları yazar; altta 'HER ŞEY EN İYİSİ' yazısının üstü 'alay'da kırmızıyla çizilir; Kaşif solda anlatır",
+   "title": {
+    "white": "Voltaire"
+   },
+   "cues": {
+    "hit": "şiir",
+    "strike": "alay"
+   },
+   "params": {
+    "title": [
+     "Voltaire:",
+     "Lizbon Felaketi",
+     "Üzerine Şiir"
+    ],
+    "title_at": "hit",
+    "write": {
+     "at": 0.8,
+     "dur": 4
+    },
+    "name": {
+     "text": "HER ŞEY",
+     "rest": "EN İYİSİ",
+     "strike": "strike"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "talk",
+      "at": "strike",
+      "then": "point",
+      "y": 0.88,
+      "scale": 0.62,
+      "face": "right",
+      "dir": "right"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Genç Kant ise depremi doğal nedenlerle açıklamaya çalışan üç yazı yayımladı. Açıklaması yanlıştı, ama soruyu doğru sormuştu.",
+   "visual": "Şapkasız genç Kant elinde tomarla durur; 'üç'te üç tomar belirir; 'yanlıştı'da Kaşif omuz silker, 'doğru'da Kant'ı işaret eder; 'Kant, 1756' etiketi",
+   "title": {
+    "white": "Kant"
+   },
+   "cues": {
+    "hit": "üç",
+    "wrong": "yanlıştı",
+    "right": "doğru"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kant",
+      "x": 0.6,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "left",
+      "talk": false
+     },
+     {
+      "who": "kasif",
+      "x": 0.22,
+      "pose": "talk",
+      "at": "wrong",
+      "then": "shrug",
+      "face": "right",
+      "seq": [
+       {
+        "at": "right",
+        "pose": "point",
+        "dir": "right"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.78,
+      "scale": 0.7,
+      "at": "hit"
+     },
+     {
+      "type": "scroll",
+      "x": 0.86,
+      "scale": 0.7,
+      "at": "hit"
+     },
+     {
+      "type": "scroll",
+      "x": 0.94,
+      "scale": 0.7,
+      "at": "hit"
+     }
+    ],
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "backdrop": {
+     "type": "harbour"
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "label": {
+     "text": "Kant, 1756",
+     "x": 0.6,
+     "y": 0.13,
+     "at": 0.3
+    }
+   }
+  },
+  {
+   "type": "lz_church",
+   "text": "Bugün Lizbon'a giderseniz, Carmo Manastırı'nın çatısız kemerlerini görebilirsiniz. O yıkıntı, o sabahın sessiz tanığı olarak bilerek ayakta bırakıldı.",
+   "visual": "Çatısız Carmo Manastırı: sütunlar üstünde gökyüzüne açık sivri gotik kemerler, otlar, martılar; Kaşif soldan yürüyerek gelir, dürbünle yukarı bakar, 'tanığı'nda kemerleri işaret eder; 'Carmo' etiketi",
+   "title": {
+    "white": "Bugün",
+    "gray": "Lizbon"
+   },
+   "cues": {
+    "hit": "Carmo",
+    "w": "tanığı"
+   },
+   "params": {
+    "ruin": true,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.1,
+      "pose": "walk",
+      "at": "hit",
+      "then": "look",
+      "to": 0.14,
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right",
+      "seq": [
+       {
+        "at": "w",
+        "pose": "point",
+        "dir": "up"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Carmo Manastırı",
+      "x": 0.62,
+      "y": 0.06,
+      "at": "hit",
+      "size": 60
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani 1755'te bir şehir yıkıldı, ama o yıkıntıdan felakete \"neden?\" diye soran yeni bir dünya doğdu.",
+   "visual": "Dev yazı: 'YIKINTIDAN YENİ BİR DÜNYA DOĞDU', 'dünya' kırmızı kutuda; Kaşif el sallar",
+   "title": {},
+   "cues": {
+    "w0": "Yani",
+    "w3": "dünya"
+   },
+   "params": {
+    "lines": [
+     "Yıkıntıdan",
+     "yeni bir",
+     "dünya doğdu"
+    ],
+    "highlight": [
+     "dünya"
+    ],
+    "kasif": {
+     "x": 0.86,
+     "pose": "wave",
+     "face": -1,
+     "scale": 0.8,
+     "at": "w3"
+    }
+   }
+  },
+  {
+   "type": "lz_sea",
+   "text": "Peki siz o sabah limanda olsaydınız, çekilen denizi görünce ne yapardınız? Yorumlara yazın.",
+   "visual": "Rıhtımdan liman: deniz yavaşça geri çekilir, çamur açılır; Kaşif rıhtımda izleyiciye döner, 'ne'de omuz silker; el yazısı 'Siz ne yapardınız?'",
+   "title": {
+    "white": "Sizce?"
+   },
+   "cues": {
+    "recede": "limanda",
+    "q": "yapardınız"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "pose": "look",
+      "at": "q",
+      "then": "shrug",
+      "y": 0.99,
+      "scale": 1.3,
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Siz ne yapardınız?",
+      "x": 0.62,
+      "y": 0.14,
+      "at": "q",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   }
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Lizbon",
+   "3 kez",
+   "yıkıldı"
+  ],
+  "highlight": [
+   "3"
+  ],
+  "scene": 0,
+  "t": 6.4,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1000,
+   "y": 1150,
+   "scale": 1.8,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Lizbon Depremi 1755: Bir Sabahta Üç Felaket Nasıl Geldi?",
+  "description": "Lizbon depremi, 1 Kasım 1755 sabahı Avrupa'nın en zengin şehirlerinden birini önce sarsıntıyla, sonra dev bir dalgayla, en sonunda da ateşle yıktı. Peki bu üç felaket neden üst üste geldi?\n\nAzizler Günü ayini sırasında kiliseler çöktü, kıyıya kaçanları tsunami vurdu, devrilen mumlar şehri günlerce yaktı. Ama hikâye yıkımla bitmiyor: Pombal Markisi ülkenin dört bir yanına sorular gönderdi ve modern deprem biliminin ilk adımlarından birini attı. Lizbon'un ızgara planla yeniden kuruluşunu, depreme dayanıklı gaiola ahşap kafesini ve Voltaire ile Kant'ı nasıl düşündürdüğünü anlatıyoruz.\n\nBu videoda:\n• Bayram sabahı zengin Lizbon\n• Deniz neden geri çekildi ve tsunami\n• Beş gün süren yangın\n• \"Ölüleri gömün\": Pombal'ın kararları\n• Peki neden? Fay, levhalar ve üç felaket zinciri\n• Pombal'ın anketi ve depreme dayanıklı yeni şehir\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence o sabah limanda olsaydın, çekilen denizi görünce ne yapardın? Yorumlara yaz!\n\n#lizbondepremi #tarih #deprem #tsunami #düşünbakalım",
+  "tags": [
+   "lizbon depremi",
+   "lizbon depremi 1755",
+   "1755 lizbon depremi",
+   "lizbon depremi neden oldu",
+   "lizbon tsunamisi",
+   "lizbon yangını",
+   "pombal markisi",
+   "gaiola pombalina",
+   "voltaire candide",
+   "deprem tarihi",
+   "tsunami tarihi",
+   "portekiz tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "ilginç bilgiler",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-23T20:30:00+03:00"
+ }
+}

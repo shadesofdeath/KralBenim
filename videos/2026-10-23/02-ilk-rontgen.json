@@ -1,0 +1,554 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "ilk-rontgen",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Bu kadın",
+      "kendi ölümünü",
+      "gördü"
+    ],
+    "highlight": [
+      "ölümünü"
+    ],
+    "scene": 8,
+    "t": 2.4,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "İlk Röntgen: Bu Kadın Kendi Ölümünü Gördü",
+    "description": "İlk röntgen fotoğrafında bir kadın kendi iskeletini gördü. 1895'te Anna Bertha Röntgen elini bir plakaya koydu, kocası ışını açtı ve plakada kemikleri belirdi.\n\nWürzburg'da fizikçi Wilhelm Conrad Röntgen, 8 Kasım 1895'te katot ışını tüpünü siyah kartonla kapattığı halde masadaki floresan ekranın parladığını fark etti. Haftalarca laboratuvarda çalıştı ve bu bilinmeyen ışına \"X ışını\" adını verdi. Aralık 1895'te eşinin elinin görüntüsünü aldı: kemikler ve yüzük apaçık görünüyordu. Röntgen keşfine patent almadı ve 1901'de ilk Nobel Fizik Ödülü'nü kazandı.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sen kendi iskeletini ilk kez görseydin ne hissederdin? Yorumlara yaz!\n\n#shorts #röntgen #xışını #bilimtarihi #düşünbakalım",
+    "tags": [
+      "ilk röntgen",
+      "ilk röntgen fotoğrafı",
+      "ilk röntgen kimin eli",
+      "dünyanın ilk röntgeni",
+      "röntgen nasıl bulundu",
+      "x ışını keşfi",
+      "wilhelm conrad röntgen",
+      "anna bertha röntgen",
+      "x ışını",
+      "1895",
+      "bilim tarihi",
+      "icatların hikayesi",
+      "tarih",
+      "tarih hikayeleri",
+      "ilginç bilgiler",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-23T15:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "xr_hand",
+      "text": "Bu kadın kendi ölümünü gördü. Gelin, anlatayım.",
+      "visual": "Parşömen üstünde solda büyük bir röntgen plakası: soluk et silueti içinde bir sol elin kemikleri, yüzük parmağında koyu bir yüzük; çerçeve altın nabızla atar, kamera yüzüğe iter; sağda büyük Kaşif plakaya bakar, 'ölümünü'de şokla geri sıçrar ve yüzüğün etrafına kırmızı halka çizilir.",
+      "title": {},
+      "cues": {
+        "shock": "ölümünü"
+      },
+      "params": {
+        "mode": "plate",
+        "plate": {
+          "cx": 0.38,
+          "cy": 0.35,
+          "w": 600,
+          "h": 780
+        },
+        "mark": {
+          "at": "shock",
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "y": 0.6,
+            "scale": 0.8,
+            "pose": "look",
+            "face": "left",
+            "at": "shock",
+            "then": "shock",
+            "emotion": "surprised"
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.45,
+            0.42
+          ]
+        }
+      }
+    },
+    {
+      "type": "xr_lab",
+      "text": "1895'te Röntgen, katot tüpünü siyah kartonla sarmıştı.",
+      "visual": "Laboratuvar tezgâhı ('1895'te sağ üstte kırmızı el yazısı '1895'): rafta şişeler, solda kıvılcım çakan bobin, ortada bir sehpa koluna kıskaçla tutturulmuş armut biçimli cam katot tüpü sarı sarı parlar; sağda tezgâha eğik dayanmış küçük bir levha, üstünde el yazısı 'ekran'; solda sakallı Röntgen tüpü gösterir; 'kartonla'da tüpün biçimini izleyen buruşuk siyah karton kılıf yukarıdan inip tüpü sarar, parıltı söner; sağda Kaşif kılıfı işaret eder.",
+      "title": {
+        "white": "Würzburg",
+        "gray": "8 Kasım 1895"
+      },
+      "cues": {
+        "year": "1895",
+        "wrap": "kartonla",
+        "start": "Röntgen"
+      },
+      "params": {
+        "mode": "wrap",
+        "cast": [
+          {
+            "who": "rontgen",
+            "beard": "black",
+            "x": 0.16,
+            "scale": 0.72,
+            "pose": "talk",
+            "face": "right",
+            "at": "start",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "neutral"
+          },
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "scale": 0.66,
+            "pose": "idle",
+            "face": "left",
+            "at": "wrap",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "happy"
+          }
+        ],
+        "bench": [
+          0.26,
+          0.74
+        ],
+        "screen_x": 0.64,
+        "tube_x": 0.44,
+        "label": {
+          "text": "1895",
+          "x": 0.78,
+          "y": 0.17,
+          "at": "year",
+          "color": "red",
+          "size": 110
+        }
+      }
+    },
+    {
+      "type": "xr_lab",
+      "text": "Işık sızamazdı. Ama karanlıkta bir ekran parladı!",
+      "visual": "Aynı tezgâh, oda mürekkep taramasıyla kararır; tüp buruşuk siyah kartonun içinde; 'parladı'da sağdaki eğik 'ekran' levhası altın renkte yanar, çevresine genişleyen altın halkalar ve ışınlar yayılır; Röntgen ve Kaşif şokla geri sıçrar.",
+      "title": {
+        "white": "Karanlık",
+        "gray": "oda"
+      },
+      "cues": {
+        "dark": "karanlıkta",
+        "glow": "parladı"
+      },
+      "params": {
+        "mode": "glow",
+        "dark": {
+          "at": "dark",
+          "k": 0.9
+        },
+        "cast": [
+          {
+            "who": "rontgen",
+            "beard": "black",
+            "x": 0.16,
+            "scale": 0.72,
+            "pose": "think",
+            "face": "right",
+            "at": "glow",
+            "then": "shock"
+          },
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "scale": 0.66,
+            "pose": "look",
+            "face": "left",
+            "at": "glow",
+            "then": "shock"
+          }
+        ],
+        "bench": [
+          0.26,
+          0.74
+        ],
+        "screen_x": 0.64,
+        "tube_x": 0.44
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "Haftalarca denedi.",
+      "visual": "Dikey zaman çizgisi: '8 Kasım · ekran', kırmızı '6 hafta · deney', '28 Aralık · makale'; işaretçi aşağı iner; sağda Kaşif ortadaki tarihi işaret eder.",
+      "title": {
+        "white": "Gece",
+        "gray": "gündüz"
+      },
+      "cues": {
+        "a": "Haftalarca",
+        "b": "denedi"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "8 Kasım",
+            "text": "ekran",
+            "at": "a"
+          },
+          {
+            "year": "6 hafta",
+            "text": "deney",
+            "at": "b"
+          },
+          {
+            "year": "28 Aralık",
+            "text": "makale"
+          }
+        ],
+        "focus": 1,
+        "kasif": {
+          "x": 0.84,
+          "y": 0.6,
+          "pose": "point",
+          "dir": -20,
+          "face": -1,
+          "scale": 0.62,
+          "at": "b",
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "board",
+      "text": "Işık bin sayfalık kitabı da, tahtayı da geçti; sadece kurşunda durdu.",
+      "visual": "İğneli pano, başlık 'Geçti mi?'; kartta sırayla 'kitabı'da yeşil ✓ 'Kitap', 'tahtayı'da yeşil ✓ 'Tahta', 'kurşunda'da kırmızı ✗ 'Kurşun' çizilir.",
+      "title": {
+        "white": "Ne",
+        "gray": "durdurur?"
+      },
+      "cues": {
+        "k": "kitabı",
+        "t": "tahtayı",
+        "l": "kurşunda"
+      },
+      "params": {
+        "title": "Geçti mi?",
+        "cards": [
+          {
+            "items": [
+              {
+                "text": "Kitap",
+                "mark": "check",
+                "at": "k"
+              },
+              {
+                "text": "Tahta",
+                "mark": "check",
+                "at": "t"
+              },
+              {
+                "text": "Kurşun",
+                "mark": "x",
+                "at": "l"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Bu ışına matematikteki bilinmeyen gibi \"X\" dedi.",
+      "visual": "Dev yazı kelime kelime çarpar: 'X / ışını', 'X' kırmızı kutuda; 'bilinmeyen'de el yazısı not 'bilinmeyen' belirir; solda Kaşif X'i işaret eder.",
+      "title": {
+        "white": "Adı",
+        "gray": "bilinmeyen"
+      },
+      "cues": {
+        "w0": "\"X\"",
+        "w1": "dedi",
+        "note": "bilinmeyen"
+      },
+      "params": {
+        "lines": [
+          "X",
+          "ışını"
+        ],
+        "highlight": [
+          "X"
+        ],
+        "note": "bilinmeyen",
+        "y": 0.3,
+        "kasif": {
+          "x": 0.12,
+          "y": 0.64,
+          "pose": "point",
+          "dir": 45,
+          "face": 1,
+          "scale": 0.64,
+          "at": "w0",
+          "emotion": "happy"
+        }
+      }
+    },
+    {
+      "type": "xr_lab",
+      "text": "Sonra eşi Anna'nın elini plakaya koydu.",
+      "visual": "Tezgâhta koyu bir fotoğraf plakası, üstünde kıskaçlı kolla tutulan cam tüp; topuzlu, etekli Anna 'elini'de elini uzatır, avucu plakanın üstüne kayar; 'plakaya'da bobin kıvılcım çakar, tüp parlar ve altın ışınlar plakadaki ele iner; sağda Röntgen, solda Kaşif plakayı işaret eder.",
+      "title": {
+        "white": "Anna",
+        "gray": "22 Aralık"
+      },
+      "cues": {
+        "hand": "elini",
+        "rays": "plakaya"
+      },
+      "params": {
+        "mode": "hand",
+        "bench": [
+          0.36,
+          0.66
+        ],
+        "plate_x": 0.51,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.15,
+            "scale": 0.62,
+            "pose": "idle",
+            "face": "right",
+            "at": "rays",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "surprised"
+          },
+          {
+            "who": "anna",
+            "hair": "bun",
+            "x": 0.3,
+            "scale": 0.72,
+            "pose": "idle",
+            "face": "right",
+            "at": "hand",
+            "then": "point",
+            "dir": "down",
+            "reach": true,
+            "emotion": "worried"
+          },
+          {
+            "who": "rontgen",
+            "beard": "black",
+            "x": 0.8,
+            "scale": 0.72,
+            "pose": "talk",
+            "face": "left",
+            "at": "rays",
+            "then": "point",
+            "dir": "down"
+          }
+        ]
+      }
+    },
+    {
+      "type": "xr_hand",
+      "text": "Işın eti geçmişti, ama kemiğe ve yüzüğe takılmıştı.",
+      "visual": "Röntgen plakasında önce sadece soluk et silueti; 'eti'de alttan yukarı altın bir tarama çizgisi geçer ve koyu kemikler bilekten parmak uçlarına doğru belirir; 'yüzüğe'de koyu yüzük vurarak çıkar ve etrafına kırmızı mürekkep halka çizilir; sağda Kaşif işaret eder, sonra şaşırır.",
+      "title": {
+        "white": "Et geçti",
+        "gray": "kemik takıldı"
+      },
+      "cues": {
+        "bones": "eti",
+        "ring": "yüzüğe"
+      },
+      "params": {
+        "mode": "reveal",
+        "plate": {
+          "cx": 0.42,
+          "cy": 0.37,
+          "w": 660,
+          "h": 760
+        },
+        "mark": {
+          "at": "ring",
+          "color": "red"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.85,
+            "y": 0.6,
+            "scale": 0.62,
+            "pose": "point",
+            "dir": "up",
+            "face": "left",
+            "at": "ring",
+            "then": "shock",
+            "emotion": "surprised"
+          }
+        ],
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.4
+          ]
+        }
+      }
+    },
+    {
+      "type": "xr_hand",
+      "text": "Anlatılana göre Anna, \"Ölümümü gördüm.\" dedi.",
+      "visual": "Kâğıda kırmızı raptiyeyle iğnelenmiş, hafif eğik bir röntgen baskısı (el kemikleri ve yüzük), altında el yazısı '22 Aralık 1895'; solda büyük, topuzlu Anna 'Ölümümü'de şokla geri sıçrar ve yüzüğün etrafına kırmızı halka çizilir; sağda Kaşif düşünür, sonra şaşırır.",
+      "title": {
+        "white": "Anna",
+        "gray": "anlatılana göre"
+      },
+      "cues": {
+        "hit": "Ölümümü",
+        "date": "Anlatılana"
+      },
+      "params": {
+        "mode": "print",
+        "label": {
+          "text": "22 Aralık 1895",
+          "x": 0.51,
+          "y": 0.525,
+          "at": "date",
+          "size": 76,
+          "rot": 2
+        },
+        "cast": [
+          {
+            "who": "anna",
+            "hair": "bun",
+            "x": 0.24,
+            "scale": 1.05,
+            "pose": "think",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "worried",
+            "y": 0.65
+          },
+          {
+            "who": "kasif",
+            "x": 0.79,
+            "scale": 0.95,
+            "pose": "think",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "emotion": "surprised",
+            "y": 0.65
+          }
+        ],
+        "plate": {
+          "cx": 0.51,
+          "cy": 0.36,
+          "w": 400,
+          "h": 490,
+          "rot": -3
+        },
+        "mark": {
+          "at": "hit",
+          "color": "red"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Röntgen buna patent bile almadı. Çünkü ona göre bu ışık, hepimizindi.",
+      "visual": "Parşömen sahnede yere dikili büyük tabela 'PATENT YOK'; solda Röntgen tabelayı gösterir, Kaşif yürüyerek gelir ve tabelayı işaret eder; 'hepimizindi'de Röntgen el sallar, Kaşif sevinçle kollarını açar ve üstte el yazısı 'Işık herkesin!' belirir.",
+      "title": {
+        "white": "Patent",
+        "gray": "yok"
+      },
+      "cues": {
+        "p": "patent",
+        "h": "hepimizindi"
+      },
+      "params": {
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "label": {
+          "text": "Işık herkesin!",
+          "x": 0.5,
+          "y": 0.22,
+          "at": "h",
+          "size": 96
+        },
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.5,
+            "text": "PATENT YOK",
+            "scale": 1.05,
+            "at": "p"
+          }
+        ],
+        "cast": [
+          {
+            "who": "rontgen",
+            "beard": "black",
+            "x": 0.15,
+            "pose": "talk",
+            "face": "right",
+            "at": "p",
+            "then": "point",
+            "dir": "forward",
+            "seq": [
+              {
+                "at": "h",
+                "pose": "wave",
+                "emotion": "happy"
+              }
+            ],
+            "scale": 0.85
+          },
+          {
+            "who": "kasif",
+            "x": 0.85,
+            "to": 0.84,
+            "pose": "walk",
+            "face": "left",
+            "at": "p",
+            "then": "point",
+            "dir": "forward",
+            "seq": [
+              {
+                "at": "h",
+                "pose": "shrug",
+                "emotion": "happy"
+              }
+            ],
+            "scale": 0.85
+          }
+        ]
+      }
+    }
+  ]
+}
