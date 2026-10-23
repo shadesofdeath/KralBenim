@@ -65,13 +65,16 @@ def main():
         if err == "slow_down":
             wait += 5
             continue
+        if err in ("expired_token", "access_denied") or "xpired" in str(tok.get("error_description")):
+            print(f"login not completed: {err}")   # an unused code: no Telegram noise
+            return 0
         if err:
             say(f"❌ YouTube girişi olmadı: {tok.get('error_description') or err}")
             return 1
         break
     else:
-        say("⌛ Kodun süresi doldu; işi tekrar başlatın.")
-        return 1
+        print("code expired unused")
+        return 0
     req = urllib.request.Request("https://www.googleapis.com/youtube/v3/channels?part=snippet&mine=true",
                                  headers={"Authorization": f"Bearer {tok['access_token']}"})
     with urllib.request.urlopen(req, timeout=30) as r:

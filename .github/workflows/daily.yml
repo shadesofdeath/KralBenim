@@ -269,6 +269,8 @@ jobs:
           V="out/${{ steps.n.outputs.name }}.mp4"
           # a failed render already shows ❌ in the video's live message
           if [ ! -f "$V" ]; then [ -n "$LIVE_STATUS" ] || python tools/telegram.py text "⚠️ Render başarısız: $F"; exit 0; fi
+          # a video that was already on YouTube (re-run) is not sent again
+          if [ -f "out/${{ steps.n.outputs.name }}.already" ]; then echo "already sent"; exit 0; fi
           # Shorts go as an Instagram-ready file; long videos only appear in the channel's live message
           if [ "$(jq -r '.format // "short"' "$F")" != "long" ]; then python tools/telegram.py send "$F" "$V"; fi
       - uses: actions/upload-artifact@v4

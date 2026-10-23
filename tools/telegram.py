@@ -89,7 +89,8 @@ def instagram_caption(script, channel=DEFAULT):
 # description  state|t0|t1|progress|text.  Why: GITHUB_TOKEN can write and read them from any job
 # (statuses: write), at any time, without commits, caches or artifacts; one context per stage means
 # parallel writers never lose each other's updates (latest write per stage wins, which is what we want).
-#   tg/<key>/ch-<id>/_msg       chat_id|message_id|created     the day's Telegram message of a channel
+#   tg/<key>/ch-<id>/_msg.<w>   chat_id|message_id|created     a writer's candidate for the day's message of a
+#                                                               channel; the smallest (first sent) message wins
 #   tg/<key>/<slug>/_meta       kind|title                      video heading
 #   tg/<key>/<slug>/shard<i>    run|percent                     live render progress of shard i
 # Without GITHUB_TOKEN (local use) the same records go to a JSON file (out/telegram/<key>.json).
@@ -117,6 +118,7 @@ STATES = ("wait", "run", "done", "fail", "skip", "info")
 MONTHS = ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 REUSE_HOURS = 20   # an older message of the same key is left alone and a new one is started
+WRITER = uuid.uuid4().hex[:6]   # this process's candidate record for a new message (publish_one)
 ANCHOR = os.environ.get("TG_ANCHOR_SHA", "2811b79a51d4e0a5d1382f67311b7d361c4373c2")
 GH_API = os.environ.get("GITHUB_API_URL", "https://api.github.com").rstrip("/")
 GH_STATE = {"remaining": 5000}
@@ -276,9 +278,10 @@ class Store:
             if len(parts) != 2:
                 continue
             sid, stage = parts
-            if stage == "_msg":
+            if stage.split(".")[0] == "_msg":
                 c, m, cr = (d.split("|") + ["", "", ""])[:3]
-                if m.isdigit():
+                cur = st["msgs"].get(sid)
+                if m.isdigit() and (not cur or int(m) < cur["message_id"]):   # the first message sent wins
                     st["msgs"][sid] = {"chat_id": c, "message_id": int(m), "created": from36(cr) or 0}
                 continue
             if stage == "_meta":
@@ -559,17 +562,22 @@ def publish_one(store, st, sid, text, cid, last=None):
         if not any(x in str(res) for x in ("not found", "can't be edited", "MESSAGE_ID_INVALID")):
             warn(f"edit failed: {res}")
             return False   # transient: the next call edits again
+    if store.remote and not mid:     # another job may have just started it
+        store.refresh(pages=1)
+        if store.state()["msgs"].get(sid):
+            st["msgs"][sid] = store.state()["msgs"][sid]
+            return publish_one(store, st, sid, text, cid, last)
     ok, res = tg("sendMessage", {"chat_id": cid, "text": text, "disable_web_page_preview": True, "parse_mode": "HTML"})
     if not (ok and isinstance(res, dict)):
         warn(f"send failed: {res}")
         return False
     mine = res["message_id"]
-    store.put(f"{sid}/_msg", f"{cid}|{mine}|{b36(time.time())}")
-    # two writers may have started the same message at the same moment: the latest record wins, the other
-    # writer deletes its own message
+    # every writer keeps its own candidate record, so none is overwritten; the first message sent (smallest
+    # id) wins and every later writer deletes its own copy
+    store.put(f"{sid}/_msg.{WRITER}", f"{cid}|{mine}|{b36(time.time())}")
     if store.remote:
-        time.sleep(1)
-        store.refresh(pages=1)
+        time.sleep(3)
+        store.refresh(pages=2)
         won = store.state()["msgs"].get(sid, {}).get("message_id")
         if won and won != mine:
             tg("deleteMessage", {"chat_id": cid, "message_id": mine})
@@ -596,7 +604,7 @@ def clear(scan=1500):
     store.refresh(pages=30, max_age_h=24 * 60)
     known = set()
     for k, v in store.seen.items():
-        if k.endswith("_msg"):
+        if "/_msg" in k:
             c, m, _ = (v["d"].split("|") + ["", "", ""])[:3]
             if m.isdigit() and str(c) == str(cid):
                 known.add(int(m))
@@ -614,7 +622,7 @@ def clear(scan=1500):
         if not ok:
             for mid in ids[i:i + 100]:
                 tg("deleteMessage", {"chat_id": cid, "message_id": mid})
-    for k in [k for k in store.seen if k.endswith("_msg") and store.seen[k]["d"]]:
+    for k in [k for k in store.seen if "/_msg" in k and store.seen[k]["d"]]:
         store.put(k, "")
     print(f"deleted {len(ids)} bot messages (scanned {max(1, top - scan)}..{top})")
     return 0
@@ -713,11 +721,13 @@ def main():
                             "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-maxrate", "9M", "-bufsize", "18M",
                             "-c:a", "copy", "-movflags", "+faststart", small], check=True)
             video = small
+        fits = len(cap) <= 1024
         res = call("sendDocument", {"chat_id": chat_id(), "disable_content_type_detection": "true",
-                                    "caption": "🎬 Instagram Reels için hazır (orijinal kalite). Açıklama aşağıda 👇"},
+                                    "caption": cap if fits else "🎬 Instagram Reels için hazır. Açıklama aşağıda 👇"},
                    {"document": video})
         print("video sent", res.get("ok"))
-        call("sendMessage", {"chat_id": chat_id(), "text": cap})
+        if not fits:
+            call("sendMessage", {"chat_id": chat_id(), "text": cap})
     elif cmd == "text":
         call("sendMessage", {"chat_id": chat_id(), "text": sys.argv[2]})
     else:

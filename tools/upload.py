@@ -87,6 +87,14 @@ def open_channel(channel):
     return yt
 
 
+def find_upload(yt, title):
+    """Id of a video with this exact title among the channel's last 50 uploads, or None."""
+    ch = yt.channels().list(part="contentDetails", mine=True).execute()["items"][0]
+    pl = ch["contentDetails"]["relatedPlaylists"]["uploads"]
+    items = yt.playlistItems().list(part="snippet", playlistId=pl, maxResults=50).execute().get("items", [])
+    return next((i["snippet"]["resourceId"]["videoId"] for i in items if i["snippet"]["title"] == title), None)
+
+
 def relogin_hint(channel, err):
     c = CHANNELS[channel]
     return (f"🔑 {channel}: YouTube girişi geçersiz ({err}). GitHub > Actions > 'YouTube login (phone)' > "
@@ -159,9 +167,22 @@ def main():
     script = json.loads(script_path.read_text())
     meta, channel = script["youtube"], of_file(script_path.name)
     lg = CHANNELS[channel]["lang"]
+    done = script_path.with_suffix(".youtube.json")
+    if done.exists():   # already on YouTube (a re-run of the folder): never upload twice
+        print(f"already uploaded: {json.loads(done.read_text()).get('url')}; skipped")
+        video.with_suffix(".already").touch()
+        return
     yt = open_channel(channel)
     if yt is None:
         print(f"no YouTube token for {channel} ({CHANNELS[channel]['youtube_env']}): upload skipped")
+        return
+    same = find_upload(yt, meta["title"])
+    if same:            # on the channel already, but its record was lost: record it instead
+        result = {"id": same, "thumbnail": False, "url": f"https://youtu.be/{same}", "status": {},
+                  "title": meta["title"], "script": str(script_path)}
+        video.with_suffix(".youtube.json").write_text(json.dumps(result, ensure_ascii=False, indent=1))
+        video.with_suffix(".already").touch()
+        print(f"already on the channel: {result['url']}; skipped")
         return
 
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}
