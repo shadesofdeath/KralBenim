@@ -1,15 +1,14 @@
 #!/usr/bin/env python3
 """Today's production plan: which videos to make, file names, publish times, ElevenLabs budget.
 
-  python tools/plan.py               # today (Europe/Istanbul)
-  python tools/plan.py --date 2026-10-21
+  python tools/plan.py               # Düşün Bakalım, today (Europe/Istanbul)
+  python tools/plan.py --channel ag  # Stickstory (tools/channels.py)
+  python tools/plan.py --date 2026-10-26
   python tools/plan.py --extra long  # one extra video started by hand: file number + earliest publish_at
-  python tools/plan.py --channel ag  # the same for another channel (tools/channels.py; default Düşün Bakalım)
 
-Plan per channel (tools/channels.py): Düşün Bakalım 4 Shorts + 1 long video every day; Stickstory (ex Anlatayım Gel)
-2 Shorts a day + a long video on Tue/Thu/Sat. A channel's files carry its prefix (ag-01-x.json). Videos already in the day's folder (e.g. a long video
-made the evening before) are marked done; the daily task makes only the "todo" ones.
-Extra videos started by hand carry "extra": true in their script and never count against the plan.
+Schedules live in tools/channels.py (Düşün Bakalım: 1 Short a day + a long video every 3 days; Stickstory:
+3 Shorts a day + a long video every 2 days). Videos already in the day's folder are "done"; the daily task
+makes only the "todo" ones. Extra videos carry "extra": true and never count against the plan.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
 import argparse
@@ -26,11 +25,14 @@ from channels import CHANNELS, DEFAULT, by_id, of_file  # noqa: E402
 TZ = ZoneInfo("Europe/Istanbul")
 MONTHLY_CHARS = 231442                 # ElevenLabs Creator plan credits (panel, 2026-10-20)
 BILLING_DAY = 20                       # credits renew on this day of the month
-LIMITS = {"short": (400, 500, 550), "long": (6500, 7800, 8300)}   # target min, target max, hard max (long: 8-10 min, owner 2026-10-21)
+# narration chars: target min, target max, hard max (~14 chars/s: Shorts 28-35 s, long videos 5-6 min)
+LIMITS = {"short": (400, 500, 550), "long": (4300, 5000, 5400)}
+SCENES = {"short": (8, 11), "long": (40, 50)}
 
 
 def is_long_day(d, ch=DEFAULT):
-    return d.weekday() in CHANNELS[ch]["long_slots"]
+    c = CHANNELS[ch]
+    return (d - date.fromisoformat(c["long_anchor"])).days % c["long_every"] == 0
 
 
 def next_long(d, ch=DEFAULT):
@@ -39,63 +41,53 @@ def next_long(d, ch=DEFAULT):
     return d
 
 
-def chars(path):
+def script_info(path):
+    """(narration chars, format, extra) of a script file."""
     s = json.loads(path.read_text())
-    return sum(len(sc["text"]) for sc in s["scenes"]) + max(0, len(s["scenes"]) - 1), s.get("format", "short")
-
-
-def billing_start(d):
-    if d.day >= BILLING_DAY:
-        return d.replace(day=BILLING_DAY)
-    prev = d.replace(day=1) - timedelta(days=1)
-    return prev.replace(day=BILLING_DAY)
+    return (sum(len(sc["text"]) for sc in s["scenes"]) + max(0, len(s["scenes"]) - 1),
+            s.get("format", "short"), bool(s.get("extra")))
 
 
 def month_usage(d):
-    """Characters of the scripts in the current billing period (repo estimate, not the live account)."""
-    start, used = billing_start(d), 0
-    for f in sorted(ROOT.glob("videos/*/*.json")):
+    """Characters of every channel's scripts in the current billing period (repo estimate; the live
+    account figure is in the API check, tools/check.py)."""
+    start = d.replace(day=BILLING_DAY) if d.day >= BILLING_DAY else \
+        (d.replace(day=1) - timedelta(days=1)).replace(day=BILLING_DAY)
+    used = 0
+    for f in ROOT.glob("videos/*/*.json"):
         try:
             day = date.fromisoformat(f.parent.name)
         except ValueError:
             continue
         if start <= day <= d and not f.name.endswith(".youtube.json"):
-            used += chars(f)[0]
+            used += script_info(f)[0]
     return used
 
 
-def slot(d, hhmm, now):
+def slot(d, hhmm, now, tz=TZ):
+    """Publish time hh:mm of day d in the channel's time zone (ISO, with that zone's offset)."""
     h, m = map(int, hhmm.split(":"))
-    t = datetime(d.year, d.month, d.day, h, m, tzinfo=TZ)
+    t = datetime(d.year, d.month, d.day, h, m, tzinfo=tz)
     while t < now + timedelta(hours=1):     # render takes ~15 min; never schedule in the past
         t += timedelta(days=1)
     return t.isoformat()
 
 
 def category(ch, d, k):
-    """Content category suggestion for the k-th video of the day: the channel's pool in rotation
-    (tools/channels.py "categories"); a different category for every video of the day."""
+    """Content category for the k-th video of the day: the channel's pool in rotation, all different."""
     pool = CHANNELS[ch]["categories"]
     return pool[(d.toordinal() * 2 + k) % len(pool)]
 
 
-def extra(fmt, d, folder, taken, now, ch):
-    """An extra video outside the plan: the next free number and the earliest publish time lint accepts
-    (now + 1 h, rounded up to 5 minutes); if the render finishes later, upload.py publishes at once."""
-    pre = CHANNELS[ch]["prefix"]
-    n = 1
-    while f"{n:02d}" in taken:
-        n += 1
-    t = now + timedelta(hours=1)
-    t = (t + timedelta(minutes=(5 - t.minute % 5) % 5)).replace(second=0, microsecond=0)
-    lo, hi, hard = LIMITS[fmt]
+def budget(d, planned):
     used = month_usage(d)
-    return {"channel": ch, "lang": CHANNELS[ch]["lang"], "category": category(ch, d, n - 1), "date": d.isoformat(), "folder": str(folder.relative_to(ROOT)), "extra": True,
-            "video": {"file": f"{pre}{n:02d}-<slug>.json", "format": fmt, "publish_at": t.isoformat(),
-                      "chars": f"{lo}-{hi} (hard max {hard})"},
-            "note": 'write "extra": true at the top level of the script; publish_at is the earliest allowed',
-            "elevenlabs_chars": {"used_this_month": used, "today_max": hi, "monthly_budget": MONTHLY_CHARS,
-                                 "warning": used + hi > MONTHLY_CHARS}}
+    return {"used_this_month": used, "today_max": planned, "monthly_budget": MONTHLY_CHARS,
+            "warning": used + planned > MONTHLY_CHARS}
+
+
+def limits(fmt):
+    lo, hi, hard = LIMITS[fmt]
+    return f"{lo}-{hi} (hard max {hard})"
 
 
 def main():
@@ -111,49 +103,51 @@ def main():
     now = datetime.now(TZ)
     d = date.fromisoformat(a.date) if a.date else now.date()
     folder = ROOT / "videos" / d.isoformat()
-    videos = [{"file": "", "format": "short", "publish_at": slot(d, t, now)} for t in cfg["short_slots"]]
-    if is_long_day(d, ch):
-        videos.append({"file": "", "format": "long", "publish_at": slot(d, cfg["long_slots"][d.weekday()], now)})
-    existing = {"short": [], "long": []}
-    taken = set()                          # numbers already used by this channel's files of the day
+
+    existing, taken = {"short": [], "long": []}, set()     # this channel's files of the day
     for f in sorted(folder.glob("*.json")):
         if f.name.endswith(".youtube.json") or of_file(f.name) != ch:
             continue
         taken.add(f.name[len(pre):len(pre) + 2])
-        if not json.loads(f.read_text()).get("extra"):
-            existing[chars(f)[1]].append(f.name)
-    if a.extra:
-        print(json.dumps(extra(a.extra, d, folder, taken, now, ch), ensure_ascii=False, indent=1))
-        return
-    for v in videos:
-        lo, hi, hard = LIMITS[v["format"]]
-        v["chars"] = f"{lo}-{hi} (hard max {hard})"
-        v["done"] = existing[v["format"]].pop(0) if existing[v["format"]] else None
-    n = 1
-    for v in videos:                       # todo files get the next free number
-        if not v["done"]:
-            while f"{n:02d}" in taken:
-                n += 1
-            v["file"] = f"{pre}{n:02d}-<slug>.json"
-            taken.add(f"{n:02d}")
-        else:
-            v["file"] = v["done"]
-    todo = [v for v in videos if not v["done"]]
-    for k, v in enumerate(videos):
-        v["category"] = category(ch, d, k)
+        _, fmt, extra = script_info(f)
+        if not extra:
+            existing[fmt].append(f.name)
 
-    used = month_usage(d)                  # one ElevenLabs account for every channel
-    planned = sum(LIMITS[v["format"]][1] for v in todo)
-    print(json.dumps({
-        "channel": ch, "narrator": cfg["narrator"], "lang": cfg["lang"], "voice_id": cfg["voice_id"],
-        "date": d.isoformat(), "weekday": d.strftime("%A"), "folder": str(folder.relative_to(ROOT)),
-        "folder_exists": folder.exists(), "long_video_today": is_long_day(d, ch),
-        "next_long_video": next_long(d + timedelta(days=1), ch).isoformat(),
-        "videos": videos,
-        "todo": [v["file"] for v in todo],
-        "elevenlabs_chars": {"used_this_month": used, "today_max": planned, "monthly_budget": MONTHLY_CHARS,
-                             "warning": used + planned > MONTHLY_CHARS},
-    }, ensure_ascii=False, indent=1))
+    def free_number():
+        n = 1
+        while f"{n:02d}" in taken:
+            n += 1
+        taken.add(f"{n:02d}")
+        return f"{pre}{n:02d}-<slug>.json"
+
+    head = {"channel": ch, "narrator": cfg["narrator"], "lang": cfg["lang"], "voice_id": cfg["voice_id"],
+            "date": d.isoformat(), "folder": str(folder.relative_to(ROOT))}
+    if a.extra:    # earliest publish time lint accepts: now + 1 h, rounded up to 5 minutes
+        t = now + timedelta(hours=1)
+        t = (t + timedelta(minutes=(5 - t.minute % 5) % 5)).replace(second=0, microsecond=0)
+        print(json.dumps({**head, "extra": True, "category": category(ch, d, len(taken)),
+                          "video": {"file": free_number(), "format": a.extra, "publish_at": t.isoformat(),
+                                    "chars": limits(a.extra), "scenes": SCENES[a.extra]},
+                          "note": 'write "extra": true at the top level of the script; publish_at is the earliest allowed',
+                          "elevenlabs_chars": budget(d, LIMITS[a.extra][1])}, ensure_ascii=False, indent=1))
+        return
+
+    tz = ZoneInfo(cfg["tz"])
+    videos = [{"format": "short", "publish_at": slot(d, t, now, tz)} for t in cfg["short_slots"]]
+    if is_long_day(d, ch):
+        videos.append({"format": "long", "publish_at": slot(d, cfg["long_slot"], now, tz)})
+    for v in videos:     # the owner's clock too
+        v["istanbul"] = datetime.fromisoformat(v["publish_at"]).astimezone(TZ).strftime("%d.%m %H:%M")
+    for k, v in enumerate(videos):
+        done = existing[v["format"]].pop(0) if existing[v["format"]] else None
+        v.update(file=done or free_number(), done=done, chars=limits(v["format"]),
+                 scenes=SCENES[v["format"]], category=category(ch, d, k))
+    todo = [v for v in videos if not v["done"]]
+    print(json.dumps({**head, "long_video_today": is_long_day(d, ch),
+                      "next_long_video": next_long(d + timedelta(days=1), ch).isoformat(),
+                      "videos": videos, "todo": [v["file"] for v in todo],
+                      "elevenlabs_chars": budget(d, sum(LIMITS[v["format"]][1] for v in todo))},
+                     ensure_ascii=False, indent=1))
 
 
 if __name__ == "__main__":

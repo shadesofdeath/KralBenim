@@ -1,14 +1,12 @@
 name: Daily batch
 
-# Fires when scripts land in videos/<date>/ (pushed by the daily Claude task), or manually for a
-# given folder. Each video is built in three stages so one video renders on several runners at once:
+# Fires when scripts land in videos/<date>/ (pushed by the daily Claude task), or manually for a folder or
+# one script. Each video is built in three stages so one video renders on several runners at once:
 #   prepare  (1 job per script)   TTS (cached) + timeline + media -> artifact prep-<name>
-#   render   (N jobs per script)  build.py --shard i/N: one frame range each -> artifact seg-<name>-<i>
+#   render   (N jobs per script)  build.py --shard i/N, ~one shard per 40 s of video (max 16)
 #   finish   (1 job per script)   concat + audio + cover, YouTube upload, Telegram
-#   monitor  (1 job, whole run)   keeps the day's ONE live Telegram message current (stages, render %,
-#                                 ETA, YouTube link); the only job that edits it (tools/live.py).
-#                                 Every Telegram/live step is best-effort and can never fail a render.
-# N is about one shard per 40 s of video (max 16), so a Short is 1 render job and a 10-minute video 15.
+#   monitor  (1 job)              keeps the live Telegram messages current (tools/live.py); best-effort
+#   check    (1 job)              API check (tools/check.py): a broken YouTube login starts the phone login
 on:
   push:
     paths: ["videos/**.json"]
@@ -23,7 +21,7 @@ on:
 
 permissions:
   contents: write
-  actions: read     # monitor: job/step states of this run
+  actions: write    # monitor: job states of this run; check: start the YouTube phone login
   statuses: write   # live status records (commit statuses on the anchor commit, tools/telegram.py Store)
 
 jobs:
@@ -46,26 +44,48 @@ jobs:
           elif [ -n "$DIR" ]; then
             files=$(ls "$DIR"/*.json | grep -v '\.youtube\.json$' || true)
           else
-            # new scripts, plus edited scripts that were never uploaded (no .youtube.json yet):
-            # an edited script whose video is already on YouTube is never uploaded twice
-            for f in $(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'videos/*/*.json'); do
-              if is_script "$f"; then files="$files $f"; fi
-            done
-            for f in $(git diff --name-only --diff-filter=M HEAD~1 HEAD -- 'videos/*/*.json'); do
+            # new scripts, plus edited scripts never uploaded (no .youtube.json): nothing goes up twice
+            for f in $(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'videos/*/*.json'); do
               if is_script "$f" && [ ! -f "${f%.json}.youtube.json" ]; then files="$files $f"; fi
             done
           fi
           echo "files=$(printf '%s\n' $files | jq -R . | jq -sc 'map(select(length>0))')" >> "$GITHUB_OUTPUT"
 
-  # Live Telegram status: polls this run's jobs + the shards' progress records every ~12 s and edits the
-  # day's message (the one telegram-status.yml started for the cloud session's stages, or a new one).
-  # Nothing depends on this job, so even a crash here cannot touch prepare/render/finish.
+  check:
+    needs: plan
+    if: needs.plan.outputs.files != '[]'
+    runs-on: ubuntu-24.04
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q google-auth requests
+      - name: API check (Telegram only on a problem)
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/check.py --notify problems --relogin
+
   monitor:
     needs: plan
     if: needs.plan.outputs.files != '[]'
     runs-on: ubuntu-24.04
     timeout-minutes: 340
     continue-on-error: true
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      FILES: ${{ needs.plan.outputs.files }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -75,21 +95,9 @@ jobs:
             config/
             videos/*/*.json
       - name: Live status
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          FILES: ${{ needs.plan.outputs.files }}
         run: python3 tools/live.py monitor || true
       - name: Live status (cancelled run)
         if: cancelled()
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          FILES: ${{ needs.plan.outputs.files }}
         run: python3 tools/live.py monitor --once --footer "⛔ Çalışma iptal edildi" || true
 
   prepare:
@@ -104,25 +112,7 @@ jobs:
     name: prepare ${{ matrix.file }}   # tools/live.py matches jobs by these names
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: System packages
-        # ffmpeg: a static build from GitHub releases (fast on Actions); apt only as fallback, because a
-        # runner's Azure apt mirror sometimes crawls at ~100 KB/s and stalls a render for good
-        run: |
-          set -u
-          for i in 1 2 3; do
-            if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
-                https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
-               && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
-              ffmpeg -version | head -1 && exit 0
-            fi
-            echo "static ffmpeg retry $i"; sleep 5
-          done
-          sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
-      - name: Python packages
-        run: pip install -r requirements.txt
+      - uses: ./.github/actions/setup
       - name: Names
         id: n
         env:
@@ -142,8 +132,7 @@ jobs:
           NAME: ${{ steps.n.outputs.name }}
         run: |
           python build.py "$F" -o "out/$NAME.mp4" --prepare
-          python -c "import json,sys; m=json.load(open(sys.argv[1])); json.dump({'file': sys.argv[2], 'name': sys.argv[3], 'shards': m['shards']}, open(sys.argv[4], 'w'))" \
-            "out/$NAME.prepared.json" "$F" "$NAME" "shards-$NAME.json"
+          jq -c --arg f "$F" --arg n "$NAME" '{file: $f, name: $n, shards: .shards}' "out/$NAME.prepared.json" > "shards-$NAME.json"
       - name: Save TTS cache (also when the prepare fails, so a fixed re-run reuses the narration)
         if: always() && steps.tts.outputs.cache-hit != 'true'
         continue-on-error: true
@@ -188,7 +177,7 @@ jobs:
     needs: shards
     if: always() && needs.shards.result == 'success' && needs.shards.outputs.include != '[]'
     runs-on: ubuntu-24.04
-    timeout-minutes: 300   # studio videos draw 3D in software
+    timeout-minutes: 180
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -197,25 +186,9 @@ jobs:
     name: render ${{ matrix.name }} ${{ matrix.shard }}/${{ matrix.of }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: ./.github/actions/setup
         with:
-          python-version: "3.12"
-      - name: System packages
-        # ffmpeg: a static build from GitHub releases (fast on Actions); apt only as fallback, because a
-        # runner's Azure apt mirror sometimes crawls at ~100 KB/s and stalls a render for good
-        run: |
-          set -u
-          for i in 1 2 3; do
-            if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
-                https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
-               && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
-              ffmpeg -version | head -1 && exit 0
-            fi
-            echo "static ffmpeg retry $i"; sleep 5
-          done
-          sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
-      - name: Python packages
-        run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+          chromium: "true"
       - uses: actions/download-artifact@v4
         with:
           name: prep-${{ matrix.name }}
@@ -225,15 +198,10 @@ jobs:
           F: ${{ matrix.file }}
           GITHUB_TOKEN: ${{ github.token }}
           LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
-        # live.py only wraps build.py (same exit code) and publishes the shard's frame progress every 5 %
-        # for the monitor; if live.py itself is broken, the shard is rendered without it
+        # live.py wraps build.py (same exit code) and publishes the shard's progress for the monitor
         run: |
-          CMD=(python build.py "$F" -o "out/${{ matrix.name }}.mp4" --shard "${{ matrix.shard }}/${{ matrix.of }}")
-          if python tools/live.py --help >/dev/null 2>&1; then
-            python tools/live.py shard --name "${{ matrix.name }}" --shard "${{ matrix.shard }}" -- "${CMD[@]}"
-          else
-            "${CMD[@]}"
-          fi
+          python tools/live.py shard --name "${{ matrix.name }}" --shard "${{ matrix.shard }}" -- \
+            python build.py "$F" -o "out/${{ matrix.name }}.mp4" --shard "${{ matrix.shard }}/${{ matrix.of }}"
       - uses: actions/upload-artifact@v4
         with:
           name: seg-${{ matrix.name }}-${{ matrix.shard }}
@@ -252,31 +220,17 @@ jobs:
       matrix:
         file: ${{ fromJson(needs.plan.outputs.files) }}
     name: finish ${{ matrix.file }}
+    env:
+      F: ${{ matrix.file }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: ./.github/actions/setup
         with:
-          python-version: "3.12"
-      - name: System packages
-        # ffmpeg: a static build from GitHub releases (fast on Actions); apt only as fallback, because a
-        # runner's Azure apt mirror sometimes crawls at ~100 KB/s and stalls a render for good
-        run: |
-          set -u
-          for i in 1 2 3; do
-            if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
-                https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
-               && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
-              ffmpeg -version | head -1 && exit 0
-            fi
-            echo "static ffmpeg retry $i"; sleep 5
-          done
-          sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
-      - name: Python packages
-        run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+          chromium: "true"
       - name: Names
         id: n
-        env:
-          F: ${{ matrix.file }}
         run: echo "name=$(basename "$(dirname "$F")")-$(basename "$F" .json)" >> "$GITHUB_OUTPUT"
       - uses: actions/download-artifact@v4
         continue-on-error: true   # prepare failed: the Build step fails and Telegram reports it
@@ -290,43 +244,33 @@ jobs:
           path: out/${{ steps.n.outputs.name }}.parts
           merge-multiple: true
       - name: Build (concat shards, mux audio, cover)
-        env:
-          F: ${{ matrix.file }}
         run: python build.py "$F" -o "out/${{ steps.n.outputs.name }}.mp4" --finish
       - name: Upload to YouTube
         if: inputs.upload != 'false'
         env:
           YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}   # Stickstory, ex Anlatayım Gel (tools/channels.py)
-          F: ${{ matrix.file }}
           GITHUB_TOKEN: ${{ github.token }}
-          LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}   # upload.py: "login expired" notice
         run: |
-          # upload.py picks the token of the script's channel and skips (no .youtube.json) when it is missing
-          python tools/upload.py "$F" "out/${{ steps.n.outputs.name }}.mp4"
-          if [ ! -f "out/${{ steps.n.outputs.name }}.youtube.json" ]; then exit 0; fi
-          cp "out/${{ steps.n.outputs.name }}.youtube.json" "${F%.json}.youtube.json"
-          # the video link for the live Telegram status (best-effort)
-          python tools/live.py note --name "${{ steps.n.outputs.name }}" \
-            --url "$(jq -r '.url // empty' "out/${{ steps.n.outputs.name }}.youtube.json" 2>/dev/null)" || true
+          # upload.py uses the token of the script's channel; no token: skipped, no .youtube.json
+          N="out/${{ steps.n.outputs.name }}"
+          python tools/upload.py "$F" "$N.mp4"
+          [ -f "$N.youtube.json" ] || exit 0
+          cp "$N.youtube.json" "${F%.json}.youtube.json"
+          python tools/live.py note --name "${{ steps.n.outputs.name }}" --url "$(jq -r '.url // empty' "$N.youtube.json")" || true
       - name: Send to Telegram (Instagram-ready)
         if: always() && steps.n.outputs.name != ''
         continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          LIVE_STATUS: ${{ secrets.TELEGRAM_BOT_TOKEN != '' && '1' || '' }}
-          F: ${{ matrix.file }}
         run: |
-          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ ! -f config/telegram_chat_id ]; then echo "Telegram not set up, skipping"; exit 0; fi
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ ! -f config/telegram_chat_id ]; then echo "Telegram not set up"; exit 0; fi
           V="out/${{ steps.n.outputs.name }}.mp4"
-          # a failed render already shows ❌ in the video's live message; a separate text only without it
+          # a failed render already shows ❌ in the video's live message
           if [ ! -f "$V" ]; then [ -n "$LIVE_STATUS" ] || python tools/telegram.py text "⚠️ Render başarısız: $F"; exit 0; fi
-          if grep -q '"format": "long"' "$F"; then
-            python tools/telegram.py text "📺 Uzun video yüklendi: $(python -c "import json;print(json.load(open('$F'))['youtube']['title'])")"
+          if [ "$(jq -r '.format // "short"' "$F")" = "long" ]; then
+            python tools/telegram.py text "📺 Uzun video hazır: $(jq -r '.youtube.title' "$F")"
           else
             python tools/telegram.py send "$F" "$V"
           fi

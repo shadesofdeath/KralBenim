@@ -23,14 +23,8 @@ def main():
     ap.add_argument("--times", help="comma separated seconds")
     a = ap.parse_args()
     script = build.load_script(a.script)
-    text, ranges = "", []
-    for sc in script["scenes"]:
-        if text:
-            text += " "
-        ranges.append((len(text), len(text) + len(sc["text"])))
-        text += sc["text"]
-    words, dur = build.estimate_words(text)
-    tl = build.build_timeline(script, text, ranges, build.locate(text, words), dur + build.STUDIO_TAIL)
+    tl, dur = build.draft_timeline(script)
+    chars = len(build.narration(script)[0])
     out = ROOT / "out" / "preview" / script.get("slug", Path(a.script).stem)
     out.mkdir(parents=True, exist_ok=True)
     for f in out.glob("frame_*.png"):
@@ -54,7 +48,6 @@ def main():
                     str(out / "sheet.png")], check=True)
     if script.get("cover"):
         build.cover(tl, script, out / "cover.jpg")
-    chars = len(text)
     print(f"{out / 'sheet.png'}  (~{dur:.0f}s estimated, {len(tl['scenes'])} scenes, {chars} chars)")
     motion = None if a.times else [frame_change(out / f"frame_{2 * i:02d}.png", out / f"frame_{2 * i + 1:02d}.png")
                                    for i in range(len(tl["scenes"]))]

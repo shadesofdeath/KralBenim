@@ -96,8 +96,7 @@ Kurallar: parametrik yaz (aynı tip başka bir tarih anında da işe yarasın), 
 dikey ve yatayda düzeni ayrı ayarla (`H > W`), Türkçe sayıları `fmtNum()` ile bas, global isim sızdırma
 (IIFE içinde yaz). Performans: tam ekran yarı saydam katman, `mix-blend-mode`, büyük `filter: blur` yok;
 grup `opacity` yerine yol başına `fill-opacity` kullan (yazılım raster'ında şerit artefaktı).
-Motor `kind: '3d'` (Three.js, sepya filtreli WebGL katmanı) desteğini hâlâ taşır ama hiçbir tip bunu
-kullanmıyor; BRAND "parlak 3D" görünümü yasaklar, yeni tipi 2D mürekkep olarak yaz.
+Motor sadece 2D (`kind: '2d'`) tipleri çizer; 3D/WebGL katmanı kaldırıldı (BRAND "parlak 3D" görünümü yasaklar).
 
 **Bitti sayılması için:** `tools/preview.py` ile en az 3 farklı anda (`--times`) kare al, bak; boş kare yok,
 ekran dışına taşma yok, palet dışı renk yok, hareket ölçümü > 1.5, konsolda `page error` yok.

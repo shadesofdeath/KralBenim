@@ -33,7 +33,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from channels import DEFAULT, of_file  # noqa: E402
+from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 CHAT_FILE = ROOT / "config" / "telegram_chat_id"
 TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
@@ -66,14 +66,20 @@ def chat_id(required=True):
     return cid
 
 
-def instagram_caption(script):
-    yt = script.get("youtube", {})
+def instagram_caption(script, channel=DEFAULT):
+    """YouTube description -> Instagram caption: "follow" instead of "subscribe", at most 5 hashtags
+    (3 topic tags + the channel's own + explore)."""
+    yt, c = script.get("youtube", {}), CHANNELS[channel]
     desc = yt.get("description", "")
-    body = desc.split("\n\n#")[0].replace("#shorts", "").strip()
-    body = body.replace("Bakalım'a abone ol", "Bakalım'ı takip et").replace("abone ol", "takip et").replace("YouTube", "")
-    # Instagram allows at most 5 hashtags: up to 3 topic tags + brand + #keşfet
-    topic = [t for t in desc.rsplit("\n\n", 1)[-1].split() if t.startswith("#") and t not in ("#shorts", "#düşünbakalım")]
-    tags = list(dict.fromkeys(topic[:3] + ["#düşünbakalım", "#keşfet"]))[:5]
+    body = desc.split("\n\n#")[0].replace("#shorts", "").replace("YouTube", "").strip()
+    if c["lang"] == "en":
+        body = re.sub(r"\b([Ss])ubscribe( to)?\b", lambda m: "Ff"[m[1] == "s"] + "ollow", body)
+        explore = "#explore"
+    else:
+        body = body.replace("Bakalım'a abone ol", "Bakalım'ı takip et").replace("abone ol", "takip et")
+        explore = "#keşfet"
+    topic = [t for t in desc.rsplit("\n\n", 1)[-1].split() if t.startswith("#") and t not in ("#shorts", c["hashtag"])]
+    tags = list(dict.fromkeys(topic[:3] + [c["hashtag"], explore]))[:5]
     return f"{yt.get('title', '')}\n\n{body}\n\n{' '.join(tags)}"[:2200]
 
 
@@ -85,7 +91,6 @@ def instagram_caption(script):
 # parallel writers never lose each other's updates (latest write per stage wins, which is what we want).
 #   tg/<key>/<slug>/_msg        chat_id|message_id|created     the Telegram message of one video
 #   tg/<key>/_/_msg             chat_id|message_id|created     the day's general message (plan, push)
-#   tg/<key>/_msg               (old: one message per day; only read by `clear`)
 #   tg/<key>/<slug>/_meta       kind|title                      video heading
 #   tg/<key>/<slug>/shard<i>    run|percent                     live render progress of shard i
 # Without GITHUB_TOKEN (local use) the same records go to a JSON file (out/telegram/<key>.json).
@@ -269,11 +274,6 @@ class Store:
         # oldest record first: a video's first slug creates its section, the newest record of a stage wins
         for k, v in sorted(self.seen.items(), key=lambda kv: (kv[1].get("id") or 0)):
             parts, d = k.split("/"), v["d"]
-            if parts == ["_msg"]:
-                c, m, cr = (d.split("|") + ["", "", ""])[:3]
-                if m.isdigit():
-                    st.update(chat_id=c, message_id=int(m), created=from36(cr) or 0, msg_id=v["id"])
-                continue
             if len(parts) != 2:
                 continue
             sid, stage = parts
@@ -679,11 +679,11 @@ def main():
             sys.exit("no messages yet: send any message to the bot first")
         CHAT_FILE.parent.mkdir(exist_ok=True)
         CHAT_FILE.write_text(str(chats[-1]) + "\n")
-        call("sendMessage", {"chat_id": chats[-1], "text": "✅ Düşün Bakalım botu bağlandı. Yeni Shorts'lar buraya Instagram'a hazır olarak gelecek."})
+        call("sendMessage", {"chat_id": chats[-1], "text": "✅ Bot bağlandı. Yeni Shorts'lar buraya Instagram'a hazır olarak gelecek."})
         print("chat id saved")
     elif cmd == "send":
         script = json.loads(Path(sys.argv[2]).read_text())
-        cap = instagram_caption(script)
+        cap = instagram_caption(script, of_file(Path(sys.argv[2]).name))
         import subprocess
         video = sys.argv[3]
         # sent as a file (sendDocument), so Telegram does not re-compress it; bot uploads are capped at 50 MB,

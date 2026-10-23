@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """Upload a rendered video to YouTube using the script's "youtube" block.
 
-  YOUTUBE_TOKEN_JSON='<contents of youtube_token.json>' python tools/upload.py videos/<date>/<file>.json out/video.mp4
-  # or: YOUTUBE_CLIENT_ID / YOUTUBE_CLIENT_SECRET / YOUTUBE_REFRESH_TOKEN
-Each channel uploads with its own token (tools/channels.py "youtube_env", e.g. YOUTUBE_TOKEN_JSON_AG for
-Stickstory); a script is never uploaded with another channel's token. No token for the script's channel:
-prints a note and exits 0 without writing <video>.youtube.json.
+  python tools/upload.py videos/<date>/<file>.json out/video.mp4
+  python tools/upload.py --thumbnail videos/<date>/<file>.youtube.json cover.jpg
 
-<file>.json:
-  "youtube": {"title": "...", "description": "...", "tags": [...], "category_id": "27",
-              "publish_at": "2026-10-16T10:00:00+03:00"}   # omit publish_at to keep it private
-Also sets <video>.jpg as the thumbnail if present, and for long videos appends chapters
-built from scenes that have a "chapter" title (timings from <video>.timeline.json).
-Prints the video URL. Writes result JSON next to the video (<video>.youtube.json).
+The channel comes from the file name prefix (tools/channels.py) and uploads only with its own token
+("youtube_env" secret; Düşün Bakalım may also use YOUTUBE_CLIENT_ID / _SECRET / _REFRESH_TOKEN). No token:
+prints a note and exits 0 without a .youtube.json. Expired login: tells Telegram how to log in again, exits 1.
+
+<file>.json:  "youtube": {"title", "description", "tags", "category_id", "publish_at"}  (no publish_at: private)
+Sets <video>.jpg as the thumbnail, appends chapters (long videos, from <video>.timeline.json) and photo
+credits to the description. Writes <video>.youtube.json and prints the URL.
 """
 import json
 import os
@@ -20,45 +18,56 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from google.auth.transport.requests import Request
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build as gbuild
-from googleapiclient.http import MediaFileUpload
-
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from channels import CHANNELS, DEFAULT, lang, resolve  # noqa: E402
+from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
-
-def credentials(channel=DEFAULT):
-    """The channel's own credentials, or None. The client id/secret/refresh-token trio belongs to Düşün Bakalım."""
-    channel = resolve(channel)
-    if channel not in CHANNELS:              # unknown channel: never fall back to another channel's token
-        return None
-    env = CHANNELS[channel]["youtube_env"]
-    if os.environ.get(env):
-        info = json.loads(os.environ[env])
-    elif channel != DEFAULT or not os.environ.get("YOUTUBE_REFRESH_TOKEN"):
-        return None
-    else:
-        info = {"client_id": os.environ["YOUTUBE_CLIENT_ID"], "client_secret": os.environ["YOUTUBE_CLIENT_SECRET"],
-                "refresh_token": os.environ["YOUTUBE_REFRESH_TOKEN"], "token_uri": "https://oauth2.googleapis.com/token"}
-    info.pop("scopes", None)   # refresh with whatever scopes were granted
-    return Credentials.from_authorized_user_info(info)
-
-
-def insert_chapters(desc, chap):
-    """Chapters go before the hashtag block so hashtags stay at the very end."""
-    if not chap:
-        return desc
-    head, sep, tags = desc.rpartition("\n\n#")
-    return (head + chap + sep + tags) if sep else desc + chap
-
-
+TOKEN_URI = "https://oauth2.googleapis.com/token"
 HEAD = {"tr": {"chapters": "⏱️ Bölümler", "credits": "📷 Görseller"},
         "en": {"chapters": "⏱️ Chapters", "credits": "📷 Image credits"}}
 
 
-def chapters(video, lg="tr"):
+def token_info(channel):
+    """The channel's own OAuth token dict, or None (never another channel's)."""
+    env = os.environ.get(CHANNELS[channel]["youtube_env"], "").strip()
+    if env:
+        return json.loads(env)
+    if channel == DEFAULT and os.environ.get("YOUTUBE_REFRESH_TOKEN"):
+        return {"client_id": os.environ["YOUTUBE_CLIENT_ID"], "client_secret": os.environ["YOUTUBE_CLIENT_SECRET"],
+                "refresh_token": os.environ["YOUTUBE_REFRESH_TOKEN"], "token_uri": TOKEN_URI}
+    return None
+
+
+def credentials(channel):
+    """Refreshed credentials of the channel, or None without a token. Raises google.auth RefreshError
+    (invalid_grant) when the login expired or was revoked."""
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
+    info = token_info(channel)
+    if info is None:
+        return None
+    info.pop("scopes", None)   # refresh with whatever scopes were granted
+    creds = Credentials.from_authorized_user_info(info)
+    creds.refresh(Request())
+    return creds
+
+
+def relogin_hint(channel, err):
+    c = CHANNELS[channel]
+    return (f"🔑 {channel}: YouTube girişi geçersiz ({err}). GitHub > Actions > 'YouTube login (phone)' > "
+            f"channel {c['id']} çalıştır, gelen JSON'u {c['youtube_env']} secret'ına yapıştır; sonra videoyu yeniden başlat.")
+
+
+def youtube(creds):
+    from googleapiclient.discovery import build
+    return build("youtube", "v3", credentials=creds, cache_discovery=False)
+
+
+def media(path, **kw):
+    from googleapiclient.http import MediaFileUpload
+    return MediaFileUpload(str(path), **kw)
+
+
+def chapters(video, lg):
     tl_path = video.with_suffix(".timeline.json")
     if not tl_path.exists():
         return ""
@@ -66,110 +75,84 @@ def chapters(video, lg="tr"):
     marks = [(s["start"], s["chapter"]) for s in tl["scenes"] if s.get("chapter")]
     if tl.get("format") != "long" or len(marks) < 3:
         return ""
-    marks[0] = (0.0, marks[0][1])
-    kept = [marks[0]]
+    kept = [(0.0, marks[0][1])]
     for t, name in marks[1:]:
         if t - kept[-1][0] >= 10:          # YouTube needs >= 10 s per chapter
             kept.append((t, name))
     if len(kept) < 3:
         return ""
-    fmt = lambda t: f"{int(t) // 60}:{int(t) % 60:02d}"
-    return f"\n\n{HEAD[lg]['chapters']}\n" + "\n".join(f"{fmt(t)} {name}" for t, name in kept)
+    return f"\n\n{HEAD[lg]['chapters']}\n" + "\n".join(f"{int(t) // 60}:{int(t) % 60:02d} {n}" for t, n in kept)
 
 
-def credits(script, lg="tr"):
-    """Attribution for photos / clips used by studio "photo" shots (CC BY / CC BY-SA require it)."""
-    seen = []
-    for sc in script.get("scenes", []):
-        c = (sc.get("params") or {}).get("credit")
-        if c and c not in seen:
-            seen.append(c)
+def credits(script, lg):
+    """Attribution for photos/clips used by "photo" shots (CC BY / CC BY-SA require it)."""
+    seen = list(dict.fromkeys(c for sc in script["scenes"] if (c := (sc.get("params") or {}).get("credit"))))
     return (f"\n\n{HEAD[lg]['credits']}\n" + "\n".join(seen)) if seen else ""
 
 
-def set_thumbnail(video_id, jpg, channel=DEFAULT):
-    creds = credentials(channel)
-    if creds is None:
-        print(f"no YouTube token for {channel}: thumbnail skipped")
-        return
-    yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)
-    yt.thumbnails().set(videoId=video_id, media_body=MediaFileUpload(str(jpg), mimetype="image/jpeg")).execute()
-    print("thumbnail set", video_id)
+def description(desc, extra):
+    """Chapters and credits go before the hashtag line so the hashtags stay at the very end."""
+    head, sep, tags = desc.rpartition("\n\n#")
+    return ((head + extra + sep + tags) if sep else desc + extra)[:5000]
+
+
+def set_thumbnail(yt, video_id, jpg):
+    try:
+        yt.thumbnails().set(videoId=video_id, media_body=media(jpg, mimetype="image/jpeg")).execute()
+        return True
+    except Exception as e:   # Shorts / unverified channels may refuse custom thumbnails
+        print(f"thumbnail not set: {e}")
+        return False
 
 
 def main():
-    if sys.argv[1] == "--thumbnail":           # upload.py --thumbnail <video.youtube.json> <cover.jpg>
+    if sys.argv[1] == "--thumbnail":
         rec = json.loads(Path(sys.argv[2]).read_text())
-        try:
-            channel = json.loads((Path(__file__).resolve().parent.parent / rec["script"]).read_text()).get("channel") or DEFAULT
-            channel = resolve(channel)
-        except (KeyError, OSError, ValueError):
-            channel = DEFAULT
-        return set_thumbnail(rec["id"], sys.argv[3], channel)
+        creds = credentials(of_file(Path(rec["script"]).name))
+        if creds and set_thumbnail(youtube(creds), rec["id"], sys.argv[3]):
+            print("thumbnail set", rec["id"])
+        return
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     script = json.loads(script_path.read_text())
-    meta = script["youtube"]
-    channel = resolve(script.get("channel") or DEFAULT)
-    lg = script.get("lang") or lang(channel)        # Stickstory is English (global), Düşün Bakalım Turkish
-    creds = credentials(channel)
-    if creds is None:
-        print(f"no YouTube token for {channel} ({CHANNELS.get(channel, CHANNELS[DEFAULT])['youtube_env']}): upload skipped")
-        return
-    if not creds.valid:
+    meta, channel = script["youtube"], of_file(script_path.name)
+    lg = CHANNELS[channel]["lang"]
+    try:
+        creds = credentials(channel)
+    except Exception as e:   # RefreshError invalid_grant: the login expired or was revoked
+        msg = relogin_hint(channel, e.__class__.__name__)
+        print(msg)
         try:
-            creds.refresh(Request())
-        except Exception as e:   # RefreshError "invalid_grant": the login expired or was revoked
-            env = CHANNELS[channel]["youtube_env"]
-            msg = (f"🔑 {channel}: YouTube girişi geçersiz ({e.__class__.__name__}). GitHub > Actions > "
-                   f"'YouTube login (phone)' > channel {CHANNELS[channel]['id']} çalıştır, gelen JSON'u {env} "
-                   f"secret'ına yapıştır; sonra videoyu yeniden başlat.")
-            print(msg)
-            try:
-                import telegram
-                telegram.call("sendMessage", {"chat_id": telegram.chat_id(), "text": msg})
-            except Exception:
-                pass
-            sys.exit(1)
-    yt = gbuild("youtube", "v3", credentials=creds, cache_discovery=False)
+            import telegram
+            telegram.call("sendMessage", {"chat_id": telegram.chat_id(), "text": msg})
+        except Exception:
+            pass
+        sys.exit(1)
+    if creds is None:
+        print(f"no YouTube token for {channel} ({CHANNELS[channel]['youtube_env']}): upload skipped")
+        return
+    yt = youtube(creds)
 
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}
-    # realistic AI-generated footage (Higgsfield clips, "ai": true) must be disclosed to YouTube
-    if any((sc.get("params") or {}).get("ai") for sc in script.get("scenes", [])):
-        status["containsSyntheticMedia"] = True
-    pub = meta.get("publish_at")
-    if pub:
-        when = datetime.fromisoformat(pub)
-        if when > datetime.now(timezone.utc):
-            status["publishAt"] = when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-        else:   # time already passed -> publish now
-            status["privacyStatus"] = "public"
-    body = {
-        "snippet": {
-            "title": meta["title"][:100],
-            "description": insert_chapters(meta.get("description", ""), chapters(video, lg) + credits(script, lg))[:5000],
-            "tags": meta.get("tags", []),
-            "categoryId": str(meta.get("category_id", "27")),
-            "defaultLanguage": lg,
-            "defaultAudioLanguage": lg,
-        },
-        "status": status,
-    }
+    when = datetime.fromisoformat(meta["publish_at"]) if meta.get("publish_at") else None
+    if when and when > datetime.now(timezone.utc):
+        status["publishAt"] = when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    elif when:   # time already passed -> publish now
+        status["privacyStatus"] = "public"
+    body = {"snippet": {"title": meta["title"][:100],
+                        "description": description(meta.get("description", ""), chapters(video, lg) + credits(script, lg)),
+                        "tags": meta.get("tags", []), "categoryId": str(meta.get("category_id", "27")),
+                        "defaultLanguage": lg, "defaultAudioLanguage": lg},
+            "status": status}
     req = yt.videos().insert(part="snippet,status", body=body,
-                             media_body=MediaFileUpload(str(video), chunksize=8 * 1024 * 1024, resumable=True))
+                             media_body=media(video, chunksize=8 * 1024 * 1024, resumable=True))
     res = None
     while res is None:
         st, res = req.next_chunk()
         if st:
             print(f"upload {int(st.progress() * 100)}%")
     thumb = video.with_suffix(".jpg")
-    thumb_ok = False
-    if thumb.exists():
-        try:
-            yt.thumbnails().set(videoId=res["id"], media_body=MediaFileUpload(str(thumb), mimetype="image/jpeg")).execute()
-            thumb_ok = True
-        except Exception as e:   # Shorts / unverified channels may refuse custom thumbnails
-            print(f"thumbnail not set: {e}")
-    result = {"id": res["id"], "thumbnail": thumb_ok, "url": f"https://youtu.be/{res['id']}", "status": res.get("status", {}),
+    result = {"id": res["id"], "thumbnail": thumb.exists() and set_thumbnail(yt, res["id"], thumb),
+              "url": f"https://youtu.be/{res['id']}", "status": res.get("status", {}),
               "title": meta["title"], "script": str(script_path)}
     video.with_suffix(".youtube.json").write_text(json.dumps(result, ensure_ascii=False, indent=1))
     print(result["url"], result["status"])

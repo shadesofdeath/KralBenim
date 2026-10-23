@@ -1,0 +1,31 @@
+name: Setup render tools
+description: Python 3.12, ffmpeg (static build; apt as fallback), pip packages and optionally Chromium.
+inputs:
+  chromium:
+    description: "Install Playwright Chromium"
+    default: "false"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: "3.12"
+        cache: pip
+    - name: ffmpeg
+      shell: bash
+      # the static build from GitHub releases is fast; a runner's apt mirror sometimes crawls at ~100 KB/s
+      run: |
+        for i in 1 2 3; do
+          if curl -fsSL --retry 3 --max-time 180 -o /tmp/ff.tar.xz \
+              https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+             && sudo tar -xJf /tmp/ff.tar.xz -C /usr/local --strip-components=1 --wildcards '*/bin/ffmpeg' '*/bin/ffprobe'; then
+            ffmpeg -version | head -1 && exit 0
+          fi
+          echo "static ffmpeg retry $i"; sleep 5
+        done
+        sudo timeout 900 apt-get update && sudo timeout 900 apt-get install -y ffmpeg
+    - name: Python packages
+      shell: bash
+      run: |
+        pip install -r requirements.txt
+        if [ "${{ inputs.chromium }}" = "true" ]; then python -m playwright install --with-deps chromium; fi

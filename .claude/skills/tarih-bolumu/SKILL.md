@@ -30,10 +30,10 @@ yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPT
 3. Şaşırtıcı ayrıntı / asıl neden.
 4. Net, akılda kalan kapanış cümlesi.
 
-**Uzun video (8–10 dk, 60–80 sahne, 6–8 bölüm):**
+**Uzun video (5–6 dk, 40–50 sahne, 4–5 bölüm):**
 `BÖLÜM 1` sıradan dünya → `BÖLÜM 2` kıvılcım/karar → `BÖLÜM 3` felaket ya da dönüm noktası →
 `BÖLÜM 4` "peki neden?" (asıl açıklama, yaygın yanlışı düzelt) → `BÖLÜM 5` sonrası ve bugün → tek yorum sorusu.
-8–10 dakikayı doldurmak için hikâyeyi uzatma, derinleştir: olayın içinde 2–3 ara dönüm noktası (ayrı bölümler), gerçek insanların kararları ve sözleri, beklenmedik ayrıntılar. Tekrar ve dolgu yok; her bölüm yeni bir soru açıp kapatır.
+5–6 dakika sıkı bir anlatım ister: hikâyeyi uzatma, derinleştir: olayın içinde 1–2 ara dönüm noktası, gerçek insanların kararları ve sözleri, beklenmedik ayrıntılar. Tekrar ve dolgu yok; her bölüm yeni bir soru açıp kapatır.
 Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmemişti."
 
 ## 3. Sahne seçimi (sepya stil, `"theme": "parchment"`)

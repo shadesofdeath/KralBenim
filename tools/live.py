@@ -30,6 +30,7 @@ import tempfile
 import time
 from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import telegram as tgm  # noqa: E402
@@ -120,7 +121,7 @@ def failed_step(j):
 def publish_label(script):
     p = (script.get("youtube") or {}).get("publish_at", "")
     try:
-        d = datetime.fromisoformat(p)
+        d = datetime.fromisoformat(p).astimezone(ZoneInfo("Europe/Istanbul"))   # the owner's clock
         return f"yayın {d.day} {tgm.MONTHS[d.month - 1]} {d:%H:%M}"
     except ValueError:
         return ""

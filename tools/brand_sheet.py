@@ -6,7 +6,6 @@
 Re-run whenever the character design changes.
 """
 import argparse
-import json
 import os
 from pathlib import Path
 

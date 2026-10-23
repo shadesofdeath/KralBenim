@@ -13,17 +13,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from plan import LIMITS  # noqa: E402
+from plan import LIMITS, SCENES  # noqa: E402
 from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
-# voice per channel (tools/channels.py voice_id): Düşün Bakalım j4vJUfke1j8j9OYq8V3b (owner, 2026-10-19), all formats
-MODEL = "eleven_v3"
-SCENES = {"short": (8, 11), "long": (60, 80)}
+MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
 THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
 
 
 def shot_types():
-    """Every shot type lives in its own scenes/studio/shots/<type>.js (removed Studio types are unknown)."""
+    """Every shot type lives in its own scenes/studio/shots/<type>.js."""
     kinds = {}
     for js in sorted((ROOT / "scenes/studio/shots").glob("*.js")):
         # SHOTS.x = {kind: ...}, SH.x = {\n kind: ...}, (window.SHOTS || ...).x = {...}
@@ -127,10 +125,7 @@ def lint(path, kinds):
         for k in ("src", "video"):
             if p.get(k) and "://" not in p[k]:
                 if not (Path(path).parent / p[k]).exists():
-                    if p.get("url"):
-                        warn.append(f"{tag}: {p[k]} not downloaded here; build fetches params.url (preview shows a placeholder)")
-                    else:
-                        err.append(f"{tag}: media not found {p[k]}")
+                    err.append(f"{tag}: media not found {p[k]}")
                 if not p.get("credit"):
                     err.append(f"{tag}: photo/video without params.credit")
         if p.get("ai") or "higgsfield" in str(p.get("credit", "")).lower() or "/hf-" in str(p.get("video", "")):

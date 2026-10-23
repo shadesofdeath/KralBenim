@@ -1,2 +1,0 @@
-HyperFrames skills (Apache-2.0) copied from github.com/heygen-com/hyperframes @ b1fe8dd, CLI v0.8.177.
-Refresh: clone the repo and copy skills/<name> again (or npx hyperframes skills update).

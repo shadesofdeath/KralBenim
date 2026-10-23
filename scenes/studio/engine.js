@@ -1,42 +1,12 @@
 // Studio engine: timeline -> frames. window.init(timeline), window.seek(t), window.cover(c).
 // One visual style (brand/kit/BRAND.md): sepia parchment + the stick-figure Kaşif ("theme": "parchment").
-// Layers (back to front): paper background (canvas, parchment-theme.js) · optional WebGL layer (a '3d'
-// shot kind, sepia-filtered) · 2D ink shots · 3D labels · HUD (kicker, captions, brand, progress) · cover.
+// Layers (back to front): paper background (canvas, parchment-theme.js) · 2D ink shots ·
+// HUD (kicker, captions, brand, progress) · cover.
 'use strict';
 
-let D, S = [], W, H, R3, glDirty = false;
+let D, S = [], W, H;
 let PAPER = null, PCAP = null, PBRAND = null, BG_AT = { i: 0, prev: -1, p: 1 };   // parchment-theme.js
 const $ = id => document.getElementById(id);
-
-function makeLabels(container) {
-  const box = div(container, 'lblset');
-  box.style.cssText = 'position:absolute;inset:0;display:none';
-  const svg = el(box, 'svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}` });
-  return {
-    box,
-    add(kind) {
-      const d = div(box, 'lbl');
-      const ln = el(svg, 'path', { fill: 'none', stroke: '#fff', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0, pathLength: 1 });
-      const dot = el(svg, 'circle', { r: 8, fill: '#fff', opacity: 0 });
-      return {
-        // html at stage px (x, y); anchor = [sx, sy] screen point the leader line points to (layer labels)
-        set(html, x, y, alpha, anchor, grow = 1) {
-          if (d._h !== html) { d.innerHTML = html; d._h = html; }
-          d.style.left = x + 'px'; d.style.top = y + 'px'; d.style.opacity = alpha;
-          if (anchor && kind === 'layer') {
-            const w = d.offsetWidth / 2 + 14, side = anchor[0] > x ? 1 : -1;
-            const sx = x + side * w, sy = y;
-            ln.setAttribute('d', `M${sx} ${sy} L${(sx + anchor[0]) / 2} ${sy} L${anchor[0]} ${anchor[1]}`);
-            draw(ln, clamp01(grow));
-            ln.style.opacity = alpha;
-            dot.setAttribute('cx', anchor[0]); dot.setAttribute('cy', anchor[1]);
-            dot.setAttribute('opacity', alpha * clamp01(grow * 2 - 1));
-          }
-        },
-      };
-    },
-  };
-}
 
 function makeKicker(sc) {
   return PARCHMENT.kicker($('kickers'), W, H, sc.title || {});
@@ -51,16 +21,10 @@ window.init = async (data) => {
   if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
   root.classList.add(D.format || 'short');
-  root.classList.add('parchment');   // the only theme (older non-parchment scripts render on parchment too)
-  THREE.ColorManagement.enabled = false;
+  root.classList.add('parchment');   // the only theme
 
   const bg = $('bg'); bg.width = W / 2; bg.height = H / 2;
   PAPER = PARCHMENT.background(bg, W, H, { scale: 0.5 });
-  R3 = new THREE.WebGLRenderer({ canvas: $('gl'), antialias: D.gl_aa !== false, alpha: true, preserveDrawingBuffer: true });
-  R3.setPixelRatio(devicePixelRatio * (D.gl_scale || 1));
-  R3.setSize(W, H, false);
-  R3.setClearColor(0x000000, 0);
-  R3.outputColorSpace = THREE.SRGBColorSpace;
   // shots measure text while building: fonts must be ready first
   await Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
 
@@ -68,33 +32,22 @@ window.init = async (data) => {
     const shot = SHOTS[sc.type];
     if (!shot) throw new Error('unknown studio shot type: ' + sc.type);
     const P = sc.params || {};
-    const pal = Object.assign({}, THEME_PARCHMENT.pal, ((sc.art || D.art || {}).colors) || {});
-    const o = { sc, i, P, pal, kind: shot.kind, dur: sc.end - sc.start, kick: makeKicker(sc) };
-    if (shot.kind === '3d') {
-      o.scene = new THREE.Scene();
-      o.camera = new THREE.PerspectiveCamera(34, W / H, 0.05, 300);
-      o.labels = makeLabels($('labels'));
-      o.inst = shot.build({ P, pal, W, H, scene: o.scene, camera: o.camera, labels: o.labels, renderer: R3, seed: i + 1, theme: D.theme });
-    } else {
-      o.el = div($('shots'), 'shot');
-      o.el.style.cssText = 'position:absolute;inset:0;visibility:hidden';   // laid out while building (text measuring)
-      o.svg = el(o.el, 'svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}` });
-      o.svg.style.cssText = 'position:absolute;left:0;top:0';
-      const defs = el(o.svg, 'defs');
-      o.inst = shot.build({ P, pal, W, H, root: o.el, svg: o.svg, defs, seed: i + 1, theme: D.theme });
-      o.el.style.display = 'none'; o.el.style.visibility = '';
-    }
+    const pal = THEME_PARCHMENT.pal;
+    const o = { sc, i, P, pal, dur: sc.end - sc.start, kick: makeKicker(sc) };
+    o.el = div($('shots'), 'shot');
+    o.el.style.cssText = 'position:absolute;inset:0;visibility:hidden';   // laid out while building (text measuring)
+    o.svg = el(o.el, 'svg', { width: W, height: H, viewBox: `0 0 ${W} ${H}` });
+    o.svg.style.cssText = 'position:absolute;left:0;top:0';
+    const defs = el(o.svg, 'defs');
+    o.inst = shot.build({ P, pal, W, H, root: o.el, svg: o.svg, defs, seed: i + 1, theme: D.theme });
+    o.el.style.display = 'none'; o.el.style.visibility = '';
     return o;
   });
-  // continuity: consecutive 3D shots of the same world continue the camera (match cut)
   S.forEach((o, i) => {
-    const prev = S[i - 1];
-    const same = prev && prev.kind === '3d' && o.kind === '3d' && prev.sc.type === o.sc.type && (prev.P.preset || '') === (o.P.preset || '');
-    o.env = { prevP: same ? prev.P : null, prevCam: same && prev.endCam ? prev.endCam : null };
-    o.endCam = o.inst.camAt ? o.inst.camAt(o.dur, o.dur, o.env) : null;
-    // paper slide or a soft cross-dissolve (old "zoom"/"whip"/"flash" values map onto them); same 3D world: match cut
-    o.trans = i === 0 ? 'cut' : (o.sc.transition || (same ? 'match' : i % 3 === 2 ? 'fade' : 'slide'));
-    o.trans = { zoom: 'slide', whip: 'slide', flash: 'fade' }[o.trans] || (TRANS_WIN[o.trans] ? o.trans : 'slide');
+    o.env = { prevP: null, prevCam: null };
+    // paper slide or a soft cross-dissolve; every third boundary fades
+    o.trans = i === 0 ? 'cut' : (o.sc.transition || (i % 3 === 2 ? 'fade' : 'slide'));
+    if (!TRANS_WIN[o.trans]) o.trans = 'slide';
     // cue times that belong to this scene (captions colour these words)
     o.cueTimes = Object.values(o.sc.cues || {});
   });
@@ -129,11 +82,11 @@ function transStyle(kind, role, t, T) {
     if (role === 'out') { const p = lin(t, T - 0.2, 0.4); return { show: p < 1, tf: '', op: 1 - EASE_IO(p), blur: 0 }; }
     const q = lin(t, T - 0.2, 0.4); return { show: q > 0, tf: `scale(${lerp(1.02, 1, EASE(q))})`, op: EASE_IO(q), blur: 0 };
   }
-  // cut / match: hard switch at T (match continues the camera of the same 3D world)
+  // cut: hard switch at T
   if (role === 'out') return { show: t < T, tf: '', op: 1, blur: 0 };
   return { show: t >= T, tf: '', op: 1, blur: 0 };
 }
-const TRANS_WIN = { cut: [0, 0], match: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2] };
+const TRANS_WIN = { cut: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2] };
 
 function applyStyle(node, st, extraScale = 1) {
   node.style.display = st.show ? '' : 'none';
@@ -145,26 +98,8 @@ function applyStyle(node, st, extraScale = 1) {
 // draw one frame. visible = [{o, lt, st}], hook/cover handled by callers
 function compose(t, visible, pend, coverTf) {
   drawBg(t);
-  const gl = $('gl');
-  // 3D: only one scene can own the GL canvas; prefer the one that is "in"
-  const v3 = visible.filter(v => v.o.kind === '3d' && v.st.show);
-  const own = v3.length ? v3[v3.length - 1] : null;
-  S.forEach(o => { if (o.labels) o.labels.box.style.display = 'none'; if (o.el && !visible.some(v => v.o === o)) o.el.style.display = 'none'; });
-  if (own) {
-    const { o, lt, st } = own;
-    o.inst.update(lt, o.dur, localCues(o), Object.assign({ t, pal: o.pal }, o.env));
-    R3.render(o.scene, o.camera);
-    glDirty = true;
-    applyStyle(gl, st);
-    if (coverTf) gl.style.transform += ' ' + coverTf;
-    applyStyle(o.labels.box, st);
-    if (coverTf) o.labels.box.style.transform += ' ' + coverTf;
-  } else {
-    if (glDirty) { R3.clear(); glDirty = false; }
-    gl.style.display = 'none';
-  }
+  S.forEach(o => { if (!visible.some(v => v.o === o)) o.el.style.display = 'none'; });
   for (const v of visible) {
-    if (v.o.kind !== '2d') continue;
     const { o, lt, st } = v;
     if (o.inst.pending) { const pr = o.inst.pending(lt); if (pr) pend.push(pr); }
     let pk = 0; for (const c of Object.values(localCues(o))) pk = Math.max(pk, punch(lt, c, 0.5));
@@ -172,7 +107,6 @@ function compose(t, visible, pend, coverTf) {
     if (coverTf) o.el.style.transform += ' ' + coverTf;
     if (st.show) o.inst.update(lt, o.dur, localCues(o), Object.assign({ t, pal: o.pal }, o.env));
   }
-  if (own && own.st.show) gl.style.display = '';
 }
 
 function localCues(o) {

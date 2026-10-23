@@ -1,7 +1,7 @@
 // Studio engine (parchment theme): shared helpers (easing, svg, colours, the brand palette). No randomness: use rng(seed).
 'use strict';
 
-// shot registry: every scenes/studio/shots/<type>.js adds SHOTS.<type> = {kind: '2d'|'3d', build(ctx)}
+// shot registry: every scenes/studio/shots/<type>.js adds SHOTS.<type> = {kind: '2d', build(ctx)}
 const SHOTS = window.SHOTS || (window.SHOTS = {});
 
 // text locale of the video ("lang" in the script: tr -> tr-TR, en -> en-US); set by engine.js init before shots build.

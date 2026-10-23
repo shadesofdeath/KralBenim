@@ -1,240 +1,207 @@
-# Düşün Bakalım — video otomasyonu
+# Düşün Bakalım + Stickstory — video otomasyonu
 
-YouTube kanalı **Düşün Bakalım** için Türkçe anlatım videoları üreten pipeline.
-Her gün **4 Shorts** ve **1 uzun video** üretilir, GitHub Actions'ta render edilip YouTube'a zamanlanmış olarak yüklenir.
-Aynı pipeline ikinci kanal **Stickstory**'ye (eski adı Anlatayım Gel, 2026-10-22'de değişti) de üretir: aynı parşömen tarzı ama **global ve İngilizce** (ses, ekran, kapak, SEO), tarihle sınırlı değil, en çok izlenen Shorts kategorilerinden (bkz. *İkinci kanal: Stickstory*).
-Kanalların ayarları (ekrandaki ad, anlatıcı, dil, ses, hashtag, kategori havuzu, dosya öneki, yayın saatleri, YouTube secret'ı) `tools/channels.py`'dedir.
+İki YouTube kanalı için parşömen tarzı anlatım videoları üreten pipeline. Senaryolar bu bulut oturumunda yazılır,
+push'tan sonra GitHub Actions render edip YouTube'a zamanlanmış olarak yükler.
 
-**Kanalın tek tarzı (kanal sahibinin kesin kararı):** **tarih hikâyeleri**, sepya parşömen üstüne elle
-çizilmiş mürekkep ve çöp adam anlatıcı **Kaşif** (`"theme": "parchment"`). Anayasa `brand/kit/BRAND.md`;
-senaryo yazmadan önce `.claude/skills/tarih-bolumu/SKILL.md` becerisi yüklenir. Eski "Studio" tarzı
-(renk paletleri, 3D gezegen/küre/kafes, maskot ampul, headline/bars/compare/scale_bar/waterline…) ve
-eski klasik kart motoru **kaldırıldı**; geri getirme. `videos/` altındaki eski tarz senaryolar sadece
-geçmiş kayıttır (konu tekrarını önlemek için okunur), artık render edilemez ve değiştirilmez.
+| Kanal | Dil | Shorts | Uzun video (5–6 dk) | Saat dilimi |
+|---|---|---|---|---|
+| **Düşün Bakalım** (Türkçe, tarih) | tr | günde **1** — 19:00 | **3 günde bir** — 20:30 | İstanbul |
+| **Stickstory** (global, İngilizce) | en | günde **3** — 09:00, 13:00, 19:00 | **2 günde bir** — 14:00 | **New York** |
+
+Takvim, saatler, ses, hashtag, kategori havuzu, dosya öneki ve YouTube secret'ı tek yerde: `tools/channels.py`.
+Stickstory saatleri New York saatidir (en büyük İngilizce kitle ABD; aynı saatler İngiltere/Avrupa öğleden sonra
+ve akşamına denk gelir; yaz/kış saati otomatik). İstanbul'da gece olması sorun değil, YouTube zamanlanmış videoyu
+kendisi yayınlar. **Tarih/saat hesabını elle yapma: `python tools/plan.py [--channel ag]` kullan.**
+
+**Tek tarz (kanal sahibinin kesin kararı):** sepya parşömen üstüne elle çizilmiş mürekkep ve çöp adam anlatıcı
+**Kaşif** (`"theme": "parchment"`; Stickstory'de aynı çizim kırmızı fesli). Anayasa `brand/kit/BRAND.md`
+(çelişkide BRAND.md kazanır); senaryo yazmadan önce `.claude/skills/tarih-bolumu/SKILL.md` yüklenir.
+Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kaldırıldı; geri getirme.
+`videos/` altındaki eski tarz senaryolar sadece geçmiş kayıttır (konu tekrarını önlemek için okunur).
 
 ## Yapı
 
-- `build.py` — `<senaryo>.json -> mp4`. ElevenLabs ile seslendirir (kelime zamanlamalı), sahneleri Playwright ile kare kare çeker (CPU sayısı kadar paralel tarayıcı), ffmpeg ile birleştirir. Sadece `"engine": "studio"` senaryoları kabul eder.
-- **`scenes/studio/` — tek motor.** `engine.js` (zaman çizelgesi, geçişler, kapak, Kaşif'li kapak), `core.js` (ortak yardımcılar, `SHOTS` kaydı, `svgText`, BRAND paleti `THEME_PARCHMENT`), `parchment-theme.js` (kâğıt zemin, lekeler, altyazı şeridi, kicker, marka). Zaman tamamen `window.seek(t)` ile kontrol edilir; her şey deterministik (Math.random yok, `rng(seed)` kullan).
-- `scenes/studio/shots/<tip>.js` — sahne tipleri, her tip kendi dosyasında (build.py otomatik yükler): `_ink.js` (kaynayan mürekkep çizgi yardımcıları), `kasif.js` (Kaşif rig'i + `stage`), `parchment2d.js` (`chapter`, `title`, `board`, `map`, `timeline`), `photo.js` (sepya fotoğraf/klip) ve konuya özel tipler (`emu`, `petri`/`labbench`, `halic`, `portage`, `pirimap`).
-- **Referans senaryolar ve kalite seviyesi:** `videos/2026-10-20/01-emu-savasi.json` (Short), `videos/2026-10-19/05-piri-reis-haritasi.json` (uzun video).
-- `brand/kit/BRAND.md` — marka kitabı (kimlik, Kaşif, renkler, tipografi, çizim dili, anlatım kuralları, kapak). **Çelişki varsa BRAND.md kazanır.**
-- `videos/YYYY-MM-DD/*.json` — günlük senaryolar. Push edilince `.github/workflows/daily.yml` render + yükleme yapar, sonucu `*.youtube.json` olarak geri commit eder.
-- `tools/plan.py` — bugünün üretim planı: kaç video, dosya adları, `publish_at` saatleri, uzun video günü mü, aylık ElevenLabs karakter kullanımı. **Tarih/saat hesabını elle yapma, bunu kullan.**
-- `tools/lint.py` — senaryo kural denetimi (tema, Kaşif oranı, karakter, sahne sayısı, çeşitlilik, cue, anlatım, kapak, SEO, `publish_at`). Hata varsa push yok.
-- `tools/preview.py` — TTS olmadan görsel kontrol (tahmini zamanlama ile kontak sayfası + kapak + sahne başına hareket ölçümü, donuk sahneyi `STATIC?` diye işaretler).
-- `docs/ANIMATION_GUIDE.md` — parşömen görsel dili, sahne tipleri tablosu, ekran düzeni, hareket dili, yeni sahne tipi şablonu. **Senaryo yazan ya da sahne kodlayan her ajan önce BRAND.md'yi ve bunu okur.**
-- `docs/REVIEW.md` — eleştiri döngüsü: 11 kriterli puanlama, geçme şartı (hepsi ≥ 7), günlük formatı.
-- `tools/upload.py` — YouTube yüklemesi (Actions'ta çalışır, `YOUTUBE_TOKEN_JSON` secret'ı). Fotoğraf/video kredilerini (`params.credit`) açıklamaya otomatik ekler.
-- `tools/media.py` — telifsiz fotoğraf/video bulur ve indirir (Wikimedia Commons; `PEXELS_API_KEY` varsa Pexels foto + video).
-- `cloudflare/telegram-worker.js` — Telegram komut dinleyicisi (Cloudflare Worker): `/uzun [konu]`, `/shorts [konu]` günlük görevi API ile ek video isteğiyle başlatır. Kurulum `cloudflare/KURULUM.md`.
-- `tools/hf.py` — (kullanılmıyor: kanal sahibi Higgsfield'ı yasakladı, 2026-10-22) Higgsfield sepya klibini (MCP ile üretilen) indirip 1080p'ye normalleştirir. Bulut ortamı Higgsfield CDN'ine erişemezse klip `params.url` ile senaryoya yazılır; `build.py` render sırasında (GitHub Actions) indirir, önizleme yer tutucu gösterir.
+- `build.py` — `<senaryo>.json -> mp4`. ElevenLabs (kelime zamanlamalı, nefes sesleri kısılır: `debreath`),
+  sahneleri Playwright ile kare kare çeker (CPU sayısı kadar paralel tarayıcı), ffmpeg ile birleştirir. Sadece `"engine": "studio"`.
+- `scenes/studio/` — tek motor: `engine.js` (zaman çizelgesi, geçişler, kapak), `core.js` (yardımcılar, `SHOTS`,
+  `THEME_PARCHMENT`), `parchment-theme.js` (kâğıt, altyazı şeridi, kicker, marka). Zaman sadece `window.seek(t)`;
+  her şey deterministik (`Math.random` yok, `rng(seed)`).
+- `scenes/studio/shots/<tip>.js` — her sahne tipi kendi dosyasında (otomatik yüklenir): `_ink.js`, `kasif.js`
+  (Kaşif + `stage`), `parchment2d.js` (`chapter`, `title`, `board`, `map`, `timeline`), `photo.js` ve konuya özel tipler.
+- Referans kalite: `videos/2026-10-20/01-emu-savasi.json` (Short), `videos/2026-10-19/05-piri-reis-haritasi.json` (uzun).
+- `docs/ANIMATION_GUIDE.md` (görsel dil, sahne tipleri, yeni tip şablonu) ve `docs/REVIEW.md` (11 kriterli eleştiri).
+  **Senaryo yazan ya da sahne kodlayan her ajan önce BRAND.md'yi ve ANIMATION_GUIDE'ı okur.**
+- `tools/plan.py` planı · `tools/lint.py` kural + SEO denetimi · `tools/preview.py` TTS'siz kontak sayfası + kapak +
+  hareket ölçümü (`STATIC?`) · `tools/media.py` telifsiz fotoğraf (Wikimedia, Pexels) · `tools/sfx.py` hafif ambiyans müziği.
+- `tools/upload.py` YouTube yüklemesi (kanal dosya önekinden; krediler ve bölümler açıklamaya eklenir).
+- `tools/check.py` **API kontrolü**: ElevenLabs anahtarı/kalan kredi/sesler, iki kanalın YouTube girişi (token tazelenir,
+  doğru kanala mı bağlı), Telegram botu. `.github/workflows/api-check.yml` her sabah 03:15'te ve her `Daily batch`
+  başında çalışır; süresi dolmuş YouTube girişinde `YouTube login (phone)` workflow'unu o kanal için kendisi başlatır
+  (kod Telegram'a gelir, gelen JSON kanalın secret'ına yapıştırılır: `YOUTUBE_TOKEN_JSON` / `YOUTUBE_TOKEN_JSON_AG`).
+- `tools/telegram.py` + `tools/live.py` — her video için yerinde güncellenen tek Telegram mesajı, Shorts'un
+  Instagram'a hazır dosyası. `cloudflare/telegram-worker.js` — Telegram `/uzun`, `/shorts` komutları (`cloudflare/KURULUM.md`).
 
-Ses: anlatım + altında çok hafif ambiyans müziği (`tools/sfx.py`, kodla üretilir). **Efekt sesi (whoosh, pop, vuruş) yok — kanal sahibi istemiyor, geri ekleme.** **Nefes sesi de istenmiyor:** `eleven_v3` kelime aralarında nefes alıyor; `build.py` (`debreath`) kelime zamanlamasına göre kelime aralarını kısar, kelimelere dokunmaz. Müziği de kapatmak için senaryoya `"sfx": false`.
-
-Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece GitHub Actions'ta çalışır. Yerel kontrol için `tools/preview.py` kullan.
+Ses: anlatım + çok hafif ambiyans (`"sfx": false` kapatır). **Efekt sesi (whoosh, pop) ve nefes sesi yok** —
+kanal sahibi istemiyor. **Görseller sadece kodla üretilir:** Higgsfield ya da başka bir yapay zekâ görsel/video
+aracı hiç kullanılmaz (lint engeller); çizilemeyen an için yeni parşömen sahne tipi ya da telifsiz gerçek fotoğraf.
+Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece Actions'ta. Yerel kontrol: `preview.py`.
 
 ## Günlük üretim görevi
 
-Zamanlanmış görev her sabah bu bölümü uygular.
+Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Stickstory farkları aşağıda).
 
-**Plan:** her gün **4 Shorts + 1 uzun video** (`python tools/plan.py` söyler). Bu planın dışına çıkma, fazladan video üretme. Karakter sınırlarına kesinlikle uy; `plan.py` aylık ElevenLabs kullanımını gösterir, `warning: true` ise raporda mutlaka belirt.
-
-| | Süre | Karakter (anlatım metni toplamı) | Yayın |
+| | Süre | Anlatım karakteri | Sahne |
 |---|---|---|---|
-| Shorts ×4 | 28–35 sn | **400–500** (sert sınır 550) | her gün 12:00, 15:00, 19:00 ve 22:00 (+03:00) |
-| Uzun video (her gün) | **8–10 dk** | **6.500–7.800** (sert sınır 8.300) | her gün 20:30 (+03:00) |
+| Shorts | 28–35 sn | **400–500** (sert sınır 550) | 8–11 |
+| Uzun video | **5–6 dk** | **4.300–5.000** (sert sınır 5.400) | **40–50**, her 8–12 sahnede bir `"chapter"` (ilk sahnede mutlaka) |
 
-**Shorts'ta izlenmeyi belirleyen kurallar** (YouTube, ilk 1–2 saniyede kaydırılan videoyu akışa açmaz):
-- **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" diye hitap eder, merakı paylaşır ve açıklar ("Kediler neden hep dört ayağının üstüne düşer, hiç merak ettiniz mi? Gelin, hemen anlatayım."). Olayı altyazı gibi sayan, "yapıyor ediyor" diye giden anlatım yasak; **devrik cümle yok** (özne başta, yüklem sonda: "Ordu geldi.", "Geldi ordu." değil) (BRAND.md §6.0–6.3, §6.10).
-- **İlk kare dolu olmalı.** Shorts otomatik olarak `cover` bloğuyla açılır: ilk cümle bitene kadar kapaktaki dev yazı + dramatik görsel ekranda durur. Bu yüzden **ilk cümle kısa (3–10 kelime) ve kapak yazısıyla aynı fikirde** olmalı ("Bisküvilerdeki bu delikler süs değil." ↔ kapak "BU DELİKLER SÜS DEĞİL").
-- **Hızlı görüntü temposu:** 2–4 saniyede bir yeni görüntü, 8–11 sahne. Anlatım ise doğal akar; sahneler cümleyi bölebilir.
-- **Net kapanış (döngü yok):** son cümle **tam ve kendi başına anlamlı** olsun; videoyu bağlayan, akılda kalan bir sonuç/punchline ("Yani ayağının altında, erimeyi reddeden bir demir güneş var."). Cümleyi yarım bırakıp videonun başına bağlama — kanal sahibi "sonsuz video" etkisini istemiyor. Ayrı bir soru/"yorumlara yazın" sahnesi koyma; yorum sorusu açıklamaya yazılır.
-- Hiç dolgu cümle yok; her cümle ya yeni bir bilgi ya da gerilim eklesin.
+### Akış (ana oturum = yönetmen; alt ajanlar commit/push yapmaz; bağımsız işler aynı mesajda paralel)
 
-### Üretim akışı: ajanlar ve kapılar
+0. **API kontrolü:** GitHub MCP `actions_run_trigger` ile `api-check.yml`'i başlat (`ref: claude/shorts-pipeline`),
+   sonucu bekleme. Sonuç Telegram'a gider; YouTube girişi bozuksa render yine yapılır, video Actions'ta 14 gün saklanır.
+1. **Plan:** `python tools/plan.py`. Sadece `todo` listesindekileri üret (`done` olanlara dokunma); `todo` boşsa dur.
+   Dosya adları, `publish_at` ve önerilen `category` buradan gelir. `elevenlabs_chars.warning: true` ise karakteri
+   aralığın alt ucunda tut ve raporda belirt. Plan dışına çıkma, fazladan video üretme.
+2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanal; `ag-` Stickstory'dir) `youtube.title` ve konularını
+   oku, aynı ya da çok benzer konuyu seçme. Dünün senaryolarının `*.youtube.json`'u yoksa (yüklenmemiş) raporla.
+3. **Konu:** niş **tarih hikâyeleri** (BRAND §1): gerçek olay, gerçek insanlar, gerilim, "peki neden oldu?".
+   Havuzu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşlar ·
+   keşifler ve icatlar · imparatorlukların yükselişi/çöküşü · **Türkiye ve Osmanlı tarihi, haftada en az 2 video**).
+   Konu `tarih-bolumu` becerisinin 4 testini geçmeli. Uzun video: birden fazla perdesi olan daha derin bir olay;
+   aynı günün Short'undan farklı.
+4. **`videos/<tarih>/production.md`:** her video için konu, havuz, "izleyici sonunda ne hisseder", kanca + kapak
+   fikri, önce **tek parça akıcı anlatım metni**, sonra çekim listesi (her sahne: cümle, `visual`, tip, Kaşif ne yapıyor,
+   cue, kamera notu). **Önce senaryo, sonra görüntü** (kanal sahibinin kuralı, BRAND §6.10): metin sahne düşünmeden
+   yazılır, sesli okunur gibi kontrol edilir, sonra sahnelere bölünür. Sahne başına cümle yazıp görsel tarif etmek yasak.
+5. **Yazım:** video başına 1 yazar ajan (uzunda: önce tek yazar tüm anlatımı, sonra bölüm başına bir ajan sahneleri).
+   Her ajana `production.md` bölümünü, dosya adını, `publish_at`'i ver; CLAUDE.md + BRAND.md + ANIMATION_GUIDE okusun,
+   `tarih-bolumu` becerisini yüklesin, bilgileri doğrulasın, JSON'u yazsın, `lint` hatasız + `preview` çalıştırıp
+   `sheet.png`/`cover.jpg`'ye baksın. Yeni sahne tipi gerekirse **kendi dosyasına** yazar; ortak dosyalara
+   (`engine.js`, `core.js`, `parchment-theme.js`, `_ink.js`, `kasif.js`, `parchment2d.js`) paralel ajan dokunmaz.
+6. **Eleştiri:** video başına yazardan farklı 1 eleştirmen ajan, `docs/REVIEW.md`'ye göre puanlar, en büyük 3 sorunu
+   yazar, düzeltmez. **Düzeltme turu:** aynı yazar ajan (SendMessage) düzeltir → lint → preview → tekrar puan.
+   En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 7 (kapak ≥ 8). Her tur `production.md` → "Eleştiri günlüğü".
+7. **Son kapı (yönetmen):** videoların konu/dönem olarak birbirinden ve geçmişten farklı olduğunu, `lint`'in hatasız
+   geçtiğini, her `cover.jpg` ve `sheet.png`'yi **kendi gözüyle** gördüğünü doğrular.
+8. **Gönder:** push'tan hemen önce `python tools/lint.py videos/<tarih>/*.json` son kez hatasız. Hepsini (`media/`,
+   `production.md`, varsa `scenes/studio/` değişikliği) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et,
+   `git pull --rebase origin claude/shorts-pipeline`, sonra doğrudan `claude/shorts-pipeline`'a push (yeni dal/PR yok).
+9. **Rapor:** konu, başlık, kapak metni, karakter, yayın saati (İstanbul), son tur puanları, aylık ElevenLabs
+   kullanımı, API kontrolünün sonucu ve bir sonraki uzun video tarihi (`next_long_video`).
 
-Videolar tek seferde yazılıp gönderilmez; bir prodüksiyon gibi aşamalı ilerler. Ana oturum **yönetmen**dir:
-konuları seçer, işi alt ajanlara (Agent aracı) dağıtır, kapıları denetler, commit/push'u kendisi yapar.
-Alt ajanlar commit/push yapmaz. Bağımsız işler **aynı mesajda paralel** başlatılır.
+Zaman: tüm akış ~1,5 saati geçmesin; turlar uzarsa 3. turu atla ve belirt. Ağır işler (`preview.py`) aynı anda en fazla 3.
 
-1. **Ön hazırlık (yönetmen):** adım 1–3. Sonra `videos/<tarih>/production.md` yaz: her video için konu,
-   konu havuzu (BRAND §1), tek cümlelik "izleyici sonunda ne hisseder", kanca + kapak fikri ve **çekim listesi**
-   (her sahne: anlatım cümlesi, `visual`, sahne tipi, Kaşif ne yapıyor, cue kelimesi, kamera/hareket notu). Bu dosya
-   günün yaratıcı belgesidir ve commit'e girer (workflow sadece `.json` dosyalarını render eder).
-2. **Önce senaryo, sonra görüntü (kanal sahibinin kuralı):** yazar önce anlatımı **tek parça, akıcı bir metin** olarak yazar: bir anlatıcının sesiyle, sahne ve görsel düşünmeden (bkz. `brand/kit/BRAND.md` §6.10). Metin `production.md`'ye konur ve sesli okunur gibi kontrol edilir; ancak bundan sonra metin sahnelere bölünür ve görseller metne göre kurulur. Görsel cümleyi değil, cümle görseli belirler. Sahne başına cümle yazıp görseli tarif etmek yasak.
-   **Yazım (video başına 1 yazar ajan, paralel):** her ajana `production.md`'deki kendi bölümünü, dosya
-   adını, `publish_at` değerini ver; CLAUDE.md + `brand/kit/BRAND.md` + `docs/ANIMATION_GUIDE.md` okusun ve
-   `tarih-bolumu` becerisini yüklesin. Görevi: bilgileri doğrulamak (adım 4), senaryo JSON'unu yazmak, `lint` hatasız + `preview` çalıştırıp `sheet.png`/`cover.jpg`'ye bakmak.
-   Uygun sahne tipi yoksa yeni tipi **kendi dosyasına** yazar (`scenes/studio/shots/<tip>.js`);
-   ortak dosyalara (`engine.js`, `core.js`, `parchment-theme.js`, `_ink.js`, `kasif.js`, `parchment2d.js`)
-   paralel ajanlar dokunmaz; gerekiyorsa yönetmene bildirir. Uzun videoda: önce tek bir yazar tüm anlatımı
-   yazar (hikâye bütünlüğü), sonra her bölüm (`chapter`) için ayrı bir ajan o bölümün sahnelerini
-   kurar ve önizler.
-3. **Eleştiri (video başına 1 eleştirmen ajan, yazardan farklı, paralel):** `docs/REVIEW.md`'ye göre
-   puanlar, en büyük 3 sorunu yazar. Kendisi düzeltmez.
-4. **Düzeltme turu:** yazar ajan (SendMessage ile aynı ajana devam et) sorunları düzeltir → lint →
-   preview → eleştirmen tekrar puanlar. En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 7. Her tur
-   `production.md` → "Eleştiri günlüğü"ne eklenir.
-5. **Son kapı (yönetmen):** dört Shorts'un konu/dönem/konu havuzu olarak birbirinden ve geçmişten farklı
-   olduğunu, `lint` hatasız geçtiğini, her `cover.jpg` ve `sheet.png`'yi **kendi gözüyle** gördüğünü
-   doğrular; sonra adım 10–11.
+### Telegram canlı durumu
+Bulut oturumunda Telegram token'ı yok: her aşamada `actions_run_trigger` ile `telegram-status.yml`'i tetikle
+(`ref: claude/shorts-pipeline`; inputs: `key` = günün tarihi, `stage`, `state` = `run|done|fail|info`, `text`,
+`video` = dosya adı slug'ı (ör. `01-emu-savasi`), ilk anışta `title` + `kind` = `short|long`; çok satır için
+`batch` = JSON listesi). Başarısızsa yok say, üretimi bekletme. Metin bilgi dolu olsun:
+- `plan` `run` → `done` ("1 Short + 1 uzun · bütçe %41") — sadece Düşün Bakalım'da (genel kutu onun).
+- Konular seçilince tek `batch`: her video için `topic` `info` ("Emu Savaşı · tarih") + `publish` `info`
+  (plan.py'deki `istanbul` saati, ör. "24.10 19:00").
+- `script` `run`/`done` + `chars` `info` · her eleştiri turunda `review` `run` ("1. tur: kanca 6 · … en düşük 6"),
+  geçince `done` · push'tan önce açık aşamaları `done` yap, `push` `run`. Hata: `fail` + kısa neden.
+Push'tan sonra `Daily batch` workflow'u aynı mesajları devralır (seslendirme, render yüzdesi + kalan süre, YouTube linki).
 
-Zaman: tüm akış ~1,5 saati geçmesin (uzun video 8–10 dk); turlar uzarsa 3. turu atla ve raporda belirt. Ağır işler
-(`preview.py`, Chromium) aynı anda en fazla 3 tane çalışsın.
+### Senaryo kuralları (lint denetler)
+- Alanlar: `"engine": "studio"`, `"theme": "parchment"`, `"format": "short|long"`, `"fps": 30`, `"subtitles": true`,
+  `"channel"`, `"tts": {"provider": "elevenlabs", "voice_id": <kanalın sesi>, "model": "eleven_v3"}`.
+  `tts.settings`, `pacing`, `max_pause`, sahne `tone`, `art`/`palette`, `mascot` yok. **Ses asla değişmez**
+  (Düşün Bakalım `j4vJUfke1j8j9OYq8V3b`, Stickstory `ppLqTilh7rH7fbUVlXsf`).
+- **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" der, merakı paylaşır ve açıklar; olayı altyazı gibi sayan "yapıyor
+  ediyor" anlatım yasak (en fazla üçte biri "-yor"), **devrik cümle yok**, ekrandakini tarif etmez, cümleler birbirine
+  bağlanır, her 20–30 sn'de gerilim kancası, dolgu cümle yok (BRAND §6). Kısaltmaları açık yaz ("km/sa" değil).
+- **Shorts:** ilk kare doluyla açılır (kapak bloğu ilk cümle bitene kadar ekranda) → **ilk cümle 3–10 kelime ve kapak
+  yazısıyla aynı fikir** ("Bisküvilerdeki bu delikler süs değil." ↔ "BU DELİKLER SÜS DEĞİL"). 2–4 sn'de bir yeni görüntü.
+  Yapı: anın içine düş → gerilim → şaşırtıcı ayrıntı/asıl neden → **net kapanış**: son cümle tam ve kendi başına anlamlı
+  bir punchline; videonun başına bağlanan döngü yok, soru/"yorumlara yazın" sahnesi yok (soru açıklamaya yazılır).
+- **Uzun:** BÖLÜM 1 sıradan dünya → kıvılcım/karar → felaket/dönüm noktası → "peki neden?" → sonrası ve bugün →
+  tek yorum sorusu (`tarih-bolumu` §2). Bölümler YouTube'a otomatik eklenir.
+- Her sahne 1–3 cümle (Shorts'ta en fazla 2), `"visual"` = ekranda tam olarak ne görünüyor; seçilen tip bunu **birebir**
+  göstermeli, uygun tip yoksa yeni tip kodla. `title` sol üstte küçük kicker: `white` 1–2, `gray` ≤ 3 kelime;
+  `title`/`chapter` sahnesinde `{}`. `cues`: sahne metnindeki dramatik bir kelimenin parçası (ilk eşleşme; erken bir
+  kelimeye denk gelmesin), altyazıda altın (sahnede `params.caption_color: "red"` ile kırmızı) yanar.
+- **Sahne tipleri:** `stage` (Kaşif + dönem karakterleri, tek aksesuar), `map`, `timeline`, `board`, `title`, `chapter`,
+  `photo` (gerçek fotoğraf/klip, hep sepya; sadece gerçek tarihî belge/yer/eser için: `python tools/media.py search
+  "<İngilizce sorgu>" --dir videos/<tarih>/media` → `candidates.jpg`'ye bak → `get <no> --dir … --name <ad>`;
+  `params.credit` zorunlu, ajan başına ayrı `--name`) ve konuya özel tipler (parametreler dosya başındaki yorumda).
+- **Kaşif kuralı:** sahnelerin **en az yarısında** Kaşif ekranda ve bir eylem yapıyor (`stage` ya da `params.cast`/`kasif`).
+- **Çeşitlilik:** Shorts'ta en az 4 farklı tip; aynı tip üst üste en fazla 2 (`stage` 3); tek tip toplamın %60'ını geçmez.
+- **Kalite:** her sahnede sürekli hareket (kaynayan çizgi tek başına yetmez), girişlerde `spring()`, vurguda
+  `punch(lt, cue)` ya da Kaşif poz değişimi. Ekranda sahne başına en fazla 5 kelime, en küçük yazı 44 px. Dikey ekranda
+  önemli ayrıntı altyazı şeridine (y ≈ 1170–1320) ve YouTube arayüzüne (y > 1500) konmaz; sol üst marka + kicker'ındır.
+- Geçişler otomatik (`slide`, her üçüncüde `fade`); elle `"transition": "slide|fade|cut"`.
 
-**Canlı Telegram durumu (her video ayrı bir mesajda, yerinde güncellenir).** Bulut oturumunda
-Telegram token'ı yok; yönetmen her aşamada GitHub MCP `actions_run_trigger` ile
-`telegram-status.yml` workflow'unu tetikler (`ref: claude/shorts-pipeline`, inputs: `key` = günün
-tarihi, `stage`, `state` = `run|done|fail|info`, `text`, `video` = dosya adı slug'ı ör. `01-emu-savasi`,
-ilk kez anılan videoda `title` + `kind` = `short|long`; aynı anda birden çok satır için `batch` =
-JSON listesi `[{"stage","state","text","video","title","kind"}]`). Tetikleme başarısızsa yok say,
-üretimi asla bekletme. Ne zaman (metin bilgi dolu olsun: sayı, puan, saat):
-- Başta: `plan` `run` → plan.py'den sonra `plan` `done` ("4 Shorts + 1 uzun · bütçe %41").
-- Konular seçilince (tek `batch`): her video için `topic` `info` ("Emu Savaşı · tarih") + `title` + `kind`, `publish` `info` ("20 Ekim 12:00").
-- Yazar ajanlar başlarken `script` `run`; bitince `script` `done` + `chars` `info` ("486 karakter").
-- Her eleştiri turunda `review` `run` ("1. tur: kanca 6 · tempo 8 · … en düşük 6"); geçince `review` `done` ("2. tur: hepsi ≥ 7").
-- Commit'ten hemen önce `push` `run` (genel bölüm, `video` boş). Bir aşama hata verirse `fail` + kısa neden.
-Push'tan sonra `Daily batch` workflow'undaki `monitor` job'u aynı mesajı devralır (seslendirme,
-render yüzdesi + kalan süre, birleştirme, YouTube linki, Telegram); yönetmen bir şey yapmaz.
-Aynı tarihli mesaj kayıtları GitHub commit status'ü olarak tutulur (commit atılmaz; ayrıntı `tools/telegram.py`, `tools/live.py`).
+### Kapak (tıklanma oranını belirler, en çok özen burada)
+```json
+"cover": {"lines": ["Avustralya", "kuşlara", "savaş açtı"], "highlight": ["kuşlara"], "scene": 0, "t": 2.4, "kasif": "shock"}
+```
+- BRAND §9: parşömen, Fraunces 900 dev yazı, tek kelime kırmızı kutuda, yanında **büyük Kaşif** güçlü bir duyguyla
+  (şok, korku, hayret; yüzü okunur) ve olayın tek simgesi. `lines` 2–4 satır, toplam **3–5 kelime**, başlığı tekrar
+  etmeyen merak patlatan iddia. `highlight` tek kelime. `scene` + `t`: en dramatik, dolu an (boş/yarım çizilmiş kare,
+  sıkıcı harita/pano, uzak plan olmaz; gerekirse nesneyi büyüt). `kasif`: `"shock"`, `{"pose", "emotion", "dir",
+  "face", "scale", "x", "y"}` ya da sahnede zaten büyükse `false`.
+- Uzun video kapağı 1280×720 (solda yazı, sağda sahne + Kaşif); Shorts 1080×1920 (üstte yazı; aynı kare kancadır).
+- **Her video için en az 3 kapak adayı** üret (farklı sahne/an/poz/metin), `cover.jpg`'leri karşılaştır, en güçlüsünü
+  seç; telefonda küçükken okunmalı. Eleştirmen kapağa **8'in altında** verirse kapak yenilenir.
 
-1. **Plan:** `python tools/plan.py` çalıştır. Sadece `todo` listesindeki videoları üret (`done` dolu olanlar önceden hazırlanmış, dokunma); `todo` boşsa hiçbir şey yapma, dur. Dosya adları ve `publish_at` değerleri bu çıktıdan gelir. `elevenlabs_chars.warning: true` ise karakterleri hedef aralığın alt ucunda tut ve raporda belirt.
-2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanalın da: `ag-` önekli dosyalar Stickstory'nin (eski Anlatayım Gel)) `youtube.title` ve konularını oku; aynı ya da çok benzer konuyu tekrar seçme. Dünün `*.youtube.json` dosyalarını kontrol et; yüklenmemiş video varsa raporla.
-3. **Konu:** Kanalın nişi **tarih hikâyeleridir** (BRAND §1): gerçek bir olay, gerçek insanlar, bir gerilim ve "peki neden oldu?" sorusunun cevabı. Konu havuzunu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşların dönüm noktaları · keşifler ve icatların hikâyesi · imparatorlukların yükseliş/çöküşü · **Türkiye ve Osmanlı tarihinden anlar**, haftada en az 2 video). Bilim ancak bir tarih olayını açıklamak için girer. Konu `tarih-bolumu` becerisindeki 4 testi geçmeli (tek an, bir insan, bir "neden", doğrulanabilir). Uzun video: birden fazla perdesi olan, hikâyesi güçlü daha derin bir olay.
-4. **Doğruluk:** Sadece emin olduğun, iyi bilinen bilgileri kullan. Web araması varsa tarih ve sayıları doğrula. Emin olmadığın sayıyı yazma; "yaklaşık" de ya da çıkar. Yaygın ama yanlış efsaneleri anlatma.
-5. **Senaryo** — dosyalar: `01-<slug>.json` … `04-<slug>.json` (Shorts, dördü de farklı konu havuzlarından ve dönemlerden; en az biri Türkiye/Osmanlı tarihinden) ve `05-<slug>.json` (uzun video, Shorts'lardan farklı bir olay); numaralar `plan.py`'nin `todo` listesinden.
-   - **Motor ve tarz:** her dosyada `"engine": "studio"` ve `"theme": "parchment"` (lint ikisini de denetler). Renk paleti seçilmez: tek sabit palet BRAND §3 (`"art"`/`"palette"` yazma).
-   - **Storyboard (zorunlu):** her sahneye `"visual": "ekranda tam olarak ne görünüyor"` cümlesini yaz. Seçtiğin sahne tipi bu cümleyi **birebir** göstermeli; anlatılan şeyle ilgisiz ya da "yaklaşık" bir görsel kullanma. Uygun tip yoksa konuya özel yeni bir parşömen sahne tipi kodla (bkz. 6).
-   - Shorts: `"format": "short"`, `"fps": 30`, 8–11 sahne; sahne sınırı anlatımın doğal duraklarına göre konur (bir sahne bir cümle ya da uzun bir cümlenin parçası olabilir). Uzun: `"format": "long"`, `"fps": 30`, 60–80 sahne, her 8–12 sahnede bir `"chapter": "Bölüm adı"` (ilk sahnede mutlaka; YouTube bölümleri otomatik oluşur).
-   - Ortak alanlar (referans senaryolardaki gibi): `"channel": "Düşün Bakalım"`, `"subtitles": true`, `"tts": {"provider": "elevenlabs", "voice_id": "j4vJUfke1j8j9OYq8V3b", "model": "eleven_v3"}`; `tts.settings`, `pacing`, `max_pause`, sahne `tone` yok (BRAND §6.2).
-     Ses (kanal sahibinin seçimi, asla değiştirme): **tüm videolarda (Shorts ve uzun)** ElevenLabs `voice_id: j4vJUfke1j8j9OYq8V3b`. Model `eleven_v3`. `tools/lint.py` bunu denetler.
-   - **Karakter bütçesine uy** (tablo). `tools/preview.py` çıktısındaki `chars` değerini kontrol et; sınırı aşıyorsa metni kısalt.
-   - Anlatım: hikâye yapısı `tarih-bolumu` §2 (Shorts: anın içine düş → gerilim → şaşırtıcı ayrıntı/asıl neden → net kapanış; uzun video: BÖLÜM 1 sıradan dünya → kıvılcım/karar → felaket/dönüm noktası → "peki neden?" → sonrası ve bugün → tek yorum sorusu). Kurallar BRAND §6 (YouTuber anlatıcı, geçmiş zaman, en fazla üçte biri "-yor", devrik cümle yok, her 20–30 sn'de gerilim kancası). Sade, konuşma dili; ama bir anlatıcı gibi: cümleler birbirine bağlanır, ekrandakini tarif etmez (BRAND.md §6.10). "km/sa" gibi kısaltmaları açık yaz.
-   - Her sahne 1–3 cümle. `title` sol üstte küçük bir "kicker" etiketi olarak görünür: `title.white` 1–2 kelime, `title.gray` en fazla ~3 kelime; `title`/`chapter` sahnesinde boş bırak (`{}`). `tags` gösterilmez.
-   - `cues`: sahnenin metninde geçen bir kelimenin parçası (büyük/küçük harf duyarsız, ilk eşleşme). Animasyonun vurgusunu o kelimeye bağla; erken bir kelimeyle yanlışlıkla eşleşmediğinden emin ol.
-6. **Görseller (parşömen + Kaşif):** her şey `brand/kit/BRAND.md` §2–5 ve `docs/ANIMATION_GUIDE.md`'ye göre: parşömen zemin, kaynayan mürekkep çizgi, tek sabit palet, Fraunces/Lora/Patrick Hand. Sahne tipleri (parametreler her dosyanın başındaki yorumda):
-   - `stage` — Kaşif + dönem karakterleri (şapkasız, tek aksesuar: `laurel`, `turban`, `beret`, `helmet`…) + mürekkep nesneler, yürüyüş/poz dizileri, uzak plan, kamera itmesi (`shots/kasif.js`).
-   - `map` — eski harita, kıyı `preset`'leri ya da özel kara, şehirler, kesikli rota, pusula gülü, el yazısı not.
-   - `timeline` — tarihler ve sıra (Shorts'ta dikey, uzunda yatay), isteğe bağlı Kaşif.
-   - `board` — karşılaştırma, kanıtlar, ✓/✗ listesi, çubuklar, hap rozet.
-   - `title` — tek güçlü cümle ya da sayı, kelime kelime, vurgulu kelime kırmızı kutuda, el yazısı not.
-   - `chapter` — uzun videoda "BÖLÜM 2 / 5" kartı (her `"chapter"` alanlı bölümü açar).
-   - `photo` — gerçek fotoğraf/klip, **her zaman sepya**, kâğıda basılmış gibi: `{"src": "media/x.jpg"}` ya da `{"video": "media/x.mp4", "from": 2.0, "rate": 0.6}`, `"kb"` (Ken Burns), `"credit"`, `"marks"` (daire/ok/kutu + el yazısı). Stok fotoğraf görünümü yasak (BRAND §3); sadece gerçek tarihî belge/yer/eser için ve telifsiz kaynaktan (`python tools/media.py search "<İngilizce sorgu>" --dir videos/<tarih>/media` → `candidates.jpg`'ye bak → `get <no> --dir ... --name <ad>` → `params.src` + `params.credit`; ajan başına ayrı `--name`).
-   - **Konuya özel parşömen tipleri:** `emu`, `petri`, `labbench`, `halic`, `portage`, `pirimap` ve yenileri. Uygun tip yoksa yenisini **kendi dosyasına** kodla (`scenes/studio/shots/<tip>.js`, şablon ANIMATION_GUIDE'da); 2D mürekkep, Kaşif'i `KASIF.create()` ile ekleyebilir.
-   - **Kaşif kuralı (zorunlu, lint denetler):** sahnelerin **en az yarısında** Kaşif ekranda ve bir eylem yapıyor (`stage` sahneleri ya da `params.cast`/`params.kasif` içinde). Kaşif anlatıcıdır; olayın kahramanları dönem figürleridir. Eski maskot (`"mascot"`) kaldırıldı, lint hata verir.
-   - **Görseller sadece kodla üretilir (kanal sahibinin kuralı, 2026-10-22): Higgsfield ve başka yapay zekâ video/görsel aracı hiç kullanılmaz** (Shorts ve uzun video, iki kanal). Kodla çizilemeyen bir an için yeni bir parşömen sahne tipi yazılır ya da telifsiz gerçek fotoğraf (`photo`) kullanılır.
-   - **Geçişler:** otomatik kâğıt kayması (`slide`) ve yumuşak geçiş (`fade`). Elle: sahneye `"transition": "slide|fade|cut"`.
-   - **Çeşitlilik kuralı (zorunlu):** bir Shorts'ta en az **4 farklı sahne tipi**; aynı tip **üst üste en fazla 2 sahne** (`stage` hariç: Kaşif'in yolculuğu 3 sahne sürebilir); tek bir tip toplamın %60'ını geçmesin.
-   - **Kalite (zorunlu):** her sahnede sürekli hareket (yürüyüş, poz, kamera itmesi, rota çizimi, sayaç; kaynayan çizgi tek başına yetmez), girişlerde `spring()`, vurgu anlarında `punch(lt, cue)` ya da Kaşif'in poz değişimi. Cue'ları gerçekten dramatik kelimelere bağla; altyazıda cue kelimeleri `gold` (sahnede `params.caption_color: "red"` ile kırmızı) yanar. Ekranda en fazla 5 kelime/sahne, en küçük yazı 44 px. Önemli ayrıntıyı altyazı şeridine (dikey ekranda y ≈ 1170–1320) ve en alttaki YouTube arayüzüne (y > 1500) koyma; sol üst marka + kicker'a ayrılmıştır.
-7. **Kapak (thumbnail)** — her dosyada `cover` bloğu zorunlu. Kapak tıklanma oranını belirler; en çok özen gösterilecek kısım budur.
-   ```json
-   "cover": {"lines": ["Avustralya", "kuşlara", "savaş açtı"], "highlight": ["kuşlara"],
-             "scene": 0, "t": 2.4, "kasif": "shock"}
-   ```
-   - **BRAND §9:** parşömen zemin, solda/üstte Fraunces 900 dev yazı, tek kelime `red` kutuda, yanında **büyük Kaşif** güçlü bir pozda (şok, işaret; yüzü okunur büyüklükte) ve olayın tek simgesi (volkan, gemi, taç, harita).
-   - `lines`: 2–4 satır, toplam **3–5 kelime**, büyük harfle basılır. Başlığı tekrar etme; merakı patlatan kısa bir iddia ya da şok cümlesi olsun ("AVUSTRALYA KUŞLARA SAVAŞ AÇTI", "1513'TE AMERİKA'YI ÇİZDİ"). Soru cümlesi yerine iddia çoğu zaman daha güçlüdür.
-   - `highlight`: kırmızı kutuda vurgulanacak **tek** anahtar kelime (en kritik nesne/sayı/isim).
-   - `scene` + `t`: sahnenin en dramatik, en dolu anı (rota çizilmiş, gemiler tepede, emular koşuyor). Boş ya da yarım çizilmiş kare seçme.
-   - `kasif`: kapağa motorun eklediği büyük Kaşif: `"shock"` ya da `{"pose": "point", "emotion": "surprised", "dir": 30, "face": -1, "scale": 1.15, "x": 1720, "y": 1070}`; seçilen sahnede Kaşif zaten büyük ve öndeyse `false`.
-   - Uzun video kapağı 1280×720: solda dev yazı, sağda büyütülmüş sahne + Kaşif. Shorts kapağı 1080×1920: üstte dev yazı, altında sahne (aynı kare Shorts'un ilk saniyelerinde kanca olarak oynar).
-   - `tools/preview.py` kapağı `out/preview/<slug>/cover.jpg` olarak üretir; **mutlaka açıp bak**: yazı küçük ekranda okunuyor mu, yazı görsele ya da Kaşif'e biniyor mu, Kaşif'in yüzü okunuyor mu, görsel dolu ve dramatik mi. Gerekirse `scene`, `t`, `kasif` ve metni değiştirip tekrar üret.
-   - **Kapak çok daha ilgi çekici olmalı (kanal sahibi, 2026-10-21):** her video için en az **3 kapak adayı** üret (farklı `scene`/`t`, Kaşif pozu/duygusu, kapak metni), `cover.jpg`'leri yan yana karşılaştır ve en güçlüsünü seç. Aranan: tek bakışta okunan tek bir dramatik an (felaketin tam anı, dev bir nesne, şaşkın yüzler), büyük ve net Kaşif yüzü güçlü bir duyguyla (şok, korku, hayret), boş kâğıt alanı az, yazı ile görsel arasında güçlü kontrast, telefonda küçükken bile anlaşılır. Sıkıcı bir harita/pano karesi, uzak plan ya da yarım çizilmiş sahne kapak olmaz; gerekirse kapak için o sahnede nesneyi büyüt. Eleştirmen kapağı (REVIEW.md "kapak" kriteri) ayrıca puanlar; **8'in altındaysa kapak yenilenir**.
-8. **YouTube SEO** — her dosyaya `youtube` bloğu:
-   ```json
-   "youtube": {
-     "title": "Emu Savaşı: Avustralya Kuşlara Neden Savaş Açtı?",
-     "description": "...",
-     "tags": ["..."],
-     "category_id": "27",
-     "publish_at": "2026-10-16T13:00:00+03:00"
-   }
-   ```
-   - **Başlık:** ana anahtar kelime başta (insanların gerçekten arayacağı ifade: "emu savaşı", "piri reis haritası"), merak boşluğu bırakan soru ya da iddia. Shorts ≤ 60, uzun ≤ 70 karakter. Türkçe karakterler doğru, BÜYÜK HARF spam yok, en fazla 1 emoji, yanıltıcı clickbait yok (videonun cevabı başlığın vaadini karşılamalı).
-   - **Açıklama:** ilk 150 karakter (aramada görünen kısım) ana anahtar kelimeyi ve kancayı içersin. Sonra 2–4 cümlelik özet; 2–3 yan anahtar kelimeyi doğal geçir. Uzun videoda bir boş satırdan sonra "Bu videoda:" ile 3–5 madde. Sonra abone çağrısı + yoruma çağıran soru ("Her gün yeni bir 'neden?' için abone ol. Sence ...? Yorumlara yaz!"). En sonda 3–5 hashtag (ilk üçü başlığın üstünde görünür): Shorts'ta ilk hashtag `#shorts`, sonra konu hashtag'leri ve `#düşünbakalım`. Bölümler (chapters) uzun videoda otomatik eklenir; elle yazma.
-   - **Etiketler:** 12–18 etiket, toplam ≤ 450 karakter: ana anahtar kelime, 3–5 varyasyonu (eş anlamlı, soru biçimi), konu/kişi/olay adları, genel kategori ("tarih", "tarih hikayeleri", "ilginç bilgiler"), `düşün bakalım`.
-   - `category_id`: "27" (Eğitim). `publish_at`: `tools/plan.py` çıktısındaki değer (geçmiş saatleri zaten ertesi güne kaydırır).
-9. **Kontrol:** `pip install -r requirements.txt` (gerekirse), sonra `python tools/lint.py videos/<tarih>/*.json` (hata kalmayana kadar) ve her dosya için `python tools/preview.py videos/<tarih>/<dosya>.json`. `STATIC?` işaretli sahneyi hareketlendir. `sheet.png` ve `cover.jpg` dosyalarını oku ve kontrol et: taşan/üst üste binen yazı, ekran dışına taşan nesne/etiket, boş kare, palet dışı renk, Kaşif'in olmadığı ya da sadece durduğu sahneler, altyazının arkasında kalan önemli detay, eşleşmeyen cue uyarısı, karakter bütçesi. Sorunları düzelt ve tekrar kontrol et. Ardından eleştiri döngüsü (`docs/REVIEW.md`, aşağıdaki *Üretim akışı*).
-10. **Gönder:** Push'tan hemen önce `tools/lint.py` son kez hatasız geçmeli. Dosyaları (`media/` klasörü, `production.md` ve varsa `scenes/studio/` değişikliği dahil) tek commit'te `Daily batch YYYY-MM-DD` mesajıyla commit et ve doğrudan `claude/shorts-pipeline` dalına push et (varsayılan dal; yeni dal açma, PR açma). Push, `Daily batch` workflow'unu tetikler (render + kapak + YouTube'a zamanlanmış yükleme).
-11. **Rapor:** Konuyu, başlığı, kapak metnini, karakter sayısını, yayın saatini ve son tur eleştiri puanlarını kısaca özetle; bir sonraki uzun video tarihini yaz.
+### YouTube SEO (lint 100/100 ister; altı hatadır, push yok)
+```json
+"youtube": {"title": "Emu Savaşı: Avustralya Kuşlara Neden Savaş Açtı?", "description": "...", "tags": ["emu savaşı", "..."],
+            "category_id": "27", "publish_at": "<plan.py'den>"}
+```
+- **`tags[0]` ana anahtar kelimedir** (insanların gerçekten aradığı ifade). Başlık onunla başlar, merak boşluğu
+  (`?`/`!`/`:`), Shorts 30–60 / uzun 30–70 karakter, en fazla 1 emoji, BÜYÜK HARF yok, cevabı videoda olan dürüst vaat.
+- Açıklama: ilk 150 karakterde ana kelime + kanca; 2–4 cümle özet (2–3 yan kelime); uzunda boş satırdan sonra
+  "Bu videoda:" 3–5 madde; abone çağrısı + yorum sorusu ("Her gün yeni bir 'neden?' için abone ol. Sence …? Yorumlara
+  yaz!"); son satırda 3–5 hashtag (Shorts'ta ilki `#shorts`, sonra konu, `#düşünbakalım`). Shorts ≥ 250, uzun ≥ 600 karakter.
+- Etiketler: 12–18, toplam ≤ 450 karakter, tekrar/hashtag yok, ana kelimenin ≥ 3 varyasyonu, konu/kişi adları,
+  "tarih", "tarih hikayeleri", `düşün bakalım`. `category_id` "27". Diğer kanalın adı/hashtag'i geçmez.
 
-## İkinci kanal: Stickstory (global, İngilizce; eski adı Anlatayım Gel)
+### Kontrol
+`pip install -r requirements.txt`, `python tools/lint.py videos/<tarih>/*.json` (hata kalmayana kadar), her dosya için
+`python tools/preview.py …` (`CHROMIUM_PATH=/opt/pw-browsers/chromium`). `STATIC?` sahneyi hareketlendir. `sheet.png` ve
+`cover.jpg`'de: taşan/üst üste binen yazı, ekran dışı nesne, boş kare, palet dışı renk, Kaşif'siz ya da duran sahne,
+altyazının arkasında kalan ayrıntı, eşleşmeyen cue uyarısı, karakter bütçesi. Doğruluk: sadece emin olunan bilgiler;
+web varsa tarih ve sayıları doğrula, emin olmadığın sayıyı yazma, yaygın yanlış efsaneleri anlatma.
 
-Kanal sahibinin ikinci kanalı (2026-10-21, adı "Anlatayım Gel" idi); **2026-10-22'den itibaren adı Stickstory, global ve tamamen İngilizce**:
-seslendirme, ekrandaki her yazı (kicker, harita/pano etiketleri, el yazısı notlar, bölüm kartı
-"CHAPTER 2 / 5"), altyazı, kapak, YouTube başlığı/açıklaması/etiketleri. Düşün Bakalım Türkçe kalır.
-Ayrı bir zamanlanmış görev her sabah bu bölümü uygular. Tarz (parşömen + fesli anlatıcı), kalite kuralları,
-ajan akışı, kapak ve SEO kuralları **Düşün Bakalım ile birebir aynıdır** (yukarıdaki *Günlük üretim görevi*,
-BRAND.md); İngilizce anlatım kuralları **BRAND.md §11**'dedir. Farklar:
+## İkinci kanal: Stickstory (global, İngilizce)
 
-- **Plan:** `python tools/plan.py --channel ag`. Her gün **2 Shorts** (13:00, 17:30) + **Salı, Perşembe,
-  Cumartesi** bir uzun video (19:30; Cumartesi 14:00). Sadece `todo` listesindekileri üret; dosya adları
-  `ag-NN-<slug>.json`. Her video için plan.py bir **kategori** önerir (`category`); günün videoları farklı kategoriden.
-- **Niş (global):** sadece tarih değil; dünyada en çok izlenen Shorts kategorilerinden parşömen + çöp adam
-  tarzına uyanlar (`tools/channels.py` → `categories`): *history's strangest moments* · *unsolved mysteries* ·
-  *how it was built* · *origins of everyday things* · *the human body* · *animal superpowers* · *space and planet
-  earth* · *survival stories* · *empires and battles* (Osmanlı/Türk tarihi burada, global izleyiciye anlatılır).
-  Her konu yine **gerçek, doğrulanabilir bir hikâye**dir: bir an, bir insan (ya da bir canlı/nesne), bir "neden?"
-  (`tarih-bolumu` 4 testi; bilim/vücut/hayvan konularında "insan" yerine somut bir kahraman ya da deney olabilir).
-  Konu **iki kanalın geçmişinde** (tüm `videos/*/*.json`) işlenmemiş olmalı; aynı gün Düşün Bakalım'la çakışmamalı.
-- **Senaryo alanları:** `"channel": "Stickstory"` (ekranda sol üstte bu ad yazar), `"narrator": "fes"`, **`"lang": "en"`**,
-  `"tts": {"provider": "elevenlabs", "voice_id": "ppLqTilh7rH7fbUVlXsf", "model": "eleven_v3"}` (kanal sahibinin
-  İngilizce sesi, asla değiştirme; ses kanalın `voice_id`'sidir, `tools/channels.py`). Anlatıcı Kaşif'in aynı çizimi, kırmızı
-  fesli (`KASIF.setNarrator`); Kaşif kuralları aynen geçerli. `lint` kanal adını, dosya önekini, anlatıcıyı, dili ve sesi denetler.
-- **Bütçe:** Shorts 400–500, uzun 6.500–7.800 karakter (İngilizce de aynı; ~15 karakter/sn).
-- **SEO (İngilizce, global arama):** başlık İngilizce aranan ifadeyle başlar ("Mary Celeste: …", "Why Do Cats…?");
-  açıklama İngilizce, uzun videoda "In this video:" listesi, abone çağrısı "Subscribe to Stickstory for …",
-  yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + **`#stickstory`**; etiketlerde **`stickstory`**
-  ve İngilizce varyasyonlar. Metadata'da Türkçe karakter ve "Düşün Bakalım" geçmez.
-- **Yayın saatleri** Europe/Istanbul; 13:00 = Londra 11:00 / New York 06:00, 17:30 = New York 10:30, 19:30 = New York 12:30.
-- **Telegram:** sadece video satırları (`video` = `ag-NN-<slug>`); `plan`/`push` gibi genel satırları
-  gönderme (genel kutu Düşün Bakalım'ındır). Kutularda başlığın önünde kanal adı yazar. Telegram metinleri Türkçe kalır (kanal sahibine). Kanal açıklaması: "How about hearing history from a stick figure? ✏️📜".
-- **Commit:** `Daily batch YYYY-MM-DD (Stickstory)`; aynı dala push. Yükleme `YOUTUBE_TOKEN_JSON_AG`
-  secret'ıyla, `defaultLanguage`/`defaultAudioLanguage` = `en`; secret yoksa render yapılır ama yükleme atlanır.
-
-### SEO puanı (iki kanal, 100/100 zorunlu)
-
-`tools/lint.py` her senaryoya 100 üzerinden SEO puanı verir; **100'ün altı hatadır, push yok.** Puanlanan:
-başlık (30–60/70 karakter, `tags[0]` ana anahtar kelimeyle başlar, merak boşluğu `?`/`!`/`:`, en fazla 1 emoji,
-BÜYÜK HARF yok) · açıklama (ana anahtar kelime ilk 150 karakterde, Shorts ≥ 250 / uzun ≥ 600 karakter, uzunda
-"Bu videoda:"/"In this video:", abone çağrısı + yorum sorusu, son satırda 3–5 hashtag, Shorts'ta ilk `#shorts`,
-kanal hashtag'i, diğer kanalın adı yok) · etiketler (12–18, ≤ 450 karakter, tekrar yok, kanal etiketi, ana anahtar
-kelimenin en az 3 varyasyonu, hashtag yok) · kategori · İngilizce kanalda Türkçe karakter yok · kapak metni (3–5 kelime, tek vurgu).
-**`tags[0]` her zaman ana anahtar kelimedir.**
+Ayrı bir zamanlanmış görev her sabah bunu tetikler. Tarz, akış, kalite, kapak ve SEO kuralları yukarıdakiyle
+**birebir aynı**; İngilizce anlatım kuralları **BRAND.md §11**. Farklar:
+- `python tools/plan.py --channel ag`; dosyalar `ag-NN-<slug>.json`; plan her video için farklı bir `category` önerir.
+- **Her şey İngilizce:** ses, ekrandaki her yazı (kicker, etiketler, el yazısı notlar, "CHAPTER 2 / 5"), altyazı, kapak,
+  başlık/açıklama/etiketler. Metadata'da Türkçe karakter ve "Düşün Bakalım" geçmez.
+- **Niş:** sadece tarih değil, en çok izlenen Shorts kategorilerinden parşömen + çöp adama uyanlar (`channels.py`
+  `categories`; Osmanlı/Türk tarihi "empires and battles" altında global izleyiciye). Her konu yine gerçek ve
+  doğrulanabilir (`tarih-bolumu` 4 testi; bilim/hayvan konularında kahraman bir canlı ya da deney olabilir). Konu iki
+  kanalın geçmişinde işlenmemiş ve aynı gün Düşün Bakalım'la çakışmıyor olmalı.
+- Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"`, `"lang": "en"`, ses `ppLqTilh7rH7fbUVlXsf`.
+- SEO: başlık aranan İngilizce ifadeyle başlar ("Mary Celeste: …"); uzunda "In this video:"; "Subscribe to Stickstory
+  for …" + yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + `#stickstory`; etiketlerde `stickstory`.
+- Telegram: sadece video satırları (`video` = `ag-NN-<slug>`; `plan`/`push` gönderme). Telegram metinleri Türkçe.
+- Commit: `Daily batch YYYY-MM-DD (Stickstory)`. Yükleme `YOUTUBE_TOKEN_JSON_AG` ile, dil `en`.
 
 ## Elle başlatılan ek video
-
-Kanal sahibi zamanlamanın dışında da tek bir video başlatabilir: Telegram'da `/uzun [konu]` ya da
-`/shorts [konu]` (Cloudflare Worker, günlük görevi API ile "EK VİDEO: uzun|shorts · Konu: …" payload'ıyla
-başlatır) ya da sohbette "bir uzun video üret ve yayınla".
-Bu, plan dışı ama **istenmiş** bir videodur; "fazladan video üretme" kuralı buna uygulanmaz.
-
-- `python tools/plan.py --extra short|long` dosya numarasını ve en erken `publish_at`'i verir (şimdi + 1 saat;
-  render daha geç biterse `upload.py` hemen yayınlar). Elle saat hesaplama.
-- Senaryonun en üstüne `"extra": true` yaz: plan.py bu dosyayı günlük planın Shorts/uzun sayısına katmaz,
-  sabahki görev yine kendi videolarını üretir.
-- Konu verilmemişse geçmişte işlenmemiş bir tarih konusu seç (adım 2–3). Akış günlük görevle aynı:
-  `production.md` (ek bölüm), yazar ajan (uzunda önce anlatım, sonra bölüm ajanları), eleştirmen (en az 1 tur;
-  zaman yetiyorsa 2), lint, preview, cover/sheet'e kendi gözünle bak, Telegram canlı durum, commit
-  `Extra video YYYY-MM-DD: <başlık>`, push.
+Telegram `/uzun [konu]`, `/shorts [konu]` (payload "EK VİDEO: uzun|shorts · Konu: …") ya da sohbetten istek: plan
+dışı ama **istenmiş** bir videodur. `python tools/plan.py --extra short|long [--channel ag]` numara ve en erken
+`publish_at`'i verir; senaryoya `"extra": true` yaz (günlük plana sayılmaz). Konu yoksa geçmişte işlenmemiş bir konu
+seç. Akış aynı (eleştirmen en az 1 tur, zaman yetiyorsa 2); commit `Extra video YYYY-MM-DD: <başlık>`.
 
 ## Komutlar
 
 ```bash
-python build.py videos/<tarih>/<dosya>.json                 # tam render (ELEVENLABS_API_KEY gerekli)
-python build.py videos/<tarih>/<dosya>.json --scenes 3      # ilk 3 sahne
-python build.py videos/<tarih>/<dosya>.json --still 12.5    # tek kare
-python build.py videos/<tarih>/<dosya>.json --no-tts -o out/draft.mp4   # sessiz taslak video (tahmini zamanlama)
-# parçalı render (Actions bunu kullanır; üç adımda da aynı -o):
-python build.py <dosya>.json -o out/x.mp4 --prepare   # TTS + zaman çizelgesi + medya -> out/x.prepared.json
-python build.py <dosya>.json -o out/x.mp4 --shard 2/5 # 5 parçanın 2.'si -> out/x.parts/
-python build.py <dosya>.json -o out/x.mp4 --finish    # birleştir + ses + kapak -> out/x.mp4
-python tools/plan.py                                  # bugünün planı (dosyalar, saatler, bütçe)
-python tools/lint.py videos/<tarih>/*.json             # kural denetimi
-python tools/preview.py videos/<tarih>/<dosya>.json   # TTS'siz görsel kontrol
-python tools/preview.py <dosya>.json --times 3,12.5    # belirli anlar
-python tools/media.py search "Piri Reis map" --dir videos/<tarih>/media   # telifsiz görsel ara
-python tools/brand_sheet.py                          # Kaşif referans çizimleri (brand/kit/)
+python tools/plan.py [--channel ag] [--date YYYY-MM-DD] [--extra short|long]
+python tools/lint.py videos/<tarih>/*.json
+python tools/preview.py videos/<tarih>/<dosya>.json [--times 3,12.5]
+python tools/media.py search "Piri Reis map" --dir videos/<tarih>/media
+python tools/check.py                                      # API kontrolü (secret'lar Actions'ta)
+python build.py <dosya>.json [--scenes 3 | --still 12.5 | --cover | --no-tts -o out/draft.mp4]
+python build.py <dosya>.json -o out/x.mp4 --prepare | --shard 2/5 | --finish   # Actions'ın parçalı render'ı
+python tools/brand_sheet.py                                # Kaşif referans çizimleri (brand/kit/)
 ```
 
-Playwright Chromium'u bulamazsa `CHROMIUM_PATH=/opt/pw-browsers/chromium` ver. **Performans kuralı:** pahalı desenleri (kâğıt dokusu gibi) açılışta bir kez pişir, karede sadece kopyala; tarayıcıda `mix-blend-mode`, büyük `filter: blur`, tam ekran yarı saydam katman ve SVG grup `opacity`'sinden kaçın (yazılım raster'ında şerit artefaktı). Motor 1080p/30 fps çizer, ffmpeg 1440p'ye büyütür; render tüm CPU çekirdeklerine bölünür (`RENDER_WORKERS`). Actions'ta bir video ayrıca ~40 sn'lik parçalara bölünüp (en çok 16) ayrı işlerde render edilir. Video kareleri Chromium'un yazılım compositor'ıyla çizilir ve CDP ile yakalanır (kapak eski yolla); eski yola dönmek için `RENDER_COMPOSITOR=gpu`, `RENDER_CAPTURE=screenshot`.
+**Performans kuralı (sahne kodu):** pahalı desenleri açılışta bir kez pişir, karede sadece kopyala; `mix-blend-mode`,
+büyük `filter: blur`, tam ekran yarı saydam katman ve SVG grup `opacity`'sinden kaçın (yazılım raster'ında şerit
+artefaktı). Motor 1080p/30 fps çizer (yazılım compositor'ı, CDP yakalama), ffmpeg 1440p'ye büyütür. Actions'ta bir
+video ~40 sn'lik parçalara (en çok 16) bölünüp ayrı işlerde render edilir.

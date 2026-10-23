@@ -1,5 +1,4 @@
 playwright
-edge-tts
 google-api-python-client
 google-auth
 numpy

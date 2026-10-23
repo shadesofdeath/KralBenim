@@ -26,16 +26,8 @@
   #stage { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: #E9DCC0; }
   #stage > * { position: absolute; inset: 0; }
   canvas { display: block; }
-  #bg, #gl { width: var(--W); height: var(--H); }
-  #gl { filter: sepia(.8) saturate(.5) contrast(.82) brightness(1.22); }   /* optional '3d' shots stay on paper */
+  #bg { width: var(--W); height: var(--H); }
   #shots > svg { position: absolute; left: 0; top: 0; overflow: visible; }
-  #labels { pointer-events: none; }
-  #labels svg { position: absolute; left: 0; top: 0; overflow: visible; }
-  .lbl { position: absolute; transform: translate(-50%, -50%); white-space: nowrap; text-align: center;
-    color: #2B1D12; font-family: Fraunces, serif; font-weight: 800; letter-spacing: -0.01em;
-    text-shadow: 0 0 6px #F4EAD5, 0 0 3px #F4EAD5, 0 0 2px #F4EAD5; }
-  .lbl b { display: block; font-family: Fraunces, serif; font-weight: 900; letter-spacing: .01em; }
-  .lbl small { display: block; font-weight: 600; opacity: .78; }
 
   /* ---- HUD (kicker, captions and brand are drawn by parchment-theme.js into #kickers) */
   #progress { display: none; }
@@ -57,14 +49,11 @@
   html.long.cover #covertext { left: 90px; right: auto; width: 860px; top: 50%; transform: translateY(-50%); font-size: 128px; }
   html.cover #kasifcover { display: block; }
 </style>
-<script src="../vendor/three.min.js"></script>
 </head>
 <body>
 <div id="stage">
   <canvas id="bg"></canvas>
-  <canvas id="gl"></canvas>
   <div id="shots"></div>
-  <div id="labels"></div>
   <div id="kickers"></div>
   <div id="covershade"></div>
   <div id="covertext"></div>

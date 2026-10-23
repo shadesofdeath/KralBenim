@@ -1,0 +1,35 @@
+name: API check
+
+# Every morning before the daily tasks (Stickstory 03:40, Düşün Bakalım 05:50 Istanbul) and on demand:
+# ElevenLabs key + credits + voices, both channels' YouTube logins (refreshed, right channel), Telegram bot.
+# A broken YouTube login starts 'YouTube login (phone)' for that channel (code comes to Telegram).
+on:
+  schedule:
+    - cron: "15 0 * * *"   # 03:15 Europe/Istanbul
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write   # start youtube-auth.yml
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -q google-auth requests
+      - name: Check
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python tools/check.py --notify always --relogin

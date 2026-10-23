@@ -94,7 +94,6 @@ def search(query, d):
     flt = ";".join(f"[{i}:v]scale=360:360:force_original_aspect_ratio=increase,crop=360:360,"
                    f"drawtext=text='{i}':x=12:y=8:fontsize=44:fontcolor=white:box=1:boxcolor=black@0.6[v{i}]" for i in range(len(cands)))
     cols = 4
-    rows = -(-len(cands) // cols)
     layout = "|".join(f"{(i % cols) * 360}_{(i // cols) * 360}" for i in range(len(cands)))
     flt += ";" + "".join(f"[v{i}]" for i in range(len(cands))) + f"xstack=inputs={len(cands)}:layout={layout}:fill=black[o]"
     sheet = d / "candidates.jpg"

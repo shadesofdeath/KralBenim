@@ -13,22 +13,20 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: ./.github/actions/setup
         with:
-          python-version: "3.12"
-      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-inter
-      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+          chromium: "true"
       - name: Covers + upload
         env:
           FILES: ${{ inputs.files }}
+          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
+          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}
           YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
           YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
           YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
-          YOUTUBE_TOKEN_JSON: ${{ secrets.YOUTUBE_TOKEN_JSON }}
-          YOUTUBE_TOKEN_JSON_AG: ${{ secrets.YOUTUBE_TOKEN_JSON_AG }}   # Stickstory, ex Anlatayım Gel (tools/channels.py)
         run: |
           for f in $FILES; do
             python tools/preview.py "$f" --times 0
-            slug=$(python -c "import json,sys;print(json.load(open('$f'))['slug'])")
+            slug=$(jq -r '.slug // empty' "$f"); slug=${slug:-$(basename "$f" .json)}
             python tools/upload.py --thumbnail "${f%.json}.youtube.json" "out/preview/$slug/cover.jpg"
           done
