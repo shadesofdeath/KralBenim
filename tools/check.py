@@ -61,12 +61,19 @@ def check_elevenlabs():
 
 
 def dispatch_relogin(channel):
-    """Start 'YouTube login (phone)' for the channel (it sends the sign-in code to Telegram)."""
+    """Start 'YouTube login (phone)' for the channel (it sends the sign-in code to Telegram), unless one is
+    already running for it."""
     token, repo = os.environ.get("GITHUB_TOKEN"), os.environ.get("GITHUB_REPOSITORY")
     if not (token and repo):
         return False
-    code, _ = http(f"https://api.github.com/repos/{repo}/actions/workflows/youtube-auth.yml/dispatches",
-                   {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"},
+    api = f"https://api.github.com/repos/{repo}/actions/workflows/youtube-auth.yml"
+    auth = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json"}
+    cid = CHANNELS[channel]["id"]
+    for st in ("queued", "in_progress"):   # a login of this channel is already waiting for its code
+        _, runs = http(f"{api}/runs?status={st}&per_page=20", auth)
+        if any(r.get("display_title", "").endswith(f": {cid}") for r in runs.get("workflow_runs", [])):
+            return True
+    code, _ = http(f"{api}/dispatches", auth,
                    {"ref": os.environ.get("GITHUB_REF_NAME", "claude/shorts-pipeline"),
                     "inputs": {"channel": CHANNELS[channel]["id"]}})
     return code == 204
