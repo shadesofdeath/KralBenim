@@ -155,7 +155,7 @@ jobs:
   # one render job per (script, shard): {file, name, shard, of}
   shards:
     needs: prepare
-    if: always() && needs.prepare.result != 'skipped'
+    if: ${{ !cancelled() && needs.prepare.result != 'skipped' }}
     runs-on: ubuntu-24.04
     outputs:
       include: ${{ steps.m.outputs.include }}
@@ -175,7 +175,7 @@ jobs:
 
   render:
     needs: shards
-    if: always() && needs.shards.result == 'success' && needs.shards.outputs.include != '[]'
+    if: ${{ !cancelled() && needs.shards.result == 'success' && needs.shards.outputs.include != '[]' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 180
     strategy:
@@ -212,7 +212,7 @@ jobs:
 
   finish:
     needs: [plan, render]
-    if: always() && needs.plan.outputs.files != '[]'
+    if: ${{ !cancelled() && needs.plan.outputs.files != '[]' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 60
     strategy:
@@ -262,7 +262,7 @@ jobs:
           cp "$N.youtube.json" "${F%.json}.youtube.json"
           python tools/live.py note --name "${{ steps.n.outputs.name }}" --url "$(jq -r '.url // empty' "$N.youtube.json")" || true
       - name: Send to Telegram (Instagram-ready)
-        if: always() && steps.n.outputs.name != ''
+        if: ${{ !cancelled() && steps.n.outputs.name != '' }}
         continue-on-error: true
         run: |
           if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ ! -f config/telegram_chat_id ]; then echo "Telegram not set up"; exit 0; fi
@@ -284,7 +284,7 @@ jobs:
 
   record:
     needs: finish
-    if: always() && needs.finish.result != 'skipped'
+    if: ${{ !cancelled() && needs.finish.result != 'skipped' }}
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
