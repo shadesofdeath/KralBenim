@@ -11,13 +11,15 @@ prints a note and exits 0 without a .youtube.json. Expired login, or a token who
 the script's channel: tells Telegram, uploads nothing, exits 1.
 
 <file>.json:  "youtube": {"title", "description", "tags", "category_id", "publish_at"}  (no publish_at: private)
+A video is always uploaded private + scheduled, never public at once: a publish_at that already passed moves
+to the same time on the next day.
 Sets <video>.jpg as the thumbnail, appends chapters (long videos, from <video>.timeline.json) and photo
 credits to the description. Writes <video>.youtube.json and prints the URL.
 """
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -85,6 +87,14 @@ def open_channel(channel):
                f"'YouTube login (phone)' > channel {c['id']} ile girişte {channel} kanalını seçin.")
         sys.exit(1)
     return yt
+
+
+def schedule_time(publish_at, now=None):
+    """publish_at, or the same time of day on the first later day that is at least 20 minutes away."""
+    when, now = datetime.fromisoformat(publish_at), now or datetime.now(timezone.utc)
+    while when < now + timedelta(minutes=20):
+        when += timedelta(days=1)
+    return when
 
 
 def find_upload(yt, title):
@@ -186,11 +196,10 @@ def main():
         return
 
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}
-    when = datetime.fromisoformat(meta["publish_at"]) if meta.get("publish_at") else None
-    if when and when > datetime.now(timezone.utc):
+    if meta.get("publish_at"):   # always scheduled, never public at once: a passed time moves to the next day
+        when = schedule_time(meta["publish_at"])
         status["publishAt"] = when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    elif when:   # time already passed -> publish now
-        status["privacyStatus"] = "public"
+        print(f"scheduled for {when.isoformat()}")
     body = {"snippet": {"title": meta["title"][:100],
                         "description": description(meta.get("description", ""), chapters(video, lg) + credits(script, lg)),
                         "tags": meta.get("tags", []), "categoryId": str(meta.get("category_id", "27")),
