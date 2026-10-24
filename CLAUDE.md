@@ -63,7 +63,7 @@ Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Sticksto
 ### Akış (ana oturum = yönetmen; alt ajanlar commit/push yapmaz; bağımsız işler aynı mesajda paralel)
 
 0. **API kontrolü:** GitHub MCP `actions_run_trigger` ile `api-check.yml`'i başlat (`ref: claude/shorts-pipeline`),
-   sonucu bekleme. Sonuç Telegram'a gider; YouTube girişi bozuksa render yine yapılır, video Actions'ta 14 gün saklanır.
+   sonucu bekleme. Sorun varsa Telegram'a kendisi yazar; YouTube girişi bozuksa render yine yapılır, video Actions'ta 14 gün saklanır.
 1. **Plan:** `python tools/plan.py`. Sadece `todo` listesindekileri üret (`done` olanlara dokunma); `todo` boşsa dur.
    Dosya adları, `publish_at` ve önerilen `category` buradan gelir. `elevenlabs_chars.warning: true` ise karakteri
    aralığın alt ucunda tut ve raporda belirt. Plan dışına çıkma, fazladan video üretme.
@@ -96,17 +96,10 @@ Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Sticksto
 
 Zaman: tüm akış ~1,5 saati geçmesin; turlar uzarsa 3. turu atla ve belirt. Ağır işler (`preview.py`) aynı anda en fazla 3.
 
-### Telegram canlı durumu
-Bulut oturumunda Telegram token'ı yok: her aşamada `actions_run_trigger` ile `telegram-status.yml`'i tetikle
-(`ref: claude/shorts-pipeline`; inputs: `key` = günün tarihi, `stage`, `state` = `run|done|fail|info`, `text`,
-`video` = dosya adı slug'ı (ör. `01-emu-savasi`), ilk anışta `title` + `kind` = `short|long`; çok satır için
-`batch` = JSON listesi). Başarısızsa yok say, üretimi bekletme. Metin bilgi dolu olsun:
-- `plan` `run` → `done` ("1 Short + 1 uzun · bütçe %41") — sadece Düşün Bakalım'da (genel kutu onun).
-- Konular seçilince tek `batch`: her video için `topic` `info` ("Emu Savaşı · tarih") + `publish` `info`
-  (plan.py'deki `istanbul` saati, ör. "24.10 19:00").
-- `script` `run`/`done` + `chars` `info` · her eleştiri turunda `review` `run` ("1. tur: kanca 6 · … en düşük 6"),
-  geçince `done` · push'tan önce açık aşamaları `done` yap, `push` `run`. Hata: `fail` + kısa neden.
-Push'tan sonra `Daily batch` workflow'u aynı mesajı devralır (seslendirme, render yüzdesi + kalan süre, YouTube linki).
+### Telegram
+Yönetmen (bulut oturumu) Telegram'a **hiçbir şey göndermez**. Her kanalın günlük mesajını push'tan sonra
+`Daily batch` workflow'u otomatik yazar: seslendirme, render yüzdesi + kalan süre, YouTube linki, hata nedeni.
+Böylece mesaj hiçbir zaman eski kalmaz.
 
 ### Senaryo kuralları (lint denetler)
 - Alanlar: `"engine": "studio"`, `"theme": "parchment"`, `"format": "short|long"`, `"fps": 30`, `"subtitles": true`,
@@ -184,7 +177,6 @@ Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı
 - Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"`, `"lang": "en"`, ses `ppLqTilh7rH7fbUVlXsf`.
 - SEO: başlık aranan İngilizce ifadeyle başlar ("Mary Celeste: …"); uzunda "In this video:"; "Subscribe to Stickstory
   for …" + yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + `#stickstory`; etiketlerde `stickstory`.
-- Telegram: sadece video satırları (`video` = `ag-NN-<slug>`; `plan`/`push` gönderme). Telegram metinleri Türkçe.
 - Commit: `Daily batch YYYY-MM-DD (Stickstory)`. Yükleme `YOUTUBE_TOKEN_JSON_AG` ile, dil `en`.
 
 ## Elle başlatılan ek video

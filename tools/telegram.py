@@ -1,21 +1,13 @@
 #!/usr/bin/env python3
-"""Telegram: finished Shorts (Instagram-ready) + ONE live status message per production day.
+"""Telegram: finished Shorts (Instagram-ready) + ONE live status message per channel and day.
 
   python tools/telegram.py setup                      # find the chat that messaged the bot -> config/telegram_chat_id
   python tools/telegram.py send <file>.json out/x.mp4  # video + Instagram caption
   python tools/telegram.py text "message"
-  python tools/telegram.py status <key> <stage> <state> [text] [--video SLUG] [--title T] [--kind short|long] [--progress 60%]
-  python tools/telegram.py clear                      # delete the bot's messages, start fresh ones
-  python tools/telegram.py status <key> --batch '[{"stage": "script", "state": "done", "video": "01-x"}, ...]'
 
-`status` keeps ONE message per channel per <key> (the production date) and edits it in place: the first call
-sends it, every later call (from any job or run) re-renders it from all records. Each video is a block in it.
-<state>: wait | run | done | fail | skip | info (info = "label: text" line, e.g. topic, chars, publish).
-Known stages: plan topic script chars visual preview review publish push tts render mux youtube telegram.
-With --video the line goes under that video's block in its channel's message (ag- files: Stickstory).
-The cloud session does not call this directly (no token there): it dispatches telegram-status.yml.
-Stage records live as commit statuses on an anchor commit (see Store) when GITHUB_TOKEN is set,
-else in out/telegram/<key>.json. `status` never fails: no token/chat id/network -> silent exit 0.
+The live message is written only by GitHub Actions (tools/live.py: voice, render %, YouTube link), never by
+the cloud session, so it is never stale. Stage records live as commit statuses on an anchor commit (Store)
+when GITHUB_TOKEN is set, else in out/telegram/<key>.json.
 
 Env: TELEGRAM_BOT_TOKEN. Chat id: TELEGRAM_CHAT_ID or config/telegram_chat_id.
 GITHUB_TOKEN + GITHUB_REPOSITORY (Actions). TELEGRAM_API (tests): API base, default https://api.telegram.org.
@@ -97,16 +89,7 @@ def instagram_caption(script, channel=DEFAULT):
 # Whoever writes then re-renders the channel's message from all records and edits it, so it is always
 # complete. The message is HTML (bold headings, details in <code>); every value is escaped.
 
-STAGES = {   # id: (emoji, short label)
-    "plan": ("🗓️", "Plan"),
-    "topic": ("💡", "Konu"),
-    "script": ("✍️", "Senaryo"),
-    "chars": ("🔤", "Karakter"),
-    "visual": ("🎨", "Sahneler"),
-    "preview": ("👀", "Önizleme"),
-    "review": ("🧐", "Eleştiri"),
-    "publish": ("🕒", "Yayın"),
-    "push": ("🚀", "Gönderim"),
+STAGES = {   # id: (emoji, short label); the steps GitHub Actions reports (tools/live.py)
     "tts": ("🎙️", "Ses"),
     "render": ("🎬", "Render"),
     "mux": ("🧩", "Birleştirme"),
@@ -301,31 +284,12 @@ class Store:
                 sec = section(st, sid)
                 sec["stages"] = [x for x in sec["stages"] if x["id"] != stage] + [g]
                 sec["stages"].sort(key=lambda x: ORDER.index(x["id"]) if x["id"] in ORDER else len(ORDER))
-        for sec in st["sections"]:            # a message saved under another slug of the same video
-            if sec["id"] != "_" and sec["id"] not in st["msgs"]:
-                alias = next((m for m in st["msgs"] if same_video(m, sec["id"])), None)
-                if alias:
-                    st["msgs"][sec["id"]] = st["msgs"][alias]
         return st
 
 
-NUM_RE = re.compile(r"^((?:[a-z]+-)?\d{2})-")
-
-
-def same_video(a, b):
-    """Two slugs of one video: the director names it before the file exists ("01-arhipov"), the file
-    may end up "01-vasili-arhipov"; the channel prefix + number is unique per day."""
-    ma, mb = NUM_RE.match(a or ""), NUM_RE.match(b or "")
-    return a == b or bool(ma and mb and ma.group(1) == mb.group(1))
-
-
 def section(st, sid, kind=None, title=None):
-    """The section of a video (one Telegram message): an earlier slug of the same video is reused."""
-    for s in st["sections"]:
-        if s["id"] == sid:
-            break
-    else:
-        s = next((x for x in st["sections"] if x["id"] != "_" and sid != "_" and same_video(x["id"], sid)), None)
+    """The section (block) of a video in its channel's message."""
+    s = next((x for x in st["sections"] if x["id"] == sid), None)
     if s is None:
         s = {"id": sid, "kind": None, "title": None, "stages": []}
         st["sections"].append(s)
@@ -364,23 +328,6 @@ def set_stage(sec, stage, state, text=None, progress=None, t0=None, t1=None, now
     g["state"] = state
     g["progress"] = progress if state == "run" else None
     return g
-
-
-def parse_progress(v):
-    """'60%' | '0.6' | '60' | '3/7' -> 0..1, or None."""
-    if v is None or str(v).strip() == "":
-        return None
-    v = str(v).strip().rstrip("%").replace(",", ".")
-    try:
-        if "/" in v:
-            a, b = v.split("/", 1)
-            p = float(a) / float(b)
-        else:
-            p = float(v)
-            p = p / 100 if p > 1 else p
-    except (ValueError, ZeroDivisionError):
-        return None
-    return max(0.0, min(1.0, p))
 
 
 def fmt_dur(sec):
@@ -469,28 +416,36 @@ def msg_key(sid):
     return "ch-" + CHANNELS[channel_of(sid)]["id"]
 
 
+AUTO = ("tts", "render", "mux", "youtube", "telegram")   # stages GitHub Actions writes (tools/live.py)
+
+
+def publish_time(key, sid):
+    """'24.10 19:00' (Istanbul) from videos/<key>/<sid>.json, or ''."""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    try:
+        p = json.loads((ROOT / "videos" / key / f"{sid}.json").read_text())["youtube"]["publish_at"]
+        return datetime.fromisoformat(p).astimezone(ZoneInfo("Europe/Istanbul")).strftime("%d.%m %H:%M")
+    except (OSError, ValueError, KeyError):
+        return ""
+
+
 def render(st, ch, secs, now=None):
-    """The channel's message: heading, the general step, then per video its kind, publish time, title
-    and the one step it is at (+ the run's footer)."""
+    """The channel's message: per video its kind, publish time, title and the one automatic step it is at
+    (voice, render %, YouTube link; written by GitHub Actions only, so it is never stale) + the run's footer."""
     now = now or time.time()
     out = [f"<b>{CH_ICON[CHANNELS[ch]['lang']]} {esc(ch)}</b> · {day_label(st.get('key', ''))}"]
-    videos = 0
     for sec in secs:
-        # the publish time is already in the video's heading, so it is never the status line
-        g = current({**sec, "stages": [x for x in sec["stages"] if x["id"] != "publish"]})
-        if not g:
+        g = current({**sec, "stages": [x for x in sec["stages"] if x["id"] in AUTO]})
+        if sec["id"] == "_" or not g:
             continue
-        if sec["id"] == "_":
-            out.append(stage_line(g, now))
-            continue
-        videos += 1
         kind = {"short": "📱 Short", "long": "📺 Uzun video"}.get(sec.get("kind"), "🎞️ Video")
-        pub = stage_of(sec, "publish")
-        when = f" · {esc(pub['text'])}" if pub and pub.get("text") else ""
-        out += ["", f"{kind}{when}", f"<b>{esc(sec.get('title') or sec['id'])}</b>", stage_line(g, now)]
+        when = publish_time(st.get("key", ""), sec["id"])
+        out += ["", f"{kind}{' · ' + esc(when) if when else ''}", f"<b>{esc(sec.get('title') or sec['id'])}</b>",
+                stage_line(g, now)]
     if len(out) == 1:
         return None
-    if st.get("footer") and videos:
+    if st.get("footer"):
         out += ["", esc(st["footer"])]
     return "\n".join(out)[:4000]
 
@@ -590,115 +545,8 @@ def publish_one(store, st, sid, text, cid, last=None):
     return True
 
 
-def clear(scan=1500):
-    """Delete the bot's own messages in the chat, then forget the stored message ids, so the next status
-    update starts fresh messages. Own messages are found by probing ids: editing the reply markup of an
-    own message answers "not modified", of anyone else's "can't be edited" (the owner's messages stay)."""
-    cid = chat_id(required=False)
-    if not TOKEN or not cid:
-        return 0
-    probe = tg("sendMessage", {"chat_id": cid, "text": "🧹"})
-    top = probe[1]["message_id"] if probe[0] and isinstance(probe[1], dict) else 0
-    store = Store("")
-    store.prefix = "tg/"
-    store.refresh(pages=30, max_age_h=24 * 60)
-    known = set()
-    for k, v in store.seen.items():
-        if "/_msg" in k:
-            c, m, _ = (v["d"].split("|") + ["", "", ""])[:3]
-            if m.isdigit() and str(c) == str(cid):
-                known.add(int(m))
-    top = max([top] + list(known))
-    own = set(known) | ({top} if top else set())
-    for mid in range(max(1, top - scan), top):
-        if mid in own:
-            continue
-        ok, res = tg("editMessageReplyMarkup", {"chat_id": cid, "message_id": mid, "reply_markup": {"inline_keyboard": []}})
-        if ok or "not modified" in str(res):
-            own.add(mid)
-    ids = sorted(own)
-    for i in range(0, len(ids), 100):
-        ok, res = tg("deleteMessages", {"chat_id": cid, "message_ids": ids[i:i + 100]})
-        if not ok:
-            for mid in ids[i:i + 100]:
-                tg("deleteMessage", {"chat_id": cid, "message_id": mid})
-    for k in [k for k in store.seen if "/_msg" in k and store.seen[k]["d"]]:
-        store.put(k, "")
-    print(f"deleted {len(ids)} bot messages (scanned {max(1, top - scan)}..{top})")
-    return 0
-
-
-def apply_update(store, st, u, now=None):
-    """One status update {stage, state, text, video, title, kind, progress} -> records."""
-    sid = u.get("video") or "_"
-    kind, title = u.get("kind"), u.get("title")
-    if sid != "_":
-        k2, t2 = script_info(store.key, sid)
-        kind, title = kind or k2, title or t2
-        if kind or title:
-            store.put_meta(sid, kind, title)
-    sec = section(st, sid, kind, title)
-    if sec["id"] != sid and (kind or title):
-        store.put_meta(sec["id"], kind, title)   # the video's message keeps its first slug; title updates
-    g = set_stage(sec, u["stage"], u.get("state") or "info", u.get("text"), parse_progress(u.get("progress")),
-                  now=now)
-    store.put_stage(sec["id"], g)
-
-
-def script_info(key, slug):
-    """(kind, title) of videos/<key>/<slug>.json, if it exists."""
-    if not DATE_RE.match(key or ""):
-        return None, None
-    try:
-        s = json.loads((ROOT / "videos" / key / f"{slug}.json").read_text())
-    except (OSError, ValueError):
-        return None, None
-    return ("long" if s.get("format") == "long" else "short"), s.get("youtube", {}).get("title")
-
-
-def status(argv):
-    import argparse
-    ap = argparse.ArgumentParser(prog="telegram.py status")
-    ap.add_argument("key", help="production date (2026-10-20) or any name")
-    ap.add_argument("stage", nargs="?", help="plan, topic, script, chars, review, publish, push, ... (or --batch)")
-    ap.add_argument("state", nargs="?", choices=STATES)
-    ap.add_argument("text", nargs="?")
-    ap.add_argument("--video", help="video slug, e.g. 01-emu-savasi (gets its own heading)")
-    ap.add_argument("--title")
-    ap.add_argument("--kind", choices=("short", "long"))
-    ap.add_argument("--progress", help="60%%, 0.6 or 3/7 (a bar while running)")
-    ap.add_argument("--batch", help='JSON list of updates: [{"stage":..,"state":..,"text":..,"video":..}, ...]')
-    a = ap.parse_args(argv)
-    if not TOKEN or not chat_id(required=False):
-        return 0   # Telegram not set up: silently do nothing
-    try:
-        updates = []
-        if a.batch and a.batch.strip():
-            b = json.loads(a.batch)
-            updates += b if isinstance(b, list) else [b]
-        if a.stage:
-            updates.append({"stage": a.stage, "state": a.state or "info", "text": a.text, "video": a.video,
-                            "title": a.title, "kind": a.kind, "progress": a.progress})
-        store = Store(a.key)
-        store.refresh()
-        st = store.state()
-        for u in updates:
-            if u.get("stage"):
-                apply_update(store, st, u)
-        # only the messages of the videos this call updated: a bare call (e.g. after `clear`) sends nothing,
-        # so videos of an abandoned run never come back as new messages
-        publish(store, st, only={u.get("video") or "_" for u in updates if u.get("stage")})
-    except Exception as e:   # never break the caller
-        print(f"telegram status: {e}", file=sys.stderr)
-    return 0
-
-
 def main():
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
-    if cmd == "status":
-        sys.exit(status(sys.argv[2:]))
-    if cmd == "clear":
-        sys.exit(clear())
     if cmd == "setup":
         ups = call("getUpdates").get("result", [])
         chats = [u["message"]["chat"]["id"] for u in ups if "message" in u]

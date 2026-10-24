@@ -14,8 +14,6 @@ a running job's log cannot be read from the API, so
   - the monitor job reads this run's job/step states (GET /actions/runs/{run}/jobs, actions: read) and
     the records every ~12 s, writes its stages as records too, and edits the message (only when the
     text changed: Telegram allows ~1 edit/s per chat, ~20/min in groups).
-The records are the same ones telegram-status.yml writes for the cloud session's stages (plan,
-script, review, push...), so the message continues where the writing stages left it.
 Nothing here ever fails a job: errors are printed and ignored.
 
 Env: GITHUB_TOKEN, GITHUB_REPOSITORY, GITHUB_RUN_ID, FILES (JSON list of scripts, monitor),
@@ -141,7 +139,6 @@ class Video:
         self.chars = sum(len(s.get("text", "")) for s in self.script.get("scenes", []))
 
 
-PRE_PUSH = ("plan", "topic", "script", "chars", "visual", "preview", "review", "publish", "push")
 
 
 def update(st, videos, jobs, now):
@@ -265,10 +262,6 @@ def cmd_monitor(a):
         if tick % 3 == 0 or a.once:   # jobs every 3rd tick: the whole loop stays < ~450 API calls/hour
             jobs = fetch_jobs() or jobs
         st = store.state()
-        gen = tgm.section(st, "_")
-        push = tgm.stage_of(gen, "push")
-        if push and push["state"] in ("run", "wait"):
-            store.put_stage("_", tgm.set_stage(gen, "push", "done"))
         now = time.time()
         final = update(st, videos, jobs, now)
         others = [j for j in jobs if not j["name"].startswith(("monitor", "record"))]
@@ -276,23 +269,15 @@ def cmd_monitor(a):
         done = final or idle >= 4 or now > deadline or a.once
         sync(store, st, videos, posted)
         mine = {tgm.section(st, v.slug)["id"] for v in videos}   # this run's videos only
-        if any(tgm.channel_of(v.slug) == tgm.DEFAULT for v in videos):
-            mine.add("_")                                        # the general steps are Düşün Bakalım's
         if done:
-            # the director's steps before the push are over once the run ends: no stale ⏳ lines
-            for s in st["sections"]:
-                if s["id"] not in mine:
-                    continue
-                for g in s["stages"]:
-                    if g["id"] in PRE_PUSH and g["state"] in ("run", "wait"):
-                        store.put_stage(s["id"], tgm.set_stage(s, g["id"], "done", g.get("text")))
-            states = [g["state"] for s in st["sections"] if s["id"] in mine for g in s["stages"]]
+            auto = [g for s in st["sections"] if s["id"] in mine for g in s["stages"] if g["id"] in tgm.AUTO]
+            states = [g["state"] for g in auto]
             if a.footer:
                 st["footer"] = a.footer
             elif "fail" in states:
                 st["footer"] = f"⚠️ Bitti ama hata var (❌ satırına bak): https://github.com/{REPO}/actions/runs/{RUN}"
             else:
-                t0s = [g["t0"] for s in st["sections"] if s["id"] in mine for g in s["stages"] if g.get("t0")]
+                t0s = [g["t0"] for g in auto if g.get("t0")]
                 st["footer"] = "🎉 Hepsi tamam" + (f" · toplam {tgm.fmt_dur(now - min(t0s))}" if t0s else "")
         tgm.publish(store, st, now, last, only=mine)
         if done:
