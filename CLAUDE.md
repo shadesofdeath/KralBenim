@@ -10,7 +10,7 @@ push'tan sonra GitHub Actions render edip YouTube'a zamanlanmış olarak yükler
 
 **İki kanal asla karışmaz:** Türkçe videolar sadece Düşün Bakalım'a, İngilizce videolar sadece Stickstory'ye gider.
 Kanal dosya önekinden gelir (`ag-` = Stickstory); `upload.py` token'ın bağlı olduğu YouTube kanalını kontrol eder,
-yanlış kanalsa yüklemez. **Üretim saatleri ayrı:** Düşün Bakalım sabah 05:50'de, Stickstory 11:10'da (İstanbul)
+yanlış kanalsa yüklemez. **Üretim saatleri ayrı:** Düşün Bakalım sabah 05:50'de, Stickstory 11:50'de (İstanbul)
 üretilir; bir oturum sadece kendi kanalının videolarını yazar.
 
 Takvim, saatler, ses, hashtag, kategori havuzu, dosya öneki ve YouTube secret'ı tek yerde: `tools/channels.py`.
