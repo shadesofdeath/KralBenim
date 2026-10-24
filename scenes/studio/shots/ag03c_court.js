@@ -11,15 +11,15 @@
 // P: {setting: "tent"|"palace",
 //     throne: {x: 0.66, accessory: "turban", beard: "black", scale: 1, pose: "sit", face: -1, emotion,
 //              seq: [{at, pose, dir, face, emotion}], crown: {at: cue (crown descends onto the head)}},
-//     captive: {x: 0.42, scale: 1, face: 1, crown: true, chains: true, bow: cue|sec (head bows; negative = bowed
+//     captive: {x: 0.42, scale: 1, face: 1, crown: true, chains: true, turban: false, beard: null|"black"|"grey" (optional), bow: cue|sec (head bows; negative = bowed
 //               from the start), free: cue (chain breaks, hands drop), askew: 8 (crown tilt)} | false,
-//     figures: [{x, accessory, beard, scale, pose: "idle", face: -1, emotion, spear: true, seq}],
+//     figures: [{x, accessory, beard, scale, pose: "idle", face: -1, emotion, spear: true, tilt: 0 (deg), tilt_at: cue, seq}],
 //     tug: {x: 0.9} | false (tent: horse-tail standard), lamp: {x: 0.5} | false (tent: hanging oil lamp),
 //     shadow: {from: 0.74, to: 1} (palace: hatched shade on the wall behind figures),
 //     mark: {text: "?", at, x: 0.58, y: 0.3, size: 150, color: "red"|"ink"|"blue"},
 //     kasif: {x: 0.14, scale: 0.85, pose: "talk", dir, face: 1, emotion, seq: [{at, pose, dir, face, emotion}]} | false,
 //     cam: {zoom: 1.06, focus: [0.5, 0.55]}, cover_hide: true (thumbnail: the shot's own narrator hides),
-//     cover: {zoom: 1.3, focus: [0.56, 0.6], kasif: {x, y, scale, pose, emotion, face, dir} | null, captive_scale: 1,
+//     cover: {zoom: 1.3, bow: 0..1 (captive head bow override), hide_figures: [i] (optional), focus: [0.56, 0.6], kasif: {x, y, scale, pose, emotion, face, dir} | null, captive_scale: 1,
 //       captive_x, mark: false} (thumbnail only:
 //       static zoomed framing; with cover.kasif the shot's narrator stays visible at that spot instead of hiding)}
 // cues: hit (punch), plus whatever names seq / bow / free / crown / mark use
@@ -81,7 +81,8 @@
       // captive (hand-drawn kneeling figure)
       const C = P.captive ? Object.assign({ x: portrait ? 0.4 : 0.42, scale: 1, face: 1, crown: true, chains: true, askew: 8 }, P.captive) : null;
       const capG = el(front, 'g');
-      const cap = C ? { head: mk(capG, INK.paperLight), body: mk(capG), face: mk(capG), crownF: mk(capG, INK.gold), crownR: mk(capG), chain: mk(capG), cuffs: mk(capG, INK.inkSoft), stake: mk(capG) } : null;
+      const cap = C ? { head: mk(capG, INK.paperLight), body: mk(capG), beard: C.beard ? mk(capG, C.beard === 'grey' ? INK.paperDark : INK.ink) : null, face: mk(capG),
+        crownF: mk(capG, C.turban ? INK.paperLight : INK.gold), crownR: mk(capG), jewel: C.turban ? mk(capG, INK.red) : null, chain: mk(capG), cuffs: mk(capG, INK.inkSoft), stake: mk(capG) } : null;
 
       // mark + narrator
       const ui = el(root, 'g');
@@ -192,7 +193,7 @@
         const s = k0 * (C.scale || 1) * ((cov && cov.captive_scale) || 1), fc = C.face || 1, cx = ((cov && cov.captive_x) ?? C.x) * W, cy = gy;
         const X = q => [cx + fc * s * q[0], cy + s * q[1]];
         const bowAt = atOr(cues, C.bow, null), freeAt = atOr(cues, C.free, null);
-        const bow = bowAt == null ? 0 : bowAt < 0 ? 1 : sm((lt - bowAt) / 0.7);
+        const bow = (cov && cov.bow != null) ? cov.bow : bowAt == null ? 0 : bowAt < 0 ? 1 : sm((lt - bowAt) / 0.7);   // cover.bow: optional thumbnail override
         const fr = freeAt == null ? 0 : sm((lt - freeAt) / 0.5);
         const br = Math.sin(t * 2.1), sway = Math.sin(t * 0.8) * 2;
         const lean = 6 + bow * 22 + br * 1.2 - fr * 8, tilt = bow * 16 - fr * 10 + Math.sin(t * 0.9) * 2;
@@ -228,8 +229,22 @@
         const mth = [Hh(0, 40), Hh(15, 36 - fr * 4), Hh(30, 40)];
         fd += inkPath(L(mth), O(12, 4.5, { amp: 0.6, taper: 0.4 }));
         cap.face.setAttribute('d', fd);
+        // optional (added for 02-ankara-savasi-1402): beard + turban instead of the crown
+        if (cap.beard) {
+          const bp = [[-46, 22], [-40, 58], [-18, 92], [12, 104], [42, 92], [64, 58], [70, 22], [44, 46], [12, 54], [-22, 46]].map(q => X(Hh(q[0], q[1])));
+          cap.beard.setAttribute('d', inkLoop(bp, { seed: sd + 545, t, amp: 1 }) + ' ' + inkPath(bp, O(7, 4.5, { closed: true, amp: 1 })));
+        }
+        if (C.turban) {
+          const TB = [[-74, -26], [-82, -70], [-56, -118], [0, -138], [56, -118], [82, -70], [74, -26], [0, -40]].map(q => X(Hh(q[0] + 8, q[1] - 6)));
+          cap.crownF.setAttribute('d', inkLoop(TB, { seed: sd + 560, t }));
+          let cr = inkPath(TB, O(13, 5.5, { closed: true }));
+          [[[-72, -60], [0, -80], [70, -64]], [[-60, -98], [0, -112], [56, -100]]].forEach((fl, i) => { cr += ' ' + inkPath(fl.map(q => X(Hh(q[0] + 8, q[1] - 6))), O(14 + i, 3.5, { taper: 0.4 })); });
+          cap.crownR.setAttribute('d', cr);
+          const j = X(Hh(14, -82));
+          cap.jewel.setAttribute('d', inkDot(j[0], j[1], 11 * s, 11 * s, sd + 575, t));
+        }
         // crown, a little askew
-        if (C.crown) {
+        if (C.crown && !C.turban) {
           const cp = CROWN.map(q => { const v = rot([q[0], q[1] + 4], C.askew ?? 8); return X(Hh(v[0], v[1])); });
           cap.crownF.setAttribute('d', inkLoop(cp, { seed: sd + 560, t }));
           let cr = inkPath(cp, O(13, 5.5, { closed: true }));
@@ -302,11 +317,18 @@
           figs.forEach((F, i) => {
             const f = F.f, o = seqOpts(f, cues, lt, -1);
             const x = f.x * W, y = gy - (f.lift || 0);
+            const hideC = isCover && P.cover && (P.cover.hide_figures || []).includes(i);   // optional: hide figure i on the thumbnail
+            F.g0 = F.g0 || (F.rig.node && F.rig.node.parentNode); if (F.g0 && F.g0.setAttribute) F.g0.setAttribute('display', hideC ? 'none' : 'inline');
+            if (F.spear) F.spear.setAttribute('display', hideC ? 'none' : 'inline');
             const ret = F.rig.update(t + i * 0.37, o.pose, Object.assign({ x, y }, o));
             if (F.spear) {
               const sc = k0 * (f.scale || 0.95), h = ret.hands[1], wx = x + o.face * sc * h[0], wy = y + sc * h[1];
-              F.spear.setAttribute('d', inkPath([[wx + o.face * 6, y + 4], [wx + o.face * 2, wy - 420 * sc]], { w: 7, seed: sd + 760 + i, t, amp: 1 }) + ' ' +
-                inkLoop([[wx + o.face * 2 - 14, wy - 420 * sc], [wx + o.face * 2, wy - 480 * sc], [wx + o.face * 2 + 14, wy - 420 * sc]], { seed: sd + 770 + i, t, amp: 0.8 }));
+              // optional (added for 02-ankara-savasi-1402): f.tilt (deg, leans the spear forward, towards `face`), f.tilt_at (cue: tilts then)
+              let ang = 0;
+              if (f.tilt) { const ta = f.tilt_at != null ? atOr(cues, f.tilt_at, null) : null; ang = f.tilt * (ta == null ? 1 : sm((lt - ta) / 0.45)); }
+              const R = q => { if (!ang) return q; const a = ang * Math.PI / 180 * o.face, dx = q[0] - wx, dy = q[1] - wy; return [wx + dx * Math.cos(a) - dy * Math.sin(a), wy + dx * Math.sin(a) + dy * Math.cos(a)]; };
+              F.spear.setAttribute('d', inkPath([R([wx + o.face * 6, y + 4]), R([wx + o.face * 2, wy - 420 * sc])], { w: 7, seed: sd + 760 + i, t, amp: 1 }) + ' ' +
+                inkLoop([R([wx + o.face * 2 - 14, wy - 420 * sc]), R([wx + o.face * 2, wy - 480 * sc]), R([wx + o.face * 2 + 14, wy - 420 * sc])], { seed: sd + 770 + i, t, amp: 0.8 }));
             }
           });
           // ruler on the throne

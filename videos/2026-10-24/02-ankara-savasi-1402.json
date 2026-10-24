@@ -1,0 +1,4608 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "ankara-savasi-1402",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Sabah",
+   "sultan",
+   "akşam",
+   "esir"
+  ],
+  "highlight": [
+   "esir"
+  ],
+  "scene": 1,
+  "t": 6.0,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 960,
+   "y": 1075,
+   "scale": 1.5,
+   "face": 1
+  }
+ },
+ "youtube": {
+  "title": "Ankara Savaşı: Yıldırım Bayezid Neden Kaybetti?",
+  "description": "Ankara Savaşı, 28 Temmuz 1402'de Yıldırım Bayezid'in tek bir günde ordusunu ve özgürlüğünü kaybettiği gündü. Peki hiç yenilmeyen sultan nasıl esir düştü?\n\nTimur ile Yıldırım Bayezid'in mektup savaşı, Timur'un Osmanlı ordusunun arkasına dolanan ters hamlesi, Çubuk Ovası'nda kendi saflarından gelen darbe ve Osmanlı tarihinde savaşta esir düşen tek padişahın hikâyesi. Demir kafes efsanesinin aslını ve Fetret Devri'nde dört kardeşin taht kavgasını da anlatıyoruz.\n\nBu videoda:\n• Yıldırım Bayezid ve Timur: iki fatihin çarpışması\n• Timur'un ters hamlesi ve çevrilen Çubuk Çayı\n• Kara Tatarlar ve beylik askerleri neden saf değiştirdi?\n• Demir kafes efsanesi doğru mu?\n• Fetret Devri ve Çelebi Mehmed\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Bayezid Ankara'da bekleseydi tarih nasıl yazılırdı? Yorumlara yaz!\n\n#ankarasavaşı #osmanlı #yıldırımbayezid #tarih #düşünbakalım",
+  "tags": [
+   "ankara savaşı",
+   "ankara savaşı 1402",
+   "1402 ankara savaşı",
+   "ankara muharebesi",
+   "yıldırım bayezid",
+   "timur",
+   "bayezid ve timur",
+   "fetret devri",
+   "çubuk ovası",
+   "osmanlı tarihi",
+   "kara tatarlar",
+   "çelebi mehmed",
+   "demir kafes efsanesi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-24T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Çubuk Ovası, 1402",
+   "type": "an_field",
+   "text": "Bu sultan sabah koca bir ordunun başındaydı.",
+   "visual": "Yandan geniş ova, sabah güneşi; solda mavi sancaklı Osmanlı hattı, sağda kırmızı sancaklı Timur hattı ve filler; 'sabah'ta hatlar öne çıkar, 'sultan'da sol hattın ortasındaki sultan sancağı kırmızı halkayla işaretlenir; önde Kaşif dürbünle bakar",
+   "title": {
+    "white": "1402",
+    "gray": "Ankara"
+   },
+   "cues": {
+    "meet": "sabah",
+    "hit": "sultan"
+   },
+   "params": {
+    "time": "dawn",
+    "left": {
+     "color": "blue",
+     "helmet": "cap",
+     "rows": 3,
+     "n": 13,
+     "banners": 3,
+     "advance": "meet"
+    },
+    "right": {
+     "color": "red",
+     "helmet": "turban",
+     "rows": 3,
+     "n": 13,
+     "banners": 3,
+     "advance": "meet"
+    },
+    "standard": {
+     "side": "left",
+     "x": 0.26
+    },
+    "elephants": {
+     "side": "right",
+     "n": 2,
+     "x": 0.8,
+     "scale": 0.9
+    },
+    "ring": {
+     "x": 0.26,
+     "y": 0.38,
+     "r": 120,
+     "at": "hit",
+     "color": "red"
+    },
+    "dust": "meet",
+    "kasif": {
+     "x": 0.1,
+     "scale": 0.85,
+     "face": 1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 40,
+       "face": 1
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03c_court",
+   "text": "Akşam ise düşmanının esiriydi. Tarih 28 Temmuz 1402, yer Ankara. Osmanlı tarihinde savaşta esir düşen tek padişah!",
+   "visual": "Timur'un otağı: tahtta öfkeli Timur (kır sakal, sarık); önünde diz çökmüş, sarıklı ve kara sakallı Bayezid 'esiriydi'de başını eğer, iki muhafızın mızrakları önünde çaprazlanır; 'tek'te kırmızı '1'; solda Kaşif şokta",
+   "title": {
+    "white": "Akşam"
+   },
+   "cues": {
+    "bow": "esiriydi",
+    "hit": "tek"
+   },
+   "params": {
+    "setting": "tent",
+    "throne": {
+     "x": 0.8,
+     "accessory": "turban",
+     "beard": "grey",
+     "pose": "sit",
+     "face": -1,
+     "emotion": "angry"
+    },
+    "captive": {
+     "x": 0.5,
+     "scale": 1.0,
+     "face": 1,
+     "turban": true,
+     "beard": "black",
+     "crown": false,
+     "chains": false,
+     "bow": "bow"
+    },
+    "figures": [
+     {
+      "x": 0.36,
+      "accessory": "helmet",
+      "beard": "short",
+      "pose": "idle",
+      "face": 1,
+      "spear": true,
+      "scale": 0.9,
+      "tilt": 20,
+      "tilt_at": "bow"
+     },
+     {
+      "x": 0.67,
+      "accessory": "helmet",
+      "beard": "black",
+      "pose": "idle",
+      "face": -1,
+      "spear": true,
+      "scale": 0.9,
+      "tilt": 20,
+      "tilt_at": "bow"
+     }
+    ],
+    "tug": {
+     "x": 0.92
+    },
+    "lamp": {
+     "x": 0.52
+    },
+    "mark": {
+     "text": "1",
+     "at": "hit",
+     "x": 0.51,
+     "y": 0.2,
+     "size": 170,
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.13,
+     "scale": 1.0,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "bow",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 20,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cover": {
+     "zoom": 0.95,
+     "focus": [
+      -2.1,
+      0.55
+     ],
+     "mark": false,
+     "captive_scale": 1.15,
+     "bow": 0.35,
+     "hide_figures": [
+      0
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "İki fatih",
+   "type": "chapter",
+   "text": "Peki bu nasıl oldu? Gelin, anlatayım.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'İki fatih' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Peki",
+    "title": "anlatayım"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "İki fatih"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Önce o sultanı tanıyalım: Birinci Bayezid. Herkes onu lakabıyla bilirdi: Yıldırım.",
+   "visual": "Tepeli kırda Kaşif soldan yürüyerek gelir; sağda sarıklı, kara sakallı Bayezid durur; 'Bayezid'de Kaşif onu işaret eder ve üstte 'Bayezid' etiketi belirir; 'Yıldırım'da gökte mürekkep şimşek çakar, Bayezid'in yanında 'YILDIRIM' tabelası düşer, Kaşif şok olur",
+   "title": {
+    "white": "Bayezid"
+   },
+   "cues": {
+    "name": "Bayezid",
+    "bolt": "Yıldırım"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.08,
+      "pose": "walk",
+      "to": 0.3,
+      "at": "name",
+      "then": "point",
+      "dir": 12,
+      "face": "right",
+      "seq": [
+       {
+        "at": "bolt",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "bayezid",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.62,
+      "scale": 1.0,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "angry",
+      "at": "bolt",
+      "then": "point",
+      "dir": "up"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 1.0,
+      "at": "bolt",
+      "text": "YILDIRIM"
+     }
+    ],
+    "label": {
+     "text": "Bayezid",
+     "x": 0.6,
+     "y": 0.16,
+     "at": "name",
+     "arrow": [
+      0.61,
+      0.33
+     ]
+    },
+    "storm": {
+     "flash": "bolt",
+     "bolt": "ink",
+     "bolt_x": 0.66
+    },
+    "scale": 1.0,
+    "ground_y": 820,
+    "cam": {
+     "zoom": 1.07,
+     "pan": 20,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.2
+     },
+     "far_h": 0.18,
+     "near": "post",
+     "side": "left"
+    }
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Bu lakap boşuna değildi. Düşmanları onu daha yolda sanırken, kapılarında bulurdu.",
+   "visual": "Yandan manzara: sağda taş kale, uzakta tepeler; mavi sancaklı atlılar soldan dörtnala gelir, arkalarında toynak izleri kalır; 'kapılarında'da kalenin önünde durur, kale burcunda mavi bayrak yükselir; solda Kaşif 'yolda'da dürbünle ufka bakar, 'kapılarında'da şok olur",
+   "title": {
+    "white": "Yıldırım"
+   },
+   "cues": {
+    "go": "yolda",
+    "hit": "kapılarında"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.2,
+     "ridges": 2,
+     "seed": 4
+    },
+    "grass": 14,
+    "buildings": [
+     {
+      "type": "castle",
+      "x": 0.82,
+      "scale": 1.05,
+      "flag": {
+       "at": "hit",
+       "color": "blue"
+      }
+     }
+    ],
+    "riders": [
+     {
+      "x": -0.2,
+      "to": 0.6,
+      "start": 0.3,
+      "at": "hit",
+      "gait": "gallop",
+      "face": "right",
+      "cloth": "blue",
+      "banner": "blue",
+      "rider": {
+       "accessory": "turban",
+       "beard": "black"
+      }
+     },
+     {
+      "x": -0.38,
+      "to": 0.45,
+      "start": 0.3,
+      "at": "hit",
+      "gait": "gallop",
+      "face": "right",
+      "cloth": "blue",
+      "scale": 0.85,
+      "rider": {
+       "accessory": "helmet"
+      }
+     }
+    ],
+    "trail": {
+     "from": [
+      0.02,
+      0.8
+     ],
+     "to": [
+      0.55,
+      0.8
+     ],
+     "at": 0.6,
+     "dur": 2.2,
+     "n": 14
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "at": "go",
+      "then": "look",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "shake": "hit",
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "1396'da Niğbolu'da koca bir Haçlı ordusunu yendi. Sonra gözünü İstanbul'a dikti, yıllarca şehrin yollarını kesti.",
+   "visual": "Balkanlar haritası: kuzeybatıdan kırmızı kesikli Haçlı oku Tuna kıyısındaki Niğbolu'ya iner; 'Niğbolu'da kale ikonu, şehir kırmızı halka ve '1396' notu; 'yendi'de güneyden mavi ok gelir, kalenin bayrağı mavi olur; 'İstanbul'a'da harita Marmara'ya kayar, Edirne'den mavi kesikli ok İstanbul'a iner, 'kesti'de şehrin çevresine halka çizilir; solda Kaşif önce işaret eder, sonra anlatır",
+   "title": {
+    "white": "Niğbolu"
+   },
+   "cues": {
+    "nig": "Niğbolu",
+    "win": "yendi",
+    "ist": "İstanbul",
+    "cut": "kesti"
+   },
+   "params": {
+    "view": [
+     19.5,
+     31.5,
+     38.6,
+     46.2
+    ],
+    "view2": [
+     22.5,
+     32.5,
+     37.4,
+     44.8
+    ],
+    "pan": {
+     "at": "ist",
+     "dur": 1.6
+    },
+    "routes": [
+     {
+      "pts": [
+       [
+        19.8,
+        45.6
+       ],
+       [
+        21.6,
+        44.9
+       ],
+       [
+        23.2,
+        44.0
+       ],
+       [
+        24.7,
+        43.78
+       ]
+      ],
+      "at": 0.3,
+      "dur": 1.6,
+      "color": "red",
+      "riders": 2,
+      "dust": true
+     },
+     {
+      "pts": [
+       [
+        26.56,
+        41.68
+       ],
+       [
+        25.9,
+        42.4
+       ],
+       [
+        25.2,
+        43.2
+       ],
+       [
+        24.95,
+        43.6
+       ]
+      ],
+      "at": "win",
+      "dur": 1.2,
+      "color": "blue",
+      "riders": 1
+     },
+     {
+      "pts": [
+       [
+        26.56,
+        41.68
+       ],
+       [
+        27.6,
+        41.45
+       ],
+       [
+        28.6,
+        41.15
+       ],
+       [
+        28.95,
+        41.05
+       ]
+      ],
+      "at": "ist",
+      "dur": 1.5,
+      "color": "blue",
+      "riders": 2,
+      "dust": true
+     }
+    ],
+    "icons": [
+     {
+      "type": "castle",
+      "lon": 24.89,
+      "lat": 43.7,
+      "at": "nig",
+      "size": 0.9,
+      "flag": {
+       "at": "win",
+       "color": "blue"
+      }
+     }
+    ],
+    "cities": [
+     {
+      "name": "Niğbolu",
+      "lon": 24.89,
+      "lat": 43.7,
+      "at": "nig",
+      "color": "ink",
+      "ring": true,
+      "dx": -10,
+      "dy": 70
+     },
+     {
+      "name": "İstanbul",
+      "lon": 28.98,
+      "lat": 41.01,
+      "at": "ist",
+      "color": "red",
+      "ring": "cut",
+      "dx": 0,
+      "dy": 74
+     }
+    ],
+    "note": {
+     "text": "1396",
+     "x": 0.06,
+     "y": 0.14,
+     "at": "nig"
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "point",
+     "dir": 18,
+     "face": "right",
+     "seq": [
+      {
+       "at": "ist",
+       "pose": "point",
+       "dir": 4,
+       "face": "right"
+      },
+      {
+       "at": "cut",
+       "pose": "talk",
+       "face": "right"
+      }
+     ]
+    },
+    "sheet": {
+     "x": 420,
+     "y": 200,
+     "w": 1440,
+     "h": 660
+    }
+   }
+  },
+  {
+   "type": "an_beylik",
+   "text": "Anadolu'daki Türk beyliklerini de birer birer aldı.",
+   "visual": "Anadolu 'yama yorgan' haritası: kuzeybatıda mavi taramalı Osmanlı yaması; Saruhan, Aydın, Menteşe, Germiyan, Hamid, Teke, Karaman, Candar yamaları kendi soluk tonlarında; 'beyliklerini'den itibaren her yama sırayla mavi taramayla dolar, sınırı mavi kalınlaşır, adı zıplar; haritanın sağında Kaşif her yama döndüğünde onu işaret eder",
+   "title": {
+    "white": "Beylikler"
+   },
+   "cues": {
+    "take": "beyliklerini"
+   },
+   "params": {
+    "take": {
+     "at": "take",
+     "gap": 0.3,
+     "dur": 0.6
+    },
+    "kasif": {
+     "pose": "talk",
+     "track": true
+    },
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_beylik",
+   "text": "Tahtını kaybeden beyler ortadan kaybolmadı. Onları aklınızda tutun, çünkü hepsi aynı kapıya gitti.",
+   "visual": "Aynı harita, bütün yamalar mavi: 'kaybolmadı'da her yamadan küçük sarıklı bir bey figürü çıkar, kesikli izler bırakarak doğuya, harita kenarındaki kırmızı sancaklı çadıra yürür ve kapısında toplanır; 'kapıya'da çadır zıplar; sağda Kaşif düşünür, 'aklınızda'da parmağını kaldırır, 'kapıya'da çadırı gösterir",
+   "title": {
+    "white": "Tahtsız beyler"
+   },
+   "cues": {
+    "exile": "kaybolmadı",
+    "mind": "aklınızda",
+    "hit": "kapıya"
+   },
+   "params": {
+    "taken": "all",
+    "exile": {
+     "at": "exile",
+     "hit": "hit",
+     "gap": 0.12
+    },
+    "tent": {
+     "lon": 38.5,
+     "lat": 39.5,
+     "color": "red"
+    },
+    "kasif": {
+     "pose": "think",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "mind",
+       "pose": "point",
+       "dir": "up"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "tent",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.5
+     ],
+     "pan": 30
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "O kapının sahibi Timur'du. Semerkant'tan çıkmış, İran'dan Delhi'ye kadar önüne geleni yenmişti.",
+   "visual": "Orta Asya haritası: Semerkant'ta kırmızı halka ve çadır ikonu; 'İran'da harita genişler, kırmızı tarama Semerkant'tan yayılır, kırmızı oklar batıya İran'a ve güneydoğuya Delhi'ye uzanır; 'Delhi'de Delhi halkaya alınır; solda Kaşif 'Timur'du'da şok olur, sonra okları işaret eder",
+   "title": {
+    "white": "Timur"
+   },
+   "cues": {
+    "tim": "Timur",
+    "go": "İran",
+    "del": "Delhi"
+   },
+   "params": {
+    "view": [
+     44,
+     70,
+     30,
+     45
+    ],
+    "view2": [
+     42,
+     82,
+     21,
+     47
+    ],
+    "pan": {
+     "at": "go",
+     "dur": 1.8
+    },
+    "realms": [
+     {
+      "poly": [
+       [
+        50,
+        43
+       ],
+       [
+        58,
+        45.5
+       ],
+       [
+        68,
+        45
+       ],
+       [
+        74,
+        42
+       ],
+       [
+        73,
+        37
+       ],
+       [
+        76,
+        33
+       ],
+       [
+        79,
+        29
+       ],
+       [
+        76,
+        26.5
+       ],
+       [
+        70,
+        27
+       ],
+       [
+        64,
+        25.5
+       ],
+       [
+        58,
+        25.8
+       ],
+       [
+        53,
+        27.5
+       ],
+       [
+        49,
+        30
+       ],
+       [
+        46,
+        32.5
+       ],
+       [
+        44.5,
+        36
+       ],
+       [
+        45.5,
+        39.5
+       ],
+       [
+        48,
+        41.5
+       ]
+      ],
+      "color": "red",
+      "at": "go",
+      "dur": 2.0,
+      "from": "east",
+      "label": {
+       "text": "Timur",
+       "lon": 62,
+       "lat": 34.5,
+       "size": 70
+      }
+     }
+    ],
+    "icons": [
+     {
+      "type": "tent",
+      "lon": 66.96,
+      "lat": 39.65,
+      "at": "tim",
+      "size": 1.1
+     }
+    ],
+    "cities": [
+     {
+      "name": "Semerkant",
+      "lon": 66.96,
+      "lat": 39.65,
+      "at": "tim",
+      "color": "red",
+      "ring": true,
+      "dy": -84
+     },
+     {
+      "name": "Delhi",
+      "lon": 77.21,
+      "lat": 28.61,
+      "at": "del",
+      "color": "red",
+      "ring": true,
+      "dy": 70
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        66.96,
+        39.65
+       ],
+       [
+        62,
+        37.6
+       ],
+       [
+        57,
+        36.2
+       ],
+       [
+        52,
+        35.2
+       ]
+      ],
+      "at": "go",
+      "dur": 1.6,
+      "color": "red",
+      "riders": 2,
+      "dust": true,
+      "label": {
+       "text": "İran",
+       "u": 1.0,
+       "dx": -40,
+       "dy": -40
+      }
+     },
+     {
+      "pts": [
+       [
+        66.96,
+        39.65
+       ],
+       [
+        69,
+        35.5
+       ],
+       [
+        72.5,
+        31.5
+       ],
+       [
+        76.8,
+        28.9
+       ]
+      ],
+      "at": "del",
+      "dur": 1.4,
+      "color": "red",
+      "riders": 2,
+      "dust": true
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "tim",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      },
+      {
+       "at": "go",
+       "pose": "point",
+       "dir": 15,
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Altmışlı yaşlarındaydı, bir bacağı aksaktı. Ama savaş meydanında neredeyse hiç yenilmemişti.",
+   "visual": "Bozkırda tuğlu bir çadır; kır sakallı, sarıklı Timur ağır adımlarla yürür; 'yenilmemişti'de arkasından kırmızı sancaklı üç atlı dörtnala gelip yanında durur, kamera sarsılır; solda Kaşif 'aksaktı'da omuz silker, 'yenilmemişti'de şok olur",
+   "title": {
+    "white": "Aksak",
+    "gray": "ama yenilmez"
+   },
+   "cues": {
+    "lame": "aksaktı",
+    "hit": "yenilmemişti"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.2,
+     "ridges": 2,
+     "seed": 9
+    },
+    "grass": 14,
+    "buildings": [
+     {
+      "type": "tent",
+      "x": 0.88,
+      "scale": 1.0,
+      "tug": true
+     }
+    ],
+    "riders": [
+     {
+      "x": 1.3,
+      "to": 0.66,
+      "start": "lame",
+      "at": "hit",
+      "gait": "gallop",
+      "face": "left",
+      "cloth": "red",
+      "banner": "red",
+      "scale": 0.8,
+      "rider": {
+       "accessory": "helmet"
+      }
+     },
+     {
+      "x": 1.5,
+      "to": 0.79,
+      "start": "lame",
+      "at": "hit",
+      "gait": "gallop",
+      "face": "left",
+      "cloth": "red",
+      "banner": "red",
+      "scale": 0.72,
+      "rider": {
+       "accessory": "helmet"
+      }
+     },
+     {
+      "x": 1.7,
+      "to": 0.92,
+      "start": "lame",
+      "at": "hit",
+      "gait": "gallop",
+      "face": "left",
+      "cloth": "red",
+      "banner": "red",
+      "scale": 0.66,
+      "rider": {
+       "accessory": "helmet"
+      }
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "scale": 0.9,
+      "pose": "talk",
+      "face": "right",
+      "at": "lame",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "timur",
+      "accessory": "turban",
+      "beard": "grey",
+      "x": 0.3,
+      "to": 0.48,
+      "scale": 1.0,
+      "pose": "walk",
+      "dur": 4.5,
+      "face": "right",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Timur",
+      "x": 0.4,
+      "y": 0.2,
+      "at": 0.4,
+      "size": 64,
+      "color": "red"
+     }
+    ],
+    "shake": "hit",
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Biri doğuda, biri batıda iki büyük fatih. Arada da Anadolu. Bu çarpışma sadece zaman meselesiydi.",
+   "visual": "Anadolu-İran haritası: 'doğuda'da kırmızı Timur taraması doğudan, 'batıda'da mavi Osmanlı taraması batıdan yayılır; 'Anadolu'da aradaki boş orta Anadolu kırmızı halkaya alınır; 'çarpışma'da iki taramanın uçları uzayıp birbirine değer; solda Kaşif önce doğuyu işaret eder, sonra düşünür, 'çarpışma'da şok olur",
+   "title": {
+    "white": "Anadolu"
+   },
+   "cues": {
+    "e": "doğuda",
+    "w": "batıda",
+    "an": "Anadolu",
+    "hit": "çarpışma"
+   },
+   "params": {
+    "view": [
+     24,
+     54,
+     31,
+     45
+    ],
+    "realms": [
+     {
+      "poly": [
+       [
+        54,
+        44
+       ],
+       [
+        48,
+        42.5
+       ],
+       [
+        45,
+        41.6
+       ],
+       [
+        43.5,
+        41.2
+       ],
+       [
+        42,
+        40.2
+       ],
+       [
+        41,
+        38.8
+       ],
+       [
+        41.5,
+        37.4
+       ],
+       [
+        44,
+        36.8
+       ],
+       [
+        46,
+        33.5
+       ],
+       [
+        49,
+        30.5
+       ],
+       [
+        54,
+        28
+       ]
+      ],
+      "color": "red",
+      "at": "e",
+      "dur": 1.4,
+      "from": "east",
+      "label": {
+       "text": "Timur",
+       "lon": 49,
+       "lat": 36.5,
+       "size": 64
+      }
+     },
+     {
+      "poly": [
+       [
+        20,
+        46
+       ],
+       [
+        28,
+        46
+       ],
+       [
+        28.6,
+        43.5
+       ],
+       [
+        28.2,
+        42
+       ],
+       [
+        29,
+        41.2
+       ],
+       [
+        31.4,
+        41.3
+       ],
+       [
+        33,
+        42
+       ],
+       [
+        34.2,
+        41.9
+       ],
+       [
+        34.4,
+        39.6
+       ],
+       [
+        33.8,
+        38.0
+       ],
+       [
+        32.6,
+        36.3
+       ],
+       [
+        30.5,
+        36.5
+       ],
+       [
+        28.2,
+        36.7
+       ],
+       [
+        26.2,
+        39.5
+       ],
+       [
+        22.6,
+        36.4
+       ],
+       [
+        20,
+        39.6
+       ]
+      ],
+      "color": "blue",
+      "at": "w",
+      "dur": 1.4,
+      "from": "west",
+      "label": {
+       "text": "Osmanlı",
+       "lon": 29.5,
+       "lat": 39.0,
+       "size": 60
+      }
+     },
+     {
+      "poly": [
+       [
+        34.2,
+        41.9
+       ],
+       [
+        37.6,
+        41.1
+       ],
+       [
+        37.6,
+        37
+       ],
+       [
+        36.6,
+        36.8
+       ],
+       [
+        33.8,
+        38.0
+       ],
+       [
+        34.4,
+        39.6
+       ]
+      ],
+      "color": "blue",
+      "at": "hit",
+      "dur": 0.8,
+      "from": "west"
+     },
+     {
+      "poly": [
+       [
+        37.6,
+        41.1
+       ],
+       [
+        39.7,
+        41.0
+       ],
+       [
+        41.5,
+        41.4
+       ],
+       [
+        42,
+        40.2
+       ],
+       [
+        41,
+        38.8
+       ],
+       [
+        41.5,
+        37.4
+       ],
+       [
+        38.5,
+        36.9
+       ],
+       [
+        37.6,
+        37
+       ]
+      ],
+      "color": "red",
+      "at": "hit",
+      "dur": 0.8,
+      "from": "east"
+     }
+    ],
+    "cities": [
+     {
+      "name": "Anadolu",
+      "lon": 37.6,
+      "lat": 39.3,
+      "at": "an",
+      "color": "ink",
+      "ring": true,
+      "dy": -60,
+      "size": 60
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "e",
+       "pose": "point",
+       "dir": 10,
+       "face": "right"
+      },
+      {
+       "at": "an",
+       "pose": "think",
+       "face": "right"
+      },
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_letters",
+   "text": "Önce mektuplar gidip geldi. Hem de ne mektuplar! İki hükümdar da birbirine hakaret ve tehdit yağdırdı.",
+   "visual": "Solda mavi sancaklı Bayezid, sağda kırmızı sancaklı Timur halı üstünde oturur, önlerinde alçak masa; kırmızı mühürlü rulolar yay çizerek gidip gelir, alıcının elinde açılır, üstü kırmızı karalamalarla dolu, büyük kırmızı '!' patlar, alıcının kaşları öfkelenir; 'hakaret'te onlarca rulo birden uçuşur, masalardaki yığınlar büyür; ortada Kaşif her rulo başının üstünden geçerken eğilip şaşırır",
+   "title": {
+    "white": "Mektuplar"
+   },
+   "cues": {
+    "a": "mektuplar",
+    "b": "Hem",
+    "c": "hükümdar",
+    "storm": "hakaret",
+    "hit": "yağdırdı"
+   },
+   "params": {
+    "left": {
+     "accessory": "turban",
+     "beard": "black",
+     "name": "Bayezid",
+     "color": "blue"
+    },
+    "right": {
+     "accessory": "turban",
+     "beard": "grey",
+     "name": "Timur",
+     "color": "red"
+    },
+    "throws": [
+     {
+      "from": "left",
+      "at": "a"
+     },
+     {
+      "from": "right",
+      "at": "b"
+     },
+     {
+      "from": "left",
+      "at": "c"
+     }
+    ],
+    "storm": {
+     "at": "storm",
+     "n": 10,
+     "gap": 0.16
+    },
+    "kasif": {
+     "pose": "talk",
+     "face": 1,
+     "duck": true
+    },
+    "hit": "hit",
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "1400'de Timur, Osmanlı'nın doğudaki kalesi Sivas'ı aldı. Ama Bayezid'in aklı hâlâ İstanbul'daydı.",
+   "visual": "Doğu Anadolu haritası: '1400' notu; 'Timur'da doğudan kırmızı kesikli ok atlılarla Sivas'a uzanır; 'Sivas'ı'nda kale ikonunun bayrağı kırmızı olur, şehir kırmızı halkaya alınır; 'Bayezid'in'de harita batıya kayar, 'hâlâ'da İstanbul mavi halkaya alınır; solda Kaşif 'Sivas'ı'nda şok olur, 'hâlâ'da İstanbul'u işaret eder",
+   "title": {
+    "white": "Sivas",
+    "gray": "1400"
+   },
+   "cues": {
+    "go": "Timur",
+    "siv": "Sivas",
+    "pan": "Bayezid'in",
+    "ist": "hâlâ"
+   },
+   "params": {
+    "view": [
+     30,
+     46,
+     35.5,
+     43.5
+    ],
+    "view2": [
+     24.5,
+     38.5,
+     36.4,
+     43.2
+    ],
+    "pan": {
+     "at": "pan",
+     "dur": 1.6
+    },
+    "routes": [
+     {
+      "pts": [
+       [
+        46.5,
+        39.2
+       ],
+       [
+        43.5,
+        39.9
+       ],
+       [
+        40.5,
+        40.0
+       ],
+       [
+        37.4,
+        39.8
+       ]
+      ],
+      "at": "go",
+      "dur": 1.5,
+      "color": "red",
+      "riders": 3,
+      "dust": true
+     }
+    ],
+    "icons": [
+     {
+      "type": "castle",
+      "lon": 37.02,
+      "lat": 39.75,
+      "at": 0.2,
+      "size": 1.0,
+      "flag": {
+       "at": "siv",
+       "color": "red"
+      }
+     }
+    ],
+    "cities": [
+     {
+      "name": "Sivas",
+      "lon": 37.02,
+      "lat": 39.75,
+      "at": "siv",
+      "color": "red",
+      "ring": true,
+      "dy": 74
+     },
+     {
+      "name": "İstanbul",
+      "lon": 28.98,
+      "lat": 41.01,
+      "at": "ist",
+      "color": "blue",
+      "ring": true,
+      "dy": 74
+     }
+    ],
+    "note": {
+     "text": "1400",
+     "x": 0.06,
+     "y": 0.14,
+     "at": 0.3
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "siv",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      },
+      {
+       "at": "ist",
+       "pose": "point",
+       "dir": 12,
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "Ters hamle",
+   "type": "chapter",
+   "text": "1402'de ise Timur, Anadolu'nun içlerine yürüdü.",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Ters hamle' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "1402",
+    "title": "yürüdü"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Ters hamle"
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Bayezid kuşatmayı bıraktı ve doğuya yöneldi. Bazı komutanları, suyu bol Ankara'da beklemesini söyledi.",
+   "visual": "Çadır önü, savaş meclisi: ortada sarıklı, kara sakallı Bayezid 'doğuya'da sağı (doğuyu) gösterir; sağda miğferli komutan 'Ankara'da' yerdeki harita prop'unu işaret eder, yanında 'Ankara'da bekle?' tabelası belirir; arkada tuğlu çadır; solda Kaşif düşünür, sonra haritayı işaret eder",
+   "title": {
+    "white": "Savaş meclisi"
+   },
+   "cues": {
+    "go": "doğuya",
+    "hit": "Ankara'da"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.2,
+     "ridges": 2,
+     "seed": 11
+    },
+    "grass": 14,
+    "buildings": [
+     {
+      "type": "tent",
+      "x": 0.6,
+      "scale": 1.05,
+      "tug": true
+     }
+    ],
+    "props": [
+     {
+      "type": "map",
+      "x": 0.55,
+      "y": 0.9,
+      "scale": 0.8,
+      "at": 0.3
+     },
+     {
+      "type": "sign",
+      "x": 0.83,
+      "scale": 0.85,
+      "text": "Ankara'da bekle?",
+      "at": "hit"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": -20
+     },
+     {
+      "who": "bayezid",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.38,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "at": "go",
+      "then": "point",
+      "dir": 15,
+      "emotion": "angry"
+     },
+     {
+      "who": "komutan",
+      "accessory": "turban",
+      "x": 0.7,
+      "scale": 0.92,
+      "pose": "talk",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": -30,
+      "emotion": "worried",
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Bayezid",
+      "x": 0.27,
+      "y": 0.27,
+      "at": 0.3,
+      "size": 62,
+      "arrow": [
+       0.36,
+       0.36
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Ama Yıldırım beklemeyi hiç sevmezdi. Ordusunu daha da doğuya sürdü.",
+   "visual": "Farklı kadraj: solda Bayezid başını sallar, komutan omuz silker; 'doğuya'da mavi sancaklı uzun asker kolu ve atlılar sağa yürür, kamera onları sağa doğru izler; Kaşif ortada işaret eder",
+   "title": {
+    "white": "Beklemek mi?"
+   },
+   "cues": {
+    "no": "sevmezdi",
+    "go": "doğuya"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.2,
+     "ridges": 2,
+     "seed": 11
+    },
+    "grass": 14,
+    "buildings": [],
+    "troops": [
+     {
+      "kind": "spear",
+      "n": 9,
+      "color": "blue",
+      "from": [
+       -0.05,
+       0.7
+      ],
+      "to": [
+       0.95,
+       0.7
+      ],
+      "at": 0.2,
+      "dur": 4.6,
+      "gap": [
+       -80,
+       0
+      ],
+      "scale": 0.9,
+      "appear": false
+     },
+     {
+      "kind": "rider",
+      "n": 4,
+      "color": "blue",
+      "from": [
+       -0.15,
+       0.64
+      ],
+      "to": [
+       0.8,
+       0.64
+      ],
+      "at": 0.2,
+      "dur": 4.6,
+      "gap": [
+       -140,
+       0
+      ],
+      "scale": 0.8,
+      "appear": false
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.52,
+      "pose": "talk",
+      "face": "left",
+      "at": "no",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "go",
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "bayezid",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.3,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "angry",
+      "at": "no",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "go",
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "emotion": "angry"
+       }
+      ]
+     },
+     {
+      "who": "komutan",
+      "accessory": "turban",
+      "x": 0.14,
+      "scale": 0.92,
+      "pose": "talk",
+      "face": "right",
+      "at": "no",
+      "then": "shrug",
+      "emotion": "worried",
+      "beard": "short"
+     }
+    ],
+    "cam": {
+     "zoom": 1.12,
+     "focus": [
+      0.35,
+      0.6
+     ],
+     "pan": 420
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "İşte tam burada Timur ustaca bir hamle yaptı. Karşılaşmak yerine güneye kıvrıldı, Kayseri ve Kırşehir üzerinden Bayezid'in arkasına dolandı.",
+   "visual": "Orta Anadolu haritası: mavi ok Ankara'dan doğuya uzanır; 'güneye'de kırmızı ok Sivas'tan güneybatıya Kayseri'ye kıvrılır, 'Kırşehir'de oradan Kırşehir üzerinden Ankara'ya kapanır; 'arkasına'da Ankara kırmızı halkaya alınır; solda Kaşif düşünür, işaret eder, şok olur",
+   "title": {
+    "white": "Ters hamle"
+   },
+   "cues": {
+    "hit": "ustaca",
+    "turn": "güneye",
+    "kay": "Kayseri",
+    "kir": "Kırşehir",
+    "back": "arkasına"
+   },
+   "params": {
+    "view": [
+     29,
+     41,
+     36,
+     42.2
+    ],
+    "cities": [
+     {
+      "name": "Ankara",
+      "lon": 32.86,
+      "lat": 39.93,
+      "at": 0.2,
+      "ring": "back",
+      "color": "ink",
+      "dy": -46
+     },
+     {
+      "name": "Sivas",
+      "lon": 37.02,
+      "lat": 39.75,
+      "at": 0.4,
+      "color": "red",
+      "dy": -46
+     },
+     {
+      "name": "Kayseri",
+      "lon": 35.48,
+      "lat": 38.72,
+      "at": "kay",
+      "color": "red",
+      "dy": 62
+     },
+     {
+      "name": "Kırşehir",
+      "lon": 34.17,
+      "lat": 39.15,
+      "at": "kir",
+      "color": "red",
+      "dy": 62
+     }
+    ],
+    "icons": [
+     {
+      "type": "castle",
+      "lon": 32.86,
+      "lat": 39.93,
+      "at": 0.2,
+      "size": 0.8,
+      "flag": {
+       "at": 0.4,
+       "color": "blue"
+      }
+     },
+     {
+      "type": "tent",
+      "lon": 37.02,
+      "lat": 39.75,
+      "at": 0.4,
+      "size": 0.8
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        33.1,
+        40.0
+       ],
+       [
+        34.3,
+        40.25
+       ],
+       [
+        35.6,
+        40.35
+       ]
+      ],
+      "at": 0.3,
+      "dur": 2.4,
+      "color": "blue",
+      "riders": 1
+     },
+     {
+      "pts": [
+       [
+        36.8,
+        39.6
+       ],
+       [
+        36.3,
+        39.1
+       ],
+       [
+        35.6,
+        38.82
+       ]
+      ],
+      "at": "turn",
+      "dur": 1.4,
+      "color": "red",
+      "riders": 1,
+      "dust": true
+     },
+     {
+      "pts": [
+       [
+        35.3,
+        38.78
+       ],
+       [
+        34.4,
+        39.05
+       ],
+       [
+        33.6,
+        39.5
+       ],
+       [
+        33.05,
+        39.8
+       ]
+      ],
+      "at": "kir",
+      "dur": 2.0,
+      "color": "red",
+      "riders": 2,
+      "dust": true
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "think"
+      },
+      {
+       "at": "turn",
+       "pose": "point",
+       "dir": 10,
+       "face": "right"
+      },
+      {
+       "at": "back",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Bayezid ileriye bakarken Timur, Ankara'ya vardı ve Osmanlı'nın boşalttığı kampa yerleşti.",
+   "visual": "Yandan: sağda tepede Ankara kalesi, önde boş Osmanlı çadırları; 'Ankara'ya'da kırmızı sancaklı atlılar soldan dörtnala girip çadırların yanında durur, 'kampa'da kalenin önündeki bayrak kırmızı olarak dikilir; solda Kaşif dürbünle sağa (ileriye) bakar, 'Ankara'ya'da arkasını döner, şok olur, 'kampa'da kaleyi işaret eder",
+   "title": {
+    "white": "Ankara"
+   },
+   "cues": {
+    "look": "ileriye",
+    "hit": "Ankara'ya",
+    "camp": "kampa"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.26,
+     "ridges": 2,
+     "seed": 4
+    },
+    "grass": 16,
+    "buildings": [
+     {
+      "type": "castle",
+      "x": 0.68,
+      "scale": 1.0,
+      "flag": {
+       "at": "camp",
+       "color": "red"
+      }
+     },
+     {
+      "type": "tent",
+      "x": 0.42,
+      "scale": 0.8
+     },
+     {
+      "type": "tent",
+      "x": 0.56,
+      "scale": 0.7
+     }
+    ],
+    "riders": [
+     {
+      "x": -0.2,
+      "to": 0.3,
+      "start": "hit",
+      "at": "camp",
+      "gait": "gallop",
+      "face": "right",
+      "cloth": "red",
+      "banner": "red",
+      "rider": {
+       "accessory": "turban",
+       "beard": "grey"
+      }
+     }
+    ],
+    "troops": [
+     {
+      "kind": "rider",
+      "n": 4,
+      "color": "red",
+      "from": [
+       -0.1,
+       0.7
+      ],
+      "to": [
+       0.46,
+       0.7
+      ],
+      "at": "hit",
+      "dur": 2.6,
+      "gap": [
+       -110,
+       0
+      ],
+      "scale": 0.75
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "surprised"
+       },
+       {
+        "at": "camp",
+        "pose": "point",
+        "dir": 10,
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Ankara",
+      "x": 0.68,
+      "y": 0.14,
+      "at": "hit",
+      "size": 64,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_heat",
+   "text": "Bayezid ordusunu geri çevirdi. Temmuz sıcağında, günlerce süren zorlu bir yürüyüş başladı.",
+   "visual": "Dev güneş (dönen ışınlar), sıcak dalga çizgileri, çatlak toprak; mavi sancaklı uzun asker kolu 'geri'de arkasını döner ve sola (batıya) ağır ağır yürür, ayaklarından toz kalkar, zemin yavaşça kayar; bir asker su tulumunu baş aşağı sallar, 'yürüyüş'te tek bir damla düşer; sağda Kaşif kolla birlikte yürür, terler",
+   "title": {
+    "white": "Temmuz"
+   },
+   "cues": {
+    "turn": "geri",
+    "hot": "Temmuz",
+    "hit": "zorlu",
+    "empty": "yürüyüş"
+   },
+   "params": {
+    "mode": "march",
+    "column": {
+     "turn": "turn",
+     "dir": -1
+    },
+    "empty": "empty",
+    "waves": {
+     "at": "hot"
+    },
+    "kasif": {
+     "x": 0.88,
+     "face": -1,
+     "pose": "idle",
+     "emotion": "worried",
+     "sweat": "hot",
+     "walk": true
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_water",
+   "text": "Ve Ankara'da onları kötü bir sürpriz bekliyordu. Anlatılana göre Timur, Çubuk Çayı'nın yolunu çevirmişti.",
+   "visual": "Kuşbakışı ova: kıvrılan Çubuk Çayı akar; sağda kırmızı sancaklı Timur kampı ve boş gölet çukuru; 'Anlatılana'da kürekli küçük figürler belirir, çayın önüne taş set çekilir, kampa doğru yeni kanal kazılır, 'anlatılana göre' notu; 'çevirmişti'de su yeni kanaldan gölete akar, gölet dolar, eski yatak kurur (çatlak, taş); solda Kaşif şok olur, sonra göleti işaret eder",
+   "title": {
+    "white": "Çubuk Çayı"
+   },
+   "cues": {
+    "hit": "sürpriz",
+    "dig": "Anlatılana",
+    "turn": "çevirmişti"
+   },
+   "params": {
+    "mode": "divert",
+    "river": {
+     "label": {
+      "text": "Çubuk Çayı",
+      "x": 0.25,
+      "y": 0.34,
+      "at": 0.2
+     }
+    },
+    "camp": {
+     "color": "red"
+    },
+    "dig": "dig",
+    "turn": "turn",
+    "note": {
+     "text": "anlatılana göre",
+     "x": 0.62,
+     "y": 0.13,
+     "at": "dig",
+     "color": "soft"
+    },
+    "kasif": {
+     "x": 0.09,
+     "y": 0.97,
+     "scale": 0.62,
+     "face": 1,
+     "pose": "talk",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "turn",
+       "pose": "point",
+       "dir": 25,
+       "face": "right"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.62,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_water",
+   "text": "Yani yorgun askerler, savaştan önce suya bile hasretti. Ama asıl darbe, kendi saflarından gelecekti.",
+   "visual": "Yakın plan kuru dere yatağı: çatlak kil, taşlar, kuru sazlar; mavi börklü askerler boş kova ve tulumu baş aşağı sallar, tek damla düşer; 'hasretti'de çatlaklar yayılır; arka kıyıda mavi sancaklı asker sırası; 'saflarından'da sıranın üstüne dev kırmızı '?' iner; solda Kaşif endişeli, 'darbe'de şok olur",
+   "title": {
+    "white": "Susuz"
+   },
+   "cues": {
+    "dry": "hasretti",
+    "hit": "darbe",
+    "q": "saflarından"
+   },
+   "params": {
+    "mode": "dry",
+    "dry": "dry",
+    "q": "q",
+    "team": "blue",
+    "cast": [
+     {
+      "x": 0.36,
+      "face": 1,
+      "carry": "bucket",
+      "emotion": "worried",
+      "shake": 0.5
+     },
+     {
+      "x": 0.56,
+      "face": -1,
+      "carry": "skin",
+      "emotion": "worried",
+      "shake": "dry"
+     },
+     {
+      "x": 0.72,
+      "face": -1,
+      "pose": "idle",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "look",
+        "face": -1
+       }
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.97,
+     "scale": 0.62,
+     "face": 1,
+     "pose": "idle",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "dry",
+       "pose": "shrug",
+       "emotion": "worried"
+      },
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "Çubuk Ovası",
+   "type": "chapter",
+   "text": "Kaç kişiydiler? Kaynaklar o kadar farklı ki kesin sayı vermek imkânsız.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Çubuk Ovası' başlığı ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Kaç",
+    "title": "imkânsız"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Çubuk Ovası"
+   }
+  },
+  {
+   "type": "an_field",
+   "text": "Ama Timur'un saflarında savaş filleri bile vardı.",
+   "visual": "Yakın plan sağ hat: kırmızı sancaklı, sarıklı Timur askerlerinin önünde sırtında kuleli üç mürekkep fil sallanarak sola, öne yürür; kulakları sallanır, 'filleri'nde hortumlar havaya kalkar; önde solda Kaşif dürbünle bakar, 'filleri'nde şokla geri sıçrar",
+   "title": {
+    "white": "Filler"
+   },
+   "cues": {
+    "hit": "filleri"
+   },
+   "params": {
+    "time": "day",
+    "sun": {
+     "x": 0.3,
+     "y": 0.15,
+     "r": 58
+    },
+    "horizon": 0.42,
+    "birds": 2,
+    "left": false,
+    "right": {
+     "color": "red",
+     "x0": 0.4,
+     "x1": 0.95,
+     "y": 0.6,
+     "rows": 2,
+     "n": 10,
+     "scale": 1.2,
+     "helmet": "turban",
+     "banners": 4,
+     "advance": 0.2,
+     "step": 26,
+     "dur": 2.6
+    },
+    "elephants": {
+     "side": "right",
+     "color": "red",
+     "items": [
+      {
+       "x": 0.44,
+       "y": 0.81,
+       "scale": 1.2
+      },
+      {
+       "x": 0.64,
+       "y": 0.76,
+       "scale": 1.02
+      },
+      {
+       "x": 0.84,
+       "y": 0.81,
+       "scale": 1.2
+      }
+     ],
+     "advance": 0.05,
+     "step": 90,
+     "dur": 2.8,
+     "raise": "hit"
+    },
+    "kasif": {
+     "x": 0.15,
+     "y": 0.95,
+     "scale": 0.85,
+     "face": 1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ],
+     "moves": [
+      {
+       "at": "hit",
+       "x": 0.11,
+       "dur": 0.35
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.62,
+      0.62
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_battle",
+   "text": "Ortada Bayezid ve yeniçerileri duruyordu. Bir kanatta ise kayınbiraderi, Sırp despotu Stefan Lazareviç vardı.",
+   "visual": "Kuşbakışı diziliş: sağda kırmızı Timur blokları; solda yukarıdan aşağı Tatarlar, Beylikler, ortada Bayezid (merkez), altta Sırplar; Kaşif sağdaki tepeden sırayla işaret eder",
+   "title": {
+    "white": "Diziliş"
+   },
+   "cues": {
+    "mid": "Ortada",
+    "kan": "kanatta",
+    "srb": "Sırp"
+   },
+   "params": {
+    "camp": false,
+    "hills": [
+     {
+      "x": 0.52,
+      "y": 0.06,
+      "r": 140
+     },
+     {
+      "x": 0.08,
+      "y": 0.9,
+      "r": 120
+     }
+    ],
+    "units": [
+     {
+      "id": "t1",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.7,
+      "y": 0.27,
+      "w": 170,
+      "h": 88
+     },
+     {
+      "id": "t2",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.72,
+      "y": 0.48,
+      "w": 190,
+      "h": 96,
+      "banner": true
+     },
+     {
+      "id": "t3",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.7,
+      "y": 0.69,
+      "w": 170,
+      "h": 88
+     },
+     {
+      "id": "tat",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.4,
+      "y": 0.12,
+      "face": 0,
+      "appear": 0.15
+     },
+     {
+      "id": "bey",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.37,
+      "y": 0.28,
+      "face": 0,
+      "appear": 0.45
+     },
+     {
+      "id": "mid",
+      "side": "sel",
+      "kind": "riders",
+      "n": 10,
+      "spread": 1.15,
+      "x": 0.36,
+      "y": 0.46,
+      "face": 0,
+      "appear": "mid",
+      "moves": [
+       {
+        "at": "mid",
+        "x": 0.39,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "id": "srb",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.4,
+      "y": 0.64,
+      "face": 0,
+      "appear": "srb",
+      "moves": [
+       {
+        "at": "srb",
+        "x": 0.43,
+        "dur": 1.4
+       }
+      ]
+     },
+     {
+      "id": "bey2",
+      "side": "sel",
+      "kind": "riders",
+      "n": 6,
+      "x": 0.4,
+      "y": 0.8,
+      "face": 0,
+      "appear": 0.6
+     }
+    ],
+    "labels": [
+     {
+      "text": "Timur",
+      "x": 0.71,
+      "y": 0.13,
+      "color": "red",
+      "at": 0.1
+     },
+     {
+      "text": "Tatarlar",
+      "x": 0.2,
+      "y": 0.15,
+      "color": "blue",
+      "at": 0.2
+     },
+     {
+      "text": "Beylikler",
+      "x": 0.2,
+      "y": 0.31,
+      "color": "blue",
+      "at": 0.5
+     },
+     {
+      "text": "Bayezid",
+      "x": 0.2,
+      "y": 0.49,
+      "color": "blue",
+      "at": "mid",
+      "size": 66
+     },
+     {
+      "text": "Sırplar",
+      "x": 0.2,
+      "y": 0.67,
+      "color": "blue",
+      "at": "srb",
+      "size": 66
+     },
+     {
+      "text": "Beylikler",
+      "x": 0.2,
+      "y": 0.83,
+      "color": "blue",
+      "at": 0.7
+     }
+    ],
+    "kasif": {
+     "x": 0.885,
+     "y": 0.88,
+     "scale": 0.95,
+     "face": -1,
+     "pose": "point",
+     "seq": [
+      {
+       "at": "mid",
+       "pose": "point",
+       "dir": 10,
+       "face": -1
+      },
+      {
+       "at": "srb",
+       "pose": "point",
+       "dir": -20,
+       "emotion": "happy"
+      }
+     ],
+     "dir": "left"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_ova",
+   "text": "Savaş başladı ve Sırp süvarileri Timur'un saflarına defalarca daldı. Bir an için her şey mümkün göründü.",
+   "visual": "Yandan ova: mavi sancaklı, zırh çullu atlarıyla miğferli mızraklı Sırp süvarileri soldan dörtnala gelir, sağdan kırmızı sancaklı sarıklı Timur atlıları karşılar; 'defalarca'da ekran sarsılır, Sırplar geri çekilip yeniden hücum eder; toz bulutları, gökte oklar; solda önde Kaşif dürbünle izler, 'mümkün'de sevinip işaret eder",
+   "title": {
+    "white": "Sırp atlılar"
+   },
+   "cues": {
+    "go": "başladı",
+    "hit": "defalarca",
+    "hope": "mümkün"
+   },
+   "params": {
+    "time": "day",
+    "sun": {
+     "x": 0.5,
+     "y": 0.15,
+     "r": 60
+    },
+    "volcano": false,
+    "camps": [
+     {
+      "side": "byz",
+      "x0": 0.72,
+      "x1": 0.92,
+      "n": 5,
+      "scale": 0.42
+     }
+    ],
+    "riders": [
+     {
+      "who": "sirp",
+      "side": "sel",
+      "accessory": "helmet",
+      "armor": true,
+      "weapon": "lance",
+      "flag": "blue",
+      "x": -0.12,
+      "face": 1,
+      "n": 2,
+      "gap": 0.15,
+      "scale": 0.6,
+      "moves": [
+       {
+        "at": "go",
+        "x": 0.45,
+        "dur": 2.2
+       },
+       {
+        "at": "hit",
+        "x": 0.36,
+        "dur": 0.8
+       },
+       {
+        "at": "hope",
+        "x": 0.52,
+        "dur": 1.2
+       }
+      ]
+     },
+     {
+      "who": "timur",
+      "side": "byz",
+      "accessory": "turban",
+      "beard": "black",
+      "weapon": "bow",
+      "flag": "red",
+      "x": 1.12,
+      "face": -1,
+      "n": 2,
+      "gap": 0.13,
+      "scale": 0.58,
+      "y": 0.85,
+      "moves": [
+       {
+        "at": "go",
+        "x": 0.64,
+        "dur": 2.2
+       },
+       {
+        "at": "hope",
+        "x": 0.7,
+        "dur": 1.2
+       }
+      ]
+     }
+    ],
+    "dust": {
+     "at": "go",
+     "x0": 0.2,
+     "x1": 0.8,
+     "y": 0.85,
+     "n": 8
+    },
+    "arrows": {
+     "at": "go",
+     "n": 10,
+     "dir": -1
+    },
+    "kasif": {
+     "x": 0.08,
+     "y": 0.9,
+     "scale": 0.72,
+     "face": 1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "hope",
+       "pose": "point",
+       "dir": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "shake": "hit",
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_battle",
+   "text": "Ama sonra Osmanlı saflarında bir şey oldu. Kara Tatar atlıları birden atlarını çevirdi ve Timur'un safına geçti.",
+   "visual": "Kuşbakışı aynı diziliş: 'oldu'da ekran sarsılır; üst kanattaki 'Tatarlar' etiketli mavi atlı birlik 'çevirdi'de yerinde döner, yukarı kıvrılıp sağa, Timur'un kırmızı bloklarına doğru akar ve 'safına'da rengi kırmızıya döner; kırmızı el yazısı 'karşıya geçti!'; Kaşif tepede şokla geri sıçrar",
+   "title": {
+    "white": "Saf değişimi"
+   },
+   "cues": {
+    "hit": "oldu",
+    "turn": "çevirdi",
+    "def": "safına"
+   },
+   "params": {
+    "camp": false,
+    "hills": [
+     {
+      "x": 0.52,
+      "y": 0.06,
+      "r": 140
+     },
+     {
+      "x": 0.08,
+      "y": 0.9,
+      "r": 120
+     }
+    ],
+    "units": [
+     {
+      "id": "t1",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.7,
+      "y": 0.27,
+      "w": 170,
+      "h": 88
+     },
+     {
+      "id": "t2",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.72,
+      "y": 0.48,
+      "w": 190,
+      "h": 96,
+      "banner": true
+     },
+     {
+      "id": "t3",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.7,
+      "y": 0.69,
+      "w": 170,
+      "h": 88
+     },
+     {
+      "id": "tat",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.4,
+      "y": 0.24,
+      "face": 0,
+      "moves": [
+       {
+        "at": "turn",
+        "x": 0.42,
+        "y": 0.13,
+        "dur": 0.8,
+        "face": -90
+       },
+       {
+        "at": "def",
+        "x": 0.6,
+        "y": 0.12,
+        "dur": 1.3,
+        "face": 0
+       }
+      ],
+      "defect": "def"
+     },
+     {
+      "id": "bey",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.37,
+      "y": 0.4,
+      "face": 0
+     },
+     {
+      "id": "mid",
+      "side": "sel",
+      "kind": "riders",
+      "n": 10,
+      "spread": 1.15,
+      "x": 0.39,
+      "y": 0.57,
+      "face": 0
+     },
+     {
+      "id": "srb",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.43,
+      "y": 0.75,
+      "face": 0
+     }
+    ],
+    "labels": [
+     {
+      "text": "Tatarlar",
+      "x": 0.17,
+      "y": 0.27,
+      "color": "blue",
+      "at": 0.2
+     },
+     {
+      "text": "karşıya geçti!",
+      "x": 0.54,
+      "y": 0.34,
+      "color": "red",
+      "at": "def",
+      "size": 70
+     }
+    ],
+    "shake": "hit",
+    "kasif": {
+     "x": 0.12,
+     "y": 0.9,
+     "scale": 0.95,
+     "face": 1,
+     "pose": "talk",
+     "seq": [
+      {
+       "at": "turn",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_ova",
+   "text": "Beylik askerleri karşıya baktığında kimi gördü, biliyor musunuz? Kendi eski beylerini!",
+   "visual": "Yandan ova: solda miğferli, mızraklı üç beylik askeri sağa bakar; sağda kırmızı sancaklı büyük otağın önünde sarıklı, sakallı üç eski bey 'baktığında' el sallar; ortada Kaşif anlatır, 'biliyor'da izleyiciye döner, 'beylerini'de şokla geri sıçrar; askerler de irkilir; kırmızı el yazısı 'eski beyler'",
+   "title": {
+    "white": "Eski beyler"
+   },
+   "cues": {
+    "look": "baktığında",
+    "q": "biliyor",
+    "hit": "beylerini"
+   },
+   "params": {
+    "time": "day",
+    "sun": {
+     "x": 0.62,
+     "y": 0.14,
+     "r": 55
+    },
+    "volcano": false,
+    "camps": [
+     {
+      "side": "sel",
+      "x0": 0.02,
+      "x1": 0.3,
+      "n": 5,
+      "scale": 0.4
+     },
+     {
+      "side": "byz",
+      "x0": 0.62,
+      "x1": 0.98,
+      "n": 5,
+      "scale": 0.4
+     }
+    ],
+    "tents": [
+     {
+      "x": 0.82,
+      "side": "byz",
+      "scale": 0.95
+     }
+    ],
+    "cast": [
+     {
+      "who": "s1",
+      "accessory": "turban",
+      "x": 0.08,
+      "face": "right",
+      "pose": "idle",
+      "spear": true,
+      "seq": [
+       {
+        "at": "look",
+        "pose": "point",
+        "dir": "right"
+       },
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "s2",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.18,
+      "face": "right",
+      "pose": "idle",
+      "spear": true,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "s3",
+      "accessory": "turban",
+      "x": 0.28,
+      "face": "right",
+      "pose": "idle",
+      "spear": true,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "b1",
+      "accessory": "turban",
+      "beard": "grey",
+      "x": 0.68,
+      "face": "left",
+      "pose": "idle",
+      "seq": [
+       {
+        "at": "look",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "b2",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.79,
+      "face": "left",
+      "pose": "idle",
+      "seq": [
+       {
+        "at": "look",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "b3",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.9,
+      "face": "left",
+      "pose": "idle",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "note": {
+     "text": "eski beyler",
+     "x": 0.79,
+     "y": 0.16,
+     "at": "hit",
+     "size": 72,
+     "color": "red"
+    },
+    "label": {
+     "text": "beylik askerleri",
+     "x": 0.2,
+     "y": 0.3,
+     "at": 0.3,
+     "size": 60
+    },
+    "kasif": {
+     "x": 0.48,
+     "y": 0.9,
+     "scale": 0.85,
+     "face": 1,
+     "pose": "talk",
+     "seq": [
+      {
+       "at": "q",
+       "pose": "point",
+       "dir": "forward",
+       "face": -1
+      },
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": 1,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_battle",
+   "text": "Ve birer birer onların yanına geçtiler. Osmanlı ordusu gözlerinin önünde eridi. Şehzadeler farklı yönlere çekildi.",
+   "visual": "Kuşbakışı: beylik etiketli mavi atlı birlikler 'birer', 'yanına', 'geçtiler'de sırayla kırmızıya dönüp sağa, Timur bloklarının yanına akar; 'eridi'de merkezin yarısı da kırmızıya geçer, Sırplar sola çekilir; 'Şehzadeler'de üç küçük mavi grup merkezden farklı yönlere dağılır; Kaşif tepede endişeli, 'eridi'de şaşırır",
+   "title": {
+    "white": "Erime"
+   },
+   "cues": {
+    "a": "birer",
+    "b": "yanına",
+    "c": "geçtiler",
+    "melt": "eridi",
+    "pr": "Şehzadeler"
+   },
+   "params": {
+    "camp": false,
+    "hills": [
+     {
+      "x": 0.52,
+      "y": 0.06,
+      "r": 140
+     },
+     {
+      "x": 0.08,
+      "y": 0.9,
+      "r": 120
+     }
+    ],
+    "units": [
+     {
+      "id": "t1",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.7,
+      "y": 0.27,
+      "w": 170,
+      "h": 88
+     },
+     {
+      "id": "t2",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.72,
+      "y": 0.48,
+      "w": 190,
+      "h": 96,
+      "banner": true
+     },
+     {
+      "id": "t3",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.7,
+      "y": 0.69,
+      "w": 170,
+      "h": 88
+     },
+     {
+      "id": "tat",
+      "side": "byz",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.6,
+      "y": 0.12,
+      "face": 0
+     },
+     {
+      "id": "b1",
+      "side": "sel",
+      "kind": "riders",
+      "n": 5,
+      "x": 0.4,
+      "y": 0.3,
+      "face": 0,
+      "defect": "a",
+      "moves": [
+       {
+        "at": "a",
+        "x": 0.57,
+        "y": 0.27,
+        "dur": 1.2
+       }
+      ]
+     },
+     {
+      "id": "b2",
+      "side": "sel",
+      "kind": "riders",
+      "n": 5,
+      "x": 0.33,
+      "y": 0.39,
+      "face": 0,
+      "defect": "b",
+      "moves": [
+       {
+        "at": "b",
+        "x": 0.56,
+        "y": 0.38,
+        "dur": 1.2
+       }
+      ]
+     },
+     {
+      "id": "b3",
+      "side": "sel",
+      "kind": "riders",
+      "n": 5,
+      "x": 0.41,
+      "y": 0.45,
+      "face": 0,
+      "defect": "c",
+      "moves": [
+       {
+        "at": "c",
+        "x": 0.58,
+        "y": 0.5,
+        "dur": 1.2
+       }
+      ]
+     },
+     {
+      "id": "m2",
+      "side": "sel",
+      "kind": "riders",
+      "n": 6,
+      "x": 0.43,
+      "y": 0.62,
+      "face": 0,
+      "defect": "melt",
+      "moves": [
+       {
+        "at": "melt",
+        "x": 0.58,
+        "y": 0.62,
+        "dur": 1.2
+       }
+      ]
+     },
+     {
+      "id": "mid",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.35,
+      "y": 0.58,
+      "face": 0
+     },
+     {
+      "id": "srb",
+      "side": "sel",
+      "kind": "riders",
+      "n": 7,
+      "x": 0.43,
+      "y": 0.76,
+      "face": 0,
+      "moves": [
+       {
+        "at": "melt",
+        "x": 0.18,
+        "y": 0.78,
+        "dur": 1.6,
+        "face": 180
+       }
+      ]
+     },
+     {
+      "id": "p1",
+      "side": "sel",
+      "kind": "riders",
+      "n": 3,
+      "spread": 0.7,
+      "x": 0.33,
+      "y": 0.56,
+      "face": 180,
+      "appear": "pr",
+      "moves": [
+       {
+        "at": "pr",
+        "x": 0.1,
+        "y": 0.34,
+        "dur": 1.5,
+        "face": 200
+       }
+      ]
+     },
+     {
+      "id": "p2",
+      "side": "sel",
+      "kind": "riders",
+      "n": 3,
+      "spread": 0.7,
+      "x": 0.33,
+      "y": 0.58,
+      "face": 180,
+      "appear": "pr",
+      "moves": [
+       {
+        "at": "pr",
+        "x": 0.06,
+        "y": 0.58,
+        "dur": 1.5
+       }
+      ]
+     },
+     {
+      "id": "p3",
+      "side": "sel",
+      "kind": "riders",
+      "n": 3,
+      "spread": 0.7,
+      "x": 0.33,
+      "y": 0.6,
+      "face": 180,
+      "appear": "pr",
+      "moves": [
+       {
+        "at": "pr",
+        "x": 0.2,
+        "y": 0.92,
+        "dur": 1.5,
+        "face": 130
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "beylikler",
+      "x": 0.2,
+      "y": 0.27,
+      "color": "blue",
+      "at": 0.2
+     },
+     {
+      "text": "Şehzadeler",
+      "x": 0.15,
+      "y": 0.47,
+      "color": "blue",
+      "at": "pr",
+      "size": 64
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.88,
+     "scale": 0.95,
+     "face": -1,
+     "pose": "think",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "melt",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 0.97,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_battle",
+   "text": "Bayezid ise geri adım atmadı. Yeniçerileriyle bir tepeye çıktı ve akşama kadar direndi. Karanlıkta yarıp kaçmayı denedi.",
+   "visual": "Kuşbakışı: ortada kontur halkalı tepe; küçük mavi birlik 'tepeye'de tepeye tırmanır; etrafında kırmızı Timur blokları yaklaşır, 'tepeye'de kırmızı hilal çizilir, 'akşama'da halka kapanır ve kalınlaşır; 'Karanlıkta'da üç mavi atlı halkayı sola yarmaya çalışır; Kaşif tepede endişeli, sonra şaşırır",
+   "title": {
+    "white": "Son direniş"
+   },
+   "cues": {
+    "hill": "tepeye",
+    "close": "akşama",
+    "run": "Karanlıkta"
+   },
+   "params": {
+    "camp": false,
+    "hills": [
+     {
+      "x": 0.45,
+      "y": 0.5,
+      "r": 200
+     },
+     {
+      "x": 0.86,
+      "y": 0.12,
+      "r": 110
+     }
+    ],
+    "units": [
+     {
+      "id": "bay",
+      "side": "sel",
+      "kind": "riders",
+      "n": 6,
+      "spread": 0.75,
+      "x": 0.3,
+      "y": 0.66,
+      "face": -40,
+      "moves": [
+       {
+        "at": 0.2,
+        "x": 0.35,
+        "y": 0.6,
+        "dur": 1.2
+       },
+       {
+        "at": "hill",
+        "x": 0.46,
+        "y": 0.49,
+        "dur": 1.4,
+        "face": 0
+       }
+      ]
+     },
+     {
+      "id": "r1",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.78,
+      "y": 0.3,
+      "w": 150,
+      "h": 80,
+      "face": 160,
+      "moves": [
+       {
+        "at": "close",
+        "x": 0.66,
+        "y": 0.34,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "id": "r2",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.74,
+      "y": 0.64,
+      "w": 160,
+      "h": 84,
+      "face": 200,
+      "banner": true,
+      "moves": [
+       {
+        "at": "close",
+        "x": 0.66,
+        "y": 0.6,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "id": "r3",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.45,
+      "y": 0.12,
+      "w": 150,
+      "h": 80,
+      "face": 90,
+      "moves": [
+       {
+        "at": "close",
+        "x": 0.46,
+        "y": 0.2,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "id": "r4",
+      "side": "byz",
+      "kind": "block",
+      "x": 0.14,
+      "y": 0.4,
+      "w": 150,
+      "h": 80,
+      "face": 0,
+      "appear": "close",
+      "moves": [
+       {
+        "at": "close",
+        "x": 0.22,
+        "y": 0.42,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "id": "brk",
+      "side": "sel",
+      "kind": "riders",
+      "n": 3,
+      "spread": 0.7,
+      "x": 0.44,
+      "y": 0.5,
+      "face": 180,
+      "appear": "run",
+      "moves": [
+       {
+        "at": "run",
+        "x": 0.3,
+        "y": 0.56,
+        "dur": 1.6
+       }
+      ]
+     }
+    ],
+    "crescent": {
+     "at": "hill",
+     "cx": 0.46,
+     "cy": 0.5,
+     "r": 300,
+     "a0": -150,
+     "a1": 150,
+     "dur": 1.3,
+     "close": "close"
+    },
+    "kasif": {
+     "x": 0.12,
+     "y": 0.9,
+     "scale": 0.95,
+     "face": 1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "close",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "run",
+       "pose": "point",
+       "dir": 20,
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.46,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03_ova",
+   "text": "Ama atı düştü ve Yıldırım esir alındı. Oğlu Musa da onunla birlikteydi.",
+   "visual": "Akşam: 'düştü'de Bayezid'in atı öne doğru yığılır, kılıcı yere düşer ve kırmızı halkayla işaretlenir; kırmızı sancaklı atlılar yaklaşır; yanında genç Musa; solda Kaşif şokta",
+   "title": {
+    "white": "Esir"
+   },
+   "cues": {
+    "drop": "düştü",
+    "hit": "esir",
+    "son": "Musa"
+   },
+   "params": {
+    "time": "evening",
+    "sun": false,
+    "volcano": false,
+    "camps": [
+     {
+      "side": "byz",
+      "x0": 0.45,
+      "x1": 0.98,
+      "n": 6,
+      "scale": 0.4
+     }
+    ],
+    "horse": {
+     "x": 0.34,
+     "y": 0.76,
+     "scale": 0.95,
+     "face": 1,
+     "fall": "drop"
+    },
+    "cast": [
+     {
+      "who": "bayezid",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "emotion": "angry",
+      "sword": true,
+      "drop": "drop",
+      "scale": 1.0,
+      "seq": [
+       {
+        "at": "drop",
+        "pose": "idle",
+        "emotion": "worried"
+       },
+       {
+        "at": "hit",
+        "pose": "idle",
+        "emotion": "worried",
+        "face": "right"
+       }
+      ],
+      "y": 0.76
+     },
+     {
+      "who": "musa",
+      "accessory": "turban",
+      "x": 0.73,
+      "face": "left",
+      "pose": "idle",
+      "emotion": "worried",
+      "scale": 0.78,
+      "appear": "son",
+      "bow": "son",
+      "y": 0.76
+     }
+    ],
+    "riders": [
+     {
+      "who": "t1",
+      "side": "byz",
+      "accessory": "turban",
+      "beard": "black",
+      "flag": "red",
+      "weapon": "lance",
+      "x": 1.15,
+      "face": -1,
+      "n": 2,
+      "gap": 0.12,
+      "scale": 0.56,
+      "y": 0.76,
+      "moves": [
+       {
+        "at": "drop",
+        "x": 0.93,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "who": "t2",
+      "side": "byz",
+      "accessory": "helmet",
+      "flag": "red",
+      "x": 1.3,
+      "face": -1,
+      "n": 1,
+      "scale": 0.5,
+      "y": 0.72,
+      "moves": [
+       {
+        "at": "hit",
+        "x": 0.86,
+        "dur": 1.4
+       }
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.8,
+     "scale": 0.72,
+     "face": 1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "son",
+       "pose": "idle",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.62
+     ]
+    },
+    "ring": {
+     "x": 0.56,
+     "y": 0.71,
+     "r": 70,
+     "at": "drop"
+    },
+    "ground": 0.76
+   }
+  },
+  {
+   "chapter": "Peki neden?",
+   "type": "chapter",
+   "text": "Peki Yıldırım nasıl bu kadar ağır kaybetti?",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Peki neden?' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Peki",
+    "title": "kaybetti"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Peki neden?"
+   }
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "Çoğu kişi \"Tatarlar taraf değiştirdi\" der. Ama bu, hikâyenin sadece sonu.",
+   "visual": "Elle yazılmış başlık 'Çoğu kişiye göre', altında dev Fraunces 'Tatarlar!' belirir; 'sonu'nda altına kırmızı hap 'sadece son' iner; sağda Kaşif konuşur, 'sonu'nda omuz silker",
+   "title": {
+    "white": "Tek cevap?"
+   },
+   "cues": {
+    "hit": "Tatarlar",
+    "end": "sonu"
+   },
+   "params": {
+    "header": {
+     "text": "Çoğu kişiye göre",
+     "at": 0.2
+    },
+    "items": [
+     {
+      "text": "Tatarlar!",
+      "at": "hit",
+      "size": 200
+     }
+    ],
+    "pill": {
+     "text": "sadece son",
+     "at": "end",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.84,
+     "scale": 0.9,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "end",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03c_compare",
+   "text": "Bakın, ilk sebep hızdı. Bayezid toprakları çok hızlı aldı, ama insanların gönlünü kazanmaya zaman bulamadı.",
+   "visual": "Solda kartta mavi 'toprak' çubuğu hızla neredeyse sonuna kadar dolar, kırmızı 'bağlılık' çubuğu kısa kalır; sağda 'Sebep' kartında 'Hız' satırına mavi ✓ gelir; sağ kenarda Kaşif anlatır, 'gönlünü'de kısa çubuğu işaret eder",
+   "title": {
+    "white": "1. Hız"
+   },
+   "cues": {
+    "a": "hızdı",
+    "bar": "hızlı",
+    "hit": "gönlünü"
+   },
+   "params": {
+    "bars": [
+     {
+      "label": "toprak",
+      "value": 0.95,
+      "color": "blue",
+      "at": "bar"
+     },
+     {
+      "label": "bağlılık",
+      "value": 0.22,
+      "color": "red",
+      "at": "hit"
+     }
+    ],
+    "list": {
+     "title": "Sebep 1",
+     "items": [
+      {
+       "text": "Hız",
+       "at": "a",
+       "mark": "check"
+      },
+      {
+       "text": "Toprak",
+       "at": "bar",
+       "mark": "check"
+      },
+      {
+       "text": "Gönül",
+       "at": "hit",
+       "mark": "x"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.9,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 10,
+       "face": -1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_heat",
+   "text": "İkinci sebep yorgunluktu. Susuz bir yürüyüşten gelen ordu, dinlenmiş bir orduyla savaştı.",
+   "visual": "Ekran kesikli çizgiyle ikiye bölünür: solda dev güneş altında öne eğilmiş, yavaş yürüyen mavi başlıklı asker kolu, çatlak toprak, sıcak dalgaları, boş su tulumu sallanır; sağda gölgeli çadırlar, su fıçısı, dik duran kırmızı sancaklı askerler 'dinlenmiş'te mızraklarını kaldırır; ortada Kaşif önce sola bakar, sonra sağı işaret eder",
+   "title": {
+    "white": "2. Yorgunluk"
+   },
+   "cues": {
+    "tired": "Susuz",
+    "rest": "dinlenmiş"
+   },
+   "params": {
+    "mode": "split",
+    "column": {
+     "n": 4,
+     "color": "blue"
+    },
+    "rest": {
+     "color": "red",
+     "tents": 2,
+     "barrel": true,
+     "at": "rest"
+    },
+    "tired": "tired",
+    "empty": "tired",
+    "kasif": {
+     "x": 0.5,
+     "pose": "idle",
+     "seq": [
+      {
+       "at": 0.4,
+       "pose": "look",
+       "face": -1
+      },
+      {
+       "at": "tired",
+       "pose": "idle",
+       "face": -1,
+       "emotion": "worried"
+      },
+      {
+       "at": "rest",
+       "pose": "point",
+       "face": 1,
+       "dir": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Üçüncüsü de Timur'du. Belki suyla, ama kesinlikle casuslarıyla, savaşı başlamadan kazanmaya çalıştı.",
+   "visual": "Timur 'SU' tabelası tutar; sarıklı casus bir Tatar askerine fısıldar ('casus' etiketi); Kaşif düşünür, sonra işaret eder",
+   "title": {
+    "white": "3. Timur"
+   },
+   "cues": {
+    "hit": "Timur'du",
+    "water": "suyla",
+    "spy": "casuslarıyla"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "cast": [
+     {
+      "who": "timur",
+      "x": 0.3,
+      "accessory": "turban",
+      "beard": "grey",
+      "pose": "idle",
+      "face": "right",
+      "at": "water",
+      "then": "hold",
+      "text": "SU",
+      "talk": false,
+      "emotion": "angry"
+     },
+     {
+      "who": "casus",
+      "x": 0.66,
+      "accessory": "turban",
+      "pose": "idle",
+      "face": "right",
+      "at": "spy",
+      "then": "talk",
+      "talk": false,
+      "scale": 0.92,
+      "beard": "short"
+     },
+     {
+      "who": "tatar",
+      "x": 0.8,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "left",
+      "talk": false,
+      "at": "spy",
+      "then": "think"
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "pose": "think",
+      "face": "right",
+      "at": "spy",
+      "then": "point",
+      "dir": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [],
+    "label": {
+     "text": "casus",
+     "x": 0.6,
+     "y": 0.13,
+     "at": "spy",
+     "arrow": [
+      0.66,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani Ankara bir öğleden sonra kaybedilmedi. Yıllardır biriken küskünlük, o gün bir anda patladı.",
+   "visual": "Dev yazı kelime kelime: 'YILLARIN KÜSKÜNLÜĞÜ', 'küskünlüğü' kırmızı kutuda; el yazısı not 'tek günde değil'; yanda Kaşif 'patladı'da şaşırıp geri sıçrar",
+   "title": {
+    "white": "Asıl neden"
+   },
+   "cues": {
+    "w0": "Ankara",
+    "w1": "küskünlük",
+    "note": "patladı"
+   },
+   "params": {
+    "lines": [
+     "Yılların",
+     "küskünlüğü"
+    ],
+    "highlight": [
+     "küskünlüğü"
+    ],
+    "note": {
+     "text": "tek günde değil",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Bayezid, Mart 1403'te Akşehir'de, hâlâ esirken hayatını kaybetti.",
+   "visual": "Batı-orta Anadolu haritası: Ankara'dan güneybatıya ince kesikli mürekkep çizgi yavaşça Akşehir'e uzanır; 'Mart'ta kırmızı 'Mart 1403' notu belirir; 'Akşehir'de'de Akşehir kırmızı halkayla işaretlenir; solda Kaşif üzgün bakar, sonra Akşehir'i gösterir",
+   "title": {
+    "white": "Akşehir"
+   },
+   "cues": {
+    "note": "Mart",
+    "go": "Akşehir'de"
+   },
+   "params": {
+    "view": [
+     27.5,
+     37.5,
+     36,
+     41.6
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        32.86,
+        39.93
+       ],
+       [
+        32.4,
+        39.45
+       ],
+       [
+        31.9,
+        38.9
+       ],
+       [
+        31.42,
+        38.36
+       ]
+      ],
+      "at": 0.3,
+      "dur": 2.6,
+      "color": "ink",
+      "width": 6
+     }
+    ],
+    "cities": [
+     {
+      "name": "Ankara",
+      "lon": 32.86,
+      "lat": 39.93,
+      "at": 0.1,
+      "color": "blue",
+      "dy": -40
+     },
+     {
+      "name": "Akşehir",
+      "lon": 31.42,
+      "lat": 38.36,
+      "at": "go",
+      "color": "red",
+      "ring": true,
+      "dy": 66
+     }
+    ],
+    "note": {
+     "text": "Mart 1403",
+     "x": 0.62,
+     "y": 0.14,
+     "at": "note",
+     "color": "red"
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "idle",
+     "emotion": "worried",
+     "at": "go",
+     "then": "point",
+     "dir": 5,
+     "face": "right",
+     "scale": 0.85
+    }
+   }
+  },
+  {
+   "type": "an_cage",
+   "text": "Belki siz de duymuşsunuzdur: Timur onu demir bir kafeste gezdirmiş. Peki bu doğru mu?",
+   "visual": "Kaşif'in başından yükselen düşünce kabarcıkları, kesikli çizgili dalgalı bir 'rivayet bulutu'na varır; bulutun içinde öküzün çektiği araba, üstünde demir parmaklıklı kafes, içinde sarıklı figür endişeyle oturur, tekerler döner, araba sallanır; 'doğru'da bulutun sağ üst kenarına büyük kırmızı '?' damgası iner; Kaşif düşünür, sonra omuz silker",
+   "title": {
+    "white": "Rivayet"
+   },
+   "cues": {
+    "cage": "kafeste",
+    "q": "doğru"
+   },
+   "params": {
+    "cloud": {
+     "x": 0.56,
+     "y": 0.47,
+     "w": 0.62,
+     "h": 0.64
+    },
+    "figure": {
+     "accessory": "turban",
+     "beard": "black",
+     "emotion": "worried"
+    },
+    "q": "q",
+    "label": {
+     "text": "rivayet",
+     "at": "cage"
+    },
+    "kasif": {
+     "x": 0.12,
+     "y": 0.83,
+     "scale": 0.8,
+     "pose": "think",
+     "face": "right",
+     "at": "q",
+     "then": "shrug",
+     "emotion": "worried"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "O gün Osmanlı ordusunda Bavyeralı bir genç vardı: Schiltberger. Yıllarca Bayezid'e hizmet etmişti.",
+   "visual": "Kaşif yürüyerek gelir; başı açık genç Schiltberger sağdan gelip el sallar; 'Schiltberger' etiketi",
+   "title": {
+    "white": "Schiltberger"
+   },
+   "cues": {
+    "hit": "Bavyeralı",
+    "name": "Schiltberger"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "cast": [
+     {
+      "who": "schiltberger",
+      "x": 0.98,
+      "pose": "walk",
+      "to": 0.64,
+      "at": "hit",
+      "then": "wave",
+      "face": "left",
+      "talk": false
+     },
+     {
+      "who": "kasif",
+      "x": 0.04,
+      "pose": "walk",
+      "to": 0.28,
+      "at": "hit",
+      "then": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "name",
+        "pose": "point",
+        "dir": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "tree",
+      "x": 0.88,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "Schiltberger",
+     "x": 0.62,
+     "y": 0.13,
+     "at": "name"
+    }
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Sonra yaşadıklarını bir kitapta anlattı, ama kafesten hiç söz etmedi.",
+   "visual": "Kandil ışığında yazı masası: büyük kâğıtta 'Esaret anıları' başlığı, satırlar tüy kalemle kendini yazar; 'kafesten'de kâğıdın yanına kırmızı 'kafes? yok' damgası iner; solda Kaşif okur gibi düşünür, sonra damgayı gösterir",
+   "title": {
+    "white": "Tanık"
+   },
+   "cues": {
+    "hit": "kitapta",
+    "no": "kafesten"
+   },
+   "params": {
+    "title": [
+     "Esaret",
+     "anıları"
+    ],
+    "title_at": "hit",
+    "write": {
+     "at": 0.4,
+     "dur": 4
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.84,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "right",
+      "at": "no",
+      "then": "point",
+      "dir": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "kafes? yok",
+      "x": 0.68,
+      "y": 0.64,
+      "at": "no",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "Kafes, onlarca yıl sonraki kroniklerde ortaya çıktı. Bazı tarihçilere göre bu \"kafes\" aslında parmaklıklı bir tahtırevandı.",
+   "visual": "Dev Fraunces 'Demir kafes?' belirir, 'sonraki'de altına kırmızı hap 'sonraki rivayet'; 'tahtırevandı'da üstte el yazısı 'belki kafesli tahtırevan'; sağda Kaşif konuşur",
+   "title": {
+    "white": "Sonradan"
+   },
+   "cues": {
+    "hit": "Kafes",
+    "pill": "sonraki",
+    "tah": "tahtırevandı"
+   },
+   "params": {
+    "items": [
+     {
+      "text": "Demir kafes?",
+      "at": 0.15,
+      "size": 170
+     }
+    ],
+    "pill": {
+     "text": "sonraki rivayet",
+     "at": "pill",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "pill",
+       "pose": "point",
+       "dir": -20,
+       "face": -1
+      }
+     ]
+    },
+    "header": {
+     "text": "belki parmaklıklı tahtırevan",
+     "at": "tah"
+    }
+   }
+  },
+  {
+   "chapter": "Dört kardeş",
+   "type": "chapter",
+   "text": "Asıl dram ise şimdi başlıyordu.",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Dört kardeş' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Asıl",
+    "title": "dram"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Dört kardeş"
+   }
+  },
+  {
+   "type": "an_brothers",
+   "text": "Bayezid'in oğulları Süleyman, İsa, Musa ve Mehmed, taht için birbirine düştü.",
+   "visual": "Ortada basamaklı boş taht, minderinde sorguçlu padişah kavuğu; dört sarıklı şehzade kılıçlarıyla iki yandan yürüyerek gelir, adları üstlerinde belirir; 'taht'ta ikişer ikişer birbirine döner, kılıçlar çaprazlanır, altın kıvılcımlar; 'düştü'de taht sallanır, kavuk titrer; Kaşif sağdan gelip kenarda durur, 'düştü'de şaşırıp geri sıçrar",
+   "title": {
+    "white": "Taht kavgası"
+   },
+   "cues": {
+    "s": "Süleyman",
+    "i": "İsa",
+    "m": "Musa",
+    "me": "Mehmed",
+    "fight": "taht",
+    "hit": "düştü"
+   },
+   "params": {
+    "mode": "fight",
+    "princes": [
+     {
+      "name": "Süleyman",
+      "x": 0.36,
+      "beard": "black",
+      "at": "s"
+     },
+     {
+      "name": "İsa",
+      "x": 0.2,
+      "beard": "short",
+      "at": "i"
+     },
+     {
+      "name": "Musa",
+      "x": 0.64,
+      "beard": "black",
+      "at": "m"
+     },
+     {
+      "name": "Mehmed",
+      "x": 0.8,
+      "beard": "short",
+      "at": "me"
+     }
+    ],
+    "fight": "fight",
+    "hit": "hit",
+    "kasif": {
+     "x": 1.04,
+     "to": 0.9,
+     "walk_at": "me",
+     "walk_dur": 0.9,
+     "scale": 0.75,
+     "pose": "walk",
+     "face": "left",
+     "at": "hit",
+     "then": "shock",
+     "emotion": "surprised"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "On bir yıl boyunca kardeş kardeşle savaştı. Tarihçiler bu yıllara Fetret Devri der, yani ara dönem.",
+   "visual": "Yatay zaman çizgisi: '1402 Ankara', '1413 Birlik' uçları sırayla belirir, sonra ortada kırmızı '11 yıl · Fetret' işaretlenir; sağda Kaşif 'Fetret'te işaret eder",
+   "title": {
+    "white": "Fetret"
+   },
+   "cues": {
+    "a": "On",
+    "b": "kardeşle",
+    "c": "Fetret"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1402",
+      "text": "Ankara",
+      "at": "a"
+     },
+     {
+      "year": "11 yıl",
+      "text": "Fetret",
+      "at": "c"
+     },
+     {
+      "year": "1413",
+      "text": "Birlik",
+      "at": "b"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.92,
+     "y": 0.8,
+     "pose": "point",
+     "at": "c",
+     "scale": 0.55,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "an_beylik",
+   "text": "Timur beylikleri geri kurup doğuya döndü ve 1405'te Çin yolunda öldü.",
+   "visual": "Anadolu yama haritası mavi başlar: doğu kenardaki kırmızı sancaklı çadırdan sarıklı küçük beyler kesikli yollarla evlerine yürür, her yama eski rengine döner; 'doğuya'da çadır doğuya kayıp kaybolur; '1405'te' kırmızı notu belirir; sağda Kaşif düşünür, sonra çadırın gittiği yönü gösterir",
+   "title": {
+    "white": "Beylikler",
+    "gray": "geri döndü"
+   },
+   "cues": {
+    "back": "beylikleri",
+    "go": "doğuya",
+    "note": "1405'te"
+   },
+   "params": {
+    "taken": "all",
+    "restore": {
+     "at": "back",
+     "dur": 2.2
+    },
+    "tent_leave": {
+     "at": "go",
+     "dur": 1.4
+    },
+    "note": {
+     "text": "1405",
+     "at": "note",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.9,
+     "pose": "think",
+     "face": -1,
+     "seq": [
+      {
+       "at": "go",
+       "pose": "point",
+       "dir": "tent"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_brothers",
+   "text": "Herkes Osmanlı'nın dağılmasını bekliyordu. Ama 1413'te Çelebi Mehmed, kardeşi Musa'yı yendi ve ülkeyi yeniden birleştirdi.",
+   "visual": "Aynı taht: dört şehzade kılıçlarını birbirine doğrultmuş bekler; '1413'te' kırmızı '1413' rozeti düşer; 'yendi'de üç şehzade dönüp sahneden çıkar, Mehmed tahta yürür, kürsüye çıkıp el sallar, padişah kavuğu uçup başına konar; 'birleştirdi'de altın ışınlar; sağda Kaşif endişeli bekler, sonra sevinçle tahtı gösterir",
+   "title": {
+    "white": "1413"
+   },
+   "cues": {
+    "y": "1413",
+    "win": "yendi",
+    "hit": "birleştirdi"
+   },
+   "params": {
+    "mode": "unite",
+    "princes": [
+     {
+      "name": "Süleyman",
+      "x": 0.36,
+      "beard": "black"
+     },
+     {
+      "name": "İsa",
+      "x": 0.2,
+      "beard": "short"
+     },
+     {
+      "name": "Musa",
+      "x": 0.64,
+      "beard": "black"
+     },
+     {
+      "name": "Mehmed",
+      "x": 0.8,
+      "beard": "short"
+     }
+    ],
+    "winner": 3,
+    "win": "win",
+    "hit": "hit",
+    "badge": {
+     "text": "1413",
+     "at": "y",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.94,
+     "scale": 0.75,
+     "pose": "idle",
+     "face": "left",
+     "emotion0": "worried",
+     "at": "hit",
+     "then": "point",
+     "dir": 20,
+     "emotion": "happy"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_tug",
+   "text": "İşte en şaşırtıcı kısım bu: Sultan esir düştü, ordu dağıldı, kardeşler birbirine kılıç çekti. Ve devlet yine ayakta kaldı.",
+   "visual": "Tümsek üstünde dikili Osmanlı tuğu (altın top, hilal, at kılı püsküller); 'Esaret', 'Bozgun', 'Kavga' kelimeleri sırayla uçup direğe çarpar, kırmızı çarpma izi, tuğ sallanır ama ayakta kalır, kelimeler düşer; 'ayakta'da üstte yeşil hap 'Devlet ayakta'; sağda Kaşif önce şok, sonra sevinçle işaret eder",
+   "title": {
+    "white": "Ayakta"
+   },
+   "cues": {
+    "a": "esir",
+    "b": "dağıldı",
+    "c": "kılıç",
+    "pill": "ayakta"
+   },
+   "params": {
+    "x": 0.42,
+    "blows": [
+     {
+      "text": "Esaret",
+      "at": "a"
+     },
+     {
+      "text": "Bozgun",
+      "at": "b",
+      "from": "left"
+     },
+     {
+      "text": "Kavga",
+      "at": "c"
+     }
+    ],
+    "pill": {
+     "text": "Devlet ayakta",
+     "at": "pill",
+     "color": "green"
+    },
+    "kasif": {
+     "x": 0.84,
+     "scale": 0.9,
+     "pose": "talk",
+     "face": -1,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "a",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "pill",
+       "pose": "point",
+       "dir": 20,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Bizans derin bir nefes aldı. Fetih, Bayezid'in torununun oğlu Fatih'e, 1453'e kaldı. Yani Ankara'da bir sultan yenildi, İstanbul ise yarım asır kazandı.",
+   "visual": "Arkada İstanbul silueti; taçlı Bizans imparatoru önce endişeli durur, 'nefes'te rahatlayıp el sallar; 'Fatih'e'de '1453' tabelası dikilir; 'kazandı'da 'yarım asır' notu belirir, Kaşif onu gösterir",
+   "title": {
+    "white": "1453"
+   },
+   "cues": {
+    "sigh": "nefes",
+    "f": "Fatih'e",
+    "hit": "kazandı"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "skyline": true,
+    "cast": [
+     {
+      "who": "bizans",
+      "x": 0.58,
+      "accessory": "crown",
+      "beard": "grey",
+      "pose": "shrug",
+      "emotion": "worried",
+      "face": "left",
+      "at": "sigh",
+      "then": "wave",
+      "talk": false
+     },
+     {
+      "who": "kasif",
+      "x": 0.22,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "emotion": "happy"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.84,
+      "text": "1453",
+      "at": "f",
+      "hit": "f"
+     }
+    ],
+    "label": {
+     "text": "yarım asır",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki siz ne düşünüyorsunuz? Bayezid Ankara'da bekleseydi, tarih nasıl yazılırdı? Yorumlara yazın.",
+   "visual": "Kaşif iki yol tabelası arasında: solda 'BEKLE', sağda 'YÜRÜ'; arkada sarıklı Bayezid düşünür; Kaşif önce düşünür, 'bekleseydi'de sol tabelayı, 'Yorumlara'da izleyiciyi gösterir; 'Yorumlara yazın' notu",
+   "title": {
+    "white": "Sizce?"
+   },
+   "cues": {
+    "q": "düşünüyorsunuz",
+    "wait": "bekleseydi",
+    "hit": "Yorumlara"
+   },
+   "params": {
+    "scale": 1.2,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.25
+     }
+    },
+    "cast": [
+     {
+      "who": "bayezid",
+      "x": 0.64,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "think",
+      "face": "left",
+      "talk": false,
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "wait",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.15,
+      "text": "BEKLE",
+      "at": "wait",
+      "hit": "wait"
+     },
+     {
+      "type": "sign",
+      "x": 0.86,
+      "text": "YÜRÜ",
+      "at": "wait",
+      "hit": "wait"
+     }
+    ],
+    "label": {
+     "text": "Yorumlara yazın!",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "hit"
+    }
+   }
+  }
+ ]
+}

@@ -14,7 +14,7 @@
 //       moves: [{at, x, dur: 2, face}], appear: cue}],
 //     cast: [{who, accessory, beard, robe: "white", x, y, scale: 0.72, face, pose, dir, emotion, seq: [...],
 //       moves: [{at, x, dur}], spear: true, raise: cue (spear goes up), sword: true, drop: cue, bow: cue, appear: cue}],
-//     horse: {x, y, scale: 1.1, face: 1, knot: cue} (riderless horse, tail tied on the cue),
+//     horse: {x, y, scale: 1.1, face: 1, knot: cue, fall: cue (optional: collapses forward)} (riderless horse, tail tied on the cue),
 //     crown: {x, y, at} (crown lying on the ground), ring: {x, y, r: 120, at} (red ring),
 //     label: {text, x, y, at, size: 64, color: "ink"|"red"}, note: {...same}, bubble: {text, x, y, at, size: 56},
 //     kasif: {x: 0.12, y, scale: 0.8, face: 1, pose, dir, emotion, seq, sweat: cue} | false,
@@ -334,7 +334,12 @@
             const s = BH.scale ?? 1.1, ka = BH.knot != null ? atOr(cues, BH.knot, null) : null, kp = ka != null && lt >= ka ? prog(lt, ka, 0.6) : 0;
             const h = horse(BH.x * W, (BH.y ?? (P.ground ?? 0.86)) * H, s, faceOf(BH.face ?? 1), 0, 0, t, sd + 1500, { knot: kp });
             bhF.setAttribute('d', h.fill); bhR.setAttribute('d', h.ring);
-            bhG.setAttribute('transform', kp > 0 && kp < 1 ? `translate(0 ${f1(-6 * Math.sin(kp * Math.PI))})` : '');
+            // optional (added for 02-ankara-savasi-1402): BH.fall = cue, the horse collapses forward (pitch onto the front legs, sinks)
+            const fa = BH.fall != null ? atOr(cues, BH.fall, null) : null, fp = fa != null && lt >= fa ? prog(lt, fa, 0.55) : 0;
+            if (fp > 0) {
+              const fc = faceOf(BH.face ?? 1), gy0 = (BH.y ?? (P.ground ?? 0.86)) * H, px = BH.x * W + fc * 170 * s;
+              bhG.setAttribute('transform', `translate(0 ${f1(34 * fp * s)}) rotate(${f1(fc * 24 * fp + Math.sin(t * 9) * 1.2 * (1 - fp))} ${f1(px)} ${f1(gy0)})`);
+            } else bhG.setAttribute('transform', kp > 0 && kp < 1 ? `translate(0 ${f1(-6 * Math.sin(kp * Math.PI))})` : '');
           }
 
           // standing cast

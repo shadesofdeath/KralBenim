@@ -1,0 +1,1078 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "mansa-musa",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Bu kral",
+      "altını",
+      "ucuzlattı"
+    ],
+    "highlight": [
+      "ucuzlattı"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Mansa Musa: Altının Değerini Düşüren Kral Neden Borç Aldı?",
+    "description": "Mansa Musa: altının değerini düşüren kral! 1324'te Mali İmparatorluğu'nun hükümdarı hacca giderken Kahire'de o kadar çok altın dağıttı ki altının değeri düştü. Peki bu nasıl oldu?\n\nMansa Musa binlerce kişilik bir kervanla Sahra'yı geçti ve Kahire'de saraydaki her emire bir yük altın verdi. Arap tarihçi el-Ömerî'ye göre bir altın sikke önceden 25 dirhemin altına inmezken, on iki yıl sonra bile 22 dirhemi geçmiyordu, yani altın yaklaşık sekizde bir ucuzlamıştı. İşin ironisi şu: dönüş yolunda kral, Mısırlı tüccarlardan borç almak zorunda kaldı. 1375 tarihli Katalan Atlası da onu elinde altınla çizdi.\n\nHer gün yeni bir \"neden?\" için abone ol. Sence tarihin en zengin insanı gerçekten Mansa Musa mıydı? Yorumlara yaz!\n\n#shorts #mansamusa #maliimparatorluğu #tarih #düşünbakalım",
+    "tags": [
+      "mansa musa",
+      "mansa musa kimdir",
+      "mansa musa altın",
+      "mansa musa hac yolculuğu",
+      "tarihin en zengin insanı",
+      "mali imparatorluğu",
+      "altının değeri düştü",
+      "kahire 1324",
+      "el-ömerî",
+      "katalan atlası",
+      "afrika tarihi",
+      "ilginç tarih",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-24T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "mm_gold",
+      "text": "Bu kral altını ucuzlattı.",
+      "visual": "Kahire silüeti ve piramitler önünde taçlı Mansa Musa bir altın yığınının üstünde durup avuç avuç altın sikke fırlatıyor; sikkeler yay çizip yağıyor ve yerde birikiyor; yığına saplı kâğıt etikette kırmızı 'ucuz!' yazıyor; sağda büyük Kaşif 'ucuzlattı'da şokla geri sıçrıyor.",
+      "title": {},
+      "cues": {
+        "hit": "ucuzlattı"
+      },
+      "params": {
+        "mode": "rain",
+        "king": {
+          "x": 0.3,
+          "scale": 0.92
+        },
+        "rate": 13,
+        "spread": [
+          -560,
+          240
+        ],
+        "tag": {
+          "text": "ucuz!",
+          "at": 0
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.6
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.75,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "mm_map",
+      "text": "Yıl 1324. Mali İmparatorluğu'nun",
+      "visual": "Eski harita: Kuzey Afrika, Akdeniz ve Arabistan; Mali'den Sahra üzerinden Kahire'ye, oradan Mekke'ye kırmızı kesikli rota çiziliyor; el yazısı not '1324'; sağ altta Kaşif rotayı işaret ediyor.",
+      "title": {
+        "white": "1324",
+        "gray": "Mali'den Mekke'ye"
+      },
+      "cues": {
+        "route": "Yıl",
+        "note": "1324",
+        "city": "İmparatorluğu"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              0.1938,
+              0.1436
+            ],
+            [
+              0.25,
+              0.1598
+            ],
+            [
+              0.3281,
+              0.1254
+            ],
+            [
+              0.4375,
+              0.1173
+            ],
+            [
+              0.4531,
+              0.1618
+            ],
+            [
+              0.4453,
+              0.1922
+            ],
+            [
+              0.5156,
+              0.2165
+            ],
+            [
+              0.5781,
+              0.2549
+            ],
+            [
+              0.5938,
+              0.2205
+            ],
+            [
+              0.6406,
+              0.2104
+            ],
+            [
+              0.6719,
+              0.2306
+            ],
+            [
+              0.7484,
+              0.2387
+            ],
+            [
+              0.7859,
+              0.2367
+            ],
+            [
+              0.7891,
+              0.265
+            ],
+            [
+              0.8047,
+              0.3136
+            ],
+            [
+              0.8281,
+              0.3844
+            ],
+            [
+              0.8625,
+              0.4734
+            ],
+            [
+              0.8828,
+              0.5058
+            ],
+            [
+              0.8984,
+              0.5564
+            ],
+            [
+              0.9563,
+              0.615
+            ],
+            [
+              0.9688,
+              0.6575
+            ],
+            [
+              1.0781,
+              0.6312
+            ],
+            [
+              1.0781,
+              1.0318
+            ],
+            [
+              0.4219,
+              1.0318
+            ],
+            [
+              0.425,
+              0.8902
+            ],
+            [
+              0.4297,
+              0.8497
+            ],
+            [
+              0.4219,
+              0.789
+            ],
+            [
+              0.375,
+              0.7829
+            ],
+            [
+              0.3125,
+              0.7425
+            ],
+            [
+              0.2188,
+              0.7647
+            ],
+            [
+              0.1562,
+              0.7789
+            ],
+            [
+              0.1094,
+              0.7283
+            ],
+            [
+              0.0781,
+              0.698
+            ],
+            [
+              0.0469,
+              0.6474
+            ],
+            [
+              0.0156,
+              0.617
+            ],
+            [
+              0.0078,
+              0.5725
+            ],
+            [
+              0.0234,
+              0.4855
+            ],
+            [
+              0.0312,
+              0.3945
+            ],
+            [
+              0.0781,
+              0.3136
+            ],
+            [
+              0.1281,
+              0.2529
+            ],
+            [
+              0.1406,
+              0.2023
+            ],
+            [
+              0.175,
+              0.172
+            ]
+          ],
+          [
+            [
+              0.1406,
+              0.087
+            ],
+            [
+              0.1375,
+              -0.004
+            ],
+            [
+              0.25,
+              -0.0121
+            ],
+            [
+              0.3281,
+              0.0081
+            ],
+            [
+              0.3312,
+              0.0243
+            ],
+            [
+              0.2953,
+              0.0405
+            ],
+            [
+              0.2812,
+              0.0708
+            ],
+            [
+              0.2734,
+              0.0951
+            ],
+            [
+              0.25,
+              0.1275
+            ],
+            [
+              0.1938,
+              0.1416
+            ],
+            [
+              0.1719,
+              0.1194
+            ],
+            [
+              0.1422,
+              0.1214
+            ]
+          ],
+          [
+            [
+              0.3984,
+              -0.0162
+            ],
+            [
+              0.4375,
+              -0.0202
+            ],
+            [
+              0.4531,
+              0.0101
+            ],
+            [
+              0.4844,
+              0.0364
+            ],
+            [
+              0.5281,
+              0.0607
+            ],
+            [
+              0.525,
+              0.0991
+            ],
+            [
+              0.5328,
+              0.1012
+            ],
+            [
+              0.5469,
+              0.0809
+            ],
+            [
+              0.5406,
+              0.0587
+            ],
+            [
+              0.5703,
+              0.0566
+            ],
+            [
+              0.5312,
+              0.0303
+            ],
+            [
+              0.5,
+              0.0101
+            ],
+            [
+              0.4938,
+              -0.0121
+            ],
+            [
+              0.475,
+              -0.0303
+            ],
+            [
+              0.4062,
+              -0.0324
+            ]
+          ],
+          [
+            [
+              0.475,
+              0.1012
+            ],
+            [
+              0.525,
+              0.0951
+            ],
+            [
+              0.5172,
+              0.1275
+            ]
+          ],
+          [
+            [
+              0.5703,
+              -0.0162
+            ],
+            [
+              0.5844,
+              0.0243
+            ],
+            [
+              0.5938,
+              0.0688
+            ],
+            [
+              0.6109,
+              0.0951
+            ],
+            [
+              0.6203,
+              0.1254
+            ],
+            [
+              0.6312,
+              0.1335
+            ],
+            [
+              0.6438,
+              0.1315
+            ],
+            [
+              0.6406,
+              0.1012
+            ],
+            [
+              0.6562,
+              0.0971
+            ],
+            [
+              0.6391,
+              0.0506
+            ],
+            [
+              0.6562,
+              0.0445
+            ],
+            [
+              0.6875,
+              0.0445
+            ],
+            [
+              0.6906,
+              0.0526
+            ],
+            [
+              0.7328,
+              0.0405
+            ],
+            [
+              0.7344,
+              0.0344
+            ],
+            [
+              0.7219,
+              0.0283
+            ],
+            [
+              0.7188,
+              0.0081
+            ],
+            [
+              0.7281,
+              -0.0162
+            ]
+          ],
+          [
+            [
+              0.6906,
+              0.0587
+            ],
+            [
+              0.6953,
+              0.0809
+            ],
+            [
+              0.7078,
+              0.1113
+            ],
+            [
+              0.7266,
+              0.1275
+            ],
+            [
+              0.7578,
+              0.1295
+            ],
+            [
+              0.7969,
+              0.1376
+            ],
+            [
+              0.8438,
+              0.1254
+            ],
+            [
+              0.8422,
+              0.1517
+            ],
+            [
+              0.8359,
+              0.1821
+            ],
+            [
+              0.8219,
+              0.2185
+            ],
+            [
+              0.8156,
+              0.2367
+            ],
+            [
+              0.7906,
+              0.2428
+            ],
+            [
+              0.7922,
+              0.265
+            ],
+            [
+              0.8156,
+              0.3075
+            ],
+            [
+              0.8266,
+              0.2731
+            ],
+            [
+              0.8359,
+              0.3035
+            ],
+            [
+              0.8625,
+              0.3743
+            ],
+            [
+              0.8922,
+              0.435
+            ],
+            [
+              0.9219,
+              0.5159
+            ],
+            [
+              0.9469,
+              0.5665
+            ],
+            [
+              0.9594,
+              0.613
+            ],
+            [
+              0.9844,
+              0.611
+            ],
+            [
+              1.0156,
+              0.6009
+            ],
+            [
+              1.0156,
+              0.0344
+            ],
+            [
+              0.9297,
+              0.0364
+            ],
+            [
+              0.875,
+              0.0425
+            ],
+            [
+              0.8484,
+              0.0344
+            ],
+            [
+              0.8281,
+              0.0202
+            ],
+            [
+              0.7969,
+              0.0223
+            ],
+            [
+              0.7656,
+              0.0384
+            ],
+            [
+              0.7375,
+              0.0364
+            ],
+            [
+              0.7391,
+              0.0465
+            ],
+            [
+              0.7031,
+              0.0526
+            ]
+          ],
+          [
+            [
+              0.6484,
+              0.1497
+            ],
+            [
+              0.6922,
+              0.1578
+            ],
+            [
+              0.6641,
+              0.1618
+            ]
+          ]
+        ],
+        "cities": [
+          {
+            "name": "Mali",
+            "x": 0.1875,
+            "y": 0.6069,
+            "dy": 62,
+            "at": "route"
+          },
+          {
+            "name": "Kahire",
+            "x": 0.7688,
+            "y": 0.262,
+            "dx": -10,
+            "dy": -34,
+            "anchor": "end",
+            "at": "city"
+          },
+          {
+            "name": "Mekke",
+            "x": 0.9031,
+            "y": 0.437,
+            "dx": -26,
+            "dy": 14,
+            "anchor": "end",
+            "color": "red",
+            "at": "note"
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              0.1875,
+              0.6069
+            ],
+            [
+              0.2422,
+              0.4957
+            ],
+            [
+              0.3125,
+              0.3642
+            ],
+            [
+              0.4688,
+              0.3136
+            ],
+            [
+              0.6562,
+              0.2832
+            ],
+            [
+              0.7688,
+              0.262
+            ],
+            [
+              0.8359,
+              0.3338
+            ],
+            [
+              0.9031,
+              0.437
+            ]
+          ],
+          "at": "route",
+          "dur": 2.0,
+          "color": "red"
+        },
+        "seas": [
+          {
+            "name": "Akdeniz",
+            "x": 0.5469,
+            "y": 0.176
+          },
+          {
+            "name": "Sahra",
+            "x": 0.4062,
+            "y": 0.4451
+          }
+        ],
+        "note": {
+          "text": "1324",
+          "x": 0.2,
+          "y": 0.9,
+          "at": "note"
+        },
+        "focus": [
+          0.55,
+          0.45
+        ],
+        "zoom": 1.1,
+        "compass": "tl",
+        "kasif": {
+          "x": 0.83,
+          "y": 0.6,
+          "scale": 0.6,
+          "pose": "idle",
+          "face": "left",
+          "at": "route",
+          "then": "point",
+          "dir": 45
+        }
+      }
+    },
+    {
+      "type": "mm_atlas",
+      "text": "hükümdarı Mansa Musa,",
+      "visual": "Katalan Atlası (1375) tarzı parşömen kart: tahtta oturan taçlı Mansa Musa elinde parlayan altın küre ve asa tutuyor, soldan peçeli bir deveci ona doğru geliyor; altta el yazısı 'Katalan Atlası · 1375'; üstte 'Mansa Musa'; sağ önde Kaşif krala işaret ediyor.",
+      "title": {
+        "white": "Mali",
+        "gray": "14. yüzyıl"
+      },
+      "cues": {
+        "k": "hükümdarı",
+        "hit": "Musa"
+      },
+      "params": {
+        "label": {
+          "text": "Mansa Musa",
+          "y": 0.19,
+          "at": "k",
+          "size": 104
+        },
+        "caption": "Katalan Atlası · 1375",
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.9,
+            "pose": "idle",
+            "face": "left",
+            "at": "k",
+            "then": "point",
+            "dir": 25,
+            "scale": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "mm_gold",
+      "text": "binlerce kişiyle hacca gidiyordu.",
+      "visual": "Kum tepeleri kayarak geçiyor: dört deve ve sarıklı yürüyüşçülerden oluşan uzun kervan soldan sağa ilerliyor, arka sırtta minik bir kervan dizisi daha; üstte el yazısı 'binlerce kişi'; önde Kaşif kervanla birlikte yürüyor.",
+      "title": {
+        "white": "Hac yolu",
+        "gray": "Sahra"
+      },
+      "cues": {
+        "lab": "binlerce",
+        "hit": "hacca"
+      },
+      "params": {
+        "mode": "caravan",
+        "label": {
+          "text": "binlerce kişi!",
+          "y": 0.25,
+          "at": "lab"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.82,
+            "y": 0.62,
+            "pose": "walk",
+            "face": "right",
+            "scale": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "mm_gold",
+      "text": "Anlatılana göre develer altın yüklüydü.",
+      "visual": "Yakın plan: iki deve yürüyor, sırtlarındaki heybeler altınla dolu; 'altın'da heybeler parlıyor ve birkaç sikke kuma dökülüyor; solda Kaşif dürbünle bakıp şaşkınlıkla geri sıçrıyor.",
+      "title": {
+        "white": "Altın",
+        "gray": "yüklü develer"
+      },
+      "cues": {
+        "hit": "altın"
+      },
+      "params": {
+        "mode": "camels",
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.45,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.13,
+            "pose": "look",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.62
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kahire'ye varınca her emire bir yük altın dağıttı.",
+      "visual": "Kahire silüeti önünde taçlı Mansa Musa elinde altın sikkeyle duruyor; sarıklı iki emir gelip altını alıyor; 'altın'da el yazısı 'Bir yük altın!' beliriyor; solda Kaşif şaşkınlıkla geri sıçrıyor.",
+      "title": {
+        "white": "Kahire",
+        "gray": "Memlük sarayı"
+      },
+      "cues": {
+        "arr": "emire",
+        "hit": "altın"
+      },
+      "params": {
+        "skyline": true,
+        "foreground": "hatch",
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "scale": 0.82,
+        "label": {
+          "text": "Bir yük altın!",
+          "y": 0.2,
+          "at": "hit",
+          "size": 96
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.2,
+            "pose": "idle",
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.9
+          },
+          {
+            "who": "musa",
+            "accessory": "crown",
+            "x": 0.42,
+            "pose": "hold",
+            "item": "coin",
+            "face": "right",
+            "talk": false,
+            "emotion": "happy"
+          },
+          {
+            "who": "emir1",
+            "accessory": "turban",
+            "x": 1.1,
+            "pose": "walk",
+            "to": 0.64,
+            "face": "left",
+            "talk": false,
+            "at": "arr",
+            "then": "hold",
+            "item": "coin",
+            "emotion": "happy"
+          },
+          {
+            "who": "emir2",
+            "accessory": "turban",
+            "x": 1.3,
+            "pose": "walk",
+            "to": 0.82,
+            "face": "left",
+            "talk": false,
+            "scale": 0.82,
+            "at": "arr",
+            "then": "shock"
+          }
+        ]
+      }
+    },
+    {
+      "type": "mm_market",
+      "text": "Peki sonra ne oldu? Şehir altına boğuldu ve altın değer kaybetti!",
+      "visual": "Kahire çarşısında tezgâh ve terazi: solda altın kefesi, sağda gümüş dirhemler; 'altına'da gökten sikke yağmaya başlıyor ve alttan altın yığını yükseliyor; 'değer'de altın kefesi yukarı kalkıyor (altın hafifledi), solda kırmızı aşağı ok, tezgâhın ön panosunda 'Değeri düştü!' beliriyor; yığın sokak çizgisinin (y≈1100) üstünde kalıyor; sağda yığının önünde Kaşif düşünürken şokla sıçrıyor.",
+      "title": {
+        "white": "Kahire",
+        "gray": "çarşı"
+      },
+      "cues": {
+        "flood": "altına",
+        "hit": "değer"
+      },
+      "params": {
+        "arrow": {
+          "at": "hit",
+          "text": "Değeri düştü!"
+        },
+        "scale_x": 0.42,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.8,
+            "y": 0.573,
+            "pose": "think",
+            "face": "left",
+            "at": "flood",
+            "then": "shock",
+            "scale": 0.75
+          }
+        ]
+      }
+    },
+    {
+      "type": "mm_board",
+      "text": "Bir tarihçiye göre on iki yıl sonra bile altının fiyatı düzelmemişti.",
+      "visual": "Pano: 'Bir altın = kaç dirhem?' başlığı; iki çubuk: '1324'ten önce' 25+ dirhem (uzun), '12 yıl sonra' 22 dirhem (kısa); kısa çubuğun yanında kırmızı el yazısı '−3 dirhem'; altta kırmızı hap 'Hâlâ düzelmedi'; kartın boş alt kısmında Kaşif düşünüyor, 'düzelmemişti'de şaşkın yüzle kısa çubuğun ucunu işaret ediyor.",
+      "title": {
+        "white": "el-Ömerî",
+        "gray": "Arap tarihçi"
+      },
+      "cues": {
+        "b0": "tarihçiye",
+        "b1": "iki",
+        "pill": "düzelmemişti"
+      },
+      "params": {
+        "title": "Bir altın kaç dirhem?",
+        "cards": [
+          {
+            "bars": [
+              {
+                "label": "1324'ten önce",
+                "value": 1.0,
+                "text": "25+",
+                "at": "b0"
+              },
+              {
+                "label": "12 yıl sonra",
+                "value": 0.86,
+                "text": "22",
+                "at": "b1"
+              }
+            ]
+          }
+        ],
+        "pill": {
+          "text": "Hâlâ düzelmedi",
+          "color": "red",
+          "at": "pill"
+        },
+        "wrap": {
+          "scale": 0.85,
+          "ox": 0.5,
+          "oy": 312
+        },
+        "redNote": {
+          "text": "−3 dirhem",
+          "x": 0.7,
+          "y": 0.45,
+          "at": "b1",
+          "size": 76
+        },
+        "kasif": {
+          "x": 0.48,
+          "y": 0.475,
+          "scale": 0.44,
+          "pose": "think",
+          "face": "right",
+          "at": "pill",
+          "then": "point",
+          "dir": 38,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "mm_gold",
+      "text": "Ama asıl ironi şu: altını ucuzlatan kral,",
+      "visual": "Çölde dönüş yolu: taçlı Mansa Musa boş heybeyi baş aşağı sallıyor; 'ironi'de içinden tek bir sikke düşüp seğiriyor, 'ucuzlatan'da kanatlı bir güve uçup çıkıyor; arkada boş heybeli deve; sağda Kaşif heybeyi işaret ediyor.",
+      "title": {
+        "white": "Dönüş",
+        "gray": "yolu"
+      },
+      "cues": {
+        "drop": "ironi",
+        "moth": "ucuzlatan",
+        "hit": "kral"
+      },
+      "params": {
+        "mode": "empty",
+        "king": {
+          "x": 0.45,
+          "scale": 0.95
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "pose": "idle",
+            "face": "left",
+            "at": "drop",
+            "then": "point",
+            "dir": 20,
+            "scale": 0.74
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "eve dönerken borç almak zorunda kaldı.",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Altın kral', 'BORÇ ALDI!' ('borç' kırmızı kutuda); el yazısı not 'Mısırlı tüccarlardan'; sol altta Kaşif omuz silkiyor.",
+      "title": {
+        "white": "Sonuç"
+      },
+      "cues": {
+        "w0": "eve",
+        "w1": "dönerken",
+        "w2": "borç",
+        "w3": "almak",
+        "note": "kaldı"
+      },
+      "params": {
+        "lines": [
+          "Altın kral",
+          "borç aldı!"
+        ],
+        "highlight": [
+          "borç"
+        ],
+        "note": "Mısırlı tüccarlardan",
+        "y": 0.25,
+        "kasif": {
+          "x": 0.17,
+          "y": 0.63,
+          "pose": "shrug",
+          "at": "note",
+          "face": 1,
+          "scale": 0.64,
+          "emotion": "worried"
+        }
+      }
+    }
+  ]
+}
