@@ -1,0 +1,763 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-brooklyn-bridge",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "A woman",
+   "saved",
+   "this bridge"
+  ],
+  "highlight": [
+   "woman"
+  ],
+  "scene": 0,
+  "t": 2.4,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Brooklyn Bridge: The Woman Who Saved It Without a Degree",
+  "description": "The Brooklyn Bridge was finished by a woman with no engineering degree. So how did Emily Roebling end up at the heart of one of the greatest building projects of the 1800s?\n\nIts designer John Roebling died in 1869, before construction began. His son Washington took over and worked in the pressurized caissons under the East River until caisson disease, the bends, left him an invalid. Watching from his window with a telescope, he relied on his wife Emily, who studied the engineering, carried his orders and dealt with the engineers. Just before the bridge opened in May 1883, Emily was the first to ride across it.\n\nSubscribe to Stickstory for a new true story every day. Who is the forgotten hero you think deserves more credit? Tell me in the comments!\n\n#shorts #brooklynbridge #emilyroebling #history #stickstory",
+  "tags": [
+   "brooklyn bridge",
+   "brooklyn bridge history",
+   "who built the brooklyn bridge",
+   "brooklyn bridge construction",
+   "emily roebling",
+   "emily warren roebling",
+   "washington roebling",
+   "john roebling",
+   "caisson disease",
+   "the bends",
+   "new york history",
+   "how it was built",
+   "women in history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-24T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "bb_bridge",
+   "text": "A woman with no engineering degree saved the Brooklyn Bridge.",
+   "visual": "The two Gothic stone towers of the Brooklyn Bridge over the river, main cables drawing themselves in; on the quay Emily (hair bun, blue dress) holds a rolled plan and points up at the towers; the big fez narrator in front jumps back in shock, then points at the bridge on 'Brooklyn'.",
+   "title": {
+    "white": "Brooklyn Bridge",
+    "gray": "New York"
+   },
+   "cues": {
+    "w": "woman",
+    "hit": "saved",
+    "b": "Brooklyn"
+   },
+   "params": {
+    "cables": {
+     "at": 0,
+     "dur": 2.6
+    },
+    "cast": [
+     {
+      "who": "emily",
+      "woman": true,
+      "dress": "blue",
+      "x": 0.22,
+      "y": 0.6,
+      "scale": 0.88,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": 55,
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.72,
+      "y": 0.63,
+      "scale": 1.12,
+      "pose": "shock",
+      "face": "left",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "b",
+        "pose": "point",
+        "dir": 50,
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "type": "bb_pier",
+   "text": "Its designer died before work even began,",
+   "visual": "An empty river with no bridge yet, the far city shore and gulls; grey-bearded John Roebling stands on a wooden pier holding his rolled bridge plans; on 'died' a red hand-written 'DIED 1869' slams in, John's face turns worried and the fez narrator jumps back in shock.",
+   "title": {
+    "white": "John Roebling",
+    "gray": "the designer"
+   },
+   "cues": {
+    "d": "designer",
+    "hit": "died"
+   },
+   "params": {
+    "pier": {
+     "from": 0,
+     "to": 1
+    },
+    "gulls": 3,
+    "cast": [
+     {
+      "who": "john",
+      "beard": "grey",
+      "x": 0.34,
+      "y": 0.6,
+      "scale": 0.85,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "right",
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "hold",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.78,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "DIED 1869",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "hit",
+      "size": 110,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.07,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "bb_bridge",
+   "text": "so his son Washington took over.",
+   "visual": "Over the empty river the bridge appears only as a pale pencil plan drawing itself in; young Washington Roebling (short dark beard) walks onto the quay and points up at the plan; the fez narrator points at him.",
+   "title": {
+    "white": "Washington",
+    "gray": "his son"
+   },
+   "cues": {
+    "s": "son",
+    "hit": "took"
+   },
+   "params": {
+    "ghost": {
+     "at": 0,
+     "dur": 2.0
+    },
+    "gulls": 2,
+    "cast": [
+     {
+      "who": "washington",
+      "beard": "short",
+      "x": -0.1,
+      "to": 0.34,
+      "y": 0.6,
+      "scale": 0.85,
+      "pose": "walk",
+      "at": "hit",
+      "then": "point",
+      "dir": 50,
+      "face": "right",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.62,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "left",
+      "at": "s",
+      "then": "point",
+      "dir": 15
+     }
+    ],
+    "labels": [
+     {
+      "text": "NEW BOSS",
+      "x": 0.5,
+      "y": 0.34,
+      "at": "hit",
+      "size": 84,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "bb_caisson",
+   "text": "He worked deep under the river in giant air boxes,",
+   "visual": "Cross-section under the river: water and mud above, a giant timber box sunk into the riverbed with the stone tower built on its roof; inside the lamp-lit chamber Washington and a worker dig with pickaxes while air bubbles escape under the edges; the fez narrator inside points at the walls; red label 'AIR BOX' with an arrow.",
+   "title": {
+    "white": "Caisson",
+    "gray": "under the river"
+   },
+   "cues": {
+    "d": "deep",
+    "hit": "air"
+   },
+   "params": {
+    "pressure": "hit",
+    "cast": [
+     {
+      "who": "worker",
+      "x": 0.24,
+      "y": 0.62,
+      "scale": 0.72,
+      "pose": "swing",
+      "swing": true,
+      "face": "left"
+     },
+     {
+      "who": "washington",
+      "beard": "short",
+      "x": 0.5,
+      "y": 0.62,
+      "scale": 0.72,
+      "pose": "swing",
+      "swing": true,
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.77,
+      "y": 0.62,
+      "scale": 0.72,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": 40
+     }
+    ],
+    "labels": [
+     {
+      "text": "AIR BOX",
+      "x": 0.3,
+      "y": 0.215,
+      "at": "hit",
+      "size": 84,
+      "color": "red",
+      "arrow": [
+       0.2,
+       0.4
+      ]
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.38
+     ]
+    },
+    "surface": 0.2,
+    "bed": 0.3,
+    "roof": 0.36,
+    "floor": 0.62
+   }
+  },
+  {
+   "type": "bb_caisson",
+   "text": "until the bends crippled him.",
+   "visual": "Same chamber, closer: Washington drops the pickaxe and slumps down in pain, red pain marks flash around his head; a red stamp 'THE BENDS' slams in; the fez narrator jumps back in shock.",
+   "title": {
+    "white": "The bends",
+    "gray": "1872"
+   },
+   "cues": {
+    "b": "bends",
+    "hit": "crippled"
+   },
+   "params": {
+    "ache": {
+     "who": 0,
+     "at": "hit"
+    },
+    "shake": "hit",
+    "cast": [
+     {
+      "who": "washington",
+      "beard": "short",
+      "x": 0.44,
+      "y": 0.62,
+      "scale": 0.75,
+      "pose": "swing",
+      "swing": true,
+      "face": "right",
+      "at": "hit",
+      "then": "sit",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.74,
+      "y": 0.62,
+      "scale": 0.75,
+      "pose": "think",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "THE BENDS",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "b",
+      "size": 100,
+      "stamp": true,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "z0": 1.06,
+     "zoom": 1.14,
+     "focus": [
+      0.55,
+      0.45
+     ]
+    },
+    "surface": 0.2,
+    "bed": 0.3,
+    "roof": 0.36,
+    "floor": 0.62
+   }
+  },
+  {
+   "type": "bb_room",
+   "text": "Stuck in his room, he watched the bridge through a telescope.",
+   "visual": "A sickroom with striped wallpaper and red curtains; through the tall window the bridge towers stand over the river while its cables draw in; Washington sits in a red armchair with his eye at a brass telescope on a tripod aimed out of the window; the fez narrator behind him looks through binoculars too, then points at the window.",
+   "title": {
+    "white": "His window",
+    "gray": "Brooklyn Heights"
+   },
+   "cues": {
+    "w": "watched",
+    "hit": "telescope"
+   },
+   "params": {
+    "view": {
+     "cables": {
+      "at": "w",
+      "dur": 2.2
+     }
+    },
+    "chair": {
+     "x": 0.36,
+     "face": "right"
+    },
+    "telescope": 0,
+    "cast": [
+     {
+      "who": "washington",
+      "beard": "short",
+      "x": 0.36,
+      "y": 0.6,
+      "scale": 0.66,
+      "pose": "sit",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.6,
+      "scale": 0.68,
+      "pose": "look",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": 35
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    },
+    "window": [
+     0.56,
+     0.2,
+     0.96,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "bb_bridge",
+   "text": "So his wife Emily stepped in.",
+   "visual": "At the building site the unfinished stone towers rise with scaffolds on top; Emily (hair bun, blue dress) strides onto the quay carrying the rolled plans; on 'Emily' a red hand-written 'EMILY' with an arrow pops up and the fez narrator points at her.",
+   "title": {
+    "white": "Emily Roebling",
+    "gray": "his wife"
+   },
+   "cues": {
+    "w": "wife",
+    "hit": "Emily"
+   },
+   "params": {
+    "towers": {
+     "from": 0.62,
+     "h": 0.84,
+     "at": 0,
+     "dur": 2.4
+    },
+    "cables": false,
+    "deck": false,
+    "gulls": 2,
+    "cast": [
+     {
+      "who": "emily",
+      "woman": true,
+      "dress": "blue",
+      "x": -0.12,
+      "to": 0.34,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "walk",
+      "walk_dur": 1.3,
+      "at": "hit",
+      "then": "hold",
+      "item": "scroll",
+      "face": "right",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.78,
+      "y": 0.62,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": 10,
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "EMILY",
+      "x": 0.6,
+      "y": 0.33,
+      "at": "hit",
+      "size": 120,
+      "color": "red",
+      "arrow": [
+       0.42,
+       0.4
+      ]
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.07,
+     "focus": [
+      0.4,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "bb_room",
+   "text": "She learned the math, carried his orders,",
+   "visual": "In the sickroom Emily (hair bun, blue dress) studies the plans at a desk while Washington in his armchair dictates with his hands; blue ticks appear next to hand-written 'MATH' and 'ORDERS'; the fez narrator nods and points at the list.",
+   "title": {
+    "white": "Crash course",
+    "gray": "at home"
+   },
+   "cues": {
+    "m": "math",
+    "o": "carried"
+   },
+   "params": {
+    "window": [
+     0.56,
+     0.2,
+     0.96,
+     0.5
+    ],
+    "view": {
+     "cables": true
+    },
+    "chair": {
+     "x": 0.62,
+     "face": "left"
+    },
+    "desk": {
+     "x": 0.36
+    },
+    "cast": [
+     {
+      "who": "washington",
+      "beard": "short",
+      "x": 0.62,
+      "y": 0.6,
+      "scale": 0.62,
+      "pose": "sit",
+      "face": "left",
+      "emotion": "neutral",
+      "at": "o",
+      "then": "talk"
+     },
+     {
+      "who": "emily",
+      "woman": true,
+      "dress": "blue",
+      "x": 0.2,
+      "y": 0.6,
+      "scale": 0.66,
+      "pose": "think",
+      "face": "right",
+      "at": "m",
+      "then": "hold",
+      "item": "scroll",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.62,
+      "scale": 0.6,
+      "pose": "think",
+      "face": "left",
+      "at": "o",
+      "then": "point",
+      "dir": 40
+     }
+    ],
+    "labels": [
+     {
+      "text": "MATH",
+      "x": 0.14,
+      "y": 0.17,
+      "at": "m",
+      "size": 96,
+      "color": "ink",
+      "check": true,
+      "anchor": "start",
+      "rot": -3
+     },
+     {
+      "text": "ORDERS",
+      "x": 0.14,
+      "y": 0.255,
+      "at": "o",
+      "size": 96,
+      "color": "ink",
+      "check": true,
+      "anchor": "start",
+      "rot": -3
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "bb_bridge",
+   "text": "and faced the engineers herself.",
+   "visual": "On the quay below the stone towers Emily (hair bun, blue dress) talks to two bearded engineers and points at them; a red hand-written 'NO DEGREE?' hangs over the engineers, who step back in surprise on 'herself'.",
+   "title": {
+    "white": "On site",
+    "gray": "the engineers"
+   },
+   "cues": {
+    "e": "engineers",
+    "hit": "herself"
+   },
+   "params": {
+    "cables": true,
+    "cast": [
+     {
+      "who": "emily",
+      "woman": true,
+      "dress": "blue",
+      "x": 0.3,
+      "y": 0.6,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "right",
+      "at": "e",
+      "then": "point",
+      "emotion": "neutral",
+      "dir": 10
+     },
+     {
+      "who": "eng1",
+      "beard": "black",
+      "x": 0.64,
+      "y": 0.6,
+      "scale": 0.62,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "eng2",
+      "beard": "grey",
+      "x": 0.84,
+      "y": 0.6,
+      "scale": 0.6,
+      "pose": "think",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "cam": {
+     "z0": 1.02,
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    },
+    "labels": [
+     {
+      "text": "NO DEGREE?",
+      "x": 0.72,
+      "y": 0.398,
+      "at": "e",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "bb_bridge",
+   "text": "In 1883, the first person to ride across the bridge was Emily.",
+   "visual": "The finished bridge just before its opening: a horse carriage carrying Emily, a rooster in her arms, rolls to the middle of the deck; on 'Emily' a red stamp 'FIRST ACROSS' slams in; the fez narrator on the quay points up at her, then waves.",
+   "title": {
+    "white": "First ride",
+    "gray": "May 1883"
+   },
+   "cues": {
+    "y": "1883",
+    "f": "first",
+    "hit": "Emily"
+   },
+   "params": {
+    "cables": true,
+    "carriage": {
+     "at": 0.2,
+     "dur": 3.0,
+     "from": -0.3,
+     "to": 0.4,
+     "scale": 2.0,
+     "flag": false,
+     "rooster": true
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.62,
+      "scale": 0.85,
+      "pose": "point",
+      "dir": 45,
+      "face": "left",
+      "at": "hit",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "FIRST ACROSS",
+      "x": 0.42,
+      "y": 0.45,
+      "at": "hit",
+      "size": 96,
+      "stamp": true,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "z0": 1.0,
+     "zoom": 1.07,
+     "focus": [
+      0.45,
+      0.38
+     ]
+    }
+   }
+  }
+ ]
+}

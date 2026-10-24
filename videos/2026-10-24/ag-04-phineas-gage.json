@@ -1,0 +1,3622 @@
+{
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-04-phineas-gage",
+ "cover": {
+  "lines": [
+   "He",
+   "survived",
+   "this"
+  ],
+  "highlight": [
+   "survived"
+  ],
+  "scene": 0,
+  "t": 5.0,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1640,
+   "y": 1075,
+   "scale": 1.5,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Phineas Gage: The Iron Bar That Changed Who He Was",
+  "description": "Phineas Gage was a railroad foreman in Vermont when, in 1848, a 13-pound iron bar shot straight through his skull. He was talking a few minutes later. So how did he survive, and what did it do to him?\n\nOn September 13, 1848, a blasting charge went off too early and drove Gage's tamping iron in under his left cheekbone and out through the top of his head. Dr. John Harlow saved his life, but his friends said he was \"no longer Gage.\" The story of his frontal lobe injury changed how scientists understand the human brain and personality, and his skull is still at Harvard today.\n\nIn this video:\n• How rock blasting worked on an 1848 railroad\n• The blast and the path of the iron through his skull\n• Why his friends said he was \"no longer Gage\"\n• What his frontal lobe injury taught science about the brain\n• Why his skull and the iron are at Harvard\n\nSubscribe to Stickstory for a strange true story every day. If an injury changed your personality, would you still be the same person? Tell me in the comments!\n\n#phineasgage #brain #history #stickstory",
+  "tags": [
+   "phineas gage",
+   "phineas gage story",
+   "phineas gage accident",
+   "phineas gage brain injury",
+   "phineas gage skull",
+   "tamping iron",
+   "frontal lobe",
+   "frontal lobe damage",
+   "brain injury personality",
+   "history of neuroscience",
+   "john harlow",
+   "human brain",
+   "human body",
+   "strange history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-24T14:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "chapter": "The Iron Bar, 1848",
+   "type": "pga_skull",
+   "text": "Imagine an iron bar, longer than your arm, flying straight through a man's head.",
+   "visual": "Ink skull in side profile (we see its left side) on parchment, no blood; on 'flying' a long iron bar rockets up from below the frame with speed lines and on 'through' stops piercing the skull: in under the left cheekbone, out through the top; red ring at the entry point, camera punch and shake; on the right the fez narrator talks, then jumps back in shock on 'through'",
+   "title": {
+    "white": "1848"
+   },
+   "cues": {
+    "fly": "flying",
+    "hit": "through"
+   },
+   "params": {
+    "x": 0.42,
+    "rod": {
+     "mode": "fly",
+     "at": "fly",
+     "dur": 0.55
+    },
+    "marks": {
+     "in": "hit"
+    },
+    "kasif": {
+     "x": 0.8,
+     "y": 0.9,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "left"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_site",
+   "text": "Now imagine that man sitting up a few minutes later, and talking.",
+   "visual": "Railroad cut in the Vermont hills: rock ledge on the right with smoke slowly thinning, half-laid track on the left; the injured man (cap, no blood) sits on the ground and shakes, on 'talking' a speech bubble with bouncing dots pops from him; on the left the fez narrator points at him on 'sitting', then is shocked on 'talking'",
+   "title": {
+    "white": "Minutes later"
+   },
+   "cues": {
+    "sit": "sitting",
+    "talk": "talking"
+   },
+   "params": {
+    "track": {
+     "to": 0.42
+    },
+    "rock": {
+     "x0": 0.66,
+     "top": 0.55
+    },
+    "hole_x": 0.86,
+    "smoke": {
+     "x": 0.78,
+     "y": 0.42,
+     "r": 320,
+     "at": 0,
+     "clear": 0.4
+    },
+    "cast": [
+     {
+      "who": "gage",
+      "x": 0.55,
+      "y": 0.81,
+      "scale": 0.75,
+      "pose": "sit",
+      "face": "left",
+      "emotion": "worried",
+      "shake": 0,
+      "shake_until": "talk",
+      "seq": [
+       {
+        "at": "talk",
+        "pose": "sit",
+        "face": "left",
+        "emotion": "neutral"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.86,
+      "scale": 0.82,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "sit",
+        "pose": "point",
+        "dir": 5,
+        "face": "right"
+       },
+       {
+        "at": "talk",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "bubble": {
+     "at": "talk",
+     "who": 0,
+     "dots": true,
+     "dx": -200,
+     "dy": -130,
+     "w": 260,
+     "h": 130
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.65
+     ]
+    },
+    "zoom": 1.1
+   }
+  },
+  {
+   "type": "pga_skull",
+   "text": "That really happened in 1848, and it changed what we know about the human brain.",
+   "visual": "The ink skull again, now without the iron: inside it a soft hand-drawn brain; on '1848' a red '1848' stamp slams at the top right; on 'brain' the front part of the brain behind the forehead lights up red with hatching and punches in; the fez narrator on the right thinks, then points at it",
+   "title": {
+    "white": "1848"
+   },
+   "cues": {
+    "yr": "1848",
+    "hit": "brain"
+   },
+   "params": {
+    "x": 0.42,
+    "rod": false,
+    "lobe": "hit",
+    "brain": true,
+    "kasif": {
+     "x": 0.8,
+     "y": 0.9,
+     "scale": 0.85,
+     "pose": "think",
+     "face": "left",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 20,
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "1848",
+      "x": 0.7,
+      "y": 0.2,
+      "at": "yr",
+      "stamp": true,
+      "color": "red",
+      "size": 90
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.42,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_iron",
+   "text": "This is the story of Phineas Gage.",
+   "visual": "An oval daguerreotype frame in a gold rim swings in on a nail: inside, the young bare-headed foreman holds his tall tamping iron upright; on 'Phineas' a brass name plate 'PHINEAS GAGE' pops under the frame; the fez narrator on the right points at the portrait",
+   "title": {
+    "white": "Phineas Gage"
+   },
+   "cues": {
+    "name": "Phineas"
+   },
+   "params": {
+    "mode": "portrait",
+    "x": 0.42,
+    "y": 0.38,
+    "name": {
+     "text": "PHINEAS GAGE",
+     "at": "name"
+    },
+    "kasif": {
+     "x": 0.78,
+     "y": 0.9,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": "left",
+     "at": "name",
+     "then": "point",
+     "dir": 25
+    },
+    "ry": 0.28
+   }
+  },
+  {
+   "chapter": "A Perfect Foreman",
+   "type": "chapter",
+   "text": "In the summer of 1848, Gage was twenty-five, and he ran a railroad crew in Vermont.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, below it 'A Perfect Foreman' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "summer",
+    "title": "twenty",
+    "line": "railroad"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "A Perfect Foreman"
+   }
+  },
+  {
+   "type": "pga_site",
+   "text": "His job was to blast rock out of the way. His bosses called him the most capable foreman they had.",
+   "visual": "Railroad cut: the foreman in a cloth cap stands on the rock ledge holding his iron, two capped crewmen with a shovel and a pick below; on 'blast' the left part of the ledge explodes (gold and red ink burst, flying rocks, smoke, camera shake) leaving a rubble pile, the crew jumps; on 'capable' a red rubber stamp 'MOST CAPABLE' slams above the foreman; the fez narrator on the left points at him",
+   "title": {
+    "white": "Foreman"
+   },
+   "cues": {
+    "blast": "blast",
+    "stamp": "capable"
+   },
+   "params": {
+    "track": {
+     "to": 0.4
+    },
+    "rock": {
+     "x0": 0.55,
+     "top": 0.52
+    },
+    "hole_x": 0.88,
+    "blast": {
+     "at": "blast",
+     "x": 0.6,
+     "y": 0.68,
+     "r": 170,
+     "chunk": 0.1
+    },
+    "cast": [
+     {
+      "who": "gage",
+      "x": 0.82,
+      "y": 0.525,
+      "scale": 0.66,
+      "pose": "hold",
+      "face": "left",
+      "iron": true,
+      "seq": [
+       {
+        "at": "stamp",
+        "pose": "point",
+        "dir": 10,
+        "face": "left",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "crew",
+      "x": 0.3,
+      "y": 0.81,
+      "scale": 0.66,
+      "pose": "hold",
+      "face": "right",
+      "tool": "shovel",
+      "seq": [
+       {
+        "at": "blast",
+        "pose": "shock",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "crew",
+      "x": 0.43,
+      "y": 0.81,
+      "scale": 0.66,
+      "pose": "hold",
+      "face": "right",
+      "tool": "pick",
+      "seq": [
+       {
+        "at": "blast",
+        "pose": "shock",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "y": 0.87,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "blast",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       },
+       {
+        "at": "stamp",
+        "pose": "point",
+        "dir": 30,
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Most capable",
+      "x": 0.78,
+      "y": 0.13,
+      "at": "stamp",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.6
+     ]
+    },
+    "zoom": 1.1
+   }
+  },
+  {
+   "type": "pga_hole",
+   "text": "Here's how blasting worked back then. You drilled a hole in the rock, poured in gunpowder and a fuse, and covered it with sand.",
+   "visual": "Cutaway of a rock block: on 'drilled' a drill steel and a swinging hammer deepen a hole; on 'gunpowder' dark powder pours in and fills the bottom (label 'powder'); on 'fuse' a fuse cord runs from the powder up out of the hole (label 'fuse'); on 'sand' sand pours in on top (label 'sand'); the fez narrator stands on the rock and points into the hole",
+   "title": {
+    "white": "Blasting",
+    "gray": "how it worked"
+   },
+   "cues": {
+    "drill": "drilled",
+    "powder": "gunpowder",
+    "fuse": "fuse",
+    "sand": "covered"
+   },
+   "params": {
+    "drill": "drill",
+    "powder": "powder",
+    "fuse": "fuse",
+    "sand": "sand",
+    "iron": false,
+    "kasif": {
+     "x": 0.74,
+     "y": 0.305,
+     "scale": 0.58,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "drill",
+       "pose": "point",
+       "dir": -30,
+       "face": "left"
+      },
+      {
+       "at": "sand",
+       "pose": "point",
+       "dir": -30,
+       "face": "left"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "powder",
+      "x": 0.36,
+      "y": 0.64,
+      "at": "powder",
+      "size": 66,
+      "arrow": [
+       0.47,
+       0.63
+      ]
+     },
+     {
+      "text": "fuse",
+      "x": 0.66,
+      "y": 0.17,
+      "at": "fuse",
+      "size": 66,
+      "arrow": [
+       0.57,
+       0.24
+      ]
+     },
+     {
+      "text": "sand",
+      "x": 0.37,
+      "y": 0.45,
+      "at": "sand",
+      "size": 66,
+      "arrow": [
+       0.47,
+       0.45
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_hole",
+   "text": "Then you packed it down with a tamping iron.",
+   "visual": "Same cutaway with powder, fuse and sand in the hole: two hands bring a long iron bar down into the hole and tamp the sand three times, the sand packs lower; label 'tamping iron' with an arrow; the fez narrator mimes the tamping with a talking gesture",
+   "title": {
+    "white": "Tamping iron"
+   },
+   "cues": {
+    "tamp": "packed",
+    "lab": "tamping"
+   },
+   "params": {
+    "powder": true,
+    "fuse": true,
+    "sand": true,
+    "tamp": "tamp",
+    "kasif": {
+     "x": 0.74,
+     "y": 0.305,
+     "scale": 0.58,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "lab",
+       "pose": "point",
+       "dir": -30,
+       "face": "left"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "tamping iron",
+      "x": 0.29,
+      "y": 0.21,
+      "at": "lab",
+      "size": 66,
+      "arrow": [
+       0.47,
+       0.16
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_iron",
+   "text": "Gage had his own made. It was three feet seven inches long, it weighed about thirteen pounds, and one end was sharpened to a point.",
+   "visual": "A long iron bar lies on a blacksmith's anvil, a hammer strikes it with gold sparks on 'made'; on 'three' a dimension line draws along it and a big 3'7\" pops above; on 'thirteen' a paper tag '13 LB' swings down on a string; on 'point' a red ring and a gold gleam circle the sharp tip; the fez narrator on the right points at the bar",
+   "title": {
+    "white": "His iron"
+   },
+   "cues": {
+    "make": "made",
+    "len": "three",
+    "weight": "thirteen",
+    "point": "point"
+   },
+   "params": {
+    "mode": "spec",
+    "y": 0.42,
+    "from": 0.08,
+    "to": 0.76,
+    "make": "make",
+    "len": {
+     "text": "3'7\"",
+     "at": "len"
+    },
+    "weight": {
+     "text": "13 LB",
+     "at": "weight"
+    },
+    "point": "point",
+    "kasif": {
+     "x": 0.89,
+     "y": 0.88,
+     "scale": 0.72,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "len",
+       "pose": "point",
+       "dir": 35,
+       "face": "left"
+      },
+      {
+       "at": "point",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "left"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "The Blast",
+   "type": "chapter",
+   "text": "On September 13, 1848, late in the afternoon, Gage was doing that job as he had a hundred times before.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, below it 'The Blast' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "September",
+    "title": "afternoon",
+    "line": "hundred"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Blast"
+   }
+  },
+  {
+   "type": "pga_site",
+   "text": "But something went wrong. Maybe someone called his name. Maybe he looked away.",
+   "visual": "Railroad cut, late afternoon: the foreman stands on the ledge over the drill hole with his iron; on 'called' a crewman below calls and a bubble 'Phineas!' pops from him; on 'looked' the foreman turns his head away from the hole towards the crewman; the fez narrator on the left looks worried, then points at the hole",
+   "title": {
+    "white": "Sept 13",
+    "gray": "1848"
+   },
+   "cues": {
+    "wrong": "wrong",
+    "call": "called",
+    "look": "looked"
+   },
+   "params": {
+    "track": {
+     "to": 0.36
+    },
+    "rock": {
+     "x0": 0.5,
+     "top": 0.52
+    },
+    "hole_x": 0.74,
+    "cast": [
+     {
+      "who": "gage",
+      "x": 0.72,
+      "y": 0.525,
+      "scale": 0.68,
+      "pose": "hold",
+      "face": "right",
+      "iron": true,
+      "seq": [
+       {
+        "at": "look",
+        "pose": "hold",
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "crew",
+      "x": 0.38,
+      "y": 0.81,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "call",
+        "pose": "wave",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "y": 0.87,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "wrong",
+        "pose": "think",
+        "emotion": "worried",
+        "face": "right"
+       },
+       {
+        "at": "look",
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "bubble": {
+     "at": "call",
+     "who": 1,
+     "text": "Phineas!",
+     "dx": 160,
+     "dy": -130,
+     "w": 330,
+     "h": 130,
+     "size": 58
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.6,
+      0.55
+     ]
+    },
+    "zoom": 1.1
+   }
+  },
+  {
+   "type": "pga_hole",
+   "text": "Either way, the sand never went in.",
+   "visual": "Cutaway of the loaded hole: powder and fuse are there, but the sand layer is missing; on 'sand' its empty slot is outlined with red dashes and a big red X slams next to it, stamp 'NO SAND'; the iron hangs above the open hole; the fez narrator on the rock is shocked",
+   "title": {
+    "white": "No sand"
+   },
+   "cues": {
+    "nosand": "sand",
+    "hit": "never"
+   },
+   "params": {
+    "powder": true,
+    "fuse": true,
+    "nosand": "nosand",
+    "kasif": {
+     "x": 0.74,
+     "y": 0.305,
+     "scale": 0.58,
+     "pose": "point",
+     "dir": -30,
+     "face": "left",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "left"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "No sand",
+      "x": 0.3,
+      "y": 0.45,
+      "at": "hit",
+      "stamp": true,
+      "color": "red",
+      "size": 76
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_hole",
+   "text": "And when Gage brought the iron down, it struck the rock, threw a spark, and the powder exploded.",
+   "visual": "Cutaway: the iron comes down into the unpacked hole on 'down' and grates on the rock; on 'spark' a gold spark star flashes at the contact; on 'exploded' the powder flashes red, a gold and red ink burst erupts from the mouth, rock chips fly, the camera shakes and the iron shoots straight up off the frame with speed lines; the fez narrator jumps in shock",
+   "title": {
+    "white": "The blast"
+   },
+   "cues": {
+    "strike": "down",
+    "spark": "spark",
+    "boom": "exploded"
+   },
+   "params": {
+    "powder": true,
+    "fuse": true,
+    "strike": "strike",
+    "spark": "spark",
+    "boom": "boom",
+    "kasif": {
+     "x": 0.74,
+     "y": 0.305,
+     "scale": 0.58,
+     "pose": "talk",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "spark",
+       "pose": "point",
+       "dir": -30,
+       "face": "left",
+       "emotion": "worried"
+      },
+      {
+       "at": "boom",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "left"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_skull",
+   "text": "The iron shot upward like a bullet. It went in under his left cheekbone, passed behind his left eye, and came out through the top of his skull.",
+   "visual": "Ink skull in side profile, no blood: on 'upward' the iron rockets up and pierces it; red rings mark the entry under the left cheekbone ('cheekbone'), the spot behind the left eye ('eye') and the exit on top ('top'); a red dashed trajectory draws along the bar; the fez narrator on the right points at each ring",
+   "title": {
+    "white": "Its path"
+   },
+   "cues": {
+    "fly": "upward",
+    "in": "cheekbone",
+    "eye": "eye",
+    "out": "top"
+   },
+   "params": {
+    "x": 0.4,
+    "rod": {
+     "mode": "fly",
+     "at": "fly",
+     "dur": 0.5
+    },
+    "path": "in",
+    "marks": {
+     "in": "in",
+     "eye": "eye",
+     "out": "out"
+    },
+    "kasif": {
+     "x": 0.8,
+     "y": 0.9,
+     "scale": 0.82,
+     "pose": "shock",
+     "face": "left",
+     "seq": [
+      {
+       "at": "in",
+       "pose": "point",
+       "dir": 5,
+       "face": "left"
+      },
+      {
+       "at": "eye",
+       "pose": "point",
+       "dir": 22,
+       "face": "left"
+      },
+      {
+       "at": "out",
+       "pose": "point",
+       "dir": 45,
+       "face": "left"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.42,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "pga_site",
+   "text": "Then it landed about eighty feet away.",
+   "visual": "Wide view of the cut: from the smoking ledge on the right the iron flies in a long dashed red arc across the field and sticks slanted into the ground on the far left; on 'eighty' a distance arrow draws across the top and a stamp '80 FEET' pops; the fez narrator in the middle follows it through binoculars, then is shocked",
+   "title": {
+    "white": "80 feet"
+   },
+   "cues": {
+    "land": "landed",
+    "dist": "eighty"
+   },
+   "params": {
+    "track": {
+     "to": 0.3
+    },
+    "rock": {
+     "x0": 0.7,
+     "top": 0.55
+    },
+    "hole_x": 0.86,
+    "smoke": {
+     "x": 0.84,
+     "y": 0.42,
+     "r": 260,
+     "at": 0
+    },
+    "fly": {
+     "at": 0.1,
+     "from": [
+      0.84,
+      0.5
+     ],
+     "to": [
+      0.1,
+      0.79
+     ],
+     "dur": 1.3,
+     "h": 0.45,
+     "len": 230
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.46,
+      "y": 0.87,
+      "scale": 0.8,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": 0.6,
+        "pose": "look",
+        "face": "left"
+       },
+       {
+        "at": "dist",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "80 feet",
+      "x": 0.47,
+      "y": 0.3,
+      "at": "dist",
+      "stamp": true,
+      "color": "red",
+      "size": 76
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "And now, here's the part nobody believes. Gage didn't die.",
+   "visual": "Giant Fraunces words 'HE DIDN'T DIE' appear word by word, 'DIE' in a red box",
+   "title": {},
+   "cues": {
+    "w0": "part",
+    "w1": "nobody",
+    "w2": "didn"
+   },
+   "params": {
+    "lines": [
+     "He",
+     "didn't",
+     "die"
+    ],
+    "highlight": [
+     "die"
+    ]
+   }
+  },
+  {
+   "type": "pga_site",
+   "text": "He fell back, his body shook, and within a few minutes he was talking.",
+   "visual": "Railroad cut, smoke clearing: the foreman jumps back on 'fell', then sits on the ground and shakes on 'shook' while two crewmen run in from both sides; on 'talking' the shaking stops and a speech bubble with bouncing dots pops from him; the fez narrator on the left is shocked",
+   "title": {
+    "white": "Alive"
+   },
+   "cues": {
+    "fall": "fell",
+    "shook": "shook",
+    "talk": "talking"
+   },
+   "params": {
+    "track": {
+     "to": 0.36
+    },
+    "rock": {
+     "x0": 0.68,
+     "top": 0.55
+    },
+    "hole_x": 0.86,
+    "smoke": {
+     "x": 0.8,
+     "y": 0.42,
+     "r": 300,
+     "at": 0,
+     "clear": "shook"
+    },
+    "cast": [
+     {
+      "who": "gage",
+      "x": 0.55,
+      "y": 0.81,
+      "scale": 0.75,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "fall",
+        "pose": "shock",
+        "face": "left"
+       },
+       {
+        "at": "shook",
+        "pose": "sit",
+        "face": "left",
+        "emotion": "worried"
+       },
+       {
+        "at": "talk",
+        "pose": "sit",
+        "face": "left",
+        "emotion": "neutral"
+       }
+      ],
+      "shake": "shook",
+      "shake_until": "talk"
+     },
+     {
+      "who": "crew",
+      "x": 0.2,
+      "to": 0.4,
+      "walk_at": "shook",
+      "walk_dur": 1.4,
+      "run": true,
+      "y": 0.81,
+      "scale": 0.66,
+      "pose": "idle",
+      "face": "right",
+      "then": "shock"
+     },
+     {
+      "who": "crew",
+      "x": 1.05,
+      "to": 0.68,
+      "walk_at": "shook",
+      "walk_dur": 1.6,
+      "run": true,
+      "y": 0.81,
+      "scale": 0.66,
+      "pose": "idle",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "y": 0.87,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "fall",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       },
+       {
+        "at": "talk",
+        "pose": "point",
+        "dir": 10,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "bubble": {
+     "at": "talk",
+     "who": 0,
+     "dots": true,
+     "dx": -200,
+     "dy": -130,
+     "w": 260,
+     "h": 130
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.65
+     ]
+    },
+    "zoom": 1.1
+   }
+  },
+  {
+   "type": "pga_cart",
+   "text": "His men put him in an ox cart, and he rode nearly a mile into town, sitting up.",
+   "visual": "Village road scrolling left: an ox pulls a two-wheeled cart, the bandaged foreman sits upright on it, a capped crewman leads the ox, the village with a white church steeple slides in from the right; on 'mile' a milestone post '1 MILE' passes; the fez narrator walks alongside in front",
+   "title": {
+    "white": "Ox cart"
+   },
+   "cues": {
+    "cart": "cart",
+    "mile": "mile",
+    "sit": "sitting"
+   },
+   "params": {
+    "mode": "road",
+    "milestone": {
+     "at": "mile",
+     "text": "1 MILE"
+    },
+    "kasif": {
+     "x": 0.26,
+     "y": 0.93,
+     "scale": 0.7,
+     "pose": "walk",
+     "in_place": true,
+     "face": "right",
+     "seq": [
+      {
+       "at": "sit",
+       "pose": "point",
+       "dir": 25,
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "zoom": 1.28
+   }
+  },
+  {
+   "type": "pga_cart",
+   "text": "When the first doctor arrived, Gage reportedly greeted him with a joke: \"Here is business enough for you.\"",
+   "visual": "Village tavern porch with a swinging 'TAVERN' sign: the bandaged foreman sits on a bench; on 'arrived' a doctor in a top hat with a black bag walks in from the right; on 'joke' a speech bubble 'Business enough for you!' pops from the foreman; the fez narrator on the left laughs and shrugs",
+   "title": {
+    "white": "The doctor"
+   },
+   "cues": {
+    "doc": "arrived",
+    "joke": "joke"
+   },
+   "params": {
+    "mode": "porch",
+    "sign": "TAVERN",
+    "doctor": {
+     "x": 1.1,
+     "to": 0.66,
+     "at": "doc",
+     "dur": 1.6
+    },
+    "bubble": {
+     "at": "joke",
+     "text": "Business enough for you!",
+     "w": 640,
+     "h": 160,
+     "size": 54,
+     "dx": 200,
+     "dy": 200
+    },
+    "kasif": {
+     "x": 0.16,
+     "y": 0.93,
+     "scale": 0.72,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "joke",
+       "pose": "shrug",
+       "emotion": "happy",
+       "face": "right"
+      }
+     ]
+    },
+    "zoom": 1.15
+   }
+  },
+  {
+   "chapter": "No Longer Gage",
+   "type": "chapter",
+   "text": "The doctor who saved him was John Harlow.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'No Longer Gage' and a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "doctor",
+    "title": "Harlow"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "No Longer Gage"
+   }
+  },
+  {
+   "type": "pgb_room",
+   "text": "He cleaned the wound, pulled out pieces of bone, and fought a terrible infection for weeks.",
+   "visual": "Candle-lit sickroom at night: Gage lies in a wooden bed under a blue blanket, head bandaged, patch over one eye; Dr. Harlow (short beard, doctor's bag at his feet) bends over him; on 'pieces' three small bone fragments hop from the pillow into a dish; on 'infection' red fever lines rise over the pillow and Harlow turns worried; on 'weeks' the wall calendar's SEP page flies off to OCT; the narrator in the red fez watches from the left, worried",
+   "title": {
+    "white": "Dr. Harlow",
+    "gray": "1848"
+   },
+   "cues": {
+    "bone": "pieces",
+    "fever": "infection",
+    "weeks": "weeks"
+   },
+   "params": {
+    "bed": {
+     "x0": 0.4,
+     "x1": 0.64,
+     "y": 0.66,
+     "cover": 0.42
+    },
+    "candle": {
+     "x": 0.32
+    },
+    "bag": {
+     "x": 0.84
+    },
+    "calendar": {
+     "x": 0.56,
+     "y": 0.1,
+     "pages": [
+      "SEP",
+      "OCT"
+     ],
+     "at": "fever",
+     "until": "weeks"
+    },
+    "bones": {
+     "at": "bone",
+     "from": [
+      0.44,
+      0.6
+     ],
+     "to": [
+      0.32,
+      0.67
+     ],
+     "n": 3,
+     "gap": 0.35
+    },
+    "fever": {
+     "at": "fever",
+     "x": 0.44,
+     "y": 0.55
+    },
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "x": 0.625,
+      "y": 0.645,
+      "scale": 0.85,
+      "lie": -90,
+      "pose": "idle",
+      "face": 1,
+      "emotion": "worried"
+     },
+     {
+      "who": "harlow",
+      "beard": "short",
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 0.64,
+      "pose": "point",
+      "dir": -30,
+      "face": "left",
+      "seq": [
+       {
+        "at": "bone",
+        "pose": "point",
+        "dir": -40,
+        "face": "left"
+       },
+       {
+        "at": "fever",
+        "pose": "think",
+        "emotion": "worried",
+        "face": "left"
+       },
+       {
+        "at": "weeks",
+        "pose": "point",
+        "dir": -30,
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.9,
+      "scale": 0.7,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "fever",
+        "pose": "shock",
+        "emotion": "worried",
+        "face": "right"
+       },
+       {
+        "at": "weeks",
+        "pose": "think",
+        "emotion": "worried",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "window": {
+     "x": 0.2,
+     "y": 0.24,
+     "w": 0.11,
+     "h": 0.25
+    }
+   }
+  },
+  {
+   "type": "pgb_room",
+   "text": "At one point, Gage's friends even had a coffin ready.",
+   "visual": "Same sickroom, dimmer: two hatless friends stand at the foot of the bed with bowed heads; on 'coffin' a brown wooden coffin slides in and leans against the wall at the right, the camera punches in; the narrator in the red fez jumps back in shock",
+   "title": {
+    "white": "A coffin"
+   },
+   "cues": {
+    "hit": "coffin"
+   },
+   "params": {
+    "bed": {
+     "x0": 0.32,
+     "x1": 0.56,
+     "y": 0.66,
+     "cover": 0.42
+    },
+    "candle": {
+     "x": 0.24
+    },
+    "bag": false,
+    "window": {
+     "x": 0.2,
+     "y": 0.24,
+     "w": 0.1,
+     "h": 0.24
+    },
+    "coffin": {
+     "at": "hit",
+     "x": 0.86,
+     "scale": 1.05
+    },
+    "fever": {
+     "at": 0.2,
+     "x": 0.36,
+     "y": 0.55
+    },
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "x": 0.545,
+      "y": 0.645,
+      "scale": 0.85,
+      "lie": -90,
+      "pose": "idle",
+      "face": 1,
+      "emotion": "worried"
+     },
+     {
+      "who": "friend1",
+      "x": 0.66,
+      "y": 0.87,
+      "scale": 0.6,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "friend2",
+      "beard": "black",
+      "x": 0.73,
+      "y": 0.87,
+      "scale": 0.6,
+      "pose": "think",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.9,
+      "scale": 0.72,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "pgb_street",
+   "text": "But by November, he was walking around town again.",
+   "visual": "Cavendish village street in autumn: two clapboard houses, a white church with a steeple, smoke from a chimney, red and gold leaves drifting down; Gage, head bandaged and one eye patched, walks in from the left and stops in the middle on 'again'; a neighbour in a doorway waves; the narrator in the red fez at the right jumps in surprise, then points at him",
+   "title": {
+    "white": "November",
+    "gray": "1848"
+   },
+   "cues": {
+    "nov": "November",
+    "hit": "again"
+   },
+   "params": {
+    "buildings": [
+     {
+      "type": "house",
+      "x": 0.14,
+      "scale": 1.0
+     },
+     {
+      "type": "church",
+      "x": 0.42,
+      "scale": 0.95
+     },
+     {
+      "type": "house",
+      "x": 0.7,
+      "scale": 0.9
+     }
+    ],
+    "leaves": {
+     "n": 16,
+     "at": 0
+    },
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "x": -0.06,
+      "to": 0.5,
+      "walk_at": 0.0,
+      "walk_dur": 2.6,
+      "pose": "walk",
+      "scale": 0.72,
+      "y": 0.86,
+      "face": "right",
+      "then": "wave",
+      "at": "hit",
+      "emotion": "happy"
+     },
+     {
+      "who": "neighbour",
+      "beard": "grey",
+      "x": 0.66,
+      "y": 0.8,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.92,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "nov",
+        "pose": "look",
+        "face": "left"
+       },
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "pgb_portrait",
+   "text": "He had lost his left eye, but he could speak, remember, and work with his hands.",
+   "visual": "Gage stands big on a plain page, bandaged head and patched eye, soft rays behind him; on 'eye' a tag 'left eye' with an arrow to the patch is struck out in red; on 'speak', 'remember' and 'work' green-ticked tags 'speech', 'memory', 'hands' pop in with arrows to his mouth, head and hand; the narrator in the red fez at the left is worried on the strike, then points happily at each tick",
+   "title": {
+    "white": "What remained"
+   },
+   "cues": {
+    "eye": "eye",
+    "sp": "speak",
+    "mem": "remember",
+    "hand": "work"
+   },
+   "params": {
+    "figure": {
+     "who": "gage",
+     "gage": true,
+     "x": 0.6,
+     "y": 0.86,
+     "scale": 1.25,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hand",
+       "pose": "wave",
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "tags": [
+     {
+      "text": "left eye",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "eye",
+      "mark": "x",
+      "to": [
+       0.62,
+       0.39
+      ]
+     },
+     {
+      "text": "speech",
+      "x": 0.84,
+      "y": 0.55,
+      "at": "sp",
+      "mark": "check",
+      "to": [
+       0.62,
+       0.46
+      ]
+     },
+     {
+      "text": "memory",
+      "x": 0.36,
+      "y": 0.24,
+      "at": "mem",
+      "mark": "check",
+      "to": [
+       0.56,
+       0.33
+      ]
+     },
+     {
+      "text": "hands",
+      "x": 0.36,
+      "y": 0.62,
+      "at": "hand",
+      "mark": "check",
+      "to": [
+       0.55,
+       0.66
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.88,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "eye",
+       "pose": "shock",
+       "emotion": "worried",
+       "face": "right"
+      },
+      {
+       "at": "sp",
+       "pose": "point",
+       "dir": 25,
+       "emotion": "happy",
+       "face": "right"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "So the story ends with a miracle, right? Not quite.",
+   "visual": "Giant Fraunces words 'A MIRACLE?' with 'MIRACLE?' in a red box; on 'Not' a red hand-written note 'not quite' with an arrow; the narrator in the red fez at the right first nods along, then shrugs",
+   "title": {},
+   "cues": {
+    "w0": "story",
+    "w1": "miracle",
+    "note": "Not"
+   },
+   "params": {
+    "lines": [
+     "A miracle?"
+    ],
+    "highlight": [
+     "miracle?"
+    ],
+    "note": {
+     "text": "not quite",
+     "at": "note",
+     "color": "red"
+    },
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.86,
+     "pose": "shrug",
+     "at": "note",
+     "face": -1,
+     "scale": 0.9,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "pgb_twogage",
+   "text": "Harlow noticed something strange. The old Gage was patient and polite.",
+   "visual": "Split page: left panel with a blue 'OLD GAGE' tag, calm Gage in his 1848 cloth cap (no patch) bows and waves with gold calm lines around him on 'polite'; right panel holds a dashed silhouette with a big swaying '?'; small narrator in the red fez in the middle thinks on 'strange', then points left on 'old'",
+   "title": {
+    "white": "Before"
+   },
+   "cues": {
+    "str": "strange",
+    "old": "old",
+    "hit": "polite"
+   },
+   "params": {
+    "left": {
+     "label": "OLD GAGE",
+     "pose": "idle",
+     "emotion": "happy",
+     "gage": {
+      "bandage": false,
+      "patch": false,
+      "cap": true
+     },
+     "cast": {
+      "at": "hit",
+      "then": "wave"
+     }
+    },
+    "right": {
+     "label": "NEW GAGE",
+     "reveal": false
+    },
+    "kasif": {
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "str",
+       "pose": "think",
+       "face": "right"
+      },
+      {
+       "at": "old",
+       "pose": "point",
+       "dir": 20,
+       "face": "left"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "pgb_twogage",
+   "text": "The new Gage swore, made plans and dropped them, and acted, in Harlow's words, like a child with the passions of a strong man.",
+   "visual": "Same split page: the old Gage fades on the left; on 'new' the right '?' becomes the bandaged, eye-patched new Gage under a red 'NEW GAGE' tag; on 'swore' a red scribble cloud '#@!%' bursts over him; on 'plans' he holds a scroll and three plan sheets pop up, on 'dropped' they fall torn to the floor; on 'child' he plops down beside a gold toy block 'A'; on 'passions' red flames flicker around him and he shakes; the small narrator in the red fez in the middle is shocked",
+   "title": {
+    "white": "After"
+   },
+   "cues": {
+    "new": "new",
+    "sw": "swore",
+    "pl": "plans",
+    "dr": "dropped",
+    "ch": "child",
+    "pa": "passions"
+   },
+   "params": {
+    "left": {
+     "label": "OLD GAGE",
+     "pose": "wave",
+     "emotion": "happy",
+     "gage": {
+      "bandage": false,
+      "patch": false,
+      "cap": true
+     },
+     "dim": "new"
+    },
+    "right": {
+     "label": "NEW GAGE",
+     "reveal": "new",
+     "swear": "sw",
+     "plans": "pl",
+     "drop": "dr",
+     "child": "ch",
+     "passion": "pa"
+    },
+    "kasif": {
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "sw",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      },
+      {
+       "at": "ch",
+       "pose": "shrug",
+       "face": "right"
+      },
+      {
+       "at": "pa",
+       "pose": "shock",
+       "emotion": "worried",
+       "face": "right"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "pgb_street",
+   "text": "His friends said he was no longer Gage. And the railroad would not take him back.",
+   "visual": "Village edge by the railroad: two hatless friends at the left whisper and shake their heads, a hand-written label 'no longer Gage' appears over them on 'Gage'; Gage with bandage and eye patch walks to a railroad depot (board 'RAILROAD') at the right, its door swings open on 'railroad' and a foreman steps out; on 'back' a red 'NO' stamp slams down, the camera shakes and Gage shrugs; railroad track in front",
+   "title": {
+    "white": "No job"
+   },
+   "cues": {
+    "fr": "friends",
+    "lg": "longer",
+    "rr": "railroad",
+    "hit": "back"
+   },
+   "params": {
+    "hills": true,
+    "rails": {
+     "y": 0.93
+    },
+    "leaves": false,
+    "ground": 0.8,
+    "buildings": [
+     {
+      "type": "depot",
+      "x": 0.74,
+      "scale": 1.05,
+      "text": "RAILROAD",
+      "door": "rr"
+     }
+    ],
+    "cast": [
+     {
+      "who": "friend1",
+      "x": 0.1,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "worried",
+      "at": "lg",
+      "then": "shrug"
+     },
+     {
+      "who": "friend2",
+      "beard": "black",
+      "x": 0.19,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "think",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "gage",
+      "gage": true,
+      "x": 0.3,
+      "to": 0.55,
+      "walk_at": "lg",
+      "walk_dur": 1.8,
+      "pose": "idle",
+      "scale": 0.72,
+      "y": 0.85,
+      "face": "right",
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "foreman",
+      "beard": "grey",
+      "x": 0.63,
+      "y": 0.84,
+      "scale": 0.6,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "angry",
+      "hide_until": "rr",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": -10,
+        "face": "left",
+        "emotion": "angry"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "no longer Gage",
+      "x": 0.15,
+      "y": 0.3,
+      "at": "lg",
+      "size": 64,
+      "color": "ink"
+     },
+     {
+      "text": "NO",
+      "x": 0.46,
+      "y": 0.3,
+      "at": "hit",
+      "stamp": true,
+      "color": "red",
+      "size": 110
+     }
+    ],
+    "shake": "hit",
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "rm_plus",
+   "text": "So what did he do next? Something nobody expected. He moved to Chile.",
+   "visual": "Old map of the Americas: Vermont marked with a ring in the north-east; the narrator in the red fez stands beside the sheet, thinks on 'next', is shocked on 'nobody'; on 'Chile' a red dashed arrow runs all the way down to Valparaíso on the Pacific coast of South America, Chile gets a red ring and the narrator points at it; note card '1852'",
+   "title": {
+    "white": "Chile",
+    "gray": "1852"
+   },
+   "cues": {
+    "vt": "So",
+    "next": "next",
+    "nob": "nobody",
+    "route": "moved",
+    "ch": "Chile"
+   },
+   "params": {
+    "shot": "map",
+    "scale": 1.0,
+    "origin": [
+     0.6,
+     0.5
+    ],
+    "params": {
+     "coords": "sheet",
+     "land": [
+      [
+       [
+        0.1,
+        -0.0838
+       ],
+       [
+        0.1667,
+        0.0105
+       ],
+       [
+        0.1733,
+        0.0838
+       ],
+       [
+        0.2,
+        0.1675
+       ],
+       [
+        0.22,
+        0.1885
+       ],
+       [
+        0.2667,
+        0.2827
+       ],
+       [
+        0.3,
+        0.3141
+       ],
+       [
+        0.3533,
+        0.356
+       ],
+       [
+        0.3867,
+        0.377
+       ],
+       [
+        0.42,
+        0.3874
+       ],
+       [
+        0.4333,
+        0.4188
+       ],
+       [
+        0.4667,
+        0.445
+       ],
+       [
+        0.48,
+        0.4607
+       ],
+       [
+        0.4867,
+        0.4921
+       ],
+       [
+        0.4667,
+        0.534
+       ],
+       [
+        0.46,
+        0.5759
+       ],
+       [
+        0.4933,
+        0.6702
+       ],
+       [
+        0.5333,
+        0.712
+       ],
+       [
+        0.53,
+        0.7853
+       ],
+       [
+        0.5227,
+        0.8691
+       ],
+       [
+        0.51,
+        0.911
+       ],
+       [
+        0.51,
+        0.9843
+       ],
+       [
+        0.5,
+        1.0471
+       ],
+       [
+        0.52,
+        1.089
+       ],
+       [
+        0.5467,
+        1.1047
+       ],
+       [
+        0.5667,
+        1.0942
+       ],
+       [
+        0.5467,
+        1.0576
+       ],
+       [
+        0.5667,
+        1.0157
+       ],
+       [
+        0.5667,
+        0.9634
+       ],
+       [
+        0.5867,
+        0.9319
+       ],
+       [
+        0.62,
+        0.9005
+       ],
+       [
+        0.6467,
+        0.8796
+       ],
+       [
+        0.68,
+        0.7958
+       ],
+       [
+        0.7267,
+        0.7539
+       ],
+       [
+        0.74,
+        0.6702
+       ],
+       [
+        0.7667,
+        0.6073
+       ],
+       [
+        0.7667,
+        0.5759
+       ],
+       [
+        0.7067,
+        0.5445
+       ],
+       [
+        0.6667,
+        0.5236
+       ],
+       [
+        0.6533,
+        0.4712
+       ],
+       [
+        0.6,
+        0.4398
+       ],
+       [
+        0.5733,
+        0.4136
+       ],
+       [
+        0.5267,
+        0.3979
+       ],
+       [
+        0.5,
+        0.4084
+       ],
+       [
+        0.4867,
+        0.4293
+       ],
+       [
+        0.46,
+        0.4293
+       ],
+       [
+        0.4467,
+        0.4188
+       ],
+       [
+        0.44,
+        0.3665
+       ],
+       [
+        0.4133,
+        0.356
+       ],
+       [
+        0.42,
+        0.3037
+       ],
+       [
+        0.4,
+        0.3037
+       ],
+       [
+        0.3933,
+        0.3246
+       ],
+       [
+        0.3733,
+        0.3298
+       ],
+       [
+        0.3533,
+        0.3141
+       ],
+       [
+        0.35,
+        0.2513
+       ],
+       [
+        0.3733,
+        0.2147
+       ],
+       [
+        0.4067,
+        0.2094
+       ],
+       [
+        0.4333,
+        0.2115
+       ],
+       [
+        0.4467,
+        0.2199
+       ],
+       [
+        0.4533,
+        0.2513
+       ],
+       [
+        0.4667,
+        0.2618
+       ],
+       [
+        0.4667,
+        0.2408
+       ],
+       [
+        0.46,
+        0.199
+       ],
+       [
+        0.4867,
+        0.1571
+       ],
+       [
+        0.4933,
+        0.1257
+       ],
+       [
+        0.5067,
+        0.0995
+       ],
+       [
+        0.5333,
+        0.089
+       ],
+       [
+        0.5333,
+        0.0681
+       ],
+       [
+        0.56,
+        0.0545
+       ],
+       [
+        0.5733,
+        0.0419
+       ],
+       [
+        0.6,
+        0.0314
+       ],
+       [
+        0.6267,
+        -0.0209
+       ],
+       [
+        0.6267,
+        -0.1047
+       ],
+       [
+        0.0667,
+        -0.1047
+       ]
+      ]
+     ],
+     "cities": [
+      {
+       "name": "Vermont",
+       "x": 0.516,
+       "y": 0.0691,
+       "at": "vt",
+       "dx": 90,
+       "dy": 10,
+       "anchor": "start"
+      },
+      {
+       "name": "Chile",
+       "x": 0.5227,
+       "y": 0.8696,
+       "at": "ch",
+       "color": "red",
+       "dx": -40,
+       "dy": 10,
+       "anchor": "end"
+      }
+     ],
+     "route": {
+      "points": [
+       [
+        0.516,
+        0.0691
+       ],
+       [
+        0.56,
+        0.2304
+       ],
+       [
+        0.4667,
+        0.3979
+       ],
+       [
+        0.4267,
+        0.5864
+       ],
+       [
+        0.4667,
+        0.7749
+       ],
+       [
+        0.5227,
+        0.8696
+       ]
+      ],
+      "at": "route",
+      "dur": 1.8,
+      "color": "red"
+     },
+     "compass": "tr",
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.4712
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "y": 0.86,
+      "scale": 1.15,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "nob",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       },
+       {
+        "at": "ch",
+        "pose": "point",
+        "dir": 10,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgb_coach",
+   "text": "For about seven years, he drove a stagecoach with six horses, on a mountain road between Valparaíso and Santiago.",
+   "visual": "Andes road in Chile: snow-capped peaks with a zig-zag road climbing them, cacti on the hills; a six-horse stagecoach (three galloping pairs, luggage on the roof, wheels turning, dust behind) rolls left to right; Gage, eye patched, sits on the box with reins and cracks his whip on 'six' and 'mountain'; signposts 'VALPARAÍSO' at the left and 'SANTIAGO' at the right appear on their names; a red hand-written note '7 years' on 'seven'; the narrator in the red fez rides on the roof, holding on, then waving",
+   "title": {
+    "white": "Chile",
+    "gray": "1852–1859"
+   },
+   "cues": {
+    "yrs": "seven",
+    "six": "six",
+    "mt": "mountain",
+    "val": "Valparaíso",
+    "san": "Santiago"
+   },
+   "params": {
+    "dir": 1,
+    "from": 0.18,
+    "to": 0.36,
+    "pairs": 3,
+    "scale": 0.95,
+    "road": 0.8,
+    "whip": [
+     "six",
+     "mt"
+    ],
+    "driver": {
+     "gage": {
+      "bandage": false,
+      "patch": true
+     },
+     "emotion": "happy"
+    },
+    "signs": [
+     {
+      "text": "Valparaíso",
+      "x": 0.13,
+      "at": "val"
+     },
+     {
+      "text": "Santiago",
+      "x": 0.84,
+      "at": "san"
+     }
+    ],
+    "note": {
+     "text": "7 years",
+     "x": 0.5,
+     "y": 0.13,
+     "at": "yrs"
+    },
+    "kasif": {
+     "ride": true,
+     "pose": "sit",
+     "face": "right",
+     "seq": [
+      {
+       "at": "mt",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "What the Iron Revealed",
+   "type": "chapter",
+   "text": "Driving six horses on a mountain road is not easy.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, below it 'What the Iron Revealed' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "Driving",
+    "title": "horses"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "What the Iron Revealed"
+   }
+  },
+  {
+   "type": "pgb_coach",
+   "text": "You have to plan, stay calm, and get up before dawn, every day.",
+   "visual": "Chilean mountain road: bandaged Gage on the box drives a six-horse stagecoach left to right past snow-capped peaks, signposts VALPARAÍSO and SANTIAGO inside the frame; the whip cracks on 'dawn'; the narrator stands on the left behind the coach, talks, then points at the driver on 'every'",
+   "title": {
+    "white": "A driver's",
+    "gray": "day"
+   },
+   "cues": {
+    "plan": "plan",
+    "whip": "dawn",
+    "day": "every"
+   },
+   "params": {
+    "dir": 1,
+    "from": 0.26,
+    "to": 0.56,
+    "pairs": 3,
+    "whip": "whip",
+    "driver": {
+     "gage": true
+    },
+    "signs": [
+     {
+      "text": "VALPARAÍSO",
+      "x": 0.17
+     },
+     {
+      "text": "SANTIAGO",
+      "x": 0.86,
+      "at": "plan"
+     }
+    ],
+    "kasif": {
+     "x": 0.07,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "day",
+       "pose": "point",
+       "dir": 15,
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "pgc_gage",
+   "text": "So which Gage was the real one? The wild man, or the careful driver?",
+   "visual": "Split page with a dashed divider: on the left bandaged Gage stamps his feet angrily under a red 'WILD' stamp; on the right bandaged Gage stands calm holding a whip-like stick under a blue 'CAREFUL' stamp; the narrator in the middle thinks, points left on 'wild', right on 'careful', then shrugs",
+   "title": {
+    "white": "Which Gage?"
+   },
+   "cues": {
+    "q": "real",
+    "wild": "wild",
+    "careful": "careful"
+   },
+   "params": {
+    "bg": "plain",
+    "divider": {
+     "x": 0.5,
+     "at": 0.1
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.5,
+      "y": 0.17,
+      "at": "q",
+      "size": 130,
+      "font": "serif",
+      "color": "red"
+     },
+     {
+      "text": "WILD",
+      "x": 0.22,
+      "y": 0.3,
+      "at": "wild",
+      "stamp": true,
+      "color": "red"
+     },
+     {
+      "text": "CAREFUL",
+      "x": 0.78,
+      "y": 0.3,
+      "at": "careful",
+      "stamp": true,
+      "color": "blue"
+     }
+    ],
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.75,
+      "x": 0.2,
+      "pose": "idle",
+      "face": "right",
+      "emotion0": "neutral",
+      "at": "wild",
+      "then": "shock",
+      "emotion": "angry",
+      "shake": "wild"
+     },
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "think",
+      "face": "left",
+      "scale": 0.6,
+      "seq": [
+       {
+        "at": "wild",
+        "pose": "point",
+        "dir": 10,
+        "face": "left"
+       },
+       {
+        "at": "careful",
+        "pose": "shrug",
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.75,
+      "x": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "at": "careful",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "This is where the true story gets better than the legend. In many textbooks, Gage became a monster forever.",
+   "visual": "Handwritten header 'Old textbooks'; giant Fraunces 'MONSTER' and 'FOREVER' appear on 'monster'; on 'forever' a red ink line strikes both and a red 'MYTH' pill drops; the narrator talks, then shrugs",
+   "title": {
+    "white": "The legend"
+   },
+   "cues": {
+    "legend": "legend",
+    "books": "textbooks",
+    "mon": "monster",
+    "hit": "forever"
+   },
+   "params": {
+    "header": {
+     "text": "Old textbooks",
+     "at": 0.3,
+     "size": 76
+    },
+    "items": [
+     {
+      "text": "MONSTER",
+      "at": "mon",
+      "strike": "hit",
+      "size": 170
+     },
+     {
+      "text": "FOREVER",
+      "at": "mon",
+      "strike": "hit",
+      "size": 130
+     }
+    ],
+    "x": 0.42,
+    "pill": {
+     "text": "MYTH",
+     "at": "hit",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.83,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "But historians who went back to the old letters found that his worst changes came in the first years.",
+   "visual": "Horizontal timeline 1848 / 1849 / 1852 / 1859 ('the iron', 'worst years', 'Chile', 'steady work'); 1849 is ringed red as the marker reaches it on 'worst'; the narrator on the right points at it",
+   "title": {
+    "white": "Old letters"
+   },
+   "cues": {
+    "c0": "historians",
+    "c1": "worst",
+    "c2": "first"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1848",
+      "text": "the iron",
+      "at": "c0"
+     },
+     {
+      "year": "1849",
+      "text": "worst years",
+      "at": "c1"
+     },
+     {
+      "year": "1852",
+      "text": "Chile",
+      "at": "c2"
+     },
+     {
+      "year": "1859",
+      "text": "steady work",
+      "at": "c2"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.86,
+     "pose": "point",
+     "at": "c1",
+     "scale": 0.72,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "pgc_gage",
+   "text": "Slowly, he seems to have rebuilt a working life.",
+   "visual": "Hills and a small house: bandaged Gage walks in from the left carrying a 'DRIVER' sign and stops in front of the house; a blue 'NEW JOB' stamp lands on 'working'; the narrator on the right points warmly at him",
+   "title": {
+    "white": "New life"
+   },
+   "cues": {
+    "w": "rebuilt",
+    "hit": "working"
+   },
+   "params": {
+    "bg": "hills",
+    "house": {
+     "x": 0.6,
+     "scale": 1.0
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    },
+    "labels": [
+     {
+      "text": "NEW JOB",
+      "x": 0.4,
+      "y": 0.24,
+      "at": "hit",
+      "stamp": true,
+      "color": "blue"
+     }
+    ],
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.72,
+      "x": 0.02,
+      "to": 0.33,
+      "pose": "walk",
+      "at": "hit",
+      "then": "hold",
+      "text": "DRIVER",
+      "face": "right",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.66,
+      "at": "hit",
+      "then": "point",
+      "dir": 10,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_brain",
+   "text": "And here's why that iron mattered so much. It destroyed a big part of his left frontal lobe, the area right behind your forehead.",
+   "visual": "Brain in profile (face left), lobes outlined; on 'iron' an iron bar shoots up from under the cheek through the front of the brain and out the top; on 'destroyed' the frontal lobe floods red with hatching; 'Frontal lobe' label with an arrow; the narrator on the right points, then taps his own forehead on 'forehead'",
+   "title": {
+    "white": "Frontal lobe"
+   },
+   "cues": {
+    "rod": "iron",
+    "hit": "destroyed",
+    "lobe": "frontal",
+    "head": "forehead"
+   },
+   "params": {
+    "mode": "lobes",
+    "brain": {
+     "x": 0.5,
+     "y": 0.5,
+     "r": 0.31
+    },
+    "labels": [
+     {
+      "text": "Frontal lobe",
+      "x": 0.13,
+      "y": 0.3,
+      "at": "lobe",
+      "color": "red",
+      "arrow": [
+       0.31,
+       0.36
+      ]
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 1.02,
+      "to": 0.85,
+      "start": 0.0,
+      "arrive": "rod",
+      "scale": 0.74,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "rod",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "surprised"
+       },
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 10,
+        "face": "left",
+        "emotion": "worried"
+       },
+       {
+        "at": "head",
+        "pose": "point",
+        "dir": 70,
+        "face": "left"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_gage",
+   "text": "Back then, scientists were still arguing about whether different parts of the brain have different jobs. Gage became powerful evidence that they do.",
+   "visual": "A 19th-century study (bookshelf, window): a bearded scientist and a grey-bearded one argue across a table in front of an easel chart with a blank brain outline and a red '?'; on 'Gage' bandaged Gage walks in; on 'evidence' the chart's lobe borders draw in, the front lobe turns red and a 'EVIDENCE' stamp lands; the narrator by the window points at Gage",
+   "title": {
+    "white": "Back then"
+   },
+   "cues": {
+    "arg": "arguing",
+    "jobs": "jobs",
+    "gage": "Gage",
+    "proof": "evidence"
+   },
+   "params": {
+    "bg": "study",
+    "chart": {
+     "x": 0.47,
+     "y": 0.13,
+     "w": 0.27,
+     "h": 0.42,
+     "at": "proof",
+     "red": "proof"
+    },
+    "desk": {
+     "x": 0.47,
+     "w": 0.3
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "labels": [
+     {
+      "text": "EVIDENCE",
+      "x": 0.47,
+      "y": 0.3,
+      "at": "proof",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cast": [
+     {
+      "who": "sci1",
+      "beard": "black",
+      "x": 0.18,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "angry",
+      "scale": 0.68,
+      "at": "jobs",
+      "then": "point",
+      "dir": 20
+     },
+     {
+      "who": "sci2",
+      "beard": "grey",
+      "x": 0.33,
+      "pose": "shrug",
+      "face": "left",
+      "scale": 0.68,
+      "at": "gage",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.68,
+      "x": 0.98,
+      "to": 0.68,
+      "pose": "walk",
+      "walk_at": "gage",
+      "walk_dur": 1.2,
+      "face": "left",
+      "then": "idle"
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "think",
+      "face": "left",
+      "scale": 0.6,
+      "at": "proof",
+      "then": "point",
+      "dir": 15,
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_gage",
+   "text": "You can lose a piece of the front of your brain and still walk, talk, and remember.",
+   "visual": "Bandaged Gage walks across the hills; green stamps pop above him: 'WALK' on 'walk', 'TALK' on 'talk' (he gestures), 'REMEMBER' on 'remember' (he taps his head); the narrator on the right counts on his fingers",
+   "title": {
+    "white": "Still works"
+   },
+   "cues": {
+    "c0": "lose",
+    "a": "walk",
+    "b": "talk",
+    "c": "remember"
+   },
+   "params": {
+    "bg": "hills",
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    },
+    "labels": [
+     {
+      "text": "WALK",
+      "x": 0.24,
+      "y": 0.32,
+      "at": "a",
+      "stamp": true,
+      "color": "green",
+      "size": 84
+     },
+     {
+      "text": "TALK",
+      "x": 0.46,
+      "y": 0.2,
+      "at": "b",
+      "stamp": true,
+      "color": "green",
+      "size": 84
+     },
+     {
+      "text": "REMEMBER",
+      "x": 0.68,
+      "y": 0.32,
+      "at": "c",
+      "stamp": true,
+      "color": "green",
+      "size": 84
+     }
+    ],
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.74,
+      "x": 0.05,
+      "to": 0.42,
+      "pose": "walk",
+      "walk_at": "c0",
+      "walk_dur": 2.0,
+      "face": "right",
+      "then": "talk",
+      "seq": [
+       {
+        "at": "b",
+        "pose": "talk",
+        "face": "right"
+       },
+       {
+        "at": "c",
+        "pose": "point",
+        "dir": 70,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "talk",
+      "face": "left",
+      "scale": 0.66,
+      "at": "c",
+      "then": "point",
+      "dir": 20,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_brain",
+   "text": "But you may lose something harder to see: the brakes on your behavior, and the part of you that plans ahead.",
+   "visual": "Brain with the frontal lobe tinted red and a dashed ghost of the iron's path; on 'brakes' the red word 'BRAKES' with an arrow to the frontal lobe; on 'plans' 'PLANNING' with a second arrow; the narrator on the right turns worried and points",
+   "title": {
+    "white": "Unseen loss"
+   },
+   "cues": {
+    "brakes": "brakes",
+    "plans": "plans"
+   },
+   "params": {
+    "mode": "lobes",
+    "red_always": true,
+    "rod": {
+     "ghost": true
+    },
+    "brain": {
+     "x": 0.5,
+     "y": 0.5,
+     "r": 0.29
+    },
+    "labels": [
+     {
+      "text": "BRAKES",
+      "x": 0.13,
+      "y": 0.28,
+      "at": "brakes",
+      "color": "red",
+      "size": 80,
+      "arrow": [
+       0.32,
+       0.34
+      ]
+     },
+     {
+      "text": "PLANNING",
+      "x": 0.14,
+      "y": 0.62,
+      "at": "plans",
+      "color": "red",
+      "size": 80,
+      "arrow": [
+       0.31,
+       0.5
+      ]
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "think",
+      "face": "left",
+      "scale": 0.74,
+      "seq": [
+       {
+        "at": "brakes",
+        "pose": "point",
+        "dir": 20,
+        "face": "left",
+        "emotion": "worried"
+       },
+       {
+        "at": "plans",
+        "pose": "point",
+        "dir": -25,
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_scan",
+   "text": "In 2012, scientists rebuilt his skull on a computer and traced the path of the iron.",
+   "visual": "An ink-drawn computer screen with a grid, a scan bar sweeping down over a skull outline with the brain inside; big '2012' top right; on 'traced' a red dashed line traces the iron's path through the skull; the narrator on the right looks through binoculars, then points",
+   "title": {
+    "white": "2012"
+   },
+   "cues": {
+    "y": "2012",
+    "sk": "skull",
+    "trace": "traced"
+   },
+   "params": {
+    "brain": {
+     "x": 0.42,
+     "y": 0.47,
+     "r": 0.25
+    },
+    "note": {
+     "text": "2012",
+     "x": 0.86,
+     "y": 0.18,
+     "at": "y",
+     "color": "blue"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "look",
+      "face": "left",
+      "scale": 0.82,
+      "seq": [
+       {
+        "at": "sk",
+        "pose": "think",
+        "face": "left"
+       },
+       {
+        "at": "trace",
+        "pose": "point",
+        "dir": 15,
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_wires",
+   "text": "It hadn't only hit the frontal lobe. It had also cut the wiring that connects it to the rest of the brain.",
+   "visual": "Brain in profile with blue fibres fanning out from the frontal lobe to the rest of the brain; the iron's path as a dashed line; on 'cut' every fibre crossing that path turns red and snaps apart; the narrator on the right jumps back in shock",
+   "title": {
+    "white": "The wiring"
+   },
+   "cues": {
+    "lobe": "frontal",
+    "cut": "cut",
+    "rest": "rest"
+   },
+   "params": {
+    "brain": {
+     "x": 0.5,
+     "y": 0.5,
+     "r": 0.31
+    },
+    "labels": [
+     {
+      "text": "cut!",
+      "x": 0.14,
+      "y": 0.3,
+      "at": "cut",
+      "color": "red",
+      "size": 80,
+      "arrow": [
+       0.33,
+       0.36
+      ]
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "talk",
+      "face": "left",
+      "scale": 0.74,
+      "seq": [
+       {
+        "at": "lobe",
+        "pose": "point",
+        "dir": 15,
+        "face": "left"
+       },
+       {
+        "at": "cut",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "surprised"
+       },
+       {
+        "at": "rest",
+        "pose": "shrug",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "The Skull at Harvard",
+   "type": "chapter",
+   "text": "In 1859, Gage left Chile and joined his family in San Francisco.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, below it 'The Skull at Harvard' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "1859",
+    "title": "San"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Skull at Harvard"
+   }
+  },
+  {
+   "type": "pgc_museum",
+   "text": "Soon after, he started having seizures, and on May 21, 1860, he died. He was only thirty-six, almost twelve years after the accident.",
+   "visual": "A quiet San Francisco hillside with the family house and a cypress; on 'died' a headstone 'GAGE / 1860' rises from the ground and the narrator lowers his head; on 'thirty' a red handwritten 'only 36' appears above the stone",
+   "title": {
+    "white": "May 1860",
+    "gray": "San Francisco"
+   },
+   "cues": {
+    "hit": "died",
+    "age": "thirty"
+   },
+   "params": {
+    "mode": "grave",
+    "house": {
+     "x": 0.78,
+     "scale": 0.9
+    },
+    "stone": {
+     "x": 0.45,
+     "lines": [
+      "GAGE",
+      "1860"
+     ],
+     "at": "hit"
+    },
+    "cam": {
+     "zoom": 1.2,
+     "focus": [
+      0.5,
+      0.84
+     ]
+    },
+    "label": {
+     "text": "only 36",
+     "x": 0.45,
+     "y": 0.3,
+     "at": "age",
+     "color": "red",
+     "size": 80
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.26,
+      "pose": "idle",
+      "face": "right",
+      "emotion0": "worried",
+      "at": "hit",
+      "then": "think",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_museum",
+   "text": "Harlow never forgot him. Years later, with the family's help, Gage's skull was taken from his grave.",
+   "visual": "The hillside with the headstone on the left; a family member walks from the grave carrying a small wooden box to Dr. Harlow (grey beard) waiting on the right, who reaches out on 'grave'; the narrator by the cypress watches, thinking",
+   "title": {
+    "white": "Dr. Harlow"
+   },
+   "cues": {
+    "h": "Harlow",
+    "go": "Years",
+    "hit": "grave"
+   },
+   "params": {
+    "mode": "grave",
+    "stone": {
+     "x": 0.3,
+     "lines": [
+      "GAGE",
+      "1860"
+     ]
+    },
+    "cam": {
+     "zoom": 1.18,
+     "focus": [
+      0.5,
+      0.84
+     ]
+    },
+    "carry": {
+     "who": "family",
+     "from": 0.38,
+     "to": 0.62,
+     "start": "go",
+     "at": "hit",
+     "scale": 0.6
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "pose": "think",
+      "face": "right",
+      "scale": 0.6,
+      "at": "hit",
+      "then": "point",
+      "dir": 10,
+      "emotion": "worried"
+     },
+     {
+      "who": "harlow",
+      "beard": "grey",
+      "x": 0.82,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.62,
+      "at": "hit",
+      "then": "point",
+      "dir": 0
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_hall",
+   "text": "Today it sits in a glass case at Harvard, right next to the iron bar that went through it.",
+   "visual": "A museum hall with a 'WARREN MUSEUM' plaque: a glass case on a plinth holding the skull and, beside it, the long iron bar; a '1848' card; glints sweep over the glass; the narrator walks in from the left and points at the case, a red ring circles the skull on 'iron'",
+   "title": {
+    "white": "Harvard",
+    "gray": "today"
+   },
+   "cues": {
+    "glass": "glass",
+    "hit": "iron"
+   },
+   "params": {
+    "mode": "case",
+    "case": {
+     "x": 0.55,
+     "w": 0.46,
+     "y": 0.6,
+     "card": "1848",
+     "ring": "hit"
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "to": 0.17,
+      "pose": "walk",
+      "start": 0.1,
+      "at": "glass",
+      "then": "point",
+      "dir": 35,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_gage",
+   "text": "So a railroad worker who never wrote a single page about himself became one of the most famous patients in medicine.",
+   "visual": "Bandaged Gage stands beside his tall tamping iron; 'RAILROAD WORKER' handwritten above him on 'railroad'; on 'famous' a big red 'FAMOUS PATIENT' stamp slams in and Gage looks surprised; the narrator on the right points up",
+   "title": {
+    "white": "Famous",
+    "gray": "patient"
+   },
+   "cues": {
+    "w0": "railroad",
+    "hit": "famous"
+   },
+   "params": {
+    "bg": "plain",
+    "iron": {
+     "x": 0.34,
+     "at": 0.1,
+     "ang": -10
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.4,
+      0.55
+     ]
+    },
+    "labels": [
+     {
+      "text": "railroad worker",
+      "x": 0.46,
+      "y": 0.24,
+      "at": "w0",
+      "size": 74
+     },
+     {
+      "text": "FAMOUS PATIENT",
+      "x": 0.48,
+      "y": 0.52,
+      "at": "hit",
+      "stamp": true,
+      "color": "red",
+      "size": 96
+     }
+    ],
+    "cast": [
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.78,
+      "x": 0.22,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "pose": "talk",
+      "face": "left",
+      "scale": 0.66,
+      "at": "hit",
+      "then": "point",
+      "dir": 50,
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgc_hall",
+   "text": "Every student who learns how the brain shapes personality meets Phineas Gage.",
+   "visual": "A lecture room: a big board with a brain sketch whose front lobe turns red and a chalk Gage with bandage and eye patch, 'Phineas Gage' written under him, an arrow from Gage to the brain on 'Gage'; three students sit on a raised step facing the board, the front one points at it on 'Gage'; the narrator at the board points at it",
+   "title": {
+    "white": "Every student"
+   },
+   "cues": {
+    "red": "brain",
+    "hit": "Gage"
+   },
+   "params": {
+    "mode": "class",
+    "bench": false,
+    "riser": {
+     "x0": 0.6,
+     "x1": 0.95,
+     "y": 0.72
+    },
+    "board": {
+     "x": 0.42,
+     "y": 0.21,
+     "w": 0.4,
+     "h": 0.37,
+     "text": "Phineas Gage",
+     "red": "red"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.5
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.07,
+      "pose": "talk",
+      "face": "right",
+      "scale": 0.6,
+      "at": "hit",
+      "then": "point",
+      "dir": 50
+     },
+     {
+      "who": "st1",
+      "x": 0.66,
+      "pose": "sit",
+      "face": "left",
+      "scale": 0.52,
+      "y": 0.72,
+      "at": "hit",
+      "then": "point",
+      "dir": 60
+     },
+     {
+      "who": "st2",
+      "x": 0.78,
+      "pose": "sit",
+      "face": "left",
+      "scale": 0.52,
+      "y": 0.72,
+      "emotion": "surprised"
+     },
+     {
+      "who": "st3",
+      "x": 0.9,
+      "pose": "sit",
+      "face": "left",
+      "scale": 0.52,
+      "y": 0.72
+     }
+    ]
+   }
+  },
+  {
+   "type": "pgb_coach",
+   "text": "And maybe that's the real lesson. The accident took away part of who he was. But in the years after, he kept learning how to be someone new.",
+   "visual": "Sunrise over the Andes road: bandaged Gage holds the reins of the six-horse coach and drives it right to left; the whip cracks on 'someone'; the narrator rides on the coach roof and waves",
+   "title": {
+    "white": "The lesson"
+   },
+   "cues": {
+    "acc": "accident",
+    "go": "years",
+    "whip": "someone"
+   },
+   "params": {
+    "dir": -1,
+    "from": 0.86,
+    "to": 0.42,
+    "pairs": 3,
+    "whip": "whip",
+    "driver": {
+     "gage": true,
+     "emotion": "happy"
+    },
+    "kasif": {
+     "ride": true,
+     "pose": "wave"
+    }
+   }
+  },
+  {
+   "type": "pgc_gage",
+   "text": "So here's my question for you. If an injury changed your personality, would you still be the same person? Tell me in the comments.",
+   "visual": "Two Gage silhouettes on either side of a dashed line: on the left the old Gage in his 1848 cloth cap, faded; on the right the new Gage with bandage and eye patch; a big red 'SAME?' stamp between them on 'same'; the narrator in the middle talks to the viewer, then points straight out on 'comments'",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "q": "question",
+    "p": "personality",
+    "same": "same",
+    "c": "comments"
+   },
+   "params": {
+    "bg": "plain",
+    "divider": {
+     "x": 0.5,
+     "at": "q"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "labels": [
+     {
+      "text": "1848",
+      "x": 0.18,
+      "y": 0.32,
+      "at": "p",
+      "size": 70,
+      "font": "serif"
+     },
+     {
+      "text": "after",
+      "x": 0.82,
+      "y": 0.32,
+      "at": "p",
+      "size": 70
+     },
+     {
+      "text": "SAME?",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "same",
+      "stamp": true,
+      "color": "red",
+      "size": 110
+     }
+    ],
+    "cast": [
+     {
+      "who": "gage",
+      "gage": {
+       "cap": true,
+       "bandage": false,
+       "patch": false
+      },
+      "x": 0.18,
+      "pose": "wave",
+      "face": "right",
+      "alpha": 0.5,
+      "scale": 0.74,
+      "emotion": "happy"
+     },
+     {
+      "who": "gage",
+      "gage": true,
+      "scale": 0.74,
+      "x": 0.82,
+      "pose": "idle",
+      "face": "left",
+      "at": "same",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "talk",
+      "face": "right",
+      "scale": 0.7,
+      "at": "c",
+      "then": "point",
+      "dir": 8
+     }
+    ]
+   }
+  }
+ ]
+}

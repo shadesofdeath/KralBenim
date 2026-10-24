@@ -457,3 +457,175 @@ Geçti. Son düzeltmeler (yazar uyguladı, yeniden puanlanmadı): sahne 6 sikke 
 | 8 | 8 | 8 | 7 | 8 | 7 | 7 | 8 | 9 | 8 | 8 |
 
 Geçti. Son düzeltmeler (yazar uyguladı, yeniden puanlanmadı): sahne 29 kompozisyonu, 23 Bayezid tam ortada, 15 farklı kadraj, 40 tahtırevan cümlesi, 46 yeni `an_tug` (darbeler tuğa çarpar, tuğ ayakta kalır), kapakta arka muhafız gizlendi. Final 4.444 karakter, 49 sahne, ~5:10.
+
+
+---
+
+# Stickstory — 2026-10-24 (ayrı oturum; Düşün Bakalım dosyalarına dokunulmadı)
+
+Plan (`tools/plan.py --channel ag`): 3 Shorts + 1 uzun video. ElevenLabs: bu ay 66.334 / 231.442, **uyarı: true**
+(projeksiyon 384.834) → tüm karakterler aralığın alt ucunda (bugün toplam ≈ 5.700 / günlük üst sınır 6.500).
+
+| Dosya | Konu | Kategori | Dönem | Yayın (NY / İstanbul) |
+|---|---|---|---|---|
+| ag-01-roanoke-colony | Roanoke kayıp kolonisi, "CROATOAN" (1587–1590) | unsolved mysteries | 16. yy, Kuzey Amerika | 09:00 / 24.10 16:00 |
+| ag-02-brooklyn-bridge | Brooklyn Köprüsü, Washington ve Emily Roebling (1869–1883) | how it was built | 19. yy, New York | 13:00 / 24.10 20:00 |
+| ag-03-origin-of-ok | "OK" kelimesinin kökeni (Boston 1839, Van Buren 1840) | origins of everyday things | 19. yy, ABD | 19:00 / 25.10 02:00 |
+| ag-04-phineas-gage (uzun) | Phineas Gage, kafatasından geçen demir çubuk (1848–1860) | the human body | 19. yy, Vermont/Şili | 14:00 / 24.10 21:00 |
+
+Geçmişte işlenmedi (Mary Celeste, Dancing Plague, Anglo-Zanzibar, Cadaver Synod, Eyfel, Tacoma… ile çakışmıyor);
+aynı günün Düşün Bakalım konuları (Mansa Musa, Ankara Savaşı) ile çakışmıyor. Dört video dört farklı kategori.
+
+## ag-01-roanoke-colony (Short)
+- **Hissedilen:** "Koca bir koloni yok oldu ve geriye tek bir kelime kaldı; tehlike işareti bile yoktu."
+- **Kanca + kapak:** ilk cümle "A whole colony vanished, and left one word behind." ↔ kapak `A COLONY / VANISHED` ya da `THEY LEFT / ONE WORD` (vurgu `VANISHED` / `WORD`). Kapak karesi: CROATOAN oyulmuş direk, terk edilmiş çit, büyük şok fesli anlatıcı.
+- **Doğrulanacak:** 1587'de John White önderliğinde ~115 kolonist (kaynaklara göre 115–118), White aynı yıl ikmal için İngiltere'ye döndü; İspanya ile savaş / Armada (1588) dönüşü geciktirdi; Ağustos 1590'da döndü; evler sökülmüş, çevre çitle (palisade) çevrili; bir direkte "CROATOAN", bir ağaçta "CRO"; ayrılırlarsa gidecekleri yeri yazacak, tehlikedeyseler haç (Maltese cross) oyacaklardı; haç yoktu. Kolonistler bir daha kesin olarak görülmedi.
+- **Tek parça anlatım (476 karakter):**
+
+> A whole colony vanished, and left one word behind. In 1587, about 115 English settlers landed on Roanoke Island. Their governor, John White, sailed home for supplies, but a war with Spain kept him away for three years. When he finally returned, the houses were gone. No bodies. No graves. Just one word carved into a post: "CROATOAN." And here's the strange part. White had told them to carve a cross if they left in danger. There was no cross. And no one ever saw them again.
+
+- **Çekim fikri (yazar kesinleştirir):** 1 kapak/kanca: CROATOAN direği + şok anlatıcı · 2 `map` İngiltere→Roanoke rota, gemi · 3 `stage` White gemiye biniyor, kolonistler el sallıyor · 4 Armada gemileri yolu kesiyor / takvim 1587→1590 · 5 yeni tip (ör. `ro_fort`) boş çit, sökülmüş evler, anlatıcı dürbünle bakıyor · 6 `board` ✗ bodies ✗ graves · 7 direkte kelime oyuluyor (cue `CROATOAN`) · 8 `stage` White haç işaretini anlatıyor (geçmiş) · 9 haç yok, kırmızı ✗ · 10 son: boş ufuk, anlatıcı tek başına.
+
+## ag-02-brooklyn-bridge (Short)
+- **Hissedilen:** "Dünyanın en ünlü köprülerinden birini mühendislik diploması olmayan bir kadın ayakta tuttu."
+- **Kanca + kapak:** "The Brooklyn Bridge was saved by a woman…" ↔ kapak `A WOMAN / SAVED / THIS BRIDGE` (vurgu `WOMAN`). Kapak: köprü kuleleri + teleskop + büyük hayret anlatıcı.
+- **Doğrulanacak:** John A. Roebling 1869'da iskelede ayağı ezildi, tetanozdan öldü (Temmuz 1869); inşaat Ocak 1870'te başladı; Washington Roebling kesonlarda (caisson) çalıştı, 1872'de vurgun (caisson disease / the bends) ile ağır hastalandı; Brooklyn Heights'taki odasından teleskopla izledi; Emily Warren Roebling matematik/mühendislik öğrendi, talimatları iletti, mühendisler ve yetkililerle görüştü; 24 Mayıs 1883 açılış, Emily köprüden arabayla ilk geçen kişi.
+- **Tek parça anlatım (454 karakter):**
+
+> The Brooklyn Bridge was saved by a woman with no engineering degree. Its designer died before work even began, so his son Washington took over. He worked deep under the river in giant air boxes, until the bends crippled him. Stuck in his room, he watched the bridge through a telescope. So his wife Emily stepped in. She learned the math, carried his orders, and faced the engineers herself. In 1883, the first person to ride across the bridge was Emily.
+
+- **Çekim fikri:** 1 kanca: yarım köprü kuleleri, Emily planla, hayret anlatıcı · 2 `stage` John Roebling iskelede (kansız) · 3 yeni tip kesit: nehir altında keson, işçiler · 4 `stage` Washington yatakta, teleskopla pencereden köprüye bakıyor · 5 `stage` Emily not defteriyle mühendislerle · 6 `board` math ✓ orders ✓ engineers ✓ · 7 `timeline` 1869 → 1872 → 1883 · 8 köprü tamam, Emily arabada ilk geçiyor.
+
+## ag-03-origin-of-ok (Short)
+- **Hissedilen:** "Dünyanın en çok kullanılan kelimelerinden biri, 1839'da bir gazete şakasıydı."
+- **Kanca + kapak:** "The word OK started as a bad joke." ↔ kapak `OK WAS / A JOKE` (vurgu `JOKE`). Kapak: gazete sayfasında dev "O.K." harfleri, gülen/şaşıran anlatıcı.
+- **Doğrulanacak:** 1830'ların sonunda Boston gazetelerinde kasıtlı yanlış yazılmış kısaltma modası; "o.k." ilk kez Boston Morning Post, 23 Mart 1839; Allen Walker Read (1963) belgeledi; 1840 seçiminde Martin Van Buren'in lakabı "Old Kinderhook", destekçileri "O.K. Club" kurdu; Van Buren seçimi William Henry Harrison'a kaybetti.
+- **Tek parça anlatım (436 karakter):**
+
+> The word OK started as a bad joke. In 1830s Boston, newspapers had a weird fad. They shortened phrases into initials, and misspelled them on purpose, just for laughs. So "all correct" became "oll korrect," and then simply O.K. Most of those jokes died fast. But in 1840, President Martin Van Buren ran again, and his nickname was Old Kinderhook. His fans formed O.K. Clubs. Van Buren lost the election. But the joke conquered the world.
+
+- **Çekim fikri:** 1 kanca: gazete sayfasında dev O.K., gülen anlatıcı · 2 `stage` 1830'lar Boston matbaası, gazeteci kalemle yazıyor · 3 yeni tip: "all correct" → "oll korrect" → "O.K." harf harf dönüşüm · 4 `board` diğer şaka kısaltmalar silinip gidiyor · 5 `stage` Van Buren, "Old Kinderhook" pankartı · 6 `stage` kalabalık O.K. tabelalarıyla yürüyor · 7 `title` "HE LOST" · 8 `map` dünya haritasında OK balonları yayılıyor, anlatıcı başparmak.
+
+## ag-04-phineas-gage (uzun video)
+- **Hissedilen:** "Kafasından demir çubuk geçen bir adam yaşadı, kişiliği değişti; ama asıl ders beynin parça parça iş yaptığı ve insanın kendini yeniden kurabildiği."
+- **Kanca + kapak:** kapak `IT WENT / THROUGH / HIS SKULL` ya da `HE SURVIVED / THIS` (vurgu `SKULL` / `SURVIVED`); kare: kafatasından çapraz geçen demir çubuk (mürekkep kesit), büyük şok anlatıcı. Kan yok, saygılı.
+- **Doğrulanacak:** 13 Eylül 1848, Cavendish (Vermont), Rutland & Burlington demiryolu; Gage 25 yaşında, ustabaşı; demir 3 ft 7 in, ~13¼ lb, bir ucu sivri; sol elmacık kemiğinin altından girdi, sol gözün arkasından geçip kafatasının tepesinden çıktı, ~25–30 yarda (≈80 ft) öteye düştü; öküz arabasıyla ~¾ mil; ilk doktor Edward Williams'a "Here is business enough for you" (aktarım → "reportedly"); Dr. John Martyn Harlow; enfeksiyon, tabutun hazır tutulması; Kasım'da kasabada yürüyordu; sol gözünü kaybetti; Harlow 1868: "no longer Gage", "a child… the animal passions of a strong man"; demiryolu geri almadı; Şili'de ~1852–1859 altı atlı posta arabası (Valparaíso–Santiago); 1859 San Francisco; nöbetler; 21 Mayıs 1860'ta öldü (36); kafatası 1867'de çıkarıldı, Harvard Warren Anatomical Museum'da çubukla; Macmillan: sosyal iyileşme; 2012 Van Horn ve ark. bağlantı hasarı. Barnum iddiası bilerek çıkarıldı (belirsiz).
+- **Bölümler:** 1 "A Perfect Foreman" · 2 "The Blast" · 3 "No Longer Gage" · 4 "What the Iron Revealed" · 5 "The Skull at Harvard". Toplam 4362 karakter.
+- **Tek parça anlatım (bölüm bölüm):**
+
+**CHAPTER 1 / 5 — A Perfect Foreman** (749 karakter)
+
+> Imagine an iron bar, as long as your arm, flying straight through a man's head. Now imagine that man sitting up a few minutes later, and talking. That really happened in 1848, and it changed what we know about the human brain. This is the story of Phineas Gage.
+> In the summer of 1848, Gage was twenty-five, and he ran a railroad crew in Vermont. His job was to blast rock out of the way. His bosses called him the most capable foreman they had.
+> Here's how blasting worked back then. You drilled a hole in the rock, poured in gunpowder and a fuse, and covered it with sand. Then you packed it down with a tamping iron. Gage had his own made. It was three feet seven inches long, it weighed about thirteen pounds, and one end was sharpened to a point.
+
+**CHAPTER 2 / 5 — The Blast** (810 karakter)
+
+> On September 13, 1848, late in the afternoon, Gage was doing that job like a hundred times before. But something went wrong. Maybe someone called his name. Maybe he looked away. Either way, the sand never went in. And when Gage brought the iron down, it struck the rock, threw a spark, and the powder exploded.
+> The iron shot upward like a bullet. It went in under his left cheekbone, passed behind his left eye, and came out through the top of his skull. Then it landed about eighty feet away.
+> And now, here's the part nobody believes. Gage didn't die. He fell back, his body shook, and within a few minutes he was talking. His men put him in an ox cart, and he rode nearly a mile into town, sitting up. When the first doctor arrived, Gage reportedly greeted him with a joke: "Here is business enough for you."
+
+**CHAPTER 3 / 5 — No Longer Gage** (838 karakter)
+
+> The doctor who saved him was John Harlow. He cleaned the wound, pulled out pieces of bone, and fought a terrible infection for weeks. At one point, Gage's friends even had a coffin ready. But by November, he was walking around town again. He had lost his left eye, but he could speak, remember, and work with his hands. So the story ends with a miracle, right? Not quite.
+> Harlow noticed something strange. The old Gage was patient and polite. The new Gage swore, made plans and dropped them, and acted, in Harlow's words, like a child with the passions of a strong man. His friends said he was no longer Gage. And the railroad would not take him back.
+> So what did he do next? Something nobody expected. He moved to Chile, and for about seven years he drove a stagecoach with six horses, on a mountain road between Valparaíso and Santiago.
+
+**CHAPTER 4 / 5 — What the Iron Revealed** (1098 karakter)
+
+> Driving six horses on a mountain road is not easy. You have to plan, stay calm, and get up before dawn, every day. So which Gage was the real one? The wild man, or the careful driver?
+> This is where the true story gets better than the legend. In many textbooks, Gage became a monster forever. But historians who went back to the old letters found that his worst changes came in the first years. Slowly, he seems to have rebuilt a working life.
+> And here's why that iron mattered so much. It destroyed a big part of his left frontal lobe, the area right behind your forehead. Back then, scientists were still arguing about whether different parts of the brain have different jobs. Gage was living proof that they do. You can lose a piece of the front of your brain and still walk, talk, and remember. But you may lose something harder to see: the brakes on your behavior, and the part of you that plans ahead.
+> In 2012, scientists rebuilt his skull on a computer and traced the path of the iron. It hadn't only hit the frontal lobe. It had also cut the wiring that connects it to the rest of the brain.
+
+**CHAPTER 5 / 5 — The Skull at Harvard** (863 karakter)
+
+> In 1859, Gage left Chile and joined his family in San Francisco. Soon after, he started having seizures, and on May 21, 1860, he died. He was only thirty-six, almost twelve years after the accident.
+> Harlow never forgot him. Years later, with the family's permission, Gage's skull was taken from his grave. Today it sits in a glass case at Harvard, right next to the iron bar that went through it.
+> So a railroad worker who never wrote a single page about himself became one of the most famous patients in medicine. Every student who learns how the brain shapes personality meets Phineas Gage.
+> And maybe that's the real lesson. The accident took away part of who he was. But in the years after, he kept learning how to be someone new.
+> So here's my question for you. If an injury changed your personality, would you still be the same person? Tell me in the comments.
+
+- **Çekim fikri:** 3 sahne yazarı (bölüm 1–2, bölüm 3, bölüm 4–5). Konuya özel tipler önek `pg_` (ör. `pg_blast` patlama ve çubuğun fırlaması, `pg_skull` kafatası kesitinde çubuğun yolu + ön lob, `pg_coach` Şili dağ yolunda altı atlı araba, `pg_museum` Harvard vitrini). Gerçek fotoğraf: Gage'in çubuğu tutarken dagerreyotipi (kamu malı) ve kafatası — `photo`, sepya, kredi.
+
+## Stickstory eleştiri günlüğü
+
+Not: ag-01'in 09:00 NY (24.10 16:00 İstanbul) slotu üretim sırasında 1 saatin altına düştü; `plan.py` slotu
+ertesi güne kaydırdı → `publish_at` 2026-10-25T09:00:00-04:00 (25.10 16:00 İstanbul).
+
+### ag-01-roanoke-colony — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 6 | 8 | 6 | 7 | 7 | 8 | 8 | 7 |
+1. Sahne 5 ("houses were gone"): evlerin yok oluşu görünmüyor, "GONE" küçük, White çitin arkasında, Kaşif altyazı şeridinde → hayalet çerçeveler + moloz, 160 px kırmızı GONE, White çit aralığında, Kaşif yukarı.
+2. Sahne 3 ve 9 kadraj taşmaları (Kaşif kenarda kesik, direk kicker'a biniyor, CROATOAN'ın N'si taşıyor, yasak işareti altyazıda) → konum/ölçek düzeltildi.
+3. Kapak 7: sol yarıyı düz tahta kaplıyor, Kaşif küçük → direk daraldı, çit aralığı, Kaşif 1.6; 4 aday karşılaştırıldı. Ayrıca "No graves" çıkarıldı (White'ın kaydında yok), 474 → 463 karakter.
+
+### ag-02-brooklyn-bridge — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 7 | 8 | 6 | 8 | 8 | 6 | 8 | 8 |
+1. Son sahne: "Opening day" + havai fişek yanlış (Emily açılıştan önce horozla geçti) → kicker "First ride / May 1883", fişek yok, horoz, araba büyüdü; açıklama düzeltildi.
+2. Masa ve teleskop sahnelerinde Kaşif kenardan taşıyor / koltuk arkasında → yeniden yerleşim, etiketler duvara.
+3. Washington küçük, "NEW BOSS" fese biniyor, keson sahnesinde nehir görünmüyor → ölçek, etiket, kamera odağı; John Roebling sahnesi yeni `bb_pier` tipine taşındı, "DIED 1869" kırmızı.
+
+### ag-03-origin-of-ok — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 6 | 8 | 8 | 8 | 8 | 7 | 7 | 7 | 8 | 6 | 7 |
+1. Metin tarih sıralıyor, "you" yok, asıl dönüş (O.K. neden yaşadı) söylenmiyor → "But OK got lucky… guess his nickname? Old Kinderhook… soon you saw those letters everywhere" (463 karakter).
+2. Kapanış iki "But" + belirsiz → "Van Buren lost the election. The joke won the world." tek sahnede; Kaşif küreden ayrıldı.
+3. Kapak: gazete yarım çizilmiş, Kaşif yüzü küçük → t 2.3, Kaşif 1.35; `ok_morph`'a matbaa arka planı; açıklamada "dozens of languages".
+
+### ag-04-phineas-gage — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 7 | 8 | 7 | 7 | 6 | 8 | 8 | 8 |
+1. Gage çizimi parçalar arasında tutarsız → kaza öncesi kasket (A), sonrası bant + sargı (B'nin `PGB.gageMarks`'ı C'de de kullanıldı, yeni `pgc_gage`).
+2. Son ~35 sn boş (13 sn'lik tek yazı kartı, boş tepede iki figür) → sınıf sahnesi (`pgc_hall`), dizginli Gage, "SAME?" aksesuarı.
+3. 36–41 aynı beyin çizimi → tartışan iki 19. yy bilim insanı, yürüyen Gage + WALK/TALK/REMEMBER damgaları.
+4. Mezar taşı "died"dan önce görünüyordu → cue'da belirir. 5. "living proof" → "powerful evidence" (doğruluk).
+Ayrıca 52 → 50 sahne (iki birleştirme), Wikimedia proxy'de engelli olduğu için gerçek fotoğraf kullanılamadı.
+
+### ag-01-roanoke-colony — tur 2
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 7 | 7 | 6 | 7 | 7 | 9 | 8 | 8 |
+1. Sahne 3: altyazı figürlerin gövdesini kapatıyor → ground_y 1140, figürler 0.8–0.85.
+2. "No bodies." sahnesi 1 sn ve taşıyor → önceki sahneye katıldı, cue'da üstü çizili BODIES (9 sahne).
+3. CROATOAN / no-cross: Kaşif altyazı arkasında → bandın üstüne.
+
+### ag-01-roanoke-colony — tur 3 (geçti)
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 7 | 7 | 7 | 7 | 7 | 9 | 8 | 8 |
+Kalan (isteğe bağlı): CROATOAN sahnelerinde Kaşif küçük; "BACK SOON" kicker'a yakın; "gone" sahnesinde figürler küçük.
+
+### ag-02-brooklyn-bridge — tur 2 (geçti)
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 8 | 8 | 7 | 8 | 8 | 8 | 8 | 8 |
+Kalan (isteğe bağlı): keson sahnesinde alt üçte bir boş; mühendisler küçük; bb_pier hareketi en düşük (6.4). Zaman nedeniyle 3. tur yapılmadı.
+
+### ag-03-origin-of-ok — tur 2
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 8 | 6 | 8 | 7 | 7 | 6 | 8 | 8 | 8 |
+1. Old Kinderhook anı okunmuyor (harfler dağınık, kicker'a biniyor) → iki satır tam ~1 sn, sonra OK'ye çöküş.
+2. Süre ~36 sn → "President" çıktı, "Now, guess his nickname?" ayrı soru, son sahne ikiye bölündü (443 karakter, ~34 sn).
+3. Kapakta fes MORNING POST'u örtüyor → Kaşif yeri.
+
+### ag-03-origin-of-ok — tur 3 (geçti)
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 8 | 8 | 8 | 7 | 7 | 8 | 8 | 8 | 8 |
+Kalan (isteğe bağlı): "?" ile inen harfler kısa an üst üste; son sahnede Kaşif küçük.
+
+### ag-04-phineas-gage — tur 2 (geçti)
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 8 | 8 | 8 | 8 | 7 | 7 | 9 | 8 | 8 |
+Sonrasında cila (C): sınıf sahnesinde öğrenciler altyazıdan yukarı, posta arabasında Kaşif atların önünden çekildi, beyin sahnelerinde cue'lu pozlar, Warren Museum levhası + büyük kafatası. Kalan: bölüm 4 kartında Fraunces 900 "4" glifi küçük ekranda tuhaf (ortak `chapter` tipi, sonraki iş).
+
+**Yönetmen son kapısı:** dört videonun `sheet.png` ve `cover.jpg`'si gözle kontrol edildi; konular birbirinden ve geçmişten farklı;
+lint hatasız, SEO 100/100. Son karakterler: ag-01 463 · ag-02 447 · ag-03 443 · ag-04 ≈4.367 (toplam ≈5.720).

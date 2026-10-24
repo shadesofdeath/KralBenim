@@ -1,0 +1,671 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-roanoke-colony",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "A whole",
+   "colony",
+   "vanished"
+  ],
+  "highlight": [
+   "vanished"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Roanoke Colony: 115 Settlers Vanished and Left One Word",
+  "description": "The Roanoke Colony vanished from an island in North Carolina and left only one word carved into a post: CROATOAN. So where did the Lost Colony go?\n\nIn 1587 about 115 English settlers landed on Roanoke Island. Their governor, John White, sailed back to England for supplies, but the war with Spain and the Spanish Armada kept him away until 1590. When he returned, the houses were taken down, there were no bodies, and the word CROATOAN was carved at the fort's entrance. White had told the colonists to carve a cross if they left in danger. There was no cross.\n\nSubscribe to Stickstory for a strange true story every day. Where do you think the colonists went? Tell me in the comments!\n\n#shorts #roanokecolony #lostcolony #unsolvedmysteries #stickstory",
+  "tags": [
+   "roanoke colony",
+   "lost colony of roanoke",
+   "roanoke colony mystery",
+   "roanoke mystery",
+   "roanoke lost colony",
+   "croatoan",
+   "john white",
+   "roanoke island",
+   "lost colony",
+   "unsolved mysteries",
+   "history mysteries",
+   "colonial america",
+   "strange history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-25T09:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "ro_fort",
+   "text": "A whole colony vanished, and left one word behind.",
+   "visual": "A deserted log stockade under a pale sky; in front, a huge bark-covered post with a stripped panel where 'CROATOAN' is carved in big letters; the big fez narrator stands beside it in shock, then points at the word on 'word'.",
+   "title": {
+    "white": "Roanoke Island",
+    "gray": "1590"
+   },
+   "cues": {
+    "hit": "word"
+   },
+   "params": {
+    "ground": 0.66,
+    "palisade": {
+     "h": 300,
+     "gap": [
+      0.55,
+      0.64
+     ]
+    },
+    "post": {
+     "x": 0.33,
+     "w": 460,
+     "top": 0.2,
+     "base": 0.7,
+     "panel": [
+      0.37,
+      0.445
+     ],
+     "text": "CROATOAN",
+     "size": 72,
+     "at": -1
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.72,
+      "y": 0.8,
+      "scale": 1.6,
+      "pose": "shock",
+      "face": "left",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 25,
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.4,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "rm_plus",
+   "text": "In 1587, about 115 English settlers landed on Roanoke Island.",
+   "visual": "Old Atlantic map: a red dashed route runs from Plymouth in England across the ocean to Roanoke on the American coast, 'Roanoke' turns red, a note '~115 settlers'; the fez narrator below points at it.",
+   "title": {
+    "white": "1587",
+    "gray": "the voyage"
+   },
+   "cues": {
+    "route": "English",
+    "city": "Roanoke",
+    "note": "115"
+   },
+   "params": {
+    "shot": "map",
+    "params": {
+     "preset": "atlantic",
+     "cities": [
+      {
+       "name": "Plymouth",
+       "x": -4.14,
+       "y": 50.37,
+       "dx": 0,
+       "dy": -30,
+       "anchor": "middle"
+      },
+      {
+       "name": "Roanoke",
+       "x": -75.67,
+       "y": 35.9,
+       "dx": 24,
+       "dy": -26,
+       "anchor": "start",
+       "color": "red",
+       "at": "city"
+      }
+     ],
+     "route": {
+      "points": [
+       [
+        -4.14,
+        50.37
+       ],
+       [
+        -20,
+        40
+       ],
+       [
+        -45,
+        28
+       ],
+       [
+        -65,
+        27
+       ],
+       [
+        -75.67,
+        35.9
+       ]
+      ],
+      "at": "route",
+      "dur": 1.8,
+      "color": "red"
+     },
+     "note": {
+      "text": "~115 settlers",
+      "x": 0.3,
+      "y": 0.12,
+      "at": "note"
+     },
+     "focus": [
+      -40,
+      38
+     ],
+     "zoom": 1.05,
+     "compass": "br"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.9,
+      "scale": 1.1,
+      "pose": "think",
+      "at": "city",
+      "then": "point",
+      "dir": 60,
+      "face": "left"
+     }
+    ],
+    "scale": 1.0,
+    "origin": [
+     0.5,
+     0.17
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Their governor, John White, sailed home for supplies,",
+   "visual": "On a beach, grey-bearded John White walks toward a ship waiting in the water; two settlers and the fez narrator wave goodbye; hand-written 'BACK SOON' appears.",
+   "title": {
+    "white": "John White",
+    "gray": "the governor"
+   },
+   "cues": {
+    "w": "governor",
+    "go": "sailed",
+    "hit": "supplies"
+   },
+   "params": {
+    "ground_y": 1140,
+    "foreground": "hatch",
+    "backdrop": {
+     "type": "sea",
+     "y": 0.56,
+     "coast": "left",
+     "opacity": 0.8
+    },
+    "scale": 1.0,
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.82,
+      "y": 0.594,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "BACK SOON",
+     "x": 0.5,
+     "y": 0.2,
+     "at": "hit",
+     "size": 90
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "right",
+      "at": "go",
+      "then": "wave"
+     },
+     {
+      "who": "settler",
+      "x": 0.29,
+      "scale": 0.82,
+      "pose": "idle",
+      "face": "right",
+      "at": "go",
+      "then": "wave"
+     },
+     {
+      "who": "settler2",
+      "beard": "short",
+      "x": 0.41,
+      "scale": 0.82,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "wave"
+     },
+     {
+      "who": "white",
+      "beard": "grey",
+      "accessory": "slouch",
+      "x": 0.5,
+      "to": 0.64,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "wave",
+      "scale": 0.85
+     }
+    ]
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "but a war with Spain kept him away for three years.",
+   "visual": "Vertical timeline: '1587 sails home', then '1588 Armada' (the war with Spain), then red '1590 back'; the fez narrator beside it thinks, then points at 1590.",
+   "title": {
+    "white": "1587–1590",
+    "gray": "the long wait"
+   },
+   "cues": {
+    "c0": "war",
+    "c1": "Spain",
+    "c2": "three"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1587",
+      "text": "sails home",
+      "at": "c0"
+     },
+     {
+      "year": "1588",
+      "text": "Armada",
+      "at": "c1"
+     },
+     {
+      "year": "1590",
+      "text": "back",
+      "at": "c2"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.78,
+     "y": 0.68,
+     "pose": "point",
+     "pose0": "think",
+     "dir": -10,
+     "at": "c2",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "ro_fort",
+   "text": "When he finally returned, the houses were gone. No bodies.",
+   "visual": "Wide shot inside the stockade: two thatched cottages stand in front of the stakes, John White walks in through the gap; on 'gone' the cottages sink away in a puff of dust, leaving thick dashed empty outlines and fallen logs on the ground; the fez narrator lowers his spyglass in shock; a red box 'GONE' slams in. On 'bodies' a smaller ink word 'BODIES' appears under it and gets a red strike.",
+   "title": {
+    "white": "1590",
+    "gray": "the return"
+   },
+   "cues": {
+    "w": "returned",
+    "gone": "houses",
+    "hit": "gone",
+    "hit2": "bodies"
+   },
+   "params": {
+    "ground": 0.56,
+    "palisade": {
+     "h": 250,
+     "gap": [
+      0.58,
+      0.7
+     ]
+    },
+    "houses": [
+     {
+      "x": 0.18,
+      "w": 230,
+      "h": 420
+     },
+     {
+      "x": 0.43,
+      "w": 250,
+      "h": 450
+     }
+    ],
+    "gone": "gone",
+    "post": {
+     "x": 0.72,
+     "w": 58,
+     "top": 0.38,
+     "base": 0.565,
+     "panel": [
+      0.4,
+      0.44
+     ]
+    },
+    "cast": [
+     {
+      "who": "white",
+      "beard": "grey",
+      "accessory": "slouch",
+      "x": -0.1,
+      "to": 0.64,
+      "y": 0.585,
+      "scale": 0.62,
+      "pose": "walk",
+      "face": "right",
+      "at": "gone",
+      "then": "shock"
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.58,
+      "scale": 0.6,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    },
+    "houses_front": true,
+    "stamp": {
+     "text": "GONE",
+     "x": 0.5,
+     "y": 0.2,
+     "at": "hit",
+     "size": 160
+    },
+    "labels": [
+     {
+      "text": "BODIES",
+      "x": 0.5,
+      "y": 0.29,
+      "at": "hit2",
+      "size": 96,
+      "font": "serif",
+      "strike": "hit2"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ro_fort",
+   "text": "Just one word carved into a post: CROATOAN. And here's the strange part.",
+   "visual": "Close on the big post at the entrance: letter by letter 'CROATOAN' is carved into the stripped panel, wood chips fly; the fez narrator points at it, then jumps back on the full word. On 'strange' he rubs his chin.",
+   "title": {
+    "white": "One word",
+    "gray": "on the gatepost"
+   },
+   "cues": {
+    "carve": "carved",
+    "hit": "CROATOAN",
+    "s": "strange"
+   },
+   "params": {
+    "ground": 0.6,
+    "palisade": {
+     "h": 330,
+     "gap": [
+      0.75,
+      0.85
+     ]
+    },
+    "post": {
+     "x": 0.38,
+     "w": 600,
+     "top": 0.2,
+     "base": 0.64,
+     "panel": [
+      0.3,
+      0.375
+     ],
+     "text": "CROATOAN",
+     "size": 90,
+     "at": "carve",
+     "dur": 1.3
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.6,
+      "scale": 0.65,
+      "pose": "point",
+      "dir": 30,
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "seq": [
+       {
+        "at": "s",
+        "pose": "think",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.45,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "White had told them to carve a cross if they left in danger.",
+   "visual": "Flashback in 1587: John White holds up a sign 'CROSS = DANGER' to two settlers, who nod; the fez narrator rubs his chin, then raises a finger.",
+   "title": {
+    "white": "The deal",
+    "gray": "back in 1587"
+   },
+   "cues": {
+    "sign": "cross",
+    "hit": "danger"
+   },
+   "params": {
+    "ground_y": 1150,
+    "foreground": "hatch",
+    "scale": 1.0,
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "scale": 0.72,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "up"
+     },
+     {
+      "who": "white",
+      "beard": "grey",
+      "accessory": "slouch",
+      "x": 0.3,
+      "pose": "talk",
+      "face": "right",
+      "at": "sign",
+      "then": "hold",
+      "text": "CROSS = DANGER"
+     },
+     {
+      "who": "settler",
+      "x": 0.66,
+      "scale": 0.9,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "think"
+     },
+     {
+      "who": "settler2",
+      "beard": "short",
+      "x": 0.85,
+      "scale": 0.9,
+      "pose": "idle",
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ro_fort",
+   "text": "There was no cross.",
+   "visual": "The carved post again: under 'CROATOAN' a dashed outline of a cross draws in where a cross would be, then a big red no-sign slams over the empty spot; the fez narrator jumps back in shock.",
+   "title": {
+    "white": "No cross",
+    "gray": ""
+   },
+   "cues": {
+    "hit": "no"
+   },
+   "params": {
+    "ground": 0.6,
+    "palisade": {
+     "h": 330,
+     "gap": [
+      0.75,
+      0.85
+     ]
+    },
+    "post": {
+     "x": 0.38,
+     "w": 600,
+     "top": 0.2,
+     "base": 0.64,
+     "panel": [
+      0.3,
+      0.375
+     ],
+     "text": "CROATOAN",
+     "size": 90,
+     "at": -1
+    },
+    "cross": {
+     "x": 0.38,
+     "y": 0.47,
+     "size": 150,
+     "at": 0.05,
+     "no": "hit"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.6,
+      "scale": 0.65,
+      "pose": "point",
+      "dir": 10,
+      "face": "left",
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "shake": "hit",
+    "cam": {
+     "zoom": 1.1,
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "And no one ever saw them again.",
+   "visual": "Giant words build up: 'NEVER / SEEN AGAIN' with 'NEVER' in a red box; the big fez narrator below looks worried and shrugs.",
+   "title": {},
+   "cues": {
+    "w0": "ever",
+    "w1": "again"
+   },
+   "params": {
+    "lines": [
+     "NEVER",
+     "SEEN AGAIN"
+    ],
+    "highlight": [
+     "NEVER"
+    ],
+    "y": 0.25,
+    "kasif": {
+     "x": 0.76,
+     "y": 0.77,
+     "pose": "shrug",
+     "at": "w1",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried"
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,570 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "origin-of-ok",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "OK was",
+   "a joke"
+  ],
+  "highlight": [
+   "joke"
+  ],
+  "scene": 0,
+  "t": 2.3,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Origin of OK: How a Bad Joke Became the World's Word",
+  "description": "The origin of OK is a bad newspaper joke from 1830s Boston. So how did two letters from a silly pun end up in dozens of languages?\n\nIn the late 1830s, Boston papers loved a strange fad: they shortened phrases into initials and misspelled them on purpose. On March 23, 1839, the Boston Morning Post printed \"o.k.\" for \"oll korrect\", a joke spelling of all correct. Most of these joke abbreviations vanished, but in the 1840 election, supporters of President Martin Van Buren, nicknamed Old Kinderhook, formed O.K. Clubs. Van Buren lost, yet OK spread everywhere. Linguist Allen Walker Read traced the story in the 1960s.\n\nSubscribe to Stickstory for a strange true story every day. How many times have you said OK today? Tell me in the comments!\n\n#shorts #originofok #wordorigins #stickstory",
+  "tags": [
+   "origin of ok",
+   "origin of ok word",
+   "ok meaning origin",
+   "where does ok come from",
+   "what does ok stand for",
+   "oll korrect",
+   "old kinderhook",
+   "martin van buren",
+   "boston morning post",
+   "allen walker read",
+   "word origins",
+   "etymology",
+   "origins of everyday things",
+   "strange history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-24T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "ok_page",
+   "text": "The word OK started as a bad joke.",
+   "visual": "A big 1839 Boston newspaper sheet ('MORNING POST', scribbled columns) fills the frame; a giant red ink stamp 'O.K.' slams onto it with ink splatters; the big fez narrator in front jumps back in shock, and jumps again on 'joke'.",
+   "title": {
+    "white": "Boston",
+    "gray": "1839"
+   },
+   "cues": {
+    "hit": "joke"
+   },
+   "params": {
+    "masthead": "MORNING POST",
+    "date": "BOSTON, 1839",
+    "page": {
+     "y": 0.42,
+     "h": 0.38
+    },
+    "stamps": [
+     {
+      "text": "O.K.",
+      "x": 0.35,
+      "y": 0.6,
+      "size": 210,
+      "rot": -7,
+      "at": 0.05
+     }
+    ],
+    "kasif": {
+     "x": 0.76,
+     "y": 0.64,
+     "scale": 1.35,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_press",
+   "text": "In 1830s Boston, newspapers had a weird fad.",
+   "visual": "Inside an 1830s print shop: a wooden hand press, a pressman with a beret pulls the bar, the platen comes down and printed sheets with small red initials flutter up out of the press; the fez narrator on the left points up at them, then jumps in surprise on 'fad'.",
+   "title": {
+    "white": "Boston",
+    "gray": "1830s newspapers"
+   },
+   "cues": {
+    "go": "Boston",
+    "hit": "fad"
+   },
+   "params": {
+    "period": 1.1,
+    "mark": [
+     "O.K.",
+     "N.S.",
+     "O.W."
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.6,
+     "scale": 0.9,
+     "pose": "point",
+     "dir": 45,
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_page",
+   "text": "They shortened phrases into initials, and misspelled them on purpose.",
+   "visual": "The newspaper page again: red joke initials 'N.S.', 'K.Y.' and 'O.W.' stamp onto it one by one; under 'O.W.' a handwritten note 'oll wright' is underlined in red; the fez narrator explains, then shrugs laughing on 'purpose'.",
+   "title": {
+    "white": "The fad",
+    "gray": "joke initials"
+   },
+   "cues": {
+    "a": "shortened",
+    "b": "initials",
+    "c": "misspelled",
+    "n": "purpose",
+    "hit": "purpose"
+   },
+   "params": {
+    "masthead": "MORNING POST",
+    "date": "",
+    "page": {
+     "y": 0.37
+    },
+    "stamps": [
+     {
+      "text": "N.S.",
+      "x": 0.27,
+      "y": 0.42,
+      "size": 130,
+      "rot": -8,
+      "at": "a"
+     },
+     {
+      "text": "K.Y.",
+      "x": 0.64,
+      "y": 0.4,
+      "size": 130,
+      "rot": 6,
+      "at": "b"
+     },
+     {
+      "text": "O.W.",
+      "x": 0.42,
+      "y": 0.72,
+      "size": 160,
+      "rot": -4,
+      "at": "c",
+      "note": {
+       "text": "oll wright",
+       "dx": 0,
+       "dy": 70,
+       "size": 64,
+       "at": "n"
+      }
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.61,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_morph",
+   "text": "So “all correct” became “oll korrect,” then just O.K.",
+   "visual": "In a print shop (type-case drawers, a desk with a tilted type case, a swinging lamp), wooden type blocks read 'ALL / CORRECT'; on 'became' the A and the C flip over into a red O and K ('OLL / KORRECT'); on 'simply' the other letters fall away and the red O and K slide together into a giant 'O.K.' with red dots and an underline; the fez narrator on the right points up, then jumps in shock.",
+   "title": {
+    "white": "All correct",
+    "gray": "spelled wrong"
+   },
+   "cues": {
+    "swap": "became",
+    "shrink": "just",
+    "hit": "O.K."
+   },
+   "params": {
+    "words": [
+     "ALL",
+     "CORRECT"
+    ],
+    "to": [
+     "OLL",
+     "KORRECT"
+    ],
+    "final_x": 0.38,
+    "kasif": {
+     "x": 0.85,
+     "y": 0.61,
+     "scale": 0.95,
+     "pose": "point",
+     "dir": 55,
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "Most of those jokes died fast.",
+   "visual": "The joke initials 'N.S.', 'K.Y.' and 'O.W.' stand big on the page and get struck through with a red ink line one after another; the fez narrator shrugs.",
+   "title": {
+    "white": "Forgotten"
+   },
+   "cues": {
+    "s1": "jokes",
+    "s2": "died",
+    "s3": "fast",
+    "hit": "died"
+   },
+   "params": {
+    "items": [
+     {
+      "text": "N.S.",
+      "at": 0.05,
+      "strike": "s1",
+      "size": 160
+     },
+     {
+      "text": "K.Y.",
+      "at": 0.15,
+      "strike": "s2",
+      "size": 160
+     },
+     {
+      "text": "O.W.",
+      "at": 0.25,
+      "strike": "s3",
+      "size": 160
+     }
+    ],
+    "x": 0.4,
+    "kasif": {
+     "x": 0.82,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_rally",
+   "text": "But OK got lucky. In 1840, Martin Van Buren ran again.",
+   "visual": "An 1840 street of brick houses, a green 'LUCKY' scribble pops in on 'lucky': Martin Van Buren (no hat, big mutton chops, red bow tie) stands on a speaker's platform with red and blue bunting and 'VAN BUREN' on its front, waving; three supporters cheer in front of it; the fez narrator on the left points at him.",
+   "title": {
+    "white": "1840",
+    "gray": "the election"
+   },
+   "cues": {
+    "l": "lucky",
+    "go": "Martin",
+    "hit": "again"
+   },
+   "params": {
+    "podium": {
+     "x": 0.72,
+     "text": "VAN BUREN",
+     "at": 0.05
+    },
+    "label": {
+     "text": "LUCKY",
+     "x": 0.36,
+     "y": 0.22,
+     "size": 110,
+     "at": "l",
+     "color": "green"
+    },
+    "vb": {
+     "scale": 0.95,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 50,
+       "emotion": "happy"
+      }
+     ]
+    },
+    "crowd": {
+     "n": 3,
+     "walk": false,
+     "from": 0.33,
+     "spacing": 0.12,
+     "signs": [
+      null,
+      null,
+      null
+     ],
+     "faces": [
+      "right",
+      "right",
+      "right"
+     ],
+     "poses": [
+      "wave",
+      "point",
+      "wave"
+     ]
+    },
+    "kasif": {
+     "x": 0.13,
+     "y": 0.61,
+     "scale": 0.9,
+     "pose": "talk",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "go",
+       "pose": "point",
+       "dir": 30
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_morph",
+   "text": "Now, guess his nickname? Old Kinderhook.",
+   "visual": "In the print shop a big red '?' wobbles while the fez narrator rubs his chin; on 'nickname' wooden type blocks drop in and read 'OLD / KINDERHOOK' in full; on 'Old' the O and the K turn red; just after 'Kinderhook' the other letters fall away and the two slide into a giant red 'O.K.'; the narrator jumps back in shock, face clearly visible.",
+   "title": {
+    "white": "His nickname"
+   },
+   "cues": {
+    "g": "guess",
+    "enter": "nickname",
+    "hl": "Old",
+    "shrink": "Kinderhook"
+   },
+   "params": {
+    "words": [
+     "OLD",
+     "KINDERHOOK"
+    ],
+    "at": "enter",
+    "pre": "?",
+    "y": 0.25,
+    "block": 80,
+    "final_x": 0.4,
+    "final_y": 0.34,
+    "shrink_delay": 0.35,
+    "kasif": {
+     "x": 0.8,
+     "y": 0.61,
+     "scale": 0.75,
+     "pose": "talk",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "g",
+       "pose": "think"
+      },
+      {
+       "at": "enter",
+       "pose": "point",
+       "dir": 55,
+       "emotion": "surprised"
+      },
+      {
+       "at": "shrink",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_rally",
+   "text": "His fans formed O.K. Clubs, and soon you saw OK everywhere.",
+   "visual": "Supporters march down the 1840 street left to right holding red 'O.K.' signs, two of them carry a banner 'O.K. CLUB' on poles; the fez narrator on the right waves along, then points on 'everywhere'.",
+   "title": {
+    "white": "O.K. Clubs",
+    "gray": "1840"
+   },
+   "cues": {
+    "hit": "everywhere"
+   },
+   "params": {
+    "podium": false,
+    "crowd": {
+     "n": 4,
+     "walk": true,
+     "from": -0.2,
+     "spacing": 0.22,
+     "speed": 110,
+     "signs": [
+      "O.K.",
+      null,
+      null,
+      "O.K."
+     ],
+     "banner": {
+      "text": "O.K. CLUB",
+      "between": [
+       1,
+       2
+      ]
+     }
+    },
+    "kasif": {
+     "x": 0.87,
+     "y": 0.63,
+     "scale": 0.95,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 40,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_rally",
+   "text": "Van Buren lost the election.",
+   "visual": "Van Buren stands alone on his bunting platform and shrugs, worried; big red 'HE LOST' slams in above; the fez narrator on the left shrugs too.",
+   "title": {
+    "white": "1840",
+    "gray": "the result"
+   },
+   "cues": {
+    "hit": "lost"
+   },
+   "params": {
+    "podium": {
+     "x": 0.68,
+     "text": "VAN BUREN"
+    },
+    "vb": {
+     "scale": 0.95,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "crowd": false,
+    "label": {
+     "text": "HE LOST",
+     "x": 0.5,
+     "y": 0.2,
+     "size": 150,
+     "at": "hit"
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.61,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ok_world",
+   "text": "The joke won the world.",
+   "visual": "A slowly turning ink globe; speech bubbles saying 'OK' pop up all around it one after another; the fez narrator waves happily.",
+   "title": {
+    "white": "Today",
+    "gray": "everywhere"
+   },
+   "cues": {
+    "go": "joke",
+    "hit": "world"
+   },
+   "params": {
+    "at": 0.15,
+    "every": 0.18,
+    "bubbles": 7,
+    "x": 0.46,
+    "y": 0.37,
+    "r": 250,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.61,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": 40,
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
