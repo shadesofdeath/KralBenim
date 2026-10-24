@@ -172,7 +172,7 @@ web varsa tarih ve sayıları doğrula, emin olmadığın sayıyı yazma, yaygı
 
 ## İkinci kanal: Stickstory (global, İngilizce)
 
-Ayrı bir zamanlanmış görev her gün 11:10'da (İstanbul) bunu tetikler. Tarz, akış, kalite, kapak ve SEO kuralları yukarıdakiyle
+Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı görev, saate göre kanal seçer). Tarz, akış, kalite, kapak ve SEO kuralları yukarıdakiyle
 **birebir aynı**; İngilizce anlatım kuralları **BRAND.md §11**. Farklar:
 - `python tools/plan.py --channel ag`; dosyalar `ag-NN-<slug>.json`; plan her video için farklı bir `category` önerir.
 - **Her şey İngilizce:** ses, ekrandaki her yazı (kicker, etiketler, el yazısı notlar, "CHAPTER 2 / 5"), altyazı, kapak,
