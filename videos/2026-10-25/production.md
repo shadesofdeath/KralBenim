@@ -589,3 +589,28 @@ Doğruluk: kicker "2026 find" yanlış (bulundu 2024, duyuruldu 2026), "just tur
 Düzeltmeler (yönetmen): sahne 4 tekne kaldırıldı, "AGE = ?" "date"te; Kaşif 0.68–0.75; zaman çizelgesine "c. 2200 BC
 Greek wreck"; "Here's the clever part:" ve "And what was left?" eklendi (496 karakter); kicker "found 2024"; açıklama
 düzeltildi. Pano çubukları (1.0 / 0.93) gerçek oranı gösterdiği için bilerek bozulmadı. Lint OK, preview'de STATIC yok.
+
+# Stickstory ek video — ag-06-earhart-taraia-object (Short, extra, 25.10 17:55 İstanbul)
+
+İstek: "Bir video daha, Türkiye'den olmasın, ABD olabilir; Google News'te viral olan bir haber." Kanal sahibine
+3 aday sunuldu (Earhart / Taraia Object, Alaska'daki 13.800 yıllık ev, 82 yıl sonra bulunan U-boat); **Earhart seçildi**.
+
+- Haber: Purdue + Archaeological Legacy Institute'un 17 kişilik ekibi Nikumaroro lagünündeki "Taraia Object"i inceledi
+  (Purdue, National Geographic, ExplorersWeb, 19–21 Ekim 2026): uçak değil, kum dilinde devrilmiş ağaçlar; metal parıltısı
+  odunu kaplayan sertleşmiş mercan kumu; dev hindistancevizi yengeçleri yüzünden ekip her gece gemiye döndü.
+  Arka plan: Earhart ve Fred Noonan 2 Temmuz 1937'de Howland Adası'nı ararken Lockheed Electra ile kayboldu.
+- Kanca/kapak: "Was this blur Amelia Earhart's lost plane?" ↔ WAS THIS / EARHART'S / **PLANE?** (uydu fotoğrafı, kırmızı halka, şoktaki Kaşif).
+- Anlatım (495 karakter, 9 sahne): Was this blur Amelia Earhart's lost plane? In 1937, Earhart vanished over the Pacific.
+  One theory says she landed on Nikumaroro instead. In 2020, satellite photos caught a strange shape there. It even glinted
+  like metal! This year, seventeen people finally went to check. What did they find? Fallen trees on a sandbar. That metal
+  shine? Wood crusted with coral sand. Giant coconut crabs were so bad, the team slept on their ship every night. The plane
+  is still out there, and the search goes on.
+- Sahneler: ea_sat · ea_plane · rm_plus/map · ea_sat · stage · ea_lagoon · ea_log · ea_crabs · title.
+  Yeni dosya: `scenes/studio/shots/ea_earhart.js`.
+
+### ag-06-earhart-taraia-object — tur 1
+Puanlar: 7 · 8 · 7 · 7 · 7 · 6 · 7 · 8 · 7 · Kapanış 5 · Kapak+SEO 7. Sorunlar: şakacı kapanış; hayalet uçak kicker'a biniyor,
+yengeç sahnesinde Kaşif kadraj dışına koşuyor, haritada etiketin üstünde; "?" altyazı şeridinde; "This fall/October" doğrulanmamış.
+Düzeltmeler: kapanış "The plane is still out there, and the search goes on." (THE SEARCH / GOES ON, Kaşif dürbünle bakar);
+hayalet Electra kum dilinin üstüne; Kaşif to 0.85; harita Kaşif'i solda; "?" kaldırıldı, kapak yakınlaşması 1.75;
+"This year" + kicker "2026"; başlık "…That Fooled Searchers". Kapak: t 2.6 / 3.0 ve zoom 1.5 / 1.75 karşılaştırıldı, 3.0 + 1.75 seçildi.

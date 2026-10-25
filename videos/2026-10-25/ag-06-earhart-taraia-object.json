@@ -1,0 +1,522 @@
+{
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "extra": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-06-earhart-taraia-object",
+ "cover": {
+  "lines": [
+   "Was this",
+   "Earhart's",
+   "plane?"
+  ],
+  "highlight": [
+   "plane"
+  ],
+  "scene": 0,
+  "t": 3.0,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Amelia Earhart Plane: The Blur That Fooled Searchers",
+  "description": "Was the Amelia Earhart plane finally found? A strange shape in a lagoon on Nikumaroro even glinted like metal in satellite photos. Now an expedition has finally checked it.\n\nIn 1937 Amelia Earhart and her navigator Fred Noonan vanished over the Pacific while looking for tiny Howland Island. One theory says they landed on Nikumaroro instead. In 2020 satellite images showed the so-called Taraia Object in its lagoon. A 17-person team from Purdue University and the Archaeological Legacy Institute found fallen trees on a sandbar, crusted with coral sand. Giant coconut crabs even kept them from camping on the island.\n\nSubscribe to Stickstory for a strange true story every day. Where do you think Amelia Earhart's plane is? Tell me in the comments!\n\n#shorts #ameliaearhart #unsolvedmysteries #stickstory",
+  "tags": [
+   "amelia earhart plane",
+   "amelia earhart",
+   "amelia earhart plane found",
+   "amelia earhart mystery",
+   "amelia earhart nikumaroro",
+   "taraia object",
+   "nikumaroro",
+   "fred noonan",
+   "lockheed electra",
+   "purdue university",
+   "unsolved mysteries",
+   "aviation history",
+   "history mysteries",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-25T17:55:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "ea_sat",
+   "text": "Was this blur Amelia Earhart's lost plane?",
+   "visual": "A taped-down satellite photo of a ring-shaped atoll; the camera creeps in on a dark Y-shaped blur in the lagoon, a red ink ring circles it on 'plane'; the fez narrator below the photo points at it in shock.",
+   "title": {
+    "white": "Nikumaroro",
+    "gray": "the Pacific"
+   },
+   "cues": {
+    "ring": "Earhart",
+    "hit": "plane"
+   },
+   "params": {
+    "ring": "ring",
+    "glint": 0.3,
+    "zoom": 1.75,
+    "photo": {
+     "x": 0.5,
+     "y": 0.34,
+     "w": 0.88,
+     "h": 0.4
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.76,
+      "y": 0.6,
+      "scale": 0.72,
+      "pose": "point",
+      "dir": 50,
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ea_plane",
+   "text": "In 1937, Earhart vanished over the Pacific.",
+   "visual": "Earhart's twin-engine Lockheed Electra flies right above the clouds, propellers spinning, a red dashed route behind it and a tiny island speck on the sea far ahead; on 'vanished' a cloud bank rolls over it and the plane fades to a dashed outline; hand-written '1937'.",
+   "title": {
+    "white": "July 1937",
+    "gray": "the last flight"
+   },
+   "cues": {
+    "route": "1937",
+    "v": "vanished"
+   },
+   "params": {
+    "vanish": "v",
+    "route": "route",
+    "y": 0.4,
+    "label": {
+     "text": "1937",
+     "x": 0.5,
+     "y": 0.2,
+     "at": "route",
+     "size": 110
+    }
+   }
+  },
+  {
+   "type": "rm_plus",
+   "text": "One theory says she landed on Nikumaroro instead.",
+   "visual": "Old map of the Pacific: a dashed route ends at Howland Island, then a red dashed line bends south to Nikumaroro, which turns red; the fez narrator points at it.",
+   "title": {
+    "white": "The theory",
+    "gray": "a castaway"
+   },
+   "cues": {
+    "route": "landed",
+    "city": "Nikumaroro"
+   },
+   "params": {
+    "shot": "map",
+    "params": {
+     "coords": "sheet",
+     "land": [
+      [
+       [
+        0.02,
+        0.5
+       ],
+       [
+        0.12,
+        0.46
+       ],
+       [
+        0.16,
+        0.56
+       ],
+       [
+        0.1,
+        0.68
+       ],
+       [
+        0.02,
+        0.66
+       ]
+      ],
+      [
+       [
+        0.6,
+        0.28
+       ],
+       [
+        0.62,
+        0.27
+       ],
+       [
+        0.63,
+        0.29
+       ],
+       [
+        0.61,
+        0.3
+       ]
+      ],
+      [
+       [
+        0.72,
+        0.66
+       ],
+       [
+        0.75,
+        0.65
+       ],
+       [
+        0.76,
+        0.67
+       ],
+       [
+        0.73,
+        0.68
+       ]
+      ]
+     ],
+     "cities": [
+      {
+       "name": "Howland",
+       "x": 0.615,
+       "y": 0.285,
+       "dx": 0,
+       "dy": -34,
+       "anchor": "middle",
+       "at": 0.1
+      },
+      {
+       "name": "Nikumaroro",
+       "x": 0.74,
+       "y": 0.665,
+       "dx": 0,
+       "dy": 60,
+       "anchor": "middle",
+       "color": "red",
+       "at": "city"
+      }
+     ],
+     "route": {
+      "points": [
+       [
+        0.615,
+        0.285
+       ],
+       [
+        0.7,
+        0.45
+       ],
+       [
+        0.74,
+        0.66
+       ]
+      ],
+      "at": "route",
+      "dur": 1.4,
+      "color": "red"
+     },
+     "seas": [
+      {
+       "name": "Pacific Ocean",
+       "x": 0.45,
+       "y": 0.85
+      }
+     ],
+     "compass": "tr",
+     "zoom": 1.05
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.62,
+      "scale": 0.8,
+      "pose": "think",
+      "at": "city",
+      "then": "point",
+      "dir": 10,
+      "face": "right"
+     }
+    ],
+    "scale": 1.1,
+    "origin": [
+     0.5,
+     0.15
+    ]
+   }
+  },
+  {
+   "type": "ea_sat",
+   "text": "In 2020, satellite photos caught a strange shape there. It even glinted like metal!",
+   "visual": "The satellite photo again, zooming slowly into the lagoon: the dark Y-shaped blur, a red ring on 'shape', then gold sparkles flash on it on 'glinted'; the fez narrator peers through his spyglass, then jumps back.",
+   "title": {
+    "white": "2020",
+    "gray": "satellite photos"
+   },
+   "cues": {
+    "ring": "shape",
+    "glint": "glinted"
+   },
+   "params": {
+    "ring": "ring",
+    "glint": "glint",
+    "zoom": 1.9,
+    "photo": {
+     "x": 0.5,
+     "y": 0.34,
+     "w": 0.88,
+     "h": 0.4
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.78,
+      "y": 0.6,
+      "scale": 0.68,
+      "pose": "look",
+      "face": "left",
+      "at": "glint",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "This year, seventeen people finally went to check.",
+   "visual": "On a beach, three expedition members and the fez narrator march towards a ship waiting in the water; hand-written 'TEAM OF 17' appears.",
+   "title": {
+    "white": "2026",
+    "gray": "the expedition"
+   },
+   "cues": {
+    "go": "people",
+    "hit": "seventeen"
+   },
+   "params": {
+    "ground_y": 1140,
+    "foreground": "hatch",
+    "backdrop": {
+     "type": "sea",
+     "y": 0.56,
+     "coast": "left",
+     "opacity": 0.8
+    },
+    "scale": 1.0,
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.84,
+      "y": 0.594,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "TEAM OF 17",
+     "x": 0.5,
+     "y": 0.22,
+     "at": "hit",
+     "size": 96
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.06,
+      "to": 0.3,
+      "scale": 0.85,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "wave"
+     },
+     {
+      "who": "diver",
+      "accessory": "beret",
+      "x": 0.18,
+      "to": 0.44,
+      "scale": 0.85,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": 10
+     },
+     {
+      "who": "scientist",
+      "beard": "short",
+      "x": 0.3,
+      "to": 0.58,
+      "scale": 0.85,
+      "pose": "walk",
+      "face": "right",
+      "at": "hit",
+      "then": "idle"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ea_lagoon",
+   "text": "What did they find? Fallen trees on a sandbar.",
+   "visual": "Standing knee-deep in the lagoon: a dashed ghost outline of the Electra hangs over a sandbar and fades away on 'trees', revealing a tangle of Y-shaped fallen tree trunks; a red stamp 'TREES' slams in; the fez narrator in the water shrugs.",
+   "title": {
+    "white": "Taraia Object"
+   },
+   "cues": {
+    "trees": "trees",
+    "hit": "sandbar"
+   },
+   "params": {
+    "water": 0.4,
+    "ghost": {
+     "at": 0,
+     "gone": "trees"
+    },
+    "trees": "trees",
+    "zoom": 1.06,
+    "focus": [
+     0.5,
+     0.5
+    ],
+    "label": {
+     "text": "TREES",
+     "x": 0.5,
+     "y": 0.2,
+     "at": "trees",
+     "size": 130,
+     "stamp": true
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "y": 0.6,
+      "scale": 0.6,
+      "pose": "look",
+      "face": "left",
+      "at": "trees",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ea_log",
+   "text": "That metal shine? Wood crusted with coral sand.",
+   "visual": "Close-up of one fallen trunk crusted with pale coral sand; gold sparkles glint on it, then a red ring and the hand-written note 'coral sand' with an arrow; the fez narrator looks through his spyglass, then points.",
+   "title": {
+    "white": "The shine",
+    "gray": "up close"
+   },
+   "cues": {
+    "glint": "shine",
+    "ring": "crusted"
+   },
+   "params": {
+    "glint": "glint",
+    "ring": "ring",
+    "ground": 0.56,
+    "note": "coral sand",
+    "note_x": 0.42,
+    "note_y": 0.24,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "y": 0.6,
+      "scale": 0.6,
+      "pose": "look",
+      "face": "left",
+      "at": "ring",
+      "then": "point",
+      "dir": 20
+     }
+    ]
+   }
+  },
+  {
+   "type": "ea_crabs",
+   "text": "Giant coconut crabs were so bad, the team slept on their ship every night.",
+   "visual": "Night on the atoll: moon, stars, palms, the expedition ship with a lit window offshore; three giant coconut crabs with huge claws crawl out of the brush; on 'slept' the fez narrator runs to the right towards the ship.",
+   "title": {
+    "white": "Night",
+    "gray": "on the atoll"
+   },
+   "cues": {
+    "run": "slept"
+   },
+   "params": {
+    "crabs": 3,
+    "ground": 0.5,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.6,
+      "y": 0.56,
+      "scale": 0.6,
+      "pose": "shock",
+      "face": "left",
+      "emotion": "surprised",
+      "at": "run",
+      "then": "run",
+      "to": 0.85,
+      "end": "idle"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "The plane is still out there, and the search goes on.",
+   "visual": "Giant words build up: 'THE SEARCH / GOES ON' with 'SEARCH' in a red box; the big fez narrator below raises his spyglass and looks out to sea.",
+   "title": {},
+   "cues": {
+    "w0": "search",
+    "w1": "goes"
+   },
+   "params": {
+    "lines": [
+     "THE SEARCH",
+     "GOES ON"
+    ],
+    "highlight": [
+     "SEARCH"
+    ],
+    "y": 0.25,
+    "kasif": {
+     "x": 0.74,
+     "y": 0.77,
+     "pose": "look",
+     "at": "w1",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "happy"
+    }
+   }
+  }
+ ]
+}
