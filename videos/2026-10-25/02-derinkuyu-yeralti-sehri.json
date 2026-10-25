@@ -1,0 +1,2865 @@
+{
+ "channel": "Düşün Bakalım",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "derinkuyu-yeralti-sehri",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "85 metre",
+   "aşağıda",
+   "bir şehir"
+  ],
+  "highlight": [
+   "aşağıda"
+  ],
+  "scene": 1,
+  "t": 3.2,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1560,
+   "y": 1030,
+   "scale": 1.6,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Derinkuyu Yeraltı Şehri: Bir Duvarın Arkasından Çıktı!",
+  "description": "Derinkuyu yeraltı şehri, 1963'te Kapadokya'da bir adamın bodrum duvarını yıkmasıyla ortaya çıktı. Peki yerin 85 metre altındaki bu şehri kim kazdı ve insanlar neden oraya indi?\n\nYumuşak tüf kayaya oyulmuş katlar, temiz havayı en alt kata taşıyan bacalar, kuyular ve içeriden kapanan dev yuvarlak taş kapılar. Kapadokya yeraltı şehirlerinin Frigler'den Bizans'a uzanan hikâyesini, akınlara karşı nasıl bir sığınağa dönüştüğünü ve 1923'ten sonra nasıl unutulduğunu anlatıyoruz.\n\nBu videoda:\n• 1963: bodrumdaki duvarın arkasından çıkan tünel\n• Ahırdan kiliseye kat kat bir yeraltı şehri\n• Bacalar, kuyular ve yuvarlanan taş kapılar\n• Derinkuyu'yu kim kazdı?\n• Nevşehir'de bulunan yeni yeraltı şehri\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence tehlike gelince yerin altına iner miydin, yoksa kaçar mıydın? Yorumlara yaz!\n\n#derinkuyu #kapadokya #yeraltışehri #tarih #düşünbakalım",
+  "tags": [
+   "derinkuyu yeraltı şehri",
+   "derinkuyu",
+   "derinkuyu yeraltı şehri tarihi",
+   "yeraltı şehri",
+   "kapadokya yeraltı şehri",
+   "kapadokya",
+   "nevşehir yeraltı şehri",
+   "kaymaklı yeraltı şehri",
+   "tüf kaya",
+   "bizans",
+   "frigler",
+   "taş kapı",
+   "türkiye tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-25T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Bodrumdaki duvar",
+   "type": "dr_wall",
+   "text": "1963'te Kapadokya'da bir adam, evinin bodrumundaki bir duvarı yıktı.",
+   "visual": "Taş bloklu bodrum duvarı, rafta küpler, tavanda kandil; bereli köylü balyozu kaldırıp indirir, duvarda çatlaklar yayılır; 'yıktı'da taş parçaları düşer, toz bulutu kalkar, duvarda karanlık bir delik açılır; solda Kaşif fenerle bakar, 'yıktı'da şok olur",
+   "title": {
+    "white": "1963",
+    "gray": "Derinkuyu"
+   },
+   "cues": {
+    "hit": "yıktı"
+   },
+   "params": {
+    "mode": "basement",
+    "break": "hit",
+    "cracks": 0.4,
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.8,
+      "y": 0.9,
+      "scale": 0.8,
+      "face": "left",
+      "tool": "hammer",
+      "swing": [
+       0.2,
+       "hit"
+      ],
+      "accessory": "beret",
+      "pose": "idle"
+     },
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "y": 0.92,
+      "scale": 0.8,
+      "pose": "look",
+      "lantern": true,
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_wall",
+   "text": "Duvarın arkasında bilmediği bir oda vardı. O odadan da karanlık bir geçit aşağıya iniyordu.",
+   "visual": "Aynı bodrum, delik açık: içinde aşağıya doğru küçülen tünel kemerleri ve basamaklar, delikten toz zerreleri süzülür; Kaşif fenerle deliğe yürür, 'aşağıya'da aşağıyı gösterir; köylü şaşkın geri çekilir",
+   "title": {
+    "white": "Gizli geçit"
+   },
+   "cues": {
+    "room": "oda",
+    "down": "aşağıya"
+   },
+   "params": {
+    "mode": "basement",
+    "open": true,
+    "hole": {
+     "x": 0.42,
+     "y": 0.5,
+     "rx": 190,
+     "ry": 235
+    },
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.8,
+      "y": 0.9,
+      "scale": 0.8,
+      "face": "left",
+      "accessory": "beret",
+      "pose": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "kasif",
+      "x": 0.02,
+      "to": 0.18,
+      "walk_at": 0.1,
+      "y": 0.92,
+      "scale": 0.8,
+      "pose": "walk",
+      "lantern": true,
+      "face": "right",
+      "then": "look",
+      "at": "room",
+      "seq": [
+       {
+        "at": "down",
+        "pose": "point",
+        "dir": "down",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "aşağı",
+      "x": 0.64,
+      "y": 0.2,
+      "at": "down",
+      "arrow": [
+       0.46,
+       0.5
+      ],
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.45,
+      0.52
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Aşağı, daha da aşağı. Adam farkında olmadan yüzyıllardır unutulmuş bir şehrin kapısını açmıştı!",
+   "visual": "Kesit görünümü: yüzeyde köy evleri ve peri bacası; kamera yerin altına iner, kat kat oyulmuş odalar, eğimli tüneller ve bacalar görünür; soldaki derinlik cetveli kayar; Kaşif fenerle bir kattan yürür; 'şehrin'de 'ŞEHİR' damgası",
+   "title": {
+    "white": "Yerin altında"
+   },
+   "cues": {
+    "hit": "şehrin"
+   },
+   "params": {
+    "cam": {
+     "d0": 2,
+     "d1": 40,
+     "z0": 0.95,
+     "z1": 0.62,
+     "x0": 0.5,
+     "x1": 0.5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 2,
+      "x": 0.3,
+      "to": 0.5,
+      "walk_at": 0.3,
+      "walk_dur": 3,
+      "scale": 0.36,
+      "pose": "walk",
+      "lantern": true,
+      "then": "shock",
+      "at": "hit"
+     }
+    ],
+    "people": [
+     {
+      "level": 0,
+      "x": 0.24,
+      "pose": "idle"
+     },
+     {
+      "level": 4,
+      "x": 0.7,
+      "pose": "idle"
+     }
+    ],
+    "stamp": {
+     "text": "ŞEHİR",
+     "at": "hit",
+     "x": 0.8,
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki bu şehri kim kazdı? İnsanlar neden güneşi bırakıp yerin altına indi?",
+   "visual": "Dev yazı kelime kelime: 'KİM KAZDI?', 'kazdı' kırmızı kutuda; el yazısı not 've neden?'; sağda Kaşif önce düşünür, 'anlatayım'da izleyiciyi gösterir",
+   "title": {
+    "white": "Soru"
+   },
+   "cues": {
+    "w0": "kim",
+    "w1": "kazdı",
+    "note": "neden",
+    "go": "altına"
+   },
+   "params": {
+    "lines": [
+     "Kim",
+     "kazdı?"
+    ],
+    "highlight": [
+     "kazdı"
+    ],
+    "note": {
+     "text": "ve neden?",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.84,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "emotion": "worried",
+     "at": "go"
+    }
+   }
+  },
+  {
+   "chapter": "Yumuşak taş",
+   "type": "chapter",
+   "text": "Önce yeri tanıyalım.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Yumuşak taş'",
+   "title": {},
+   "cues": {
+    "n": "Önce",
+    "title": "tanıyalım"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Yumuşak taş"
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Nevşehir'in güneyinde Derinkuyu diye bir kasaba var. Adı bile bir ipucu: derin kuyu.",
+   "visual": "Kapadokya haritası: Erciyes Dağı, Hasandağ (yanardağlar) ve Kızılırmak yazıları; 'Nevşehir'de şehir halkası, 'Derinkuyu'da kırmızı halka ve rota; 'ipucu'nda 'derin + kuyu' notu; solda Kaşif işaret eder, sonra parmağını kaldırır",
+   "title": {
+    "white": "Derinkuyu"
+   },
+   "cues": {
+    "nev": "Nevşehir'in",
+    "der": "Derinkuyu",
+    "hit": "ipucu"
+   },
+   "params": {
+    "view": [
+     33.4,
+     36.2,
+     37.7,
+     39.3
+    ],
+    "texts": [
+     {
+      "text": "Erciyes Dağı",
+      "lon": 35.45,
+      "lat": 38.53,
+      "at": 0.4,
+      "size": 50,
+      "color": "soft"
+     },
+     {
+      "text": "Hasandağ",
+      "lon": 34.17,
+      "lat": 38.13,
+      "at": 0.6,
+      "size": 50,
+      "color": "soft"
+     },
+     {
+      "text": "Kızılırmak",
+      "lon": 34.0,
+      "lat": 39.08,
+      "at": 0.8,
+      "size": 46,
+      "color": "soft",
+      "rot": -6
+     }
+    ],
+    "cities": [
+     {
+      "name": "Nevşehir",
+      "lon": 34.71,
+      "lat": 38.62,
+      "at": "nev",
+      "color": "ink",
+      "ring": "nev",
+      "dy": -10,
+      "dx": -120
+     },
+     {
+      "name": "Derinkuyu",
+      "lon": 34.73,
+      "lat": 38.37,
+      "at": "der",
+      "color": "red",
+      "ring": "der",
+      "dy": 74
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        33.5,
+        39.12
+       ],
+       [
+        34.1,
+        39.0
+       ],
+       [
+        34.55,
+        38.85
+       ],
+       [
+        34.85,
+        38.74
+       ],
+       [
+        35.2,
+        38.8
+       ],
+       [
+        35.7,
+        38.92
+       ],
+       [
+        36.2,
+        39.05
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.6,
+      "color": "blue",
+      "head": false,
+      "width": 5
+     },
+     {
+      "pts": [
+       [
+        34.71,
+        38.6
+       ],
+       [
+        34.73,
+        38.39
+       ]
+      ],
+      "at": "der",
+      "dur": 0.9,
+      "color": "red"
+     }
+    ],
+    "note": {
+     "text": "derin + kuyu",
+     "x": 0.66,
+     "y": 0.84,
+     "at": "hit",
+     "color": "red"
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "point",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "up",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Milyonlarca yıl önce bu bölgedeki yanardağlar her yeri küle boğdu. O kül zamanla sertleşti ve tüf denen bir kayaya dönüştü.",
+   "visual": "Uzakta tepeler; ortada duman çıkaran yanardağ; Kaşif soldan yürüyüp gelir, 'küle'de şok olur; 'tüf'te önüne bir kaya düşer, Kaşif kayayı gösterir; 'TÜF' etiketi",
+   "title": {
+    "white": "Tüf"
+   },
+   "cues": {
+    "ash": "küle",
+    "hit": "tüf"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "pose": "walk",
+      "to": 0.26,
+      "at": "ash",
+      "then": "shock",
+      "face": "right",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "down",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "volcano",
+      "x": 0.66,
+      "scale": 1.25
+     },
+     {
+      "type": "rock",
+      "x": 0.42,
+      "scale": 0.9,
+      "at": "hit"
+     }
+    ],
+    "label": {
+     "text": "TÜF",
+     "x": 0.42,
+     "y": 0.5,
+     "at": "hit",
+     "arrow": [
+      0.42,
+      0.7
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_wall",
+   "text": "Tüf ilk kazıldığında yumuşaktır, basit bir demir aletle oyabilirsiniz. Ama havayla buluştukça sertleşir.",
+   "visual": "Açık havada peri bacaları; sağda açık renk tüf kaya yüzü; köylü kazmayla vurur, taş parçacıkları uçar, kayada kapı biçimli oyuk adım adım büyür; 'sertleşir'de 'sertleşir' notu ve Kaşif parmak kaldırır",
+   "title": {
+    "white": "Yumuşak taş"
+   },
+   "cues": {
+    "go": "kazıldığında",
+    "hit": "sertleşir"
+   },
+   "params": {
+    "mode": "cliff",
+    "carve": {
+     "at": "go",
+     "dur": 3.4
+    },
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.4,
+      "y": 0.9,
+      "scale": 0.8,
+      "face": "right",
+      "tool": "pick",
+      "swing": [
+       "go",
+       "hit"
+      ],
+      "pose": "idle",
+      "accessory": "beret"
+     },
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "y": 0.92,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "sertleşir!",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "hit",
+      "color": "red",
+      "size": 72
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_wall",
+   "text": "Kapadokyalılar bunu çok iyi biliyordu. Evlerini, ambarlarını, hatta kiliselerini kayaya oydular.",
+   "visual": "Peri bacaları ve tüf kaya yüzü: 'Evlerini'de kayada kapı ve pencereler oyulur, 'ambarlarını'nda bir oyuk daha, 'kiliselerini'de kemerli kilise cephesi ve haç belirir; Kaşif önce kapıyı, sonra kiliseyi gösterir",
+   "title": {
+    "white": "Kaya evler"
+   },
+   "cues": {
+    "home": "Evlerini",
+    "store": "ambarlarını",
+    "hit": "kiliselerini"
+   },
+   "params": {
+    "mode": "cliff",
+    "hole": {
+     "x": 0.58,
+     "y": 0.6,
+     "rx": 70,
+     "ry": 110
+    },
+    "carve": {
+     "at": 0,
+     "dur": 0.4
+    },
+    "openings": [
+     {
+      "x": 0.7,
+      "y": 0.4,
+      "w": 60,
+      "h": 80,
+      "at": "home"
+     },
+     {
+      "x": 0.8,
+      "y": 0.42,
+      "w": 60,
+      "h": 80,
+      "at": "home"
+     },
+     {
+      "x": 0.68,
+      "y": 0.84,
+      "w": 110,
+      "h": 170,
+      "at": "store"
+     },
+     {
+      "x": 0.9,
+      "y": 0.84,
+      "w": 110,
+      "h": 170,
+      "at": "hit",
+      "kind": "church"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.92,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "right",
+      "at": "home",
+      "then": "point",
+      "dir": 20,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 10,
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.34,
+      "y": 0.9,
+      "scale": 0.78,
+      "pose": "idle",
+      "face": "right",
+      "at": "store",
+      "then": "wave",
+      "accessory": "beret"
+     }
+    ],
+    "draft": false,
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.7,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Yani bir bodrumu biraz genişletmek burada sıradan bir işti. 1963'teki adamın yaptığı da tam buydu.",
+   "visual": "Kesit: köy evinin altında küçük bir bodrum; içinde bereli adam balyozla duvara vurur; bodrumun hemen yanında ve altında soluk, kesik çizgili gizli odalar; '1963'te '1963' damgası; Kaşif evin yanında omuz silker, sonra aşağıyı gösterir",
+   "title": {
+    "white": "Sıradan iş"
+   },
+   "cues": {
+    "sh": "sıradan",
+    "yr": "1963'teki"
+   },
+   "params": {
+    "levels": [
+     {
+      "x0": 0.3,
+      "x1": 0.52,
+      "d": 6,
+      "h": 5,
+      "kind": "store"
+     },
+     {
+      "x0": 0.56,
+      "x1": 0.86,
+      "d": 9,
+      "h": 6,
+      "kind": "room",
+      "ghost": true
+     },
+     {
+      "x0": 0.2,
+      "x1": 0.6,
+      "d": 18,
+      "h": 6,
+      "kind": "room",
+      "ghost": true
+     }
+    ],
+    "tunnels": [
+     [
+      [
+       0.38,
+       -1
+      ],
+      [
+       0.38,
+       6
+      ]
+     ]
+    ],
+    "shafts": [],
+    "gauge": false,
+    "cam": {
+     "d0": 0.5,
+     "d1": 1.5,
+     "z0": 1.15,
+     "z1": 1.22,
+     "x0": 0.45,
+     "x1": 0.46
+    },
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "level": 0,
+      "x": 0.47,
+      "scale": 0.3,
+      "face": "right",
+      "tool": "hammer",
+      "swing": true,
+      "accessory": "beret",
+      "pose": "idle"
+     },
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "y": 0,
+      "scale": 0.5,
+      "pose": "talk",
+      "face": "right",
+      "at": "sh",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "yr",
+        "pose": "point",
+        "dir": "down",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "stamp": {
+     "text": "1963",
+     "at": "yr",
+     "x": 0.82,
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Ama duvarın arkasından bir ambar çıkmadı. Çıkan şey, kat kat aşağı inen koca bir dünyaydı.",
+   "visual": "Kesit: kamera bodrumdan aşağı iner, kat kat odalar ve tüneller açılır; önde büyük Kaşif fenerle aşağıyı gösterir, 'dünyaydı'da şok olur",
+   "title": {
+    "white": "Aşağıda"
+   },
+   "cues": {
+    "go": "Çıkan",
+    "hit": "dünyaydı"
+   },
+   "params": {
+    "cam": {
+     "d0": 6,
+     "d1": 42,
+     "z0": 1.0,
+     "z1": 0.7,
+     "x0": 0.55,
+     "x1": 0.6,
+     "at": "go",
+     "dur": 3
+    },
+    "front": [
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "y": 0.93,
+      "scale": 0.8,
+      "pose": "point",
+      "dir": "down",
+      "lantern": true,
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Aşağı inmek",
+   "type": "chapter",
+   "text": "Gelin, birlikte aşağı inelim.",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Aşağı inmek'",
+   "title": {},
+   "cues": {
+    "n": "Gelin",
+    "title": "inelim"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Aşağı inmek"
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Bugün bu şehrin yaklaşık 85 metre derinliğe indiği biliniyor. Yani neredeyse otuz katlı bir apartman boyu!",
+   "visual": "Kesitin tamamı: kamera yüzeyden en alt kata iner; soldaki cetvelde '85 m' kırmızı kutuda belirir; 'otuz'da sağda kesik çizgili bir apartman yerin altına kat kat sarkar, '~30 KAT' yazar; Kaşif en alt katta şok olur",
+   "title": {
+    "white": "85 metre"
+   },
+   "cues": {
+    "m": "85",
+    "tw": "otuz",
+    "hit": "apartman"
+   },
+   "params": {
+    "cam": {
+     "d0": 24,
+     "d1": 50,
+     "z0": 0.56,
+     "z1": 0.52,
+     "x0": 0.72,
+     "x1": 0.75
+    },
+    "gauge": {
+     "mark": 85,
+     "at": "m"
+    },
+    "tower": {
+     "x": 1.02,
+     "floors": 28,
+     "at": "tw",
+     "dur": 1.4,
+     "label": "~30 KAT",
+     "w": 220
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 8,
+      "x": 0.42,
+      "scale": 0.4,
+      "pose": "look",
+      "lantern": true,
+      "at": "hit",
+      "then": "shock"
+     }
+    ],
+    "front": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.96,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Üstelik burası rastgele kazılmış bir mağara değildi. Her katı bir işe göre düşünülmüş, planlı bir şehirdi.",
+   "visual": "Kaşif bir parşömen planı tutar; yanında köylü düşünür; 'planlı'da Kaşif 'PLANLI' tabelası kaldırır",
+   "title": {
+    "white": "Plan"
+   },
+   "cues": {
+    "no": "mağara",
+    "hit": "planlı"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "to": 0.3,
+      "pose": "walk",
+      "at": "no",
+      "then": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "hold",
+        "text": "PLANLI",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.66,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "left",
+      "at": "no",
+      "then": "shrug"
+     }
+    ],
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.86,
+      "scale": 0.9,
+      "at": "no"
+     }
+    ]
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "En üst katlarda ahırlar vardı, çünkü hayvanları derine indirmek zordu.",
+   "visual": "Kesitin üst katı yakın: yüzey ve en üst kat; ahırda eşek ve yemlik; 'ahırlar'da kırmızı halka ve 'Ahır' etiketi; Kaşif fenerle eşeği gösterir",
+   "title": {
+    "white": "1. kat"
+   },
+   "cues": {
+    "hit": "ahırlar",
+    "deep": "derine"
+   },
+   "params": {
+    "cam": {
+     "d0": 5,
+     "d1": 6.5,
+     "z0": 1.5,
+     "z1": 1.7,
+     "x0": 0.3,
+     "x1": 0.28
+    },
+    "highlight": [
+     {
+      "level": 0,
+      "at": "hit",
+      "text": "Ahır",
+      "below": true,
+      "size": 72
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 0,
+      "x": 0.2,
+      "scale": 0.36,
+      "pose": "talk",
+      "lantern": true,
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "deep",
+        "pose": "point",
+        "dir": "down"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Biraz aşağıda şarap ve yağ işlikleri, mutfaklar, ambarlar vardı. En derinde ise bir kilise bile vardı.",
+   "visual": "Kamera iner: işlik katında akan oluk, mutfakta kaynayan tencere, ambarda küpler; 'işlikleri'nde halka 'İşlik'; kamera en alt kata kayar, 'kilise'de haç planlı kilise halkalanır 'Kilise'; Kaşif kilisede şaşırır",
+   "title": {
+    "white": "Katlar"
+   },
+   "cues": {
+    "pr": "işlikleri",
+    "ch": "kilise"
+   },
+   "params": {
+    "cam": {
+     "d0": 16,
+     "d1": 79,
+     "z0": 1.05,
+     "z1": 1.35,
+     "x0": 0.42,
+     "x1": 0.48,
+     "at": "pr",
+     "dur": 3.4
+    },
+    "highlight": [
+     {
+      "level": 2,
+      "at": "pr",
+      "text": "İşlik"
+     },
+     {
+      "level": 8,
+      "at": "ch",
+      "text": "Kilise"
+     }
+    ],
+    "people": [
+     {
+      "level": 3,
+      "x": 0.3,
+      "pose": "idle"
+     },
+     {
+      "level": 4,
+      "x": 0.66,
+      "pose": "idle"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 8,
+      "x": 0.4,
+      "scale": 0.4,
+      "pose": "look",
+      "lantern": true,
+      "at": "ch",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki bu kadar derinde insanlar nasıl nefes aldı? İşte işin dahiyane kısmı burada.",
+   "visual": "Kaşif boğazını tutar gibi düşünür (endişeli), sonra 'dahiyane'de parmağını kaldırır; yanında köylü nefes nefese omuz silker; 'nefes?' etiketi",
+   "title": {
+    "white": "Hava?"
+   },
+   "cues": {
+    "q": "nefes",
+    "hit": "dahiyane"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.0,
+      "to": 0.36,
+      "pose": "walk",
+      "at": "q",
+      "then": "think",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "up",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.66,
+      "scale": 0.95,
+      "pose": "shrug",
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "label": {
+     "text": "nefes?",
+     "x": 0.5,
+     "y": 0.2,
+     "at": "q"
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Yüzeyden aşağıya yaklaşık elli baca iniyordu. Bu bacalar temiz havayı en alt katlara kadar taşıdı.",
+   "visual": "Kesit: dikey bacalar yüzeyden aşağıya iner; 'temiz'de bacalarda mavi oklar aşağı akar; kamera bacaları izleyerek iner; Kaşif bir katta bacayı gösterir; '~50 baca' etiketi",
+   "title": {
+    "white": "Bacalar"
+   },
+   "cues": {
+    "n": "elli",
+    "air": "temiz",
+    "hit": "alt"
+   },
+   "params": {
+    "air": "air",
+    "cam": {
+     "d0": 10,
+     "d1": 40,
+     "z0": 0.7,
+     "z1": 0.62,
+     "x0": 0.5,
+     "x1": 0.55
+    },
+    "labels": [
+     {
+      "text": "~50 baca",
+      "x": 0.82,
+      "y": 0.14,
+      "at": "n",
+      "color": "blue"
+     }
+    ],
+    "cast": [],
+    "front": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.96,
+      "scale": 0.72,
+      "pose": "talk",
+      "face": "left",
+      "at": "air",
+      "then": "point",
+      "dir": "up"
+     }
+    ]
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Bazı bacalar ise kuyuydu. Yani dışarıya hiç çıkmadan su çekebiliyordunuz.",
+   "visual": "Kuyu bacasına çok yakın çekim: dipte dalgalanan su, ipine bağlı kova yukarı çıkıp iner; Kaşif bacanın yanında, fenerle, kolunu ipe uzatır; 'Kuyu' etiketi",
+   "title": {
+    "white": "Kuyu"
+   },
+   "cues": {
+    "w": "kuyuydu",
+    "pull": "çekebiliyordunuz"
+   },
+   "params": {
+    "well": "w",
+    "cam": {
+     "d0": 75,
+     "d1": 77,
+     "z0": 2.9,
+     "z1": 3.2,
+     "x0": 0.735,
+     "x1": 0.745
+    },
+    "labels": [
+     {
+      "text": "Kuyu",
+      "x": 0.84,
+      "y": 0.3,
+      "at": "w",
+      "color": "blue",
+      "size": 80
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 8,
+      "x": 0.705,
+      "scale": 0.2,
+      "pose": "point",
+      "dir": 50,
+      "lantern": true,
+      "face": "right",
+      "seq": [
+       {
+        "at": "w",
+        "pose": "point",
+        "dir": 70,
+        "face": "right"
+       },
+       {
+        "at": "pull",
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "well_span": 7
+   }
+  },
+  {
+   "type": "dr_door",
+   "text": "Ama asıl şaşırtıcı ayrıntı kapılardaydı. Koridorlarda değirmen taşı gibi, neredeyse insan boyunda yuvarlak taşlar vardı.",
+   "visual": "Kemerli geçidin yanında oyukta dev yuvarlak taş (ortası delik, keski izleri); Kaşif fenerle gelir, 'insan boyunda'da taşın yanında durup boyunu ölçer gibi elini kaldırır; 'taş kapı' etiketi",
+   "title": {
+    "white": "Taş kapı"
+   },
+   "cues": {
+    "door": "kapılardaydı",
+    "hit": "insan"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.02,
+      "to": 0.82,
+      "y": 0.9,
+      "walk_at": 0.2,
+      "walk_dur": 2.4,
+      "scale": 0.9,
+      "pose": "walk",
+      "lantern": true,
+      "face": "right",
+      "then": "point",
+      "at": "door",
+      "dir": "left",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "up",
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "taş kapı",
+      "x": 0.62,
+      "y": 0.18,
+      "at": "door",
+      "color": "red",
+      "arrow": [
+       0.62,
+       0.36
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.65
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_door",
+   "text": "Her biri yüzlerce kilo ağırlığındaydı. Tehlike gelince içeridekiler taşı yuvarlayıp geçidi kapattı. Dışarıdan onu yerinden oynatmak ise neredeyse imkânsızdı.",
+   "visual": "Kaşif ve köylü taşa omuz verip iter; 'yuvarlayıp'ta taş dönerek geçidin önüne yuvarlanır, ikisi de taşla birlikte yürür; toz kalkar, kamera sarsılır; 'imkânsızdı'da 'İÇERİDEN' damgası",
+   "title": {
+    "white": "Kapandı"
+   },
+   "cues": {
+    "roll": "yuvarlayıp",
+    "hit": "imkânsızdı"
+   },
+   "params": {
+    "roll": {
+     "at": "roll",
+     "dur": 1.5
+    },
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.88,
+      "to": 0.66,
+      "walk_at": "roll",
+      "walk_dur": 1.5,
+      "y": 0.9,
+      "scale": 0.85,
+      "pose": "point",
+      "dir": "forward",
+      "face": "left",
+      "then": "point"
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "to": 0.56,
+      "walk_at": "roll",
+      "walk_dur": 1.5,
+      "y": 0.9,
+      "scale": 0.9,
+      "pose": "point",
+      "dir": "forward",
+      "face": "left",
+      "then": "point",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "stamp": {
+     "text": "İÇERİDEN",
+     "at": "hit",
+     "x": 0.78,
+     "y": 0.2
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.65
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Yani burası bir saklanma yeri değil, bir kaleydi. Ama kime karşı?",
+   "visual": "Dev yazı: 'YERALTI KALESİ', 'kalesi' kırmızı kutuda; not 'kime karşı?'; Kaşif 'kaleydi'de şaşırır, 'kime'de düşünür",
+   "title": {
+    "white": "Kale"
+   },
+   "cues": {
+    "w0": "Yani",
+    "w1": "kaleydi",
+    "note": "kime"
+   },
+   "params": {
+    "lines": [
+     "Yeraltı",
+     "kalesi"
+    ],
+    "highlight": [
+     "kalesi"
+    ],
+    "note": {
+     "text": "kime karşı?",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.84,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.85,
+     "emotion": "surprised",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "chapter": "Kim kazdı?",
+   "type": "chapter",
+   "text": "Dürüst cevap şu: kesin olarak bilmiyoruz.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Kim kazdı?'",
+   "title": {},
+   "cues": {
+    "n": "Dürüst",
+    "title": "bilmiyoruz"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Kim kazdı?"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Çünkü kayaya oyulmuş bir odanın yaşını ölçmek çok zor. Taşın üstünde ne bir yazı var ne de kazıyanın imzası.",
+   "visual": "Kaşif büyük bir kayanın önünde dürbünle bakar, 'imzası'nda omuz silker; kayanın yanında boş tabela; '? yıl' etiketi",
+   "title": {
+    "white": "Kaç yaşında?"
+   },
+   "cues": {
+    "age": "yaşını",
+    "hit": "yazı"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.04,
+      "to": 0.26,
+      "pose": "walk",
+      "at": "age",
+      "then": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.62,
+      "scale": 1.5
+     },
+     {
+      "type": "sign",
+      "x": 0.85,
+      "scale": 0.9,
+      "at": "age",
+      "text": "? YIL"
+     }
+    ]
+   }
+  },
+  {
+   "type": "dr_wall",
+   "text": "Bazı tarihçilere göre ilk tüneller Frigler zamanında, yani milattan önce sekizinci ya da yedinci yüzyılda kazıldı. Ama bu bir tahmin.",
+   "visual": "Tüf kaya yüzü: başı açık, kısa sakallı bir Frig kazıcı kazmayla oyuk açar, taş parçacıkları uçar; 'MÖ 700?' notu; Kaşif 'tahmin'de omuz silker",
+   "title": {
+    "white": "Frigler?"
+   },
+   "cues": {
+    "a": "Frigler",
+    "b": "milattan",
+    "c": "tahmin"
+   },
+   "params": {
+    "mode": "cliff",
+    "carve": {
+     "at": "a",
+     "dur": 3.2
+    },
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.42,
+      "y": 0.9,
+      "scale": 0.85,
+      "face": "right",
+      "tool": "pick",
+      "swing": [
+       "a",
+       "c"
+      ],
+      "pose": "idle"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.92,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "right",
+      "at": "c",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "MÖ 700?",
+      "x": 0.3,
+      "y": 0.32,
+      "at": "b",
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Daha iyi bildiğimiz kısım sonrası. Bizans döneminde bölgenin Hristiyan halkı tünelleri genişletti ve kat kat derinleştirdi.",
+   "visual": "Aynı zaman çizgisi: 'Bizans' kırmızıyla vurgulanır; Kaşif 'derinleştirdi'de aşağıyı gösterir",
+   "title": {
+    "white": "Bizans"
+   },
+   "cues": {
+    "a": "iyi",
+    "b": "Bizans",
+    "c": "derinleştirdi"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "MÖ 700",
+      "text": "Frigler?",
+      "at": "a"
+     },
+     {
+      "year": "Bizans",
+      "text": "genişleme",
+      "at": "b"
+     },
+     {
+      "year": "1923",
+      "text": "mübadele",
+      "at": "a"
+     },
+     {
+      "year": "1963",
+      "text": "keşif",
+      "at": "a"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.97,
+     "pose": "point",
+     "at": "c",
+     "scale": 1.0,
+     "face": -1
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Yedinci yüzyıldan itibaren Arap orduları Anadolu'ya yüzyıllar boyunca akınlar düzenledi. Kapadokya da tam bu yolun üstündeydi.",
+   "visual": "Anadolu haritası: güneydoğudan kırmızı kesikli oklar atlılarla Toroslar'ı aşıp Kapadokya'ya uzanır; 'Kapadokya'da Derinkuyu kırmızı halkaya alınır; solda Kaşif önce okları izler, sonra şok olur",
+   "title": {
+    "white": "Akınlar"
+   },
+   "cues": {
+    "go": "Arap",
+    "hit": "Kapadokya"
+   },
+   "params": {
+    "view": [
+     28,
+     40,
+     34.6,
+     41.4
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        37.16,
+        36.2
+       ],
+       [
+        35.8,
+        36.9
+       ],
+       [
+        34.9,
+        37.3
+       ],
+       [
+        34.75,
+        38.3
+       ]
+      ],
+      "at": "go",
+      "dur": 2.0,
+      "color": "red",
+      "riders": 2,
+      "dust": true
+     },
+     {
+      "pts": [
+       [
+        38.3,
+        37.2
+       ],
+       [
+        37.0,
+        38.0
+       ],
+       [
+        35.6,
+        38.4
+       ],
+       [
+        34.9,
+        38.4
+       ]
+      ],
+      "at": "go",
+      "dur": 2.4,
+      "color": "red",
+      "riders": 1
+     }
+    ],
+    "cities": [
+     {
+      "name": "Kapadokya",
+      "lon": 34.73,
+      "lat": 38.37,
+      "at": "hit",
+      "color": "red",
+      "ring": "hit",
+      "dy": -74
+     },
+     {
+      "name": "Halep",
+      "lon": 37.16,
+      "lat": 36.2,
+      "at": 0.3,
+      "color": "soft",
+      "dy": 60
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "look",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Şimdi kendinizi o köylülerin yerine koyun. Bir sabah ufukta bir toz bulutu görüyorsunuz.",
+   "visual": "Sabah kırı, uzakta tepeler; ufukta kırmızı sancaklı atlılar dörtnala yaklaşır, arkalarında toz izi; solda Kaşif dürbünle bakar, 'toz'da şok olur; yanında köylü işaret eder",
+   "title": {
+    "white": "Ufukta"
+   },
+   "cues": {
+    "look": "sabah",
+    "hit": "toz"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.2,
+     "ridges": 2,
+     "seed": 6
+    },
+    "grass": 14,
+    "riders": [
+     {
+      "x": 1.25,
+      "to": 0.62,
+      "start": 0.2,
+      "at": "hit",
+      "gait": "gallop",
+      "face": "left",
+      "cloth": "red",
+      "banner": "red",
+      "scale": 0.85,
+      "rider": {
+       "accessory": "helmet"
+      }
+     },
+     {
+      "x": 1.45,
+      "to": 0.82,
+      "start": 0.2,
+      "at": "hit",
+      "gait": "gallop",
+      "face": "left",
+      "cloth": "red",
+      "banner": "red",
+      "scale": 0.8,
+      "rider": {
+       "accessory": "helmet"
+      }
+     }
+    ],
+    "trail": {
+     "from": [
+      0.98,
+      0.76
+     ],
+     "to": [
+      0.66,
+      0.76
+     ],
+     "at": 0.4,
+     "dur": 2.2,
+     "n": 14
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "scale": 0.95,
+      "pose": "look",
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.26,
+      "scale": 0.9,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "right"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Yakında sığınacak bir kale yok, dağlar da çok uzak. Siz ne yapardınız? Kapadokyalılar kaçmadı, aşağı indiler.",
+   "visual": "Kaşif omuz silker, köylüler bir evin kapısına koşar; 'Aşağı'da Kaşif aşağıyı gösterir, 'AŞAĞI' tabelası",
+   "title": {
+    "white": "Ne yapmalı?"
+   },
+   "cues": {
+    "q": "yapardınız",
+    "hit": "aşağı"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.22,
+      "pose": "shrug",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "down",
+      "emotion": "surprised"
+     },
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.42,
+      "to": 0.7,
+      "at": "hit",
+      "pose": "walk",
+      "run": true,
+      "face": "right",
+      "scale": 0.85
+     },
+     {
+      "who": "koylu",
+      "beard": "black",
+      "x": 0.3,
+      "to": 0.62,
+      "at": "hit",
+      "pose": "walk",
+      "run": true,
+      "face": "right",
+      "scale": 0.8
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.82,
+      "scale": 1.1
+     },
+     {
+      "type": "sign",
+      "x": 0.5,
+      "scale": 0.9,
+      "at": "hit",
+      "text": "AŞAĞI"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Taşın arkası",
+   "type": "chapter",
+   "text": "Peki bu gerçekten işe yaradı mı?",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Taşın arkası'",
+   "title": {},
+   "cues": {
+    "n": "Peki",
+    "title": "yaradı"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Taşın arkası"
+   }
+  },
+  {
+   "type": "ag03a_field",
+   "text": "Şimdi de bir akıncının yerine geçin. Köye giriyorsunuz ama evler boş, ambarlar boş, hayvanlar yok.",
+   "visual": "Köy meydanı: boş taş evler ve ambar; kırmızı sancaklı miğferli atlı soldan girer, durup etrafına bakar; 'boş'ta evlerin yanında 'BOŞ' etiketleri; sağda Kaşif omuz silker",
+   "title": {
+    "white": "Boş köy"
+   },
+   "cues": {
+    "in": "giriyorsunuz",
+    "hit": "boş"
+   },
+   "params": {
+    "far": {
+     "kind": "hills",
+     "h": 0.18,
+     "ridges": 2,
+     "seed": 3
+    },
+    "grass": 10,
+    "props": [
+     {
+      "type": "house",
+      "x": 0.62,
+      "scale": 1.1
+     },
+     {
+      "type": "house",
+      "x": 0.86,
+      "scale": 1.2
+     }
+    ],
+    "riders": [
+     {
+      "x": -0.25,
+      "to": 0.34,
+      "start": 0.1,
+      "at": "in",
+      "gait": "walk",
+      "face": "right",
+      "cloth": "red",
+      "banner": "red",
+      "rider": {
+       "accessory": "helmet",
+       "pose": "look"
+      }
+     }
+    ],
+    "labels": [
+     {
+      "text": "boş",
+      "x": 0.62,
+      "y": 0.56,
+      "at": "hit",
+      "color": "red",
+      "ring": "hit"
+     },
+     {
+      "text": "boş",
+      "x": 0.86,
+      "y": 0.54,
+      "at": "hit",
+      "color": "red",
+      "ring": "hit"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_door",
+   "text": "Sonra yerde bir delik buluyorsunuz. Koridor dar ve alçak, belinizi bükerek tek sıra yürümek zorundasınız.",
+   "visual": "Alçak kemerli geçit (taş oyukta açık); miğferli akıncı belini bükerek geçide girer ve içeride küçülerek uzaklaşır; Kaşif geçidin yanında eğilerek bakar; 'tek sıra' etiketi",
+   "title": {
+    "white": "Dar geçit"
+   },
+   "cues": {
+    "go": "delik",
+    "hit": "tek"
+   },
+   "params": {
+    "inner": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.37,
+      "y": 0.86,
+      "scale": 0.95,
+      "pose": "walk",
+      "to": 0.44,
+      "walk_at": "go",
+      "walk_dur": 3.2,
+      "face": "right",
+      "accessory": "helmet",
+      "tilt": 24,
+      "shrink": {
+       "to": 0.34,
+       "at": "go",
+       "dur": 3.2
+      }
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.9,
+      "scale": 0.85,
+      "pose": "look",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": "left",
+      "emotion": "worried",
+      "tilt": -12
+     }
+    ],
+    "labels": [
+     {
+      "text": "tek sıra",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "hit",
+      "color": "red",
+      "size": 72
+     }
+    ],
+    "door": {
+     "x": 0.42,
+     "w": 400,
+     "h": 500
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.45,
+      0.62
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_door",
+   "text": "Kılıcınızı savuramıyorsunuz bile. Karanlık bir dönemeçten sonra da karşınıza yuvarlak bir taş çıkıyor.",
+   "visual": "Dışarıdan görüş: miğferli akıncı eğilerek geçide yürür; geçidin içinde fenerli Kaşif taşı iter; 'taş'ta dev taş dönerek akıncının önünde geçidi kapatır, Kaşif içeride kalır; akıncı şaşırır; 'İÇERİDEN' damgası",
+   "title": {
+    "white": "Taş kapı"
+   },
+   "cues": {
+    "dark": "Karanlık",
+    "roll": "taş"
+   },
+   "params": {
+    "roll": {
+     "at": "roll",
+     "dur": 1.3
+    },
+    "inner": [
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "point",
+      "dir": "right",
+      "lantern": true,
+      "face": "right"
+     }
+    ],
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.98,
+      "to": 0.66,
+      "walk_at": 0.2,
+      "walk_dur": 2.6,
+      "y": 0.9,
+      "scale": 0.9,
+      "pose": "walk",
+      "face": "left",
+      "accessory": "helmet",
+      "tilt": -18,
+      "then": "shock",
+      "at": "roll"
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.4,
+      0.62
+     ]
+    },
+    "stamp": {
+     "text": "İÇERİDEN",
+     "at": "roll",
+     "x": 0.78,
+     "y": 0.2
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "İşte savunmanın sırrı buydu. Dışarıdaki ordu ne kadar kalabalık olursa olsun, dar geçitte bir kişiye karşı bir kişi vardı.",
+   "visual": "Dev yazı: 'BİRE BİR', 'bir' kırmızı kutuda; not 'ordu işe yaramaz'; Kaşif 'kişiye'de parmağını kaldırır",
+   "title": {
+    "white": "Sır"
+   },
+   "cues": {
+    "w0": "sırrı",
+    "w1": "kalabalık",
+    "note": "kişiye"
+   },
+   "params": {
+    "lines": [
+     "Bire",
+     "bir"
+    ],
+    "highlight": [
+     "bir"
+    ],
+    "note": {
+     "text": "ordu sığmaz",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.84,
+     "pose": "point",
+     "dir": 70,
+     "face": -1,
+     "scale": 0.85,
+     "emotion": "happy",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Ama aşağıda hayat hiç kolay değildi. Kandillerin isi, hayvanların kokusu ve bitmeyen bir karanlık vardı.",
+   "visual": "Kesit, orta katlar yakın: kandillerden is dumanı kıvrılarak tavana çıkar, tavanlar kararır; odalarda oturan köylüler; Kaşif fenerle durur, 'kokusu'nda endişelenir",
+   "title": {
+    "white": "Aşağıda hayat"
+   },
+   "cues": {
+    "smoke": "isi",
+    "smell": "kokusu"
+   },
+   "params": {
+    "smoke": "smoke",
+    "cam": {
+     "d0": 27,
+     "d1": 28,
+     "z0": 1.45,
+     "z1": 1.6,
+     "x0": 0.62,
+     "x1": 0.66
+    },
+    "people": [
+     {
+      "level": 3,
+      "x": 0.18,
+      "pose": "sit"
+     },
+     {
+      "level": 3,
+      "x": 0.3,
+      "pose": "sit",
+      "beard": "black"
+     },
+     {
+      "level": 4,
+      "x": 0.78,
+      "pose": "sit"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 4,
+      "x": 0.62,
+      "scale": 0.38,
+      "pose": "talk",
+      "lantern": true,
+      "face": "left",
+      "at": "smell",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "İnsanlar büyük olasılıkla tehlike geçene kadar orada kaldı. Belki günlerce, belki haftalarca.",
+   "visual": "Kaşif fenerle oturur, yanında köylü ailesi oturur; 'günlerce'de 'GÜN?' tabelası, 'haftalarca'da Kaşif parmak kaldırır",
+   "title": {
+    "white": "Ne kadar?"
+   },
+   "cues": {
+    "d": "günlerce",
+    "w": "haftalarca"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "to": 0.26,
+      "pose": "walk",
+      "at": "d",
+      "then": "talk",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "w",
+        "pose": "point",
+        "dir": "right",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.5,
+      "pose": "sit",
+      "face": "left",
+      "scale": 0.9
+     },
+     {
+      "who": "koylu",
+      "beard": "black",
+      "x": 0.64,
+      "pose": "sit",
+      "face": "left",
+      "scale": 0.75
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.82,
+      "scale": 0.8,
+      "at": "d",
+      "text": "GÜN? HAFTA?"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Şehrin kaç kişi aldığı ise tartışmalı. Binlerce kişi alabildiği düşünülüyor. Yirmi bin diyenler de var, ama bu sadece bir tahmin.",
+   "visual": "Dev yazı: 'BİNLERCE', altında kırmızı kutuda '20.000?'; el yazısı not 'tahmin'; Kaşif 'tahmin'de omuz silker",
+   "title": {
+    "white": "Kapasite"
+   },
+   "cues": {
+    "w0": "Binlerce",
+    "w1": "Yirmi",
+    "note": "tahmin"
+   },
+   "params": {
+    "lines": [
+     "Binlerce",
+     "20.000?"
+    ],
+    "highlight": [
+     "20000"
+    ],
+    "note": {
+     "text": "sadece tahmin",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.84,
+     "pose": "talk",
+     "face": -1,
+     "scale": 0.9,
+     "emotion": "worried",
+     "at": "note",
+     "then": "shrug"
+    }
+   }
+  },
+  {
+   "chapter": "Unutulan şehir",
+   "type": "chapter",
+   "text": "Peki böyle bir şehir nasıl unutuldu?",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Unutulan şehir'",
+   "title": {},
+   "cues": {
+    "n": "Peki",
+    "title": "unutuldu"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Unutulan şehir"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Tüneller yüzyıllar boyunca kullanıldı. 1909'da bile bir İngiliz araştırmacı, kötü haberler gelince bir köyün halkının yeraltına sığındığını not etmişti.",
+   "visual": "Bereli araştırmacı parşömene not alır; '1909' tabelası; Kaşif yanına yürür ve şaşırır",
+   "title": {
+    "white": "1909"
+   },
+   "cues": {
+    "y": "1909'da",
+    "hit": "sığındığını"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": null,
+      "x": 0.62,
+      "pose": "hold",
+      "text": "NOT",
+      "face": "left",
+      "accessory": "beret"
+     },
+     {
+      "who": "kasif",
+      "x": 0.0,
+      "pose": "walk",
+      "to": 0.3,
+      "at": "y",
+      "then": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.86,
+      "scale": 0.9,
+      "at": "y",
+      "text": "1909"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Sonra 1923 geldi. Türkiye ile Yunanistan arasındaki nüfus mübadelesiyle Derinkuyu'nun Rum halkı bölgeden ayrıldı.",
+   "visual": "Ege ve Anadolu haritası: '1923' notu; 'mübadelesiyle'de Derinkuyu'dan batıya, Yunanistan'a kesikli mavi ok uzanır; Yunanistan ve Derinkuyu halkalanır; solda Kaşif oku izler",
+   "title": {
+    "white": "1923"
+   },
+   "cues": {
+    "yr": "1923",
+    "go": "mübadelesiyle",
+    "hit": "ayrıldı"
+   },
+   "params": {
+    "view": [
+     20,
+     37,
+     34.5,
+     42.5
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        34.73,
+        38.37
+       ],
+       [
+        31.0,
+        38.6
+       ],
+       [
+        27.0,
+        38.4
+       ],
+       [
+        23.7,
+        38.0
+       ]
+      ],
+      "at": "go",
+      "dur": 2.2,
+      "color": "blue"
+     }
+    ],
+    "cities": [
+     {
+      "name": "Derinkuyu",
+      "lon": 34.73,
+      "lat": 38.37,
+      "at": 0.3,
+      "color": "red",
+      "ring": true,
+      "dy": 70
+     },
+     {
+      "name": "Yunanistan",
+      "lon": 22.4,
+      "lat": 39.6,
+      "at": "hit",
+      "color": "blue",
+      "ring": "hit",
+      "dy": -74
+     }
+    ],
+    "note": {
+     "text": "1923",
+     "x": 0.06,
+     "y": 0.12,
+     "at": "yr"
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "left",
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Büyük olasılıkla tünellerin sırrını bilenler de gitti. Girişler kapandı, bodrum ya da ahır oldu.",
+   "visual": "Kesit, yüzey ve üst katlar: 'kapandı'da yüzeydeki girişlere moloz yığılır; odalar soluk; Kaşif yüzeyde yürür, aşağıyı göremez, omuz silker",
+   "title": {
+    "white": "Unutuldu"
+   },
+   "cues": {
+    "hit": "kapandı"
+   },
+   "params": {
+    "sealed": "hit",
+    "ghost": true,
+    "cam": {
+     "d0": 5,
+     "d1": 7,
+     "z0": 1.0,
+     "z1": 1.08,
+     "x0": 0.5,
+     "x1": 0.5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.06,
+      "y": 0,
+      "to": 0.36,
+      "walk_at": 0.2,
+      "walk_dur": 2.4,
+      "scale": 0.5,
+      "pose": "walk",
+      "face": "right",
+      "then": "shrug",
+      "at": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "type": "dr_wall",
+   "text": "Ve tam kırk yıl sonra, o bodrumda bir duvar yıkıldı.",
+   "visual": "Bodrum yine: köylü balyozla vurur, 'yıkıldı'da duvar çöker, karanlık delik açılır; Kaşif fenerle şok olur; '1963' damgası",
+   "title": {
+    "white": "1963"
+   },
+   "cues": {
+    "hit": "yıkıldı"
+   },
+   "params": {
+    "mode": "basement",
+    "break": "hit",
+    "cracks": 0.2,
+    "cast": [
+     {
+      "who": "koylu",
+      "beard": "short",
+      "x": 0.8,
+      "y": 0.9,
+      "scale": 0.8,
+      "face": "left",
+      "tool": "hammer",
+      "swing": [
+       0.1,
+       "hit"
+      ],
+      "accessory": "beret",
+      "pose": "idle",
+      "at": "hit",
+      "then": "shock"
+     },
+     {
+      "who": "kasif",
+      "x": 0.15,
+      "y": 0.92,
+      "scale": 0.8,
+      "pose": "look",
+      "lantern": true,
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "stamp": {
+     "text": "1963",
+     "at": "hit",
+     "x": 0.82,
+     "y": 0.2
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "Bugün Derinkuyu ziyarete açık. Ama gezebildiğiniz yer, şehrin sadece küçük bir bölümü.",
+   "visual": "Kesit: üst katlar mavi halkayla 'Gezilen' diye işaretlenir; kamera aşağı iner, alt katlar karanlık; Kaşif fenerle üst katta yürür ve aşağıyı gösterir",
+   "title": {
+    "white": "Bugün"
+   },
+   "cues": {
+    "open": "açık",
+    "hit": "küçük"
+   },
+   "params": {
+    "cam": {
+     "d0": 14,
+     "d1": 16,
+     "z0": 1.25,
+     "z1": 1.4,
+     "x0": 0.4,
+     "x1": 0.45
+    },
+    "highlight": [
+     {
+      "level": 2,
+      "at": "open",
+      "text": "Gezilen",
+      "color": "blue",
+      "below": true
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "level": 2,
+      "x": 0.3,
+      "to": 0.5,
+      "walk_at": 0.2,
+      "walk_dur": 2.2,
+      "scale": 0.36,
+      "pose": "walk",
+      "lantern": true,
+      "face": "right",
+      "then": "point",
+      "dir": "down",
+      "at": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Üstelik hikâye bitmedi. 2013'te Nevşehir'de eski evler yıkılırken başka bir yeraltı şehrinin girişleri bulundu.",
+   "visual": "Kapadokya haritası (Erciyes, Hasandağ, Kızılırmak): Derinkuyu soluk; 'Nevşehir'de kale ikonu ve kırmızı halka; 'girişleri'nde '2013' notu; solda Kaşif şok olur",
+   "title": {
+    "white": "2013"
+   },
+   "cues": {
+    "y": "2013'te",
+    "nev": "Nevşehir'de",
+    "hit": "girişleri"
+   },
+   "params": {
+    "view": [
+     33.4,
+     36.2,
+     37.7,
+     39.3
+    ],
+    "texts": [
+     {
+      "text": "Erciyes Dağı",
+      "lon": 35.45,
+      "lat": 38.53,
+      "at": 0.4,
+      "size": 50,
+      "color": "soft"
+     },
+     {
+      "text": "Hasandağ",
+      "lon": 34.17,
+      "lat": 38.13,
+      "at": 0.6,
+      "size": 50,
+      "color": "soft"
+     },
+     {
+      "text": "Kızılırmak",
+      "lon": 34.0,
+      "lat": 39.08,
+      "at": 0.8,
+      "size": 46,
+      "color": "soft",
+      "rot": -6
+     }
+    ],
+    "icons": [
+     {
+      "type": "castle",
+      "lon": 34.71,
+      "lat": 38.62,
+      "at": "nev",
+      "size": 1.0
+     }
+    ],
+    "cities": [
+     {
+      "name": "Derinkuyu",
+      "lon": 34.73,
+      "lat": 38.37,
+      "at": 0.3,
+      "color": "soft",
+      "dy": 74
+     },
+     {
+      "name": "Nevşehir",
+      "lon": 34.71,
+      "lat": 38.62,
+      "at": "nev",
+      "color": "red",
+      "ring": "hit",
+      "dy": -10,
+      "dx": -120
+     }
+    ],
+    "note": {
+     "text": "2013: yeni şehir",
+     "x": 0.62,
+     "y": 0.84,
+     "at": "hit",
+     "color": "red"
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      }
+     ]
+    },
+    "routes": [
+     {
+      "pts": [
+       [
+        33.5,
+        39.12
+       ],
+       [
+        34.1,
+        39.0
+       ],
+       [
+        34.55,
+        38.85
+       ],
+       [
+        34.85,
+        38.74
+       ],
+       [
+        35.2,
+        38.8
+       ],
+       [
+        35.7,
+        38.92
+       ],
+       [
+        36.2,
+        39.05
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.6,
+      "color": "blue",
+      "head": false,
+      "width": 5
+     }
+    ]
+   }
+  },
+  {
+   "type": "dr_section",
+   "text": "İlk tahminlere göre o şehir Derinkuyu'dan bile büyük olabilir. Yani Kapadokya'da yürüyen biri, şu an kimsenin görmediği bir şehrin üstünden geçiyor olabilir.",
+   "visual": "Kesit: yüzeyde Kaşif yürür; altında soluk, hayalet gibi odalar ve tüneller; 'görmediği'nde Kaşif durup ayaklarının altını gösterir; 'BÜYÜK?' damgası",
+   "title": {
+    "white": "Ayağınızın altı"
+   },
+   "cues": {
+    "big": "büyük",
+    "hit": "görmediği"
+   },
+   "params": {
+    "ghost": true,
+    "cam": {
+     "d0": 6,
+     "d1": 8,
+     "z0": 1.0,
+     "z1": 1.06,
+     "x0": 0.5,
+     "x1": 0.52
+    },
+    "stamp": {
+     "text": "BÜYÜK?",
+     "at": "big",
+     "x": 0.76,
+     "y": 0.22
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "y": 0,
+      "to": 0.42,
+      "walk_at": 0.4,
+      "walk_dur": 3.2,
+      "scale": 0.62,
+      "pose": "walk",
+      "face": "right",
+      "then": "point",
+      "dir": "down",
+      "at": "hit",
+      "emotion": "surprised"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki siz olsaydınız, yerin altına inip o taş kapıyı kapatır mıydınız, yoksa kaçmayı mı denerdiniz? Yorumlara yazın!",
+   "visual": "Kaşif iki tabela arasında: solda 'İN', sağda 'KAÇ'; önce düşünür, 'kapatır'da sol tabelayı, 'Yorumlara'da izleyiciyi gösterir",
+   "title": {
+    "white": "Sizce?"
+   },
+   "cues": {
+    "q": "olsaydınız",
+    "in": "kapatır",
+    "hit": "Yorumlara"
+   },
+   "params": {
+    "scale": 1.15,
+    "ground_y": 850,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.34,
+      "to": 0.5,
+      "walk_at": 0.1,
+      "walk_dur": 1.4,
+      "pose": "walk",
+      "face": "right",
+      "then": "think",
+      "seq": [
+       {
+        "at": "in",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       },
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "forward",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.22,
+      "scale": 1.0,
+      "at": "q",
+      "text": "İN"
+     },
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 1.0,
+      "at": "q",
+      "text": "KAÇ"
+     }
+    ]
+   }
+  }
+ ]
+}

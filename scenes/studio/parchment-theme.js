@@ -160,14 +160,14 @@ const PARCHMENT = (() => {
         if (!g) { node.style.opacity = 0; return; }
         if (curG !== g) {
           curG = g; node.innerHTML = '';
-          spans = g.words.map(w => { const s = document.createElement('span'); s.textContent = w.text; s.style.cssText = 'display:inline-block;margin:0 .15em;transform-origin:50% 70%'; node.appendChild(s); return s; });
+          spans = g.words.map(w => { const s = document.createElement('span'); s.textContent = w.text; s.style.cssText = 'display:inline-block;margin:0 .2em;transform-origin:50% 70%'; node.appendChild(s); return s; });
         }
         g.words.forEach((w, k) => {
           const next = k + 1 < g.words.length ? g.words[k + 1].t : g.end;
           const on = t >= w.t, now = on && t < next, p = spring(t, w.t, 0.35);
           spans[k].style.visibility = on ? 'visible' : 'hidden';
           spans[k].style.color = w.cue ? (w.cue === 'red' ? C.red : C.gold) : C.ink;
-          spans[k].style.transform = `translateY(${(1 - p) * 30}px) scale(${lerp(0.6, 1, p) * (now ? 1.06 : 1)})`;
+          spans[k].style.transform = `translateY(${(1 - p) * 30}px) scale(${lerp(0.6, 1, p) * (now ? 1.04 : 1)})`;
         });
         node.style.opacity = 1 - prog(t, g.end - 0.08, 0.08);
       },

@@ -1,0 +1,889 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "halifax-patlamasi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Bu yangını",
+      "izlemek",
+      "kör etti"
+    ],
+    "highlight": [
+      "izlemek"
+    ],
+    "scene": 0,
+    "t": 2.5,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Halifax Patlaması: Bu Yangını İzleyenler Neden Kör Oldu?",
+    "description": "Halifax Patlaması: bir yangını izlemek yüzlerce kişiyi kör etti. 6 Aralık 1917 sabahı Kanada'nın Halifax limanında iki gemi çarpıştı. Peki insanlar neden kaçmak yerine pencerelere koştu?\n\nFransız gemisi Mont-Blanc, Birinci Dünya Savaşı için yaklaşık 2.800 ton patlayıcı taşıyordu ama direğinde tehlike bayrağı yoktu. Dar boğazda Norveç gemisi Imo ile çarpışınca güvertedeki benzol alev aldı. Mürettebat filikalarla kaçarken Fransızca bağırdı, kimse anlamadı. Halk ise yangını izlemek için sokaklara ve pencerelere toplandı. Yaklaşık yirmi dakika sonra gemi patladı ve şok dalgası camları izleyenlerin yüzüne savurdu. Sonraki günlerde göz doktorları 592 yaralıyı tedavi etti, 249 göz alınmak zorunda kaldı.\n\nHer gün yeni bir \"neden?\" için abone ol. Sen o sabah pencereden bakar mıydın? Yorumlara yaz!\n\n#shorts #halifaxpatlaması #tarih #düşünbakalım",
+    "tags": [
+      "halifax patlaması",
+      "halifax patlaması 1917",
+      "1917 halifax patlaması",
+      "halifax explosion",
+      "mont-blanc gemisi",
+      "imo gemisi",
+      "kanada tarihi",
+      "birinci dünya savaşı",
+      "en büyük patlama",
+      "liman felaketi",
+      "tarihteki felaketler",
+      "ilginç tarih",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-25T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "hx_harbor",
+      "text": "Bu yangını izlemek insanları kör etti.",
+      "visual": "Limanda büyük bir yük gemisi alev alev yanıyor, kara dumanı gökyüzüne yükseliyor; sağda ahşap evin pencerelerinde gemiye bakan şaşkın yüzler, önde rıhtımda sırtı dönük izleyen kalabalık; solda büyük Kaşif 'kör'de şokla geri sıçrıyor.",
+      "title": {},
+      "cues": {
+        "hit": "kör"
+      },
+      "params": {
+        "mode": "watch",
+        "water": 0.45,
+        "ships": [
+          {
+            "x": 0.55,
+            "L": 620,
+            "face": -1,
+            "band": "red",
+            "burn": 1,
+            "barrels": true,
+            "smokeH": 620,
+            "smokeW": 0.42,
+            "drift": 0.1
+          }
+        ],
+        "house": {
+          "x": 0.76,
+          "w": 0.42,
+          "h": 0.27
+        },
+        "faces": 0,
+        "crowd": {
+          "n": 5,
+          "y": 0.655,
+          "from": 0.36,
+          "to": 0.97,
+          "r": 42
+        },
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.45,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.22,
+            "y": 0.6,
+            "pose": "idle",
+            "face": "right",
+            "emotion": "surprised",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.95
+          }
+        ]
+      }
+    },
+    {
+      "type": "map",
+      "text": "1917'de Halifax limanında,",
+      "visual": "Eski harita: Bedford Havzası, dar boğaz ve açık denize uzanan Halifax limanı; batı kıyısında Halifax, doğuda Dartmouth işaretleniyor; denizden dar boğaza kırmızı kesikli bir rota çiziliyor, el yazısı not '6 Aralık 1917' beliriyor.",
+      "title": {
+        "white": "1917",
+        "gray": "Halifax, Kanada"
+      },
+      "cues": {
+        "route": "1917'de",
+        "city": "Halifax",
+        "note": "limanında"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              -0.05,
+              -0.05
+            ],
+            [
+              0.16,
+              -0.05
+            ],
+            [
+              0.08,
+              0.12
+            ],
+            [
+              0.1,
+              0.25
+            ],
+            [
+              0.2,
+              0.33
+            ],
+            [
+              0.33,
+              0.35
+            ],
+            [
+              0.4,
+              0.4
+            ],
+            [
+              0.45,
+              0.48
+            ],
+            [
+              0.49,
+              0.57
+            ],
+            [
+              0.53,
+              0.68
+            ],
+            [
+              0.58,
+              0.82
+            ],
+            [
+              0.6,
+              1.05
+            ],
+            [
+              -0.05,
+              1.05
+            ]
+          ],
+          [
+            [
+              0.44,
+              -0.05
+            ],
+            [
+              1.05,
+              -0.05
+            ],
+            [
+              1.05,
+              0.76
+            ],
+            [
+              0.86,
+              0.72
+            ],
+            [
+              0.74,
+              0.64
+            ],
+            [
+              0.63,
+              0.56
+            ],
+            [
+              0.57,
+              0.48
+            ],
+            [
+              0.53,
+              0.4
+            ],
+            [
+              0.49,
+              0.31
+            ],
+            [
+              0.52,
+              0.22
+            ],
+            [
+              0.5,
+              0.1
+            ]
+          ]
+        ],
+        "cities": [
+          {
+            "name": "Halifax",
+            "x": 0.4,
+            "y": 0.5,
+            "dx": -24,
+            "dy": 8,
+            "anchor": "end",
+            "color": "red",
+            "at": "city"
+          },
+          {
+            "name": "Dartmouth",
+            "x": 0.7,
+            "y": 0.42,
+            "dx": 0,
+            "dy": -40,
+            "at": "city"
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              0.84,
+              1.0
+            ],
+            [
+              0.68,
+              0.78
+            ],
+            [
+              0.56,
+              0.6
+            ],
+            [
+              0.49,
+              0.46
+            ]
+          ],
+          "at": "route",
+          "dur": 1.6,
+          "color": "red"
+        },
+        "note": {
+          "text": "6 Aralık 1917",
+          "x": 0.06,
+          "y": 0.9,
+          "at": "note"
+        },
+        "focus": [
+          0.49,
+          0.48
+        ],
+        "zoom": 1.18,
+        "compass": "tr"
+      }
+    },
+    {
+      "type": "hx_harbor",
+      "text": "iki gemi çarpıştı ve biri alev aldı.",
+      "visual": "Dar boğazda soldan kırmızı bacalı Mont-Blanc ilerliyor, sağdan mavi bacalı Imo uzaktan küçük gelip büyüyerek yaklaşıyor; 'çarpıştı'da pruvalar ortada çarpışıyor, altın kıvılcımlar, punch ve sarsıntı; 'alev'de Mont-Blanc'ın pruvası alev alıyor, duman yükseliyor; solda rıhtımda Kaşif gösteriyor, sonra şok.",
+      "title": {
+        "white": "Dar boğaz",
+        "gray": "iki gemi"
+      },
+      "cues": {
+        "hit": "çarpıştı",
+        "fire": "alev"
+      },
+      "params": {
+        "mode": "collide",
+        "ships": [
+          {
+            "x": 0.46,
+            "from": 0.38,
+            "L": 360,
+            "face": 1,
+            "band": "red",
+            "burn": "fire",
+            "barrels": true,
+            "smokeH": 560,
+            "drift": -0.2
+          },
+          {
+            "x": 0.8,
+            "from": 1.0,
+            "L": 360,
+            "face": -1,
+            "band": "blue",
+            "wl": 30,
+            "far": {
+              "L": 190,
+              "wl": -40
+            }
+          }
+        ],
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.24,
+            "y": 0.6,
+            "pose": "point",
+            "dir": 10,
+            "face": "right",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.85
+          }
+        ],
+        "scale": 1.18
+      }
+    },
+    {
+      "type": "hx_hold",
+      "text": "İçi tonlarca patlayıcı doluydu!",
+      "visual": "Mont-Blanc'ın kesit görünümü: ambarlar soldan sağa varillerle ve kırmızı 'TNT' yazılı sandıklarla doluyor, güvertede iki sıra benzol varili; üstte el yazısı '≈2.800 ton'; 'patlayıcı'da yükler kırmızı yanıp sönüyor, ortada kırmızı 'PATLAYICI!' damgası çarpıyor; pruvada Kaşif ambarı gösteriyor, sonra şokla geri sıçrıyor.",
+      "title": {
+        "white": "Mont-Blanc",
+        "gray": "Fransız gemisi"
+      },
+      "cues": {
+        "fill": "İçi",
+        "ton": "tonlarca",
+        "hit": "patlayıcı"
+      },
+      "params": {
+        "fill": "fill",
+        "labels": [
+          {
+            "text": "≈2.800 ton",
+            "x": 0.5,
+            "y": 0.165,
+            "at": "ton",
+            "size": 84,
+            "color": "red"
+          },
+          {
+            "text": "Patlayıcı!",
+            "x": 0.42,
+            "y": 0.47,
+            "at": "hit",
+            "stamp": true,
+            "color": "red",
+            "size": 100
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.87,
+            "y": 0.313,
+            "pose": "point",
+            "dir": "down",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.48
+          }
+        ]
+      }
+    },
+    {
+      "type": "hx_harbor",
+      "text": "Ama tehlike bayrağı yoktu, yani izleyenler bilmiyordu.",
+      "visual": "Yakın plan yanan Mont-Blanc; ön direğin tepesinde kesik kırmızı çizgiyle 'olması gereken' tehlike bayrağı beliriyor, 'yoktu'da üstüne kırmızı X çiziliyor, el yazısı 'Bayrak yok!'; önde rıhtımda sırtı dönük izleyen kalabalık; solda Kaşif bayrak direğini gösteriyor, 'bilmiyordu'da omuz silkiyor.",
+      "title": {
+        "white": "Bayrak yok"
+      },
+      "cues": {
+        "flag": "tehlike",
+        "cross": "yoktu",
+        "hit": "bilmiyordu"
+      },
+      "params": {
+        "mode": "watch",
+        "water": 0.5,
+        "scale": 1.0,
+        "ships": [
+          {
+            "x": 0.55,
+            "L": 680,
+            "face": 1,
+            "band": "red",
+            "burn": 1,
+            "barrels": true,
+            "smokeH": 560,
+            "smokeW": 0.32,
+            "drift": 0.2
+          }
+        ],
+        "flag": {
+          "at": "flag",
+          "cross": "cross",
+          "top": -0.52,
+          "w": 0.17,
+          "h": 0.1
+        },
+        "labels": [
+          {
+            "text": "Bayrak yok!",
+            "x": 0.66,
+            "y": 0.21,
+            "at": "cross",
+            "size": 84,
+            "color": "red"
+          }
+        ],
+        "crowd": {
+          "n": 5,
+          "y": 0.715,
+          "from": 0.36,
+          "to": 0.97,
+          "r": 40
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.6,
+            0.4
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.12,
+            "y": 0.6,
+            "pose": "point",
+            "dir": "up",
+            "face": "right",
+            "at": "hit",
+            "then": "shrug",
+            "scale": 0.72
+          }
+        ]
+      }
+    },
+    {
+      "type": "hx_harbor",
+      "text": "Mürettebat Fransızca bağırıp kaçtı, kimse anlamadı.",
+      "visual": "Arkada yanan gemi; önde bereli dört denizci filikanın içinde sola doğru kürek çekiyor, ikisi geriye dönüp bağırıyor, kırmızı bağırış dalgaları ve el yazısı 'Fransızca!'; sağda rıhtımda iki kasabalının başında kırmızı '?', Kaşif omuz silkiyor.",
+      "title": {
+        "white": "Mürettebat",
+        "gray": "filikada"
+      },
+      "cues": {
+        "shout": "bağırıp",
+        "hit": "anlamadı"
+      },
+      "params": {
+        "mode": "flee",
+        "ships": [
+          {
+            "x": 0.34,
+            "L": 520,
+            "face": 1,
+            "band": "red",
+            "burn": 1,
+            "barrels": true,
+            "smokeH": 620,
+            "drift": -0.2
+          }
+        ],
+        "boat": {
+          "from": 0.6,
+          "to": 0.27,
+          "y": 0.575,
+          "at": 0,
+          "w": 380,
+          "crew": [
+            {
+              "who": "denizci1",
+              "accessory": "beret",
+              "dx": -120,
+              "pose": "idle",
+              "face": "left",
+              "scale": 0.38
+            },
+            {
+              "who": "denizci2",
+              "accessory": "beret",
+              "dx": -40,
+              "pose": "idle",
+              "face": "left",
+              "beard": "short",
+              "scale": 0.38
+            },
+            {
+              "who": "denizci3",
+              "accessory": "beret",
+              "dx": 40,
+              "pose": "talk",
+              "face": "right",
+              "at": "shout",
+              "then": "point",
+              "dir": "forward",
+              "emotion": "worried",
+              "scale": 0.38
+            },
+            {
+              "who": "denizci4",
+              "accessory": "beret",
+              "dx": 120,
+              "pose": "wave",
+              "face": "right",
+              "emotion": "worried",
+              "scale": 0.38
+            }
+          ]
+        },
+        "shouts": "shout",
+        "labels": [
+          {
+            "text": "Fransızca!",
+            "x": 0.3,
+            "y": 0.29,
+            "at": "shout",
+            "size": 80,
+            "color": "red"
+          },
+          {
+            "text": "?",
+            "x": 0.64,
+            "y": 0.41,
+            "at": "hit",
+            "size": 100,
+            "color": "red",
+            "font": "serif"
+          },
+          {
+            "text": "?",
+            "x": 0.78,
+            "y": 0.41,
+            "at": "hit",
+            "size": 100,
+            "color": "red",
+            "font": "serif"
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasaba1",
+            "x": 0.64,
+            "y": 0.6,
+            "pose": "idle",
+            "face": "left",
+            "scale": 0.5,
+            "at": "hit",
+            "then": "shrug",
+            "beard": "short"
+          },
+          {
+            "who": "kasaba2",
+            "x": 0.78,
+            "y": 0.6,
+            "pose": "idle",
+            "face": "left",
+            "scale": 0.47,
+            "at": "hit",
+            "then": "think"
+          },
+          {
+            "who": "kasif",
+            "x": 0.9,
+            "y": 0.6,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "shrug",
+            "scale": 0.6
+          }
+        ],
+        "scale": 1.0
+      }
+    },
+    {
+      "type": "hx_street",
+      "text": "Düşünün, halk pencerelere koştu.",
+      "visual": "Richmond mahallesinde iki katlı ahşap evler; solda arkada limandan kara duman sütunu ve alevler; 'halk'tan itibaren pencereler tek tek dumana bakan yüzlerle doluyor; sokakta iki kasabalı dumanı gösteriyor; sağda sokakta Kaşif izleyiciye anlatıp 'pencerelere'de pencereleri gösteriyor.",
+      "title": {
+        "white": "Richmond",
+        "gray": "liman mahallesi"
+      },
+      "cues": {
+        "faces": "halk",
+        "hit": "pencerelere"
+      },
+      "params": {
+        "mode": "windows",
+        "faces": "faces",
+        "smoke": {
+          "x": 0.12
+        },
+        "x0": 0.33,
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.55,
+            0.45
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "y": 0.63,
+            "pose": "talk",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "up",
+            "scale": 0.75
+          },
+          {
+            "who": "kasaba1",
+            "x": 0.42,
+            "y": 0.61,
+            "pose": "point",
+            "dir": 30,
+            "face": "left",
+            "scale": 0.52,
+            "beard": "short"
+          },
+          {
+            "who": "kasaba2",
+            "x": 0.6,
+            "y": 0.61,
+            "pose": "look",
+            "face": "left",
+            "scale": 0.5
+          }
+        ],
+        "ground": 0.55
+      }
+    },
+    {
+      "type": "hx_harbor",
+      "text": "Ve yirmi dakika sonra gemi patladı.",
+      "visual": "Yanan gemi limanda; sağ üstte saat 8.45'ten 9.04'e ilerliyor, el yazısı '20 dakika'; 'patladı'da kısa bir parlama, altın ışınlar, kırmızı-altın ateş topu, gökyüzüne yükselen kalın gri mantar bulutu, havaya savrulan enkaz parçaları, beyaz su sütunu ve yayılan şok halkaları; kamera sarsılıyor; solda Kaşif dürbünle bakarken şokla geri sıçrıyor.",
+      "title": {
+        "white": "Saat 9.04",
+        "gray": "6 Aralık 1917"
+      },
+      "cues": {
+        "min": "dakika",
+        "boom": "patladı"
+      },
+      "params": {
+        "mode": "blast",
+        "ships": [
+          {
+            "x": 0.55,
+            "L": 440,
+            "face": 1,
+            "band": "red",
+            "burn": 1,
+            "barrels": true,
+            "smokeH": 560,
+            "drift": -0.2
+          }
+        ],
+        "clock": {
+          "x": 0.8,
+          "y": 0.2,
+          "r": 95,
+          "from": [
+            8,
+            45
+          ],
+          "to": [
+            9,
+            4
+          ]
+        },
+        "labels": [
+          {
+            "text": "20 dakika",
+            "x": 0.8,
+            "y": 0.29,
+            "at": "min",
+            "size": 64,
+            "color": "red"
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.45
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.12,
+            "y": 0.6,
+            "pose": "look",
+            "face": "right",
+            "at": "boom",
+            "then": "shock",
+            "scale": 0.7
+          }
+        ],
+        "scale": 1.0
+      }
+    },
+    {
+      "type": "hx_street",
+      "text": "Şok dalgası camları izleyenlerin yüzüne savurdu.",
+      "visual": "Pencerelerinde yüzler olan ahşap evler; 'camları'da soldan dalgalı mürekkep şok cephesi süpürüyor, geçtiği her pencere dışarı doğru cam kırıklarıyla patlıyor, yüzler aşağı kayboluyor, toz bulutları, kamera sarsılıyor; sağda Kaşif şokla geri sıçrıyor.",
+      "title": {
+        "white": "Şok dalgası"
+      },
+      "cues": {
+        "hit": "camları"
+      },
+      "params": {
+        "mode": "shatter",
+        "smoke": {
+          "x": 0.12
+        },
+        "x0": 0.3,
+        "cam": {
+          "zoom": 1.1,
+          "focus": [
+            0.6,
+            0.45
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.78,
+            "y": 0.63,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock",
+            "scale": 0.75
+          }
+        ],
+        "ground": 0.55
+      }
+    },
+    {
+      "type": "hx_street",
+      "text": "Doktorlar yaklaşık iki yüz elli gözü ameliyatla çıkarmak zorunda kaldı.",
+      "visual": "Önde gözleri sargılı iki büyük figür (biri ayakta, biri oturuyor), arkada camları kırık, bazı pencereleri tahtayla kapatılmış ahşap evler, havada kül süzülüyor; üstte el yazısı '≈250 göz'; sağda yanlarında Kaşif üzgün, 'çıkarmak'ta düşünüyor.",
+      "title": {
+        "white": "Sonrası",
+        "gray": "göz yaraları"
+      },
+      "cues": {
+        "lab": "yaklaşık",
+        "hit": "çıkarmak"
+      },
+      "params": {
+        "mode": "after",
+        "smoke": false,
+        "x0": 0.3,
+        "labels": [
+          {
+            "text": "≈250 göz",
+            "x": 0.55,
+            "y": 0.18,
+            "at": "lab",
+            "size": 96,
+            "color": "red"
+          }
+        ],
+        "hurt": [
+          {
+            "x": 0.26,
+            "y": 0.63,
+            "pose": "idle",
+            "face": "right",
+            "scale": 0.7,
+            "beard": "short"
+          },
+          {
+            "x": 0.55,
+            "y": 0.63,
+            "pose": "sit",
+            "face": "right",
+            "scale": 0.7
+          }
+        ],
+        "cam": {
+          "zoom": 1.04,
+          "focus": [
+            0.5,
+            0.55
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.84,
+            "y": 0.63,
+            "pose": "idle",
+            "face": "left",
+            "emotion": "worried",
+            "at": "hit",
+            "then": "think",
+            "scale": 0.75
+          }
+        ],
+        "ground": 0.52
+      }
+    },
+    {
+      "type": "hx_end",
+      "text": "Yani insanları kör eden şey ateş değil, meraktı.",
+      "visual": "Dev yazı satır satır çarpıyor: 'KÖR EDEN / ATEŞ DEĞİL, / MERAK', 'MERAK' kırmızı kutuda; altta camları kırık büyük bir pencere çerçevesi, içinden uzakta yanan küçük gemi görünüyor, pervazda cam kırıkları; sağda Kaşif 'meraktı'da pencereyi gösteriyor.",
+      "title": {},
+      "cues": {
+        "l0": "kör",
+        "l1": "ateş",
+        "l2": "meraktı"
+      },
+      "params": {
+        "lines": [
+          "Kör eden",
+          "ateş değil,",
+          "merak"
+        ],
+        "highlight": "merak",
+        "y": 0.15,
+        "size": 130,
+        "window": {
+          "x": 0.17,
+          "y": 0.41,
+          "w": 0.48,
+          "h": 0.22
+        },
+        "kasif": {
+          "x": 0.84,
+          "y": 0.6,
+          "scale": 0.62,
+          "pose": "idle",
+          "face": "left",
+          "emotion": "surprised",
+          "at": "l2",
+          "then": "point",
+          "dir": 15
+        }
+      }
+    }
+  ]
+}
