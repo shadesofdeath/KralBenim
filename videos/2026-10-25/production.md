@@ -374,3 +374,153 @@ Geçti (sınırda). 1. Haritada Kızılırmak/Nevşehir çakışması. 2. Kesitl
 |---|---|---|---|---|---|---|---|---|---|---|
 
 Geçti. Kalan küçükler: 18'de "Kuyu" etiketi uzak, 32'de taş kemeri tam kapatmıyor, 13/16/23/38 ek hareket yok, 28/30 kırmızı çatılı evler, haritada yanardağ simgesi yok. Yönetmen son kapıda sahne 3'teki dolgu "Gelin, anlatayım." cümlesini çıkardı. Final 4.425 karakter, 46 sahne, ~5:05.
+
+
+# Stickstory — 2026-10-25 (ayrı oturum; Düşün Bakalım dosyalarına dokunulmadı)
+
+Plan (`tools/plan.py --channel ag`): 3 Shorts + 1 uzun video. ElevenLabs: bu ay 76.959 / 231.442, **uyarı: true**
+(projeksiyon 383.459) → tüm karakterler aralığın alt ucunda (hedef toplam ≈ 5.750 / günlük üst sınır 6.500).
+Dünün (2026-10-24) dört Stickstory videosunun da `*.youtube.json`'u var (hepsi yüklendi).
+
+| Dosya | Konu | Kategori | Dönem | Yayın (NY / İstanbul) |
+|---|---|---|---|---|
+| ag-01-bubble-wrap | Balonlu naylon: duvar kâğıdı olarak doğdu (1957–1960'lar) | origins of everyday things | 20. yy, New Jersey | 09:00 / 25.10 16:00 |
+| ag-02-barry-marshall | Barry Marshall bakteri içti, ülserin sebebi (1984 → Nobel 2005) | the human body | 20. yy, Avustralya | 13:00 / 25.10 20:00 |
+| ag-03-tardigrades-space | Su ayıları çıplak uzayda (FOTON-M3, 2007) | animal superpowers | 21. yy, yörünge | 19:00 / 26.10 02:00 |
+| ag-04-tambora-1816 (uzun) | Tambora 1815 ve yazsız yıl 1816 | space and planet earth | 19. yy, Endonezya → dünya | 14:00 / 25.10 21:00 |
+
+Geçmişte işlenmedi (Tunguska, Pompeii, Lizbon, Penisilin, İlk Röntgen, Phineas Gage ile komşu ama farklı);
+aynı günün Düşün Bakalım konuları (Halifax Patlaması, Derinkuyu) ile çakışmıyor. Dört video dört farklı kategori.
+
+## ag-01-bubble-wrap (Short)
+- **Hissedilen:** "Herkesin patlattığı o şey, kimsenin istemediği bir duvar kâğıdıydı."
+- **Kanca + kapak:** ilk cümle "Bubble wrap was supposed to be wallpaper." ↔ kapak `IT WAS / WALLPAPER` (vurgu `WALLPAPER`). Kare: duvarda balonlu kâğıt, şaşkın fesli anlatıcı parmağıyla balon patlatıyor.
+- **Doğrulanacak:** 1957, Hawthorne (New Jersey), Alfred Fielding ve Marc Chavannes; iki plastik duş perdesini ısıyla birleştirip hava kabarcığı hapsettiler; amaç dokulu duvar kâğıdı; tutmadı; sera yalıtımı denendi, tutmadı; 1960 Sealed Air şirketi; IBM 1401 (1959) bilgisayarının sevkiyatında kullanıldı.
+- **Tek parça anlatım (468 karakter):**
+
+> Bubble wrap was supposed to be wallpaper. In 1957, two inventors in New Jersey sealed two plastic shower curtains together, and trapped tiny bubbles of air inside. Their dream? Fancy textured wallpaper for modern homes. Nobody wanted it. So they tried selling it to greenhouses, as insulation. That flopped too. Then IBM launched a new computer, and needed a way to ship it without breaking it. And the wallpaper nobody wanted ended up protecting the world's packages.
+
+- **Çekim fikri (yazar kesinleştirir):** 1 kanca: balonlu duvar kâğıdı + anlatıcı · 2 `stage` garajda iki mucit, perde tabakaları · 3 yeni tip `bw_seal`: iki tabaka birleşir, balonlar kabarır · 4 şık oda, duvar kâğıdı, müşteri burun kıvırıyor · 5 `board` ✗ wallpaper · 6 sera, ✗ insulation · 7 1959 dev bilgisayar dolabı, sarsılan kasa · 8 balonlu naylonla sarılı bilgisayar · 9 dünya, kutular, anlatıcı balon patlatıyor.
+
+### Çekim listesi (yazar) — tur 2 sonrası
+Son metin 459 karakter (~34,7 sn): "Bubble wrap was supposed to be wallpaper. In 1957, two inventors sealed two shower curtains together, and trapped tiny bubbles of air inside. Their dream? Textured wallpaper for modern homes. Nobody wanted it. So they pitched it to greenhouses, as insulation. Another flop. But here's the crazy part: IBM had a new computer, and it had to travel without breaking. So they wrapped it in the wallpaper nobody wanted. Now it protects almost everything you order."
+1. `bw_room` "Bubble wrap was supposed to be wallpaper." Anlatıcı parmağıyla balon patlatır (parmak ucunda büyük POP), zincirleme patlamalar, şok; kamera itmesi (kapak anı).
+2. `bw_seal` (curtains) "In 1957, two inventors sealed two shower curtains together," İki duş perdesi birleşir, ütü dikişten geçer; iki şapkasız mucit (ölçek 0.85).
+3. `bw_seal` (sheet) "and trapped tiny bubbles of air inside." Balonlar dalga hâlinde kabarır, "AIR" oku tabakaya.
+4. `bw_room` (reveal) "Their dream? …" Rulo duvar kâğıdı açılır, koltuk/lamba/çerçeve, "TEXTURED!".
+5. `bw_room` "Nobody wanted it." Müşteriler omuz silker, "NO THANKS" damgası.
+6. `bw_green` "So they pitched it to greenhouses, as insulation." Sera camları balonlu naylonla kaplanır, "INSULATION?".
+7. `ag03c_strike` "Another flop." "Wallpaper" ve "Greenhouses" kırmızı çizilir.
+8. `bw_ship` (lab) "But here's the crazy part: IBM had a new computer," IBM 1401 dolapları, anlatıcı yürüyerek gelir, "IBM 1401", "NEW!".
+9. `bw_ship` (truck) "and it had to travel without breaking." Kamyonda sarsılan dolap, "FRAGILE", çatlak.
+10. `bw_pack` "So they wrapped it in the wallpaper nobody wanted." Dolap balonlu naylonla sarılır, "OLD WALLPAPER!".
+11. `bw_world` "Now it protects almost everything you order." Sağda bant (x ≥ 0.3) üstünde balonlu koliler, üstünde serbest dönen küre; bandın solunda zeminde anlatıcı iki eli arasındaki küçük opak tabakayı patlatır.
+Kapak: `THIS WAS / WALLPAPER`, sahne 0, t 2.8 (şok pozu oturmuş, zincirleme POP'lar). Adaylar: t 1.45 parmak ucunda POP (yüz şaşkın değil), "IT WAS" t 1.75 işaret anı, sahne 3 şık oda; şok + zincir en güçlüsü.
+
+## ag-02-barry-marshall (Short)
+- **Hissedilen:** "Herkes yanılıyordu; bir doktor kanıtlamak için mikrobu kendisi içti."
+- **Kanca + kapak:** "This doctor drank a glass of bacteria on purpose." ↔ kapak `HE DRANK / THE GERMS` (vurgu `DRANK`). Kare: bardaktaki bulanık sıvı, bakteri çizimleri, korkmuş fesli anlatıcı.
+- **Doğrulanacak:** Perth, Robin Warren ile 1982'de mide biyopsilerinde bakteri; dönemin görüşü stres/asit; domuz yavrularını enfekte etme denemeleri başarısız; 1984'te kültürü içti; birkaç gün içinde kusma; endoskopi + biyopsi gastrit gösterdi; antibiyotikle iyileşti; Nobel 2005 (Warren ile). "Ülser oldu" denmez, iltihap/gastrit.
+- **Tek parça anlatım (469 karakter):**
+
+> This doctor drank a glass of bacteria on purpose. In 1984, almost every doctor believed stomach ulcers came from stress and acid. But Barry Marshall, a young doctor in Australia, kept finding a strange bacterium in sick stomachs. Nobody believed him, and his tests on pigs had failed. So he mixed the germs into a broth, and drank it. Days later, he was vomiting, and a camera showed his stomach was inflamed. Twenty-one years later, that drink won him the Nobel Prize.
+
+- **Çekim fikri:** 1 kanca: bardak + korkmuş anlatıcı · 2 `board` STRESS + ACID (1984 inancı) · 3 `stage` Marshall mikroskopta, spiral bakteri · 4 doktorlar kafa sallıyor · 5 domuz ✗ · 6 `bm_drink`: bakteri et suyuna dökülüyor, içiyor · 7 mide kesiti kızarıyor · 8 `timeline` 1984 → 2005 · 9 Nobel madalyası.
+
+### Çekim listesi (yazar)
+**Düzeltme turu 2 sonrası (güncel):** 454 karakter (~33.6 sn tahmini), 10 sahne. Metin: "This doctor drank a glass of bacteria on purpose. If you had an ulcer in 1984, doctors blamed stress. But Barry Marshall kept finding strange germs in sick stomachs. Nobody believed him. His pig tests failed. To prove it, he did the unthinkable. He mixed the germs into a broth, and drank it. Days later, he was vomiting, and a camera showed his stomach was inflamed. That drink helped win him a Nobel Prize, and today, ulcers are cured with antibiotics." Doğrulandı (Wikipedia/Lasker): 1984 domuz denemeleri başarısız → kültür et suyunda içildi; 5–8. günler kusma; 8. gün endoskopi + biyopsi: gastrit (metin ülser demiyor); Nobel 2005 Warren ile (açıklamada).
+Yeni tip dosyası: `scenes/studio/shots/bm_marshall.js` (`bm_drink`, `bm_clinic`, `bm_scope`, `bm_pig`, `bm_sick`, `bm_stomach`, `bm_nobel`).
+0 `bm_drink` kanca/kapak: yakın plan, büyük gözlüklü Marshall bardağı kafaya dikiyor (içinde 4 ayrı büyük spiral bakteri), büyük fesli anlatıcı şok, "BACTERIA!" kırmızı damga · 1 `bm_clinic` muayenehane: tablo "ULCER?" → kırmızı "STRESS!", doktor gösteriyor, anlatıcı hasta · 2 `bm_scope` (2+3 birleşti; Perth kicker'da) Marshall mikroskopta, "MARSHALL" etiketi, büyüteç dairesinde spiral bakteriler, anlatıcı dürbün → şok · 3 `bm_pig` domuzlar sol-orta bölgede, doktor 0.62 omuz silkiyor, anlatıcı 0.8, "FAILED" · 4 `bm_drink` parlayan dolu bardak, Marshall yürüyüp duruyor, anlatıcı şok + "DON'T!" · 5 `bm_drink` petri kabı dökülüyor, "drank"te içiyor · 6 `bm_sick` "DAY 5", halsiz Marshall, kova, bulantı sarmalı · 7 `bm_stomach` endoskop, kızaran yamalar, "INFLAMED" oku yamalara (0.5, 0.48), anlatıcı ölçek 0.75 midenin dışında · 8 `bm_nobel` 1984 → 2005, altın madalya · 9 `bm_stomach` (heal) kapsüller iniyor, lekenin yanındaki "ULCER" lekeler silinirken çiziliyor, yeşil "ANTIBIOTICS" + yeşil tik, anlatıcı (0.75) tike işaret ediyor.
+Kapak (tur 2, 3 aday denendi): A sahne 0 t=2.4 "HE DRANK / THE GERMS", içme anı + şok anlatıcı + damga, kare dolu (seçildi) · B sahne 4 t=2.5 parlayan bardak + "DON'T!": içme anı yok, karakterler küçük, ilk cümleyle zayıf bağ · C sahne 0 "HE DRANK / THIS" (vurgu THIS): merak var ama "BACTERIA!" damgasına yaslanıyor, A daha net.
+
+## ag-03-tardigrades-space (Short)
+- **Hissedilen:** "Yarım milimetrelik bir hayvan, insanın skafandrsız bir saniye dayanamayacağı yerde hayatta kaldı."
+- **Kanca + kapak:** "In 2007, scientists sent a tiny animal into open space." ↔ kapak `IT SURVIVED / SPACE` (vurgu `SPACE`). Kare: uydunun dışında tombul su ayısı, yıldızlar, hayret anlatıcı büyüteçle.
+- **Doğrulanacak:** ESA, FOTON-M3, Eylül 2007, TARDIS deneyi, ~10 gün alçak yörünge; kurutulmuş (tun) hayvanlar; sadece vakum: çoğu yaşadı; vakum + tam güneş UV: çoğu öldü, birkaçı yaşadı; dönüşte su eklendi; yumurta bıraktılar, yumurtalar açıldı; açık uzayda yaşadığı bilinen ilk hayvan (Jönsson ve ark. 2008). Boy ~0,5 mm.
+- **Tek parça anlatım (501 → yazar ≤ 470'e indirir, ör. UV cümlesini birleştirerek):**
+
+> In 2007, scientists sent a tiny animal into open space. It's called a tardigrade, a water bear about half a millimeter long. Researchers dried a batch of them out, and strapped them to the outside of a satellite. For ten days, they faced the vacuum of space. Some even faced the Sun's raw ultraviolet light. Here's the crazy part. Back on Earth, the scientists added water, and many of them woke up. They even laid eggs that hatched. That speck became the first animal known to survive naked in space.
+
+- **Çekim fikri:** 1 kanca: uzayda su ayısı + anlatıcı · 2 büyüteç altında su ayısı · 3 `td_tun`: kuruyup fıçıya dönüşüyor · 4 uydu, dış yüzeyde kutu · 5 yörünge, 10 gün sayacı · 6 Güneş ışınları · 7 laboratuvar, damla su · 8 su ayısı uyanıp yürüyor, yumurtalar · 9 kapanış: "FIRST" damgası, anlatıcı şapka çıkarıyor.
+
+### Çekim listesi (yazar) — tur 2 sonrası
+**Anlatım (son cila: 458 karakter, ~35 sn tahmini; eleştiri tur 1: tutanak dili → YouTuber sesi, asıl "neden" = tun, UV doğruluğu, "neden"e bağlanan kapanış):**
+
+> This tiny animal survived open space. Meet the tardigrade, the water bear. In 2007, scientists dried some and strapped them to a satellite. Back on Earth, they added water. Here's the crazy part: many woke up! Raw sunlight killed most, but a few made it. So why did they live? Dried out, it pulls in its legs and becomes a tiny barrel. Its body nearly stops, like pausing your life. It didn't beat space by being tough. It beat space by switching itself off.
+
+Doğrulama: National Geographic (Ed Yong, 2008), Jönsson ve ark. 2008: FOTON-M3, Eylül 2007, 10 gün; tun hâlinde; sadece vakum: kontrol grubuyla aynı oranda yaşadı; vakum + tam UV: çoğu öldü, birkaçı yaşadı; su damlasıyla canlandılar. Anlatıcı fesini çıkarmaz (BRAND §2).
+Kapak: `THIS ANIMAL / SURVIVED / SPACE` (vurgu SPACE), sahne 0, t 2.5: büyük şoklu anlatıcı (scale 1.25) + dev su ayısı, Dünya ufku aşağıda, uydu hayaleti yok. Adaylar: IT SURVIVED / OPEN SPACE (sahne 0), DRIED OUT. / THEN IT / WOKE UP (sahne 3, tunun canlandığı an; yakın plan küçük kaldı).
+1. `td_space` "This tiny animal survived open space." Dev su ayısı yıldızlar arasında süzülüyor; büyük anlatıcı alçak ufukta dürbünle bakıyor → "space"te şok (kanca = kapak).
+2. `td_lens` "Meet the tardigrade, the water bear." Anlatıcı dev büyüteç tutuyor; yosunda yürüyen su ayısı, "0.5 mm" ölçeği, "WATER BEAR".
+3. `td_space` "In 2007, scientists dried some and strapped them to a satellite." FOTON kapsülü yakın plan (kicker "2007 FOTON-M3", etiket tekrarı yok); tun tepsisi, "strapped"te kayışlar, sağ üstte "10 DAYS" notu.
+4. `td_lab` "Back on Earth, they added water. Here's the crazy part: many woke up!" Damlalıktan damla; büyük yuvarlak yakın planda tun tamamen canlanıp yürüyor; "woke"ta yeşil "ALIVE!", anlatıcı geri sıçrıyor.
+5. `td_space` "Raw sunlight killed most, but a few made it." Güneş'ten tepsiye kırmızı UV ışınları, tunlar kırmızı yanıyor; "MOST DIED", "few"da yeşil kutulu "A FEW LIVED".
+6. `title` "So why did they live?" WHY DID THEY / [LIVE?] (kutu ayrı satırda, "they"de tam görünür); anlatıcı sağ altta düşünüyor.
+7. `td_lens` "Dried out, it pulls in its legs and becomes a tiny barrel." Büyüteçte su ayısı bacaklarını ve başını çekip buruşuk fıçıya dönüşüyor; "barrel"da kırmızı "TUN", anlatıcı şok.
+8. `td_pause` "Its body nearly stops, like pausing your life." Kalp monitörü yavaşlayıp düzleşiyor, tunun üstünden "z"ler; "pausing"de anlatıcı dev kırmızı duraklat düğmesine basıyor, mavi "PAUSED".
+9. `td_space` "It didn't beat space by being tough." Uzayda süzülen su ayısı; "TOUGH" yazısı "tough"ta kırmızı çizgiyle üstü çiziliyor; anlatıcı önce yazıyı işaret ediyor, üstü çizilince omuz silkiyor.
+10. `td_space` "It beat space by switching itself off." Su ayısı "switching"te uzayda tuna dönüşüyor, "off"ta kırmızı "OFF" damgası; anlatıcı aşağı uzanıp "off"ta kırmızı güç düğmesine basıyor (düğme çöküyor).
+Tipler: `td_space` ×5, `td_lens` ×2, `td_lab`, `td_pause`, `title`; anlatıcı 8/10 sahnede. Yeni dosyalar: `scenes/studio/shots/td__lib.js`, `td_space.js` (`td_space`, `td_orbit`), `td_lens.js` (`td_lens`, `td_lab`), `td_pause.js`.
+Tur 2: Dünya diski artık dolgusuz (palet dışı #E3DDCD yok): sadece ince ufuk kavsi + ink-soft tarama; sahne 0'da kapak bloğu sırasında su ayısı belirgin süzülüyor (drift_k 3).
+
+## ag-04-tambora-1816 (uzun video)
+- **Hissedilen:** "Dünyanın öbür ucundaki tek bir dağ, bir yıl boyunca bütün gezegenin yazını çaldı; kimse sebebini bilmiyordu."
+- **Kanca + kapak:** kapak `SNOW / IN JUNE` ya da `IT STOLE / SUMMER` (vurgu `JUNE` / `SUMMER`). Kare: patlayan dağ, ön planda karlı yaz tarlası, üşüyen şok anlatıcı. 3 aday.
+- **Doğrulanacak:** Tambora, Sumbawa; ~4.300 m → ~2.850 m; faaliyet 5 Nisan 1815, doruk 10–11 Nisan; Java'da İngiliz askerleri top sesi sandı (Raffles), tekne gönderildi; Sanggar racası: üç alev sütunu birleşti, "liquid fire"; piroklastik akıntılar köyleri denize sürükledi; ~2.600 km'den duyuldu (metinde "more than 2,500"); pomza salları; birkaç gün karanlık; doğrudan ~10.000 ölüm, açlık/hastalıkla onbinler (metin sayı vermiyor); kükürt aerosolü stratosferde; 1816 Haziran New England/Quebec kar, Temmuz/Ağustos don; "Eighteen Hundred and Froze to Death"; Vermont'tan batıya göç; Avrupa'da kıtlık, ekmek isyanları; Villa Diodati, Byron'ın hayalet hikâyesi yarışması, Mary Shelley (18) → Frankenstein; Karl Drais 1817 (bağlantı tartışmalı, metin öyle diyor); ~100 yıl sonra bağ kuruldu (Humphreys, 1920); Grönland/Antarktika buz çekirdeklerinde sülfat; küresel soğuma ~0,4–0,7 °C ("less than one degree").
+- **Bölümler:** 1 "A Quiet Mountain" · 2 "The Loudest Sound" · 3 "The Invisible Veil" · 4 "The Year Without a Summer" · 5 "The Answer in the Ice". Toplam 4.383 karakter.
+- **Tek parça anlatım (bölüm bölüm):**
+
+**CHAPTER 1 / 5 — A Quiet Mountain**
+> In June 1816, it snowed in New England. Frost killed the crops, rain drowned the harvests of Europe, and hungry people wondered if the world was ending. Nobody knew why. The answer was on the other side of the planet, inside a mountain most of them had never heard of. This is the story of Mount Tambora, and the year without a summer.
+> In 1815, Tambora stood on the island of Sumbawa, in what is now Indonesia. It was more than four thousand meters tall, and for as long as anyone could remember, it had been quiet. Villages, rice fields and small kingdoms lived on its slopes. People didn't even think of it as a volcano. Then, on April 5, the mountain began to rumble.
+
+**CHAPTER 2 / 5 — The Loudest Sound**
+> The first blasts were so loud that, on the island of Java, hundreds of kilometers away, British soldiers thought they heard cannon fire. They marched out to fight an enemy. Boats were sent to look for a ship in trouble. There was no enemy, and there was no ship.
+> And that was only the warning. On the evening of April 10, the real eruption began. A local ruler later said that three columns of fire shot out of the summit, and joined into one. The whole mountain, he said, looked like flowing liquid fire. Then avalanches of burning ash and gas raced down the slopes, faster than anyone could run, and swept entire villages into the sea.
+> The explosions were heard more than 2,500 kilometers away. When it was over, Tambora was about 1,300 meters shorter. Its whole top had been blown into the sky. Weeks later, ships far out at sea were still sailing through huge rafts of floating stone.
+
+**CHAPTER 3 / 5 — The Invisible Veil**
+> For days, the islands nearby lived in total darkness, even at noon. Ash buried the fields and poisoned the water. The eruption itself killed around ten thousand people. But the hunger and disease that came after killed many more. Most estimates say that tens of thousands died across Sumbawa and the island next to it.
+> But here's the thing. Tambora wasn't finished. The blast had shot millions of tons of sulfur gas high into the sky, far above the clouds and the rain. Up there, the gas turned into a thin haze of tiny droplets, and the winds slowly spread it around the entire planet.
+> You couldn't see it like a cloud. But it did something sneaky. It bounced part of the sunlight back into space, before it could warm the ground. So the whole Earth got a little colder. And a year later, people far away from Indonesia began to feel it.
+
+**CHAPTER 4 / 5 — The Year Without a Summer**
+> In June 1816, snow fell in New England and Canada. Frost came back in July, and again in August, and killed the corn in the fields. Farmers gave that year a grim nickname: Eighteen Hundred and Froze to Death. Thousands of people in Vermont and Maine gave up, sold their farms, and headed west.
+> In Europe, it rained for weeks. Harvests rotted, the price of bread exploded, and hungry crowds rioted in the streets. Some families left their homes and walked away to find food.
+> Now here's the strangest part. In Switzerland, beside Lake Geneva, a group of young writers was stuck indoors by the endless storms. So the poet Lord Byron gave his friends a challenge: let's each write a ghost story. One of them was an eighteen-year-old named Mary Shelley. And out of that dark, cold summer came Frankenstein.
+> Some historians even go one step further. Oats were so expensive that horses became hard to feed. And in 1817, a German inventor named Karl Drais showed off a running machine with two wheels and no horse, an early ancestor of the bicycle. That link is still debated. But the timing is hard to ignore.
+
+**CHAPTER 5 / 5 — The Answer in the Ice**
+> So why did nobody blame the volcano? Because in 1816, nobody imagined that one mountain could change the weather of the whole world. News traveled slowly, and Tambora was very far away. It took about a hundred years before scientists connected the dots.
+> And today, we can even see the proof. Deep in the ice of Greenland and Antarctica, the layers from those years hold a spike of volcanic sulfur. It's like a fingerprint frozen in time.
+> Tambora is the most powerful eruption in recorded history. And it cooled the planet by less than one degree Celsius. That sounds tiny. But it was enough to bring snow in June, hunger to millions, and a monster to literature.
+> And volcanoes like Tambora are still out there. So here's my question for you. If the summer disappeared next year, do you think our modern world would handle it better than they did in 1816? Tell me in the comments.
+
+
+- **Çekim fikri:** 3 sahne yazarı (A: bölüm 1–2, B: bölüm 3, C: bölüm 4–5). Konuya özel tipler önek `tbA_`, `tbB_`, `tbC_` (ör. uyuyan/patlayan dağ ve alev sütunları; Java'da top sesi sanan askerler; stratosferde yayılan perde ve geri yansıyan güneş ışınları; haziranda karlı tarla; fırtınalı villa, mum, yazanlar; buz çekirdeği katmanları + sülfat çizgisi). Haritalar: Endonezya (Sumbawa, Java), dünya (New England, İsviçre), Grönland/Antarktika.
+
+## Stickstory eleştiri günlüğü
+
+Puan sırası: Senaryo · Kanca · Okunabilirlik · Görsel=anlatım · Hareket · Kompozisyon+Kaşif · Derinlik+marka · Tempo · Doğruluk · Kapanış · Kapak+SEO
+
+### ag-01-bubble-wrap
+- Tur 1: 6·8·7·7·7·6·7·8·8·6·8 → metne YouTuber sesi + "crazy part" kancası, ironik kapanış; son sahne kompozisyonu; kapakta fes hayaleti, sahne 1 hareket.
+- Tur 2: 7·9·7·6·8·5·7·6·8·7·9 → son sahne yeniden kuruldu, "in New Jersey" çıktı (süre), FANCY→TEXTURED.
+- Tur 3 (geçti): 7·9·8·7·8·7·7·8·8·7·9. Son cila: Kaşif 1.1, SAFE! damgası, etiket/ok konumları. 459 karakter, ~34,7 sn.
+
+### ag-02-barry-marshall
+- Tur 1: 6·8·7·7·7·7·7·8·9·6·7 → izleyiciye hitap, "he did the unthinkable" kancası, kapanış antibiyotik; kapak yeniden; endoskop/PERTH çakışmaları.
+- Tur 2: 7·8·8·8·8·7·7·7·9·8·8 → süre 37,5 sn: kısaltma ("millions" çıktı); kenarda kesik Kaşif'ler; 4 ayrı spiral bakteri.
+- Tur 3 (geçti): 7·8·8·8·8·7·7·8·9·8·8. Son cila: MARSHALL etiketi, Nobel/antibiyotik sahnelerinde Kaşif. 454 karakter, ~33,6 sn.
+
+### ag-03-tardigrades-space
+- Tur 1: 5·6·8·8·8·7·7·7·7·6·7 → metin yeniden yazıldı (tun = "kendini kapatma"), kanca kapakla eşlendi, UV doğruluğu ("çoğu öldü, birkaçı yaşadı").
+- Tur 2: 7·8·7·8·8·7·7·6·9·9·8 → süre kısaltıldı, palet dışı Dünya diski kaldırıldı, Kaşif eylemleri.
+- Tur 3 (geçti): 8·8·7·8·8·8·8·8·9·9·8. Son cila: "Back on Earth", live? kutusu, düğmeye basma. 458 karakter, ~35 sn.
+
+### ag-04-tambora-1816 (uzun)
+- Tur 1: 7·7·6·6·7·5·7·7·8·8·5 → kapak başlığı tekrar ediyordu (IT STOLE SUMMER) → SNOW / IN JUNE (sahne 28, büyük Kaşif); Kaşif ölçeği tüm parçalarda 0.8; sol üst marka alanı temizlendi; kül akıntısı köyleri denize sürüklüyor; askerler fes gibi değil; 50→48 sahne (tekrarlar birleşti); "Mary Godwin, the future Mary Shelley"; bölüm başlarına kısa hitaplar; tepe kaybı 1.400 m (≈4.300→2.851 m).
+- Tur 2 (geçti): 8·8·7·7·7·7·7·7·9·8·8. Son cila: harita çerçeveleri kicker'ın altına, 1815 etiketi altyazının üstüne, kesik Kaşif/etiketler.
+- Son: 48 sahne, 4.551 karakter, ~5:29.
+
+**Yönetmen son kapısı:** dört videonun `sheet.png` ve `cover.jpg`'si gözle kontrol edildi; konular birbirinden, geçmişten ve bugünün Düşün Bakalım videolarından farklı; lint hatasız, SEO 100/100. Toplam ≈ 5.922 karakter (günlük sınır 6.500).

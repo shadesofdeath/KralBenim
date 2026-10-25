@@ -1,0 +1,532 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "tardigrades-space",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "This animal",
+   "survived",
+   "space"
+  ],
+  "highlight": [
+   "space"
+  ],
+  "scene": 0,
+  "t": 2.5,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Tardigrades in Space: The Animal That Survived the Void",
+  "description": "Tardigrades in space: in 2007, scientists strapped dried water bears to the outside of a satellite. How did a tiny animal survive the open void?\n\nOn the FOTON-M3 mission, the TARDIS experiment left dried tardigrades in the vacuum of low Earth orbit for about ten days, some also under raw solar ultraviolet light. Back on Earth, a drop of water revived many of them, although most of the ones hit by full sunlight died. The secret is the tun: a dried tardigrade pulls in its legs and its body almost stops. Researchers led by Ingemar Jonsson reported it in 2008.\n\nSubscribe to Stickstory for a strange true story every day. Would you send a water bear to Mars? Tell me in the comments!\n\n#shorts #tardigrades #waterbear #stickstory",
+  "tags": [
+   "tardigrades in space",
+   "tardigrades in space 2007",
+   "tardigrades space survival",
+   "water bear in space",
+   "tardigrades",
+   "water bears",
+   "tardis experiment",
+   "foton-m3",
+   "tardigrade survival",
+   "animal superpowers",
+   "toughest animal on earth",
+   "space biology",
+   "science facts",
+   "weird science",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-25T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "td_space",
+   "text": "This tiny animal survived open space.",
+   "visual": "A huge cute tardigrade (plump segmented body, round head with a snout ring, eight stubby clawed legs) floats paddling among ink stars above a flat Earth horizon; the big fez narrator stands on the horizon at the left looking up through binoculars, then jumps back in shock on 'space'.",
+   "title": {
+    "white": "Open space"
+   },
+   "cues": {
+    "hit": "space"
+   },
+   "params": {
+    "bear": {
+     "x": 0.66,
+     "y": 0.56,
+     "s": 1.2,
+     "rot": -8,
+     "drift_k": 3,
+     "drift_amp": 1.8
+    },
+    "earth": {
+     "x": 0.5,
+     "y": 1.6,
+     "r": 1.6,
+     "land": false,
+     "fill": false
+    },
+    "kasif": {
+     "x": 0.22,
+     "y": 0.72,
+     "scale": 1.25,
+     "pose": "look",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "td_lens",
+   "text": "Meet the tardigrade, the water bear.",
+   "visual": "The fez narrator on the right holds a giant magnifying glass; inside the lens a tardigrade walks over moss among drifting water bubbles, a '0.5 mm' scale bar draws under it, 'WATER BEAR' is handwritten at the top of the lens on 'water'.",
+   "title": {
+    "white": "Tardigrade",
+    "gray": "0.5 millimeters"
+   },
+   "cues": {
+    "hit": "water"
+   },
+   "params": {
+    "lens": {
+     "x": 0.42,
+     "y": 0.37,
+     "r": 330
+    },
+    "ruler": {
+     "text": "0.5 mm",
+     "at": 0.4
+    },
+    "labels": [
+     {
+      "text": "WATER BEAR",
+      "x": 0.42,
+      "y": 0.25,
+      "size": 76,
+      "at": "hit",
+      "color": "ink"
+     }
+    ],
+    "kasif": {
+     "x": 0.85,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": 45,
+     "face": "left",
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "td_space",
+   "text": "In 2007, scientists dried some and strapped them to a satellite.",
+   "visual": "Close-up of the FOTON capsule in space (sphere with a hatch, service cylinder, antennas); on its outside an open experiment box holds a tray of six dried tuns, two brown straps run down over the tray on 'strapped'; a handwritten red '10 DAYS' note pops in at the top right.",
+   "title": {
+    "white": "2007",
+    "gray": "FOTON-M3"
+   },
+   "cues": {
+    "hit": "strapped"
+   },
+   "params": {
+    "sat": {
+     "x": 0.3,
+     "y": 0.38,
+     "s": 1.1,
+     "rot": -4,
+     "strap_at": "hit"
+    },
+    "earth": {
+     "x": 0.5,
+     "y": 1.51,
+     "r": 1.6,
+     "land": false,
+     "fill": false
+    },
+    "labels": [
+     {
+      "text": "10 DAYS",
+      "x": 0.66,
+      "y": 0.2,
+      "size": 90,
+      "at": 1.6,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "td_lab",
+   "text": "Back on Earth, they added water. Here's the crazy part: many woke up!",
+   "visual": "A lab bench with flasks on a shelf; a dropper with a red bulb lets one blue drop fall into a glass dish with a dried tun on 'water'; in a big round close-up the wrinkled tun swells, stretches its eight legs and starts walking; a green 'ALIVE!' box pops in on 'woke'; the fez narrator jumps back in shock.",
+   "title": {
+    "white": "Back home",
+    "gray": "just water"
+   },
+   "cues": {
+    "hit": "water",
+    "w": "woke"
+   },
+   "params": {
+    "dish": {
+     "x": 0.5
+    },
+    "drop": {
+     "at": "hit"
+    },
+    "callout_r": 200,
+    "wake": true,
+    "labels": [
+     {
+      "text": "ALIVE!",
+      "x": 0.3,
+      "y": 0.255,
+      "size": 84,
+      "at": "w",
+      "box": true,
+      "font": "serif",
+      "color": "green"
+     }
+    ],
+    "kasif": {
+     "x": 0.86,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": -20,
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "w",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "td_space",
+   "text": "Raw sunlight killed most, but a few made it.",
+   "visual": "A gold ink sun blazes at the top right; three red zig-zag ultraviolet rays shoot into the open tray on the capsule and the tuns flash red; a red 'MOST DIED' pops in, then a green box 'A FEW LIVED' on 'few'.",
+   "title": {
+    "white": "Raw sunlight",
+    "gray": "ultraviolet"
+   },
+   "cues": {
+    "hit": "sunlight",
+    "f": "few"
+   },
+   "params": {
+    "sun": {
+     "x": 0.8,
+     "y": 0.2,
+     "r": 95
+    },
+    "sat": {
+     "x": 0.24,
+     "y": 0.42,
+     "s": 0.8,
+     "rot": -6
+    },
+    "uv": {
+     "at": "hit",
+     "n": 3
+    },
+    "earth": false,
+    "labels": [
+     {
+      "text": "MOST DIED",
+      "x": 0.7,
+      "y": 0.47,
+      "size": 84,
+      "at": "hit",
+      "font": "serif",
+      "color": "red",
+      "underline": false
+     },
+     {
+      "text": "A FEW LIVED",
+      "x": 0.7,
+      "y": 0.544,
+      "size": 68,
+      "at": "f",
+      "color": "green",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "So why did they live?",
+   "visual": "Giant Fraunces words slam in: 'WHY DID THEY', then 'LIVE?' in a red box on its own line; the fez narrator at the lower right rubs his chin, thinking.",
+   "title": {},
+   "cues": {
+    "w0": "why",
+    "w1": "did",
+    "w2": "did",
+    "w3": "they"
+   },
+   "params": {
+    "lines": [
+     "Why did they",
+     "live?"
+    ],
+    "highlight": [
+     "live"
+    ],
+    "y": 0.3,
+    "kasif": {
+     "x": 0.84,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.6,
+     "emotion": "neutral",
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "td_lens",
+   "text": "Dried out, it pulls in its legs and becomes a tiny barrel.",
+   "visual": "Inside the giant magnifying glass the walking tardigrade stops, pulls in its eight legs and its head and shrivels into a wrinkled dry barrel (a 'tun'); a red 'TUN' box stamps in on 'barrel'; the fez narrator holding the lens leans in curiously, then jumps back in shock.",
+   "title": {
+    "white": "The trick",
+    "gray": "the tun"
+   },
+   "cues": {
+    "d": "Dried",
+    "hit": "barrel"
+   },
+   "params": {
+    "lens": {
+     "x": 0.42,
+     "y": 0.37,
+     "r": 330
+    },
+    "dry": {
+     "at": "d",
+     "dur": 1.6
+    },
+    "labels": [
+     {
+      "text": "TUN",
+      "x": 0.42,
+      "y": 0.25,
+      "size": 110,
+      "at": "hit",
+      "box": true,
+      "font": "serif",
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.85,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": 30,
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "td_pause",
+   "text": "Its body nearly stops, like pausing your life.",
+   "visual": "The dried tun rests on a line; above it a heart monitor's beating red trace slows and flattens into rare tiny blips, a small heart icon beats slower; on 'pause' the fez narrator presses a big red pause button, a blue 'PAUSED' box stamps in and little 'z' letters float up from the tun.",
+   "title": {
+    "white": "On pause"
+   },
+   "cues": {
+    "hit": "pausing",
+    "s": "stops"
+   },
+   "params": {
+    "pause": "s",
+    "label": {
+     "at": "hit"
+    },
+    "bear": {
+     "x": 0.36,
+     "y": 0.6,
+     "s": 0.9
+    },
+    "button": {
+     "x": 0.66,
+     "y": 0.5,
+     "r": 80
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": -25,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "td_space",
+   "text": "It didn't beat space by being tough.",
+   "visual": "The tardigrade floats among the stars above a thin Earth horizon; a big 'TOUGH' appears and the fez narrator points up at it, then on 'tough' it is struck through with a red line and he shrugs.",
+   "title": {
+    "white": "Not toughness"
+   },
+   "cues": {
+    "hit": "tough",
+    "t": "beat"
+   },
+   "params": {
+    "bear": {
+     "x": 0.62,
+     "y": 0.5,
+     "s": 1.0,
+     "rot": 4
+    },
+    "earth": {
+     "x": 0.5,
+     "y": 1.51,
+     "r": 1.6,
+     "land": false,
+     "fill": false
+    },
+    "labels": [
+     {
+      "text": "TOUGH",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 130,
+      "at": "t",
+      "font": "serif",
+      "color": "ink",
+      "underline": false,
+      "strike": "hit"
+     }
+    ],
+    "kasif": {
+     "x": 0.17,
+     "y": 0.615,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "t",
+       "pose": "point",
+       "dir": 60,
+       "emotion": "neutral"
+      },
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "td_space",
+   "text": "It beat space by switching itself off.",
+   "visual": "The floating tardigrade pulls in its legs and curls into a dry tun in mid-space on 'switching'; the fez narrator on the horizon points down and presses a big red power button on 'off' (it sinks) while a red 'OFF' stamp slams in above the tun.",
+   "title": {
+    "white": "The secret"
+   },
+   "cues": {
+    "sw": "switching",
+    "hit": "off"
+   },
+   "params": {
+    "bear": {
+     "x": 0.6,
+     "y": 0.5,
+     "s": 1.05,
+     "rot": -4,
+     "face": -1,
+     "dry_at": "sw"
+    },
+    "earth": {
+     "x": 0.5,
+     "y": 1.51,
+     "r": 1.6,
+     "land": false,
+     "fill": false
+    },
+    "stamp": {
+     "text": "OFF",
+     "at": "hit",
+     "x": 0.55,
+     "y": 0.2,
+     "size": 160
+    },
+    "kasif": {
+     "x": 0.25,
+     "y": 0.615,
+     "scale": 0.85,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "sw",
+       "pose": "point",
+       "dir": -35,
+       "emotion": "happy"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": -30,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "button": {
+     "x": 0.38,
+     "y": 0.565,
+     "r": 58,
+     "at": "hit",
+     "icon": "power"
+    }
+   }
+  }
+ ]
+}

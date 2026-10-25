@@ -1,0 +1,718 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-barry-marshall",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "He drank",
+   "the germs"
+  ],
+  "highlight": [
+   "drank"
+  ],
+  "scene": 0,
+  "t": 2.4,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Barry Marshall: Why Did This Doctor Drink Bacteria?",
+  "description": "Barry Marshall drank a glass of bacteria on purpose, and it changed how the world treats stomach ulcers.\n\nIn 1984, doctors blamed ulcers on stress and acid. In Perth, Australia, Marshall and pathologist Robin Warren kept finding a spiral bacterium, Helicobacter pylori, in sick stomachs, but nobody believed them. So Marshall drank a culture of it. Within days he was vomiting, and an endoscopy showed an inflamed stomach. In 2005, Marshall and Warren shared the Nobel Prize in Medicine, and today ulcers caused by this germ are treated with antibiotics.\n\nSubscribe to Stickstory for a new true story every day. Would you have drunk it to prove you were right? Tell me in the comments!\n\n#shorts #barrymarshall #hpylori #stickstory",
+  "tags": [
+   "barry marshall",
+   "barry marshall experiment",
+   "barry marshall drank bacteria",
+   "doctor drank bacteria",
+   "helicobacter pylori",
+   "h pylori",
+   "stomach ulcer cause",
+   "stomach ulcers",
+   "robin warren",
+   "nobel prize in medicine",
+   "self experiment",
+   "medical history",
+   "human body",
+   "science history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-25T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "bm_drink",
+   "text": "This doctor drank a glass of bacteria on purpose.",
+   "visual": "Close on the lab bench: Barry Marshall (round spectacles) tips a big glass of cloudy gold broth full of wriggling spiral bacteria to his lips; the big fez narrator beside him jumps back in shock on 'drank'; a red 'BACTERIA!' stamp slams in between them.",
+   "title": {
+    "white": "Perth",
+    "gray": "1984"
+   },
+   "cues": {
+    "d": "drank",
+    "hit": "bacteria"
+   },
+   "params": {
+    "glass": false,
+    "bench_y": 0.58,
+    "floor_y": 0.75,
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "y": 0.75,
+      "x": 0.25,
+      "scale": 1.5,
+      "pose": "point",
+      "dir": 15,
+      "at": "d",
+      "then": "think",
+      "face": "right",
+      "emotion": "neutral",
+      "hold": "glass",
+      "glass_h": 240,
+      "bugs": 4,
+      "drink": {
+       "at": "d",
+       "dur": 3.6
+      },
+      "big_bugs": true
+     },
+     {
+      "who": "kasif",
+      "y": 0.75,
+      "x": 0.76,
+      "scale": 1.32,
+      "pose": "idle",
+      "face": "left",
+      "at": "d",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "BACTERIA!",
+      "x": 0.47,
+      "y": 0.335,
+      "at": "hit",
+      "size": 80,
+      "stamp": true,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_clinic",
+   "text": "If you had an ulcer in 1984, doctors blamed stress.",
+   "visual": "A 1980s doctor's office: a bearded doctor points at a wall chart where a red hand-written 'STRESS!' appears; the fez narrator plays the patient, sitting worried with his hand on his belly, then shrugs.",
+   "title": {
+    "white": "1984",
+    "gray": "the doctor's office"
+   },
+   "cues": {
+    "u": "ulcer",
+    "hit": "stress"
+   },
+   "params": {
+    "chart": {
+     "x": 0.36,
+     "y": 0.3,
+     "w": 0.56,
+     "h": 0.2
+    },
+    "labels": [
+     {
+      "text": "ULCER?",
+      "x": 0.32,
+      "y": 0.27,
+      "at": "u",
+      "size": 84,
+      "color": "ink"
+     },
+     {
+      "text": "STRESS!",
+      "x": 0.38,
+      "y": 0.34,
+      "at": "hit",
+      "size": 96,
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "doc",
+      "beard": "grey",
+      "x": 0.2,
+      "y": 0.6,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": 60,
+      "emotion": "neutral"
+     },
+     {
+      "who": "kasif",
+      "y": 0.6,
+      "x": 0.8,
+      "scale": 0.85,
+      "pose": "sit",
+      "face": "left",
+      "emotion": "worried",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ],
+    "desk_x": 0.55,
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_scope",
+   "text": "But Barry Marshall kept finding strange germs in sick stomachs.",
+   "visual": "The lab bench with the microscope; Marshall (round spectacles) leans at it, thinking, a hand-written 'MARSHALL' tag pops over him; a round magnified view joined to the eyepiece by a dashed line shows stomach-lining cells, and on 'strange' spiral bacteria pop in one by one and wriggle; the fez narrator looks through binoculars, then jumps back in shock.",
+   "title": {
+    "white": "Perth",
+    "gray": "Australia, 1984"
+   },
+   "cues": {
+    "m": "Marshall",
+    "find": "strange",
+    "hit": "stomachs"
+   },
+   "params": {
+    "scope": {
+     "x": 0.36
+    },
+    "view": {
+     "x": 0.62,
+     "y": 0.32,
+     "r": 230,
+     "at": 0.5,
+     "bugs": 12,
+     "bugs_at": "find"
+    },
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "x": 0.22,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried",
+      "tag": {
+       "text": "MARSHALL",
+       "at": "m",
+       "dy": -560
+      }
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.6,
+      "scale": 0.72,
+      "pose": "look",
+      "face": "left",
+      "at": "find",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.45,
+      0.32
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_pig",
+   "text": "Nobody believed him. His pig tests failed.",
+   "visual": "A farm pen with a wooden fence; healthy piglets trot happily; Marshall (round spectacles) holds a clipboard while a bearded doctor shrugs on 'believed'; a red 'FAILED' stamp slams in and the fez narrator shrugs.",
+   "title": {
+    "white": "Pig tests",
+    "gray": "1984"
+   },
+   "cues": {
+    "b": "believed",
+    "hit": "failed"
+   },
+   "params": {
+    "pigs": 2,
+    "ground_y": 0.53,
+    "pig_range": [
+     0.22,
+     0.47
+    ],
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "y": 0.6,
+      "x": 0.1,
+      "scale": 0.74,
+      "pose": "idle",
+      "face": "right",
+      "hold": "clipboard",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "doc",
+      "beard": "grey",
+      "x": 0.62,
+      "y": 0.6,
+      "scale": 0.7,
+      "pose": "idle",
+      "face": "left",
+      "at": "b",
+      "then": "shrug",
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "y": 0.6,
+      "x": 0.8,
+      "scale": 0.68,
+      "pose": "point",
+      "dir": 0,
+      "face": "left",
+      "at": "hit",
+      "then": "shrug"
+     }
+    ],
+    "labels": [
+     {
+      "text": "FAILED",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "hit",
+      "size": 110,
+      "stamp": true,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_drink",
+   "text": "To prove it, he did the unthinkable.",
+   "visual": "Night in the lab: a full glass of cloudy broth with spiral germs glows on the bench, gold rings pulsing round it; Marshall (round spectacles) walks up to it and stops, thinking; the fez narrator throws his hands up in shock and a red 'DON'T!' pops up.",
+   "title": {
+    "white": "The plan",
+    "gray": "July 1984"
+   },
+   "cues": {
+    "p": "prove",
+    "hit": "unthinkable"
+   },
+   "params": {
+    "glass": {
+     "x": 0.52,
+     "h": 300,
+     "level": 0.8,
+     "bugs": 10
+    },
+    "glow": true,
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "y": 0.6,
+      "x": -0.1,
+      "to": 0.26,
+      "walk_at": 0,
+      "walk_dur": 1.4,
+      "scale": 0.92,
+      "pose": "walk",
+      "then": "think",
+      "face": "right",
+      "emotion": "neutral"
+     },
+     {
+      "who": "kasif",
+      "y": 0.6,
+      "x": 0.82,
+      "scale": 0.88,
+      "pose": "think",
+      "face": "left",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "DON'T!",
+      "x": 0.78,
+      "y": 0.27,
+      "at": "hit",
+      "size": 100,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.52,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_drink",
+   "text": "He mixed the germs into a broth, and drank it.",
+   "visual": "On the lab bench a tall glass of gold broth; a petri dish tips over it and spiral germs tumble in, the broth clouds up and fills with wriggling bacteria; on 'drank' Marshall (round spectacles) has the glass at his lips and empties it, gulp marks by his throat; the fez narrator jumps back in shock.",
+   "title": {
+    "white": "The drink",
+    "gray": "1984"
+   },
+   "cues": {
+    "g": "germs",
+    "b": "broth",
+    "d": "drank"
+   },
+   "params": {
+    "glass": {
+     "x": 0.52,
+     "h": 280,
+     "level": 0.75,
+     "bugs": 9
+    },
+    "dish": {
+     "at": "g"
+    },
+    "pick": "d",
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "x": 0.24,
+      "y": 0.6,
+      "scale": 0.95,
+      "pose": "point",
+      "dir": 0,
+      "face": "right",
+      "at": "d",
+      "then": "think",
+      "emotion": "neutral",
+      "hold": "glass",
+      "hold_at": "d",
+      "glass_h": 240,
+      "bugs": 7,
+      "drink": {
+       "at": "d",
+       "dur": 1.2
+      }
+     },
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "y": 0.6,
+      "scale": 0.85,
+      "pose": "think",
+      "face": "left",
+      "at": "d",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_sick",
+   "text": "Days later, he was vomiting,",
+   "visual": "At home: a wall calendar tears off its pages until a red 'DAY 5'; Marshall (round spectacles) sits slumped on a stool beside a pail, a green queasy swirl spins over his head and sweat drops fall; the fez narrator looks worried.",
+   "title": {
+    "white": "Day 5",
+    "gray": "the symptoms"
+   },
+   "cues": {
+    "day": "later",
+    "sick": "vomiting"
+   },
+   "params": {
+    "calendar": {
+     "x": 0.7,
+     "y": 0.27,
+     "from": 1,
+     "to": 5,
+     "at": "day"
+    },
+    "pail": {
+     "x": 0.56
+    },
+    "swirl": {
+     "who": 0,
+     "at": "sick"
+    },
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "x": 0.32,
+      "y": 0.6,
+      "scale": 0.9,
+      "pose": "sit",
+      "face": "right",
+      "emotion": "worried",
+      "shake": "sick"
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.6,
+      "scale": 0.75,
+      "pose": "idle",
+      "face": "left",
+      "at": "sick",
+      "then": "think",
+      "emotion": "worried"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.4,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_stomach",
+   "text": "and a camera showed his stomach was inflamed.",
+   "visual": "A big ink cross-section of a stomach with soft folds; an endoscope cable with a lit camera head slides down the gullet and sweeps its light; on 'inflamed' red sore patches bloom on the lining and spiral bacteria wriggle there; a red 'INFLAMED' with an arrow; the small fez narrator points up at it.",
+   "title": {
+    "white": "Endoscopy",
+    "gray": "day 8"
+   },
+   "cues": {
+    "c": "camera",
+    "inflamed": "inflamed"
+   },
+   "params": {
+    "scope": {
+     "at": 0,
+     "dur": 1.3
+    },
+    "bugs": 9,
+    "cast": [
+     {
+      "who": "kasif",
+      "y": 0.6,
+      "x": 0.87,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "left",
+      "at": "inflamed",
+      "then": "point",
+      "dir": 50,
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "INFLAMED",
+      "x": 0.72,
+      "y": 0.2,
+      "at": "inflamed",
+      "size": 90,
+      "color": "red",
+      "arrow": [
+       0.5,
+       0.48
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.4
+     ]
+    },
+    "cx": 0.5,
+    "cy": 0.44,
+    "k": 0.8
+   }
+  },
+  {
+   "type": "bm_nobel",
+   "text": "That drink helped win him a Nobel Prize,",
+   "visual": "A year counter rolls from 1984 to a red 2005; a gold medal swings down on a blue ribbon with gold rays; Marshall (round spectacles) waves happily on the left; the fez narrator jumps in surprise, then waves on 'Prize'.",
+   "title": {
+    "white": "Nobel Prize",
+    "gray": "2005"
+   },
+   "cues": {
+    "n": "helped",
+    "hit": "Prize"
+   },
+   "params": {
+    "years": {
+     "from": 1984,
+     "to": 2005,
+     "at": 0,
+     "dur": 1.2,
+     "y": 0.2
+    },
+    "medal": {
+     "x": 0.5,
+     "y": 0.44,
+     "r": 170,
+     "at": "helped"
+    },
+    "cast": [
+     {
+      "who": "marshall",
+      "glasses": true,
+      "x": 0.16,
+      "y": 0.6,
+      "scale": 0.92,
+      "pose": "idle",
+      "face": "right",
+      "at": "n",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.6,
+      "scale": 0.92,
+      "pose": "shock",
+      "face": "left",
+      "at": "hit",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "bm_stomach",
+   "text": "and today, ulcers are cured with antibiotics.",
+   "visual": "The stomach cross-section with red sore patches and a red 'ULCER' beside them; red-and-cream antibiotic capsules slide down the gullet; on 'cured' the sores and bacteria shrink away while 'ULCER' is struck through; a green 'ANTIBIOTICS' and a big green tick appear and the fez narrator points up at them, smiling.",
+   "title": {
+    "white": "Today",
+    "gray": "the cure"
+   },
+   "cues": {
+    "u": "ulcers",
+    "cured": "cured",
+    "hit": "antibiotics"
+   },
+   "params": {
+    "scope": false,
+    "cx": 0.42,
+    "cy": 0.44,
+    "k": 0.8,
+    "inflame": {
+     "at": -1
+    },
+    "heal": {
+     "at": "cured",
+     "check": [
+      0.84,
+      0.2
+     ]
+    },
+    "bugs": 7,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.6,
+      "scale": 0.78,
+      "pose": "think",
+      "face": "left",
+      "at": "cured",
+      "then": "point",
+      "dir": 55,
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "ULCER",
+      "x": 0.82,
+      "y": 0.33,
+      "at": "u",
+      "size": 84,
+      "color": "red",
+      "strike": "cured"
+     },
+     {
+      "text": "ANTIBIOTICS",
+      "x": 0.52,
+      "y": 0.2,
+      "at": "hit",
+      "size": 80,
+      "color": "green"
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   }
+  }
+ ]
+}

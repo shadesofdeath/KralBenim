@@ -1,0 +1,5012 @@
+{
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-04-tambora-1816",
+ "cover": {
+  "lines": [
+   "Snow",
+   "in June"
+  ],
+  "highlight": [
+   "June"
+  ],
+  "scene": 28,
+  "t": 1.15,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "worried",
+   "x": 1500,
+   "y": 1060,
+   "scale": 1.3,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Mount Tambora: The Volcano That Stole Summer in 1816",
+  "description": "Mount Tambora erupted in April 1815, and a year later it snowed in June. How did one volcano in Indonesia steal the summer from the whole world, when nobody even knew it had happened?\n\nThe 1815 eruption of Mount Tambora was the most powerful eruption in recorded history. Its blasts were mistaken for cannon fire hundreds of kilometers away, and it blew about 1,400 meters off the top of the mountain. Then an invisible veil of sulfur spread around the planet and caused the Year Without a Summer: frost in New England, famine and bread riots in Europe, and the gloomy summer that gave us Frankenstein.\n\nIn this video:\n• The quiet mountain on Sumbawa that nobody feared\n• The April 1815 eruption, heard more than 2,500 kilometers away\n• How sulfur in the sky cooled the whole Earth\n• 1816: snow in June, hunger, and the birth of Frankenstein\n• The proof frozen in the ice of Greenland and Antarctica\n\nSubscribe to Stickstory for a strange true story every day. If the summer disappeared next year, would our modern world handle it better than 1816? Tell me in the comments!\n\n#tambora #yearwithoutasummer #history #stickstory",
+  "tags": [
+   "mount tambora",
+   "tambora eruption",
+   "mount tambora 1815",
+   "tambora volcano",
+   "year without a summer",
+   "1816 year without a summer",
+   "volcano history",
+   "biggest volcanic eruption",
+   "frankenstein origin",
+   "mary shelley",
+   "history",
+   "history stories",
+   "volcanoes",
+   "climate history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-25T14:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Snow in June, 1816",
+   "type": "tbA_field",
+   "text": "In June 1816, it snowed in New England.",
+   "visual": "New England farm in high summer: green corn rows, a farmhouse and a red barn, a wooden fence, a gold sun; snowflakes are already falling and white caps grow on the roofs, the corn and the ground; a red stamp 'JUNE 1816' slams on; on 'snowed' the snow turns heavy, the bare-headed farmer and the fez narrator both jump back in shock",
+   "title": {
+    "white": "New England",
+    "gray": "1816"
+   },
+   "cues": {
+    "heavy": "snowed"
+   },
+   "params": {
+    "ground": 0.64,
+    "snow": {
+     "at": 0,
+     "heavy": "heavy"
+    },
+    "sun": {
+     "x": 0.62,
+     "y": 0.17
+    },
+    "house": {
+     "x": 0.83,
+     "barn": true
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "y": 0.93,
+      "scale": 0.85,
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "heavy",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "farmer",
+      "x": 0.6,
+      "y": 0.9,
+      "scale": 0.72,
+      "pose": "look",
+      "face": "left",
+      "seq": [
+       {
+        "at": "heavy",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "JUNE 1816",
+      "x": 0.3,
+      "y": 0.34,
+      "at": 0.15,
+      "stamp": true,
+      "color": "red",
+      "size": 96
+     }
+    ],
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_field",
+   "text": "Frost killed the crops, rain drowned the harvests of Europe, and hungry people wondered if the world was ending.",
+   "visual": "Split field with a dashed divider: left, corn rows that droop and turn brown on 'Frost' (label 'frost'); right, golden wheat under a dark rain cloud, rain streaks pour on 'rain' and the wheat is beaten flat (label 'rain'); in front, a thin hungry villager and the fez narrator look up at the sky, worried, a hand note 'the end?' pops on 'ending'",
+   "title": {
+    "white": "1816",
+    "gray": "the hunger"
+   },
+   "cues": {
+    "wilt": "Frost",
+    "rain": "rain",
+    "flat": "drowned",
+    "hungry": "hungry",
+    "end": "ending"
+   },
+   "params": {
+    "crops": [
+     {
+      "type": "corn",
+      "from": 0.0,
+      "to": 0.48,
+      "wilt": "wilt"
+     },
+     {
+      "type": "wheat",
+      "from": 0.52,
+      "to": 1.0,
+      "flat": "flat"
+     }
+    ],
+    "rain": {
+     "at": "rain",
+     "from": 0.52,
+     "to": 1.0
+    },
+    "divider": 0.5,
+    "ground": 0.64,
+    "house": false,
+    "fence": false,
+    "sun": {
+     "x": 0.36,
+     "y": 0.17,
+     "dim": "wilt"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.38,
+      "y": 0.93,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hungry",
+        "pose": "look",
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "villager",
+      "x": 0.62,
+      "y": 0.92,
+      "scale": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "end",
+        "pose": "shrug",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "frost",
+      "x": 0.15,
+      "y": 0.45,
+      "at": "wilt",
+      "size": 70,
+      "color": "blue"
+     },
+     {
+      "text": "rain",
+      "x": 0.88,
+      "y": 0.45,
+      "at": "rain",
+      "size": 70,
+      "color": "blue"
+     },
+     {
+      "text": "the end?",
+      "x": 0.5,
+      "y": 0.4,
+      "at": "end",
+      "size": 84,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Nobody knew why. The answer was on the other side of the planet, inside a mountain most of them had never heard of.",
+   "visual": "Old parchment world map: markers 'New England' and 'Europe' pop in, then a red dashed route runs from New England across the Atlantic, around Africa and the Indian Ocean to the far side of the world, where a small smoking volcano 'Tambora' pops up on 'mountain'; the map slowly pushes in on it",
+   "title": {
+    "white": "Far away"
+   },
+   "cues": {
+    "ne": "Nobody",
+    "eu": "knew",
+    "route": "other",
+    "mountain": "mountain"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       -0.1564,
+       0.0484
+      ],
+      [
+       -0.0545,
+       0.0161
+      ],
+      [
+       0.1091,
+       0.0
+      ],
+      [
+       0.1636,
+       0.0726
+      ],
+      [
+       0.2182,
+       0.0968
+      ],
+      [
+       0.2545,
+       0.1613
+      ],
+      [
+       0.2145,
+       0.2177
+      ],
+      [
+       0.2,
+       0.2419
+      ],
+      [
+       0.1782,
+       0.2742
+      ],
+      [
+       0.16,
+       0.3306
+      ],
+      [
+       0.1636,
+       0.379
+      ],
+      [
+       0.1491,
+       0.3387
+      ],
+      [
+       0.1273,
+       0.3468
+      ],
+      [
+       0.1018,
+       0.371
+      ],
+      [
+       0.1018,
+       0.4113
+      ],
+      [
+       0.1345,
+       0.4113
+      ],
+      [
+       0.1382,
+       0.4516
+      ],
+      [
+       0.1527,
+       0.5
+      ],
+      [
+       0.1673,
+       0.5161
+      ],
+      [
+       0.1564,
+       0.5161
+      ],
+      [
+       0.1418,
+       0.4839
+      ],
+      [
+       0.12,
+       0.4597
+      ],
+      [
+       0.0727,
+       0.4194
+      ],
+      [
+       0.0545,
+       0.3871
+      ],
+      [
+       0.04,
+       0.3306
+      ],
+      [
+       0.0255,
+       0.3065
+      ],
+      [
+       0.0036,
+       0.2581
+      ],
+      [
+       0.0036,
+       0.1935
+      ],
+      [
+       -0.0182,
+       0.1371
+      ],
+      [
+       -0.0909,
+       0.0968
+      ],
+      [
+       -0.1455,
+       0.0968
+      ]
+     ],
+     [
+      [
+       0.2545,
+       0.0968
+      ],
+      [
+       0.3018,
+       0.0968
+      ],
+      [
+       0.3818,
+       0.0161
+      ],
+      [
+       0.3818,
+       -0.0806
+      ],
+      [
+       0.1891,
+       -0.0806
+      ],
+      [
+       0.1891,
+       -0.0484
+      ],
+      [
+       0.2545,
+       0.0161
+      ]
+     ],
+     [
+      [
+       0.1745,
+       0.5161
+      ],
+      [
+       0.2364,
+       0.5
+      ],
+      [
+       0.2727,
+       0.5806
+      ],
+      [
+       0.3273,
+       0.621
+      ],
+      [
+       0.3127,
+       0.7016
+      ],
+      [
+       0.28,
+       0.8065
+      ],
+      [
+       0.2436,
+       0.8871
+      ],
+      [
+       0.2182,
+       0.9435
+      ],
+      [
+       0.2073,
+       1.0323
+      ],
+      [
+       0.1818,
+       1.0
+      ],
+      [
+       0.1891,
+       0.9032
+      ],
+      [
+       0.1964,
+       0.7258
+      ],
+      [
+       0.16,
+       0.621
+      ],
+      [
+       0.1636,
+       0.5726
+      ]
+     ],
+     [
+      [
+       0.4182,
+       0.2903
+      ],
+      [
+       0.4218,
+       0.2339
+      ],
+      [
+       0.4509,
+       0.2097
+      ],
+      [
+       0.4364,
+       0.1935
+      ],
+      [
+       0.4545,
+       0.1774
+      ],
+      [
+       0.4727,
+       0.1532
+      ],
+      [
+       0.4836,
+       0.121
+      ],
+      [
+       0.4727,
+       0.0806
+      ],
+      [
+       0.5091,
+       0.0242
+      ],
+      [
+       0.5636,
+       0.0081
+      ],
+      [
+       0.6,
+       0.0403
+      ],
+      [
+       0.6727,
+       0.0161
+      ],
+      [
+       0.7455,
+       -0.0081
+      ],
+      [
+       0.8545,
+       -0.0323
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       1.0727,
+       0.0323
+      ],
+      [
+       1.0727,
+       0.0968
+      ],
+      [
+       1.0,
+       0.1129
+      ],
+      [
+       0.9709,
+       0.1613
+      ],
+      [
+       0.9455,
+       0.2339
+      ],
+      [
+       0.9164,
+       0.2581
+      ],
+      [
+       0.8982,
+       0.2581
+      ],
+      [
+       0.8945,
+       0.3306
+      ],
+      [
+       0.8836,
+       0.3871
+      ],
+      [
+       0.8545,
+       0.4113
+      ],
+      [
+       0.8473,
+       0.4516
+      ],
+      [
+       0.8509,
+       0.4839
+      ],
+      [
+       0.8364,
+       0.5081
+      ],
+      [
+       0.8182,
+       0.4758
+      ],
+      [
+       0.8182,
+       0.5242
+      ],
+      [
+       0.8291,
+       0.5726
+      ],
+      [
+       0.8109,
+       0.5161
+      ],
+      [
+       0.8109,
+       0.4516
+      ],
+      [
+       0.7964,
+       0.4435
+      ],
+      [
+       0.7855,
+       0.4032
+      ],
+      [
+       0.7709,
+       0.4113
+      ],
+      [
+       0.7455,
+       0.4597
+      ],
+      [
+       0.7345,
+       0.5161
+      ],
+      [
+       0.72,
+       0.4435
+      ],
+      [
+       0.7164,
+       0.4113
+      ],
+      [
+       0.6945,
+       0.379
+      ],
+      [
+       0.6618,
+       0.379
+      ],
+      [
+       0.6582,
+       0.3629
+      ],
+      [
+       0.6364,
+       0.3387
+      ],
+      [
+       0.6291,
+       0.3468
+      ],
+      [
+       0.6364,
+       0.379
+      ],
+      [
+       0.6582,
+       0.3871
+      ],
+      [
+       0.6691,
+       0.4032
+      ],
+      [
+       0.6436,
+       0.4516
+      ],
+      [
+       0.6145,
+       0.4758
+      ],
+      [
+       0.6109,
+       0.4516
+      ],
+      [
+       0.5818,
+       0.3548
+      ],
+      [
+       0.5782,
+       0.3306
+      ],
+      [
+       0.5855,
+       0.2903
+      ],
+      [
+       0.5636,
+       0.2903
+      ],
+      [
+       0.5527,
+       0.2823
+      ],
+      [
+       0.5491,
+       0.2581
+      ],
+      [
+       0.5382,
+       0.2581
+      ],
+      [
+       0.5345,
+       0.2823
+      ],
+      [
+       0.5273,
+       0.2581
+      ],
+      [
+       0.5236,
+       0.2419
+      ],
+      [
+       0.4982,
+       0.2177
+      ],
+      [
+       0.5127,
+       0.25
+      ],
+      [
+       0.52,
+       0.2581
+      ],
+      [
+       0.5091,
+       0.2742
+      ],
+      [
+       0.4982,
+       0.2419
+      ],
+      [
+       0.4873,
+       0.2258
+      ],
+      [
+       0.4655,
+       0.2339
+      ],
+      [
+       0.4545,
+       0.2661
+      ],
+      [
+       0.4473,
+       0.2823
+      ],
+      [
+       0.4327,
+       0.2903
+      ]
+     ],
+     [
+      [
+       0.3927,
+       0.4113
+      ],
+      [
+       0.4182,
+       0.3387
+      ],
+      [
+       0.4327,
+       0.2903
+      ],
+      [
+       0.4909,
+       0.2823
+      ],
+      [
+       0.5273,
+       0.3226
+      ],
+      [
+       0.5709,
+       0.3306
+      ],
+      [
+       0.5818,
+       0.3548
+      ],
+      [
+       0.6109,
+       0.4839
+      ],
+      [
+       0.64,
+       0.4839
+      ],
+      [
+       0.6,
+       0.621
+      ],
+      [
+       0.6,
+       0.7016
+      ],
+      [
+       0.5818,
+       0.7823
+      ],
+      [
+       0.5564,
+       0.8468
+      ],
+      [
+       0.5273,
+       0.8629
+      ],
+      [
+       0.52,
+       0.8226
+      ],
+      [
+       0.4982,
+       0.7177
+      ],
+      [
+       0.5018,
+       0.621
+      ],
+      [
+       0.4873,
+       0.5484
+      ],
+      [
+       0.4727,
+       0.5403
+      ],
+      [
+       0.4255,
+       0.5484
+      ],
+      [
+       0.4073,
+       0.5161
+      ],
+      [
+       0.3927,
+       0.4677
+      ]
+     ],
+     [
+      [
+       0.4364,
+       0.1774
+      ],
+      [
+       0.4582,
+       0.1694
+      ],
+      [
+       0.4473,
+       0.129
+      ],
+      [
+       0.4364,
+       0.1129
+      ],
+      [
+       0.4327,
+       0.129
+      ],
+      [
+       0.4436,
+       0.1452
+      ],
+      [
+       0.4364,
+       0.1613
+      ]
+     ],
+     [
+      [
+       0.8691,
+       0.7581
+      ],
+      [
+       0.8982,
+       0.7177
+      ],
+      [
+       0.9273,
+       0.6774
+      ],
+      [
+       0.9527,
+       0.6774
+      ],
+      [
+       0.9709,
+       0.6694
+      ],
+      [
+       0.9855,
+       0.7339
+      ],
+      [
+       1.0109,
+       0.7823
+      ],
+      [
+       1.0036,
+       0.8548
+      ],
+      [
+       0.9818,
+       0.8871
+      ],
+      [
+       0.9564,
+       0.8629
+      ],
+      [
+       0.9309,
+       0.8306
+      ],
+      [
+       0.88,
+       0.8629
+      ],
+      [
+       0.8727,
+       0.8226
+      ]
+     ],
+     [
+      [
+       0.8,
+       0.5403
+      ],
+      [
+       0.8109,
+       0.5484
+      ],
+      [
+       0.8327,
+       0.5968
+      ],
+      [
+       0.84,
+       0.629
+      ],
+      [
+       0.8218,
+       0.6048
+      ]
+     ],
+     [
+      [
+       0.8364,
+       0.6315
+      ],
+      [
+       0.8691,
+       0.6387
+      ],
+      [
+       0.8709,
+       0.6492
+      ],
+      [
+       0.84,
+       0.6419
+      ]
+     ],
+     [
+      [
+       0.8509,
+       0.5645
+      ],
+      [
+       0.88,
+       0.5242
+      ],
+      [
+       0.8873,
+       0.5726
+      ],
+      [
+       0.8764,
+       0.6129
+      ],
+      [
+       0.8545,
+       0.6048
+      ]
+     ],
+     [
+      [
+       0.8891,
+       0.5766
+      ],
+      [
+       0.9091,
+       0.5685
+      ],
+      [
+       0.8945,
+       0.5887
+      ],
+      [
+       0.9,
+       0.621
+      ],
+      [
+       0.8891,
+       0.625
+      ]
+     ],
+     [
+      [
+       0.9309,
+       0.5887
+      ],
+      [
+       0.9673,
+       0.6048
+      ],
+      [
+       1.0,
+       0.6532
+      ],
+      [
+       0.9673,
+       0.6532
+      ],
+      [
+       0.9527,
+       0.6452
+      ],
+      [
+       0.9418,
+       0.6129
+      ]
+     ],
+     [
+      [
+       0.8793,
+       0.6476
+      ],
+      [
+       0.888,
+       0.6484
+      ],
+      [
+       0.8865,
+       0.6532
+      ],
+      [
+       0.88,
+       0.654
+      ]
+     ],
+     [
+      [
+       0.8902,
+       0.6484
+      ],
+      [
+       0.9018,
+       0.6468
+      ],
+      [
+       0.9,
+       0.6516
+      ],
+      [
+       0.8909,
+       0.6524
+      ]
+     ],
+     [
+      [
+       0.9273,
+       0.3306
+      ],
+      [
+       0.9455,
+       0.3065
+      ],
+      [
+       0.9673,
+       0.25
+      ],
+      [
+       0.9709,
+       0.2177
+      ],
+      [
+       0.9636,
+       0.2742
+      ],
+      [
+       0.9491,
+       0.3145
+      ],
+      [
+       0.9309,
+       0.3145
+      ]
+     ]
+    ],
+    "seas": [],
+    "cities": [
+     {
+      "name": "New England",
+      "x": 0.1964,
+      "y": 0.2339,
+      "at": "ne",
+      "dy": -40,
+      "dx": 60
+     },
+     {
+      "name": "Europe",
+      "x": 0.4836,
+      "y": 0.1855,
+      "at": "eu",
+      "dy": -40
+     }
+    ],
+    "mountains": [
+     {
+      "name": "Tambora",
+      "x": 0.8836,
+      "y": 0.6476,
+      "volcano": true,
+      "at": "mountain",
+      "size": 60
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.1964,
+       0.25
+      ],
+      [
+       0.3273,
+       0.4597
+      ],
+      [
+       0.4,
+       0.6613
+      ],
+      [
+       0.5091,
+       0.9032
+      ],
+      [
+       0.6727,
+       0.8226
+      ],
+      [
+       0.8,
+       0.7016
+      ],
+      [
+       0.88,
+       0.6613
+      ]
+     ],
+     "at": "route",
+     "dur": 2.4,
+     "color": "red"
+    },
+    "focus": [
+     0.6,
+     0.5
+    ],
+    "zoom": 1.08,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "tbA_peak",
+   "text": "This is the story of Mount Tambora, and the year without a summer.",
+   "visual": "A huge quiet volcano on parchment fills the frame, green rice terraces on its lower slopes, clouds drift, birds fly; a red stamp 'MOUNT TAMBORA' slams on 'Tambora'; in the sky a gold sun is crossed out with a red X on 'summer' and a note 'no summer' appears; the fez narrator in front presents it, then points up at the sun",
+   "title": {},
+   "cues": {
+    "name": "Tambora",
+    "sun": "summer"
+   },
+   "params": {
+    "mode": "quiet",
+    "sun": {
+     "x": 0.83,
+     "y": 0.2,
+     "cross": "sun"
+    },
+    "palace": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "y": 0.93,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "name",
+        "pose": "point",
+        "dir": 30,
+        "face": "right"
+       },
+       {
+        "at": "sun",
+        "pose": "point",
+        "dir": 55,
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "MOUNT TAMBORA",
+      "x": 0.52,
+      "y": 0.13,
+      "at": "name",
+      "stamp": true,
+      "color": "red",
+      "size": 88
+     },
+     {
+      "text": "no summer",
+      "x": 0.83,
+      "y": 0.39,
+      "at": "sun",
+      "size": 66,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "A Quiet Mountain",
+   "type": "chapter",
+   "text": "In 1815, Tambora stood on the island of Sumbawa, in what is now Indonesia.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, below it 'A Quiet Mountain' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "1815",
+    "title": "Sumbawa",
+    "line": "Indonesia"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "A Quiet Mountain"
+   }
+  },
+  {
+   "type": "map",
+   "text": "It was more than four thousand meters tall, and for as long as anyone could remember, it had been quiet.",
+   "visual": "Old map of the islands of Indonesia (Java, Bali, Lombok, Sumbawa, Flores): the island names appear, the mountain 'Tambora' pops up on Sumbawa on 'four', the map pushes in on it and a red note card '4,000+ m, quiet' pops on 'quiet'",
+   "title": {
+    "white": "Sumbawa",
+    "gray": "1815"
+   },
+   "cues": {
+    "tam": "four",
+    "note": "quiet"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       -0.1667,
+       0.0
+      ],
+      [
+       -0.0278,
+       0.0
+      ],
+      [
+       0.0444,
+       0.1309
+      ],
+      [
+       0.05,
+       0.3752
+      ],
+      [
+       0.0111,
+       0.3752
+      ],
+      [
+       -0.0278,
+       0.3839
+      ],
+      [
+       -0.0833,
+       0.2967
+      ],
+      [
+       -0.1667,
+       0.1745
+      ]
+     ],
+     [
+      [
+       0.1944,
+       -0.1309
+      ],
+      [
+       0.2556,
+       0.0
+      ],
+      [
+       0.2889,
+       0.1222
+      ],
+      [
+       0.3611,
+       0.1309
+      ],
+      [
+       0.4278,
+       0.1658
+      ],
+      [
+       0.5278,
+       0.1745
+      ],
+      [
+       0.5833,
+       0.2094
+      ],
+      [
+       0.6222,
+       0.1571
+      ],
+      [
+       0.6333,
+       0.0436
+      ],
+      [
+       0.6667,
+       -0.1309
+      ]
+     ],
+     [
+      [
+       0.8,
+       -0.0873
+      ],
+      [
+       0.8056,
+       0.1745
+      ],
+      [
+       0.8,
+       0.3578
+      ],
+      [
+       0.8556,
+       0.3578
+      ],
+      [
+       0.8556,
+       0.1309
+      ],
+      [
+       0.8889,
+       0.1134
+      ],
+      [
+       0.9167,
+       0.2618
+      ],
+      [
+       0.95,
+       0.2618
+      ],
+      [
+       0.9556,
+       0.1745
+      ],
+      [
+       0.9056,
+       0.0262
+      ],
+      [
+       0.9167,
+       -0.0436
+      ],
+      [
+       0.9167,
+       -0.0873
+      ]
+     ],
+     [
+      [
+       0.0111,
+       0.4625
+      ],
+      [
+       0.0556,
+       0.3839
+      ],
+      [
+       0.1,
+       0.4014
+      ],
+      [
+       0.1833,
+       0.4188
+      ],
+      [
+       0.2,
+       0.4538
+      ],
+      [
+       0.3,
+       0.4756
+      ],
+      [
+       0.3333,
+       0.4276
+      ],
+      [
+       0.4222,
+       0.4712
+      ],
+      [
+       0.4333,
+       0.4974
+      ],
+      [
+       0.4722,
+       0.541
+      ],
+      [
+       0.5222,
+       0.5497
+      ],
+      [
+       0.5333,
+       0.6283
+      ],
+      [
+       0.5,
+       0.6195
+      ],
+      [
+       0.4167,
+       0.6021
+      ],
+      [
+       0.3333,
+       0.5846
+      ],
+      [
+       0.2778,
+       0.5759
+      ],
+      [
+       0.1944,
+       0.5497
+      ],
+      [
+       0.1333,
+       0.5236
+      ],
+      [
+       0.0778,
+       0.5148
+      ],
+      [
+       0.0278,
+       0.4712
+      ]
+     ],
+     [
+      [
+       0.525,
+       0.5759
+      ],
+      [
+       0.5667,
+       0.5716
+      ],
+      [
+       0.5944,
+       0.6021
+      ],
+      [
+       0.5667,
+       0.6414
+      ],
+      [
+       0.5333,
+       0.6021
+      ]
+     ],
+     [
+      [
+       0.6028,
+       0.5934
+      ],
+      [
+       0.6333,
+       0.5846
+      ],
+      [
+       0.65,
+       0.6021
+      ],
+      [
+       0.6389,
+       0.6457
+      ],
+      [
+       0.6056,
+       0.637
+      ]
+     ],
+     [
+      [
+       0.6528,
+       0.6195
+      ],
+      [
+       0.6667,
+       0.6021
+      ],
+      [
+       0.6889,
+       0.6065
+      ],
+      [
+       0.6972,
+       0.6152
+      ],
+      [
+       0.7083,
+       0.6065
+      ],
+      [
+       0.7056,
+       0.5846
+      ],
+      [
+       0.7222,
+       0.5716
+      ],
+      [
+       0.7389,
+       0.5759
+      ],
+      [
+       0.7444,
+       0.5977
+      ],
+      [
+       0.7611,
+       0.5934
+      ],
+      [
+       0.7861,
+       0.6065
+      ],
+      [
+       0.7889,
+       0.6326
+      ],
+      [
+       0.7667,
+       0.6414
+      ],
+      [
+       0.7333,
+       0.6414
+      ],
+      [
+       0.7,
+       0.6588
+      ],
+      [
+       0.6722,
+       0.6588
+      ],
+      [
+       0.6583,
+       0.6414
+      ]
+     ],
+     [
+      [
+       0.8222,
+       0.6108
+      ],
+      [
+       0.8611,
+       0.5934
+      ],
+      [
+       0.9167,
+       0.6108
+      ],
+      [
+       0.9722,
+       0.5759
+      ],
+      [
+       1.0,
+       0.5934
+      ],
+      [
+       0.9889,
+       0.6195
+      ],
+      [
+       0.9333,
+       0.6457
+      ],
+      [
+       0.8611,
+       0.6414
+      ],
+      [
+       0.8278,
+       0.637
+      ]
+     ],
+     [
+      [
+       0.7778,
+       0.6981
+      ],
+      [
+       0.8778,
+       0.7504
+      ],
+      [
+       0.85,
+       0.7679
+      ],
+      [
+       0.7889,
+       0.7243
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Java",
+      "x": 0.2778,
+      "y": 0.6135999999999999,
+      "size": 52
+     },
+     {
+      "name": "Sumbawa",
+      "x": 0.7222,
+      "y": 0.7395,
+      "size": 52
+     },
+     {
+      "name": "Indian Ocean",
+      "x": 0.55,
+      "y": 0.86,
+      "size": 50
+     }
+    ],
+    "mountains": [
+     {
+      "name": "Tambora",
+      "x": 0.7222,
+      "y": 0.589,
+      "at": "tam",
+      "size": 70,
+      "dy": -150
+     }
+    ],
+    "note": {
+     "text": "4,000+ m, quiet",
+     "x": 0.52,
+     "y": 0.2,
+     "at": "note"
+    },
+    "focus": [
+     0.6667,
+     0.5934
+    ],
+    "zoom": 1.3,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "tbA_peak",
+   "text": "Now imagine living there. Villages, rice fields and small kingdoms lived on its slopes. People didn't even think of it as a volcano.",
+   "visual": "Close on the foot of the quiet mountain: on 'Villages' stilt huts pop in one by one between palm trees, on 'rice' green rice terraces draw along the slopes, on 'kingdoms' a small palace with a tiered roof and a red flag pops up; a bare-headed villager waves; the fez narrator walks in, then shrugs on 'volcano' as a hand note 'a volcano?' appears",
+   "title": {
+    "white": "Sumbawa",
+    "gray": "1815"
+   },
+   "cues": {
+    "village": "Villages",
+    "rice": "rice",
+    "kingdom": "kingdoms",
+    "volc": "volcano"
+   },
+   "params": {
+    "mode": "quiet",
+    "village": "village",
+    "rice": "rice",
+    "palace": {
+     "x": 0.55,
+     "at": "kingdom",
+     "s": 1.0
+    },
+    "view": {
+     "scale": 1.6,
+     "focus": [
+      0.42,
+      0.74
+     ]
+    },
+    "clouds": false,
+    "birds": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "to": 0.2,
+      "walk_dur": 1.6,
+      "y": 0.93,
+      "scale": 0.8,
+      "pose": "walk",
+      "face": "right",
+      "then": "talk",
+      "seq": [
+       {
+        "at": "volc",
+        "pose": "shrug",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "villager",
+      "x": 0.88,
+      "y": 0.92,
+      "scale": 0.65,
+      "pose": "wave",
+      "face": "left",
+      "seq": [
+       {
+        "at": "volc",
+        "pose": "idle",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "a volcano?",
+      "x": 0.45,
+      "y": 0.25,
+      "at": "volc",
+      "size": 80,
+      "color": "red"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.4,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_peak",
+   "text": "Then, on April 5, the mountain began to rumble.",
+   "visual": "Low angle: the mountain towers over the frame with huts at its foot; a red stamp 'APRIL 5, 1815' slams on 'April'; on 'rumble' the mountain shakes hard, a grey ash puff climbs from the summit, big rocks tumble down the slopes toward us and the birds scatter; the fez narrator in front jumps back in shock",
+   "title": {
+    "white": "April 5",
+    "gray": "1815"
+   },
+   "cues": {
+    "date": "April",
+    "rumble": "rumble"
+   },
+   "params": {
+    "mode": "rumble",
+    "palace": false,
+    "base": 0.9,
+    "h": 0.8,
+    "hw": 0.62,
+    "rock_scale": 2.4,
+    "shake_amp": 12,
+    "huts": [
+     {
+      "x": 0.17,
+      "at": 0
+     },
+     {
+      "x": 0.25,
+      "s": 0.85,
+      "at": 0
+     },
+     {
+      "x": 0.36,
+      "at": 0
+     },
+     {
+      "x": 0.69,
+      "s": 0.9,
+      "at": 0
+     },
+     {
+      "x": 0.78,
+      "at": 0
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.95,
+      "scale": 0.82,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "rumble",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "APRIL 5, 1815",
+      "x": 0.78,
+      "y": 0.14,
+      "at": "date",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "The Loudest Sound",
+   "type": "chapter",
+   "text": "The first blasts were so loud that, on the island of Java, hundreds of kilometers away, British soldiers thought they heard cannon fire.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, below it 'The Loudest Sound' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "blasts",
+    "title": "Java",
+    "line": "cannon"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Loudest Sound"
+   }
+  },
+  {
+   "type": "tbA_java",
+   "text": "They marched out to fight an enemy.",
+   "visual": "A British garrison on Java: stone fort wall with a Union flag, palm trees, hills; three soldiers in dark felt hats march out to the right in a column, the fez narrator marches beside them and then scans the horizon through binoculars; sound arcs roll in from the far horizon and red 'BOOM!' words punch in the sky; on 'enemy' he looks on, worried",
+   "title": {
+    "white": "Java",
+    "gray": "1815"
+   },
+   "cues": {
+    "b1": "marched",
+    "b2": "fight",
+    "enemy": "enemy"
+   },
+   "params": {
+    "booms": [
+     "b1",
+     "b2"
+    ],
+    "cast": [
+     {
+      "who": "soldier",
+      "accessory": "slouch",
+      "x": 0.3,
+      "to": 0.5,
+      "walk_at": 0,
+      "walk_dur": 2.0,
+      "y": 0.9,
+      "scale": 0.66,
+      "pose": "walk",
+      "face": "right",
+      "then": "point",
+      "dir": 15
+     },
+     {
+      "who": "soldier",
+      "accessory": "slouch",
+      "x": 0.2,
+      "to": 0.4,
+      "walk_at": 0,
+      "walk_dur": 2.0,
+      "y": 0.9,
+      "scale": 0.66,
+      "pose": "walk",
+      "face": "right",
+      "then": "idle"
+     },
+     {
+      "who": "soldier",
+      "accessory": "slouch",
+      "x": 0.1,
+      "to": 0.3,
+      "walk_at": 0,
+      "walk_dur": 2.0,
+      "y": 0.9,
+      "scale": 0.66,
+      "pose": "walk",
+      "face": "right",
+      "then": "idle"
+     },
+     {
+      "who": "kasif",
+      "x": 0.42,
+      "to": 0.66,
+      "walk_at": 0,
+      "walk_dur": 2.0,
+      "y": 0.94,
+      "scale": 0.8,
+      "pose": "walk",
+      "face": "right",
+      "then": "look",
+      "seq": [
+       {
+        "at": "enemy",
+        "pose": "look",
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_sea",
+   "text": "Boats were sent to look for a ship in trouble. There was no enemy, and there was no ship. And that was only the warning.",
+   "visual": "A palm beach on the left and the open sea: two rowboats with sailors in berets pull out to sea, oars swinging, the fez narrator in the lead boat searches through binoculars; on 'ship' a red dashed ghost outline of a ship draws itself on the horizon; stamp 'NO ENEMY' slams on 'enemy', then a big red X crosses out the ghost ship and stamp 'NO SHIP' slams; on 'warning' a tiny volcano on the far right horizon sends up a dark plume and the narrator turns and points at it, worried",
+   "title": {
+    "white": "Java Sea"
+   },
+   "cues": {
+    "ship": "ship",
+    "enemy": "enemy",
+    "cross": "and",
+    "warn": "warning"
+   },
+   "params": {
+    "mode": "search",
+    "boats": [
+     {
+      "x": 0.24,
+      "to": 0.46,
+      "at": 0,
+      "dur": 3.0,
+      "y": 0.76,
+      "s": 1.2,
+      "crew": [
+       {
+        "who": "kasif",
+        "dx": 110,
+        "pose": "look",
+        "face": "right",
+        "scale": 0.78,
+        "seq": [
+         {
+          "at": "enemy",
+          "pose": "shrug",
+          "face": "right"
+         },
+         {
+          "at": "warn",
+          "pose": "point",
+          "dir": 15,
+          "face": "right",
+          "emotion": "worried"
+         }
+        ]
+       },
+       {
+        "who": "sailor",
+        "accessory": "beret",
+        "dx": -100,
+        "pose": "talk",
+        "face": "right",
+        "scale": 0.7,
+        "seq": [
+         {
+          "at": "enemy",
+          "pose": "shrug",
+          "face": "right"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "x": 0.08,
+      "to": 0.26,
+      "at": 0.4,
+      "dur": 3.0,
+      "y": 0.86,
+      "s": 0.85,
+      "crew": [
+       {
+        "who": "sailor",
+        "accessory": "beret",
+        "dx": 40,
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "scale": 0.42
+       },
+       {
+        "who": "sailor",
+        "accessory": "beret",
+        "dx": -60,
+        "pose": "idle",
+        "face": "right",
+        "scale": 0.42
+       }
+      ]
+     }
+    ],
+    "ghost": {
+     "x": 0.68,
+     "at": "ship",
+     "s": 0.75,
+     "cross": "cross"
+    },
+    "far_volcano": {
+     "x": 0.92,
+     "at": "warn"
+    },
+    "labels": [
+     {
+      "text": "NO ENEMY",
+      "x": 0.33,
+      "y": 0.27,
+      "at": "enemy",
+      "stamp": true,
+      "color": "red",
+      "size": 76
+     },
+     {
+      "text": "NO SHIP",
+      "x": 0.7,
+      "y": 0.13,
+      "at": "cross",
+      "stamp": true,
+      "color": "red",
+      "size": 76
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.65,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_peak",
+   "text": "On the evening of April 10, the real eruption began.",
+   "visual": "Night over the mountain (dark ink-washed and cross-hatched sky, gold stars): a red stamp 'APRIL 10' slams on; on 'eruption' a giant column of fire and ash shoots out of the summit, a shock ring races out, lava bombs fly, the camera shakes; the fez narrator in front jumps back in shock",
+   "title": {
+    "white": "April 10",
+    "gray": "evening"
+   },
+   "cues": {
+    "date": "April",
+    "boom": "eruption"
+   },
+   "params": {
+    "mode": "blast",
+    "base": 0.57,
+    "h": 0.45,
+    "palace": false,
+    "huts": false,
+    "palms": [
+     {
+      "x": 0.06
+     },
+     {
+      "x": 0.93,
+      "h": 0.9
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "y": 0.94,
+      "scale": 0.85,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "boom",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "APRIL 10",
+      "x": 0.8,
+      "y": 0.86,
+      "at": "date",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_erupt",
+   "text": "A local ruler later said that three columns of fire shot out of the summit, and joined into one.",
+   "visual": "Night, the mountain from the side: on 'three' three separate red-gold fire columns rise from the summit, on 'joined' they lean together and merge into one huge column; in front, the local ruler (gold crown) points at it and the fez narrator beside him is shocked; hand note 'three columns' then 'one!'",
+   "title": {
+    "white": "The raja",
+    "gray": "of Sanggar"
+   },
+   "cues": {
+    "ruler": "ruler",
+    "fire": "three",
+    "join": "joined"
+   },
+   "params": {
+    "mode": "columns",
+    "x": 0.6,
+    "base": 0.57,
+    "h": 0.45,
+    "palms": [
+     {
+      "x": 0.95
+     }
+    ],
+    "huts": false,
+    "cast": [
+     {
+      "who": "raja",
+      "accessory": "crown",
+      "x": 0.33,
+      "y": 0.93,
+      "scale": 0.78,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "fire",
+        "pose": "point",
+        "dir": 45,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "y": 0.95,
+      "scale": 0.78,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "join",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "three columns",
+      "x": 0.4,
+      "y": 0.3,
+      "at": "fire",
+      "size": 70,
+      "color": "gold"
+     },
+     {
+      "text": "one!",
+      "x": 0.86,
+      "y": 0.3,
+      "at": "join",
+      "size": 90,
+      "color": "gold"
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_erupt",
+   "text": "The whole mountain, he said, looked like flowing liquid fire.",
+   "visual": "Night, the whole mountain glows: red-gold lava rivers run down every slope one after another from the burning summit, lava bombs arc; the ruler in front says it in a speech bubble 'Liquid fire!' on 'liquid'; the fez narrator watches with binoculars, then is shocked",
+   "title": {
+    "white": "Liquid fire"
+   },
+   "cues": {
+    "lava": "whole",
+    "say": "liquid"
+   },
+   "params": {
+    "mode": "liquid",
+    "x": 0.58,
+    "base": 0.57,
+    "h": 0.45,
+    "huts": false,
+    "palms": [
+     {
+      "x": 0.95
+     }
+    ],
+    "bubble": {
+     "text": "Liquid fire!",
+     "x": 0.4,
+     "y": 0.3,
+     "at": "say",
+     "w": 470,
+     "tail": [
+      0.35,
+      0.5
+     ],
+     "size": 70
+    },
+    "cast": [
+     {
+      "who": "raja",
+      "accessory": "crown",
+      "x": 0.33,
+      "y": 0.93,
+      "scale": 0.78,
+      "pose": "point",
+      "dir": 40,
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "say",
+        "pose": "talk",
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.18,
+      "y": 0.95,
+      "scale": 0.78,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "say",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_flow",
+   "text": "Then avalanches of burning ash and gas raced down the slopes, faster than anyone could run, and swept entire villages into the sea.",
+   "visual": "The mountain on the left, the sea on the right, ash in the sky; three stilt huts stand on the shore at its foot: on 'avalanches' layered, overlapping clouds of burning ash roll down the slope, on 'swept' they hit the huts, which tumble down into the sea, and white steam bursts up from the water; in the foreground two villagers run off to the left and the fez narrator runs, then looks back in shock",
+   "title": {
+    "white": "Ash flows"
+   },
+   "cues": {
+    "flow": "avalanches",
+    "run": "faster",
+    "swept": "swept"
+   },
+   "params": {
+    "mode": "flow",
+    "x": 0.3,
+    "hw": 0.5,
+    "h": 0.46,
+    "base": 0.7,
+    "sea": {
+     "x": 0.7
+    },
+    "huts": [
+     {
+      "x": 0.55,
+      "s": 1.2
+     },
+     {
+      "x": 0.61,
+      "s": 1.25
+     },
+     {
+      "x": 0.67,
+      "s": 1.2
+     }
+    ],
+    "palms": [
+     {
+      "x": 0.5,
+      "h": 0.8
+     }
+    ],
+    "cast": [
+     {
+      "who": "villager",
+      "x": 0.42,
+      "to": -0.12,
+      "walk_at": "run",
+      "walk_dur": 3.0,
+      "run": true,
+      "y": 0.9,
+      "scale": 0.62,
+      "pose": "shock",
+      "face": "right"
+     },
+     {
+      "who": "villager",
+      "x": 0.5,
+      "to": -0.04,
+      "walk_at": "run",
+      "walk_dur": 3.2,
+      "run": true,
+      "y": 0.93,
+      "scale": 0.6,
+      "pose": "shock",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "to": 0.22,
+      "walk_at": "run",
+      "walk_dur": 1.6,
+      "run": true,
+      "y": 0.95,
+      "scale": 0.78,
+      "pose": "shock",
+      "face": "right",
+      "seq": [
+       {
+        "at": "swept",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_sound",
+   "text": "The explosions were heard more than 2,500 kilometers away.",
+   "visual": "Parchment map of the islands from Sumatra to New Guinea and north Australia: ink sound rings pulse out of the burning Tambora marker; on 'heard' a big red dashed circle draws around it with a radius line, stamp '2,500+ KM'; the fez narrator beside the map cups his ear, then is shocked",
+   "title": {
+    "white": "Heard",
+    "gray": "2,500 km"
+   },
+   "cues": {
+    "ring": "heard",
+    "km": "2,500"
+   },
+   "params": {
+    "km": 2500,
+    "sheet": {
+     "x": 0.07,
+     "y": 0.2,
+     "w": 0.66,
+     "h": 0.62
+    },
+    "names": [
+     {
+      "name": "Sumatra",
+      "x": 101,
+      "y": 0.5,
+      "size": 56
+     },
+     {
+      "name": "Borneo",
+      "x": 114,
+      "y": 1.5,
+      "size": 56
+     },
+     {
+      "name": "Java",
+      "x": 110,
+      "y": -9.8,
+      "size": 56
+     },
+     {
+      "name": "Australia",
+      "x": 133,
+      "y": -19,
+      "size": 56
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.85,
+      "y": 0.92,
+      "scale": 0.82,
+      "pose": "think",
+      "face": "left",
+      "seq": [
+       {
+        "at": "ring",
+        "pose": "look",
+        "face": "left"
+       },
+       {
+        "at": "km",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "2,500+ KM",
+      "x": 0.86,
+      "y": 0.34,
+      "at": "km",
+      "stamp": true,
+      "color": "red",
+      "size": 58
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.4,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_peak",
+   "text": "When it was over, Tambora was about 1,400 meters shorter. Its whole top had been blown into the sky.",
+   "visual": "Day, ash still in the sky: on 'shorter' the top of the mountain breaks into three chunks that fly up out of the frame, leaving a flat broken caldera; a red dashed ghost line shows the old peak and a red dimension bracket draws, stamp '-1,400 M'; on 'sky' the fez narrator points up at the flying top",
+   "title": {
+    "white": "Top gone"
+   },
+   "cues": {
+    "cut": "shorter",
+    "sky": "sky"
+   },
+   "params": {
+    "mode": "shorter",
+    "cut": 0.33,
+    "huts": false,
+    "palace": false,
+    "terraces": false,
+    "palms": [
+     {
+      "x": 0.06
+     },
+     {
+      "x": 0.94,
+      "h": 0.9
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "y": 0.94,
+      "scale": 0.82,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "cut",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       },
+       {
+        "at": "sky",
+        "pose": "point",
+        "dir": 70,
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "-1,400 M",
+      "x": 0.8,
+      "y": 0.3,
+      "at": "cut",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbA_sea",
+   "text": "Weeks later, ships far out at sea were still sailing through huge rafts of floating stone.",
+   "visual": "Open sea covered with rafts of grey floating stone drifting past; a three-masted sailing ship ploughs slowly through them in the distance; in the foreground the fez narrator stands in a rowboat among the stones, looks through binoculars and points down at them on 'stone'; stamp 'WEEKS LATER', hand note 'floating stone' with an arrow to the rafts",
+   "title": {
+    "white": "At sea",
+    "gray": "1815"
+   },
+   "cues": {
+    "later": "Weeks",
+    "stone": "stone"
+   },
+   "params": {
+    "mode": "pumice",
+    "horizon": 0.42,
+    "rafts": 1,
+    "ship": {
+     "x": 0.5,
+     "to": 0.62,
+     "y": 0.58,
+     "s": 0.8,
+     "crew": [
+      {
+       "who": "sailor",
+       "accessory": "beret",
+       "dx": 150,
+       "pose": "point",
+       "dir": -20,
+       "face": "right",
+       "scale": 0.5
+      }
+     ]
+    },
+    "boats": [
+     {
+      "x": 0.2,
+      "to": 0.24,
+      "at": 0,
+      "y": 0.9,
+      "s": 1.15,
+      "crew": [
+       {
+        "who": "kasif",
+        "dx": 20,
+        "pose": "look",
+        "face": "right",
+        "scale": 0.8,
+        "seq": [
+         {
+          "at": "stone",
+          "pose": "point",
+          "dir": -25,
+          "face": "right",
+          "emotion": "surprised"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "WEEKS LATER",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "later",
+      "stamp": true,
+      "color": "red",
+      "size": 72
+     },
+     {
+      "text": "floating stone",
+      "x": 0.8,
+      "y": 0.7,
+      "at": "stone",
+      "size": 66,
+      "color": "ink",
+      "arrow": [
+       0.7,
+       0.84
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "The Invisible Veil",
+   "type": "chapter",
+   "text": "Imagine a morning where the sun never comes up. For days, the islands nearby lived in total darkness, even at noon.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, below it 'The Invisible Veil' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "morning",
+    "title": "days",
+    "line": "noon"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Invisible Veil"
+   }
+  },
+  {
+   "type": "tbB_noon",
+   "text": "Ash buried the fields and poisoned the water.",
+   "visual": "A Sumbawa village at noon under a sky cross-hatched dark with ash; a dim sun barely shows through, grey ash flakes fall the whole time; on 'buried' a grey ash layer rises over the rice field until the green sprouts disappear; on 'poisoned' the blue water in the stone well turns grey and a red X slams beside it; two stilt huts on the right; the fez narrator on the left points down at the field, then is shocked on 'poisoned'; a villager by the well shocked too",
+   "title": {
+    "white": "Noon",
+    "gray": "no sun"
+   },
+   "cues": {
+    "bury": "buried",
+    "poison": "poisoned"
+   },
+   "params": {
+    "ground": 0.8,
+    "sun": {
+     "x": 0.47,
+     "y": 0.16,
+     "r": 60
+    },
+    "bury": "bury",
+    "field": {
+     "x0": 0.2,
+     "x1": 0.52
+    },
+    "huts": [
+     {
+      "x": 0.8,
+      "s": 1
+     },
+     {
+      "x": 0.93,
+      "s": 0.8
+     }
+    ],
+    "well": {
+     "x": 0.62,
+     "s": 1,
+     "poison": "poison"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.86,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "bury",
+        "pose": "point",
+        "dir": "down",
+        "face": "right",
+        "emotion": "worried"
+       },
+       {
+        "at": "poison",
+        "pose": "shock",
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "villager",
+      "x": 0.7,
+      "y": 0.86,
+      "scale": 0.7,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "poison",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_toll",
+   "text": "The eruption itself killed around ten thousand people, but the hunger and disease that came after killed many more. Most estimates say that tens of thousands died across Sumbawa and the island next to it.",
+   "visual": "Left: an old map card of Bali, Lombok and Sumbawa (named), a small smoking volcano on Sumbawa's peninsula. Right: a quiet memorial count: on 'ten' a short shelf of 9 candles lights up one by one under '10,000'; on 'hunger' a long shelf of 32 candles lights up row after row; on 'thousands' 'TENS OF THOUSANDS' appears in red above it; on 'Sumbawa' Sumbawa turns red on the map, on 'next' Lombok too; the fez narrator on the right, sad, thinks, then points at the long shelf on 'more'",
+   "title": {
+    "white": "The toll"
+   },
+   "cues": {
+    "g1": "ten",
+    "g2": "hunger",
+    "more": "more",
+    "note": "thousands",
+    "sum": "Sumbawa",
+    "lom": "next"
+   },
+   "params": {
+    "shelf": 0.74,
+    "map": {
+     "x": 60,
+     "y": 215,
+     "w": 700,
+     "h": 445,
+     "at": 0,
+     "volcano": [
+      0.722,
+      0.31
+     ],
+     "islands": [
+      {
+       "name": "Bali",
+       "pts": [
+        [
+         0.029,
+         0.278
+        ],
+        [
+         0.118,
+         0.25
+        ],
+        [
+         0.176,
+         0.256
+        ],
+        [
+         0.245,
+         0.333
+        ],
+        [
+         0.276,
+         0.444
+        ],
+        [
+         0.235,
+         0.567
+        ],
+        [
+         0.176,
+         0.694
+        ],
+        [
+         0.167,
+         0.611
+        ],
+        [
+         0.098,
+         0.472
+        ],
+        [
+         0.029,
+         0.389
+        ]
+       ],
+       "lx": 0.15,
+       "ly": 0.16
+      },
+      {
+       "name": "Lombok",
+       "pts": [
+        [
+         0.324,
+         0.361
+        ],
+        [
+         0.402,
+         0.333
+        ],
+        [
+         0.455,
+         0.417
+        ],
+        [
+         0.475,
+         0.556
+        ],
+        [
+         0.441,
+         0.722
+        ],
+        [
+         0.353,
+         0.711
+        ],
+        [
+         0.304,
+         0.639
+        ],
+        [
+         0.31,
+         0.472
+        ]
+       ],
+       "lx": 0.39,
+       "ly": 0.22,
+       "at": "lom"
+      },
+      {
+       "name": "Sumbawa",
+       "pts": [
+        [
+         0.49,
+         0.528
+        ],
+        [
+         0.529,
+         0.433
+        ],
+        [
+         0.588,
+         0.456
+        ],
+        [
+         0.627,
+         0.456
+        ],
+        [
+         0.667,
+         0.556
+        ],
+        [
+         0.716,
+         0.622
+        ],
+        [
+         0.765,
+         0.6
+        ],
+        [
+         0.784,
+         0.511
+        ],
+        [
+         0.735,
+         0.472
+        ],
+        [
+         0.682,
+         0.422
+        ],
+        [
+         0.651,
+         0.356
+        ],
+        [
+         0.696,
+         0.278
+        ],
+        [
+         0.745,
+         0.244
+        ],
+        [
+         0.808,
+         0.333
+        ],
+        [
+         0.863,
+         0.444
+        ],
+        [
+         0.922,
+         0.4
+        ],
+        [
+         0.961,
+         0.472
+        ],
+        [
+         0.951,
+         0.639
+        ],
+        [
+         0.863,
+         0.694
+        ],
+        [
+         0.765,
+         0.75
+        ],
+        [
+         0.647,
+         0.789
+        ],
+        [
+         0.549,
+         0.806
+        ],
+        [
+         0.5,
+         0.694
+        ]
+       ],
+       "lx": 0.63,
+       "ly": 0.68,
+       "at": "sum"
+      }
+     ]
+    },
+    "groups": [
+     {
+      "x": 0.505,
+      "cols": 3,
+      "rows": 3,
+      "at": "g1",
+      "dur": 1.0,
+      "num": "10,000",
+      "y": 0.27,
+      "size": 110,
+      "scale": 1.3
+     },
+     {
+      "x": 0.72,
+      "cols": 8,
+      "rows": 4,
+      "at": "g2",
+      "dur": 2.4,
+      "num": "TENS OF THOUSANDS",
+      "color": "red",
+      "y": 0.42,
+      "lx": 0.68,
+      "size": 70,
+      "scale": 1.15,
+      "gap": 46,
+      "label_at": "note"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "g2",
+        "pose": "think",
+        "face": "left",
+        "emotion": "worried"
+       },
+       {
+        "at": "more",
+        "pose": "point",
+        "dir": 10,
+        "face": "left",
+        "emotion": "worried"
+       },
+       {
+        "at": "sum",
+        "pose": "point",
+        "dir": 25,
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_caldera",
+   "text": "But here's the thing. Tambora wasn't finished.",
+   "visual": "The broken, flat-topped mountain in dark ink fills the right side, grey ash puffs churning up from its caldera, birds over far hills; the fez narrator walks in from the left, talks to the viewer on 'thing', then on 'finished' the mountain rumbles, rocks tumble, the smoke thickens and he points up at it, eyebrows high",
+   "title": {
+    "white": "Not over"
+   },
+   "cues": {
+    "thing": "thing",
+    "fin": "finished"
+   },
+   "params": {
+    "mountain": {
+     "x": 0.66,
+     "base": 0.86,
+     "hw": 0.34,
+     "h": 0.55,
+     "cut": 0.32
+    },
+    "rumble": "fin",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "to": 0.3,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "walk",
+      "at": "thing",
+      "then": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "fin",
+        "pose": "point",
+        "dir": 45,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_sky",
+   "text": "The blast had shot millions of tons of sulfur gas high into the sky, far above the clouds and the rain.",
+   "visual": "Cross-section of the sky: the broken ink mountain on the ground at the left, a deck of drifting clouds with blue rain in the middle, a dashed line high above; on 'shot' billowing gold gas puffs shoot from the crater past the clouds; on 'sky' it spreads into a thin gold layer above the dashed line; labels 'sulfur gas' (gold) and 'clouds + rain'; the fez narrator on the right watches through binoculars, then points up on 'above'",
+   "title": {
+    "white": "Sulfur gas"
+   },
+   "cues": {
+    "shot": "shot",
+    "layer": "sky",
+    "above": "above",
+    "clouds": "clouds"
+   },
+   "params": {
+    "ground": 0.86,
+    "volcano": {
+     "x": 0.28,
+     "s": 1
+    },
+    "clouds": 0.56,
+    "top": 0.3,
+    "plume": {
+     "at": "shot",
+     "dur": 1.5,
+     "layer": "layer"
+    },
+    "labels": [
+     {
+      "text": "sulfur gas",
+      "x": 0.62,
+      "y": 0.13,
+      "at": "layer",
+      "color": "gold",
+      "size": 66
+     },
+     {
+      "text": "clouds + rain",
+      "x": 0.6,
+      "y": 0.42,
+      "at": "clouds",
+      "color": "soft",
+      "size": 52
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "look",
+      "face": "left",
+      "seq": [
+       {
+        "at": "above",
+        "pose": "point",
+        "dir": 60,
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.4,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_globe",
+   "text": "Up there, the gas turned into a thin haze of tiny droplets, and the winds slowly spread it around the entire planet.",
+   "visual": "An ink globe turns slowly, Indonesia in front with a pulsing red dot on Tambora and a small gold haze patch around it; on 'droplets' a magnifier pops up top right showing tiny gold droplets drifting, label 'tiny droplets'; on 'spread' the gold haze grows out from the dot until it covers the whole globe, a dashed gold shell wraps the rim and wind arrows drift along the latitudes; the fez narrator on the right points at the globe",
+   "title": {
+    "white": "The veil"
+   },
+   "cues": {
+    "drop": "droplets",
+    "spread": "spread",
+    "planet": "planet"
+   },
+   "params": {
+    "globe": {
+     "x": 0.4,
+     "y": 0.45,
+     "r": 300,
+     "lon": 112,
+     "lat": 6,
+     "spin": 2.5
+    },
+    "mark": {
+     "lon": 118,
+     "lat": -8.25,
+     "at": 0.15
+    },
+    "haze": {
+     "at": "spread",
+     "dur": 3.0,
+     "from": 0.07
+    },
+    "inset": {
+     "x": 0.74,
+     "y": 0.26,
+     "r": 115,
+     "at": "drop"
+    },
+    "labels": [
+     {
+      "text": "tiny droplets",
+      "x": 0.74,
+      "y": 0.5,
+      "at": "drop",
+      "color": "gold",
+      "size": 58
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.92,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "drop",
+        "pose": "point",
+        "dir": 40,
+        "face": "left",
+        "emotion": "surprised"
+       },
+       {
+        "at": "spread",
+        "pose": "point",
+        "dir": 15,
+        "face": "left",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_rays",
+   "text": "You couldn't see it like a cloud. But it did something sneaky. It bounced part of the sunlight back into space, before it could warm the ground.",
+   "visual": "Clear sky over a farm field, sun high in the sky, a faint line of tiny gold specks high up; a dashed cloud outline draws in the sky and a red X crosses it out on 'cloud'; on 'sneaky' a glint sweeps along the gold specks, two faint lines frame the veil, label 'veil', and gold sunrays start shooting from the sun to the veil; on 'bounced' every other ray bounces off the veil in red and flies back up off the frame with moving dots, label 'back to space' on 'space'; the other rays reach the ground and only a few weak heat squiggles rise on 'warm'; the fez narrator on the left looks up through binoculars, shrugs on 'cloud', points at the veil on 'sneaky', points up after the bounced rays, then points down at the ground, worried, on 'warm'",
+   "title": {
+    "white": "Sneaky"
+   },
+   "cues": {
+    "cross": "cloud",
+    "glint": "sneaky",
+    "bounce": "bounced",
+    "space": "space",
+    "warm": "warm"
+   },
+   "params": {
+    "ground": 0.82,
+    "sun": {
+     "x": 0.34,
+     "y": 0.17,
+     "r": 66
+    },
+    "veil": {
+     "y": 0.38,
+     "faint": 0.35,
+     "glint": "glint"
+    },
+    "cloud": {
+     "x": 0.82,
+     "y": 0.25,
+     "w": 320,
+     "at": 0.1,
+     "cross": "cross"
+    },
+    "rays": {
+     "at": "glint",
+     "bounce": "bounce",
+     "warm": "warm",
+     "n": 6
+    },
+    "farm_x": 0.24,
+    "labels": [
+     {
+      "text": "veil",
+      "x": 0.5,
+      "y": 0.53,
+      "at": "glint",
+      "color": "gold",
+      "size": 64,
+      "arrow": [
+       0.5,
+       0.42
+      ]
+     },
+     {
+      "text": "back to space",
+      "x": 0.86,
+      "y": 0.09,
+      "at": "space",
+      "color": "red",
+      "size": 62
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "cross",
+        "pose": "shrug",
+        "face": "right",
+        "emotion": "neutral"
+       },
+       {
+        "at": "glint",
+        "pose": "point",
+        "dir": 55,
+        "face": "right",
+        "emotion": "surprised"
+       },
+       {
+        "at": "bounce",
+        "pose": "point",
+        "dir": 65,
+        "face": "right",
+        "emotion": "surprised"
+       },
+       {
+        "at": "warm",
+        "pose": "point",
+        "dir": "down",
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_globe",
+   "text": "So the whole Earth got a little colder.",
+   "visual": "The globe wrapped in the gold haze turns slowly; a big thermometer beside it: on 'whole' the red column plunges from the top to near the bottom and a big blue arrow points down, on 'little' blue snowflakes pop around the globe; the fez narrator on the right shivers, worried",
+   "title": {
+    "white": "Colder"
+   },
+   "cues": {
+    "cold": "whole",
+    "frost": "little",
+    "hit": "colder"
+   },
+   "params": {
+    "globe": {
+     "x": 0.38,
+     "y": 0.45,
+     "r": 290,
+     "lon": 60,
+     "lat": 20,
+     "spin": 4
+    },
+    "mark": {
+     "lon": 118,
+     "lat": -8.25,
+     "at": 0.1
+    },
+    "haze": {
+     "at": 0,
+     "dur": 1,
+     "from": 1
+    },
+    "frost": "frost",
+    "thermo": {
+     "x": 0.66,
+     "y": 0.42,
+     "at": "cold",
+     "from": 0.88,
+     "to": 0.22
+    },
+    "shiver": "frost",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.92,
+      "scale": 0.8,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "frost",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "type": "tbB_year",
+   "text": "And a year later, people far away from Indonesia began to feel it.",
+   "visual": "A wall calendar hangs on a nail, its page reads '1815'; the fez narrator walks in from the left; on 'year' the page flips up and a new red '1816' drops down with a punch; on 'feel' blue snowflakes start falling across the frame and the narrator shivers, worried",
+   "title": {
+    "white": "Next year"
+   },
+   "cues": {
+    "flip": "year",
+    "far": "far",
+    "feel": "feel"
+   },
+   "params": {
+    "cal": {
+     "x": 0.6,
+     "y": 0.42,
+     "w": 460,
+     "h": 520
+    },
+    "from": "1815",
+    "to": "1816",
+    "flip": "flip",
+    "snow": "feel",
+    "shiver": "feel",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "to": 0.3,
+      "y": 0.9,
+      "scale": 0.8,
+      "pose": "walk",
+      "at": "flip",
+      "then": "point",
+      "dir": 30,
+      "face": "right",
+      "seq": [
+       {
+        "at": "far",
+        "pose": "talk",
+        "face": "right"
+       },
+       {
+        "at": "feel",
+        "pose": "shock",
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.45
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "The Year Without a Summer",
+   "type": "chapter",
+   "text": "Now imagine you're a farmer in Vermont. In June 1816, snow fell in New England and Canada.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, below it 'The Year Without a Summer' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "imagine",
+    "title": "June",
+    "line": "snow"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "The Year Without a Summer"
+   }
+  },
+  {
+   "type": "tbC_field",
+   "text": "Frost came back in July, and again in August, and killed the corn in the fields. Farmers gave that year a grim nickname: Eighteen Hundred and Froze to Death.",
+   "visual": "A New England cornfield in summer under grey clouds and a pale sun, snowflakes falling and a thin snow blanket on the ground; frost crystals creep over the field on 'Frost'; the fez narrator walks in shivering; a calendar page flips to JULY, then to AUGUST; on 'killed' the corn stalks droop and fade; a hatless farmer among the rows worries, then is shocked; the narrator points down at the dead corn; on 'Froze' a red stamp 'FROZE TO DEATH' slams on and the narrator jumps in shock",
+   "title": {
+    "white": "Summer 1816"
+   },
+   "cues": {
+    "frost": "Frost",
+    "jul": "July",
+    "aug": "August",
+    "kill": "killed",
+    "nick": "nickname",
+    "froze": "Froze"
+   },
+   "params": {
+    "frost": {
+     "at": "frost",
+     "dur": 3
+    },
+    "droop": {
+     "at": "kill",
+     "dur": 1.6
+    },
+    "blanket": {
+     "at": 0,
+     "dur": 2
+    },
+    "calendar": {
+     "x": 0.86,
+     "y": 0.27,
+     "w": 250,
+     "pages": [
+      {
+       "word": "JULY",
+       "at": "jul"
+      },
+      {
+       "word": "AUGUST",
+       "at": "aug"
+      }
+     ]
+    },
+    "snow": {
+     "n": 30
+    },
+    "house": {
+     "x": 0.9,
+     "y": 0.68,
+     "w": 200,
+     "h": 140
+    },
+    "sun": {
+     "x": 0.56,
+     "y": 0.19
+    },
+    "clouds": {
+     "n": 4,
+     "y": 0.1
+    },
+    "rows": [
+     {
+      "y": 0.74,
+      "n": 8,
+      "x0": 0.03,
+      "x1": 0.5,
+      "h": 240
+     },
+     {
+      "y": 0.88,
+      "n": 5,
+      "x0": 0.02,
+      "x1": 0.34,
+      "h": 300
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "cast": [
+     {
+      "who": "farmer",
+      "x": 0.43,
+      "y": 0.8,
+      "scale": 0.6,
+      "pose": "think",
+      "emotion": "worried",
+      "at": "kill",
+      "then": "shock",
+      "look": {
+       "hair": "short",
+       "coat": "soft"
+      }
+     },
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.9,
+      "to": 0.66,
+      "walk_at": "jul",
+      "walk_dur": 1.2,
+      "hide_until": "jul",
+      "y": 0.92,
+      "pose": "walk",
+      "face": "left",
+      "shiver": true,
+      "then": "idle",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "kill",
+        "pose": "point",
+        "dir": "down",
+        "emotion": "worried",
+        "face": "left"
+       },
+       {
+        "at": "froze",
+        "pose": "shock",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "froze to death",
+      "stamp": true,
+      "color": "red",
+      "x": 0.52,
+      "y": 0.27,
+      "at": "froze",
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_road",
+   "text": "Thousands of people in Vermont and Maine gave up, sold their farms, and headed west.",
+   "visual": "A snowy farmhouse on the left gets a red 'SOLD' stamp; a family walks right along the dirt road, the father pulling a loaded handcart, mother and child behind; a signpost 'WEST' pops up on the right; the fez narrator walks in front of them and points at the sign; heading 'Vermont & Maine'",
+   "title": {
+    "white": "Heading west"
+   },
+   "cues": {
+    "vt": "Vermont",
+    "gave": "gave",
+    "sold": "sold",
+    "west": "west"
+   },
+   "params": {
+    "house": {
+     "x": 0.14,
+     "w": 300,
+     "h": 200,
+     "snow": true
+    },
+    "sign": {
+     "x": 0.89,
+     "text": "WEST",
+     "at": "west"
+    },
+    "cart": {
+     "who": 0
+    },
+    "clouds": {
+     "n": 4,
+     "y": 0.1
+    },
+    "snow": {
+     "n": 16
+    },
+    "labels": [
+     {
+      "text": "SOLD",
+      "stamp": true,
+      "color": "red",
+      "x": 0.14,
+      "y": 0.5,
+      "at": "sold",
+      "size": 88
+     },
+     {
+      "text": "Vermont & Maine",
+      "font": "serif",
+      "x": 0.55,
+      "y": 0.2,
+      "at": "vt",
+      "size": 66
+     }
+    ],
+    "cast": [
+     {
+      "who": "father",
+      "x": 0.3,
+      "to": 0.56,
+      "walk_at": "gave",
+      "walk_dur": 3.4,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.6,
+      "look": {
+       "hair": "short",
+       "coat": "soft"
+      }
+     },
+     {
+      "who": "mother",
+      "x": 0.1,
+      "to": 0.35,
+      "walk_at": "gave",
+      "walk_dur": 3.4,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.56,
+      "look": {
+       "hair": "bun",
+       "skirt": "blue",
+       "hc": "soft"
+      }
+     },
+     {
+      "who": "child",
+      "x": 0.05,
+      "to": 0.29,
+      "walk_at": "gave",
+      "walk_dur": 3.4,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.4,
+      "look": {
+       "hair": "short"
+      }
+     },
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.46,
+      "to": 0.72,
+      "y": 0.93,
+      "walk_at": "gave",
+      "walk_dur": 3.0,
+      "pose": "walk",
+      "then": "point",
+      "dir": 12,
+      "face": "right"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_riot",
+   "text": "In Europe, it rained for weeks. Harvests rotted, the price of bread exploded, and hungry crowds rioted in the streets.",
+   "visual": "A European town street in heavy rain under dark clouds: chalk tally marks for the weeks appear on a wall; wheat sheaves in the front slump and rot on 'rotted'; on the bakery a price board shows a loaf and a red line that shoots up on 'exploded'; on 'rioted' an angry hungry crowd marches in with raised fists and a 'BREAD!' sign; the fez narrator by the bakery points at the price, then jumps back in shock",
+   "title": {
+    "white": "Europe, 1816"
+   },
+   "cues": {
+    "eu": "Europe",
+    "weeks": "weeks",
+    "rot": "rotted",
+    "price": "exploded",
+    "crowd": "hungry",
+    "riot": "rioted"
+   },
+   "params": {
+    "rain": {
+     "n": 70
+    },
+    "clouds": {
+     "n": 4,
+     "y": 0.1,
+     "dark": true
+    },
+    "tally": {
+     "at": "eu",
+     "n": 9,
+     "dur": 2.2,
+     "x": 0.34,
+     "y": 0.6
+    },
+    "bakery": {
+     "x": 0.76,
+     "w": 540
+    },
+    "price": {
+     "at": "price",
+     "x": 0.76,
+     "y": 0.3
+    },
+    "sheaves": {
+     "x": 0.04,
+     "at": "rot"
+    },
+    "crowd": {
+     "at": "riot",
+     "n": 6,
+     "x0": 0.14,
+     "x1": 0.46,
+     "scale": 0.56,
+     "sign": "BREAD!"
+    },
+    "shake": "riot",
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.6,
+      "y": 0.93,
+      "pose": "idle",
+      "face": "right",
+      "at": "price",
+      "then": "point",
+      "dir": 40,
+      "seq": [
+       {
+        "at": "riot",
+        "pose": "shock",
+        "face": "left"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_road",
+   "text": "Some families left their homes and walked away to find food.",
+   "visual": "Rainy grey hills in Europe: in front the doors of a granary swing open on an empty barn with only a few loose straws; a winding road climbs away to a far hill town with a church spire, and a long line of tiny walkers with bundles moves up it, getting smaller; the fez narrator on the right, worried, points at the line of walkers",
+   "title": {
+    "white": "No food"
+   },
+   "cues": {
+    "left": "left",
+    "walk": "walked",
+    "food": "food"
+   },
+   "params": {
+    "house": false,
+    "granary": {
+     "x": 0.15,
+     "at": "left"
+    },
+    "exodus": {
+     "walkers": 11,
+     "town": {
+      "x": 0.7,
+      "y": 0.53
+     }
+    },
+    "clouds": {
+     "n": 4,
+     "y": 0.12,
+     "dark": true
+    },
+    "rain": {
+     "n": 40
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.82,
+      "y": 0.92,
+      "pose": "idle",
+      "face": "left",
+      "at": "walk",
+      "then": "point",
+      "dir": 25,
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_lake",
+   "text": "Now here's the strangest part. In Switzerland, beside Lake Geneva, a group of young writers was stuck indoors by the endless storms.",
+   "visual": "Lake Geneva in a storm: snowy Alps far behind, waves on the lake, a lakeside villa on a slope whose windows light up gold on 'writers' with small figures inside; dark clouds, rain, lightning on 'strangest' and 'storms'; label 'Lake Geneva'; the fez narrator on the near shore talks, points at the villa, then is shocked by the lightning",
+   "title": {
+    "white": "Switzerland, 1816"
+   },
+   "cues": {
+    "strange": "strangest",
+    "geneva": "Geneva",
+    "writers": "writers",
+    "storm": "storms"
+   },
+   "params": {
+    "villa": {
+     "x": 0.68,
+     "y": 0.6,
+     "s": 1,
+     "lit": "writers"
+    },
+    "bolts": [
+     "strange",
+     "storm"
+    ],
+    "labels": [
+     {
+      "text": "Lake Geneva",
+      "x": 0.4,
+      "y": 0.73,
+      "at": "geneva",
+      "size": 66
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.15,
+      "y": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "at": "writers",
+      "then": "point",
+      "dir": 28,
+      "seq": [
+       {
+        "at": "storm",
+        "pose": "shock",
+        "face": "right"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_villa",
+   "text": "So the poet Lord Byron gave his friends a challenge: let's each write a ghost story.",
+   "visual": "Inside the villa by candlelight: a tall window with rain and a lightning flash, red curtains, a bookshelf; Lord Byron (dark curls, cravat, blue coat) stands and talks, then raises a finger on 'challenge' and a speech bubble with a little ghost doodle says 'A GHOST STORY'; Mary and Percy sit on chairs and listen; the fez narrator jumps in surprise on 'ghost'",
+   "title": {
+    "white": "Lord Byron"
+   },
+   "cues": {
+    "byron": "Byron",
+    "chal": "challenge",
+    "ghost": "ghost"
+   },
+   "params": {
+    "window": {
+     "x": 0.72,
+     "w": 300,
+     "h": 400,
+     "y": 0.08
+    },
+    "bolts": [
+     "chal"
+    ],
+    "shelf": {
+     "x": 0.08
+    },
+    "desk": {
+     "x": 0.56,
+     "w": 240,
+     "y": 0.72
+    },
+    "candles": [
+     {
+      "x": 0.56,
+      "y": 0.72,
+      "s": 0.9
+     }
+    ],
+    "bubble": {
+     "at": "chal",
+     "from": 0,
+     "text": "A GHOST STORY",
+     "x": 0.46,
+     "y": 0.2
+    },
+    "cast": [
+     {
+      "who": "byron",
+      "x": 0.38,
+      "scale": 0.74,
+      "pose": "talk",
+      "face": "right",
+      "at": "chal",
+      "then": "point",
+      "dir": "up",
+      "emotion": "happy",
+      "look": {
+       "hair": "curls",
+       "cravat": true,
+       "coat": "blue"
+      }
+     },
+     {
+      "who": "mary",
+      "x": 0.7,
+      "scale": 0.68,
+      "pose": "sit",
+      "face": "left",
+      "noseat": true,
+      "chair": true,
+      "look": {
+       "hair": "bun",
+       "skirt": "green",
+       "hc": "soft"
+      }
+     },
+     {
+      "who": "percy",
+      "x": 0.85,
+      "scale": 0.68,
+      "pose": "sit",
+      "face": "left",
+      "noseat": true,
+      "chair": true,
+      "look": {
+       "hair": "short",
+       "cravat": true,
+       "coat": "red"
+      }
+     },
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.2,
+      "y": 0.9,
+      "pose": "idle",
+      "face": "right",
+      "at": "ghost",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_villa",
+   "text": "One of them was an eighteen-year-old named Mary Godwin, the future Mary Shelley.",
+   "visual": "Mary Godwin (hair in a bun, green dress) sits at a writing desk by a candle, her quill filling a page line by line; label 'Mary Godwin, 18' with an arrow; rain on the window behind; the fez narrator stands right behind her and peeks over her shoulder, pointing down at the page",
+   "title": {
+    "white": "Mary Godwin"
+   },
+   "cues": {
+    "one": "One",
+    "eight": "eighteen-year",
+    "mary": "Mary"
+   },
+   "params": {
+    "window": {
+     "x": 0.8,
+     "w": 260,
+     "h": 360,
+     "y": 0.1
+    },
+    "shelf": {
+     "x": 0.1
+    },
+    "bolts": [],
+    "desk": {
+     "x": 0.6,
+     "w": 480,
+     "y": 0.79
+    },
+    "page": {
+     "who": 1,
+     "at": "one",
+     "lines": 7
+    },
+    "candles": [
+     {
+      "x": 0.75,
+      "y": 0.79,
+      "s": 0.85
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "labels": [
+     {
+      "text": "Mary Godwin, 18",
+      "x": 0.66,
+      "y": 0.3,
+      "at": "mary",
+      "size": 72,
+      "arrow": [
+       0.5,
+       0.56
+      ]
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.36,
+      "y": 0.86,
+      "pose": "idle",
+      "face": "right",
+      "at": "eight",
+      "then": "point",
+      "dir": -30,
+      "emotion": "surprised"
+     },
+     {
+      "who": "mary",
+      "x": 0.45,
+      "scale": 0.76,
+      "pose": "sit",
+      "face": "right",
+      "noseat": true,
+      "chair": true,
+      "look": {
+       "hair": "bun",
+       "skirt": "green",
+       "hc": "soft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_book",
+   "text": "And out of that dark, cold summer came Frankenstein.",
+   "visual": "A writing desk by candlelight, manuscript pages flutter up; behind, on a pinned page, a very tall cloaked silhouette with long dark hair and faint gold eyes rises beside a small human outline; lightning in the stormy window; on 'Frankenstein' a red bound book with 'FRANKENSTEIN' on the cover drops onto the desk; the fez narrator behind the desk jumps in shock",
+   "title": {
+    "white": "1818"
+   },
+   "cues": {
+    "dark": "dark",
+    "cold": "cold",
+    "fr": "Frankenstein"
+   },
+   "params": {
+    "book": {
+     "at": "fr",
+     "title": "FRANKENSTEIN",
+     "x": 0.42,
+     "y": 0.74,
+     "size": 60
+    },
+    "sketch": {
+     "at": "dark",
+     "dur": 2.0,
+     "x": 0.42,
+     "y": 0.34
+    },
+    "pages": {
+     "at": "dark"
+    },
+    "window": {
+     "x": 0.8,
+     "w": 240,
+     "h": 320,
+     "y": 0.12
+    },
+    "bolts": [
+     "cold",
+     "fr"
+    ],
+    "candle": {
+     "x": 0.66,
+     "y": 0.74,
+     "s": 1.1
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.86,
+      "y": 0.92,
+      "pose": "idle",
+      "face": "left",
+      "at": "fr",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_drais",
+   "text": "Some historians even go one step further. Oats were so expensive that horses became hard to feed.",
+   "visual": "A barn wall of planks: a thin horse with ribs showing stands beside an empty trough; a sack labelled 'OATS' has a swinging price tag whose red arrow jumps up on 'expensive'; the fez narrator thinks, is shocked at the price, then shrugs on 'feed'",
+   "title": {
+    "white": "Hungry horses"
+   },
+   "cues": {
+    "hist": "historians",
+    "oats": "Oats",
+    "exp": "expensive",
+    "feed": "feed"
+   },
+   "params": {
+    "mode": "oats",
+    "horse": {
+     "x": 0.28,
+     "s": 1.3
+    },
+    "trough": {
+     "x": 0.53
+    },
+    "sack": {
+     "x": 0.84,
+     "at": "exp"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.68,
+      "y": 0.9,
+      "pose": "think",
+      "face": "left",
+      "at": "exp",
+      "then": "shock",
+      "seq": [
+       {
+        "at": "feed",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_drais",
+   "text": "And in 1817, a German inventor named Karl Drais showed off a running machine with two wheels and no horse, an early ancestor of the bicycle. That link is still debated. But the timing is hard to ignore.",
+   "visual": "A German town street: Karl Drais (sideburns, green coat) rides the wooden two-wheeled running machine across, pushing off the ground with his feet, dust puffing behind; label 'Karl Drais'; a red 'NO HORSE!' stamp on 'horse'; a faint dashed modern bicycle appears on 'ancestor'; the fez narrator runs after him, points at the bicycle, then shrugs on 'debated' as a red 'COINCIDENCE?' note appears on 'timing'",
+   "title": {
+    "white": "Mannheim, 1817"
+   },
+   "cues": {
+    "drais": "Drais",
+    "wheels": "wheels",
+    "horse": "horse",
+    "anc": "ancestor",
+    "deb": "debated",
+    "tim": "timing"
+   },
+   "params": {
+    "mode": "ride",
+    "ride": {
+     "x0": 0.12,
+     "x1": 0.66,
+     "at": "drais",
+     "s": 0.85,
+     "dur": 7
+    },
+    "rider": {
+     "coat": "green"
+    },
+    "bike": {
+     "at": "anc",
+     "x": 0.84,
+     "y": 0.42,
+     "s": 0.75
+    },
+    "labels": [
+     {
+      "text": "Karl Drais",
+      "x": 0.42,
+      "y": 0.22,
+      "at": "drais",
+      "size": 68
+     },
+     {
+      "text": "NO HORSE!",
+      "stamp": true,
+      "color": "red",
+      "x": 0.74,
+      "y": 0.22,
+      "at": "horse",
+      "size": 80
+     },
+     {
+      "text": "coincidence?",
+      "x": 0.3,
+      "y": 0.34,
+      "at": "tim",
+      "size": 76,
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.1,
+      "to": 0.36,
+      "y": 0.92,
+      "walk_at": "wheels",
+      "walk_dur": 2.4,
+      "run": true,
+      "pose": "walk",
+      "then": "point",
+      "dir": 30,
+      "face": "right",
+      "seq": [
+       {
+        "at": "deb",
+        "pose": "shrug",
+        "emotion": "worried",
+        "face": "right"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "The Answer in the Ice",
+   "type": "chapter",
+   "text": "Now think about this for a second. Why did nobody blame the volcano?",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, below it 'The Answer in the Ice' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "think",
+    "title": "nobody",
+    "line": "volcano"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Answer in the Ice"
+   }
+  },
+  {
+   "type": "tbC_globe",
+   "text": "Because in 1816, nobody imagined that one mountain could change the weather of the whole world. News traveled slowly, and Tambora was very far away.",
+   "visual": "Old hand-drawn world map: a smoking volcano 'Tambora' pops up in Indonesia, snowflakes over 'New England' and 'Europe', a big red '?' between them; on 'News' a small sailing ship starts a slow dashed route from Indonesia around Africa toward America; the fez narrator in front of the Pacific shrugs, then looks through his binoculars toward Tambora on 'far'",
+   "title": {
+    "white": "Too far"
+   },
+   "cues": {
+    "imag": "imagined",
+    "mtn": "mountain",
+    "world": "world",
+    "news": "News",
+    "far": "far"
+   },
+   "params": {
+    "marks": [
+     {
+      "lon": 118,
+      "lat": -8.25,
+      "kind": "volcano",
+      "at": "mtn",
+      "label": "Tambora",
+      "dy": -110
+     },
+     {
+      "lon": -71,
+      "lat": 44,
+      "kind": "snow",
+      "at": "world",
+      "label": "New England",
+      "dy": -70
+     },
+     {
+      "lon": 10,
+      "lat": 50,
+      "kind": "snow",
+      "at": "world",
+      "label": "Europe",
+      "dy": -70
+     }
+    ],
+    "ask": {
+     "at": "world",
+     "lon": -30,
+     "lat": 12
+    },
+    "route": {
+     "pts": [
+      [
+       117,
+       -11
+      ],
+      [
+       100,
+       -15
+      ],
+      [
+       75,
+       -24
+      ],
+      [
+       50,
+       -37
+      ],
+      [
+       20,
+       -40
+      ],
+      [
+       4,
+       -26
+      ],
+      [
+       -12,
+       -6
+      ],
+      [
+       -24,
+       14
+      ],
+      [
+       -36,
+       30
+      ],
+      [
+       -58,
+       38
+      ],
+      [
+       -68,
+       41
+      ]
+     ],
+     "at": "news",
+     "dur": 5.5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.11,
+      "y": 0.92,
+      "pose": "talk",
+      "face": "right",
+      "at": "imag",
+      "then": "shrug",
+      "seq": [
+       {
+        "at": "far",
+        "pose": "look",
+        "face": "right",
+        "emotion": "neutral"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_globe",
+   "text": "It took about a hundred years before scientists connected the dots.",
+   "visual": "The same world map: red dots '1815' at Tambora and '1816' in New England; a year counter runs from 1816 to 1920; on 'connected' a red line arcs from Tambora to New England; the fez narrator thinks, then points happily",
+   "title": {
+    "white": "A century"
+   },
+   "cues": {
+    "took": "took",
+    "hund": "hundred",
+    "conn": "connected",
+    "dots": "dots"
+   },
+   "params": {
+    "marks": [
+     {
+      "lon": 118,
+      "lat": -8.25,
+      "kind": "dot",
+      "at": 0.15,
+      "label": "1815",
+      "dy": -60
+     },
+     {
+      "lon": -71,
+      "lat": 44,
+      "kind": "dot",
+      "at": 0.3,
+      "label": "1816",
+      "dy": -60
+     }
+    ],
+    "link": {
+     "from": [
+      118,
+      -8.25
+     ],
+     "to": [
+      -71,
+      44
+     ],
+     "at": "conn",
+     "dur": 1.2,
+     "bend": 0.1
+    },
+    "counter": {
+     "from": 1816,
+     "to": 1920,
+     "at": "took",
+     "dur": 2.4,
+     "x": 0.84,
+     "y": 0.3
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.11,
+      "y": 0.92,
+      "pose": "think",
+      "face": "right",
+      "at": "conn",
+      "then": "point",
+      "dir": 30,
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_ice",
+   "text": "And today, we can even see the proof. Deep in the ice of Greenland and Antarctica,",
+   "visual": "A polar ice camp: red tent with a flag, a drilling tripod and a winch that a scientist in a fur-hooded parka cranks; on 'proof' a long ice core is hoisted out of the hole; below the surface a cut-away of the ice sheet's layers and on 'Deep' the borehole goes far down; labels 'Greenland' and 'Antarctica'; snow blows across; the shivering fez narrator points at the core, then down the hole",
+   "title": {
+    "white": "Today"
+   },
+   "cues": {
+    "today": "today",
+    "proof": "proof",
+    "deep": "Deep",
+    "gr": "Greenland",
+    "an": "Antarctica"
+   },
+   "params": {
+    "mode": "drill",
+    "surface": 0.6,
+    "deep": "deep",
+    "up": "proof",
+    "labels": [
+     {
+      "text": "Greenland",
+      "font": "serif",
+      "x": 0.8,
+      "y": 0.13,
+      "at": "gr",
+      "size": 64
+     },
+     {
+      "text": "Antarctica",
+      "font": "serif",
+      "x": 0.8,
+      "y": 0.24,
+      "at": "an",
+      "size": 64
+     }
+    ],
+    "cast": [
+     {
+      "who": "sci",
+      "x": 0.72,
+      "y": 0.6,
+      "scale": 0.6,
+      "pose": "hold",
+      "face": "left",
+      "look": {
+       "hood": true,
+       "parka": true,
+       "glasses": true
+      }
+     },
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.33,
+      "y": 0.6,
+      "pose": "idle",
+      "face": "right",
+      "shiver": true,
+      "at": "proof",
+      "then": "point",
+      "dir": 20,
+      "seq": [
+       {
+        "at": "deep",
+        "pose": "point",
+        "dir": "down"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_ice",
+   "text": "the layers from those years hold a spike of volcanic sulfur. It's like a fingerprint frozen in time.",
+   "visual": "A long ice core lies across the frame with its thin yearly layers and a years ruler '1810 / 1815 / 1820'; above it a sulfur graph is drawn left to right and spikes up in red at the 1815 layer on 'spike', label 'SULFUR'; that layer turns red and on 'fingerprint' a red fingerprint whorl appears on it; the fez narrator looks through his binoculars, then jumps in surprise",
+   "title": {
+    "white": "Ice core"
+   },
+   "cues": {
+    "layers": "layers",
+    "spike": "spike",
+    "sulf": "sulfur",
+    "fp": "fingerprint"
+   },
+   "params": {
+    "mode": "core",
+    "core": {
+     "x0": 0.05,
+     "x1": 0.74,
+     "y": 0.52
+    },
+    "graph": {
+     "at": "layers",
+     "dur": 2.2,
+     "spike": 0.62
+    },
+    "years": [
+     {
+      "text": "1810",
+      "u": 0.3
+     },
+     {
+      "text": "1815",
+      "u": 0.62,
+      "red": true
+     },
+     {
+      "text": "1820",
+      "u": 0.92
+     }
+    ],
+    "fp": "fp",
+    "labels": [
+     {
+      "text": "SULFUR",
+      "font": "serif",
+      "color": "red",
+      "x": 0.64,
+      "y": 0.13,
+      "at": "sulf",
+      "size": 72,
+      "arrow": [
+       0.51,
+       0.15
+      ]
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.88,
+      "y": 0.92,
+      "pose": "look",
+      "face": "left",
+      "at": "fp",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Tambora is the most powerful eruption in recorded history.",
+   "visual": "Giant Fraunces words 'THE MOST POWERFUL ERUPTION' word by word, 'POWERFUL' in a red box; the fez narrator on the right jumps back in shock",
+   "title": {},
+   "cues": {
+    "w0": "Tambora",
+    "w1": "most",
+    "w2": "powerful",
+    "w3": "eruption"
+   },
+   "params": {
+    "lines": [
+     "The most",
+     "powerful",
+     "eruption"
+    ],
+    "highlight": [
+     "powerful"
+    ],
+    "y": 0.44,
+    "kasif": {
+     "x": 0.88,
+     "y": 0.92,
+     "pose": "shock",
+     "at": "w2",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "tbC_thermo",
+   "text": "And it cooled the planet by less than one degree Celsius. That sounds tiny.",
+   "visual": "A big Celsius thermometer: on 'cooled' the red column drops clearly; on 'less' a magnifier ring shows the drop with a red arrow; a huge red '< 1 °C' appears on 'degree'; the fez narrator points at it, then shrugs on 'tiny'",
+   "title": {
+    "white": "One degree"
+   },
+   "cues": {
+    "cool": "cooled",
+    "less": "less",
+    "deg": "degree",
+    "tiny": "tiny"
+   },
+   "params": {
+    "x": 0.26,
+    "from": 0.7,
+    "to": 0.58,
+    "at": "cool",
+    "lens": "less",
+    "labels": [
+     {
+      "text": "< 1 °C",
+      "font": "serif",
+      "color": "red",
+      "x": 0.66,
+      "y": 0.5,
+      "at": "deg",
+      "size": 180
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.86,
+      "y": 0.92,
+      "pose": "point",
+      "face": "left",
+      "dir": 15,
+      "at": "tiny",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_trio",
+   "text": "But it was enough to bring snow in June, hunger to millions, and a monster to literature.",
+   "visual": "Three pinned cards pop up one by one: snow falling on dead corn with a 'JUNE' calendar page, an empty bowl with a spoon and crumbs, a red 'FRANKENSTEIN' book with a lightning bolt; the fez narrator on the right points at the cards, then jumps in shock on 'monster'",
+   "title": {
+    "white": "Enough"
+   },
+   "cues": {
+    "a": "snow",
+    "b": "hunger",
+    "c": "monster"
+   },
+   "params": {
+    "at": [
+     "a",
+     "b",
+     "c"
+    ],
+    "xs": [
+     0.14,
+     0.4,
+     0.66
+    ],
+    "y": 0.44,
+    "s": 0.92,
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.88,
+      "y": 0.92,
+      "pose": "talk",
+      "face": "left",
+      "at": "a",
+      "then": "point",
+      "dir": 20,
+      "seq": [
+       {
+        "at": "c",
+        "pose": "shock",
+        "face": "left"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_globe",
+   "text": "And volcanoes like Tambora are still out there.",
+   "visual": "The old world map again: smoking volcanoes pop up one by one around the Pacific, Iceland and Italy, then a bigger Tambora with its label; the fez narrator looks through his binoculars, then jumps in shock on 'still'",
+   "title": {
+    "white": "Still active"
+   },
+   "cues": {
+    "v": "volcanoes",
+    "tam": "Tambora",
+    "still": "still"
+   },
+   "params": {
+    "marks": [
+     {
+      "lon": -19.6,
+      "lat": 63.6,
+      "at": 0.25
+     },
+     {
+      "lon": 14.4,
+      "lat": 40.8,
+      "at": 0.45
+     },
+     {
+      "lon": -155,
+      "lat": 58.3,
+      "at": 0.6
+     },
+     {
+      "lon": -122.2,
+      "lat": 46.2,
+      "at": 0.75
+     },
+     {
+      "lon": -98.6,
+      "lat": 19,
+      "at": 0.9
+     },
+     {
+      "lon": -78.4,
+      "lat": -0.7,
+      "at": 1.05
+     },
+     {
+      "lon": 160.6,
+      "lat": 56.1,
+      "at": 1.2
+     },
+     {
+      "lon": 138.7,
+      "lat": 35.4,
+      "at": 1.35
+     },
+     {
+      "lon": 120.35,
+      "lat": 15.1,
+      "at": 1.5
+     },
+     {
+      "lon": 105.4,
+      "lat": -6.1,
+      "at": 1.65
+     },
+     {
+      "lon": 118,
+      "lat": -8.25,
+      "at": "tam",
+      "label": "Tambora",
+      "dy": -120,
+      "s": 1.3
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.55
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.14,
+      "y": 0.92,
+      "pose": "look",
+      "face": "right",
+      "at": "still",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "tbC_question",
+   "text": "So here's my question for you. If the summer disappeared next year, do you think our modern world would handle it better than they did in 1816? Tell me in the comments.",
+   "visual": "Split page with a dashed divider: on the left '1816', a snowy farmhouse and dead corn; on the right 'Today', a modern city with lit windows and a truck, snow falling on both; a red 'BETTER?' stamp on 'better'; the fez narrator in the middle talks to the viewer, then points straight out on 'comments'",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "q": "question",
+    "sum": "summer",
+    "mod": "modern",
+    "better": "better",
+    "com": "comments"
+   },
+   "params": {
+    "split": "q",
+    "labels": [
+     {
+      "text": "1816",
+      "font": "serif",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "sum",
+      "size": 90
+     },
+     {
+      "text": "Today",
+      "font": "serif",
+      "x": 0.75,
+      "y": 0.22,
+      "at": "mod",
+      "size": 90
+     },
+     {
+      "text": "BETTER?",
+      "stamp": true,
+      "color": "red",
+      "x": 0.5,
+      "y": 0.36,
+      "at": "better",
+      "size": 100
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "scale": 0.8,
+      "x": 0.5,
+      "y": 0.9,
+      "pose": "talk",
+      "face": "right",
+      "at": "com",
+      "then": "point",
+      "dir": 8
+     }
+    ]
+   }
+  }
+ ]
+}
