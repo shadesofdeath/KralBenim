@@ -524,3 +524,68 @@ Puan sırası: Senaryo · Kanca · Okunabilirlik · Görsel=anlatım · Hareket 
 - Son: 48 sahne, 4.551 karakter, ~5:29.
 
 **Yönetmen son kapısı:** dört videonun `sheet.png` ve `cover.jpg`'si gözle kontrol edildi; konular birbirinden, geçmişten ve bugünün Düşün Bakalım videolarından farklı; lint hatasız, SEO 100/100. Toplam ≈ 5.922 karakter (günlük sınır 6.500).
+
+# Stickstory ek video — ag-05-oldest-shipwreck (Short, extra, 25.10 16:20 İstanbul)
+
+İstek sohbetten geldi: "Google News'te İngilizce gündemde olan, kanala uyan bir haber seç, Shorts'unu yap."
+
+## Konu seçimi (Google News, İngilizce, son 7–14 gün)
+Taranan aramalar: history discovery, archaeology, shipwreck found, ancient discovery, historic.
+Seçilen: **"World's oldest shipwreck found off Turkey"** (14 Ekim'den beri BBC, CNN, NYT, CBS, ABC, Euronews,
+New Scientist, Phys.org; 19–24 Ekim'de hâlâ yeni haberler). Neden: gerçek ve doğrulanabilir, global ilgi, tek
+şaşırtıcı fikir ("en eski gemi enkazında gemi yok"), parşömen + Kaşif'e çok uygun, iki kanalın geçmişinde yok.
+Elenen: San José kalyonu hazinesi (iddialar belirsiz), Hegseth / Eisenhower küresi (siyasi), Troy kemik flütü (zayıf kanca).
+
+- Havuz: weird history / unsolved mysteries (kayıp şehirler ve gizemler).
+- İzleyici sonunda ne hisseder: "Bir testinin şeklinden 4.500 yıl okunabiliyor, inanılmaz."
+- Kanca + kapak: "The world's oldest shipwreck has no ship." ↔ OLDEST WRECK / HAS NO **SHIP**; su altında
+  testilerin üstünde kesik çizgili hayalet gemi, kırmızı X ve şoktaki fesli anlatıcı.
+
+## Doğrulanan bilgiler
+Kekova Adası açıkları (Antalya), ~30 m derinlik; 30'dan fazla seramik depolama küpü + 3 taş çapa; ahşap gövde
+hiç kalmamış; tarih çömlek biçiminden: yaklaşık MÖ 2700–2400 (≈4.400–4.700 yıl; ön tahmin, radyokarbon yok →
+metinde "If that holds"); Hakan Öniz (Akdeniz Üniversitesi), 2024'te belgelendi, 2026'da kazı; önceki rekor Dokos
+(Yunanistan) ~4.200 yıl. Giza piramitleri ~MÖ 2600–2500: aynı dönem. Kaynak: Phys.org, Euronews, Baird Maritime,
+BBC/CNN başlıkları.
+
+## Tek parça anlatım (453 karakter, ~34 sn)
+The world's oldest shipwreck has no ship. Divers found it off Turkey, thirty meters down: more than thirty clay jars
+and three stone anchors. But the wooden hull? Gone, rotted away long ago. So how do you date a ship that isn't there?
+You read the jars. This shape of jar dates to about 4,500 years ago, when Egypt was building the pyramids. If that
+holds, it beats the old record from Greece by centuries. The wood forgot this ship. The clay never did.
+
+## Çekim listesi
+| # | Cümle | Tip | Görüntü / Kaşif | Cue |
+|---|---|---|---|---|
+| 0 | The world's oldest shipwreck has no ship. | kk_sea | testiler + çapalar, hayalet gemi çizilir, kırmızı X; Kaşif dürbün → şok | hit=no |
+| 1 | Divers found it off Turkey, thirty meters down: | rm_plus/map | Anadolu haritası, Kekova kırmızı, "30 m down"; Kaşif düşünür → gösterir | Turkey, thirty |
+| 2 | more than thirty clay jars and three stone anchors. | kk_sea | testiler sırayla belirir, sayaç "30+ JARS", 3 çapa; Kaşif yukarıdan yüzerek iner | more, clay, stone, anchors |
+| 3 | But the wooden hull? Gone, rotted away long ago. | kk_hull | ahşap gövde kalaslara ayrılıp toz olur, testiler kuma düşer, "GONE" damgası; Kaşif omuz silker | Gone, rotted |
+| 4 | So how do you date a ship that isn't there? | stage | sahilde Kaşif yürür, düşünür, "AGE = ?" tabelası | date, there |
+| 5 | You read the jars. | kk_jar | dev kuşaklı testi, kil kuşağa kırmızı halka + "clay belt"; Kaşif dürbün → gösterir | read, jars |
+| 6 | This shape of jar dates to about 4,500 years ago, | timeline | 2500 BC jar made → 2026 found; Kaşif gösterir | shape, years |
+| 7 | when Egypt was building the pyramids. | kk_egypt | yapımı süren piramit, rampa, blok çeken işçiler, önde aynı testi, "SAME ERA" | Egypt, pyramids |
+| 8 | If that holds, it beats the old record from Greece by centuries. | rm_plus/board | Turkey ~4,500 / Greece ~4,200 çubukları, "NEW RECORD" | beats, Greece, centuries |
+| 9 | The wood forgot this ship. The clay never did. | title | THE **CLAY** / NEVER FORGOT; Kaşif gösterir | clay, never |
+
+Yeni sahne dosyası: `scenes/studio/shots/kk_kekova.js` (`kk_sea`, `kk_hull`, `kk_jar`, `kk_egypt`).
+
+## Kapak adayları
+1. Sahne 0, t 2.4, büyük kapak Kaşif'i: sahnedeki Kaşif'le üst üste bindi, X henüz çizilmemiş → elendi.
+2. Sahne 0, t 2.4, kapak Kaşif'i yok: X yarım, Kaşif dürbünle bakıyor, duygu yok → elendi.
+3. **Sahne 0, t 2.95** (seçilen): X tam, Kaşif ellerini başına koymuş şokta, testiler + hayalet gemi tek simge.
+
+## Önizleme düzeltmeleri (yönetmen)
+Harita: Kaşif YouTube arayüzü bölgesindeydi, "Kekova" etiketi deniz adına biniyordu → ölçek 1.15, Kaşif haritanın
+doğusunda, not iç Anadolu'da. Mısır: Kaşif ve testi altyazının arkasındaydı → ufuk 0.45, ikisi 0.6'ya. Pano: Kaşif
+kartın içine. Testi: "clay belt" notu kicker'a biniyordu → y 0.3. Derinlik çizgisi kicker'ın altından başlar.
+
+## Eleştiri günlüğü
+### ag-05-oldest-shipwreck — tur 1 (ek video: en az 1 tur)
+Puanlar: Senaryo 7 · Kanca 9 · Okunurluk 8 · Görsel=anlatım 6 · Hareket 8 · Kompozisyon+Kaşif 6 · Derinlik 8 · Tempo 8 ·
+Doğruluk 7 · Kapanış 9 · Kapak+SEO 8. En büyük 3 sorun: (1) sahne 4'te "orada olmayan gemi" derken sağlam bir tekne
+görünüyordu, tabela son kelimede çıkıyordu; (2) Kaşif küçük, zaman çizelgesi/pano boş; (3) anlatım biraz haber dili.
+Doğruluk: kicker "2026 find" yanlış (bulundu 2024, duyuruldu 2026), "just turned up" → "was just announced", "c. 2500 BC".
+Düzeltmeler (yönetmen): sahne 4 tekne kaldırıldı, "AGE = ?" "date"te; Kaşif 0.68–0.75; zaman çizelgesine "c. 2200 BC
+Greek wreck"; "Here's the clever part:" ve "And what was left?" eklendi (496 karakter); kicker "found 2024"; açıklama
+düzeltildi. Pano çubukları (1.0 / 0.93) gerçek oranı gösterdiği için bilerek bozulmadı. Lint OK, preview'de STATIC yok.
