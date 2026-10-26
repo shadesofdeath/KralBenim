@@ -20,7 +20,7 @@ yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPT
 3. **Bir "neden" var:** izleyicinin aklındaki yanlış ya da eksik cevap ("Titanik buzdağı yüzünden battı" → asıl neden perçinler ve hız).
 4. **Doğrulanabilir:** tarih, sayı ve isimler güvenilir kaynaklarda var.
 
-`videos/*/` altındaki geçmiş başlıkları kontrol et, tekrar etme. Konu havuzunu dönüşümlü kullan (BRAND.md §1), Türkiye/Osmanlı tarihinden haftada en az 2 bölüm.
+**Önce manşet:** `python tools/news.py --channel db` (Türkiye) / `python tools/news.py` (Stickstory); havuza uyan bir manşetin arkasındaki gerçek hikâyeyi seç (CLAUDE.md). `videos/*/` altındaki geçmiş başlıkları kontrol et, tekrar etme. Konu havuzunu dönüşümlü kullan (BRAND.md §1), Türkiye/Osmanlı tarihinden haftada en az 2 bölüm.
 
 ## 2. Hikâye yapısı
 

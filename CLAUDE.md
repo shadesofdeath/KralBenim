@@ -41,7 +41,7 @@ Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kald
 - `docs/ANIMATION_GUIDE.md` (görsel dil, sahne tipleri, yeni tip şablonu) ve `docs/REVIEW.md` (11 kriterli eleştiri).
   **Senaryo yazan ya da sahne kodlayan her ajan önce BRAND.md'yi ve ANIMATION_GUIDE'ı okur.**
 - `tools/plan.py` planı · `tools/lint.py` kural + SEO denetimi · `tools/preview.py` TTS'siz kontak sayfası + kapak +
-  hareket ölçümü (`STATIC?`) · `tools/media.py` telifsiz fotoğraf (Wikimedia, Pexels) · `tools/news.py` Stickstory konusu için 7 ülkenin manşetleri · `tools/sfx.py` hafif ambiyans müziği.
+  hareket ölçümü (`STATIC?`) · `tools/media.py` telifsiz fotoğraf (Wikimedia, Pexels) · `tools/news.py` konu için manşetler (Stickstory 7 ülke, Düşün Bakalım Türkiye) · `tools/sfx.py` hafif ambiyans müziği.
 - `tools/upload.py` YouTube yüklemesi (kanal dosya önekinden; krediler ve bölümler açıklamaya eklenir).
 - `tools/check.py` **API kontrolü**: ElevenLabs anahtarı/kalan kredi/sesler, iki kanalın YouTube girişi (token tazelenir,
   doğru kanala mı bağlı), Telegram botu. `.github/workflows/api-check.yml` her sabah 03:15'te ve her `Daily batch`
@@ -74,7 +74,14 @@ Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Sticksto
    aralığın alt ucunda tut ve raporda belirt. Plan dışına çıkma, fazladan video üretme.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanal; `ag-` Stickstory'dir) `youtube.title` ve konularını
    oku, aynı ya da çok benzer konuyu seçme. Dünün senaryolarının `*.youtube.json`'u yoksa (yüklenmemiş) raporla.
-3. **Konu:** niş **tarih hikâyeleri** (BRAND §1): gerçek olay, gerçek insanlar, gerilim, "peki neden oldu?".
+3. **Konu önce manşetten (kanal sahibinin kalıcı kuralı, 2026-10-26):** her Düşün Bakalım videosunda (günlük,
+   ek, Shorts ve uzun) konu seçmeden önce `python tools/news.py --channel db` çalıştır (Google News Türkiye
+   manşetleri). Kanalın havuzuna uyan bir manşetin **arkasındaki gerçek tarih hikâyesini** anlat (ör. bir kazı
+   haberi → o şehrin hikâyesi; bir yıl dönümü → o günün kendisi; bir rekor ya da keşif → ilk kez nasıl olduğu);
+   haber ilk cümlelerde kanca olur, gerisi kalıcı tarih. Siyaset, seçim, suç, kurbanı olan güncel felaket, ölüm
+   haberi, magazin, spor sonucu ve ürün haberi seçilmez. Aynı gün her video ayrı manşetten; uyan manşet yoksa o
+   video için havuza dön ve raporda belirt; seçilen manşeti `production.md`'ye yaz.
+   **Konu havuzu:** niş **tarih hikâyeleri** (BRAND §1): gerçek olay, gerçek insanlar, gerilim, "peki neden oldu?".
    Havuzu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşlar ·
    keşifler ve icatlar · imparatorlukların yükselişi/çöküşü · **Türkiye ve Osmanlı tarihi, haftada en az 2 video**).
    Konu `tarih-bolumu` becerisinin 4 testini geçmeli. Uzun video: birden fazla perdesi olan daha derin bir olay;
@@ -234,7 +241,7 @@ Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı
 ## Elle başlatılan ek video
 Telegram `/uzun [konu]`, `/shorts [konu]` (payload "EK VİDEO: uzun|shorts · Konu: …") ya da sohbetten istek: plan
 dışı ama **istenmiş** bir videodur. `python tools/plan.py --extra short|long [--channel ag]` numara ve en erken
-`publish_at`'i verir; senaryoya `"extra": true` yaz (günlük plana sayılmaz). Kanal sahibi "hemen paylaş" derse
+`publish_at`'i verir (konu verilmemişse iki kanalda da önce `tools/news.py` manşetleri); senaryoya `"extra": true` yaz (günlük plana sayılmaz). Kanal sahibi "hemen paylaş" derse
 `"publish_at": "now"`: render biter bitmez herkese açık yayınlanır (sadece `extra` videolarda, lint denetler). Konu yoksa geçmişte işlenmemiş bir konu
 seç (Stickstory'de önce `tools/news.py` manşetleri, yukarıdaki kural). Akış aynı (eleştirmen en az 1 tur, zaman yetiyorsa 2); commit `Extra video YYYY-MM-DD: <başlık>`.
 
@@ -246,7 +253,7 @@ python tools/lint.py videos/<tarih>/*.json
 python tools/preview.py videos/<tarih>/<dosya>.json [--times 3,12.5]
 python tools/media.py search "Piri Reis map" --dir videos/<tarih>/media
 python tools/check.py                                      # API kontrolü (secret'lar Actions'ta)
-python tools/news.py [--links]                             # Stickstory: 7 ülkenin Google News manşetleri
+python tools/news.py [--channel db] [--links]              # Google News manşetleri (Stickstory 7 ülke / Türkiye)
 python build.py <dosya>.json [--scenes 3 | --still 12.5 | --cover | --no-tts -o out/draft.mp4]
 python build.py <dosya>.json -o out/x.mp4 --prepare | --shard 2/5 | --finish   # Actions'ın parçalı render'ı
 python tools/brand_sheet.py                                # Kaşif referans çizimleri (brand/kit/)

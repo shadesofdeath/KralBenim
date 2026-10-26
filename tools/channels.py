@@ -25,6 +25,8 @@ CHANNELS = {
         "lang": "tr", "voice_id": "j4vJUfke1j8j9OYq8V3b",
         "hashtag": "#düşünbakalım", "brand_tag": "düşün bakalım",
         "category_id": "27", "ai_disclosure": False,
+        # topics start from Turkey's front page too (tools/news.py --channel db; owner, 2026-10-26)
+        "news": [("TR", "tr")],
         "categories": ["felaketler ve kazalar", "kayıp şehirler ve gizemler", "büyük kararlar ve savaşlar",
                        "keşifler ve icatlar", "imparatorlukların yükselişi ve çöküşü", "Türkiye ve Osmanlı tarihi"],
     },

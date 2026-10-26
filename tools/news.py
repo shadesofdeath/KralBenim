@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-"""Today's headlines for picking a Stickstory topic: Google News top stories of the channel's countries.
+"""Today's headlines for picking a topic: Google News top stories of the channel's countries.
 
-  python tools/news.py                  # Stickstory editions from tools/channels.py ("news")
+  python tools/news.py                  # Stickstory: US, AU, CH, NO, NZ, CA, DE (tools/channels.py "news")
+  python tools/news.py --channel db     # Düşün Bakalım: Türkiye
   python tools/news.py --max 25 --links # more headlines per country, with article links
   python tools/news.py --json           # machine-readable
 
-Every Stickstory video starts here (CLAUDE.md, "İkinci kanal: Stickstory"): read the headlines, pick one that
-fits a channel category (channels.py "categories") and leads to a real, verifiable story, the "story behind the
-news" (Japan launches a probe to Phobos -> "Mars's moon is falling"). Skip politics, elections, crime, live
+Every video of both channels starts here (CLAUDE.md): read the headlines, pick one that fits a channel category
+(channels.py "categories") and leads to a real, verifiable story, the "story behind the news" (Japan launches a
+probe to Phobos -> "Mars's moon is falling"; a dig in Anatolia -> the history of that place). Skip politics, elections, crime, live
 disasters with victims, deaths, celebrities, sports results and product news. If nothing fits, the topic comes
 from the category pool as before. Stories that make the front page in several countries are listed first.
 """
