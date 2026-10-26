@@ -47,7 +47,8 @@ Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kald
   güncellenir), Shorts'un Instagram'a hazır dosyası. API kontrolü Telegram'a sadece sorun varsa yazar. `cloudflare/telegram-worker.js` — Telegram `/uzun`, `/shorts` komutları (`cloudflare/KURULUM.md`).
 
 Ses: anlatım + çok hafif ambiyans (`"sfx": false` kapatır). **Efekt sesi (whoosh, pop) ve nefes sesi yok** —
-kanal sahibi istemiyor. **Görseller sadece kodla üretilir:** Higgsfield ya da başka bir yapay zekâ görsel/video
+kanal sahibi istemiyor. **Görseller sadece kodla üretilir:** Higgsfield (kanal sahibi tamamen kaldırdı, 2026-10-27: Higgsfield araçları
+hiçbir oturumda çağrılmaz) ya da başka bir yapay zekâ görsel/video
 aracı hiç kullanılmaz (lint engeller); çizilemeyen an için yeni parşömen sahne tipi ya da telifsiz gerçek fotoğraf.
 Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece Actions'ta. Yerel kontrol: `preview.py`.
 
@@ -109,12 +110,31 @@ Böylece mesaj hiçbir zaman eski kalmaz.
 - **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" der, merakı paylaşır ve açıklar; olayı altyazı gibi sayan "yapıyor
   ediyor" anlatım yasak (en fazla üçte biri "-yor"), **devrik cümle yok**, ekrandakini tarif etmez, cümleler birbirine
   bağlanır, her 20–30 sn'de gerilim kancası, dolgu cümle yok (BRAND §6). Kısaltmaları açık yaz ("km/sa" değil).
-- **Shorts:** ilk kare doluyla açılır (kapak bloğu ilk cümle bitene kadar ekranda) → **ilk cümle 3–10 kelime ve kapak
-  yazısıyla aynı fikir** ("Bisküvilerdeki bu delikler süs değil." ↔ "BU DELİKLER SÜS DEĞİL"). 2–4 sn'de bir yeni görüntü.
-  Yapı: anın içine düş → gerilim → şaşırtıcı ayrıntı/asıl neden → **net kapanış**: son cümle tam ve kendi başına anlamlı
-  bir punchline; videonun başına bağlanan döngü yok, soru/"yorumlara yazın" sahnesi yok (soru açıklamaya yazılır).
-- **Uzun:** BÖLÜM 1 sıradan dünya → kıvılcım/karar → felaket/dönüm noktası → "peki neden?" → sonrası ve bugün →
-  tek yorum sorusu (`tarih-bolumu` §2). Bölümler YouTube'a otomatik eklenir.
+- **Kanal analizi (2026-10-27, iki kanal için de geçerli):** Shorts izleyicilerinin ~%46'sı ilk 1–2 saniyede
+  kaydırıyor (hedef ≥ %70 devam); uzun videolar yarıda bırakılıyor (ortalama %39 izlenme); uzun video tıklama oranı
+  %0,96; trafiğin %99'u Shorts'tan ama abone ve uzun video izlenmesi neredeyse yok. Aşağıdaki kurallar bunun için.
+- **Shorts — ilk 2 saniye:** ilk kare doluyla açılır (kapak bloğu ilk cümle bitene kadar ekranda; tek net görsel +
+  kapak yazısı) → **ilk cümle 3–8 kelime**, konunun **en çarpıcı anı ya da iddiası**, kapak yazısıyla aynı fikir
+  ("Bisküvilerdeki bu delikler süs değil." ↔ "BU DELİKLER SÜS DEĞİL"). Tarihle, bağlamla, "bir zamanlar"la açılmaz
+  (tarih ikinci cümlede). Bekleme yok: ses ilk karede başlar. 2–4 sn'de bir yeni görüntü.
+  Yapı: en çarpıcı an → gerilim → şaşırtıcı ayrıntı/asıl neden → **punchline + abone çağrısı**: punchline tam ve
+  kendi başına anlamlı bir cümle; hemen ardından **tek kısa, doğal abone cümlesi, nedeniyle birlikte**
+  ("Her gün böyle gerçek bir hikâye için abone olun." / "Subscribe for a true story like this every day."; lint
+  ister). Videonun başına bağlanan döngü yok, soru/"yorumlara yazın" sahnesi yok (soru açıklamaya yazılır).
+- **Shorts → uzun video:** `upload.py` her Short'un açıklamasına (ilk paragrafın hemen altına) kanalın bir uzun
+  videosunun linkini koyar: `youtube.related` (uzun videonun senaryo yolu ya da video id'si) varsa o, yoksa Short
+  yayınlandığında yayında olan en yeni uzun video. Konuyla bağlantılı bir uzun video varsa yönetmen `related`'ı
+  yazar. (YouTube'un Shorts "İlgili video" alanının API'si yok; istenirse Studio'dan elle de seçilir.)
+- **Uzun — ilk 30 saniye (soğuk açılış):** selam, kanal tanıtımı, "bu videoda", "bugün size", uzun giriş yok (lint).
+  Video, vaat edilen olayın **en dramatik anının içinde** açılır (bölüm kartıyla değil: ilk sahne `chapter` tipi
+  olamaz) ve videonun cevaplayacağı soruyu sorar (açık döngü; cevap sonda). Arka plan bilgisi kısa tutulur ve
+  hep "bu neden önemli?" sorusuna bağlanır.
+- **Uzun — tempo:** her **45–60 saniyede** bir hikâye kancası (yeni soru, "ama kimse bilmiyordu ki…", sürpriz,
+  cliffhanger) ve bir **görsel değişim** (yeni yer, harita/zaman çizelgesi, büyük sayı kartı, yakın plan). Her bölüm
+  bir sonraki bölüme çeken bir cümleyle biter (lint uyarır). Efekt sesi yine yok (kanal sahibinin kuralı); dikkat
+  görsel değişim ve hikâye kancasıyla tutulur.
+- **Uzun yapı:** soğuk açılış → BÖLÜM 1 sıradan dünya → kıvılcım/karar → felaket/dönüm noktası → "peki neden?" →
+  sonrası ve bugün → tek yorum sorusu + abone çağrısı (`tarih-bolumu` §2). Bölümler YouTube'a otomatik eklenir.
 - Her sahne 1–3 cümle (Shorts'ta en fazla 2), `"visual"` = ekranda tam olarak ne görünüyor; seçilen tip bunu **birebir**
   göstermeli, uygun tip yoksa yeni tip kodla. `title` sol üstte küçük kicker: `white` 1–2, `gray` ≤ 3 kelime;
   `title`/`chapter` sahnesinde `{}`. `cues`: sahne metnindeki dramatik bir kelimenin parçası (ilk eşleşme; erken bir
@@ -132,14 +152,19 @@ Böylece mesaj hiçbir zaman eski kalmaz.
 
 ### Kapak (tıklanma oranını belirler, en çok özen burada)
 ```json
-"cover": {"lines": ["Avustralya", "kuşlara", "savaş açtı"], "highlight": ["kuşlara"], "scene": 0, "t": 2.4, "kasif": "shock"}
+"cover": {"lines": ["Kuşlara", "yenildiler"], "highlight": ["kuşlara"], "scene": 0, "t": 2.4, "kasif": "shock"}
+"cover": {"lines": ["200 gemi", "tek ada"], "highlight": ["ada"], "scene": 21, "t": 1.5, "focus": [831, 567], "zoom": 1.5, "kasif": "shock"}
 ```
 - BRAND §9: parşömen, Fraunces 900 dev yazı, tek kelime kırmızı kutuda, yanında **büyük Kaşif** güçlü bir duyguyla
-  (şok, korku, hayret; yüzü okunur) ve olayın tek simgesi. `lines` 2–4 satır, toplam **3–5 kelime**, başlığı tekrar
-  etmeyen merak patlatan iddia. `highlight` tek kelime. `scene` + `t`: en dramatik, dolu an (boş/yarım çizilmiş kare,
+  (şok, korku, hayret; yüzü okunur) ve olayın **tek simgesi**. **Görsel karmaşa yok: tek net odak noktası.**
+  `lines` 1–3 satır, toplam **2–4 kelime** (lint), başlığı tekrar etmeyen merak patlatan iddia. `highlight` tek kelime. `scene` + `t`: en dramatik, dolu an (boş/yarım çizilmiş kare,
   sıkıcı harita/pano, uzak plan olmaz; gerekirse nesneyi büyüt). `kasif`: `"shock"`, `{"pose", "emotion", "dir",
   "face", "scale", "x", "y"}` ya da sahnede zaten büyükse `false`.
-- Uzun video kapağı 1280×720 (solda yazı, sağda sahne + Kaşif); Shorts 1080×1920 (üstte yazı; aynı kare kancadır).
+- Uzun video kapağı 1280×720 (solda yazı, sağda tek nesne + Kaşif); Shorts 1080×1920 (üstte yazı; aynı kare ilk 2
+  saniyenin kancasıdır). **Uzun kapakta `focus` zorunlu (lint):** `[x, y]` = kapağın gösterdiği tek nesnenin sahne
+  pikseli; motor onu sağ yarının ortasına büyütür (`zoom`, varsayılan 1.6) ve gerisini kâğıda eritir (`"fade": false`
+  kapatır). Shorts'ta `focus` isteğe bağlı (nesneyi yazının altına büyütür). Kalabalık sahne (çok gemi, çok asker,
+  çok yazı) yerine tek nesne + Kaşif'in yüzü.
 - **Her video için en az 3 kapak adayı** üret (farklı sahne/an/poz/metin), `cover.jpg`'leri karşılaştır, en güçlüsünü
   seç; telefonda küçükken okunmalı. Eleştirmen kapağa **8'in altında** verirse kapak yenilenir.
 
@@ -150,6 +175,9 @@ Böylece mesaj hiçbir zaman eski kalmaz.
 ```
 - **`tags[0]` ana anahtar kelimedir** (insanların gerçekten aradığı ifade). Başlık onunla başlar, merak boşluğu
   (`?`/`!`/`:`), Shorts 30–60 / uzun 30–70 karakter, en fazla 1 emoji, BÜYÜK HARF yok, cevabı videoda olan dürüst vaat.
+  **Başlık bilgi değil kanca:** ana kelimeden sonra izleyicide soru işareti bırakan bir soru ya da şaşırtıcı iddia
+  ("Malta Kuşatması 1565: Küçük Bir Ada Koca Orduyu Nasıl Durdurdu?", "Phobos: Mars'a Yavaş Yavaş Düşen Uydu").
+  "X Tarihi", "X Nedir", "Belgesel", "The History of", "Explained", "Documentary" gibi bilgi veren kalıplar yasak (lint).
 - Açıklama: ilk 150 karakterde ana kelime + kanca; 2–4 cümle özet (2–3 yan kelime); uzunda boş satırdan sonra
   "Bu videoda:" 3–5 madde; abone çağrısı + yorum sorusu ("Her gün yeni bir 'neden?' için abone ol. Sence …? Yorumlara
   yaz!"); son satırda 3–5 hashtag (Shorts'ta ilki `#shorts`, sonra konu, `#düşünbakalım`). Shorts ≥ 250, uzun ≥ 600 karakter.

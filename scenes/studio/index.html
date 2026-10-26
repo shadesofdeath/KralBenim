@@ -35,7 +35,9 @@
   html.long #bar { height: 100%; width: 0; border-radius: 3px; background: #4A6F94; }
 
   /* ---- cover / hook (BRAND.md §9) */
-  #covershade, #covertext, #kasifcover { display: none; pointer-events: none; }
+  #covershade, #covertext, #kasifcover, #coverfade { display: none; pointer-events: none; }
+  /* long video thumbnail with cover.focus: everything but the focal object fades into the paper (one clear subject) */
+  html.long.cover.focus #coverfade { display: block; background: radial-gradient(ellipse 30% 50% at 72% 52%, rgba(233,220,192,0) 58%, #E9DCC0 100%); }
   html.cover #covershade { display: block; background: linear-gradient(180deg, #E9DCC0 0%, #E9DCC0 36%, rgba(233,220,192,0) 50%); }
   html.long.cover #covershade { background: linear-gradient(90deg, #E9DCC0 0%, #E9DCC0 38%, rgba(233,220,192,0) 56%); }
   html.cover #covertext { display: block; inset: auto; left: 70px; right: 70px; top: 190px;
@@ -55,6 +57,7 @@
   <canvas id="bg"></canvas>
   <div id="shots"></div>
   <div id="kickers"></div>
+  <div id="coverfade"></div>
   <div id="covershade"></div>
   <div id="covertext"></div>
   <svg id="kasifcover"></svg>

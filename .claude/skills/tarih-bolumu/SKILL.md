@@ -25,16 +25,19 @@ yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPT
 ## 2. Hikâye yapısı
 
 **Shorts (28–35 sn, 8–11 sahne):**
-1. Anın içine düş (tarih + yer + sıradan bir ayrıntı) — kapak yazısıyla aynı fikir.
+1. İlk 2 saniye: en çarpıcı an ya da iddia, 3–8 kelime — kapak yazısıyla aynı fikir (tarih/yer ikinci cümlede).
 2. Gerilimi kur (bir şey ters gidiyor).
 3. Şaşırtıcı ayrıntı / asıl neden.
-4. Net, akılda kalan kapanış cümlesi.
+4. Net, akılda kalan punchline + tek kısa, doğal abone cümlesi nedeniyle ("Her gün böyle gerçek bir hikâye için abone olun.").
 
 **Uzun video (5–6 dk, 40–50 sahne, 4–5 bölüm):**
-`BÖLÜM 1` sıradan dünya → `BÖLÜM 2` kıvılcım/karar → `BÖLÜM 3` felaket ya da dönüm noktası →
+**Soğuk açılış (ilk 30 sn):** selam/giriş yok; olayın en dramatik anının içinde aç, videonun cevaplayacağı soruyu sor
+(cevap sonda). Sonra `BÖLÜM 1` sıradan dünya → `BÖLÜM 2` kıvılcım/karar → `BÖLÜM 3` felaket ya da dönüm noktası →
 `BÖLÜM 4` "peki neden?" (asıl açıklama, yaygın yanlışı düzelt) → `BÖLÜM 5` sonrası ve bugün → tek yorum sorusu.
 5–6 dakika sıkı bir anlatım ister: hikâyeyi uzatma, derinleştir: olayın içinde 1–2 ara dönüm noktası, gerçek insanların kararları ve sözleri, beklenmedik ayrıntılar. Tekrar ve dolgu yok; her bölüm yeni bir soru açıp kapatır.
-Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmemişti."
+Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmemişti." Her 45–60 saniyede bir görsel
+değişim (yeni yer, harita, büyük sayı, yakın plan); her bölüm bir sonrakine çeken bir cümleyle biter.
+Kapak: tek nesne + büyük Kaşif, 2–4 kelime, uzunda `cover.focus` zorunlu. Başlık bilgi değil kanca (CLAUDE.md).
 
 ## 3. Sahne seçimi (sepya stil, `"theme": "parchment"`)
 

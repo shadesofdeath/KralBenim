@@ -1,4 +1,4 @@
-// photo: a real photo or video clip (or a Higgsfield sepia ink clip, "ai": true) printed onto the parchment
+// photo: a real, freely licensed photo or video clip printed onto the parchment (no AI-generated footage: lint)
 // (brand/kit/BRAND.md §3, §8): sepia grade, multiplied by the paper colour, edges dissolving into the page,
 // slow Ken Burns drift and hand-drawn marks on top.
 // P: {src: "media/x.jpg"} | {video: "media/x.mp4", from: 2.0, rate: 0.6}  (build.py turns video into P.frames)

@@ -16,7 +16,7 @@ Category and the "altered or synthetic content" (AI) box come from the channel (
 A video is always uploaded private + scheduled, never public at once: a publish_at that already passed moves
 to the same time on the next day.
 Sets <video>.jpg as the thumbnail, appends chapters (long videos, from <video>.timeline.json) and photo
-credits to the description. Writes <video>.youtube.json and prints the URL.
+credits to the description; a Short's description links a long video of the channel (related_long). Writes <video>.youtube.json and prints the URL.
 """
 import json
 import os
@@ -28,8 +28,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from channels import CHANNELS, DEFAULT, by_id, of_file  # noqa: E402
 
 TOKEN_URI = "https://oauth2.googleapis.com/token"
-HEAD = {"tr": {"chapters": "⏱️ Bölümler", "credits": "📷 Görseller"},
-        "en": {"chapters": "⏱️ Chapters", "credits": "📷 Image credits"}}
+HEAD = {"tr": {"chapters": "⏱️ Bölümler", "credits": "📷 Görseller", "next": "▶ Uzun video"},
+        "en": {"chapters": "⏱️ Chapters", "credits": "📷 Image credits", "next": "▶ Watch the long video"}}
+ROOT = Path(__file__).resolve().parent.parent
 
 
 def token_info(channel):
@@ -140,14 +141,48 @@ def chapters(video, lg):
     return f"\n\n{HEAD[lg]['chapters']}\n" + "\n".join(f"{int(t) // 60}:{int(t) % 60:02d} {n}" for t, n in kept)
 
 
+def related_long(script, channel, at):
+    """Shorts -> long videos (owner, 2026-10-27: 99% of views come from Shorts, long videos are barely watched).
+    The Short's description links a long video of the same channel: youtube.related (a long script path or a
+    video id) or else the newest recorded long video that is public by the Short's publish time `at`.
+    YouTube's "Related video" field for Shorts has no API, so the link goes into the description.
+    Returns (title, url) or None."""
+    rel = script["youtube"].get("related")
+    if rel and not rel.endswith(".json"):
+        return ("", f"https://youtu.be/{rel}")
+    best = None
+    for rec_path in (ROOT / "videos").glob("*/*.youtube.json"):
+        if of_file(rec_path.name) != channel:
+            continue
+        rec = json.loads(rec_path.read_text())
+        src = ROOT / rec.get("script", "")
+        if not rec.get("id") or not src.exists() or (rel and Path(rel).resolve() != src.resolve()):
+            continue
+        s = json.loads(src.read_text())
+        if s.get("format") != "long":
+            continue
+        pub = s.get("youtube", {}).get("publish_at")
+        when = datetime.fromisoformat(pub) if pub else None
+        if not rel and (when is None or (at and when > at)):
+            continue
+        key = when or datetime.min.replace(tzinfo=timezone.utc)
+        if best is None or key > best[0]:
+            best = (key, rec.get("title") or s["youtube"]["title"], rec["url"])
+    return best[1:] if best else None
+
+
 def credits(script, lg):
     """Attribution for photos/clips used by "photo" shots (CC BY / CC BY-SA require it)."""
     seen = list(dict.fromkeys(c for sc in script["scenes"] if (c := (sc.get("params") or {}).get("credit"))))
     return (f"\n\n{HEAD[lg]['credits']}\n" + "\n".join(seen)) if seen else ""
 
 
-def description(desc, extra):
-    """Chapters and credits go before the hashtag line so the hashtags stay at the very end."""
+def description(desc, extra, link=""):
+    """Chapters and credits go before the hashtag line so the hashtags stay at the very end; a Short's long-video
+    link goes right after the first paragraph (the part people see before "more")."""
+    if link:
+        first, sep, rest = desc.partition("\n\n")
+        desc = first + "\n\n" + link + (sep + rest if sep else "")
     head, sep, tags = desc.rpartition("\n\n#")
     return ((head + extra + sep + tags) if sep else desc + extra)[:5000]
 
@@ -234,6 +269,12 @@ def main():
         return
 
     cfg = CHANNELS[channel]
+    link = ""
+    if script.get("format", "short") == "short":
+        rel = related_long(script, channel, schedule_time(meta["publish_at"]) if meta.get("publish_at") else None)
+        if rel:
+            link = f"{HEAD[lg]['next']}: {rel[0]}\n{rel[1]}".replace(": \n", ":\n")
+            print(f"long video link: {rel[1]}")
     status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
               "containsSyntheticMedia": bool(cfg.get("ai_disclosure"))}
     if meta.get("publish_at"):   # always scheduled, never public at once: a passed time moves to the next day
@@ -241,7 +282,7 @@ def main():
         status["publishAt"] = when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         print(f"scheduled for {when.isoformat()}")
     body = {"snippet": {"title": meta["title"][:100],
-                        "description": description(meta.get("description", ""), chapters(video, lg) + credits(script, lg)),
+                        "description": description(meta.get("description", ""), chapters(video, lg) + credits(script, lg), link),
                         "tags": meta.get("tags", []), "categoryId": cfg["category_id"],
                         "defaultLanguage": lg, "defaultAudioLanguage": lg},
             "status": status}

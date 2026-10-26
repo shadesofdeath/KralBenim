@@ -18,6 +18,19 @@ from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
 THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
+# channel analytics (owner, 2026-10-27): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
+# halfway (39% average view), long-video CTR 0.96%, Shorts viewers rarely subscribe. The rules below target that.
+GREETING = re.compile(r"\b(merhaba|selam(lar)?|hoş ?geldiniz|kanal(ım)?a hoş|bu videoda|bugün sizlere|bugün size|"
+                      r"başlamadan önce|hello|hi (everyone|guys|there)|welcome|in this video|today (we|i)('ll| will| are)|"
+                      r"before we (start|begin)|let'?s talk about)\b", re.I)
+CTA = re.compile(r"\b(subscribe|follow|abone|takip)", re.I)
+HOOK = re.compile(r"[?!…]|\b(but|until|nobody|no one|never|here'?s the|wait|the (strange|crazy|wild|worst) part|"
+                  r"ama|fakat|peki|kimse|hiç kimse|asla|işte tam|meğer|tahmin edin|bekleyin)\b", re.I)
+FLAT_TITLE = re.compile(r"\b(history of|explained|documentary|the story of|a short history|tarihi?\s*$|belgesel|"
+                        r"hikayesi\s*$|hikâyesi\s*$|nedir\s*$|kimdir\s*$)", re.I)
+TITLE_HOOK = re.compile(r"[?!]|\b(why|how|what|who|secret|nobody|no one|never|almost|only|nearly|wrong|truth|"
+                        r"really|impossible|mistake|stopped|vanished|survived|neden|nasıl|niye|kim|kimse|hiç|asla|"
+                        r"sır|neredeyse|sadece|yanlış|gerçek|aslında|imkânsız|imkansız|hata)\b", re.I)
 
 
 def shot_types():
@@ -158,19 +171,42 @@ def lint(path, kinds):
     nk = sum(1 for x in sc if has_kasif(x))
     if types and nk < len(types) / 2:
         err.append(f"Kaşif in {nk}/{len(types)} scenes ('stage' or params.kasif/cast), brand needs at least half")
+    # first ~30 s (~420 chars): straight into the event, no greeting / channel intro / "in this video"
+    if GREETING.search(text[:420]):
+        err.append(f"opening has a greeting/intro ({GREETING.search(text[:420]).group(0)!r}): start inside the event (BRAND.md §6.1)")
     if short:
         first = sentences(sc[0]["text"])[0] if sc else ""
-        if not 3 <= len(first.split()) <= 10:
-            err.append(f"first sentence has {len(first.split())} words, hook needs 3-10")
+        if not 3 <= len(first.split()) <= 8:
+            err.append(f"first sentence has {len(first.split())} words, the 2-second hook needs 3-8")
+        if re.match(r"(in |on |back in )?(\d{3,4}|\w+ \d{3,4})\b|\d{3,4}('|’)?(de|da|te|ta|yılında)\b", low(first)):
+            warn.append("first sentence opens with a date: open with the most striking moment, date later")
+        last = sentences(sc[-1]["text"]) if sc else []
+        if not last or not CTA.search(last[-1]):
+            err.append("Shorts end: punchline, then ONE natural subscribe line with a reason (e.g. 'Subscribe for a true "
+                       "story like this every day.' / 'Her gün böyle gerçek bir hikâye için abone olun.')")
         if sc and (sc[-1]["text"].rstrip().endswith("?") or re.search(r"yorum|comment", low(sc[-1]["text"]))):
-            err.append("last scene must be a complete punchline, not a question / comment call")
+            err.append("last scene: punchline + subscribe line, not a question / comment call")
+        if last and len(last[-1].split()) > 12:
+            warn.append("subscribe line is long; keep it to one short natural sentence")
     else:
         if not sc or not sc[0].get("chapter"):
             err.append("long video: first scene needs \"chapter\"")
+        if sc and sc[0].get("type") == "chapter":
+            err.append("long video: open on the event itself (cold open), not on a chapter card")
         idx = [i for i, x in enumerate(sc) if x.get("chapter")] + [len(sc)]
         for a, b in zip(idx, idx[1:]):
             if b - a > 12:
                 warn.append(f"chapter at scene {a} runs {b - a} scenes (aim 8-12)")
+            end = sc[b - 1]["text"] if b < len(sc) else ""
+            if end and not HOOK.search(end):
+                warn.append(f"chapter ending at scene {b - 1} has no hook into the next one (question, 'but…', cliffhanger)")
+        # a story hook at least every ~45-60 s (~14 chars/s): question, 'but nobody…', cliffhanger
+        pos = 0
+        while pos + 840 < len(text):
+            if not HOOK.search(text[pos:pos + 840]):
+                warn.append(f"~1 minute without a hook around chars {pos}-{pos + 840}: add a question or tension line")
+                break
+            pos += 420
 
     # cover
     c = s.get("cover")
@@ -178,8 +214,10 @@ def lint(path, kinds):
         err.append("missing cover")
     else:
         words = " ".join(c.get("lines", [])).split()
-        if not 2 <= len(c.get("lines", [])) <= 4 or not 3 <= len(words) <= 5:
-            err.append(f"cover: {len(c.get('lines', []))} lines / {len(words)} words (need 2-4 lines, 3-5 words)")
+        if not 1 <= len(c.get("lines", [])) <= 3 or not 2 <= len(words) <= 4:
+            err.append(f"cover: {len(c.get('lines', []))} lines / {len(words)} words (need 1-3 lines, 2-4 words: one curiosity claim)")
+        if not short and not (isinstance(c.get("focus"), list) and len(c["focus"]) == 2):
+            err.append("long cover needs \"focus\": [x, y] (stage px) of the ONE object it shows; the rest fades out (BRAND.md §9)")
         hl = c.get("highlight", [])
         if len(hl) != 1 or low(hl[0]) not in low(" ".join(c.get("lines", []))):
             err.append("cover.highlight must be exactly one word that appears in cover.lines")
@@ -226,6 +264,9 @@ def seo_score(s, y, short, en, cfg):
         miss.append((8, f"title must start with the main keyword (tags[0] {tags[:1]})"))
     if not re.search(r"[?!:]", title):
         miss.append((3, "title needs a curiosity gap (question, claim or 'Keyword: hook')"))
+    if FLAT_TITLE.search(title) or (not short and not TITLE_HOOK.search(title.split(":", 1)[-1]) and len(title.split(":", 1)[-1].split()) < 4):
+        miss.append((5, "title reads like information, not a hook: after the keyword, an open question or surprising "
+                        "claim the video answers ('…: How a Tiny Island Stopped an Empire')"))
     if sum(1 for ch in title if unicodedata.category(ch) == "So") > 1 or sum(
             1 for w in title.split() if len(w) > 3 and w.isupper()) > 1:
         miss.append((6, "title: at most 1 emoji and no ALL-CAPS words"))
@@ -266,8 +307,8 @@ def seo_score(s, y, short, en, cfg):
         miss.append((5, "English channel: Turkish characters in the YouTube metadata"))
     # cover text (10): checked again visually by the critic
     c = s.get("cover") or {}
-    if not 3 <= len(" ".join(c.get("lines", [])).split()) <= 5 or len(c.get("highlight", [])) != 1:
-        miss.append((10, "cover: 3-5 words with exactly one highlighted word"))
+    if not 2 <= len(" ".join(c.get("lines", [])).split()) <= 4 or len(c.get("highlight", [])) != 1:
+        miss.append((10, "cover: 2-4 words with exactly one highlighted word"))
     return miss
 
 

@@ -185,7 +185,20 @@ function coverKasif(c, lt) {
       face: k.face ?? -1, since: 1.5, emotion: k.emotion || (pose === 'shock' ? 'surprised' : 'happy'), dir: k.dir ?? 40, mouth: 0.6 });
   } catch (e) { console.error('Kaşif cover failed', e); node.innerHTML = ''; }
 }
-const coverShift = () => D.format === 'long' ? `translateX(${W * 0.2}px) scale(1.12)` : `translateY(${H * 0.17}px)`;
+// cover.focus [x, y] (stage px): the ONE object the thumbnail is about (BRAND.md §9). The shot is zoomed
+// (cover.zoom, default 1.6 long / 1.25 Short) so that point lands in the free part of the frame; on a long video
+// cover the rest of the shot also fades into the paper (#coverfade; cover.fade: false keeps it). The shot's
+// transform origin is its centre: p -> C + T + s (p - C).
+const coverShift = (c) => {
+  const long = D.format === 'long';
+  if (c && Array.isArray(c.focus)) {
+    const s = c.zoom ?? (long ? 1.6 : 1.25), [fx, fy] = c.focus;
+    const tx = long ? W * 0.72 : W * 0.5, ty = long ? H * 0.52 : H * 0.6;
+    return `translate(${(tx - W / 2 - s * (fx - W / 2)).toFixed(1)}px, ${(ty - H / 2 - s * (fy - H / 2)).toFixed(1)}px) scale(${s})`;
+  }
+  return long ? `translateX(${W * 0.2}px) scale(1.12)` : `translateY(${H * 0.17}px)`;
+};
+const coverFocusClass = (c, on) => document.documentElement.classList.toggle('focus', !!(on && c && Array.isArray(c.focus) && c.fade !== false));
 
 function coverMoment(c) {
   const idx = Math.min(c.scene ?? 0, S.length - 1), o = S[idx];
@@ -199,7 +212,7 @@ window.seek = (t) => {
     if (h && t < h.end) {
       if (!root.classList.contains('hook')) { root.classList.add('cover', 'hook'); buildCoverText(h); coverKasif(h, 0); }
       const m = coverMoment(h);
-      renderSolo(t, m.idx, m.lt + t * 0.35, pend, coverShift());
+      renderSolo(t, m.idx, m.lt + t * 0.35, pend, coverShift(h));
       const box = $('covertext');
       box.style.opacity = 1;
       box.style.transform = `scale(${lerp(1.08, 1, prog(t, 0, 0.4))})`;
@@ -227,7 +240,8 @@ window.cover = (c) => {
   const m = coverMoment(c);
   const t = S[m.idx].sc.start + m.lt;
   coverKasif(c, m.lt);
-  const run = () => { renderSolo(t, m.idx, m.lt, pend, coverShift()); hud(t, m.idx, true); };
+  coverFocusClass(c, D.format === 'long');   // thumbnail only: never a full-frame fade layer in video frames
+  const run = () => { renderSolo(t, m.idx, m.lt, pend, coverShift(c)); hud(t, m.idx, true); };
   run();
   if (pend.length) return Promise.all(pend).then(() => { run(); return true; });
   return true;

@@ -85,8 +85,9 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
    İstenen kalıplar: "Hiç merak ettiniz mi…", "Bakın, işin sırrı şurada…", "Şimdi size çok ilginç bir şey
    söyleyeceğim:", "Peki sizce ne oldu?", "İnanması zor ama…", "İşte tam burada…". Açıklamayı sıcak, içten,
    biraz heyecanlı yap; izleyiciyle birlikte şaşır. Hikâye kısmı geçmiş zamanla anlatılır (§3).
-1. **Selam ve kanal tanıtımı yok** ("Merhaba arkadaşlar, kanalıma hoş geldiniz" yok). İlk cümle doğrudan
-   merak sorusu ya da şaşırtıcı iddiadır; hemen ardından "gelin anlatayım" gibi kısa bir davet gelebilir.
+1. **Selam ve kanal tanıtımı yok** ("Merhaba arkadaşlar, kanalıma hoş geldiniz", "bu videoda", "bugün size" yok;
+   lint engeller). İlk cümle doğrudan en çarpıcı an, merak sorusu ya da şaşırtıcı iddiadır. Shorts'ta ilk cümle
+   3–8 kelimedir (ilk 2 saniye); uzun videoda ilk 30 saniye olayın içinde geçer (soğuk açılış), uzun giriş yoktur.
 2. **Doğal okuma (kanal sahibinin kararı).** Seslendirmeye hiçbir ses/hız ayarı yapılmaz: `tts.settings`
    yok, `"pacing"`/`"max_pause"` yok (sessizlik eklenmez/kesilmez), `"tone"` ses etiketleri yok. Ses kendi
    doğal okumasıyla okur. Tonlamayı **noktalama** taşır: cümleler nokta, soru işareti ya da ünlemle biter;
@@ -106,7 +107,10 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 4. **Sahne başına tek fikir**, ekranda en fazla 5 kelime. Kaşif o fikri **gösterir** (işaret eder, şaşırır, dürbünle bakar).
 5. Her 20–30 saniyede bir **soru/gerilim kancası**: "Ama asıl felaket henüz başlamamıştı."
 6. **Sayı, tarih, isim doğrulanmadan yazılmaz**; tartışmalıysa "büyük olasılıkla" de.
-7. **Kapanış:** Shorts tam ve akılda kalan bir cümleyle biter (döngü yok); uzun video tek bir yorum sorusuyla.
+7. **Kapanış:** Shorts tam ve akılda kalan bir punchline + tek kısa, doğal abone cümlesi (nedeniyle: "Her gün
+   böyle gerçek bir hikâye için abone olun.") ile biter (döngü yok); uzun video tek bir yorum sorusu ve abone çağrısıyla.
+11. **Uzun videoda tempo:** her 45–60 saniyede bir hikâye kancası ve görsel değişim; her bölüm bir sonrakine çeken
+   bir cümleyle biter. Efekt sesi yok, dikkat hikâye ve görüntüyle tutulur.
 9. **Düz anlatım yasak (kanal sahibinin kararı).** Bilgi sıralamak değil, hikâye anlatmak: izleyiciye
    doğrudan seslen ("Şimdi şunu düşün…", "Sence ne yaptılar?"), merakı bir cümle bekletip sonra cevapla,
    zıtlık kur ("Herkes zinciri izliyordu. Kimse tepeye bakmıyordu."), somut duyusal ayrıntı ver (ses, koku,
@@ -132,16 +136,17 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 
 ## 8. Görseller sadece kodla üretilir
 
-**Kanal sahibinin kuralı (2026-10-22): Higgsfield ya da başka bir yapay zekâ görsel/video aracı hiç
-kullanılmaz.** Her sahne kodla çizilir (Kaşif `stage`, `map`, `timeline`, `board`, `title`, `chapter` ve
+**Kanal sahibinin kuralı (2026-10-22, 2026-10-27'de kesinleşti): Higgsfield ya da başka bir yapay zekâ
+görsel/video aracı hiç kullanılmaz; Higgsfield araçları hiçbir oturumda çağrılmaz.** Her sahne kodla çizilir (Kaşif `stage`, `map`, `timeline`, `board`, `title`, `chapter` ve
 konuya özel yeni kod sahneleri); gerekiyorsa yeni sahne tipi yazılır. Gerçek tarihî belge/yer/eser için
 telifsiz fotoğraf (`photo`, sepya) kullanılabilir.
 
 ## 9. Kapak (thumbnail)
 
-Parşömen zemin, solda/üstte Fraunces 900 dev yazı (2–3 satır, 3–5 kelime, tek kelime `red` kutuda),
-yanında **büyük Kaşif** güçlü bir pozda (şok, işaret) ve olayın tek simgesi (volkan, gemi, taç).
-Her kapakta Kaşif'in yüzü okunur büyüklükte olur.
+Parşömen zemin, solda/üstte Fraunces 900 dev yazı (1–3 satır, **2–4 kelime**, tek kelime `red` kutuda),
+yanında **büyük Kaşif** güçlü bir pozda (şok, işaret) ve olayın **tek simgesi** (volkan, gemi, taç).
+Her kapakta Kaşif'in yüzü okunur büyüklükte olur. **Tek net odak noktası:** kalabalık sahne, çok nesne, çok yazı
+yok; uzun video kapağında `cover.focus` o tek nesneyi büyütür, gerisi kâğıda erir.
 
 ## 10. Kontrol listesi (her video)
 
@@ -175,6 +180,8 @@ Görsel kimlik aynı (§2–5, §9; anlatıcı kırmızı fesli). Dil, niş ve a
   Pasif ve dolambaçlı cümle yerine özne-yüklem-nesne düz cümle.
 - **TTS için yazım:** kısaltma yok ("miles per hour", "for example"; "mph", "e.g." yok); büyük sayılar rakamla
   ama okunur ("1,701 barrels", "1872"); tırnaklar kapatılır; noktalama tonlamayı taşır. Ses ayarı/etiket yok (§6.2).
-- **Kapak:** İngilizce 3–5 kelime iddia ("THE SHIP WITH NO CREW", "A TOWN DANCED TO DEATH"); tek kelime kırmızı kutuda.
+- **Kapak:** İngilizce 2–4 kelime iddia ("SHIP WITH NO CREW", "DANCED TO DEATH"); tek kelime kırmızı kutuda, tek nesne.
+- **Shorts sonu:** punchline + tek kısa, doğal abone cümlesi nedeniyle: *"Subscribe for a true story like this every
+  day."*, *"Follow Stickstory for one strange true story a day."* İlk cümle 3–8 kelime, en çarpıcı an, tarihle açılmaz.
 - **Doğruluk:** yaygın İngilizce efsaneleri (ör. Mary Celeste'te "sıcak çay, yarım kahvaltı") anlatma ya da efsane
   olduğunu söyle.
