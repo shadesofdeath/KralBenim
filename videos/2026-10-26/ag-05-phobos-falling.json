@@ -1,0 +1,564 @@
+{
+ "extra": true,
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "phobos-falling",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Mars's moon",
+   "is falling"
+  ],
+  "highlight": [
+   "falling"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Phobos: The Moon That's Slowly Falling Into Mars",
+  "description": "Phobos, the bigger moon of Mars, is slowly falling. It sinks about 6 feet (1.8 meters) closer to Mars every hundred years, and in October 2026 Japan sent a spacecraft to bring a piece of it home.\n\nPhobos orbits only about 3,700 miles (6,000 kilometers) above the Martian surface, closer than any other known moon to its planet, and it circles Mars three times a day, so from the ground it rises in the west. NASA says that in about 50 million years it will either crash into Mars or break up into a ring, and scientists think its long grooves may be the first stretch marks of that breakup. In October 2026, JAXA launched its MMX (Martian Moons eXploration) mission on an H3 rocket to land on Phobos, scoop up samples and return them to Earth in 2031.\n\nSubscribe to Stickstory for a strange true story every day. Would you rather see Phobos crash into Mars or turn into a ring? Tell me in the comments!\n\n#shorts #phobos #mars #space #stickstory",
+  "tags": [
+   "phobos",
+   "phobos moon",
+   "mars moon phobos",
+   "phobos falling into mars",
+   "moons of mars",
+   "mars",
+   "jaxa mmx",
+   "martian moons exploration",
+   "mmx mission",
+   "phobos sample return",
+   "space facts",
+   "planet facts",
+   "astronomy",
+   "space news",
+   "solar system",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-26T11:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "phobos_space",
+   "text": "Mars has a moon that's falling.",
+   "visual": "Deep space on parchment with ink stars: a big rust-red Mars (polar cap, dark markings, a canyon, night-side hatching) on the right; lumpy potato-shaped Phobos rides a dashed red inward spiral around it, jolts lower with red speed dashes and an arrow pointing it at Mars while the frame shakes; the big fez narrator on the left jumps back in shock.",
+   "title": {
+    "white": "Mars"
+   },
+   "cues": {
+    "hit": "falling"
+   },
+   "params": {
+    "mode": "fall",
+    "mars": {
+     "x": 0.54,
+     "y": 0.37,
+     "r": 250
+    },
+    "orbit": {
+     "rx": 335,
+     "ry": 100,
+     "tilt": -14
+    },
+    "phobos": {
+     "s": 82,
+     "a0": -1.4
+    },
+    "spiral": {
+     "turns": 1.4,
+     "from": 1.3,
+     "to": 0.82
+    },
+    "kasif": {
+     "x": 0.22,
+     "y": 0.61,
+     "scale": 1.3,
+     "pose": "point",
+     "dir": 30,
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": 0.25,
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "drop": 0.25
+   }
+  },
+  {
+   "type": "phobos_launch",
+   "text": "In October 2026, Japan sent a spacecraft to grab a piece of it.",
+   "visual": "A coastal launch pad on Tanegashima: a lattice tower, a tall white rocket with two side boosters and a small Japanese flag, the sea on the right; on 'sent' the engines light with gold-and-red flames, smoke clouds billow out and the rocket lifts off; a red handwritten 'MMX' pops up; on 'grab' a small Mars with tiny Phobos appears high in the sky and a dashed red trajectory arcs from the rocket's nose to it; the fez narrator at the far right, clear of the smoke, waves, then points straight up at Mars.",
+   "title": {
+    "white": "Japan",
+    "gray": "October 2026"
+   },
+   "cues": {
+    "go": "sent",
+    "craft": "spacecraft",
+    "to": "grab"
+   },
+   "params": {
+    "rocket": {
+     "x": 0.4,
+     "s": 0.8,
+     "rise": 250
+    },
+    "sea": {
+     "from": 0.93
+    },
+    "target": {
+     "x": 0.8,
+     "y": 0.28,
+     "r": 58
+    },
+    "labels": [
+     {
+      "text": "MMX",
+      "x": 0.14,
+      "y": 0.4,
+      "at": "craft",
+      "size": 96,
+      "color": "red",
+      "font": "hand"
+     }
+    ],
+    "kasif": {
+     "x": 0.85,
+     "y": 0.6,
+     "scale": 0.72,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "to",
+       "pose": "point",
+       "dir": 80,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "clouds": [
+     [
+      0.66,
+      0.43,
+      70
+     ],
+     [
+      0.1,
+      0.3,
+      60
+     ]
+    ],
+    "smoke_max": 300,
+    "arc_lift": 70
+   }
+  },
+  {
+   "type": "phobos_space",
+   "text": "It's Phobos, closer to its planet than any other known moon.",
+   "visual": "Mars on the left with Phobos on a dashed orbit off its right side; on 'closer' a red bracket from the Martian surface to Phobos draws in with a red handwritten '6,000 km' on clear paper above it, and on 'known' the orbit cinches in tighter; the fez narrator at the lower right watches through binoculars, then points at the gap.",
+   "title": {
+    "white": "Phobos",
+    "gray": "closest moon"
+   },
+   "cues": {
+    "hugs": "closer",
+    "tight": "known"
+   },
+   "params": {
+    "mode": "close",
+    "mars": {
+     "x": 0.33,
+     "y": 0.4,
+     "r": 200
+    },
+    "orbit": {
+     "rx": 480,
+     "ry": 125,
+     "tilt": -12
+    },
+    "phobos": {
+     "s": 56,
+     "a0": 0.1,
+     "speed": 0.015
+    },
+    "bracket": {
+     "text": "6,000 km",
+     "at": "hugs",
+     "dx": 0,
+     "dy": -70,
+     "size": 76
+    },
+    "kasif": {
+     "x": 0.88,
+     "y": 0.6,
+     "scale": 0.72,
+     "pose": "look",
+     "face": "left",
+     "seq": [
+      {
+       "at": "tight",
+       "pose": "point",
+       "dir": 50,
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "phobos_space",
+   "text": "It laps Mars three times a day,",
+   "visual": "Mars in the middle; Phobos whips round it on a tilted dashed orbit with a gold motion trail, passing behind and in front of the planet; a big Fraunces counter above ticks 'LAP 1', 'LAP 2', 'LAP 3' (the 3 turns red) with a handwritten 'in one day' under it; the fez narrator at the lower left points up at it.",
+   "title": {
+    "white": "One lap",
+    "gray": "under 8 hours"
+   },
+   "cues": {
+    "hit": "three"
+   },
+   "params": {
+    "mode": "laps",
+    "mars": {
+     "x": 0.57,
+     "y": 0.46,
+     "r": 185
+    },
+    "orbit": {
+     "rx": 320,
+     "ry": 105,
+     "tilt": -10
+    },
+    "phobos": {
+     "s": 44,
+     "a0": 2.2,
+     "speed": 1.35
+    },
+    "counter": {
+     "x": 0.5,
+     "y": 0.235,
+     "label": "LAP",
+     "max": 3,
+     "size": 140
+    },
+    "labels": [
+     {
+      "text": "in one day",
+      "x": 0.5,
+      "y": 0.31,
+      "at": 0.3,
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "rot": -2
+     }
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.6,
+     "scale": 0.75,
+     "pose": "point",
+     "dir": 55,
+     "face": "right",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "phobos_sky",
+   "text": "so from Mars, you'd see it rise in the west.",
+   "visual": "Standing on Mars at night: a dusty rust ground with rocks and low hills, ink stars; lumpy Phobos climbs out of the left horizon along a dashed arc; a big 'W' sits at the left horizon and an 'E' at the right; on 'west' the W turns red with a red up-arrow; the fez narrator in the middle watches through binoculars facing west, then shrugs in surprise.",
+   "title": {
+    "white": "From Mars"
+   },
+   "cues": {
+    "west": "west"
+   },
+   "params": {
+    "horizon": 0.52,
+    "s": 66,
+    "path": [
+     [
+      0.12,
+      0.57
+     ],
+     [
+      0.2,
+      0.22
+     ],
+     [
+      0.6,
+      0.16
+     ]
+    ],
+    "from": 0.05,
+    "to": 0.75,
+    "kasif": {
+     "x": 0.6,
+     "y": 0.6,
+     "scale": 0.85,
+     "pose": "look",
+     "face": "left",
+     "seq": [
+      {
+       "at": "west",
+       "pose": "shrug",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "phobos_sink",
+   "text": "But here's the catch: every century, it sinks about six feet.",
+   "visual": "Phobos floats above the curved rust surface of Mars on a dashed orbit line; a Fraunces '100 YEARS' pops in on 'century'; on 'sinks' Phobos drops, leaving a dashed ghost outline where it was and a red down-arrow; at the right a ruler exactly as tall as the fez narrator fills red from the bottom on 'six' with a red '6 FT' slamming in on top; the narrator thinks, points at the drop, then shrugs.",
+   "title": {
+    "white": "The catch"
+   },
+   "cues": {
+    "hit": "catch",
+    "century": "century",
+    "sinks": "sinks",
+    "six": "six",
+    "feet": "feet"
+   },
+   "params": {
+    "phobos": {
+     "x": 0.34,
+     "y": 0.36,
+     "s": 150,
+     "drop": 80
+    },
+    "ruler": {
+     "x": 0.64,
+     "text": "6 FT",
+     "h": 0.95,
+     "fill_at": "six",
+     "label_at": "six",
+     "fill_dur": 0.45
+    },
+    "labels": [
+     {
+      "text": "100 YEARS",
+      "x": 0.36,
+      "y": 0.175,
+      "at": "century",
+      "size": 96,
+      "color": "ink",
+      "font": "serif",
+      "rot": -3
+     }
+    ],
+    "kasif": {
+     "x": 0.82,
+     "y": 0.6,
+     "scale": 0.78,
+     "pose": "think",
+     "face": "left",
+     "seq": [
+      {
+       "at": "sinks",
+       "pose": "point",
+       "dir": 20,
+       "face": "left",
+       "emotion": "surprised"
+      },
+      {
+       "at": "six",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "phobos_rock",
+   "text": "Mars is pulling it in, and it may already be cracking.",
+   "visual": "Close-up of potato-shaped Phobos (big Stickney crater, long parallel grooves) with the edge of Mars at the left; on 'pulling' two red tidal arrows stretch it toward and away from Mars; on 'cracking' the grooves split open in red and branch, flecks of rock fly off, the frame shakes and a red handwritten 'CRACKS?' appears; the fez narrator at the lower right points at it, then jumps back in shock.",
+   "title": {
+    "white": "Tides",
+    "gray": "stretch marks"
+   },
+   "cues": {
+    "pull": "pulling",
+    "crack": "cracking"
+   },
+   "params": {
+    "mode": "crack",
+    "mars": {
+     "x": -0.16,
+     "y": 0.38,
+     "r": 330
+    },
+    "phobos": {
+     "x": 0.52,
+     "y": 0.4,
+     "s": 270,
+     "rot": -14
+    },
+    "labels": [
+     {
+      "text": "CRACKS?",
+      "x": 0.58,
+      "y": 0.2,
+      "at": "crack",
+      "size": 100,
+      "color": "red",
+      "font": "hand"
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.6,
+     "scale": 0.75,
+     "pose": "point",
+     "dir": 30,
+     "face": "left",
+     "seq": [
+      {
+       "at": "crack",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "phobos_space",
+   "text": "In about fifty million years, it'll crash or break into a ring.",
+   "visual": "Mars with Phobos on its dashed orbit and a Fraunces '50 MILLION YEARS' above; on 'crash' a red dashed fall-line runs from Phobos down to the Martian surface and bursts in gold and red; on 'break' Phobos shatters, the frame shakes and its pieces spread along the orbit into a debris ring around Mars; the fez narrator at the lower left points, then jumps back in shock.",
+   "title": {
+    "white": "Two endings"
+   },
+   "cues": {
+    "fifty": "fifty",
+    "crash": "crash",
+    "ring": "break"
+   },
+   "params": {
+    "mode": "ring",
+    "mars": {
+     "x": 0.6,
+     "y": 0.47,
+     "r": 185
+    },
+    "orbit": {
+     "rx": 320,
+     "ry": 92,
+     "tilt": -10
+    },
+    "phobos": {
+     "s": 46,
+     "a0": 0.5,
+     "speed": 0.07
+    },
+    "labels": [
+     {
+      "text": "50 MILLION YEARS",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "fifty",
+      "size": 84,
+      "color": "ink",
+      "font": "serif",
+      "rot": -2
+     }
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.6,
+     "scale": 0.75,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "crash",
+       "pose": "point",
+       "dir": 10,
+       "face": "right"
+      },
+      {
+       "at": "ring",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "phobos_rock",
+   "text": "So Japan is grabbing a souvenir before Mars swallows it.",
+   "visual": "Standing on Phobos's grey cratered ground under a huge Mars filling the sky; a gold-foil lander with blue solar panels digs its arm into the ground on 'grabbing' and kicks up dust; the fez narrator on the right holds up a glinting rock toward Mars on 'souvenir'; on 'swallows' Mars swells bigger, the ground shakes and the narrator lifts the rock higher in surprise.",
+   "title": {
+    "white": "MMX",
+    "gray": "back by 2031"
+   },
+   "cues": {
+    "scoop": "grabbing",
+    "rock": "souvenir",
+    "loom": "swallows"
+   },
+   "params": {
+    "mode": "scoop",
+    "mars": {
+     "x": 0.52,
+     "y": 0.34,
+     "r": 285
+    },
+    "lander": {
+     "x": 0.22,
+     "s": 0.92
+    },
+    "kasif": {
+     "x": 0.84,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "rock",
+       "pose": "point",
+       "dir": 40,
+       "face": "left",
+       "emotion": "happy"
+      },
+      {
+       "at": "loom",
+       "pose": "point",
+       "dir": 55,
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

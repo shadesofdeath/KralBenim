@@ -694,3 +694,93 @@ Title: "Siege of Malta 1565: How a Tiny Island Stopped Suleiman" (55 chars). tag
 1. s26 bulut "August 7" etiketinin üstünden geçiyor.
 2. Kapakta sol altta rıhtım çizgisi artığı; Kaşif'in bacakları ön kadırgaların üstünde.
 3. s45 Kaşif küçük ve sola yaslı.
+
+---
+
+# Stickstory — ek video (sohbetten istek, 2026-10-26 ~14:50 İstanbul): manşetten ilk Short
+
+Kanal sahibinin yeni kalıcı kuralı: konu önce `tools/news.py` manşetlerinden (US, AU, CH, NO, NZ, CA, DE).
+
+## ag-05-phobos-falling (Short, `"extra": true`)
+- **Manşet:** US · The Economist · "Japan's mission to Mars's moons takes off" (ayrıca AU/NZ/CA bilim manşetleri:
+  "NASA's Swift space telescope ends mission", "Lumina simulation…"). Doğrulama: JAXA MMX, H3 F10, Tanegashima,
+  20 Ekim 2026 04:41 JST; hedef Phobos'tan örnek alıp 2031'de Dünya'ya dönmek (nippon.com, ESA, space.com).
+- **Haberin arkasındaki hikâye:** Japonya'nın gittiği uydu, Mars'a yavaş yavaş düşüyor. Phobos Mars'a en yakın
+  uydu (yüzeyden ~6.000 km), günde ~3 tur atıyor, Mars'tan bakınca batıdan doğup doğuda batıyor; her yüzyılda
+  ~1,8 m yaklaşıyor; ~50 milyon yıl içinde ya çakılacak ya parçalanıp halka olacak (NASA). Yüzeydeki uzun oluklar
+  büyük olasılıkla gelgit gerilmesinin ilk çatlakları (NASA Goddard 2015, "olabilir" diliyle).
+- **Kategori:** space and planet earth. **İzleyici sonunda:** "bir uydu ölüyor ve biz tam zamanında oraya gidiyoruz."
+- **Kanca / kapak fikri:** "MARS'S MOON IS FALLING" (highlight FALLING), Kaşif şokta, Phobos Mars'a yakın, iniş spirali.
+- **Yayın:** 2026-10-26T11:00:00-04:00 (İstanbul 18:00; günün 09:00 ve 13:00 Short'larının arasında).
+
+### ag-05 — yazar notları
+**Anlatım (tek parça; tur 1 sonrası 471 karakter, bütçe uyarısı açık):**
+> Mars has a moon that's falling. In October 2026, Japan sent a spacecraft to grab a piece of it. It's Phobos, closer
+> to its planet than any other known moon. It laps Mars three times a day, so from Mars, you'd see it rise in the west.
+> But here's the catch: every century, it sinks about six feet. Mars is pulling it in, and it may already be cracking.
+> In about fifty million years, it'll crash or break into a ring. So Japan is grabbing a souvenir before Mars swallows it.
+
+Yapı: kanca (düşen uydu) → haber (Japonya) → ne olduğu → tuhaf ayrıntı (batıdan doğar) → "here's the catch" gerilimi →
+neden (Mars'ın gelgiti, çatlaklar) → son (çarpma ya da halka) → punchline (yutulmadan önce hatıra).
+
+**Çekim listesi** (yeni dosya `scenes/studio/shots/phobos.js`: `phobos_space`, `phobos_launch`, `phobos_sky`, `phobos_sink`, `phobos_rock`)
+| # | Cümle | Tip | Görüntü | Kaşif (fes) | Cue | Kamera |
+|---|---|---|---|---|---|---|
+| 0 | Mars has a moon that's falling. | phobos_space `fall` | Büyük Mars, Phobos kırmızı kesikli içe sarmalda, aşağı sarsılır, kırmızı hız çizgileri + Mars'a ok | Büyük (1.3), şokta | hit=falling | yavaş itme + sarsıntı (kapak karesi) |
+| 1 | In October 2026, Japan sent a spacecraft to grab a piece of it. | phobos_launch | Tanegashima kıyısında rampa, kule, beyaz roket (2 yan iticili, bayrak); ateşleme, duman, kalkış; "MMX"; gökte küçük Mars+Phobos'a kesikli rota | El sallar → Mars'ı gösterir | go=sent, craft=spacecraft, to=grab | sarsıntı |
+| 2 | It's Phobos, closer to its planet than any other known moon. | phobos_space `close` | Phobos Mars'ın hemen yanında; yörünge daralır, kırmızı ölçü + "6,000 km" | Dürbünle bakar → gösterir | hugs=closer, tight=known | itme |
+| 3 | It laps Mars three times a day, | phobos_space `laps` | Phobos altın izle hızla döner; "LAP 1→3" sayacı (3 kırmızı), "in one day" | Gösterir | hit=three | itme |
+| 4 | so from Mars, you'd see it rise in the west. | phobos_sky | Mars yüzeyi, yıldızlar; Phobos sol ufuktan (W) yükselir; W kırmızı + ok | Dürbün (batıya) → omuz silker | west | itme |
+| 5 | But here's the catch: every century, it sinks about six feet. | phobos_sink | Mars yüzeyi üstünde Phobos; "100 YEARS"; düşer (hayalet kontur + ok); Kaşif boyunda cetvel kırmızı dolar "6 FT" | Düşünür → gösterir → omuz silker | hit=catch, century, sinks, six (cetvel + 6 FT), feet | itme |
+| 6 | Mars is pulling it in, and it may already be cracking. | phobos_rock `crack` | Yakın plan Phobos (Stickney, oluklar), solda Mars kenarı; gelgit okları; oluklar kırmızı çatlar, kırıntı; "CRACKS?" | Gösterir → şok | pull=pulling, crack=cracking | sarsıntı |
+| 7 | In about fifty million years, it'll crash or break into a ring. | phobos_space `ring` | "50 MILLION YEARS"; Phobos'tan yüzeye kırmızı düşüş çizgisi + patlama; Phobos parçalanır, enkaz halka olur | Anlatır → gösterir → şok | fifty, crash, ring=break | sarsıntı |
+| 8 | So Japan is grabbing a souvenir before Mars swallows it. | phobos_rock `scoop` | Phobos yüzeyi, dev Mars gökte; iniş aracı kolu toprak kazır; Kaşif parlayan taşı Mars'a doğru kaldırır; Mars büyür | Taşı kaldırır → şaşırır | scoop=grabbing, rock=souvenir, loom=swallows | büyüme + sarsıntı |
+
+Kaşif 9/9 sahnede; 5 farklı tip, en fazla `phobos_space` 4/9; aynı tip üst üste en çok 2.
+
+**Doğrulanan bilgiler:**
+- Phobos yüzeyden ~6.000 km (3.700 mil), bilinen en yakın uydu; günde 3 tur (7 sa 39 dk); Mars'tan batıdan doğar —
+  NASA Science "Phobos" (science.nasa.gov/mars/moons/phobos). Not: yerden bakınca gökyüzünü günde ~2 kez geçer;
+  bu yüzden metin "laps Mars three times a day" diyor ("crosses the sky" değil).
+- Her 100 yılda ~1,8 m (6 ft) yaklaşır; ~50 milyon yılda ya Mars'a çarpar ya halkaya dönüşür — NASA Science.
+- Oluklar gelgit "stretch marks" olabilir, Phobos çökmeye başlamış olabilir — NASA Goddard, T. Hurford, DPS 10 Kasım
+  2015 (metinde "may already be cracking"; kicker "stretch marks").
+- MMX: H3 (F10) ile Tanegashima'dan 20 Ekim 2026 (JST) fırlatıldı; Phobos'tan örnek alıp 2031'de Dünya'ya getirecek —
+  nippon.com/Jiji, space.com (metin: "This month"; kicker "back by 2031").
+
+**Kapak adayları** (`out/preview/phobos-falling/cover_alt_*.jpg`, yan yana `cover_alts.jpg`):
+- A ✅ seçilen (son hali `cover.jpg`): sahne 0, t 1.6, "MARS'S MOON / IS FALLING", büyük şok Kaşif solda, Phobos Mars'ın
+  dışında, kırmızı ok Mars'ı gösteriyor. İlk cümleyle aynı fikir.
+- B: sahne 8 (dev Mars + şok Kaşif), "THIS MOON IS FALLING": Phobos görünmüyor, "Mars düşüyor" gibi okunuyor.
+- C: sahne 6 (çatlayan Phobos), "A MOON FALLING INTO MARS": dramatik ama Kaşif küçük, "CRACKS?" yazısı kapakta kirli.
+- D: sahne 0 + ayrı dev Kaşif (`cover.kasif`): yüz büyük ama sahne boş kalıyor; A'da Kaşif'i sahnede büyüterek birleştirildi.
+
+### ag-05-phobos-falling — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 9 | 7 | 7 | 8 | 7 | 7 | 8 | 8 | 8 | 8 |
+1. Anlatıcı sesi: "you" yok; s2 "hugs its planet tighter" belirsiz; "This month" eskiyor.
+2. s5: "6 FT" hiç görünmüyor, cetvel sahne sonunda yarım dolu.
+3. s1: roket burnu/rota/bulut kicker'a giriyor, Kaşif dumanda, işaret okunmuyor, "MMX" bulutun üstünde.
+Küçük: s2 "6,000 km" Mars diskinin üstünde; s3/6/7 Kaşif küçük, s3 yörünge Kaşif'in içinden geçiyor; kapak grubu küçük, Phobos hız çizgileri sağda kesik; açıklamada "just".
+
+**Yazar düzeltmeleri (tur 1 → 2):**
+- Metin (450 → 471 karakter): s1 "In October 2026, Japan sent…"; s2 "It's Phobos, closer to its planet than any other known moon."
+  (cue closer/known); s4 "so from Mars, you'd see it rise in the west." ("you" eklendi; bütçe için önerilen uzun cümle kısaltıldı,
+  "Now think about that." bütçeye sığmadı). "may" ve "about fifty million years" korundu.
+- s5: cetvel "six"te dolmaya başlıyor (0,45 sn, tamamen dolu), "6 FT" aynı anda çakılıyor (`ruler.fill_at/label_at`).
+- s1: roket s 0.8 / yükselme 250 (burun y≈320), hedef Mars y 0.28, rota yayı alçak (`arc_lift` 70), bulutlar
+  kicker'dan uzakta (`clouds`), duman yayılması sınırlı (`smoke_max` 300), Kaşif x 0.85 dumanın dışında, "grab"da dik yukarı işaret;
+  "MMX" kulenin solunda boş kâğıtta.
+- s2: Mars küçüldü/sola, yörünge genişledi; "6,000 km" ölçünün üstünde boş kâğıtta; Kaşif 0.72.
+- s3/s6/s7: Kaşif 0.75; s3 yörünge daraltıldı (Kaşif'in içinden geçmiyor); s6 Phobos sola, Kaşif sağ kenara.
+- Kapak: Mars r 250, Phobos s 82, Kaşif 1.3 (grup büyüdü, biraz yukarı); hız çizgileri kısaltıldı, artık kadrajda.
+  Not: Shorts kapağında motor sahneyi 326 px aşağı kaydırıyor; sahnenin y > 1150 bölgesi videoda altyazı bandı olduğundan
+  kapağın en alt ~350 px'i boş kâğıt kalıyor.
+- Açıklama: "in October 2026 Japan sent…". Lint OK, SEO 100/100, preview STATIC? yok.
+
+
+### ag-05-phobos-falling — tur 2 (yönetmen özeti)
+- Tur 1: Senaryo 7 · Kanca 9 · Okunabilirlik 7 · Görsel 7 · Hareket 8 · Kompozisyon 7 · Derinlik 7 · Tempo 8 · Doğruluk 8 · Kapanış 8 · Kapak+SEO 8 (kapak 8).
+- Tur 2: Senaryo 8 · Kanca 9 · Okunabilirlik 8 · Görsel 8 · Hareket 8 · Kompozisyon 8 · Derinlik 7 · Tempo 8 · Doğruluk 9 · Kapanış 8 · Kapak+SEO 8 (kapak 8). Engelleyici sorun yok; ek video olduğu için 2 turda bırakıldı.
+- Son kapı: lint hatasız (SEO 100/100), sheet.png ve cover.jpg yönetmen tarafından görüldü. Anlatım 471 karakter (bütçe uyarısı açık).
