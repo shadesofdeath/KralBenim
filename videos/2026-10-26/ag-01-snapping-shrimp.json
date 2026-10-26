@@ -1,0 +1,705 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "snapping-shrimp",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Louder",
+   "than a",
+   "gunshot"
+  ],
+  "highlight": [
+   "gunshot"
+  ],
+  "scene": 0,
+  "t": 2.6,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Pistol Shrimp: The Tiny Animal Louder Than a Gunshot",
+  "description": "The pistol shrimp is the size of your finger, yet one snap of its claw can be louder than a gunshot. How does a tiny shrimp make a bang like that?\n\nThe snapping shrimp closes its giant claw so fast that a jet of water tears open a cavitation bubble. When the bubble collapses, it makes the bang that stuns its prey, a tiny flash of light, and, scientists estimate, heat close to the surface of the sun. In World War Two, the crackle of shrimp beds confused Navy sonar, and some reports say submarines hid in the noise.\n\nSubscribe to Stickstory for a strange true story every day. Which animal superpower would you want? Tell me in the comments!\n\n#shorts #pistolshrimp #animalsuperpowers #stickstory",
+  "tags": [
+   "pistol shrimp",
+   "pistol shrimp snap",
+   "pistol shrimp sound",
+   "snapping shrimp",
+   "loudest animal in the ocean",
+   "cavitation bubble",
+   "shrimpoluminescence",
+   "animal superpowers",
+   "ocean facts",
+   "sea creatures",
+   "world war 2 submarines",
+   "sonar history",
+   "weird animal facts",
+   "science facts",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-26T09:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "sh_shrimp",
+   "text": "This shrimp is louder than a gunshot.",
+   "visual": "On the seabed a big pistol shrimp (red-tinted giant claw, long antennae) faces the big fez narrator; on 'gunshot' the claw snaps shut and a bubble bursts right at the claw tip with a gold flash, ink spikes and sound rings, the frame shakes, a big red 'BANG!' slams in and the narrator jumps back in shock.",
+   "title": {
+    "white": "Pistol shrimp"
+   },
+   "cues": {
+    "snap": "louder",
+    "hit": "gunshot"
+   },
+   "params": {
+    "shrimp": {
+     "x": 0.715,
+     "y": 0.55,
+     "s": 0.75,
+     "face": -1
+    },
+    "snap": "snap",
+    "burst": "hit",
+    "bubble_dx": 15,
+    "bubble_r": 55,
+    "burst_r": 115,
+    "water": {
+     "bed": 0.55,
+     "depth": 260
+    },
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    },
+    "labels": [
+     {
+      "text": "BANG!",
+      "x": 0.66,
+      "y": 0.33,
+      "size": 170,
+      "at": "hit",
+      "font": "serif",
+      "color": "red",
+      "underline": false
+     }
+    ],
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 1.25,
+     "pose": "point",
+     "face": "right",
+     "emotion": "neutral",
+     "dir": -10,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_shrimp",
+   "text": "It's the size of your finger, but one claw is huge.",
+   "visual": "A human index finger (rounded tip, nail, knuckle creases) slides in from the right and lies just above the shrimp for scale; on 'huge' a red 'HUGE!' pops in above the giant claw; the fez narrator on the right points at the claw, then jumps in shock.",
+   "title": {
+    "white": "Finger-sized",
+    "gray": "one giant claw"
+   },
+   "cues": {
+    "f": "finger",
+    "hit": "huge"
+   },
+   "params": {
+    "shrimp": {
+     "x": 0.36,
+     "y": 0.58,
+     "s": 0.8,
+     "face": 1
+    },
+    "finger": {
+     "x": 0.2,
+     "y": 0.35,
+     "s": 1.6,
+     "at": "f"
+    },
+    "water": {
+     "bed": 0.58
+    },
+    "labels": [
+     {
+      "text": "HUGE!",
+      "x": 0.6,
+      "y": 0.465,
+      "size": 110,
+      "at": "hit",
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.58,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "left",
+     "emotion": "happy",
+     "dir": -20,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_snap",
+   "text": "It snaps that claw so fast, the water rips open into a bubble.",
+   "visual": "Inside a giant magnifying glass held by the fez narrator: the huge claw close up; on 'snaps' the upper finger slams down, thick blue water-jet streaks shoot out and a round bubble swells in the jet; handwritten 'WATER JET' and then 'BUBBLE' pop in.",
+   "title": {
+    "white": "The snap"
+   },
+   "cues": {
+    "snap": "snaps",
+    "w": "water",
+    "hit": "bubble"
+   },
+   "params": {
+    "lens": {
+     "x": 0.44,
+     "y": 0.36,
+     "r": 380
+    },
+    "shrimp": {
+     "x": -0.33,
+     "y": 0.44,
+     "s": 1.8
+    },
+    "snap": "snap",
+    "burst": false,
+    "bubble_r": 95,
+    "labels": [
+     {
+      "text": "WATER JET",
+      "x": 0.5,
+      "y": 0.26,
+      "size": 76,
+      "at": "w",
+      "color": "blue"
+     },
+     {
+      "text": "BUBBLE",
+      "x": 0.5,
+      "y": 0.5,
+      "size": 80,
+      "at": "hit",
+      "color": "ink"
+     }
+    ],
+    "kasif": {
+     "x": 0.87,
+     "y": 0.6,
+     "scale": 0.7,
+     "pose": "point",
+     "face": "left",
+     "emotion": "neutral",
+     "dir": 35,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 45,
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_snap",
+   "text": "The bubble collapses. Bang!",
+   "visual": "Same magnifying-glass close-up: the swollen bubble in front of the shut claw collapses on 'collapses' into a gold flash with ink spikes and sound rings, the lens shakes, a red 'BANG!' box slams in and the fez narrator holding the lens jumps back in shock.",
+   "title": {
+    "white": "Collapse"
+   },
+   "cues": {
+    "hit": "collapses",
+    "b": "Bang"
+   },
+   "params": {
+    "lens": {
+     "x": 0.44,
+     "y": 0.36,
+     "r": 380
+    },
+    "shrimp": {
+     "x": -0.33,
+     "y": 0.44,
+     "s": 1.8
+    },
+    "snap": "pre",
+    "burst": "hit",
+    "bubble_r": 95,
+    "labels": [
+     {
+      "text": "BANG!",
+      "x": 0.6,
+      "y": 0.2,
+      "size": 120,
+      "at": "b",
+      "box": true,
+      "font": "serif",
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.87,
+     "y": 0.6,
+     "scale": 0.7,
+     "pose": "point",
+     "face": "left",
+     "emotion": "worried",
+     "dir": 35,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_shrimp",
+   "text": "It uses that blast to stun its prey.",
+   "visual": "The shrimp on the seabed faces a small blue fish swimming toward it; on 'blast' the claw snaps and the bubble bursts in front of the fish with a gold flash and rings; on 'stun' the fish flips belly-up with X eyes and gold dizzy stars, a red 'STUNNED!' pops in.",
+   "title": {
+    "white": "Why snap?",
+    "gray": "hunting"
+   },
+   "cues": {
+    "snap": "uses",
+    "hit": "blast",
+    "s": "stun"
+   },
+   "params": {
+    "shrimp": {
+     "x": 0.36,
+     "y": 0.54,
+     "s": 0.75,
+     "face": 1
+    },
+    "snap": "snap",
+    "burst": "hit",
+    "water": {
+     "bed": 0.54,
+     "depth": 160
+    },
+    "prey": {
+     "x": 0.86,
+     "y": 0.43,
+     "s": 0.75,
+     "face": 1,
+     "stun": "s"
+    },
+    "labels": [
+     {
+      "text": "STUNNED!",
+      "x": 0.6,
+      "y": 0.27,
+      "size": 100,
+      "at": "s",
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "kasif": false
+   }
+  },
+  {
+   "type": "sh_hot",
+   "text": "Here's the crazy part: it briefly gets about as hot as the sun's surface.",
+   "visual": "Left: the collapsing bubble with a pulsing gold flash inside and heat lines; on 'hot' a hand-drawn '=' draws itself and on 'sun's' a big gold sun springs in on the right; handwritten 'BUBBLE' and 'SUN' labels; the fez narrator below in the middle talks, then jumps back in shock.",
+   "title": {
+    "white": "Sun-hot",
+    "gray": "for an instant"
+   },
+   "cues": {
+    "i": "crazy",
+    "hit": "hot",
+    "s": "sun"
+   },
+   "params": {
+    "bubble": {
+     "x": 0.24,
+     "y": 0.31,
+     "r": 170,
+     "at": "i"
+    },
+    "sun": {
+     "x": 0.77,
+     "y": 0.31,
+     "r": 130,
+     "at": "s"
+    },
+    "eq": {
+     "at": "hit",
+     "x": 0.51,
+     "y": 0.31
+    },
+    "labels": [
+     {
+      "text": "BUBBLE",
+      "x": 0.24,
+      "y": 0.45,
+      "size": 80,
+      "at": "i",
+      "color": "ink"
+     },
+     {
+      "text": "SUN",
+      "x": 0.77,
+      "y": 0.45,
+      "size": 80,
+      "at": "s",
+      "color": "ink"
+     }
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.6,
+     "scale": 0.75,
+     "pose": "talk",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_sea",
+   "text": "Now imagine thousands, crackling like frying bacon.",
+   "visual": "A shallow sea: a seabed packed with pistol shrimp, a far row of tiny ones and two staggered front rows of big ones, all snapping with gold sparks; on 'crackling' they snap twice as fast, red 'CRACKLE!' and 'SIZZLE!' pop in; the fez narrator on the seabed watches through binoculars, then jumps in shock.",
+   "title": {
+    "white": "Thousands"
+   },
+   "cues": {
+    "hit": "crackling",
+    "b": "bacon"
+   },
+   "params": {
+    "surface": 0.2,
+    "bed": 0.5,
+    "sand": 200,
+    "ship": false,
+    "pings": false,
+    "colony": {
+     "n": 4,
+     "x0": 0.3,
+     "x1": 1.04,
+     "s": 0.42,
+     "rows": 2,
+     "row_dy": 95,
+     "dy0": 150,
+     "back": {
+      "n": 14,
+      "s": 0.12,
+      "dy": -4
+     },
+     "crackle": "hit"
+    },
+    "labels": [
+     {
+      "text": "CRACKLE!",
+      "x": 0.62,
+      "y": 0.36,
+      "size": 96,
+      "at": "hit",
+      "color": "red"
+     },
+     {
+      "text": "SIZZLE!",
+      "x": 0.36,
+      "y": 0.27,
+      "size": 84,
+      "at": "b",
+      "color": "red",
+      "rot": 5
+     }
+    ],
+    "kasif": {
+     "x": 0.13,
+     "y": 0.5,
+     "scale": 0.62,
+     "pose": "look",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_sonar",
+   "text": "In World War Two, that racket confused Navy sonar.",
+   "visual": "Inside a 1940s ship's sonar room: a round dark sonar scope with a turning gold sweep and one target blip; on 'confused' the screen fills with crackling gold specks, the blip is lost, the headphone-wearing operator flinches with red crackle zig-zags at his ears and a red '?' pops up; the fez narrator points at the screen, then shrugs.",
+   "title": {
+    "white": "1940s",
+    "gray": "World War Two"
+   },
+   "cues": {
+    "noise": "confused",
+    "q": "sonar"
+   },
+   "params": {
+    "scope": {
+     "x": 0.42,
+     "y": 0.34,
+     "r": 190
+    },
+    "noise": "noise",
+    "operator": {
+     "x": 0.8,
+     "scale": 0.7,
+     "pose": "idle",
+     "face": "left",
+     "seq": [
+      {
+       "at": "noise",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.8,
+      "y": 0.2,
+      "size": 150,
+      "at": "q",
+      "color": "red",
+      "font": "serif",
+      "underline": false
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.6,
+     "scale": 0.55,
+     "pose": "point",
+     "face": "right",
+     "emotion": "neutral",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "noise",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_sea",
+   "text": "Some reports say submarines hid inside it.",
+   "visual": "The same shallow sea with a warship on the surface: a submarine glides in from the left and settles low over the snapping shrimp bed; the ship's blue sonar rings break into scribbles in the crackle on 'hid'; a red '?' pops above the ship; the fez narrator on the seabed points at the submarine.",
+   "title": {
+    "white": "Hiding",
+    "gray": "in the noise"
+   },
+   "cues": {
+    "sub": "submarines",
+    "hit": "hid",
+    "q": "inside"
+   },
+   "params": {
+    "surface": 0.2,
+    "bed": 0.5,
+    "sand": 200,
+    "ship": {
+     "x": 0.7,
+     "s": 0.7
+    },
+    "pings": {
+     "at": 0.1,
+     "every": 0.8,
+     "scatter": "hit"
+    },
+    "colony": {
+     "n": 4,
+     "x0": 0.3,
+     "x1": 1.04,
+     "s": 0.42,
+     "rows": 2,
+     "row_dy": 95,
+     "dy0": 150,
+     "back": {
+      "n": 14,
+      "s": 0.12,
+      "dy": -4
+     },
+     "rate": 2.2
+    },
+    "sub": {
+     "from": [
+      -0.35,
+      0.44
+     ],
+     "to": [
+      0.58,
+      0.455
+     ],
+     "at": 0.05,
+     "dur": 2.0,
+     "s": 0.6,
+     "face": 1
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.88,
+      "y": 0.14,
+      "size": 140,
+      "at": "q",
+      "color": "red",
+      "font": "serif",
+      "underline": false
+     }
+    ],
+    "kasif": {
+     "x": 0.13,
+     "y": 0.5,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "right",
+     "emotion": "happy",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 20,
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sh_shrimp",
+   "text": "The ocean's best hiding place was a shrimp.",
+   "visual": "The big pistol shrimp sits on the seabed; a clear submarine rises from behind the shrimp's head and claw and peeks out, its lower half still hidden by the shrimp while a red handwritten 'HIDING SPOT' arrow points at it; on 'shrimp' the shrimp snaps its claw with a small gold flash; the fez narrator on the right points, then shrugs with a grin.",
+   "title": {
+    "white": "Best cover"
+   },
+   "cues": {
+    "snap": "best",
+    "hit": "shrimp"
+   },
+   "params": {
+    "shrimp": {
+     "x": 0.42,
+     "y": 0.58,
+     "s": 0.8,
+     "face": 1
+    },
+    "snap": "snap",
+    "burst": "hit",
+    "bubble_r": 28,
+    "burst_r": 45,
+    "bubble_dx": 15,
+    "water": {
+     "bed": 0.58,
+     "depth": 260
+    },
+    "sub": {
+     "from": [
+      0.56,
+      0.64
+     ],
+     "to": [
+      0.56,
+      0.505
+     ],
+     "at": 0.1,
+     "dur": 1.4,
+     "s": 0.6,
+     "face": 1
+    },
+    "labels": [
+     {
+      "text": "HIDING SPOT",
+      "x": 0.42,
+      "y": 0.29,
+      "size": 88,
+      "at": 0.9,
+      "color": "red"
+     }
+    ],
+    "arrows": [
+     {
+      "from": [
+       0.47,
+       0.32
+      ],
+      "to": [
+       0.55,
+       0.43
+      ],
+      "at": 1.0,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.91,
+     "y": 0.58,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "left",
+     "emotion": "happy",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,4202 @@
+{
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-04-siege-of-malta",
+ "cover": {
+  "lines": [
+   "200 ships",
+   "vs one",
+   "island"
+  ],
+  "highlight": [
+   "island"
+  ],
+  "scene": 21,
+  "t": 1.5,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "worried",
+   "x": 1650,
+   "y": 1070,
+   "scale": 1.3,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Siege of Malta 1565: How a Tiny Island Stopped Suleiman",
+  "description": "The Siege of Malta in 1565 should have been over in days. Almost two hundred Ottoman ships, an army of tens of thousands, against a 70-year-old Grand Master and a few thousand defenders. So how did the island hold?\n\nIn the summer of 1565, Suleiman the Magnificent sent his fleet against the Knights of Saint John on Malta. Fort Saint Elmo was supposed to fall in a few days; it held for about a month and cost the attackers the legendary corsair Turgut Reis (Dragut). Then came the long fight for Birgu and Senglea, a cavalry raid from Mdina, and a relief army from Sicily.\n\nIn this video:\n• Why the Knights were thrown out of Rhodes and ended up on Malta\n• The split command of Mustafa Pasha and Piyale Pasha\n• Fort Saint Elmo, the month-long stand and the death of Dragut\n• August 7: the attack on Birgu that suddenly stopped\n• Why time, water and disease decided the siege, and how Valletta was born\n\nSubscribe to Stickstory for a true story from history every day. Did Malta survive because of courage, or because of one month lost at a tiny fort? Tell me in the comments!\n\n#siegeofmalta #ottomanempire #history #stickstory",
+  "tags": [
+   "siege of malta",
+   "great siege of malta",
+   "siege of malta 1565",
+   "malta 1565",
+   "knights of malta",
+   "knights hospitaller",
+   "fort st elmo",
+   "suleiman the magnificent",
+   "ottoman empire",
+   "dragut",
+   "turgut reis",
+   "jean de valette",
+   "valletta history",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-26T14:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "chapter": "A Fleet on the Horizon",
+   "type": "pv_sea",
+   "text": "In May 1565, a seventy-year-old man stood on a stone wall and watched almost two hundred ships come over the horizon.",
+   "visual": "Close on a rocky ledge on the left: the grey-bearded old Grand Master in a conical helmet and the fez narrator, both big; behind them the sea, and from the first frame the horizon is crowded with red-pennant galleys and tall ships; on 'watched' the narrator lifts his binoculars; on 'hundred' a second wave of bigger galleys rows in from the right, the narrator jumps back in shock and the Grand Master points; labels 'May 1565' and '~200 ships'",
+   "title": {
+    "white": "Malta",
+    "gray": "May 1565"
+   },
+   "cues": {
+    "may": "1565",
+    "watched": "watched",
+    "ships": "hundred"
+   },
+   "params": {
+    "horizon": 0.4,
+    "ledge": {
+     "side": "left",
+     "y": 0.8,
+     "w": 0.42
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.42,
+      "to": 0.4,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.45199999999999996,
+      "to": 0.43200000000000005,
+      "y": 0.428,
+      "scale": 0.42,
+      "depth": 0.7999999999999999,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.484,
+      "to": 0.464,
+      "y": 0.44599999999999995,
+      "scale": 0.42,
+      "depth": 0.88,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.516,
+      "to": 0.496,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.548,
+      "to": 0.528,
+      "y": 0.428,
+      "scale": 0.42,
+      "depth": 0.7999999999999999,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.58,
+      "to": 0.56,
+      "y": 0.44599999999999995,
+      "scale": 0.42,
+      "depth": 0.88,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.612,
+      "to": 0.5920000000000001,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.644,
+      "to": 0.624,
+      "y": 0.428,
+      "scale": 0.42,
+      "depth": 0.7999999999999999,
+      "face": -1
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.6759999999999999,
+      "to": 0.656,
+      "y": 0.44599999999999995,
+      "scale": 0.42,
+      "depth": 0.88,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.708,
+      "to": 0.6880000000000001,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.74,
+      "to": 0.72,
+      "y": 0.428,
+      "scale": 0.42,
+      "depth": 0.7999999999999999,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.772,
+      "to": 0.752,
+      "y": 0.44599999999999995,
+      "scale": 0.42,
+      "depth": 0.88,
+      "face": -1
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.804,
+      "to": 0.784,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.8360000000000001,
+      "to": 0.8160000000000001,
+      "y": 0.428,
+      "scale": 0.42,
+      "depth": 0.7999999999999999,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.868,
+      "to": 0.8480000000000001,
+      "y": 0.44599999999999995,
+      "scale": 0.42,
+      "depth": 0.88,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.8999999999999999,
+      "to": 0.88,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.9319999999999999,
+      "to": 0.912,
+      "y": 0.428,
+      "scale": 0.42,
+      "depth": 0.7999999999999999,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.964,
+      "to": 0.9440000000000001,
+      "y": 0.44599999999999995,
+      "scale": 0.42,
+      "depth": 0.88,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.996,
+      "to": 0.9760000000000001,
+      "y": 0.41,
+      "scale": 0.42,
+      "depth": 0.72,
+      "face": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 1.15,
+      "to": 0.5,
+      "y": 0.52,
+      "scale": 0.55,
+      "depth": 0.3,
+      "face": -1,
+      "at": "ships",
+      "dur": 2.4
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 1.25,
+      "to": 0.66,
+      "y": 0.555,
+      "scale": 0.55,
+      "depth": 0.3,
+      "face": -1,
+      "at": "ships",
+      "dur": 2.4
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 1.3499999999999999,
+      "to": 0.8200000000000001,
+      "y": 0.5900000000000001,
+      "scale": 0.55,
+      "depth": 0.3,
+      "face": -1,
+      "at": "ships",
+      "dur": 2.4
+     }
+    ],
+    "labels": [
+     {
+      "text": "May 1565",
+      "x": 0.75,
+      "y": 0.2,
+      "at": "may",
+      "size": 72,
+      "color": "red"
+     },
+     {
+      "text": "~200 ships",
+      "x": 0.78,
+      "y": 0.68,
+      "at": "ships",
+      "size": 64
+     }
+    ],
+    "cast": [
+     {
+      "who": "valette",
+      "accessory": "helmet_byz",
+      "beard": "grey",
+      "x": 0.1,
+      "y": 0.82,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "at": "ships",
+      "then": "point",
+      "dir": "forward"
+     },
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "y": 0.82,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "at": "watched",
+      "then": "look",
+      "seq": [
+       {
+        "at": "ships",
+        "pose": "shock"
+       }
+      ]
+     }
+    ],
+    "zoom": 1.05,
+    "focus": [
+     0.4,
+     0.6
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "He had a few thousand fighters. Those ships carried a giant army.",
+   "visual": "A sea backdrop: on the left a small group of three knights in helmets behind a stone wall in the foreground, label 'a few thousand'; on 'giant' ship props pop up one after another across the sea on the right, label 'a giant army'; the fez narrator between them turns from the knights to the ships and jumps back in shock",
+   "title": {
+    "white": "The odds"
+   },
+   "cues": {
+    "few": "few",
+    "giant": "giant",
+    "army": "army"
+   },
+   "params": {
+    "backdrop": {
+     "type": "sea",
+     "y": 0.56
+    },
+    "foreground": [
+     {
+      "type": "wall",
+      "from": 0,
+      "to": 0.4
+     }
+    ],
+    "cast": [
+     {
+      "who": "k1",
+      "accessory": "helmet_byz",
+      "beard": "short",
+      "x": 0.08,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "k2",
+      "accessory": "helmet_byz",
+      "x": 0.17,
+      "scale": 0.8,
+      "pose": "hold",
+      "face": "right",
+      "text": "few"
+     },
+     {
+      "who": "k3",
+      "accessory": "helmet_byz",
+      "beard": "black",
+      "x": 0.26,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "scale": 0.9,
+      "pose": "point",
+      "dir": "left",
+      "face": "left",
+      "at": "giant",
+      "then": "shock",
+      "seq": [
+       {
+        "at": "giant",
+        "pose": "shock",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.6,
+      "y": 0.53,
+      "scale": 0.45,
+      "at": "giant"
+     },
+     {
+      "type": "ship",
+      "x": 0.69,
+      "y": 0.53,
+      "scale": 0.45,
+      "at": "giant"
+     },
+     {
+      "type": "ship",
+      "x": 0.78,
+      "y": 0.53,
+      "scale": 0.45,
+      "at": "giant"
+     },
+     {
+      "type": "ship",
+      "x": 0.87,
+      "y": 0.53,
+      "scale": 0.45,
+      "at": "giant"
+     },
+     {
+      "type": "ship",
+      "x": 0.6,
+      "y": 0.5800000000000001,
+      "scale": 0.45,
+      "at": "army"
+     },
+     {
+      "type": "ship",
+      "x": 0.69,
+      "y": 0.5800000000000001,
+      "scale": 0.45,
+      "at": "army"
+     },
+     {
+      "type": "ship",
+      "x": 0.78,
+      "y": 0.5800000000000001,
+      "scale": 0.45,
+      "at": "army"
+     },
+     {
+      "type": "ship",
+      "x": 0.87,
+      "y": 0.5800000000000001,
+      "scale": 0.45,
+      "at": "army"
+     }
+    ],
+    "label": {
+     "text": "a giant army",
+     "x": 0.75,
+     "y": 0.3,
+     "at": "army"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "And here's the crazy part: he lost his first fort, and that is exactly why he won. Let me show you how.",
+   "visual": "Giant Fraunces words appear one by one: 'He lost the fort', then 'and WON' with WON in a red box; a small fez narrator beside the words points at them and raises his brows",
+   "title": {},
+   "cues": {
+    "w0": "crazy",
+    "w1": "lost",
+    "w2": "his",
+    "w3": "fort",
+    "w4": "that",
+    "w5": "won"
+   },
+   "params": {
+    "lines": [
+     "He lost the fort",
+     "and won"
+    ],
+    "highlight": [
+     "won"
+    ],
+    "y": 0.44,
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "won"
+    }
+   }
+  },
+  {
+   "chapter": "Thrown Out of Rhodes",
+   "type": "chapter",
+   "text": "The old man was Jean de Valette, Grand Master of the Knights of Saint John.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, below it 'Thrown Out of Rhodes' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "Valette",
+    "title": "Grand",
+    "line": "Knights"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Thrown Out of Rhodes"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "His order began as a hospital for pilgrims, but by now it was a small army of monks in armor.",
+   "visual": "A house prop with a hand label 'hospital' on the left; a knight in a helmet walks in from the right holding a sign 'MONK + KNIGHT'; the fez narrator points at the house, then turns and points at the knight in surprise on 'armor'",
+   "title": {
+    "white": "The Knights",
+    "gray": "of Saint John"
+   },
+   "cues": {
+    "hospital": "hospital",
+    "army": "army",
+    "armor": "armor"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "house",
+      "x": 0.2,
+      "scale": 1.0,
+      "at": 0.1
+     },
+     {
+      "type": "column",
+      "x": 0.06,
+      "scale": 0.8
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "scale": 0.9,
+      "pose": "point",
+      "dir": "left",
+      "face": "left",
+      "at": "army",
+      "then": "point",
+      "seq": [
+       {
+        "at": "army",
+        "pose": "point",
+        "face": "right",
+        "dir": "forward",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "knight",
+      "accessory": "helmet_byz",
+      "beard": "black",
+      "x": 1.1,
+      "to": 0.68,
+      "at": "army",
+      "pose": "walk",
+      "then": "hold",
+      "text": "MONK + KNIGHT",
+      "scale": 0.95,
+      "face": "left"
+     }
+    ],
+    "label": {
+     "text": "hospital",
+     "x": 0.2,
+     "y": 0.4,
+     "at": "hospital"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "In 1522, Suleiman the Magnificent had driven them out of their home on Rhodes. He even let them sail away alive.",
+   "visual": "Old Mediterranean map: 'Istanbul' and 'Rhodes' pop up, on 'Rhodes' a red note card '1522' appears; on 'sail' a red dashed route runs from Rhodes west past Crete toward Sicily; the map slowly pushes in",
+   "title": {
+    "white": "Rhodes",
+    "gray": "1522"
+   },
+   "cues": {
+    "sul": "Suleiman",
+    "rho": "Rhodes",
+    "sail": "sail"
+   },
+   "params": {
+    "preset": "mediterranean",
+    "cities": [
+     {
+      "name": "Istanbul",
+      "x": 28.97,
+      "y": 41.0,
+      "at": "sul"
+     },
+     {
+      "name": "Rhodes",
+      "x": 28.2,
+      "y": 36.4,
+      "at": "rho",
+      "color": "red"
+     },
+     {
+      "name": "Sicily",
+      "x": 14.2,
+      "y": 37.6,
+      "at": "sail"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       28.2,
+       36.4
+      ],
+      [
+       26.5,
+       35.0
+      ],
+      [
+       24.0,
+       34.8
+      ],
+      [
+       19.0,
+       36.0
+      ],
+      [
+       15.5,
+       37.3
+      ]
+     ],
+     "at": "sail",
+     "dur": 2.4
+    },
+    "note": {
+     "text": "1522",
+     "x": 0.72,
+     "y": 0.86,
+     "at": "rho"
+    },
+    "focus": [
+     22,
+     37.5
+    ],
+    "zoom": 1.15,
+    "compass": "tl"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Then the emperor Charles the Fifth gave them a dry, rocky island south of Sicily, and the rent was one falcon a year.",
+   "visual": "The emperor (gold crown, short beard) stands left and points at a rock prop; on 'falcon' the fez narrator walks in, holds up a sign 'RENT: 1 FALCON' and raises his brows in surprise",
+   "title": {
+    "white": "Charles V",
+    "gray": "1530"
+   },
+   "cues": {
+    "gave": "gave",
+    "rocky": "rocky",
+    "island": "island",
+    "falcon": "falcon"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.5,
+      "scale": 1.2,
+      "at": "rocky"
+     },
+     {
+      "type": "scroll",
+      "x": 0.33,
+      "y": 0.5,
+      "scale": 0.6,
+      "at": "gave"
+     }
+    ],
+    "cast": [
+     {
+      "who": "charles",
+      "accessory": "crown",
+      "beard": "short",
+      "x": 0.18,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "at": "rocky",
+      "then": "point",
+      "dir": "forward"
+     },
+     {
+      "who": "kasif",
+      "x": 1.05,
+      "to": 0.78,
+      "at": "falcon",
+      "pose": "walk",
+      "then": "hold",
+      "text": "RENT: 1 FALCON",
+      "face": "left",
+      "scale": 0.95,
+      "emotion": "surprised"
+     }
+    ],
+    "label": {
+     "text": "Malta",
+     "x": 0.5,
+     "y": 0.3,
+     "at": "island"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "That island was Malta. And from its deep harbors, the knights' galleys went straight back to hunting Ottoman ships.",
+   "visual": "Side view of the sea: on the left the shore of Malta with a small stone fort; a blue-pennant knights' galley rows out of it and chases a red-pennant Ottoman sailing ship that turns away on 'hunting'; the fez narrator on the right ledge points at the chase",
+   "title": {
+    "white": "Malta",
+    "gray": "1530s"
+   },
+   "cues": {
+    "galleys": "galleys",
+    "hunting": "hunting"
+   },
+   "params": {
+    "horizon": 0.4,
+    "shore": {
+     "side": "left",
+     "w": 0.3,
+     "fort": true
+    },
+    "ledge": {
+     "side": "right",
+     "y": 0.76,
+     "w": 0.32
+    },
+    "ships": [
+     {
+      "kind": "galley",
+      "side": "hl",
+      "x": 0.2,
+      "to": 0.55,
+      "y": 0.62,
+      "scale": 0.8,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.6,
+      "to": 0.85,
+      "y": 0.58,
+      "scale": 0.65,
+      "face": 1,
+      "depth": 0.3,
+      "scatter": "hunting"
+     }
+    ],
+    "labels": [
+     {
+      "text": "knights' galley",
+      "x": 0.28,
+      "y": 0.78,
+      "at": "galleys",
+      "size": 56,
+      "color": "blue"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.78,
+      "scale": 0.6,
+      "pose": "idle",
+      "face": "left",
+      "at": "galleys",
+      "then": "point",
+      "dir": "left",
+      "seq": [
+       {
+        "at": "hunting",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Suleiman's Decision",
+   "type": "chapter",
+   "text": "Now picture it from Istanbul.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, below it 'Suleiman's Decision' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "picture",
+    "title": "Istanbul"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Suleiman's Decision"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Merchant ships kept vanishing near Malta, and pilgrims sailing to Mecca were captured at sea.",
+   "visual": "Old Mediterranean map: 'Malta' and 'Istanbul' pop up; a red dashed route of a pilgrim ship runs from Istanbul south past Rhodes toward Egypt; a red note card 'ships lost!' pops on 'captured'",
+   "title": {
+    "white": "Raids"
+   },
+   "cues": {
+    "merch": "Merchant",
+    "malta": "Malta",
+    "pilgrims": "pilgrims",
+    "captured": "captured"
+   },
+   "params": {
+    "preset": "mediterranean",
+    "cities": [
+     {
+      "name": "Malta",
+      "x": 14.45,
+      "y": 35.9,
+      "at": "malta",
+      "color": "red"
+     },
+     {
+      "name": "Istanbul",
+      "x": 28.97,
+      "y": 41.0,
+      "at": "merch"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       28.97,
+       41.0
+      ],
+      [
+       26.3,
+       39.0
+      ],
+      [
+       27.0,
+       37.2
+      ],
+      [
+       28.5,
+       35.8
+      ],
+      [
+       30.5,
+       34.0
+      ]
+     ],
+     "at": "pilgrims",
+     "dur": 2.0
+    },
+    "note": {
+     "text": "ships lost!",
+     "x": 0.06,
+     "y": 0.86,
+     "at": "captured"
+    },
+    "focus": [
+     21,
+     38
+    ],
+    "zoom": 1.1,
+    "compass": "tl"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Suleiman was about seventy too, the most powerful ruler of his age, and he decided to finish what he had started at Rhodes.",
+   "visual": "Palace backdrop: the old sultan (big white turban, grey beard) stands talking, then points forward hard on 'finish'; label 'about 70'; the fez narrator on the right strokes his chin, then nods in surprise",
+   "title": {
+    "white": "Suleiman",
+    "gray": "the Magnificent"
+   },
+   "cues": {
+    "seventy": "seventy",
+    "finish": "finish"
+   },
+   "params": {
+    "backdrop": {
+     "type": "palace",
+     "y": 0.6
+    },
+    "cast": [
+     {
+      "who": "suleiman",
+      "accessory": "turban",
+      "beard": "grey",
+      "x": 0.32,
+      "scale": 1.05,
+      "pose": "talk",
+      "face": "right",
+      "at": "finish",
+      "then": "point",
+      "dir": "forward"
+     },
+     {
+      "who": "kasif",
+      "x": 0.75,
+      "scale": 0.9,
+      "pose": "think",
+      "face": "left",
+      "at": "finish",
+      "then": "shock"
+     }
+    ],
+    "label": {
+     "text": "about 70",
+     "x": 0.5,
+     "y": 0.3,
+     "at": "seventy"
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.4,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "On the eighteenth of May, his fleet reached Malta.",
+   "visual": "Side view of the sea toward the Malta shore on the right with its stone fort: a dense fleet of red-pennant galleys and tall sailing ships rows in from the left; a red stamp 'MAY 18' slams on; the fez narrator on a rock ledge left watches through binoculars",
+   "title": {
+    "white": "Malta",
+    "gray": "May 18, 1565"
+   },
+   "cues": {
+    "may": "eighteenth",
+    "reached": "reached"
+   },
+   "params": {
+    "horizon": 0.42,
+    "shore": {
+     "side": "right",
+     "w": 0.3,
+     "fort": true
+    },
+    "ledge": {
+     "side": "left",
+     "y": 0.78,
+     "w": 0.28
+    },
+    "ships": [
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": -0.2,
+      "to": 0.3,
+      "y": 0.52,
+      "scale": 0.55,
+      "depth": 0.3,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": -0.28,
+      "to": 0.38,
+      "y": 0.56,
+      "scale": 0.6000000000000001,
+      "depth": 0.6,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": -0.36,
+      "to": 0.45999999999999996,
+      "y": 0.6,
+      "scale": 0.65,
+      "depth": 0.0,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": -0.44,
+      "to": 0.54,
+      "y": 0.52,
+      "scale": 0.55,
+      "depth": 0.3,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": -0.52,
+      "to": 0.62,
+      "y": 0.56,
+      "scale": 0.6000000000000001,
+      "depth": 0.6,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": -0.6000000000000001,
+      "to": 0.7,
+      "y": 0.6,
+      "scale": 0.65,
+      "depth": 0.0,
+      "face": 1,
+      "row": true
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": -0.3,
+      "to": 0.2,
+      "y": 0.5,
+      "scale": 0.6,
+      "depth": 0.5,
+      "face": 1
+     }
+    ],
+    "labels": [
+     {
+      "text": "May 18",
+      "x": 0.55,
+      "y": 0.2,
+      "at": "may",
+      "stamp": true,
+      "size": 96
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.8,
+      "scale": 0.6,
+      "pose": "look",
+      "face": "right",
+      "at": "reached",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "board",
+   "text": "Historians argue about the numbers, but most estimate thirty to forty thousand soldiers against roughly six thousand defenders, many of them Maltese farmers.",
+   "visual": "Pinned board 'The odds': card with two bars, a long red bar 'Ottoman army' labelled '30,000-40,000' grows on 'thirty', a short bar 'Defenders' labelled '~6,000' grows on 'six'; a red pill 'estimates vary' at the bottom",
+   "title": {
+    "white": "The odds"
+   },
+   "cues": {
+    "thirty": "thirty",
+    "six": "six",
+    "farmers": "farmers"
+   },
+   "params": {
+    "title": "The odds",
+    "cards": [
+     {
+      "bars": [
+       {
+        "label": "Ottoman army",
+        "value": 0.95,
+        "text": "30-40,000",
+        "at": "thirty"
+       },
+       {
+        "label": "Defenders",
+        "value": 0.17,
+        "text": "~6,000",
+        "at": "six"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Estimates vary",
+     "color": "red",
+     "at": "farmers"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "But the army had a hidden problem. It had two commanders.",
+   "visual": "Two Ottoman commanders in turbans step in from both sides and stop back to back in the middle, arms crossed (one black beard, one short beard); a hand label 'two commanders' with an arrow; the fez narrator on the right shrugs",
+   "title": {
+    "white": "The army"
+   },
+   "cues": {
+    "two": "two",
+    "commanders": "commanders"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "mustafa",
+      "accessory": "turban",
+      "beard": "black",
+      "x": -0.1,
+      "to": 0.38,
+      "at": "two",
+      "pose": "walk",
+      "then": "talk",
+      "face": "left",
+      "scale": 0.95
+     },
+     {
+      "who": "piyale",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 1.1,
+      "to": 0.55,
+      "at": "two",
+      "pose": "walk",
+      "then": "talk",
+      "face": "right",
+      "scale": 0.95
+     },
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "left",
+      "at": "commanders",
+      "then": "shrug"
+     }
+    ],
+    "label": {
+     "text": "two commanders",
+     "x": 0.47,
+     "y": 0.2,
+     "at": "commanders",
+     "arrow": [
+      0.47,
+      0.4
+     ]
+    },
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.47,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Mustafa Pasha led the troops on land, Piyale Pasha led the fleet, and they disagreed about almost everything.",
+   "visual": "Sea backdrop on the right, hills on the left: Mustafa (black beard) points left to the land, label 'LAND'; Piyale (short beard) points right to a ship prop on the sea, label 'SEA'; on 'disagreed' both turn to face each other angrily; the fez narrator in front between them looks from one to the other, worried",
+   "title": {
+    "white": "Mustafa",
+    "gray": "vs Piyale"
+   },
+   "cues": {
+    "land": "land",
+    "fleet": "fleet",
+    "disagreed": "disagreed"
+   },
+   "params": {
+    "backdrop": {
+     "type": "sea",
+     "y": 0.58,
+     "from": 0.55,
+     "to": 1
+    },
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.88,
+      "y": 0.56,
+      "scale": 0.6,
+      "at": "fleet"
+     },
+     {
+      "type": "tree",
+      "x": 0.08,
+      "scale": 0.8,
+      "at": "land"
+     }
+    ],
+    "cast": [
+     {
+      "who": "mustafa",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.3,
+      "scale": 0.95,
+      "pose": "point",
+      "dir": "left",
+      "face": "left",
+      "at": "disagreed",
+      "then": "talk",
+      "seq": [
+       {
+        "at": "disagreed",
+        "pose": "talk",
+        "face": "right",
+        "emotion": "angry"
+       }
+      ]
+     },
+     {
+      "who": "piyale",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.66,
+      "scale": 0.95,
+      "pose": "idle",
+      "face": "right",
+      "at": "fleet",
+      "then": "point",
+      "dir": "right",
+      "seq": [
+       {
+        "at": "disagreed",
+        "pose": "talk",
+        "face": "left",
+        "emotion": "angry"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.48,
+      "scale": 0.7,
+      "pose": "idle",
+      "face": "left",
+      "at": "disagreed",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ],
+    "label": {
+     "text": "land vs sea",
+     "x": 0.48,
+     "y": 0.18,
+     "at": "disagreed"
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "The fleet needed a safe harbor, so the first target became a small star-shaped fort at the tip of the peninsula: Fort Saint Elmo.",
+   "visual": "Old ink map of Malta's harbours: the long Sciberras peninsula between two bays; a red dashed route runs from the open sea into the bay 'Marsamxett' on 'harbor'; then 'St Elmo' pops up in red at the tip of the peninsula, 'Birgu' and 'Senglea' across the Grand Harbour; red note 'target #1'",
+   "title": {
+    "white": "St Elmo",
+    "gray": "the target"
+   },
+   "cues": {
+    "fleet": "fleet",
+    "harbor": "harbor",
+    "elmo": "Elmo"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.05,
+       1.05
+      ],
+      [
+       -0.05,
+       0.55
+      ],
+      [
+       0.12,
+       0.5
+      ],
+      [
+       0.2,
+       0.56
+      ],
+      [
+       0.3,
+       0.42
+      ],
+      [
+       0.42,
+       0.3
+      ],
+      [
+       0.5,
+       0.2
+      ],
+      [
+       0.56,
+       0.25
+      ],
+      [
+       0.48,
+       0.38
+      ],
+      [
+       0.4,
+       0.5
+      ],
+      [
+       0.36,
+       0.63
+      ],
+      [
+       0.45,
+       0.72
+      ],
+      [
+       0.52,
+       0.6
+      ],
+      [
+       0.57,
+       0.65
+      ],
+      [
+       0.6,
+       0.58
+      ],
+      [
+       0.63,
+       0.47
+      ],
+      [
+       0.67,
+       0.5
+      ],
+      [
+       0.69,
+       0.6
+      ],
+      [
+       0.8,
+       0.47
+      ],
+      [
+       0.95,
+       0.44
+      ],
+      [
+       1.05,
+       0.5
+      ],
+      [
+       1.05,
+       1.05
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Grand Harbour",
+      "x": 0.66,
+      "y": 0.33
+     },
+     {
+      "name": "Marsamxett",
+      "x": 0.17,
+      "y": 0.38
+     }
+    ],
+    "cities": [
+     {
+      "name": "St Elmo",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "elmo",
+      "color": "red",
+      "dy": -0.02
+     },
+     {
+      "name": "Birgu",
+      "x": 0.63,
+      "y": 0.49,
+      "at": "fleet"
+     },
+     {
+      "name": "Senglea",
+      "x": 0.52,
+      "y": 0.62,
+      "at": "fleet"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.75,
+       0.05
+      ],
+      [
+       0.45,
+       0.12
+      ],
+      [
+       0.25,
+       0.3
+      ],
+      [
+       0.18,
+       0.42
+      ]
+     ],
+     "at": "harbor",
+     "dur": 1.8
+    },
+    "note": {
+     "text": "target #1",
+     "x": 0.7,
+     "y": 0.86,
+     "at": "elmo"
+    },
+    "focus": [
+     0.5,
+     0.25
+    ],
+    "zoom": 1.18,
+    "compass": "bl"
+   }
+  },
+  {
+   "chapter": "The Fort That Would Not Fall",
+   "type": "chapter",
+   "text": "The plan said it would fall in a few days. It didn't.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, below it 'The Fort That Would Not Fall' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "plan",
+    "title": "days",
+    "line": "didn"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Fort That Would Not Fall"
+   }
+  },
+  {
+   "type": "mt_fort",
+   "text": "Within a week, the cannons had turned its walls into rubble, and still, every night, boats slipped across the harbor with fresh men and carried the wounded back.",
+   "visual": "Side view of Fort St Elmo on its rock headland: guns on a far hill to the right fire, balls arc in and burst into dust, the walls crumble into rubble on 'rubble'; on 'night' the sky turns to night hatching with a gold moon and stars; on 'boats' three rowboats cross the harbor from the right to the fort, oars sweeping; the fez narrator on a quay in the foreground left watches, then looks on in surprise",
+   "title": {
+    "white": "St Elmo",
+    "gray": "late May"
+   },
+   "cues": {
+    "cannons": "cannons",
+    "rubble": "rubble",
+    "night": "night",
+    "boats": "boats"
+   },
+   "params": {
+    "sea": 0.7,
+    "night": "night",
+    "hill": {
+     "side": "right",
+     "w": 0.4,
+     "h": 0.2
+    },
+    "forts": [
+     {
+      "x": 0.36,
+      "w": 560,
+      "h": 230,
+      "base": 0.62,
+      "damage": {
+       "from": 0.05,
+       "to": 0.85,
+       "at": "cannons",
+       "dur": 3.2
+      },
+      "flag": true
+     }
+    ],
+    "guns": {
+     "at": "cannons",
+     "n": 5,
+     "gap": 0.7,
+     "target": 0
+    },
+    "fleet": {
+     "n": 8,
+     "x0": 0.54,
+     "x1": 0.94,
+     "scale": 0.75,
+     "at": 0
+    },
+    "boats": {
+     "n": 3,
+     "from": 1.1,
+     "to": 0.62,
+     "y": 0.76,
+     "at": "boats",
+     "dur": 3.5,
+     "gap": 0.8
+    },
+    "quay": {
+     "side": "left",
+     "w": 0.24,
+     "y": 0.86
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.88,
+      "scale": 0.55,
+      "pose": "look",
+      "face": "right",
+      "at": "rubble",
+      "then": "shock",
+      "seq": [
+       {
+        "at": "boats",
+        "pose": "point",
+        "dir": "forward"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "St Elmo",
+      "x": 0.36,
+      "y": 0.2,
+      "at": 0.3,
+      "size": 64
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "Then a legend arrived from Tripoli.",
+   "visual": "Old map of the central Mediterranean: Sicily, Malta and the coast of Africa; 'Sicily', 'Malta' and, in red, 'Tripoli' pop up; on 'legend' a red dashed route draws north from Tripoli to Malta",
+   "title": {
+    "white": "Tripoli"
+   },
+   "cues": {
+    "legend": "legend"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.425,
+       0.0735
+      ],
+      [
+       0.55,
+       0.0588
+      ],
+      [
+       0.825,
+       0.0441
+      ],
+      [
+       0.7625,
+       0.191
+      ],
+      [
+       0.7625,
+       0.279
+      ],
+      [
+       0.6625,
+       0.235
+      ],
+      [
+       0.425,
+       0.118
+      ]
+     ],
+     [
+      [
+       0.8375,
+       0.0515
+      ],
+      [
+       0.875,
+       0.0956
+      ],
+      [
+       0.95,
+       0.0294
+      ],
+      [
+       1.05,
+       -0.06
+      ],
+      [
+       0.82,
+       -0.08
+      ]
+     ],
+     [
+      [
+       0.6475,
+       0.3735
+      ],
+      [
+       0.66875,
+       0.375
+      ],
+      [
+       0.6975,
+       0.4
+      ],
+      [
+       0.6875,
+       0.4118
+      ],
+      [
+       0.6625,
+       0.397
+      ]
+     ],
+     [
+      [
+       -0.06,
+       0.191
+      ],
+      [
+       0.1,
+       0.191
+      ],
+      [
+       0.1625,
+       0.265
+      ],
+      [
+       0.25,
+       0.221
+      ],
+      [
+       0.1875,
+       0.338
+      ],
+      [
+       0.2,
+       0.412
+      ],
+      [
+       0.2625,
+       0.5
+      ],
+      [
+       0.21875,
+       0.574
+      ],
+      [
+       0.1375,
+       0.691
+      ],
+      [
+       0.2375,
+       0.735
+      ],
+      [
+       0.3125,
+       0.809
+      ],
+      [
+       0.59875,
+       0.84
+      ],
+      [
+       0.8375,
+       0.912
+      ],
+      [
+       0.8625,
+       0.971
+      ],
+      [
+       1.07,
+       1.12
+      ],
+      [
+       1.07,
+       1.3
+      ],
+      [
+       -0.06,
+       1.3
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Mediterranean Sea",
+      "x": 0.42,
+      "y": 0.6
+     }
+    ],
+    "cities": [
+     {
+      "name": "Sicily",
+      "x": 0.6,
+      "y": 0.13,
+      "at": 0.1
+     },
+     {
+      "name": "Malta",
+      "x": 0.68,
+      "y": 0.39,
+      "at": 0.15
+     },
+     {
+      "name": "Tripoli",
+      "x": 0.6,
+      "y": 0.84,
+      "at": 0.2,
+      "color": "red"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.6,
+       0.82
+      ],
+      [
+       0.62,
+       0.62
+      ],
+      [
+       0.67,
+       0.42
+      ]
+     ],
+     "at": "legend",
+     "dur": 1.2
+    },
+    "focus": [
+     0.64,
+     0.55
+    ],
+    "zoom": 1.12,
+    "compass": "tr"
+   }
+  },
+  {
+   "type": "mt_fort",
+   "text": "Turgut Reis, known in Europe as Dragut, was the most famous sea captain of the Mediterranean, and he saw the problem at once: cut off the boats.",
+   "visual": "Night over the battered fort: rowboats cross the harbor toward it; in the foreground on the right quay the grey-bearded corsair Dragut (white turban) walks in and points at the boats; on 'cut' a red dashed line draws along the boat route and a big red X slams over it; the fez narrator beside him nods in surprise",
+   "title": {
+    "white": "Turgut Reis",
+    "gray": "(Dragut)"
+   },
+   "cues": {
+    "Dragut": "Dragut",
+    "captain": "captain",
+    "cut": "cut"
+   },
+   "params": {
+    "sea": 0.7,
+    "night": true,
+    "hill": false,
+    "forts": [
+     {
+      "x": 0.3,
+      "w": 520,
+      "h": 220,
+      "base": 0.6,
+      "damage": 0.7,
+      "flag": true
+     }
+    ],
+    "boats": {
+     "n": 3,
+     "from": 0.75,
+     "to": 0.48,
+     "y": 0.74,
+     "at": 0.2,
+     "dur": 5,
+     "gap": 1.0,
+     "cut": "cut"
+    },
+    "quay": {
+     "side": "right",
+     "w": 0.34,
+     "y": 0.86
+    },
+    "cast": [
+     {
+      "who": "dragut",
+      "accessory": "turban",
+      "beard": "grey",
+      "x": 1.1,
+      "to": 0.74,
+      "at": "captain",
+      "pose": "walk",
+      "then": "point",
+      "dir": "left",
+      "face": "left",
+      "scale": 0.62,
+      "y": 0.88
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.88,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "left",
+      "at": "cut",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Dragut",
+      "x": 0.74,
+      "y": 0.45,
+      "at": "Dragut",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mt_trench",
+   "text": "But in June, while he was directing the guns, a cannonball smashed into the trench beside him, and flying stone struck his head.",
+   "visual": "A siege trench with wicker gabions, the battered fort far across the water on the right: a bronze cannon fires on 'guns'; the grey-bearded Dragut (white turban) points at the fort; on 'smashed' a ball flies in from the fort and smashes into the stone right beside him: gold flash, flying stone chips, dust, the frame shakes; Dragut recoils and on 'stone' he collapses to the ground; the fez narrator on the left jumps back in shock",
+   "title": {
+    "white": "The trench",
+    "gray": "June 1565"
+   },
+   "cues": {
+    "June": "June",
+    "guns": "guns",
+    "smashed": "smashed",
+    "stone": "stone"
+   },
+   "params": {
+    "cannon": {
+     "x": 0.3,
+     "y": 0.8,
+     "scale": 0.9,
+     "face": 1,
+     "fire": "guns"
+    },
+    "strike": {
+     "at": "smashed",
+     "x": 0.6,
+     "y": 0.79,
+     "from": [
+      0.82,
+      0.45
+     ]
+    },
+    "cast": [
+     {
+      "who": "dragut",
+      "accessory": "turban",
+      "beard": "grey",
+      "x": 0.52,
+      "y": 0.8,
+      "scale": 0.75,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right",
+      "seq": [
+       {
+        "at": "smashed",
+        "pose": "shock",
+        "emotion": "surprised"
+       },
+       {
+        "at": "stone",
+        "pose": "sit",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.8,
+      "scale": 0.7,
+      "pose": "idle",
+      "face": "right",
+      "at": "smashed",
+      "then": "shock",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "June 1565",
+      "x": 0.3,
+      "y": 0.24,
+      "at": "June",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mt_fort",
+   "text": "He died around the day Saint Elmo finally fell, on the twenty-third of June, after about a month. That little fort had cost the attackers thousands of men, and the one commander who might have won.",
+   "visual": "Daylight over the ruined fort, heavy rubble, smoke rising, the Ottoman fleet on the sea behind; on 'fell' its red flag with a white cross tips over and falls; a red stamp 'JUNE 23' slams on; on 'thousands' a hand label 'thousands lost + Dragut' appears; the fez narrator on the quay in front bows his head, then looks up sadly",
+   "title": {
+    "white": "St Elmo",
+    "gray": "falls"
+   },
+   "cues": {
+    "fell": "fell",
+    "twenty": "twenty",
+    "thousands": "thousands"
+   },
+   "params": {
+    "sea": 0.72,
+    "hill": {
+     "side": "right",
+     "w": 0.36,
+     "h": 0.16
+    },
+    "forts": [
+     {
+      "x": 0.42,
+      "w": 600,
+      "h": 220,
+      "base": 0.62,
+      "damage": 0.95,
+      "flag": {
+       "fall": "fell"
+      }
+     }
+    ],
+    "guns": {
+     "at": 0.2,
+     "n": 2,
+     "gap": 1.4,
+     "target": 0
+    },
+    "fleet": {
+     "n": 10,
+     "x0": 0.4,
+     "x1": 1.0,
+     "y": 0.88,
+     "scale": 1.15,
+     "rows": 2,
+     "front": true,
+     "at": 0
+    },
+    "quay": {
+     "side": "left",
+     "w": 0.26,
+     "y": 0.86
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.88,
+      "scale": 0.6,
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "at": "fell",
+      "then": "think"
+     }
+    ],
+    "labels": [
+     {
+      "text": "June 23",
+      "x": 0.72,
+      "y": 0.2,
+      "at": "twenty",
+      "stamp": true,
+      "size": 92
+     },
+     {
+      "text": "thousands lost + Dragut",
+      "x": 0.74,
+      "y": 0.34,
+      "at": "thousands",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mt_fort",
+   "text": "Mustafa Pasha, the story goes, looked across the water at the bigger forts and asked: if the son cost us this much, what will the father cost?",
+   "visual": "Two forts across the water: a small ruined fort on the left labelled 'the son', a much bigger intact fort on the right labelled 'the father' on 'father'; on the quay in front the black-bearded Mustafa (turban) looks across through his hand, then turns and shrugs; the fez narrator beside him points at the big fort",
+   "title": {
+    "white": "Mustafa",
+    "gray": "Pasha"
+   },
+   "cues": {
+    "asked": "asked",
+    "son": "son",
+    "father": "father"
+   },
+   "params": {
+    "sea": 0.68,
+    "hill": false,
+    "forts": [
+     {
+      "x": 0.2,
+      "w": 330,
+      "h": 140,
+      "base": 0.6,
+      "damage": 0.9,
+      "flag": false,
+      "label": {
+       "text": "the son",
+       "at": "son",
+       "size": 60
+      }
+     },
+     {
+      "x": 0.66,
+      "w": 760,
+      "h": 300,
+      "base": 0.6,
+      "damage": 0.05,
+      "flag": true,
+      "label": {
+       "text": "the father",
+       "at": "father",
+       "size": 64,
+       "color": "red",
+       "dy": 0.16
+      }
+     }
+    ],
+    "quay": {
+     "side": "left",
+     "w": 0.5,
+     "y": 0.86
+    },
+    "cast": [
+     {
+      "who": "mustafa",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.14,
+      "y": 0.88,
+      "scale": 0.62,
+      "pose": "look",
+      "face": "right",
+      "at": "asked",
+      "then": "talk",
+      "seq": [
+       {
+        "at": "father",
+        "pose": "shrug",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.34,
+      "y": 0.88,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "right",
+      "at": "father",
+      "then": "point",
+      "dir": "up"
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "Now the real siege began. Birgu and Senglea, two small walled towns, were pounded for weeks.",
+   "visual": "Old ink map of the harbours: 'St Elmo' crossed out, then 'Birgu' and 'Senglea' pop up in red across the Grand Harbour; a red dashed arrow from the Sciberras heights curves to Birgu on 'pounded'; note 'for weeks'",
+   "title": {
+    "white": "Birgu",
+    "gray": "and Senglea"
+   },
+   "cues": {
+    "birgu": "Birgu",
+    "senglea": "Senglea",
+    "pounded": "pounded",
+    "weeks": "weeks"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.05,
+       1.05
+      ],
+      [
+       -0.05,
+       0.55
+      ],
+      [
+       0.12,
+       0.5
+      ],
+      [
+       0.2,
+       0.56
+      ],
+      [
+       0.3,
+       0.42
+      ],
+      [
+       0.42,
+       0.3
+      ],
+      [
+       0.5,
+       0.2
+      ],
+      [
+       0.56,
+       0.25
+      ],
+      [
+       0.48,
+       0.38
+      ],
+      [
+       0.4,
+       0.5
+      ],
+      [
+       0.36,
+       0.63
+      ],
+      [
+       0.45,
+       0.72
+      ],
+      [
+       0.52,
+       0.6
+      ],
+      [
+       0.57,
+       0.65
+      ],
+      [
+       0.6,
+       0.58
+      ],
+      [
+       0.63,
+       0.47
+      ],
+      [
+       0.67,
+       0.5
+      ],
+      [
+       0.69,
+       0.6
+      ],
+      [
+       0.8,
+       0.47
+      ],
+      [
+       0.95,
+       0.44
+      ],
+      [
+       1.05,
+       0.5
+      ],
+      [
+       1.05,
+       1.05
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Grand Harbour",
+      "x": 0.66,
+      "y": 0.33
+     },
+     {
+      "name": "Marsamxett",
+      "x": 0.17,
+      "y": 0.38
+     }
+    ],
+    "cities": [
+     {
+      "name": "Birgu",
+      "x": 0.63,
+      "y": 0.49,
+      "at": "birgu",
+      "color": "red"
+     },
+     {
+      "name": "Senglea",
+      "x": 0.52,
+      "y": 0.62,
+      "at": "senglea",
+      "color": "red"
+     },
+     {
+      "name": "St Elmo",
+      "x": 0.5,
+      "y": 0.2,
+      "at": 0.2
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.33,
+       0.48
+      ],
+      [
+       0.45,
+       0.42
+      ],
+      [
+       0.6,
+       0.47
+      ]
+     ],
+     "at": "pounded",
+     "dur": 1.4
+    },
+    "note": {
+     "text": "for weeks",
+     "x": 0.7,
+     "y": 0.86,
+     "at": "weeks"
+    },
+    "focus": [
+     0.58,
+     0.55
+    ],
+    "zoom": 1.2,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Women and children carried stones and water up to the walls.",
+   "visual": "Behind a stone wall in the foreground: a townswoman in a headscarf-like beret and a small child walk to the right carrying rocks; the fez narrator walks with them, holding a rock too, then turns to us in admiration",
+   "title": {
+    "white": "Birgu",
+    "gray": "summer 1565"
+   },
+   "cues": {
+    "water": "water",
+    "walls": "walls"
+   },
+   "params": {
+    "foreground": [
+     {
+      "type": "wall",
+      "from": 0,
+      "to": 1
+     }
+    ],
+    "depth": {
+     "far": "city",
+     "sky": true
+    },
+    "cast": [
+     {
+      "who": "woman",
+      "accessory": "beret",
+      "x": 0.1,
+      "to": 0.45,
+      "at": "water",
+      "pose": "walk",
+      "then": "hold",
+      "item": "rock",
+      "face": "right",
+      "scale": 0.95
+     },
+     {
+      "who": "child",
+      "accessory": "beret",
+      "x": 0.02,
+      "to": 0.3,
+      "at": "water",
+      "pose": "walk",
+      "then": "hold",
+      "item": "rock",
+      "face": "right",
+      "scale": 0.6
+     },
+     {
+      "who": "kasif",
+      "x": 0.74,
+      "pose": "hold",
+      "item": "rock",
+      "at": "walls",
+      "then": "point",
+      "dir": "left",
+      "face": "left",
+      "scale": 0.9,
+      "emotion": "happy"
+     }
+    ],
+    "label": {
+     "text": "everyone helped",
+     "x": 0.7,
+     "y": 0.22,
+     "at": "walls"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "In July, boats full of soldiers tried to storm Senglea from the sea, and a hidden battery at the waterline sank almost all of them.",
+   "visual": "Side view: the shore of Senglea on the right with a stone fort; red-pennant galleys row in from the left toward it; on 'hidden' cannon smoke puffs with gold flashes burst from the waterline under the fort, the galleys turn away and scatter; the fez narrator on a left rock ledge points, then jumps back in shock",
+   "title": {
+    "white": "Senglea",
+    "gray": "July"
+   },
+   "cues": {
+    "July": "July",
+    "hidden": "hidden",
+    "sank": "sank"
+   },
+   "params": {
+    "horizon": 0.4,
+    "shore": {
+     "side": "right",
+     "w": 0.3,
+     "fort": true
+    },
+    "ledge": {
+     "side": "left",
+     "y": 0.8,
+     "w": 0.24
+    },
+    "ships": [
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.28,
+      "to": 0.5,
+      "y": 0.5,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "scatter": "sank",
+      "scatter_dir": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.34,
+      "to": 0.5700000000000001,
+      "y": 0.545,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "scatter": "sank",
+      "scatter_dir": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.4,
+      "to": 0.64,
+      "y": 0.59,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "scatter": "sank",
+      "scatter_dir": -1
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.46,
+      "to": 0.71,
+      "y": 0.635,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "scatter": "sank",
+      "scatter_dir": -1
+     }
+    ],
+    "guns": [
+     {
+      "x": 0.76,
+      "y": 0.6,
+      "at": "hidden",
+      "n": 5,
+      "gap": 0.3,
+      "dx": 30
+     }
+    ],
+    "labels": [
+     {
+      "text": "July 1565",
+      "x": 0.3,
+      "y": 0.2,
+      "at": "July",
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.82,
+      "scale": 0.6,
+      "pose": "point",
+      "dir": "right",
+      "face": "right",
+      "at": "sank",
+      "then": "shock"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mt_fort",
+   "text": "Then came the seventh of August. Birgu's wall was breached, and the attackers were pouring in.",
+   "visual": "The long wall of Birgu on its rock across the water on the right, cannon balls arc in from the right edge and burst on the wall; on 'breached' a big gap smashes into the wall; turbaned attackers run along the rock toward the breach on 'pouring'; a red label 'August 7'; the fez narrator on a quay in front left watches, worried, then jumps back in shock",
+   "title": {
+    "white": "Birgu",
+    "gray": "August 7"
+   },
+   "cues": {
+    "seventh": "seventh",
+    "breached": "breached",
+    "pouring": "pouring"
+   },
+   "params": {
+    "sea": 0.74,
+    "hill": false,
+    "forts": [
+     {
+      "x": 0.66,
+      "w": 860,
+      "h": 260,
+      "base": 0.66,
+      "damage": {
+       "from": 0.2,
+       "to": 0.9,
+       "at": "breached",
+       "dur": 1.6
+      },
+      "flag": true
+     }
+    ],
+    "guns": {
+     "at": 0.3,
+     "n": 4,
+     "gap": 0.8,
+     "target": 0,
+     "from": [
+      [
+       1.02,
+       0.42
+      ]
+     ]
+    },
+    "quay": {
+     "side": "left",
+     "w": 0.22,
+     "y": 0.88
+    },
+    "cast": [
+     {
+      "who": "a1",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.24,
+      "to": 0.46,
+      "walk_at": "pouring",
+      "walk_dur": 1.4,
+      "run": true,
+      "y": 0.67,
+      "scale": 0.42,
+      "face": "right"
+     },
+     {
+      "who": "a2",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.18,
+      "to": 0.4,
+      "walk_at": "pouring",
+      "walk_dur": 1.5,
+      "run": true,
+      "y": 0.67,
+      "scale": 0.42,
+      "face": "right"
+     },
+     {
+      "who": "a3",
+      "accessory": "turban",
+      "x": 0.12,
+      "to": 0.34,
+      "walk_at": "pouring",
+      "walk_dur": 1.6,
+      "run": true,
+      "y": 0.67,
+      "scale": 0.42,
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "y": 0.9,
+      "scale": 0.55,
+      "pose": "look",
+      "face": "right",
+      "at": "pouring",
+      "then": "shock",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "August 7",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "seventh",
+      "color": "red",
+      "size": 72
+     }
+    ],
+    "clouds": false
+   }
+  },
+  {
+   "type": "mt_battle",
+   "text": "And then, without warning, they turned around and ran back. Why?",
+   "visual": "Bird's-eye battlefield: the walled town of Birgu (ring wall, towers, red roofs) on the right; three big red attacking blocks press against its wall; on 'turned' their arrows swing round, on 'ran' they rush back to the left and two of them burst into fleeing dots; a red label 'Why?' pops; the small fez narrator on a hill shrugs",
+   "title": {
+    "white": "August 7"
+   },
+   "cues": {
+    "turned": "turned",
+    "ran": "ran",
+    "Why": "Why"
+   },
+   "params": {
+    "town": {
+     "x": 0.84,
+     "y": 0.5,
+     "r": 170,
+     "at": 0,
+     "gate": 180,
+     "label": "Birgu"
+    },
+    "units": [
+     {
+      "id": "a0",
+      "side": "byz",
+      "kind": "block",
+      "w": 230,
+      "h": 110,
+      "x": 0.5,
+      "y": 0.32,
+      "face": 0,
+      "arrow": {
+       "len": 150,
+       "reverse": "turned"
+      },
+      "banner": {
+       "turn": "turned"
+      },
+      "moves": [
+       {
+        "at": 0.1,
+        "x": 0.62,
+        "y": 0.32,
+        "dur": 1.2
+       },
+       {
+        "at": "ran",
+        "x": 0.2,
+        "y": 0.36,
+        "dur": 1.6
+       }
+      ],
+      "scatter": "Why"
+     },
+     {
+      "id": "a1",
+      "side": "byz",
+      "kind": "block",
+      "w": 230,
+      "h": 110,
+      "x": 0.5,
+      "y": 0.5,
+      "face": 0,
+      "arrow": {
+       "len": 150,
+       "reverse": "turned"
+      },
+      "banner": {
+       "turn": "turned"
+      },
+      "moves": [
+       {
+        "at": 0.1,
+        "x": 0.62,
+        "y": 0.5,
+        "dur": 1.2
+       },
+       {
+        "at": "ran",
+        "x": 0.2,
+        "y": 0.5,
+        "dur": 1.6
+       }
+      ]
+     },
+     {
+      "id": "a2",
+      "side": "byz",
+      "kind": "block",
+      "w": 230,
+      "h": 110,
+      "x": 0.5,
+      "y": 0.6799999999999999,
+      "face": 0,
+      "arrow": {
+       "len": 150,
+       "reverse": "turned"
+      },
+      "banner": {
+       "turn": "turned"
+      },
+      "moves": [
+       {
+        "at": 0.1,
+        "x": 0.62,
+        "y": 0.6799999999999999,
+        "dur": 1.2
+       },
+       {
+        "at": "ran",
+        "x": 0.2,
+        "y": 0.64,
+        "dur": 1.6
+       }
+      ],
+      "scatter": "Why"
+     }
+    ],
+    "camp": false,
+    "hills": [
+     {
+      "x": 0.9,
+      "y": 0.88,
+      "r": 90
+     }
+    ],
+    "labels": [
+     {
+      "text": "Why?",
+      "x": 0.4,
+      "y": 0.16,
+      "at": "Why",
+      "color": "red",
+      "size": 90
+     }
+    ],
+    "kasif": {
+     "x": 0.92,
+     "y": 0.9,
+     "scale": 0.5,
+     "face": -1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "Why",
+       "pose": "shrug",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "So Why?",
+   "type": "chapter",
+   "text": "Because of a few riders.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, below it 'So Why?' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "Because",
+    "title": "few",
+    "line": "riders"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "So Why?"
+   }
+  },
+  {
+   "type": "mt_battle",
+   "text": "Inland, the old walled city of Mdina had a small cavalry force, and that day they charged into the Ottoman camp behind the lines.",
+   "visual": "Bird's-eye battlefield: the round walled hill city of Mdina (ring wall, towers, red roofs, a dome) springs in on the left; blue horse riders ride out of it on 'cavalry' and charge right into a top-down tent camp labelled 'camp' on 'charged'; the small fez narrator on a hill points",
+   "title": {
+    "white": "Mdina",
+    "gray": "the cavalry"
+   },
+   "cues": {
+    "Mdina": "Mdina",
+    "cavalry": "cavalry",
+    "charged": "charged",
+    "camp": "camp"
+   },
+   "params": {
+    "units": [
+     {
+      "id": "rid",
+      "side": "sel",
+      "kind": "riders",
+      "x": 0.27,
+      "y": 0.6,
+      "n": 8,
+      "face": 0,
+      "appear": "cavalry",
+      "moves": [
+       {
+        "at": "charged",
+        "x": 0.6,
+        "y": 0.45,
+        "dur": 1.8
+       }
+      ]
+     }
+    ],
+    "camp": {
+     "x": 0.66,
+     "y": 0.42,
+     "n": 9,
+     "r": 130
+    },
+    "hills": [
+     {
+      "x": 0.88,
+      "y": 0.84,
+      "r": 100
+     }
+    ],
+    "town": {
+     "x": 0.16,
+     "y": 0.6,
+     "r": 150,
+     "at": "Mdina",
+     "gate": 0,
+     "label": "Mdina"
+    },
+    "labels": [
+     {
+      "text": "camp",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "camp",
+      "size": 60
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.86,
+     "scale": 0.5,
+     "face": -1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "charged",
+       "pose": "point",
+       "dir": 20
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "The men in the camp panicked. They thought the big Christian army from Sicily had finally landed, and the assault was called off.",
+   "visual": "A tent prop camp: two Ottoman soldiers in turbans jump back in shock, one holds a sign 'SICILY?!' on 'Sicily'; the fez narrator on the right jumps back too, then shrugs on 'called'",
+   "title": {
+    "white": "The camp"
+   },
+   "cues": {
+    "panicked": "panicked",
+    "Sicily": "Sicily",
+    "called": "called"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "house",
+      "x": 0.15,
+      "scale": 0.8
+     },
+     {
+      "type": "sign",
+      "x": 0.86,
+      "scale": 0.8,
+      "text": "camp",
+      "at": 0.2
+     }
+    ],
+    "cast": [
+     {
+      "who": "soldier1",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.32,
+      "scale": 0.9,
+      "pose": "idle",
+      "face": "right",
+      "at": "panicked",
+      "then": "shock"
+     },
+     {
+      "who": "soldier2",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.5,
+      "scale": 0.9,
+      "pose": "idle",
+      "face": "left",
+      "at": "Sicily",
+      "then": "hold",
+      "text": "SICILY?!"
+     },
+     {
+      "who": "kasif",
+      "x": 0.7,
+      "scale": 0.85,
+      "pose": "idle",
+      "face": "left",
+      "at": "panicked",
+      "then": "shock",
+      "seq": [
+       {
+        "at": "called",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "map",
+   "text": "It hadn't landed. But it was coming.",
+   "visual": "Old map of the central Mediterranean: Sicily, Malta, Africa; 'Syracuse' pops up and a red dashed route starts from Sicily toward Malta and stops halfway; red note 'coming...'",
+   "title": {
+    "white": "Sicily"
+   },
+   "cues": {
+    "landed": "landed",
+    "coming": "coming"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.425,
+       0.0735
+      ],
+      [
+       0.55,
+       0.0588
+      ],
+      [
+       0.825,
+       0.0441
+      ],
+      [
+       0.7625,
+       0.191
+      ],
+      [
+       0.7625,
+       0.279
+      ],
+      [
+       0.6625,
+       0.235
+      ],
+      [
+       0.425,
+       0.118
+      ]
+     ],
+     [
+      [
+       0.8375,
+       0.0515
+      ],
+      [
+       0.875,
+       0.0956
+      ],
+      [
+       0.95,
+       0.0294
+      ],
+      [
+       1.05,
+       -0.06
+      ],
+      [
+       0.82,
+       -0.08
+      ]
+     ],
+     [
+      [
+       0.6475,
+       0.3735
+      ],
+      [
+       0.66875,
+       0.375
+      ],
+      [
+       0.6975,
+       0.4
+      ],
+      [
+       0.6875,
+       0.4118
+      ],
+      [
+       0.6625,
+       0.397
+      ]
+     ],
+     [
+      [
+       -0.06,
+       0.191
+      ],
+      [
+       0.1,
+       0.191
+      ],
+      [
+       0.1625,
+       0.265
+      ],
+      [
+       0.25,
+       0.221
+      ],
+      [
+       0.1875,
+       0.338
+      ],
+      [
+       0.2,
+       0.412
+      ],
+      [
+       0.2625,
+       0.5
+      ],
+      [
+       0.21875,
+       0.574
+      ],
+      [
+       0.1375,
+       0.691
+      ],
+      [
+       0.2375,
+       0.735
+      ],
+      [
+       0.3125,
+       0.809
+      ],
+      [
+       0.59875,
+       0.84
+      ],
+      [
+       0.8375,
+       0.912
+      ],
+      [
+       0.8625,
+       0.971
+      ],
+      [
+       1.07,
+       1.12
+      ],
+      [
+       1.07,
+       1.3
+      ],
+      [
+       -0.06,
+       1.3
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Mediterranean Sea",
+      "x": 0.42,
+      "y": 0.6
+     }
+    ],
+    "cities": [
+     {
+      "name": "Malta",
+      "x": 0.68,
+      "y": 0.39,
+      "at": 0.2,
+      "color": "red"
+     },
+     {
+      "name": "Syracuse",
+      "x": 0.786,
+      "y": 0.225,
+      "at": "landed"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.78,
+       0.24
+      ],
+      [
+       0.76,
+       0.28
+      ],
+      [
+       0.735,
+       0.31
+      ]
+     ],
+     "at": "coming",
+     "dur": 1.0
+    },
+    "note": {
+     "text": "coming...",
+     "x": 0.06,
+     "y": 0.86,
+     "at": "coming"
+    },
+    "focus": [
+     0.72,
+     0.3
+    ],
+    "zoom": 1.25,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Now, here's what most people get wrong. Malta wasn't saved by one heroic charge. It was saved by time.",
+   "visual": "Giant Fraunces words: 'Not a charge' appears, then 'Saved by TIME' with TIME in a red box on 'time'; a small fez narrator beside them points at the word",
+   "title": {},
+   "cues": {
+    "w0": "wasn",
+    "w1": "one",
+    "w2": "charge",
+    "w3": "It",
+    "w4": "It",
+    "w5": "time"
+   },
+   "params": {
+    "lines": [
+     "Not a charge.",
+     "Saved by time"
+    ],
+    "highlight": [
+     "time"
+    ],
+    "y": 0.44,
+    "kasif": {
+     "x": 0.87,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "time"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Every day lost at Saint Elmo was a day of summer gone.",
+   "visual": "Horizontal timeline: 'May 18' fleet arrives, 'June 23' St Elmo falls (red, highlighted), 'Aug 7' Birgu, 'Sept 7' relief lands; the marker moves along; a small fez narrator on the right points at the June mark",
+   "title": {
+    "white": "Summer 1565"
+   },
+   "cues": {
+    "day": "day",
+    "Elmo": "Elmo",
+    "summer": "summer",
+    "gone": "gone"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "May 18",
+      "text": "fleet arrives",
+      "at": "day"
+     },
+     {
+      "year": "June 23",
+      "text": "St Elmo falls",
+      "at": "Elmo"
+     },
+     {
+      "year": "Aug 7",
+      "text": "Birgu holds",
+      "at": "summer"
+     },
+     {
+      "year": "Sept 7",
+      "text": "relief lands",
+      "at": "gone"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.62,
+     "pose": "point",
+     "at": "summer",
+     "scale": 0.5,
+     "face": -1,
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "The island had very little fresh water, disease spread through the camps, and powder and food had to cross a thousand miles of sea.",
+   "visual": "Pinned board 'The siege's enemies' with one card: red ✗ items 'little water', 'disease', 'supplies far away' tick in one by one; a red pill 'time ran out' at the bottom",
+   "title": {
+    "white": "The siege",
+    "gray": "why it failed"
+   },
+   "cues": {
+    "water": "water",
+    "disease": "disease",
+    "thousand": "thousand",
+    "sea": "sea."
+   },
+   "params": {
+    "title": "Hidden enemies",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Little water",
+        "mark": "x",
+        "at": "water"
+       },
+       {
+        "text": "Disease",
+        "mark": "x",
+        "at": "disease"
+       },
+       {
+        "text": "Supplies far away",
+        "mark": "x",
+        "at": "thousand"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Time ran out",
+     "color": "red",
+     "at": "sea"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "And the two commanders never agreed.",
+   "visual": "Mustafa and Piyale (turbans) face each other and argue angrily, waving their arms; the fez narrator in front throws up his hands in a shrug",
+   "title": {
+    "white": "Mustafa",
+    "gray": "vs Piyale"
+   },
+   "cues": {
+    "never": "never",
+    "agreed": "agreed"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "mustafa",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.3,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "angry"
+     },
+     {
+      "who": "piyale",
+      "accessory": "turban",
+      "beard": "short",
+      "x": 0.6,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "left",
+      "emotion": "angry",
+      "at": "never",
+      "then": "point",
+      "dir": "forward"
+     },
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "at": "never",
+      "then": "shrug"
+     }
+    ],
+    "label": {
+     "text": "never agreed",
+     "x": 0.45,
+     "y": 0.2,
+     "at": "agreed",
+     "color": "red"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Meanwhile, in Sicily, the viceroy García de Toledo was slowly gathering a relief army.",
+   "visual": "Side view of a Sicilian harbour: blue-pennant galleys and sailing ships gather one by one near the shore with its stone fort on the left; the viceroy (black beard, crown) and the fez narrator stand on the right ledge, the viceroy points at the ships, the narrator looks through binoculars",
+   "title": {
+    "white": "Sicily",
+    "gray": "summer 1565"
+   },
+   "cues": {
+    "Sicily": "Sicily",
+    "gathering": "gathering",
+    "relief": "relief"
+   },
+   "params": {
+    "horizon": 0.42,
+    "shore": {
+     "side": "left",
+     "w": 0.28,
+     "fort": true
+    },
+    "ledge": {
+     "side": "right",
+     "y": 0.78,
+     "w": 0.34
+    },
+    "ships": [
+     {
+      "kind": "galley",
+      "side": "hl",
+      "x": 0.3,
+      "y": 0.55,
+      "scale": 0.5,
+      "face": -1,
+      "depth": 0.0,
+      "row": false,
+      "sail": "furled",
+      "at": "g0"
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.4,
+      "y": 0.5800000000000001,
+      "scale": 0.5,
+      "face": -1,
+      "depth": 0.2,
+      "row": false,
+      "sail": "furled",
+      "at": "g1"
+     },
+     {
+      "kind": "galley",
+      "side": "hl",
+      "x": 0.5,
+      "y": 0.55,
+      "scale": 0.5,
+      "face": -1,
+      "depth": 0.4,
+      "row": false,
+      "sail": "furled",
+      "at": "g2"
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.6000000000000001,
+      "y": 0.5800000000000001,
+      "scale": 0.5,
+      "face": -1,
+      "depth": 0.0,
+      "row": false,
+      "sail": "furled",
+      "at": "g3"
+     },
+     {
+      "kind": "galley",
+      "side": "hl",
+      "x": 0.7,
+      "y": 0.55,
+      "scale": 0.5,
+      "face": -1,
+      "depth": 0.2,
+      "row": false,
+      "sail": "furled",
+      "at": "g4"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Sicily",
+      "x": 0.2,
+      "y": 0.32,
+      "at": "Sicily",
+      "size": 64
+     }
+    ],
+    "cast": [
+     {
+      "who": "garcia",
+      "accessory": "crown",
+      "beard": "black",
+      "x": 0.78,
+      "y": 0.8,
+      "scale": 0.6,
+      "pose": "talk",
+      "face": "left",
+      "at": "gathering",
+      "then": "point",
+      "dir": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.92,
+      "y": 0.8,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "left",
+      "at": "relief",
+      "then": "look"
+     }
+    ]
+   }
+  },
+  {
+   "type": "map",
+   "text": "On the seventh of September, about eight thousand men landed in the north of the island.",
+   "visual": "Old ink map of the island of Malta (and Gozo): 'Mdina' and 'Birgu' marked; a red dashed route comes in from the sea in the north and lands in a northern bay on 'landed'; red note '~8,000 men'",
+   "title": {
+    "white": "September 7"
+   },
+   "cues": {
+    "seventh": "seventh",
+    "eight": "eight",
+    "landed": "landed"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0.36,
+       0.344
+      ],
+      [
+       0.44,
+       0.4375
+      ],
+      [
+       0.5,
+       0.48
+      ],
+      [
+       0.54,
+       0.453
+      ],
+      [
+       0.64,
+       0.531
+      ],
+      [
+       0.72,
+       0.609
+      ],
+      [
+       0.76,
+       0.64
+      ],
+      [
+       0.84,
+       0.75
+      ],
+      [
+       0.82,
+       0.875
+      ],
+      [
+       0.64,
+       0.9375
+      ],
+      [
+       0.5,
+       0.875
+      ],
+      [
+       0.42,
+       0.75
+      ],
+      [
+       0.36,
+       0.5625
+      ]
+     ],
+     [
+      [
+       0.08,
+       0.156
+      ],
+      [
+       0.24,
+       0.094
+      ],
+      [
+       0.38,
+       0.219
+      ],
+      [
+       0.28,
+       0.281
+      ],
+      [
+       0.1,
+       0.25
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "to Sicily",
+      "x": 0.7,
+      "y": 0.12
+     }
+    ],
+    "cities": [
+     {
+      "name": "Mdina",
+      "x": 0.5,
+      "y": 0.67,
+      "at": 0.2
+     },
+     {
+      "name": "Birgu",
+      "x": 0.744,
+      "y": 0.66,
+      "at": 0.4
+     },
+     {
+      "name": "landing",
+      "x": 0.52,
+      "y": 0.47,
+      "at": "landed",
+      "color": "red"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.75,
+       0.05
+      ],
+      [
+       0.62,
+       0.25
+      ],
+      [
+       0.53,
+       0.45
+      ]
+     ],
+     "at": "seventh",
+     "dur": 2.2
+    },
+    "note": {
+     "text": "~8,000 men",
+     "x": 0.06,
+     "y": 0.86,
+     "at": "eight"
+    },
+    "focus": [
+     0.55,
+     0.5
+    ],
+    "zoom": 1.1,
+    "compass": "bl"
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Within days, the great fleet sailed away.",
+   "visual": "Side view of the sea from Malta's shore on the left: red-pennant galleys and sailing ships turn and sail away to the right, getting smaller toward the horizon; the fez narrator on the left ledge watches with binoculars, then lowers them",
+   "title": {
+    "white": "September",
+    "gray": "1565"
+   },
+   "cues": {
+    "away": "away"
+   },
+   "params": {
+    "horizon": 0.42,
+    "shore": {
+     "side": "left",
+     "w": 0.26,
+     "fort": true
+    },
+    "ledge": {
+     "side": "left",
+     "y": 0.8,
+     "w": 0.3
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.3,
+      "to": 0.55,
+      "scatter": "away",
+      "y": 0.52,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "depth": 0.0
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.4,
+      "to": 0.65,
+      "scatter": "away",
+      "y": 0.55,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "depth": 0.2
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.5,
+      "to": 0.75,
+      "scatter": "away",
+      "y": 0.5800000000000001,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "depth": 0.4
+     },
+     {
+      "kind": "sail",
+      "side": "tr",
+      "x": 0.6000000000000001,
+      "to": 0.8500000000000001,
+      "scatter": "away",
+      "y": 0.52,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "depth": 0.0
+     },
+     {
+      "kind": "galley",
+      "side": "tr",
+      "x": 0.7,
+      "to": 0.9500000000000001,
+      "scatter": "away",
+      "y": 0.55,
+      "scale": 0.55,
+      "face": 1,
+      "row": true,
+      "depth": 0.2
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.82,
+      "scale": 0.6,
+      "pose": "look",
+      "face": "right",
+      "at": "away",
+      "then": "idle"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "A City With His Name",
+   "type": "chapter",
+   "text": "Malta was in ruins.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, below it 'A City With His Name' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "Malta",
+    "title": "ruins"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "A City With His Name"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Hundreds of knights and thousands of islanders were dead, and the attackers had lost even more.",
+   "visual": "Pinned board 'The cost' with one card: red ✗ items 'hundreds of knights', 'thousands of Maltese' tick in one by one; a red pill 'attackers lost more' at the bottom",
+   "title": {
+    "white": "The cost"
+   },
+   "cues": {
+    "knights": "knights",
+    "islanders": "islanders",
+    "more": "more."
+   },
+   "params": {
+    "title": "The cost",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Hundreds of knights",
+        "mark": "x",
+        "at": "knights"
+       },
+       {
+        "text": "Thousands of Maltese",
+        "mark": "x",
+        "at": "islanders"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Attackers lost more",
+     "color": "red",
+     "at": "more"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "But Valette did something surprising. He didn't just patch up the old towns.",
+   "visual": "Among broken column props and rubble rocks, the grey-bearded Valette (helmet) stands thinking with his hand on his chin, then points up the hill on 'patch'; the fez narrator walks in and looks surprised",
+   "title": {
+    "white": "Valette",
+    "gray": "after the siege"
+   },
+   "cues": {
+    "surprising": "surprising",
+    "patch": "patch"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "column",
+      "x": 0.15,
+      "scale": 0.9,
+      "rot": -10
+     },
+     {
+      "type": "rock",
+      "x": 0.28,
+      "scale": 0.7
+     },
+     {
+      "type": "house",
+      "x": 0.9,
+      "scale": 0.7
+     }
+    ],
+    "cast": [
+     {
+      "who": "valette",
+      "accessory": "helmet_byz",
+      "beard": "grey",
+      "x": 0.45,
+      "scale": 1.0,
+      "pose": "think",
+      "face": "right",
+      "at": "patch",
+      "then": "point",
+      "dir": 40
+     },
+     {
+      "who": "kasif",
+      "x": 1.05,
+      "to": 0.7,
+      "at": "surprising",
+      "pose": "walk",
+      "then": "shock",
+      "face": "left",
+      "scale": 0.85,
+      "emotion": "surprised"
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "On the bare hill above Saint Elmo, he started a brand new fortress city, and in 1566 its first stone was laid.",
+   "visual": "A flat-topped hill on the left: house and column props pop up on top of it one by one, building a new city; Valette stands at its foot, pointing up the hill the whole time; on '1566' a stone prop drops in and the label '1566: first stone' appears; the fez narrator on the right points, smiling",
+   "title": {
+    "white": "Mount Sciberras"
+   },
+   "cues": {
+    "h0": "hill",
+    "h1": "brand",
+    "h2": "fortress",
+    "h3": "city",
+    "city": "city",
+    "stone": "stone"
+   },
+   "params": {
+    "hill": {
+     "x0": 0,
+     "top": 0.35,
+     "x1": 0.62,
+     "h": 0.15
+    },
+    "props": [
+     {
+      "type": "house",
+      "x": 0.1,
+      "y": 0.6,
+      "scale": 0.55,
+      "at": "h0"
+     },
+     {
+      "type": "house",
+      "x": 0.21000000000000002,
+      "y": 0.6,
+      "scale": 0.55,
+      "at": "h1"
+     },
+     {
+      "type": "house",
+      "x": 0.32,
+      "y": 0.6,
+      "scale": 0.55,
+      "at": "h2"
+     },
+     {
+      "type": "house",
+      "x": 0.43000000000000005,
+      "y": 0.6,
+      "scale": 0.55,
+      "at": "h3"
+     },
+     {
+      "type": "column",
+      "x": 0.54,
+      "y": 0.6,
+      "scale": 0.55,
+      "at": "stone"
+     }
+    ],
+    "cast": [
+     {
+      "who": "valette",
+      "accessory": "helmet_byz",
+      "beard": "grey",
+      "x": 0.68,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "left",
+      "at": "city",
+      "then": "point",
+      "dir": 35
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "at": "stone",
+      "then": "point",
+      "dir": "up",
+      "emotion": "happy"
+     }
+    ],
+    "label": {
+     "text": "1566: first stone",
+     "x": 0.34,
+     "y": 0.3,
+     "at": "stone",
+     "color": "red"
+    },
+    "depth": {
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.4,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Today it is the capital of Malta, and it still carries his name: Valletta.",
+   "visual": "Giant Fraunces words: 'Today's capital:' then 'Valletta' in a red box on 'Valletta'; a small fez narrator beside them waves happily",
+   "title": {},
+   "cues": {
+    "w0": "Today",
+    "w1": "capital",
+    "w2": "Valletta"
+   },
+   "params": {
+    "lines": [
+     "Today's capital:",
+     "Valletta"
+    ],
+    "highlight": [
+     "Valletta"
+    ],
+    "y": 0.44,
+    "kasif": {
+     "x": 0.86,
+     "pose": "wave",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "happy",
+     "at": "Valletta"
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Suleiman never got his revenge. A year after Malta, he died in his tent during a siege in Hungary.",
+   "visual": "Horizontal timeline: '1522' Rhodes, '1565' Malta, '1566' Suleiman dies (red, highlighted) on 'died'; a small fez narrator on the right lowers his head",
+   "title": {
+    "white": "Suleiman",
+    "gray": "1566"
+   },
+   "cues": {
+    "Suleiman": "Suleiman",
+    "Malta": "Malta",
+    "died": "died"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1522",
+      "text": "Rhodes",
+      "at": "Suleiman"
+     },
+     {
+      "year": "1565",
+      "text": "Malta",
+      "at": "Malta"
+     },
+     {
+      "year": "1566",
+      "text": "Suleiman dies",
+      "at": "died"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.62,
+     "pose": "think",
+     "at": "died",
+     "scale": 0.5,
+     "face": -1,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "mt_fort",
+   "text": "And the little fort they lost? Rebuilt, it still guards the tip of Valletta. Losing it bought the summer that made the city possible.",
+   "visual": "Peaceful daylight: Fort St Elmo stands rebuilt and whole on its rock at the tip of a peninsula, a flag flying; hand label 'Fort St Elmo today' on 'Rebuilt'; the big fez narrator on the quay in front points at the fort on 'guards'; on 'summer' a red label 'lost fort = saved summer' appears and he smiles",
+   "title": {
+    "white": "Valletta",
+    "gray": "today"
+   },
+   "cues": {
+    "rebuilt": "Rebuilt",
+    "guards": "guards",
+    "summer": "summer"
+   },
+   "params": {
+    "sea": 0.72,
+    "hill": {
+     "side": "right",
+     "w": 0.5,
+     "h": 0.12
+    },
+    "clouds": false,
+    "forts": [
+     {
+      "x": 0.5,
+      "w": 640,
+      "h": 230,
+      "base": 0.62,
+      "damage": 0,
+      "flag": true
+     }
+    ],
+    "quay": {
+     "side": "left",
+     "w": 0.24,
+     "y": 0.86
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.9,
+      "scale": 0.85,
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "guards",
+        "pose": "point",
+        "dir": 25
+       },
+       {
+        "at": "summer",
+        "pose": "talk",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Fort St Elmo today",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "rebuilt",
+      "size": 64
+     },
+     {
+      "text": "lost fort = saved summer",
+      "x": 0.62,
+      "y": 0.13,
+      "at": "summer",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So here's my question for you. Did Malta survive because of courage, or because of one month lost at a tiny fort? Tell me in the comments.",
+   "visual": "Two sign props: 'COURAGE?' on the left and 'ONE LOST MONTH?' on the right; the fez narrator in the middle points to the left sign on 'courage', then to the right sign on 'month', then shrugs to us on 'comments'",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "courage": "courage",
+    "month": "month",
+    "comments": "comments"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.2,
+      "scale": 1.0,
+      "text": "COURAGE?",
+      "at": "courage"
+     },
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 1.0,
+      "text": "ONE LOST MONTH?",
+      "at": "month"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "courage",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       },
+       {
+        "at": "month",
+        "pose": "point",
+        "dir": "right",
+        "face": "right"
+       },
+       {
+        "at": "comments",
+        "pose": "shrug",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": true
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  }
+ ]
+}

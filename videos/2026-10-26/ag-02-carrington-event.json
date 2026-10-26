@@ -1,0 +1,684 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "carrington-event",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "The",
+   "sky",
+   "caught fire"
+  ],
+  "highlight": [
+   "fire"
+  ],
+  "scene": 0,
+  "t": 1.9,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Carrington Event: When Telegraphs Ran Without Batteries",
+  "description": "Carrington Event: in 1859 the night sky caught fire, and telegraphs kept working with their batteries unplugged. How did a storm from the Sun power the wires?\n\nOn September 1, 1859, astronomer Richard Carrington was sketching sunspots when two blinding flashes of white light burst from the Sun. About 17 hours later a huge geomagnetic storm hit Earth. Auroras glowed as far south as Cuba, and gold miners in the Rocky Mountains got up to make breakfast in the middle of the night. Telegraph lines threw sparks, and operators between Boston and Portland, Maine, disconnected their batteries and kept sending messages on the current the storm induced in the long wires, for about two hours.\n\nSubscribe to Stickstory for a strange true story every day. Would you have believed it was morning? Tell me in the comments!\n\n#shorts #carringtonevent #solarstorm #stickstory",
+  "tags": [
+   "carrington event",
+   "carrington event 1859",
+   "the carrington event",
+   "solar storm 1859",
+   "richard carrington",
+   "solar storm",
+   "geomagnetic storm",
+   "solar flare",
+   "northern lights",
+   "aurora borealis",
+   "telegraph history",
+   "space weather",
+   "history of science",
+   "weird history",
+   "space facts",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-26T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "ce_sky",
+   "text": "In 1859, the sky caught fire.",
+   "visual": "Night over a small 1859 town (houses with lit gold windows, a church spire, hills behind, crescent moon, stars); red aurora curtains with gold rays and a green hem blaze low across the sky; the big fez narrator in the left foreground jumps back in shock, and jumps again as the aurora flares on 'fire'; a small townsman by the church jumps back in shock too.",
+   "title": {
+    "white": "1859"
+   },
+   "cues": {
+    "hit": "fire"
+   },
+   "params": {
+    "ground": 0.6,
+    "aurora": {
+     "y": 0.4,
+     "h": 0.22,
+     "at": -0.6,
+     "dur": 1.4,
+     "amp": 36
+    },
+    "flare_at": "hit",
+    "stars": 16,
+    "moon": {
+     "x": 0.86,
+     "y": 0.19,
+     "r": 44
+    },
+    "ridge": {
+     "y": 0.53,
+     "h": 0.08,
+     "n": 3,
+     "sharp": false
+    },
+    "town": {
+     "x0": 0.42,
+     "x1": 1.05,
+     "s": 1.0
+    },
+    "cast": [
+     {
+      "who": "man",
+      "x": 0.62,
+      "y": 0.6,
+      "scale": 0.48,
+      "pose": "shock",
+      "dir": 70,
+      "face": "right",
+      "emotion": "surprised"
+     }
+    ],
+    "kasif": {
+     "x": 0.28,
+     "y": 0.6,
+     "scale": 1.18,
+     "pose": "shock",
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "sky": {
+     "top": 0.14
+    }
+   }
+  },
+  {
+   "type": "ce_scope",
+   "text": "Picture this: astronomer Richard Carrington was sketching sunspots.",
+   "visual": "A Victorian observatory room: a brass telescope on a tripod points out of a window at the Sun and projects its disc onto a white screen on an easel; bearded Richard Carrington stands beside the screen and pencils in a group of dark sunspots one by one on 'sketching'.",
+   "title": {
+    "white": "September 1",
+    "gray": "1859"
+   },
+   "cues": {
+    "sk": "sketching",
+    "hit": "sunspots"
+   },
+   "params": {
+    "mode": "wide",
+    "sketch_at": "sk",
+    "disc": {
+     "x": 0.64,
+     "y": 0.36,
+     "r": 150
+    },
+    "window": {
+     "x": 0.2,
+     "y": 0.23
+    },
+    "cast": [
+     {
+      "who": "man",
+      "beard": "black",
+      "x": 0.89,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "point",
+      "dir": 25,
+      "face": "left",
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "sk",
+        "pose": "point",
+        "dir": 10
+       },
+       {
+        "at": 1.6,
+        "pose": "point",
+        "dir": 22
+       },
+       {
+        "at": 2.0,
+        "pose": "point",
+        "dir": 6
+       },
+       {
+        "at": 2.4,
+        "pose": "point",
+        "dir": 18
+       },
+       {
+        "at": "hit",
+        "pose": "think",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "ce_scope",
+   "text": "Two blinding flashes burst from the Sun.",
+   "visual": "Close-up of the projected Sun on the screen with its sunspot group; on 'flashes' two kidney-shaped white-light kernels with gold halos burst out of the spots, gold rays shoot around the disc and the picture jolts; the fez narrator at the lower right shields himself and jumps back in shock.",
+   "title": {
+    "white": "Two flashes",
+    "gray": "white light"
+   },
+   "cues": {
+    "f": "flashes",
+    "hit": "burst"
+   },
+   "params": {
+    "mode": "disc",
+    "flare_at": "f",
+    "disc": {
+     "x": 0.43,
+     "y": 0.37,
+     "r": 350
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.62,
+     "scale": 0.78,
+     "pose": "point",
+     "dir": 35,
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "f",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "ce_map",
+   "text": "Within a day, auroras glowed even over Cuba.",
+   "visual": "An old parchment map of North America and the Caribbean; a red aurora curtain band with gold rays and a green hem slides south from Canada across the United States, a dashed red front line and a falling latitude number follow it, and on 'Cuba' Cuba gets a red ring and a handwritten 'CUBA'; the fez narrator at the lower right points at it.",
+   "title": {
+    "white": "17 hours",
+    "gray": "Sun to Earth"
+   },
+   "cues": {
+    "go": "auroras",
+    "hit": "Cuba"
+   },
+   "params": {
+    "from": 62,
+    "to": 22,
+    "at": "go",
+    "dur": 2.0,
+    "target": {
+     "name": "CUBA",
+     "lon": -79.5,
+     "lat": 21.8,
+     "at": "hit"
+    },
+    "kasif": {
+     "x": 0.89,
+     "y": 0.6,
+     "scale": 0.62,
+     "pose": "point",
+     "dir": -20,
+     "face": "left",
+     "emotion": "surprised"
+    },
+    "band": 190,
+    "op": 0.55
+   }
+  },
+  {
+   "type": "ce_sky",
+   "text": "Miners in the Rockies got up to make breakfast.",
+   "visual": "A night camp under snowy Rocky Mountain peaks, a dark night sky with red aurora curtains and a crescent moon; a miner in a slouch hat holds a frying pan with two eggs over a crackling campfire next to his tent; the fez narrator on the right watches through binoculars, then points at the pan on 'breakfast'.",
+   "title": {
+    "white": "Rocky Mountains"
+   },
+   "cues": {
+    "hit": "breakfast"
+   },
+   "params": {
+    "ground": 0.6,
+    "aurora": {
+     "y": 0.31,
+     "h": 0.11,
+     "at": -2,
+     "dur": 1,
+     "amp": 26
+    },
+    "stars": 10,
+    "moon": {
+     "x": 0.14,
+     "y": 0.18,
+     "r": 40
+    },
+    "ridge": {
+     "y": 0.52,
+     "h": 0.2,
+     "n": 3,
+     "sharp": true,
+     "snow": true
+    },
+    "camp": {
+     "tent": {
+      "x": 0.17,
+      "s": 0.75
+     },
+     "fire": {
+      "x": 0.55,
+      "s": 0.75
+     },
+     "pan": 0
+    },
+    "cast": [
+     {
+      "who": "man",
+      "accessory": "slouch",
+      "x": 0.37,
+      "y": 0.6,
+      "scale": 0.78,
+      "pose": "point",
+      "dir": -10,
+      "face": "right",
+      "emotion": "happy"
+     }
+    ],
+    "kasif": {
+     "x": 0.86,
+     "y": 0.6,
+     "scale": 0.75,
+     "pose": "look",
+     "face": "left",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": -10,
+       "emotion": "happy"
+      }
+     ]
+    },
+    "sky": {
+     "top": 0.14
+    }
+   }
+  },
+  {
+   "type": "ce_sky",
+   "text": "I would too: it looked like morning.",
+   "visual": "Close on the camp: the big fez narrator stands by the campfire under snowy peaks and a blazing red aurora on a dark night sky, waving as if greeting the dawn, then shrugs on 'morning' as a red 'MORNING?' tag pops up.",
+   "title": {
+    "white": "Night camp"
+   },
+   "cues": {
+    "hit": "morning"
+   },
+   "params": {
+    "ground": 0.6,
+    "aurora": {
+     "y": 0.31,
+     "h": 0.11,
+     "at": -2,
+     "dur": 1,
+     "amp": 26
+    },
+    "stars": 10,
+    "moon": {
+     "x": 0.14,
+     "y": 0.18,
+     "r": 40
+    },
+    "ridge": {
+     "y": 0.5,
+     "h": 0.18,
+     "n": 4,
+     "sharp": true,
+     "snow": true
+    },
+    "camp": {
+     "fire": {
+      "x": 0.7,
+      "s": 0.9
+     },
+     "pan": false
+    },
+    "cast": [],
+    "labels": [
+     {
+      "text": "MORNING?",
+      "x": 0.66,
+      "y": 0.33,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "box": true,
+      "font": "hand"
+     }
+    ],
+    "kasif": {
+     "x": 0.3,
+     "y": 0.6,
+     "scale": 1.0,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "sky": {
+     "top": 0.14
+    }
+   }
+  },
+  {
+   "type": "ce_wire",
+   "text": "Then the telegraphs threw sparks.",
+   "visual": "A telegraph office: desk with a Morse key, a sounder, battery jars and a paper tape, the line wire running out of a window to a pole; on 'threw' sparks burst from the key, the sounder and the window wire, the paper tape catches fire; the operator on the left jumps back in shock, the fez narrator on the right jumps back too.",
+   "title": {
+    "white": "Telegraphs"
+   },
+   "cues": {
+    "go": "threw",
+    "hit": "sparks"
+   },
+   "params": {
+    "mode": "spark",
+    "spark_at": "go",
+    "cast": [
+     {
+      "who": "man",
+      "beard": "short",
+      "x": 0.16,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "point",
+      "dir": -25,
+      "face": "right",
+      "seq": [
+       {
+        "at": "go",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.6,
+     "scale": 0.72,
+     "pose": "point",
+     "dir": 10,
+     "face": "left",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Here's the wild part.",
+   "visual": "Giant Fraunces words slam in one by one: 'Here's the', then 'wild part' with 'wild' in a red box; the fez narrator at the lower right rubs his chin, thinking.",
+   "title": {},
+   "cues": {
+    "w0": "here",
+    "w1": "here",
+    "w2": "wild",
+    "w3": "wild"
+   },
+   "params": {
+    "lines": [
+     "Here's the",
+     "wild part"
+    ],
+    "highlight": [
+     "wild"
+    ],
+    "y": 0.26,
+    "kasif": {
+     "x": 0.82,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.62,
+     "emotion": "happy",
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "ce_wire",
+   "text": "Boston operators unplugged their batteries, and messages kept going.",
+   "visual": "The same telegraph office: on 'unplugged' the lead pops off the battery jars, a big red cross slams over them with a red 'NO BATTERY' stamp just above; the Morse key keeps tapping by itself and gold pulses run along the wire out of the window toward a 'PORTLAND' sign; the operator on the right points at the jars, the fez narrator on the left jumps back in shock on 'kept'.",
+   "title": {
+    "white": "Boston",
+    "gray": "no batteries"
+   },
+   "cues": {
+    "un": "unplugged",
+    "msg": "messages",
+    "hit": "kept"
+   },
+   "params": {
+    "mode": "unplug",
+    "unplug_at": "un",
+    "flow_at": "msg",
+    "sign": {
+     "text": "PORTLAND",
+     "at": "msg",
+     "x": 0.68,
+     "y": 0.165
+    },
+    "stamp": {
+     "text": "NO BATTERY",
+     "at": "un",
+     "x": 0.55,
+     "y": 0.4,
+     "size": 76
+    },
+    "cast": [
+     {
+      "who": "man",
+      "beard": "short",
+      "x": 0.93,
+      "y": 0.6,
+      "scale": 0.78,
+      "pose": "point",
+      "dir": -20,
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "kasif": {
+     "x": 0.15,
+     "y": 0.6,
+     "scale": 0.72,
+     "pose": "point",
+     "dir": -15,
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "clock": false
+   }
+  },
+  {
+   "type": "ce_storm",
+   "text": "The storm was pushing current down the wires.",
+   "visual": "Diagram on parchment: a big gold Sun at the upper left throws a stream of gold and red particles at a big Earth (upper right) whose bold ink field-line loops are squeezed on the Sun side and stretched behind it, shaking when the storm hits on 'storm'; below, a telegraph line between two poles glows and gold current pulses race along it on 'current'; a red handwritten 'SOLAR STORM' tag sits over the stream; the fez narrator stands left of the first pole, points up at the storm, then points at the glowing wire on 'current'.",
+   "title": {
+    "white": "The cause",
+    "gray": "solar storm"
+   },
+   "cues": {
+    "s": "storm",
+    "hit": "current"
+   },
+   "params": {
+    "at": 0.0,
+    "current_at": "hit",
+    "labels": [
+     {
+      "text": "SOLAR STORM",
+      "x": 0.5,
+      "y": 0.165,
+      "at": "s",
+      "size": 56,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.13,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "look",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "s",
+       "pose": "point",
+       "dir": 60,
+       "emotion": "surprised"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": -5,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "sun": {
+     "x": 0.25,
+     "y": 0.29,
+     "r": 140
+    },
+    "earth": {
+     "x": 0.78,
+     "y": 0.3,
+     "r": 150
+    }
+   }
+  },
+  {
+   "type": "ce_sky",
+   "text": "For two hours, the power came from the sky.",
+   "visual": "Night hills with a line of telegraph poles running into the distance under a blazing red aurora; on 'power' gold-and-red strikes reach down from the aurora into the wires and gold pulses race along them; a red '2 HOURS' stamp slams in; the fez narrator on the left points up at the sky, delighted.",
+   "title": {
+    "white": "Two hours",
+    "gray": "sky power"
+   },
+   "cues": {
+    "h": "hours",
+    "go": "power",
+    "hit": "sky"
+   },
+   "params": {
+    "ground": 0.6,
+    "aurora": {
+     "y": 0.34,
+     "h": 0.13,
+     "at": -2,
+     "dur": 1,
+     "amp": 30
+    },
+    "flare_at": "go",
+    "stars": 14,
+    "moon": false,
+    "ridge": {
+     "y": 0.53,
+     "h": 0.1,
+     "n": 3,
+     "sharp": false
+    },
+    "poles": {
+     "n": 4,
+     "x0": 0.4,
+     "x1": 0.97,
+     "h": 0.24,
+     "current_at": "go"
+    },
+    "stamp": {
+     "text": "2 HOURS",
+     "at": "h",
+     "x": 0.62,
+     "y": 0.2,
+     "size": 110
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "go",
+       "pose": "point",
+       "dir": 60,
+       "emotion": "happy"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 75,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "sky": {
+     "top": 0.14
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,555 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "juliane-koepcke",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "She fell",
+   "10,000 feet"
+  ],
+  "highlight": [
+   "fell"
+  ],
+  "scene": 2,
+  "t": 2.2,
+  "kasif": {
+   "pose": "shock",
+   "x": 250,
+   "y": 1880,
+   "face": 1,
+   "scale": 1.1
+  }
+ },
+ "youtube": {
+  "title": "Juliane Koepcke: How She Survived a Fall From the Sky",
+  "description": "Juliane Koepcke fell about 10,000 feet over the Amazon in 1971 and lived. But how did a 17-year-old walk out of the rainforest alone?\n\nOn Christmas Eve 1971, lightning struck LANSA Flight 508 over Peru and the plane broke apart. Juliane, still strapped to her row of seats, was the only one of 92 people on board to survive the crash. With a broken collarbone and one sandal, she followed a stream downstream, the rule her father had taught her, until loggers found her about 11 days later.\n\nSubscribe to Stickstory for a true survival story every day. What would you do first if you were lost in the jungle? Tell me in the comments!\n\n#shorts #julianekoepcke #survivalstory #stickstory",
+  "tags": [
+   "juliane koepcke",
+   "juliane koepcke story",
+   "juliane koepcke plane crash",
+   "juliane koepcke survival",
+   "lansa flight 508",
+   "girl who fell from the sky",
+   "plane crash survivor",
+   "sole survivor",
+   "amazon survival story",
+   "jungle survival",
+   "1971 plane crash peru",
+   "survival stories",
+   "true survival story",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-26T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "jk_fall",
+   "text": "She fell 10,000 feet and lived.",
+   "visual": "Open sky: a torn-out row of three blue airline seats, tilted about 20 degrees, tumbles down while clouds and speed lines rush upwards; the girl strapped into the middle seat (hair blown up, arms flailing, scared face); clear sky below it, then the green rainforest canopy; the big fez narrator stands on the treetops at the left looking up through binoculars, then jumps back in shock on 'lived'.",
+   "title": {
+    "white": "Peru",
+    "gray": "1971"
+   },
+   "cues": {
+    "hit": "lived"
+   },
+   "params": {
+    "seat": {
+     "x": 0.64,
+     "y": 0.32,
+     "s": 1.05
+    },
+    "canopy": {
+     "y": 0.665,
+     "rise": 40
+    },
+    "kasif": {
+     "x": 0.21,
+     "y": 0.64,
+     "scale": 1.0,
+     "pose": "look",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "jk_storm",
+   "text": "In 1971, lightning broke her plane apart over the Amazon.",
+   "visual": "A four-engine airliner with a blue stripe flies right through dark storm clouds and rain; on 'lightning' a gold bolt strikes the right wing (ink burst, camera shake), the wing catches fire and trails smoke; on 'apart' the fuselage breaks in two behind the wing, both halves tumble and drop while debris flies; red handwritten 'DEC 24, 1971' at the top right.",
+   "title": {
+    "white": "Christmas Eve"
+   },
+   "cues": {
+    "bolt": "lightning",
+    "split": "apart",
+    "hit": "lightning"
+   },
+   "params": {
+    "plane": {
+     "x": 0.5,
+     "y": 0.42,
+     "s": 1.05
+    },
+    "bolt": "bolt",
+    "split": "split",
+    "labels": [
+     {
+      "text": "DEC 24, 1971",
+      "x": 0.7,
+      "y": 0.2,
+      "size": 76,
+      "at": 0.3,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "jk_fall",
+   "text": "Seventeen-year-old Juliane fell, still strapped to her seat.",
+   "visual": "Close-up of the tilted, falling seat row with no floor under it: Juliane in the middle seat, hair streaming upwards, arms flailing; clouds and dark speed streaks rush past; a red box 'AGE 17' pops in at the top right; on 'strapped' her seat belt flashes red and the row jolts; the canopy is far below.",
+   "title": {
+    "white": "Juliane Koepcke"
+   },
+   "cues": {
+    "belt": "strapped"
+   },
+   "params": {
+    "seat": {
+     "x": 0.57,
+     "y": 0.44,
+     "s": 1.2,
+     "belt": "belt"
+    },
+    "canopy": {
+     "y": 0.72,
+     "rise": 20
+    },
+    "labels": [
+     {
+      "text": "AGE 17",
+      "x": 0.76,
+      "y": 0.17,
+      "size": 80,
+      "at": 0.3,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "jk_tally",
+   "text": "Of 92 people, only she survived.",
+   "visual": "A grid of 92 tiny ink people pops in under '92 ON BOARD'; on 'only' all of them fade to pale paper except one, which grows, turns red and gets a red ink ring, while the caption swaps to a red box '1 SURVIVED'; the fez narrator at the right talks, then puts his hand on his chin, worried.",
+   "title": {
+    "white": "Flight 508"
+   },
+   "cues": {
+    "only": "only",
+    "hit": "only"
+   },
+   "params": {
+    "n": 92,
+    "survivor": 60,
+    "at": "only",
+    "before": {
+     "text": "92 ON BOARD"
+    },
+    "after": {
+     "text": "1 SURVIVED"
+    },
+    "kasif": {
+     "x": 0.87,
+     "y": 0.6,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "only",
+       "pose": "think",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "jk_jungle",
+   "text": "Here's the thing: the fall was the easy part.",
+   "visual": "Rainforest floor: giant trunks, hanging vines, ferns, roots and leaf litter; the empty seat row lies tilted on the ground at the left; Juliane (long hair, one sandal, bandaged shoulder) sits on a root, worried; the fez narrator walks in from the right and points up at the endless trees; on 'easy' a green handwritten 'EASY PART' with an arrow points at the seat row.",
+   "title": {
+    "white": "The jungle"
+   },
+   "cues": {
+    "hit": "easy"
+   },
+   "params": {
+    "top": 0.18,
+    "seat": {
+     "x": 0.27,
+     "s": 0.8,
+     "rot": -12
+    },
+    "girl": {
+     "x": 0.62,
+     "scale": 0.85,
+     "pose": "sit",
+     "face": "left",
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "EASY PART",
+      "x": 0.3,
+      "y": 0.33,
+      "size": 72,
+      "at": "hit",
+      "color": "green",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "arrows": [
+     {
+      "from": [
+       0.3,
+       0.365
+      ],
+      "to": [
+       0.27,
+       0.45
+      ],
+      "at": "hit",
+      "color": "green"
+     }
+    ],
+    "kasif": {
+     "x": 0.84,
+     "scale": 0.9,
+     "pose": "point",
+     "dir": 70,
+     "face": "left",
+     "emotion": "worried",
+     "walk_in": 0.8
+    }
+   }
+  },
+  {
+   "type": "jk_jungle",
+   "text": "Her father had taught her one rule: follow water downstream.",
+   "visual": "Flashback in the jungle: a clear blue stream runs just below the characters' feet; Juliane's father (bearded, no hat) talks, then on 'rule' points firmly down-right at the stream; on 'follow' a blue box 'FOLLOW THE WATER' appears at the top, a blue arrow draws itself along the stream in the downstream direction and the fez narrator points the same way.",
+   "title": {
+    "white": "Dad's rule"
+   },
+   "cues": {
+    "rule": "rule",
+    "hit": "follow"
+   },
+   "params": {
+    "top": 0.18,
+    "ground": 0.52,
+    "seat": false,
+    "girl": false,
+    "stream": {
+     "y": 0.025,
+     "h": 0.065
+    },
+    "cast": [
+     {
+      "x": 0.3,
+      "scale": 0.9,
+      "beard": "short",
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "rule",
+        "pose": "point",
+        "dir": -32
+       }
+      ]
+     }
+    ],
+    "arrows": [
+     {
+      "from": [
+       0.1,
+       0.565
+      ],
+      "to": [
+       0.92,
+       0.57
+      ],
+      "at": "hit",
+      "color": "blue"
+     }
+    ],
+    "labels": [
+     {
+      "text": "FOLLOW THE WATER",
+      "x": 0.5,
+      "y": 0.25,
+      "size": 80,
+      "at": "hit",
+      "color": "blue",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.68,
+     "y": 0.52,
+     "scale": 0.9,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": -32,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "jk_arm",
+   "text": "She walked alone, injured, with fly larvae in her arm.",
+   "visual": "Close-up framed by big jungle leaves: Juliane's arm (blue dress sleeve at the left) sways as she walks, a clean bandage wrapped above the elbow; two big ink flies circle the bandage with buzz trails, on 'larvae' three more fly in; the fez narrator at the lower right, hand on chin, jumps back in shock on 'larvae'.",
+   "title": {
+    "white": "Alone",
+    "gray": "injured"
+   },
+   "cues": {
+    "hit": "larvae"
+   },
+   "params": {
+    "flies": [
+     2,
+     5
+    ],
+    "kasif": {
+     "x": 0.84,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "think",
+     "face": -1,
+     "emotion": "worried",
+     "then": "shock"
+    }
+   }
+  },
+  {
+   "type": "jk_river",
+   "text": "Could you do that for eleven days?",
+   "visual": "The stream has become a wide river; Juliane keeps walking with flies around her arm, the narrator behind her; at the top a 'DAY 1' counter on a parchment card ticks up to a red 'DAY 11' with tally marks.",
+   "title": {
+    "white": "Downstream",
+    "gray": "11 days"
+   },
+   "cues": {
+    "hit": "eleven"
+   },
+   "params": {
+    "top": 0.17,
+    "widen": [
+     0.45,
+     0.9
+    ],
+    "days": {
+     "from": 1,
+     "to": 11,
+     "at": 0.1,
+     "y": 0.27
+    },
+    "girl": {
+     "x": 0.58,
+     "scale": 0.8,
+     "pose": "walk",
+     "face": "right",
+     "emotion": "worried",
+     "flies": true
+    },
+    "kasif": {
+     "x": 0.25,
+     "scale": 0.8,
+     "pose": "walk",
+     "face": "right",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "jk_rescue",
+   "text": "She did, until loggers found her.",
+   "visual": "The wide river: a hut on stilts at the far right, a canoe on the water; two bearded loggers stand in front of the hut, one jumps in surprise, the other waves; Juliane stops on the bank and smiles, the fez narrator behind her waves happily; a green 'FOUND!' box pops in at the top.",
+   "title": {
+    "white": "Rescued"
+   },
+   "cues": {
+    "hit": "found"
+   },
+   "params": {
+    "top": 0.17,
+    "hut": {
+     "x": 0.86,
+     "s": 0.65
+    },
+    "canoe": {
+     "x": 0.5,
+     "s": 0.75
+    },
+    "girl": {
+     "x": 0.42,
+     "scale": 0.8,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "idle",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.16,
+     "scale": 0.8,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "loggers": [
+     {
+      "x": 0.62,
+      "scale": 0.82,
+      "pose": "idle",
+      "face": "right",
+      "beard": "black",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "x": 0.75,
+      "scale": 0.82,
+      "pose": "talk",
+      "face": "left",
+      "beard": "short",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "FOUND!",
+      "x": 0.5,
+      "y": 0.27,
+      "size": 110,
+      "at": "hit",
+      "color": "green",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "jk_end",
+   "text": "The fall was luck. The walk out was her father's lesson.",
+   "visual": "Giant Fraunces words spring in: 'FALL: LUCK.' then 'WALK: LESSON.' with 'LESSON.' in a red box; a trail of ink footprints draws itself across the page and the fez narrator walks in along it, then points up at 'LESSON.', smiling.",
+   "title": {},
+   "cues": {
+    "fall": "fall",
+    "luck": "luck",
+    "walk": "walk",
+    "hit": "lesson"
+   },
+   "params": {
+    "lines": [
+     {
+      "words": [
+       "FALL:",
+       "LUCK."
+      ],
+      "at": [
+       "fall",
+       "luck"
+      ],
+      "y": 0.17,
+      "size": 130
+     },
+     {
+      "words": [
+       "WALK:",
+       "LESSON."
+      ],
+      "at": [
+       "walk",
+       "hit"
+      ],
+      "y": 0.265,
+      "size": 130
+     }
+    ],
+    "highlight": "LESSON.",
+    "steps": {
+     "y": 0.575
+    },
+    "kasif": {
+     "x": 0.7,
+     "y": 0.6,
+     "scale": 1.0,
+     "pose": "point",
+     "dir": 60,
+     "face": "right",
+     "emotion": "happy",
+     "walk_in": 1.4
+    }
+   }
+  }
+ ]
+}
