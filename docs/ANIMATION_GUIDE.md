@@ -7,19 +7,25 @@ okur. Amaç: farklı ajanların yazdığı sahneler aynı defterden çıkmış g
 
 ## Görsel dil
 
-- **Kâğıt + mürekkep.** Zemini motor çizer (parşömen dokusu, lekeler, vinyet: `parchment-theme.js`);
-  sahneler şeffaftır, üstüne mürekkep çizer. Düz renk/gradyan zemin, parlak 3D, neon, emoji ikon yasak.
+- **Kâğıt + mürekkep + dünya.** Zemini motor çizer (parşömen dokusu, lekeler, vinyet: `parchment-theme.js`) ve
+  sahnenin dekorunu (`"set"`, `sets.js`: gökyüzü, ufuk, orta plan, zemin) kâğıda mürekkep-yıkama olarak basar;
+  sahneler şeffaftır, üstüne mürekkep çizer. Yeni sahne tipi kendi gökyüzünü/zeminini çizmez, dekora bırakır;
+  zemin çizgisi y ≈ 1100–1200 (dikey) olsun ki dekorun zemini ayakların altına otursun (BRAND §5.1). Düz renk/gradyan zemin, parlak 3D, neon, emoji ikon yasak.
 - **Renk:** sadece BRAND §3 token'ları: `THEME_PARCHMENT` (`paper`, `paperLight`, `paperDark`, `stain`,
-  `ink`, `inkSoft`, `blue`, `red`, `gold`, `green`, `hat`, `hatBand`) ya da `_ink.js`'teki `INK`. Elle hex yazma: renkler videoya göre değişir (`scenes/studio/palettes.json`, 5 palet), token kullanan sahne her palette doğru görünür.
+  `ink`, `inkSoft`, `blue`, `red`, `gold`, `green`, `hat`, `hatBand`) ya da `_ink.js`'teki `INK`. Elle hex yazma: renkler videoya göre değişir (`scenes/studio/palettes.json`: Düşün Bakalım'ın 5 sıcak, Stickstory'nin 4 soğuk `ag-` seti), token kullanan sahne her palette doğru görünür.
 - **Çizgi:** 5–7 px `ink`, yuvarlak uç; dolgu yok ya da `paperLight`. Her çizgi saniyede 8 kez "kaynar"
   (`boil()`, `inkPath()`, `inkLoop()`, `inkCircle()` — `shots/_ink.js`); sabit vektör görünümü yok.
-- **Yazı:** başlık/dev yazı Fraunces 800–900, altyazı Lora 700 (motor), el yazısı etiket Patrick Hand
+- **Yazı:** başlık/dev yazı Fraunces 800–900, altyazı Lora 700 (motor; Stickstory'de kicker/altyazı/kapak Zilla Slab), el yazısı etiket Patrick Hand
   (`INK_FONT`). En küçük yazı 1080 genişlikte 44 px. Bir sahnede en fazla 5 kelime sahne yazısı (altyazı hariç).
-- **Kaşif** (`shots/kasif.js`, `KASIF.create()`): sahnelerin en az yarısında ve her seferinde bir eylem yapar
-  (yürür, işaret eder, şaşırır, dürbünle bakar). Şapkasını asla çıkarmaz, ağzı sabittir. Dönem karakterleri
+- **Kaşif** (`shots/kasif.js`, `KASIF.create()`): **sunucudur**, sahnelerin %15–25'inde (en fazla %35, lint):
+  açılış, bölüm dönüşü, kilit an, kapanış; göründüğünde bir eylem yapar (işaret eder, şaşırır, dürbünle bakar),
+  kenarda seyirci olarak durmaz. Diğer sahneleri olayın kendisi doldurur (`params.kasif` / `cast` olmadan). Şapkasını asla çıkarmaz, ağzı sabittir. Dönem karakterleri
   aynı çöp adam stilinde ama şapkasız, tek aksesuarla (`accessory`).
-- **Derinlik:** uzak plan (tepeler, şehir silüeti, `backdrop`), orta plan (karakterler, nesneler), ön plan
-  (kırpılmış direk/halat, `depth.near`); yavaş kamera itmesi (`cam`) sırasında katmanlar farklı hızda kayar.
+- **Derinlik:** dekor (`"set"`) uzak ve orta planı verir; ön plan (kırpılmış direk/halat, `depth.near`).
+- **Kamera (motor, `engine.js`):** her sahneyi kadraja oturtur ve hareket ettirir (itme/çekme/kayma, sahneden
+  sahneye değişir). Plan büyüklüğünü senaryo seçer: `"camera": {"focus": [x, y], "zoom": 1.8, "move": "push|pull|left|right|up|down|still"}`
+  yakın plan (`focus` = sahne pikseli, gösterilen tek şey), `"camera": false` kilitli geniş plan. Shorts'ta ≥ 1,
+  uzunda ≥ 4 yakın plan; `preview` ile `focus`'un doğru yere düştüğünü kontrol et (kesik kafa/yazı olmasın).
 - **Gerçek fotoğraf/klip** (`photo`): sadece sepya, kâğıda basılmış gibi (kenarlar sayfaya karışır).
 
 ## Sahne tipleri

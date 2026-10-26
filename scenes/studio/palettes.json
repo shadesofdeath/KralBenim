@@ -1,8 +1,111 @@
 {
- "_comment": "Paper + ink colour sets of the parchment style (brand/kit/BRAND.md §3). build.py picks one per video (stable hash of the file name, or the script's \"palette\"); every set keeps the same roles and contrast: light paper, near-black ink, muted accents. Kaşif's hat colours never change.",
- "sepia":      {"paper": "#E9DCC0", "paperLight": "#F4EAD5", "paperDark": "#D3C09A", "stain": "#B88F5A", "ink": "#2B1D12", "inkSoft": "#6B5440", "blue": "#4A6F94", "red": "#A8432F", "gold": "#C8922E", "green": "#5E7D4B"},
- "olive":      {"paper": "#E3DDBF", "paperLight": "#F1EDD8", "paperDark": "#C9C196", "stain": "#A39256", "ink": "#262417", "inkSoft": "#5E5B40", "blue": "#476F86", "red": "#9F472C", "gold": "#B98E2C", "green": "#587A45"},
- "indigo":     {"paper": "#E4DECF", "paperLight": "#F3EFE5", "paperDark": "#CAC1AB", "stain": "#A48E68", "ink": "#1E2333", "inkSoft": "#535A6D", "blue": "#3D5E8E", "red": "#A33E3A", "gold": "#C18B2F", "green": "#4E7A5D"},
- "terracotta": {"paper": "#EED9C2", "paperLight": "#F8EADB", "paperDark": "#D9BC9C", "stain": "#BC8458", "ink": "#2F1B14", "inkSoft": "#70493B", "blue": "#4B6A87", "red": "#B3482F", "gold": "#CD8E34", "green": "#627A47"},
- "ash":        {"paper": "#E3DFD4", "paperLight": "#F1EEE6", "paperDark": "#C8C2B3", "stain": "#A08F72", "ink": "#22201C", "inkSoft": "#5F5A52", "blue": "#43698E", "red": "#A5432F", "gold": "#BE8A2B", "green": "#5A7A4D"}
+ "_comment": "Paper + ink colour sets of the parchment style (brand/kit/BRAND.md §3). build.py picks one per video (stable hash of the file name, or the script's \"palette\") from the video's channel: Düşün Bakalım uses the warm sets, Stickstory the cool \"ag-\" sets (its own look, BRAND.md §11). Every set keeps the same roles and contrast: light paper, near-black ink, muted accents. Kaşif's hat colours never change.",
+ "sepia": {
+  "paper": "#E9DCC0",
+  "paperLight": "#F4EAD5",
+  "paperDark": "#D3C09A",
+  "stain": "#B88F5A",
+  "ink": "#2B1D12",
+  "inkSoft": "#6B5440",
+  "blue": "#4A6F94",
+  "red": "#A8432F",
+  "gold": "#C8922E",
+  "green": "#5E7D4B"
+ },
+ "olive": {
+  "paper": "#E3DDBF",
+  "paperLight": "#F1EDD8",
+  "paperDark": "#C9C196",
+  "stain": "#A39256",
+  "ink": "#262417",
+  "inkSoft": "#5E5B40",
+  "blue": "#476F86",
+  "red": "#9F472C",
+  "gold": "#B98E2C",
+  "green": "#587A45"
+ },
+ "indigo": {
+  "paper": "#E4DECF",
+  "paperLight": "#F3EFE5",
+  "paperDark": "#CAC1AB",
+  "stain": "#A48E68",
+  "ink": "#1E2333",
+  "inkSoft": "#535A6D",
+  "blue": "#3D5E8E",
+  "red": "#A33E3A",
+  "gold": "#C18B2F",
+  "green": "#4E7A5D"
+ },
+ "terracotta": {
+  "paper": "#EED9C2",
+  "paperLight": "#F8EADB",
+  "paperDark": "#D9BC9C",
+  "stain": "#BC8458",
+  "ink": "#2F1B14",
+  "inkSoft": "#70493B",
+  "blue": "#4B6A87",
+  "red": "#B3482F",
+  "gold": "#CD8E34",
+  "green": "#627A47"
+ },
+ "ash": {
+  "paper": "#E3DFD4",
+  "paperLight": "#F1EEE6",
+  "paperDark": "#C8C2B3",
+  "stain": "#A08F72",
+  "ink": "#22201C",
+  "inkSoft": "#5F5A52",
+  "blue": "#43698E",
+  "red": "#A5432F",
+  "gold": "#BE8A2B",
+  "green": "#5A7A4D"
+ },
+ "ag-newsprint": {
+  "paper": "#E2E0D8",
+  "paperLight": "#F0EFEA",
+  "paperDark": "#C9C6BA",
+  "stain": "#9C968A",
+  "ink": "#1B2230",
+  "inkSoft": "#4E5868",
+  "blue": "#2E6A8E",
+  "red": "#C4562B",
+  "gold": "#D69A2D",
+  "green": "#4F7A5A"
+ },
+ "ag-slate": {
+  "paper": "#DCE1E1",
+  "paperLight": "#ECF0EF",
+  "paperDark": "#BFC7C8",
+  "stain": "#8A9A9E",
+  "ink": "#17212B",
+  "inkSoft": "#4A5A66",
+  "blue": "#2C5F86",
+  "red": "#C2502E",
+  "gold": "#D49A35",
+  "green": "#4C7C66"
+ },
+ "ag-sage": {
+  "paper": "#DFE2D4",
+  "paperLight": "#EEF0E6",
+  "paperDark": "#C3C8B2",
+  "stain": "#929B7C",
+  "ink": "#1E2620",
+  "inkSoft": "#505B52",
+  "blue": "#33698A",
+  "red": "#BF5530",
+  "gold": "#CF9A30",
+  "green": "#557A48"
+ },
+ "ag-dusk": {
+  "paper": "#E3DDD8",
+  "paperLight": "#F1EDEA",
+  "paperDark": "#C9BFB8",
+  "stain": "#9C8C86",
+  "ink": "#211D2A",
+  "inkSoft": "#565064",
+  "blue": "#3C5C8C",
+  "red": "#C04A3A",
+  "gold": "#D3972F",
+  "green": "#567A5C"
+ }
 }

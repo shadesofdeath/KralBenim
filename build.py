@@ -218,7 +218,7 @@ def build_timeline(script, text, ranges, words, duration):
                 print(f"warning: cue '{needle}' not found in scene {i}", file=sys.stderr)
         out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"], "chapter": sc.get("chapter"),
                            "title": sc.get("title", {}), "source": sc.get("source"), "params": sc.get("params", {}), "cues": cues,
-                           **({"transition": sc["transition"]} if "transition" in sc else {})})
+                           **{k: sc[k] for k in ("transition", "camera", "set") if k in sc}})
         captions += captions_of(per[i], ends[i])
 
     fmt = script.get("format", "short")
@@ -237,13 +237,20 @@ PALETTES = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scen
             if not k.startswith("_")}
 
 
+def channel_palettes(script):
+    """Stickstory has its own cool "ag-" sets, Düşün Bakalım the warm ones: the two channels never look alike."""
+    ag = script.get("narrator") == "fes" or script.get("channel") == "Stickstory"
+    return sorted(k for k in PALETTES if k.startswith("ag-") == ag)
+
+
 def palette(script):
     """The video's paper/ink colours (scenes/studio/palettes.json): the script's "palette", else a stable pick from
     the file name, so every video gets a different but repeatable set (preview = render = every shard)."""
     name = script.get("palette")
     if name not in PALETTES:
         key = script.get("_name") or script.get("youtube", {}).get("title", "")
-        name = sorted(PALETTES)[int(hashlib.sha1(key.encode()).hexdigest(), 16) % len(PALETTES)]
+        own = channel_palettes(script)
+        name = own[int(hashlib.sha1(key.encode()).hexdigest(), 16) % len(own)]
     return {"palette": name, "colors": PALETTES[name]}
 
 

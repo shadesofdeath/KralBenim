@@ -51,8 +51,12 @@ Kapak: tek nesne + büyük Kaşif, 2–4 kelime, uzunda `cover.focus` zorunlu. B
 | Tek güçlü cümle, sayı | `title` |
 | Atmosfer (mekân, doğa olayı) | konuya özel kod sahnesi ya da gerçek telifsiz fotoğraf (`photo`); yapay zekâ klibi yok |
 
-- Kaşif sahnelerin **en az yarısında** ve her seferinde bir eylem yapıyor (yürüyor, işaret ediyor, dürbünle bakıyor, şaşırıyor).
-- Aynı tip üst üste en fazla 2 sahne; `stage` hariç (Kaşif'in yolculuğu 3 sahne sürebilir).
+- Kaşif **sunucudur**: sahnelerin **%15–25'inde** (açılış, bölüm dönüşü, kilit an, kapanış) ve her seferinde bir eylem
+  yapıyor (işaret ediyor, şaşırıyor, bir nesne tutuyor). Diğer sahnelerde olayın kendisi ve dönem karakterleri oynar.
+- Her sahne bir dünyada geçer: `"set"` (hills, sea, ocean, coast, city, interior, night, desert, snow, storm, field);
+  yer değiştikçe dekor değişir. Plan büyüklüğü değişir: en az 1 (uzunda 4) yakın plan `"camera": {"focus": [x, y], "zoom": 1.8}`
+  (BRAND.md §5.1). Kalıp tekrarı yok: dünkü videonun dekor/plan/kapak düzenini aynen kopyalama.
+- Aynı tip üst üste en fazla 2 sahne; `stage` 3 sahne sürebilir.
 - Kaşif anlatıcıdır; olayın kahramanları şapkasız dönem figürleridir (defne tacı, sarık, bere, miğfer).
 
 ## 4. Anlatım

@@ -17,6 +17,8 @@ from plan import LIMITS, SCENES  # noqa: E402
 from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
+SETS = ["field", "hills", "desert", "sea", "ocean", "coast", "city", "interior", "night", "snow", "storm"]   # scenes/studio/sets.js
+CAM_MOVES = ["push", "pull", "left", "right", "up", "down", "still"]                                  # engine.js camera
 THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
 # channel analytics (owner, 2026-10-26): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
 # halfway (39% average view), long-video CTR 0.96%, Shorts viewers rarely subscribe. The rules below target that.
@@ -163,14 +165,37 @@ def lint(path, kinds):
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
 
-    # Kaşif is on screen in every 'stage' scene and in any shot that puts him in params.kasif or params.cast
+    # Kaşif is the host (owner, 2026-10-26): on screen in 15-25% of the scenes (opening, chapter turns, key moments),
+    # the rest belongs to the story itself. He is in a scene through params.kasif or a params.cast entry ("who" kasif or none).
     def has_kasif(x):
         p = x.get("params") or {}
-        return x.get("type") == "stage" or bool(p.get("kasif")) or any(
+        return bool(p.get("kasif")) or any(
             isinstance(c, dict) and (c.get("who") or "kasif") == "kasif" for c in (p.get("cast") or []))
     nk = sum(1 for x in sc if has_kasif(x))
-    if types and nk < len(types) / 2:
-        err.append(f"Kaşif in {nk}/{len(types)} scenes ('stage' or params.kasif/cast), brand needs at least half")
+    if types:
+        share = nk / len(types)
+        if nk == 0:
+            err.append("Kaşif in no scene: the host opens or turns the story at least once (BRAND.md §2)")
+        elif share > 0.35:
+            err.append(f"Kaşif in {nk}/{len(types)} scenes ({share:.0%}): he is the host now, 15-25% of the scenes, max 35% (BRAND.md §2)")
+        elif not 0.15 <= share <= 0.25:
+            warn.append(f"Kaşif in {nk}/{len(types)} scenes ({share:.0%}), aim for 15-25% (BRAND.md §2)")
+    # sets + camera (BRAND.md §5.1): the frame is a world, and the shot sizes change
+    named = {(x["set"] if isinstance(x.get("set"), str) else (x.get("set") or {}).get("name")) for x in sc if x.get("set")}
+    close = sum(1 for x in sc if isinstance(x.get("camera"), dict) and x["camera"].get("focus"))
+    for i, x in enumerate(sc):
+        v = x.get("set")
+        nm = v if isinstance(v, str) else (v.get("name") if isinstance(v, dict) else None)
+        if v not in (None, False) and nm not in SETS:
+            err.append(f'scene {i}: "set" must be one of {", ".join(SETS)} (or false)')
+        c = x.get("camera")
+        if c not in (None, False) and not (isinstance(c, dict) and (not c.get("focus") or (isinstance(c["focus"], list) and len(c["focus"]) == 2))
+                                           and c.get("move", "push") in CAM_MOVES):
+            err.append(f'scene {i}: "camera" is false or {{"focus": [x, y], "zoom", "move": {"|".join(CAM_MOVES)}}}')
+    if not named - {False, None}:
+        warn.append('no scene has a "set": give the story its world (hills, sea, city, interior, night...; BRAND.md §5.1)')
+    if close < (1 if short else 4):
+        warn.append(f'{close} close-up(s) ("camera": {{"focus": [x, y], "zoom"}}): use >= {1 if short else 4} to vary the shot sizes (BRAND.md §5.1)')
     # first ~30 s (~420 chars): straight into the event, no greeting / channel intro / "in this video"
     if GREETING.search(text[:420]):
         err.append(f"opening has a greeting/intro ({GREETING.search(text[:420]).group(0)!r}): start inside the event (BRAND.md §6.1)")
@@ -222,8 +247,9 @@ def lint(path, kinds):
         if len(str(x["source"]).split()) > 5:
             warn.append(f"scene {sc.index(x)}: on-screen source note too long (<= 5 words)")
     pals = json.loads((ROOT / "scenes/studio/palettes.json").read_text())
-    if s.get("palette") and (s["palette"] not in pals or s["palette"].startswith("_")):
-        err.append(f'"palette" must be one of {", ".join(k for k in pals if not k.startswith("_"))} (or leave it out: random per video)')
+    own = [k for k in pals if not k.startswith("_") and k.startswith("ag-") == (ch == "Stickstory")]
+    if s.get("palette") and s["palette"] not in own:
+        err.append(f'"palette" must be one of this channel\'s sets: {", ".join(own)} (or leave it out: random per video)')
 
     # cover
     c = s.get("cover")

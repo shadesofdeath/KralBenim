@@ -43,7 +43,7 @@ CHANNELS = {
         "short_slots": ["13:00", "19:00"],
         "long_every": 2, "long_anchor": "2026-10-22", "long_slot": "14:00",
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
-        "lang": "en", "voice_id": "ppLqTilh7rH7fbUVlXsf",
+        "lang": "en", "voice_id": "2t85BBUECtLLKQzxLD95",
         "hashtag": "#stickstory", "brand_tag": "stickstory",
         "category_id": "28", "ai_disclosure": True,                 # Science & Technology, AI use: yes (owner, 2026-10-26)
         "categories": ["history's strangest moments", "unsolved mysteries", "how it was built",

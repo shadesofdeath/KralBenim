@@ -25,11 +25,14 @@ window.init = async (data) => {
   for (const k of ['paper', 'paperLight', 'ink', 'red', 'blue']) root.style.setProperty('--' + k, THEME_PARCHMENT[k]);
   root.classList.add(D.format || 'short');
   root.classList.add('parchment');   // the only theme
+  // each channel its own HUD and cover type (BRAND.md §11): Stickstory (fez narrator) never looks like Düşün Bakalım
+  const skin = D.narrator === 'fes' ? 'ag' : 'db';
+  root.classList.add('ch-' + skin); PARCHMENT.setSkin(skin);
 
   const bg = $('bg'); bg.width = W / 2; bg.height = H / 2;
   PAPER = PARCHMENT.background(bg, W, H, { scale: 0.5 });
   // shots measure text while building: fonts must be ready first
-  await Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
+  await Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"', '700 100px "Zilla Slab"', '600 100px "Zilla Slab"'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
 
   S = D.scenes.map((sc, i) => {
     const shot = SHOTS[sc.type];
@@ -43,8 +46,13 @@ window.init = async (data) => {
     o.svg.style.cssText = 'position:absolute;left:0;top:0';
     const defs = el(o.svg, 'defs');
     o.inst = shot.build({ P, pal, W, H, root: o.el, svg: o.svg, defs, seed: i + 1, theme: D.theme });
-    o.el.style.display = 'none'; o.el.style.visibility = '';
     return o;
+  });
+  // the camera measures each shot while it is still laid out (hidden, untransformed)
+  S.forEach((o, i) => {
+    const b = measureInk(o);
+    o.cam = planCamera(o, i, b); o.set = planSet(o, b);
+    o.el.style.display = 'none'; o.el.style.visibility = '';
   });
   S.forEach((o, i) => {
     o.env = { prevP: null, prevCam: null };
@@ -69,8 +77,18 @@ window.init = async (data) => {
 };
 
 // ------------------------------------------------------------ background
-function drawBg(t) {
-  PAPER.update(t, BG_AT.i, BG_AT.prev, BG_AT.p);   // parchment-theme.js: baked paper, stains move per scene
+function drawBg(t, visible = []) {
+  // parchment-theme.js: baked paper, stains move per scene; then each visible shot's set, under its camera
+  const withSet = visible.filter(v => v.o.set && v.st.show && v.st.op > 0.01);
+  PAPER.update(t, BG_AT.i, BG_AT.prev, BG_AT.p, withSet.length ? (X) => {
+    X.globalCompositeOperation = 'multiply';
+    for (const v of withSet) {
+      const k = v.cam, cx = W / 2, cy = H / 2;
+      X.globalAlpha = v.st.op;
+      X.setTransform(k.s, 0, 0, k.s, (cx + k.tx - k.s * cx) / 2, (cy + k.ty - k.s * cy) / 2);
+      X.drawImage(v.o.set, 0, 0);
+    }
+  } : null);
 }
 
 // ------------------------------------------------------------ transitions
@@ -91,23 +109,101 @@ function transStyle(kind, role, t, T) {
 }
 const TRANS_WIN = { cut: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2] };
 
-function applyStyle(node, st, extraScale = 1) {
+function applyStyle(node, st, cam = '') {
   node.style.display = st.show ? '' : 'none';
   node.style.opacity = st.op;
-  node.style.transform = (st.tf || '') + (extraScale !== 1 ? ` scale(${extraScale})` : '');
+  node.style.transform = (st.tf || '') + (cam ? ' ' + cam : '');
   node.style.filter = st.blur > 0.3 ? `blur(${st.blur.toFixed(1)}px)` : '';
 }
 
+// ------------------------------------------------------------ camera
+// Shots are drawn on a fixed stage and most keep their action in a band in the middle, which left every frame
+// looking alike: a wide shot with empty paper around it. The camera frames each shot instead: it measures where
+// the ink really is (leaf element boxes; full-frame backdrops and stray outliers left out), fills the picture
+// area above the captions with it, then moves through the scene (push in, pull out, drift), never showing the
+// stage's edge. sc.camera overrides it: false (locked wide shot) or
+// {zoom, focus: [x, y] (stage px, the close-up's subject), move: 'push'|'pull'|'left'|'right'|'up'|'down'|'still'}.
+const CAM_MOVES = ['push', 'left', 'pull', 'push', 'right', 'up'];
+function cameraArea() {   // the picture area: under the brand/kicker, above the caption strip
+  return H > W ? { x0: 40, x1: W - 40, y0: 300, y1: 1150 } : { x0: 80, x1: W - 80, y0: 210, y1: H - 190 };
+}
+function measureInk(o) {
+  const lt = Math.max(0, o.dur * 0.8);
+  try { o.inst.update(lt, o.dur, localCues(o), { t: o.sc.start + lt, pal: o.pal, prevP: null, prevCam: null }); } catch (e) { return null; }
+  const R = [];
+  let ground = 0;                                                  // a long thin stroke low in the frame: the ground line
+  for (const n of o.el.querySelectorAll('*')) {
+    if (n.children.length || /^(defs|clipPath|mask|linearGradient|radialGradient|stop|filter|pattern|symbol|title|style)$/i.test(n.tagName)) continue;
+    if (n.closest('defs,clipPath,mask,pattern,symbol')) continue;
+    const r = n.getBoundingClientRect();
+    if (r.width * r.height < 6 || r.right < 0 || r.bottom < 0 || r.left > W || r.top > H) continue;
+    if (r.width > W * 0.5 && r.height < 40 && r.top > H * 0.4 && r.top < H * 0.8) ground = Math.max(ground, (r.top + r.bottom) / 2);
+    if (r.width > W * 0.85 || r.height > H * 0.7) continue;          // paper, sky, sea, ground: a backdrop
+    const x0 = Math.max(0, r.left), x1 = Math.min(W, r.right), y0 = Math.max(0, r.top), y1 = Math.min(H, r.bottom);
+    R.push({ x0, x1, y0, y1, w: Math.sqrt((x1 - x0) * (y1 - y0)) });
+  }
+  if (R.length < 3) return null;
+  const tot = R.reduce((a, r) => a + r.w, 0);
+  const pct = (key, q) => { const s = R.slice().sort((a, b) => a[key] - b[key]); let acc = 0; for (const r of s) { acc += r.w; if (acc >= q * tot) return r[key]; } return s[s.length - 1][key]; };
+  return { x0: pct('x0', 0.015), x1: pct('x1', 0.985), y0: pct('y0', 0.015), y1: pct('y1', 0.985), ground: ground || null };
+}
+function planCamera(o, i, b) {
+  const c = o.sc.camera, A = cameraArea();
+  if (c === false || o.sc.type === 'photo') return null;      // photos frame themselves (Ken Burns)
+  const C = typeof c === 'object' && c ? c : {};
+  let s, fx, fy;
+  if (Array.isArray(C.focus)) {
+    [fx, fy] = C.focus; s = C.zoom ?? 1.8;
+  } else {
+    if (!b) return null;
+    const m = 30, bw = b.x1 - b.x0 + 2 * m, bh = b.y1 - b.y0 + 2 * m;
+    s = C.zoom ?? Math.min((A.x1 - A.x0) / bw, (A.y1 - A.y0) / bh, H > W ? 1.45 : 1.3);
+    fx = (b.x0 + b.x1) / 2; fy = (b.y0 + b.y1) / 2;
+  }
+  s = Math.max(1, Math.min(3, s));
+  const move = C.move || (o.sc.type === 'chapter' ? 'push' : CAM_MOVES[(i * 7 + 3) % CAM_MOVES.length]);
+  return { s, fx, fy, ax: (A.x0 + A.x1) / 2, ay: (A.y0 + A.y1) / 2, move };
+}
+// transform for scene-local time lt: p -> C + T + s (p - C) about the stage centre, clamped so the stage covers the frame
+function cameraAt(o, lt, pk) {
+  const k = o.cam, p = progIO(lt, 0, Math.max(o.dur, 1)), cx = W / 2, cy = H / 2;
+  if (!k) return { s: (1 + 0.025 * pk) * lerp(1, 1.035, p), tx: 0, ty: 0 };
+  const sw = Math.min(k.s - 1, 0.08) + 0.04;              // move amplitude, relative to the framing
+  let s = k.s, dx = 0, dy = 0;
+  if (k.move === 'push') s *= 1 + 0.07 * p;
+  else if (k.move === 'pull') s *= 1.07 - 0.07 * p;
+  else if (k.move === 'left' || k.move === 'right') { s *= 1.04; dx = (k.move === 'left' ? 1 : -1) * W * sw * (p - 0.5); }
+  else if (k.move === 'up' || k.move === 'down') { s *= 1.04; dy = (k.move === 'up' ? 1 : -1) * H * sw * 0.5 * (p - 0.5); }
+  s *= 1 + 0.025 * pk;
+  let tx = k.ax - cx - s * (k.fx - cx) + dx, ty = k.ay - cy - s * (k.fy - cy) + dy;
+  const lx = (s - 1) * cx, ly = (s - 1) * cy;
+  tx = Math.max(-lx, Math.min(lx, tx)); ty = Math.max(-ly, Math.min(ly, ty));
+  return { s, tx, ty };
+}
+const camCss = k => (k.tx || k.ty ? `translate(${k.tx.toFixed(1)}px, ${k.ty.toFixed(1)}px) ` : '') + (k.s !== 1 ? `scale(${k.s.toFixed(4)})` : '');
+
+// the scene's set (sets.js): "set": "<name>" | {name, ground, horizon} | false; a shot with a ground line gets "field"
+function planSet(o, b) {
+  const v = o.sc.set;
+  if (v === false || typeof SETS === 'undefined') return null;
+  const name = typeof v === 'string' ? v : (v && v.name) || (b && b.ground ? 'field' : null);
+  if (!name || !SETS.names.includes(name)) return null;
+  const gy = (v && v.ground) || (b && b.ground) || H * 0.6, hy = v && v.horizon;
+  return SETS.bake(name, W / 2, H / 2, gy / 2, (o.i + 1) * 17 + name.length, hy ? hy / 2 : null);
+}
+
 // draw one frame. visible = [{o, lt, st}], hook/cover handled by callers
-function compose(t, visible, pend, coverTf) {
-  drawBg(t);
+function compose(t, visible, pend, coverCam) {
+  for (const v of visible) {   // the cover frames its own focus (stage px); scenes use their camera
+    let pk = 0; for (const c of Object.values(localCues(v.o))) pk = Math.max(pk, punch(v.lt, c, 0.5));
+    v.cam = coverCam || cameraAt(v.o, v.lt, pk);
+  }
+  drawBg(t, visible);
   S.forEach(o => { if (!visible.some(v => v.o === o)) o.el.style.display = 'none'; });
   for (const v of visible) {
     const { o, lt, st } = v;
     if (o.inst.pending) { const pr = o.inst.pending(lt); if (pr) pend.push(pr); }
-    let pk = 0; for (const c of Object.values(localCues(o))) pk = Math.max(pk, punch(lt, c, 0.5));
-    applyStyle(o.el, st, (1 + 0.025 * pk) * lerp(1, 1.035, clamp01(lt / Math.max(o.dur, 1))));
-    if (coverTf) o.el.style.transform += ' ' + coverTf;
+    applyStyle(o.el, st, camCss(v.cam));
     if (st.show) o.inst.update(lt, o.dur, localCues(o), Object.assign({ t, pal: o.pal }, o.env));
   }
 }
@@ -145,10 +241,10 @@ function renderNormal(t, pend) {
   hud(t, i, false);
 }
 
-function renderSolo(t, idx, lt, pend, coverTf) {
+function renderSolo(t, idx, lt, pend, coverCam) {
   const o = S[idx];
   BG_AT = { i: idx, prev: -1, p: 1 };
-  compose(t, [{ o, lt, st: { show: true, tf: '', op: 1, blur: 0 } }], pend, coverTf);
+  compose(t, [{ o, lt, st: { show: true, tf: '', op: 1, blur: 0 } }], pend, coverCam);
 }
 
 function buildCoverText(c) {
@@ -197,9 +293,9 @@ const coverShift = (c) => {
   if (c && Array.isArray(c.focus)) {
     const s = c.zoom ?? (long ? 1.6 : 1.25), [fx, fy] = c.focus;
     const tx = long ? W * 0.72 : W * 0.5, ty = long ? H * 0.52 : H * 0.6;
-    return `translate(${(tx - W / 2 - s * (fx - W / 2)).toFixed(1)}px, ${(ty - H / 2 - s * (fy - H / 2)).toFixed(1)}px) scale(${s})`;
+    return { s, tx: tx - W / 2 - s * (fx - W / 2), ty: ty - H / 2 - s * (fy - H / 2) };
   }
-  return long ? `translateX(${W * 0.2}px) scale(1.12)` : `translateY(${H * 0.17}px)`;
+  return long ? { s: 1.12, tx: W * 0.2, ty: 0 } : { s: 1, tx: 0, ty: H * 0.17 };
 };
 const coverFocusClass = (c, on) => document.documentElement.classList.toggle('focus', !!(on && c && Array.isArray(c.focus) && c.fade !== false));
 

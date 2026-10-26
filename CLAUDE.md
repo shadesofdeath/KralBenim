@@ -26,14 +26,18 @@ kendisi yayınlar. **Tarih/saat hesabını elle yapma: `python tools/plan.py [--
 **Kaşif** (`"theme": "parchment"`; Stickstory'de aynı çizim kırmızı fesli). Anayasa `brand/kit/BRAND.md`
 (çelişkide BRAND.md kazanır); senaryo yazmadan önce `.claude/skills/tarih-bolumu/SKILL.md` yüklenir.
 Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kaldırıldı; geri getirme.
+**Sinematik parşömen (kanal sahibinin kararı, 2026-10-26: "videolar birbirine çok benziyor"):** parşömen korunur ama
+her kare bir dünya (`"set"` dekorları), kamera plan büyüklüğünü değiştirir (`"camera"` yakın plan), Kaşif figüran değil
+**sunucu** (sahnelerin %15–25'i), iki kanalın ekran kimliği ayrı (Stickstory: soğuk `ag-` kâğıtlar, Zilla Slab,
+koyu şerit altyazı). Ayrıntı BRAND.md §2, §5.1, §11.
 `videos/` altındaki eski tarz senaryolar sadece geçmiş kayıttır (konu tekrarını önlemek için okunur).
 
 ## Yapı
 
 - `build.py` — `<senaryo>.json -> mp4`. ElevenLabs (kelime zamanlamalı, nefes sesleri kısılır: `debreath`),
   sahneleri Playwright ile kare kare çeker (CPU sayısı kadar paralel tarayıcı), ffmpeg ile birleştirir. Sadece `"engine": "studio"`.
-- `scenes/studio/` — tek motor: `engine.js` (zaman çizelgesi, geçişler, kapak), `core.js` (yardımcılar, `SHOTS`,
-  `THEME_PARCHMENT`), `parchment-theme.js` (kâğıt, altyazı şeridi, kicker, marka). Zaman sadece `window.seek(t)`;
+- `scenes/studio/` — tek motor: `engine.js` (zaman çizelgesi, kamera, geçişler, kapak), `core.js` (yardımcılar, `SHOTS`,
+  `THEME_PARCHMENT`), `parchment-theme.js` (kâğıt, altyazı, kicker, marka; kanal başına `setSkin`), `sets.js` (dekorlar). Zaman sadece `window.seek(t)`;
   her şey deterministik (`Math.random` yok, `rng(seed)`).
 - `scenes/studio/shots/<tip>.js` — her sahne tipi kendi dosyasında (otomatik yüklenir): `_ink.js`, `kasif.js`
   (Kaşif + `stage`), `parchment2d.js` (`chapter`, `title`, `board`, `map`, `timeline`), `photo.js` ve konuya özel tipler.
@@ -94,7 +98,7 @@ Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Sticksto
    Her ajana `production.md` bölümünü, dosya adını, `publish_at`'i ver; CLAUDE.md + BRAND.md + ANIMATION_GUIDE okusun,
    `tarih-bolumu` becerisini yüklesin, bilgileri doğrulasın, JSON'u yazsın, `lint` hatasız + `preview` çalıştırıp
    `sheet.png`/`cover.jpg`'ye baksın. Yeni sahne tipi gerekirse **kendi dosyasına** yazar; ortak dosyalara
-   (`engine.js`, `core.js`, `parchment-theme.js`, `_ink.js`, `kasif.js`, `parchment2d.js`) paralel ajan dokunmaz.
+   (`engine.js`, `core.js`, `parchment-theme.js`, `sets.js`, `_ink.js`, `kasif.js`, `parchment2d.js`) paralel ajan dokunmaz.
 6. **Eleştiri:** video başına yazardan farklı 1 eleştirmen ajan, `docs/REVIEW.md`'ye göre puanlar, en büyük 3 sorunu
    yazar, düzeltmez. **Düzeltme turu:** aynı yazar ajan (SendMessage) düzeltir → lint → preview → tekrar puan.
    En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 7 (kapak ≥ 8). Her tur `production.md` → "Eleştiri günlüğü".
@@ -116,8 +120,9 @@ Böylece mesaj hiçbir zaman eski kalmaz.
 ### Senaryo kuralları (lint denetler)
 - Alanlar: `"engine": "studio"`, `"theme": "parchment"`, `"format": "short|long"`, `"fps": 30`, `"subtitles": true`,
   `"channel"`, `"tts": {"provider": "elevenlabs", "voice_id": <kanalın sesi>, "model": "eleven_v3"}`.
-  `tts.settings`, `pacing`, `max_pause`, sahne `tone`, `art`/`palette`, `mascot` yok. **Ses asla değişmez**
-  (Düşün Bakalım `j4vJUfke1j8j9OYq8V3b`, Stickstory `ppLqTilh7rH7fbUVlXsf`).
+  `tts.settings`, `pacing`, `max_pause`, sahne `tone`, `art`, `mascot` yok. **Ses asla değişmez** (Stickstory'nin sesi
+  kanal sahibinin isteğiyle 2026-10-26'da değişti; yenisi kalıcı)
+  (Düşün Bakalım `j4vJUfke1j8j9OYq8V3b`, Stickstory `2t85BBUECtLLKQzxLD95`).
 - **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" der, merakı paylaşır ve açıklar; olayı altyazı gibi sayan "yapıyor
   ediyor" anlatım yasak (en fazla üçte biri "-yor"), **devrik cümle yok**, ekrandakini tarif etmez, cümleler birbirine
   bağlanır, her 20–30 sn'de gerilim kancası, dolgu cümle yok (BRAND §6). Kısaltmaları açık yaz ("km/sa" değil).
@@ -154,7 +159,11 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   `photo` (gerçek fotoğraf/klip, hep sepya; sadece gerçek tarihî belge/yer/eser için: `python tools/media.py search
   "<İngilizce sorgu>" --dir videos/<tarih>/media` → `candidates.jpg`'ye bak → `get <no> --dir … --name <ad>`;
   `params.credit` zorunlu, ajan başına ayrı `--name`) ve konuya özel tipler (parametreler dosya başındaki yorumda).
-- **Kaşif kuralı:** sahnelerin **en az yarısında** Kaşif ekranda ve bir eylem yapıyor (`stage` ya da `params.cast`/`kasif`).
+- **Kaşif kuralı (2026-10-26):** Kaşif **sunucu**: sahnelerin **%15–25'inde** (en fazla %35, lint; `params.cast`/`kasif`
+  ile), açılışta, bölüm dönüşlerinde, kilit anda ve kapanışta; göründüğünde bir eylem yapıyor. Diğer sahneleri olay doldurur.
+- **Dekor ve kamera (BRAND §5.1):** sahneler bir dünyada geçer (`"set": "hills|sea|ocean|coast|city|interior|night|desert|snow|storm|field"`),
+  yer değiştikçe dekor değişir; plan büyüklüğü değişir: Shorts'ta ≥ 1, uzunda ≥ 4 yakın plan
+  (`"camera": {"focus": [x, y], "zoom": 1.8, "move": "push"}`). Her video önceki videolardan kalıp olarak farklı.
 - **Çeşitlilik:** Shorts'ta en az 4 farklı tip; aynı tip üst üste en fazla 2 (`stage` 3); tek tip toplamın %60'ını geçmez.
 - **Kalite:** her sahnede sürekli hareket (kaynayan çizgi tek başına yetmez), girişlerde `spring()`, vurguda
   `punch(lt, cue)` ya da Kaşif poz değişimi. Ekranda sahne başına en fazla 5 kelime, en küçük yazı 44 px. Dikey ekranda
@@ -165,8 +174,9 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   `upload.py` açıklamaya "📚 Kaynaklar / Sources" bölümü olarak ekler. Ekranda: kilit bilgi/sayı sahnelerinde
   sahne alanı `"source": "NASA"` (≤ 5 kelime) kicker'ın altında "Kaynak: NASA" notu olarak görünür (Shorts ≥ 1,
   uzun ≥ 3 sahne). Mümkünse gerçek belge, mektup, eski harita (`photo`) ve kişilerin kendi sözleri kullanılır.
-- **Renk paleti her videoda değişir:** `scenes/studio/palettes.json` (sepia, olive, indigo, terracotta, ash; hepsi
-  parşömen + mürekkep, aynı kontrast). `build.py` dosya adından sabit ama videoya göre farklı birini seçer;
+- **Renk paleti her videoda değişir:** `scenes/studio/palettes.json` (Düşün Bakalım: sepia, olive, indigo,
+  terracotta, ash; Stickstory: `ag-newsprint`, `ag-slate`, `ag-sage`, `ag-dusk`; hepsi kâğıt + mürekkep, aynı kontrast).
+  `build.py` kanalın setlerinden dosya adına göre sabit ama videoya göre farklı birini seçer;
   senaryoda `"palette": "<ad>"` ile elle seçilebilir. Sahne kodu renkleri sadece `INK.*` / `THEME_PARCHMENT.*`
   token'larından alır (sabit hex yazılmaz), Kaşif'in şapkası hep aynı.
 
@@ -185,6 +195,9 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   pikseli; motor onu sağ yarının ortasına büyütür (`zoom`, varsayılan 1.6) ve gerisini kâğıda eritir (`"fade": false`
   kapatır). Shorts'ta `focus` isteğe bağlı (nesneyi yazının altına büyütür). Kalabalık sahne (çok gemi, çok asker,
   çok yazı) yerine tek nesne + Kaşif'in yüzü.
+- **Çerçeve (kanal sahibinin kararı, 2026-10-26, tıklanma için):** motor her küçük resmin kenarına kalın bir çerçeve
+  koyar (Düşün Bakalım kırmızı + mürekkep çizgi, Stickstory koyu mürekkep + altın çizgi); senaryoya bir şey yazılmaz.
+  Videonun içindeki kanca karesinde çerçeve yoktur. Kapak yazısı ve Kaşif çerçeveye değmez.
 - **Her video için en az 3 kapak adayı** üret (farklı sahne/an/poz/metin), `cover.jpg`'leri karşılaştır, en güçlüsünü
   seç; telefonda küçükken okunmalı. Eleştirmen kapağa **8'in altında** verirse kapak yenilenir.
 
@@ -231,7 +244,7 @@ Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı
   `categories`; Osmanlı/Türk tarihi "empires and battles" altında global izleyiciye). Her konu yine gerçek ve
   doğrulanabilir (`tarih-bolumu` 4 testi; bilim/hayvan konularında kahraman bir canlı ya da deney olabilir). Konu iki
   kanalın geçmişinde işlenmemiş ve aynı gün Düşün Bakalım'la çakışmıyor olmalı.
-- Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"`, `"lang": "en"`, ses `ppLqTilh7rH7fbUVlXsf`.
+- Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"`, `"lang": "en"`, ses `2t85BBUECtLLKQzxLD95`.
 - SEO: başlık aranan İngilizce ifadeyle başlar ("Mary Celeste: …"); uzunda "In this video:"; "Subscribe to Stickstory
   for …" + yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + `#stickstory`; etiketlerde `stickstory`.
 - `category_id` **"28"** (Bilim ve Teknoloji); yüklemede "yapay zekâ kullanımı / değiştirilmiş ya da sentetik içerik"

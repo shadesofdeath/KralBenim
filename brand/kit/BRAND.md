@@ -28,9 +28,9 @@ Kanalın tek ve sabit anlatıcı karakteri. Her videoda, aynı çizimle, aynı k
 | **İmza aksesuar** | **Kahverengi kâşif şapkası** (`hat` #8B5A2B, bant `hat-band` #4E3218). Silüetten tanınır. **Asla çıkarmaz.** |
 | Diğer karakterler | Aynı çöp adam stili ama **şapkasız**; döneme göre tek aksesuar (Romalıya defne tacı, denizciye bere, padişaha sarık). Kaşif'le asla karıştırılmaz. |
 | Hareket kütüphanesi | `idle` (nefes alır, hafif sallanır) · `walk` (sahneye yürüyerek girer/çıkar) · `point` (bir şeyi gösterir) · `think` (el çenede) · `shock` (geri sıçrar, kaşlar yukarı) · `shrug` · `talk` (el hareketleriyle anlatır) · `wave` · `run` · `sit` · `hold` (bir nesne/tabela tutar) · `look` (dürbünle bakar). |
-| Kural | Her videonun sahnelerinin **en az yarısında** Kaşif ekranda ve **bir şey yapıyor** (sadece durmuyor). Ağzı **sabittir** (konuşma animasyonu yok; kanal sahibinin kararı), duyguyu kaşlar ve poz taşır. |
+| Kural | **Sunucu, figüran değil (kanal sahibinin kararı, 2026-10-26).** Kaşif sahnelerin **%15–25'inde** görünür (en fazla %35, lint): açılışta, bölüm dönüşlerinde, kilit anda ve kapanışta. Göründüğünde **bir şey yapar** (işaret eder, şaşırır, bir nesneyi tutar); kenarda seyirci gibi durmaz. Geri kalan sahneleri olayın kendisi doldurur. Kapakta kalır. Ağzı **sabittir** (konuşma animasyonu yok), duyguyu kaşlar ve poz taşır. |
 
-**İkinci kanal Stickstory (eski adı Anlatayım Gel):** anlatıcı aynı çizim ve aynı kurallarla, ama kâşif şapkası yerine **kırmızı fes** (`red` #A8432F, mürekkep püskül) takar; senaryoda `"narrator": "fes"`.
+**İkinci kanal Stickstory (eski adı Anlatayım Gel):** anlatıcı aynı çizim ve aynı kurallarla, ama kâşif şapkası yerine **kırmızı fes** (`red` #A8432F, mürekkep püskül) takar; senaryoda `"narrator": "fes"`. Stickstory'nin ekran kimliği ayrıdır (§11).
 
 Referans çizim: `brand/kit/kasif-reference.png` (kodla üretilir; tasarım değişirse yeniden üretilir).
 
@@ -64,7 +64,7 @@ fotoğraf. Gerçek fotoğraf/klip kullanılacaksa `sepia` renk düzeltmesiyle pa
 | Rol | Yazı tipi | Not |
 |---|---|---|
 | Başlık, bölüm kartı, dev yazı | **Fraunces** 800–900 | Sıcak, kalın serif (örnek: "Önce her sahnenin görseli") |
-| Altyazı | **Lora** 700 | `ink` renkte, açık parşömen şerit üstünde; vurgu kelimesi `gold`/`red` |
+| Altyazı | **Lora** 700 | `ink` renkte, kutusuz, açık parşömen hale ile; vurgu kelimesinin altından `gold` (ya da `red`) fosforlu kalem çizgisi geçer |
 | El yazısı notlar, etiketler | **Patrick Hand** | Okların ucunda, karakterin yanında, harita notlarında |
 
 Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küçük yazı 44 px (1080 genişlikte).
@@ -79,8 +79,27 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 - **Kartlar/rozetler:** yuvarlatılmış köşe, 3 px `ink` kontur, hafif yumuşak gölge, `paper-light` iç.
   Hap biçimli rozetler `blue` ya da `red`, içinde `paper-light` yazı (örnekteki "Yan yana koy, kontrol et").
 - **Kamera:** yavaş kayma ve yakınlaşma (2D sahnede `scale` ve `translate`), sert kesme yerine
-  kâğıt kayması/sayfa çevirme geçişi.
+  kâğıt kayması/sayfa çevirme geçişi. Ayrıntısı §5.1.
 - **Haritalar:** eski harita stili, `ink-soft` kıyı çizgileri, kesikli rota, pusula gülü, Patrick Hand etiketler.
+
+### 5.1 Dekor ve kamera (kanal sahibinin kararı, 2026-10-26: "videolar birbirine çok benziyor")
+
+Eskiden her sahne boş kâğıdın ortasında yüzen bir çizimdi; her kare aynı geniş plandı. Artık her kare bir **dünya**:
+
+- **Dekor (`"set"`):** sahnenin arkasında kenardan kenara mürekkep-yıkama dünya (`scenes/studio/sets.js`): gökyüzü,
+  ufuk, orta plan ve figürlerin bastığı zemin; uzak planlar soluk ve mavimsi, yakın planlar sıcak, koyu ve taralı
+  (derinlik). Türler: `field`, `hills`, `desert`, `sea` (kıyı), `ocean` (açık deniz), `coast`, `city`, `interior`,
+  `night`, `snow`, `storm`. Sahnede `"set": "hills"` ya da `{"name": "sea", "ground": 1150, "horizon": 980}`
+  (sahne pikseli; `ground` verilmezse motor çizimin zemin çizgisini ölçer). Zemin çizgisi olan bir sahne `"set"`
+  yazmazsa sade `field` alır; `"set": false` kapatır. Harita, pano, başlık gibi kendi çerçevesi olan sahnelere dekor
+  konmaz. Bir video aynı dekoru baştan sona kullanmaz: yer değiştikçe dekor değişir (kıyı → açık deniz → fırtına).
+- **Kamera (`"camera"`):** motor her sahneyi kadraja oturtur ve sahne boyunca hareket ettirir (itme, çekme, sağa/sola
+  kayma); hareket sahneden sahneye değişir. **Plan büyüklüğü değişir:** yakın plan için
+  `"camera": {"focus": [x, y], "zoom": 1.8, "move": "push"}` (`focus` = gösterilen tek şeyin sahne pikseli: bir yüz,
+  bir el, bir nesne). Shorts'ta en az 1, uzunda en az 4 yakın plan (lint uyarır); geniş plan → yakın plan → orta plan
+  ritmi. `"camera": false` kilitli geniş plan. `photo` sahnesi kendi kamerasını kullanır.
+- Dekor ve kamera eski sahne tiplerinin hepsiyle çalışır; yeni sahne tipi yazan ajan kendi arka planını çizmez,
+  dekora bırakır (zemin çizgisi y ≈ 1100–1200 olmalı ki dekorun zemini ayakların altına otursun).
 
 ## 6. Anlatım kuralları (sert)
 
@@ -155,11 +174,15 @@ Parşömen zemin, solda/üstte Fraunces 900 dev yazı (1–3 satır, **2–4 kel
 yanında **büyük Kaşif** güçlü bir pozda (şok, işaret) ve olayın **tek simgesi** (volkan, gemi, taç).
 Her kapakta Kaşif'in yüzü okunur büyüklükte olur. **Tek net odak noktası:** kalabalık sahne, çok nesne, çok yazı
 yok; uzun video kapağında `cover.focus` o tek nesneyi büyütür, gerisi kâğıda erir.
+Her küçük resmin kenarında kalın bir **çerçeve** vardır (kanal sahibinin kararı, 2026-10-26: akışta göze çarpsın):
+Düşün Bakalım `red` çerçeve + `ink` iç çizgi, Stickstory `ink` çerçeve + `gold` iç çizgi. Motor ekler; videonun
+kendi karelerinde yoktur.
 
 ## 10. Kontrol listesi (her video)
 
 - [ ] Palet dışı renk yok, fon parşömen
-- [ ] Kaşif sahnelerin en az yarısında ve hareket ediyor; şapkası var
+- [ ] Kaşif sahnelerin %15–25'inde (sunucu), göründüğünde bir şey yapıyor; şapkası var
+- [ ] Sahneler bir dünyada geçiyor (`set`), yer değiştikçe dekor değişiyor; en az 1 (uzunda 4) yakın plan
 - [ ] Çizgiler titreşiyor (boil), sabit vektör görünümü yok
 - [ ] İlk cümle doğrudan olayın içinde; cümle arası boşluk sıkı
 - [ ] Ekranda en fazla 5 kelime/sahne, en küçük yazı 44 px
@@ -169,7 +192,17 @@ yok; uzun video kapağında `cover.focus` o tek nesneyi büyütür, gerisi kâğ
 
 Kanal adı **Stickstory** (ekranda sol üstte, kapakta değil). Kanal açıklamasının ilk cümlesi: *"How about hearing history from a stick figure? ✏️📜"*.
 
-Görsel kimlik aynı (§2–5, §9; anlatıcı kırmızı fesli). Dil, niş ve anlatım:
+Çizim dili aynı (§2, §5, §5.1; anlatıcı kırmızı fesli), ama **ekran kimliği ayrı (kanal sahibinin kararı,
+2026-10-26: iki kanal birbirinin kopyası gibi durmaz):**
+
+- **Kâğıt:** soğuk gazete/saha defteri kâğıdı, `palettes.json` içindeki `ag-` setleri (`ag-newsprint`, `ag-slate`,
+  `ag-sage`, `ag-dusk`); Düşün Bakalım'ın sıcak setlerini kullanmaz (lint).
+- **Yazı:** **Zilla Slab** (kicker, altyazı, kapak, marka); kicker ve marka harf aralıklı büyük harf, işaret kare.
+- **Altyazı:** koyu mürekkep şerit üstünde açık yazı, vurgu kelimesi `gold`, şeridin altında kırmızı ofset gölge.
+- **Kapak:** Zilla Slab büyük harf; vurgu kelimesi mürekkep kutuda, kırmızı ofset gölgeyle, eğik değil.
+- Motor bunları `"narrator": "fes"`'ten kendisi seçer; senaryoya ayrıca bir şey yazılmaz.
+
+Dil, niş ve anlatım:
 
 - **Dil:** her şey İngilizce: anlatım, kicker, etiketler, el yazısı notlar, harita adları (İngilizce yaygın
   adlarıyla: "Constantinople", "Azores"), kapak, YouTube metadata. Senaryoda `"lang": "en"`; motor büyük harfi
@@ -188,7 +221,7 @@ Görsel kimlik aynı (§2–5, §9; anlatıcı kırmızı fesli). Dil, niş ve a
   Pasif ve dolambaçlı cümle yerine özne-yüklem-nesne düz cümle.
 - **TTS için yazım:** kısaltma yok ("miles per hour", "for example"; "mph", "e.g." yok); büyük sayılar rakamla
   ama okunur ("1,701 barrels", "1872"); tırnaklar kapatılır; noktalama tonlamayı taşır. Ses ayarı/etiket yok (§6.2).
-- **Kapak:** İngilizce 2–4 kelime iddia ("SHIP WITH NO CREW", "DANCED TO DEATH"); tek kelime kırmızı kutuda, tek nesne.
+- **Kapak:** İngilizce 2–4 kelime iddia ("SHIP WITH NO CREW", "DANCED TO DEATH"); tek kelime vurgu kutusunda, tek nesne.
 - **Shorts sonu:** punchline + tek kısa, doğal abone cümlesi nedeniyle: *"Subscribe for a true story like this every
   day."*, *"Follow Stickstory for one strange true story a day."* İlk cümle 3–8 kelime, en çarpıcı an, tarihle açılmaz.
 - **Doğruluk:** yaygın İngilizce efsaneleri (ör. Mary Celeste'te "sıcak çay, yarım kahvaltı") anlatma ya da efsane

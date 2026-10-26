@@ -4,7 +4,8 @@
 // in as an argument; every update() is a pure function of its arguments (deterministic, no Math.random/Date).
 //
 //   PARCHMENT.fonts(baseUrl)                       -> Promise; injects @font-face (Fraunces, Lora, Patrick Hand) + loads them
-//   PARCHMENT.background(target, W, H, opts)       -> {canvas, update(t, scene = 0, prevScene = -1, mix = 1)}
+//   PARCHMENT.background(target, W, H, opts)       -> {canvas, update(t, scene = 0, prevScene = -1, mix = 1, under = null)}
+//        under(ctx, w, h): drawn over the paper and stains, under the vignette (engine.js: the scene's set)
 //        target: a <canvas> or a container element (a canvas is appended). opts.scale (default 0.5: drawn at half
 //        resolution, CSS-stretched to W×H), opts.seed. Paper is baked once; per frame only blits + 2-4 stains.
 //   PARCHMENT.captions(container, W, H, groups)    -> {node, update(t)}   (t < 0 or no group at t: hidden)
@@ -12,13 +13,20 @@
 //   PARCHMENT.groupWords(words, maxWords=3, maxChars=16) -> groups from a flat [{t, text, cue?}] list
 //   PARCHMENT.kicker(container, W, H, {white, gray}) -> {node, update(lt, alpha = 1)}  (lt < 0: hidden)
 //   PARCHMENT.brand(container, W, H, text)         -> {node, update(alpha = 1)}
+//   PARCHMENT.setSkin('db' | 'ag')                 -> the channel's own HUD (BRAND.md §11): call before the builders.
+//        db (Düşün Bakalım): Fraunces/Lora, ink captions with a paper halo, cue words on a gold marker stroke.
+//        ag (Stickstory): Zilla Slab, captions on a dark ink strip, cue words in gold, square marks, letter-spaced caps.
 'use strict';
 
 const PARCHMENT = (() => {
   const C = THEME_PARCHMENT;
   const FONTS = [
     ['Fraunces', 'fraunces', '100 900'], ['Lora', 'lora', '400 700'], ["'Patrick Hand'", 'patrick-hand', '400'],
+    ["'Zilla Slab'", 'zilla-slab-600', '600'], ["'Zilla Slab'", 'zilla-slab-700', '700'],
   ];
+  let SKIN = 'db';
+  const setSkin = k => { SKIN = k === 'ag' ? 'ag' : 'db'; };
+  const SLAB = "'Zilla Slab', Georgia, serif";
   const LAT = 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD';
   const EXT = 'U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF';
 
@@ -29,7 +37,7 @@ const PARCHMENT = (() => {
         css += `@font-face{font-family:${fam};src:url(${baseUrl}${file}-${part}.woff2) format('woff2');font-weight:${w};font-display:block;unicode-range:${rng2}}\n`;
       const st = document.createElement('style'); st.id = 'parchment-fonts'; st.textContent = css; document.head.appendChild(st);
     }
-    return Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"']
+    return Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"', '700 100px "Zilla Slab"', '600 100px "Zilla Slab"']
       .map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123'))).then(() => true);
   }
 
@@ -110,7 +118,7 @@ const PARCHMENT = (() => {
     const P = bake(w, h, seed);
     return {
       canvas: cv,
-      update(t, scene = 0, prevScene = -1, mix = 1) {
+      update(t, scene = 0, prevScene = -1, mix = 1, under = null) {
         const { m, stains } = P;
         const ox = m * (0.5 + 0.45 * Math.sin(t * 0.07)), oy = m * (0.5 + 0.45 * Math.cos(t * 0.05));   // slow paper drift
         X.globalCompositeOperation = 'source-over'; X.globalAlpha = 1;
@@ -125,6 +133,7 @@ const PARCHMENT = (() => {
           }
         };
         put(prevScene, 1 - mix); put(scene, mix);
+        if (under) { X.save(); under(X, w, h); X.restore(); }   // sets.js: the scene's world, multiplied onto the paper
         const R = Math.hypot(w, h) / 2, g = X.createRadialGradient(w / 2, h * 0.47, R * 0.45, w / 2, h * 0.47, R);
         g.addColorStop(0, rgba(C.paperDark, 0)); g.addColorStop(0.7, rgba(C.paperDark, 0.55)); g.addColorStop(1, rgba(C.stain, 0.55));
         X.fillStyle = g; X.fillRect(0, 0, w, h);
@@ -144,14 +153,18 @@ const PARCHMENT = (() => {
     flush();
     return out.map((ws, i) => ({ start: ws[0].t, end: out[i + 1] ? out[i + 1][0].t : ws[ws.length - 1].t + 0.8, words: ws }));
   }
+  // a paper halo around ink letters (db): stacked hard text-shadows, cheap for the software rasteriser
+  const halo = (c, r) => { const o = []; for (let a = 0; a < 16; a++) o.push(`${(r * Math.cos(a * Math.PI / 8)).toFixed(1)}px ${(r * Math.sin(a * Math.PI / 8)).toFixed(1)}px 0 ${c}`); return o.join(','); };
   function captions(container, W, H, groups) {
-    const portrait = H > W;
+    const portrait = H > W, ag = SKIN === 'ag';
     const node = document.createElement('div');
-    node.style.cssText = 'position:absolute;left:50%;transform:translateX(-50%);width:max-content;text-align:center;opacity:0;' +
-      `font-family:Lora,Georgia,serif;font-weight:700;color:${C.ink};background:${C.paperLight};border:3px solid ${C.ink};` +
-      `border-radius:34px;box-shadow:6px 8px 0 ${rgba(C.ink, 0.18)};letter-spacing:-0.01em;line-height:1.12;` +
-      (portrait ? 'top:1170px;max-width:940px;font-size:84px;padding:6px 30px 16px;' : 'bottom:92px;max-width:1440px;font-size:60px;padding:4px 26px 12px;');
+    node.style.cssText = 'position:absolute;left:50%;transform:translateX(-50%);width:max-content;text-align:center;opacity:0;line-height:1.12;' + (ag
+      ? `font-family:${SLAB};font-weight:700;color:${C.paperLight};background:${C.ink};border-radius:6px;box-shadow:10px 10px 0 ${C.red};letter-spacing:0;` +
+        (portrait ? 'top:1176px;max-width:920px;font-size:82px;padding:8px 30px 16px;' : 'bottom:92px;max-width:1440px;font-size:58px;padding:6px 26px 12px;')
+      : `font-family:Lora,Georgia,serif;font-weight:700;color:${C.ink};letter-spacing:-0.01em;text-shadow:${halo(C.paperLight, portrait ? 7 : 5)},0 10px 26px ${rgba(C.ink, 0.25)};` +
+        (portrait ? 'top:1170px;max-width:960px;font-size:92px;padding:6px 10px 16px;' : 'bottom:84px;max-width:1500px;font-size:64px;padding:4px 10px 12px;'));
     container.appendChild(node);
+    const mark = col => `linear-gradient(176deg, transparent 52%, ${rgba(col, 0.82)} 53%, ${rgba(col, 0.82)} 90%, transparent 91%)`;
     let curG = null, spans = [];
     return {
       node,
@@ -160,13 +173,19 @@ const PARCHMENT = (() => {
         if (!g) { node.style.opacity = 0; return; }
         if (curG !== g) {
           curG = g; node.innerHTML = '';
-          spans = g.words.map(w => { const s = document.createElement('span'); s.textContent = w.text; s.style.cssText = 'display:inline-block;margin:0 .2em;transform-origin:50% 70%'; node.appendChild(s); return s; });
+          spans = g.words.map(w => { const s = document.createElement('span'); s.textContent = w.text; s.style.cssText = 'display:inline-block;margin:0 .2em;padding:0 .06em;transform-origin:50% 70%'; node.appendChild(s); return s; });
         }
         g.words.forEach((w, k) => {
           const next = k + 1 < g.words.length ? g.words[k + 1].t : g.end;
           const on = t >= w.t, now = on && t < next, p = spring(t, w.t, 0.35);
           spans[k].style.visibility = on ? 'visible' : 'hidden';
-          spans[k].style.color = w.cue ? (w.cue === 'red' ? C.red : C.gold) : C.ink;
+          if (ag) spans[k].style.color = w.cue ? (w.cue === 'red' ? C.red : C.gold) : C.paperLight;
+          else {   // db: ink letters; a cue word sits on a gold (or red) marker stroke that sweeps in
+            spans[k].style.color = C.ink;
+            spans[k].style.backgroundImage = w.cue && on ? mark(w.cue === 'red' ? C.red : C.gold) : '';
+            spans[k].style.backgroundSize = `${(100 * prog(t, w.t, 0.25)).toFixed(0)}% 100%`;
+            spans[k].style.backgroundRepeat = 'no-repeat';
+          }
           spans[k].style.transform = `translateY(${(1 - p) * 30}px) scale(${lerp(0.6, 1, p) * (now ? 1.04 : 1)})`;
         });
         node.style.opacity = 1 - prog(t, g.end - 0.08, 0.08);
@@ -176,15 +195,18 @@ const PARCHMENT = (() => {
 
   // ---------------------------------------------------------------- kicker + brand (Fraunces, ink)
   function kicker(container, W, H, title = {}) {
-    const portrait = H > W;
+    const portrait = H > W, ag = SKIN === 'ag';
     const node = document.createElement('div');
-    node.style.cssText = `position:absolute;display:flex;align-items:stretch;gap:18px;opacity:0;font-family:Fraunces,Georgia,serif;font-weight:800;color:${C.ink};letter-spacing:-0.01em;line-height:1.05;` +
-      (portrait ? 'left:64px;top:168px;font-size:52px;max-width:720px;' : 'left:90px;top:128px;font-size:46px;max-width:900px;');
+    node.style.cssText = `position:absolute;display:flex;align-items:stretch;gap:18px;opacity:0;color:${C.ink};line-height:1.05;` + (ag
+      ? `font-family:${SLAB};font-weight:700;letter-spacing:0.06em;text-transform:uppercase;` + (portrait ? 'left:64px;top:170px;font-size:46px;max-width:760px;' : 'left:90px;top:128px;font-size:40px;max-width:900px;')
+      : 'font-family:Fraunces,Georgia,serif;font-weight:800;letter-spacing:-0.01em;' + (portrait ? 'left:64px;top:168px;font-size:52px;max-width:720px;' : 'left:90px;top:128px;font-size:46px;max-width:900px;'));
     container.appendChild(node);
     const words = [];
     let bar = null, src = null;
     if (title.white || title.gray || title.source) {
-      bar = document.createElement('div'); bar.style.cssText = `width:8px;border-radius:4px;background:${C.blue};flex:none`; node.appendChild(bar);
+      bar = document.createElement('div');
+      bar.style.cssText = ag ? `width:20px;height:20px;margin-top:.42em;background:${C.red};flex:none;transform-origin:50% 50%` : `width:8px;border-radius:4px;background:${C.blue};flex:none`;
+      node.appendChild(bar);
       const tx = document.createElement('div'); node.appendChild(tx);
       for (const [col, s] of [[C.ink, title.white || ''], [C.inkSoft, title.gray || '']])
         for (const wd of s.split(/\s+/).filter(Boolean)) {
@@ -193,7 +215,7 @@ const PARCHMENT = (() => {
         }
       if (title.source) {
         src = document.createElement('div'); src.textContent = title.source;
-        src.style.cssText = `font-family:Lora,Georgia,serif;font-style:italic;font-weight:700;color:${C.inkSoft};letter-spacing:0;margin-top:10px;` +
+        src.style.cssText = `font-family:${ag ? SLAB : 'Lora,Georgia,serif'};font-style:italic;font-weight:${ag ? 600 : 700};color:${C.inkSoft};letter-spacing:0;text-transform:none;margin-top:10px;` +
           `font-size:${portrait ? 44 : 34}px;opacity:0`;
         tx.appendChild(src);
       }
@@ -203,22 +225,23 @@ const PARCHMENT = (() => {
       update(lt, alpha = 1) {
         if (lt == null || lt < 0 || (!words.length && !src)) { node.style.opacity = 0; return; }
         node.style.opacity = alpha;
-        bar.style.transform = `scaleY(${spring(lt, 0, 0.5)})`;
+        bar.style.transform = ag ? `scale(${spring(lt, 0, 0.5)}) rotate(${(1 - spring(lt, 0, 0.6)) * 90}deg)` : `scaleY(${spring(lt, 0, 0.5)})`;
         words.forEach((w, j) => { const p = spring(lt, 0.05 + j * 0.07, 0.55); w.style.opacity = clamp01(p * 1.6); w.style.transform = `translateY(${(1 - p) * 40}px)`; });
         if (src) src.style.opacity = clamp01((lt - 0.4) / 0.4);
       },
     };
   }
   function brand(container, W, H, text) {
-    const portrait = H > W;
+    const portrait = H > W, ag = SKIN === 'ag';
     const node = document.createElement('div');
-    node.style.cssText = `position:absolute;display:flex;align-items:center;gap:14px;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:34px;color:${C.ink};` +
-      (portrait ? 'left:64px;top:92px;' : 'left:90px;top:64px;');
-    const dot = document.createElement('i'); dot.style.cssText = `width:16px;height:16px;border-radius:50%;background:${C.red};display:block`;
+    node.style.cssText = `position:absolute;display:flex;align-items:center;gap:14px;color:${C.ink};` + (ag
+      ? `font-family:${SLAB};font-weight:700;font-size:30px;letter-spacing:0.16em;text-transform:uppercase;`
+      : 'font-family:Fraunces,Georgia,serif;font-weight:700;font-size:34px;') + (portrait ? 'left:64px;top:92px;' : 'left:90px;top:64px;');
+    const dot = document.createElement('i'); dot.style.cssText = `width:16px;height:16px;${ag ? '' : 'border-radius:50%;'}background:${C.red};display:block`;
     const sp = document.createElement('span'); sp.textContent = text || '';
     node.appendChild(dot); node.appendChild(sp); container.appendChild(node);
     return { node, update(alpha = 1) { node.style.opacity = alpha; } };
   }
 
-  return { colors: C, fonts, background, captions, groupWords, kicker, brand };
+  return { colors: C, fonts, setSkin, background, captions, groupWords, kicker, brand };
 })();
