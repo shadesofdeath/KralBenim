@@ -1,0 +1,375 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "extra": true,
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "kaime",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Kendi",
+      "parasını",
+      "yaktı"
+    ],
+    "highlight": [
+      "yaktı"
+    ],
+    "scene": 0,
+    "t": 3.4,
+    "focus": [
+      620,
+      880
+    ],
+    "zoom": 1.15,
+    "kasif": false
+  },
+  "sources": [
+    {
+      "title": "TDV İslâm Ansiklopedisi — Kâime (Ali Akyıldız)",
+      "url": "https://islamansiklopedisi.org.tr/kaime"
+    },
+    {
+      "title": "TCMB Sanal Müze — Kaime",
+      "url": "https://sanalmuze.tcmb.gov.tr/wps/wcm/connect/sanalmuze/en/main+menu/banknote+series/kaime"
+    },
+    {
+      "title": "FRUS 1880, No. 608 — Maynard'ın İstanbul'dan raporu (2 Aralık 1879)",
+      "url": "https://history.state.gov/historicaldocuments/frus1880/d608"
+    }
+  ],
+  "youtube": {
+    "title": "Kaime: Osmanlı Kendi Parasını Neden Meydanda Yaktı?",
+    "description": "Kaime, Osmanlı'nın ilk kâğıt parasıydı ve bir gün devlet onu meydanlarda yaktı. Peki bir devlet kendi parasını neden ateşe verir?\n\n1840'ta çıkan ilk kaimeler matbaada basılmadı, elle yazılıp mühürlendi; kalpazanlar da hemen işe koyuldu. Kırım Savaşı'nda ve 93 Harbi'nde devlet ihtiyaç duydukça yeni kaime bastı. 1878'de kâğıt azalsın ve güven dönsün diye toplanan kaimeler meydanlarda yakıldı, ama iş işten geçmişti: 1879'da bir altın on üç kaimeye satılır oldu ve esnaf kaimeyi almaz oldu. Altına bugün bile \"güvenli liman\" denmesinin en eski cevaplarından biri bu hikâyede.\n\nHer gün böyle gerçek bir hikâye için Düşün Bakalım'a abone ol. Sence bir paranın değerini ne belirler: altın mı, güven mi? Yorumlara yaz!\n\n#shorts #kaime #osmanlı #tarih #düşünbakalım",
+    "tags": [
+      "kaime",
+      "osmanlı kaime",
+      "kaime para",
+      "kaime-i nakdiye",
+      "osmanlı kağıt para",
+      "ilk kağıt para",
+      "osmanlı parası",
+      "abdülmecid",
+      "tanzimat",
+      "kırım savaşı",
+      "93 harbi",
+      "kalpazan",
+      "enflasyon tarihi",
+      "altın",
+      "osmanlı tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-27T16:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "kaime_fire",
+      "text": "Osmanlı kendi parasını meydanda yaktı. Peki neden?",
+      "visual": "İstanbul'da bir meydan: arnavut kaldırımı, arkada kubbe ve minare silueti. Ortada üst üste yığılmış kâğıt paralar (kaimeler) büyük bir mürekkep alevinde yanıyor; yanan kâğıtlar kıvrılıp dumanla yükseliyor. Solda fesli bir memur 'parasını'da bağlı bir kaime destesini ateşe fırlatıyor; arkada fesli halk izliyor. Sağda büyük Kaşif alevi işaret ediyor, 'yaktı'da alev parlıyor, Kaşif şokla geri sıçrıyor.",
+      "title": {},
+      "set": {
+        "name": "city",
+        "ground": 1150
+      },
+      "cues": {
+        "toss": "parasını",
+        "hit": "yaktı"
+      },
+      "params": {
+        "gy": 0.6,
+        "x": 0.42,
+        "kasif": {
+          "x": 0.77,
+          "scale": 1.1,
+          "face": "left",
+          "pose": "point",
+          "dir": "down",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "shock"
+            }
+          ]
+        },
+        "crowd_n": 3,
+        "embers": 5
+      }
+    },
+    {
+      "type": "kaime_desk",
+      "text": "1840'ta ilk kâğıt para çıktı: kaime.",
+      "visual": "Maliye odası: ahşap bir masanın üstünde büyük, boş bir kaime kâğıdı, solda mürekkep hokkası. Mavi kollu bir kâtibin eli kamış kalemle kâğıda sağdan sola satır satır yazı yazıyor; üstte tuğra benzeri kıvrım, köşede '100'.",
+      "title": {
+        "white": "1840",
+        "gray": "Abdülmecid dönemi"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1150
+      },
+      "source": "TCMB Sanal Müze",
+      "cues": {
+        "hit": "kaime"
+      },
+      "params": {
+        "mode": "write",
+        "seal": false,
+        "write": [
+          0.1,
+          3.4
+        ]
+      }
+    },
+    {
+      "type": "kaime_desk",
+      "text": "Düşünün, cebinizdeki para birinin el yazısı!",
+      "visual": "Yakın plan aynı masa: yazısı bitmek üzere olan kaime; el son satırı yazıp çekiliyor, 'yazısı'nda yukarıdan ahşap saplı pirinç bir mühür iniyor, kâğıda basıyor, kalkıyor ve geride kırmızı yuvarlak bir mühür izi kalıyor. Masanın ön yüzü çekmeceleriyle ekranın altına iniyor.",
+      "title": {
+        "white": "Elle yazıldı"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1150
+      },
+      "camera": {
+        "focus": [
+          540,
+          1010
+        ],
+        "zoom": 1.45,
+        "move": "push"
+      },
+      "source": "TDV İslâm Ansiklopedisi",
+      "cues": {
+        "seal": "yazısı"
+      },
+      "params": {
+        "mode": "write",
+        "write_from": 0.7,
+        "write": [
+          0,
+          1.0
+        ]
+      }
+    },
+    {
+      "type": "kaime_forge",
+      "text": "Tahmin edin ne oldu? Kalpazanlar hemen işe koyuldu.",
+      "visual": "Gece, mum ışığında bir oda: pencereden yıldızlı gökyüzü ve ay görünüyor. Masada solda mühürlü asıl kaime, sağda boş bir kâğıt; koyu kollu bir el 'Kalpazanlar'da onu satır satır kopyalamaya başlıyor. 'koyuldu'da bir büyüteç asıl kaimenin üstünden kopyaya kayıyor.",
+      "title": {
+        "white": "Kalpazanlar"
+      },
+      "set": {
+        "name": "night",
+        "ground": 1150
+      },
+      "camera": {
+        "focus": [
+          540,
+          980
+        ],
+        "zoom": 1.15,
+        "move": "push"
+      },
+      "cues": {
+        "copy": "Kalpazanlar",
+        "hit": "koyuldu"
+      },
+      "params": {}
+    },
+    {
+      "type": "kaime_press",
+      "text": "Savaşlarda devlet durmadan kaime bastı.",
+      "visual": "Bir basımhane: fesli bir baskıcı ahşap el baskı makinesinin kolunu çekiyor, baskı tablası iniyor, her çekişte bir kaime fırlayıp sağdaki desteye uçuyor. Makine giderek hızlanıyor; '1854' etiketli deste büyüyor, 'devlet'te yanında '1877' etiketli ikinci bir deste yükselmeye başlıyor; 'bastı'da makine sarsılıyor. Ön planda perspektifli tahta döşeme ve kapağı açık, taze kaimelerle dolu ahşap bir sandık.",
+      "title": {
+        "white": "Savaş masrafı"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1150
+      },
+      "source": "TDV İslâm Ansiklopedisi",
+      "cues": {
+        "war2": "devlet",
+        "hit": "bastı"
+      },
+      "params": {
+        "rate": 1.3,
+        "rate_end": 3.2,
+        "stacks": [
+          {
+            "x": 0.78,
+            "label": "1854",
+            "at": 0
+          },
+          {
+            "x": 0.92,
+            "label": "1877",
+            "at": "war2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "kaime_fire",
+      "text": "1878'de devlet, güven dönsün diye kaimeleri yaktı.",
+      "visual": "Yakın plan, akşam meydanı: alevler içindeki kaime yığını; kenarları kıvrılan, mühürleri seçilen kaimeler kararıp yanıyor, yanan kâğıt parçaları yükseliyor. Solda fesli bir memur 'devlet'te bir desteyi daha ateşe atıyor, 'yaktı'da alev yükseliyor. Ön planda arnavut kaldırımı, yere saçılmış yanık kâğıtlar ve izleyen kalabalığın koyu fesli başları.",
+      "title": {
+        "white": "1878",
+        "gray": "güven için yakıldı"
+      },
+      "set": {
+        "name": "night",
+        "ground": 1150
+      },
+      "camera": {
+        "focus": [
+          580,
+          1000
+        ],
+        "zoom": 1.4,
+        "move": "push"
+      },
+      "source": "TDV İslâm Ansiklopedisi",
+      "cues": {
+        "toss": "devlet",
+        "hit": "yaktı"
+      },
+      "params": {
+        "gy": 0.6,
+        "x": 0.55,
+        "size": 1.0,
+        "flame_h": 300,
+        "ember_top": 0.42,
+        "smoke_top": 0.4,
+        "embers": 9
+      }
+    },
+    {
+      "type": "kaime_scale",
+      "text": "Ama iş işten geçmişti: bir altına on üç kaime istendi!",
+      "visual": "Bir sarrafın tezgâhı: tezgâhın üstünde altın sikke yığınları ve büyük pirinç terazi; sol kefede tek bir altın sikke ('1 altın' notu), kefe aşağıda. 'geçmişti'den itibaren sağ kefeye kaimeler tek tek düşüyor, direğe asılı kara tahtadaki sayaç 1, 2, 3… diye artıyor, terazi yavaş yavaş dengeye geliyor; 'istendi'de on üçüncü kaime düşüyor, '13' altın rengine dönüyor. Tezgâhın ön yüzü ekranın altına kadar iniyor.",
+      "title": {
+        "white": "1879",
+        "gray": "sarraf tezgâhı"
+      },
+      "set": {
+        "name": "city",
+        "ground": 1150
+      },
+      "source": "TDV İslâm Ansiklopedisi",
+      "cues": {
+        "count": "geçmişti",
+        "hit": "istendi"
+      },
+      "params": {
+        "mode": "count",
+        "n": 13,
+        "coin_label": "1 altın",
+        "unit": "kaime"
+      }
+    },
+    {
+      "type": "kaime_hands",
+      "text": "Esnaf kaimeyi almaz oldu.",
+      "visual": "Yakın plan bir dükkân tezgâhı, arkada kavanozlar, kumaş topları ve çuvallarla raflar; tezgâhta birkaç altın ve gümüş sikke. Mavi kollu bir müşteri eli 'Esnaf'ta tezgâhın üstünden bir kaime uzatıyor; 'almaz'da dükkâncının açık avucu kalkıp 'hayır' diye sallanıyor, kaime geri itiliyor ve yukarıdan 'Kaime geçmez!' tabelası sallanarak iniyor.",
+      "title": {
+        "white": "Esnaf",
+        "gray": "kaimeyi reddetti"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1150
+      },
+      "source": "ABD elçisi, 1879",
+      "cues": {
+        "offer": "Esnaf",
+        "refuse": "almaz"
+      },
+      "params": {
+        "sign": {
+          "text": "Kaime geçmez!",
+          "at": "refuse"
+        }
+      }
+    },
+    {
+      "type": "kaime_scale",
+      "text": "Kâğıt para değerini güvenden alır; güven bitince elde sadece altın kalır.",
+      "visual": "Tepelerde açık havada büyük terazi: sol kefede tek bir kaime, sağ kefede altın sikke; altın tarafı aşağıda. 'güvenden'de yukarıdan üstünde 'GÜVEN' yazan demir bir ağırlık kaimenin kefesine düşüyor ve terazi sallanarak dengeye geliyor. Ön planda koyu taralı bir tepe.",
+      "title": {
+        "white": "Asıl değer",
+        "gray": "güven"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 1150
+      },
+      "camera": {
+        "focus": [
+          540,
+          820
+        ],
+        "zoom": 1.1,
+        "move": "push"
+      },
+      "cues": {
+        "trust": "güvenden"
+      },
+      "params": {
+        "mode": "trust",
+        "x": 0.5
+      }
+    },
+    {
+      "type": "kaime_scale",
+      "text": "Her gün böyle gerçek bir hikâye için abone olun.",
+      "visual": "Geniş plan aynı tepeler: dengede duran terazi, sol kefede kaime ve üstünde 'GÜVEN' ağırlığı, sağ kefede altın sikke. Sağda Kaşif teraziyi işaret ediyor, 'abone'de izleyiciye dönüp el sallıyor.",
+      "title": {
+        "white": "Kaime",
+        "gray": "1840-1879"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 1150
+      },
+      "camera": {
+        "move": "pull"
+      },
+      "cues": {
+        "wave": "abone"
+      },
+      "params": {
+        "mode": "trust",
+        "settled": true,
+        "x": 0.4,
+        "kasif": {
+          "x": 0.84,
+          "scale": 1.05,
+          "face": "left",
+          "pose": "point",
+          "dir": "forward",
+          "seq": [
+            {
+              "at": "wave",
+              "pose": "wave",
+              "face": "right"
+            }
+          ]
+        },
+        "span": 230
+      }
+    }
+  ]
+}
