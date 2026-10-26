@@ -1,0 +1,8 @@
+{
+ "_comment": "Paper + ink colour sets of the parchment style (brand/kit/BRAND.md §3). build.py picks one per video (stable hash of the file name, or the script's \"palette\"); every set keeps the same roles and contrast: light paper, near-black ink, muted accents. Kaşif's hat colours never change.",
+ "sepia":      {"paper": "#E9DCC0", "paperLight": "#F4EAD5", "paperDark": "#D3C09A", "stain": "#B88F5A", "ink": "#2B1D12", "inkSoft": "#6B5440", "blue": "#4A6F94", "red": "#A8432F", "gold": "#C8922E", "green": "#5E7D4B"},
+ "olive":      {"paper": "#E3DDBF", "paperLight": "#F1EDD8", "paperDark": "#C9C196", "stain": "#A39256", "ink": "#262417", "inkSoft": "#5E5B40", "blue": "#476F86", "red": "#9F472C", "gold": "#B98E2C", "green": "#587A45"},
+ "indigo":     {"paper": "#E4DECF", "paperLight": "#F3EFE5", "paperDark": "#CAC1AB", "stain": "#A48E68", "ink": "#1E2333", "inkSoft": "#535A6D", "blue": "#3D5E8E", "red": "#A33E3A", "gold": "#C18B2F", "green": "#4E7A5D"},
+ "terracotta": {"paper": "#EED9C2", "paperLight": "#F8EADB", "paperDark": "#D9BC9C", "stain": "#BC8458", "ink": "#2F1B14", "inkSoft": "#70493B", "blue": "#4B6A87", "red": "#B3482F", "gold": "#CD8E34", "green": "#627A47"},
+ "ash":        {"paper": "#E3DFD4", "paperLight": "#F1EEE6", "paperDark": "#C8C2B3", "stain": "#A08F72", "ink": "#22201C", "inkSoft": "#5F5A52", "blue": "#43698E", "red": "#A5432F", "gold": "#BE8A2B", "green": "#5A7A4D"}
+}

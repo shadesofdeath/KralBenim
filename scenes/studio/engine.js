@@ -9,7 +9,9 @@ let PAPER = null, PCAP = null, PBRAND = null, BG_AT = { i: 0, prev: -1, p: 1 }; 
 const $ = id => document.getElementById(id);
 
 function makeKicker(sc) {
-  return PARCHMENT.kicker($('kickers'), W, H, sc.title || {});
+  // scene "source": a short on-screen source note under the kicker ("Kaynak: NASA"), BRAND.md §6.12
+  return PARCHMENT.kicker($('kickers'), W, H, Object.assign({}, sc.title || {},
+    sc.source ? { source: (D.lang === 'en' ? 'Source: ' : 'Kaynak: ') + sc.source } : {}));
 }
 
 window.init = async (data) => {
@@ -20,6 +22,7 @@ window.init = async (data) => {
   // the channel's narrator (Kaşif's explorer hat, or Stickstory's fez) before any shot builds a rig
   if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
+  for (const k of ['paper', 'paperLight', 'ink', 'red', 'blue']) root.style.setProperty('--' + k, THEME_PARCHMENT[k]);
   root.classList.add(D.format || 'short');
   root.classList.add('parchment');   // the only theme
 

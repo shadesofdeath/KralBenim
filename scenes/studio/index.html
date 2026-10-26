@@ -20,10 +20,10 @@
     unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
   /* one visual style: sepia parchment + Kaşif (brand/kit/BRAND.md §3-5) */
   :root { --W: 1080px; --H: 1920px; }
-  html, body { margin: 0; width: var(--W); height: var(--H); overflow: hidden; background: #E9DCC0; }
+  html, body { margin: 0; width: var(--W); height: var(--H); overflow: hidden; background: var(--paper, #E9DCC0); }
   html.long { --W: 1920px; --H: 1080px; }
-  body { font-family: Lora, serif; color: #2B1D12; -webkit-font-smoothing: antialiased; }
-  #stage { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: #E9DCC0; }
+  body { font-family: Lora, serif; color: var(--ink, #2B1D12); -webkit-font-smoothing: antialiased; }
+  #stage { position: relative; width: var(--W); height: var(--H); overflow: hidden; background: var(--paper, #E9DCC0); }
   #stage > * { position: absolute; inset: 0; }
   canvas { display: block; }
   #bg { width: var(--W); height: var(--H); }
@@ -32,20 +32,20 @@
   /* ---- HUD (kicker, captions and brand are drawn by parchment-theme.js into #kickers) */
   #progress { display: none; }
   html.long #progress { display: block; inset: auto; left: 90px; right: 90px; bottom: 40px; height: 5px; border-radius: 3px; background: rgba(43,29,18,.15); }
-  html.long #bar { height: 100%; width: 0; border-radius: 3px; background: #4A6F94; }
+  html.long #bar { height: 100%; width: 0; border-radius: 3px; background: var(--blue, #4A6F94); }
 
   /* ---- cover / hook (BRAND.md §9) */
   #covershade, #covertext, #kasifcover, #coverfade { display: none; pointer-events: none; }
   /* long video thumbnail with cover.focus: everything but the focal object fades into the paper (one clear subject) */
-  html.long.cover.focus #coverfade { display: block; background: radial-gradient(ellipse 30% 50% at 72% 52%, rgba(233,220,192,0) 58%, #E9DCC0 100%); }
-  html.cover #covershade { display: block; background: linear-gradient(180deg, #E9DCC0 0%, #E9DCC0 36%, rgba(233,220,192,0) 50%); }
-  html.long.cover #covershade { background: linear-gradient(90deg, #E9DCC0 0%, #E9DCC0 38%, rgba(233,220,192,0) 56%); }
+  html.long.cover.focus #coverfade { display: block; background: radial-gradient(ellipse 30% 50% at 72% 52%, transparent 58%, var(--paper, #E9DCC0) 100%); }
+  html.cover #covershade { display: block; background: linear-gradient(180deg, var(--paper, #E9DCC0) 0%, var(--paper, #E9DCC0) 36%, transparent 50%); }
+  html.long.cover #covershade { background: linear-gradient(90deg, var(--paper, #E9DCC0) 0%, var(--paper, #E9DCC0) 38%, transparent 56%); }
   html.cover #covertext { display: block; inset: auto; left: 70px; right: 70px; top: 190px;
-    font-family: Fraunces, serif; font-weight: 900; color: #2B1D12; font-size: 150px; line-height: 1.04; letter-spacing: -0.02em; word-spacing: 0.14em;
+    font-family: Fraunces, serif; font-weight: 900; color: var(--ink, #2B1D12); font-size: 150px; line-height: 1.04; letter-spacing: -0.02em; word-spacing: 0.14em;
     text-transform: uppercase; transform-origin: left top; }
   html.cover #covertext .line { display: block; }
-  html.cover #covertext .hl { color: #F4EAD5; background: #A8432F; padding: .02em .14em .08em; margin: .04em .1em .06em 0;
-    border: 5px solid #2B1D12; border-radius: .12em; display: inline-block; transform: rotate(-2deg);
+  html.cover #covertext .hl { color: var(--paperLight, #F4EAD5); background: var(--red, #A8432F); padding: .02em .14em .08em; margin: .04em .1em .06em 0;
+    border: 5px solid var(--ink, #2B1D12); border-radius: .12em; display: inline-block; transform: rotate(-2deg);
     box-shadow: 8px 10px 0 rgba(43,29,18,.22); }
   html.cover #progress { display: none !important; }
   html.long.cover #covertext { left: 90px; right: auto; width: 860px; top: 50%; transform: translateY(-50%); font-size: 128px; }

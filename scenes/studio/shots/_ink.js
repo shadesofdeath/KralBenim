@@ -5,11 +5,7 @@
 // Everything is a pure function of (seed, t): no Math.random, scrubbing back gives the same frame.
 'use strict';
 
-const INK = {
-  paper: '#E9DCC0', paperLight: '#F4EAD5', paperDark: '#D3C09A', stain: '#B88F5A',
-  ink: '#2B1D12', inkSoft: '#6B5440', blue: '#4A6F94', red: '#A8432F', gold: '#C8922E', green: '#5E7D4B',
-  hat: '#8B5A2B', hatBand: '#4E3218',
-};
+const INK = Object.assign({}, THEME_PARCHMENT);   // the video's palette (core.js, window.PALETTE)
 const INK_FPS = 8;            // boil rate: lines re-draw 8 times a second
 const INK_FONT = "'Patrick Hand', 'Comic Sans MS', cursive";
 

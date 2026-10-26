@@ -5,8 +5,12 @@ push'tan sonra GitHub Actions render edip YouTube'a zamanlanmış olarak yükler
 
 | Kanal | Dil | Shorts | Uzun video (5–6 dk) | Saat dilimi |
 |---|---|---|---|---|
-| **Düşün Bakalım** (Türkçe, tarih) | tr | günde **1** — 19:00 | **her gün 1** — 20:30 | İstanbul |
-| **Stickstory** (global, İngilizce) | en | günde **3** — 09:00, 13:00, 19:00 | **her gün 1** — 14:00 | **New York** |
+| **Düşün Bakalım** (Türkçe, tarih) | tr | günde **1** — 19:00 | **2 günde 1** — 20:30 | İstanbul |
+| **Stickstory** (global, İngilizce) | en | günde **2** — 13:00, 19:00 | **2 günde 1** — 14:00 | **New York** |
+
+**Daha az ama daha iyi (kanal sahibinin kararı, 2026-10-26):** YouTube seri üretilmiş/tekrarlayan içeriğe para
+kazanma açmıyor; bu yüzden sıklık düşürüldü (uzun videolar 2 günde bir, Stickstory Shorts günde 2). Kazanılan zaman
+araştırmaya, kaynaklara ve kaliteye gider; her video bir öncekinden kalıp olarak da farklı olmalı.
 
 **İki kanal asla karışmaz:** Türkçe videolar sadece Düşün Bakalım'a, İngilizce videolar sadece Stickstory'ye gider.
 Kanal dosya önekinden gelir (`ag-` = Stickstory); `upload.py` token'ın bağlı olduğu YouTube kanalını kontrol eder,
@@ -47,7 +51,7 @@ Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kald
   güncellenir), Shorts'un Instagram'a hazır dosyası. API kontrolü Telegram'a sadece sorun varsa yazar. `cloudflare/telegram-worker.js` — Telegram `/uzun`, `/shorts` komutları (`cloudflare/KURULUM.md`).
 
 Ses: anlatım + çok hafif ambiyans (`"sfx": false` kapatır). **Efekt sesi (whoosh, pop) ve nefes sesi yok** —
-kanal sahibi istemiyor. **Görseller sadece kodla üretilir:** Higgsfield (kanal sahibi tamamen kaldırdı, 2026-10-27: Higgsfield araçları
+kanal sahibi istemiyor. **Görseller sadece kodla üretilir:** Higgsfield (kanal sahibi tamamen kaldırdı, 2026-10-26: Higgsfield araçları
 hiçbir oturumda çağrılmaz) ya da başka bir yapay zekâ görsel/video
 aracı hiç kullanılmaz (lint engeller); çizilemeyen an için yeni parşömen sahne tipi ya da telifsiz gerçek fotoğraf.
 Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece Actions'ta. Yerel kontrol: `preview.py`.
@@ -110,7 +114,7 @@ Böylece mesaj hiçbir zaman eski kalmaz.
 - **Anlatıcı bir YouTuber'dır:** izleyiciye "siz" der, merakı paylaşır ve açıklar; olayı altyazı gibi sayan "yapıyor
   ediyor" anlatım yasak (en fazla üçte biri "-yor"), **devrik cümle yok**, ekrandakini tarif etmez, cümleler birbirine
   bağlanır, her 20–30 sn'de gerilim kancası, dolgu cümle yok (BRAND §6). Kısaltmaları açık yaz ("km/sa" değil).
-- **Kanal analizi (2026-10-27, iki kanal için de geçerli):** Shorts izleyicilerinin ~%46'sı ilk 1–2 saniyede
+- **Kanal analizi (2026-10-26, iki kanal için de geçerli):** Shorts izleyicilerinin ~%46'sı ilk 1–2 saniyede
   kaydırıyor (hedef ≥ %70 devam); uzun videolar yarıda bırakılıyor (ortalama %39 izlenme); uzun video tıklama oranı
   %0,96; trafiğin %99'u Shorts'tan ama abone ve uzun video izlenmesi neredeyse yok. Aşağıdaki kurallar bunun için.
 - **Shorts — ilk 2 saniye:** ilk kare doluyla açılır (kapak bloğu ilk cümle bitene kadar ekranda; tek net görsel +
@@ -149,6 +153,15 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   `punch(lt, cue)` ya da Kaşif poz değişimi. Ekranda sahne başına en fazla 5 kelime, en küçük yazı 44 px. Dikey ekranda
   önemli ayrıntı altyazı şeridine (y ≈ 1170–1320) ve YouTube arayüzüne (y > 1500) konmaz; sol üst marka + kicker'ındır.
 - Geçişler otomatik (`slide`, her üçüncüde `fade`); elle `"transition": "slide|fade|cut"`.
+- **Kaynaklar görünür (kanal sahibinin kararı, 2026-10-26; lint):** senaryoda `"sources": [{"title": "NASA — Phobos",
+  "url": "https://…"}, …]` (Shorts ≥ 2, uzun ≥ 3; bilgilerin doğrulandığı gerçek sayfalar, uydurma yok) →
+  `upload.py` açıklamaya "📚 Kaynaklar / Sources" bölümü olarak ekler. Ekranda: kilit bilgi/sayı sahnelerinde
+  sahne alanı `"source": "NASA"` (≤ 5 kelime) kicker'ın altında "Kaynak: NASA" notu olarak görünür (Shorts ≥ 1,
+  uzun ≥ 3 sahne). Mümkünse gerçek belge, mektup, eski harita (`photo`) ve kişilerin kendi sözleri kullanılır.
+- **Renk paleti her videoda değişir:** `scenes/studio/palettes.json` (sepia, olive, indigo, terracotta, ash; hepsi
+  parşömen + mürekkep, aynı kontrast). `build.py` dosya adından sabit ama videoya göre farklı birini seçer;
+  senaryoda `"palette": "<ad>"` ile elle seçilebilir. Sahne kodu renkleri sadece `INK.*` / `THEME_PARCHMENT.*`
+  token'larından alır (sabit hex yazılmaz), Kaşif'in şapkası hep aynı.
 
 ### Kapak (tıklanma oranını belirler, en çok özen burada)
 ```json
@@ -221,7 +234,8 @@ Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı
 ## Elle başlatılan ek video
 Telegram `/uzun [konu]`, `/shorts [konu]` (payload "EK VİDEO: uzun|shorts · Konu: …") ya da sohbetten istek: plan
 dışı ama **istenmiş** bir videodur. `python tools/plan.py --extra short|long [--channel ag]` numara ve en erken
-`publish_at`'i verir; senaryoya `"extra": true` yaz (günlük plana sayılmaz). Konu yoksa geçmişte işlenmemiş bir konu
+`publish_at`'i verir; senaryoya `"extra": true` yaz (günlük plana sayılmaz). Kanal sahibi "hemen paylaş" derse
+`"publish_at": "now"`: render biter bitmez herkese açık yayınlanır (sadece `extra` videolarda, lint denetler). Konu yoksa geçmişte işlenmemiş bir konu
 seç (Stickstory'de önce `tools/news.py` manşetleri, yukarıdaki kural). Akış aynı (eleştirmen en az 1 tur, zaman yetiyorsa 2); commit `Extra video YYYY-MM-DD: <başlık>`.
 
 ## Komutlar

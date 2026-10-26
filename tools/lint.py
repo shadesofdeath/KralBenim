@@ -18,7 +18,7 @@ from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
 THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
-# channel analytics (owner, 2026-10-27): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
+# channel analytics (owner, 2026-10-26): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
 # halfway (39% average view), long-video CTR 0.96%, Shorts viewers rarely subscribe. The rules below target that.
 GREETING = re.compile(r"\b(merhaba|selam(lar)?|hoş ?geldiniz|kanal(ım)?a hoş|bu videoda|bugün sizlere|bugün size|"
                       r"başlamadan önce|hello|hi (everyone|guys|there)|welcome|in this video|today (we|i)('ll| will| are)|"
@@ -208,6 +208,23 @@ def lint(path, kinds):
                 break
             pos += 420
 
+    # sources (owner, 2026-10-26: research must be visible): "sources" list for the description + on-screen notes
+    srcs = s.get("sources") or []
+    need = 2 if short else 3
+    if len(srcs) < need or not all(isinstance(x, dict) and x.get("title") for x in srcs):
+        err.append(f'"sources": need >= {need} entries {{"title": "...", "url": "https://..."}} (shown in the description)')
+    elif not any(str(x.get("url", "")).startswith("http") for x in srcs):
+        warn.append("sources: no entry has a url; add the page you verified the facts on")
+    notes = [x for x in sc if x.get("source")]
+    if len(notes) < (1 if short else 3):
+        err.append(f'scene "source" (short on-screen note, e.g. "NASA"): need >= {1 if short else 3} scenes with one, on the key facts')
+    for i, x in enumerate(notes):
+        if len(str(x["source"]).split()) > 5:
+            warn.append(f"scene {sc.index(x)}: on-screen source note too long (<= 5 words)")
+    pals = json.loads((ROOT / "scenes/studio/palettes.json").read_text())
+    if s.get("palette") and (s["palette"] not in pals or s["palette"].startswith("_")):
+        err.append(f'"palette" must be one of {", ".join(k for k in pals if not k.startswith("_"))} (or leave it out: random per video)')
+
     # cover
     c = s.get("cover")
     if not c:
@@ -236,6 +253,10 @@ def lint(path, kinds):
     seo = seo_score(s, y, short, en, cfg)
     if seo:
         err.append(f"SEO {100 - sum(p for p, _ in seo)}/100: " + "; ".join(m for _, m in seo))
+    if y.get("publish_at") == "now":     # immediate public upload, only for videos the owner asked for
+        if not s.get("extra"):
+            err.append('publish_at "now" is only for extra videos ("extra": true)')
+        return err, warn
     try:
         at = datetime.fromisoformat(y["publish_at"])
         if at < datetime.now(timezone.utc) + timedelta(minutes=45):

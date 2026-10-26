@@ -217,7 +217,7 @@ def build_timeline(script, text, ranges, words, duration):
             else:
                 print(f"warning: cue '{needle}' not found in scene {i}", file=sys.stderr)
         out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"], "chapter": sc.get("chapter"),
-                           "title": sc.get("title", {}), "params": sc.get("params", {}), "cues": cues,
+                           "title": sc.get("title", {}), "source": sc.get("source"), "params": sc.get("params", {}), "cues": cues,
                            **({"transition": sc["transition"]} if "transition" in sc else {})})
         captions += captions_of(per[i], ends[i])
 
@@ -229,8 +229,22 @@ def build_timeline(script, text, ranges, words, duration):
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
     return {"hook": hook, "duration": duration, "fps": script.get("fps", 30), "format": fmt, "size": SIZES[fmt],
             "channel": script.get("channel", ""), "narrator": script.get("narrator", "kasif"),
-            "lang": script.get("lang", "tr"), "theme": "parchment",
+            "lang": script.get("lang", "tr"), "theme": "parchment", **palette(script),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
+
+
+PALETTES = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scenes/studio/palettes.json").read_text()).items()
+            if not k.startswith("_")}
+
+
+def palette(script):
+    """The video's paper/ink colours (scenes/studio/palettes.json): the script's "palette", else a stable pick from
+    the file name, so every video gets a different but repeatable set (preview = render = every shard)."""
+    name = script.get("palette")
+    if name not in PALETTES:
+        key = script.get("_name") or script.get("youtube", {}).get("title", "")
+        name = sorted(PALETTES)[int(hashlib.sha1(key.encode()).hexdigest(), 16) % len(PALETTES)]
+    return {"palette": name, "colors": PALETTES[name]}
 
 
 def draft_timeline(script):
@@ -246,6 +260,7 @@ def load_script(path):
     """Read a script and resolve media paths (params.src / params.video) relative to the script file."""
     path = Path(path).resolve()
     script = json.loads(path.read_text())
+    script["_name"] = path.stem
     if script.get("engine") != "studio":
         sys.exit(f'{path.name}: "engine" must be "studio"')
     for sc in script["scenes"]:
@@ -295,6 +310,8 @@ def open_page(pw, timeline):
     w, h = timeline["size"]
     page = browser.new_page(viewport={"width": w, "height": h})
     page.on("pageerror", lambda e: print(f"page error: {e}", file=sys.stderr))
+    if timeline.get("colors"):      # before core.js runs: every shot file captures these colours (palettes.json)
+        page.add_init_script(f"window.PALETTE = {json.dumps(timeline['colors'])};")
     page.goto(STUDIO.as_uri())
     for js in SHOT_FILES:
         page.add_script_tag(path=str(js))

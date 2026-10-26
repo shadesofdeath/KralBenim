@@ -182,8 +182,8 @@ const PARCHMENT = (() => {
       (portrait ? 'left:64px;top:168px;font-size:52px;max-width:720px;' : 'left:90px;top:128px;font-size:46px;max-width:900px;');
     container.appendChild(node);
     const words = [];
-    let bar = null;
-    if (title.white || title.gray) {
+    let bar = null, src = null;
+    if (title.white || title.gray || title.source) {
       bar = document.createElement('div'); bar.style.cssText = `width:8px;border-radius:4px;background:${C.blue};flex:none`; node.appendChild(bar);
       const tx = document.createElement('div'); node.appendChild(tx);
       for (const [col, s] of [[C.ink, title.white || ''], [C.inkSoft, title.gray || '']])
@@ -191,14 +191,21 @@ const PARCHMENT = (() => {
           const sp = document.createElement('span'); sp.textContent = wd; sp.style.cssText = `display:inline-block;margin-right:.22em;color:${col}`;
           tx.appendChild(sp); words.push(sp);
         }
+      if (title.source) {
+        src = document.createElement('div'); src.textContent = title.source;
+        src.style.cssText = `font-family:Lora,Georgia,serif;font-style:italic;font-weight:700;color:${C.inkSoft};letter-spacing:0;margin-top:10px;` +
+          `font-size:${portrait ? 44 : 34}px;opacity:0`;
+        tx.appendChild(src);
+      }
     }
     return {
       node, words,
       update(lt, alpha = 1) {
-        if (lt == null || lt < 0 || !words.length) { node.style.opacity = 0; return; }
+        if (lt == null || lt < 0 || (!words.length && !src)) { node.style.opacity = 0; return; }
         node.style.opacity = alpha;
         bar.style.transform = `scaleY(${spring(lt, 0, 0.5)})`;
         words.forEach((w, j) => { const p = spring(lt, 0.05 + j * 0.07, 0.55); w.style.opacity = clamp01(p * 1.6); w.style.transform = `translateY(${(1 - p) * 40}px)`; });
+        if (src) src.style.opacity = clamp01((lt - 0.4) / 0.4);
       },
     };
   }

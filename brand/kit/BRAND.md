@@ -34,7 +34,13 @@ Kanalın tek ve sabit anlatıcı karakteri. Her videoda, aynı çizimle, aynı k
 
 Referans çizim: `brand/kit/kasif-reference.png` (kodla üretilir; tasarım değişirse yeniden üretilir).
 
-## 3. Renkler (tek palet, sabit)
+## 3. Renkler (5 palet, her video birini kullanır)
+
+Aşağıdaki tablo klasik **sepia** paletidir. Kanal sahibinin kararıyla (2026-10-26) aynı rollerle 4 kardeş palet
+daha var: **olive** (zeytin yeşili kâğıt), **indigo** (lacivert mürekkep, soğuk kâğıt), **terracotta** (kiremit,
+sıcak kâğıt), **ash** (kül grisi kâğıt). Değerler `scenes/studio/palettes.json`'da; `build.py` her videoya birini
+seçer. Hepsinde kâğıt açık, mürekkep koyu, vurgular soluk ve uyumlu; tarz her zaman parşömen + mürekkep kalır.
+Sahne kodu renkleri sadece token'lardan (`INK.*`) alır, sabit hex yazmaz. Kaşif'in şapka renkleri hiç değişmez.
 
 | Token | Hex | Kullanım |
 |---|---|---|
@@ -109,6 +115,8 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 6. **Sayı, tarih, isim doğrulanmadan yazılmaz**; tartışmalıysa "büyük olasılıkla" de.
 7. **Kapanış:** Shorts tam ve akılda kalan bir punchline + tek kısa, doğal abone cümlesi (nedeniyle: "Her gün
    böyle gerçek bir hikâye için abone olun.") ile biter (döngü yok); uzun video tek bir yorum sorusu ve abone çağrısıyla.
+12. **Kaynaklar görünür:** her senaryo doğrulandığı kaynakları `sources` listesinde taşır (açıklamaya eklenir);
+   kilit bilgi sahnelerinde ekranda kısa bir "Kaynak: …" notu (`source`). Araştırma emeği izleyiciye görünür.
 11. **Uzun videoda tempo:** her 45–60 saniyede bir hikâye kancası ve görsel değişim; her bölüm bir sonrakine çeken
    bir cümleyle biter. Efekt sesi yok, dikkat hikâye ve görüntüyle tutulur.
 9. **Düz anlatım yasak (kanal sahibinin kararı).** Bilgi sıralamak değil, hikâye anlatmak: izleyiciye
@@ -136,7 +144,7 @@ Dosyalar: `scenes/studio/fonts/` (Türkçe karakterler dahil). Ekranda en küç�
 
 ## 8. Görseller sadece kodla üretilir
 
-**Kanal sahibinin kuralı (2026-10-22, 2026-10-27'de kesinleşti): Higgsfield ya da başka bir yapay zekâ
+**Kanal sahibinin kuralı (2026-10-22, 2026-10-26'de kesinleşti): Higgsfield ya da başka bir yapay zekâ
 görsel/video aracı hiç kullanılmaz; Higgsfield araçları hiçbir oturumda çağrılmaz.** Her sahne kodla çizilir (Kaşif `stage`, `map`, `timeline`, `board`, `title`, `chapter` ve
 konuya özel yeni kod sahneleri); gerekiyorsa yeni sahne tipi yazılır. Gerçek tarihî belge/yer/eser için
 telifsiz fotoğraf (`photo`, sepya) kullanılabilir.

@@ -10,7 +10,7 @@ okur. Amaç: farklı ajanların yazdığı sahneler aynı defterden çıkmış g
 - **Kâğıt + mürekkep.** Zemini motor çizer (parşömen dokusu, lekeler, vinyet: `parchment-theme.js`);
   sahneler şeffaftır, üstüne mürekkep çizer. Düz renk/gradyan zemin, parlak 3D, neon, emoji ikon yasak.
 - **Renk:** sadece BRAND §3 token'ları: `THEME_PARCHMENT` (`paper`, `paperLight`, `paperDark`, `stain`,
-  `ink`, `inkSoft`, `blue`, `red`, `gold`, `green`, `hat`, `hatBand`) ya da `_ink.js`'teki `INK`. Elle hex yazma.
+  `ink`, `inkSoft`, `blue`, `red`, `gold`, `green`, `hat`, `hatBand`) ya da `_ink.js`'teki `INK`. Elle hex yazma: renkler videoya göre değişir (`scenes/studio/palettes.json`, 5 palet), token kullanan sahne her palette doğru görünür.
 - **Çizgi:** 5–7 px `ink`, yuvarlak uç; dolgu yok ya da `paperLight`. Her çizgi saniyede 8 kez "kaynar"
   (`boil()`, `inkPath()`, `inkLoop()`, `inkCircle()` — `shots/_ink.js`); sabit vektör görünümü yok.
 - **Yazı:** başlık/dev yazı Fraunces 800–900, altyazı Lora 700 (motor), el yazısı etiket Patrick Hand

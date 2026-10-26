@@ -18,8 +18,9 @@ Scripts of every channel live in videos/<date>/; a channel's files start with it
 CHANNELS = {
     "Düşün Bakalım": {
         "id": "db", "prefix": "", "narrator": "kasif", "tz": "Europe/Istanbul",
-        "short_slots": ["19:00"],                                   # 1 Short + 1 long video a day (owner, 2026-10-24)
-        "long_every": 1, "long_anchor": "2026-10-23", "long_slot": "20:30",
+        "short_slots": ["19:00"],                                   # 1 Short a day (owner, 2026-10-24)
+        # fewer but better (owner, 2026-10-26: YouTube's "mass-produced content" review): a long video every 2nd day
+        "long_every": 2, "long_anchor": "2026-10-23", "long_slot": "20:30",
         "youtube_env": "YOUTUBE_TOKEN_JSON",
         "lang": "tr", "voice_id": "j4vJUfke1j8j9OYq8V3b",
         "hashtag": "#düşünbakalım", "brand_tag": "düşün bakalım",
@@ -36,8 +37,9 @@ CHANNELS = {
     # A night-time slot in Turkey is fine: YouTube publishes the scheduled video itself.
     "Stickstory": {
         "id": "ag", "prefix": "ag-", "narrator": "fes", "tz": "America/New_York",
-        "short_slots": ["09:00", "13:00", "19:00"],                 # 3 Shorts + 1 long video a day (owner, 2026-10-24)
-        "long_every": 1, "long_anchor": "2026-10-22", "long_slot": "14:00",
+        # fewer but better (owner, 2026-10-26): 2 Shorts a day (was 3) and a long video every 2nd day (was daily)
+        "short_slots": ["13:00", "19:00"],
+        "long_every": 2, "long_anchor": "2026-10-22", "long_slot": "14:00",
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
         "lang": "en", "voice_id": "ppLqTilh7rH7fbUVlXsf",
         "hashtag": "#stickstory", "brand_tag": "stickstory",

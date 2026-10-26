@@ -77,10 +77,12 @@ const shade = (h, k) => mix(h, k < 0 ? '#000000' : '#ffffff', Math.abs(k));
 
 // The channel's single fixed sepia palette (brand/kit/BRAND.md §3; every script has "theme": "parchment").
 // ctx.pal (bg/glow/accent/accent2/ink) maps onto it; shots should use the tokens directly.
-const THEME_PARCHMENT = {
+// window.PALETTE (set by build.py before any script runs, scenes/studio/palettes.json) swaps paper/ink/accent colours
+// per video; shot files read these tokens, so the whole frame follows. Kaşif's hat colours never change.
+const THEME_PARCHMENT = Object.assign({
   paper: '#E9DCC0', paperLight: '#F4EAD5', paperDark: '#D3C09A', stain: '#B88F5A', ink: '#2B1D12', inkSoft: '#6B5440',
-  blue: '#4A6F94', red: '#A8432F', gold: '#C8922E', green: '#5E7D4B', hat: '#8B5A2B', hatBand: '#4E3218',
-};
+  blue: '#4A6F94', red: '#A8432F', gold: '#C8922E', green: '#5E7D4B',
+}, (typeof window !== 'undefined' && window.PALETTE) || {}, { hat: '#8B5A2B', hatBand: '#4E3218' });
 THEME_PARCHMENT.pal = { bg: [THEME_PARCHMENT.paper, THEME_PARCHMENT.paper], glow: THEME_PARCHMENT.stain, accent: THEME_PARCHMENT.gold,
   accent2: THEME_PARCHMENT.blue, ink: THEME_PARCHMENT.ink, theme: 'parchment' };
 
