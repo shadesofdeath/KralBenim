@@ -1,0 +1,3161 @@
+{
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "extra": true,
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "sehzade-mustafa",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "terracotta",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Çadıra girdi",
+   "çıkamadı"
+  ],
+  "highlight": [
+   "çıkamadı"
+  ],
+  "scene": 31,
+  "t": 5.0,
+  "focus": [
+   960,
+   560
+  ],
+  "zoom": 1.05,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1690,
+   "y": 1060,
+   "scale": 1.02,
+   "face": -1
+  }
+ },
+ "youtube": {
+  "title": "Şehzade Mustafa: Kanuni Oğlunu Neden Kendi Çadırında Öldürttü?",
+  "description": "Şehzade Mustafa, 6 Ekim 1553'te Konya Ereğlisi'ndeki ordugâhta, babası Kanuni Sultan Süleyman'ın çadırında boğduruldu. Ordunun en sevdiği şehzadeyi babası neden öldürttü?\n\nHürrem Sultan ve Rüstem Paşa'nın rolü, sahte mühür ve mektup rivayeti, Yavuz'un 1512'de babasını tahttan indirmesinin gölgesi, ordunun öfkesi ve Taşlıcalı Yahya'nın mersiyesi. Sonra Cihangir, Bayezid ile Selim'in taht kavgası ve İkinci Selim. Kanuni'nin en ağır kararını kaynaklarıyla anlatıyoruz.\n\nBu videoda:\n• Herkesin sevdiği şehzade: Manisa'dan Amasya'ya\n• Hürrem Sultan, Rüstem Paşa ve kardeş katli\n• Sahte mühür rivayeti ve yeniçeri korkusu\n• 6 Ekim 1553: Ereğli'deki otağ\n• Peki neden? Ve sonrasındaki taht kavgası\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Kanuni bir tuzağa mı düştü, yoksa korkusuna mı yenildi? Yorumlara yaz!\n\n#şehzademustafa #kanuni #osmanlı #tarih #düşünbakalım",
+  "tags": [
+   "şehzade mustafa",
+   "şehzade mustafa nasıl öldü",
+   "şehzade mustafa neden öldü",
+   "şehzade mustafa ölümü",
+   "kanuni sultan süleyman",
+   "kanuni oğlunu öldürttü",
+   "hürrem sultan",
+   "rüstem paşa",
+   "mahidevran sultan",
+   "taşlıcalı yahya",
+   "osmanlı tarihi",
+   "osmanlı padişahları",
+   "ereğli 1553",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "now"
+ },
+ "sources": [
+  {
+   "title": "TDV İslâm Ansiklopedisi: Mustafa Çelebi (Kanuni'nin oğlu)",
+   "url": "https://islamansiklopedisi.org.tr/mustafa-celebi"
+  },
+  {
+   "title": "Zahit Atçıl, Kanuni Sultan Süleyman Oğlu Şehzade Mustafa'yı 1553'te Neden Boğdurttu? Osmanlı Araştırmaları 48 (2016)",
+   "url": "https://osmanliarastirmalari.isam.org.tr/dergi/article/view/203"
+  },
+  {
+   "title": "TDV İslâm Ansiklopedisi: Kara Ahmed Paşa",
+   "url": "https://islamansiklopedisi.org.tr/kara-ahmed-pasa"
+  },
+  {
+   "title": "Wikipedia: Şehzade Mustafa (son of Suleiman the Magnificent)",
+   "url": "https://en.wikipedia.org/wiki/%C5%9Eehzade_Mustafa_(son_of_Suleiman_the_Magnificent)"
+  },
+  {
+   "title": "Wikipedia: Şehzade Cihangir",
+   "url": "https://en.wikipedia.org/wiki/%C5%9Eehzade_Cihangir"
+  },
+  {
+   "title": "Wikipedia: Selim II",
+   "url": "https://en.wikipedia.org/wiki/Selim_II"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "sm_otag",
+   "text": "Bir şehzade, babasının çadırına silahsız girdi. Ve bir daha canlı çıkmadı.",
+   "visual": "Sabah ordugâhı: ortada çizgili, saçaklı büyük padişah otağı, iki yanında tuğlar, uzakta küçük çadırlar; sarıklı, kara sakallı şehzade soldan yürür, 'silahsız'da kılıcını ve yayını kapının yanına yere bırakır, 'girdi'de karanlık kapıdan içeri girip kaybolur, 'canlı'da kapı perdeleri kapanır; sağda Kaşif dürbünle bakar, 'çıkmadı'da şokla geri sıçrar",
+   "title": {
+    "white": "1553",
+    "gray": "Ereğli"
+   },
+   "cues": {
+    "drop": "silahsız",
+    "enter": "girdi",
+    "close": "canlı",
+    "hit": "çıkmadı"
+   },
+   "params": {
+    "time": "dawn",
+    "muted": true,
+    "weapons": {
+     "scale": 1.6,
+     "lean": true
+    },
+    "flag": {
+     "droop": "hit"
+    },
+    "prince": {
+     "x": 0.08,
+     "walk_at": 0.0,
+     "drop": "drop",
+     "enter": "enter"
+    },
+    "close": "close",
+    "kasif": {
+     "x": 0.88,
+     "pose": "look",
+     "face": -1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.07
+    }
+   },
+   "chapter": "Ereğli, 1553"
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Yıl 1553, yer Konya Ereğlisi'ndeki ordugâh.",
+   "visual": "Anadolu haritası: '1553' notu; 'Ereğlisi'nde Konya Ereğlisi kırmızı halkaya alınır, 'ordugâh'ta yanında çadır ikonu belirir; solda Kaşif işaret eder",
+   "title": {
+    "white": "Ereğli",
+    "gray": "Konya"
+   },
+   "cues": {
+    "ereg": "Ereğlisi",
+    "camp": "ordugâh"
+   },
+   "params": {
+    "view": [
+     26.5,
+     41.5,
+     35.5,
+     42.3
+    ],
+    "cities": [
+     {
+      "name": "İstanbul",
+      "lon": 28.98,
+      "lat": 41.01,
+      "at": 0.3,
+      "color": "ink",
+      "dy": 70
+     },
+     {
+      "name": "Ereğli",
+      "lon": 34.05,
+      "lat": 37.51,
+      "at": "ereg",
+      "color": "red",
+      "ring": true,
+      "dy": 74
+     }
+    ],
+    "icons": [
+     {
+      "type": "tent",
+      "lon": 34.05,
+      "lat": 37.95,
+      "at": "camp",
+      "size": 1.1
+     }
+    ],
+    "note": {
+     "text": "1553",
+     "x": 0.06,
+     "y": 0.14,
+     "at": 0.2
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "ereg",
+       "pose": "point",
+       "dir": 12,
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_camp",
+   "text": "Çadırın sahibi Kanuni Sultan Süleyman'dı. İçeri giren ise en büyük oğlu, Şehzade Mustafa.",
+   "visual": "Ordugâh: arkada küçük çadırlar ve tuğ; solda uzun beyaz kavuklu, sorguçlu, kır sakallı Kanuni durur, 'Süleyman'dı'da üstünde 'Kanuni' etiketi belirir; 'Mustafa'da sağdan sarıklı, kara sakallı Mustafa yürüyerek gelir, yanında 'MUSTAFA' tabelası yükselir; ortada Kaşif önce sola, sonra sağa işaret eder",
+   "title": {
+    "white": "Baba",
+    "gray": "ve oğul"
+   },
+   "cues": {
+    "sul": "Süleyman'dı",
+    "mus": "Mustafa"
+   },
+   "params": {
+    "tug": {
+     "x": 0.07
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.72
+     ]
+    },
+    "cast": [
+     {
+      "who": "suleyman",
+      "sultan": true,
+      "x": 0.27,
+      "scale": 0.9,
+      "beard": "grey",
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "mustafa",
+      "x": 1.12,
+      "to": 0.7,
+      "at": "mus",
+      "walk_dur": 2.0,
+      "scale": 0.9,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "walk",
+      "then": "idle",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.47,
+      "scale": 0.72,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "sul",
+        "pose": "point",
+        "dir": 12,
+        "face": "left"
+       },
+       {
+        "at": "mus",
+        "pose": "point",
+        "dir": 12,
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "signs": [
+     {
+      "text": "MUSTAFA",
+      "x": 0.87,
+      "at": "mus",
+      "h": 0.32
+     }
+    ],
+    "labels": [
+     {
+      "text": "Kanuni",
+      "x": 0.27,
+      "y": 0.27,
+      "at": "sul",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki bir baba, ordunun en sevdiği oğlunu neden kendi çadırında öldürttü? Cevap, sandığınızdan daha karmaşık.",
+   "visual": "Dev yazı kelime kelime: 'Baba oğlunu neden öldürttü?', 'neden' kırmızı kutuda; el yazısı not 'cevap sonda'; sağda Kaşif düşünür, 'karmaşık'ta omuz silker",
+   "title": {
+    "white": "Soru"
+   },
+   "cues": {
+    "w0": "baba",
+    "w1": "oğlunu",
+    "w2": "neden",
+    "w3": "öldürttü",
+    "note": "karmaşık"
+   },
+   "params": {
+    "lines": [
+     "Baba oğlunu",
+     "neden öldürttü?"
+    ],
+    "highlight": [
+     "neden"
+    ],
+    "note": {
+     "text": "cevap sonda",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.87,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Bu sorunun cevabı, Mustafa'nın neden bu kadar sevildiğinde saklı.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Herkesin şehzadesi' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "sorunun",
+    "title": "sevildiğinde"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Herkesin şehzadesi"
+   },
+   "chapter": "Herkesin şehzadesi"
+  },
+  {
+   "type": "stage",
+   "text": "1515'te Manisa'da doğduğunda babası henüz padişah bile değildi. 1521'de ağabeyi ölünce de herkesin gözünde geleceğin sultanı oldu.",
+   "visual": "Saray önü: ortada genç, kısa sakallı, sarıklı Mustafa durur, 'Manisa'da'da üstünde 'Manisa, 1515' notu belirir; 'sultanı'nda yanında 'GELECEĞİN SULTANI' tabelası düşer, Mustafa el sallar; solda Kaşif yürüyerek gelir, işaret eder",
+   "title": {
+    "white": "Mustafa"
+   },
+   "cues": {
+    "born": "Manisa'da",
+    "fut": "sultanı"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 840,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 16
+    },
+    "foreground": "hatch",
+    "backdrop": {
+     "type": "palace",
+     "y": 0.62,
+     "opacity": 0.7
+    },
+    "cast": [
+     {
+      "who": "mustafa",
+      "x": 0.55,
+      "accessory": "turban",
+      "beard": "short",
+      "talk": false,
+      "pose": "idle",
+      "face": "left",
+      "at": "fut",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": -0.05,
+      "pose": "walk",
+      "to": 0.24,
+      "at": "born",
+      "then": "point",
+      "dir": 12,
+      "face": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.82,
+      "text": "GELECEĞİN SULTANI",
+      "at": "fut"
+     }
+    ],
+    "label": {
+     "text": "Manisa, 1515",
+     "x": 0.55,
+     "y": 0.15,
+     "at": "born",
+     "arrow": [
+      0.55,
+      0.3
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Osmanlı'da şehzadeler sancaklarda devlet yönetmeyi öğrenirdi. Mustafa önce Manisa'ya, sonra Amasya'ya gönderildi.",
+   "visual": "Anadolu haritası: 'Manisa'ya'da Manisa mavi halkaya alınır; 'Amasya'ya'da Manisa'dan Amasya'ya mavi kesikli rota tek atlıyla uzanır, Amasya mavi halkaya alınır; solda Kaşif anlatır, sonra Amasya'yı gösterir",
+   "title": {
+    "white": "Sancaklar"
+   },
+   "cues": {
+    "man": "Manisa'ya",
+    "ama": "Amasya'ya"
+   },
+   "params": {
+    "view": [
+     25.5,
+     38.5,
+     36.2,
+     42.4
+    ],
+    "cities": [
+     {
+      "name": "Manisa",
+      "lon": 27.43,
+      "lat": 38.61,
+      "at": "man",
+      "color": "blue",
+      "ring": true,
+      "dy": 74
+     },
+     {
+      "name": "Amasya",
+      "lon": 35.83,
+      "lat": 40.65,
+      "at": "ama",
+      "color": "blue",
+      "ring": true,
+      "dy": 74
+     },
+     {
+      "name": "İstanbul",
+      "lon": 28.98,
+      "lat": 41.01,
+      "at": 0.3,
+      "color": "ink",
+      "dy": -60
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        27.43,
+        38.61
+       ],
+       [
+        29.5,
+        39.4
+       ],
+       [
+        32.0,
+        40.0
+       ],
+       [
+        34.2,
+        40.5
+       ],
+       [
+        35.83,
+        40.65
+       ]
+      ],
+      "at": "ama",
+      "dur": 1.6,
+      "color": "blue",
+      "riders": 1
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "ama",
+       "pose": "point",
+       "dir": 12,
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Ve gittiği her yerde sevildi. Cömertti, iyi bir askerdi, üstelik Muhlisi mahlasıyla şiir yazardı.",
+   "visual": "Kandil ışığında yazı masası: büyük kâğıtta tüy kalem satırları kendiliğinden yazar; 'Muhlisi'de kâğıdın başına 'Muhlisi' başlığı belirir; solda 'şair şehzade' notu; Kaşif düşünür, sonra kâğıdı gösterir",
+   "title": {
+    "white": "Şair",
+    "gray": "Muhlisi"
+   },
+   "cues": {
+    "poet": "Muhlisi"
+   },
+   "params": {
+    "title": [
+     "Muhlisi"
+    ],
+    "title_at": "poet",
+    "write": {
+     "at": 0.3,
+     "dur": 5
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.86,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "right",
+      "at": "poet",
+      "then": "point",
+      "dir": 12
+     }
+    ],
+    "labels": [
+     {
+      "text": "şair şehzade",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "poet",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "an_field",
+   "text": "Ama asıl önemlisi şuydu: yeniçeriler ona hayrandı. Venedik elçisi Navagero, askerlerin onu tahtta görmek istediğini yazar.",
+   "visual": "Yandan ova: solda mavi sancaklı, börklü yeniçeri saffı 'yeniçeriler'de öne adım atar, sultan tuğu yükselir; 'Navagero'da sağ üstte kırmızı 'Navagero' notu belirir; 'tahtta'da saf etrafına kırmızı halka çizilir; sağda Kaşif dürbünle bakar, sonra işaret eder",
+   "title": {
+    "white": "Yeniçeriler"
+   },
+   "cues": {
+    "meet": "yeniçeriler",
+    "nav": "Navagero",
+    "hit": "tahtta"
+   },
+   "params": {
+    "time": "day",
+    "left": {
+     "color": "blue",
+     "helmet": "cap",
+     "rows": 3,
+     "n": 12,
+     "banners": 2,
+     "x0": 0.04,
+     "x1": 0.6,
+     "advance": "meet"
+    },
+    "right": false,
+    "standard": {
+     "side": "left",
+     "x": 0.3,
+     "at": "meet"
+    },
+    "ring": {
+     "x": 0.3,
+     "y": 0.72,
+     "r": 150,
+     "at": "hit",
+     "color": "red"
+    },
+    "labels": [
+     {
+      "text": "Navagero",
+      "x": 0.74,
+      "y": 0.26,
+      "at": "nav",
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.86,
+     "scale": 0.85,
+     "face": -1,
+     "pose": "look",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 20,
+       "face": -1
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03c_compare",
+   "text": "Şimdi bunu bir de padişahın gözünden düşünün. Ordunun gönlü sizde değil, oğlunuzda.",
+   "visual": "Solda 'ordunun gönlü' kartı: 'Siz' kırmızı çubuğu kısa kalır, 'Oğlunuz' mavi çubuğu neredeyse sonuna kadar dolar; sağda 'Kim?' listesi; sağ kenarda Kaşif düşünür, 'oğlunuzda'da uzun çubuğu işaret eder",
+   "title": {},
+   "cues": {
+    "you": "sizde",
+    "son": "oğlunuzda"
+   },
+   "params": {
+    "header": "ordunun gönlü",
+    "bars": [
+     {
+      "label": "Siz",
+      "value": 0.38,
+      "color": "red",
+      "at": "you"
+     },
+     {
+      "label": "Oğlunuz",
+      "value": 0.93,
+      "color": "blue",
+      "at": "son"
+     }
+    ],
+    "list": {
+     "title": "Kazanan",
+     "items": [
+      {
+       "text": "Oğlunuz",
+       "mark": "check",
+       "at": "son"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.9,
+     "scale": 0.8,
+     "pose": "think",
+     "face": -1,
+     "seq": [
+      {
+       "at": "son",
+       "pose": "point",
+       "dir": 10,
+       "face": -1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_hurrem",
+   "text": "Üstelik sarayda Mustafa'ya hiç iyi gözle bakmayan biri vardı…",
+   "visual": "Saray kemerleri: ortadaki kemerde iki kırmızı perdenin arasında yüzü görünmeyen, gölge gibi koyu bir kadın silueti durur; 'biri'nde üstüne büyük kırmızı '?' iner; solda Kaşif anlatır, sonra şaşırır",
+   "title": {
+    "white": "Sarayda"
+   },
+   "cues": {
+    "hit": "biri"
+   },
+   "params": {
+    "woman": {
+     "x": 0.5,
+     "face": "left",
+     "pose": "idle",
+     "silhouette": true
+    },
+    "drapes": true,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "y": 0.88,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "hit",
+      "color": "red",
+      "size": 200,
+      "font": "serif"
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_hurrem",
+   "text": "O kişi… Hürrem Sultan'dı!",
+   "visual": "Aynı kemer, perdeler açılmış: hotozlu, uzun kırmızı entarili Hürrem öne çıkar, kaşları çatık; 'Hürrem'de üstüne kırmızı 'HÜRREM SULTAN' damgası iner; solda Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "Hürrem"
+   },
+   "cues": {
+    "name": "Hürrem"
+   },
+   "params": {
+    "woman": {
+     "x": 0.5,
+     "face": "left",
+     "pose": "idle",
+     "emotion": "angry",
+     "seq": [
+      {
+       "at": "name",
+       "pose": "hold"
+      }
+     ]
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "y": 0.88,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "name",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Hürrem Sultan",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "name",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ],
+    "cam": {
+     "zoom": 1.1,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Düşünün, saraya bir cariye olarak gelmişti.",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Saraydaki rakip' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Düşünün",
+    "title": "cariye"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Saraydaki rakip"
+   },
+   "chapter": "Saraydaki rakip"
+  },
+  {
+   "type": "sm_hurrem",
+   "text": "Ama Süleyman'ın kalbini kazandı ve onunla resmen evlendi.",
+   "visual": "Saray kemerleri: Hürrem soldan süzülerek gelir; sağda kısa sakallı, uzun beyaz kavuklu ve sorguçlu genç Kanuni; 'kalbini'de aralarında kırmızı mürekkep kalp belirip atar, Kanuni el sallar; 'evlendi'de altın 'nikâh' notu; sağda Kaşif anlatır, sonra işaret eder",
+   "title": {
+    "white": "Hürrem"
+   },
+   "cues": {
+    "heart": "kalbini",
+    "wed": "evlendi"
+   },
+   "params": {
+    "woman": {
+     "x": -0.08,
+     "to": 0.36,
+     "walk_at": 0.0,
+     "walk_dur": 1.4,
+     "face": "right",
+     "seq": [
+      {
+       "at": "heart",
+       "pose": "hold",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "heart": {
+     "at": "heart",
+     "x": 0.48,
+     "y": 0.34,
+     "size": 80
+    },
+    "cast": [
+     {
+      "who": "suleyman",
+      "sultan": true,
+      "x": 0.62,
+      "y": 0.88,
+      "scale": 0.8,
+      "beard": "short",
+      "pose": "idle",
+      "face": "left",
+      "at": "heart",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.88,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "left",
+      "at": "wed",
+      "then": "point",
+      "dir": 12
+     }
+    ],
+    "labels": [
+     {
+      "text": "nikâh",
+      "x": 0.48,
+      "y": 0.16,
+      "at": "wed",
+      "color": "gold",
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "type": "an_brothers",
+   "text": "Hürrem'in de üç oğlu hayattaydı: Selim, Bayezid ve Cihangir. Ama tahta sadece bir kişi çıkabilirdi.",
+   "visual": "Ortada basamaklı boş taht, minderinde padişah kavuğu; solda Mustafa baştan durur, Selim, Bayezid ve Cihangir adları söylendikçe yürüyerek gelir, adları üstlerinde belirir; 'tahta'da ikişer ikişer birbirine döner, kılıçlar çaprazlanır; 'kişi'de taht sallanır",
+   "title": {
+    "white": "Dört şehzade"
+   },
+   "cues": {
+    "s": "Selim",
+    "b": "Bayezid",
+    "c": "Cihangir",
+    "fight": "tahta",
+    "hit": "kişi"
+   },
+   "params": {
+    "mode": "fight",
+    "princes": [
+     {
+      "name": "Mustafa",
+      "at": 0.2,
+      "x": 0.18,
+      "from": -0.1,
+      "beard": "black"
+     },
+     {
+      "name": "Selim",
+      "at": "s",
+      "x": 0.35,
+      "from": -0.15,
+      "beard": "short"
+     },
+     {
+      "name": "Bayezid",
+      "at": "b",
+      "x": 0.65,
+      "from": 1.1,
+      "beard": "black"
+     },
+     {
+      "name": "Cihangir",
+      "at": "c",
+      "x": 0.82,
+      "from": 1.15
+     }
+    ],
+    "fight": "fight",
+    "hit": "hit",
+    "kasif": false,
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Bakın, işin korkunç tarafı şurada: o dönemde tahta çıkan şehzade kardeşlerini öldürtebiliyordu. Yani Mustafa padişah olursa, Hürrem'in oğulları da tehlikedeydi.",
+   "visual": "Dev yazı kelime kelime: 'Kardeş katli', 'katli' kırmızı kutuda; el yazısı not 'o dönemin kuralı'; sağda Kaşif 'kardeşlerini'de şokla geri sıçrar",
+   "title": {
+    "white": "Kural"
+   },
+   "cues": {
+    "w0": "tahta",
+    "w1": "kardeşlerini",
+    "note": "tehlikedeydi"
+   },
+   "params": {
+    "lines": [
+     "Kardeş",
+     "katli"
+    ],
+    "highlight": [
+     "katli"
+    ],
+    "note": {
+     "text": "o dönemin kuralı",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "w1"
+    }
+   }
+  },
+  {
+   "type": "sm_hurrem",
+   "text": "Hürrem'in güçlü bir müttefiki de vardı: kızı Mihrimah'ın kocası, sadrazam Rüstem Paşa.",
+   "visual": "Saray kemerleri: solda Hürrem durur; 'müttefik'te sağdan sarıklı, kara sakallı Rüstem Paşa yürüyerek gelip yanında durur, 'Rüstem'de üstünde mavi 'Rüstem Paşa' etiketi belirir, Hürrem onu gösterir; solda Kaşif anlatır, sonra işaret eder",
+   "title": {
+    "white": "Rüstem Paşa"
+   },
+   "cues": {
+    "ally": "müttefik",
+    "rus": "Rüstem"
+   },
+   "params": {
+    "woman": {
+     "x": 0.36,
+     "face": "right",
+     "name": "Hürrem",
+     "name_at": 0.2,
+     "seq": [
+      {
+       "at": "rus",
+       "pose": "point",
+       "dir": 8
+      }
+     ]
+    },
+    "cast": [
+     {
+      "who": "rustem",
+      "x": 1.1,
+      "to": 0.62,
+      "at": "ally",
+      "walk_dur": 1.6,
+      "y": 0.88,
+      "scale": 0.8,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "walk",
+      "then": "idle",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.12,
+      "y": 0.88,
+      "scale": 0.75,
+      "pose": "talk",
+      "face": "right",
+      "at": "rus",
+      "then": "point",
+      "dir": 12
+     }
+    ],
+    "labels": [
+     {
+      "text": "Rüstem Paşa",
+      "x": 0.62,
+      "y": 0.13,
+      "at": "rus",
+      "color": "blue",
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "Kaynakların çoğu, ikisinin Mustafa'ya karşı birlikte çalıştığını yazar. Ama dikkat edin, bu sadece en yaygın anlatım.",
+   "visual": "El yazısı başlık 'Yaygın anlatım', altında dev Fraunces 'Hürrem + Rüstem' belirir; 'yaygın'da altına kırmızı hap 'kesin mi?' iner; sağda Kaşif anlatır, sonra omuz silker",
+   "title": {
+    "white": "Kaynaklar"
+   },
+   "cues": {
+    "hit": "birlikte",
+    "pill": "yaygın"
+   },
+   "params": {
+    "header": {
+     "text": "Yaygın anlatım",
+     "at": 0.2
+    },
+    "items": [
+     {
+      "text": "Hürrem + Rüstem",
+      "at": 0.3,
+      "size": 150
+     }
+    ],
+    "pill": {
+     "text": "kesin mi?",
+     "at": "pill",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.86,
+     "scale": 0.85,
+     "pose": "talk",
+     "face": -1,
+     "seq": [
+      {
+       "at": "pill",
+       "pose": "shrug"
+      }
+     ]
+    }
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "chapter",
+   "text": "Ve sonunda padişaha çok tehlikeli bir haber ulaştı.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Mühür ve korku' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "sonunda",
+    "title": "tehlikeli"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Mühür ve korku"
+   },
+   "chapter": "Mühür ve korku"
+  },
+  {
+   "type": "ag03c_court",
+   "text": "Kaynaklara göre Rüstem Paşa, askerlerin yaşlanan padişah yerine Mustafa'yı istediğini bildirdi.",
+   "visual": "Sefer çadırı: tahtta kır sakallı Kanuni oturur; önünde kara sakallı Rüstem Paşa eğilip anlatır, 'Mustafa'yı'da işaret eder; Kanuni'nin kaşları endişeyle kalkar, üstünde kırmızı '!' belirir; solda Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "Haber"
+   },
+   "cues": {
+    "rep": "Rüstem",
+    "hit": "Mustafa'yı"
+   },
+   "params": {
+    "setting": "tent",
+    "throne": {
+     "x": 0.72,
+     "accessory": "turban",
+     "beard": "grey",
+     "pose": "sit",
+     "face": -1,
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "captive": false,
+    "figures": [
+     {
+      "x": 0.47,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "talk",
+      "face": 1,
+      "scale": 0.95,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 10,
+        "face": 1
+       }
+      ]
+     }
+    ],
+    "tug": {
+     "x": 0.92
+    },
+    "lamp": {
+     "x": 0.56
+    },
+    "mark": {
+     "text": "!",
+     "at": "hit",
+     "x": 0.72,
+     "y": 0.22,
+     "size": 170,
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.13,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.07,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_seal",
+   "text": "Bir rivayete göre Rüstem, Mustafa'nın mührünün kopyasını kazdırıp onun adına İran şahına bir mektup yollamış. Şahın cevabı da yolda yakalanıp padişaha götürülmüş.",
+   "visual": "Üstte 'Rivayet' başlığı; solda yuvarlak 'Mustafa' mührü; 'kopyasını'da yanına keskiyle ikinci bir mühür oyulur, kırmızı 'kopya' notu; 'adına'da kopya aşağıdaki mektuba basar, kırmızı mum mühür kalır; 'yollamış'ta mektup rulo olup kesikli bir yayla sağa, mavi 'Şah' damgasına uçar; 'yakalanıp'ta yolda kırmızı halkayla durdurulur; 'padişaha'da aşağı, kırmızı 'Padişah' damgasına iner; solda Kaşif işaret eder, sonra şaşırır",
+   "title": {
+    "white": "Sahte mektup?"
+   },
+   "cues": {
+    "copy": "kopyasını",
+    "stamp": "adına",
+    "send": "yollamış",
+    "catch": "yakalanıp",
+    "back": "padişaha"
+   },
+   "params": {
+    "header": {
+     "text": "Rivayet",
+     "at": 0.2
+    },
+    "orig": {
+     "label": "Mustafa"
+    },
+    "copy": {
+     "at": "copy",
+     "label": "kopya"
+    },
+    "stamp": "stamp",
+    "send": "send",
+    "to": {
+     "text": "Şah",
+     "x": 0.9,
+     "y": 0.28
+    },
+    "catch": "catch",
+    "back": "back",
+    "back_to": {
+     "text": "Padişah",
+     "x": 0.86,
+     "y": 0.72
+    },
+    "kasif": {
+     "x": 0.13,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "copy",
+       "pose": "point",
+       "dir": 20,
+       "face": 1
+      },
+      {
+       "at": "catch",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "Bu mektup gerçekten var mıydı? Kimse kesin bilmiyor. Ama şu kesin: Süleyman böyle bir hikâyeyi çok iyi tanıyordu.",
+   "visual": "Dev Fraunces 'Mektup?' belirir; 'bilmiyor'da altına kırmızı hap 'kanıt yok' iner; sağda Kaşif omuz silker, 'tanıyordu'da parmağını kaldırıp işaret eder",
+   "title": {
+    "white": "Kanıt?"
+   },
+   "cues": {
+    "unk": "bilmiyor",
+    "hit": "tanıyordu"
+   },
+   "params": {
+    "items": [
+     {
+      "text": "Mektup?",
+      "at": 0.15,
+      "size": 200
+     }
+    ],
+    "pill": {
+     "text": "kanıt yok",
+     "at": "unk",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.84,
+     "scale": 0.85,
+     "pose": "think",
+     "face": -1,
+     "seq": [
+      {
+       "at": "unk",
+       "pose": "shrug"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 40,
+       "face": -1
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Çünkü 1512'de babası Yavuz Sultan Selim, yeniçerilerin desteğiyle İkinci Bayezid'i tahttan indirmişti.",
+   "visual": "Saray önü, '1512' tabelası: sağda kır sakallı yaşlı İkinci Bayezid durur; solda kara sakallı Yavuz ve arkasında iki miğferli asker 'yeniçerilerin'de öne yürür, askerler yukarıyı işaret eder; 'indirmişti'de Bayezid sağa yürüyüp kadrajdan çıkar, Yavuz ortaya gelir; üstte 'Yavuz' etiketi; solda Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "1512"
+   },
+   "cues": {
+    "a": "1512'de",
+    "yen": "yeniçerilerin",
+    "ind": "indirmişti"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 840,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 16
+    },
+    "foreground": "hatch",
+    "backdrop": {
+     "type": "palace",
+     "y": 0.62,
+     "opacity": 0.7
+    },
+    "cast": [
+     {
+      "who": "bayezid2",
+      "x": 0.66,
+      "accessory": "turban",
+      "beard": "grey",
+      "talk": false,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "yen",
+        "pose": "shock",
+        "emotion": "surprised"
+       },
+       {
+        "at": "ind",
+        "pose": "walk",
+        "to": 1.25,
+        "dur": 1.8,
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "yavuz",
+      "x": 0.3,
+      "accessory": "turban",
+      "beard": "black",
+      "talk": false,
+      "pose": "idle",
+      "face": "right",
+      "emotion": "angry",
+      "at": "yen",
+      "then": "point",
+      "dir": 10
+     },
+     {
+      "who": "asker1",
+      "x": 0.18,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "right",
+      "at": "yen",
+      "then": "point",
+      "dir": "up",
+      "talk": false
+     },
+     {
+      "who": "asker2",
+      "x": 0.08,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "right",
+      "at": "yen",
+      "then": "point",
+      "dir": "up",
+      "talk": false
+     },
+     {
+      "who": "kasif",
+      "x": 0.82,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "ind",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.5,
+      "text": "1512",
+      "at": "a",
+      "scale": 0.8
+     }
+    ],
+    "label": {
+     "text": "Yavuz",
+     "x": 0.3,
+     "y": 0.15,
+     "at": "yen",
+     "arrow": [
+      0.3,
+      0.3
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03c_court",
+   "text": "Yani Süleyman, askerin sevdiği bir şehzadenin neler yapabileceğini kendi ailesinden biliyordu.",
+   "visual": "Sefer çadırı, kandil sallanır: tahtta kır sakallı Kanuni endişeyle oturur; 'ailesinden'de üstünde kırmızı '1512' notu belirir; solda Kaşif anlatır, sonra notu gösterir",
+   "title": {
+    "white": "Tanıdık",
+    "gray": "bir korku"
+   },
+   "cues": {
+    "hit": "ailesinden"
+   },
+   "params": {
+    "setting": "tent",
+    "throne": {
+     "x": 0.62,
+     "accessory": "turban",
+     "beard": "grey",
+     "pose": "sit",
+     "face": -1,
+     "emotion": "worried"
+    },
+    "captive": false,
+    "figures": [],
+    "tug": {
+     "x": 0.9
+    },
+    "lamp": {
+     "x": 0.5
+    },
+    "mark": {
+     "text": "1512",
+     "at": "hit",
+     "x": 0.62,
+     "y": 0.2,
+     "size": 130,
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.16,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 30,
+       "face": 1
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.55,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "1553 yazında padişah İran seferine bizzat çıktı ve Mustafa'yı ordugâha çağırdı.",
+   "visual": "Anadolu haritası: 'seferine'de İstanbul'dan Ereğli'ye mavi kesikli ok atlılarla iner, doğuda 'İran' yazısı belirir; 'çağırdı'da Amasya'dan Ereğli'ye kırmızı kesikli ok uzanır, Ereğli kırmızı halkaya alınır; solda Kaşif işaret eder",
+   "title": {
+    "white": "1553"
+   },
+   "cues": {
+    "go": "seferine",
+    "call": "çağırdı"
+   },
+   "params": {
+    "view": [
+     26.5,
+     45.5,
+     35.5,
+     42.5
+    ],
+    "cities": [
+     {
+      "name": "İstanbul",
+      "lon": 28.98,
+      "lat": 41.01,
+      "at": 0.2,
+      "color": "blue",
+      "dy": -60
+     },
+     {
+      "name": "Amasya",
+      "lon": 35.83,
+      "lat": 40.65,
+      "at": 0.4,
+      "color": "ink",
+      "dy": -60
+     },
+     {
+      "name": "Ereğli",
+      "lon": 34.05,
+      "lat": 37.51,
+      "at": "call",
+      "color": "red",
+      "ring": true,
+      "dy": 74
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        28.98,
+        41.01
+       ],
+       [
+        30.4,
+        40.2
+       ],
+       [
+        32.2,
+        38.7
+       ],
+       [
+        34.05,
+        37.51
+       ]
+      ],
+      "at": "go",
+      "dur": 1.6,
+      "color": "blue",
+      "riders": 3,
+      "dust": true
+     },
+     {
+      "pts": [
+       [
+        35.83,
+        40.65
+       ],
+       [
+        35.4,
+        39.3
+       ],
+       [
+        34.6,
+        38.3
+       ],
+       [
+        34.05,
+        37.51
+       ]
+      ],
+      "at": "call",
+      "dur": 1.4,
+      "color": "red",
+      "riders": 1
+     }
+    ],
+    "texts": [
+     {
+      "text": "İran",
+      "lon": 43.6,
+      "lat": 37.6,
+      "at": "go",
+      "size": 70,
+      "color": "soft"
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "call",
+       "pose": "point",
+       "dir": 12,
+       "face": "right"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Anlatılana göre çevresi onu uyardı. Ama gitmemek, isyan demekti. Peki ne yaptı dersiniz?",
+   "visual": "Amasya'da: ortada kara sakallı Mustafa düşünür; solda iki kır sakallı danışman 'uyardı'da ona dönüp işaret eder, yanlarında 'GİTME' tabelası; 'isyan'da sağda kırmızı 'İSYAN?' tabelası düşer; sağda Kaşif 'dersiniz'de izleyiciye döner, işaret eder",
+   "title": {
+    "white": "Gitmeli mi?"
+   },
+   "cues": {
+    "warn": "uyardı",
+    "isy": "isyan",
+    "q": "dersiniz"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 840,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "mustafa",
+      "x": 0.5,
+      "accessory": "turban",
+      "beard": "black",
+      "talk": false,
+      "pose": "think",
+      "face": "left",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "isy",
+        "face": "right",
+        "pose": "think"
+       }
+      ]
+     },
+     {
+      "who": "danisman1",
+      "x": 0.27,
+      "accessory": "turban",
+      "beard": "grey",
+      "talk": false,
+      "pose": "idle",
+      "face": "right",
+      "at": "warn",
+      "then": "point",
+      "dir": 10,
+      "emotion": "worried"
+     },
+     {
+      "who": "danisman2",
+      "x": 0.14,
+      "accessory": "turban",
+      "beard": "grey",
+      "talk": false,
+      "pose": "idle",
+      "face": "right",
+      "at": "warn",
+      "then": "talk",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "point",
+        "dir": "forward",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.06,
+      "text": "GİTME",
+      "at": "warn",
+      "scale": 0.8
+     },
+     {
+      "type": "sign",
+      "x": 0.7,
+      "text": "İSYAN?",
+      "at": "isy",
+      "scale": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Mustafa yola çıktı ve 5 Ekim'de Ereğli'deki ordugâha vardı.",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Otağ' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Mustafa",
+    "title": "vardı"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Otağ"
+   },
+   "chapter": "Otağ"
+  },
+  {
+   "type": "an_field",
+   "text": "Askerler onu coşkuyla karşıladı. Bu coşku, belki de babasının korkusunu büyüttü.",
+   "visual": "Yandan ova: mavi sancaklı yeniçeri saffı 'coşkuyla'da öne adım atar, toz kalkar, sancak yükselir; 'korkusunu'da sağ üstte kırmızı 'korku?' notu belirir; sağda Kaşif önce sevinir, sonra endişelenir",
+   "title": {
+    "white": "Coşku"
+   },
+   "cues": {
+    "meet": "coşkuyla",
+    "fear": "korkusunu"
+   },
+   "params": {
+    "time": "day",
+    "left": {
+     "color": "blue",
+     "helmet": "cap",
+     "rows": 3,
+     "n": 13,
+     "banners": 3,
+     "x0": 0.04,
+     "x1": 0.66,
+     "advance": "meet"
+    },
+    "right": false,
+    "standard": {
+     "side": "left",
+     "x": 0.4,
+     "at": "meet"
+    },
+    "dust": "meet",
+    "labels": [
+     {
+      "text": "korku?",
+      "x": 0.78,
+      "y": 0.26,
+      "at": "fear",
+      "color": "red",
+      "size": 70
+     }
+    ],
+    "kasif": {
+     "x": 0.87,
+     "scale": 0.85,
+     "face": -1,
+     "pose": "look",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "fear",
+       "pose": "think",
+       "emotion": "worried",
+       "face": -1
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.45,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_otag",
+   "text": "Ertesi sabah, 6 Ekim'de, Mustafa padişahın otağına çağrıldı.",
+   "visual": "Şafak, padişah otağı: solda Mustafa bekler; kapının yanında sarıklı bir haberci 'çağrıldı'da el sallayıp onu çağırır; sol üstte kırmızı '6 Ekim' notu; sağda Kaşif dürbünle bakar",
+   "title": {
+    "white": "6 Ekim",
+    "gray": "1553"
+   },
+   "cues": {
+    "date": "Ekim'de",
+    "call": "çağrıldı"
+   },
+   "params": {
+    "time": "dawn",
+    "muted": true,
+    "weapons": false,
+    "prince": {
+     "x": 0.14,
+     "pose": "idle",
+     "face": 1
+    },
+    "cast": [
+     {
+      "who": "haberci",
+      "x": 0.38,
+      "y": 0.84,
+      "scale": 0.58,
+      "accessory": "turban",
+      "beard": "short",
+      "pose": "idle",
+      "face": "left",
+      "at": "call",
+      "then": "wave"
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "pose": "look",
+     "face": -1,
+     "seq": [
+      {
+       "at": "call",
+       "pose": "point",
+       "dir": 20,
+       "face": -1
+      }
+     ]
+    }
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "sm_otag",
+   "text": "Gelenek gereği atından indi ve silahlarını kapıda bıraktı.",
+   "visual": "Yakın plan otağ kapısı: Mustafa soldan kapıya yürür, 'silahlarını'da büyük kılıcını kapının önüne yere bırakır, yayı kapı direğine dayanır; sağda Kaşif işaret eder",
+   "title": {
+    "white": "Silahsız"
+   },
+   "cues": {
+    "drop": "silahlarını"
+   },
+   "params": {
+    "time": "dawn",
+    "muted": true,
+    "prince": {
+     "x": 0.12,
+     "walk_at": 0.0,
+     "drop": "drop"
+    },
+    "weapons": {
+     "scale": 1.4,
+     "lean": true
+    },
+    "kasif": {
+     "x": 0.9,
+     "pose": "look",
+     "face": -1,
+     "seq": [
+      {
+       "at": "drop",
+       "pose": "point",
+       "dir": -20,
+       "face": -1
+      }
+     ]
+    },
+    "tugs": false,
+    "sun": false,
+    "frame": {
+     "zoom": 1.25,
+     "at": [
+      0.5,
+      0.84
+     ],
+     "to": [
+      0.5,
+      0.8
+     ]
+    },
+    "cam": {
+     "zoom": 1.03
+    }
+   }
+  },
+  {
+   "type": "ag03c_court",
+   "text": "İçeri girdiğinde babasını değil, cellatları buldu. Kaynaklar onu dilsiz cellatların beklediğini yazar.",
+   "visual": "Otağın içi, kandil sallanır, tahtsız loş çadır: solda kara sakallı Mustafa içeri girmiş durur, 'cellatları'nda şokla geri çekilir; karşısında başı açık üç sessiz figür ona döner; 'dilsiz'de üstte el yazısı 'dilsiz' notu; solda Kaşif şokta",
+   "title": {
+    "white": "Otağın içi"
+   },
+   "cues": {
+    "hit": "cellatları",
+    "mute": "dilsiz"
+   },
+   "params": {
+    "setting": "tent",
+    "throne": {
+     "x": 1.5,
+     "accessory": "turban",
+     "beard": "grey",
+     "pose": "sit",
+     "face": -1
+    },
+    "captive": false,
+    "tug": false,
+    "lamp": {
+     "x": 0.5
+    },
+    "figures": [
+     {
+      "x": 0.36,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "idle",
+      "face": 1,
+      "scale": 0.95,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "x": 0.6,
+      "pose": "idle",
+      "face": -1,
+      "scale": 0.92,
+      "emotion": "angry"
+     },
+     {
+      "x": 0.72,
+      "pose": "idle",
+      "face": -1,
+      "scale": 0.92,
+      "emotion": "angry"
+     },
+     {
+      "x": 0.84,
+      "pose": "idle",
+      "face": -1,
+      "scale": 0.92,
+      "emotion": "angry"
+     }
+    ],
+    "mark": {
+     "text": "dilsiz",
+     "at": "mute",
+     "x": 0.72,
+     "y": 0.22,
+     "size": 110,
+     "color": "ink"
+    },
+    "kasif": {
+     "x": 0.12,
+     "scale": 0.9,
+     "pose": "talk",
+     "face": 1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.55
+     ]
+    }
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "sm_otag",
+   "text": "Mustafa direndi. Ama sonunda bir kemendin altında can verdi. Henüz otuzlu yaşlarındaydı.",
+   "visual": "Yakın plan kapalı otağ kapısı, önünde yerde büyük kılıç, kapı direğine dayalı yay: 'direndi'de kapı perdeleri ve çadır kumaşı sarsılır; 'verdi'de her şey durulur, sessizlik; sağda Kaşif önce şaşırır, sonra üzgün bakar",
+   "title": {},
+   "cues": {
+    "res": "direndi",
+    "die": "verdi"
+   },
+   "params": {
+    "time": "dawn",
+    "muted": true,
+    "prince": false,
+    "close": -1,
+    "weapons": {
+     "at": 0,
+     "scale": 1.6,
+     "lean": true
+    },
+    "shudder": {
+     "at": "res",
+     "dur": 2.4
+    },
+    "kasif": {
+     "x": 0.9,
+     "pose": "look",
+     "face": -1,
+     "seq": [
+      {
+       "at": "res",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "die",
+       "pose": "idle",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "tugs": false,
+    "sun": false,
+    "frame": {
+     "zoom": 1.5,
+     "at": [
+      0.56,
+      0.84
+     ],
+     "to": [
+      0.5,
+      0.78
+     ]
+    },
+    "cam": {
+     "zoom": 1.03
+    }
+   }
+  },
+  {
+   "type": "ag03c_strike",
+   "text": "Süleyman'ın perdenin arkasından izlediği anlatılır, ama tarihçiler bundan pek emin değil.",
+   "visual": "El yazısı başlık 'Rivayet', altında dev Fraunces 'Perde arkası?' belirir; 'emin'de üstüne kırmızı çizgi çekilir ve kırmızı hap 'şüpheli' iner; sağda Kaşif düşünür, sonra omuz silker",
+   "title": {
+    "white": "Rivayet"
+   },
+   "cues": {
+    "doubt": "emin"
+   },
+   "params": {
+    "header": {
+     "text": "Rivayet",
+     "at": 0.2
+    },
+    "items": [
+     {
+      "text": "Perde arkası?",
+      "at": 0.3,
+      "strike": "doubt",
+      "size": 160
+     }
+    ],
+    "pill": {
+     "text": "şüpheli",
+     "at": "doubt",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.86,
+     "scale": 0.85,
+     "pose": "think",
+     "face": -1,
+     "seq": [
+      {
+       "at": "doubt",
+       "pose": "shrug"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_otag",
+   "text": "İtalyan kaynaklarına göre bedeni, Şah'la iş birliğini ima eden bir İran halısına konup otağın önüne bırakıldı.",
+   "visual": "Otağın önü, tepedeki flama sarkık: 'halısına'da kapının önüne kırmızı bir İran halısı serilir, üstüne beyaz bir örtü gelir, kamera halıya yaklaşır; önde börklü yeniçeriler 'bırakıldı'da başlarını eğer; sağda Kaşif üzgün bakar",
+   "title": {
+    "white": "Otağın önü"
+   },
+   "cues": {
+    "rug": "halısına",
+    "left": "bırakıldı"
+   },
+   "params": {
+    "time": "dawn",
+    "muted": true,
+    "prince": false,
+    "close": -1,
+    "weapons": {
+     "at": 0,
+     "scale": 1.2,
+     "lean": true
+    },
+    "flag": {
+     "droop": -5
+    },
+    "carpet": {
+     "at": "rug"
+    },
+    "size": 1.0,
+    "ground": 0.66,
+    "crowd": {
+     "n": 6,
+     "x0": 0.04,
+     "x1": 0.3,
+     "at": 0,
+     "mourn": "left"
+    },
+    "kasif": {
+     "x": 0.9,
+     "pose": "idle",
+     "face": -1,
+     "emotion": "worried"
+    },
+    "tugs": false,
+    "sun": false,
+    "frame": {
+     "zoom": 1.3,
+     "at": [
+      0.56,
+      0.72
+     ],
+     "to": [
+      0.5,
+      0.71
+     ]
+    },
+    "cam": {
+     "zoom": 1.03
+    }
+   }
+  },
+  {
+   "type": "sm_otag",
+   "text": "İşte tam o anda, ordugâhta bir fırtına koptu.",
+   "visual": "Aşağıdan bakış: önde kadrajı dolduran börklü yeniçeriler, arkada küçük kalan otağ; 'fırtına'da yumruklar ve mızraklar havaya kalkar, kaşlar öfkelenir, kamera sarsılır; sağda Kaşif şokla geri sıçrar",
+   "title": {
+    "white": "Fırtına"
+   },
+   "cues": {
+    "hit": "fırtına"
+   },
+   "params": {
+    "time": "dawn",
+    "muted": true,
+    "prince": false,
+    "close": -1,
+    "flag": {
+     "droop": -5
+    },
+    "size": 0.8,
+    "ground": 0.56,
+    "crowd": {
+     "n": 8,
+     "x0": 0.03,
+     "x1": 0.78,
+     "y": 1.02,
+     "at": 0,
+     "anger": "hit",
+     "scale": 1.45
+    },
+    "shake": "hit",
+    "kasif": {
+     "x": 0.9,
+     "y": 0.96,
+     "scale": 0.85,
+     "pose": "look",
+     "face": -1,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.04
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Askerler yas tuttu, öfkelendi. Öfkenin hedefi ise padişah değil, Rüstem Paşa'ydı.",
+   "visual": "Ordugâh: solda miğferli üç asker önce başını eğer, 'Rüstem'de öfkeyle sağı işaret eder; sağda kara sakallı Rüstem Paşa şokla geri sıçrar, üstünde kırmızı 'Rüstem Paşa' etiketi; ortada Kaşif anlatır",
+   "title": {
+    "white": "Öfke"
+   },
+   "cues": {
+    "mourn": "yas",
+    "rus": "Rüstem"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 840,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "asker1",
+      "x": 0.08,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "at": "rus",
+      "then": "point",
+      "dir": 10,
+      "talk": false
+     },
+     {
+      "who": "asker2",
+      "x": 0.18,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "at": "rus",
+      "then": "point",
+      "dir": 20,
+      "talk": false
+     },
+     {
+      "who": "asker3",
+      "x": 0.28,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "at": "rus",
+      "then": "point",
+      "dir": 10,
+      "talk": false
+     },
+     {
+      "who": "rustem",
+      "x": 0.78,
+      "accessory": "turban",
+      "beard": "black",
+      "talk": false,
+      "pose": "idle",
+      "face": "left",
+      "at": "rus",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "talk",
+      "face": "right"
+     }
+    ],
+    "label": {
+     "text": "Rüstem Paşa",
+     "x": 0.78,
+     "y": 0.16,
+     "at": "rus",
+     "arrow": [
+      0.78,
+      0.3
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_camp",
+   "text": "Süleyman bir ayaklanmadan korktu ve Rüstem'i hemen sadrazamlıktan aldı. Yerine Kara Ahmed Paşa geldi.",
+   "visual": "Ordugâh, çadırlar ve tuğ: sağda uzun kavuklu, sorguçlu Kanuni endişeli durur, 'sadrazamlıktan'da işaret eder; ortadaki kara sakallı Rüstem Paşa sola yürüyüp kadrajdan çıkar; 'Ahmed'de sağdan kısa sakallı Kara Ahmed Paşa yürüyerek gelir, 'SADRAZAM' tabelası tutar; üstte 'Kara Ahmed' etiketi; solda Kaşif işaret eder",
+   "title": {
+    "white": "Azil"
+   },
+   "cues": {
+    "fear": "ayaklanmadan",
+    "out": "sadrazamlıktan",
+    "new": "Ahmed"
+   },
+   "params": {
+    "tug": {
+     "x": 0.72
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.72
+     ]
+    },
+    "cast": [
+     {
+      "who": "suleyman",
+      "sultan": true,
+      "x": 0.86,
+      "scale": 0.9,
+      "beard": "grey",
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried",
+      "at": "out",
+      "then": "point",
+      "dir": 10
+     },
+     {
+      "who": "rustem",
+      "x": 0.5,
+      "to": -0.25,
+      "walk_at": "out",
+      "walk_dur": 2.0,
+      "scale": 0.9,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "ahmed",
+      "x": 1.25,
+      "to": 0.56,
+      "at": "new",
+      "walk_dur": 2.0,
+      "scale": 0.9,
+      "accessory": "turban",
+      "beard": "short",
+      "pose": "walk",
+      "then": "hold",
+      "text": "SADRAZAM",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.15,
+      "scale": 0.72,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "new",
+        "pose": "point",
+        "dir": 12,
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Kara Ahmed",
+      "x": 0.56,
+      "y": 0.15,
+      "at": "new",
+      "color": "blue",
+      "size": 64
+     }
+    ]
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "timeline",
+   "text": "Ama sadece iki yıl sonra Kara Ahmed Paşa idam edildi. Ve Rüstem aynı gün yeniden sadrazam oldu.",
+   "visual": "Yatay zaman çizgisi: '1553 Rüstem gitti' ve '1555 Ahmed idam' ve '1555 Rüstem döndü' sırayla belirir, son nokta kırmızı vurgulanır; sağda Kaşif 'yeniden'de şokla geri sıçrar",
+   "title": {
+    "white": "1555"
+   },
+   "cues": {
+    "a": "iki",
+    "b0": "idam",
+    "b": "yeniden"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1553",
+      "text": "Rüstem gitti",
+      "at": "a"
+     },
+     {
+      "year": "1555",
+      "text": "Ahmed idam",
+      "at": "b0"
+     },
+     {
+      "year": "1555",
+      "text": "Rüstem döndü",
+      "at": "b"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.8,
+     "pose": "think",
+     "at": "b",
+     "scale": 0.6,
+     "face": -1,
+     "emotion": "surprised"
+    }
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "chapter",
+   "text": "Şairler de susmadı.",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Bedel' ve el çizimi alt çizgi",
+   "title": {},
+   "cues": {
+    "n": "Şairler",
+    "title": "susmadı"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Bedel"
+   },
+   "chapter": "Bedel"
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Taşlıcalı Yahya'nın yanık mersiyesi dilden dile dolaştı.",
+   "visual": "Kandil ışığında yazı masası: büyük kâğıda 'Mersiye' başlığı gelir, satırlar tüy kalemle kendini yazar; üstte el yazısı 'Taşlıcalı Yahya'; solda Kaşif üzgün düşünür, sonra kâğıdı gösterir",
+   "title": {
+    "white": "Mersiye"
+   },
+   "cues": {
+    "poet": "Taşlıcalı",
+    "hit": "mersiye"
+   },
+   "params": {
+    "title": [
+     "Mersiye"
+    ],
+    "title_at": "hit",
+    "write": {
+     "at": 0.3,
+     "dur": 4
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "y": 0.86,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried",
+      "at": "hit",
+      "then": "point",
+      "dir": 12
+     }
+    ],
+    "labels": [
+     {
+      "text": "Taşlıcalı Yahya",
+      "x": 0.3,
+      "y": 0.2,
+      "at": "poet",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Halk arasında bir tarih düşürme bile yayıldı: Mekr-i Rüstem, yani Rüstem'in hilesi.",
+   "visual": "Dev yazı kelime kelime: 'Mekr-i Rüstem', 'Rüstem' kırmızı kutuda; el yazısı not 'Rüstem'in hilesi'; sağda Kaşif işaret eder",
+   "title": {
+    "white": "Tarih düşürme"
+   },
+   "cues": {
+    "w0": "düşürme",
+    "w1": "Rüstem",
+    "note": "hilesi"
+   },
+   "params": {
+    "lines": [
+     "Mekr-i",
+     "Rüstem"
+    ],
+    "highlight": [
+     "Rüstem"
+    ],
+    "note": {
+     "text": "Rüstem'in hilesi",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 20,
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "w1"
+    }
+   },
+   "source": "TDV İslâm Ansiklopedisi"
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Ama acı burada bitmedi. Mustafa'nın küçük yaştaki oğlu Mehmed de birkaç ay sonra Bursa'da boğduruldu.",
+   "visual": "Batı Anadolu haritası: 'Bursa'da'da Bursa kırmızı halkaya alınır, yanında '1554' notu; solda Kaşif üzgün bakar, sonra Bursa'yı gösterir",
+   "title": {
+    "white": "Bursa",
+    "gray": "1554"
+   },
+   "cues": {
+    "meh": "Mehmed",
+    "bur": "Bursa'da"
+   },
+   "params": {
+    "view": [
+     25.5,
+     36.5,
+     36.5,
+     42.0
+    ],
+    "cities": [
+     {
+      "name": "Bursa",
+      "lon": 29.06,
+      "lat": 40.19,
+      "at": "bur",
+      "color": "red",
+      "ring": true,
+      "dy": 74
+     },
+     {
+      "name": "İstanbul",
+      "lon": 28.98,
+      "lat": 41.01,
+      "at": 0.3,
+      "color": "ink",
+      "dy": -60
+     }
+    ],
+    "note": {
+     "text": "1554",
+     "x": 0.06,
+     "y": 0.14,
+     "at": "bur",
+     "color": "red"
+    },
+    "kasif": {
+     "side": "left",
+     "pose": "idle",
+     "emotion": "worried",
+     "face": "right",
+     "seq": [
+      {
+       "at": "bur",
+       "pose": "point",
+       "dir": 12,
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "En küçük şehzade Cihangir ise birkaç hafta sonra Halep'te öldü. Halk, ağabeyinin acısına dayanamadığını söyledi. Ama büyük olasılıkla zaten hastaydı.",
+   "visual": "Ordugâhın kenarı: sağda genç, sakalsız, sarıklı Cihangir üzgün durur, 'Cihangir'de üstünde etiketi belirir; 'Halep'te'de yanında 'HALEP' tabelası; solda Kaşif anlatır, 'olasılıkla'da omuz silker",
+   "title": {
+    "white": "Cihangir"
+   },
+   "cues": {
+    "cih": "Cihangir",
+    "hal": "Halep'te",
+    "ill": "olasılıkla"
+   },
+   "params": {
+    "scale": 1.1,
+    "ground_y": 840,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 20
+    },
+    "foreground": "hatch",
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 2,
+      "gulls": 2,
+      "cloud_y": 0.22
+     }
+    },
+    "cast": [
+     {
+      "who": "cihangir",
+      "x": 0.62,
+      "accessory": "turban",
+      "talk": false,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.26,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "cih",
+        "pose": "point",
+        "dir": 12,
+        "face": "right"
+       },
+       {
+        "at": "ill",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.86,
+      "text": "HALEP",
+      "at": "hal",
+      "scale": 0.8
+     }
+    ],
+    "label": {
+     "text": "Cihangir",
+     "x": 0.62,
+     "y": 0.15,
+     "at": "cih",
+     "arrow": [
+      0.62,
+      0.3
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_hurrem",
+   "text": "Peki Süleyman neden bu kadar ileri gitti? Bir görüşe göre bu, Hürrem ve Rüstem'in kurduğu bir tuzaktı ve Süleyman sahte kanıtlara inandı.",
+   "visual": "Saray kemerleri: solda Hürrem ve Rüstem Paşa yan yana durur; 'tuzaktı'da üstlerine kırmızı 'TUZAK?' damgası iner; 'sahte'de Rüstem 'KANIT' yazılı bir kâğıt tutar, sağdaki uzun kavuklu Kanuni ona bakıp şaşırır; en sağda Kaşif düşünür, sonra omuz silker",
+   "title": {
+    "white": "Peki neden?"
+   },
+   "cues": {
+    "trap": "tuzaktı",
+    "pill": "sahte"
+   },
+   "params": {
+    "woman": {
+     "x": 0.16,
+     "face": "right",
+     "pose": "idle",
+     "seq": [
+      {
+       "at": "pill",
+       "pose": "point",
+       "dir": 10
+      }
+     ]
+    },
+    "cast": [
+     {
+      "who": "rustem",
+      "x": 0.36,
+      "y": 0.88,
+      "scale": 0.8,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "idle",
+      "face": "right",
+      "at": "pill",
+      "then": "hold",
+      "text": "KANIT"
+     },
+     {
+      "who": "suleyman",
+      "sultan": true,
+      "x": 0.66,
+      "y": 0.88,
+      "scale": 0.8,
+      "beard": "grey",
+      "pose": "idle",
+      "face": "left",
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "pill",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.9,
+      "y": 0.88,
+      "scale": 0.72,
+      "pose": "think",
+      "face": "left",
+      "at": "pill",
+      "then": "shrug"
+     }
+    ],
+    "labels": [
+     {
+      "text": "tuzak?",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "trap",
+      "stamp": true,
+      "color": "red",
+      "size": 80
+     }
+    ]
+   }
+  },
+  {
+   "type": "sm_camp",
+   "text": "Bazı tarihçilere göre ise asıl mesele padişahın kendi otoritesiydi. Ordu oğlunu daha çok sevince, Süleyman gücünü kaybettiğini hissetti.",
+   "visual": "Ordugâh: solda uzun kavuklu Kanuni yalnız ve endişeli durur; 'otoritesiydi'de üstüne kırmızı 'OTORİTE?' damgası iner; sağda kara sakallı Mustafa, 'sevince'de yanındaki iki miğferli asker ona el sallar; 'kaybettiğini'de Kanuni şaşırır; ortada Kaşif anlatır, sonra Kanuni'yi gösterir",
+   "title": {
+    "white": "Otorite"
+   },
+   "cues": {
+    "auth": "otoritesiydi",
+    "love": "sevince",
+    "lose": "kaybettiğini"
+   },
+   "params": {
+    "tug": {
+     "x": 0.86
+    },
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.5,
+      0.72
+     ]
+    },
+    "cast": [
+     {
+      "who": "suleyman",
+      "sultan": true,
+      "x": 0.18,
+      "scale": 0.9,
+      "beard": "grey",
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "lose",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "mustafa",
+      "x": 0.62,
+      "scale": 0.9,
+      "accessory": "turban",
+      "beard": "black",
+      "pose": "idle",
+      "face": "left",
+      "at": "love",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "asker1",
+      "x": 0.75,
+      "scale": 0.85,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "left",
+      "at": "love",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "asker2",
+      "x": 0.87,
+      "scale": 0.85,
+      "accessory": "helmet",
+      "pose": "idle",
+      "face": "left",
+      "at": "love",
+      "then": "point",
+      "dir": 10,
+      "emotion": "happy"
+     },
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "scale": 0.72,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "lose",
+        "pose": "point",
+        "dir": 12,
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "otorite?",
+      "x": 0.4,
+      "y": 0.33,
+      "arrow": [
+       0.24,
+       0.42
+      ],
+      "at": "auth",
+      "stamp": true,
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "source": "Atçıl, Osmanlı Araştırmaları 2016"
+  },
+  {
+   "type": "title",
+   "text": "Yani bu tek bir entrikanın değil, korkunun hikâyesiydi. Süleyman tahtını korudu, ama oğlunu kaybetti.",
+   "visual": "Dev yazı kelime kelime: 'Tahtını korudu, oğlunu kaybetti', 'oğlunu' kırmızı kutuda; el yazısı not 'korkunun hikâyesi'; sağda Kaşif üzgün düşünür",
+   "title": {
+    "white": "Bedel"
+   },
+   "cues": {
+    "note": "kaybetti",
+    "w0": "korkunun",
+    "w1": "korudu",
+    "w2": "oğlunu",
+    "w3": "kaybetti"
+   },
+   "params": {
+    "lines": [
+     "Tahtını korudu",
+     "oğlunu kaybetti"
+    ],
+    "highlight": [
+     "oğlunu"
+    ],
+    "note": {
+     "text": "korkunun hikâyesi",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.87,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w3"
+    }
+   }
+  },
+  {
+   "type": "an_brothers",
+   "text": "Ve bu karar, belki de imparatorluğun geleceğini değiştirdi. 1559'da Hürrem'in iki oğlu, Selim ve Bayezid, Konya'da birbirine kılıç çekti.",
+   "visual": "Ortada boş taht, minderinde padişah kavuğu; '1559'da kırmızı '1559' rozeti düşer; 'Selim' ve 'Bayezid'de iki şehzade yürüyerek gelir, adları belirir; 'kılıç'ta birbirine döner, kılıçlar çaprazlanır, altın kıvılcımlar; 'çekti'de taht sallanır; sağda Kaşif şaşırır",
+   "title": {
+    "white": "Konya",
+    "gray": "1559"
+   },
+   "cues": {
+    "y": "1559'da",
+    "s": "Selim",
+    "b": "Bayezid",
+    "fight": "kılıç",
+    "hit": "çekti"
+   },
+   "params": {
+    "mode": "fight",
+    "princes": [
+     {
+      "name": "Selim",
+      "at": "s",
+      "x": 0.22,
+      "from": -0.1,
+      "beard": "short"
+     },
+     {
+      "name": "Bayezid",
+      "at": "b",
+      "x": 0.4,
+      "from": -0.2,
+      "beard": "black"
+     }
+    ],
+    "throne": {
+     "x": 0.66
+    },
+    "fight": "fight",
+    "hit": "hit",
+    "badge": {
+     "text": "1559",
+     "at": "y",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.9,
+     "scale": 0.65,
+     "pose": "idle",
+     "face": "left",
+     "emotion0": "worried",
+     "at": "hit",
+     "then": "shock",
+     "emotion": "surprised"
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "ag03a_map",
+   "text": "Bayezid yenildi ve İran'a sığındı. 1561'de, orada oğullarıyla birlikte öldürüldü.",
+   "visual": "Anadolu ve İran haritası: 'sığındı'da Konya'dan Amasya üzerinden doğuya, İran'daki Kazvin'e kırmızı kesikli rota tek atlıyla uzanır; '1561'de'de Kazvin kırmızı halkaya alınır; solda Kaşif üzgün bakar, sonra Kazvin'i gösterir",
+   "title": {
+    "white": "Kazvin",
+    "gray": "1561"
+   },
+   "cues": {
+    "flee": "sığındı",
+    "kaz": "1561'de"
+   },
+   "params": {
+    "view": [
+     30.5,
+     54.0,
+     33.5,
+     42.5
+    ],
+    "cities": [
+     {
+      "name": "Konya",
+      "lon": 32.49,
+      "lat": 37.87,
+      "at": 0.2,
+      "color": "ink",
+      "dy": 74
+     },
+     {
+      "name": "Kazvin",
+      "lon": 50.0,
+      "lat": 36.27,
+      "at": "kaz",
+      "color": "red",
+      "ring": true,
+      "dy": 74
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        32.49,
+        37.87
+       ],
+       [
+        35.83,
+        40.65
+       ],
+       [
+        41.27,
+        39.9
+       ],
+       [
+        46.29,
+        38.08
+       ],
+       [
+        50.0,
+        36.27
+       ]
+      ],
+      "at": "flee",
+      "dur": 2.0,
+      "color": "red",
+      "riders": 1
+     }
+    ],
+    "texts": [
+     {
+      "text": "İran",
+      "lon": 47.8,
+      "lat": 34.9,
+      "at": "flee",
+      "size": 70,
+      "color": "soft"
+     }
+    ],
+    "kasif": {
+     "side": "left",
+     "pose": "idle",
+     "emotion": "worried",
+     "face": "right",
+     "seq": [
+      {
+       "at": "kaz",
+       "pose": "point",
+       "dir": 12,
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "an_brothers",
+   "text": "1566'da tahta, padişahken tek bir sefere bile kendisi çıkmayan İkinci Selim oturdu. Mustafa'nın nasıl bir padişah olacağını ise artık kimse bilemeyecek.",
+   "visual": "Aynı taht: tek başına kısa sakallı Selim bekler; '1566'da kırmızı '1566' rozeti düşer; 'oturdu'da tahta yürüyüp çıkar, padişah kavuğu uçup başına konar; sağda Kaşif 'Mustafa'nın'da düşünür, 'bilemeyecek'te omuz silker",
+   "title": {
+    "white": "1566"
+   },
+   "cues": {
+    "y": "1566'da",
+    "win": "oturdu",
+    "mus": "Mustafa'nın",
+    "hit": "bilemeyecek"
+   },
+   "params": {
+    "mode": "unite",
+    "princes": [
+     {
+      "name": "İkinci Selim",
+      "x": 0.25,
+      "beard": "short"
+     }
+    ],
+    "winner": 0,
+    "win": "win",
+    "hit": "hit",
+    "badge": {
+     "text": "1566",
+     "at": "y",
+     "color": "red"
+    },
+    "kasif": {
+     "x": 0.9,
+     "scale": 0.65,
+     "pose": "idle",
+     "face": "left",
+     "seq": [
+      {
+       "at": "mus",
+       "pose": "think",
+       "emotion": "worried"
+      },
+      {
+       "at": "hit",
+       "pose": "shrug"
+      }
+     ]
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   }
+  },
+  {
+   "type": "sm_camp",
+   "text": "Sizce Süleyman bir tuzağa mı düştü, yoksa korkusuna mı yenildi? Yorumlara yazın. Her gün böyle bir hikâye için abone olun.",
+   "visual": "Ordugâh: Kaşif iki tabela arasında, solda 'TUZAK', sağda 'KORKU'; arkada uzun kavuklu Kanuni düşünür; Kaşif 'tuzağa'da sol tabelayı, 'korkusuna'da sağ tabelayı, 'Yorumlara'da izleyiciyi gösterir; üstte 'Yorumlara yazın!' notu",
+   "title": {
+    "white": "Sizce?"
+   },
+   "cues": {
+    "trap": "tuzağa",
+    "fear": "korkusuna",
+    "hit": "Yorumlara"
+   },
+   "params": {
+    "tug": false,
+    "cast": [
+     {
+      "who": "suleyman",
+      "sultan": true,
+      "x": 0.66,
+      "scale": 0.8,
+      "beard": "grey",
+      "pose": "think",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "kasif",
+      "x": 0.42,
+      "scale": 0.8,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "trap",
+        "pose": "point",
+        "dir": 10,
+        "face": "left"
+       },
+       {
+        "at": "fear",
+        "pose": "point",
+        "dir": 10,
+        "face": "right"
+       },
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "forward",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "signs": [
+     {
+      "text": "TUZAK",
+      "x": 0.13,
+      "at": "trap",
+      "h": 0.3,
+      "size": 64
+     },
+     {
+      "text": "KORKU",
+      "x": 0.88,
+      "at": "fear",
+      "h": 0.3,
+      "size": 64
+     }
+    ],
+    "labels": [
+     {
+      "text": "Yorumlara yazın!",
+      "x": 0.5,
+      "y": 0.13,
+      "at": "hit",
+      "size": 70
+     }
+    ]
+   }
+  }
+ ]
+}

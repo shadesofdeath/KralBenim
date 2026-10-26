@@ -784,3 +784,370 @@ Küçük: s2 "6,000 km" Mars diskinin üstünde; s3/6/7 Kaşif küçük, s3 yör
 - Tur 1: Senaryo 7 · Kanca 9 · Okunabilirlik 7 · Görsel 7 · Hareket 8 · Kompozisyon 7 · Derinlik 7 · Tempo 8 · Doğruluk 8 · Kapanış 8 · Kapak+SEO 8 (kapak 8).
 - Tur 2: Senaryo 8 · Kanca 9 · Okunabilirlik 8 · Görsel 8 · Hareket 8 · Kompozisyon 8 · Derinlik 7 · Tempo 8 · Doğruluk 9 · Kapanış 8 · Kapak+SEO 8 (kapak 8). Engelleyici sorun yok; ek video olduğu için 2 turda bırakıldı.
 - Son kapı: lint hatasız (SEO 100/100), sheet.png ve cover.jpg yönetmen tarafından görüldü. Anlatım 471 karakter (bütçe uyarısı açık).
+
+---
+
+# Ek videolar (sohbetten istek, 2026-10-26 ~16:40 İstanbul): iki kanala 1 Short + 1 uzun, "hemen paylaş"
+
+Hepsi `"extra": true`, `"publish_at": "now"` (render biter bitmez herkese açık). Yeni kurallar: ilk 2 sn / soğuk
+açılış, Shorts sonunda abone cümlesi, kapak 2–4 kelime + uzunda `cover.focus`, `sources` + ekranda `source` notu,
+palet otomatik. Eleştirmen en az 1 tur.
+
+## 03-rum-atesi (Düşün Bakalım, Short) · havuz: keşifler ve icatlar / imparatorluklar
+- Konu: Bizans'ın "Rum ateşi": suyla sönmeyen silah, 672–678 Arap kuşatmasında İstanbul'u kurtardı; formül devlet sırrıydı ve kayboldu.
+- İzleyici sonunda: "Bir sırrı o kadar iyi saklamışlar ki kendileri de kaybetmiş."
+- Kanca/kapak fikri: "SUYLA SÖNMEYEN ATEŞ" (2–4 kelimeye indir), Kaşif şokta, gemiden fışkıran ateş.
+
+### Yazar notları (03-rum-atesi)
+**Anlatım (tek parça, 469 karakter, abone cümlesi dahil):**
+> Bu ateş suyla sönmüyordu. Denizin üstünde bile yanardı! 670'li yıllarda bir Arap donanması İstanbul'u kuşatmıştı.
+> Ama Suriye'den kaçan Kallinikos adlı bir usta, şehre bir sır getirdi. Gemilere borular takıldı ve fışkıran alev Arap
+> filosunu yaktı. Peki ateşin içinde ne vardı? Büyük olasılıkla petrol, ama tarifi kimse bilmiyor. Çünkü tarif bir devlet
+> sırrıydı. Sırrı o kadar iyi sakladılar ki tarif sonsuza dek kayboldu. Her gün böyle gerçek bir hikâye için abone olun.
+
+-yor: 2/10 cümle · devrik yok · tarihle açılmıyor (tarih 3. cümlede) · ilk cümle 4 kelime = kapak fikri.
+
+**Çekim listesi (9 sahne, ~34 sn):**
+| # | Cümle | Tip | Görüntü | Kaşif | Cue |
+|---|---|---|---|---|---|
+| 0 | Bu ateş suyla sönmüyordu. | `ra_siphon` (yeni) | denizde yanan alev gölü; Arap denizci su fırlatıyor, buhar, alev büyüyor (kapak karesi) | kayada işaret → şok (kapakta büyük Kaşif) | suyla / sönmüyordu |
+| 1 | Denizin üstünde bile yanardı! | `ra_siphon` | Bizans kadırgasının tunç borusundan alev akıntısı denize, deniz yanıyor | — | Denizin / üstünde / yanardı |
+| 2 | 670'li yıllarda … kuşatmıştı. | `map` (anatolia) | Suriye → Ege → Çanakkale → İstanbul kırmızı rota, "Kuşatma!" | — | donanması / İstanbul / kuşatmıştı · Kaynak: Theophanes |
+| 3 | Ama Suriye'den kaçan Kallinikos … sır getirdi. | `stage` | İstanbul silueti, tomarla gelen Kallinikos, taçlı imparator | işaret → şok | Kallinikos / sır · Kaynak: Theophanes |
+| 4 | Gemilere borular takıldı … yaktı. | `ra_siphon` | pruvada sifon belirir ("sifon" oku), alev akıntısı iki Arap gemisini sırayla tutuşturur | — | borular / fışkıran / filosunu / yaktı · Kaynak: Theophanes |
+| 5 | Peki ateşin içinde … bilmiyor. | `ra_secret` (yeni) | tarif tomarı: "Petrol ✓", iki okunmaz satır + kırmızı "?" | düşün → işaret → omuz silk | petrol / tarifi / kimse |
+| 6 | Çünkü tarif bir devlet sırrıydı. | `stage` | imparator tomarı saklayıp sırtını döner, muhafız önüne geçer, "Devlet sırrı" | dürbünle bakar → omuz silker | sırrıydı · Kaynak: Konstantinos VII |
+| 7 | Sırrı o kadar iyi sakladılar … kayboldu. | `ra_secret` | yazılar silinip mürekkep tozu olur, "KAYBOLDU" damgası | anlatır → şok | sonsuza / kayboldu |
+| 8 | Her gün … abone olun. | `title` | "Her gün / gerçek / bir hikâye" | el sallar | gerçek |
+
+**Doğrulanan bilgiler:**
+- Kallinikos: Theophanes'e göre Heliopolis'ten (Suriye) Romalılara kaçan bir usta; "deniz ateşi"ni yaptı, Arap gemilerini yaktı; c. 672 (Wikipedia "Greek fire"; World History Encyclopedia).
+- Kuşatma: geleneksel tarih 674–678 (Theophanes); tarih tartışmalı (Jankowiak 667–669; Howard-Johnston kuşatmayı sorguluyor). Metinde bu yüzden "670'li yıllarda" (Wikipedia "Siege of Constantinople (674–678)").
+- IV. Konstantinos donanmasını sifonlu gemilerle donattı; 677/678'de Arap donanması bozguna uğradı (aynı sayfa).
+- Su söndürmüyordu, su üstünde yanıyordu; sadece kum, sert sirke, eski idrar gibi az sayıda madde söndürebiliyordu (Wikipedia; WHE: "water had no effect").
+- Formül devlet sırrıydı; VII. Konstantinos oğluna formülü asla vermemesini öğütledi (De Administrando Imperio); bileşim kayboldu. Modern görüş: büyük olasılıkla petrol (neft) + reçine; kesin tarif bilinmiyor (metin tarif uydurmuyor).
+- Kaynaklar (`sources`): https://en.wikipedia.org/wiki/Greek_fire · https://en.wikipedia.org/wiki/Siege_of_Constantinople_(674%E2%80%93678) · https://www.worldhistory.org/Greek_Fire/
+
+**Kapak adayları (5 render, karşılaştırıldı):**
+A sahne 0 eski hâli: borudan akıntı + küçük alev gölü, "SUYLA SÖNMEYEN ATEŞ" — alev küçük, gemi kırpık.
+B sahne 1 su atılan dev alev, "SU BİLE SÖNDÜREMEDİ" — en güçlü görüntü ama ilk cümleyle kelime ortaklığı yok.
+C sahne 4 yanan filo, "DENİZİ YAKAN SİLAH" — kalabalık (3 gemi + etiket).
+D sahne 0, "TARİFİ KAYBOLDU" — sonu ele veriyor, kancayla örtüşmüyor.
+**Seçilen E:** B'nin görüntüsü (su atılan, buharı tüten dev alev gölü + büyük şok Kaşif) + "SUYLA SÖNMEYEN **ATEŞ**"; tek odak, ilk cümleyle aynı fikir.
+
+### 03-rum-atesi — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 8 | 7 | 7 | 7 | 7 | 8 | 6 | 7 | 7 (kapak 7) |
+1. Kapak/sahne 0: "su ateşe çarpıp işe yaramıyor" okunmuyor (alev dağ gibi, su minik noktalar, buhar baloncuk, gemi tahta parçası, solda kaya parçası, Kaşif'in şapkası kesik).
+2. Doğruluk: "Arap filosunu yaktı" abartı (filo bozguna uğradı, sonra fırtınada battı); açıklamada "İstanbul'u kurtardı" fazla iddialı.
+3. YouTuber sesi zayıf ve en iyi bilgi yok (VII. Konstantinos'un oğluna uyarısı); son sahne jenerik "Her gün gerçek bir hikâye" kartı.
+
+**Tur 1 düzeltmeleri (yazar):**
+- Anlatım (468 karakter): "Bu ateş suyla sönmüyordu. Denizin üstünde bile yanardı! 670'li yıllarda Arap donanması İstanbul'u kuşattı. Ama Suriyeli
+  usta Kallinikos bir sır getirdi. Borulardan fışkıran alev Arap gemilerini tek tek yaktı. İçinde ne mi vardı? Büyük olasılıkla
+  petrol, gerisi meçhul. Çünkü bu, devlet sırrıydı. Bir imparator oğluna "Bunu asla yabancılara verme!" diye yazdı. Düşünün:
+  öyle iyi sakladılar ki tarif sonsuza dek kayboldu. Her gün böyle gerçek bir hikâye için abone olun." (edilgen "takıldı" yok,
+  "filosunu" → "gemilerini tek tek", "siz/Düşünün" anı, DAI uyarısı; -yor 1/11).
+- Sahne 0 + kapak yeniden: dalgalı deniz (mürekkep dalga sırtları), alçak geniş alev tabakası, Arap kadırgasında denizci kovayı
+  deviriyor, kalın mavi su kavsi alevin ortasına iniyor ve orada alev **kıvrık dillerle yukarı fışkırıyor** (yeni `fireBurst`),
+  gri buhar kıvrımları; sol kenar parçası yok, Kaşif x 820 tamamen kadrajda. 3 yeni kapak adayı (R1 "SUYLA SÖNMEYEN **ATEŞ**",
+  R2 "**SU** BİLE SÖNDÜREMEDİ", R3 zoom 1.3 "**SÖNMEYEN**" vurgulu): R1 seçildi (telefonda en okunur, ilk cümleyle aynı kelimeler;
+  R3'te denizci kesik, R2 ilk cümleyle kelime ortaklığı yok).
+- Sahne 1: Kaşif Bizans kadırgasının güvertesinde alevi işaret ediyor → şok (ilk 5 sahnede Kaşif artık 3 sahnede).
+- Sahne 2: harita zoom 1.05, odak (28.3, 38.8): Ege rotası tamamen görünüyor. Sahne 4: öndeki Arap gemisi kadraja alındı.
+- Sahne 5: "Petrol" yanında ✓ yerine kırmızı "?" ("büyük olasılıkla"), Kaşif büyük (0.8) ve düşün → işaret → omuz silk.
+- Sahne 6: imparator taçlı küçük oğluna parmağını sallayıp uyarıyor, "Asla verme!" etiketi, kaynak notu "De Administrando Imperio".
+- Sahne 7: Kaşif büyük (0.8), anlat → işaret → şok; damga kadrajın ortasında.
+- Sahne 8: başlık kartı yerine hikâyenin son karesi: dalgalı denizde hâlâ yanan son küçük alev, uzakta kadırga, kıyıda büyük
+  Kaşif (1.0) alevi gösteriyor, "abone"de izleyiciye dönüp el sallıyor.
+- Açıklama: "İstanbul'un kurtuluşunda büyük rol oynadı", "Arap gemilerini yaktı", VII. Konstantinos'un uyarısı; `sources`'a
+  Wikipedia "De Administrando Imperio" eklendi (Wikipedia "Greek fire": Konstantinos VII oğluna formülü asla yabancılara
+  vermemesini öğütledi; ateşin bir melek tarafından gösterildiğini yazdı).
+- Lint 0 hata (SEO 100), preview: STATIC yok.
+
+## 04-sehzade-mustafa (Düşün Bakalım, uzun) · havuz: Türkiye ve Osmanlı tarihi
+- Konu: 1553 Ereğli ordugâhı: Kanuni Sultan Süleyman, en sevilen oğlu Şehzade Mustafa'yı çadırında boğdurdu. Neden?
+  Perdeler: sevilen şehzade → Hürrem ve Rüstem Paşa → mektup/isyan şüphesi → çadır → ordunun öfkesi, mersiyeler → sonrası (Bayezid, Selim, taht kavgası).
+- Tartışmalı noktalar "bir görüşe göre" diliyle (Rüstem'in sahte mektubu iddiası vb.).
+- İzleyici sonunda: "Bir padişah, tahtı korumak için kendi oğlunu feda etti; ve bu karar imparatorluğun geleceğini değiştirdi."
+- Kapak fikri: "OĞLUNU ÖLDÜRTTÜ" / "ÇADIRA GİRDİ" tek nesne: çadır + Kaşif.
+
+### Yazar notları (04-sehzade-mustafa)
+- Dosya: `videos/2026-10-26/04-sehzade-mustafa.json` · `"extra": true` · `publish_at: "now"` · palet `terracotta` · 49 sahne · ~318 sn (preview tahmini).
+- Başlık: Şehzade Mustafa: Kanuni Oğlunu Neden Kendi Çadırında Öldürttü?
+- Kapak: Çadıra girdi / çıkamadı (vurgu: çıkamadı) · sahne 0, t 5.0 · focus [1075, 700] (otağ kapısı, kapalı perdeler + yerde kılıç), zoom 1.1, büyük şok Kaşif.
+- Kapak adayları: A "Çadıra girdi / çıkamadı" (sahne 0, kapalı kapı + kılıç) **seçildi**; B "Oğlunu / öldürttü" (sahne 30; başlığı tekrar ediyor, elendi); C "Sahte / mühür" (sahne 19, tek mühür; temiz ama duygusu zayıf).
+
+**Tek parça anlatım (4612 karakter; bütçe uyarısı için alt uçta):**
+
+> Bir şehzade, babasının çadırına silahsız girdi. Ve bir daha canlı çıkmadı. Yıl 1553, yer Konya Ereğlisi'ndeki ordugâh. Çadırın sahibi Kanuni Sultan Süleyman'dı. İçeri giren ise en büyük oğlu, Şehzade Mustafa. Peki bir baba, ordunun en sevdiği oğlunu neden kendi çadırında öldürttü? Cevap, sandığınızdan çok daha karmaşık. Mustafa 1515'te Manisa'da doğdu. Annesi Mahidevran'dı ve Mustafa padişahın en büyük oğluydu. Herkes onu geleceğin sultanı olarak görüyordu. Osmanlı'da şehzadeler sancaklarda devlet yönetmeyi öğrenirdi. Mustafa önce Manisa'ya, sonra Amasya'ya gönderildi. Ve gittiği her yerde sevildi. Cömertti, iyi bir askerdi, üstelik Muhlisi mahlasıyla şiir yazardı. Ama asıl önemli olan şuydu: yeniçeriler ona hayrandı. Venedik elçisi Navagero, askerlerin onu tahtta görmek istediğini yazar. Şimdi bunu bir de padişahın gözünden düşünün. Ordunun gönlü sizde değil, oğlunuzda. Üstelik sarayda Mustafa'ya hiç iyi gözle bakmayan biri vardı… O kişi Hürrem Sultan'dı. Hürrem saraya bir cariye olarak gelmişti. Ama Süleyman'ın kalbini kazandı ve onunla resmen evlendi. Hürrem'in de üç oğlu hayattaydı: Selim, Bayezid ve Cihangir. Ama tahta sadece bir kişi çıkabilirdi. Bakın, işin korkunç tarafı şurada: o dönemde tahta çıkan şehzade kardeşlerini öldürtebiliyordu. Yani Mustafa padişah olursa, Hürrem'in oğulları da tehlikedeydi. Hürrem'in yanında güçlü bir müttefik de vardı: kızı Mihrimah'ın kocası, sadrazam Rüstem Paşa. Kaynakların çoğu, ikisinin Mustafa'yı padişahın gözünden düşürmek için birlikte çalıştığını yazar. Ama dikkat edin, bu sadece en yaygın anlatım. Ve sonunda padişaha çok tehlikeli bir haber ulaştı. Kaynaklara göre Rüstem Paşa, askerlerin yaşlanan padişah yerine Mustafa'yı istediğini bildirdi. Bir rivayete göre Rüstem, Mustafa'nın mührünün kopyasını kazdırıp onun adına İran şahına bir mektup yollamış. Şahın cevabı da yolda yakalanıp padişaha götürülmüş. Bu mektup gerçekten var mıydı? Bunu kimse kesin bilmiyor. Ama bir şey kesin: Süleyman böyle bir hikâyeyi çok iyi tanıyordu. Çünkü 1512'de kendi babası Yavuz Sultan Selim, yeniçerilerin desteğiyle İkinci Bayezid'i tahttan indirmişti. Yani Süleyman, askerin sevdiği bir şehzadenin neler yapabileceğini kendi ailesinden biliyordu. 1553 yazında padişah İran seferine bizzat çıktı ve Mustafa'yı ordugâha çağırdı. Anlatılana göre çevresi onu uyardı. Ama gitmemek, isyan demekti. Peki ne yaptı dersiniz? Mustafa yola çıktı ve 5 Ekim'de Ereğli'deki ordugâha vardı. Askerler onu coşkuyla karşıladı. Bu coşku, belki de babasının korkusunu daha da büyüttü. Ertesi sabah, 6 Ekim'de, Mustafa padişahın otağına çağrıldı. Gelenek gereği atından indi ve silahlarını kapıda bıraktı. İçeri girdiğinde babasını değil, cellatları buldu. Kaynaklar onu dilsiz cellatların beklediğini yazar. Mustafa direndi. Ama sonunda bir kemendin altında can verdi. Henüz otuzlu yaşlarındaydı. Süleyman'ın perdenin arkasından izlediği anlatılır, ama tarihçiler bundan pek emin değil. Mustafa'nın bedeni bir halıya konup otağın önüne bırakıldı. İşte tam o anda, ordugâhta bir fırtına koptu. Askerler yas tuttu, öfkelendi. Öfkenin hedefi ise padişah değil, Rüstem Paşa'ydı. Süleyman bir ayaklanmadan korktu ve Rüstem'i hemen sadrazamlıktan aldı. Yerine Kara Ahmed Paşa geldi. Ama sadece iki yıl sonra Kara Ahmed Paşa idam edildi. Ve Rüstem aynı gün yeniden sadrazam oldu. Şairler de susmadı. Taşlıcalı Yahya'nın yazdığı yanık mersiye dilden dile dolaştı. Halk arasında bir tarih düşürme bile yayıldı: "Mekr-i Rüstem", yani Rüstem'in hilesi. Ama acı burada bitmedi. Mustafa'nın küçük oğlu Mehmed de birkaç ay sonra Bursa'da boğduruldu. Hürrem'in en küçük oğlu Cihangir ise birkaç hafta sonra Halep'te öldü. Halk, ağabeyinin acısına dayanamadığını söyledi. Ama büyük olasılıkla zaten hastaydı. Peki Süleyman neden bu kadar ileri gitti? Bir görüşe göre bu, Hürrem ve Rüstem'in kurduğu bir tuzaktı ve Süleyman sahte kanıtlara inandı. Bazı tarihçilere göre ise asıl mesele padişahın kendi otoritesiydi. Ordu oğlunu daha çok sevince, Süleyman gücünü kaybettiğini hissetti. Yani bu tek bir entrikanın değil, korkunun hikâyesiydi. Süleyman tahtını korudu, ama oğlunu kaybetti. Ve bu karar, imparatorluğun geleceğini de değiştirdi. 1559'da Hürrem'in iki oğlu, Selim ve Bayezid, Konya'da birbirine kılıç çekti. Bayezid yenildi ve İran'a sığındı. 1561'de, orada oğullarıyla birlikte öldürüldü. 1566'da tahta, padişahken tek bir sefere bile kendisi çıkmayan İkinci Selim oturdu. Mustafa'nın nasıl bir padişah olacağını ise artık kimse bilemeyecek. Sizce Süleyman bir tuzağa mı düştü, yoksa korkusuna mı yenildi? Yorumlara yazın. Her gün böyle gerçek bir hikâye için de abone olun.
+
+**Bölümler:** soğuk açılış "Ereğli, 1553" (0–3, soru: bir baba oğlunu neden öldürttü? cevap sonda) · BÖLÜM 1 Herkesin şehzadesi (4–10) · BÖLÜM 2 Saraydaki rakip (11–16) · BÖLÜM 3 Mühür ve korku (17–24) · BÖLÜM 4 Otağ (25–36) · BÖLÜM 5 Bedel (37–48: mersiye, Mehmed, Cihangir, "peki neden?" iki görüş, Selim–Bayezid, II. Selim, yorum sorusu + abone).
+
+**Çekim listesi** (sahne · tip · görsel):
+0. `sm_otag` · Sabah ordugâhı: ortada çizgili, saçaklı büyük padişah otağı, iki yanında tuğlar, uzakta küçük çadırlar; sarıklı, kara sakallı şehzade soldan yürür, 's…
+1. `ag03a_map` · Anadolu haritası: '1553' notu; 'Ereğlisi'nde Konya Ereğlisi kırmızı halkaya alınır, 'ordugâh'ta yanında çadır ikonu belirir; solda Kaşif işaret eder
+2. `stage` · Ordugâhta solda sarıklı, kır sakallı Kanuni durur, 'Süleyman'dı'da üstünde 'Kanuni' etiketi belirir; 'Mustafa'da sağdan sarıklı, kara sakallı Mustafa …
+3. `title` · Dev yazı kelime kelime: 'Baba oğlunu neden öldürttü?', 'neden' kırmızı kutuda; el yazısı not 'cevap sonda'; sağda Kaşif düşünür, 'karmaşık'ta omuz sil…
+4. `chapter` · BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Herkesin şehzadesi' ve el çizimi alt çizgi
+5. `stage` · Saray önü: ortada genç, kısa sakallı, sarıklı Mustafa durur, 'büyük'te üstünde 'en büyük oğul' etiketi belirir; 'sultanı'nda yanında 'GELECEĞİN SULTAN…
+6. `ag03a_map` · Anadolu haritası: 'Manisa'ya'da Manisa mavi halkaya alınır; 'Amasya'ya'da Manisa'dan Amasya'ya mavi kesikli rota tek atlıyla uzanır, Amasya mavi halka… · ekranda kaynak: TDV İslâm Ansiklopedisi
+7. `mcB_desk` · Kandil ışığında yazı masası: büyük kâğıtta tüy kalem satırları kendiliğinden yazar; 'Muhlisi'de kâğıdın başına 'Muhlisi' başlığı belirir; solda 'şair …
+8. `an_field` · Yandan ova: solda mavi sancaklı, börklü yeniçeri saffı 'yeniçeriler'de öne adım atar, sultan tuğu yükselir; 'Navagero'da sağ üstte kırmızı 'Navagero' … · ekranda kaynak: TDV İslâm Ansiklopedisi
+9. `ag03c_compare` · Solda 'ordunun gönlü' kartı: 'Siz' kırmızı çubuğu kısa kalır, 'Oğlunuz' mavi çubuğu neredeyse sonuna kadar dolar; sağda 'Kim?' listesi; sağ kenarda Ka…
+10. `sm_hurrem` · Saray kemerleri: sağda, hotozlu ve uzun entarili bir kadın yan dönmüş, kaşları çatık bekler; 'biri'nde üstüne büyük kırmızı '?' damgası iner; solda Ka…
+11. `chapter` · BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Saraydaki rakip' ve el çizimi alt çizgi
+12. `sm_hurrem` · Saray kemerleri, ortada kırmızı perde: hotozlu, uzun kırmızı entarili Hürrem soldan süzülerek gelir, üstünde 'Hürrem' yazar; sağda kara sakallı genç K…
+13. `an_brothers` · Ortada basamaklı boş taht, minderinde padişah kavuğu; solda Mustafa baştan durur, Selim, Bayezid ve Cihangir adları söylendikçe yürüyerek gelir, adlar…
+14. `title` · Dev yazı kelime kelime: 'Kardeş katli', 'katli' kırmızı kutuda; el yazısı not 'o dönemin kuralı'; sağda Kaşif 'kardeşlerini'de şokla geri sıçrar
+15. `sm_hurrem` · Saray kemerleri: solda Hürrem durur; 'müttefik'te sağdan sarıklı, kara sakallı Rüstem Paşa yürüyerek gelip yanında durur, 'Rüstem'de üstünde mavi 'Rüs…
+16. `ag03c_strike` · El yazısı başlık 'Yaygın anlatım', altında dev Fraunces 'Hürrem + Rüstem' belirir; 'yaygın'da altına kırmızı hap 'kesin mi?' iner; sağda Kaşif anlatır… · ekranda kaynak: TDV İslâm Ansiklopedisi
+17. `chapter` · BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Mühür ve korku' ve el çizimi alt çizgi
+18. `ag03c_court` · Sefer çadırı: tahtta kır sakallı Kanuni oturur; önünde kara sakallı Rüstem Paşa eğilip anlatır, 'Mustafa'yı'da işaret eder; Kanuni'nin kaşları endişey…
+19. `sm_seal` · Üstte 'Rivayet' başlığı; solda yuvarlak 'Mustafa' mührü; 'kopyasını'da yanına keskiyle ikinci bir mühür oyulur, kırmızı 'kopya' notu; 'adına'da kopya … · ekranda kaynak: TDV İslâm Ansiklopedisi
+20. `ag03c_strike` · Dev Fraunces 'Mektup?' belirir; 'bilmiyor'da altına kırmızı hap 'kanıt yok' iner; sağda Kaşif omuz silker, 'tanıyordu'da parmağını kaldırıp işaret ede…
+21. `stage` · Saray önü, '1512' tabelası: sağda kır sakallı yaşlı İkinci Bayezid durur; solda kara sakallı Yavuz ve arkasında iki miğferli asker 'yeniçerilerin'de ö…
+22. `ag03c_court` · Sefer çadırı, kandil sallanır: tahtta kır sakallı Kanuni endişeyle oturur; 'ailesinden'de üstünde kırmızı '1512' notu belirir; solda Kaşif anlatır, so…
+23. `ag03a_map` · Anadolu haritası: 'seferine'de İstanbul'dan Ereğli'ye mavi kesikli ok atlılarla iner, doğuda 'İran' yazısı belirir; 'çağırdı'da Amasya'dan Ereğli'ye k…
+24. `stage` · Amasya'da: ortada kara sakallı Mustafa düşünür; solda iki kır sakallı danışman 'uyardı'da ona dönüp işaret eder, yanlarında 'GİTME' tabelası; 'isyan'd…
+25. `chapter` · BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Otağ' ve el çizimi alt çizgi
+26. `an_field` · Yandan ova: mavi sancaklı yeniçeri saffı 'coşkuyla'da öne adım atar, toz kalkar, sancak yükselir; 'korkusunu'da sağ üstte kırmızı 'korku?' notu beliri…
+27. `sm_otag` · Şafak, padişah otağı: solda Mustafa bekler; kapının yanında sarıklı bir haberci 'çağrıldı'da el sallayıp onu çağırır; sol üstte kırmızı '6 Ekim' notu;… · ekranda kaynak: TDV İslâm Ansiklopedisi
+28. `sm_otag` · Yakın plan otağ kapısı: Mustafa soldan kapıya yürür, 'silahlarını'da kılıcını ve yayını kapının yanına yere bırakır; sağda Kaşif işaret eder
+29. `ag03c_court` · Otağın içi, kandil sallanır, tahtsız loş çadır: solda kara sakallı Mustafa içeri girmiş durur, 'cellatları'nda şokla geri çekilir; karşısında başı açı… · ekranda kaynak: TDV İslâm Ansiklopedisi
+30. `sm_otag` · Otağ dışarıdan, perdeler kapalı, kılıç ve yay kapının yanında yerde: 'direndi'de çadırın kumaşı sarsılır, perdeler titrer; 'verdi'de her şey durulur v…
+31. `ag03c_strike` · El yazısı başlık 'Rivayet', altında dev Fraunces 'Perde arkası?' belirir; 'emin'de üstüne kırmızı çizgi çekilir ve kırmızı hap 'şüpheli' iner; sağda K…
+32. `sm_otag` · Otağın önü, flama yarıda: 'halıya'da kapının önüne kırmızı bir halı serilir, üstüne beyaz bir örtü gelir; önde börklü yeniçeriler 'bırakıldı'da başlar…
+33. `sm_otag` · Otağ önünde kalabalık: kadrajın altında sıra sıra börklü yeniçeriler; 'fırtına'da yumrukları ve mızrakları havaya kalkar, kaşları öfkelenir, kamera sa…
+34. `stage` · Ordugâh: solda miğferli üç asker önce başını eğer, 'Rüstem'de öfkeyle sağı işaret eder; sağda kara sakallı Rüstem Paşa şokla geri sıçrar, üstünde kırm…
+35. `stage` · Saray önü: sağda kır sakallı Kanuni endişeli durur; ortadaki Rüstem Paşa 'sadrazamlıktan'da sola yürüyüp kadrajdan çıkar; 'Ahmed'de sağdan kır sakallı… · ekranda kaynak: TDV İslâm Ansiklopedisi
+36. `timeline` · Yatay zaman çizgisi: '1553 Rüstem gitti' ve '1555 Rüstem döndü' sırayla belirir, 1555 kırmızı vurgulanır; sağda Kaşif 'yeniden'de şokla geri sıçrar
+37. `chapter` · BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Bedel' ve el çizimi alt çizgi
+38. `mcB_desk` · Kandil ışığında yazı masası: büyük kâğıda 'Mersiye' başlığı gelir, satırlar tüy kalemle kendini yazar; üstte el yazısı 'Taşlıcalı Yahya'; solda Kaşif …
+39. `title` · Dev yazı kelime kelime: 'Mekr-i Rüstem', 'Rüstem' kırmızı kutuda; el yazısı not 'Rüstem'in hilesi'; sağda Kaşif işaret eder · ekranda kaynak: Atçıl 2016; Wikipedia
+40. `ag03a_map` · Batı Anadolu haritası: 'Bursa'da'da Bursa kırmızı halkaya alınır, yanında '1554' notu; solda Kaşif üzgün bakar, sonra Bursa'yı gösterir
+41. `stage` · Ordugâhın kenarı: sağda genç, sakalsız, sarıklı Cihangir üzgün durur, 'Cihangir'de üstünde etiketi belirir; 'Halep'te'de yanında 'HALEP' tabelası; sol…
+42. `sm_hurrem` · Saray kemerleri: solda Hürrem ve Rüstem Paşa yan yana durur; 'tuzaktı'da üstlerine kırmızı 'TUZAK?' damgası iner; 'sahte'de Rüstem 'KANIT' yazılı bir …
+43. `ag03c_compare` · Solda 'ordunun gönlü' kartı: 'sevince'de 'Oğul' mavi çubuğu uzar, 'kaybettiğini'de 'Padişah' kırmızı çubuğu kısa kalır; sağda 'Neden?' listesinde 'Tuz…
+44. `title` · Dev yazı kelime kelime: 'Tahtını korudu, oğlunu kaybetti', 'oğlunu' kırmızı kutuda; el yazısı not 'korkunun hikâyesi'; sağda Kaşif üzgün düşünür · ekranda kaynak: Atçıl, Osmanlı Araştırmaları 2016
+45. `an_brothers` · Ortada boş taht, minderinde padişah kavuğu; '1559'da kırmızı '1559' rozeti düşer; 'Selim' ve 'Bayezid'de iki şehzade yürüyerek gelir, adları belirir; …
+46. `ag03a_map` · Anadolu ve İran haritası: 'sığındı'da Konya'dan Amasya üzerinden doğuya, İran'daki Kazvin'e kırmızı kesikli rota tek atlıyla uzanır; '1561'de'de Kazvi…
+47. `an_brothers` · Aynı taht: tek başına kısa sakallı Selim bekler; '1566'da kırmızı '1566' rozeti düşer; 'oturdu'da tahta yürüyüp çıkar, padişah kavuğu uçup başına kona…
+48. `stage` · Kaşif iki yol tabelası arasında: solda 'TUZAK', sağda 'KORKU'; arkada kır sakallı Kanuni düşünür; Kaşif 'tuzağa'da sol tabelayı, 'korkusuna'da sağ tab…
+
+**Doğrulanan bilgiler:**
+- Mustafa 1515'te Manisa'da doğdu, annesi Mahidevran; 1533–1541 Manisa (Saruhan), 1541'den itibaren Amasya sancak beyi (TDV "Mustafa Çelebi"; Wikipedia).
+- Venedik elçisi Navagero: yeniçeriler onu tahtta görmek istiyordu (TDV).
+- Rüstem Paşa, Hürrem'in kızı Mihrimah'ın kocası, sadrazam. Sahte mühür/mektup rivayeti: Rüstem Mustafa'nın mührünü kazdırıp Şah Tahmasb'a mektup yollatmış, cevabı yolda yakalatmış (TDV ve Wikipedia rivayet olarak verir; videoda "bir rivayete göre").
+- 1512: Yavuz Sultan Selim yeniçerilerin desteğiyle II. Bayezid'i tahttan indirdi (bilinen olgu).
+- Kanuni 28 Ağustos 1553'te İstanbul'dan (Üsküdar) Nahçıvan seferine çıktı; 5 Ekim'de Konya Ereğlisi yakınında (Aktepe/Akhöyük) ordugâh; Mustafa 5 Ekim'de geldi, 6 Ekim 1553'te otağda silahsız girdiği çadırda dilsiz cellatlar tarafından boğuldu (TDV: "kapıcılardan Mahmud Ağa'nın kemendi altında"). Babasının perde arkasından izlediği anlatımını TDV şüpheli bulur (videoda öyle verildi). Naaşı otağ önünde bir halı üstünde teşhir edildi (TDV; videoda sadece örtülü halı).
+- Ordunun tepkisi Rüstem'e yöneldi; Rüstem aynı gün azledildi, yerine Kara Ahmed Paşa (6 Ekim 1553); Kara Ahmed 29 Eylül 1555'te idam edildi, Rüstem aynı gün yeniden sadrazam (TDV "Kara Ahmed Paşa"; Wikipedia).
+- Taşlıcalı Yahya'nın mersiyesi; halk arasında "mekr-i Rüstem" tarih düşürmesi (Wikipedia, Atçıl).
+- Mustafa'nın oğlu Mehmed 1554'te Bursa'da boğduruldu (TDV; Wikipedia: Mayıs 1554).
+- Cihangir 27 Kasım 1553'te Halep'te öldü; "kardeşinin acısından öldü" popüler bir anlatım, bugün kronik hastalığı daha olası görülüyor (Wikipedia) → videoda "Halk ... söyledi. Ama büyük olasılıkla zaten hastaydı."
+- 1559 Konya: Selim kazandı; Bayezid İran'a sığındı, 25 Eylül 1561'de Kazvin'de oğullarıyla öldürüldü (Wikipedia Selim II / Şehzade Bayezid).
+- II. Selim 1566'da tahta çıktı ve padişahken orduya hiç bizzat komuta etmedi (Wikipedia Selim II: "did not lead the army in person during his reign").
+- İki görüş: yaygın anlatım Hürrem + Rüstem entrikası; Zahit Atçıl (Osmanlı Araştırmaları 48, 2016): otoritesini şehzadeye kaptıran sultan gücünü yeniden kurmak için öldürttü.
+- Bilerek anlatılmayanlar: uydurma alıntılar, Hürrem'in "kesin suçlu" olduğu iddiası, Mustafa'nın Şah'la gerçekten anlaştığı iddiası.
+
+**Yeni sahne tipleri (sadece yeni dosyalar):** `scenes/studio/shots/sm_otag.js` (padişah otağı: yürüyen şehzade, kapıya bırakılan kılıç/yay, kapanan perdeler, sarsılan çadır, yarıya inen flama, örtülü halı, yas tutan/öfkelenen börklü yeniçeriler), `sm_seal.js` (mühür kopyası, mum mühür, Şah'a uçan ve yolda yakalanan mektup), `sm_hurrem.js` (saray kemerleri + hotozlu, uzun entarili kadın figürü; kalp, damga). Ortak dosyalara dokunulmadı.
+
+**Lint:** 0 hata, 0 uyarı (SEO 100/100). **Preview:** STATIC yok (en düşük motion: chapter kartları ~4.6–9, timeline 6.5).
+
+#### Eleştiri günlüğü — 04-sehzade-mustafa
+**Tur 1 (eleştirmen):**
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 9 | 8 | 7 | 8 | 8 | 7 | 7 | 8 | 9 | 6 |
+1. Kapak: Kaşif kapıyı ve silahları örtüyor, üst yarı boş, çizgili çadır sirk çadırı gibi → yeniden.
+2. Sahne 4–7 ve 12–15 ders kitabı gibi ("Mustafa 1515'te Manisa'da doğdu."), Hürrem ifşası sahne 10'da bozuluyor, BÖLÜM 2 kartı ifşa cümlesinin üstünde.
+3. Aynı geniş çadır planı 6 kez; padişahın ayırt edici işareti yok; küçük uyumsuzluklar (sahne 13/21/35/36/43), kaynak notları.
+
+**Tur 1 düzeltmeleri (yazar):**
+- Kapak: sahne 31'in kapı yakın planı (kapalı perdeler, kapı aralığı koyu, altında gölge; sol kapı direğine dayalı büyük kılıç, sağ direğe dayalı yay; soluk mürekkep çizgili "muted" çadır), focus [960, 560], zoom 1.05, Kaşif sağ kenardan şokla bakıyor (x 1760, ölçek 1.25, face -1), kapıya ve silahlara değmiyor. 5 aday denendi (sahne 0 geniş, sahne 0 zoom 1.55, sahne 29, sahne 31 Kaşif metinle çadır arasında, sahne 31 Kaşif sağda); sonuncusu seçildi. Metin aynı: "Çadıra girdi / ÇIKAMADI".
+- `sm_otag.js`: `weapons.scale/lean` (kılıç ve yay kapıya dayanır, büyük ve okunur), `muted`, `flag.droop` (flama yarıya inmiyor, sarkıyor), kapalı kapıda koyu aralık + gölge, sabit yakın plan `frame`, `tugs: false`, `sun: false`.
+- Senaryo: sahne 4 "Bu sorunun cevabı, Mustafa'nın neden bu kadar sevildiğinde saklı." + sahne 5 "1515'te Manisa'da doğduğunda babası henüz padişah bile değildi…" (soruya bağlandı). Sahne 10 perde arkasında yüzsüz siluet + "?"; sahne 11 ifşa "O kişi… Hürrem Sultan'dı!" (HÜRREM SULTAN damgası); BÖLÜM 2 kartı ifşadan sonra ("Düşünün, saraya bir cariye olarak gelmişti."). Sahne 33: İran halısı ayrıntısı (TDV: İtalyan kaynaklarına göre Şah'la iş birliğini ima etmek için). Sahne 41 "küçük yaştaki oğlu", sahne 46 "belki de". Toplam 4648 karakter, 50 sahne.
+- Planlar ayrıştı: 0 geniş şafak, 28 geniş, 29 orta plan kapı, 31 kapı yakın planı (sarsılan perde), 33 halıya yakın plan, 34 alçak açı kalabalık (yumruk/mızrak, Kaşif şok).
+- Padişah işareti: yeni `sm__lib.js` (SMB.cast `sultan: true` = büyük beyaz kavuk + altın sorguç + tüy) ve yeni `sm_camp.js` (ordugâh arka planı). Kanuni sahne 2, 13, 36, 43, 49'da kavuklu; sahne 36 artık ordugâhta (İstanbul silueti yok), Kara Ahmed kısa sakallı.
+- Sahne 14 görselinden Kaşif çıkarıldı; sahne 22'de II. Bayezid yürüyüp kadrajdan çıkıyor; sahne 37 zaman çizgisi 1553 Rüstem gitti · 1555 Ahmed idam · 1555 Rüstem döndü; sahne 44 "Tuzak?" işaretsiz, "Otorite" ✓.
+- Kaynak notları: 37 (TDV, aynı gün dönüş), 40 (TDV, "mekr-i Rüstem" 960), 44 (Atçıl 2016); 6/8'den kaldırıldı (çerçeveye biniyordu). Sahne 24 kicker kısaldı, sahne 16 "Rüstem Paşa" etiketi kemerin üstüne alındı, sahne 40'taki tırnaklar kaldırıldı (altyazıda tek başına tırnak kalmıyor).
+- Lint 0 hata (SEO 100/100); preview ~320 sn, STATIC yok.
+
+**Tur 2 (eleştirmen):**
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 9 | 8 | 8 | 8 | 8 | 8 | 8 | 7 | 9 | 7 |
+1. Sahne 5 bilgi hatası: 1520'de ağabey Mahmud hayattaydı; Mustafa en büyük şehzade 1521'de oldu.
+2. Kapak 7: Kaşif sağ kenarda kesiliyor, kılıç çubuk gibi, kapı tam kapalı okunmuyor.
+3. Sahne 44: "Tuzak?" yanında ✓ var; Atçıl kaynak notu kartın üst kenarına değiyor.
+
+**Tur 2 düzeltmeleri (yazar, son tur):**
+- Sahne 5: "1515'te Manisa'da doğduğunda babası henüz padişah bile değildi. 1521'de ağabeyi ölünce de herkesin gözünde geleceğin sultanı oldu." Bütçe için sahne 3 ("Cevap, sandığınızdan daha karmaşık.") ve sahne 16 ("Hürrem'in güçlü bir müttefiki de vardı") kısaldı → 4.647 karakter.
+- `sm_otag.js`: gerçek bir kılıç (geniş, hafif kavisli, paper-light ağız + mürekkep kontur, sivri uç, altın balçak, kabza, topuz; kabzası yukarıda, 1,2× uzun, sol kapı direğine dayalı); kapalı kapıda kalın koyu mürekkep ek yeri, kapı perdelerindeki kırmızı V çizgileri muted çadırda ince ink-soft.
+- Kapak: sahne 31, focus [960, 560], zoom 1.05; Kaşif x 1690, ölçek 1.02, face -1, şapka ve yüz tamamen kadrajda, yaya değmiyor. 3 aday karşılaştırıldı (zoom 1.2 ve 1.3'te kılıç sol kenarda soluklaşıp kesiliyordu); zoom 1.05 seçildi. Metin aynı: "Çadıra girdi / ÇIKAMADI".
+- Sahne 44 `ag03c_compare` (her satıra ✓ koyuyordu, başka ajanın dosyası) yerine `sm_camp`: solda yalnız ve endişeli kavuklu Kanuni, sağda Mustafa'ya el sallayan askerler; "otoritesiydi"de oklu kırmızı "OTORİTE?" damgası, "kaybettiğini"de Kanuni şaşırır. Atçıl kaynak notu boş gökyüzünde, hiçbir şeye değmiyor.
+- Lint 0 hata (SEO 100/100); preview ~320 sn, STATIC yok; kapak ve değişen kareler kontrol edildi.
+
+
+## ag-06-pulsar-lgm1 (Stickstory, Short) · space and planet earth
+- Manşet: AU · IFLScience · "One Radio Source In Our Galaxy Has Been Producing Signals For At Least 20 Years That No One Can Explain".
+- Haberin arkasındaki hikâye: 1967'de 24 yaşındaki Jocelyn Bell, 1,33 saniyede bir atan bir sinyal buldu; adı "LGM-1" (Little Green Men) kondu; aslında ilk pulsardı. Nobel (1974) hocasına gitti.
+- Kapak fikri: "LITTLE GREEN MEN?" / "THE SIGNAL WAS REAL".
+
+### ag-06 — yazar notları
+**Anlatım (tek parça; tur 1 sonrası 469 karakter, bütçe uyarısı açık → 400–470):**
+> Her signal was nicknamed Little Green Men. Astronomers still find signals they can't explain. But the first big one
+> hit a student's desk in 1967. Jocelyn Bell, 24, saw it pulse every 1.3 seconds. Aliens, right? Then she found
+> another, across the sky. It was a spinning dead star: the first pulsar. Guess who got the Nobel Prize? Her
+> supervisor. In 2018 she won three million dollars, and gave it all to students like her. Subscribe for a true
+> story like this every day.
+
+Yapı: kanca (lakap: Little Green Men) → haber (bu hafta yine açıklanamayan bir sinyal) → 1967, 24 yaşında öğrenci →
+kusursuz ritim (1,33 sn) → "uzaylı mı?" gerilimi → dönüş (gökyüzünün öbür ucunda ikincisi: uzaylı değil) → cevap (dönen
+ölü yıldız, ilk pulsar) → adaletsizlik (Nobel hocasına) → punchline (3 milyon doları kazandı ve hepsini verdi) → abone.
+Manşetin arkasındaki nesne (tur 1'de doğrulandı): VT J1906+0849, Caltech liderliğinde bir çalışma; ~2005'ten beri
+radyoda parlıyor, doğası çözülemedi (La Brújula Verde, 21.9.2026). Metin bunu zamansız tutuyor: "Astronomers still find
+signals they can't explain." (ekranda "Source: Caltech study, 2026").
+
+**Doğrulanan bilgiler:**
+- 28 Kasım 1967, Cambridge (Mullard Radio Astronomy Observatory, Interplanetary Scintillation Array); Jocelyn Bell
+  doktora öğrencisi, 15 Temmuz 1943 doğumlu → 24 yaşında; kâğıt kayıtta "scruff"; ~1⅓ sn'de bir atım (1,3373 sn);
+  takma ad "LGM-1" (little green men); ikinci kaynak gökyüzünün başka yerinde bulununca uzaylı fikri düştü; bugünkü adı
+  PSR B1919+21, ilk keşfedilen radyo pulsarı (dönen nötron yıldızı) — Wikipedia "Jocelyn Bell Burnell",
+  "PSR B1919+21"; Hewish, Bell ve ark., Nature 217, 709 (Şubat 1968).
+- 1974 Nobel Fizik Ödülü: Antony Hewish (doktora danışmanı; "pulsarların keşfindeki belirleyici rolü") ve Martin Ryle;
+  Bell ödüle dahil edilmedi — nobelprize.org, Physics World.
+- 2018 (6 Eylül): Special Breakthrough Prize in Fundamental Physics, 3 milyon dolar; parayı tamamen Institute of
+  Physics üzerinden yeterince temsil edilmeyen grupların doktora öğrencilerine bağışladı — Physics World 6.9.2018,
+  breakthroughprize.org. ("Decades later" = 51 yıl sonra.)
+
+**Çekim listesi** (yeni dosya `scenes/studio/shots/lgm_pulsar.js`: `lgm_chart`, `lgm_dish`, `lgm_desk`, `lgm_sky`,
+`lgm_pulsar`, `lgm_medal`, `lgm_prize`; palet `indigo`)
+| # | Cümle | Tip | Görüntü | Kaşif (fes) | Cue | Kamera |
+|---|---|---|---|---|---|---|
+| 0 | Her signal was nicknamed Little Green Men. | lgm_chart `hook` | Kayıt kâğıdı kayıcıyla birlikte akar, kalem 1,33 sn'de bir sivri atım çizer (gerçek ritim); kâğıdın üstünde yeşil mürekkep uzaylı karalaması belirip el sallar; kırmızı "LGM-1" damgası | Solda gösterir → şok | alien=Little, hit=Men | yavaş itme (kapak karesi) |
+| 1 | Astronomers still find signals they can't explain. | lgm_dish | Yıldızlı gece; dönen sarmal galaksiden radyo çanağına dalga cepheleri, besleyici altın yanar; dev kırmızı "?"; kaynak notu Caltech study, 2026 | Dürbünle bakar → omuz silker | ask=explain | itme |
+| 2 | But the first big one hit a student's desk in 1967. | lgm_desk | 1960'lar kulübesi: gece penceresi, masada kayıt cihazı, kâğıt masadan yere katlanarak yığılır; pencereden kırmızı zikzak sinyal cihaza çarpar (sarsıntı, ibre); "1967" | Jocelyn (kâkül saç) düşünür → şaşırır; Kaşif gösterir | hit, year=1967 | sarsıntı |
+| 3 | Jocelyn Bell, 24, saw it pulse every 1.3 seconds. | lgm_chart `pulse` | Şerit yakın; atımlar gerçek 1,337 sn ritminde; son iki atım arasında kırmızı köşeli ayraç + "1.3 s"; kaynak notu Nature 1968 | Jocelyn şeridi gösterir; Kaşif dürbün → gösterir | beat=1.3 | itme |
+| 4 | Aliens, right? Then she found another, across the sky. | lgm_sky | Dönen yuvarlak yıldız haritası; A kaynağı halkalarla atar + altında boş kâğıtta "ALIENS?"; ikinci kaynak haritanın öbür ucunda belirir, kırmızı kesikli yay; "ALIENS?" üstü çizilir | Dürbün → gösterir → omuz silker | aliens, second=another, across | itme |
+| 5 | It was a spinning dead star: the first pulsar. | lgm_pulsar | Taralı nötron yıldızı, dipol alan halkaları, kırmızı dönüş oku; iki altın deniz feneri ışını 1,33 sn'de bir döner, ışın A geçince küçük Dünya kırmızı parlar; "dead star", "PULSAR" | Gösterir → şok | spin, dead, pulsar | itme |
+| 6 | Guess who got the Nobel Prize? Her supervisor. | lgm_medal | Kırmızı kurdeleli altın "1974" madalyası sallanır; "supervisor"da kavis çizip danışmanın boynuna takılır; kaynak NobelPrize.org | Jocelyn düşünür → üzgün omuz silker; danışman el sallar; Kaşif kızgın omuz silker | nobel, give=supervisor | itme |
+| 7 | In 2018 she won three million dollars, | lgm_prize `win` | Fraunces sayaç $0 → $3,000,000, altın alt çizgi; yeşil banknot yağmuru; "Breakthrough Prize"; Jocelyn artık gri saçlı | Gösterir → şok | count=three | itme |
+| 8 | and gave it all to students like her. | lgm_prize `give` | Banknotlar Jocelyn'den üç genç fizik öğrencisine kavisle uçar, sayaç kırmızı $0'a iner, sonra "ALL OF IT" | (Kaşif yok; 4 kişi) | give=gave, all=students, kids=like | itme |
+| 9 | Subscribe for a true story like this every day. | lgm_pulsar | Pulsar sol üstte hâlâ döner, "still ticking" | El sallar → yıldızı gösterir | sub, day | itme |
+
+Kaşif 9/10 sahnede; 7 farklı tip, en fazla 2 tekrar; kaynak notu 6 sahnede.
+
+**Kapak adayları** (`out/preview/pulsar-lgm1/cover_alts.jpg`, soldan sağa):
+- A ✅ (tur 1'de 3 satıra çıktı: "LITTLE / GREEN / MEN?", `focus` [480, 740] `zoom` 1.1, sahnede Kaşif 1.2 ölçek; başlık kapakla aynı değil) sahne 0 t 2.3: tek odak yeşil uzaylı karalaması, atım şeridi üstünde;
+  solda şokta Kaşif. İlk cümleyle aynı kelimeler; kırmızı kutudaki "GREEN" = yeşil uzaylı.
+- B "ALIEN / SIGNAL?": kısa ve büyük ama "alien" kutusu kırmızı, figür yeşil; ilk cümleyle bağı daha zayıf.
+- C A'nın metni, t 2.95 (LGM-1 damgası da var): damga uzaylının yüzüne biniyor, iki odak → elendi.
+- D "A SIGNAL / FROM ALIENS?": 4 kelime, küçük ekranda daha zayıf okunuyor.
+
+### ag-06-pulsar-lgm1 — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 7 | 8 | 7 | 8 | 8 | 7 | 7 | 8 | 6 | 8 | 7 (kapak 6) |
+1. Sahne 1 "This week, astronomers reported…" doğrulanamıyordu ve videoyu tarihliyordu → "Astronomers still find signals
+   they can't explain." + sahne 2 "But the first big one…"; kaynak La Brújula Verde (VT J1906+0849, Caltech çalışması), ekranda
+   "Caltech study, 2026".
+2. Ses / kapanış → "Aliens, right?" (izleyiciye hitap), punchline "…and gave it all to students like her." (IOP'un Bell Burnell
+   Graduate Scholarship Fund'ı, Physics World ile doğrulandı); "Decades later" yerine "In 2018".
+3. Periyot "1.3 seconds" (1,3373 sn; animasyon 1,337 sn), ekranda "1.3 s", açıklama güncellendi.
+4. Sahne 5 kaynak notu "Gold, Nature, 1968" (dönen nötron yıldızı açıklaması; Gold 1968 + Wikipedia "Pulsar" `sources`'a eklendi);
+   üst ışın kicker çizgisinde durur; Dünya büyüdü (r 88); "PULSAR" Kaşif'in kolundan uzak.
+5. Kapak: 3 satır yazı boş bandı doldurur, `focus` + `zoom` 1.1 ile Kaşif büyük (sahnede 1.2) ve tam kadrajda, uzaylı tek odak;
+   YouTube başlığı "Jocelyn Bell Burnell: She Found the Signal, He Got the Nobel" (kapak metnini tekrar etmiyor).
+6. Küçükler: sahne 2 Jocelyn kenardan uzak, pencere taralı gece + yıldızlar + hilal; sahne 4 "ALIENS?" haritanın altında boş
+   kâğıtta; sahne 8 sayaç "ALL OF IT"ten önce $0'a iniyor. Lint OK (SEO 100), preview: tüm sahneler motion ≥ 6.
+
+## ag-07-skylab-esperance (Stickstory, uzun) · space and planet earth / history's strangest moments
+- Manşet: AU · India Today · "Nasa's Swift telescope ends science ops, preps for crashing into Earth".
+- Haberin arkasındaki hikâye: Skylab (1973) fırlatılırken hasar gördü, ekipler onardı, terk edildi; Güneş'in etkisiyle beklenenden erken düştü; 11 Temmuz 1979'da parçaları Batı Avustralya'ya (Esperance) yağdı; belediye NASA'ya 400 dolar çöp cezası kesti; 17 yaşındaki Stan Thornton parça toplayıp ödül aldı; ceza 2009'da bir radyo programcısının topladığı parayla ödendi.
+- Kapak fikri: "NASA GOT FINED" / "LITTERING FINE: $400", tek nesne: düşen istasyon parçası + Kaşif.
+
+### ag-07 yazar notları (Stickstory, uzun, ek video, `publish_at: now`)
+- **Manşet:** AU · India Today · "Nasa's Swift telescope ends science ops, preps for crashing into Earth". Doğrulanan: Swift (2004'ten beri yörüngede) güneş etkinliğinin şişirdiği üst atmosferin sürtünmesiyle alçalıyor; Katalyst'in kurtarma (yükseltme) görevi 19 Ağustos 2026'da iptal edildi; NASA yeniden girişin bu yıl olacağını söylüyor (NPR/AP haberleri). Metinde sadece "bu hafta bilim çalışmasını bitirdi ve yakında atmosfere düşecek" deniyor (manşetin söylediği); yer/tarih tahmini verilmiyor.
+- **Konu/havuz:** space and planet earth + history's strangest moments. **İzleyici sonunda:** "Bir uzay istasyonu bir gencin bahçesine düştü, NASA da çöp cezası yedi; asıl suçlu Güneş'miş."
+- **Kanca + kapak:** soğuk açılış = 12 Temmuz 1979 gece yarısı Esperance (gök gürültüsü, ateş topları, Stan bahçede yanık parçalar buluyor) → açık döngü: "Bir istasyon bir gencin bahçesine nasıl düştü, kasaba NASA'ya neden ceza kesti?" (cevap: bölüm 4 ve 5). Kapak: "NASA GOT / FINED" + "$400 to: NASA" bileti + şok Kaşif.
+- **Anlatım:** 4.486 karakter (bütçe uyarısı açık → aralığın alt yarısı), ~5:25.
+- **Bölümler:** soğuk açılış "The Night the Sky Fell" (sahne 0–4) · 1 "A Station Born Broken" (5–13) · 2 "The Rescue" (14–22) · 3 "Why It Really Fell" (23–31) · 4 "Where Will It Land?" (32–40) · 5 "A Fine for NASA" (41–49). Her bölüm soruyla/"but"la biter.
+- **Önce tek parça anlatım (sahnelere bölünmeden yazıldı):**
+> Just after midnight, in July 1979, a quiet town in Western Australia woke up to a sound like thunder. But the sky was clear. Glowing pieces were streaking across the dark, breaking apart and falling. A seventeen-year-old named Stan Thornton ran outside, and around his house he found burnt chunks of an American space station. So how did a space station land in a teenager's yard? And why did his town send NASA a fine? Stick with me, because it's happening again. This week, NASA's Swift telescope ended its science work, and it will soon fall into the atmosphere. And here's the twist: the same thing is pulling it down.
+> The station was Skylab, America's first space station. Engineers took the third stage of a giant Saturn Five Moon rocket and turned its empty fuel tank into a home, about seventy-seven tons, with more room than a small house. In May 1973, it launched. And about one minute into the flight, something went terribly wrong. A thin metal shield, meant to block tiny space rocks and the heat of the Sun, tore loose. Minutes later, one of the two big solar wings was ripped away, and a strip of metal pinned the other one shut. Now picture it. A brand new station with almost no power and no shade. Inside, it climbed to about fifty-four degrees Celsius. NASA had built a house in the sky, and it was baking. So who was going to fix it?
+> Eleven days later, three astronauts flew up: Pete Conrad, Joe Kerwin and Paul Weitz. Their first trick sounds almost silly. They pushed a folded sunshade, basically a giant umbrella, out through a tiny airlock, and opened it over the hot side. And it worked. But the station still needed power. So on the seventh of June, Conrad and Kerwin climbed outside with a long pole and a cable cutter. Kerwin snipped the metal strap. The wing moved a little, then stuck again. So they grabbed a rope, pulled with everything they had, and the wing swung open. Skylab came back to life. Three crews lived there, and they studied the Sun like no one ever had. Then, in February 1974, the last crew flew home. Skylab was empty, and NASA thought it had years to decide what to do with it. But NASA was wrong.
+> Here's the part most people never hear. Skylab didn't fall because it broke. It fell because of the Sun. Even four hundred kilometers up, there's a tiny trace of air, and it slowly steals the speed of anything flying through it. When the Sun gets stormy, it heats that air, and the air puffs up like bread in an oven, reaching higher and grabbing harder. NASA expected Skylab to last until around 1983. But the next solar cycle became one of the strongest in a century. NASA had a rescue plan: the new Space Shuttle would fly up and push the station higher. But the Shuttle was late, and its first flight came only in 1981. In December 1978, NASA gave up. A seventy-seven ton station was coming down. So where would it land?
+> Now imagine the summer of 1979. The whole world was looking up. People sold T-shirts with a bullseye on them. One neighborhood in Nebraska painted a giant target, so the station would have something to aim for. And the San Francisco Examiner made an offer: ten thousand dollars to the first person who brought a piece of Skylab to its office within seventy-two hours. In the final hours, controllers set the station tumbling, to aim its fall at empty ocean southeast of South Africa. On the eleventh of July, Skylab hit the thick air. And then came the surprise. It broke apart lower than predicted, and that small error carried its pieces over Western Australia, just after midnight. But down in Esperance, a teenager was about to win a race.
+> Stan Thornton gathered about two dozen burnt pieces. He got his first passport, jumped on a plane, and landed in San Francisco with fourteen hours to spare. After NASA experts checked the pieces, Stan won the ten thousand dollars. Back home, Esperance had a sense of humor. When NASA officials came to see the wreckage, the shire handed them a four hundred dollar fine for littering. It was a joke, and NASA never paid. Not for thirty years. Then, in 2009, an American radio host named Scott Barley asked his listeners to chip in, and they paid it. And here's what stays with me. Skylab wasn't killed by an accident in space. It was pulled down by a stormy Sun, just like Swift today. So, should old spacecraft be brought down on purpose, or left to fall where the sky decides? Tell me in the comments. And subscribe to Stickstory for a true story like this every day.
+
+**Çekim listesi (50 sahne):**
+| # | Tip | Görüntü (kısa) | Kaşif |
+|---|---|---|---|
+| 0–1 | `sky_night` (yeni) | gece kasaba, ateş topları parçalanıyor, BOOM (soğuk açılış) | dürbün → şok |
+| 2 | `sky_yard` (yeni) | teneke çatılı ev, dumanlı parçalar, Stan parçayı alıyor | işaret → şok |
+| 3 | `title` | "A space station in his yard?" + "and a fine?" | omuz silker |
+| 4 | `sky_drag` (yeni) | Swift atmosfere çöküyor, alev izi · Kaynak: India Today | işaret |
+| 5 | `chapter` 1/5 | A Station Born Broken | — |
+| 6, 8 | `sky_rocket` (yeni) | Saturn V'in 3. kademesi "home" oluyor · fırlatma, kalkan kopuyor | işaret · dürbün → şok |
+| 7, 9, 10, 12 | `sky_station` (yeni) | 77 ton + ev ölçeği · kalkan kopar · kanat kopar/kayış · 54°C termometre (Kaynak: NASA) | her sahnede |
+| 11 | `title` | "No power, no shade" | şok |
+| 13 | `stage` | ev + TOO HOT, mühendis düşünüyor | işaret → omuz silker |
+| 14 | `chapter` 2/5 | The Rescue | — |
+| 15–16 | `sky_station` | şemsiye açılır · termometre düşer "it worked!" | güler / el sallar |
+| 17–18 | `sky_eva` (yeni, yakın plan) | iki astronot, sırıkla kesici · kayış kesilir, kanat takılır (Kaynak: NASA) | işaret → şok |
+| 19 | `sky_station` | iple çekiş, kanat açılır "power!" | el sallar |
+| 20 | `timeline` | 3 mürettebat 1973 (Kaynak: NASA) | işaret |
+| 21 | `sky_station` | Apollo ayrılır, ışıklar söner, Feb 1974 | el sallar |
+| 22 | `title` | "NASA was wrong" | şok |
+| 23 | `chapter` 3/5 | Why It Really Fell | — |
+| 24 | `td_space` | Güneş + "THE SUN" damgası | işaret |
+| 25–26 | `sky_drag` | ~400 km, hava hızı çalıyor · Güneş fırtınası, hava şişiyor | düşün · şok |
+| 27 | `timeline` | 1973 / 1979 Güneş zirvesi / 1983 NASA tahmini (Kaynak: NASA) | işaret |
+| 28 | `sky_station` | Mekik gelir, istasyonu yukarı itme planı | işaret |
+| 29 | `title` | "First Shuttle flight: 1981" | omuz silker |
+| 30 | `stage` | "GAVE UP" tabelalı kontrolör, Dec 1978 | şok |
+| 31 | `sky_drag` (küre) | yörünge izleri + "?" | dürbün |
+| 32 | `chapter` 4/5 | Where Will It Land? | — |
+| 33–34 | `sky_props:sky_target` (yeni) | hedefli tişörtler · Nebraska'da dev hedef (Kaynak: Wikipedia) | güler · omuz silker |
+| 35 | `sky_paper` (yeni) | EXAMINER $10,000 + 72 h kronometre (Kaynak: Spokesman-Review) | şok |
+| 36 | `map` | Hint Okyanusu, hedef: Güney Afrika'nın güneydoğusu (Kaynak: NASA) | — |
+| 37–38 | `sky_station` | yeniden giriş alevleri · parçalanma "lower than predicted" (Kaynak: NASA) | şok · işaret |
+| 39 | `map` | Batı Avustralya, Esperance–Balladonia enkaz hattı (Kaynak: NASA) | — |
+| 40 | `stage` | Stan ve Kaşif koşuyor, saat | koşar |
+| 41 | `chapter` 5/5 | A Fine for NASA | — |
+| 42 | `map` | Esperance → San Francisco uçuşu, "14 hours to spare" (Kaynak: New York Times) | — |
+| 43 | `stage` | Stan "$10,000" (Kaynak: Wikipedia) | el sallar |
+| 44 | `sky_fine` (yeni) | LITTERING $400 to: NASA, FINED damgası (Kaynak: Guinness World Records) — kapak karesi | güler → şok |
+| 45 | `timeline` | 1979 / 1989 / 1999 ödenmedi | omuz silker |
+| 46 | `sky_fine` | radyo mikrofonu, kavanoza paralar, PAID damgası, 2009 (Kaynak: GWR) | el sallar |
+| 47 | `sky_drag` | Güneş, Skylab 1979 + Swift today birlikte çöker | işaret |
+| 48–49 | `stage` | ON PURPOSE? / LET IT FALL? · yorum + abone | işaret/omuz · el sallar |
+
+**Doğrulanan bilgiler (kaynaklar `sources` alanında):**
+- Skylab 14 Mayıs 1973'te son uçan Saturn V ile fırlatıldı; Saturn V'in S-IVB (3.) kademesinden yapıldı; ~77 ton (NASA: 169.000 lb). Mikrometeoroid kalkanı ~63. saniyede koptu; bir OWS güneş kanadı dakikalar sonra koptu, diğeri kalkandan kalan alüminyum şeritle sıkıştı (NASA "Skylab 2" sayfaları, Wikipedia).
+- İçerisi ~130°F ≈ 54°C (NASA "We can fix anything"). İlk mürettebat (Conrad, Kerwin, Weitz) 25 Mayıs'ta (11 gün sonra) fırlatıldı; şemsiye bilimsel hava kilidinden dışarı itilip açıldı; 7 Haziran'da Conrad ve Kerwin 25 ft sırık + kablo kesiciyle şeridi kesti, kanat donmuş menteşede takıldı, iple birlikte çekince açıldı (NASA "first repair spacewalk").
+- 3 mürettebat; son mürettebat 8 Şubat 1974'te ayrıldı (NASA). Yörünge ~269×283 mil (~435–455 km; metinde "four hundred kilometers up").
+- NASA istasyonun Mart 1983'e kadar kalacağını hesaplamıştı; güneş döngüsü yüzyılın en etkin ikinci döngüsü oldu; mekikle yükseltme planı 19 Aralık 1978'de iptal; ilk mekik uçuşu (STS-1) Nisan 1981 (NASA, Wikipedia).
+- Bullseye tişört/şapkalar; Nebraska'da bir mahalle hedef boyadı; San Francisco Examiner 72 saat içinde ofisine ilk parçayı getirene 10.000 $ (Wikipedia, Spokesman-Review, NSS/NYT).
+- Kontrolcüler son saatlerde istasyonu yavaşça döndürüp (tumble) Cape Town'un ~810 mil güney-güneydoğusunu hedefledi; 11 Temmuz 1979 ~16:37 UTC (Batı Avustralya'da 12 Temmuz gece yarısından hemen sonra); beklenenden alçakta (~10 mil) parçalandı, %4'lük hata enkazı Esperance–Balladonia bölgesine taşıdı (NASA, Wikipedia).
+- Stan Thornton, 17, Esperance; evinde 24 parça buldu; ilk pasaportunu aldı, San Francisco'ya 72 saatlik süreden ~14 saat önce ulaştı; parçaların doğrulanması ~1 hafta sürdü, 10.000 $ ödülü aldı (Wikipedia/SFGATE, Spokesman-Review, NSS'te NYT alıntısı). Metinde "evinin etrafında" deniyor (çatı/bahçe kaynaklara göre değişiyor).
+- Esperance Shire'ı NASA'ya şaka olarak 400 $ (A$) çöp cezası kesti; NASA ödemedi; Nisan 2009'da Highway Radio sunucusu Scott Barley dinleyicilerinden toplayıp ödedi (Guinness World Records, Mental Floss, Wikipedia).
+- Kaçınılan efsane/tartışmalı: "çatısına düştü" kesin söylenmedi; Carter'ın özrü (doğrulanamadı) anlatılmadı; kimse yaralanmadı ama metin bunu iddia etmiyor.
+
+**Kapak adayları:** A "NASA got / fined" + bilet ($400, to: NASA) + şok Kaşif (sahne 44) → **seçildi** (tek nesne, küçükken okunuyor, başlıkla aynı vaat); B "It fell / on Australia" + yanan istasyon (sahne 37: kalabalık, alevler kadraja girmedi); C "Space junk / in his yard" (sahne 2: Stan kırpıldı, karanlık). Dosyalar: `out/preview/ag-07-skylab-esperance/cover_{A,B,C}.jpg`.
+
+#### Eleştiri günlüğü — ag-07-skylab-esperance
+### ag-07-skylab-esperance — tur 1
+| Senaryo | Kanca | Okunabilirlik | Görsel=anlatım | Hareket | Kompozisyon+Kaşif | Derinlik+marka | Tempo | Doğruluk | Kapanış | Kapak+SEO |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 8 | 8 | 7 | 7 | 8 | 7 | 7 | 8 | 7 | 8 | 7 (kapak 7) |
+Eleştirmen: kaynak/iddialar (Swift notu "India Today", "New York Times" yanlış atıf, "fourteen hours", "first passport", A$), kapak (başlığı tekrar ediyor, iki kırmızı, Kaşif orta boy ve biletin arkasında, uzay yok), görsel tutarlılık (25/26/47'de Skylab sağlam, EVA'da astronotlar görünmez zeminde, 44'te bilet altyazıya giriyor, 49'da SUBSCRIBE yüzü kapatıyor, haritalar küçük ve Kaşif'siz) + küçükler.
+
+**Tur 1 düzeltmeleri (yazar):**
+- Kaynaklar: sahne 4 notu "NASA"; NPR yerine NASA Swift blogu (23 Eki 2026: 20 Ekim'de 275 km'de safe mode, operasyon bitirildi, yeniden giriş "önümüzdeki birkaç hafta", sürtünmeyi güneş etkinliği artırdı); SFGATE eklendi. "This week" → "Just days ago" (metin + açıklama). Uçuş sahnesi notu "SFGATE", "fourteen hours" → "with hours to spare", "first passport" çıkarıldı. Ödül sahnesi notu "Perth Observatory" (72 saat). Ceza: "a fine of four hundred Australian dollars", bilet "A$400".
+- Kapak yeniden: "FINED FOR / SPACE JUNK" (vurgu JUNK, tek kırmızı öğe), bilet tutarı mürekkep rengi, biletin önünde dumanlı Skylab parçası, Kaşif 1.35 ölçekte biletin sağında, yüzü okunuyor. 3 aday (A/B "NASA got fined"/C yakın plan) → A seçildi. Başlık kapağı tekrar etmesin diye: "Skylab: How a Space Station Ended Up in a Teenager's Yard". Not: kapak yazı boyu motorda 128 px ile sınırlı (paylaşılan dosya, değiştirilmedi).
+- Görsel: 25/26/47 Skylab hasarlı (kalkansız, tek kanat, şemsiye; `sky_drag` craft `state`); 17–18 yakın plan (kayışa zoom), astronotlar gölgesiz, eğik, süzülerek; 44 bilet y≤~810, FINED damgası biletin alt ortasında; 49 COMMENTS/SUBSCRIBE ayrı tabelalar, Kaşif işaret edip el sallıyor; haritalar yeni `sky_map` tipi (~%74 genişlik, Kaşif işaret ediyor, etiketler 56–64 px, kicker köşesi ve altyazı bandı boş).
+- Küçükler: yıldız/bulut/tarama sol üst köşeden çekildi (yıldızlar y ≥ 0.14, sahnelerde `sky: {clouds: 0, gulls: 0}`, gece taraması y ≥ 170); gece gökyüzü düz gri yerine katmanlı bantlar + çapraz tarama; 13 "house in the sky" = gökte yüzen ev silueti + ısınan istasyon; 6'da "3rd stage" ve "= home!" etiketleri; 30'da tekrar eden "Dec 1978" etiketi kaldırıldı; 40'ta Stan "teenager"da SKYLAB! tabelasıyla duruyor; 37+38 birleşti (yeniden giriş + parçalanma, tekrar eden etiket yok); bölüm kartları: 2 "Eleven days later, help was on the way." (isimler yeni `stage` sahnesinde), 5 "Now, back to Stan." (parçalar yeni gündüz `sky_yard` sahnesinde, "24 pieces").
+- Sonuç: 50 sahne, 4.511 karakter (~5:27), lint 0 hata / 0 uyarı (SEO 100), preview'da STATIC yok.
