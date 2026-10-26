@@ -1,0 +1,3329 @@
+{
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "extra": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "palette": "indigo",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "ppLqTilh7rH7fbUVlXsf",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-07-skylab-esperance",
+ "cover": {
+  "lines": [
+   "Fined for",
+   "space junk"
+  ],
+  "highlight": [
+   "junk"
+  ],
+  "scene": 44,
+  "t": 9.6,
+  "focus": [
+   1060,
+   520
+  ],
+  "zoom": 0.95,
+  "kasif": {
+   "pose": "shock",
+   "scale": 1.35,
+   "x": 1650,
+   "y": 1075,
+   "face": -1,
+   "emotion": "surprised"
+  }
+ },
+ "sources": [
+  {
+   "title": "NASA: 45 Years Ago, Skylab Reenters Earth's Atmosphere",
+   "url": "https://www.nasa.gov/history/45-years-ago-skylab-reenters-earths-atmosphere/"
+  },
+  {
+   "title": "NASA: Skylab 2, the first repair spacewalk",
+   "url": "https://www.nasa.gov/history/skylab-2-first-repair-spacewalk/"
+  },
+  {
+   "title": "NASA: Skylab 2, 'We can fix anything!'",
+   "url": "https://www.nasa.gov/history/skylab-2-we-can-fix-anything"
+  },
+  {
+   "title": "Guinness World Records: First fine for littering from space",
+   "url": "https://www.guinnessworldrecords.com/world-records/114725-first-fine-for-littering-from-space"
+  },
+  {
+   "title": "Perth Observatory: The time NASA nearly wiped Esperance off the map",
+   "url": "https://perthobservatory.com.au/astronomy-news/the-time-nasa-nearly-wiped-esperance-off-the-map"
+  },
+  {
+   "title": "The Spokesman-Review: When the sky fell",
+   "url": "https://spokesman.com/further-review/when-the-sky-fell"
+  },
+  {
+   "title": "Wikipedia: Skylab (re-entry and debris)",
+   "url": "https://en.wikipedia.org/wiki/Skylab"
+  },
+  {
+   "title": "NASA: Swift mission ends ahead of re-entry (Oct 23, 2026)",
+   "url": "https://science.nasa.gov/blogs/swift/2026/10/23/nasas-swift-mission-ends-ahead-of-re-entry/"
+  },
+  {
+   "title": "SFGATE: A space station fell to Earth. An Australian boy brought it to San Francisco",
+   "url": "https://www.sfgate.com/sfhistory/article/the-skylab-race-to-san-francisco-18074888.php"
+  }
+ ],
+ "youtube": {
+  "title": "Skylab: How a Space Station Ended Up in a Teenager's Yard",
+  "description": "Skylab, America's first space station, came down on Western Australia in July 1979, and the little town of Esperance sent NASA a littering fine. How did a space station end up in a teenager's yard?\n\nJust days ago NASA's Swift telescope ended its mission and is sinking toward Earth, pulled down by the same force that dropped Skylab: a stormy Sun. Skylab launched in 1973, was nearly lost on launch day, was rescued by its first crew with a giant sunshade and a cable cutter, and was left empty in 1974. Then the Sun puffed up our atmosphere, the Space Shuttle came too late, and the station fell.\n\nIn this video:\n• How a Saturn V rocket stage became a space station\n• The launch that tore off Skylab's shield and solar wing\n• The umbrella and the spacewalk that saved it\n• Why a stormy Sun pulled it down early\n• Stan Thornton's race to San Francisco and NASA's A$400 littering fine\n\nSubscribe to Stickstory for a true story like this every day. Should old spacecraft be brought down on purpose, or left to fall? Tell me in the comments!\n\n#skylab #nasa #spacehistory #stickstory",
+  "tags": [
+   "skylab",
+   "skylab space station",
+   "skylab crash",
+   "skylab reentry 1979",
+   "skylab esperance",
+   "nasa littering fine",
+   "esperance western australia",
+   "stan thornton",
+   "space station falls to earth",
+   "space debris",
+   "nasa swift telescope",
+   "solar activity",
+   "space history",
+   "nasa history",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "now"
+ },
+ "scenes": [
+  {
+   "type": "sky_night",
+   "text": "Just after midnight, in July 1979, a quiet town in Western Australia woke up to a sound like thunder. But the sky was clear.",
+   "visual": "Night over a small outback town (low houses with gold-lit windows, a water tank tower, a windmill) under a hatched night sky with stars; from the first frame a big glowing fireball with a gold-red trail streaks down from the top right and breaks into pieces, a second one follows; on 'thunder' ink sound rings and a red BOOM punch in the sky and the camera shakes; the fez narrator in the foreground looks up through binoculars, then jumps back in shock",
+   "title": {
+    "white": "Western Australia",
+    "gray": "July 1979"
+   },
+   "cues": {
+    "boom": "thunder",
+    "clear": "clear"
+   },
+   "params": {
+    "town": {
+     "x0": 0.22,
+     "x1": 1.0,
+     "s": 1.3
+    },
+    "streaks": [
+     {
+      "from": [
+       0.95,
+       0.06
+      ],
+      "to": [
+       0.25,
+       0.55
+      ],
+      "at": -1.6,
+      "dur": 5.0,
+      "size": 3.2,
+      "split": 0.6,
+      "pieces": 5
+     },
+     {
+      "from": [
+       1.08,
+       0.2
+      ],
+      "to": [
+       0.5,
+       0.62
+      ],
+      "at": 2.0,
+      "dur": 4.0,
+      "size": 2.0,
+      "split": 0.5,
+      "pieces": 4
+     },
+     {
+      "from": [
+       0.9,
+       -0.05
+      ],
+      "to": [
+       0.2,
+       0.42
+      ],
+      "at": "clear",
+      "dur": 3.5,
+      "size": 1.8,
+      "split": 0.5,
+      "pieces": 3
+     }
+    ],
+    "booms": [
+     {
+      "at": "boom",
+      "x": 0.58,
+      "y": 0.22,
+      "text": "BOOM"
+     }
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.93,
+     "scale": 0.75,
+     "pose": "look",
+     "face": "right",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "boom",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "clear",
+       "pose": "point",
+       "dir": 50,
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "chapter": "The Night the Sky Fell"
+  },
+  {
+   "type": "sky_night",
+   "text": "Glowing pieces were streaking across the dark, breaking apart and falling.",
+   "visual": "Closer on the night sky above the rooftops: three big fireballs race across the dark from the right, each splitting into a fan of smaller glowing pieces on 'breaking'; the fez narrator on the left points up at them, worried",
+   "title": {
+    "white": "Over Esperance"
+   },
+   "cues": {
+    "streak": "streaking",
+    "break": "breaking",
+    "fall": "falling"
+   },
+   "params": {
+    "town": {
+     "x0": 0.25,
+     "x1": 1.0,
+     "s": 0.8
+    },
+    "ground": 0.82,
+    "stars": 30,
+    "streaks": [
+     {
+      "from": [
+       1.05,
+       0.05
+      ],
+      "to": [
+       0.2,
+       0.6
+      ],
+      "at": -0.6,
+      "dur": 3.4,
+      "size": 3.0,
+      "split": 0.45,
+      "pieces": 6
+     },
+     {
+      "from": [
+       1.1,
+       0.25
+      ],
+      "to": [
+       0.4,
+       0.7
+      ],
+      "at": "streak",
+      "dur": 3.0,
+      "size": 2.2,
+      "split": 0.4,
+      "pieces": 4
+     },
+     {
+      "from": [
+       0.95,
+       -0.05
+      ],
+      "to": [
+       0.3,
+       0.62
+      ],
+      "at": "break",
+      "dur": 3.0,
+      "size": 2.4,
+      "split": 0.35,
+      "pieces": 5
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.97,
+     "scale": 0.72,
+     "pose": "point",
+     "face": "right",
+     "dir": 55,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "break",
+       "pose": "shock"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_yard",
+   "text": "A seventeen-year-old named Stan Thornton ran outside, and around his house he found burnt chunks of an American space station.",
+   "visual": "Night yard of a house with a corrugated tin roof and a wire fence: smoking charred chunks drop onto the roof and the ground one after another; Stan, a bare-headed teenager, stands in the yard, then on 'chunks' bends and holds a smoking chunk; label 'Stan, 17'; the fez narrator on the right points at the chunks in shock",
+   "title": {
+    "white": "Stan Thornton",
+    "gray": "age 17"
+   },
+   "cues": {
+    "stan": "Stan",
+    "house": "house",
+    "chunks": "chunks",
+    "station": "station"
+   },
+   "params": {
+    "night": true,
+    "house": {
+     "x": 0.3,
+     "s": 1.0
+    },
+    "chunks": [
+     {
+      "x": 0.22,
+      "y": 0.47,
+      "s": 1.1,
+      "rot": -8,
+      "at": 0.2
+     },
+     {
+      "x": 0.56,
+      "y": 0.84,
+      "s": 1.3,
+      "rot": 12,
+      "at": "house"
+     },
+     {
+      "x": 0.44,
+      "y": 0.9,
+      "s": 1.0,
+      "rot": 30,
+      "at": "stan"
+     },
+     {
+      "x": 0.37,
+      "y": 0.44,
+      "s": 0.9,
+      "rot": 20,
+      "at": "station"
+     }
+    ],
+    "pickup": {
+     "who": 0,
+     "chunk": 1,
+     "at": "chunks"
+    },
+    "cast": [
+     {
+      "x": 0.62,
+      "y": 0.8,
+      "scale": 0.75,
+      "pose": "shock",
+      "face": "left",
+      "seq": [
+       {
+        "at": "chunks",
+        "pose": "point",
+        "dir": 10,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Stan, 17",
+      "x": 0.66,
+      "y": 0.3,
+      "at": "stan",
+      "size": 90
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.95,
+     "scale": 0.72,
+     "pose": "point",
+     "face": "left",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "chunks",
+       "pose": "shock"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "So how did a space station land in a teenager's yard? And why did his town send NASA a fine?",
+   "visual": "Giant Fraunces words appear one by one: 'A space station' then 'in his yard?' with 'yard' in a red box; a handwritten red note 'and a fine?' pops up on 'fine'; a small fez narrator beside the words shrugs",
+   "title": {},
+   "cues": {
+    "w0": "how",
+    "w1": "space",
+    "w2": "station",
+    "w3": "land",
+    "w4": "teenager",
+    "w5": "yard",
+    "note": "fine"
+   },
+   "params": {
+    "lines": [
+     "A space station",
+     "in his yard?"
+    ],
+    "highlight": [
+     "yard"
+    ],
+    "note": {
+     "text": "and a fine?",
+     "at": "note",
+     "color": "red"
+    },
+    "y": 0.42,
+    "kasif": {
+     "x": 0.88,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "yard"
+    }
+   }
+  },
+  {
+   "type": "sky_drag",
+   "text": "Stick with me, because it's happening again. Just days ago, NASA's Swift telescope ended its science work, and it will soon fall into the atmosphere. And here's the twist: the same thing is pulling it down.",
+   "visual": "Space above a big Earth limb with a blue air band: a small space telescope with two square solar panels rides a dashed orbit, label 'Swift, 2026'; on 'fall' it sinks toward the air band and on 'atmosphere' a red-gold flame trail grows behind it; the fez narrator in the corner points at it",
+   "title": {
+    "white": "Happening again",
+    "gray": "NASA Swift"
+   },
+   "cues": {
+    "swift": "Swift",
+    "fall": "fall",
+    "atm": "atmosphere",
+    "same": "twist"
+   },
+   "params": {
+    "earth": {
+     "y": 1.75,
+     "r": 1.15
+    },
+    "band": {
+     "h": 70
+    },
+    "crafts": [
+     {
+      "type": "swift",
+      "x": 0.55,
+      "alt": 330,
+      "s": 0.75,
+      "vx": 0.008,
+      "fall": {
+       "at": "fall",
+       "to": 120,
+       "dur": 3.2
+      },
+      "glow": "atm",
+      "label": {
+       "text": "Swift, 2026",
+       "dy": -200,
+       "at": "swift",
+       "size": 80
+      }
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.93,
+     "scale": 0.65,
+     "pose": "point",
+     "face": "right",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "same",
+       "pose": "think",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "chapter",
+   "text": "The station was Skylab, America's first space station.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, below it 'A Station Born Broken' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "station",
+    "title": "Skylab",
+    "line": "America"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "A Station Born Broken"
+   },
+   "chapter": "A Station Born Broken"
+  },
+  {
+   "type": "sky_rocket",
+   "text": "Engineers took the third stage of a giant Saturn Five Moon rocket and turned its empty fuel tank into a home,",
+   "visual": "A hand-drawn Saturn V stands on its pad next to a lattice tower; label 'Saturn V' on 'Saturn'; on 'third' its third stage gets a red outline and pulses; on 'turned' that stage slides out of the stack, turns level, grows on the right and gets glowing windows, label 'home'; the fez narrator points at it",
+   "title": {
+    "white": "Skylab",
+    "gray": "from a rocket"
+   },
+   "cues": {
+    "third": "third",
+    "saturn": "Saturn",
+    "turned": "turned",
+    "home": "home"
+   },
+   "params": {
+    "x": 0.36,
+    "s": 0.74,
+    "ground": 0.93,
+    "highlight": {
+     "at": "third"
+    },
+    "extract": {
+     "at": "turned",
+     "to": [
+      0.72,
+      0.42
+     ],
+     "s": 1.7
+    },
+    "labels": [
+     {
+      "text": "Saturn V",
+      "x": 0.18,
+      "y": 0.4,
+      "at": "saturn",
+      "size": 80
+     },
+     {
+      "text": "3rd stage",
+      "x": 0.52,
+      "y": 0.22,
+      "at": "third",
+      "size": 80,
+      "color": "red"
+     },
+     {
+      "text": "= home!",
+      "x": 0.74,
+      "y": 0.66,
+      "at": "home",
+      "size": 96,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.95,
+     "scale": 0.65,
+     "pose": "point",
+     "face": "left",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "turned",
+       "pose": "point",
+       "dir": 40,
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_station",
+   "text": "about seventy-seven tons, with more room than a small house.",
+   "visual": "Skylab floats above the Earth limb, wrapped in its gold shield, both solar wings and the four windmill panels open; label '~77 tons' on 'tons'; on 'house' a small house outline pops up beside it for scale; the fez narrator points at the house",
+   "title": {
+    "white": "Skylab",
+    "gray": "77 tons"
+   },
+   "cues": {
+    "tons": "tons",
+    "house": "house"
+   },
+   "params": {
+    "x": 0.58,
+    "y": 0.5,
+    "scale": 0.72,
+    "house": {
+     "x": 0.16,
+     "y": 0.62,
+     "s": 0.8,
+     "at": "house"
+    },
+    "labels": [
+     {
+      "text": "~77 tons",
+      "x": 0.6,
+      "y": 0.1,
+      "at": "tons",
+      "size": 90,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.08,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "house",
+       "pose": "point",
+       "dir": 10,
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_rocket",
+   "text": "In May 1973, it launched. And about one minute into the flight, something went terribly wrong.",
+   "visual": "The Saturn V lifts off: engines flare gold and red, white smoke billows out both sides, the rocket climbs past the tower; label 'May 14, 1973'; on 'wrong' a red burst flashes near the top and a gold shield flap tears off, the camera shakes; the fez narrator jumps back in shock",
+   "title": {
+    "white": "Launch",
+    "gray": "May 14, 1973"
+   },
+   "cues": {
+    "may": "May",
+    "launch": "launched",
+    "wrong": "wrong"
+   },
+   "params": {
+    "x": 0.5,
+    "s": 0.78,
+    "ground": 0.95,
+    "lift": {
+     "at": "launch",
+     "rise": 300,
+     "dur": 4.5
+    },
+    "fail": {
+     "at": "wrong"
+    },
+    "labels": [
+     {
+      "text": "May 14, 1973",
+      "x": 0.8,
+      "y": 0.2,
+      "at": "may",
+      "size": 80
+     }
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.95,
+     "scale": 0.68,
+     "pose": "look",
+     "face": "right",
+     "dir": 60,
+     "seq": [
+      {
+       "at": "wrong",
+       "pose": "shock"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_station",
+   "text": "A thin metal shield, meant to block tiny space rocks and the heat of the Sun, tore loose.",
+   "visual": "Close on Skylab in its gold shield with the Sun burning top right; on 'tore' a gold shield panel peels off the hull and spins away, the gold wrap is gone and the bare hull shows, the frame shakes; the fez narrator points then jumps in shock",
+   "title": {
+    "white": "The shield"
+   },
+   "cues": {
+    "rocks": "rocks",
+    "sun": "Sun",
+    "tear": "tore"
+   },
+   "params": {
+    "x": 0.52,
+    "y": 0.52,
+    "scale": 0.8,
+    "tear": "tear",
+    "sun": {
+     "x": 0.9,
+     "y": 0.14,
+     "r": 70
+    },
+    "labels": [
+     {
+      "text": "shield",
+      "x": 0.3,
+      "y": 0.2,
+      "at": "rocks",
+      "size": 80
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.93,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "right",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "tear",
+       "pose": "shock"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_station",
+   "text": "Minutes later, one of the two big solar wings was ripped away, and a strip of metal pinned the other one shut.",
+   "visual": "Skylab without its shield: on 'ripped' the top solar wing tears off and tumbles away out of frame, label 'gone'; the bottom wing lies folded flat against the hull with a red strap across it, on 'pinned' a red label 'stuck!' with an arrow; the fez narrator points at the strap",
+   "title": {
+    "white": "Solar wings"
+   },
+   "cues": {
+    "rip": "ripped",
+    "pin": "pinned"
+   },
+   "params": {
+    "x": 0.55,
+    "y": 0.5,
+    "scale": 0.82,
+    "rip": "rip",
+    "station": {
+     "shield": 0,
+     "lower": 0,
+     "strap": true
+    },
+    "labels": [
+     {
+      "text": "gone",
+      "x": 0.42,
+      "y": 0.1,
+      "at": "rip",
+      "size": 84,
+      "color": "red"
+     },
+     {
+      "text": "stuck!",
+      "x": 0.3,
+      "y": 0.7,
+      "at": "pin",
+      "size": 84,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.93,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "left",
+     "dir": -10,
+     "seq": [
+      {
+       "at": "rip",
+       "pose": "shock"
+      },
+      {
+       "at": "pin",
+       "pose": "point",
+       "dir": -10,
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Now picture it. A brand new station with almost no power and no shade.",
+   "visual": "Giant Fraunces words 'No power,' then 'no shade' with 'shade' in a red box; handwritten red note 'day one' with an arrow; the small fez narrator beside them holds his head, worried",
+   "title": {},
+   "cues": {
+    "w0": "brand",
+    "w1": "power",
+    "w2": "shade",
+    "w3": "shade",
+    "note": "picture"
+   },
+   "params": {
+    "lines": [
+     "No power,",
+     "no shade"
+    ],
+    "highlight": [
+     "shade"
+    ],
+    "note": {
+     "text": "day one",
+     "at": "note",
+     "color": "red"
+    },
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w0"
+    }
+   }
+  },
+  {
+   "type": "sky_station",
+   "text": "Inside, it climbed to about fifty-four degrees Celsius.",
+   "visual": "Bare Skylab with its missing wing under a blazing Sun, red heat squiggles rising off the hull; a big thermometer on the right climbs on 'climbed' and its reading turns to '54°C' in red; the fez narrator fans himself, worried",
+   "title": {
+    "white": "Inside",
+    "gray": "54°C"
+   },
+   "cues": {
+    "climb": "climbed",
+    "deg": "degrees"
+   },
+   "params": {
+    "x": 0.44,
+    "y": 0.52,
+    "scale": 0.72,
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 0,
+     "strap": true,
+     "heat": 1
+    },
+    "sun": {
+     "x": 0.93,
+     "y": 0.13,
+     "r": 60
+    },
+    "thermo": {
+     "x": 0.8,
+     "y": 0.72,
+     "h": 430,
+     "from": 0.3,
+     "to": 0.95,
+     "at": "climb",
+     "dur": 2.0,
+     "text_from": "20°C",
+     "text_to": "54°C"
+    },
+    "kasif": {
+     "x": 0.66,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "shock",
+     "face": "right",
+     "dir": 30,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "deg",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_station",
+   "text": "NASA had built a house in the sky, and it was baking. So who was going to fix it?",
+   "visual": "The bare, damaged Skylab drifts under a blazing Sun with red heat squiggles; on 'house' a little house outline floats up beside it in the sky; on 'baking' red label 'baking'; on 'fix' the fez narrator turns to us and shrugs",
+   "title": {
+    "white": "Who could",
+    "gray": "fix it?"
+   },
+   "cues": {
+    "house": "house",
+    "baking": "baking",
+    "fix": "fix"
+   },
+   "params": {
+    "x": 0.58,
+    "y": 0.5,
+    "scale": 0.68,
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 0,
+     "strap": true,
+     "heat": 1,
+     "lights": 0.3
+    },
+    "sun": {
+     "x": 0.92,
+     "y": 0.14,
+     "r": 60
+    },
+    "house": {
+     "x": 0.22,
+     "y": 0.5,
+     "s": 0.75,
+     "at": "house"
+    },
+    "labels": [
+     {
+      "text": "baking",
+      "x": 0.22,
+      "y": 0.62,
+      "at": "baking",
+      "size": 84,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.95,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "right",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "fix",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Eleven days later, help was on the way.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, below it 'The Rescue' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "days",
+    "title": "help",
+    "line": "way"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Rescue"
+   },
+   "chapter": "The Rescue"
+  },
+  {
+   "type": "stage",
+   "text": "Three astronauts flew up: Pete Conrad, Joe Kerwin and Paul Weitz. Their first trick sounds almost silly.",
+   "visual": "Three bare-headed astronauts walk in from the left one after another under a handwritten label 'Conrad, Kerwin, Weitz'; the fez narrator on the right points at them, then laughs on 'silly'",
+   "title": {
+    "white": "The crew",
+    "gray": "Skylab 2"
+   },
+   "cues": {
+    "three": "Three",
+    "con": "Conrad",
+    "wei": "Weitz",
+    "silly": "silly"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "conrad",
+      "x": -0.1,
+      "to": 0.2,
+      "scale": 0.85,
+      "pose": "walk",
+      "at": "con",
+      "then": "wave",
+      "face": "right"
+     },
+     {
+      "who": "kerwin",
+      "x": -0.2,
+      "to": 0.34,
+      "scale": 0.85,
+      "pose": "walk",
+      "at": "wei",
+      "then": "idle",
+      "face": "right"
+     },
+     {
+      "who": "weitz",
+      "x": -0.3,
+      "to": 0.48,
+      "scale": 0.85,
+      "pose": "walk",
+      "at": "wei",
+      "then": "point",
+      "dir": "up",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "scale": 0.95,
+      "pose": "point",
+      "dir": "left",
+      "face": "left",
+      "seq": [
+       {
+        "at": "silly",
+        "pose": "shrug",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "label": {
+     "text": "Conrad, Kerwin, Weitz",
+     "x": 0.36,
+     "y": 0.24,
+     "at": "con"
+    },
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 0,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_station",
+   "text": "They pushed a folded sunshade, basically a giant umbrella, out through a tiny airlock, and opened it over the hot side. And it worked.",
+   "visual": "Bare, overheated Skylab with a thermometer at '54°C' on the right: on 'pushed' a pole slides out of the top of the hull and a red fabric canopy unfolds over the hot side like an umbrella, label 'umbrella!'; on 'opened' the thermometer drops and turns blue, 'cooler'; on 'worked' green label 'it worked!'; the fez narrator cheers",
+   "title": {
+    "white": "The sunshade"
+   },
+   "cues": {
+    "push": "pushed",
+    "umb": "umbrella",
+    "open": "opened",
+    "worked": "worked"
+   },
+   "params": {
+    "x": 0.44,
+    "y": 0.55,
+    "scale": 0.74,
+    "umbrella": "push",
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 0,
+     "strap": true,
+     "heat": 0.6
+    },
+    "sun": {
+     "x": 0.93,
+     "y": 0.13,
+     "r": 60
+    },
+    "thermo": {
+     "x": 0.8,
+     "y": 0.72,
+     "h": 430,
+     "from": 0.95,
+     "to": 0.4,
+     "at": "open",
+     "dur": 2.4,
+     "text_from": "54°C",
+     "text_to": "cooler",
+     "cool": true
+    },
+    "labels": [
+     {
+      "text": "umbrella!",
+      "x": 0.42,
+      "y": 0.16,
+      "at": "umb",
+      "size": 88,
+      "color": "red"
+     },
+     {
+      "text": "it worked!",
+      "x": 0.2,
+      "y": 0.34,
+      "at": "worked",
+      "size": 90,
+      "color": "green"
+     }
+    ],
+    "kasif": {
+     "x": 0.08,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 40,
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "worked",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_eva",
+   "text": "But the station still needed power. So on the seventh of June, Conrad and Kerwin climbed outside with a long pole and a cable cutter.",
+   "visual": "Close-up on the hull and the folded wing with its red strap; two helmeted spacewalkers with backpacks float beside the wing, slightly tilted and bobbing, the first reaches out a long pole with cutter jaws to the strap; label 'June 7, 1973'; the fez narrator points at the strap",
+   "title": {
+    "white": "Spacewalk",
+    "gray": "June 7, 1973"
+   },
+   "cues": {
+    "power": "power",
+    "june": "seventh",
+    "pole": "pole"
+   },
+   "params": {
+    "x": 0.62,
+    "y": 0.3,
+    "scale": 1.25,
+    "rot": 0,
+    "drift": false,
+    "earth": false,
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 0,
+     "strap": true,
+     "parasol": 1,
+     "lights": 0.2
+    },
+    "eva": [
+     {
+      "x": 0.43,
+      "y": 0.74,
+      "scale": 0.45,
+      "pose": "point",
+      "dir": 40,
+      "face": 1,
+      "rot": 12
+     },
+     {
+      "x": 0.28,
+      "y": 0.82,
+      "scale": 0.45,
+      "pose": "point",
+      "dir": 30,
+      "face": 1,
+      "rot": -10
+     }
+    ],
+    "tool": "pole",
+    "labels": [
+     {
+      "text": "June 7, 1973",
+      "x": 0.2,
+      "y": 0.3,
+      "at": "june",
+      "size": 80
+     }
+    ],
+    "kasif": {
+     "x": 0.92,
+     "y": 0.93,
+     "scale": 0.55,
+     "pose": "point",
+     "face": "left",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "pole",
+       "pose": "point",
+       "dir": 50
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_eva",
+   "text": "Kerwin snipped the metal strap. The wing moved a little, then stuck again.",
+   "visual": "Same close-up: on 'snipped' the cutter jaws snap shut, the red strap splits in two with a red ring flash; on 'moved' the wing lifts a little and stops, the frame jolts, red label 'stuck again'; the floating spacewalker shrugs; the fez narrator jumps",
+   "title": {
+    "white": "Snip!"
+   },
+   "cues": {
+    "cut": "snipped",
+    "nudge": "moved",
+    "stuck": "stuck"
+   },
+   "params": {
+    "x": 0.62,
+    "y": 0.3,
+    "scale": 1.25,
+    "rot": 0,
+    "drift": false,
+    "earth": false,
+    "cut": "cut",
+    "nudge": "nudge",
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 0,
+     "strap": true,
+     "parasol": 1,
+     "lights": 0.2
+    },
+    "eva": [
+     {
+      "x": 0.43,
+      "y": 0.74,
+      "scale": 0.45,
+      "pose": "point",
+      "dir": 40,
+      "face": 1,
+      "rot": 12
+     },
+     {
+      "x": 0.28,
+      "y": 0.82,
+      "scale": 0.45,
+      "pose": "point",
+      "dir": 30,
+      "face": 1,
+      "rot": -10,
+      "seq": [
+       {
+        "at": "stuck",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ],
+    "tool": "pole",
+    "labels": [
+     {
+      "text": "stuck again",
+      "x": 0.74,
+      "y": 0.66,
+      "at": "stuck",
+      "size": 80,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.92,
+     "y": 0.93,
+     "scale": 0.55,
+     "pose": "point",
+     "face": "left",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "stuck",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_station",
+   "text": "So they grabbed a rope, pulled with everything they had, and the wing swung open.",
+   "visual": "Wider: the two spacewalkers pull a brown rope tied to the wing; on 'swung' the solar wing springs fully open below the hull with all its panels; green label 'power!'; the fez narrator throws his arms up",
+   "title": {
+    "white": "Pull!"
+   },
+   "cues": {
+    "rope": "rope",
+    "pull": "pulled",
+    "open": "swung"
+   },
+   "params": {
+    "x": 0.6,
+    "y": 0.4,
+    "scale": 0.7,
+    "rot": 0,
+    "earth": false,
+    "open": "open",
+    "rope": {
+     "at": "rope"
+    },
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 0.25,
+     "strap": false,
+     "parasol": 1
+    },
+    "eva": [
+     {
+      "x": 0.24,
+      "y": 0.76,
+      "scale": 0.4,
+      "pose": "point",
+      "dir": 10,
+      "face": 1
+     },
+     {
+      "x": 0.35,
+      "y": 0.84,
+      "scale": 0.4,
+      "pose": "point",
+      "dir": 10,
+      "face": 1
+     }
+    ],
+    "labels": [
+     {
+      "text": "power!",
+      "x": 0.82,
+      "y": 0.2,
+      "at": "open",
+      "size": 96,
+      "color": "green"
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.97,
+     "scale": 0.55,
+     "pose": "idle",
+     "face": "right",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "open",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Skylab came back to life. Three crews lived there, and they studied the Sun like no one ever had.",
+   "visual": "Horizontal timeline: 'May 1973' crew 1, 'Jul 1973' crew 2, 'Nov 1973' crew 3 (highlighted) appear one after another; a small fez narrator on the right points along it",
+   "title": {
+    "white": "Three crews",
+    "gray": "1973-1974"
+   },
+   "cues": {
+    "life": "life",
+    "three": "Three",
+    "sun": "Sun"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "May 1973",
+      "text": "Crew 1",
+      "at": "life"
+     },
+     {
+      "year": "Jul 1973",
+      "text": "Crew 2",
+      "at": "three"
+     },
+     {
+      "year": "Nov 1973",
+      "text": "Crew 3",
+      "at": "sun"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.62,
+     "pose": "point",
+     "at": "three",
+     "scale": 0.5,
+     "face": -1,
+     "emotion": "happy"
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_station",
+   "text": "Then, in February 1974, the last crew flew home.",
+   "visual": "Skylab with the parasol and one wing: on 'flew' the docked Apollo ship backs off and flies away right with a gold engine flame; on 'home' the window lights go dark; label 'Feb 1974'; the fez narrator waves goodbye",
+   "title": {
+    "white": "Empty",
+    "gray": "Feb 1974"
+   },
+   "cues": {
+    "feb": "February",
+    "leave": "flew",
+    "home": "home"
+   },
+   "params": {
+    "x": 0.42,
+    "y": 0.5,
+    "scale": 0.7,
+    "leave": "leave",
+    "dark": "home",
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 1,
+     "parasol": 1
+    },
+    "labels": [
+     {
+      "text": "Feb 1974",
+      "x": 0.75,
+      "y": 0.14,
+      "at": "feb",
+      "size": 84
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.93,
+     "scale": 0.62,
+     "pose": "idle",
+     "face": "left",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "leave",
+       "pose": "wave"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Skylab was empty, and NASA thought it had years to decide what to do with it. But NASA was wrong.",
+   "visual": "Giant Fraunces words 'NASA was wrong' appear word by word, 'wrong' in a red box on 'wrong'; handwritten note 'years?' on 'years'; the small fez narrator beside them jumps in shock",
+   "title": {},
+   "cues": {
+    "w0": "NASA",
+    "w1": "was",
+    "w2": "wrong",
+    "note": "years"
+   },
+   "params": {
+    "lines": [
+     "NASA was",
+     "wrong"
+    ],
+    "highlight": [
+     "wrong"
+    ],
+    "note": {
+     "text": "years?",
+     "at": "note"
+    },
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "surprised",
+     "at": "w2"
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Here's the part most people never hear. Skylab didn't fall because it broke.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, below it 'Why It Really Fell' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "part",
+    "title": "Skylab",
+    "line": "broke"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Why It Really Fell"
+   },
+   "chapter": "Why It Really Fell"
+  },
+  {
+   "type": "td_space",
+   "text": "It fell because of the Sun.",
+   "visual": "Open space: a big gold Sun with turning rays in the upper left, the Earth's curve at the bottom; on 'Sun' a red box stamp 'THE SUN' slams in; the fez narrator points at the Sun",
+   "title": {
+    "white": "The culprit"
+   },
+   "cues": {
+    "sun": "because"
+   },
+   "params": {
+    "stars": 22,
+    "earth": {
+     "x": 0.5,
+     "y": 1.75,
+     "r": 0.6
+    },
+    "sun": {
+     "x": 0.36,
+     "y": 0.4,
+     "r": 150
+    },
+    "stamp": {
+     "text": "THE SUN",
+     "at": "sun",
+     "x": 0.68,
+     "y": 0.3,
+     "size": 140,
+     "rot": -6
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.92,
+     "scale": 0.75,
+     "pose": "point",
+     "face": "left",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "sun",
+       "pose": "point",
+       "dir": 50,
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_drag",
+   "text": "Even four hundred kilometers up, there's a tiny trace of air, and it slowly steals the speed of anything flying through it.",
+   "visual": "Earth limb with a thin blue air band dotted with tiny air dots; Skylab small on a dashed orbit high above; a red bracket '~400 km' from the ground to it on 'four'; on 'steals' a red speed arrow in front of Skylab shrinks while air dots hit its nose; the fez narrator points",
+   "title": {
+    "white": "Thin air",
+    "gray": "~400 km"
+   },
+   "cues": {
+    "alt": "four",
+    "air": "air",
+    "steal": "steals"
+   },
+   "params": {
+    "earth": {
+     "y": 1.75,
+     "r": 1.15
+    },
+    "band": {
+     "h": 70
+    },
+    "dots": 40,
+    "crafts": [
+     {
+      "type": "skylab",
+      "x": 0.5,
+      "alt": 330,
+      "s": 0.26,
+      "vx": 0.004,
+      "state": {
+       "shield": 0,
+       "upper": 0,
+       "upper_gone": 1,
+       "lower": 1,
+       "parasol": 1
+      }
+     }
+    ],
+    "alt": {
+     "text": "~400 km",
+     "at": "alt"
+    },
+    "speed": {
+     "from": 1,
+     "to": 0.35,
+     "at": "steal",
+     "dur": 2.6
+    },
+    "kasif": {
+     "x": 0.09,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 45,
+     "seq": [
+      {
+       "at": "steal",
+       "pose": "think",
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_drag",
+   "text": "When the Sun gets stormy, it heats that air, and the air puffs up like bread in an oven, reaching higher and grabbing harder.",
+   "visual": "Same diagram with the Sun upper left: on 'stormy' red-gold bolts shoot from the Sun into the air band and the Sun pulses; on 'puffs' the blue air band swells up until it reaches Skylab's orbit, Skylab shakes and starts to sink; label 'puffs up!'; the fez narrator jumps back",
+   "title": {
+    "white": "Stormy Sun"
+   },
+   "cues": {
+    "storm": "stormy",
+    "puff": "puffs",
+    "grab": "grabbing"
+   },
+   "params": {
+    "earth": {
+     "y": 1.75,
+     "r": 1.15
+    },
+    "band": {
+     "h": 70,
+     "to": 320,
+     "at": "puff",
+     "dur": 2.6
+    },
+    "dots": 46,
+    "sun": {
+     "x": 0.9,
+     "y": 0.16,
+     "r": 80,
+     "flare": "storm"
+    },
+    "crafts": [
+     {
+      "type": "skylab",
+      "x": 0.55,
+      "alt": 330,
+      "s": 0.26,
+      "vx": 0.004,
+      "state": {
+       "shield": 0,
+       "upper": 0,
+       "upper_gone": 1,
+       "lower": 1,
+       "parasol": 1
+      },
+      "fall": {
+       "at": "grab",
+       "to": 250,
+       "dur": 2
+      }
+     }
+    ],
+    "labels": [
+     {
+      "text": "puffs up!",
+      "x": 0.6,
+      "y": 0.14,
+      "at": "puff",
+      "size": 88,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "puff",
+       "pose": "shock"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "NASA expected Skylab to last until around 1983. But the next solar cycle became one of the strongest in a century.",
+   "visual": "Horizontal timeline: '1973' Skylab launch, '1983' NASA's guess, then '1979' the Sun's peak lights up red; a small fez narrator on the right points at 1979, worried",
+   "title": {
+    "white": "Bad timing"
+   },
+   "cues": {
+    "expect": "expected",
+    "y83": "1983",
+    "storm": "strongest"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1973",
+      "text": "Skylab launch",
+      "at": "expect"
+     },
+     {
+      "year": "1979",
+      "text": "Sun at its peak",
+      "at": "storm"
+     },
+     {
+      "year": "1983",
+      "text": "NASA's guess",
+      "at": "y83"
+     }
+    ],
+    "focus": 1,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.62,
+     "pose": "point",
+     "at": "storm",
+     "scale": 0.5,
+     "face": -1,
+     "emotion": "worried"
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_station",
+   "text": "NASA had a rescue plan: the new Space Shuttle would fly up and push the station higher.",
+   "visual": "Skylab drifts; on 'Shuttle' a hand-drawn Space Shuttle orbiter flies in from the lower right; on 'push' a red dashed arrow points up and the station lifts higher; label 'the plan'; the fez narrator points hopefully",
+   "title": {
+    "white": "Plan B",
+    "gray": "Space Shuttle"
+   },
+   "cues": {
+    "plan": "plan",
+    "shuttle": "Shuttle",
+    "push": "push"
+   },
+   "params": {
+    "x": 0.4,
+    "y": 0.5,
+    "scale": 0.6,
+    "shuttle": {
+     "at": "shuttle",
+     "from": [
+      1.3,
+      0.9
+     ],
+     "to": [
+      0.8,
+      0.7
+     ],
+     "s": 0.75
+    },
+    "push": "push",
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 1,
+     "parasol": 1,
+     "lights": 0
+    },
+    "labels": [
+     {
+      "text": "the plan",
+      "x": 0.6,
+      "y": 0.12,
+      "at": "plan",
+      "size": 84
+     }
+    ],
+    "kasif": {
+     "x": 0.08,
+     "y": 0.95,
+     "scale": 0.58,
+     "pose": "point",
+     "face": "right",
+     "dir": 20,
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "But the Shuttle was late, and its first flight came only in 1981.",
+   "visual": "Giant Fraunces words 'First Shuttle' then 'flight: 1981' with '1981' in a red box; handwritten note 'too late'; the small fez narrator shrugs",
+   "title": {},
+   "cues": {
+    "w0": "Shuttle",
+    "w1": "first",
+    "w2": "flight",
+    "w3": "1981",
+    "note": "late"
+   },
+   "params": {
+    "lines": [
+     "First Shuttle",
+     "flight: 1981"
+    ],
+    "highlight": [
+     "1981"
+    ],
+    "note": {
+     "text": "too late",
+     "at": "w3",
+     "color": "red"
+    },
+    "y": 0.42,
+    "kasif": {
+     "x": 0.87,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.8,
+     "emotion": "worried",
+     "at": "w3"
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "In December 1978, NASA gave up. A seventy-seven ton station was coming down.",
+   "visual": "A bare-headed flight controller holds a sign 'GAVE UP' and lowers his head; on 'coming' the fez narrator next to him looks up and jumps back in shock; label 'Dec 1978'",
+   "title": {
+    "white": "Gave up",
+    "gray": "Dec 1978"
+   },
+   "cues": {
+    "dec": "December",
+    "gave": "gave",
+    "coming": "coming"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "controller",
+      "x": 0.35,
+      "scale": 0.95,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "gave",
+        "pose": "hold",
+        "text": "GAVE UP",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.68,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "coming",
+        "pose": "shock",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 0,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "sky_drag",
+   "text": "So where would it land?",
+   "visual": "A whole Earth globe in the middle; red dashed orbit tracks wrap around it one after another; a big red '?' pops up; the fez narrator looks through binoculars",
+   "title": {
+    "white": "Where?"
+   },
+   "cues": {
+    "land": "land"
+   },
+   "params": {
+    "globe": {
+     "x": 0.5,
+     "y": 0.5,
+     "r": 0.3
+    },
+    "tracks": {
+     "at": 0.1,
+     "n": 3
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.74,
+      "y": 0.22,
+      "at": "land",
+      "size": 200,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.12,
+     "y": 0.95,
+     "scale": 0.65,
+     "pose": "look",
+     "face": "right",
+     "dir": 40
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Now imagine the summer of 1979. The whole world was looking up.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, below it 'Where Will It Land?' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "summer",
+    "title": "world",
+    "line": "looking"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Where Will It Land?"
+   },
+   "chapter": "Where Will It Land?"
+  },
+  {
+   "type": "sky_target",
+   "text": "People sold T-shirts with a bullseye on them.",
+   "visual": "Two T-shirts printed with red bullseyes swing on a clothesline; on 'bullseye' a dashed ink arrow drops from the sky onto the centre of the first one; the fez narrator laughs and points",
+   "title": {
+    "white": "Skylab mania"
+   },
+   "cues": {
+    "shirt": "shirts",
+    "arrow": "bullseye"
+   },
+   "params": {
+    "mode": "shirt",
+    "shirts": 2,
+    "arrow": "arrow",
+    "kasif": {
+     "x": 0.88,
+     "y": 0.95,
+     "scale": 0.65,
+     "pose": "point",
+     "face": "left",
+     "dir": 30,
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "sky_target",
+   "text": "One neighborhood in Nebraska painted a giant target, so the station would have something to aim for.",
+   "visual": "A field with little houses on the horizon: on 'painted' a giant red-and-cream target spreads across the ground; two bare-headed painters hold rollers; on 'aim' a tiny ink Skylab with a red dashed trail drops toward the centre; label 'Nebraska'; the fez narrator shrugs",
+   "title": {
+    "white": "Nebraska",
+    "gray": "1979"
+   },
+   "cues": {
+    "neb": "Nebraska",
+    "paint": "painted",
+    "aim": "aim"
+   },
+   "params": {
+    "mode": "ground",
+    "paint": "paint",
+    "falling": "aim",
+    "cast": [
+     {
+      "x": 0.16,
+      "y": 0.86,
+      "scale": 0.5,
+      "pose": "point",
+      "dir": -30,
+      "face": "right",
+      "emotion": "happy"
+     },
+     {
+      "x": 0.3,
+      "y": 0.92,
+      "scale": 0.5,
+      "pose": "point",
+      "dir": 40,
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Nebraska",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "neb",
+      "size": 84
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.95,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "left",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "aim",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "sky_paper",
+   "text": "And the San Francisco Examiner made an offer: ten thousand dollars to the first person who brought a piece of Skylab to its office within seventy-two hours.",
+   "visual": "A newspaper spins in and lands: masthead 'EXAMINER', huge red headline '$10,000', handwritten 'first piece wins'; on 'seventy' a stopwatch pops up on the right with a red hand ticking, label '72 h'; the fez narrator points at the headline",
+   "title": {
+    "white": "The prize",
+    "gray": "San Francisco"
+   },
+   "cues": {
+    "at": "Examiner",
+    "ten": "thousand",
+    "clock": "seventy"
+   },
+   "params": {
+    "at": "at",
+    "masthead": "EXAMINER",
+    "headline": "$10,000",
+    "sub": "first piece wins",
+    "x": 0.45,
+    "y": 0.5,
+    "s": 0.95,
+    "clock": {
+     "x": 0.83,
+     "y": 0.4,
+     "text": "72 h",
+     "at": "clock"
+    },
+    "kasif": {
+     "x": 0.08,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "ten",
+       "pose": "shock"
+      }
+     ]
+    }
+   },
+   "source": "Perth Observatory"
+  },
+  {
+   "type": "sky_map",
+   "text": "In the final hours, controllers set the station tumbling, to aim its fall at empty ocean southeast of South Africa.",
+   "visual": "A big old map of the Indian Ocean: southern Africa on the left, Australia on the right, Cape Town and Perth marked; on 'aim' a red dashed path curves down from the west to an empty patch of ocean southeast of South Africa where a red ✗ in a ring appears, red note 'aim: empty ocean'; the fez narrator beside the map points at the ✗",
+   "title": {
+    "white": "The aim",
+    "gray": "Indian Ocean"
+   },
+   "cues": {
+    "tumb": "tumbling",
+    "route": "aim",
+    "note": "ocean"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       0.03,
+       0.16
+      ],
+      [
+       0.1,
+       0.14
+      ],
+      [
+       0.17,
+       0.2
+      ],
+      [
+       0.2,
+       0.3
+      ],
+      [
+       0.18,
+       0.4
+      ],
+      [
+       0.14,
+       0.5
+      ],
+      [
+       0.1,
+       0.56
+      ],
+      [
+       0.05,
+       0.58
+      ],
+      [
+       0.03,
+       0.6
+      ]
+     ],
+     [
+      [
+       0.64,
+       0.12
+      ],
+      [
+       0.75,
+       0.06
+      ],
+      [
+       0.86,
+       0.1
+      ],
+      [
+       0.95,
+       0.06
+      ],
+      [
+       0.97,
+       0.1
+      ],
+      [
+       0.97,
+       0.62
+      ],
+      [
+       0.92,
+       0.66
+      ],
+      [
+       0.84,
+       0.6
+      ],
+      [
+       0.78,
+       0.64
+      ],
+      [
+       0.72,
+       0.58
+      ],
+      [
+       0.66,
+       0.56
+      ],
+      [
+       0.63,
+       0.46
+      ],
+      [
+       0.62,
+       0.32
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Cape Town",
+      "x": 0.14,
+      "y": 0.54,
+      "at": "tumb",
+      "dx": 40,
+      "dy": 60,
+      "anchor": "start"
+     },
+     {
+      "name": "Perth",
+      "x": 0.645,
+      "y": 0.44,
+      "at": "tumb",
+      "dx": -30,
+      "anchor": "end"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.02,
+       0.28
+      ],
+      [
+       0.12,
+       0.66
+      ],
+      [
+       0.3,
+       0.84
+      ]
+     ],
+     "at": "route",
+     "dur": 1.6
+    },
+    "target": {
+     "x": 0.3,
+     "y": 0.84,
+     "at": "note"
+    },
+    "note": {
+     "text": "aim: empty ocean",
+     "x": 0.6,
+     "y": 0.72,
+     "at": "note"
+    },
+    "seas": [
+     {
+      "name": "Indian Ocean",
+      "x": 0.42,
+      "y": 0.3
+     }
+    ],
+    "compass": "tr",
+    "kasif": {
+     "x": 0.07,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "note",
+       "pose": "point",
+       "dir": 10
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_station",
+   "text": "On the eleventh of July, Skylab hit the thick air. And then came the surprise. It broke apart lower than predicted,",
+   "visual": "Skylab tilted, plunging toward the Earth limb: on 'hit' red-gold flame tongues burst out and stream behind it, the hull glows with red hatching; label 'July 11, 1979'; on 'broke' its parts fly apart (wings, telescope mount, workshop, docking module), tumbling; the fez narrator jumps in shock, then points",
+   "title": {
+    "white": "Re-entry",
+    "gray": "July 11, 1979"
+   },
+   "cues": {
+    "jul": "eleventh",
+    "hit": "hit",
+    "surprise": "surprise",
+    "broke": "broke"
+   },
+   "params": {
+    "x": 0.55,
+    "y": 0.42,
+    "scale": 0.66,
+    "rot": 18,
+    "glow": "hit",
+    "breakup": "broke",
+    "trail": 200,
+    "earth": {
+     "y": 1.5,
+     "r": 0.9
+    },
+    "station": {
+     "shield": 0,
+     "upper": 0,
+     "upper_gone": 1,
+     "lower": 1,
+     "parasol": 1,
+     "lights": 0
+    },
+    "labels": [
+     {
+      "text": "July 11, 1979",
+      "x": 0.8,
+      "y": 0.14,
+      "at": "jul",
+      "size": 80
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.93,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "left",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock"
+      },
+      {
+       "at": "broke",
+       "pose": "point",
+       "dir": 40,
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "sky_map",
+   "text": "and that small error carried its pieces over Western Australia, just after midnight.",
+   "visual": "A big old map of south-west Australia: a red dashed debris path sweeps in from the ocean in the south-west across the coast near Esperance toward Balladonia, and a red hatched debris zone spreads around it; Esperance pops up in red, Perth and Balladonia marked; note 'just after midnight'; the fez narrator points at Esperance",
+   "title": {
+    "white": "Western Australia"
+   },
+   "cues": {
+    "route": "carried",
+    "esp": "Western",
+    "note": "midnight"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       0.05,
+       0.03
+      ],
+      [
+       0.97,
+       0.03
+      ],
+      [
+       0.97,
+       0.52
+      ],
+      [
+       0.9,
+       0.56
+      ],
+      [
+       0.8,
+       0.54
+      ],
+      [
+       0.68,
+       0.6
+      ],
+      [
+       0.58,
+       0.62
+      ],
+      [
+       0.48,
+       0.62
+      ],
+      [
+       0.38,
+       0.66
+      ],
+      [
+       0.3,
+       0.7
+      ],
+      [
+       0.22,
+       0.72
+      ],
+      [
+       0.15,
+       0.66
+      ],
+      [
+       0.12,
+       0.55
+      ],
+      [
+       0.1,
+       0.42
+      ],
+      [
+       0.08,
+       0.28
+      ],
+      [
+       0.06,
+       0.12
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Perth",
+      "x": 0.13,
+      "y": 0.36
+     },
+     {
+      "name": "Esperance",
+      "x": 0.55,
+      "y": 0.6,
+      "at": "esp",
+      "color": "red",
+      "dy": 70
+     },
+     {
+      "name": "Balladonia",
+      "x": 0.72,
+      "y": 0.38,
+      "at": "esp"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.22,
+       0.98
+      ],
+      [
+       0.42,
+       0.74
+      ],
+      [
+       0.58,
+       0.52
+      ],
+      [
+       0.76,
+       0.32
+      ]
+     ],
+     "at": "route",
+     "dur": 2.0
+    },
+    "zone": {
+     "x": 0.62,
+     "y": 0.47,
+     "rx": 0.2,
+     "ry": 0.08,
+     "rot": -38,
+     "at": "esp"
+    },
+    "note": {
+     "text": "just after midnight",
+     "x": 0.68,
+     "y": 0.75,
+     "at": "note"
+    },
+    "seas": [
+     {
+      "name": "Southern Ocean",
+      "x": 0.3,
+      "y": 0.88
+     }
+    ],
+    "compass": "tr",
+    "kasif": {
+     "x": 0.07,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "esp",
+       "pose": "point",
+       "dir": 25
+      }
+     ]
+    }
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "stage",
+   "text": "But down in Esperance, a teenager was about to win a race.",
+   "visual": "Stan, a bare-headed teenager, runs in from the left and stops holding up a sign 'SKYLAB!'; a clock prop on the right; the fez narrator runs after him and points at the clock on 'race'",
+   "title": {
+    "white": "The race",
+    "gray": "Esperance"
+   },
+   "cues": {
+    "esp": "Esperance",
+    "teen": "teenager",
+    "race": "race"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "clock",
+      "x": 0.86,
+      "scale": 0.9,
+      "at": "esp"
+     }
+    ],
+    "cast": [
+     {
+      "who": "stan",
+      "x": 0.05,
+      "to": 0.5,
+      "scale": 0.9,
+      "pose": "run",
+      "at": "teen",
+      "then": "hold",
+      "text": "SKYLAB!",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": -0.1,
+      "to": 0.28,
+      "scale": 0.85,
+      "pose": "run",
+      "at": "race",
+      "then": "point",
+      "dir": "right",
+      "face": "right"
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 0,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Now, back to Stan.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, below it 'A Fine for NASA' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "Now",
+    "title": "back",
+    "line": "Stan"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "A Fine for NASA"
+   },
+   "chapter": "A Fine for NASA"
+  },
+  {
+   "type": "sky_yard",
+   "text": "Stan Thornton gathered about two dozen burnt pieces.",
+   "visual": "Morning in Stan's yard by the tin-roofed house: charred, smoking chunks lie on the roof and all over the ground, more drop in; Stan holds one up; label '24 pieces'; the fez narrator points at the pile",
+   "title": {
+    "white": "The pieces"
+   },
+   "cues": {
+    "stan": "Stan",
+    "dozen": "dozen",
+    "pieces": "pieces"
+   },
+   "params": {
+    "house": {
+     "x": 0.24,
+     "s": 0.85
+    },
+    "chunks": [
+     {
+      "x": 0.16,
+      "y": 0.52,
+      "s": 0.9,
+      "rot": -8,
+      "at": 0
+     },
+     {
+      "x": 0.47,
+      "y": 0.86,
+      "s": 1.1,
+      "rot": 12,
+      "at": 0
+     },
+     {
+      "x": 0.55,
+      "y": 0.9,
+      "s": 0.9,
+      "rot": 30,
+      "at": "stan"
+     },
+     {
+      "x": 0.62,
+      "y": 0.84,
+      "s": 1.0,
+      "rot": -20,
+      "at": "dozen"
+     },
+     {
+      "x": 0.7,
+      "y": 0.9,
+      "s": 0.8,
+      "rot": 40,
+      "at": "dozen"
+     },
+     {
+      "x": 0.3,
+      "y": 0.5,
+      "s": 0.8,
+      "rot": 20,
+      "at": "pieces"
+     }
+    ],
+    "pickup": {
+     "who": 0,
+     "chunk": 1,
+     "at": "dozen"
+    },
+    "cast": [
+     {
+      "x": 0.6,
+      "y": 0.8,
+      "scale": 0.75,
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "dozen",
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "24 pieces",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "dozen",
+      "size": 96,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.95,
+     "scale": 0.7,
+     "pose": "point",
+     "face": "left",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "pieces",
+       "pose": "point",
+       "dir": -10,
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "sky_map",
+   "text": "He jumped on a plane and landed in San Francisco with hours to spare.",
+   "visual": "A big old map of the Pacific: Australia lower left, the coast of North America upper right; a little ink plane flies along a red dashed route from Esperance to San Francisco; red note 'hours to spare'; the fez narrator points along the route",
+   "title": {
+    "white": "To America"
+   },
+   "cues": {
+    "route": "plane",
+    "sf": "Francisco",
+    "note": "hours"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       0.03,
+       0.62
+      ],
+      [
+       0.08,
+       0.56
+      ],
+      [
+       0.16,
+       0.6
+      ],
+      [
+       0.24,
+       0.66
+      ],
+      [
+       0.3,
+       0.76
+      ],
+      [
+       0.28,
+       0.9
+      ],
+      [
+       0.2,
+       0.97
+      ],
+      [
+       0.1,
+       0.96
+      ],
+      [
+       0.03,
+       0.9
+      ]
+     ],
+     [
+      [
+       0.8,
+       0.03
+      ],
+      [
+       0.97,
+       0.03
+      ],
+      [
+       0.97,
+       0.64
+      ],
+      [
+       0.97,
+       0.58
+      ],
+      [
+       0.93,
+       0.48
+      ],
+      [
+       0.89,
+       0.38
+      ],
+      [
+       0.86,
+       0.26
+      ],
+      [
+       0.82,
+       0.12
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Esperance",
+      "x": 0.2,
+      "y": 0.86,
+      "at": 0.1,
+      "color": "red",
+      "dx": 40,
+      "dy": 10,
+      "anchor": "start"
+     },
+     {
+      "name": "San Francisco",
+      "x": 0.86,
+      "y": 0.34,
+      "at": "sf",
+      "dx": -30,
+      "anchor": "end"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.2,
+       0.86
+      ],
+      [
+       0.38,
+       0.58
+      ],
+      [
+       0.6,
+       0.4
+      ],
+      [
+       0.86,
+       0.34
+      ]
+     ],
+     "at": "route",
+     "dur": 2.6,
+     "plane": true
+    },
+    "note": {
+     "text": "hours to spare",
+     "x": 0.62,
+     "y": 0.66,
+     "at": "note"
+    },
+    "seas": [
+     {
+      "name": "Pacific Ocean",
+      "x": 0.5,
+      "y": 0.84
+     }
+    ],
+    "compass": "tl",
+    "kasif": {
+     "x": 0.07,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 40,
+     "seq": [
+      {
+       "at": "sf",
+       "pose": "point",
+       "dir": 50,
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "source": "SFGATE"
+  },
+  {
+   "type": "stage",
+   "text": "After NASA experts checked the pieces, Stan won the ten thousand dollars.",
+   "visual": "Stan, a bare-headed teenager, holds up a giant cheque sign '$10,000' on 'won'; a scroll prop 'real!' beside him on 'checked'; the fez narrator claps and waves happily",
+   "title": {
+    "white": "The winner",
+    "gray": "$10,000"
+   },
+   "cues": {
+    "check": "checked",
+    "won": "won"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.18,
+      "scale": 0.9,
+      "text": "real!",
+      "at": "check"
+     }
+    ],
+    "cast": [
+     {
+      "who": "stan",
+      "x": 0.48,
+      "scale": 1.0,
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "won",
+        "pose": "hold",
+        "text": "$10,000",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.78,
+      "scale": 0.95,
+      "pose": "point",
+      "dir": "left",
+      "face": "left",
+      "seq": [
+       {
+        "at": "won",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 0,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "sky_fine",
+   "text": "Back home, Esperance had a sense of humor. When NASA officials came to see the wreckage, the shire handed them a fine of four hundred Australian dollars for littering.",
+   "visual": "A ticket flies in: 'LITTERING' at the top, a big ink 'A$400', 'to: NASA'; a smoking charred chunk of Skylab lies beside it; on 'handed' a pen scribbles a signature; on 'littering' a red stamp 'FINED' slams onto the lower middle; the fez narrator laughs, then shocks",
+   "title": {
+    "white": "The fine",
+    "gray": "Esperance"
+   },
+   "cues": {
+    "at": "humor",
+    "write": "handed",
+    "stamp": "littering"
+   },
+   "params": {
+    "mode": "write",
+    "at": "at",
+    "write": "write",
+    "ticket": {
+     "x": 0.52,
+     "y": 0.44,
+     "s": 0.82,
+     "amount": "A$400"
+    },
+    "chunk": {
+     "x": 0.4,
+     "y": 0.8,
+     "s": 2.2,
+     "at": "at"
+    },
+    "stamp": {
+     "text": "FINED",
+     "color": "red",
+     "at": "stamp",
+     "y": 215
+    },
+    "kasif": {
+     "x": 0.14,
+     "y": 0.95,
+     "scale": 0.72,
+     "pose": "point",
+     "face": "right",
+     "dir": 30,
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "stamp",
+       "pose": "shock",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "source": "Guinness World Records"
+  },
+  {
+   "type": "timeline",
+   "text": "It was a joke, and NASA never paid. Not for thirty years.",
+   "visual": "Horizontal timeline: '1979' the fine, '1989' unpaid, '1999' unpaid (highlighted) appear one after another; a small fez narrator on the right shrugs",
+   "title": {
+    "white": "Unpaid",
+    "gray": "30 years"
+   },
+   "cues": {
+    "joke": "joke",
+    "never": "never",
+    "thirty": "thirty"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1979",
+      "text": "The fine",
+      "at": "joke"
+     },
+     {
+      "year": "1989",
+      "text": "Unpaid",
+      "at": "never"
+     },
+     {
+      "year": "1999",
+      "text": "Still unpaid",
+      "at": "thirty"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.9,
+     "y": 0.62,
+     "pose": "shrug",
+     "at": "never",
+     "scale": 0.5,
+     "face": -1,
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "sky_fine",
+   "text": "Then, in 2009, an American radio host named Scott Barley asked his listeners to chip in, and they paid it.",
+   "visual": "A radio microphone on the left sends out blue sound arcs; on 'chip' gold coins drop one by one into a glass jar; the A$400 ticket hangs on the right and on 'paid' a green stamp 'PAID' slams onto it; label '2009'; the fez narrator cheers",
+   "title": {
+    "white": "Paid",
+    "gray": "2009"
+   },
+   "cues": {
+    "y09": "2009",
+    "radio": "radio",
+    "chip": "chip",
+    "paid": "paid"
+   },
+   "params": {
+    "mode": "paid",
+    "ticket": {
+     "x": 0.72,
+     "y": 0.46,
+     "s": 0.7,
+     "rot": 4,
+     "amount": "A$400"
+    },
+    "radio": {
+     "x": 0.17,
+     "y": 0.5
+    },
+    "coins": {
+     "at": "chip",
+     "n": 8,
+     "x": 0.42,
+     "y": 0.7
+    },
+    "stamp": {
+     "text": "PAID",
+     "color": "green",
+     "at": "paid",
+     "y": 215
+    },
+    "labels": [
+     {
+      "text": "2009",
+      "x": 0.45,
+      "y": 0.3,
+      "at": "y09",
+      "size": 110,
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.92,
+     "y": 0.97,
+     "scale": 0.55,
+     "pose": "idle",
+     "face": "left",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "paid",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "source": "Guinness World Records"
+  },
+  {
+   "type": "sky_drag",
+   "text": "And here's what stays with me. Skylab wasn't killed by an accident in space. It was pulled down by a stormy Sun, just like Swift today.",
+   "visual": "The Sun upper right above the Earth limb and air band; the damaged Skylab with its sunshade (label '1979') and the small Swift telescope (label 'today') ride the orbit; on 'stormy' bolts strike the air, it swells and both craft sink; the fez narrator points at the Sun",
+   "title": {
+    "white": "Real cause"
+   },
+   "cues": {
+    "sky": "Skylab",
+    "storm": "stormy",
+    "swift": "Swift"
+   },
+   "params": {
+    "earth": {
+     "y": 1.75,
+     "r": 1.15
+    },
+    "band": {
+     "h": 70,
+     "to": 300,
+     "at": "storm",
+     "dur": 2.4
+    },
+    "sun": {
+     "x": 0.9,
+     "y": 0.16,
+     "r": 80,
+     "flare": "storm"
+    },
+    "crafts": [
+     {
+      "type": "skylab",
+      "x": 0.38,
+      "alt": 330,
+      "s": 0.22,
+      "vx": 0.004,
+      "state": {
+       "shield": 0,
+       "upper": 0,
+       "upper_gone": 1,
+       "lower": 1,
+       "parasol": 1
+      },
+      "fall": {
+       "at": "storm",
+       "to": 230,
+       "dur": 2.4
+      },
+      "label": {
+       "text": "1979",
+       "dy": -150,
+       "at": "sky",
+       "size": 80
+      }
+     },
+     {
+      "type": "swift",
+      "x": 0.68,
+      "alt": 340,
+      "s": 0.4,
+      "vx": 0.004,
+      "fall": {
+       "at": "swift",
+       "to": 240,
+       "dur": 2
+      },
+      "label": {
+       "text": "today",
+       "dy": -150,
+       "at": "swift",
+       "size": 80,
+       "color": "red"
+      }
+     }
+    ],
+    "kasif": {
+     "x": 0.1,
+     "y": 0.95,
+     "scale": 0.6,
+     "pose": "point",
+     "face": "right",
+     "dir": 50,
+     "seq": [
+      {
+       "at": "storm",
+       "pose": "point",
+       "dir": 60,
+       "emotion": "worried"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So, should old spacecraft be brought down on purpose, or left to fall where the sky decides?",
+   "visual": "Two sign props: 'ON PURPOSE?' on the left and 'LET IT FALL?' on the right; the fez narrator in the middle points to the left sign on 'purpose', then to the right on 'fall', then shrugs at us on 'decides'",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "purpose": "purpose",
+    "fall": "fall",
+    "decides": "decides"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.2,
+      "scale": 1.0,
+      "text": "ON PURPOSE?",
+      "at": "purpose"
+     },
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 1.0,
+      "text": "LET IT FALL?",
+      "at": "fall"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "purpose",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       },
+       {
+        "at": "fall",
+        "pose": "point",
+        "dir": "right",
+        "face": "right"
+       },
+       {
+        "at": "decides",
+        "pose": "shrug",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 0,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Tell me in the comments. And subscribe to Stickstory for a true story like this every day.",
+   "visual": "Two sign props pop up: 'COMMENTS' on the left on 'comments', 'SUBSCRIBE' on the right on 'subscribe'; the fez narrator in the middle points at each, then waves at us on 'day'",
+   "title": {
+    "white": "Stickstory"
+   },
+   "cues": {
+    "com": "Tell",
+    "sub": "subscribe",
+    "day": "day"
+   },
+   "params": {
+    "props": [
+     {
+      "type": "sign",
+      "x": 0.2,
+      "scale": 1.0,
+      "text": "COMMENTS",
+      "at": "com"
+     },
+     {
+      "type": "sign",
+      "x": 0.8,
+      "scale": 1.0,
+      "text": "SUBSCRIBE",
+      "at": "sub"
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "com",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       },
+       {
+        "at": "sub",
+        "pose": "point",
+        "dir": "right",
+        "face": "right",
+        "emotion": "happy"
+       },
+       {
+        "at": "day",
+        "pose": "wave",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "depth": {
+     "far": "hills",
+     "sky": {
+      "clouds": 0,
+      "gulls": 0
+     }
+    },
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  }
+ ]
+}
