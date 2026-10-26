@@ -11,6 +11,7 @@ Scripts of every channel live in videos/<date>/; a channel's files start with it
   voice_id      ElevenLabs voice of the channel (model eleven_v3; owner's choice, never change)
   hashtag       the channel's own hashtag; brand_tag the channel tag every video carries
   categories    content pool the daily task rotates through (plan.py suggests one per video)
+  news          Google News front pages a topic is picked from first (tools/news.py), if the channel has them
 """
 CHANNELS = {
     "Düşün Bakalım": {
@@ -40,6 +41,9 @@ CHANNELS = {
         "categories": ["history's strangest moments", "unsolved mysteries", "how it was built",
                        "origins of everyday things", "the human body", "animal superpowers",
                        "space and planet earth", "survival stories", "empires and battles"],
+        # topics start from these front pages (tools/news.py; owner, 2026-10-26): (country, Google News edition)
+        "news": [("US", "en-US"), ("AU", "en-AU"), ("CH", "de-CH"), ("NO", "no"), ("NZ", "en-NZ"),
+                 ("CA", "en-CA"), ("DE", "de")],
     },
 }
 DEFAULT = "Düşün Bakalım"

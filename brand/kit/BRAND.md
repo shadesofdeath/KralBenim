@@ -164,6 +164,8 @@ Görsel kimlik aynı (§2–5, §9; anlatıcı kırmızı fesli). Dil, niş ve a
 - **Niş:** `tools/channels.py` → `categories` (tarihin en tuhaf anları, çözülmemiş gizemler, nasıl inşa edildi,
   gündelik şeylerin kökeni, insan vücudu, hayvanların süper güçleri, uzay ve gezegenimiz, hayatta kalma hikâyeleri,
   imparatorluklar ve savaşlar). Her video gerçek ve doğrulanabilir bir hikâye/olgu anlatır; Kaşif yine anlatıcıdır.
+  Konu önce günün manşetlerinden seçilir (`tools/news.py`: ABD, Avustralya, İsviçre, Norveç, Yeni Zelanda, Kanada,
+  Almanya); kategoriye uyan manşetin arkasındaki kalıcı hikâye anlatılır, uyan yoksa kategori havuzu (CLAUDE.md).
 - **Anlatıcı (İngilizce YouTuber sesi):** izleyiciye "you" diye seslenir, "I" diye anlatır, merakı paylaşır:
   *"Why do cats always land on their feet? Let me show you."*, *"Here's the crazy part."*, *"Now think about that
   for a second."*, *"So what actually happened?"*. Selam/kanal tanıtımı yok; ilk cümle doğrudan kanca.
