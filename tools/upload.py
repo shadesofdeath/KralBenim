@@ -4,6 +4,7 @@
   python tools/upload.py videos/<date>/<file>.json out/video.mp4
   python tools/upload.py --thumbnail videos/<date>/<file>.youtube.json cover.jpg
   python tools/upload.py --delete ag <video id>...      # delete videos from a channel
+  python tools/upload.py --fix-meta ag                  # recorded uploads: channel category + AI disclosure
 
 The channel comes from the file name prefix (tools/channels.py) and uploads only with its own token
 ("youtube_env" secret; Düşün Bakalım may also use YOUTUBE_CLIENT_ID / _SECRET / _REFRESH_TOKEN). No token:
@@ -11,6 +12,7 @@ prints a note and exits 0 without a .youtube.json. Expired login, or a token who
 the script's channel: tells Telegram, uploads nothing, exits 1.
 
 <file>.json:  "youtube": {"title", "description", "tags", "category_id", "publish_at"}  (no publish_at: private)
+Category and the "altered or synthetic content" (AI) box come from the channel (tools/channels.py), not the script.
 A video is always uploaded private + scheduled, never public at once: a publish_at that already passed moves
 to the same time on the next day.
 Sets <video>.jpg as the thumbnail, appends chapters (long videos, from <video>.timeline.json) and photo
@@ -159,6 +161,39 @@ def set_thumbnail(yt, video_id, jpg):
         return False
 
 
+def fix_meta(channel):
+    """Give every recorded upload of the channel (videos/*/<prefix>*.youtube.json) the channel's category and
+    AI disclosure; videos that already have them are left alone. Stops quietly when the daily quota runs out."""
+    cfg = CHANNELS[channel]
+    yt = open_channel(channel)
+    if yt is None:
+        sys.exit(f"no YouTube token for {channel}")
+    ids = []
+    for rec in sorted((Path(__file__).resolve().parent.parent / "videos").glob("*/*.youtube.json")):
+        if of_file(rec.name) == channel and json.loads(rec.read_text()).get("id"):
+            ids.append(json.loads(rec.read_text())["id"])
+    ai, fixed = bool(cfg.get("ai_disclosure")), 0
+    for i in range(0, len(ids), 50):
+        for v in yt.videos().list(part="snippet,status", id=",".join(ids[i:i + 50])).execute().get("items", []):
+            sn, st = v["snippet"], v["status"]
+            if sn.get("categoryId") == cfg["category_id"] and st.get("containsSyntheticMedia", False) == ai:
+                continue
+            sn = {k: sn[k] for k in ("title", "description", "tags", "defaultLanguage", "defaultAudioLanguage") if k in sn}
+            st = {k: st[k] for k in ("privacyStatus", "publishAt", "embeddable", "license", "publicStatsViewable",
+                                     "selfDeclaredMadeForKids") if k in st}
+            sn["categoryId"], st["containsSyntheticMedia"] = cfg["category_id"], ai
+            try:
+                yt.videos().update(part="snippet,status", body={"id": v["id"], "snippet": sn, "status": st}).execute()
+            except Exception as e:
+                if "quota" in str(e).lower():
+                    print(f"quota exhausted after {fixed} videos; run again tomorrow")
+                    return
+                raise
+            fixed += 1
+            print(f"fixed {v['id']} {sn['title']}")
+    print(f"{channel}: {fixed} of {len(ids)} videos updated (category {cfg['category_id']}, AI disclosure {ai})")
+
+
 def main():
     if sys.argv[1] == "--thumbnail":
         rec = json.loads(Path(sys.argv[2]).read_text())
@@ -172,6 +207,9 @@ def main():
         for vid in sys.argv[3:]:
             yt.videos().delete(id=vid).execute()
             print(f"deleted {vid} from {channel}")
+        return
+    if sys.argv[1] == "--fix-meta":            # upload.py --fix-meta <channel id>
+        fix_meta(by_id(sys.argv[2]))
         return
     script_path, video = Path(sys.argv[1]), Path(sys.argv[2])
     script = json.loads(script_path.read_text())
@@ -195,14 +233,16 @@ def main():
         print(f"already on the channel: {result['url']}; skipped")
         return
 
-    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False}
+    cfg = CHANNELS[channel]
+    status = {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
+              "containsSyntheticMedia": bool(cfg.get("ai_disclosure"))}
     if meta.get("publish_at"):   # always scheduled, never public at once: a passed time moves to the next day
         when = schedule_time(meta["publish_at"])
         status["publishAt"] = when.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
         print(f"scheduled for {when.isoformat()}")
     body = {"snippet": {"title": meta["title"][:100],
                         "description": description(meta.get("description", ""), chapters(video, lg) + credits(script, lg)),
-                        "tags": meta.get("tags", []), "categoryId": str(meta.get("category_id", "27")),
+                        "tags": meta.get("tags", []), "categoryId": cfg["category_id"],
                         "defaultLanguage": lg, "defaultAudioLanguage": lg},
             "status": status}
     req = yt.videos().insert(part="snippet,status", body=body,

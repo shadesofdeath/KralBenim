@@ -154,7 +154,7 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   "Bu videoda:" 3–5 madde; abone çağrısı + yorum sorusu ("Her gün yeni bir 'neden?' için abone ol. Sence …? Yorumlara
   yaz!"); son satırda 3–5 hashtag (Shorts'ta ilki `#shorts`, sonra konu, `#düşünbakalım`). Shorts ≥ 250, uzun ≥ 600 karakter.
 - Etiketler: 12–18, toplam ≤ 450 karakter, tekrar/hashtag yok, ana kelimenin ≥ 3 varyasyonu, konu/kişi adları,
-  "tarih", "tarih hikayeleri", `düşün bakalım`. `category_id` "27". Diğer kanalın adı/hashtag'i geçmez.
+  "tarih", "tarih hikayeleri", `düşün bakalım`. `category_id` "27" (Stickstory "28"). Diğer kanalın adı/hashtag'i geçmez.
 
 ### Kontrol
 `pip install -r requirements.txt`, `python tools/lint.py videos/<tarih>/*.json` (hata kalmayana kadar), her dosya için
@@ -186,6 +186,8 @@ Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı
 - Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"`, `"lang": "en"`, ses `ppLqTilh7rH7fbUVlXsf`.
 - SEO: başlık aranan İngilizce ifadeyle başlar ("Mary Celeste: …"); uzunda "In this video:"; "Subscribe to Stickstory
   for …" + yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + `#stickstory`; etiketlerde `stickstory`.
+- `category_id` **"28"** (Bilim ve Teknoloji); yüklemede "yapay zekâ kullanımı / değiştirilmiş ya da sentetik içerik"
+  kutusu **evet** işaretlenir (kanal sahibinin kararı, 2026-10-26; ikisi de `channels.py`'den, `upload.py` uygular).
 - Commit: `Daily batch YYYY-MM-DD (Stickstory)`. Yükleme `YOUTUBE_TOKEN_JSON_AG` ile, dil `en`.
 
 ## Elle başlatılan ek video

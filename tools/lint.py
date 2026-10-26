@@ -260,8 +260,8 @@ def seo_score(s, y, short, en, cfg):
     if any(len(t) > 30 or "#" in t for t in tags):
         miss.append((3, "tags: no hashtags, each <= 30 chars"))
     # category + language (5)
-    if str(y.get("category_id")) not in ("27", "22", "24", "28"):
-        miss.append((5, 'category_id should be "27" (Education)'))
+    if str(y.get("category_id")) != cfg["category_id"]:
+        miss.append((5, f'category_id should be "{cfg["category_id"]}" for this channel (tools/channels.py)'))
     if en and re.search(r"[çğışöüÇĞİŞÖÜ]", title + desc + " ".join(tags)):
         miss.append((5, "English channel: Turkish characters in the YouTube metadata"))
     # cover text (10): checked again visually by the critic

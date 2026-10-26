@@ -11,6 +11,8 @@ Scripts of every channel live in videos/<date>/; a channel's files start with it
   voice_id      ElevenLabs voice of the channel (model eleven_v3; owner's choice, never change)
   hashtag       the channel's own hashtag; brand_tag the channel tag every video carries
   categories    content pool the daily task rotates through (plan.py suggests one per video)
+  category_id   YouTube category every upload of the channel gets (27 Education, 28 Science & Technology)
+  ai_disclosure YouTube "altered or synthetic content" box (status.containsSyntheticMedia) on every upload
   news          Google News front pages a topic is picked from first (tools/news.py), if the channel has them
 """
 CHANNELS = {
@@ -21,6 +23,7 @@ CHANNELS = {
         "youtube_env": "YOUTUBE_TOKEN_JSON",
         "lang": "tr", "voice_id": "j4vJUfke1j8j9OYq8V3b",
         "hashtag": "#düşünbakalım", "brand_tag": "düşün bakalım",
+        "category_id": "27", "ai_disclosure": False,
         "categories": ["felaketler ve kazalar", "kayıp şehirler ve gizemler", "büyük kararlar ve savaşlar",
                        "keşifler ve icatlar", "imparatorlukların yükselişi ve çöküşü", "Türkiye ve Osmanlı tarihi"],
     },
@@ -38,6 +41,7 @@ CHANNELS = {
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
         "lang": "en", "voice_id": "ppLqTilh7rH7fbUVlXsf",
         "hashtag": "#stickstory", "brand_tag": "stickstory",
+        "category_id": "28", "ai_disclosure": True,                 # Science & Technology, AI use: yes (owner, 2026-10-26)
         "categories": ["history's strangest moments", "unsolved mysteries", "how it was built",
                        "origins of everyday things", "the human body", "animal superpowers",
                        "space and planet earth", "survival stories", "empires and battles"],
