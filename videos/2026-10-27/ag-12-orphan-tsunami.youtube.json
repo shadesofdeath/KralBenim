@@ -1,0 +1,17 @@
+{
+ "id": "eTKxbtYnt1k",
+ "thumbnail": false,
+ "url": "https://youtu.be/eTKxbtYnt1k",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-10-27T20:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Orphan Tsunami: How Japan Recorded a Quake It Never Felt",
+ "script": "videos/2026-10-27/ag-12-orphan-tsunami.json"
+}
