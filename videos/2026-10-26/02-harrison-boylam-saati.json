@@ -1,0 +1,2821 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "harrison-boylam-saati",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "long",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Kusursuz",
+      "saat",
+      "ödülsüz"
+    ],
+    "highlight": [
+      "ödülsüz"
+    ],
+    "scene": 30,
+    "t": 5.6,
+    "kasif": {
+      "pose": "shock",
+      "emotion": "surprised",
+      "x": 1060,
+      "y": 1050,
+      "scale": 1.4,
+      "face": 1
+    }
+  },
+  "youtube": {
+    "title": "John Harrison ve Boylam Sorunu: Bir Saat Denizi Nasıl Fethetti?",
+    "description": "John Harrison, boylam sorununu bir saatle çözen köylü bir marangozdu. 1707'de dört İngiliz gemisi Scilly kayalıklarında battı; peki denizciler neden denizde nerede olduklarını bilemiyordu?\n\n1714 Boylam Yasası'nın 20.000 sterlinlik ödülü, ahşap saatlerden H1, H2, H3 ve cep saati H4'e uzanan yarım asırlık bir uğraş, Jamaika yolculuğunda sadece beş saniye geri kalan bir saat ve Boylam Kurulu ile astronom Nevil Maskelyne'e karşı süren bir kavga. Deniz kronometresinin hikâyesini ve Harrison'ın neden krala gitmek zorunda kaldığını anlatıyoruz. Harrison sonunda para aldı ama resmî Boylam Ödülü ona hiç verilmedi.\n\nBu videoda:\n• 1707 Scilly felaketi ve denizde kaybolmak\n• Boylam nedir, saat neden çözümdü?\n• H1'den H4'e John Harrison'ın saatleri\n• Boylam Kurulu ödülü neden vermedi?\n• III. George, Kaptan Cook ve bugünün GPS'i\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence Boylam Kurulu haksız mıydı, yoksa sadece temkinli mi? Yorumlara yaz!\n\n#johnharrison #boylam #denizcilik #tarih #düşünbakalım",
+    "tags": [
+      "john harrison",
+      "boylam sorunu",
+      "john harrison boylam",
+      "harrison saati",
+      "boylam nedir",
+      "deniz kronometresi",
+      "kronometre",
+      "boylam yasası",
+      "scilly felaketi",
+      "nevil maskelyne",
+      "h4 saati",
+      "denizcilik tarihi",
+      "bilim tarihi",
+      "icatlar",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-26T20:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "chapter": "Scilly felaketi",
+      "type": "hr_scilly",
+      "text": "Ekim 1707. Gece, sis ve fırtına. İngiltere'nin en güçlü filolarından biri eve dönüyordu.",
+      "visual": "Gece denizi: koyu taranmış gök, yağmur, sürüklenen sis şeritleri; üç yüksek İngiliz savaş gemisi fenerleri yanarak sağa doğru ilerler; solda kayalık çıkıntıda Kaşif dürbünle bakar, 'filolarından'da endişelenir",
+      "title": {
+        "white": "1707",
+        "gray": "Scilly"
+      },
+      "cues": {
+        "fog": "sis",
+        "hit": "filolarından"
+      },
+      "params": {
+        "horizon": 0.5,
+        "shore": false,
+        "wind": {
+          "s": 0.8,
+          "dir": 1,
+          "lines": 0
+        },
+        "fog": {
+          "at": "fog",
+          "n": 4
+        },
+        "ships": [
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.62,
+            "to": 0.7,
+            "y": 0.56,
+            "scale": 0.6,
+            "face": 1,
+            "depth": 0.5,
+            "lantern": true
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.3,
+            "to": 0.46,
+            "y": 0.68,
+            "scale": 0.95,
+            "face": 1,
+            "lantern": true
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.54,
+            "to": 0.64,
+            "y": 0.61,
+            "scale": 0.72,
+            "face": 1,
+            "depth": 0.3,
+            "lantern": true
+          }
+        ],
+        "ledge": {
+          "side": "left",
+          "y": 0.66,
+          "w": 0.24
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.1,
+            "y": 0.66,
+            "scale": 0.6,
+            "pose": "look",
+            "face": "right",
+            "at": "hit",
+            "then": "think",
+            "emotion": "worried"
+          }
+        ],
+        "zoom": 1.07,
+        "focus": [
+          0.55,
+          0.5
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Amiral Cloudesley Shovell ve denizcileri, Manş Denizi'nin güvenli sularına girdiklerini sanıyordu.",
+      "visual": "Fırtınalı deniz kıyısında yağmur; sarkık şapkalı Amiral Shovell harita tutup kendinden emin ileriyi gösterir; 'güvenli' notu belirir; yanında Kaşif endişeyle omuz silker",
+      "title": {
+        "white": "Amiral"
+      },
+      "cues": {
+        "go": "Amiral",
+        "hit": "güvenli"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "shovell",
+            "accessory": "slouch",
+            "x": 0.56,
+            "pose": "hold",
+            "item": "map",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.0,
+            "to": 0.26,
+            "pose": "walk",
+            "at": "go",
+            "then": "talk",
+            "face": "right",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shrug",
+                "emotion": "worried"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.86,
+            "y": 0.82,
+            "scale": 0.9
+          }
+        ],
+        "label": {
+          "text": "güvenli sular?",
+          "x": 0.62,
+          "y": 0.24,
+          "size": 72,
+          "at": "hit"
+        },
+        "backdrop": {
+          "type": "sea",
+          "y": 0.62,
+          "opacity": 0.7
+        },
+        "storm": {
+          "at": 0,
+          "hatch": true
+        }
+      }
+    },
+    {
+      "type": "hr_scilly",
+      "text": "Oysa önlerinde Scilly Adaları'nın kayalıkları vardı. Ve o gece dört gemi o kayalara çarptı.",
+      "visual": "Gece: önde dişli kara kayalar sudan yükselir; büyük savaş gemisi kayalara doğru ilerler, 'çarptı'da sarsılarak durur, köpük sıçrar, kamera sarsılır; 'Scilly' etiketi; kayada Kaşif şok olur",
+      "title": {
+        "white": "Kayalıklar"
+      },
+      "cues": {
+        "rk": "kayalıkları",
+        "hit": "çarptı"
+      },
+      "params": {
+        "horizon": 0.5,
+        "shore": false,
+        "wind": {
+          "s": 0.9,
+          "dir": 1,
+          "lines": 0
+        },
+        "fog": {
+          "at": 0,
+          "n": 3
+        },
+        "ships": [
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.24,
+            "to": 0.5,
+            "at": 0,
+            "dur": 5.2,
+            "y": 0.7,
+            "scale": 1.0,
+            "face": 1,
+            "lantern": true,
+            "stop": "hit"
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.08,
+            "to": 0.2,
+            "y": 0.6,
+            "scale": 0.6,
+            "face": 1,
+            "depth": 0.4,
+            "lantern": true
+          }
+        ],
+        "rocks": [
+          {
+            "x": 0.66,
+            "y": 0.72,
+            "w": 0.24,
+            "h": 0.2,
+            "at": "rk"
+          },
+          {
+            "x": 0.8,
+            "y": 0.6,
+            "w": 0.08,
+            "h": 0.08,
+            "at": "rk"
+          }
+        ],
+        "spray": [
+          {
+            "x": 0.6,
+            "y": 0.64,
+            "at": "hit"
+          }
+        ],
+        "ledge": {
+          "side": "right",
+          "y": 0.74,
+          "w": 0.2
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.87,
+            "y": 0.74,
+            "scale": 0.5,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "shock"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Scilly Adaları",
+            "x": 0.7,
+            "y": 0.3,
+            "at": "rk",
+            "size": 68,
+            "arrow": [
+              0.66,
+              0.52
+            ]
+          }
+        ],
+        "shake": "hit",
+        "zoom": 1.06,
+        "focus": [
+          0.6,
+          0.55
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Kaç kişinin öldüğü kesin değil, tahminler bin dört yüzden iki binin üstüne kadar çıkıyor. Amiral de kurtulamadı.",
+      "visual": "Dev yazı: '1.400 ile', '2.000+' kırmızı kutuda; el yazısı not 'kesin sayı yok'; sağda Kaşif başı önde, üzgün",
+      "title": {
+        "white": "Kayıp"
+      },
+      "cues": {
+        "w0": "bin",
+        "w1": "iki",
+        "note": "kurtulamadı"
+      },
+      "params": {
+        "lines": [
+          "1.400 ile",
+          "2.000+"
+        ],
+        "highlight": [
+          "2000+"
+        ],
+        "note": {
+          "text": "kesin sayı yok",
+          "at": "note"
+        },
+        "kasif": {
+          "x": 0.84,
+          "pose": "idle",
+          "face": -1,
+          "scale": 0.85,
+          "emotion": "worried",
+          "at": "w1"
+        }
+      }
+    },
+    {
+      "chapter": "Kör deniz",
+      "type": "chapter",
+      "text": "Bu kadar deneyimli denizciler nasıl bu kadar yanılabilir? Bakın, asıl sorun gemilerde değildi.",
+      "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Kör deniz'",
+      "title": {},
+      "cues": {
+        "n": "deneyimli",
+        "title": "gemilerde"
+      },
+      "params": {
+        "n": 1,
+        "total": 5,
+        "title": "Kör deniz"
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "O çağda bir kaptan, güneşe bakarak ne kadar kuzeyde olduğunu, yani enlemini aşağı yukarı bulabilirdi.",
+      "visual": "Gemi güvertesi, arkada deniz; sol üstte güneş; başı açık, kısa sakallı denizci güneşe sırtı dönük durur, göğsünün önünde arka kadran (Davis kadranı) tutar; 'kuzeyde'de güneşten kadrana altın bir ışın iner; 'enlem ✓' notu; Kaşif güneşi gösterir",
+      "title": {
+        "white": "Enlem"
+      },
+      "cues": {
+        "sun": "güneşe",
+        "beam": "kuzeyde",
+        "lat": "enlemini"
+      },
+      "params": {
+        "mode": "quadrant",
+        "sun": [
+          0.34,
+          0.2
+        ],
+        "sun_at": "sun",
+        "beam": "beam",
+        "nav": [
+          0.62,
+          0.86
+        ],
+        "nav_scale": 0.66,
+        "cast": [
+          {
+            "who": "denizci",
+            "beard": "short",
+            "x": 0.62,
+            "y": 0.86,
+            "scale": 0.66,
+            "pose": "idle",
+            "face": "right",
+            "at": "beam",
+            "then": "think"
+          },
+          {
+            "who": "kasif",
+            "x": 0.36,
+            "y": 0.86,
+            "scale": 0.62,
+            "pose": "talk",
+            "face": "left",
+            "at": "sun",
+            "then": "point",
+            "dir": 60,
+            "emotion": "happy"
+          }
+        ],
+        "labels": [
+          {
+            "text": "enlem ✓",
+            "x": 0.84,
+            "y": 0.3,
+            "at": "lat",
+            "size": 84,
+            "color": "green"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ama ne kadar doğuda ya da batıda olduğunu, yani boylamını bulmanın güvenilir bir yolu yoktu. Kaptanlar sadece tahmin yürütürdü.",
+      "visual": "Kaşif 'BOYLAM?' tabelası tutar ve omuz silker; yanında kısa sakallı denizci parmaklarıyla hesap yapar gibi düşünür; 'tahmin' notu",
+      "title": {
+        "white": "Boylam"
+      },
+      "cues": {
+        "lon": "boylamını",
+        "hit": "tahmin"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "pose": "hold",
+            "text": "BOYLAM?",
+            "face": "right",
+            "at": "hit",
+            "then": "shrug",
+            "emotion": "worried"
+          },
+          {
+            "who": "denizci",
+            "beard": "short",
+            "x": 0.62,
+            "pose": "think",
+            "face": "left",
+            "at": "hit",
+            "then": "shrug"
+          }
+        ],
+        "label": {
+          "text": "tahmin!",
+          "x": 0.64,
+          "y": 0.24,
+          "size": 80,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "type": "ag03a_map",
+      "text": "Okyanusta küçük bir tahmin hatası, birkaç günde yüzlerce kilometrelik sapmaya dönüşebilirdi.",
+      "visual": "Okyanus haritası: aynı noktadan iki kesikli rota başlar; mavi 'tahmin' rotası düz gider, kırmızı 'gerçek' rota yavaşça ayrılır; aradaki mesafe ölçülür, 'yüzlerce km' notu; solda Kaşif şaşırır",
+      "title": {
+        "white": "Sapma"
+      },
+      "cues": {
+        "go": "küçük",
+        "hit": "yüzlerce"
+      },
+      "params": {
+        "view": [
+          -30,
+          -2,
+          40,
+          56
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                -27,
+                44
+              ],
+              [
+                -19,
+                46.5
+              ],
+              [
+                -11,
+                48.6
+              ],
+              [
+                -5,
+                50
+              ]
+            ],
+            "at": "go",
+            "dur": 2.4,
+            "color": "blue",
+            "label": {
+              "text": "tahmin",
+              "u": 0.75,
+              "dy": -50,
+              "at": "go",
+              "color": "blue"
+            }
+          },
+          {
+            "pts": [
+              [
+                -27,
+                44
+              ],
+              [
+                -19,
+                45.5
+              ],
+              [
+                -12,
+                46.2
+              ],
+              [
+                -6,
+                46.4
+              ]
+            ],
+            "at": "go",
+            "dur": 2.4,
+            "color": "red",
+            "label": {
+              "text": "gerçek",
+              "u": 0.75,
+              "dy": 56,
+              "at": "go",
+              "color": "red"
+            }
+          }
+        ],
+        "gauge": {
+          "from": [
+            -5,
+            50
+          ],
+          "to": [
+            -6,
+            46.4
+          ],
+          "at": "hit",
+          "dur": 1.0,
+          "color": "red"
+        },
+        "note": {
+          "text": "yüzlerce km",
+          "x": 0.62,
+          "y": 0.14,
+          "at": "hit",
+          "color": "red"
+        },
+        "kasif": {
+          "side": "left",
+          "pose": "talk",
+          "at": "hit",
+          "then": "shock",
+          "dir": 18
+        }
+      }
+    },
+    {
+      "type": "board",
+      "text": "Şimdi size dürüst olayım: tarihçilere göre felaketin tek suçlusu boylam değildi. Hatalı haritalar ve bozuk pusulalar da vardı.",
+      "visual": "Pano 'Neden battılar?': kartta üç madde tek tek işaretlenir: 'Boylam', 'Hatalı haritalar', 'Bozuk pusulalar'; altta mavi hap 'Tek suçlu yok'",
+      "title": {
+        "white": "Nedenler"
+      },
+      "cues": {
+        "a": "boylam",
+        "b": "haritalar",
+        "c": "pusulalar"
+      },
+      "params": {
+        "title": "Neden battılar?",
+        "cards": [
+          {
+            "title": "Suçlular",
+            "items": [
+              {
+                "text": "Boylam",
+                "mark": "check",
+                "at": "a"
+              },
+              {
+                "text": "Hatalı haritalar",
+                "mark": "check",
+                "at": "b"
+              },
+              {
+                "text": "Bozuk pusulalar",
+                "mark": "check",
+                "at": "c"
+              }
+            ]
+          }
+        ],
+        "pill": {
+          "text": "Tek suçlu yok",
+          "color": "blue",
+          "at": "c"
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Ama o kazadan sonra herkesin aklına tek bir soru kazındı: Denizde neredeyiz?",
+      "visual": "Dev yazı kelime kelime: 'Denizde neredeyiz?', 'neredeyiz?' kırmızı kutuda; sağda Kaşif çenesi elinde düşünür",
+      "title": {
+        "white": "Soru"
+      },
+      "cues": {
+        "w0": "soru",
+        "w1": "neredeyiz"
+      },
+      "params": {
+        "lines": [
+          "Denizde",
+          "neredeyiz?"
+        ],
+        "highlight": [
+          "neredeyiz"
+        ],
+        "kasif": {
+          "x": 0.84,
+          "pose": "think",
+          "face": -1,
+          "scale": 0.85,
+          "emotion": "worried",
+          "at": "w0"
+        }
+      }
+    },
+    {
+      "chapter": "Bir fiyat",
+      "type": "chapter",
+      "text": "Yedi yıl sonra İngiltere bu soruya bir fiyat koydu.",
+      "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Bir fiyat'",
+      "title": {},
+      "cues": {
+        "n": "Yedi",
+        "title": "fiyat"
+      },
+      "params": {
+        "n": 2,
+        "total": 5,
+        "title": "Bir fiyat"
+      }
+    },
+    {
+      "type": "title",
+      "text": "1714'te Parlamento Boylam Yasası'nı çıkardı ve işi bir kurula verdi. Boylamı yarım derece içinde bulana tam yirmi bin sterlin!",
+      "visual": "Dev yazı: '20.000', 'sterlin'; '20.000' kırmızı kutuda; not '1714 · Boylam Yasası'; sağda Kaşif şok olur",
+      "title": {
+        "white": "1714",
+        "gray": "Boylam Yasası"
+      },
+      "cues": {
+        "w0": "yasası",
+        "w1": "yirmi",
+        "note": "sterlin"
+      },
+      "params": {
+        "lines": [
+          "20.000",
+          "sterlin"
+        ],
+        "highlight": [
+          "20000"
+        ],
+        "note": {
+          "text": "1714 · Boylam Yasası",
+          "at": "w0"
+        },
+        "kasif": {
+          "x": 0.84,
+          "pose": "shock",
+          "face": -1,
+          "scale": 0.85,
+          "emotion": "surprised",
+          "at": "w1"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Bu, bugünün parasıyla milyonlarca sterlin demek.",
+      "visual": "Kaşif yürüyerek gelir, önünde altın sikkeler birer birer belirir; 'milyonlarca'da şok olur; 'MİLYONLARCA' notu",
+      "title": {
+        "white": "Servet"
+      },
+      "cues": {
+        "go": "bugünün",
+        "hit": "milyonlarca"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.0,
+            "to": 0.3,
+            "pose": "walk",
+            "at": "go",
+            "then": "point",
+            "dir": "down",
+            "face": "right",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.52,
+            "y": 0.82,
+            "scale": 0.8,
+            "at": "go"
+          },
+          {
+            "type": "coin",
+            "x": 0.62,
+            "y": 0.8,
+            "scale": 0.9,
+            "at": 0.9
+          },
+          {
+            "type": "coin",
+            "x": 0.72,
+            "y": 0.83,
+            "scale": 1.0,
+            "at": "hit"
+          },
+          {
+            "type": "coin",
+            "x": 0.58,
+            "y": 0.72,
+            "scale": 0.7,
+            "at": "hit"
+          }
+        ],
+        "label": {
+          "text": "milyonlarca!",
+          "x": 0.64,
+          "y": 0.26,
+          "size": 84,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Herkes cevabın gökyüzünde olduğuna inanmıştı. Bu bir astronom işiydi.",
+      "visual": "Gece göğü yerine gündüz tepeler; başı açık bir astronom dürbünle göğe bakar; Kaşif yanında yukarıyı gösterir; 'astronom işi' notu",
+      "title": {
+        "white": "Gökyüzü"
+      },
+      "cues": {
+        "sky": "gökyüzünde",
+        "hit": "astronom"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "astronom",
+            "x": 0.6,
+            "pose": "look",
+            "face": "right",
+            "dir": "up",
+            "at": "hit",
+            "then": "point",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.28,
+            "pose": "talk",
+            "face": "right",
+            "at": "sky",
+            "then": "point",
+            "dir": "up"
+          }
+        ],
+        "label": {
+          "text": "astronom işi",
+          "x": 0.66,
+          "y": 0.22,
+          "size": 76,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Ama bakın, işin sırrı başka bir yerdeydi. Dünya kendi çevresinde her saatte on beş derece döner.",
+      "visual": "Solda ışınlı güneş, ortada dönen dünya küresi (meridyenler kayar); 'derece'de küreden bir dilim kırmızıyla dolar ve '15°' yazar; sağ üstte küçük saat bir saat ilerler; Kaşif işaret eder",
+      "title": {
+        "white": "15 derece"
+      },
+      "cues": {
+        "hit": "sırrı",
+        "h": "saatte",
+        "deg": "derece"
+      },
+      "params": {
+        "mode": "earth",
+        "x": 0.52,
+        "y": 0.5,
+        "r": 290,
+        "wedge": {
+          "at": "deg",
+          "text": "15°"
+        },
+        "clock": {
+          "x": 0.84,
+          "y": 0.3,
+          "r": 120,
+          "at": "h"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.85,
+            "y": 0.88,
+            "scale": 0.55,
+            "pose": "talk",
+            "face": "left",
+            "at": "deg",
+            "then": "point",
+            "dir": 20
+          }
+        ]
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Yani gemide Londra saatini taşısaydınız, öğle vakti ona bakardınız. Saat bir ise, on beş derece batıdaydınız.",
+      "visual": "Solda dalgada yalpalayan, kavisli gövdeli üç direkli gemi (şişkin yelkenler), güneş 'öğle'de tepeye çıkar; sağda 'LONDRA' plakalı büyük saat, 'bir'de akrep 12'den 1'e döner; 'batıdaydınız'da kırmızı rozet '15° batı'; Kaşif gemi ile saat arasında saati gösterir",
+      "title": {
+        "white": "Öğle",
+        "gray": "Londra saati"
+      },
+      "cues": {
+        "sun": "öğle",
+        "turn": "saat",
+        "res": "batıdaydınız"
+      },
+      "params": {
+        "mode": "noon",
+        "sun_at": "sun",
+        "turn": "turn",
+        "result": {
+          "at": "res",
+          "text": "15° batı",
+          "x": 0.47,
+          "y": 0.16
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "y": 0.8,
+            "scale": 0.5,
+            "pose": "talk",
+            "face": "right",
+            "at": "turn",
+            "then": "point",
+            "dir": 20
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kâğıt üstünde çok kolay, değil mi? Ama o dönemde sallanan bir gemide doğru çalışan bir saat yoktu.",
+      "visual": "Kaşif 'KOLAY?' tabelası tutar, gülümser; sonra 'yoktu'da omuz silker; yanında sallanan gemi çizimi",
+      "title": {
+        "white": "Kolay mı?"
+      },
+      "cues": {
+        "hit": "kolay",
+        "no": "yoktu"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.34,
+            "pose": "hold",
+            "text": "KOLAY?",
+            "face": "right",
+            "emotion": "happy",
+            "at": "no",
+            "then": "shrug"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.72,
+            "y": 0.82,
+            "scale": 1.0
+          },
+          {
+            "type": "clock",
+            "x": 0.56,
+            "y": 0.8,
+            "scale": 0.6,
+            "at": "no"
+          }
+        ],
+        "label": {
+          "text": "sallanan gemi",
+          "x": 0.72,
+          "y": 0.26,
+          "size": 64,
+          "at": "no"
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Sarkaçlı saatler dalgada şaşırdı, sıcak ve soğuk da ayarlarını bozdu.",
+      "visual": "Ahşap sarkaçlı saat dalgaların üstünde: 'dalgada'dan sonra saat yalpalar, sarkaç çılgınca savrulur, akrep-yelkovan bir hızlanıp bir durur; 'bozdu'da kırmızı soru işaretleri; Kaşif şok olur",
+      "title": {
+        "white": "Sarkaç"
+      },
+      "cues": {
+        "sea": "dalgada",
+        "hit": "bozdu"
+      },
+      "params": {
+        "mode": "longcase",
+        "x": 0.5,
+        "y": 0.5,
+        "size": 0.95,
+        "sea": {
+          "at": "sea"
+        },
+        "marks": {
+          "at": "hit"
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.18,
+            "y": 0.86,
+            "scale": 0.62,
+            "pose": "talk",
+            "face": "right",
+            "at": "sea",
+            "then": "shock"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ve tam burada hikâyeye hiç beklenmedik biri girdi.",
+      "visual": "Kaşif sahnenin solunu gösterir; 'girdi'de bereli, sakalsız John Harrison soldan yürüyerek girer",
+      "title": {
+        "white": "Beklenmedik"
+      },
+      "cues": {
+        "go": "hikâyeye",
+        "hit": "girdi"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.7,
+            "pose": "talk",
+            "face": "left",
+            "at": "go",
+            "then": "point",
+            "dir": "left"
+          },
+          {
+            "who": "harrison",
+            "accessory": "beret",
+            "x": -0.1,
+            "to": 0.34,
+            "pose": "walk",
+            "at": "hit",
+            "then": "wave",
+            "face": "right"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Yorkshire'lı bir köylü marangoz: John Harrison.",
+      "visual": "Köy evi ve ağaç önünde Harrison tahta bir saati tutar; 'JOHN HARRISON' tabelası; Kaşif ona işaret eder",
+      "title": {
+        "white": "Harrison",
+        "gray": "Yorkshire"
+      },
+      "cues": {
+        "wood": "marangoz",
+        "hit": "harrison"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "harrison",
+            "accessory": "beret",
+            "x": 0.42,
+            "pose": "hold",
+            "item": "clock",
+            "face": "right",
+            "at": "hit",
+            "then": "wave",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.78,
+            "pose": "talk",
+            "face": "left",
+            "at": "wood",
+            "then": "point",
+            "dir": 10
+          }
+        ],
+        "props": [
+          {
+            "type": "house",
+            "x": 0.14,
+            "y": 0.8,
+            "scale": 0.9
+          },
+          {
+            "type": "tree",
+            "x": 0.94,
+            "y": 0.82,
+            "scale": 0.8
+          }
+        ],
+        "label": {
+          "text": "John Harrison",
+          "x": 0.62,
+          "y": 0.3,
+          "size": 80,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Hiç saatçilik eğitimi almamıştı ama ilk saatlerini neredeyse tamamen ahşaptan yaptı.",
+      "visual": "Ahşap sarkaçlı saat: kapağında tahta çarklar döner, sarkaç sakin sallanır; 'ahşaptan'da 'ahşap çark' notu; yanında Harrison saati gösterir, Kaşif şaşırır",
+      "title": {
+        "white": "Ahşap"
+      },
+      "cues": {
+        "hit": "ahşaptan"
+      },
+      "params": {
+        "mode": "longcase",
+        "x": 0.5,
+        "y": 0.5,
+        "size": 0.95,
+        "cast": [
+          {
+            "who": "harrison",
+            "accessory": "beret",
+            "x": 0.27,
+            "y": 0.86,
+            "scale": 0.62,
+            "pose": "point",
+            "dir": 30,
+            "face": "right",
+            "at": "hit",
+            "then": "talk",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.78,
+            "y": 0.86,
+            "scale": 0.62,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "shock"
+          }
+        ],
+        "labels": [
+          {
+            "text": "ahşap çarklar",
+            "x": 0.76,
+            "y": 0.2,
+            "at": "hit",
+            "size": 68,
+            "arrow": [
+              0.56,
+              0.3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "chapter": "Dört saat",
+      "type": "chapter",
+      "text": "Ödülü duyunca işe koyuldu ve bu iş ömrünün kırk yılını alacaktı.",
+      "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Dört saat'",
+      "title": {},
+      "cues": {
+        "n": "koyuldu",
+        "title": "kırk"
+      },
+      "params": {
+        "n": 3,
+        "total": 5,
+        "title": "Dört saat"
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "1735'te Londra'ya, bugün H1 dediğimiz dev bir deniz saatiyle geldi.",
+      "visual": "Dev H1 deniz saati: pirinç çerçeve, iki halterli denge kolu birbirine karşı sallanır, yaylar gerilir, dört küçük kadran ve büyük çark döner; 'H1' damgası; Kaşif şaşkın yukarı bakar",
+      "title": {
+        "white": "H1",
+        "gray": "1735"
+      },
+      "cues": {
+        "hit": "H1",
+        "big": "dev"
+      },
+      "params": {
+        "mode": "h1",
+        "x": 0.52,
+        "y": 0.46,
+        "size": 1.15,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.14,
+            "y": 0.88,
+            "scale": 0.62,
+            "pose": "idle",
+            "face": "right",
+            "at": "big",
+            "then": "shock"
+          }
+        ],
+        "labels": [
+          {
+            "text": "H1",
+            "x": 0.84,
+            "y": 0.22,
+            "at": "hit",
+            "stamp": true,
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "hr_map",
+      "text": "Ertesi yıl saatini bir savaş gemisine yükledi ve onunla Lizbon'a gidip döndü.",
+      "visual": "Batı Avrupa deniz haritası (Britanya, İrlanda, Fransa, İberya kıyıları): 'gemisine'de Portsmouth'tan Lizbon'a kırmızı kesikli rota çizilir, Lizbon halkalanır; 'döndü'de Lizbon'dan Britanya'ya ayrı mavi kesikli dönüş rotası; sağda Kaşif haritayı gösterir",
+      "title": {
+        "white": "Lizbon",
+        "gray": "1736"
+      },
+      "cues": {
+        "go": "gemisine",
+        "back": "döndü"
+      },
+      "params": {
+        "view": [
+          -14,
+          4,
+          36,
+          54
+        ],
+        "sheet": {
+          "x": 0.25,
+          "y": 0.1,
+          "w": 0.5,
+          "h": 0.72
+        },
+        "cities": [
+          {
+            "name": "Portsmouth",
+            "lon": -1.1,
+            "lat": 50.8,
+            "dx": 10,
+            "dy": -48,
+            "at": 0.2
+          },
+          {
+            "name": "Lizbon",
+            "lon": -9.14,
+            "lat": 38.72,
+            "color": "red",
+            "dx": 120,
+            "dy": 0,
+            "at": "go"
+          }
+        ],
+        "routes": [
+          {
+            "pts": [
+              [
+                -1.1,
+                50.6
+              ],
+              [
+                -4,
+                49.6
+              ],
+              [
+                -7.5,
+                48.2
+              ],
+              [
+                -10.2,
+                45
+              ],
+              [
+                -10.4,
+                41.5
+              ],
+              [
+                -9.6,
+                38.8
+              ]
+            ],
+            "at": "go",
+            "dur": 1.6,
+            "color": "red",
+            "label": {
+              "text": "gidiş",
+              "u": 0.35,
+              "dx": 80,
+              "dy": 10
+            }
+          },
+          {
+            "pts": [
+              [
+                -10.4,
+                38.9
+              ],
+              [
+                -12.2,
+                42
+              ],
+              [
+                -11.6,
+                46
+              ],
+              [
+                -8.6,
+                48.6
+              ],
+              [
+                -5.6,
+                49.8
+              ]
+            ],
+            "at": "back",
+            "dur": 1.2,
+            "color": "blue",
+            "label": {
+              "text": "dönüş",
+              "u": 0.55,
+              "dx": -95,
+              "dy": 0,
+              "at": "back"
+            }
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "y": 0.86,
+            "scale": 0.62,
+            "pose": "talk",
+            "face": "left",
+            "at": "go",
+            "then": "point",
+            "dir": 10
+          }
+        ]
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Dönüşte denizciler karada gördükleri burnu yanlış tanıdı. Harrison'ın saati ise gemiyi yüz kilometre kadar batıya koydu ve haklı çıktı.",
+      "visual": "H1 dalgalı denizin üstünde yalpalar ama denge kolları düzenle sallanmaya devam eder; 'yanlış' notu üstü çizilir; 'batıya'da '~100 km batı' notu, 'haklı'da yeşil 'HAKLI' damgası; Kaşif sevinir",
+      "title": {
+        "white": "Dönüş"
+      },
+      "cues": {
+        "wr": "yanlış",
+        "w": "batıya",
+        "hit": "haklı"
+      },
+      "params": {
+        "mode": "h1",
+        "x": 0.48,
+        "y": 0.4,
+        "size": 0.9,
+        "rock": 6,
+        "sea": true,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.12,
+            "y": 0.86,
+            "scale": 0.6,
+            "pose": "think",
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": 40,
+            "emotion": "happy"
+          }
+        ],
+        "labels": [
+          {
+            "text": "yanlış burun",
+            "x": 0.83,
+            "y": 0.18,
+            "at": "wr",
+            "size": 60,
+            "strike": "w"
+          },
+          {
+            "text": "~100 km batı",
+            "x": 0.83,
+            "y": 0.36,
+            "at": "w",
+            "size": 64,
+            "color": "blue"
+          },
+          {
+            "text": "haklı",
+            "x": 0.82,
+            "y": 0.6,
+            "at": "hit",
+            "stamp": true,
+            "color": "green"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Sizce Harrison sevindi mi? Hayır! Boylam Kurulu'ndan daha iyisi için para aldı ve baştan başladı.",
+      "visual": "Harrison çenesi elinde düşünür, başını sallar; 'para'da önüne sikke düşer; Kaşif şaşkın 'HAYIR!' tabelası tutar",
+      "title": {
+        "white": "Yeniden"
+      },
+      "cues": {
+        "no": "Hayır",
+        "coin": "para",
+        "hit": "baştan"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "harrison",
+            "accessory": "beret",
+            "x": 0.6,
+            "pose": "think",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "up",
+            "emotion": "angry"
+          },
+          {
+            "who": "kasif",
+            "x": 0.26,
+            "pose": "talk",
+            "face": "right",
+            "at": "no",
+            "then": "hold",
+            "text": "HAYIR!",
+            "emotion": "surprised"
+          }
+        ],
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.78,
+            "y": 0.82,
+            "scale": 0.9,
+            "at": "coin"
+          }
+        ],
+        "label": {
+          "text": "baştan!",
+          "x": 0.64,
+          "y": 0.22,
+          "size": 80,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "type": "timeline",
+      "text": "H2'de bir kusur buldu, onu denize bile çıkarmadı. H3 için ise tam on dokuz yıl uğraştı.",
+      "visual": "Yatay zaman çizgisi: H1 1735, H2 1739, H3 1740–1759, H4 1759; işaretçi H2'ye, sonra H3'e kayar, H3 kırmızı; '19 yıl'; Kaşif H3'ü gösterir",
+      "title": {
+        "white": "19 yıl"
+      },
+      "cues": {
+        "a": "H2'de",
+        "b": "H3",
+        "c": "dokuz"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1735",
+            "text": "H1",
+            "at": "a"
+          },
+          {
+            "year": "1739",
+            "text": "H2: kusurlu",
+            "at": "a"
+          },
+          {
+            "year": "1740–59",
+            "text": "H3: 19 yıl",
+            "at": "b"
+          },
+          {
+            "year": "1759",
+            "text": "H4",
+            "at": "c"
+          }
+        ],
+        "focus": 2,
+        "kasif": {
+          "x": 0.86,
+          "y": 0.62,
+          "pose": "point",
+          "at": "c",
+          "scale": 0.5,
+          "face": -1,
+          "emotion": "surprised"
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Bu yıllarda sıcakla soğuğun etkisini dengeleyen iki metalli bir şerit geliştirdi. O fikir bugün termostatlarda yaşıyor.",
+      "visual": "Kıskaca tutturulmuş iki metalli şerit (üstte altın pirinç, altta çelik); 'sıcakla'da altında alev, şerit aşağı bükülür; 'soğuğun'da kar tanesi, şerit yukarı bükülür; 'dengeleyen'de düzelir; 'termostat' notu; Kaşif işaret eder",
+      "title": {
+        "white": "İki metal"
+      },
+      "cues": {
+        "hit": "metalli",
+        "fix": "geliştirdi",
+        "t": "termostatlarda"
+      },
+      "params": {
+        "mode": "bimetal",
+        "x": 0.46,
+        "y": 0.46,
+        "hot": 0.4,
+        "cold": 2.6,
+        "fix": "fix",
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "y": 0.88,
+            "scale": 0.6,
+            "pose": "talk",
+            "face": "left",
+            "at": "fix",
+            "then": "point",
+            "dir": 30
+          }
+        ],
+        "labels": [
+          {
+            "text": "termostat",
+            "x": 0.5,
+            "y": 0.7,
+            "at": "t",
+            "size": 72,
+            "color": "blue"
+          }
+        ]
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Sonra herkesi şaşırttı. Dev saatleri bıraktı ve elinize alabileceğiniz büyük bir cep saati yaptı: H4.",
+      "visual": "Arkada H1'in kesikli çizgili dev silueti (kutu, iki denge kolu ve topları) 'Dev'de çizilir, yanında 'H1'; önde, ondan çok küçük altın kasalı H4 cep saati, saniye ibresi saniyede beş kez tıklar; 'H4' damgası; '13 cm' notu; sağda Kaşif saati gösterip şaşırır",
+      "title": {
+        "white": "H4",
+        "gray": "1759"
+      },
+      "cues": {
+        "big": "Dev",
+        "hit": "H4"
+      },
+      "params": {
+        "mode": "h4",
+        "x": 0.66,
+        "y": 0.6,
+        "r": 160,
+        "ghost": {
+          "at": "big",
+          "x": 0.42,
+          "y": 0.6,
+          "size": 0.85
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.9,
+            "y": 0.88,
+            "scale": 0.55,
+            "pose": "point",
+            "dir": 20,
+            "face": "left",
+            "at": "hit",
+            "then": "shock"
+          }
+        ],
+        "labels": [
+          {
+            "text": "H4",
+            "x": 0.66,
+            "y": 0.3,
+            "at": "hit",
+            "stamp": true,
+            "color": "red",
+            "size": 72
+          },
+          {
+            "text": "H1",
+            "x": 0.16,
+            "y": 0.45,
+            "at": "big",
+            "size": 80,
+            "font": "serif",
+            "color": "soft"
+          },
+          {
+            "text": "13 cm",
+            "x": 0.86,
+            "y": 0.5,
+            "at": "hit",
+            "size": 64
+          }
+        ]
+      }
+    },
+    {
+      "type": "map",
+      "text": "1761'de oğlu William, H4'ü alıp bir savaş gemisiyle Jamaika'ya yola çıktı.",
+      "visual": "Atlas haritası: Portsmouth'tan Madeira üzerinden Jamaika'ya kırmızı kesikli uzun rota çizilir; 'Jamaika' halkalanır",
+      "title": {
+        "white": "Jamaika",
+        "gray": "1761"
+      },
+      "cues": {
+        "route": "William",
+        "jam": "Jamaika'ya"
+      },
+      "params": {
+        "preset": "atlantic",
+        "cities": [
+          {
+            "name": "Portsmouth",
+            "x": -1.1,
+            "y": 50.8,
+            "dx": -130,
+            "dy": 30
+          },
+          {
+            "name": "Madeira",
+            "x": -16.9,
+            "y": 32.7,
+            "dx": 0,
+            "dy": 40
+          },
+          {
+            "name": "Jamaika",
+            "x": -77.3,
+            "y": 18.1,
+            "at": "jam",
+            "color": "red",
+            "dx": 0,
+            "dy": 44
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              -1.1,
+              50.8
+            ],
+            [
+              -8,
+              46
+            ],
+            [
+              -16.9,
+              32.7
+            ],
+            [
+              -35,
+              22
+            ],
+            [
+              -60,
+              17
+            ],
+            [
+              -77.3,
+              18.1
+            ]
+          ],
+          "at": "route",
+          "dur": 3.0,
+          "color": "red"
+        },
+        "compass": "br",
+        "note": {
+          "text": "1761–62",
+          "x": 0.06,
+          "y": 0.12,
+          "at": "route"
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "İki aydan uzun bir yolculuğun sonunda saati kontrol ettiler: sadece beş saniye geri kalmıştı!",
+      "visual": "Büyük H4 kadranı (sağda): saniye ibresi tıklar; 'beş'te 12'den geriye kırmızı küçük bir yay çizilir; '−5 saniye' kırmızı not; solda Kaşif şok olur",
+      "title": {
+        "white": "5 saniye"
+      },
+      "cues": {
+        "chk": "kontrol",
+        "hit": "beş"
+      },
+      "params": {
+        "mode": "h4",
+        "x": 0.58,
+        "y": 0.5,
+        "r": 215,
+        "slow": {
+          "at": "hit"
+        },
+        "cover_hide": true,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.16,
+            "y": 0.88,
+            "scale": 0.62,
+            "pose": "look",
+            "face": "right",
+            "at": "hit",
+            "then": "shock"
+          }
+        ],
+        "labels": [
+          {
+            "text": "−5 saniye",
+            "x": 0.3,
+            "y": 0.32,
+            "at": "hit",
+            "size": 84,
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "Bu, boylamda bir iki kilometrelik hata demekti. Yasanın sınırının çok altında!",
+      "visual": "Dev yazı: 'Bir iki', 'kilometre'; 'kilometre' kırmızı kutuda; not 'sınırın çok altında'; Kaşif sevinçle işaret eder",
+      "title": {
+        "white": "Hata payı"
+      },
+      "cues": {
+        "w0": "boylamda",
+        "w1": "kilometrelik",
+        "note": "altında"
+      },
+      "params": {
+        "lines": [
+          "Bir iki",
+          "kilometre"
+        ],
+        "highlight": [
+          "kilometre"
+        ],
+        "note": {
+          "text": "sınırın çok altında",
+          "at": "note"
+        },
+        "kasif": {
+          "x": 0.84,
+          "pose": "point",
+          "dir": 70,
+          "face": -1,
+          "scale": 0.85,
+          "emotion": "happy",
+          "at": "w1"
+        }
+      }
+    },
+    {
+      "chapter": "Ödül nerede?",
+      "type": "chapter",
+      "text": "Sizce Harrison ödülü aldı mı? İşte hikâyenin en tuhaf kısmı burası.",
+      "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Ödül nerede?'",
+      "title": {},
+      "cues": {
+        "n": "Sizce",
+        "title": "tuhaf"
+      },
+      "params": {
+        "n": 4,
+        "total": 5,
+        "title": "Ödül nerede?"
+      }
+    },
+    {
+      "type": "mcB_court",
+      "text": "Boylam Kurulu ikna olmadı. Belki de şanstı, dediler ve ikinci bir deneme istediler.",
+      "visual": "Kurul salonu (arması olan lambrili duvar): ayakta iki gri sakallı kurul üyesi; biri 'şanstı'da omuz silker, öteki düşünür; ortada yaşlı, gri sakallı Harrison öfkeyle konuşur; 'şanstı'da kırmızı 'ŞANS?' damgası; solda Kaşif endişeyle omuz silker",
+      "title": {
+        "white": "Boylam Kurulu"
+      },
+      "cues": {
+        "no": "ikna",
+        "hit": "şanstı",
+        "two": "ikinci"
+      },
+      "params": {
+        "bench": false,
+        "table": false,
+        "cast": [
+          {
+            "who": "kurul1",
+            "x": 0.66,
+            "y": 0.88,
+            "scale": 0.82,
+            "pose": "idle",
+            "beard": "grey",
+            "face": "left",
+            "at": "hit",
+            "then": "shrug"
+          },
+          {
+            "who": "kurul2",
+            "x": 0.84,
+            "y": 0.88,
+            "scale": 0.82,
+            "pose": "think",
+            "beard": "grey",
+            "face": "left",
+            "at": "two",
+            "then": "point",
+            "dir": 10
+          },
+          {
+            "who": "harrison",
+            "accessory": "beret",
+            "beard": "grey",
+            "x": 0.42,
+            "y": 0.9,
+            "scale": 0.9,
+            "pose": "talk",
+            "face": "right",
+            "at": "two",
+            "then": "shrug",
+            "emotion": "angry"
+          },
+          {
+            "who": "kasif",
+            "x": 0.14,
+            "y": 0.9,
+            "scale": 0.8,
+            "pose": "talk",
+            "face": "right",
+            "at": "no",
+            "then": "shrug",
+            "emotion": "worried"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Şans?",
+            "x": 0.56,
+            "y": 0.24,
+            "at": "hit",
+            "stamp": true,
+            "color": "red"
+          }
+        ],
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.5,
+            0.6
+          ]
+        }
+      }
+    },
+    {
+      "type": "map",
+      "text": "1764'te H4 bu kez Barbados'a gitti ve yine sınırın içinde kaldı.",
+      "visual": "Atlas haritası: Portsmouth'tan Barbados'a ikinci kırmızı rota çizilir; 'Barbados' halkalanır; 'yine başarılı' notu",
+      "title": {
+        "white": "Barbados",
+        "gray": "1764"
+      },
+      "cues": {
+        "route": "Barbados'a",
+        "ok": "içinde"
+      },
+      "params": {
+        "preset": "atlantic",
+        "cities": [
+          {
+            "name": "Portsmouth",
+            "x": -1.1,
+            "y": 50.8,
+            "dx": -130,
+            "dy": 30
+          },
+          {
+            "name": "Barbados",
+            "x": -59.6,
+            "y": 13.1,
+            "at": "ok",
+            "color": "red",
+            "dx": 0,
+            "dy": 44
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              -1.1,
+              50.8
+            ],
+            [
+              -9,
+              45
+            ],
+            [
+              -18,
+              33
+            ],
+            [
+              -35,
+              20
+            ],
+            [
+              -59.6,
+              13.1
+            ]
+          ],
+          "at": "route",
+          "dur": 2.4,
+          "color": "red"
+        },
+        "compass": "br",
+        "note": {
+          "text": "yine sınırın içinde",
+          "x": 0.06,
+          "y": 0.12,
+          "at": "ok"
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Bu sırada genç astronom Nevil Maskelyne rakip yöntemi savundu: Ay'ın yıldızlara uzaklığını ölçüp boylamı tablolardan bulmak.",
+      "visual": "Gece göğü: yıldızlar, ay ve parlak bir yıldız; solda başı açık Maskelyne dürbünle bakar; gözünden aya ve yıldıza mavi kesikli çizgiler, aralarında kırmızı açı yayı 'açı'; 'tablolardan'da sağda açık 'TABLO' kitabı; Kaşif kitabı gösterir",
+      "title": {
+        "white": "Maskelyne",
+        "gray": "Ay yöntemi"
+      },
+      "cues": {
+        "lines": "Ay'ın",
+        "ang": "uzaklığını",
+        "book": "tablolardan"
+      },
+      "params": {
+        "mode": "lunar",
+        "moon": [
+          0.46,
+          0.26
+        ],
+        "star": [
+          0.8,
+          0.2
+        ],
+        "eye": [
+          0.17,
+          0.55
+        ],
+        "lines": "lines",
+        "angle": "ang",
+        "book": "book",
+        "book_x": 0.66,
+        "book_y": 0.62,
+        "cast": [
+          {
+            "who": "maskelyne",
+            "x": 0.14,
+            "y": 0.88,
+            "scale": 0.62,
+            "pose": "look",
+            "dir": "up",
+            "face": "right",
+            "at": "book",
+            "then": "point",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.88,
+            "y": 0.88,
+            "scale": 0.6,
+            "pose": "idle",
+            "face": "left",
+            "at": "book",
+            "then": "point",
+            "dir": 10
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kısa süre sonra Maskelyne Kraliyet Astronomu oldu. Yani Harrison'ın saatini sınayan adam, rakip yöntemin en büyük savunucusuydu.",
+      "visual": "Maskelyne Kraliyet Astronomu tabelası tutar, gururlu; yanında saat; 'sınayan'da Kaşif şok olur, 'rakip' notu kırmızı",
+      "title": {
+        "white": "Hakem",
+        "gray": "ve rakip"
+      },
+      "cues": {
+        "ar": "Astronomu",
+        "hit": "sınayan",
+        "rv": "rakip"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "maskelyne",
+            "x": 0.58,
+            "pose": "hold",
+            "text": "ASTRONOM",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "forward",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.24,
+            "pose": "talk",
+            "face": "right",
+            "at": "hit",
+            "then": "shock"
+          }
+        ],
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.82,
+            "y": 0.82,
+            "scale": 0.7,
+            "at": "hit"
+          }
+        ],
+        "label": {
+          "text": "rakip!",
+          "x": 0.62,
+          "y": 0.22,
+          "size": 84,
+          "at": "rv"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Kurul ödülün yarısı için ağır bir şart koydu: Harrison saatini sökecek, sırrını herkese açıklayacaktı.",
+      "visual": "Yaşlı, gri sakallı Harrison 'ŞART' tabelası tutar, öfkeli; masada saat; 'yarısını'da önüne sikke düşer; Kaşif endişeyle düşünür",
+      "title": {
+        "white": "Ağır şart"
+      },
+      "cues": {
+        "half": "yarısı",
+        "hit": "şart",
+        "open": "açıklayacaktı"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "harrison",
+            "accessory": "beret",
+            "beard": "grey",
+            "x": 0.54,
+            "pose": "idle",
+            "face": "left",
+            "at": "hit",
+            "then": "hold",
+            "text": "ŞART",
+            "emotion": "angry"
+          },
+          {
+            "who": "kasif",
+            "x": 0.22,
+            "pose": "talk",
+            "face": "right",
+            "at": "open",
+            "then": "think",
+            "emotion": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "coin",
+            "x": 0.74,
+            "y": 0.83,
+            "scale": 0.9,
+            "at": "half"
+          },
+          {
+            "type": "clock",
+            "x": 0.86,
+            "y": 0.82,
+            "scale": 0.7
+          }
+        ],
+        "label": {
+          "text": "sırrı açıkla",
+          "x": 0.66,
+          "y": 0.22,
+          "size": 72,
+          "at": "open"
+        }
+      }
+    },
+    {
+      "type": "board",
+      "text": "Bu hikâye genelde iyi marangoz ve kötü astronom diye anlatılır. Ama gerçek biraz daha karmaşık.",
+      "visual": "Pano 'Efsane mi?': kartta 'İyi marangoz' ve 'Kötü astronom' maddeleri belirir, ikincisi ✗; altta kırmızı hap 'Gerçek karmaşık'",
+      "title": {
+        "white": "Efsane"
+      },
+      "cues": {
+        "a": "marangoz",
+        "b": "astronom",
+        "c": "karmaşık"
+      },
+      "params": {
+        "title": "Efsane mi?",
+        "cards": [
+          {
+            "title": "Hep anlatılan",
+            "items": [
+              {
+                "text": "İyi marangoz",
+                "mark": null,
+                "at": "a"
+              },
+              {
+                "text": "Kötü astronom",
+                "mark": "x",
+                "at": "b"
+              }
+            ]
+          }
+        ],
+        "pill": {
+          "text": "Gerçek karmaşık",
+          "color": "red",
+          "at": "c"
+        }
+      }
+    },
+    {
+      "type": "pv_sea",
+      "text": "Kurul tek bir mucize saat değil, bütün donanmaya yetecek bir yöntem arıyordu. Ay yöntemi de işe yaradı ve onlarca yıl kullanıldı.",
+      "visual": "Gündüz denizi: ufka kadar dizilmiş yelkenli savaş gemilerinden bir donanma, rüzgârla ilerler; 'donanmaya'da 'bütün donanma', 'yetecek'te 'herkese yetecek' notu; kayalık çıkıntıda Kaşif işaret eder",
+      "title": {
+        "white": "Donanma"
+      },
+      "cues": {
+        "fl": "donanmaya",
+        "hit": "yetecek",
+        "moon": "işe"
+      },
+      "params": {
+        "horizon": 0.46,
+        "shore": false,
+        "wind": {
+          "s": 0.8,
+          "dir": 1,
+          "lines": 5
+        },
+        "ships": [
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.38,
+            "to": 0.46,
+            "y": 0.7,
+            "scale": 0.85,
+            "face": 1
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.64,
+            "to": 0.72,
+            "y": 0.62,
+            "scale": 0.62,
+            "face": 1,
+            "depth": 0.3
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.86,
+            "to": 0.93,
+            "y": 0.56,
+            "scale": 0.48,
+            "face": 1,
+            "depth": 0.55
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.2,
+            "to": 0.27,
+            "y": 0.57,
+            "scale": 0.48,
+            "face": 1,
+            "depth": 0.55
+          },
+          {
+            "kind": "sail",
+            "side": "hl",
+            "x": 0.52,
+            "to": 0.58,
+            "y": 0.52,
+            "scale": 0.36,
+            "face": 1,
+            "depth": 0.75
+          }
+        ],
+        "ledge": {
+          "side": "left",
+          "y": 0.74,
+          "w": 0.2
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.09,
+            "y": 0.74,
+            "scale": 0.55,
+            "pose": "talk",
+            "face": "right",
+            "at": "fl",
+            "then": "point",
+            "dir": 15,
+            "seq": [
+              {
+                "at": "moon",
+                "pose": "point",
+                "dir": "up"
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "bütün donanma",
+            "x": 0.6,
+            "y": 0.2,
+            "at": "fl",
+            "size": 72
+          },
+          {
+            "text": "herkese yetecek",
+            "x": 0.6,
+            "y": 0.32,
+            "at": "hit",
+            "size": 64,
+            "color": "blue"
+          }
+        ],
+        "zoom": 1.06,
+        "focus": [
+          0.55,
+          0.5
+        ]
+      }
+    },
+    {
+      "chapter": "Krala giden yol",
+      "type": "chapter",
+      "text": "Peki Harrison sonunda hakkını alabildi mi?",
+      "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Krala giden yol'",
+      "title": {},
+      "cues": {
+        "n": "Peki",
+        "title": "alabildi"
+      },
+      "params": {
+        "n": 5,
+        "total": 5,
+        "title": "Krala giden yol"
+      }
+    },
+    {
+      "type": "ag03c_court",
+      "text": "Yaşı yetmişleri geçmişti ve sabrı tükenmişti. Bu kez doğrudan krala, Üçüncü George'a başvurdu.",
+      "visual": "Saray salonu: kemerler, kırmızı perde önünde tahtta taçlı Kral III. George oturur; gri sakallı yaşlı Harrison tahta yaklaşıp konuşur; Kaşif kenardan izler",
+      "title": {
+        "white": "III. George"
+      },
+      "cues": {
+        "old": "yetmişleri",
+        "hit": "krala"
+      },
+      "params": {
+        "setting": "palace",
+        "throne": {
+          "x": 0.68,
+          "accessory": "crown",
+          "beard": null,
+          "pose": "sit",
+          "face": -1,
+          "emotion": "neutral",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "think",
+              "emotion": "surprised"
+            }
+          ]
+        },
+        "captive": false,
+        "figures": [
+          {
+            "x": 0.44,
+            "accessory": "beret",
+            "beard": "grey",
+            "pose": "talk",
+            "face": 1,
+            "emotion": "worried",
+            "scale": 0.95
+          }
+        ],
+        "kasif": {
+          "x": 0.13,
+          "scale": 0.85,
+          "pose": "talk",
+          "dir": 5,
+          "face": 1,
+          "emotion": "neutral",
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "point",
+              "dir": 10
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Kral, Harrison'ın son saatini kendi gözlemevinde haftalarca denetti. Sonuç kusursuza yakındı.",
+      "visual": "Sade kadranlı, koyu parşömen kasalı büyük cep saati H5 (ortada), saniye ibresi düzenle tıklar; 'H5' etiketi; solda taçlı kral dürbünle saate bakar; 'haftalarca' notu; 'kusursuza'da saatin üstünde ortada yeşil 'NEREDEYSE KUSURSUZ' damgası; sağda Kaşif dürbünle krala bakar, sonra sevinçle saati gösterir",
+      "title": {
+        "white": "Kral denetti"
+      },
+      "cues": {
+        "w": "haftalarca",
+        "hit": "kusursuza"
+      },
+      "params": {
+        "mode": "h4",
+        "x": 0.45,
+        "y": 0.52,
+        "r": 220,
+        "h": 3,
+        "m": 40,
+        "plain": true,
+        "case": "dark",
+        "cast": [
+          {
+            "who": "kral",
+            "accessory": "crown",
+            "x": 0.14,
+            "y": 0.88,
+            "scale": 0.62,
+            "pose": "look",
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": 20,
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.86,
+            "y": 0.88,
+            "scale": 0.6,
+            "pose": "look",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": 20,
+            "emotion": "happy"
+          }
+        ],
+        "labels": [
+          {
+            "text": "H5",
+            "x": 0.72,
+            "y": 0.36,
+            "at": 0.3,
+            "size": 80,
+            "font": "serif"
+          },
+          {
+            "text": "haftalarca",
+            "x": 0.2,
+            "y": 0.3,
+            "at": "w",
+            "size": 64
+          },
+          {
+            "text": "neredeyse kusursuz",
+            "x": 0.45,
+            "y": 0.14,
+            "at": "hit",
+            "stamp": true,
+            "color": "green",
+            "size": 52
+          }
+        ]
+      }
+    },
+    {
+      "type": "title",
+      "text": "1773'te Parlamento, Harrison'a sekiz bin yedi yüz elli sterlin ödedi. Ama kurulun resmî ödülü ona hiç verilmedi.",
+      "visual": "Dev yazı: '8.750', 'sterlin'; '8.750' kırmızı kutuda; not 'resmî ödül: yok'; Kaşif omuz silker",
+      "title": {
+        "white": "1773"
+      },
+      "cues": {
+        "w0": "parlamento",
+        "w1": "sterlin",
+        "note": "verilmedi"
+      },
+      "params": {
+        "lines": [
+          "8.750",
+          "sterlin"
+        ],
+        "highlight": [
+          "8750"
+        ],
+        "note": {
+          "text": "resmî ödül: yok",
+          "at": "note"
+        },
+        "kasif": {
+          "x": 0.84,
+          "pose": "shrug",
+          "face": -1,
+          "scale": 0.85,
+          "emotion": "worried",
+          "at": "note"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Üç yıl sonra, 24 Mart 1776'da, seksen üçüncü doğum gününde hayata gözlerini yumdu.",
+      "visual": "Sessiz bir an: Kaşif başı önde '1693 – 1776' tabelasını tutar; yanında tıkırdayan saat; uzakta tepeler",
+      "title": {
+        "white": "1776"
+      },
+      "cues": {
+        "y": "1776'da",
+        "hit": "doğum"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": -0.02,
+            "to": 0.4,
+            "pose": "walk",
+            "at": "y",
+            "then": "hold",
+            "text": "1693 – 1776",
+            "face": "right",
+            "emotion": "worried"
+          }
+        ],
+        "props": [
+          {
+            "type": "clock",
+            "x": 0.68,
+            "y": 0.82,
+            "scale": 0.8
+          }
+        ],
+        "label": {
+          "text": "83. doğum günü",
+          "x": 0.64,
+          "y": 0.24,
+          "size": 68,
+          "at": "hit"
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Bu arada saatçi Larcum Kendall H4'ün bir kopyasını yaptı. Kaptan Cook o kopyayla dünyanın öbür ucuna gitti ve hayran kaldı.",
+      "visual": "Denizde gemi; başı açık Kaptan Cook bir saati elinde tutup gülümser; 'K1 kopya' notu; Kaşif sevinçle el sallar",
+      "title": {
+        "white": "Kaptan Cook",
+        "gray": "K1 kopyası"
+      },
+      "cues": {
+        "k": "kopyasını",
+        "hit": "hayran"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "cook",
+            "x": 0.56,
+            "pose": "hold",
+            "item": "clock",
+            "face": "left",
+            "at": "hit",
+            "then": "point",
+            "dir": "up",
+            "emotion": "happy"
+          },
+          {
+            "who": "kasif",
+            "x": 0.22,
+            "pose": "talk",
+            "face": "right",
+            "at": "hit",
+            "then": "wave",
+            "emotion": "happy"
+          }
+        ],
+        "props": [
+          {
+            "type": "ship",
+            "x": 0.86,
+            "y": 0.82,
+            "scale": 1.0
+          }
+        ],
+        "label": {
+          "text": "H4'ün kopyası",
+          "x": 0.6,
+          "y": 0.22,
+          "size": 68,
+          "at": "k"
+        },
+        "backdrop": {
+          "type": "sea",
+          "y": 0.62,
+          "opacity": 0.7
+        }
+      }
+    },
+    {
+      "type": "hr_clock",
+      "text": "Bugün telefonunuz da yerini uydulardaki çok hassas saatlerle buluyor. Fikir hâlâ aynı: Zamanı bilirseniz, yerinizi bulursunuz.",
+      "visual": "Dünyanın kavisli yüzeyi; yörüngede küçük saat kadranlı üç uydu; 'yerini'de uydulardan sinyal yayları yere iner ve kırmızı konum iğnesi çıkar; 'zaman = yer' notu; Kaşif yerde işaret eder",
+      "title": {
+        "white": "Bugün"
+      },
+      "cues": {
+        "ping": "yerini",
+        "hit": "Zamanı"
+      },
+      "params": {
+        "mode": "gps",
+        "ping": "ping",
+        "pin_x": 0.62,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.36,
+            "y": 0.79,
+            "scale": 0.5,
+            "pose": "look",
+            "dir": "up",
+            "face": "right",
+            "at": "ping",
+            "then": "point",
+            "dir2": 0
+          }
+        ],
+        "labels": [
+          {
+            "text": "zaman = yer",
+            "x": 0.2,
+            "y": 0.62,
+            "at": "hit",
+            "size": 76,
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Siz ne düşünüyorsunuz: Boylam Kurulu haksız mıydı, yoksa sadece temkinli mi? Yorumlara yazın!",
+      "visual": "Kaşif iki tabela arasında: solda 'HAKSIZ', sağda 'TEMKİNLİ'; önce düşünür, 'Yorumlara'da izleyiciyi gösterir",
+      "title": {
+        "white": "Sizce?"
+      },
+      "cues": {
+        "q": "haksız",
+        "t": "temkinli",
+        "hit": "Yorumlara"
+      },
+      "params": {
+        "scale": 1.1,
+        "ground_y": 850,
+        "cam": {
+          "zoom": 1.06,
+          "pan": 24
+        },
+        "foreground": "hatch",
+        "depth": {
+          "far": "hills",
+          "sky": {
+            "clouds": 2,
+            "gulls": 2,
+            "cloud_y": 0.22
+          }
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.5,
+            "pose": "think",
+            "face": "right",
+            "at": "hit",
+            "then": "point",
+            "dir": "forward",
+            "seq": [
+              {
+                "at": "q",
+                "pose": "point",
+                "dir": "left",
+                "face": "left"
+              },
+              {
+                "at": "t",
+                "pose": "point",
+                "dir": "right",
+                "face": "right"
+              }
+            ]
+          }
+        ],
+        "props": [
+          {
+            "type": "sign",
+            "x": 0.2,
+            "y": 0.82,
+            "scale": 1,
+            "text": "HAKSIZ"
+          },
+          {
+            "type": "sign",
+            "x": 0.8,
+            "y": 0.82,
+            "scale": 1,
+            "text": "TEMKİNLİ"
+          }
+        ]
+      }
+    }
+  ]
+}

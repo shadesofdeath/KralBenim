@@ -1,0 +1,1906 @@
+{
+  "channel": "Düşün Bakalım",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "hacova-savasi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Bu savaşı",
+      "aşçılar",
+      "kurtardı"
+    ],
+    "highlight": [
+      "aşçılar"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": {
+      "pose": "shock",
+      "x": 500
+    }
+  },
+  "youtube": {
+    "title": "Haçova Savaşı: Kaybedilen Savaşı Aşçılar Nasıl Kurtardı?",
+    "description": "Haçova Savaşı'nı aşçılar kurtardı, biliyor muydun? 26 Ekim 1596'da Osmanlı hattı yarılmış, düşman karargâha girmişti. Peki savaş nasıl birkaç saatte tersine döndü?\n\nHaçova Meydan Muharebesi'nde Üçüncü Mehmed'e meydandan çekilmesi bile önerildi, ama hocası Sadeddin Efendi onu savaş alanında tuttu. Karargâha giren düşman askerleri zafer kazandıklarını sanıp hazine sandıklarını yağmalamaya daldı. İşte tam o anda ordugâhın aşçıları, seyisleri ve devecileri ellerine geçeni kapıp yağmacılara saldırdı; Osmanlı süvarisi de yandan vurunca düşman bataklığa sürüldü.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence yağma olmasaydı savaşın sonu değişir miydi? Yorumlara yaz!\n\n#shorts #haçovasavaşı #osmanlı #tarih #düşünbakalım",
+    "tags": [
+      "haçova savaşı",
+      "haçova meydan muharebesi",
+      "haçova meydan savaşı",
+      "haçova savaşı 1596",
+      "mezőkeresztes savaşı",
+      "eğri seferi",
+      "üçüncü mehmed",
+      "hoca sadeddin efendi",
+      "cığalazade sinan paşa",
+      "osmanlı tarihi",
+      "osmanlı habsburg savaşları",
+      "ordugâh yağması",
+      "aşçılar savaşı kurtardı",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-26T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "hc_close",
+      "text": "Bu savaşı aşçılar kurtardı.",
+      "visual": "Osmanlı ordugâhı yakın plan: solda kaynayan bir kazan, sarıklı ve önlüklü bir aşçı kepçesini havada sallayarak koşup geliyor; sağda açık hazine sandığının başındaki miğferli yağmacı 'aşçılar'da şokla geri sıçrıyor, sandıktan altınlar saçılıyor; arkada otağ ve çadırlar.",
+      "title": {},
+      "cues": {
+        "hit": "aşçılar",
+        "run": "savaşı"
+      },
+      "params": {
+        "cauldron": {
+          "x": 0.1
+        },
+        "otag": {
+          "x": 0.62,
+          "scale": 0.8
+        },
+        "tents": {
+          "n": 5
+        },
+        "chests": [
+          {
+            "x": 0.86,
+            "scale": 1.3,
+            "loot": {
+              "from": "hit"
+            }
+          }
+        ],
+        "cast": [
+          {
+            "who": "asci",
+            "accessory": "turban",
+            "beard": "black",
+            "apron": true,
+            "tool": "ladle",
+            "x": 0.02,
+            "face": "right",
+            "pose": "run",
+            "emotion": "angry",
+            "seq": [
+              {
+                "at": 0,
+                "to": 0.33,
+                "dur": 0.9,
+                "pose": "run",
+                "then": "point"
+              },
+              {
+                "at": "hit",
+                "pose": "point",
+                "dir": 40,
+                "emotion": "angry"
+              }
+            ],
+            "dir": 40
+          },
+          {
+            "who": "yagmaci",
+            "accessory": "helmet_byz",
+            "x": 0.6,
+            "face": "right",
+            "pose": "hold",
+            "item": "coin",
+            "emotion": "happy",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "face": "left",
+                "item": null,
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "labels": [],
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.45,
+            0.5
+          ]
+        },
+        "hit": "hit"
+      }
+    },
+    {
+      "type": "map",
+      "text": "Dört yüz otuz yıl önce bugün, Haçova.",
+      "visual": "Eski harita: Balkanlar, Tuna ve Karadeniz; İstanbul'dan Belgrad üzerinden Macaristan'daki kırmızı Haçova'ya kesikli rota çiziliyor; 'Haçova'da şehir kırmızı halkayla beliriyor, el yazısı not '26 Ekim 1596'.",
+      "title": {
+        "white": "26 Ekim",
+        "gray": "1596"
+      },
+      "cues": {
+        "route": "Dört",
+        "note": "bugün",
+        "city": "Haçova"
+      },
+      "params": {
+        "coords": "sheet",
+        "land": [
+          [
+            [
+              -1.2778,
+              0.5755
+            ],
+            [
+              -1.25,
+              1.0
+            ],
+            [
+              -1.2444,
+              1.1887
+            ],
+            [
+              -1.0833,
+              1.2075
+            ],
+            [
+              -1.0611,
+              1.283
+            ],
+            [
+              -1.0,
+              1.217
+            ],
+            [
+              -0.8611,
+              1.2075
+            ],
+            [
+              -0.7778,
+              1.066
+            ],
+            [
+              -0.75,
+              1.0
+            ],
+            [
+              -0.7333,
+              0.8585
+            ],
+            [
+              -0.5833,
+              0.7358
+            ],
+            [
+              -0.5778,
+              0.6415
+            ],
+            [
+              -0.5278,
+              0.5755
+            ],
+            [
+              -0.4167,
+              0.6132
+            ],
+            [
+              -0.3333,
+              0.5472
+            ],
+            [
+              -0.2611,
+              0.4906
+            ],
+            [
+              -0.1833,
+              0.5377
+            ],
+            [
+              -0.1611,
+              0.6321
+            ],
+            [
+              -0.1056,
+              0.6887
+            ],
+            [
+              -0.0611,
+              0.7453
+            ],
+            [
+              0.0056,
+              0.7925
+            ],
+            [
+              0.0444,
+              0.8302
+            ],
+            [
+              0.1167,
+              0.9057
+            ],
+            [
+              0.1389,
+              1.0
+            ],
+            [
+              0.1222,
+              1.0943
+            ],
+            [
+              0.1444,
+              1.0943
+            ],
+            [
+              0.1722,
+              1.0566
+            ],
+            [
+              0.2056,
+              1.0
+            ],
+            [
+              0.1722,
+              0.9057
+            ],
+            [
+              0.1944,
+              0.8585
+            ],
+            [
+              0.2778,
+              0.8962
+            ],
+            [
+              0.2722,
+              0.8774
+            ],
+            [
+              0.2444,
+              0.8396
+            ],
+            [
+              0.15,
+              0.783
+            ],
+            [
+              0.0944,
+              0.7264
+            ],
+            [
+              0.0278,
+              0.6604
+            ],
+            [
+              0.0056,
+              0.5755
+            ],
+            [
+              -0.0667,
+              0.4811
+            ],
+            [
+              -0.0611,
+              0.3962
+            ],
+            [
+              0.0111,
+              0.3679
+            ],
+            [
+              0.0056,
+              0.4245
+            ],
+            [
+              0.0444,
+              0.4151
+            ],
+            [
+              0.0944,
+              0.5
+            ],
+            [
+              0.1611,
+              0.5755
+            ],
+            [
+              0.2278,
+              0.6226
+            ],
+            [
+              0.2778,
+              0.6792
+            ],
+            [
+              0.3278,
+              0.7358
+            ],
+            [
+              0.3278,
+              0.8679
+            ],
+            [
+              0.3611,
+              0.9434
+            ],
+            [
+              0.4,
+              1.0189
+            ],
+            [
+              0.4222,
+              1.066
+            ],
+            [
+              0.45,
+              1.1415
+            ],
+            [
+              0.4556,
+              1.2075
+            ],
+            [
+              0.5,
+              1.2453
+            ],
+            [
+              0.5278,
+              1.2264
+            ],
+            [
+              0.5167,
+              1.1321
+            ],
+            [
+              0.5389,
+              1.0943
+            ],
+            [
+              0.5833,
+              1.1226
+            ],
+            [
+              0.5778,
+              1.0566
+            ],
+            [
+              0.5167,
+              1.0094
+            ],
+            [
+              0.5056,
+              0.9528
+            ],
+            [
+              0.5222,
+              0.8679
+            ],
+            [
+              0.5778,
+              0.8396
+            ],
+            [
+              0.6056,
+              0.8208
+            ],
+            [
+              0.6944,
+              0.8302
+            ],
+            [
+              0.7056,
+              0.8774
+            ],
+            [
+              0.7333,
+              0.8679
+            ],
+            [
+              0.7778,
+              0.816
+            ],
+            [
+              0.8556,
+              0.8113
+            ],
+            [
+              0.8611,
+              0.7925
+            ],
+            [
+              0.8056,
+              0.717
+            ],
+            [
+              0.7944,
+              0.6415
+            ],
+            [
+              0.8333,
+              0.5566
+            ],
+            [
+              0.85,
+              0.4811
+            ],
+            [
+              0.9,
+              0.4151
+            ],
+            [
+              0.9444,
+              0.3019
+            ],
+            [
+              1.0,
+              0.283
+            ],
+            [
+              1.0833,
+              0.3396
+            ],
+            [
+              1.1167,
+              0.4811
+            ],
+            [
+              1.2222,
+              0.4151
+            ],
+            [
+              1.2833,
+              0.3962
+            ],
+            [
+              1.3611,
+              0.2453
+            ],
+            [
+              2.5833,
+              0.2453
+            ],
+            [
+              2.5833,
+              -2.3962
+            ],
+            [
+              -2.4167,
+              -2.3962
+            ],
+            [
+              -2.4167,
+              0.5755
+            ]
+          ],
+          [
+            [
+              0.8667,
+              0.7925
+            ],
+            [
+              0.9167,
+              0.8019
+            ],
+            [
+              0.9944,
+              0.783
+            ],
+            [
+              1.0833,
+              0.717
+            ],
+            [
+              1.1944,
+              0.717
+            ],
+            [
+              1.2778,
+              0.783
+            ],
+            [
+              1.3611,
+              0.8208
+            ],
+            [
+              1.4722,
+              0.8113
+            ],
+            [
+              1.5556,
+              0.7642
+            ],
+            [
+              1.5556,
+              0.6698
+            ],
+            [
+              2.5833,
+              0.6698
+            ],
+            [
+              2.5833,
+              1.2264
+            ],
+            [
+              1.2611,
+              1.2264
+            ],
+            [
+              1.2389,
+              1.2075
+            ],
+            [
+              1.1722,
+              1.2075
+            ],
+            [
+              1.1167,
+              1.2642
+            ],
+            [
+              1.0556,
+              1.2736
+            ],
+            [
+              0.9722,
+              1.2075
+            ],
+            [
+              0.9444,
+              1.2358
+            ],
+            [
+              0.8944,
+              1.2642
+            ],
+            [
+              0.8167,
+              1.217
+            ],
+            [
+              0.7722,
+              1.1887
+            ],
+            [
+              0.7611,
+              1.1038
+            ],
+            [
+              0.7167,
+              1.066
+            ],
+            [
+              0.7389,
+              1.0377
+            ],
+            [
+              0.7444,
+              0.9623
+            ],
+            [
+              0.7,
+              0.9528
+            ],
+            [
+              0.7056,
+              0.8962
+            ],
+            [
+              0.7389,
+              0.8726
+            ],
+            [
+              0.7778,
+              0.8679
+            ],
+            [
+              0.8611,
+              0.8679
+            ],
+            [
+              0.8833,
+              0.8302
+            ]
+          ],
+          [
+            [
+              -2.4167,
+              1.566
+            ],
+            [
+              -1.2944,
+              1.8491
+            ],
+            [
+              -1.1278,
+              1.4717
+            ],
+            [
+              -1.0833,
+              1.3019
+            ],
+            [
+              -1.0444,
+              1.2925
+            ],
+            [
+              -0.8611,
+              1.3679
+            ],
+            [
+              -0.75,
+              1.2925
+            ],
+            [
+              -0.5833,
+              1.2075
+            ],
+            [
+              -0.4722,
+              1.2075
+            ],
+            [
+              -0.3167,
+              1.1981
+            ],
+            [
+              -0.2056,
+              1.1604
+            ],
+            [
+              -0.1778,
+              1.2075
+            ],
+            [
+              -0.1389,
+              1.1887
+            ],
+            [
+              -0.1722,
+              1.2642
+            ],
+            [
+              -0.1333,
+              1.3585
+            ],
+            [
+              -0.1944,
+              1.4528
+            ],
+            [
+              -0.1444,
+              1.5566
+            ],
+            [
+              -0.0556,
+              1.5849
+            ],
+            [
+              0.0944,
+              1.6321
+            ],
+            [
+              0.1222,
+              1.717
+            ],
+            [
+              0.2778,
+              1.8208
+            ],
+            [
+              0.3611,
+              1.7642
+            ],
+            [
+              0.3611,
+              1.6604
+            ],
+            [
+              0.4167,
+              1.5849
+            ],
+            [
+              0.5222,
+              1.6038
+            ],
+            [
+              0.6389,
+              1.6887
+            ],
+            [
+              0.7778,
+              1.7358
+            ],
+            [
+              0.9111,
+              1.7358
+            ],
+            [
+              0.9833,
+              1.7075
+            ],
+            [
+              1.0444,
+              1.7358
+            ],
+            [
+              1.15,
+              1.7264
+            ],
+            [
+              1.1722,
+              1.6604
+            ],
+            [
+              1.2056,
+              1.566
+            ],
+            [
+              1.2444,
+              1.4245
+            ],
+            [
+              1.2389,
+              1.3302
+            ],
+            [
+              1.2444,
+              1.2264
+            ],
+            [
+              2.5833,
+              1.2264
+            ],
+            [
+              2.5833,
+              5.6226
+            ],
+            [
+              -2.4167,
+              5.6226
+            ]
+          ],
+          [
+            [
+              -0.0611,
+              1.0849
+            ],
+            [
+              -0.0056,
+              1.0755
+            ],
+            [
+              0.1167,
+              1.066
+            ],
+            [
+              0.0889,
+              1.1604
+            ],
+            [
+              0.0889,
+              1.217
+            ],
+            [
+              0.0444,
+              1.1887
+            ],
+            [
+              -0.0611,
+              1.1132
+            ]
+          ]
+        ],
+        "coast": [
+          [
+            0.0278,
+            0.1274
+          ],
+          [
+            0.1594,
+            0.1311
+          ],
+          [
+            0.2,
+            0.1377
+          ],
+          [
+            0.25,
+            0.1698
+          ],
+          [
+            0.3,
+            0.1698
+          ],
+          [
+            0.3078,
+            0.1981
+          ],
+          [
+            0.3,
+            0.3208
+          ],
+          [
+            0.3167,
+            0.3774
+          ],
+          [
+            0.3528,
+            0.4104
+          ],
+          [
+            0.3867,
+            0.4509
+          ],
+          [
+            0.4389,
+            0.4623
+          ],
+          [
+            0.5,
+            0.4717
+          ],
+          [
+            0.55,
+            0.5425
+          ],
+          [
+            0.6111,
+            0.5566
+          ],
+          [
+            0.6944,
+            0.5377
+          ],
+          [
+            0.7778,
+            0.5189
+          ],
+          [
+            0.8111,
+            0.4811
+          ],
+          [
+            0.8222,
+            0.4057
+          ],
+          [
+            0.8944,
+            0.4151
+          ]
+        ],
+        "seas": [
+          {
+            "name": "Karadeniz",
+            "x": 0.83,
+            "y": 0.5,
+            "size": 46
+          },
+          {
+            "name": "Tuna",
+            "x": 0.5,
+            "y": 0.51,
+            "size": 46
+          }
+        ],
+        "cities": [
+          {
+            "name": "İstanbul",
+            "x": 0.8594,
+            "y": 0.8104,
+            "dx": -10,
+            "dy": 70,
+            "anchor": "middle",
+            "at": "route"
+          },
+          {
+            "name": "Belgrad",
+            "x": 0.3867,
+            "y": 0.4528,
+            "dx": -24,
+            "dy": 8,
+            "anchor": "end",
+            "at": "route",
+            "size": 48
+          },
+          {
+            "name": "Buda",
+            "x": 0.3078,
+            "y": 0.1981,
+            "dx": -24,
+            "dy": 30,
+            "anchor": "end",
+            "at": "route",
+            "size": 48
+          },
+          {
+            "name": "Haçova",
+            "x": 0.3997,
+            "y": 0.1669,
+            "dx": 24,
+            "dy": 16,
+            "anchor": "start",
+            "color": "red",
+            "at": "city",
+            "size": 60
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              0.8594,
+              0.8104
+            ],
+            [
+              0.7256,
+              0.7472
+            ],
+            [
+              0.5456,
+              0.6509
+            ],
+            [
+              0.3867,
+              0.4528
+            ],
+            [
+              0.37,
+              0.3
+            ],
+            [
+              0.3997,
+              0.1669
+            ]
+          ],
+          "at": "route",
+          "dur": 1.6,
+          "color": "red"
+        },
+        "note": {
+          "text": "26 Ekim 1596",
+          "x": 0.05,
+          "y": 0.86,
+          "at": "note"
+        },
+        "focus": [
+          0.56,
+          0.47
+        ],
+        "zoom": 1.2,
+        "compass": "tr"
+      }
+    },
+    {
+      "type": "hc_field",
+      "text": "Osmanlı hattı yarılmıştı, düşman karargâha girdi.",
+      "visual": "Kuşbakışı savaş alanı: solda büyük Osmanlı ordugâhı (çadır halkası, üstünde 'Karargâh'); ortada yukarıdan aşağı mavi Osmanlı hattı (atlılar, ortada mavi piyade bloğu); sağdan kırmızı düşman blokları ilerliyor; 'yarılmıştı'da ortadaki mavi blok dağılıp kaçan noktalara dönüyor, kırmızı 'Yarıldı!' yazısı çıkıyor, kırmızı blok boşluktan ordugâha dalıyor; sağda Kaşif şokla geri sıçrıyor, sonra ordugâhı işaret ediyor.",
+      "title": {
+        "white": "Haçova"
+      },
+      "cues": {
+        "go": "Osmanlı",
+        "brk": "yarılmıştı",
+        "in": "karargâha"
+      },
+      "params": {
+        "camp": {
+          "x": 0.17,
+          "y": 0.37,
+          "n": 12,
+          "r": 150
+        },
+        "hills": false,
+        "units": [
+          {
+            "id": "o1",
+            "side": "sel",
+            "kind": "riders",
+            "n": 9,
+            "spread": 1.3,
+            "x": 0.47,
+            "y": 0.21,
+            "face": 0
+          },
+          {
+            "id": "o2",
+            "side": "sel",
+            "kind": "block",
+            "x": 0.47,
+            "y": 0.37,
+            "w": 220,
+            "h": 110,
+            "face": 0,
+            "scatter": "brk"
+          },
+          {
+            "id": "o3",
+            "side": "sel",
+            "kind": "riders",
+            "n": 9,
+            "spread": 1.3,
+            "x": 0.47,
+            "y": 0.53,
+            "face": 0
+          },
+          {
+            "id": "d1",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.82,
+            "y": 0.21,
+            "w": 210,
+            "h": 104,
+            "face": 180,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.7,
+                "dur": 1.2
+              }
+            ]
+          },
+          {
+            "id": "d2",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.84,
+            "y": 0.37,
+            "w": 230,
+            "h": 112,
+            "face": 180,
+            "banner": true,
+            "arrow": {
+              "len": 190
+            },
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.66,
+                "dur": 1.0
+              },
+              {
+                "at": "brk",
+                "x": 0.3,
+                "dur": 1.6
+              }
+            ]
+          },
+          {
+            "id": "d3",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.82,
+            "y": 0.53,
+            "w": 210,
+            "h": 104,
+            "face": 180,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.7,
+                "dur": 1.2
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "Osmanlı",
+            "x": 0.47,
+            "y": 0.155,
+            "color": "blue",
+            "at": 0.1,
+            "size": 60
+          },
+          {
+            "text": "Düşman",
+            "x": 0.82,
+            "y": 0.155,
+            "color": "red",
+            "at": 0.3,
+            "size": 60
+          },
+          {
+            "text": "Yarıldı!",
+            "x": 0.5,
+            "y": 0.455,
+            "color": "red",
+            "at": "brk",
+            "size": 72,
+            "rot": -6
+          },
+          {
+            "text": "Karargâh",
+            "x": 0.17,
+            "y": 0.27,
+            "color": "ink",
+            "at": "in",
+            "size": 64
+          }
+        ],
+        "shake": "brk",
+        "kasif": {
+          "x": 0.86,
+          "y": 0.6,
+          "scale": 0.75,
+          "face": -1,
+          "pose": "look",
+          "hill": false,
+          "seq": [
+            {
+              "at": "brk",
+              "pose": "shock"
+            },
+            {
+              "at": "in",
+              "pose": "point",
+              "dir": "left",
+              "emotion": "worried"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.45,
+            0.38
+          ]
+        }
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Padişaha meydandan çekilmesi bile önerildi, ama hocası onu durdurdu.",
+      "visual": "Otağın önünde sarıklı padişah endişeli; yanındaki sarıklı vezir 'çekilmesi'nde dönüp geriyi işaret ediyor; 'hocası'nda sağdan ak sakallı, sarıklı Hoca Sadeddin yürüyüp geliyor ve parmağıyla yeri gösteriyor, 'durdurdu'da padişah kararlı biçimde yeri işaret ediyor; el yazısı 'Hoca Sadeddin' oku hocayı gösteriyor; solda Kaşif önce şaşırıyor, sonra hocayı işaret ediyor.",
+      "title": {
+        "white": "Padişah",
+        "gray": "kaçacak mı?"
+      },
+      "cues": {
+        "run": "çekilmesi",
+        "hoca": "hocası",
+        "hold": "durdurdu"
+      },
+      "params": {
+        "foreground": "hatch",
+        "scale": 0.8,
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.55,
+            0.5
+          ]
+        },
+        "backdrop": {
+          "type": "palace",
+          "opacity": 0.5
+        },
+        "label": {
+          "text": "Hoca Sadeddin",
+          "x": 0.7,
+          "y": 0.21,
+          "at": "hoca",
+          "size": 72,
+          "arrow": [
+            0.84,
+            0.3
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.18,
+            "pose": "idle",
+            "face": "right",
+            "scale": 0.9,
+            "seq": [
+              {
+                "at": "run",
+                "pose": "shock"
+              },
+              {
+                "at": "hoca",
+                "pose": "point",
+                "dir": 10,
+                "emotion": "happy"
+              }
+            ]
+          },
+          {
+            "who": "vezir",
+            "accessory": "turban",
+            "beard": "short",
+            "x": 0.42,
+            "pose": "talk",
+            "face": "right",
+            "talk": false,
+            "scale": 0.9,
+            "seq": [
+              {
+                "at": "run",
+                "pose": "point",
+                "dir": "left",
+                "face": "left",
+                "emotion": "worried"
+              },
+              {
+                "at": "hold",
+                "pose": "shrug"
+              }
+            ]
+          },
+          {
+            "who": "padisah",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.63,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "emotion": "worried",
+            "scale": 1.05,
+            "seq": [
+              {
+                "at": "hoca",
+                "pose": "idle",
+                "face": "right",
+                "emotion": "surprised"
+              },
+              {
+                "at": "hold",
+                "pose": "point",
+                "dir": "down",
+                "face": "right",
+                "emotion": "angry"
+              }
+            ]
+          },
+          {
+            "who": "hoca",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 1.1,
+            "pose": "walk",
+            "to": 0.83,
+            "at": "hoca",
+            "then": "point",
+            "dir": "down",
+            "face": "left",
+            "talk": false,
+            "emotion": "angry"
+          }
+        ]
+      }
+    },
+    {
+      "type": "hc_camp",
+      "text": "Peki düşman ne yaptı dersiniz?",
+      "visual": "Ordugâhın ortası, arkada büyük otağ; önde iki açık hazine sandığı altınla dolu; sağdan iki miğferli düşman askeri yürüyerek giriyor, 'yaptı'da sandıkları görüp duruyor; solda Kaşif izleyiciye dönüp düşünüyor, sonra sandığı işaret ediyor.",
+      "title": {
+        "white": "Karargâh",
+        "gray": "Osmanlı"
+      },
+      "cues": {
+        "walk": "Peki",
+        "see": "yaptı",
+        "ask": "dersiniz"
+      },
+      "params": {
+        "otag": {
+          "x": 0.55
+        },
+        "cauldron": false,
+        "chests": [
+          {
+            "x": 0.42
+          },
+          {
+            "x": 0.62,
+            "scale": 0.9
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.13,
+            "face": "right",
+            "pose": "think",
+            "scale": 0.95,
+            "seq": [
+              {
+                "at": "ask",
+                "pose": "point",
+                "dir": 0
+              }
+            ]
+          },
+          {
+            "who": "y1",
+            "accessory": "helmet_byz",
+            "x": 1.08,
+            "face": "left",
+            "pose": "idle",
+            "seq": [
+              {
+                "at": "walk",
+                "to": 0.76,
+                "dur": 1.2,
+                "pose": "walk",
+                "then": "point",
+                "dir": -20
+              },
+              {
+                "at": "see",
+                "pose": "shock",
+                "emotion": "happy"
+              }
+            ]
+          },
+          {
+            "who": "y2",
+            "accessory": "helmet_byz",
+            "x": 1.25,
+            "face": "left",
+            "pose": "idle",
+            "scale": 0.92,
+            "seq": [
+              {
+                "at": "walk",
+                "to": 0.92,
+                "dur": 1.3,
+                "pose": "walk",
+                "then": "idle"
+              },
+              {
+                "at": "see",
+                "pose": "wave",
+                "emotion": "happy"
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "Hazine",
+            "x": 0.52,
+            "y": 0.47,
+            "at": "see",
+            "size": 64,
+            "color": "red",
+            "ring": true
+          }
+        ],
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "type": "hc_camp",
+      "text": "Kazandık sanıp hazineyi yağmaya daldı!",
+      "visual": "Yakınlaşan ordugâh: miğferli düşman askerleri hazine sandıklarına dalmış, ellerinde altınla sevinçle sıçrıyor, sandıklardan altınlar fışkırıyor; 'yağmaya'da kırmızı halkalı el yazısı 'YAĞMA!' beliriyor; solda Kaşif omuz silkiyor.",
+      "title": {
+        "white": "Yağma"
+      },
+      "cues": {
+        "loot": "hazineyi",
+        "hit": "yağmaya"
+      },
+      "params": {
+        "otag": {
+          "x": 0.5,
+          "scale": 0.9
+        },
+        "cauldron": {
+          "x": 0.9,
+          "scale": 0.8
+        },
+        "chests": [
+          {
+            "x": 0.42,
+            "loot": {
+              "from": 0.1
+            }
+          },
+          {
+            "x": 0.66,
+            "scale": 0.9,
+            "loot": {
+              "from": "loot"
+            }
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.12,
+            "face": "right",
+            "pose": "talk",
+            "scale": 0.9,
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shrug",
+                "emotion": "worried"
+              }
+            ]
+          },
+          {
+            "who": "y1",
+            "accessory": "helmet_byz",
+            "x": 0.3,
+            "face": "right",
+            "pose": "hold",
+            "item": "coin",
+            "emotion": "happy",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "wave",
+                "item": null
+              }
+            ]
+          },
+          {
+            "who": "y2",
+            "accessory": "helmet_byz",
+            "x": 0.54,
+            "face": "left",
+            "pose": "point",
+            "dir": "down",
+            "emotion": "happy",
+            "scale": 0.95,
+            "seq": [
+              {
+                "at": "loot",
+                "pose": "hold",
+                "item": "coin"
+              }
+            ]
+          },
+          {
+            "who": "y3",
+            "accessory": "helmet_byz",
+            "x": 0.8,
+            "face": "left",
+            "pose": "hold",
+            "item": "coin",
+            "emotion": "happy",
+            "scale": 0.9,
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "item": null,
+                "emotion": "happy"
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "YAĞMA!",
+            "x": 0.27,
+            "y": 0.255,
+            "at": "hit",
+            "size": 96,
+            "color": "red",
+            "ring": true,
+            "rot": -6
+          }
+        ],
+        "hit": "hit",
+        "cam": {
+          "zoom": 1.08,
+          "focus": [
+            0.5,
+            0.52
+          ]
+        }
+      }
+    },
+    {
+      "type": "hc_close",
+      "text": "İşte o anda aşçılar, seyisler, deveciler ellerine ne geçtiyse kapıp saldırdı.",
+      "visual": "Ordugâh yakın plan: soldan önlüklü aşçı kepçeyle, seyis yabayla, deveci sırıkla sırayla koşarak giriyor ve aletlerini havada sallıyor; her birinin başının hemen üstünde el yazısı adı ('Aşçılar', 'Seyisler', 'Deveciler') beliriyor; 'saldırdı'da yağmacıyla aralarında büyük kırmızı çarpışma patlaması ve 'HÜCUM!' yazısı, yağmacı şokla geri sıçrıyor; sağda Kaşif şaşırıyor.",
+      "title": {
+        "white": "Ordugâh",
+        "gray": "hizmetlileri"
+      },
+      "cues": {
+        "a": "aşçılar",
+        "s": "seyisler",
+        "d": "deveciler",
+        "hit": "saldırdı"
+      },
+      "params": {
+        "otag": {
+          "x": 0.7,
+          "scale": 0.75
+        },
+        "tents": {
+          "n": 5
+        },
+        "cauldron": false,
+        "chests": [
+          {
+            "x": 0.78,
+            "scale": 0.75
+          }
+        ],
+        "cast": [
+          {
+            "who": "asci",
+            "accessory": "turban",
+            "beard": "black",
+            "apron": true,
+            "tool": "ladle",
+            "x": -0.15,
+            "face": "right",
+            "pose": "idle",
+            "emotion": "angry",
+            "scale": 0.8,
+            "seq": [
+              {
+                "at": "a",
+                "to": 0.47,
+                "dur": 0.9,
+                "pose": "run",
+                "then": "point",
+                "dir": 40
+              }
+            ]
+          },
+          {
+            "who": "seyis",
+            "accessory": "beret",
+            "beard": "short",
+            "tool": "fork",
+            "x": -0.15,
+            "face": "right",
+            "pose": "idle",
+            "emotion": "angry",
+            "scale": 0.77,
+            "seq": [
+              {
+                "at": "s",
+                "to": 0.3,
+                "dur": 0.8,
+                "pose": "run",
+                "then": "point",
+                "dir": 45
+              }
+            ]
+          },
+          {
+            "who": "deveci",
+            "accessory": "turban",
+            "beard": "grey",
+            "tool": "pole",
+            "x": -0.15,
+            "face": "right",
+            "pose": "idle",
+            "emotion": "angry",
+            "scale": 0.75,
+            "seq": [
+              {
+                "at": "d",
+                "to": 0.13,
+                "dur": 0.7,
+                "pose": "run",
+                "then": "point",
+                "dir": 35
+              }
+            ]
+          },
+          {
+            "who": "yagmaci",
+            "accessory": "helmet_byz",
+            "x": 0.66,
+            "face": "right",
+            "pose": "hold",
+            "item": "coin",
+            "emotion": "happy",
+            "scale": 0.8,
+            "seq": [
+              {
+                "at": "a",
+                "face": "left",
+                "pose": "idle",
+                "item": null,
+                "emotion": "surprised"
+              },
+              {
+                "at": "hit",
+                "pose": "shock",
+                "emotion": "worried"
+              }
+            ]
+          },
+          {
+            "who": "kasif",
+            "x": 0.855,
+            "face": "left",
+            "pose": "idle",
+            "scale": 0.58,
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock"
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "Aşçılar",
+            "on": "asci",
+            "at": "a",
+            "size": 64,
+            "color": "blue",
+            "rot": -5,
+            "dx": 0.02,
+            "dy": 0.0
+          },
+          {
+            "text": "Seyisler",
+            "on": "seyis",
+            "at": "s",
+            "size": 60,
+            "color": "blue",
+            "rot": 3,
+            "dy": -0.045,
+            "dx": 0.0
+          },
+          {
+            "text": "Deveciler",
+            "on": "deveci",
+            "at": "d",
+            "size": 58,
+            "color": "blue",
+            "rot": -3,
+            "dx": 0.04,
+            "dy": 0.0
+          }
+        ],
+        "hit": "hit",
+        "shake": "hit",
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.4,
+            0.5
+          ]
+        },
+        "clash": {
+          "at": "hit",
+          "x": 0.58,
+          "y": 0.5,
+          "r": 125,
+          "text": "HÜCUM!",
+          "size": 44
+        }
+      }
+    },
+    {
+      "type": "hc_field",
+      "text": "Süvariler de yandan vurunca düşman bataklığa sürüldü.",
+      "visual": "Kuşbakışı: ortada kırmızı düşman blokları; yukarıdan ve soldan mavi Osmanlı süvarileri yandan dalıyor, 'vurunca'da bloklar aşağıdaki sazlıklı bataklığa doğru itiliyor, 'bataklığa'da dağılıp bataklığın içine kaçan noktalara dönüşüyor; bataklıkta sazlar sallanıyor, su halkaları; kırmızı 'Bataklık' yazısı; sağda Kaşif işaret ediyor.",
+      "title": {
+        "white": "Karşı",
+        "gray": "saldırı"
+      },
+      "cues": {
+        "go": "Süvariler",
+        "hit": "vurunca",
+        "mar": "bataklığa"
+      },
+      "params": {
+        "camp": false,
+        "hills": false,
+        "marsh": {
+          "x": 0.42,
+          "y": 0.47,
+          "rx": 0.3,
+          "ry": 0.085
+        },
+        "units": [
+          {
+            "id": "d1",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.36,
+            "y": 0.27,
+            "w": 200,
+            "h": 100,
+            "face": 180,
+            "moves": [
+              {
+                "at": "hit",
+                "y": 0.42,
+                "x": 0.34,
+                "dur": 1.2
+              }
+            ],
+            "scatter": "mar"
+          },
+          {
+            "id": "d2",
+            "side": "byz",
+            "kind": "block",
+            "x": 0.6,
+            "y": 0.3,
+            "w": 200,
+            "h": 100,
+            "face": 180,
+            "moves": [
+              {
+                "at": "hit",
+                "y": 0.44,
+                "x": 0.56,
+                "dur": 1.3
+              }
+            ],
+            "scatter": "mar"
+          },
+          {
+            "id": "s1",
+            "side": "sel",
+            "kind": "riders",
+            "n": 9,
+            "spread": 1.3,
+            "x": 0.52,
+            "y": 0.16,
+            "face": 90,
+            "moves": [
+              {
+                "at": "go",
+                "y": 0.22,
+                "dur": 1.2
+              },
+              {
+                "at": "hit",
+                "y": 0.31,
+                "x": 0.47,
+                "dur": 1.3
+              }
+            ]
+          },
+          {
+            "id": "s2",
+            "side": "sel",
+            "kind": "riders",
+            "n": 8,
+            "spread": 1.2,
+            "x": -0.05,
+            "y": 0.3,
+            "face": 0,
+            "moves": [
+              {
+                "at": "go",
+                "x": 0.12,
+                "dur": 1.2
+              },
+              {
+                "at": "hit",
+                "x": 0.2,
+                "y": 0.36,
+                "dur": 1.2
+              }
+            ]
+          }
+        ],
+        "labels": [
+          {
+            "text": "Osmanlı süvarisi",
+            "x": 0.76,
+            "y": 0.155,
+            "color": "blue",
+            "at": "go",
+            "size": 58
+          },
+          {
+            "text": "Bataklık",
+            "x": 0.42,
+            "y": 0.575,
+            "color": "red",
+            "at": "mar",
+            "size": 72
+          }
+        ],
+        "shake": "hit",
+        "kasif": {
+          "x": 0.87,
+          "y": 0.6,
+          "scale": 0.75,
+          "face": -1,
+          "pose": "look",
+          "hill": false,
+          "seq": [
+            {
+              "at": "hit",
+              "pose": "point",
+              "dir": "left",
+              "emotion": "happy"
+            }
+          ]
+        },
+        "cam": {
+          "zoom": 1.05,
+          "focus": [
+            0.45,
+            0.38
+          ]
+        }
+      }
+    },
+    {
+      "type": "title",
+      "text": "Yani düşman savaşı kılıçla değil, açgözlülükle kaybetti.",
+      "visual": "Dev yazı kelime kelime çarpıyor: 'Kılıçla değil,' / 'açgözlülükle' (kırmızı kutuda) / 'kaybetti'; altında el yazısı not 'Haçova, 1596'; sağda büyük Kaşif 'açgözlülükle'de şaşırıp kırmızı kutuyu işaret ediyor.",
+      "title": {},
+      "cues": {
+        "w0": "kılıçla",
+        "w1": "açgözlülükle",
+        "w2": "kaybetti",
+        "note": "kaybetti"
+      },
+      "params": {
+        "lines": [
+          "Kılıçla değil,",
+          "açgözlülükle",
+          "kaybetti"
+        ],
+        "highlight": [
+          "açgözlülükle"
+        ],
+        "note": "Haçova, 1596",
+        "y": 0.27,
+        "kasif": {
+          "x": 0.85,
+          "y": 0.65,
+          "pose": "point",
+          "dir": 35,
+          "at": "w1",
+          "face": -1,
+          "scale": 0.75,
+          "emotion": "surprised"
+        },
+        "arrow": false
+      }
+    }
+  ]
+}
