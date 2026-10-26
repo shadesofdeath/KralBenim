@@ -1,0 +1,892 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "extra": true,
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "rum-atesi",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Suyla",
+      "sönmeyen",
+      "ateş"
+    ],
+    "highlight": [
+      "ateş"
+    ],
+    "scene": 0,
+    "t": 1.3,
+    "focus": [
+      560,
+      960
+    ],
+    "zoom": 1.15,
+    "kasif": {
+      "pose": "shock",
+      "x": 820,
+      "y": 1890
+    }
+  },
+  "sources": [
+    {
+      "title": "Greek fire (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Greek_fire"
+    },
+    {
+      "title": "Siege of Constantinople, 674–678 (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Constantinople_(674%E2%80%93678)"
+    },
+    {
+      "title": "De Administrando Imperio (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/De_Administrando_Imperio"
+    },
+    {
+      "title": "Greek Fire (World History Encyclopedia)",
+      "url": "https://www.worldhistory.org/Greek_Fire/"
+    }
+  ],
+  "youtube": {
+    "title": "Rum Ateşi: Suyla Sönmeyen Silahın Tarifi Neden Kayboldu?",
+    "description": "Rum ateşi suyla sönmüyordu, denizin üstünde bile yanıyordu. Bu silah İstanbul'un kurtuluşunda büyük rol oynadı, peki tarifi neden bugün kimse bilmiyor?\n\n670'li yıllarda bir Arap donanması İstanbul'u kuşattı. Theophanes'e göre Suriye'den kaçan usta Kallinikos bir \"deniz ateşi\" getirdi; İmparator Dördüncü Konstantinos'un gemilerindeki sifonlardan fışkıran alev Arap gemilerini yaktı. Grek ateşi de denilen bu silahın formülü bir devlet sırrıydı: İmparator Yedinci Konstantinos oğluna yazdığı kitapta bu ateşin asla yabancılara verilmemesini öğütledi. Bugün tarihçiler büyük olasılıkla petrol ve reçine içerdiğini düşünüyor, ama tam tarif kayıp.\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence bu sır bir gün çözülecek mi? Yorumlara yaz!\n\n#shorts #rumateşi #bizans #tarih #düşünbakalım",
+    "tags": [
+      "rum ateşi",
+      "bizans rum ateşi",
+      "rum ateşi tarifi",
+      "grek ateşi",
+      "yunan ateşi",
+      "greek fire",
+      "kallinikos",
+      "bizans imparatorluğu",
+      "istanbul kuşatması",
+      "arap kuşatması",
+      "dördüncü konstantinos",
+      "bizans gizli silahı",
+      "kayıp tarif",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "now"
+  },
+  "scenes": [
+    {
+      "type": "ra_siphon",
+      "text": "Bu ateş suyla sönmüyordu.",
+      "visual": "Yakın plan dalgalı deniz: ortada dalgaların üstünde yayılmış alçak, geniş bir alev tabakası; sağda kırmızı flamalı Arap kadırgasının pruvası, güvertede sarıklı denizci kovayı devirip kalın mavi bir su kavsini alevin ortasına döküyor; suyun düştüğü yerde alev söneceğine dev gibi yukarı fırlıyor, gri buhar kıvrımları yükseliyor (kapakta büyük şok Kaşif sağ altta).",
+      "title": {},
+      "cues": {
+        "water": "suyla",
+        "hit": "sönmüyordu"
+      },
+      "params": {
+        "horizon": 0.36,
+        "shore": false,
+        "wind": {
+          "s": 0.3,
+          "dir": 1,
+          "lines": 2
+        },
+        "ledge": false,
+        "waves": {
+          "y0": 0.44,
+          "y1": 0.64,
+          "rows": 5,
+          "n": 6
+        },
+        "ships": [
+          {
+            "kind": "galley",
+            "side": "tr",
+            "x": 1.0,
+            "y": 0.51,
+            "scale": 1.35,
+            "face": -1,
+            "sail": "set",
+            "row": false
+          }
+        ],
+        "pools": [
+          {
+            "x": 0.4,
+            "y": 0.56,
+            "at": -1,
+            "w": 1.5,
+            "h": 0.45,
+            "n": 9
+          }
+        ],
+        "splashes": [
+          {
+            "from": [
+              0.78,
+              0.41
+            ],
+            "to": [
+              0.4,
+              0.55
+            ],
+            "at": 0.15,
+            "dur": 0.4,
+            "pour": 3,
+            "bucket": true,
+            "leap": 420,
+            "leap_w": 190
+          }
+        ],
+        "cast": [
+          {
+            "who": "denizci",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.85,
+            "y": 0.49,
+            "scale": 0.45,
+            "pose": "point",
+            "dir": "down-left",
+            "face": "left",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "point",
+                "dir": "down-left",
+                "emotion": "worried"
+              }
+            ]
+          }
+        ],
+        "zoom": 1.05,
+        "focus": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    {
+      "type": "ra_siphon",
+      "text": "Denizin üstünde bile yanardı!",
+      "visual": "Yandan deniz: solda mavi flamalı Bizans kadırgasının pruvasında tunç bir boru; 'Denizin'de borudan kırmızı-altın bir alev akıntısı kavis çizerek denize fışkırıyor; 'üstünde'de alev suya düştüğü yerde denizin üstünde yanan bir alev gölü oluşuyor, dalgalarla sallanıyor, 'yanardı'da alevler büyüyor; uzakta kırmızı flamalı bir Arap gemisi; Bizans kadırgasının güvertesinde Kaşif alevi işaret ediyor, 'yanardı'da şokla geri sıçrıyor.",
+      "title": {
+        "white": "Denizde",
+        "gray": "yanan ateş"
+      },
+      "cues": {
+        "fire": "Denizin",
+        "sea": "üstünde",
+        "hit": "yanardı"
+      },
+      "params": {
+        "horizon": 0.36,
+        "shore": false,
+        "wind": {
+          "s": 0.4,
+          "dir": 1,
+          "lines": 3
+        },
+        "ledge": false,
+        "ships": [
+          {
+            "kind": "galley",
+            "side": "hl",
+            "x": 0.1,
+            "y": 0.53,
+            "scale": 1.4,
+            "face": 1,
+            "sail": "furled"
+          },
+          {
+            "kind": "galley",
+            "side": "tr",
+            "x": 0.93,
+            "y": 0.44,
+            "scale": 0.8,
+            "face": -1,
+            "depth": 0.5,
+            "sail": "set"
+          }
+        ],
+        "siphons": [
+          {
+            "x": 0.41,
+            "y": 0.5,
+            "aim": -25,
+            "len": 150
+          }
+        ],
+        "jets": [
+          {
+            "from": 0,
+            "to": [
+              0.5,
+              0.54
+            ],
+            "at": "fire",
+            "dur": 0.4,
+            "arc": 0.35,
+            "w": 1.0
+          }
+        ],
+        "pools": [
+          {
+            "x": 0.55,
+            "y": 0.56,
+            "at": "sea",
+            "w": 1.2,
+            "flare": "hit"
+          }
+        ],
+        "zoom": 1.1,
+        "focus": [
+          0.5,
+          0.52
+        ],
+        "waves": {
+          "y0": 0.44,
+          "y1": 0.64,
+          "rows": 5,
+          "n": 6
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.2,
+            "y": 0.508,
+            "scale": 0.42,
+            "pose": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "map",
+      "text": "670'li yıllarda Arap donanması İstanbul'u kuşattı.",
+      "visual": "Eski harita: Anadolu, Ege ve Marmara; Suriye kıyısından Ege'yi dolaşıp Çanakkale'den Marmara'ya giren kırmızı kesikli donanma rotası çiziliyor; 'İstanbul'da İstanbul kırmızı halkayla beliriyor; el yazısı not 'Kuşatma!'.",
+      "title": {
+        "white": "Kuşatma",
+        "gray": "670'ler"
+      },
+      "source": "Theophanes",
+      "cues": {
+        "route": "donanması",
+        "city": "İstanbul",
+        "note": "kuşattı"
+      },
+      "params": {
+        "preset": "anatolia",
+        "cities": [
+          {
+            "name": "İstanbul",
+            "x": 28.98,
+            "y": 41.01,
+            "at": "city",
+            "color": "red"
+          },
+          {
+            "name": "Suriye",
+            "x": 37.3,
+            "y": 36.0,
+            "at": 0.1
+          }
+        ],
+        "route": {
+          "points": [
+            [
+              35.4,
+              35.85
+            ],
+            [
+              33.0,
+              35.8
+            ],
+            [
+              30.5,
+              35.95
+            ],
+            [
+              28.2,
+              36.3
+            ],
+            [
+              26.6,
+              37.3
+            ],
+            [
+              25.9,
+              38.6
+            ],
+            [
+              25.95,
+              39.8
+            ],
+            [
+              26.35,
+              40.15
+            ],
+            [
+              27.6,
+              40.6
+            ],
+            [
+              28.85,
+              40.95
+            ]
+          ],
+          "at": "route",
+          "dur": 1.6,
+          "color": "red"
+        },
+        "note": {
+          "text": "Kuşatma!",
+          "x": 0.3,
+          "y": 0.55,
+          "at": "note"
+        },
+        "focus": [
+          28.3,
+          38.8
+        ],
+        "zoom": 1.05,
+        "compass": "br"
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Ama Suriyeli usta Kallinikos bir sır getirdi.",
+      "visual": "Konstantinopolis silueti önünde: sağdan sakallı usta Kallinikos elinde bir tomarla yürüyerek geliyor; solda taçlı Bizans imparatoru bekliyor; 'sır'da Kallinikos tomarı kaldırıp gösteriyor, imparator şaşırıyor; el yazısı 'Kallinikos' oku ustayı gösteriyor; en solda Kaşif önce ustayı işaret ediyor, sonra şaşırıyor.",
+      "title": {
+        "white": "Kallinikos",
+        "gray": "Suriyeli usta"
+      },
+      "source": "Theophanes",
+      "cues": {
+        "walk": "Suriyeli",
+        "name": "Kallinikos",
+        "hit": "sır"
+      },
+      "params": {
+        "skyline": true,
+        "foreground": "hatch",
+        "scale": 0.85,
+        "cam": {
+          "zoom": 1.06,
+          "focus": [
+            0.5,
+            0.5
+          ]
+        },
+        "label": {
+          "text": "Kallinikos",
+          "x": 0.7,
+          "y": 0.22,
+          "at": "name",
+          "size": 72,
+          "arrow": [
+            0.72,
+            0.3
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.17,
+            "pose": "idle",
+            "face": "right",
+            "scale": 0.85,
+            "seq": [
+              {
+                "at": "name",
+                "pose": "point",
+                "dir": 10
+              },
+              {
+                "at": "hit",
+                "pose": "shock"
+              }
+            ]
+          },
+          {
+            "who": "imparator",
+            "accessory": "crown",
+            "beard": "short",
+            "x": 0.38,
+            "pose": "idle",
+            "face": "right",
+            "talk": false,
+            "scale": 0.95,
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          },
+          {
+            "who": "kallinikos",
+            "beard": "black",
+            "x": 1.12,
+            "pose": "walk",
+            "to": 0.68,
+            "at": "name",
+            "then": "hold",
+            "item": "scroll",
+            "face": "left",
+            "talk": false,
+            "scale": 0.95,
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "hold",
+                "item": "scroll",
+                "emotion": "happy"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "ra_siphon",
+      "text": "Borulardan fışkıran alev Arap gemilerini tek tek yaktı.",
+      "visual": "Yandan deniz: solda mavi flamalı Bizans kadırgasının pruvasında tunç boru, el yazısı kırmızı 'sifon' oku; 'fışkıran'da borudan alev akıntısı sağdaki kırmızı flamalı Arap kadırgasına fışkırıyor, 'gemilerini'de o gemi tutuşuyor, 'tek'te akıntı arkadaki ikinci gemiye kayıyor ve 'yaktı'da o da alev ve kara dumanla tutuşuyor.",
+      "title": {
+        "white": "Sifon",
+        "gray": "alev borusu"
+      },
+      "source": "Theophanes",
+      "cues": {
+        "tube": "Borulardan",
+        "fire": "fışkıran",
+        "fleet": "gemilerini",
+        "next": "tek",
+        "hit": "yaktı"
+      },
+      "params": {
+        "horizon": 0.34,
+        "shore": {
+          "side": "right",
+          "w": 0.28,
+          "fort": false
+        },
+        "wind": {
+          "s": 0.5,
+          "dir": 1,
+          "lines": 3
+        },
+        "ledge": false,
+        "ships": [
+          {
+            "kind": "galley",
+            "side": "hl",
+            "x": 0.2,
+            "y": 0.52,
+            "scale": 1.15,
+            "face": 1,
+            "sail": "furled"
+          },
+          {
+            "kind": "galley",
+            "side": "tr",
+            "x": 0.72,
+            "y": 0.5,
+            "scale": 1.0,
+            "face": -1,
+            "sail": "set",
+            "fire": "fleet"
+          },
+          {
+            "kind": "galley",
+            "side": "tr",
+            "x": 0.62,
+            "y": 0.42,
+            "scale": 0.8,
+            "face": -1,
+            "depth": 0.35,
+            "sail": "set",
+            "fire": "hit"
+          }
+        ],
+        "siphons": [
+          {
+            "x": 0.42,
+            "y": 0.495,
+            "aim": -15,
+            "len": 130,
+            "at": 0
+          }
+        ],
+        "jets": [
+          {
+            "from": 0,
+            "to": [
+              0.68,
+              0.47
+            ],
+            "at": "fire",
+            "dur": 0.4,
+            "arc": 0.22,
+            "sweep": [
+              [
+                0.6,
+                0.4
+              ]
+            ],
+            "sweep_at": "next",
+            "sweep_dur": 0.8
+          }
+        ],
+        "pools": [
+          {
+            "x": 0.68,
+            "y": 0.53,
+            "at": "hit",
+            "w": 0.9
+          }
+        ],
+        "labels": [
+          {
+            "text": "sifon",
+            "x": 0.36,
+            "y": 0.33,
+            "at": 0.1,
+            "size": 80,
+            "color": "red",
+            "arrow": [
+              0.4,
+              0.45
+            ]
+          }
+        ],
+        "zoom": 1.07,
+        "focus": [
+          0.5,
+          0.48
+        ]
+      }
+    },
+    {
+      "type": "ra_secret",
+      "text": "İçinde ne mi vardı? Büyük olasılıkla petrol, gerisi meçhul.",
+      "visual": "Açık bir parşömen tomarı, başlık 'Rum ateşi'; 'petrol'de ilk satıra el yazısıyla 'Petrol' yazılıp yanına kırmızı soru işareti konuyor; 'gerisi' ve 'meçhul'de alttaki iki satır okunmaz karalamaya dönüp kırmızı soru işaretleri alıyor; solda büyük Kaşif önce çenesini tutup düşünüyor, 'petrol'de satırı işaret ediyor, 'meçhul'de omuz silkiyor.",
+      "title": {
+        "white": "Tarif",
+        "gray": "bilinmiyor"
+      },
+      "cues": {
+        "q": "İçinde",
+        "oil": "petrol",
+        "rec": "gerisi",
+        "hit": "meçhul"
+      },
+      "params": {
+        "x": 0.64,
+        "w": 0.52,
+        "top": 0.2,
+        "bottom": 0.56,
+        "heading": "Rum ateşi",
+        "lines": [
+          {
+            "text": "Petrol",
+            "at": "oil",
+            "mark": "q"
+          },
+          {
+            "unknown": true,
+            "at": "rec"
+          },
+          {
+            "unknown": true,
+            "at": "hit"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.17,
+            "y": 0.62,
+            "scale": 0.8,
+            "pose": "think",
+            "face": "right",
+            "seq": [
+              {
+                "at": "oil",
+                "pose": "point",
+                "dir": "up-right",
+                "emotion": "happy"
+              },
+              {
+                "at": "hit",
+                "pose": "shrug",
+                "emotion": "worried"
+              }
+            ]
+          }
+        ],
+        "zoom": 1.06,
+        "focus": [
+          0.55,
+          0.42
+        ]
+      }
+    },
+    {
+      "type": "stage",
+      "text": "Çünkü bu, devlet sırrıydı. Bir imparator oğluna \"Bunu asla yabancılara verme!\" diye yazdı.",
+      "visual": "Saray önünde taçlı Bizans imparatoru elinde tomarla duruyor; 'oğluna'da sağdaki küçük taçlı oğluna dönüp anlatıyor, 'verme'de parmağını sallayarak uyarıyor, oğlu şaşırıyor; kırmızı el yazısı 'Asla verme!' oku imparatoru gösteriyor; solda Kaşif dürbünle tomarı görmeye çalışıyor, 'verme'de şokla geri sıçrıyor.",
+      "title": {
+        "white": "Devlet sırrı"
+      },
+      "source": "De Administrando Imperio",
+      "cues": {
+        "hit": "sırrıydı",
+        "son": "oğluna",
+        "warn": "verme"
+      },
+      "params": {
+        "backdrop": {
+          "type": "palace",
+          "opacity": 0.5
+        },
+        "foreground": "hatch",
+        "scale": 0.85,
+        "cam": {
+          "zoom": 1.07,
+          "focus": [
+            0.6,
+            0.5
+          ]
+        },
+        "label": {
+          "text": "Asla verme!",
+          "x": 0.66,
+          "y": 0.25,
+          "at": "warn",
+          "size": 84,
+          "arrow": [
+            0.58,
+            0.34
+          ]
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.15,
+            "pose": "look",
+            "face": "right",
+            "scale": 0.85,
+            "seq": [
+              {
+                "at": "warn",
+                "pose": "shock"
+              }
+            ]
+          },
+          {
+            "who": "imparator",
+            "accessory": "crown",
+            "beard": "short",
+            "x": 0.56,
+            "pose": "hold",
+            "item": "scroll",
+            "face": "right",
+            "talk": false,
+            "scale": 0.95,
+            "seq": [
+              {
+                "at": "son",
+                "pose": "talk",
+                "face": "right"
+              },
+              {
+                "at": "warn",
+                "pose": "point",
+                "dir": "forward",
+                "emotion": "angry"
+              }
+            ]
+          },
+          {
+            "who": "sehzade",
+            "accessory": "crown",
+            "x": 0.84,
+            "pose": "idle",
+            "face": "left",
+            "talk": false,
+            "scale": 0.68,
+            "seq": [
+              {
+                "at": "warn",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "ra_secret",
+      "text": "Düşünün: öyle iyi sakladılar ki tarif sonsuza dek kayboldu.",
+      "visual": "Aynı parşömen tomarı: 'Rum ateşi' başlığı ve satırlar; 'sonsuza'da yazılar satır satır silinip mürekkep tozu olarak uçuyor, kâğıt bomboş kalıyor; 'kayboldu'da kırmızı kutulu dev 'KAYBOLDU' damgası eğik çarpıyor; solda Kaşif önce anlatıyor, sonra şokla geri sıçrıyor.",
+      "title": {
+        "white": "Rum ateşi",
+        "gray": "kayıp tarif"
+      },
+      "cues": {
+        "fade": "sonsuza",
+        "hit": "kayboldu"
+      },
+      "params": {
+        "x": 0.64,
+        "w": 0.52,
+        "top": 0.2,
+        "bottom": 0.56,
+        "heading": "Rum ateşi",
+        "lines": [
+          {
+            "text": "Petrol",
+            "at": 0
+          },
+          {
+            "unknown": true,
+            "at": 0.1
+          },
+          {
+            "unknown": true,
+            "at": 0.2
+          }
+        ],
+        "fade": "fade",
+        "fade_dur": 1.0,
+        "stamp": {
+          "text": "KAYBOLDU",
+          "at": "hit",
+          "y": 0.36,
+          "size": 104,
+          "x": 0.6
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.17,
+            "y": 0.62,
+            "scale": 0.8,
+            "pose": "talk",
+            "face": "right",
+            "seq": [
+              {
+                "at": "fade",
+                "pose": "point",
+                "dir": "up-right"
+              },
+              {
+                "at": "hit",
+                "pose": "shock"
+              }
+            ]
+          }
+        ],
+        "zoom": 1.06,
+        "focus": [
+          0.55,
+          0.42
+        ]
+      }
+    },
+    {
+      "type": "ra_siphon",
+      "text": "Her gün böyle gerçek bir hikâye için abone olun.",
+      "visual": "Son kare: sakin, dalgalı deniz; uzakta küçük bir Bizans kadırgası; ortada denizin üstünde hâlâ yanan küçük, son bir alev; önde kıyı kayalığında, solda büyük Kaşif önce aleve bakıyor, 'abone'de izleyiciye dönüp el sallıyor.",
+      "title": {
+        "white": "Rum ateşi",
+        "gray": "hâlâ sır"
+      },
+      "cues": {
+        "turn": "abone"
+      },
+      "params": {
+        "horizon": 0.38,
+        "shore": false,
+        "wind": {
+          "s": 0.2,
+          "dir": 1,
+          "lines": 2
+        },
+        "waves": {
+          "y0": 0.44,
+          "y1": 0.6,
+          "rows": 4,
+          "n": 6
+        },
+        "ships": [
+          {
+            "kind": "galley",
+            "side": "hl",
+            "x": 0.84,
+            "y": 0.43,
+            "scale": 0.8,
+            "face": -1,
+            "depth": 0.5,
+            "sail": "set"
+          }
+        ],
+        "pools": [
+          {
+            "x": 0.66,
+            "y": 0.5,
+            "at": -1,
+            "w": 0.6,
+            "h": 0.9,
+            "n": 4
+          }
+        ],
+        "ledge": {
+          "side": "left",
+          "y": 0.58,
+          "w": 1.25
+        },
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.26,
+            "y": 0.58,
+            "scale": 1.0,
+            "pose": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "turn",
+                "pose": "wave",
+                "emotion": "happy",
+                "face": "left"
+              }
+            ]
+          }
+        ],
+        "zoom": 1.06,
+        "focus": [
+          0.45,
+          0.5
+        ]
+      }
+    }
+  ]
+}
