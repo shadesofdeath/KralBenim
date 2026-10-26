@@ -425,6 +425,8 @@ def publish_time(key, sid):
     from zoneinfo import ZoneInfo
     try:
         p = json.loads((ROOT / "videos" / key / f"{sid}.json").read_text())["youtube"]["publish_at"]
+        if p == "now":
+            return "hemen"
         return datetime.fromisoformat(p).astimezone(ZoneInfo("Europe/Istanbul")).strftime("%d.%m %H:%M")
     except (OSError, ValueError, KeyError):
         return ""

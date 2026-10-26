@@ -118,6 +118,8 @@ def failed_step(j):
 
 def publish_label(script):
     p = (script.get("youtube") or {}).get("publish_at", "")
+    if p == "now":                      # extra video the owner asked for: public as soon as it is uploaded
+        return "yayın: hemen"
     try:
         d = datetime.fromisoformat(p).astimezone(ZoneInfo("Europe/Istanbul"))   # the owner's clock
         return f"yayın {d.day} {tgm.MONTHS[d.month - 1]} {d:%H:%M}"
