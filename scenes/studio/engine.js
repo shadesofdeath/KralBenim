@@ -162,7 +162,10 @@ function planCamera(o, i, b) {
   }
   s = Math.max(1, Math.min(3, s));
   const move = C.move || (o.sc.type === 'chapter' ? 'push' : CAM_MOVES[(i * 7 + 3) % CAM_MOVES.length]);
-  return { s, fx, fy, ax: (A.x0 + A.x1) / 2, ay: (A.y0 + A.y1) / 2, move };
+  // a close-up brings its subject to the middle of the picture area; the automatic framing only zooms about the
+  // shot's own centre, so a composition laid out to fill the frame (down to the bottom) stays where its author put it
+  const close = Array.isArray(C.focus);
+  return { s, fx, fy, ax: close ? (A.x0 + A.x1) / 2 : fx, ay: close ? (A.y0 + A.y1) / 2 : fy, move };
 }
 // transform for scene-local time lt: p -> C + T + s (p - C) about the stage centre, clamped so the stage covers the frame
 function cameraAt(o, lt, pk) {
