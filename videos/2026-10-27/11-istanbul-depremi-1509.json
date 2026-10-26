@@ -1,0 +1,793 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "extra": true,
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "istanbul-depremi-1509",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Küçük",
+      "kıyamet"
+    ],
+    "highlight": [
+      "kıyamet"
+    ],
+    "scene": 0,
+    "t": 1.25,
+    "focus": [
+      600,
+      680
+    ],
+    "zoom": 1.75,
+    "kasif": {
+      "pose": "shock",
+      "x": 740,
+      "y": 1820
+    }
+  },
+  "sources": [
+    {
+      "title": "1509 Constantinople earthquake (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/1509_Constantinople_earthquake"
+    },
+    {
+      "title": "Erhan Afyoncu — İstanbul'u 510 yıl önce yıkan 'Küçük Kıyamet' (Sabah)",
+      "url": "https://www.sabah.com.tr/yazarlar/erhan-afyoncu/2019/08/18/istanbulu-510-yil-once-yikan-kucuk-kiyamet"
+    }
+  ],
+  "youtube": {
+    "title": "1509 İstanbul Depremi: Şehir Küçük Kıyamet'ten Nasıl Kalktı?",
+    "description": "1509 İstanbul depremi o kadar büyüktü ki Osmanlılar ona Küçük Kıyamet dedi. Camiler yıkıldı, deniz surları aştı, padişah çadırda yattı. Peki şehir nasıl ayağa kalktı?\n\n1509'da bir gece İstanbul yerinden oynadı: 109 cami ve binden fazla ev yıkıldı, surlardaki kulelerin onlarcası çöktü, dalgalar surların üstünden şehre girdi. Sultan İkinci Bayezid'in yatak odası çöktü ama o, odadan birkaç saat önce çıkmıştı. Artçı sarsıntılar haftalarca sürdü. Sonra büyük onarım başladı: her haneden 22 akçe toplandı, Anadolu'dan ve Rumeli'den on binlerce usta ve işçi geldi, onarım sadece iki ay sürdü. Ölü sayısı tartışmalı; kaynaklar binlerce kişiden söz ediyor.\n\nHer gün böyle gerçek bir tarih hikâyesi için Düşün Bakalım'a abone ol. Sence bugün böyle bir onarım iki ayda biter miydi? Yorumlara yaz!\n\n#shorts #istanbuldepremi #osmanlı #tarih #düşünbakalım",
+    "tags": [
+      "1509 istanbul depremi",
+      "istanbul depremi 1509",
+      "küçük kıyamet",
+      "kıyamet-i suğra",
+      "büyük istanbul depremi",
+      "tarihteki istanbul depremleri",
+      "ikinci bayezid",
+      "osmanlı depremi",
+      "istanbul surları",
+      "osmanlı tarihi",
+      "deprem tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-27T10:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "ist09_sehir",
+      "text": "Osmanlılar bu depreme Küçük Kıyamet dedi.",
+      "visual": "Gece, denizden İstanbul: tepede kubbeli camiler ve kalem minareler, önde tuğla kuşaklı deniz surları; önde sallanan bir kayık burnu. Şehir sarsılıyor; büyük caminin kubbesinde kırmızı çatlak yürüyor, ilk saniyede sol minaresi kırılıp sola devriliyor, 'Küçük'te sağdaki minare ve ortadaki sur kulesi ufalanıyor; 'Kıyamet'te soldan dev bir dalga surların üstüne yükseliyor.",
+      "title": {},
+      "set": {
+        "name": "night",
+        "horizon": 800,
+        "ground": 1104
+      },
+      "cues": {
+        "hit": "Küçük",
+        "wave": "Kıyamet"
+      },
+      "params": {
+        "shake": 0,
+        "shake_dur": 4,
+        "fall": [
+          {
+            "m": 2,
+            "at": 0.8,
+            "dir": -1
+          },
+          {
+            "m": 4,
+            "at": "hit",
+            "dir": 1
+          }
+        ],
+        "cracks": [
+          {
+            "b": 1,
+            "at": 0.2
+          }
+        ],
+        "towers_fall": [
+          {
+            "i": 2,
+            "at": "hit"
+          }
+        ],
+        "wave": "wave",
+        "wave_dur": 1.3,
+        "fore": {
+          "kind": "boat",
+          "x": 0.62,
+          "y": 0.7
+        }
+      }
+    },
+    {
+      "type": "ist09_sokak",
+      "text": "1509'da, zifiri karanlıkta İstanbul sallandı.",
+      "visual": "Gece, yerden bakış: dar bir Osmanlı sokağı, iki yanda karanlık çıkmalı ahşap evler, sadece kafesli pencerelerde ışık, kiremitli saçaklar, asılı kandiller; önde kaldırımda kırık kiremitler ve kopmuş bir kafes. '1509'da'da evler sallanmaya başlıyor; 'karanlıkta'da kandiller savruluyor, saçaklardan kiremitler yağıyor ve sarıklı bir adam sokağın ortasından korkuyla koşarak kaçıyor; 'sallandı'da sokak boyunca toz bulutu yuvarlanıyor.",
+      "title": {
+        "white": "1509",
+        "gray": "bir gece"
+      },
+      "set": {
+        "name": "night",
+        "horizon": 760,
+        "ground": 1190
+      },
+      "cues": {
+        "shake": "1509'da",
+        "tiles": "karanlıkta",
+        "dust": "sallandı"
+      },
+      "params": {
+        "shake": "shake",
+        "shake_dur": 3.5,
+        "tiles": "tiles",
+        "dust": "dust",
+        "cast": [
+          {
+            "who": "adam",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.66,
+            "y": 0.57,
+            "scale": 0.72,
+            "pose": "idle",
+            "face": "left",
+            "run": true,
+            "to": 0.36,
+            "walk_at": "tiles",
+            "walk_dur": 1.6,
+            "emotion": "worried"
+          }
+        ],
+        "night": true,
+        "debris": true
+      }
+    },
+    {
+      "type": "ist09_sehir",
+      "text": "Düşünün, 109 cami yıkıldı!",
+      "visual": "Yakın plan büyük caminin kubbesi ve iki minaresi gece gökyüzünde; zemin sallanıyor, 'Düşünün'de sol minare kırılıp devriliyor, 'cami'de kubbe davula çöküp toz bulutu yükseliyor, 'yıkıldı'da sağ minare de devriliyor; el yazısı '109 cami' beliriyor.",
+      "title": {
+        "white": "109 cami",
+        "gray": "yıkıldı"
+      },
+      "source": "Erhan Afyoncu",
+      "set": {
+        "name": "night",
+        "horizon": 800,
+        "ground": 1104
+      },
+      "camera": {
+        "focus": [
+          690,
+          640
+        ],
+        "zoom": 1.6,
+        "move": "push"
+      },
+      "cues": {
+        "dome": "cami",
+        "m1": "Düşünün",
+        "m2": "yıkıldı"
+      },
+      "params": {
+        "shake": 0,
+        "shake_dur": 4,
+        "domes": [
+          {
+            "b": 1,
+            "at": "dome"
+          }
+        ],
+        "fall": [
+          {
+            "m": 2,
+            "at": "m1",
+            "dir": -1
+          },
+          {
+            "m": 3,
+            "at": "m2",
+            "dir": 1
+          }
+        ],
+        "labels": [
+          {
+            "text": "109 cami",
+            "x": 0.62,
+            "y": 0.22,
+            "at": "dome",
+            "size": 84,
+            "color": "red"
+          }
+        ],
+        "fore": {
+          "kind": "rubble",
+          "y": 0.64
+        }
+      }
+    },
+    {
+      "type": "ist09_sehir",
+      "text": "Ve dalgalar surları aşıp şehre girdi.",
+      "visual": "Yakın plan deniz surları ve mazgallar, fırtınalı gökyüzü; 'dalgalar'da soldan köpüklü dev dalga yükselip sur boyunca ilerliyor, tepesi mazgalları aşıyor, arkasında su surun içindeki çatıların üstüne yayılıyor; 'girdi'de sur kulesinin taşları kopup öndeki köpüklü suya düşüyor ve sıçratıyor; alt kısımda köpük kıvrımları akıyor.",
+      "title": {
+        "white": "Dev dalga"
+      },
+      "set": {
+        "name": "storm",
+        "horizon": 1104
+      },
+      "cues": {
+        "wave": "dalgalar",
+        "hit": "girdi"
+      },
+      "params": {
+        "wave": "wave",
+        "wave_dur": 2.0,
+        "wave_over": 200,
+        "shake": 0,
+        "shake_dur": 2,
+        "boats": [
+          {
+            "x": 0.75,
+            "y": 0.64,
+            "s": 1.1
+          }
+        ],
+        "wave_flood": 90,
+        "buildings": [
+          {
+            "k": "cypress",
+            "x": 0.03
+          },
+          {
+            "k": "house",
+            "x": 0.08,
+            "s": 0.9
+          },
+          {
+            "k": "house",
+            "x": 0.45,
+            "s": 0.9
+          },
+          {
+            "k": "mosque",
+            "x": 0.64,
+            "s": 1.12,
+            "min": [
+              -1,
+              1
+            ]
+          },
+          {
+            "k": "cypress",
+            "x": 0.83,
+            "s": 1.05
+          },
+          {
+            "k": "mosque",
+            "x": 0.95,
+            "s": 0.66,
+            "min": [
+              -1
+            ]
+          }
+        ],
+        "towers_fall": [
+          {
+            "i": 1,
+            "at": "hit"
+          }
+        ],
+        "stones_front": true,
+        "fore": {
+          "kind": "foam",
+          "y": 0.64
+        }
+      },
+      "camera": {
+        "focus": [
+          440,
+          1000
+        ],
+        "zoom": 1.9,
+        "move": "right"
+      }
+    },
+    {
+      "type": "ist09_oda",
+      "text": "Peki padişah? Bayezid'in odası çöktü.",
+      "visual": "Yakın plan saray yatak odası, gece: arkada İznik çinileri, zincirde sallanan kandil, cibinlikli alçak yatak, kırmızı yorgan, önde desenli halı. Oda sarsılıyor, kandil savruluyor; 'odası'nda tavan kirişi ikiye kırılıp yatağın üstüne çöküyor, taşlar yağıyor, toz bulutu; halıya taşlar saçılıyor, kandil yere düşüyor, alçak sehpa devriliyor.",
+      "title": {
+        "white": "II. Bayezid",
+        "gray": "yatak odası"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "camera": {
+        "focus": [
+          560,
+          980
+        ],
+        "zoom": 1.8,
+        "move": "push"
+      },
+      "cues": {
+        "shake": "Padişah",
+        "hit": "odası"
+      },
+      "params": {
+        "shake": "shake",
+        "shake_dur": 3,
+        "hit": "hit"
+      }
+    },
+    {
+      "type": "ist09_oda",
+      "text": "Ama şansa bakın, birkaç saat önce çıkmıştı.",
+      "visual": "Yakın plan aynı oda, enkaz: kırık kirişler ve taşlar yatağın ayak ucunda, halıda saçılmış taşlar, yere düşmüş kandil ve devrik sehpa; solda halının üstünde Kaşif boş yastıkları işaret ediyor; 'şansa'da boş yastıkların çevresine kırmızı halka çiziliyor ve halının düz kısmına 'YATAK BOŞTU!' damgası basılıyor; 'saat'te yataktan kapıya mürekkep ayak izleri uzanıyor, 'çıkmıştı'da Kaşif şaşkınlıkla geri sıçrıyor.",
+      "title": {
+        "white": "Birkaç saat",
+        "gray": "önce çıktı"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "cues": {
+        "ring": "şansa",
+        "steps": "saat",
+        "hit": "çıkmıştı"
+      },
+      "params": {
+        "ruin": true,
+        "empty": "ring",
+        "steps": {
+          "at": "steps",
+          "dur": 1.4
+        },
+        "labels": [
+          {
+            "text": "Yatak boştu!",
+            "x": 0.52,
+            "y": 0.66,
+            "at": "ring",
+            "stamp": true,
+            "size": 60,
+            "color": "red"
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "y": 0.64,
+            "scale": 0.65,
+            "pose": "point",
+            "dir": "right",
+            "face": "right",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "emotion": "surprised"
+              }
+            ]
+          }
+        ],
+        "canopy": false,
+        "window": false,
+        "lamp": false
+      },
+      "camera": {
+        "focus": [
+          560,
+          1080
+        ],
+        "zoom": 1.6,
+        "move": "pull"
+      }
+    },
+    {
+      "type": "ist09_cadir",
+      "text": "Artçılar sürdü, padişah bile çadırda yattı.",
+      "visual": "Yakın plan saray bahçesindeki büyük kırmızı-altın otağ: kapısında sarıklı, ak sakallı Sultan Bayezid oturuyor; önde bohçalarıyla bekleyen halk: bir kadın, bir çocuk, sarıklı bir adam; artçılarda çadır sallanıp toz kalkıyor, adam irkiliyor; arkada servi sırası.",
+      "title": {
+        "white": "Bayezid"
+      },
+      "set": {
+        "name": "field",
+        "ground": 1152
+      },
+      "cues": {
+        "t1": "Artçılar",
+        "t2": "sürdü",
+        "t3": "padişah"
+      },
+      "params": {
+        "tremors": [
+          "t1",
+          "t2",
+          "t3"
+        ],
+        "cast": [
+          {
+            "who": "bayezid",
+            "accessory": "turban",
+            "beard": "grey",
+            "x": 0.655,
+            "y": 0.6,
+            "scale": 0.6,
+            "pose": "sit",
+            "face": "left",
+            "seq": [
+              {
+                "at": "t3",
+                "pose": "sit",
+                "emotion": "worried"
+              }
+            ]
+          },
+          {
+            "who": "kadin",
+            "accessory": "beret",
+            "x": 0.5,
+            "y": 0.7,
+            "scale": 0.5,
+            "pose": "sit",
+            "face": "right",
+            "emotion": "worried"
+          },
+          {
+            "who": "cocuk",
+            "x": 0.56,
+            "y": 0.7,
+            "scale": 0.34,
+            "pose": "sit",
+            "face": "left"
+          },
+          {
+            "who": "adam",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.84,
+            "y": 0.69,
+            "scale": 0.52,
+            "pose": "sit",
+            "face": "left",
+            "seq": [
+              {
+                "at": "t2",
+                "pose": "shock",
+                "emotion": "worried"
+              }
+            ]
+          }
+        ],
+        "bundles": [
+          [
+            0.42,
+            0.72,
+            1.1
+          ],
+          [
+            0.93,
+            0.7,
+            0.9
+          ]
+        ]
+      },
+      "camera": {
+        "focus": [
+          700,
+          960
+        ],
+        "zoom": 1.8,
+        "move": "push"
+      }
+    },
+    {
+      "type": "ist09_akce",
+      "text": "Peki şehir nasıl kalktı? Her ev 22 akçe verdi.",
+      "visual": "Yakın plan hazine masası: açık defterin sayfaları kamış kalemle satır satır doluyor; sağda kesenin yanında gümüş akçeler tek tek düşüp üst üste yığılıyor, üstte kırmızı sayaç 22'ye çıkıyor; 'akçe'de 'HANE BAŞI' damgası basılıyor.",
+      "title": {
+        "white": "Hane başı",
+        "gray": "22 akçe"
+      },
+      "source": "Erhan Afyoncu",
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "cues": {
+        "coins": "kalktı",
+        "hit": "akçe"
+      },
+      "params": {
+        "coin_at": 0.3,
+        "coin_every": 0.1,
+        "counter": {
+          "x": 0.62,
+          "y": 0.395,
+          "size": 120,
+          "suffix": " akçe"
+        },
+        "labels": [
+          {
+            "text": "Hane başı",
+            "x": 0.62,
+            "y": 0.475,
+            "at": "hit",
+            "stamp": true,
+            "size": 72,
+            "color": "red"
+          }
+        ]
+      },
+      "camera": {
+        "focus": [
+          640,
+          960
+        ],
+        "zoom": 1.5,
+        "move": "push"
+      }
+    },
+    {
+      "type": "ist09_yol",
+      "text": "On binlerce usta İstanbul'a koştu.",
+      "visual": "İki geniş yol ufuktaki surlu şehrin kapısında birleşiyor, şehirde kubbelerin çevresinde iskeleler; iki yol da omzunda kalas ve kazma taşıyan sarıklı ustaların ve taş yüklü öküz arabalarının akışıyla dolu, en öndekiler büyük ve kadrajın altını dolduruyor; kamera yol boyunca ilerliyor; 'binlerce'de 'Anadolu', 'usta'da 'Rumeli' tabela açılıyor.",
+      "title": {
+        "white": "On binlerce",
+        "gray": "usta"
+      },
+      "set": {
+        "name": "hills",
+        "horizon": 768,
+        "ground": 1190
+      },
+      "cues": {
+        "l": "binlerce",
+        "r": "usta"
+      },
+      "params": {
+        "signs": [
+          {
+            "text": "Anadolu",
+            "side": "left",
+            "at": "l"
+          },
+          {
+            "text": "Rumeli",
+            "side": "right",
+            "at": "r"
+          }
+        ],
+        "n": 14,
+        "speed": 0.12
+      },
+      "camera": {
+        "focus": [
+          540,
+          1000
+        ],
+        "zoom": 1.15,
+        "move": "up"
+      }
+    },
+    {
+      "type": "ist09_sehir",
+      "text": "Onarım sadece iki ay sürdü!",
+      "visual": "Yakın plan deniz suru: ortadaki kırık kule iskelenin içinde sıra sıra yeniden örülüyor; surun üstünde sarıklı ustalar ellerinde taşlarla çalışıyor, biri taşıyla yürüyüp geliyor; arkada kubbenin çevresinde ahşap iskele; önde denizde bir kayık.",
+      "title": {
+        "white": "İki ayda",
+        "gray": "onarım"
+      },
+      "set": {
+        "name": "ocean",
+        "horizon": 1104
+      },
+      "cues": {
+        "rise": "Onarım",
+        "hit": "iki"
+      },
+      "params": {
+        "build": {
+          "b": 0,
+          "at": "rise",
+          "dur": 3.2,
+          "m": 1,
+          "tower": 2,
+          "crane": 0
+        },
+        "buildings": [
+          {
+            "k": "cypress",
+            "x": 0.2
+          },
+          {
+            "k": "mosque",
+            "x": 0.74,
+            "s": 1.12,
+            "min": [
+              -1,
+              1
+            ]
+          },
+          {
+            "k": "cypress",
+            "x": 0.98
+          }
+        ],
+        "boats": [
+          {
+            "x": 0.62,
+            "y": 0.68,
+            "s": 1.4
+          }
+        ],
+        "cast": [
+          {
+            "who": "usta1",
+            "accessory": "turban",
+            "x": 0.43,
+            "y": 0.535,
+            "scale": 0.42,
+            "pose": "hold",
+            "item": "rock",
+            "face": "right"
+          },
+          {
+            "who": "usta2",
+            "accessory": "turban",
+            "beard": "black",
+            "x": 0.78,
+            "y": 0.535,
+            "scale": 0.42,
+            "pose": "walk",
+            "to": 0.62,
+            "walk_at": 0,
+            "walk_dur": 2,
+            "face": "left",
+            "then": "hold",
+            "item": "rock"
+          }
+        ]
+      },
+      "camera": {
+        "focus": [
+          560,
+          990
+        ],
+        "zoom": 1.9,
+        "move": "push"
+      }
+    },
+    {
+      "type": "ist09_sehir",
+      "text": "Küçük Kıyamet'i bir şantiye yendi. Her gün böyle gerçek bir hikâye için abone olun.",
+      "visual": "Orta plan: altın akşam ışığında onarılmış surun üstünde büyük Kaşif, arkasında tamamlanmış kubbeler ve minareler, önde denizde bir kayık; Kaşif önce şehri işaret ediyor, 'abone'de izleyiciye dönüp el sallıyor.",
+      "title": {
+        "white": "İstanbul",
+        "gray": "ayakta"
+      },
+      "set": {
+        "name": "sea",
+        "horizon": 1104,
+        "ground": 1900
+      },
+      "cues": {
+        "turn": "abone"
+      },
+      "params": {
+        "boats": [
+          {
+            "x": 0.55,
+            "y": 0.66,
+            "s": 1.3
+          }
+        ],
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.3,
+            "y": 0.535,
+            "scale": 0.82,
+            "pose": "point",
+            "dir": "up",
+            "face": "right",
+            "seq": [
+              {
+                "at": "turn",
+                "pose": "wave",
+                "emotion": "happy",
+                "face": "left"
+              }
+            ]
+          }
+        ],
+        "buildings": [
+          {
+            "k": "cypress",
+            "x": 0.035
+          },
+          {
+            "k": "house",
+            "x": 0.1,
+            "s": 0.95
+          },
+          {
+            "k": "mosque",
+            "x": 0.27,
+            "s": 0.82,
+            "min": [
+              1
+            ]
+          },
+          {
+            "k": "house",
+            "x": 0.43,
+            "s": 0.9
+          },
+          {
+            "k": "cypress",
+            "x": 0.465,
+            "s": 0.9
+          },
+          {
+            "k": "mosque",
+            "x": 0.64,
+            "s": 1.12,
+            "min": [
+              -1,
+              1
+            ]
+          },
+          {
+            "k": "cypress",
+            "x": 0.83,
+            "s": 1.05
+          },
+          {
+            "k": "mosque",
+            "x": 0.95,
+            "s": 0.66,
+            "min": [
+              -1
+            ]
+          }
+        ]
+      },
+      "camera": {
+        "focus": [
+          420,
+          820
+        ],
+        "zoom": 1.5,
+        "move": "left"
+      }
+    }
+  ]
+}
