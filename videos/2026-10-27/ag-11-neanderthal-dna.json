@@ -1,0 +1,555 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "extra": true,
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "neanderthal-dna",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "You're part",
+   "Neanderthal"
+  ],
+  "highlight": [
+   "neanderthal"
+  ],
+  "scene": 0,
+  "t": 2.3,
+  "kasif": false,
+  "focus": [
+   520,
+   815
+  ],
+  "zoom": 1.2
+ },
+ "sources": [
+  {
+   "title": "Green et al., A Draft Sequence of the Neandertal Genome (Science, 2010)",
+   "url": "https://www.science.org/doi/10.1126/science.1188021"
+  },
+  {
+   "title": "Prüfer et al., A high-coverage Neandertal genome from Vindija Cave in Croatia (Science, 2017)",
+   "url": "https://www.science.org/doi/10.1126/science.aao1887"
+  },
+  {
+   "title": "Higham et al., The timing and spatiotemporal patterning of Neanderthal disappearance (Nature, 2014)",
+   "url": "https://www.nature.com/articles/nature13621"
+  },
+  {
+   "title": "The Nobel Prize in Physiology or Medicine 2022 — Svante Pääbo",
+   "url": "https://www.nobelprize.org/prizes/medicine/2022/press-release/"
+  }
+ ],
+ "youtube": {
+  "title": "Neanderthal DNA: Are You Secretly Part Neanderthal?",
+  "description": "Neanderthal DNA is probably inside you right now. If your roots are outside Africa, about two percent of your genome came from Neanderthals, a people who died out some 40,000 years ago.\n\nIn 2010, Svante Pääbo's team read the Neanderthal genome from ancient bones and compared it with ours. The surprise: our ancestors met Neanderthals and had children with them, and those pieces of DNA were passed down for more than 1,500 generations. Pääbo won the 2022 Nobel Prize for this work. So what happened to the Neanderthals? Part of the answer is in you.\n\nSubscribe to Stickstory for a strange true story every day. Did you know you might be part Neanderthal? Tell me in the comments!\n\n#shorts #neanderthal #stickstory",
+  "tags": [
+   "neanderthal dna",
+   "neanderthal dna in humans",
+   "are you part neanderthal",
+   "neanderthal genome",
+   "neanderthals",
+   "neanderthal extinction",
+   "svante paabo",
+   "nobel prize 2022",
+   "human evolution",
+   "ancient dna",
+   "human body facts",
+   "science facts",
+   "interbreeding neanderthals",
+   "ice age",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-27T09:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "nea_mirror",
+   "set": "interior",
+   "text": "You are probably part Neanderthal.",
+   "visual": "A room: a tall carved oval standing mirror; the fez narrator stands in front of it pointing. At first the glass shows his own round head and fez; on 'Neanderthal' a ripple runs over the glass, gold spikes burst round the frame and the reflection becomes a Neanderthal bust (heavy brow ridge, big nose, beard) wearing his red fez; the narrator jumps back in shock.",
+   "title": {
+    "white": "Mirror test"
+   },
+   "cues": {
+    "morph": "Neanderthal"
+   },
+   "params": {
+    "mirror": {
+     "x": 0.62,
+     "y": 0.4,
+     "rx": 225,
+     "ry": 300
+    },
+    "morph": "morph",
+    "kasif": {
+     "x": 0.29,
+     "scale": 1.25,
+     "pose": "point",
+     "face": "right",
+     "dir": 15,
+     "seq": [
+      {
+       "at": "morph",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "bust_s": 2.5
+   }
+  },
+  {
+   "type": "nea_helix",
+   "text": "Outside Africa, about two percent of your DNA is theirs.",
+   "visual": "A big turning DNA double helix fills the frame (back strand pale, front strand dark, blue and green rungs); on 'two' one rung in fifty lights up gold with a red ring; on 'percent' a big red '2%' springs in and a red handwritten 'NEANDERTHAL' with an arrow points at the gold rung.",
+   "title": {
+    "white": "Your DNA",
+    "gray": "outside Africa"
+   },
+   "source": "Prüfer et al., Science",
+   "cues": {
+    "mark": "two",
+    "big": "percent"
+   },
+   "params": {
+    "x": 0.38,
+    "mark": {
+     "at": "mark",
+     "rung": 30
+    },
+    "big": {
+     "text": "2%",
+     "at": "big",
+     "x": 0.8,
+     "y": 0.27,
+     "size": 200
+    },
+    "labels": [
+     {
+      "text": "NEANDERTHAL",
+      "x": 0.78,
+      "y": 0.44,
+      "at": "big",
+      "size": 66,
+      "color": "red",
+      "arrow": [
+       0.5,
+       0.515
+      ]
+     }
+    ],
+    "top": 300,
+    "bottom": 1440,
+    "amp": 250
+   },
+   "camera": false
+  },
+  {
+   "type": "nea_ice",
+   "set": {
+    "name": "snow",
+    "ground": 1130
+   },
+   "text": "Yet they died out about 40,000 years ago.",
+   "visual": "An Ice Age snowfield in a blizzard: a Neanderthal family (a man with a spear, a child, a woman in fur cloaks) walks away towards the far hills, shrinking and fading into the snow until they are almost gone; snow blows across the frame. A pale winter sun hangs behind cloud streaks.",
+   "title": {
+    "white": "Extinct",
+    "gray": "40,000 years ago"
+   },
+   "source": "Higham et al., Nature",
+   "cues": {
+    "hit": "died"
+   },
+   "params": {
+    "figs": [
+     {
+      "kind": "nean",
+      "x": 0.66,
+      "s": 1.2,
+      "arm": "spear",
+      "to": {
+       "x": 0.3,
+       "y": 930,
+       "s": 0.5,
+       "a": 0.15
+      },
+      "dur": 3.2
+     },
+     {
+      "kind": "child",
+      "x": 0.82,
+      "s": 1.2,
+      "to": {
+       "x": 0.42,
+       "y": 935,
+       "s": 0.5,
+       "a": 0.12
+      },
+      "dur": 3.2
+     },
+     {
+      "kind": "nean",
+      "x": 0.98,
+      "s": 1.25,
+      "to": {
+       "x": 0.55,
+       "y": 940,
+       "s": 0.55,
+       "a": 0.15
+      },
+      "dur": 3.2
+     }
+    ],
+    "snow": 90,
+    "fore": "snow",
+    "sun": {
+     "x": 0.57,
+     "y": 0.27,
+     "r": 130
+    }
+   },
+   "camera": false
+  },
+  {
+   "type": "nea_ice",
+   "set": {
+    "name": "snow",
+    "ground": 1130
+   },
+   "camera": {
+    "focus": [
+     580,
+     760
+    ],
+    "zoom": 1.8,
+    "move": "push"
+   },
+   "text": "So what happened to them?",
+   "visual": "Close-up in the blizzard: the last Neanderthal, spear in hand, stops and turns his head back over his shoulder towards us; a big red '?' springs up beside him.",
+   "title": {
+    "white": "What happened?"
+   },
+   "cues": {
+    "q": "happened"
+   },
+   "params": {
+    "figs": [
+     {
+      "kind": "nean",
+      "x": 0.5,
+      "s": 1.6,
+      "face": -1,
+      "walk": false,
+      "arm": "spear",
+      "look": "q",
+      "spear_len": 0.55
+     }
+    ],
+    "snow": 60,
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.66,
+      "y": 0.33,
+      "size": 170,
+      "color": "red",
+      "font": "serif",
+      "at": "q"
+     }
+    ]
+   }
+  },
+  {
+   "type": "nea_lab",
+   "set": "interior",
+   "text": "In 2010, Svante Pääbo's team read their genome from old bones,",
+   "visual": "An ancient-DNA lab bench: a Neanderthal skull (long low braincase, heavy brow ridge) on a stand; a gloved hand brings a dental drill to the back of the skull and bone powder streams into a sample tube that fills up; a rack of sample tubes waits on the right; a bold blue 'DNA SAMPLES' label points at the rack.",
+   "title": {
+    "white": "2010",
+    "gray": "Svante Pääbo"
+   },
+   "source": "Nobel Prize 2022",
+   "cues": {
+    "drill": "team",
+    "dust": "genome"
+   },
+   "params": {
+    "drill": "drill",
+    "dust": "dust",
+    "labels": [
+     {
+      "text": "DNA SAMPLES",
+      "x": 0.7,
+      "y": 0.31,
+      "at": "dust",
+      "font": "serif",
+      "size": 56,
+      "color": "blue",
+      "arrow": [
+       0.8,
+       0.47
+      ]
+     }
+    ]
+   },
+   "camera": false
+  },
+  {
+   "type": "nea_compare",
+   "text": "then compared it with ours.",
+   "visual": "Two long paper tapes of DNA letters, 'NEANDERTHAL' above and 'YOU' below, slide slowly; a big magnifying glass moves along them and gold ink ties join the matching letters (a red x where they differ); on 'ours' a run of three letters lights up gold and a red 'MATCH!' stamp slams down. The tapes lie on a wooden desk with a printout and a pencil.",
+   "title": {
+    "white": "Compared"
+   },
+   "cues": {
+    "match": "ours"
+   },
+   "params": {
+    "match": {
+     "at": "match",
+     "from": 5,
+     "n": 3
+    }
+   },
+   "camera": false
+  },
+  {
+   "type": "nea_ice",
+   "set": {
+    "name": "desert",
+    "ground": 1130
+   },
+   "text": "Here's the twist: our ancestors met them,",
+   "visual": "A dry Middle Eastern plain: a slender modern human in a tunic walks in from the left, a stocky Neanderthal with a spear walks in from the right; on 'met' both stop face to face and raise a hand in greeting.",
+   "title": {
+    "white": "Mixing",
+    "gray": "~50,000 years ago"
+   },
+   "cues": {
+    "meet": "met"
+   },
+   "params": {
+    "figs": [
+     {
+      "kind": "human",
+      "x": 0.02,
+      "s": 1.1,
+      "face": 1,
+      "coat": "green",
+      "to": {
+       "x": 0.36
+      },
+      "dur": 1.9,
+      "stop": "meet",
+      "arm": "hang",
+      "arm2": "wave",
+      "arm_at": "meet"
+     },
+     {
+      "kind": "nean",
+      "x": 1.0,
+      "s": 1.15,
+      "face": -1,
+      "arm": "spear",
+      "to": {
+       "x": 0.68
+      },
+      "dur": 1.9,
+      "stop": "meet"
+     }
+    ],
+    "snow": 0,
+    "drift": false,
+    "fore": "desert"
+   },
+   "camera": {
+    "focus": [
+     600,
+     950
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "nea_fire",
+   "set": "night",
+   "camera": {
+    "focus": [
+     540,
+     1010
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   },
+   "text": "and had children together.",
+   "visual": "Night, a campfire with sparks rising: a slender modern human sits on a rock on the left, a stocky Neanderthal on the right, both reaching their hands to the fire; on 'children' a small child in a red tunic pops up on the ground between the human and the fire and waves. Firewood, a ring of stones and warm firelight lie on the ground in front.",
+   "title": {
+    "white": "A family"
+   },
+   "cues": {
+    "child": "children"
+   },
+   "params": {
+    "figs": [
+     {
+      "kind": "human",
+      "x": 0.27,
+      "s": 1.0,
+      "face": 1,
+      "coat": "green"
+     },
+     {
+      "kind": "nean",
+      "x": 0.73,
+      "s": 1.05,
+      "face": -1
+     }
+    ],
+    "child": {
+     "at": "child",
+     "x": 0.4,
+     "y": 1160,
+     "s": 1.0,
+     "face": 1
+    },
+    "fire": {
+     "x": 0.56,
+     "y": 1140,
+     "s": 0.9
+    }
+   }
+  },
+  {
+   "type": "nea_chain",
+   "set": {
+    "name": "hills",
+    "ground": 1150,
+    "horizon": 780
+   },
+   "text": "Pieces of their DNA passed down for over 1,500 generations.",
+   "visual": "A line of people runs from the far horizon to the foreground: the tiny farthest one is a Neanderthal with a spear (red 'NEANDERTHAL' note), each next one a modern human, bigger and nearer, springing up in turn; a gold thread runs hand to hand from the Neanderthal to the big person in the foreground; grass in front; a big red counter counts up to '1,500+' with 'GENERATIONS' under it.",
+   "title": {
+    "white": "Handed down"
+   },
+   "cues": {
+    "count": "passed"
+   },
+   "params": {
+    "n": 8,
+    "far": {
+     "x": 0.1,
+     "y": 770,
+     "s": 0.45
+    },
+    "near": {
+     "x": 0.84,
+     "y": 1330,
+     "s": 1.55
+    },
+    "thread": 0.3,
+    "counter": {
+     "at": "count",
+     "to": 1500,
+     "x": 0.62,
+     "y": 0.22
+    },
+    "labels": [
+     {
+      "text": "NEANDERTHAL",
+      "x": 0.2,
+      "y": 0.29,
+      "at": 0.3,
+      "size": 48,
+      "color": "red",
+      "arrow": [
+       0.11,
+       0.33
+      ]
+     }
+    ]
+   },
+   "camera": false
+  },
+  {
+   "type": "nea_shadow",
+   "set": "city",
+   "text": "They never truly vanished. They live on in you.",
+   "visual": "A modern street in low evening light: a person in a blue coat walks to the right past a lit brick wall; their long shadow on the wall walks in step; on 'live' the shadow turns into a Neanderthal's shadow with a spear, still walking in step with them.",
+   "title": {
+    "white": "Still here"
+   },
+   "cues": {
+    "morph": "live"
+   },
+   "params": {
+    "morph": "morph",
+    "walker": {
+     "x": 0.2,
+     "to": 0.36
+    },
+    "shadow": {
+     "x": 0.66
+    }
+   },
+   "camera": {
+    "focus": [
+     560,
+     950
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "nea_mirror",
+   "set": "interior",
+   "camera": {
+    "focus": [
+     520,
+     880
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   },
+   "text": "Subscribe for one true story a day.",
+   "visual": "Back at the standing mirror: the fez narrator waves at it, and his Neanderthal reflection in the red fez raises a big hand and waves back; a rug lies on the floor in front.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "cues": {
+    "wave": "true"
+   },
+   "params": {
+    "mirror": {
+     "x": 0.66,
+     "y": 0.4,
+     "rx": 225,
+     "ry": 300
+    },
+    "morph": 0,
+    "wave": "wave",
+    "kasif": {
+     "x": 0.18,
+     "scale": 1.2,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy"
+    },
+    "bust_s": 2.5,
+    "rug_dy": 380
+   }
+  }
+ ]
+}
