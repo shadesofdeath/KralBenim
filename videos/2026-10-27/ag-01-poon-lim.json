@@ -1,0 +1,694 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "poon-lim",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "133 days",
+   "alone"
+  ],
+  "highlight": [
+   "alone"
+  ],
+  "scene": 0,
+  "t": 2.6,
+  "focus": [
+   640,
+   940
+  ],
+  "zoom": 1.8,
+  "kasif": {
+   "pose": "shock",
+   "x": 300,
+   "y": 1900,
+   "face": 1,
+   "scale": 1.3
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — Poon Lim",
+   "url": "https://en.wikipedia.org/wiki/Poon_Lim"
+  },
+  {
+   "title": "Guinness World Records — Longest time adrift at sea, alone",
+   "url": "https://www.guinnessworldrecords.com/world-records/longest-time-adrift-at-sea-alone"
+  },
+  {
+   "title": "Today I Found Out — The Man on the Raft: The Story of Poon Lim",
+   "url": "https://www.todayifoundout.com/?p=38039"
+  }
+ ],
+ "youtube": {
+  "title": "Poon Lim: How Did He Survive 133 Days Alone at Sea?",
+  "description": "Poon Lim survived 133 days alone on a raft in the Atlantic. How does one man stay alive that long with a few tins of food and nothing else?\n\nIn November 1942, a German U-boat torpedoed the SS Benlomond, and Poon Lim, a Chinese steward, was the only survivor. When his supplies ran out, he turned a nail from the raft into a fishhook and caught fish, seabirds and even a shark, until Brazilian fishermen found him on April 5, 1943.\n\nSubscribe to Stickstory for a true survival story every day. Could you last one week on that raft? Tell me in the comments!\n\n#shorts #poonlim #survivalstory #stickstory",
+  "tags": [
+   "poon lim",
+   "poon lim story",
+   "poon lim raft",
+   "poon lim 133 days",
+   "ss benlomond",
+   "133 days at sea",
+   "longest time adrift at sea",
+   "lost at sea survival",
+   "raft survival story",
+   "ww2 survival story",
+   "u-boat attack",
+   "survival stories",
+   "true survival story",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-27T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "pl_sea",
+   "text": "He survived 133 days alone on a raft.",
+   "visual": "Open Atlantic, nothing to the horizon: a small square wooden raft (planks, a water keg, two tins) rocks on the swell, Poon Lim sitting on it, worried, looking around; gulls drift across; a big dark swell rolls through the foreground. In the hook frame the cover's big shocked fez narrator stands at the lower left.",
+   "title": {
+    "white": "Atlantic",
+    "gray": "1942"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 430,
+    "ground": 1080
+   },
+   "cues": {
+    "hit": "alone"
+   },
+   "params": {
+    "sea": 0.58,
+    "raft": {
+     "x": 0.62,
+     "y": 0.56,
+     "s": 1.3
+    },
+    "lim": {
+     "scale": 0.7,
+     "pose": "sit",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "sit",
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "gulls": 3,
+    "front": "wave"
+   }
+  },
+  {
+   "type": "pl_sink",
+   "text": "In 1942, a U-boat sank his ship.",
+   "visual": "Side view of the sea: a big cargo steamer (black hull, red boot-top, white bridge, funnel smoking) at the right, a surfaced U-boat at the far left; on 'U-boat' a bubble track races from the U-boat to the hull; on 'sank' a gold-and-red explosion and a white water column, the camera shakes, then the steamer lists and slides under the water line while black smoke rises; red handwritten 'NOV 23, 1942' at the top right.",
+   "title": {
+    "white": "SS Benlomond"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 600
+   },
+   "cues": {
+    "torpedo": "boat",
+    "hit": "sank"
+   },
+   "params": {
+    "sea": 0.58,
+    "ship": {
+     "x": 0.63,
+     "s": 0.92
+    },
+    "uboat": {
+     "x": 0.12,
+     "s": 0.55
+    },
+    "labels": [
+     {
+      "text": "NOV 23, 1942",
+      "x": 0.7,
+      "y": 0.2,
+      "size": 76,
+      "at": 0.3,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pl_sea",
+   "text": "Poon Lim, a Chinese steward, was the only survivor.",
+   "visual": "Close shot at sea level: Poon Lim's head and stroking arm in the water as he swims towards the empty raft, splashes behind him, then grabs the raft's edge; a dark swell rolls in the foreground; on 'only' a red box 'ONLY SURVIVOR' pops in above him.",
+   "title": {
+    "white": "Poon Lim",
+    "gray": "steward"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     520,
+     1080
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "only"
+   },
+   "params": {
+    "sea": 0.6,
+    "raft": {
+     "x": 0.66,
+     "y": 0.6,
+     "s": 1.1
+    },
+    "swim": {
+     "from": 0.08,
+     "at": 0.1,
+     "dur": 2.4,
+     "s": 1.15
+    },
+    "lim": {
+     "scale": 0.5,
+     "pose": "sit"
+    },
+    "gulls": 2,
+    "labels": [
+     {
+      "text": "ONLY SURVIVOR",
+      "x": 0.5,
+      "y": 0.45,
+      "size": 62,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "front": "wave"
+   }
+  },
+  {
+   "type": "pl_hook",
+   "text": "So when his food ran out,",
+   "visual": "Close-up from above on the raft's deck planks filling the frame (sea beyond the far edge, the water keg at the left): an opened tin tips over empty on 'ran out' with a red handwritten 'EMPTY'; a single nail head sits in the middle plank.",
+   "title": {
+    "white": "No food"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     700,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "empty": "ran"
+   },
+   "params": {
+    "edge": 0.2,
+    "nail": {
+     "x": 0.5,
+     "y": 0.4
+    },
+    "pull": false,
+    "labels": [
+     {
+      "text": "EMPTY",
+      "x": 0.72,
+      "y": 0.34,
+      "size": 84,
+      "at": "empty",
+      "color": "red",
+      "font": "hand"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pl_hook",
+   "text": "he bent a nail from the raft into a hook.",
+   "visual": "Closer on the planks: a hand pulls a long rusty nail straight out of the middle plank (handwritten 'NAIL' on 'nail'); on 'raft' a second hand grips the shaft and the nail curls into a barbed fishhook; on 'hook' it glints gold and a red box 'HOOK!' pops in.",
+   "title": {
+    "white": "No food"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     540,
+     660
+    ],
+    "zoom": 1.25,
+    "move": "pull"
+   },
+   "cues": {
+    "bend": "raft",
+    "hit": "hook",
+    "nail": "nail"
+   },
+   "params": {
+    "edge": 0.2,
+    "nail": {
+     "x": 0.5,
+     "y": 0.4
+    },
+    "empty": -1,
+    "tin": false,
+    "pull": 0.05,
+    "bend": "bend",
+    "labels": [
+     {
+      "text": "NAIL",
+      "x": 0.22,
+      "y": 0.33,
+      "size": 84,
+      "at": "nail",
+      "font": "hand"
+     },
+     {
+      "text": "HOOK!",
+      "x": 0.3,
+      "y": 0.48,
+      "size": 84,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pl_catch",
+   "text": "It worked: fish, seabirds, even a shark!",
+   "visual": "Split view at the surface: the raft with Poon Lim (bigger) dropping his line at the left, seaweed hanging below; underwater the line runs to the hook; on 'fish' a fish bites and is jerked up; on 'seabirds' a gull glides down and lands on the raft; on 'shark' a big shark glides in fully under the raft, Poon Lim jumps in shock and a red box 'SHARK!' pops in; a school of small fish fills the deep.",
+   "title": {
+    "white": "The menu"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 600
+   },
+   "cues": {
+    "fish": "fish",
+    "bird": "seabirds",
+    "shark": "shark"
+   },
+   "params": {
+    "sea": 0.34,
+    "raft": {
+     "x": 0.38,
+     "s": 1.2
+    },
+    "lim": {
+     "scale": 0.7,
+     "pose": "point",
+     "dir": -38,
+     "face": "right",
+     "seq": [
+      {
+       "at": "shark",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    },
+    "hook_y": 0.46,
+    "shark_y": 0.55,
+    "labels": [
+     {
+      "text": "SHARK!",
+      "x": 0.76,
+      "y": 0.39,
+      "size": 90,
+      "at": "shark",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "shark_x": 0.45,
+    "shark_s": 1.1
+   }
+  },
+  {
+   "type": "pl_sea",
+   "text": "Ships passed. Not one stopped.",
+   "visual": "Wide ocean: a small cargo steamer on the far horizon at the right steams away out of frame; on the raft mid-frame Poon Lim waves and shouts, the fez narrator stands beside him waving both arms at the ship; on 'stopped' the ship is gone past, Lim sits down and the narrator jumps in shock; a red box 'NOT ONE STOPPED' pops in; a shark fin cuts through the dark swell in the foreground.",
+   "title": {
+    "white": "Weeks pass"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 560
+   },
+   "cues": {
+    "hit": "stopped"
+   },
+   "params": {
+    "sea": 0.5,
+    "raft": {
+     "x": 0.42,
+     "y": 0.5,
+     "s": 1.3
+    },
+    "lim": {
+     "scale": 0.7,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "sit",
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.6,
+     "y": 0.47,
+     "scale": 0.7,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "worried",
+     "barrel": false,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    },
+    "ship": {
+     "from": 0.72,
+     "to": 1.3,
+     "y": 0.31,
+     "s": 0.3,
+     "at": 0
+    },
+    "shout": {
+     "at": 0.1,
+     "dur": 1.6
+    },
+    "gulls": 1,
+    "front": {
+     "type": "fin",
+     "y": 0.78,
+     "s": 1.2
+    },
+    "labels": [
+     {
+      "text": "NOT ONE STOPPED",
+      "x": 0.55,
+      "y": 0.22,
+      "size": 76,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pl_uboat",
+   "text": "A U-boat even saw him, and left.",
+   "visual": "Medium shot: right next to the raft a German U-boat rises out of the water with foam, a lookout on the conning tower turns to Poon Lim, who waves both arms; on 'left' the U-boat sails off to the right and dives, Lim drops his arms, worried; red box 'IT LEFT HIM'; dark swell in the foreground.",
+   "title": {
+    "white": "U-boat"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 560
+   },
+   "cues": {
+    "surface": "boat",
+    "gone": "left",
+    "hit": "left"
+   },
+   "params": {
+    "sea": 0.52,
+    "raft": {
+     "x": 0.28,
+     "y": 0.53,
+     "s": 1.2
+    },
+    "uboat": {
+     "x": 0.7,
+     "y": 0.475,
+     "s": 1.0
+    },
+    "lim": {
+     "scale": 0.7,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "gone",
+       "pose": "idle",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "front": "wave",
+    "labels": [
+     {
+      "text": "IT LEFT HIM",
+      "x": 0.6,
+      "y": 0.26,
+      "size": 80,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pl_sea",
+   "text": "Day 133: Brazilian fishermen found him. A world record.",
+   "visual": "Near the coast of Brazil (green land on the horizon): a card at the top counts 'DAY 1' up to a red 'DAY 133'; a small fishing sailboat with three fishermen glides in from the right to the raft; on 'found' the fishermen wave and point and Poon Lim waves back, happy; a dark swell rolls in the foreground.",
+   "title": {
+    "white": "Brazil",
+    "gray": "April 1943"
+   },
+   "source": "Guinness World Records",
+   "set": {
+    "name": "coast",
+    "horizon": 560
+   },
+   "cues": {
+    "happy": "found"
+   },
+   "params": {
+    "sea": 0.5,
+    "raft": {
+     "x": 0.22,
+     "y": 0.5,
+     "s": 1.2
+    },
+    "lim": {
+     "scale": 0.7,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "happy",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "boat": {
+     "from": 1.45,
+     "to": 0.78,
+     "y": 0.5,
+     "s": 0.85,
+     "at": 0,
+     "dur": 2.2,
+     "happy": "happy"
+    },
+    "counter": {
+     "from": 1,
+     "to": 133,
+     "at": 0.1,
+     "dur": 1.6,
+     "x": 0.5,
+     "y": 0.2,
+     "prefix": "DAY ",
+     "size": 96
+    },
+    "gulls": 1,
+    "front": "wave"
+   }
+  },
+  {
+   "type": "pl_end",
+   "text": "\"I hope no one will ever have to break that record,\" he said.",
+   "visual": "Close-up: Poon Lim's hand holds the bent-nail fishhook up against the sea and sky, his face beside it, the hook glints gold; giant Fraunces words '“BREAK THAT' are on screen from the start, then 'RECORD.”' springs in a red box on 'record'.",
+   "title": {
+    "white": "His words"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 600
+   },
+   "cues": {
+    "break": "break",
+    "hit": "record"
+   },
+   "params": {
+    "sea": 0.42,
+    "lines": [
+     {
+      "words": [
+       "“BREAK",
+       "THAT"
+      ],
+      "at": [
+       0.1,
+       0.1
+      ],
+      "y": 0.16,
+      "size": 130
+     },
+     {
+      "words": [
+       "RECORD.”"
+      ],
+      "at": [
+       "hit"
+      ],
+      "y": 0.245,
+      "size": 140
+     }
+    ],
+    "highlight": "RECORD.”",
+    "raft": {
+     "x": 0.5,
+     "y": 0.56,
+     "s": 1.5
+    },
+    "lim": {
+     "scale": 0.8,
+     "pose": "point",
+     "dir": 35,
+     "face": "right",
+     "emotion": "neutral",
+     "hook": true,
+     "dx": -0.04
+    },
+    "front": {
+     "type": "wave",
+     "y": 0.8
+    },
+    "close": {
+     "focus": [
+      0.55,
+      0.42
+     ],
+     "zoom": 1.8,
+     "to": [
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "camera": false
+  },
+  {
+   "type": "pl_end",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Callback card: 'ONE RAFT.' then 'ONE NAIL.' with 'NAIL.' in a red box; the fez narrator now stands on the big raft in the foreground, holding the fishhook up and waving at the viewer.",
+   "title": {
+    "white": "133 days"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 600
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "sea": 0.42,
+    "lines": [
+     {
+      "words": [
+       "ONE",
+       "RAFT."
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.16,
+      "size": 130
+     },
+     {
+      "words": [
+       "ONE",
+       "NAIL."
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.245,
+      "size": 130
+     }
+    ],
+    "highlight": "NAIL.",
+    "raft": {
+     "x": 0.5,
+     "y": 0.56,
+     "s": 1.5
+    },
+    "kasif": {
+     "scale": 0.8,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "hook": false,
+     "dx": 0.02
+    },
+    "front": {
+     "type": "wave",
+     "y": 0.8
+    }
+   },
+   "camera": {
+    "move": "push"
+   }
+  }
+ ]
+}

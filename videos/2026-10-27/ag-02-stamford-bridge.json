@@ -1,0 +1,1239 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "stamford-bridge",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "No",
+   "armour.",
+   "Too hot."
+  ],
+  "highlight": [
+   "armour"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   560,
+   860
+  ],
+  "zoom": 1.6,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "x": 300,
+   "y": 1880,
+   "face": 1,
+   "scale": 1.55
+  }
+ },
+ "sources": [
+  {
+   "title": "Encyclopaedia Britannica — Battle of Stamford Bridge",
+   "url": "https://www.britannica.com/event/Battle-of-Stamford-Bridge"
+  },
+  {
+   "title": "Wikipedia — Battle of Stamford Bridge",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Stamford_Bridge"
+  },
+  {
+   "title": "Britain Express — The Battle of Stamford Bridge",
+   "url": "https://britainexpress.com/History/battles/stamford-bridge.htm"
+  }
+ ],
+ "youtube": {
+  "title": "Battle of Stamford Bridge: Why Vikings Fought Without Armour",
+  "description": "The Battle of Stamford Bridge in 1066 was lost before it began: the Norwegian army had left its mail armour at the ships. So how did one hot morning decide who ruled England?\n\nIn September 1066, Harald Hardrada of Norway took York. The sagas say the day was so hot that his men left their mail shirts with the fleet at Riccall. Then King Harold Godwinson arrived after a forced march of some 185 miles, and Hardrada was killed. Three days later, William of Normandy landed at Pevensey, and on 14 October Harold's tired army lost England at the Battle of Hastings.\n\nSubscribe to Stickstory for a true history story every day. Would you have fought without armour on a hot day? Tell me in the comments!\n\n#shorts #stamfordbridge #1066 #stickstory",
+  "tags": [
+   "battle of stamford bridge",
+   "stamford bridge 1066",
+   "battle of stamford bridge 1066",
+   "stamford bridge battle",
+   "harald hardrada",
+   "harold godwinson",
+   "1066",
+   "vikings",
+   "viking history",
+   "last viking king",
+   "norman conquest",
+   "william the conqueror",
+   "battle of hastings",
+   "medieval history",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-27T19:00:00-04:00",
+  "related": "videos/2026-10-26/ag-04-siege-of-malta.json"
+ },
+ "scenes": [
+  {
+   "type": "sb_camp",
+   "text": "Vikings walked into battle without armour.",
+   "visual": "Hook frame: a big Viking warrior on the river bank under a blazing sun, conical helmet but no mail (bare stick body), sweat drops flying as he stretches in the heat; his grey mail shirt lies dumped in the grass at his feet, his planked round shield leans against his spear; camp smoke across the river; under the hook text 'NO ARMOUR' the big shocked fez narrator stands at the lower left.",
+   "title": {
+    "white": "Stamford Bridge",
+    "gray": "England, 1066"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1123,
+    "horizon": 600
+   },
+   "camera": false,
+   "cues": {
+    "hit": "armour"
+   },
+   "params": {
+    "ground": 0.585,
+    "river": {
+     "y": 0.4,
+     "h": 0.07
+    },
+    "smoke": {
+     "x": 0.3,
+     "y": 0.37
+    },
+    "sun": {
+     "x": 0.84,
+     "y": 0.2,
+     "r": 80
+    },
+    "warriors": [
+     {
+      "x": 0.6,
+      "scale": 1.18,
+      "pose": "shrug",
+      "face": "left",
+      "side": "nor",
+      "beard": "black",
+      "emotion": "happy"
+     }
+    ],
+    "pile": false,
+    "shields": [
+     {
+      "x": 0.87,
+      "y": 0.565,
+      "r": 110,
+      "side": "nor",
+      "rot": 8,
+      "tilt": 0.95
+     }
+    ],
+    "spears": [
+     {
+      "x": 0.92,
+      "y": 0.6,
+      "len": 640,
+      "rot": 6
+     }
+    ],
+    "grass": [
+     {
+      "x": 0.3,
+      "y": 0.62,
+      "s": 1.6
+     },
+     {
+      "x": 0.55,
+      "y": 0.66,
+      "s": 2.0
+     },
+     {
+      "x": 0.08,
+      "y": 0.64,
+      "s": 1.4
+     },
+     {
+      "x": 0.45,
+      "y": 0.8,
+      "s": 2.4
+     },
+     {
+      "x": 0.8,
+      "y": 0.86,
+      "s": 2.2
+     },
+     {
+      "x": 0.15,
+      "y": 0.9,
+      "s": 2.4
+     }
+    ],
+    "bridge": false,
+    "sweat": [
+     0
+    ],
+    "dropped": [
+     {
+      "x": 0.33,
+      "y": 0.6,
+      "s": 0.62,
+      "rot": -78
+     }
+    ]
+   }
+  },
+  {
+   "type": "sb_map",
+   "text": "In 1066, Norway's Hardrada took York.",
+   "visual": "Full-bleed old map of the North Sea: a red dashed route draws itself from Norway down the British coast into the Humber while a fleet of tiny striped longships sails along it; on 'York' the city pops in red and a red stamp 'TAKEN' lands above it.",
+   "title": {
+    "white": "Harald Hardrada",
+    "gray": "Sept 1066"
+   },
+   "camera": false,
+   "cues": {
+    "york": "York"
+   },
+   "params": {
+    "view": {
+     "lon": 2.4,
+     "lat": 53.96,
+     "s": 118,
+     "y": 0.52
+    },
+    "route": {
+     "pts": [
+      [
+       4.6,
+       60.7
+      ],
+      [
+       2.6,
+       59.6
+      ],
+      [
+       0.4,
+       58.1
+      ],
+      [
+       -1.0,
+       56.6
+      ],
+      [
+       -0.9,
+       55.3
+      ],
+      [
+       0.2,
+       54.4
+      ],
+      [
+       0.6,
+       53.75
+      ],
+      [
+       0.05,
+       53.63
+      ],
+      [
+       -0.5,
+       53.72
+      ],
+      [
+       -0.95,
+       53.76
+      ],
+      [
+       -1.06,
+       53.86
+      ]
+     ],
+     "at": 0.1,
+     "dur": 2.4,
+     "color": "red"
+    },
+    "fleet": {
+     "n": 5,
+     "s": 0.15,
+     "gap": 0.045
+    },
+    "cities": [
+     {
+      "name": "York",
+      "lon": -1.08,
+      "lat": 53.96,
+      "at": "york",
+      "color": "red",
+      "dx": 0,
+      "dy": 80,
+      "size": 66
+     }
+    ],
+    "names": [
+     {
+      "text": "Norway",
+      "lon": 8.4,
+      "lat": 61.6,
+      "size": 64
+     },
+     {
+      "text": "England",
+      "lon": -2.2,
+      "lat": 52.6,
+      "size": 64
+     },
+     {
+      "text": "North Sea",
+      "lon": 3.6,
+      "lat": 56.6,
+      "color": "blue",
+      "size": 60
+     }
+    ],
+    "labels": [
+     {
+      "text": "TAKEN",
+      "x": 0.3,
+      "y": 0.43,
+      "at": "york",
+      "color": "red",
+      "stamp": true,
+      "size": 90
+     }
+    ],
+    "compass": {
+     "x": 0.8,
+     "y": 0.86,
+     "r": 115
+    },
+    "scalebar": {
+     "x": 0.08,
+     "y": 0.9,
+     "miles": 100
+    }
+   }
+  },
+  {
+   "type": "sb_ships",
+   "text": "It was hot, the sagas say, so his men left their mail at the ships.",
+   "visual": "The river bank at Riccall under a blazing sun with heat shimmer: two moored longships with furled sails rock on the water; in front a wooden pole rack where two grey mail shirts (dense rings, sleeves, belt) drop in and swing; the fez narrator beside the rack lifts a third mail shirt up high on 'left', amazed; a red stamp 'LEFT HERE' slams in on 'mail' (close push-in).",
+   "title": {
+    "white": "Riccall",
+    "gray": "the ships"
+   },
+   "source": "Britannica",
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 634
+   },
+   "camera": {
+    "focus": [
+     560,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "hot": "hot",
+    "left": "left",
+    "hit": "mail"
+   },
+   "params": {
+    "water": 0.33,
+    "bank": 0.6,
+    "sun": {
+     "x": 0.8,
+     "y": 0.2,
+     "r": 66
+    },
+    "ships": [
+     {
+      "x": 0.25,
+      "y": 0.47,
+      "s": 0.72,
+      "face": 1,
+      "sail": 0,
+      "stripes": "red"
+     },
+     {
+      "x": 0.8,
+      "y": 0.45,
+      "s": 0.62,
+      "face": -1,
+      "sail": 0,
+      "stripes": "blue"
+     }
+    ],
+    "rack": {
+     "x": 0.43,
+     "w": 0.5,
+     "h": 0.3
+    },
+    "byrnies": [
+     {
+      "x": 0.33,
+      "s": 0.72,
+      "rot": -3,
+      "at": "left"
+     },
+     {
+      "x": 0.53,
+      "s": 0.72,
+      "rot": 3,
+      "at": "hit"
+     }
+    ],
+    "shields": [
+     {
+      "x": 0.22,
+      "y": 0.645,
+      "r": 110,
+      "side": "nor",
+      "rot": 20,
+      "tilt": 0.55
+     }
+    ],
+    "grass": [
+     {
+      "x": 0.4,
+      "y": 0.66,
+      "s": 1.4
+     },
+     {
+      "x": 0.62,
+      "y": 0.64,
+      "s": 1.2
+     },
+     {
+      "x": 0.04,
+      "y": 0.66,
+      "s": 1.3
+     },
+     {
+      "x": 0.95,
+      "y": 0.67,
+      "s": 1.3
+     }
+    ],
+    "labels": [
+     {
+      "text": "LEFT HERE",
+      "x": 0.5,
+      "y": 0.52,
+      "at": "hit",
+      "color": "red",
+      "stamp": true,
+      "size": 72
+     }
+    ],
+    "kasif": {
+     "x": 0.76,
+     "scale": 0.8,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "left",
+       "pose": "point",
+       "dir": 55,
+       "emotion": "surprised"
+      }
+     ],
+     "carry": {
+      "at": "left",
+      "s": 0.55,
+      "dx": -20,
+      "lift": 40
+     }
+    }
+   }
+  },
+  {
+   "type": "sb_dust",
+   "text": "Then dust rose on the road.",
+   "visual": "Looking over the heads of resting Vikings (helmeted backs, shields on their backs, cropped at the bottom) to a far ridge: a pale road winds over the crest; a dust cloud boils up behind it and a row of dark helmets and spears with gold glints rises over the ridge; a Viking lookout on the left points at it in alarm, a red stamp 'WHO IS THAT?' slams in and the resting men turn and rise.",
+   "title": {
+    "white": "The road",
+    "gray": "from York"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1150,
+    "horizon": 600
+   },
+   "cues": {
+    "dust": "dust",
+    "road": "road"
+   },
+   "params": {
+    "ridge": 0.42,
+    "road": {
+     "x": 0.64
+    },
+    "dust": {
+     "at": "dust",
+     "dur": 1.6,
+     "w": 0.75,
+     "h": 0.2
+    },
+    "column": {
+     "at": "dust",
+     "n": 8,
+     "s": 3.0
+    },
+    "lookout": {
+     "x": 0.17,
+     "y": 0.6,
+     "scale": 0.8,
+     "pose": "idle",
+     "face": "right",
+     "side": "nor",
+     "spear": true,
+     "beard": "short",
+     "seq": [
+      {
+       "at": "dust",
+       "pose": "point",
+       "dir": 20,
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "crowd": {
+     "y": 0.8,
+     "n": 5,
+     "rise": "road"
+    },
+    "labels": [
+     {
+      "text": "WHO IS THAT?",
+      "x": 0.46,
+      "y": 0.27,
+      "at": "road",
+      "color": "red",
+      "stamp": true,
+      "size": 84
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sb_map",
+   "text": "It was King Harold. He'd raced 185 miles north.",
+   "visual": "Close old map of England (hill and tree glyphs, double border, compass rose, scale bar): a red dashed route draws itself from London up the old road to York while a column of tiny spearmen marches along it; London and York are marked; on '185' a red stamp '185 MILES' slams onto the map.",
+   "title": {
+    "white": "King Harold",
+    "gray": "forced march"
+   },
+   "source": "Wikipedia",
+   "camera": false,
+   "cues": {
+    "hit": "185"
+   },
+   "params": {
+    "view": {
+     "lon": -0.6,
+     "lat": 51.92,
+     "s": 216,
+     "y": 0.5
+    },
+    "route": {
+     "pts": [
+      [
+       -0.12,
+       51.51
+      ],
+      [
+       -0.18,
+       52.33
+      ],
+      [
+       -0.54,
+       53.23
+      ],
+      [
+       -1.26,
+       53.88
+      ],
+      [
+       -1.08,
+       53.96
+      ]
+     ],
+     "at": 0.15,
+     "dur": 2.6,
+     "color": "red"
+    },
+    "column": {
+     "n": 6,
+     "gap": 0.06,
+     "s": 1.5
+    },
+    "cities": [
+     {
+      "name": "London",
+      "lon": -0.12,
+      "lat": 51.51,
+      "at": 0.1,
+      "color": "ink",
+      "dx": 40,
+      "dy": 14,
+      "anchor": "start"
+     },
+     {
+      "name": "York",
+      "lon": -1.08,
+      "lat": 53.96,
+      "at": 0.2,
+      "color": "red",
+      "dx": 0,
+      "dy": -50
+     }
+    ],
+    "names": [
+     {
+      "text": "North Sea",
+      "lon": 2.0,
+      "lat": 53.0,
+      "color": "blue",
+      "size": 58
+     },
+     {
+      "text": "England",
+      "lon": -2.4,
+      "lat": 52.6,
+      "size": 60
+     }
+    ],
+    "labels": [
+     {
+      "text": "185 MILES",
+      "x": 0.7,
+      "y": 0.44,
+      "at": "hit",
+      "color": "red",
+      "stamp": true,
+      "size": 100
+     }
+    ],
+    "compass": {
+     "x": 0.8,
+     "y": 0.86,
+     "r": 115
+    },
+    "scalebar": {
+     "x": 0.08,
+     "y": 0.9,
+     "miles": 50
+    }
+   }
+  },
+  {
+   "type": "sb_clash",
+   "text": "Without mail, they broke,",
+   "visual": "Battle line, closer: on the left two Vikings without mail (bare stick bodies) behind planked red round shields, on the right two English warriors in dark ring-mail shirts behind blue kite shields (rim, boss) advance; stamps 'NO MAIL' (red) and 'MAIL' (blue) above them; on 'broke' the Vikings jolt in shock, turn and run left; along the bottom the backs of the English front rank (helmets, raised kite shields).",
+   "title": {
+    "white": "The battle",
+    "gray": "Sept 25, 1066"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152,
+    "horizon": 600
+   },
+   "cues": {
+    "hit": "broke"
+   },
+   "params": {
+    "ground": 0.6,
+    "lines": [
+     {
+      "side": "nor",
+      "n": 2,
+      "x0": 0.12,
+      "x1": 0.36,
+      "scale": 0.95,
+      "face": "right",
+      "mail": false,
+      "shield": "round",
+      "stagger": "hit",
+      "rout": {
+       "at": "hit",
+       "dx": -0.7,
+       "delay": 0.35,
+       "dur": 1.4
+      }
+     },
+     {
+      "side": "eng",
+      "n": 2,
+      "x0": 0.66,
+      "x1": 0.9,
+      "scale": 0.95,
+      "face": "left",
+      "mail": true,
+      "shield": "kite",
+      "emotion": "angry",
+      "advance": {
+       "at": 0.1,
+       "dx": -0.12,
+       "dur": 2.6
+      }
+     }
+    ],
+    "shields": [],
+    "spears": [],
+    "grass": [
+     {
+      "x": 0.5,
+      "y": 0.7,
+      "s": 1.6
+     }
+    ],
+    "labels": [
+     {
+      "text": "NO MAIL",
+      "x": 0.24,
+      "y": 0.21,
+      "at": 0.3,
+      "color": "red",
+      "stamp": true,
+      "size": 72
+     },
+     {
+      "text": "MAIL",
+      "x": 0.8,
+      "y": 0.21,
+      "at": 0.7,
+      "color": "blue",
+      "stamp": true,
+      "size": 72
+     }
+    ],
+    "front": {
+     "y": 0.88,
+     "n": 4,
+     "side": "eng",
+     "kind": "kite"
+    }
+   }
+  },
+  {
+   "type": "sb_clash",
+   "text": "and Hardrada fell with an arrow in his throat.",
+   "visual": "Close shot of Harald Hardrada (gold circlet, beard, no mail) under his raven banner with two Vikings behind him; on 'fell' he looks up in shock as an arrow streaks in from the right edge; it hits at his neck with a gold ink star (no blood) and he topples backwards on 'arrow'; the raven banner falls on 'throat'.",
+   "title": {
+    "white": "Hardrada"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1123,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     500,
+     960
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "go": "fell",
+    "hit": "arrow",
+    "down": "throat"
+   },
+   "params": {
+    "ground": 0.585,
+    "lines": [
+     {
+      "side": "nor",
+      "n": 2,
+      "x0": 0.1,
+      "x1": 0.24,
+      "scale": 0.62,
+      "face": "right",
+      "shield": "round",
+      "stagger": "hit",
+      "seq": []
+     }
+    ],
+    "king": {
+     "x": 0.47,
+     "scale": 0.88,
+     "pose": "talk",
+     "face": "right",
+     "crown": true,
+     "beard": "short",
+     "fall": "hit",
+     "seq": [
+      {
+       "at": "go",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "banner": {
+     "x": 0.25,
+     "h": 0.28,
+     "fall": "down",
+     "dir": 1
+    },
+    "arrow": {
+     "at": "go",
+     "dur": 0.6,
+     "from": [
+      1.1,
+      0.22
+     ],
+     "arc": 70
+    },
+    "grass": [
+     {
+      "x": 0.36,
+      "y": 0.63,
+      "s": 1.4
+     },
+     {
+      "x": 0.72,
+      "y": 0.64,
+      "s": 1.6
+     },
+     {
+      "x": 0.9,
+      "y": 0.62,
+      "s": 1.2
+     }
+    ],
+    "shields": [
+     {
+      "x": 0.7,
+      "y": 0.65,
+      "r": 110,
+      "side": "eng",
+      "kind": "kite",
+      "rot": 70,
+      "tilt": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "sb_map",
+   "text": "Harold won.",
+   "visual": "Old map of England (glyphs, border, compass): York gets a green ring and a green stamp 'NORTH: WON'; then a red ring starts pulsing on the empty south coast at Pevensey.",
+   "title": {
+    "white": "King Harold",
+    "gray": "Sept 1066"
+   },
+   "camera": false,
+   "cues": {
+    "won": "won"
+   },
+   "params": {
+    "view": {
+     "lon": -0.3,
+     "lat": 50.91,
+     "s": 190,
+     "y": 0.5
+    },
+    "cities": [
+     {
+      "name": "York",
+      "lon": -1.08,
+      "lat": 53.96,
+      "at": 0.1,
+      "color": "green",
+      "dx": 0,
+      "dy": -52,
+      "size": 64
+     }
+    ],
+    "pulse": {
+     "lon": 0.33,
+     "lat": 50.8,
+     "at": 0.3
+    },
+    "compass": {
+     "x": 0.82,
+     "y": 0.86,
+     "r": 110
+    },
+    "scalebar": {
+     "x": 0.08,
+     "y": 0.9,
+     "miles": 50
+    },
+    "names": [
+     {
+      "text": "England",
+      "lon": -2.2,
+      "lat": 52.3,
+      "size": 62
+     },
+     {
+      "text": "Normandy",
+      "lon": 0.8,
+      "lat": 49.6,
+      "size": 56
+     }
+    ],
+    "labels": [
+     {
+      "text": "NORTH: WON",
+      "x": 0.4,
+      "y": 0.26,
+      "at": "won",
+      "color": "green",
+      "stamp": true,
+      "size": 88
+     }
+    ]
+   }
+  },
+  {
+   "type": "sb_ships",
+   "text": "But three days later, William of Normandy landed in the south,",
+   "visual": "The south coast at Pevensey: two Norman ships with striped sails sail in from the left and run aground on the beach on 'landed' while surf washes in; two big mailed Normans with gold kite shields step ashore; a red stamp '3 DAYS LATER' slams in on 'three'.",
+   "title": {
+    "white": "William",
+    "gray": "Sept 28, 1066"
+   },
+   "source": "Wikipedia",
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 620
+   },
+   "cues": {
+    "land": "landed",
+    "hit": "three"
+   },
+   "params": {
+    "water": 0.33,
+    "bank": 0.6,
+    "surf": true,
+    "ships": [
+     {
+      "x": 0.3,
+      "y": 0.52,
+      "s": 0.78,
+      "face": 1,
+      "sail": 1,
+      "stripes": "red",
+      "move": {
+       "at": 0,
+       "from": -0.4,
+       "dur": 2.0
+      },
+      "beach": "land"
+     },
+     {
+      "x": 0.78,
+      "y": 0.44,
+      "s": 0.55,
+      "face": 1,
+      "sail": 1,
+      "stripes": "blue",
+      "move": {
+       "at": 0.2,
+       "from": 0.2,
+       "dur": 2.2
+      }
+     }
+    ],
+    "warriors": [
+     {
+      "x": 0.46,
+      "scale": 0.85,
+      "face": "right",
+      "side": "nrm",
+      "mail": true,
+      "shield": "kite",
+      "spear": true,
+      "beard": "short",
+      "hide_until": "land",
+      "move": {
+       "at": "land",
+       "to": 0.6,
+       "dur": 1.2
+      }
+     },
+     {
+      "x": 0.62,
+      "scale": 0.85,
+      "face": "right",
+      "side": "nrm",
+      "mail": true,
+      "shield": "kite",
+      "hide_until": "land",
+      "move": {
+       "at": "land",
+       "delay": 0.3,
+       "to": 0.82,
+       "dur": 1.2
+      }
+     }
+    ],
+    "shields": [
+     {
+      "x": 0.14,
+      "y": 0.88,
+      "r": 130,
+      "side": "nrm",
+      "kind": "kite",
+      "rot": -70,
+      "tilt": 0.6
+     }
+    ],
+    "grass": [
+     {
+      "x": 0.9,
+      "y": 0.95,
+      "s": 2.0
+     },
+     {
+      "x": 0.35,
+      "y": 0.97,
+      "s": 2.2
+     }
+    ],
+    "labels": [
+     {
+      "text": "3 DAYS LATER",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "hit",
+      "color": "red",
+      "stamp": true,
+      "size": 88
+     }
+    ]
+   }
+  },
+  {
+   "type": "sb_clash",
+   "text": "and Harold's tired army lost England at Hastings.",
+   "visual": "Hastings on a hill: on the left two weary English warriors in mail behind blue kite shields, on the right two Normans in mail with gold kite shields push in; on 'lost' the English stagger and fall back; a red stamp 'LOST AT HASTINGS' slams in; the backs of the Norman front rank (helmets, gold kite shields) fill the bottom.",
+   "title": {
+    "white": "Hastings",
+    "gray": "Oct 14, 1066"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1152,
+    "horizon": 600
+   },
+   "cues": {
+    "hit": "lost",
+    "stamp": "Hastings"
+   },
+   "params": {
+    "ground": 0.6,
+    "lines": [
+     {
+      "side": "eng",
+      "n": 2,
+      "x0": 0.12,
+      "x1": 0.36,
+      "scale": 0.92,
+      "face": "right",
+      "mail": true,
+      "shield": "kite",
+      "emotion": "worried",
+      "stagger": "hit",
+      "rout": {
+       "at": "hit",
+       "dx": -0.7,
+       "delay": 0.4,
+       "dur": 1.4
+      }
+     },
+     {
+      "side": "nrm",
+      "n": 2,
+      "x0": 0.66,
+      "x1": 0.9,
+      "scale": 0.92,
+      "face": "left",
+      "mail": true,
+      "shield": "kite",
+      "emotion": "angry",
+      "advance": {
+       "at": 0.1,
+       "dx": -0.12,
+       "dur": 2.4
+      }
+     }
+    ],
+    "shields": [],
+    "spears": [],
+    "grass": [
+     {
+      "x": 0.5,
+      "y": 0.7,
+      "s": 1.6
+     }
+    ],
+    "labels": [
+     {
+      "text": "LOST AT HASTINGS",
+      "x": 0.5,
+      "y": 0.21,
+      "at": "stamp",
+      "color": "red",
+      "stamp": true,
+      "size": 80
+     }
+    ],
+    "front": {
+     "y": 0.88,
+     "n": 4,
+     "side": "nrm",
+     "kind": "kite"
+    }
+   }
+  },
+  {
+   "type": "sb_camp",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "The empty battlefield by the river at evening: dropped round and kite shields, spears stuck in the ground, low sun; the fez narrator walks in from the right and waves; a big red '1066' springs in above.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1123,
+    "horizon": 600
+   },
+   "camera": {
+    "move": "pull"
+   },
+   "cues": {
+    "hit": "Subscribe"
+   },
+   "params": {
+    "ground": 0.585,
+    "pile": false,
+    "heat": false,
+    "smoke": false,
+    "sun": false,
+    "kasif": {
+     "x": 0.95,
+     "scale": 0.85,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "happy",
+     "move": {
+      "at": 0,
+      "to": 0.62,
+      "dur": 1.4
+     },
+     "seq": [
+      {
+       "at": 1.5,
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "spears": [
+     {
+      "x": 0.18,
+      "y": 0.6,
+      "len": 420,
+      "rot": -12
+     },
+     {
+      "x": 0.36,
+      "y": 0.62,
+      "len": 380,
+      "rot": 15
+     },
+     {
+      "x": 0.82,
+      "y": 0.63,
+      "len": 400,
+      "rot": -8
+     }
+    ],
+    "shields": [
+     {
+      "x": 0.14,
+      "y": 0.66,
+      "r": 100,
+      "side": "nor",
+      "rot": 10,
+      "tilt": 0.5
+     },
+     {
+      "x": 0.42,
+      "y": 0.7,
+      "r": 110,
+      "side": "eng",
+      "kind": "kite",
+      "rot": -75,
+      "tilt": 0.6
+     },
+     {
+      "x": 0.2,
+      "y": 0.88,
+      "r": 160,
+      "side": "nor",
+      "rot": -14,
+      "tilt": 0.5
+     },
+     {
+      "x": 0.75,
+      "y": 0.9,
+      "r": 140,
+      "side": "nor",
+      "rot": 25,
+      "tilt": 0.5
+     }
+    ],
+    "grass": [
+     {
+      "x": 0.5,
+      "y": 0.97,
+      "s": 2.3
+     },
+     {
+      "x": 0.92,
+      "y": 0.78,
+      "s": 1.4
+     },
+     {
+      "x": 0.04,
+      "y": 0.78,
+      "s": 1.5
+     }
+    ],
+    "labels": [
+     {
+      "text": "1066",
+      "x": 0.38,
+      "y": 0.3,
+      "at": 0.3,
+      "color": "red",
+      "font": "serif",
+      "size": 150
+     }
+    ],
+    "bridge": false
+   }
+  }
+ ]
+}
