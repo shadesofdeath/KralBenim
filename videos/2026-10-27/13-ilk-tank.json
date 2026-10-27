@@ -1,0 +1,2849 @@
+{
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "extra": true,
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "ilk-tank",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "olive",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Su deposu",
+   "sandılar"
+  ],
+  "highlight": [
+   "deposu"
+  ],
+  "size": 180,
+  "scene": 1,
+  "t": 8.0,
+  "focus": [
+   1040,
+   480
+  ],
+  "zoom": 0.95,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 950,
+   "y": 1100,
+   "scale": 0.88,
+   "face": 1
+  }
+ },
+ "youtube": {
+  "title": "İlk Tank: Bir Su Deposu Savaşı Nasıl Değiştirdi?",
+  "description": "İlk tank, 15 Eylül 1916'da Somme'da, Flers-Courcelette'te savaşa girdi. Sisin içinden çıkan bu demir canavarı gören Alman askerleri neye uğradığını şaşırdı. Peki bu makine nereden çıktı ve adını neden bir su deposundan aldı?\n\nSiperlere kilitlenen Batı Cephesi, Winston Churchill'in Kara Gemileri Kurulu, hendekte takılan Küçük Willie, baklava dilimi gövdeli \"Mother\" ve Hatfield denemesi, \"Mezopotamya için su taşıyıcısı\" sırrı ve W.C. şakası. Ardından 49 tanktan sadece 18'inin savaşabildiği o ilk gün, Cambrai'de 476 tank ve Amiens.\n\nBu videoda:\n• Siper savaşının çıkmazı ve makineli tüfek\n• Kara gemisinden Küçük Willie'ye, oradan Mother'a\n• \"Tank\" adının su deposundan gelen sırrı\n• 15 Eylül 1916: Flers'teki ilk tank saldırısı\n• Cambrai 1917 ve savaşın değişen kuralları\n\nHer gün yeni bir \"neden?\" için Düşün Bakalım'a abone ol. Sence tank savaşın sonucunu değiştirdi mi, yoksa sadece hızlandırdı mı? Yorumlara yaz!\n\n#ilktank #birincidünyasavaşı #tarih #düşünbakalım",
+  "tags": [
+   "ilk tank",
+   "ilk tank nasıl yapıldı",
+   "ilk tank savaşı",
+   "tankın adı nereden geliyor",
+   "tank tarihi",
+   "mark 1 tankı",
+   "birinci dünya savaşı",
+   "somme muharebesi",
+   "flers courcelette",
+   "cambrai muharebesi",
+   "winston churchill",
+   "küçük willie",
+   "siper savaşı",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-27T13:00:00+03:00"
+ },
+ "sources": [
+  {
+   "title": "The Tank Museum: Tanks at Flers",
+   "url": "https://tankmuseum.org/article/tanks-at-flers"
+  },
+  {
+   "title": "The Tank Museum: The First Tank Trials at Hatfield",
+   "url": "https://tankmuseum.org/article/first_tank_trials"
+  },
+  {
+   "title": "Wikipedia: Landship Committee",
+   "url": "https://en.wikipedia.org/wiki/Landship_Committee"
+  },
+  {
+   "title": "Wikipedia: Little Willie",
+   "url": "https://en.wikipedia.org/wiki/Little_Willie"
+  },
+  {
+   "title": "Wikipedia: Mark I tank",
+   "url": "https://en.wikipedia.org/wiki/Mark_I_tank"
+  },
+  {
+   "title": "Wikipedia: Tank (etymology)",
+   "url": "https://en.wikipedia.org/wiki/Tank#Etymology"
+  },
+  {
+   "title": "Wikipedia: First day on the Somme",
+   "url": "https://en.wikipedia.org/wiki/First_day_on_the_Somme"
+  },
+  {
+   "title": "Wikipedia: MG 08",
+   "url": "https://en.wikipedia.org/wiki/MG_08"
+  },
+  {
+   "title": "Wikipedia: Battle of Cambrai (1917)",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Cambrai_(1917)"
+  },
+  {
+   "title": "Wikipedia: Battle of Amiens (1918)",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Amiens_(1918)"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "tank_charge",
+   "text": "15 Eylül 1916, Fransa. Sabahın ilk ışığında, siperdeki bir Alman askeri sisten gelen tuhaf bir ses duydu.",
+   "visual": "Alman siperinden yakın plan: önde kum torbaları, çelik miğferli Alman askeri dürbünle bakar; arkada kalın sabah sisinin içinden baklava gövdeli tankın karanlık silueti belirir, egzoz dumanı yükselir; 'ses'te asker dürbünü indirip endişeyle bakar",
+   "title": {
+    "white": "15 Eylül",
+    "gray": "1916"
+   },
+   "cues": {
+    "ses": "ses"
+   },
+   "params": {
+    "x": 0.64,
+    "dist": [
+     3800,
+     3000
+    ],
+    "yaw": 24,
+    "mist": {
+     "bands": 7
+    },
+    "wire": {
+     "d": 2400
+    },
+    "parapet": {
+     "y": 0.9,
+     "from": 0.0,
+     "to": 0.62
+    },
+    "cast": [
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.9,
+      "pose": "look",
+      "x": 0.32,
+      "y": 1.0,
+      "face": "right",
+      "seq": [
+       {
+        "at": "ses",
+        "pose": "idle",
+        "emotion": "worried",
+        "face": "right"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 800,
+    "horizon": 455
+   },
+   "camera": {
+    "focus": [
+     880,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "chapter": "15 Eylül 1916"
+  },
+  {
+   "type": "tank_charge",
+   "text": "Bir motor homurtusu, bir de demir gıcırtısı. Sonra sisten bir şey çıktı: gri, köşeli, ev büyüklüğünde bir demir yığını.",
+   "visual": "Alçak açı, önden-çapraz: sisin içinden baklava gövdeli Mark I kameraya doğru gelir, iki yanındaki toplar ileri uzanır, paletleri döner, egzoz dumanı tüter; 'çıktı'da sis açılır ve tank kadrajı doldurur; öndeki tel örgü ezilir",
+   "title": {
+    "white": "Sisten",
+    "gray": "bir şey"
+   },
+   "cues": {
+    "out": "çıktı"
+   },
+   "params": {
+    "x": 0.5,
+    "dist": [
+     3400,
+     900
+    ],
+    "yaw": 30,
+    "mist": {
+     "clear": "out",
+     "bands": 7
+    },
+    "wire": {
+     "d": 1300
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 800,
+    "horizon": 455
+   },
+   "camera": false
+  },
+  {
+   "type": "tank_track",
+   "text": "Atı yoktu, tekerleği yoktu. Ama dikenli telleri ezerek doğruca ona geldi. Mermiler zırhına çarpıp sekti.",
+   "visual": "Aşırı yakın plan: tankın ön palet boynuzu kadrajı doldurur; çelik palet plakaları makaranın etrafında döner, çamur topakları fırlar, dikenli tel ve kazık paletin altında ezilip yatar; 'Mermiler'de perçinli zırhın üstünde kıvılcımlar sekerek parlar",
+   "title": {
+    "white": "Dikenli tel"
+   },
+   "cues": {
+    "tel": "telleri",
+    "mer": "Mermiler"
+   },
+   "params": {
+    "dir": -1,
+    "speed": 70,
+    "sparks": "mer",
+    "crush": "tel"
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   },
+   "camera": false
+  },
+  {
+   "type": "tank_field",
+   "text": "O asker, tarihte bir tankla yüz yüze gelen ilk insanlardan biriydi.",
+   "visual": "Yakın plan: siperde çelik miğferli Alman askeri şokla geri sıçrar; sağda tankın palet boynuzu kadrajı doldurur; solda Kaşif askeri işaret eder, 'ilk'te o da şaşırır",
+   "title": {
+    "white": "İlk kez"
+   },
+   "cues": {
+    "ilk": "ilk"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.42,
+      "w": 0.16,
+      "depth": 120
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.74,
+      "face": -1,
+      "s": 1.0,
+      "roof": true,
+      "rock": 1.5
+     }
+    ],
+    "cast": [
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.6,
+      "pose": "shock",
+      "x": 0.44,
+      "y": 0.9,
+      "face": "right",
+      "emotion": "surprised"
+     },
+     {
+      "who": "kasif",
+      "x": 0.31,
+      "y": 0.8,
+      "scale": 0.55,
+      "pose": "point",
+      "face": "right",
+      "dir": 10,
+      "at": "ilk",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     900,
+     700
+    ],
+    "zoom": 1.75,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki bu canavar nereden çıktı? Adını neden bir su deposundan aldı? Ve ilk gün her şey ters giderken, savaşı nasıl değiştirdi?",
+   "visual": "Dev yazı kelime kelime: 'Bir su deposu savaşı değiştirdi', 'deposu' kırmızı kutuda; el yazısı not 'cevap sonda'",
+   "title": {
+    "white": "Soru"
+   },
+   "cues": {
+    "w2": "deposundan",
+    "note": "değiştirdi"
+   },
+   "params": {
+    "lines": [
+     "Bir su deposu",
+     "savaşı değiştirdi"
+    ],
+    "highlight": [
+     "deposu"
+    ],
+    "note": {
+     "text": "cevap sonda",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Bunu anlamak için, onu doğuran çıkmaza bakalım.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Kilitlenen cephe'",
+   "title": {},
+   "cues": {
+    "title": "çıkmaza"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Kilitlenen cephe"
+   },
+   "chapter": "Kilitlenen cephe"
+  },
+  {
+   "type": "tank_front",
+   "text": "1914'ün sonunda iki dev ordu öyle kilitlendi ki Kuzey Denizi'nden İsviçre'ye kadar uzanan bir siper hattı kazıldı.",
+   "visual": "Eski harita: Manş kıyıları, İngiltere, Fransa, Belçika; 'kilitlendi'de kırmızı zikzak siper hattı Kuzey Denizi kıyısından İsviçre sınırına kendini çizer; Paris işaretlenir; sonunda 'siper hattı' notu",
+   "title": {
+    "white": "Batı Cephesi",
+    "gray": "1914"
+   },
+   "cues": {
+    "l": "kilitlendi",
+    "n": "kazıldı"
+   },
+   "params": {
+    "line": {
+     "at": "l",
+     "dur": 3.2
+    },
+    "cities": [
+     {
+      "name": "Paris",
+      "lon": 2.35,
+      "lat": 48.86,
+      "at": 0.4,
+      "color": "ink"
+     }
+    ],
+    "notes": [
+     {
+      "text": "siper hattı",
+      "x": 0.66,
+      "y": 0.62,
+      "at": "n",
+      "color": "red",
+      "size": 64
+     }
+    ]
+   },
+   "camera": false
+  },
+  {
+   "type": "tank_field",
+   "text": "Şimdi kendinizi bir piyadenin yerine koyun. Düdük çalıyor ve siperden çıkıyorsunuz. Karşınızda dikenli tel ve bir makineli tüfek var.",
+   "visual": "Fırtınalı gökyüzü altında yandan cephe: solda İngiliz siperi, düz miğferli askerler tüfekleriyle siperden çıkıp sağa yürür, kasketli subay 'Düdük'te işaret eder; ortada çukurlar ve tel örgü; sağda Alman makineli tüfek yuvası, uzakta patlamalar",
+   "title": {
+    "white": "Saldırı"
+   },
+   "cues": {
+    "d": "Düdük",
+    "cik": "çıkıyorsunuz",
+    "kar": "Karşınızda",
+    "c": "tüfek"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.1,
+      "w": 0.1,
+      "depth": 140
+     },
+     {
+      "x": 0.92,
+      "w": 0.08,
+      "depth": 120
+     }
+    ],
+    "craters": [
+     {
+      "x": 0.45,
+      "w": 0.1,
+      "d": 30
+     },
+     {
+      "x": 0.62,
+      "w": 0.08,
+      "d": 24
+     }
+    ],
+    "wire": [
+     {
+      "x0": 0.5,
+      "x1": 0.82
+     }
+    ],
+    "stumps": [
+     0.38
+    ],
+    "bursts": [
+     {
+      "x": 0.58,
+      "y": 0.8,
+      "at": "c",
+      "size": 80
+     },
+     {
+      "x": 0.74,
+      "y": 0.8,
+      "at": 4.2,
+      "size": 70
+     }
+    ],
+    "cast": [
+     {
+      "who": "subay",
+      "helmet": "cap",
+      "moustache": true,
+      "x": 0.22,
+      "y": 0.8,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "right",
+      "at": "d",
+      "then": "point",
+      "dir": "up"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.55,
+      "pose": "walk",
+      "x": 0.06,
+      "to": 0.32,
+      "y": 0.8,
+      "walk_at": "cik",
+      "walk_dur": 3,
+      "rifle": true,
+      "face": "right"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.55,
+      "pose": "walk",
+      "x": 0.0,
+      "to": 0.25,
+      "y": 0.8,
+      "walk_at": "cik",
+      "walk_dur": 3.4,
+      "rifle": true,
+      "face": "right"
+     },
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.4,
+      "pose": "hold",
+      "x": 0.93,
+      "y": 0.86,
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "kimsenin toprağı",
+      "x": 0.38,
+      "y": 0.42,
+      "at": "kar",
+      "size": 60,
+      "color": "ink"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 864,
+    "horizon": 380
+   },
+   "camera": {
+    "focus": [
+     640,
+     680
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_mg",
+   "text": "Bu silah dakikada yüzlerce mermi atabiliyordu. Tek bir tüfek, koca bir bölüğü durdurabilirdi.",
+   "visual": "Yakın: kum torbalı siperin arkasında çelik miğferli Alman nişancı, su soğutmalı ağır makineli tüfek ateşler; mermi şeridi akar, boş kovanlar düşer, namlu ağzında alev, kırmızı izli mermiler sağa uçar; sağ üstte '450 mermi / dakika' sayacı yükselir",
+   "title": {
+    "white": "Makineli",
+    "gray": "tüfek"
+   },
+   "cues": {
+    "f": "silah"
+   },
+   "params": {
+    "x": 0.47,
+    "y": 0.5,
+    "s": 1.25,
+    "fire": "f",
+    "counter": {
+     "at": "f",
+     "to": 450,
+     "text": "mermi / dakika",
+     "x": 0.79,
+     "y": 0.27
+    },
+    "cast": [
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.62,
+      "pose": "hold",
+      "x": 0.17,
+      "y": 0.9,
+      "face": "right"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 700
+   },
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   },
+   "source": "MG 08, Wikipedia"
+  },
+  {
+   "type": "title",
+   "text": "Sonuç korkunçtu. 1 Temmuz 1916'da, Somme'un ilk gününde, İngiliz ordusu 57 binden fazla kayıp verdi. Tek bir günde!",
+   "visual": "Dev yazı: '57.000 kayıp, tek günde', '57.000' kırmızı kutuda; el yazısı not '1 Temmuz 1916'",
+   "title": {
+    "white": "Somme",
+    "gray": "ilk gün"
+   },
+   "cues": {
+    "w0": "57",
+    "note": "Temmuz"
+   },
+   "params": {
+    "lines": [
+     "57.000 kayıp",
+     "tek günde"
+    ],
+    "highlight": [
+     "57.000"
+    ],
+    "note": {
+     "text": "1 Temmuz 1916",
+     "at": "note"
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tank_field",
+   "text": "Generaller daha çok top, daha çok asker denedi. Ama telin ve kurşunun önünden geçebilecek hiçbir şey yoktu.",
+   "visual": "Geniş plan, fırtınalı gök: sonsuz tel örgü sıraları, çukurlar, kırık ağaçlar, patlamalar; solda siper ağzında Kaşif dürbünle bakar, 'hiçbir'de omuz silker; kırmızı 'geçilmez' damgası",
+   "title": {
+    "white": "Çıkmaz"
+   },
+   "cues": {
+    "h": "hiçbir"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.12,
+      "w": 0.1,
+      "depth": 130
+     }
+    ],
+    "craters": [
+     {
+      "x": 0.36,
+      "w": 0.1,
+      "d": 30
+     },
+     {
+      "x": 0.58,
+      "w": 0.12,
+      "d": 34
+     },
+     {
+      "x": 0.82,
+      "w": 0.08,
+      "d": 22
+     }
+    ],
+    "wire": [
+     {
+      "x0": 0.3,
+      "x1": 0.5,
+      "h": 60
+     },
+     {
+      "x0": 0.62,
+      "x1": 0.96,
+      "h": 70
+     }
+    ],
+    "stumps": [
+     0.46,
+     0.72
+    ],
+    "bursts": [
+     {
+      "x": 0.55,
+      "at": 0.8,
+      "size": 80
+     },
+     {
+      "x": 0.8,
+      "at": 2.6,
+      "size": 70
+     },
+     {
+      "x": 0.4,
+      "at": 4.6,
+      "size": 75
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.19,
+      "y": 0.8,
+      "scale": 0.55,
+      "pose": "look",
+      "face": "right",
+      "at": "h",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "geçilmez",
+      "x": 0.46,
+      "y": 0.42,
+      "at": "h",
+      "stamp": true,
+      "size": 90
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 864,
+    "horizon": 380
+   },
+   "camera": {
+    "focus": [
+     620,
+     680
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tank_blueprint",
+   "text": "Ve çözüm, kimsenin beklemediği bir yerden gelecekti: denizden!",
+   "visual": "Çizim masasında mavi kareli plan kâğıdı: dev bir zırhlı savaş gemisi kendini çizer, su dalgaları üstünde; 'gelecekti'de dalgalar silinir, geminin altına iki palet halkası kırmızıyla çizilir",
+   "title": {
+    "white": "Bir fikir"
+   },
+   "cues": {
+    "tracks": "gelecekti"
+   },
+   "params": {
+    "design": "ship",
+    "title": "1915"
+   },
+   "set": "interior"
+  },
+  {
+   "type": "chapter",
+   "text": "Evet, yanlış duymadınız. Tankı ordu değil, donanma başlattı.",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Kara gemisi'",
+   "title": {},
+   "cues": {
+    "title": "donanma"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Kara gemisi"
+   },
+   "chapter": "Kara gemisi"
+  },
+  {
+   "type": "tank_room",
+   "text": "1915'te donanmanın başında hırslı bir bakan vardı: Winston Churchill. Ona göre bütün mesele, tel örgüleri aşabilmekti.",
+   "visual": "Yakın plan: Amirallik odası; silindir şapkalı, papyonlu Churchill ağzında purosuyla masanın başında konuşur, puronun ucundan duman kıvrılır; 'Churchill'de 'Winston Churchill' etiketi; 'örgüleri'nde işaret eder",
+   "title": {
+    "white": "Amirallik",
+    "gray": "1915"
+   },
+   "cues": {
+    "ch": "Churchill",
+    "tel": "örgüleri"
+   },
+   "params": {
+    "chart": false,
+    "table_x0": 0.3,
+    "table_x1": 0.86,
+    "lamp_x": 0.7,
+    "cast": [
+     {
+      "who": "churchill",
+      "helmet": "top",
+      "bowtie": true,
+      "cigar": true,
+      "x": 0.42,
+      "y": 0.86,
+      "scale": 0.62,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "tel",
+        "pose": "point",
+        "dir": "up",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Winston Churchill",
+      "x": 0.6,
+      "y": 0.42,
+      "at": "ch",
+      "size": 70
+     }
+    ]
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     880,
+     600
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_room",
+   "text": "Onun emriyle gizli bir kurul toplandı: Kara Gemileri Kurulu. Hayal ettikleri, karada yürüyen bir zırhlı gemiydi!",
+   "visual": "Amirallik'te gizli toplantı: denizci kasketli, bıyıklı subaylar masada; duvardaki çizimde bir savaş gemisi, 'karada'da altına kırmızı paletler çizilir; 'gizli'de kırmızı 'GİZLİ' damgası; sağda Kaşif çizimi işaret eder",
+   "title": {
+    "white": "Kara Gemileri",
+    "gray": "Kurulu"
+   },
+   "cues": {
+    "giz": "gizli",
+    "idea": "karada"
+   },
+   "params": {
+    "chart": "ship",
+    "chart_x": 0.52,
+    "lamp_x": 0.7,
+    "cast": [
+     {
+      "who": "a",
+      "helmet": "naval",
+      "moustache": true,
+      "x": 0.36,
+      "y": 0.86,
+      "scale": 0.5,
+      "pose": "talk",
+      "face": "right"
+     },
+     {
+      "who": "b",
+      "helmet": "naval",
+      "x": 0.55,
+      "y": 0.86,
+      "scale": 0.5,
+      "pose": "think",
+      "face": "left"
+     },
+     {
+      "who": "kasif",
+      "x": 0.86,
+      "y": 0.86,
+      "scale": 0.55,
+      "pose": "point",
+      "face": "left",
+      "dir": "up",
+      "at": "idea",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "gizli",
+      "x": 0.22,
+      "y": 0.3,
+      "at": "giz",
+      "stamp": true,
+      "size": 84
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tank_blueprint",
+   "text": "İlk fikirlerden biri, üç yüz tonluk, dev tekerlekli bir canavardı. Neyse ki bu fikir kâğıtta kaldı.",
+   "visual": "Plan kâğıdı: üç taretli bir platform, altında iki dev tekerlek kendini çizer; yanında minicik bir insan ölçek için; üstte '300 ton' ölçü çizgisi; 'kaldı'da koca kırmızı çarpı",
+   "title": {
+    "white": "Dev tekerlek"
+   },
+   "cues": {
+    "ton": "tonluk",
+    "x": "kaldı"
+   },
+   "params": {
+    "design": "wheel",
+    "title": "300 ton",
+    "cross": "x",
+    "dims": [
+     {
+      "text": "300 ton",
+      "a": [
+       -470,
+       -260
+      ],
+      "b": [
+       470,
+       -260
+      ],
+      "at": "ton"
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tank_factory",
+   "text": "Asıl iş, Lincoln'de William Tritton'ın tarım makineleri fabrikasında yapıldı. Eylül 1915'te ilk makine yürüdü: Küçük Willie.",
+   "visual": "Lincoln'de fabrika: yüksek pencereler, çatı makasları, vinç zinciri sallanan bir zırh plakası indirir; ortada kutu gövdeli, alçak paletli Küçük Willie; kasketli işçiler çekiçle perçin çakar, kıvılcımlar uçar; 'Lincoln'de' etiketi, 'Willie'de 'Küçük Willie' yazısı",
+   "title": {
+    "white": "Lincoln"
+   },
+   "cues": {
+    "lin": "Lincoln",
+    "wil": "Willie"
+   },
+   "params": {
+    "ground": 0.8,
+    "tank": {
+     "variant": "willie",
+     "x": 0.52,
+     "s": 1.1
+    },
+    "crane": {
+     "x": 0.2,
+     "at": 0.2
+    },
+    "sparks": [
+     {
+      "x": 0.43,
+      "y": 0.6,
+      "at": 0.6
+     },
+     {
+      "x": 0.6,
+      "y": 0.54,
+      "at": 1.4
+     }
+    ],
+    "cast": [
+     {
+      "who": "w1",
+      "helmet": "flat",
+      "x": 0.33,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "point",
+      "face": "right",
+      "hammer": true
+     },
+     {
+      "who": "w2",
+      "helmet": "flat",
+      "x": 0.75,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "point",
+      "face": "left",
+      "hammer": true
+     },
+     {
+      "who": "tritton",
+      "helmet": "top",
+      "moustache": true,
+      "x": 0.9,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "idle",
+      "face": "left",
+      "at": "wil",
+      "then": "point",
+      "dir": 10
+     }
+    ],
+    "labels": [
+     {
+      "text": "Lincoln, 1915",
+      "x": 0.2,
+      "y": 0.62,
+      "at": "lin",
+      "size": 60
+     },
+     {
+      "text": "Küçük Willie",
+      "x": 0.52,
+      "y": 0.3,
+      "at": "wil",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tank_field",
+   "text": "Ama Küçük Willie hendeğe girince paletleri sarktı ve yerinden çıktı. Proje daha doğmadan ölmek üzereydi!",
+   "visual": "Yakın plan, deneme alanı: Küçük Willie hendeğe burnunu sokar, burnu aşağı düşer, paleti sarkar, kara duman yükselir; hendeğin karşısında kasketli iki mühendis şokla bakar",
+   "title": {
+    "white": "Küçük Willie"
+   },
+   "cues": {
+    "st": "sarktı",
+    "yap": "ölmek"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.6,
+      "w": 0.1,
+      "depth": 170
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "willie",
+      "x": 0.25,
+      "to": 0.44,
+      "at": 0.1,
+      "dur": 2.8,
+      "s": 0.8,
+      "stuck": {
+       "at": "st"
+      }
+     }
+    ],
+    "cast": [
+     {
+      "who": "wilson",
+      "helmet": "cap",
+      "x": 0.8,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "idle",
+      "face": "left",
+      "at": "st",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "tritton",
+      "helmet": "top",
+      "moustache": true,
+      "x": 0.9,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "idle",
+      "face": "left",
+      "at": "yap",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     880,
+     620
+    ],
+    "zoom": 1.45,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_blueprint",
+   "text": "Ama Wilson'ın aklına bir fikir geldi: paletleri bütün gövdenin etrafına dolamak! Böylece burnu havaya kalkık, o meşhur baklava dilimi gövde doğdu.",
+   "visual": "Yakın: plan kâğıdında alçak palet halkası; 'dolamak'ta halka büyüyüp bütün gövdenin etrafını saran baklava dilimi biçimine dönüşür, kırmızı oklar palet boyunca döner; ortada yan taret çizilir",
+   "title": {
+    "white": "Baklava",
+    "gray": "dilimi"
+   },
+   "cues": {
+    "morph": "dolamak"
+   },
+   "params": {
+    "design": "morph",
+    "title": "MOTHER"
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "Yeni makineye \"Mother\", yani \"Anne\" dediler. 2 Şubat 1916'da Anne, bakanların önünde hendekleri tek tek geçti.",
+   "visual": "Hatfield Parkı'nda yeşil tepeler: baklava gövdeli Mother soldan gelir, geniş hendeği aşar, toprak sete tırmanır; sağda silindir şapkalı ve kasketli bakanlar izler; 'Mother'da etiket, 'Şubat'ta tarih notu",
+   "title": {
+    "white": "Hatfield",
+    "gray": "1916"
+   },
+   "cues": {
+    "mo": "Mother",
+    "sub": "Şubat"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.42,
+      "w": 0.09,
+      "depth": 140
+     }
+    ],
+    "berms": [
+     {
+      "x": 0.6,
+      "w": 0.12,
+      "h": 50
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "mother",
+      "x": 0.1,
+      "to": 0.6,
+      "at": 0.3,
+      "dur": 9,
+      "s": 0.85,
+      "tail": true
+     }
+    ],
+    "cast": [
+     {
+      "who": "a",
+      "helmet": "top",
+      "moustache": true,
+      "x": 0.8,
+      "y": 0.84,
+      "scale": 0.52,
+      "pose": "look",
+      "face": "left"
+     },
+     {
+      "who": "b",
+      "helmet": "cap",
+      "moustache": true,
+      "x": 0.88,
+      "y": 0.84,
+      "scale": 0.52,
+      "pose": "idle",
+      "face": "left"
+     },
+     {
+      "who": "c",
+      "helmet": "top",
+      "x": 0.96,
+      "y": 0.84,
+      "scale": 0.52,
+      "pose": "think",
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Mother",
+      "x": 0.3,
+      "y": 0.34,
+      "at": "mo",
+      "size": 96,
+      "color": "red"
+     },
+     {
+      "text": "2 Şubat 1916",
+      "x": 0.58,
+      "y": 0.4,
+      "at": 0.3,
+      "size": 88
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864,
+    "horizon": 470
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "Ama herkes ikna olmamıştı. Savaş Bakanı Lord Kitchener, anlatılana göre ona \"güzel bir mekanik oyuncak\" dedi.",
+   "visual": "Yakın plan: kocaman bıyıklı, kasketli Lord Kitchener kaşlarını kaldırır; hemen yanında, dizine kadar gelen küçük Mother tankı tüter; 'oyuncak'ta Kitchener tanka bakıp omuz silker; kırmızı 'oyuncak' yazısı",
+   "title": {
+    "white": "Kitchener"
+   },
+   "cues": {
+    "kit": "Kitchener",
+    "oyu": "oyuncak"
+   },
+   "params": {
+    "tanks": [
+     {
+      "variant": "mother",
+      "x": 0.79,
+      "s": 0.32,
+      "face": -1,
+      "rock": 0.8
+     }
+    ],
+    "cast": [
+     {
+      "who": "kitchener",
+      "helmet": "cap",
+      "moustache": true,
+      "x": 0.6,
+      "y": 0.86,
+      "scale": 0.78,
+      "pose": "idle",
+      "face": "right",
+      "emotion": "angry",
+      "at": "oyu",
+      "then": "shrug"
+     }
+    ],
+    "labels": [
+     {
+      "text": "“oyuncak”",
+      "x": 0.79,
+      "y": 0.5,
+      "at": "oyu",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "Lord Kitchener",
+      "x": 0.5,
+      "y": 0.6,
+      "at": "kit",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 929,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     1300,
+     660
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_factory",
+   "text": "Yine de 150 tank sipariş edildi. Peki bu kadar büyük bir şey düşmandan nasıl saklanır?",
+   "visual": "Fabrikada sıra sıra tank gövdeleri, önde bitmiş bir Mark I; '150'de büyük kırmızı '150' damgası; solda Kaşif düşünür, 'saklanır'da omuz silker",
+   "title": {
+    "white": "Sipariş"
+   },
+   "cues": {
+    "y": "150",
+    "sak": "saklanır"
+   },
+   "params": {
+    "ground": 0.78,
+    "row": 4,
+    "tank": {
+     "variant": "male",
+     "x": 0.58,
+     "s": 0.7
+    },
+    "crane": {
+     "x": 0.86,
+     "at": 0.3
+    },
+    "sparks": [
+     {
+      "x": 0.62,
+      "y": 0.58,
+      "at": 0.5
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "y": 0.78,
+      "scale": 0.55,
+      "pose": "think",
+      "face": "right",
+      "at": "sak",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "150",
+      "x": 0.33,
+      "y": 0.3,
+      "at": "y",
+      "stamp": true,
+      "size": 110
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "chapter",
+   "text": "Fabrikadaki işçilere bile ne yaptıkları söylenmedi.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Su deposu sırrı'",
+   "title": {},
+   "cues": {
+    "title": "işçilere"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Su deposu sırrı"
+   },
+   "chapter": "Su deposu sırrı"
+  },
+  {
+   "type": "tank_factory",
+   "text": "Kâğıtlarda bunlar \"Mezopotamya için su taşıyıcısı\" diye geçti. Dışarıdan da gerçekten dev bir su deposuna benziyorlardı.",
+   "visual": "Fabrikada tankın yan zırhına harf harf 'SU TAŞIYICI' şablon yazısı püskürür, yandaki sandığa 'MEZOPOTAMYA'; 'deposuna'da üstüne koca bir branda düşer ve tank kutu gibi bir depoya döner; kasketli işçi çekiçle çalışır",
+   "title": {
+    "white": "Kod adı"
+   },
+   "cues": {
+    "mez": "Mezopotamya",
+    "dep": "deposuna"
+   },
+   "params": {
+    "ground": 0.78,
+    "tank": {
+     "variant": "female",
+     "x": 0.5,
+     "s": 0.78
+    },
+    "crane": false,
+    "crates": [
+     {
+      "x": 0.85,
+      "w": 0.25,
+      "h": 170,
+      "text": " "
+     }
+    ],
+    "stencils": [
+     {
+      "text": "su taşıyıcı",
+      "x": 0.46,
+      "y": 0.6,
+      "at": "mez",
+      "size": 54,
+      "board": true
+     },
+     {
+      "text": "Mezopotamya",
+      "x": 0.85,
+      "y": 0.7,
+      "at": "mez",
+      "size": 44,
+      "color": "red"
+     }
+    ],
+    "tarp": "dep",
+    "cast": [
+     {
+      "who": "w1",
+      "helmet": "flat",
+      "x": 0.14,
+      "y": 0.78,
+      "scale": 0.48,
+      "pose": "point",
+      "face": "right",
+      "hammer": true
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tank_name",
+   "text": "Sonra bu makinelere \"Su Taşıyıcı\" denmesi önerildi. Ama anlatılana göre biri hemen güldü: Water Carrier, yani kısaca W.C.!",
+   "visual": "Yakın plan: bakanlıkta bir kapının buzlu camına 'Water Carrier' yazısı kendini yazar; 'harfleriyle' yerine 'güldü'de W ve C harfleri büyüyüp kırmızıya döner; 'W.C.'de kırmızı 'W.C.' damgası iner; yanda bıyıklı denizci subay kahkaha atar",
+   "title": {
+    "white": "Su Taşıyıcı"
+   },
+   "cues": {
+    "gul": "güldü",
+    "wc": "W.C."
+   },
+   "params": {
+    "name": "Water Carrier",
+    "size": 78,
+    "w": 0.34,
+    "initials_at": "gul",
+    "cast": [
+     {
+      "who": "a",
+      "helmet": "naval",
+      "moustache": true,
+      "x": 0.64,
+      "y": 0.86,
+      "scale": 0.55,
+      "pose": "idle",
+      "face": "left",
+      "at": "gul",
+      "then": "shrug",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "W.C.",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "wc",
+      "stamp": true,
+      "size": 130
+     }
+    ]
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.45,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_name",
+   "text": "Tuvalet diye anılan bir silah mı? Olmaz! Sonunda daha sıkıcı bir kelimede karar kıldılar: tank, yani depo.",
+   "visual": "Aynı kapı: 'Water Carrier' yazısının üstüne kırmızı çizgi çekilir, 'tank'ta büyük 'TANK' damgası iner; solda Kaşif gülerek omuz silker, sonra damgayı işaret eder",
+   "title": {
+    "white": "Yeni ad"
+   },
+   "cues": {
+    "sik": "sıkıcı",
+    "tk": "tank,"
+   },
+   "params": {
+    "name": "Water Carrier",
+    "size": 78,
+    "w": 0.34,
+    "initials": [
+     0,
+     6
+    ],
+    "initials_at": 0.05,
+    "at": 0.0,
+    "cross": "sik",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.15,
+      "y": 0.86,
+      "scale": 0.58,
+      "pose": "shrug",
+      "face": "right",
+      "emotion": "happy",
+      "at": "tk",
+      "then": "point",
+      "dir": 20
+     }
+    ],
+    "labels": [
+     {
+      "text": "TANK",
+      "x": 0.5,
+      "y": 0.45,
+      "at": "tk",
+      "stamp": true,
+      "size": 150
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tank_field",
+   "text": "Peki içeride hayat nasıldı? Mark 1 denen bu tank 28 tondu ve 8 kişi, motorla aynı bölmede savaştı.",
+   "visual": "Yandan büyük Mark I tankı tüm ayrıntısıyla: baklava gövde, perçinli yan plaka, top taşıyan yan taret, egzoz, arkada direksiyon tekerlekleri; '28'de '28 ton' oku gövdeyi, '8'de '8 kişi' oku yan tareti gösterir",
+   "title": {
+    "white": "Mark 1"
+   },
+   "cues": {
+    "ton": "tondu",
+    "kis": "kişi"
+   },
+   "params": {
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.55,
+      "s": 1.2,
+      "face": 1,
+      "rock": 0.4
+     }
+    ],
+    "labels": [
+     {
+      "text": "28 ton",
+      "x": 0.2,
+      "y": 0.34,
+      "at": "ton",
+      "size": 84,
+      "color": "red",
+      "arrow": [
+       0.36,
+       0.63
+      ]
+     },
+     {
+      "text": "8 kişi",
+      "x": 0.86,
+      "y": 0.34,
+      "at": "kis",
+      "size": 84,
+      "color": "red",
+      "arrow": [
+       0.6,
+       0.66
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864,
+    "horizon": 390
+   },
+   "source": "Tank Museum"
+  },
+  {
+   "type": "tank_inside",
+   "text": "İçerisi 50 dereceyi bulabiliyordu, hava egzoz ve barut dumanıyla doluydu. Bazı askerler dışarı çıkınca bayıldı.",
+   "visual": "Yakın plan, tankın kesiti: ortada motor, pistonlar iner kalkar; duvardaki termometrede kırmızı sütun yükselir, '50'de '50°C'; kırmızı sıcaklık dalgaları, 'egzoz'da içerisi gri dumanla dolar; mürettebat terli ve endişeli",
+   "title": {
+    "white": "50 derece"
+   },
+   "cues": {
+    "th": "50",
+    "fu": "egzoz"
+   },
+   "params": {
+    "heat": 0.2,
+    "thermo": {
+     "at": "th",
+     "to": 50
+    },
+    "fumes": "fu",
+    "crew": true
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     880,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Tank Museum"
+  },
+  {
+   "type": "tank_inside",
+   "text": "Gürültüde sürücü, işaret vermek için motora koca bir anahtarla vurdu. Tankı döndürmek için de dört adam gerekti.",
+   "visual": "Tankın kesiti, orta plan: sürücü koca bir anahtarla motora vurur, altın 'çın' çizgileri; 'dört'te dört adamın etrafına kırmızı halkalar çizilir",
+   "title": {
+    "white": "Gürültü"
+   },
+   "cues": {
+    "sp": "vurdu",
+    "st": "dört"
+   },
+   "params": {
+    "heat": 0.0,
+    "fumes": 0.0,
+    "spanner": "sp",
+    "steer": "st",
+    "crew": true
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.15,
+    "move": "left"
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "Hızı mı? Saatte 6 kilometre, yani yürüyen bir adam kadar! Asıl sınav ise Somme'un çamurunda olacaktı.",
+   "visual": "Çamurlu arazide tank sağa ağır ağır ilerler; yanında Kaşif aynı hızla yürüyerek ona yetişir ve tankı işaret eder; 'saatte 6 km' etiketi",
+   "title": {
+    "white": "Hız"
+   },
+   "cues": {
+    "km": "kilometre"
+   },
+   "params": {
+    "craters": [
+     {
+      "x": 0.85,
+      "w": 0.1,
+      "d": 24
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.22,
+      "to": 0.46,
+      "at": 0.2,
+      "dur": 7,
+      "s": 0.95,
+      "roof": true
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.56,
+      "to": 0.8,
+      "y": 0.8,
+      "scale": 0.6,
+      "pose": "walk",
+      "walk_at": 0.2,
+      "walk_dur": 7,
+      "then": "point",
+      "face": "right",
+      "dir": 10
+     }
+    ],
+    "labels": [
+     {
+      "text": "saatte 6 km",
+      "x": 0.7,
+      "y": 0.26,
+      "at": "km",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864,
+    "horizon": 390
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Ağustos 1916'da tanklar Fransa'ya ulaştı. İngiliz başkomutanı Douglas Haig sabırsızdı.",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Çamurdaki ilk gün'",
+   "title": {},
+   "cues": {
+    "title": "Haig"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Çamurdaki ilk gün"
+   },
+   "chapter": "Çamurdaki ilk gün"
+  },
+  {
+   "type": "tank_room",
+   "text": "Bazı subaylar beklemek istedi: yüzlerce tank olsun, düşman tek seferde şaşırsın. Ama Haig beklemedi.",
+   "visual": "Karargâh: duvarda kırmızı zikzak cephe hattı olan harita; bıyıklı, kasketli Haig haritanın önünde; iki subay ellerini açıp bekleyelim der; 'beklemedi'de Haig haritaya iğne batırır",
+   "title": {
+    "white": "Karargâh"
+   },
+   "cues": {
+    "bek": "beklemek",
+    "pin": "beklemedi"
+   },
+   "params": {
+    "chart": "front",
+    "chart_x": 0.55,
+    "lamp_x": 0.72,
+    "cast": [
+     {
+      "who": "haig",
+      "helmet": "cap",
+      "moustache": true,
+      "x": 0.56,
+      "y": 0.86,
+      "scale": 0.68,
+      "pose": "think",
+      "face": "right",
+      "at": "pin",
+      "then": "point",
+      "dir": "up"
+     },
+     {
+      "who": "a",
+      "helmet": "cap",
+      "x": 0.32,
+      "y": 0.86,
+      "scale": 0.62,
+      "pose": "talk",
+      "face": "right",
+      "at": "bek",
+      "then": "shrug"
+     },
+     {
+      "who": "b",
+      "helmet": "cap",
+      "x": 0.8,
+      "y": 0.86,
+      "scale": 0.62,
+      "pose": "talk",
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Douglas Haig",
+      "x": 0.62,
+      "y": 0.44,
+      "at": 0.3,
+      "size": 60
+     }
+    ]
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     1000,
+     560
+    ],
+    "zoom": 1.25,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tank_count",
+   "text": "15 Eylül için 49 tank ayrıldı. Başlangıç çizgisine sadece 32'si ulaştı. Onlardan da yalnızca 18'i savaşa girebildi.",
+   "visual": "49 küçük tank simgesi yedi sıra halinde; sağda dev sayaç '49 ayrıldı'; '32'si'de 17 tank birer birer devrilir, kırmızı çarpı ve kara duman alır, sayaç 32'ye iner; '18'i'de 14 tank daha düşer, sayaç kırmızı '18 savaşta'",
+   "title": {
+    "white": "15 Eylül",
+    "gray": "1916"
+   },
+   "cues": {
+    "a": "32'si",
+    "b": "18'i"
+   },
+   "params": {
+    "steps": [
+     {
+      "to": 32,
+      "at": "a",
+      "label": "başlangıçta"
+     },
+     {
+      "to": 18,
+      "at": "b",
+      "label": "savaşta"
+     }
+    ],
+    "label0": "ayrıldı"
+   },
+   "source": "Tank Museum"
+  },
+  {
+   "type": "tank_field",
+   "text": "Sabah 5'i 15 geçe, D1 adlı tank ilerlemeye başladı. Savaşa giren ilk tank buydu.",
+   "visual": "Gece-şafak: ay ışığında sis; üstünde beyaz 'D1' yazan tel tavanlı tank siperden çıkıp sağa ilerler; '05.15' etiketi; uzakta işaret fişeği gibi patlamalar",
+   "title": {
+    "white": "D1"
+   },
+   "cues": {
+    "ilk": "ilk"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.1,
+      "w": 0.09,
+      "depth": 120
+     }
+    ],
+    "craters": [
+     {
+      "x": 0.62,
+      "w": 0.1,
+      "d": 26
+     }
+    ],
+    "wire": [
+     {
+      "x0": 0.7,
+      "x1": 0.98
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.2,
+      "to": 0.62,
+      "at": 0.3,
+      "dur": 7,
+      "s": 0.62,
+      "roof": true,
+      "label": "D1"
+     }
+    ],
+    "mist": {
+     "y0": 0.6,
+     "y1": 0.82,
+     "bands": 5,
+     "clear": "ilk"
+    },
+    "bursts": [
+     {
+      "x": 0.9,
+      "at": 2.0,
+      "size": 60
+     }
+    ],
+    "labels": [
+     {
+      "text": "05.15",
+      "x": 0.2,
+      "y": 0.22,
+      "at": 0.3,
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "tank_aerial",
+   "text": "Asıl sahne Flers köyündeydi. D17 adlı tank ana caddeye girdi ve Alman mevzilerini tek tek susturdu.",
+   "visual": "Uçaktan bakış: Flers köyü; tarlalar, mermi çukurları, Alman zikzak siperi; ana caddeye giren tank, arkasında küçük miğferli askerler; 'girdi' ve 'susturdu'da yan taretlerden ateş ve evlerde patlamalar",
+   "title": {
+    "white": "Flers",
+    "gray": "D17"
+   },
+   "cues": {
+    "f1": "girdi",
+    "f2": "susturdu"
+   },
+   "params": {
+    "tank": {
+     "from": 0.05,
+     "to": 0.72,
+     "at": 0.3,
+     "dur": 7.5,
+     "s": 1.3
+    },
+    "fire": [
+     "f1",
+     "f2"
+    ],
+    "labels": [
+     {
+      "text": "Flers",
+      "x": 0.86,
+      "y": 0.2,
+      "at": 0.4,
+      "size": 90,
+      "font": "serif",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": false
+  },
+  {
+   "type": "tank_field",
+   "text": "Bir pilot şunu bildirdi: \"Flers'in ana caddesinde bir tank yürüyor, ordu da arkasından tezahürat yapıyor!\"",
+   "visual": "Yakın plan, alçak açı: yıkık köy duvarları arasında tank sağa ilerler; önde düz miğferli İngiliz askerleri büyük, el sallayıp tezahürat eder; gökyüzünde çift kanatlı uçak geçer; 'tank yürüyor' notu",
+   "title": {
+    "white": "Flers",
+    "gray": "ana cadde"
+   },
+   "cues": {
+    "pil": "pilot",
+    "yur": "yürüyor"
+   },
+   "params": {
+    "ruins": [
+     {
+      "x": 0.28,
+      "w": 0.12,
+      "h": 300
+     },
+     {
+      "x": 0.74,
+      "w": 0.12,
+      "h": 260
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "female",
+      "x": 0.5,
+      "to": 0.62,
+      "at": 0.2,
+      "dur": 8,
+      "s": 0.85,
+      "roof": true,
+      "label": "D17"
+     }
+    ],
+    "plane": {
+     "x": 0.85,
+     "to": 0.2,
+     "y": 0.3,
+     "at": "pil",
+     "dur": 6,
+     "s": 0.8,
+     "face": -1
+    },
+    "cast": [
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.7,
+      "pose": "wave",
+      "x": 0.2,
+      "y": 0.86,
+      "face": "right"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.7,
+      "pose": "wave",
+      "x": 0.27,
+      "y": 0.86,
+      "face": "right"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.7,
+      "pose": "idle",
+      "x": 0.34,
+      "y": 0.86,
+      "face": "right",
+      "rifle": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "bir tank yürüyor!",
+      "x": 0.6,
+      "y": 0.4,
+      "at": "yur",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 929,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     880,
+     640
+    ],
+    "zoom": 1.7,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tank_front",
+   "text": "Flers ve Courcelette alındı. Ama ilerleme sadece iki buçuk kilometreydi. Beklenen büyük yarılma olmadı.",
+   "visual": "Somme'a yakınlaşan harita: kalın kırmızı cephe hattı; Flers ve Courcelette halkalanır; kalın mavi ok ileri uzanır ama kısa kalır; 'sadece 2,5 km' notu; solda Kaşif önce işaret eder, 'yarılma'da omuz silker",
+   "title": {
+    "white": "Somme",
+    "gray": "Eylül 1916"
+   },
+   "cues": {
+    "fl": "Flers",
+    "il": "ilerleme",
+    "ya": "yarılma"
+   },
+   "params": {
+    "view": [
+     2.5,
+     3.2,
+     49.93,
+     50.17
+    ],
+    "line": {
+     "at": 0.1,
+     "dur": 1.2
+    },
+    "countries": false,
+    "compass": false,
+    "cities": [
+     {
+      "name": "Flers",
+      "lon": 2.82,
+      "lat": 50.05,
+      "at": "fl",
+      "color": "red",
+      "dy": 80,
+      "dx": 60,
+      "size": 70
+     },
+     {
+      "name": "Courcelette",
+      "lon": 2.75,
+      "lat": 50.07,
+      "at": "fl",
+      "color": "red",
+      "dy": -60,
+      "dx": -150,
+      "size": 70
+     }
+    ],
+    "arrows": [
+     {
+      "from": [
+       2.7,
+       50.0
+      ],
+      "to": [
+       2.83,
+       50.03
+      ],
+      "at": "il",
+      "color": "blue",
+      "dur": 1.4,
+      "bend": 0.12,
+      "w": 16
+     }
+    ],
+    "notes": [
+     {
+      "text": "sadece 2,5 km",
+      "x": 0.7,
+      "y": 0.66,
+      "at": "il",
+      "size": 84
+     }
+    ],
+    "kasif": {
+     "x": 0.12,
+     "pose": "point",
+     "face": "right",
+     "at": "ya",
+     "then": "shrug",
+     "emotion": "worried",
+     "scale": 0.62
+    }
+   },
+   "camera": false,
+   "source": "Tank Museum"
+  },
+  {
+   "type": "tank_field",
+   "text": "Peki neden? Çünkü tanklar çok azdı ve aceleyle gelmişti. Delik deşik toprakta, fırtınadaki gemiler gibi sallandılar.",
+   "visual": "Yakın plan: delik deşik toprakta tankın burnu derin bir çukura dalar, gövde fırtınadaki gemi gibi sallanır, palet çamura gömülür; arkada patlama",
+   "title": {
+    "white": "Çamur"
+   },
+   "cues": {
+    "sal": "sallandılar"
+   },
+   "params": {
+    "craters": [
+     {
+      "x": 0.36,
+      "w": 0.14,
+      "d": 70
+     },
+     {
+      "x": 0.56,
+      "w": 0.16,
+      "d": 90
+     },
+     {
+      "x": 0.78,
+      "w": 0.14,
+      "d": 70
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.4,
+      "to": 0.5,
+      "at": 0.1,
+      "dur": 9,
+      "s": 0.85,
+      "roof": true,
+      "rock": 7
+     }
+    ],
+    "bursts": [
+     {
+      "x": 0.75,
+      "at": "sal",
+      "size": 90
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 864,
+    "horizon": 520
+   },
+   "camera": {
+    "focus": [
+     900,
+     740
+    ],
+    "zoom": 1.7,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "Motorlar bozuldu, paletler koptu, piyadeyle tankçılar birbirini anlamadı. Üstelik sürpriz de harcanmıştı.",
+   "visual": "Bir çukurda bozulmuş tank: 'bozuldu'da durur, kara duman yükselir; 'koptu'da kopan palet zincir gibi arkasında yere serilir; kasketli tankçılar dışarı çıkıp ellerini açar; düz miğferli piyade 'anlamadı'da şaşkınlıkla geri sıçrar",
+   "title": {
+    "white": "Arıza"
+   },
+   "cues": {
+    "boz": "bozuldu",
+    "ana": "anlamadı"
+   },
+   "params": {
+    "craters": [
+     {
+      "x": 0.42,
+      "w": 0.2,
+      "d": 50
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "female",
+      "x": 0.4,
+      "to": 0.46,
+      "at": 0.0,
+      "dur": 2.5,
+      "s": 0.75,
+      "roof": true,
+      "dead": "boz",
+      "snap": true
+     }
+    ],
+    "cast": [
+     {
+      "who": "crew",
+      "helmet": "flat",
+      "x": 0.66,
+      "y": 0.8,
+      "scale": 0.6,
+      "pose": "shrug",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.62,
+      "pose": "idle",
+      "x": 0.78,
+      "y": 0.8,
+      "face": "left",
+      "at": "ana",
+      "then": "shock",
+      "emotion": "surprised",
+      "rifle": true
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864,
+    "horizon": 520
+   },
+   "camera": {
+    "focus": [
+     960,
+     650
+    ],
+    "zoom": 1.45,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ama Haig şunu gördü: tankların ilerlediği yerde hedefler alınmıştı. Emri kısaydı: \"Yapabildiğiniz kadar çok tank yapın.\"",
+   "visual": "Dev yazı: 'Daha çok tank yapın!', 'tank' kırmızı kutuda; el yazısı not 'Haig, 1916'",
+   "title": {
+    "white": "Emir"
+   },
+   "cues": {
+    "w0": "Yapabildiğiniz",
+    "note": "yapın"
+   },
+   "params": {
+    "lines": [
+     "Daha çok",
+     "tank yapın!"
+    ],
+    "highlight": [
+     "tank"
+    ],
+    "note": {
+     "text": "Haig, 1916",
+     "at": "note"
+    }
+   },
+   "source": "Tank Museum"
+  },
+  {
+   "type": "chapter",
+   "text": "20 Kasım 1917, Cambrai. Bu kez ne uzun bir top atışı vardı, ne de uyarı.",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Demir sürü'",
+   "title": {},
+   "cues": {
+    "title": "Cambrai"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Demir sürü"
+   },
+   "chapter": "Demir sürü"
+  },
+  {
+   "type": "tank_field",
+   "text": "Sisin içinden bir anda 476 tank çıktı, 378'i savaş tankıydı. Flers'teki 49 tankı düşünün!",
+   "visual": "Cambrai, sisli sabah: üç sıra halinde, sırtlarında çalı demetleri taşıyan yirmiden fazla tank aynı anda sağa ilerler, uzaktakiler küçük, öndekiler büyük; 'çıktı'da sis açılır, dev kırmızı '476' damgası ve altında '378 savaş tankı'",
+   "title": {
+    "white": "Cambrai",
+    "gray": "1917"
+   },
+   "cues": {
+    "c": "çıktı",
+    "sav": "savaş"
+   },
+   "params": {
+    "ground": 0.82,
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.02,
+      "to": 0.13999999999999999,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.16,
+      "to": 0.28,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.3,
+      "to": 0.42,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.44,
+      "to": 0.56,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.58,
+      "to": 0.7,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.72,
+      "to": 0.84,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.86,
+      "to": 0.98,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.2,
+      "y": 0.6,
+      "fascine": true,
+      "smoke": false
+     },
+     {
+      "variant": "male",
+      "x": 0.0,
+      "to": 0.14,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.32,
+      "y": 0.68,
+      "fascine": true
+     },
+     {
+      "variant": "female",
+      "x": 0.17,
+      "to": 0.31000000000000005,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.32,
+      "y": 0.68,
+      "fascine": true
+     },
+     {
+      "variant": "male",
+      "x": 0.34,
+      "to": 0.48000000000000004,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.32,
+      "y": 0.68,
+      "fascine": true
+     },
+     {
+      "variant": "female",
+      "x": 0.51,
+      "to": 0.65,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.32,
+      "y": 0.68,
+      "fascine": true
+     },
+     {
+      "variant": "male",
+      "x": 0.68,
+      "to": 0.8200000000000001,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.32,
+      "y": 0.68,
+      "fascine": true
+     },
+     {
+      "variant": "female",
+      "x": 0.85,
+      "to": 0.99,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.32,
+      "y": 0.68,
+      "fascine": true
+     },
+     {
+      "variant": "male",
+      "x": 0.05,
+      "to": 0.21000000000000002,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.52,
+      "fascine": true,
+      "roof": false
+     },
+     {
+      "variant": "male",
+      "x": 0.4,
+      "to": 0.56,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.52,
+      "fascine": true,
+      "roof": false
+     },
+     {
+      "variant": "male",
+      "x": 0.75,
+      "to": 0.91,
+      "at": 0.2,
+      "dur": 9,
+      "s": 0.52,
+      "fascine": true,
+      "roof": false
+     }
+    ],
+    "mist": {
+     "clear": "c",
+     "y0": 0.5,
+     "y1": 0.86,
+     "bands": 8
+    },
+    "labels": [
+     {
+      "text": "476",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "c",
+      "stamp": true,
+      "size": 140
+     },
+     {
+      "text": "378 savaş tankı",
+      "x": 0.5,
+      "y": 0.42,
+      "at": "sav",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 886,
+    "horizon": 560
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tank_bells",
+   "text": "Hindenburg Hattı yarıldı, bazı yerlerde 8 kilometre ilerlendi. İngiltere'de kilise çanları çaldı.",
+   "visual": "İngiliz köyünde taş kilise kulesi: 'çanları'nda iki çan sallanmaya başlar, ses halkaları yayılır, kuşlar havalanır; aşağıda silindir şapkalı ve kasketli köylüler el sallar; '8 km' notu",
+   "title": {
+    "white": "İngiltere"
+   },
+   "cues": {
+    "km": "kilometre",
+    "can": "çanları"
+   },
+   "params": {
+    "ring": "can",
+    "cast": [
+     {
+      "who": "a",
+      "helmet": "top",
+      "x": 0.2,
+      "y": 0.88,
+      "scale": 0.45,
+      "pose": "wave",
+      "face": "right"
+     },
+     {
+      "who": "b",
+      "helmet": "flat",
+      "x": 0.28,
+      "y": 0.88,
+      "scale": 0.42,
+      "pose": "idle",
+      "face": "right",
+      "at": "can",
+      "then": "wave"
+     },
+     {
+      "who": "c",
+      "helmet": "flat",
+      "x": 0.76,
+      "y": 0.88,
+      "scale": 0.45,
+      "pose": "wave",
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "8 km ileri!",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "km",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 950
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "Ama sevinç uzun sürmedi. 30 Kasım'da Almanlar karşı saldırıya geçti ve kazanılan toprağın büyük kısmı geri gitti.",
+   "visual": "Fırtınalı gök altında Alman karşı saldırısı: çalı demetli iki tank terk edilmiş, birinden kara duman yükselir; çelik miğferli Alman askerleri tüfekleriyle sağdan sola koşarak siperi geri alır; patlamalar",
+   "title": {
+    "white": "Karşı saldırı"
+   },
+   "cues": {
+    "ks": "Kasım'da",
+    "geri": "geri"
+   },
+   "params": {
+    "trenches": [
+     {
+      "x": 0.1,
+      "w": 0.1,
+      "depth": 130
+     }
+    ],
+    "craters": [
+     {
+      "x": 0.6,
+      "w": 0.1,
+      "d": 30
+     }
+    ],
+    "tanks": [
+     {
+      "variant": "male",
+      "x": 0.3,
+      "s": 0.55,
+      "fascine": true,
+      "dead": 0.0,
+      "smoke": false
+     },
+     {
+      "variant": "female",
+      "x": 0.7,
+      "s": 0.42,
+      "y": 0.74,
+      "fascine": true,
+      "dead": 0.0,
+      "smoke": false
+     }
+    ],
+    "bursts": [
+     {
+      "x": 0.5,
+      "at": 0.8,
+      "size": 80
+     },
+     {
+      "x": 0.86,
+      "at": "ks",
+      "size": 70
+     }
+    ],
+    "cast": [
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.5,
+      "pose": "run",
+      "x": 0.95,
+      "to": 0.5,
+      "y": 0.8,
+      "run": true,
+      "walk_at": 0.4,
+      "walk_dur": 5,
+      "face": "left",
+      "rifle": true
+     },
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.5,
+      "pose": "idle",
+      "x": 1.02,
+      "to": 0.6,
+      "y": 0.8,
+      "run": true,
+      "walk_at": 1.0,
+      "walk_dur": 5,
+      "face": "left",
+      "rifle": true
+     },
+     {
+      "who": "alman",
+      "helmet": "stahl",
+      "scale": 0.5,
+      "pose": "idle",
+      "x": 1.1,
+      "to": 0.72,
+      "y": 0.8,
+      "run": true,
+      "walk_at": "ks",
+      "walk_dur": 4,
+      "face": "left",
+      "rifle": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "30 Kasım 1917",
+      "x": 0.5,
+      "y": 0.34,
+      "at": "ks",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 864,
+    "horizon": 520
+   }
+  },
+  {
+   "type": "tank_charge",
+   "text": "Yani tank, savaşı tek başına kazanamazdı. Ama piyade, top ve uçakla birlikte kullanılınca siperin kilidi açılabilirdi.",
+   "visual": "Önden-çapraz açı, tepelerde birlikte saldırı: tank kameraya doğru ilerler, önünde ve yanında farklı mesafelerde düz miğferli piyadeler yürür, gökte çift kanatlı uçak geçer, ufukta top patlaması; solda Kaşif sırayla işaret eder; 'piyade', 'top', 'uçak' etiketleri",
+   "title": {
+    "white": "Birlikte"
+   },
+   "cues": {
+    "pi": "piyade",
+    "top": "top",
+    "uc": "uçakla",
+    "kil": "kilidi"
+   },
+   "params": {
+    "x": 0.6,
+    "horizon": 0.4,
+    "dist": [
+     2600,
+     1800
+    ],
+    "yaw": -32,
+    "wire": false,
+    "plane": {
+     "x": 0.25,
+     "to": 0.85,
+     "y": 0.24,
+     "at": "uc",
+     "dur": 5,
+     "s": 0.8
+    },
+    "bursts": [
+     {
+      "x": 0.88,
+      "y": 0.36,
+      "at": "top",
+      "size": 80
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.92,
+      "scale": 0.62,
+      "pose": "point",
+      "face": "right",
+      "dir": 0,
+      "seq": [
+       {
+        "at": "uc",
+        "pose": "point",
+        "dir": "up",
+        "face": "right"
+       },
+       {
+        "at": "kil",
+        "pose": "think",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.4,
+      "pose": "walk",
+      "x": 0.28,
+      "to": 0.32,
+      "y": 0.62,
+      "walk_at": 0.2,
+      "walk_dur": 8,
+      "rifle": true,
+      "face": "right"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.55,
+      "pose": "walk",
+      "x": 0.38,
+      "to": 0.42,
+      "y": 0.74,
+      "walk_at": 0.4,
+      "walk_dur": 8,
+      "rifle": true,
+      "face": "right"
+     },
+     {
+      "who": "ingiliz",
+      "helmet": "brodie",
+      "scale": 0.72,
+      "pose": "walk",
+      "x": 0.86,
+      "to": 0.82,
+      "y": 0.9,
+      "walk_at": 0.3,
+      "walk_dur": 8,
+      "rifle": true,
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "piyade",
+      "x": 0.4,
+      "y": 0.44,
+      "at": "pi",
+      "size": 64,
+      "color": "blue"
+     },
+     {
+      "text": "top",
+      "x": 0.86,
+      "y": 0.5,
+      "at": "top",
+      "size": 64,
+      "color": "blue"
+     },
+     {
+      "text": "uçak",
+      "x": 0.62,
+      "y": 0.2,
+      "at": "uc",
+      "size": 64,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 540,
+    "horizon": 432
+   },
+   "camera": false
+  },
+  {
+   "type": "title",
+   "text": "8 Ağustos 1918'de Amiens'te tam olarak bu oldu. Alman komutanı Ludendorff o güne \"Alman ordusunun kara günü\" dedi.",
+   "visual": "Dev yazı: 'Alman ordusunun kara günü', 'kara' kırmızı kutuda; el yazısı not '8 Ağustos 1918'",
+   "title": {
+    "white": "Amiens",
+    "gray": "1918"
+   },
+   "cues": {
+    "w1": "Ludendorff",
+    "note": "dedi"
+   },
+   "params": {
+    "lines": [
+     "Alman ordusunun",
+     "kara günü"
+    ],
+    "highlight": [
+     "kara"
+    ],
+    "note": {
+     "text": "8 Ağustos 1918",
+     "at": "note"
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tank_blueprint",
+   "text": "Bugün dünyadaki her tankın atası, işte bu: su deposu diye yapılan bu yavaş makine.",
+   "visual": "Plan kâğıdında yan yana: solda perçinli, musluklu bir su deposu, sağda Mark I tankının siluieti kendini çizer; 'deposu'nda aralarına kırmızı '=' işareti düşer",
+   "title": {
+    "white": "Bugün"
+   },
+   "cues": {
+    "eq": "deposu"
+   },
+   "params": {
+    "design": "compare",
+    "title": "Mark 1, 1916"
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tank_charge",
+   "text": "Peki sizce tank, savaşın sonucunu değiştirdi mi, yoksa sadece hızlandırdı mı? Yorumlara yazın. Tarihin \"neden\"leri için de Düşün Bakalım'a abone olun.",
+   "visual": "Kapanış, önden-çapraz açı: tepelerde duran Mark I tankı kadrajın sağını doldurur, egzozu tüter; önde solda büyük Kaşif düşünür, 'Yorumlara'da işaret eder, 'abone'de el sallar",
+   "title": {
+    "white": "Sizce?"
+   },
+   "cues": {
+    "yor": "Yorumlara",
+    "ab": "abone"
+   },
+   "params": {
+    "x": 0.64,
+    "horizon": 0.42,
+    "camH": 170,
+    "dist": [
+     1650,
+     1500
+    ],
+    "yaw": 38,
+    "wire": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.95,
+      "scale": 0.82,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "yor",
+        "pose": "point",
+        "dir": 10,
+        "face": "right"
+       },
+       {
+        "at": "ab",
+        "pose": "wave",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 601,
+    "horizon": 454
+   },
+   "camera": false
+  }
+ ]
+}
