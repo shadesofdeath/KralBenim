@@ -1,0 +1,2145 @@
+{
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "extra": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-13-neutrino-ghost-particle",
+ "cover": {
+  "lines": [
+   "Nuke a",
+   "ghost?"
+  ],
+  "highlight": [
+   "nuke"
+  ],
+  "scene": 0,
+  "t": 6.2,
+  "focus": [
+   690,
+   280
+  ],
+  "zoom": 1.35,
+  "kasif": {
+   "pose": "shock",
+   "scale": 1.35,
+   "x": 1060,
+   "y": 1040,
+   "face": 1,
+   "emotion": "surprised"
+  },
+  "size": 190
+ },
+ "sources": [
+  {
+   "title": "Pauli's letter of 4 December 1930 (English translation)",
+   "url": "https://www.pp.rhul.ac.uk/~ptd/TEACHING/PH2510/pauli-letter.html"
+  },
+  {
+   "title": "CERN Courier: Ghosts in the machine (Reines and Cowan)",
+   "url": "https://cerncourier.com/a/ghosts-in-the-machine/"
+  },
+  {
+   "title": "Wikipedia: Cowan-Reines neutrino experiment",
+   "url": "https://en.wikipedia.org/wiki/Cowan%E2%80%93Reines_neutrino_experiment"
+  },
+  {
+   "title": "HyperPhysics: Cowan and Reines neutrino experiment",
+   "url": "https://hyperphysics.gsu.edu/hbase/Particles/cowan.html"
+  },
+  {
+   "title": "Wikipedia: Homestake experiment",
+   "url": "https://en.wikipedia.org/wiki/Homestake_experiment"
+  },
+  {
+   "title": "Symmetry Magazine: A goldmine of scientific research",
+   "url": "https://www.symmetrymagazine.org/article/may-2015/a-goldmine-of-scientific-research"
+  },
+  {
+   "title": "Physics World: Art McDonald and Takaaki Kajita win 2015 Nobel Prize for Physics",
+   "url": "https://physicsworld.com/a/art-mcdonald-and-takaaki-kajita-win-2015-nobel-prize-for-physics/"
+  },
+  {
+   "title": "Live Science: How many cosmic particles are passing through your body?",
+   "url": "https://livescience.com/physics-mathematics/how-many-cosmic-particles-are-passing-through-your-body-at-any-moment"
+  },
+  {
+   "title": "Wikipedia: Solar neutrino",
+   "url": "https://en.wikipedia.org/wiki/Solar_neutrino"
+  },
+  {
+   "title": "Wikipedia: Deep Underground Neutrino Experiment",
+   "url": "https://en.wikipedia.org/wiki/Deep_Underground_Neutrino_Experiment"
+  }
+ ],
+ "youtube": {
+  "title": "Neutrinos: Where Did Two Thirds of the Sun's Ghost Particles Go?",
+  "description": "Neutrinos are ghost particles: about 100 trillion pass through your body every second, yet for thirty years two thirds of the ones from the Sun seemed to vanish. Where did they go? It all began when two physicists got permission to set off an atomic bomb just to catch one.\n\nThe New York Times recently asked: neutrinos are everywhere, now what? Here is how we found them. Wolfgang Pauli imagined the neutrino in a 1930 letter and feared it could never be detected. Frederick Reines and Clyde Cowan caught it at a nuclear reactor in 1956. Then Ray Davis buried a tank of cleaning fluid a mile underground and found only a third of the Sun's neutrinos, a mystery that lasted for decades until Super-Kamiokande and SNO solved it.\n\nIn this video:\n• Pauli's \"Dear Radioactive Ladies and Gentlemen\" letter\n• The atomic bomb plan, and the reactor experiment that worked\n• Ray Davis's tank in the Homestake gold mine\n• The solar neutrino problem and neutrino oscillation\n• What we still don't know, and the DUNE experiment\n\nSubscribe to Stickstory for a true story like this every day. What do you think the ghost particle is still hiding? Tell me in the comments!\n\n#neutrino #physics #science #stickstory",
+  "tags": [
+   "neutrino",
+   "neutrinos",
+   "neutrino ghost particle",
+   "what are neutrinos",
+   "neutrino detection",
+   "solar neutrino problem",
+   "neutrino oscillation",
+   "wolfgang pauli",
+   "reines and cowan",
+   "homestake experiment",
+   "ray davis",
+   "super kamiokande",
+   "ghost particle",
+   "particle physics",
+   "science history",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-27T11:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "neu_bomb",
+   "text": "In 1951, two physicists at Los Alamos asked permission to set off an atomic bomb, and drop a detector down a hole beside it. And their boss said yes!",
+   "visual": "Dawn over a desert test site with distant mesas: a tall lattice tower whose open cab holds a fat bomb with a box tail fin; on the right a deep shaft with a winch and a hanging detector tank; on 'bomb' the bomb flashes into a mushroom cloud (stem, rolled cap, dust ring) with shock rings, and blue neutrinos stream through the soil; on 'drop' the detector falls down the shaft; the fez narrator on the right points, then jumps back in shock on 'yes'",
+   "title": {
+    "white": "Los Alamos",
+    "gray": "1951"
+   },
+   "cues": {
+    "bomb": "bomb",
+    "drop": "drop",
+    "yes": "yes"
+   },
+   "params": {
+    "tower": {
+     "x": 0.36,
+     "h": 0.36,
+     "cab": 1.5
+    },
+    "ground": 0.74,
+    "shaft": {
+     "x": 0.72,
+     "depth": 0.18
+    },
+    "blast": {
+     "at": "bomb",
+     "size": 120,
+     "rise": 120
+    },
+    "flood": {
+     "at": "bomb"
+    },
+    "drop": {
+     "at": "drop"
+    },
+    "kasif": {
+     "x": 0.9,
+     "y": 0.74,
+     "scale": 0.7,
+     "pose": "point",
+     "face": "left",
+     "dir": 20,
+     "seq": [
+      {
+       "at": "yes",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "mesas": true
+   },
+   "set": "desert",
+   "camera": false,
+   "chapter": "A Bomb for a Ghost"
+  },
+  {
+   "type": "neu_stream",
+   "text": "Why? Because they were hunting the shyest thing in the universe.",
+   "visual": "Night landscape: a stream of blue neutrinos crosses the whole frame and runs straight through an empty detector box whose sensors stay dark; on 'shyest' one neutrino glows gold and a red magnifier ring follows it, label 'neutrino'",
+   "title": {
+    "white": "The target"
+   },
+   "cues": {
+    "hunt": "hunting",
+    "hl": "shyest"
+   },
+   "params": {
+    "mode": "field",
+    "box": {
+     "x": 0.5,
+     "y": 0.6,
+     "w": 420,
+     "h": 300
+    },
+    "hl": {
+     "at": "hl"
+    },
+    "labels": [
+     {
+      "text": "neutrino",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "hl",
+      "size": 90,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 810
+   }
+  },
+  {
+   "type": "neu_stream",
+   "text": "Here's the strange part. Right now, about a hundred trillion of them fly through your body every second, and you'll never feel one.",
+   "visual": "Close on a big contour human standing in a city street: a dense diagonal rain of blue neutrinos passes straight through the chest and out the other side; on 'trillion' a red label '100 trillion' pops up, on 'second' 'every second' below it",
+   "title": {
+    "white": "Right now",
+    "gray": "through you"
+   },
+   "cues": {
+    "tril": "trillion",
+    "sec": "second",
+    "feel": "feel"
+   },
+   "params": {
+    "mode": "body",
+    "n": 70,
+    "person": {
+     "x": 0.72,
+     "h": 0.68
+    },
+    "labels": [
+     {
+      "text": "100 trillion",
+      "x": 0.53,
+      "y": 0.3,
+      "at": "tril",
+      "size": 96,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "every second",
+      "x": 0.53,
+      "y": 0.41,
+      "at": "sec",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 972
+   },
+   "camera": {
+    "focus": [
+     1300,
+     430
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Live Science"
+  },
+  {
+   "type": "neu_paper",
+   "text": "The New York Times put it in one headline: Neutrinos are everywhere. Now what?",
+   "visual": "A newspaper page (no masthead) fills the frame: on 'Neutrinos' the big headline 'NEUTRINOS ARE EVERYWHERE.' types in, on 'what' 'NOW WHAT?' in red; picture box with an atom whose orbits carry neutrinos, scribbled columns; the fez narrator on the right points at the headline",
+   "title": {
+    "white": "The headline"
+   },
+   "cues": {
+    "head": "Neutrinos",
+    "every": "everywhere",
+    "what": "Now"
+   },
+   "params": {
+    "mode": "news",
+    "rot": -1.5,
+    "lines": [
+     {
+      "text": "Neutrinos are",
+      "at": 0.3,
+      "size": 96,
+      "y": 0.4,
+      "cps": 30
+     },
+     {
+      "text": "everywhere.",
+      "at": 1.0,
+      "size": 96,
+      "y": 0.5,
+      "cps": 30
+     },
+     {
+      "text": "Now what?",
+      "at": "what",
+      "size": 104,
+      "y": 0.62,
+      "color": "red",
+      "cps": 30
+     }
+    ],
+    "kasif": {
+     "x": 0.9,
+     "y": 0.95,
+     "scale": 0.55,
+     "pose": "point",
+     "face": "left",
+     "dir": 30,
+     "seq": [
+      {
+       "at": "what",
+       "pose": "shrug",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "source": "The New York Times"
+  },
+  {
+   "type": "neu_stream",
+   "text": "To answer it, I'll take you into a thirty-year mystery: two out of three neutrinos from the Sun seemed to vanish. Where did they go?",
+   "visual": "The Sun on the left sends nine rows of neutrinos to the Earth on the right; on 'vanish' two of every three turn into dashed ghosts halfway and disappear, red question marks pop where they vanish; red label '2 of 3 missing'",
+   "title": {
+    "white": "Missing",
+    "gray": "30 years"
+   },
+   "cues": {
+    "sun": "Sun",
+    "van": "vanish",
+    "go": "go"
+   },
+   "params": {
+    "mode": "sun",
+    "fade": {
+     "at": "van"
+    },
+    "labels": [
+     {
+      "text": "2 of 3 missing",
+      "x": 0.62,
+      "y": 0.9,
+      "at": "go",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": "night"
+  },
+  {
+   "type": "chapter",
+   "text": "It started with a crisis, in 1930.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, below it 'A Desperate Remedy' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "started",
+    "title": "crisis",
+    "line": "1930"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "A Desperate Remedy"
+   },
+   "chapter": "A Desperate Remedy",
+   "set": "city"
+  },
+  {
+   "type": "neu_decay",
+   "text": "Radioactive atoms spat out electrons, and the energy didn't add up. Some of it went missing, every time.",
+   "visual": "A 1920s lab: on a work bench a radioactive source sits in a lead-brick castle and fires electrons again and again; on the wall a framed meter board shows two bars, 'energy in' full gold and 'energy out' blue and different each time; the gap is ringed in red dashes with a red question mark",
+   "title": {
+    "white": "Beta decay",
+    "gray": "1920s"
+   },
+   "cues": {
+    "emit": "spat",
+    "add": "add",
+    "miss": "missing"
+   },
+   "params": {
+    "mode": "missing",
+    "emit": {
+     "at": "emit"
+    },
+    "period": 2.2,
+    "labels": [
+     {
+      "text": "energy in",
+      "x": 0.725,
+      "y": 0.22,
+      "at": "emit",
+      "size": 64
+     },
+     {
+      "text": "energy out",
+      "x": 0.725,
+      "y": 0.46,
+      "at": "add",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1058
+   }
+  },
+  {
+   "type": "neu_room",
+   "text": "Even Niels Bohr was ready to give up a sacred rule: energy never disappears.",
+   "visual": "A hall: a tall stone tablet on a plinth with 'ENERGY / NEVER / DISAPPEARS' engraved; on 'give' a crack runs down through it and chips fall; red note 'even Bohr doubted'",
+   "title": {
+    "white": "Niels Bohr"
+   },
+   "cues": {
+    "law": "sacred",
+    "give": "give",
+    "bohr": "Bohr"
+   },
+   "params": {
+    "mode": "tablet",
+    "lines": [
+     {
+      "text": "Energy",
+      "at": 0.2,
+      "y": 0.33
+     },
+     {
+      "text": "never",
+      "at": 0.5,
+      "y": 0.47
+     },
+     {
+      "text": "disappears",
+      "at": 0.8,
+      "y": 0.61,
+      "size": 90
+     }
+    ],
+    "crack": {
+     "at": "give"
+    },
+    "labels": [
+     {
+      "text": "even Bohr doubted",
+      "x": 0.84,
+      "y": 0.3,
+      "at": "bohr",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": false
+  },
+  {
+   "type": "neu_paper",
+   "text": "Then Wolfgang Pauli had an idea. He skipped a physics meeting for a ball in Zurich and sent a letter instead.",
+   "visual": "Night city: a big lit ballroom on the left with a waltzing couple in each tall gold window (he in black tails, she in a red gown) and music notes rising, label 'Zurich'; a columned lecture hall on the right, label 'Tübingen'; on 'letter' an envelope with a red seal flies along a red dashed arc from the ballroom to the hall",
+   "title": {
+    "white": "Wolfgang Pauli",
+    "gray": "1930"
+   },
+   "cues": {
+    "ball": "ball",
+    "zur": "Zurich",
+    "letter": "letter"
+   },
+   "params": {
+    "mode": "post",
+    "rot": 0,
+    "fly": {
+     "at": "letter",
+     "dur": 2.2
+    },
+    "labels": [
+     {
+      "text": "Zurich",
+      "x": 0.24,
+      "y": 0.2,
+      "at": "zur",
+      "size": 70
+     },
+     {
+      "text": "Tübingen",
+      "x": 0.8,
+      "y": 0.36,
+      "at": "letter",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 929
+   },
+   "camera": false
+  },
+  {
+   "type": "neu_paper",
+   "text": "It opened with five famous words: Dear Radioactive Ladies and Gentlemen.",
+   "visual": "Close on a typed letter on a big sheet: 'Dear Radioactive Ladies' and 'and Gentlemen,' type out letter by letter, the rest of the page is scribbled lines; on 'Radioactive' a red underline runs under the first line",
+   "title": {
+    "white": "Pauli's letter",
+    "gray": "Dec 4, 1930"
+   },
+   "cues": {
+    "dear": "Dear",
+    "rad": "Radioactive",
+    "lad": "Ladies"
+   },
+   "params": {
+    "mode": "letter",
+    "rot": -1.5,
+    "top": 0.22,
+    "lines": [
+     {
+      "text": "Dear Radioactive Ladies",
+      "at": "dear",
+      "size": 64,
+      "y": 0.36,
+      "cps": 18
+     },
+     {
+      "text": "and Gentlemen,",
+      "at": "lad",
+      "size": 64,
+      "y": 0.44,
+      "cps": 18
+     }
+    ],
+    "hl": {
+     "line": 0,
+     "at": "rad"
+    }
+   },
+   "camera": {
+    "focus": [
+     880,
+     440
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   },
+   "source": "Pauli letter, 1930"
+  },
+  {
+   "type": "neu_decay",
+   "text": "He imagined a tiny particle with no charge and almost no mass, slipping out unseen with the missing energy. He called it a desperate remedy.",
+   "visual": "The same lab: now with every electron a dashed blue ghost particle slips out of the lead castle at another angle, and its share fills the gap on the wall meter with blue hatching; red label 'desperate remedy'",
+   "title": {
+    "white": "Pauli's idea"
+   },
+   "cues": {
+    "emit": "imagined",
+    "slip": "slipping",
+    "rem": "desperate"
+   },
+   "params": {
+    "mode": "ghost",
+    "emit": {
+     "at": "emit"
+    },
+    "period": 2.4,
+    "labels": [
+     {
+      "text": "desperate remedy",
+      "x": 0.725,
+      "y": 0.62,
+      "at": "rem",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1058
+   }
+  },
+  {
+   "type": "stage",
+   "text": "The story goes that he felt guilty. I have done a terrible thing, he told a friend. I have invented a particle that cannot be detected.",
+   "visual": "Close on Pauli (bare-headed) in his study at night, a letter scroll beside him: he thinks, then on 'terrible' clutches his head, eyebrows up, mouth open",
+   "title": {
+    "white": "Pauli",
+    "gray": "a confession"
+   },
+   "cues": {
+    "guilty": "guilty",
+    "terr": "terrible",
+    "det": "detected"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "Pauli",
+      "x": 0.45,
+      "scale": 1.15,
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "terr",
+        "pose": "shock",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.24,
+      "scale": 1.0
+     }
+    ]
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     880,
+     420
+    ],
+    "zoom": 1.8,
+    "move": "push"
+   }
+  },
+  {
+   "type": "neu_room",
+   "text": "Enrico Fermi later named it the neutrino, the little neutral one. But for decades, nobody could catch one.",
+   "visual": "A big chalkboard fills the frame: 'neutrino' writes itself in chalk on 'neutrino', below it 'little neutral one' in gold chalk; Enrico Fermi (bare-headed) stands in front and points at the word",
+   "title": {
+    "white": "Enrico Fermi",
+    "gray": "1934"
+   },
+   "cues": {
+    "w0": "neutrino",
+    "note": "little",
+    "catch": "catch"
+   },
+   "params": {
+    "mode": "board",
+    "lines": [
+     {
+      "text": "neutrino",
+      "at": "w0",
+      "y": 0.48,
+      "size": 190,
+      "cps": 10
+     },
+     {
+      "text": "little neutral one",
+      "at": "note",
+      "y": 0.66,
+      "size": 90,
+      "color": "gold",
+      "cps": 14
+     }
+    ],
+    "figures": [
+     {
+      "x": 0.12,
+      "y": 1.02,
+      "scale": 1.15,
+      "pose": "point",
+      "face": "right",
+      "dir": 40,
+      "seq": [
+       {
+        "at": "catch",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ]
+   },
+   "source": "CERN",
+   "set": {
+    "name": "interior",
+    "ground": 1030
+   },
+   "camera": false
+  },
+  {
+   "type": "chapter",
+   "text": "Back to Los Alamos, and to Frederick Reines and Clyde Cowan.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, below it 'The Bomb Plan' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "Back",
+    "title": "Reines",
+    "line": "Cowan"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Bomb Plan"
+   },
+   "chapter": "The Bomb Plan",
+   "set": "desert"
+  },
+  {
+   "type": "neu_room",
+   "text": "The logic: if neutrinos almost never hit anything, you need a flood of them, and nothing floods like a nuclear explosion.",
+   "visual": "Reines and Cowan (bare-headed) at a chalkboard: a chalk detector box with only three arrows passing; on 'floods' a chalk mushroom cloud appears and a flood of chalk arrows pours through the box, which flashes; chalk word 'FLOOD'",
+   "title": {
+    "white": "Reines, Cowan",
+    "gray": "Los Alamos"
+   },
+   "cues": {
+    "never": "never",
+    "flood": "flood",
+    "boom": "floods"
+   },
+   "params": {
+    "mode": "board",
+    "sketch": "flood",
+    "flood": {
+     "at": "boom"
+    },
+    "lines": [
+     {
+      "text": "FLOOD!",
+      "at": "flood",
+      "x": 0.5,
+      "y": 0.34,
+      "size": 130,
+      "color": "gold",
+      "cps": 10
+     }
+    ],
+    "figures": [
+     {
+      "x": 0.32,
+      "y": 1.0,
+      "scale": 1.0,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "boom",
+        "pose": "shock"
+       }
+      ]
+     },
+     {
+      "x": 0.5,
+      "y": 1.0,
+      "scale": 1.0,
+      "pose": "point",
+      "face": "right",
+      "dir": 30,
+      "seq": [
+       {
+        "at": "boom",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1030
+   },
+   "camera": false
+  },
+  {
+   "type": "neu_bomb",
+   "text": "The plan put a twenty-kiloton bomb on a tower, with a deep shaft about forty meters away.",
+   "visual": "The same cutaway as a plan: tower with the bomb (red label '20 kilotons'), shaft with the hanging detector; on 'meters' a red dimension arrow runs from the tower to the shaft, label '~40 m'",
+   "title": {
+    "white": "The plan"
+   },
+   "cues": {
+    "kt": "bomb",
+    "m": "forty",
+    "shaft": "shaft"
+   },
+   "params": {
+    "tower": {
+     "x": 0.36,
+     "h": 0.28
+    },
+    "ground": 0.7,
+    "shaft": {
+     "x": 0.7,
+     "depth": 0.2
+    },
+    "dim": {
+     "at": "m"
+    },
+    "labels": [
+     {
+      "text": "20 kilotons",
+      "x": 0.52,
+      "y": 0.3,
+      "at": "kt",
+      "size": 76,
+      "color": "red"
+     },
+     {
+      "text": "~40 m",
+      "x": 0.53,
+      "y": 0.6,
+      "at": "m",
+      "size": 80
+     }
+    ]
+   },
+   "set": "desert",
+   "camera": false,
+   "source": "Los Alamos Science"
+  },
+  {
+   "type": "neu_bomb",
+   "text": "At the blast, the detector would fall freely down the shaft, so the shock wave couldn't shake it.",
+   "visual": "Close on the shaft: the flash of the blast lights the frame from the left, the detector tank with its gold sensors drops down the shaft in free fall and lands softly on the feather cushion",
+   "title": {
+    "white": "Free fall"
+   },
+   "cues": {
+    "blast": "blast",
+    "fall": "fall",
+    "shake": "shake"
+   },
+   "params": {
+    "tower": {
+     "x": 0.36,
+     "h": 0.28
+    },
+    "ground": 0.7,
+    "shaft": {
+     "x": 0.7,
+     "depth": 0.16
+    },
+    "blast": {
+     "at": "blast",
+     "r": 900
+    },
+    "drop": {
+     "at": "fall",
+     "dur": 1.8
+    }
+   },
+   "set": "desert",
+   "camera": {
+    "focus": [
+     1344,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "down"
+   }
+  },
+  {
+   "type": "neu_reactor",
+   "text": "They started digging. Then a colleague suggested a reactor instead: fewer neutrinos, but a steady stream, day and night.",
+   "visual": "Desert: a half-dug hole with a shovel stuck in the dirt pile; far on the horizon a reactor building that starts to glow gold on 'reactor' and sends a steady stream of neutrinos across; the fez narrator by the hole thinks, then points at the reactor",
+   "title": {
+    "white": "Plan B"
+   },
+   "cues": {
+    "dig": "digging",
+    "reac": "reactor",
+    "steady": "steady"
+   },
+   "params": {
+    "mode": "choice",
+    "glow": {
+     "at": "reac"
+    },
+    "kasif": {
+     "x": 0.13,
+     "y": 0.74,
+     "scale": 0.8,
+     "pose": "think",
+     "face": "right",
+     "seq": [
+      {
+       "at": "reac",
+       "pose": "point",
+       "dir": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "set": "desert"
+  },
+  {
+   "type": "neu_reactor",
+   "text": "Here's the part I love. A neutrino hitting a proton in water makes two flashes of light, a few millionths of a second apart.",
+   "visual": "Inside the water tank (steel walls with rivets fill the frame, rising bubbles): a neutrino flies in and hits a red proton, first gold flash; a pale neutron zig-zags away and is swallowed by a grey cadmium nucleus, second flash; below, a red trace draws two sharp blips; label 'proton'",
+   "title": {
+    "white": "The trick"
+   },
+   "cues": {
+    "love": "love",
+    "hit": "hitting",
+    "sec": "millionths"
+   },
+   "params": {
+    "mode": "hit",
+    "hit": {
+     "at": "hit"
+    },
+    "second": {
+     "at": "sec"
+    },
+    "labels": [
+     {
+      "text": "proton",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "hit",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "neu_scope",
+   "text": "One flash could be anything. Two flashes in that rhythm? That's a fingerprint.",
+   "visual": "A 1950s oscilloscope on a lab bench: the gold trace sweeps again and again with the same two blips; on 'fingerprint' a red bracket spans the gap and a big red-ink fingerprint is stamped beside the scope",
+   "title": {
+    "white": "The signature"
+   },
+   "cues": {
+    "one": "One",
+    "two": "Two",
+    "fp": "fingerprint"
+   },
+   "params": {
+    "mode": "fingerprint",
+    "print": {
+     "at": "fp"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 908
+   }
+  },
+  {
+   "type": "neu_reactor",
+   "text": "In 1956, they set up beside a giant reactor at Savannah River, South Carolina.",
+   "visual": "Night: a huge reactor building with a smoking stack, a cutaway onto its glowing gold core with control rods; under the ground a shielded room holds the detector stack; neutrinos stream from the core through walls and soil and the detector blinks",
+   "title": {
+    "white": "Savannah River",
+    "gray": "1956"
+   },
+   "cues": {
+    "y": "1956",
+    "reac": "reactor",
+    "sav": "Savannah"
+   },
+   "params": {
+    "mode": "site",
+    "ground": 0.62
+   },
+   "set": {
+    "name": "night",
+    "ground": 670
+   },
+   "camera": false
+  },
+  {
+   "type": "neu_reactor",
+   "text": "They put tanks of water and cadmium between tanks of glowing liquid, watched by a hundred and ten light sensors.",
+   "visual": "Close on the detector sandwich: three gold tanks of glowing liquid, two blue water tanks between them, rows of light-sensor bulbs on both ends, lead bricks around; the liquid flashes when a neutrino is caught",
+   "title": {
+    "white": "The detector"
+   },
+   "cues": {
+    "water": "water",
+    "glow": "glowing",
+    "sens": "sensors"
+   },
+   "params": {
+    "mode": "detector"
+   },
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "left"
+   },
+   "source": "Los Alamos Science"
+  },
+  {
+   "type": "neu_scope",
+   "text": "And it worked: about three neutrinos an hour. Can you imagine sitting up all night for that?",
+   "visual": "A cramped control trailer at night: wall clock racing hour after hour, a steaming coffee mug, the log book propped on the desk; close on the page where tally marks pile up, three per turn of the clock; red label '~3 per hour'",
+   "title": {
+    "white": "It worked"
+   },
+   "cues": {
+    "work": "worked",
+    "three": "three",
+    "night": "night"
+   },
+   "params": {
+    "mode": "tally",
+    "turn": 1.0,
+    "rate": 3,
+    "labels": [
+     {
+      "text": "~3 per hour",
+      "x": 0.66,
+      "y": 0.5,
+      "at": "three",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "source": "HyperPhysics",
+   "set": "interior",
+   "camera": {
+    "focus": [
+     960,
+     420
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "neu_paper",
+   "text": "On June 14, 1956, they telegraphed Pauli. We have definitely detected neutrinos.",
+   "visual": "A telegraph office: a hand holds the telegram form up to us; paper tape strips type out 'DEFINITELY DETECTED' and 'NEUTRINOS'; a red stamp '1956' slams on",
+   "title": {
+    "white": "Telegram",
+    "gray": "June 14, 1956"
+   },
+   "cues": {
+    "tel": "telegraphed",
+    "def": "definitely",
+    "nu": "neutrinos"
+   },
+   "params": {
+    "mode": "telegram",
+    "rot": 1.5,
+    "lines": [
+     {
+      "text": "Definitely detected",
+      "at": "tel",
+      "y": 0.48,
+      "cps": 16
+     },
+     {
+      "text": "neutrinos",
+      "at": "nu",
+      "y": 0.62,
+      "cps": 40
+     }
+    ],
+    "stamp": {
+     "text": "1956",
+     "at": "def",
+     "x": 0.74,
+     "y": 0.74
+    },
+    "hand": true,
+    "box": [
+     0.14,
+     0.2,
+     0.86,
+     0.82
+    ]
+   },
+   "camera": false,
+   "source": "CERN Courier",
+   "set": "interior"
+  },
+  {
+   "type": "neu_paper",
+   "text": "His reply? Everything comes to him who knows how to wait. The ghost was real.",
+   "visual": "The fez narrator, big in the foreground, holds Pauli's reply telegram up to us: tape types out 'WHO KNOWS' / 'HOW TO WAIT'; on 'real' he points at it, beaming",
+   "title": {
+    "white": "Pauli's reply"
+   },
+   "cues": {
+    "rep": "reply",
+    "knows": "knows",
+    "real": "real"
+   },
+   "params": {
+    "mode": "telegram",
+    "rot": -3,
+    "lines": [
+     {
+      "text": "Who knows",
+      "at": "rep",
+      "y": 0.38,
+      "cps": 18
+     },
+     {
+      "text": "how to wait",
+      "at": "knows",
+      "y": 0.52,
+      "cps": 18
+     }
+    ],
+    "kasif": {
+     "x": 0.2,
+     "y": 1.04,
+     "scale": 1.25,
+     "pose": "hold",
+     "face": "right",
+     "seq": [
+      {
+       "at": "real",
+       "pose": "point",
+       "dir": "up",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "box": [
+     0.27,
+     0.18,
+     0.92,
+     0.74
+    ]
+   },
+   "camera": false,
+   "set": "interior"
+  },
+  {
+   "type": "chapter",
+   "text": "But the biggest neutrino factory of all is right above your head.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, below it 'A Mile Underground' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "biggest",
+    "title": "factory",
+    "line": "head"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "A Mile Underground"
+   },
+   "chapter": "A Mile Underground",
+   "set": "hills"
+  },
+  {
+   "type": "neu_sun",
+   "text": "Deep in the Sun's core, hydrogen fuses into helium, and every reaction throws out neutrinos.",
+   "visual": "A huge Sun cut open: gold core where pairs of hydrogen collide in small flashes, a pale zone where a red light ray staggers in a zig-zag, rolling loops near the surface, flames around it; on 'throws' neutrinos fly straight out of the core through every layer and off the frame; label 'core'",
+   "title": {
+    "white": "The Sun",
+    "gray": "inside"
+   },
+   "cues": {
+    "core": "core",
+    "h": "hydrogen",
+    "out": "throws"
+   },
+   "params": {
+    "fuse": {
+     "at": "h"
+    },
+    "stream": {
+     "at": "out"
+    },
+    "labels": [
+     {
+      "text": "core",
+      "x": 0.47,
+      "y": 0.62,
+      "at": "core",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "neu_stream",
+   "text": "About sixty-five billion of them cross every square centimeter of you each second. That's roughly your fingernail.",
+   "visual": "Close on a giant fingertip under the Sun: on 'square' a red square is drawn on the nail, label '1 cm'; a dense rain of neutrinos falls through the finger; label '65 billion' with 'every second'",
+   "title": {
+    "white": "Your fingernail"
+   },
+   "cues": {
+    "bil": "billion",
+    "sq": "square",
+    "nail": "fingernail"
+   },
+   "params": {
+    "mode": "hand",
+    "square": {
+     "at": "sq"
+    },
+    "n": 70,
+    "speed": 0.3,
+    "labels": [
+     {
+      "text": "65 billion",
+      "x": 0.36,
+      "y": 0.36,
+      "at": "bil",
+      "size": 96,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "every second",
+      "x": 0.36,
+      "y": 0.47,
+      "at": "bil",
+      "size": 70
+     },
+     {
+      "text": "1 cm",
+      "x": 0.71,
+      "y": 0.3,
+      "at": "sq",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     1060,
+     420
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "neu_mine",
+   "text": "In the 1960s, a chemist named Ray Davis decided to count them. His detector was a little absurd.",
+   "visual": "At the Homestake mine head: a towering headframe with its turning wheel, the hoist house, a cage riding the rope over the dark shaft mouth; Ray Davis (bare-headed) looks up at it; the fez narrator points down the shaft and on 'absurd' a red arrow plunges into the ground, label '1 mile down'",
+   "title": {
+    "white": "Ray Davis",
+    "gray": "1960s"
+   },
+   "cues": {
+    "davis": "Davis",
+    "count": "count",
+    "abs": "absurd"
+   },
+   "params": {
+    "mode": "surface",
+    "ground": 0.8,
+    "hx": 0.6,
+    "arrow": {
+     "at": "abs"
+    },
+    "figures": [
+     {
+      "x": 0.36,
+      "y": 0.8,
+      "scale": 1.0,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "count",
+        "pose": "point",
+        "dir": "up"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "1 mile down",
+      "x": 0.43,
+      "y": 0.3,
+      "at": "abs",
+      "size": 76,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.14,
+     "y": 0.8,
+     "scale": 0.9,
+     "pose": "point",
+     "face": "right",
+     "dir": "down",
+     "seq": [
+      {
+       "at": "abs",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864
+   }
+  },
+  {
+   "type": "neu_mine",
+   "text": "A tank longer than a city bus, holding a hundred thousand gallons of dry-cleaning fluid, nearly a mile down the Homestake gold mine.",
+   "visual": "Cutaway of the Homestake mine: houses and a headframe with a turning wheel on the surface, a mile of rock strata below, a lift cage moving in the shaft, a red depth ruler '4,850 ft'; in the cavern at the bottom a long tank with a red city-bus outline beside it for scale",
+   "title": {
+    "white": "Homestake Mine",
+    "gray": "South Dakota"
+   },
+   "cues": {
+    "bus": "bus",
+    "gal": "gallons",
+    "mile": "mile"
+   },
+   "params": {
+    "mode": "wide",
+    "surface": 0.26,
+    "depth": 0.74,
+    "bus": true,
+    "labels": [
+     {
+      "text": "4,850 ft",
+      "x": 0.15,
+      "y": 0.58,
+      "at": "mile",
+      "size": 72,
+      "color": "red"
+     },
+     {
+      "text": "city bus",
+      "x": 0.6,
+      "y": 0.6,
+      "at": "bus",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 281
+   },
+   "source": "Brookhaven Lab"
+  },
+  {
+   "type": "neu_stream",
+   "text": "Why so deep? The rock stops almost everything that rains down from space. Neutrinos go right through.",
+   "visual": "Close on the rock above the tank: red cosmic rays zig-zag down from the sky and die in small bursts in the top layers; blue neutrinos run straight through every layer and out the bottom; labels 'cosmic rays' (red) and 'neutrinos' (blue)",
+   "title": {
+    "white": "Rock shield"
+   },
+   "cues": {
+    "rock": "rock",
+    "rain": "rains",
+    "thr": "through"
+   },
+   "params": {
+    "mode": "rock",
+    "surface": 0.22,
+    "rays": {
+     "at": "rain"
+    },
+    "labels": [
+     {
+      "text": "cosmic rays",
+      "x": 0.78,
+      "y": 0.3,
+      "at": "rain",
+      "size": 72,
+      "color": "red"
+     },
+     {
+      "text": "neutrinos",
+      "x": 0.24,
+      "y": 0.66,
+      "at": "thr",
+      "size": 72,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 238
+   },
+   "camera": false
+  },
+  {
+   "type": "neu_decay",
+   "text": "That fluid is full of chlorine. Once in a long while, a neutrino turns one chlorine atom into argon.",
+   "visual": "Close on one atom: a big green chlorine nucleus with electron shells; a neutrino flies in, on 'turns' it hits, a flash, and the nucleus turns gold (argon) and glows while an electron leaves; label 'chlorine' gets struck out, 'argon' appears in gold",
+   "title": {
+    "white": "Chlorine",
+    "gray": "to argon"
+   },
+   "cues": {
+    "chl": "chlorine",
+    "hit": "turns",
+    "ar": "argon"
+   },
+   "params": {
+    "mode": "capture",
+    "hit": {
+     "at": "hit"
+    },
+    "labels": [
+     {
+      "text": "chlorine",
+      "x": 0.74,
+      "y": 0.36,
+      "at": "chl",
+      "size": 70,
+      "color": "green",
+      "strike": "ar"
+     },
+     {
+      "text": "argon",
+      "x": 0.74,
+      "y": 0.5,
+      "at": "ar",
+      "size": 84,
+      "color": "gold",
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     1150,
+     480
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "neu_mine",
+   "text": "Every few weeks, Davis bubbled helium through the tank to fish them out. A handful of atoms in six hundred tons of liquid!",
+   "visual": "Close on the tank's top corner and the trap: green chlorine dots drift in the liquid, helium bubbles carry gold argon atoms up and out through the pipe into a small trap jar where they pile up one by one; label '600 tons'",
+   "title": {
+    "white": "Atom fishing"
+   },
+   "cues": {
+    "bub": "bubbled",
+    "few": "handful",
+    "tons": "tons"
+   },
+   "params": {
+    "mode": "purge",
+    "bubble": {
+     "at": "bub"
+    },
+    "labels": [
+     {
+      "text": "600 tons",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "tons",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "source": "Symmetry Magazine",
+   "camera": {
+    "focus": [
+     1450,
+     420
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "neu_tally",
+   "text": "The theorist John Bahcall calculated what he should find. But in 1968, Davis found only a third.",
+   "visual": "Bahcall's desk under a lamp, papers spread out: gold atoms drop into the left glass jar ('predicted') to the top; on 'found' the right one ('found') fills only to a third; a red dashed line carries the predicted level across and a red brace marks the gap, label '1/3'",
+   "title": {
+    "white": "The count"
+   },
+   "cues": {
+    "calc": "calculated",
+    "found": "found",
+    "third": "third"
+   },
+   "params": {
+    "mode": "jars",
+    "pred": {
+     "at": "calc"
+    },
+    "found": {
+     "at": "found"
+    },
+    "labels": [
+     {
+      "text": "predicted",
+      "x": 0.34,
+      "y": 0.19,
+      "at": "calc",
+      "size": 70
+     },
+     {
+      "text": "found",
+      "x": 0.66,
+      "y": 0.19,
+      "at": "found",
+      "size": 70
+     },
+     {
+      "text": "1/3",
+      "x": 0.66,
+      "y": 0.44,
+      "at": "third",
+      "size": 110,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "desk": true
+   },
+   "camera": false,
+   "source": "Brookhaven Lab",
+   "set": "interior"
+  },
+  {
+   "type": "neu_room",
+   "text": "So who was wrong? Many blamed the experiment, others blamed the Sun. And for decades, nobody could close the gap.",
+   "visual": "A split: Davis's tank on a bench (left) gets a red magnifier and a question mark on 'experiment'; the Sun (right) gets a question mark on 'Sun'; between them a wall calendar flips from 1968 into the 1990s; the fez narrator in the middle points left, right, then clutches his head on 'nobody'",
+   "title": {
+    "white": "Who's wrong?"
+   },
+   "cues": {
+    "exp": "experiment",
+    "sun": "Sun",
+    "nob": "nobody"
+   },
+   "params": {
+    "mode": "split",
+    "left_at": "exp",
+    "right_at": "sun",
+    "years": [
+     1968,
+     1994
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.95,
+     "scale": 1.0,
+     "pose": "think",
+     "face": "right",
+     "seq": [
+      {
+       "at": "exp",
+       "pose": "point",
+       "dir": "left",
+       "face": "left"
+      },
+      {
+       "at": "sun",
+       "pose": "point",
+       "dir": "right",
+       "face": "right"
+      },
+      {
+       "at": "nob",
+       "pose": "shock",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "set": "interior"
+  },
+  {
+   "type": "chapter",
+   "text": "The answer came from two more giant tanks, deep in the dark.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, below it 'The Shape-Shifters' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "answer",
+    "title": "giant",
+    "line": "dark"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "The Shape-Shifters"
+   },
+   "chapter": "The Shape-Shifters",
+   "set": "night"
+  },
+  {
+   "type": "neu_detector",
+   "text": "In Japan, Super-Kamiokande held fifty thousand tons of water under eleven thousand light sensors.",
+   "visual": "Inside a giant cylinder: the far wall tiled floor to ceiling with round gold light sensors, water hatching, a tiny red rubber boat with two figures on the surface for scale; on 'watched' a particle track shoots up and a ring of sensors lights up gold and red; label '50,000 tons'",
+   "title": {
+    "white": "Super-Kamiokande",
+    "gray": "Japan"
+   },
+   "cues": {
+    "fifty": "fifty",
+    "watch": "eleven"
+   },
+   "params": {
+    "mode": "superk",
+    "ring": {
+     "at": "watch"
+    },
+    "labels": [
+     {
+      "text": "50,000 tons",
+      "x": 0.5,
+      "y": 0.52,
+      "at": "fifty",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "camera": false,
+   "source": "Nobel Prize"
+  },
+  {
+   "type": "neu_stream",
+   "text": "In 1998, Takaaki Kajita's team saw neutrinos made in our sky vanish too, mostly ones crossing the whole Earth. The longer the trip, the more went missing.",
+   "visual": "A big Earth with a detector on top: neutrinos from the sky above arrive whole; on 'vanishing' half of the ones coming up through the whole planet turn into dashed ghosts and fade out on the way; labels 'from the sky' and 'through Earth'",
+   "title": {
+    "white": "Kajita",
+    "gray": "1998"
+   },
+   "cues": {
+    "van": "vanish",
+    "earth": "Earth",
+    "long": "longer"
+   },
+   "params": {
+    "mode": "earth",
+    "fade": {
+     "at": "van"
+    },
+    "labels": [
+     {
+      "text": "made in the sky",
+      "x": 0.62,
+      "y": 0.18,
+      "at": "van",
+      "size": 64
+     },
+     {
+      "text": "through Earth",
+      "x": 0.68,
+      "y": 0.74,
+      "at": "earth",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "camera": false
+  },
+  {
+   "type": "neu_detector",
+   "text": "Then in Canada, two kilometers down a nickel mine, SNO could count every kind of neutrino.",
+   "visual": "Close on a cavern: a geodesic steel sphere with light sensors on its nodes around a clear inner sphere of heavy water; neutrinos of all three colours (blue, red, gold) fly in one after another and every one sets off a flash; label '2 km down'",
+   "title": {
+    "white": "SNO",
+    "gray": "Canada"
+   },
+   "cues": {
+    "km": "kilometers",
+    "count": "count",
+    "every": "every"
+   },
+   "params": {
+    "mode": "sno",
+    "ring": {
+     "at": "count"
+    },
+    "labels": [
+     {
+      "text": "2 km down",
+      "x": 0.6,
+      "y": 0.36,
+      "at": "km",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   },
+   "source": "Physics World"
+  },
+  {
+   "type": "neu_stream",
+   "text": "By 2001, the answer was in. The missing neutrinos had never been missing.",
+   "visual": "The scene-4 picture again: the Sun sends rows of neutrinos to the Earth and two of three fade to dashed ghosts halfway; on 'never' the ghosts snap back as red triangles and gold diamonds and fly on to the Earth: they changed, they never vanished; red label 'they changed!'",
+   "title": {
+    "white": "2001"
+   },
+   "cues": {
+    "ans": "answer",
+    "never": "never"
+   },
+   "params": {
+    "mode": "sun",
+    "fade": {
+     "at": 0.1
+    },
+    "reveal": {
+     "at": "never"
+    },
+    "labels": [
+     {
+      "text": "they changed!",
+      "x": 0.52,
+      "y": 0.16,
+      "at": "never",
+      "size": 90,
+      "color": "red"
+     }
+    ]
+   },
+   "set": "night"
+  },
+  {
+   "type": "neu_flavor",
+   "text": "Neutrinos come in three types, called flavors. On the trip from the Sun, they keep switching, and Davis's tank could only see one.",
+   "visual": "The Sun on the left, Davis's tank on the right, a dashed path between; legend of three shapes (blue ball 'electron', red triangle 'muon', gold diamond 'tau'); neutrinos fly along the path changing shape and colour, a three-colour wave below; at the tank only blue ones flash, the others fly through",
+   "title": {
+    "white": "Three flavors"
+   },
+   "cues": {
+    "three": "three",
+    "sw": "switching",
+    "one": "see"
+   },
+   "params": {
+    "go": {
+     "at": "three"
+    },
+    "labels": [
+     {
+      "text": "electron",
+      "x": 0.36,
+      "y": 0.3,
+      "at": "three",
+      "size": 56,
+      "color": "ink"
+     },
+     {
+      "text": "muon",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "three",
+      "size": 56,
+      "color": "ink"
+     },
+     {
+      "text": "tau",
+      "x": 0.64,
+      "y": 0.3,
+      "at": "three",
+      "size": 56,
+      "color": "ink"
+     }
+    ]
+   },
+   "set": "night"
+  },
+  {
+   "type": "neu_room",
+   "text": "So Davis was right. Bahcall was right. The neutrino was playing tricks.",
+   "visual": "Two oval portraits in gold frames on a wall: Ray Davis (left) and John Bahcall (right), name plaques under them; a red 'RIGHT' stamp slams onto each on their names; on 'tricks' a blue neutrino token winks between them",
+   "title": {
+    "white": "Verdict"
+   },
+   "cues": {
+    "dav": "Davis",
+    "bah": "Bahcall",
+    "pill": "tricks"
+   },
+   "params": {
+    "mode": "portraits",
+    "frames": [
+     {
+      "x": 0.3,
+      "y": 0.42,
+      "figure": {
+       "emotion": "happy",
+       "y": 0.92,
+       "scale": 1.6
+      }
+     },
+     {
+      "x": 0.7,
+      "y": 0.42,
+      "figure": {
+       "emotion": "happy",
+       "seq": [
+        {
+         "at": "pill",
+         "pose": "shrug"
+        }
+       ],
+       "y": 0.92,
+       "scale": 1.6
+      }
+     }
+    ],
+    "stamps": [
+     {
+      "text": "Right",
+      "x": 0.3,
+      "y": 0.74,
+      "at": "dav"
+     },
+     {
+      "text": "Right",
+      "x": 0.7,
+      "y": 0.74,
+      "at": "bah"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Davis",
+      "x": 0.3,
+      "y": 0.86,
+      "at": 0.1,
+      "size": 60
+     },
+     {
+      "text": "Bahcall",
+      "x": 0.7,
+      "y": 0.86,
+      "at": 0.1,
+      "size": 60
+     }
+    ]
+   },
+   "set": "interior",
+   "camera": false
+  },
+  {
+   "type": "neu_tally",
+   "text": "And to switch like that, a neutrino must have mass. Tiny, but not the zero our best theory predicted.",
+   "visual": "Close on a brass balance with one neutrino on the left pan: on 'mass' the beam dips a hair, the needle on the dial swings off zero and a red ring circles it; label 'not zero'",
+   "title": {
+    "white": "Has mass"
+   },
+   "cues": {
+    "mass": "mass",
+    "tiny": "Tiny",
+    "zero": "zero"
+   },
+   "params": {
+    "mode": "scale",
+    "tip": {
+     "at": "mass"
+    },
+    "labels": [
+     {
+      "text": "not zero",
+      "x": 0.66,
+      "y": 0.52,
+      "at": "zero",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "neu_room",
+   "text": "At eighty-seven, Davis shared the 2002 Nobel Prize with Japan's Masatoshi Koshiba. Kajita and Arthur McDonald won in 2015. But the ghost isn't done with us.",
+   "visual": "Two big gold Nobel medals on red-blue ribbons swing in: '2002' (Davis, Koshiba) and '2015' (Kajita, McDonald), a profile in relief on each, glints around them",
+   "title": {
+    "white": "Nobel Prizes"
+   },
+   "cues": {
+    "n02": "2002",
+    "n15": "2015",
+    "ghost": "ghost"
+   },
+   "params": {
+    "mode": "medals",
+    "medals": [
+     {
+      "x": 0.3,
+      "year": 2002,
+      "at": "n02"
+     },
+     {
+      "x": 0.7,
+      "year": 2015,
+      "at": "n15"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Davis, Koshiba",
+      "x": 0.3,
+      "y": 0.77,
+      "at": "n02",
+      "size": 56
+     },
+     {
+      "text": "Kajita, McDonald",
+      "x": 0.7,
+      "y": 0.77,
+      "at": "n15",
+      "size": 56
+     }
+    ]
+   },
+   "source": "NobelPrize.org",
+   "camera": false
+  },
+  {
+   "type": "chapter",
+   "text": "So, neutrinos are everywhere. Now what?",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, below it 'Now What?' with a hand-drawn underline",
+   "title": {},
+   "cues": {
+    "n": "neutrinos",
+    "title": "everywhere",
+    "line": "what"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Now What?"
+   },
+   "chapter": "Now What?",
+   "set": "night"
+  },
+  {
+   "type": "neu_room",
+   "text": "We still don't know what a neutrino weighs, or whether it explains why the universe is made of matter.",
+   "visual": "A night sky full of slowly turning spiral galaxies and stars; in front one big glowing neutrino with a giant red question mark; label 'weight: ?' on 'weighs'",
+   "title": {
+    "white": "Still unknown"
+   },
+   "cues": {
+    "wei": "weighs",
+    "mat": "matter"
+   },
+   "params": {
+    "mode": "cosmos",
+    "labels": [
+     {
+      "text": "weight: ?",
+      "x": 0.5,
+      "y": 0.7,
+      "at": "wei",
+      "size": 84,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": "night",
+   "camera": false
+  },
+  {
+   "type": "neu_mine",
+   "text": "A new experiment, DUNE, will fire neutrinos thirteen hundred kilometers through the Earth, from near Chicago into the old Homestake mine.",
+   "visual": "A long slice of the Earth's curve: a ring accelerator near the left edge ('Chicago') fires a red dashed beam of neutrinos along a chord through the rock to a headframe and a deep gold detector near the right edge ('South Dakota'); label '1,300 km'",
+   "title": {
+    "white": "DUNE",
+    "gray": "coming soon"
+   },
+   "cues": {
+    "fire": "fire",
+    "km": "thirteen",
+    "chi": "Chicago",
+    "home": "Homestake"
+   },
+   "params": {
+    "mode": "dune",
+    "fire": {
+     "at": "fire"
+    },
+    "labels": [
+     {
+      "text": "Chicago",
+      "x": 0.14,
+      "y": 0.42,
+      "at": "chi",
+      "size": 70
+     },
+     {
+      "text": "South Dakota",
+      "x": 0.72,
+      "y": 0.4,
+      "at": "home",
+      "size": 70
+     },
+     {
+      "text": "1,300 km",
+      "x": 0.5,
+      "y": 0.56,
+      "at": "km",
+      "size": 100,
+      "color": "red"
+     }
+    ]
+   },
+   "source": "Fermilab"
+  },
+  {
+   "type": "neu_mine",
+   "text": "The mine where Ray Davis counted argon atoms one by one. This time, the detector is made of argon.",
+   "visual": "The Homestake cutaway: the old tank in its cavern pulses with a red outline on 'counted'; on 'made' a second, bigger cavern beside it holds a glowing gold detector, label 'argon'; the fez narrator, big in the left foreground, points at it",
+   "title": {
+    "white": "Homestake",
+    "gray": "again"
+   },
+   "cues": {
+    "cnt": "counted",
+    "made": "made"
+   },
+   "params": {
+    "mode": "wide",
+    "surface": 0.4,
+    "depth": 0.8,
+    "hl": {
+     "at": "cnt"
+    },
+    "newhall": true,
+    "lift": true,
+    "labels": [
+     {
+      "text": "argon",
+      "x": 0.82,
+      "y": 0.55,
+      "at": "made",
+      "size": 100,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.155,
+     "y": 1.06,
+     "scale": 1.15,
+     "pose": "point",
+     "face": "right",
+     "dir": -10,
+     "seq": [
+      {
+       "at": "made",
+       "pose": "point",
+       "face": "right",
+       "dir": -20,
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 432
+   },
+   "source": "Fermilab"
+  },
+  {
+   "type": "neu_stream",
+   "text": "So, would you have approved the bomb, or the reactor? Tell me in the comments, and subscribe to Stickstory for a true story like this every day.",
+   "visual": "Night: the fez narrator stands in the middle of a stream of neutrinos that flies straight through him; he asks us, points at us on 'comments' and waves on 'subscribe'; red label 'bomb or reactor?'",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "hid": "approved",
+    "com": "comments",
+    "sub": "subscribe"
+   },
+   "params": {
+    "mode": "field",
+    "box": false,
+    "n": 30,
+    "labels": [
+     {
+      "text": "bomb or reactor?",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "hid",
+      "size": 96,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.8,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "com",
+       "pose": "point",
+       "dir": "forward"
+      },
+      {
+       "at": "sub",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  }
+ ]
+}
