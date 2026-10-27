@@ -10,7 +10,7 @@
 // A scene picks one with "set": "<name>" or {"name", "ground", "horizon"} (stage px); with no "ground" the engine
 // uses the shot's measured ground line. engine.js multiplies the set onto the paper under the shot with the same
 // camera transform, so the set's ground stays under the cast's feet. Baked once per scene; per frame one drawImage.
-// Deterministic: rng(seed), no Math.random.
+// Suns sit in the right half: the top-left belongs to the brand + kicker. Deterministic: rng(seed), no Math.random.
 'use strict';
 
 const SETS = (() => {
@@ -125,7 +125,7 @@ const SETS = (() => {
       near(x, r, w, h, gy, C.green, 0.5);
     },
     desert(x, r, w, h, gy, hy) {
-      sky(x, w, hy, C.gold, 0.45); sun(x, w * (0.2 + 0.6 * r()), hy * 0.3, w * 0.09, C.red, 0.45);
+      sky(x, w, hy, C.gold, 0.45); sun(x, w * (0.6 + 0.3 * r()), hy * 0.3, w * 0.09, C.red, 0.45);
       plane(x, ridge(r, w, hy, h * 0.04, 0.006), gy, C.stain, 0.3);
       plane(x, ridge(r, w, hy + (gy - hy) * 0.5, h * 0.03, 0.01), gy, C.gold, 0.42);
       const pts = ridge(r, w, gy + 2, 2, 0.02);
@@ -134,14 +134,14 @@ const SETS = (() => {
       for (let y = gy + 8; y < h; y += 6 + (y - gy) * 0.08) { x.lineWidth = 0.6 + (y - gy) / (h - gy); x.beginPath(); for (let px = -5; px <= w + 5; px += 6) { const yy = y + 2.5 * Math.sin(px * 0.035 + y * 0.7); px < 0 ? x.moveTo(px, yy) : x.lineTo(px, yy); } x.stroke(); }
     },
     sea(x, r, w, h, gy, hy) {   // a shore: open water to the horizon, the cast on the beach
-      sky(x, w, hy, C.blue, 0.42); sun(x, w * (0.15 + 0.7 * r()), hy * 0.4, w * 0.06, C.gold, 0.5);
+      sky(x, w, hy, C.blue, 0.42); sun(x, w * (0.6 + 0.3 * r()), hy * 0.4, w * 0.06, C.gold, 0.5);
       x.fillStyle = vgrad(x, hy, gy, tint(C.blue, 0.4), tint(C.blue, 0.6)); x.fillRect(0, hy, w, gy - hy);
       x.strokeStyle = tint(C.blue, 0.9); x.lineWidth = 1.4; x.beginPath(); x.moveTo(0, hy); x.lineTo(w, hy); x.stroke();
       waves(x, r, w, hy, gy, C.blue, 0.7);
       near(x, r, w, h, gy, C.gold, 0.42, false);
     },
     ocean(x, r, w, h, gy, hy) {  // open water down to the frame bottom (ships, boats)
-      sky(x, w, hy, C.blue, 0.42); sun(x, w * (0.15 + 0.7 * r()), hy * 0.4, w * 0.06, C.gold, 0.5);
+      sky(x, w, hy, C.blue, 0.42); sun(x, w * (0.6 + 0.3 * r()), hy * 0.4, w * 0.06, C.gold, 0.5);
       clouds(x, r, w, hy * 0.2, hy * 0.6, C.blue, 0.12, 3);
       x.fillStyle = vgrad(x, hy, h, tint(C.blue, 0.42), tint(C.blue, 0.8)); x.fillRect(0, hy, w, h - hy);
       x.strokeStyle = tint(C.blue, 0.9); x.lineWidth = 1.4; x.beginPath(); x.moveTo(0, hy); x.lineTo(w, hy); x.stroke();
@@ -155,7 +155,7 @@ const SETS = (() => {
       plane(x, pts, hy + 2, C.green, 0.45);
     },
     city(x, r, w, h, gy, hy) {
-      sky(x, w, hy, C.gold, 0.4); sun(x, w * (0.2 + 0.6 * r()), hy * 0.3, w * 0.06, C.red, 0.4);
+      sky(x, w, hy, C.gold, 0.4); sun(x, w * (0.6 + 0.3 * r()), hy * 0.3, w * 0.06, C.red, 0.4);
       skyline(x, r, w, hy + (gy - hy) * 0.4, h * 0.12, C.blue, 0.3);
       skyline(x, r, w, hy + (gy - hy) * 0.85, h * 0.07, C.inkSoft, 0.4);
       const pts = ridge(r, w, gy + 2, 1, 0.03);

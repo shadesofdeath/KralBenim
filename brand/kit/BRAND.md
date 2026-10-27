@@ -174,6 +174,7 @@ Parşömen zemin, solda/üstte Fraunces 900 dev yazı (1–3 satır, **2–4 kel
 yanında **büyük Kaşif** güçlü bir pozda (şok, işaret) ve olayın **tek simgesi** (volkan, gemi, taç).
 Her kapakta Kaşif'in yüzü okunur büyüklükte olur. **Tek net odak noktası:** kalabalık sahne, çok nesne, çok yazı
 yok; uzun video kapağında `cover.focus` o tek nesneyi büyütür, gerisi kâğıda erir.
+Uzun video kapağında yazı büyüklüğü `cover.size` (px, başlangıç; sığmazsa küçülür) ile ayarlanır.
 Her küçük resmin kenarında kalın bir **çerçeve** vardır (kanal sahibinin kararı, 2026-10-26: akışta göze çarpsın):
 Düşün Bakalım `red` çerçeve + `ink` iç çizgi, Stickstory `ink` çerçeve + `gold` iç çizgi. Motor ekler; videonun
 kendi karelerinde yoktur.

@@ -264,7 +264,7 @@ function buildCoverText(c) {
     }
     box.appendChild(row);
   }
-  box.style.fontSize = '';
+  box.style.fontSize = c.size ? c.size + 'px' : '';   // cover.size: start size in px (shrinks to fit)
   let fs = parseFloat(getComputedStyle(box).fontSize);
   while (fs > 70 && [...box.querySelectorAll('.line')].some(l => l.scrollWidth > box.clientWidth + 2 || l.offsetHeight > fs * 1.5)) {
     fs -= 6; box.style.fontSize = fs + 'px';

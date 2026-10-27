@@ -197,7 +197,9 @@ const PARCHMENT = (() => {
   function kicker(container, W, H, title = {}) {
     const portrait = H > W, ag = SKIN === 'ag';
     const node = document.createElement('div');
-    node.style.cssText = `position:absolute;display:flex;align-items:stretch;gap:18px;opacity:0;color:${C.ink};line-height:1.05;` + (ag
+    // a soft paper label behind the kicker keeps it readable over any drawing that reaches the top-left
+    node.style.cssText = `position:absolute;display:flex;align-items:stretch;gap:18px;opacity:0;color:${C.ink};line-height:1.05;` +
+      `background:${rgba(C.paperLight, 0.82)};padding:10px 18px 12px 12px;margin:-10px 0 0 -12px;border-radius:${ag ? 4 : 12}px;` + (ag
       ? `font-family:${SLAB};font-weight:700;letter-spacing:0.06em;text-transform:uppercase;` + (portrait ? 'left:64px;top:170px;font-size:46px;max-width:760px;' : 'left:90px;top:128px;font-size:40px;max-width:900px;')
       : 'font-family:Fraunces,Georgia,serif;font-weight:800;letter-spacing:-0.01em;' + (portrait ? 'left:64px;top:168px;font-size:52px;max-width:720px;' : 'left:90px;top:128px;font-size:46px;max-width:900px;'));
     container.appendChild(node);
