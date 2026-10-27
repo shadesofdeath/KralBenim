@@ -1,0 +1,372 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "cemisgezekli-ioannes",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "cover": {
+    "lines": [
+      "Bu altını",
+      "katil",
+      "bastırdı"
+    ],
+    "highlight": [
+      "katil"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": false
+  },
+  "sources": [
+    {
+      "title": "Halk TV — Ege'de amatör dalgıç bin yıllık Bizans sikkesi buldu (Ekim 2026)",
+      "url": "https://halktv.com.tr/turkiye/egede-amator-dalgic-bin-yillik-bizans-sikkesi-buldu-1060026h"
+    },
+    {
+      "title": "Hürriyet — İzmir'de denizde tarihi sikke bulundu (Ekim 2026)",
+      "url": "https://www.hurriyet.com.tr/gundem/izmirde-denizde-tarihi-sikke-bulundu-43332349"
+    },
+    {
+      "title": "Britannica — John I Tzimisces",
+      "url": "https://www.britannica.com/biography/John-I-Tzimisces"
+    },
+    {
+      "title": "Wikipedia — John I Tzimiskes",
+      "url": "https://en.wikipedia.org/wiki/John_I_Tzimiskes"
+    },
+    {
+      "title": "Wikipedia — Theophano (born Anastaso)",
+      "url": "https://en.wikipedia.org/wiki/Theophano_(born_Anastaso)"
+    }
+  ],
+  "youtube": {
+    "title": "Çemişgezekli İoannes: Tahtı Bir Cinayetle Nasıl Aldı?",
+    "description": "Çemişgezekli İoannes'in bastırdığı altın İzmir Karaburun'da denizden çıktı: bir amatör dalgıç, bin elli yıllık Bizans sikkesini buldu. Peki sikkede Meryem'in taç giydirdiği bu imparator tahtı nasıl aldı?\n\n969'da bir gece imparatoriçe Theophano kapıları açık bıraktı ve İoannes Tzimiskes, dayısı II. Nikeforos Fokas'ı yatak odasında öldürdü. Patrik Polyeuktos ona taç giydirmeyi reddetti; şartlardan biri Theophano'nun saraydan uzaklaştırılmasıydı. Bizans tarihinin en soğuk pazarlıklarından biri.\n\nHer gün böyle gerçek bir hikâye için Düşün Bakalım'a abone ol. Sence İoannes bu şartı kabul etmekte haklı mıydı? Yorumlara yaz!\n\n#shorts #bizans #tarih #düşünbakalım",
+    "tags": [
+      "çemişgezekli ioannes",
+      "ioannes tzimiskes",
+      "çemişgezekli ioannes kimdir",
+      "i. ioannes",
+      "john tzimiskes",
+      "bizans imparatoru",
+      "bizans tarihi",
+      "theophano",
+      "nikeforos fokas",
+      "karaburun altın sikke",
+      "bizans sikkesi",
+      "çemişgezek",
+      "doğu roma",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-27T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "tz_coin",
+      "text": "Bu altını bir katil bastırdı.",
+      "visual": "Kayalık bir kıyı: solda dev bir Bizans altın sikkesi damlalar saçarak denizden yükseliyor; sikkede Meryem bir imparatorun başına taç koyuyor. Sağda kayaların üstünde büyük Kaşif sikkeyi işaret ediyor; 'katil'de sikke parlıyor, Kaşif şokla geri sıçrıyor. Deniz ve kayalar ekranın altına kadar iniyor.",
+      "title": {},
+      "set": {
+        "name": "coast",
+        "ground": 1150,
+        "horizon": 980
+      },
+      "cues": {
+        "hit": "katil"
+      },
+      "params": {
+        "mode": "hold",
+        "rise": 0,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.72,
+            "y": 0.6,
+            "scale": 1.15,
+            "pose": "point",
+            "face": "left",
+            "dir": "forward",
+            "seq": [
+              {
+                "at": "hit",
+                "pose": "shock",
+                "face": "left"
+              }
+            ]
+          }
+        ],
+        "coin": {
+          "x": 0.37,
+          "y": 0.37,
+          "r": 320
+        },
+        "rock": {
+          "x": 0.5,
+          "y": 0.6
+        }
+      }
+    },
+    {
+      "type": "tz_dive",
+      "text": "Bir dalgıç onu Karaburun'da buldu. Üstündeki imparatoru tanıyor musunuz?",
+      "visual": "Su altı: yukarıda dalgalı yüzey, ışık huzmeleri; yüzeyde maskeli, şnorkelli bir dalgıcın başı. Kumlu tabanda taşlar ve sallanan deniz çayırları; ortada yarısı kuma gömülü büyük altın sikke parıldıyor. Sağ üstten dalgıç elbiseli, eldivenli bir kol iniyor; 'buldu'da sikkeyi kavrıyor, sikke dönerek yüzü izleyiciye bakacak şekilde yükseliyor. Kabarcıklar yükseliyor, balıklar geçiyor.",
+      "title": {
+        "white": "Karaburun",
+        "gray": "1050 yıllık"
+      },
+      "set": false,
+      "source": "Halk TV",
+      "cues": {
+        "reach": "dalgıç",
+        "take": "buldu"
+      },
+      "params": {
+        "labels": [
+          {
+            "text": "2-3 metre derinlik",
+            "x": 0.32,
+            "y": 0.26,
+            "at": "reach",
+            "size": 60,
+            "color": "ink",
+            "rot": -4
+          }
+        ],
+        "coin": {
+          "x": 0.5,
+          "y": 0.555,
+          "r": 190
+        },
+        "lift": 300
+      }
+    },
+    {
+      "type": "tz_coin",
+      "text": "Çemişgezekli İoannes. Adı, Tunceli'deki Çemişgezek'le aynı!",
+      "visual": "Yakın plan, müze masası: kırmızı kadife üstünde bir ayaklıkta dev altın sikke. Sikkede solda haleli, mavi örtülü Meryem; sağda mücevherli giysili, sakallı imparator. 'aynı'da Meryem'in eli tacı imparatorun başına indiriyor; 'Tunceli'de sikke parlıyor.",
+      "title": {
+        "white": "İoannes",
+        "gray": "969-976 imparatoru"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "camera": {
+        "focus": [
+          600,
+          640
+        ],
+        "zoom": 1.7,
+        "move": "push"
+      },
+      "source": "Halk TV",
+      "cues": {
+        "crown": "aynı",
+        "glint": "Tunceli"
+      },
+      "params": {
+        "mode": "face"
+      }
+    },
+    {
+      "type": "tz_shore",
+      "text": "Peki tahtı nasıl aldı?",
+      "visual": "Fırtınalı gece, Boğaz: sağda deniz kıyısında surlu bir saray, kemerli pencerelerinde altın ışıklar, sur dibinde deniz kapısı. Soldan bir kayık dalgalar arasında saraya ilerliyor: kayıkta yüzü gölgede kapüşonlu bir figür ve küreği elinde çeken kürekçi. Yağmur yağıyor, 'tahtı'da şimşek çakıyor. Dalgalar ekranın altına kadar iniyor.",
+      "title": {
+        "white": "969",
+        "gray": "Konstantinopolis"
+      },
+      "set": {
+        "name": "storm",
+        "ground": 1150,
+        "horizon": 980
+      },
+      "cues": {
+        "flash": "tahtı"
+      },
+      "params": {
+        "mode": "night",
+        "sea": 0.51,
+        "boat": {
+          "from": 0.18,
+          "to": 0.34,
+          "y": 0.55,
+          "s": 1.2
+        }
+      }
+    },
+    {
+      "type": "tz_door",
+      "text": "969'da bir gece, imparatorun karısı Theophano kapıları açık bıraktı.",
+      "visual": "Saray koridoru, gece: üstte altın mozaik şerit, mermer sütunlar, duvar kandili. Ortada sürgüyle kapalı yüksek bir çift kanatlı kapı. Solda taçlı, kırmızı giysili imparatoriçe Theophano sürgüye uzanıyor; 'açık'ta sürgü kayıyor, sağ kanat karanlığa açılıyor, aralıktan ışık sızıyor. Mermer zemin ve kırmızı halı ekranın altına iniyor.",
+      "title": {
+        "white": "Theophano",
+        "gray": "imparatorun karısı"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "source": "Wikipedia",
+      "cues": {
+        "open": "açık"
+      },
+      "params": {}
+    },
+    {
+      "type": "tz_bed",
+      "text": "İoannes içeri girip dayısını öldürdü.",
+      "visual": "Yakın plan, saray yatak odası, gece: duvarda kemerli pencerede ay; alçak yatakta kırmızı örtü altında uyuyan sakallı imparator. Solda uzun ayaklı şamdanda mum yanıyor; duvara kılıcını başının üstüne kaldırmış bir adamın gölgesi düşüyor, gölge büyüyerek yatağa uzanıyor. 'öldürdü'de mum sönüyor, gölge kayboluyor, ince bir duman yükseliyor. Ön planda yaldızlı kemerli ahşap bir sandık ve pirinç tepside ibrik ile kadeh.",
+      "title": {
+        "white": "Yatak odası",
+        "gray": "11 Aralık 969"
+      },
+      "set": false,
+      "source": "Britannica",
+      "cues": {
+        "hit": "öldürdü"
+      },
+      "params": {},
+      "camera": {
+        "focus": [
+          520,
+          820
+        ],
+        "zoom": 1.6,
+        "move": "push"
+      }
+    },
+    {
+      "type": "tz_gate",
+      "text": "Ama patrik şart koştu: taç istiyorsan Theophano'yu sürgüne gönder!",
+      "visual": "Ayasofya'nın önü: arkada pencere dizili dev kubbe, yarım kubbeler ve payandalar; kemer altında kapalı bronz kapılar. Üst basamakta haçlı beyaz atkılı, ak sakallı patrik asasıyla yolu kesiyor; 'şart'ta elini kaldırıyor. Yanında kadife yastıkta parlayan taç. Solda mavi giysili İoannes durup başını öne eğiyor. 'sürgüne'de kırmızı bir damga iniyor: 'Theophano: sürgün!'. Ön planda taş korkuluk ve bekleyen kalabalığın sırtları ekranın altını dolduruyor.",
+      "title": {
+        "white": "Patrik",
+        "gray": "Polyeuktos"
+      },
+      "set": {
+        "name": "city",
+        "ground": 1056
+      },
+      "source": "Britannica",
+      "cues": {
+        "deny": "şart",
+        "stamp": "sürgüne"
+      },
+      "params": {
+        "gy": 0.55,
+        "labels": [
+          {
+            "text": "Theophano: sürgün!",
+            "x": 0.5,
+            "y": 0.25,
+            "at": "stamp",
+            "stamp": true,
+            "color": "red",
+            "size": 64,
+            "rot": -4
+          }
+        ]
+      }
+    },
+    {
+      "type": "tz_shore",
+      "text": "Ve İoannes, ona kapıyı açan kadını tacı için sürgüne yolladı.",
+      "visual": "Gündüz, Marmara: sağda yeşil bir ada, tepesinde küçük bir manastır. Kırmızı başörtülü Theophano miğferli bir kürekçinin çektiği kayıkla adaya doğru götürülüyor; başı önde. 'kadını'da 'Adalar' yazısı ve adayı gösteren ok beliriyor. Martılar uçuyor, dalgalar ekranın altına iniyor.",
+      "title": {
+        "white": "Sürgün",
+        "gray": "Theophano"
+      },
+      "set": {
+        "name": "sea",
+        "ground": 1150,
+        "horizon": 980
+      },
+      "source": "Wikipedia",
+      "cues": {
+        "tag": "kadını"
+      },
+      "params": {
+        "mode": "exile",
+        "sea": 0.51,
+        "boat": {
+          "from": 0.2,
+          "to": 0.4,
+          "y": 0.57,
+          "s": 1.25
+        },
+        "labels": [
+          {
+            "text": "Adalar",
+            "x": 0.72,
+            "y": 0.3,
+            "at": "tag",
+            "size": 80,
+            "color": "red",
+            "arrow": [
+              0.75,
+              0.43
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "tz_coin",
+      "text": "Her gün böyle gerçek bir hikâye için abone olun.",
+      "visual": "Aynı kayalık kıyı, geniş plan: altın sikke denizin üstünde süzülüyor ve dönüyor. Sağda kayaların üstünde Kaşif sikkeyi işaret ediyor; 'abone'de izleyiciye dönüp el sallıyor.",
+      "title": {
+        "white": "Çemişgezekli",
+        "gray": "İoannes"
+      },
+      "set": {
+        "name": "coast",
+        "ground": 1150,
+        "horizon": 980
+      },
+      "cues": {
+        "wave": "abone"
+      },
+      "params": {
+        "mode": "hold",
+        "rise": -5,
+        "cast": [
+          {
+            "who": "kasif",
+            "x": 0.77,
+            "y": 0.6,
+            "scale": 1.05,
+            "pose": "point",
+            "face": "left",
+            "dir": "forward",
+            "seq": [
+              {
+                "at": "wave",
+                "pose": "wave",
+                "face": "right"
+              }
+            ]
+          }
+        ],
+        "coin": {
+          "x": 0.36,
+          "y": 0.355,
+          "r": 285
+        }
+      }
+    }
+  ]
+}

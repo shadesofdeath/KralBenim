@@ -1,0 +1,2204 @@
+{
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "cumhuriyetin-ilani-1923",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Tek gecede",
+   "yeni rejim"
+  ],
+  "highlight": [
+   "rejim"
+  ],
+  "scene": 42,
+  "t": 8.9,
+  "focus": [
+   1190,
+   820
+  ],
+  "zoom": 1.55,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 1640,
+   "y": 1080,
+   "scale": 1.4,
+   "face": -1
+  },
+  "size": 170
+ },
+ "sources": [
+  {
+   "title": "Nutuk'tan: Atatürk'ün anlatımıyla Cumhuriyet'in ilanı (Hürriyet)",
+   "url": "https://www.hurriyet.com.tr/dunya/ataturkun-agzindan-cumhuriyetin-ilani-40625479"
+  },
+  {
+   "title": "Cumhuriyetin ilan edildiği birleşim: TBMM tutanakları (Habertürk)",
+   "url": "https://www.haberturk.com/cumhuriyetin-ilan-edildigi-birlesimde-mebuslarin-konusmalari-tbmm-tutanaklarinda-3632530"
+  },
+  {
+   "title": "Alev Coşkun: Cumhuriyet nasıl ilan edildi? (Cumhuriyet)",
+   "url": "https://www.cumhuriyet.com.tr/yazarlar/alev-coskun/cumhuriyet-nasil-ilan-edildi-1997611"
+  },
+  {
+   "title": "Proclamation of the Republic of Turkey (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Proclamation_of_the_Republic_of_Turkey"
+  },
+  {
+   "title": "29 Ekim'in millî bayram yolculuğu (Habertürk)",
+   "url": "https://www.haberturk.com/29-ekim-in-milli-bayram-yolculugu-3631708"
+  }
+ ],
+ "youtube": {
+  "title": "Cumhuriyetin İlanı: Bir Rejim Tek Bir Günde Nasıl Değişti?",
+  "description": "Cumhuriyetin ilanı, 29 Ekim 1923 akşamı saat 20.30'da Ankara'daki küçük Meclis salonunda gerçekleşti. Peki bir ülkenin rejimi nasıl tek bir günde değişti ve neden tam o gün?\n\nEkim 1923'te Ankara yeni başkent olmuştu ama Meclis Hükümeti sistemi kilitlenmişti: bakanlar tek tek seçiliyor, hükümet kurulamıyordu. 28 Ekim akşamı Çankaya'daki yemekte Mustafa Kemal Paşa \"Efendiler, yarın cumhuriyeti ilan edeceğiz!\" dedi. Ertesi gün Teşkilât-ı Esasiye'ye tek bir cümle eklendi, 158 oyla ilk cumhurbaşkanı seçildi ve yüz bir pare top atıldı. Cumhuriyet Bayramı'nın 103. yılında o günün hikâyesi.\n\nBu videoda:\n• Başkent Ankara ve kilitlenen Meclis\n• Ekim 1923 hükümet bunalımı\n• Çankaya'daki tarihî yemek\n• 29 Ekim: oylama, 158 oy ve 101 pare top\n• Peki neden tam o gün?\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence o yemekte \"biraz bekleyelim\" denseydi tarih nasıl değişirdi? Yorumlara yaz!\n\n#cumhuriyetinilanı #29ekim #cumhuriyetbayramı #tarih #düşünbakalım",
+  "tags": [
+   "cumhuriyetin ilanı",
+   "cumhuriyetin ilanı 1923",
+   "29 ekim 1923",
+   "cumhuriyet nasıl ilan edildi",
+   "cumhuriyet bayramı",
+   "29 ekim cumhuriyet bayramı",
+   "mustafa kemal atatürk",
+   "teşkilatı esasiye",
+   "çankaya köşkü",
+   "ismet paşa",
+   "cumhuriyetin ilanı 29 ekim",
+   "cumhuriyetin ilanı hikayesi",
+   "türkiye cumhuriyeti tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-27T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "29 Ekim akşamı",
+   "type": "cmh_meclis",
+   "text": "29 Ekim 1923, akşam saat sekiz buçuk. Ankara'daki küçük Meclis salonunda bir ses yükseldi: “Yaşasın Cumhuriyet!”",
+   "visual": "Gece, ilk Meclis salonu arkadan: tavanda sallanan lambalar, kemerli karanlık pencereler, duvarda bayrak ve sarkaçlı saat 20:30'u gösteriyor; kürsüde kalpaklı bir hatip; ön planda sırtı dönük kalpaklı, fesli, sarıklı milletvekilleri 'sekiz'de ayağa kalkıyor, 'Yaşasın'da kollarını ve kalpaklarını kaldırıyor.",
+   "title": {
+    "white": "Ankara",
+    "gray": "29 Ekim 1923"
+   },
+   "set": false,
+   "camera": {
+    "move": "push"
+   },
+   "cues": {
+    "rise": "sekiz",
+    "cheer": "Yaşasın"
+   },
+   "params": {
+    "night": true,
+    "rise": "rise",
+    "cheer": "cheer",
+    "clock": {
+     "from": "20:24",
+     "to": "20:30"
+    },
+    "speaker": {
+     "who": "s",
+     "hat": "kalpak",
+     "pose": "talk"
+    },
+    "chair": {
+     "who": "c",
+     "hat": "kalpak"
+    }
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "O gece ülkenin dört bir yanında toplar atılacaktı. Tam yüz bir pare.",
+   "visual": "Gece Ankara: tepede kale surları ve burçlar, yamaçta ışıkları yanan düz damlı evler, minare, kavaklar; solda sırttaki top 'toplar'da sırayla ateş edip duman püskürtüyor; 'yüz'de kâğıt kartta dev kırmızı sayaç 0'dan 101'e sayıyor, altında 'pare top'.",
+   "title": {
+    "white": "101 pare"
+   },
+   "set": {
+    "name": "night",
+    "ground": 880,
+    "horizon": 520
+   },
+   "cues": {
+    "fire": "toplar",
+    "n": "yüz"
+   },
+   "params": {
+    "mode": "town",
+    "night": true,
+    "cart": false,
+    "cannon": {
+     "at": "fire",
+     "x": 0.12,
+     "y": 0.62,
+     "shots": 6,
+     "gap": 0.5
+    },
+    "counter": {
+     "to": 101,
+     "at": "n",
+     "dur": 1.6,
+     "caption": "pare top",
+     "x": 0.3,
+     "y": 0.36
+    }
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Oysa bu kararın ilk cümlesi, bir gece önce bir yemek masasında söylenmişti.",
+   "visual": "Yakın plan, Çankaya'da gece yemek odası: sallanan lamba, perdeli pencerede ay; masanın başında kalpaklı ev sahibi 'cümlesi'nde elini kaldırıp konuşuyor; iki yanında kalpaklı ve fesli misafirler ona dönüyor; masada tabaklar, kadehler, şamdanlar.",
+   "title": {
+    "white": "Bir gece"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "cümlesi"
+   },
+   "params": {
+    "room": "dinner",
+    "cast": [
+     {
+      "who": "g1",
+      "hat": "kalpak",
+      "x": 0.19,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right"
+     },
+     {
+      "who": "g2",
+      "hat": "kalpak",
+      "x": 0.33,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right",
+      "beard": "short"
+     },
+     {
+      "who": "mk",
+      "hat": "kalpak",
+      "x": 0.5,
+      "y": 0.94,
+      "scale": 0.86,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "talk"
+     },
+     {
+      "who": "g3",
+      "hat": "kalpak",
+      "x": 0.67,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left"
+     },
+     {
+      "who": "g4",
+      "hat": "fes",
+      "x": 0.81,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left",
+      "beard": "grey"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki bir ülkenin rejimi, nasıl olur da tek bir günde değişir? Ve neden tam da o gün?",
+   "visual": "Dev Fraunces yazı kelime kelime: 'Neden tam o gün?', 'gün' kırmızı kutuda; el yazısı not '28-29 Ekim 1923'; sağda Kaşif çenesini tutup düşünüyor, 'gün'de izleyiciyi işaret ediyor.",
+   "title": {},
+   "cues": {
+    "w0": "rejimi",
+    "note": "neden"
+   },
+   "params": {
+    "lines": [
+     "Neden",
+     "tam o gün?"
+    ],
+    "highlight": [
+     "gün"
+    ],
+    "note": {
+     "text": "28-29 Ekim 1923",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.85,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.8
+    }
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "Cevap için birkaç gün geriye, Ankara'nın tozlu sokaklarına gidelim. Çünkü her şey, bir hükümet kriziyle başladı!",
+   "visual": "Gündüz Ankara: tepede kale, yamaçta kerpiç evler, minare, kavaklar, telgraf direkleri; tozlu yolda öküz arabası gıcırdayarak geçiyor; solda Kaşif yürüyerek kadraja giriyor, 'sokaklarına'da kasabayı işaret ediyor.",
+   "title": {
+    "white": "Ankara",
+    "gray": "Ekim 1923"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 880,
+    "horizon": 560
+   },
+   "cues": {
+    "walk": "geriye",
+    "hit": "sokaklarına"
+   },
+   "params": {
+    "mode": "town",
+    "cart": {
+     "x": 0.3,
+     "speed": 50
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.02,
+      "to": 0.17,
+      "y": 0.97,
+      "scale": 0.85,
+      "pose": "walk",
+      "walk_at": "walk",
+      "walk_dur": 1.5,
+      "at": "hit",
+      "then": "point",
+      "dir": "right",
+      "face": "right",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Başkent bir kasaba",
+   "type": "chapter",
+   "text": "Ekim 1923. Kurtuluş Savaşı bitmiş, Lozan Antlaşması üç ay önce imzalanmıştı.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Başkent bir kasaba' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "1923",
+    "title": "Lozan"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Başkent bir kasaba"
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "Ankara ise dar sokaklı, kerpiç evli küçük bir Anadolu kasabasıydı. Ama 13 Ekim'de bu kasaba, yeni devletin başkenti oldu.",
+   "visual": "Gündüz Ankara geniş plan: kale tepesi, düz damlı kerpiç evler, minare, kavaklar, telgraf telleri; öküz arabası yoldan geçiyor; 'başkenti'nde kalenin üstüne kırmızı 'Başkent' damgası iniyor.",
+   "title": {
+    "white": "Ankara",
+    "gray": "13 Ekim 1923"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 880,
+    "horizon": 560
+   },
+   "source": "Wikipedia",
+   "cues": {
+    "hit": "başkenti"
+   },
+   "params": {
+    "mode": "town",
+    "cart": {
+     "x": 0.02,
+     "speed": 70
+    },
+    "labels": [
+     {
+      "text": "Başkent",
+      "x": 0.7,
+      "y": 0.22,
+      "at": "hit",
+      "stamp": true,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "Bu devletin bir meclisi vardı, ordusu vardı, zaferi vardı. Ama yönetim biçiminin resmî bir adı yoktu.",
+   "visual": "İlk Meclis binası önden: iki katlı taş bina, kemerli pencereler, çatıda dalgalanan bayrak, merdivenler; kapının üstünde asılı tabela 'yoktu'da beliriyor, üstünde kırmızı dev bir '?'.",
+   "title": {
+    "white": "İlk Meclis"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 880,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     1290,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "yoktu"
+   },
+   "params": {
+    "mode": "meclis",
+    "cart": false,
+    "sign": {
+     "text": "?",
+     "at": "hit",
+     "x": 0.67,
+     "y": 0.47,
+     "size": 110
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Saltanat bir yıl önce kaldırılmıştı, halife ise hâlâ İstanbul'daydı. Peki devletin başı kimdi? Kâğıt üstünde bunun net bir cevabı yoktu.",
+   "visual": "Yatay zaman çizgisi: '1922 Saltanat kalktı', '1923 Lozan', '1923 13 Ekim: Başkent Ankara' sırayla beliriyor; sonuncusu '1923 29 Ekim: ?' kırmızı halkada.",
+   "title": {
+    "white": "Devletin başı?"
+   },
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   },
+   "cues": {
+    "c0": "Saltanat",
+    "c1": "Halife",
+    "c2": "başı",
+    "c3": "cevabı"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1922",
+      "text": "Saltanat kalktı",
+      "at": "c0"
+     },
+     {
+      "year": "1923",
+      "text": "Lozan",
+      "at": "c1"
+     },
+     {
+      "year": "1923",
+      "text": "13 Ekim: Başkent Ankara",
+      "at": "c2"
+     },
+     {
+      "year": "1923",
+      "text": "29 Ekim: ?",
+      "at": "c3"
+     }
+    ],
+    "focus": 3
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "Üstelik sistem de tuhaftı. Bakanları tek tek Meclis seçiyordu. Yani her bakan için ayrı bir oylama, ayrı bir tartışma vardı.",
+   "visual": "Gündüz Meclis salonu: sağda bakanlar sırası, boş sandalyeler; 'tek'te sandalyelerin üstünde 'İçişleri', 'Maliye', 'Adliye' kartları tek tek beliriyor; 'tartışma'da milletvekilleri birbirine dönüp işaret ediyor.",
+   "title": {
+    "white": "Bakanlar",
+    "gray": "tek tek seçilir"
+   },
+   "set": false,
+   "source": "Wikipedia",
+   "cues": {
+    "a": "tek",
+    "b": "oylama",
+    "c": "tartışma"
+   },
+   "params": {
+    "rows": 3,
+    "argue": "c",
+    "clock": {
+     "time": "11:00"
+    },
+    "speaker": {
+     "who": "s",
+     "hat": "fes",
+     "pose": "talk",
+     "beard": "short"
+    },
+    "bench": {
+     "n": 5,
+     "x0": 0.64,
+     "x1": 0.94,
+     "cards": [
+      {
+       "text": "İçişleri",
+       "at": "a"
+      },
+      {
+       "text": "Maliye",
+       "at": "b"
+      },
+      {
+       "text": "Adliye",
+       "at": "c"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "Kulağa adil geliyor, değil mi? Ama birazdan bu sistem, kendi kendine kilitlenecekti.",
+   "visual": "Meclis salonu, yan kapı: önde Kaşif kapıyı işaret ediyor; 'kilitlenecekti'de kapının üstüne gökten dev altın bir asma kilit düşüyor, Kaşif şokla geri sıçrıyor.",
+   "title": {
+    "white": "Kilit"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     600,
+     660
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "q": "adil",
+    "lock": "kilitlenecekti"
+   },
+   "params": {
+    "rows": 2,
+    "crowd": 0.8,
+    "lock": {
+     "at": "lock"
+    },
+    "clock": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "y": 0.99,
+      "scale": 1.1,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "point",
+        "dir": "left",
+        "face": "left"
+       },
+       {
+        "at": "lock",
+        "pose": "shock",
+        "emotion": "surprised",
+        "face": "left"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Kilitlenen Meclis",
+   "type": "chapter",
+   "text": "Ekim'in son haftasında iki koltuk için yeni isimler gerekiyordu.",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Kilitlenen Meclis' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Ekim'in",
+    "title": "koltuk"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Kilitlenen Meclis"
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "İçişleri Bakanlığı ve Meclis başkanvekilliği. Ama Halk Fırkası grubu, önerilen adayları seçmedi ve başka isimlere oy verdi.",
+   "visual": "Meclis salonu, bakanlar sırası: iki sandalyenin üstünde 'İçişleri' ve 'Başkanvekili' kartları; 'seçmedi'de kartların üstünden kırmızı çizgi geçiyor; 'oy'da milletvekilleri ellerini kaldırıyor.",
+   "title": {
+    "white": "İki koltuk"
+   },
+   "set": false,
+   "source": "Alev Coşkun",
+   "camera": {
+    "focus": [
+     1560,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "left"
+   },
+   "cues": {
+    "a": "İçişleri",
+    "b": "başkanvekilliği",
+    "x": "seçmedi",
+    "v": "oy"
+   },
+   "params": {
+    "rows": 3,
+    "clock": {
+     "time": "15:00"
+    },
+    "cheer": "v",
+    "bench": {
+     "n": 4,
+     "x0": 0.66,
+     "x1": 0.92,
+     "cards": [
+      {
+       "text": "İçişleri",
+       "at": "a",
+       "strike": "x"
+      },
+      {
+       "text": "Başkanvekili",
+       "at": "b",
+       "strike": "x"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Bunun üzerine Mustafa Kemal Paşa, bakanları Çankaya'da topladı. Orada şaşırtıcı bir karar alındı: hükümet topluca istifa edecekti.",
+   "visual": "Gündüz, Çankaya'da kitaplıklı çalışma odası: pencerede bulutlar; ayakta duran kalpaklı ve fesli bakanlar; ortada kalpaklı Mustafa Kemal Paşa, adı etiketle beliriyor; 'istifa'da bakanların ellerinden kâğıtlar uçup ortadaki küçük masada üst üste yığılıyor; 'edecekti'de bakanlar omuz silkiyor.",
+   "title": {
+    "white": "Çankaya",
+    "gray": "Ekim 1923"
+   },
+   "set": false,
+   "source": "Alev Coşkun",
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   },
+   "cues": {
+    "name": "Mustafa",
+    "hit": "istifa",
+    "no": "edecekti"
+   },
+   "params": {
+    "room": "study",
+    "letters": {
+     "at": "hit",
+     "n": 4,
+     "from": [
+      0.2,
+      0.33,
+      0.67,
+      0.8
+     ]
+    },
+    "cast": [
+     {
+      "who": "b1",
+      "hat": "kalpak",
+      "x": 0.2,
+      "y": 0.94,
+      "scale": 0.8,
+      "face": "right",
+      "at": "no",
+      "then": "shrug"
+     },
+     {
+      "who": "b2",
+      "hat": "fes",
+      "x": 0.33,
+      "y": 0.94,
+      "scale": 0.8,
+      "face": "right",
+      "beard": "short",
+      "at": "no",
+      "then": "shrug"
+     },
+     {
+      "who": "mk",
+      "hat": "kalpak",
+      "x": 0.5,
+      "y": 0.97,
+      "scale": 0.9,
+      "face": "right",
+      "pose": "talk",
+      "tag": "Mustafa Kemal Paşa",
+      "tag_at": "name"
+     },
+     {
+      "who": "b3",
+      "hat": "kalpak",
+      "x": 0.67,
+      "y": 0.94,
+      "scale": 0.8,
+      "face": "left",
+      "beard": "grey",
+      "at": "no",
+      "then": "shrug"
+     },
+     {
+      "who": "b4",
+      "hat": "fes",
+      "x": 0.8,
+      "y": 0.94,
+      "scale": 0.8,
+      "face": "left",
+      "at": "no",
+      "then": "shrug"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "İstifa 27 Ekim'de Meclis'te okundu. Artık Meclis'in yepyeni bir hükümet seçmesi gerekiyordu.",
+   "visual": "Gündüz Meclis salonu, kürsüye yakın: fesli hatip elindeki kâğıdı kaldırıp okuyor; sağda bakanlar sırası bomboş; el yazısı not '27 Ekim'.",
+   "title": {
+    "white": "İstifa",
+    "gray": "27 Ekim"
+   },
+   "set": false,
+   "source": "Alev Coşkun",
+   "camera": {
+    "focus": [
+     1100,
+     520
+    ],
+    "zoom": 1.45,
+    "move": "right"
+   },
+   "cues": {
+    "p": "İstifa",
+    "n": "yepyeni"
+   },
+   "params": {
+    "rows": 3,
+    "paper": "p",
+    "clock": {
+     "time": "14:00"
+    },
+    "speaker": {
+     "who": "s",
+     "hat": "fes",
+     "pose": "talk",
+     "beard": "short"
+    },
+    "bench": {
+     "n": 6,
+     "x0": 0.66,
+     "x1": 0.94
+    }
+   }
+  },
+  {
+   "type": "board",
+   "text": "Ama önerilen isimler görevi kabul etmedi. Eski bakanlar da geri dönmeyeceklerini söylemişti. Liste bir türlü tamamlanamadı.",
+   "visual": "Pano: başlık 'Yeni hükümet?'; kartta 'Aday 1', 'Aday 2', 'Eski bakanlar' sırayla beliriyor, her biri kırmızı ✗ alıyor; altta kırmızı hap 'Liste boş'.",
+   "title": {
+    "white": "Yeni hükümet?"
+   },
+   "source": "Nutuk",
+   "camera": {
+    "focus": [
+     960,
+     385
+    ],
+    "zoom": 1.1,
+    "move": "still"
+   },
+   "cues": {
+    "a": "önerilen",
+    "b": "kabul",
+    "c": "Eski",
+    "pill": "tamamlanamadı"
+   },
+   "params": {
+    "title": "Yeni hükümet?",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Aday 1",
+        "mark": "x",
+        "at": "a"
+       },
+       {
+        "text": "Aday 2",
+        "mark": "x",
+        "at": "b"
+       },
+       {
+        "text": "Eski bakanlar",
+        "mark": "x",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Liste boş",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "Düşünün: Zaferle çıkmış bir ülke, kendine bir hükümet bile kuramıyordu.",
+   "visual": "Meclis salonu: bakanlar sırasında bomboş sandalyeler; önde Kaşif boş sandalyeleri gösterip omuz silkiyor, 'kuramıyordu'da şaşkınlıkla elini başına götürür gibi geri çekiliyor.",
+   "title": {
+    "white": "Boş koltuklar"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     700,
+     640
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   },
+   "cues": {
+    "q": "Zaferle",
+    "hit": "kuramıyordu"
+   },
+   "params": {
+    "rows": 2,
+    "crowd": 0.8,
+    "clock": {
+     "time": "17:00"
+    },
+    "bench": {
+     "n": 6,
+     "x0": 0.6,
+     "x1": 0.94
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "y": 0.99,
+      "scale": 1.1,
+      "pose": "point",
+      "dir": "right",
+      "face": "right",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "shrug",
+        "emotion": "worried"
+       },
+       {
+        "at": "hit",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "İşte tam bu düğümün ortasında, 28 Ekim akşamı Çankaya'daki köşkte bir yemek verildi.",
+   "visual": "Gece Çankaya: tepede iki katlı köşk ve küçük kulesi, pencereler sarı ışıkla yanıyor, kavaklar rüzgârda sallanıyor; 'yemek'te köşkün önüne '28 Ekim' tabelası iniyor.",
+   "title": {
+    "white": "Çankaya",
+    "gray": "28 Ekim akşamı"
+   },
+   "set": {
+    "name": "night",
+    "ground": 880,
+    "horizon": 560
+   },
+   "camera": {
+    "move": "push"
+   },
+   "cues": {
+    "hit": "yemek"
+   },
+   "params": {
+    "mode": "kosk",
+    "night": true,
+    "cart": false,
+    "poles": false,
+    "sign": {
+     "text": "28 Ekim",
+     "at": "hit",
+     "x": 0.22,
+     "y": 0.42,
+     "color": "red"
+    }
+   }
+  },
+  {
+   "chapter": "Çankaya'da bir yemek",
+   "type": "chapter",
+   "text": "Masada Mustafa Kemal Paşa'nın en yakın çalışma arkadaşları vardı.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Çankaya'da bir yemek' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Masada",
+    "title": "arkadaşları"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Çankaya'da bir yemek"
+   },
+   "set": false
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "İsmet Paşa, Kâzım Paşa, Fethi Bey, Kemalettin Sami Paşa ve birkaç milletvekili. Kimse bu gecenin farklı olacağını bilmiyordu.",
+   "visual": "Çankaya yemek odası, gece: uzun masa, tabaklar, kadehler, şamdanlar; masada kalpaklı ve fesli misafirler; 'İsmet'te soldaki misafirin üstünde 'İsmet Paşa', 'Fethi'de sağdakinin üstünde 'Fethi Bey' etiketi beliriyor; lamba sallanıyor.",
+   "title": {
+    "white": "Misafirler"
+   },
+   "set": false,
+   "source": "Nutuk",
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.25,
+    "move": "right"
+   },
+   "cues": {
+    "a": "İsmet",
+    "b": "Fethi",
+    "c": "farklı"
+   },
+   "params": {
+    "room": "dinner",
+    "cast": [
+     {
+      "who": "g1",
+      "hat": "kalpak",
+      "x": 0.19,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right"
+     },
+     {
+      "who": "g2",
+      "hat": "kalpak",
+      "x": 0.33,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right",
+      "beard": "short",
+      "tag": "İsmet Paşa",
+      "tag_at": "a"
+     },
+     {
+      "who": "mk",
+      "hat": "kalpak",
+      "x": 0.5,
+      "y": 0.94,
+      "scale": 0.86,
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "g3",
+      "hat": "kalpak",
+      "x": 0.67,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left",
+      "tag": "Fethi Bey",
+      "tag_at": "b"
+     },
+     {
+      "who": "g4",
+      "hat": "fes",
+      "x": 0.81,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left",
+      "beard": "grey"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Yemeğin bir yerinde Mustafa Kemal arkadaşlarına döndü ve o tarihî cümleyi söyledi:",
+   "visual": "Yakın plan, masanın başı: kalpaklı Mustafa Kemal Paşa 'döndü'de misafirlere dönüp konuşmaya başlıyor; misafirler ona bakıyor; şamdan alevi titriyor.",
+   "title": {
+    "white": "28 Ekim",
+    "gray": "Çankaya"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 2.1,
+    "move": "push"
+   },
+   "cues": {
+    "turn": "döndü",
+    "hit": "cümleyi"
+   },
+   "params": {
+    "room": "dinner",
+    "cast": [
+     {
+      "who": "g1",
+      "hat": "kalpak",
+      "x": 0.19,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right"
+     },
+     {
+      "who": "g2",
+      "hat": "kalpak",
+      "x": 0.33,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right",
+      "beard": "short"
+     },
+     {
+      "who": "mk",
+      "hat": "kalpak",
+      "x": 0.5,
+      "y": 0.94,
+      "scale": 0.86,
+      "pose": "idle",
+      "face": "right",
+      "tag": "Mustafa Kemal Paşa",
+      "tag_at": "turn",
+      "seq": [
+       {
+        "at": "turn",
+        "pose": "talk"
+       },
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "up"
+       }
+      ]
+     },
+     {
+      "who": "g3",
+      "hat": "kalpak",
+      "x": 0.67,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left"
+     },
+     {
+      "who": "g4",
+      "hat": "fes",
+      "x": 0.81,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left",
+      "beard": "grey"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "“Efendiler, yarın cumhuriyeti ilan edeceğiz!”",
+   "visual": "Dev Fraunces yazı kelime kelime: 'Yarın cumhuriyeti ilan edeceğiz!', 'cumhuriyeti' kırmızı kutuda; el yazısı not '28 Ekim 1923, Çankaya'.",
+   "title": {
+    "white": "Nutuk"
+   },
+   "source": "Nutuk",
+   "cues": {
+    "w0": "yarın",
+    "note": "ilan"
+   },
+   "params": {
+    "lines": [
+     "Yarın",
+     "cumhuriyeti",
+     "ilan edeceğiz!"
+    ],
+    "highlight": [
+     "cumhuriyeti"
+    ],
+    "arrow": false,
+    "note": {
+     "text": "28 Ekim 1923, Çankaya",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Masadakiler bu fikre hemen katıldı. Ama bazıları, biraz beklemeyi önerdi.",
+   "visual": "Yemek odası: misafirler 'katıldı'da ayağa kalkar gibi heyecanla el sallıyor; sağdaki fesli, kır sakallı misafir 'uygun'da parmağını kaldırıp itiraz ediyor; el yazısı not 'Biraz bekleyelim mi?'.",
+   "title": {
+    "white": "Ne zaman?"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   },
+   "cues": {
+    "yes": "katıldı",
+    "hit": "beklemeyi"
+   },
+   "params": {
+    "room": "dinner",
+    "cast": [
+     {
+      "who": "g1",
+      "hat": "kalpak",
+      "x": 0.19,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right",
+      "at": "yes",
+      "then": "wave"
+     },
+     {
+      "who": "g2",
+      "hat": "kalpak",
+      "x": 0.33,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "right",
+      "beard": "short",
+      "at": "yes",
+      "then": "wave"
+     },
+     {
+      "who": "mk",
+      "hat": "kalpak",
+      "x": 0.5,
+      "y": 0.94,
+      "scale": 0.86,
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "who": "g3",
+      "hat": "kalpak",
+      "x": 0.67,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left",
+      "at": "yes",
+      "then": "wave"
+     },
+     {
+      "who": "g4",
+      "hat": "fes",
+      "x": 0.81,
+      "y": 0.915,
+      "scale": 0.78,
+      "face": "left",
+      "beard": "grey",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Biraz bekleyelim mi?",
+      "x": 0.25,
+      "y": 0.36,
+      "at": "hit",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Anlatılana göre, “bunu en kuvvetli olduğumuz bir anda yapalım” diyenlere cevap kısaydı: “En kuvvetli olduğumuz gün bugünlerdir.”",
+   "visual": "Dev Fraunces yazı kelime kelime: 'En kuvvetli gün: bugün', 'bugün' kırmızı kutuda; el yazısı not 'Mustafa Kemal, 28 Ekim'.",
+   "title": {
+    "white": "Cevap"
+   },
+   "source": "Alev Coşkun",
+   "cues": {
+    "w0": "cevap",
+    "note": "bugünlerdir"
+   },
+   "params": {
+    "lines": [
+     "En kuvvetli gün:",
+     "bugün"
+    ],
+    "highlight": [
+     "bugün"
+    ],
+    "arrow": false,
+    "note": {
+     "text": "Mustafa Kemal, 28 Ekim",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Misafirler gittikten sonra köşkün ışıkları sönmedi. Mustafa Kemal ve İsmet Paşa, o gece bir kanun teklifi hazırladı.",
+   "visual": "Gece çalışma masası: yağ lambası titreyen ışık saçıyor, pencerede ay, duvarda saat gece yarısına ilerliyor; masada büyük bir kâğıt, divit kalem 'teklifi'nde yazmaya başlıyor: başlık 'Kanun teklifi'.",
+   "title": {
+    "white": "Gece yarısı"
+   },
+   "set": false,
+   "source": "Nutuk",
+   "camera": {
+    "focus": [
+     960,
+     680
+    ],
+    "zoom": 1.12,
+    "move": "push"
+   },
+   "cues": {
+    "w0": "teklifi"
+   },
+   "params": {
+    "room": "desk",
+    "heading": "Kanun teklifi",
+    "words": [
+     {
+      "text": "Madde 1 ...",
+      "at": "w0"
+     }
+    ],
+    "clock": {
+     "from": "23:20",
+     "to": "00:40"
+    }
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Teklif anayasanın birkaç maddesini değiştiriyordu. Ama kalbinde, birinci maddeye eklenecek tek bir cümle vardı.",
+   "visual": "Yakın plan kâğıt: başlık 'Kanun teklifi'; 'birkaç'ta 'Birkaç madde', 'cümle'de altına kırmızı '+ tek cümle' yazılıyor; divit yazıyı takip ediyor.",
+   "title": {
+    "white": "Teklif"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     760
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "cues": {
+    "w0": "birkaç",
+    "w1": "cümle"
+   },
+   "params": {
+    "room": "desk",
+    "heading": "Kanun teklifi",
+    "words": [
+     {
+      "text": "Birkaç madde",
+      "at": "w0"
+     },
+     {
+      "text": "+ tek cümle",
+      "at": "w1",
+      "line": 1,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "Sabaha karşı teklif hazırdı. Peki ertesi gün Meclis buna ne diyecekti? Çünkü asıl gerilim şimdi başlıyordu.",
+   "visual": "Gece, Çankaya köşkünün önü: pencerelerin çoğu karanlık, tek pencere hâlâ yanıyor; önde Kaşif elinde 'Teklif' yazan kâğıdı kaldırıp gösteriyor, 'gerilim'de endişeyle omuz silkiyor; kavaklar rüzgârda.",
+   "title": {
+    "white": "Ertesi gün?"
+   },
+   "set": {
+    "name": "night",
+    "ground": 880,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     700,
+     600
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   },
+   "cues": {
+    "q": "Meclis",
+    "hit": "gerilim"
+   },
+   "params": {
+    "mode": "kosk",
+    "night": true,
+    "cart": false,
+    "poles": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.97,
+      "scale": 0.95,
+      "pose": "hold",
+      "text": "Teklif",
+      "face": "right",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "29 Ekim",
+   "type": "chapter",
+   "text": "29 Ekim sabahı Halk Fırkası milletvekilleri yine toplandı.",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında '29 Ekim' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "sabahı",
+    "title": "Fırkası"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "29 Ekim"
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Konu aynıydı: hükümet bir türlü kurulamıyordu. Tartışma uzadı, ama çözüm çıkmadı.",
+   "visual": "Fırka grubunun toplantı odası, sabah: kitaplık, pencere, duvarda saat 10:00'dan ileri akıyor; kalpaklı ve fesli vekiller iki grup halinde karşı karşıya, 'Tartışma'da birbirlerini öfkeyle işaret ediyor, 'çözüm'de omuz silkiyor.",
+   "title": {
+    "white": "Grup toplantısı",
+    "gray": "sabah"
+   },
+   "set": false,
+   "source": "Alev Coşkun",
+   "camera": {
+    "focus": [
+     960,
+     620
+    ],
+    "zoom": 1.3,
+    "move": "right"
+   },
+   "cues": {
+    "arg": "Tartışma",
+    "hit": "çözüm"
+   },
+   "params": {
+    "room": "study",
+    "clock": {
+     "from": "10:00",
+     "to": "11:20"
+    },
+    "cast": [
+     {
+      "who": "d1",
+      "hat": "kalpak",
+      "x": 0.2,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "right",
+      "seq": [
+       {
+        "at": "arg",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "angry"
+       },
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "d2",
+      "hat": "fes",
+      "x": 0.34,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "right",
+      "beard": "short",
+      "seq": [
+       {
+        "at": "arg",
+        "pose": "talk",
+        "emotion": "angry"
+       },
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "d3",
+      "hat": "kalpak",
+      "x": 0.66,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "left",
+      "beard": "grey",
+      "seq": [
+       {
+        "at": "arg",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "angry"
+       },
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "d4",
+      "hat": "fes",
+      "x": 0.8,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "left",
+      "seq": [
+       {
+        "at": "arg",
+        "pose": "talk",
+        "emotion": "angry"
+       },
+       {
+        "at": "hit",
+        "pose": "think",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Sonunda Mustafa Kemal'in görüşünü dinlemek istediler. O da bir saat süre istedi, sonra geri dönüp teklifini okudu.",
+   "visual": "Aynı toplantı odası: ortada kalpaklı Mustafa Kemal Paşa, adı etiketle beliriyor; duvardaki saat 'saat'te bir saat ileri sarıyor; 'okudu'da 'Teklif' yazan kâğıdı kaldırıyor; iki yanındaki vekiller ona dönüp dinliyor.",
+   "title": {
+    "white": "Teklif"
+   },
+   "set": false,
+   "source": "Alev Coşkun",
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.45,
+    "move": "push"
+   },
+   "cues": {
+    "name": "Mustafa",
+    "h": "saat",
+    "p": "geri"
+   },
+   "params": {
+    "room": "study",
+    "clock": {
+     "from": "11:20",
+     "to": "12:20",
+     "at": "h",
+     "dur": 1.2
+    },
+    "cast": [
+     {
+      "who": "d1",
+      "hat": "kalpak",
+      "x": 0.24,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "right",
+      "pose": "idle"
+     },
+     {
+      "who": "d2",
+      "hat": "fes",
+      "x": 0.36,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "right",
+      "beard": "short",
+      "pose": "think"
+     },
+     {
+      "who": "mk",
+      "hat": "kalpak",
+      "x": 0.5,
+      "y": 0.97,
+      "scale": 0.95,
+      "face": "right",
+      "pose": "talk",
+      "tag": "Mustafa Kemal Paşa",
+      "tag_at": "name",
+      "at": "p",
+      "then": "hold",
+      "text": "Teklif"
+     },
+     {
+      "who": "d3",
+      "hat": "kalpak",
+      "x": 0.64,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "left",
+      "beard": "grey",
+      "pose": "idle"
+     },
+     {
+      "who": "d4",
+      "hat": "fes",
+      "x": 0.76,
+      "y": 0.95,
+      "scale": 0.85,
+      "face": "left",
+      "pose": "think"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Bakın, teklifin mantığı basitti: Sorun kişilerde değil, sistemin kendisindeydi.",
+   "visual": "Dev Fraunces yazı kelime kelime: 'Sorun kişiler değil, sistem', 'sistem' kırmızı kutuda; el yazısı not 'Meclis Hükümeti'.",
+   "title": {
+    "white": "Asıl sorun"
+   },
+   "cues": {
+    "w0": "Sorun",
+    "note": "sistemin"
+   },
+   "params": {
+    "lines": [
+     "Sorun",
+     "kişiler değil:",
+     "sistem"
+    ],
+    "highlight": [
+     "sistem"
+    ],
+    "y": 0.48,
+    "arrow": false,
+    "note": {
+     "text": "Meclis Hükümeti",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "Akşam saat altıda Meclis toplandı. Oturumu İsmet Paşa yönetiyordu.",
+   "visual": "Akşam Meclis salonu, lambalar yanıyor: saat 18:00; kürsünün arkasındaki başkanlık masasında kalpaklı İsmet Paşa, adı etiketle beliriyor; milletvekilleri yerlerine oturuyor.",
+   "title": {
+    "white": "Saat 18.00"
+   },
+   "set": false,
+   "source": "Nutuk",
+   "camera": {
+    "focus": [
+     880,
+     400
+    ],
+    "zoom": 1.9,
+    "move": "push"
+   },
+   "cues": {
+    "h": "altıda",
+    "name": "İsmet"
+   },
+   "params": {
+    "night": true,
+    "rows": 3,
+    "clock": {
+     "from": "17:40",
+     "to": "18:00",
+     "at": "h",
+     "dur": 1.0
+    },
+    "chair": {
+     "who": "ip",
+     "hat": "kalpak",
+     "tag": "İsmet Paşa",
+     "tag_at": "name"
+    }
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "Ve o cümle okundu: “Türkiye Devleti'nin şekl-i hükümeti Cumhuriyettir.”",
+   "visual": "Yakın plan kâğıt, lamba ışığında: 'Türkiye Devletinin şekl-i / hükümeti Cumhuriyettir.' kelime kelime el yazısıyla yazılıyor, 'Cumhuriyettir' kırmızı; kalem kelimeyi takip ediyor.",
+   "title": {
+    "white": "Madde 1"
+   },
+   "set": false,
+   "source": "TBMM tutanağı",
+   "camera": {
+    "focus": [
+     960,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "w0": "Türkiye",
+    "w1": "Devleti'nin",
+    "w2": "şekl-i",
+    "w3": "hükümeti",
+    "w4": "Cumhuriyettir"
+   },
+   "params": {
+    "room": "desk",
+    "heading": "Madde 1",
+    "write_dur": 0.4,
+    "words": [
+     {
+      "text": "Türkiye",
+      "at": "w0"
+     },
+     {
+      "text": "Devletinin",
+      "at": "w1"
+     },
+     {
+      "text": "şekl-i",
+      "at": "w2"
+     },
+     {
+      "text": "hükümeti",
+      "at": "w3",
+      "line": 1
+     },
+     {
+      "text": "Cumhuriyettir.",
+      "at": "w4",
+      "line": 1,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "Saat sekiz buçukta teklif kabul edildi. Salonda “Yaşasın Cumhuriyet!” sesleri yükseldi.",
+   "visual": "Gece Meclis salonu: saat 20:30'a geliyor; 'kabul'de milletvekilleri ayağa kalkıyor, 'Yaşasın'da kollar ve kalpaklar havada; önde Kaşif 'kabul'de hayretle dönüyor, 'Yaşasın'da el sallıyor.",
+   "title": {
+    "white": "Saat 20.30"
+   },
+   "set": false,
+   "source": "Nutuk",
+   "camera": {
+    "focus": [
+     960,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   },
+   "cues": {
+    "h": "sekiz",
+    "rise": "kabul",
+    "cheer": "Yaşasın"
+   },
+   "params": {
+    "night": true,
+    "rise": "rise",
+    "cheer": "cheer",
+    "clock": {
+     "from": "20:10",
+     "to": "20:30",
+     "at": "h",
+     "dur": 1.0
+    },
+    "speaker": {
+     "who": "s",
+     "hat": "kalpak",
+     "pose": "talk"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.34,
+      "y": 0.99,
+      "scale": 1.0,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "rise",
+        "pose": "shock",
+        "emotion": "surprised"
+       },
+       {
+        "at": "cheer",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "On beş dakika sonra ilk cumhurbaşkanı seçimi yapıldı. Oylamaya yüz elli sekiz milletvekili katıldı.",
+   "visual": "Gece Meclis salonu: saat 20:45; kürsünün önüne oy sandığı geliyor, oy pusulaları sandığa düşüyor; 'yüz'de sağ üstte kartta sayaç 0'dan 158'e çıkıyor.",
+   "title": {
+    "white": "Saat 20.45"
+   },
+   "set": false,
+   "source": "TBMM tutanağı",
+   "camera": {
+    "focus": [
+     1400,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "cues": {
+    "b": "cumhurbaşkanı",
+    "n": "yüz"
+   },
+   "params": {
+    "night": true,
+    "rows": 3,
+    "clock": {
+     "from": "20:30",
+     "to": "20:45"
+    },
+    "ballot": {
+     "at": "b",
+     "x": 0.64,
+     "count": {
+      "to": 158,
+      "at": "n",
+      "dur": 2.0,
+      "x": 0.82,
+      "y": 0.42
+     }
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Ve yüz elli sekiz oyun hepsi tek bir isme çıktı: Mustafa Kemal Paşa.",
+   "visual": "Dev Fraunces yazı: '158 oy, tek isim', 'tek' kırmızı kutuda; el yazısı not 'Mustafa Kemal Paşa'.",
+   "title": {
+    "white": "Oybirliği"
+   },
+   "source": "Nutuk",
+   "cues": {
+    "w0": "sekiz",
+    "note": "isme"
+   },
+   "params": {
+    "lines": [
+     "158 oy,",
+     "tek isim"
+    ],
+    "highlight": [
+     "tek"
+    ],
+    "note": {
+     "text": "Mustafa Kemal Paşa",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "cmh_telgraf",
+   "text": "O gece haber, telgraf telleriyle bütün ülkeye yayıldı.",
+   "visual": "Gece telgrafhane: fesli memur pirinç maniplenin başında, tuşa basıyor; masadan Mors noktalı şerit akıyor; tel duvardan pencereye uzanıyor, üstünde kıvılcımlar koşuyor; 'yayıldı'da şeridin üstünde kırmızı 'CUMHURİYET' beliriyor.",
+   "title": {
+    "white": "Telgraf"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     720
+    ],
+    "zoom": 1.22,
+    "move": "push"
+   },
+   "cues": {
+    "a": "haber",
+    "c": "yayıldı"
+   },
+   "params": {
+    "mode": "office",
+    "at": "a",
+    "tape": {
+     "text": "Cumhuriyet",
+     "at": "c"
+    },
+    "clock": {
+     "time": "21:30"
+    }
+   }
+  },
+  {
+   "type": "cmh_telgraf",
+   "text": "İstanbul, İzmir, Trabzon ve Erzurum gibi şehirlerde de yüz bir pare top atıldı.",
+   "visual": "Eski Anadolu ve Trakya haritası: Ankara'dan telgraf hatları direkleriyle şehirlere uzanıyor, üstünde kıvılcım koşuyor; İstanbul, İzmir, Trabzon, Erzurum'a varınca birer top patlaması.",
+   "title": {
+    "white": "101 pare"
+   },
+   "set": false,
+   "source": "TBMM tutanağı",
+   "cues": {
+    "a": "İstanbul",
+    "b": "İzmir",
+    "c": "Trabzon",
+    "d": "Erzurum"
+   },
+   "params": {
+    "mode": "map",
+    "cities": [
+     {
+      "name": "İstanbul",
+      "lon": 28.97,
+      "lat": 41.01,
+      "at": "a"
+     },
+     {
+      "name": "İzmir",
+      "lon": 27.14,
+      "lat": 38.42,
+      "at": "b",
+      "dy": 66
+     },
+     {
+      "name": "Trabzon",
+      "lon": 39.72,
+      "lat": 41.0,
+      "at": "c"
+     },
+     {
+      "name": "Erzurum",
+      "lon": 41.27,
+      "lat": 39.9,
+      "at": "d",
+      "dy": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "Ama durun. Asıl soru hâlâ cevapsız: Bütün bunlar neden bu kadar hızlı oldu? Neden tam o gün?",
+   "visual": "Gece Ankara: tepede kale, yanan pencereler; solda top ateş ediyor, duman yükseliyor; önde Kaşif elini kaldırıp 'durun' diyor, 'hızlı'da izleyiciyi işaret ediyor.",
+   "title": {
+    "white": "Asıl soru"
+   },
+   "set": {
+    "name": "night",
+    "ground": 880,
+    "horizon": 520
+   },
+   "cues": {
+    "stop": "durun",
+    "hit": "hızlı"
+   },
+   "params": {
+    "mode": "town",
+    "night": true,
+    "cart": false,
+    "cannon": {
+     "at": 0.4,
+     "x": 0.1,
+     "y": 0.6,
+     "shots": 3,
+     "gap": 1.4
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.32,
+      "y": 0.97,
+      "scale": 0.9,
+      "pose": "wave",
+      "face": "right",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "forward"
+       }
+      ],
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Peki neden o gün?",
+   "type": "chapter",
+   "text": "Bakın, cumhuriyet fikri Ankara'da bir süredir konuşuluyordu. Ama hep “biraz daha bekleyelim” deniyordu.",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Peki neden o gün?' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "cumhuriyet",
+    "title": "bekleyelim"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Peki neden o gün?"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Düşünün: Lozan imzalanmış, başkent seçilmişti. Ama bakanları tek tek seçen sistem tıkanmıştı ve bunu artık herkes görüyordu.",
+   "visual": "Pano: başlık 'Ekim 1923'; kartta sırayla yeşil ✓ 'Lozan imzalandı', yeşil ✓ 'Başkent Ankara', kırmızı ✗ 'Hükümet kurulamıyor'; altta kırmızı hap 'Eksik: tek isim'.",
+   "title": {
+    "white": "Ekim 1923"
+   },
+   "camera": {
+    "focus": [
+     960,
+     385
+    ],
+    "zoom": 1.1,
+    "move": "still"
+   },
+   "cues": {
+    "a": "Lozan",
+    "b": "başkent",
+    "c": "tıkanmıştı",
+    "pill": "herkes"
+   },
+   "params": {
+    "title": "Ekim 1923",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Lozan imzalandı",
+        "mark": "check",
+        "at": "a"
+       },
+       {
+        "text": "Başkent Ankara",
+        "mark": "check",
+        "at": "b"
+       },
+       {
+        "text": "Sistem tıkandı",
+        "mark": "x",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Eksik: tek isim",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "cmh_meclis",
+   "text": "Yani bu kriz bir kaza değildi. İstifa kararı Çankaya'da alınmıştı ve bakanlar yeniden seçilseler bile dönmeyecekti. Kilidin anahtarı ise o gece masaya konan teklifti.",
+   "visual": "Meclis salonu, yan kapı: kapıda asılı altın asma kilit 'anahtarı'nda açılıyor, düşüyor; kapı aralanıyor ve içeri altın ışık doluyor; milletvekilleri ayağa kalkıyor.",
+   "title": {
+    "white": "Anahtar"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     600,
+     660
+    ],
+    "zoom": 1.5,
+    "move": "pull"
+   },
+   "cues": {
+    "open": "anahtarı",
+    "rise": "teklifti"
+   },
+   "params": {
+    "rows": 2,
+    "crowd": 0.8,
+    "lock": {
+     "at": 0,
+     "open": "open"
+    },
+    "rise": "rise",
+    "clock": false
+   }
+  },
+  {
+   "type": "cmh_kosk",
+   "text": "İşte bu yüzden cumhuriyet, aylarca süren bir tartışmayla değil, bir gecede yazılan bir teklifle ve onun kalbindeki tek bir cümleyle geldi.",
+   "visual": "Lamba ışığında kâğıt: 'Türkiye Devletinin şekl-i / hükümeti Cumhuriyettir.' yazılı; 'cümleyle'de kâğıdın sağ üst köşesine kırmızı 'Kabul' damgası iniyor.",
+   "title": {
+    "white": "Tek cümle"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     760
+    ],
+    "zoom": 1.45,
+    "move": "pull"
+   },
+   "cues": {
+    "hit": "cümleyle"
+   },
+   "params": {
+    "room": "desk",
+    "heading": "Madde 1",
+    "words": [
+     {
+      "text": "Türkiye",
+      "at": 0
+     },
+     {
+      "text": "Devletinin",
+      "at": 0
+     },
+     {
+      "text": "şekl-i",
+      "at": 0
+     },
+     {
+      "text": "hükümeti",
+      "at": 0,
+      "line": 1
+     },
+     {
+      "text": "Cumhuriyettir.",
+      "at": 0,
+      "line": 1,
+      "color": "red"
+     }
+    ],
+    "stamp": {
+     "text": "Kabul",
+     "at": "hit",
+     "x": 0.68,
+     "y": 0.57,
+     "size": 66
+    }
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Ertesi gün İsmet Paşa, cumhuriyetin ilk başbakanı oldu. 1925'te ise 29 Ekim, kanunla millî bayram ilan edildi.",
+   "visual": "Yatay zaman çizgisi, yakın: '1923 / 29 Ekim: Cumhuriyet', '1923 / 30 Ekim: İlk başbakan', '1925 / Bayram kanunu' sırayla beliriyor; '1925' kırmızı halkada.",
+   "title": {
+    "white": "Sonrası"
+   },
+   "source": "628 sayılı kanun",
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   },
+   "cues": {
+    "c0": "Ertesi",
+    "c1": "başbakanı",
+    "c2": "1925'te"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1923",
+      "text": "29 Ekim: Cumhuriyet",
+      "at": "c0"
+     },
+     {
+      "year": "1923",
+      "text": "30 Ekim: İlk başbakan",
+      "at": "c1"
+     },
+     {
+      "year": "1925",
+      "text": "Bayram kanunu",
+      "at": "c2"
+     }
+    ],
+    "focus": 2
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "O geceden bu yana yüz yılı aşkın zaman geçti. Ankara kocaman bir şehir oldu, o küçük Meclis binası ise artık bir müze.",
+   "visual": "Gündüz, ilk Meclis binası: çatıda bayrak dalgalanıyor; önde Kaşif binayı işaret ediyor; 'müze'de kapının üstünde 'Müze' tabelası beliriyor ve Kaşif şapkasına dokunur gibi selam veriyor; solda kırmızı '100+ yıl' damgası.",
+   "title": {
+    "white": "Bugün"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 880,
+    "horizon": 600
+   },
+   "cues": {
+    "y": "aşkın",
+    "hit": "müze"
+   },
+   "params": {
+    "mode": "meclis",
+    "cart": false,
+    "sign": {
+     "text": "Müze",
+     "at": "hit",
+     "x": 0.67,
+     "y": 0.47,
+     "size": 70
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.97,
+      "scale": 0.95,
+      "pose": "point",
+      "dir": "right",
+      "face": "right",
+      "at": "hit",
+      "then": "wave",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "100+ yıl",
+      "x": 0.19,
+      "y": 0.3,
+      "at": "y",
+      "stamp": true,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "cmh_ankara",
+   "text": "Peki sizce o yemekte “biraz daha bekleyelim” denseydi, tarih nasıl değişirdi? Yorumlara yazın. Böyle hikâyeler için de abone olun.",
+   "visual": "Akşam, ilk Meclis binasının önü: pencereler yanıyor, bayrak dalgalanıyor; önde Kaşif düşünüyor, 'sizce'de izleyiciyi işaret ediyor, 'abone'de el sallıyor.",
+   "title": {
+    "white": "Sizce?"
+   },
+   "set": {
+    "name": "night",
+    "ground": 880,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     700,
+     600
+    ],
+    "zoom": 1.3,
+    "move": "pull"
+   },
+   "cues": {
+    "q": "sizce",
+    "sub": "abone"
+   },
+   "params": {
+    "mode": "meclis",
+    "night": true,
+    "cart": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "y": 0.97,
+      "scale": 0.95,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "point",
+        "dir": "forward"
+       },
+       {
+        "at": "sub",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}
