@@ -1,0 +1,2984 @@
+{
+ "extra": true,
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-14-great-moon-hoax",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "MAN-BATS",
+   "ON THE",
+   "MOON"
+  ],
+  "highlight": [
+   "MAN-BATS"
+  ],
+  "scene": 1,
+  "t": 1.0,
+  "focus": [
+   960,
+   360
+  ],
+  "zoom": 0.95,
+  "size": 200,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.1,
+   "face": -1,
+   "dir": 40,
+   "x": 1030,
+   "y": 1045
+  }
+ },
+ "sources": [
+  {
+   "title": "Great Moon Hoax (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Great_Moon_Hoax"
+  },
+  {
+   "title": "The Great Moon Hoax (Museum of Hoaxes)",
+   "url": "https://hoaxes.org/archive/permalink/the_great_moon_hoax"
+  },
+  {
+   "title": "The Great Moon Hoax Was Simply a Sign of Its Time (Smithsonian Magazine)",
+   "url": "https://www.smithsonianmag.com/history/the-great-moon-hoax-was-simply-a-sign-of-its-time-180955761/"
+  },
+  {
+   "title": "The Great Moon Hoax (History.com, This Day in History)",
+   "url": "https://www.history.com/this-day-in-history/august-25/the-great-moon-hoax"
+  },
+  {
+   "title": "Life on the Moon (William L. Clements Library, University of Michigan)",
+   "url": "https://clements.umich.edu/publication/the-heavens/life-on-the-moon/"
+  },
+  {
+   "title": "Franz von Paula Gruithuisen (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Franz_von_Paula_Gruithuisen"
+  },
+  {
+   "title": "Thomas Dick (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Dick_(scientist)"
+  }
+ ],
+ "youtube": {
+  "title": "Great Moon Hoax: How Did New York Fall for Man-Bats on the Moon?",
+  "description": "The Great Moon Hoax of 1835: a New York penny paper told its readers that a famous astronomer had seen winged man-bats, bison and a sapphire temple on the Moon. Thousands believed it. How?\n\nIn August 1835 The Sun ran six articles claiming Sir John Herschel, working with a giant telescope at the Cape of Good Hope, had discovered life on the Moon: lead-blue unicorn goats, beavers that walked on two legs and the \"Vespertilio-homo\", the man-bat. The story was almost certainly written by reporter Richard Adams Locke. We look at the penny press, the fake Edinburgh Journal of Science, why smart readers fell for it, and why The Sun never printed a retraction, while real companies get ready to build a base on the Moon today.\n\nIn this video:\n- The penny paper that needed a sensation\n- Six days of lunar discoveries, from the telescope to the man-bats\n- Why people believed it: four clues\n- Who wrote it, and what Herschel said when he found out\n\nSubscribe to Stickstory for more true stories that sound made up. If you had bought The Sun in 1835, would you have believed in the man-bats? Tell me in the comments!\n\n#greatmoonhoax #history #fakenews #moon #stickstory",
+  "tags": [
+   "great moon hoax",
+   "great moon hoax 1835",
+   "moon hoax 1835",
+   "great moon hoax story",
+   "man-bats on the moon",
+   "vespertilio-homo",
+   "new york sun 1835",
+   "richard adams locke",
+   "john herschel",
+   "penny press",
+   "fake news history",
+   "history's strangest moments",
+   "life on the moon",
+   "moon base",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-27T21:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "moon_vista",
+   "text": "In 1835, a New York newspaper told its readers there were people on the Moon. With wings.",
+   "visual": "Night: a huge engraved full Moon on the left; on 'people' a black man-bat silhouette glides across its bright face, wings beating; red note '1835'; the fez narrator on the right watches through binoculars, then points at it in shock on 'wings'.",
+   "title": {
+    "white": "New York",
+    "gray": "1835"
+   },
+   "cues": {
+    "np": "newspaper",
+    "people": "people",
+    "wings": "With"
+   },
+   "params": {
+    "orb": {
+     "x": 0.219,
+     "y": 0.42,
+     "r": 0.3
+    },
+    "manbats": [
+     {
+      "x": 0.0,
+      "y": 0.4,
+      "to": [
+       0.33,
+       0.36
+      ],
+      "fly": true,
+      "sil": true,
+      "s": 0.6,
+      "at": "np",
+      "dur": 4.0,
+      "face": "right"
+     }
+    ],
+    "trees": [
+     {
+      "x": 0.5,
+      "s": 0.6
+     },
+     {
+      "x": 0.97,
+      "s": 0.7
+     }
+    ],
+    "labels": [
+     {
+      "text": "1835",
+      "x": 0.56,
+      "y": 0.3,
+      "at": "np",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "kasif": {
+     "x": 0.82,
+     "scale": 0.95,
+     "pose": "look",
+     "face": "left",
+     "seq": [
+      {
+       "at": "wings",
+       "pose": "shock",
+       "face": "left"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   },
+   "chapter": "The Man-Bats"
+  },
+  {
+   "type": "moon_vista",
+   "text": "Today, SpaceX and Blue Origin are getting ready to build a real base up there. But back then, thousands of New Yorkers believed the Moon was already taken.",
+   "visual": "The bright Moon fills the middle of the night sky with a black man-bat silhouette hovering in front of it; on 'SpaceX' a modern rocket climbs past the Moon's right side on a dashed trail (note '2026'); on 'taken' a second man-bat crosses.",
+   "title": {
+    "white": "Then",
+    "gray": "and now"
+   },
+   "cues": {
+    "sx": "SpaceX",
+    "back": "back",
+    "hit": "taken"
+   },
+   "params": {
+    "orb": {
+     "x": 0.476,
+     "y": 0.36,
+     "r": 0.32
+    },
+    "manbats": [
+     {
+      "x": 0.53,
+      "y": 0.31,
+      "fly": true,
+      "sil": true,
+      "s": 0.75,
+      "at": 0,
+      "face": "right"
+     },
+     {
+      "x": 0.05,
+      "y": 0.62,
+      "to": [
+       0.4,
+       0.5
+      ],
+      "fly": true,
+      "sil": true,
+      "s": 0.45,
+      "at": "hit",
+      "dur": 2.5,
+      "face": "right"
+     }
+    ],
+    "rocket": {
+     "from": [
+      0.86,
+      0.95
+     ],
+     "to": [
+      0.72,
+      0.05
+     ],
+     "at": "sx",
+     "dur": 6,
+     "s": 0.9
+    },
+    "trees": [
+     {
+      "x": 0.06,
+      "s": 0.9
+     },
+     {
+      "x": 0.95,
+      "s": 0.75
+     }
+    ],
+    "labels": [
+     {
+      "text": "2026",
+      "x": 0.86,
+      "y": 0.4,
+      "at": "sx",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "1835",
+      "x": 0.14,
+      "y": 0.3,
+      "at": "back",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  },
+  {
+   "type": "moon_paper",
+   "text": "Picture it. You pay one cent for a newspaper, and you read that a famous astronomer has just seen them.",
+   "visual": "Close on the front page of The Sun: masthead with two turning suns, price 'ONE CENT' circled in red on 'cent', headline 'GREAT ASTRONOMICAL DISCOVERIES' sets itself word by word, an engraving of a winged man-bat appears on 'them'; the big fez narrator in front on the left points at the price, then jumps back in shock.",
+   "title": {
+    "white": "The Sun",
+    "gray": "New York"
+   },
+   "cues": {
+    "cent": "cent",
+    "people": "them"
+   },
+   "params": {
+    "page": {
+     "x": 0.625,
+     "y": 0.55,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": -2
+    },
+    "masthead": "THE SUN",
+    "date": "NEW-YORK, AUGUST 1835",
+    "price": "ONE CENT",
+    "head": [
+     "GREAT ASTRONOMICAL",
+     "DISCOVERIES"
+    ],
+    "at": 0.3,
+    "engraving": {
+     "kind": "manbat",
+     "at": "people",
+     "h": 300
+    },
+    "ring": {
+     "target": "price",
+     "at": "cent"
+    },
+    "kasif": {
+     "x": 0.17,
+     "y": 1.0,
+     "scale": 0.95,
+     "pose": "point",
+     "face": "right",
+     "dir": 35,
+     "seq": [
+      {
+       "at": "people",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   }
+  },
+  {
+   "type": "moon_vista",
+   "text": "Creatures about four feet tall, with faces almost like ours and wings like a bat.",
+   "visual": "Close-up of a man-bat in a lunar valley: copper hair, two dot eyes, a calm face almost like ours, standing upright, his huge bat wings beating; on 'four' a red height bar draws from his feet to his head with '4 feet tall'; two more man-bats glide far behind over a lake.",
+   "title": {
+    "white": "Man-bat"
+   },
+   "cues": {
+    "four": "four",
+    "wings": "wings"
+   },
+   "params": {
+    "lake": {
+     "x": 0.5,
+     "w": 0.5,
+     "y": 0.8
+    },
+    "manbats": [
+     {
+      "x": 0.5,
+      "s": 1.75,
+      "at": 0
+     },
+     {
+      "x": 0.92,
+      "y": 0.4,
+      "to": [
+       0.78,
+       0.34
+      ],
+      "fly": true,
+      "s": 0.3,
+      "at": "wings",
+      "dur": 4,
+      "face": "left"
+     }
+    ],
+    "trees": [
+     {
+      "x": 0.07,
+      "s": 1.1
+     },
+     {
+      "x": 0.93,
+      "s": 1.0
+     }
+    ],
+    "labels": [
+     {
+      "text": "4 feet tall",
+      "x": 0.7,
+      "y": 0.6,
+      "at": "four",
+      "color": "red",
+      "size": 66,
+      "measure": [
+       0.61,
+       0.86,
+       0.43
+      ],
+      "underline": false
+     }
+    ]
+   },
+   "set": "hills",
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "The paper even gave them a scientific name: Vespertilio-homo, the man-bat.",
+   "visual": "Over lunar-looking hills: giant words 'Vespertilio-homo' set from the start of the line, then 'the man-bat' with 'man-bat' in a red box; the fez narrator on the right points at it; hand note 'Latin for bat-man'.",
+   "title": {},
+   "cues": {
+    "w0": "paper",
+    "w1": "scientific",
+    "w2": "man-bat",
+    "note": "man-bat"
+   },
+   "params": {
+    "lines": [
+     "Vespertilio-homo",
+     "the man-bat"
+    ],
+    "highlight": [
+     "man-bat"
+    ],
+    "y": 0.4,
+    "note": {
+     "text": "Latin for bat-man",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.88,
+     "pose": "point",
+     "dir": 30,
+     "face": -1,
+     "scale": 0.9,
+     "at": "w2",
+     "emotion": "surprised"
+    }
+   },
+   "source": "The Sun, 1835",
+   "set": {
+    "name": "hills",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "moon_street",
+   "text": "And here's the crazy part. People believed it.",
+   "visual": "An 1835 New York street of brick row-houses: a newsboy in a cap holds up 'THE SUN' and shouts 'MEN ON THE MOON!' on 'crazy'; passers-by read the paper; the fez narrator in front tells us, then jumps back in shock on 'believed'.",
+   "title": {
+    "white": "They",
+    "gray": "believed it"
+   },
+   "cues": {
+    "crazy": "crazy",
+    "believed": "believed"
+   },
+   "params": {
+    "office": false,
+    "lamp": 0.93,
+    "newsboys": [
+     {
+      "x": 0.2,
+      "face": "right",
+      "shout": {
+       "text": "MEN ON THE MOON!",
+       "at": "crazy",
+       "dx": 0.1,
+       "dy": 0.62
+      }
+     }
+    ],
+    "crowd": [
+     {
+      "x": 0.43,
+      "text": "THE SUN",
+      "accessory": "slouch",
+      "face": "left"
+     },
+     {
+      "x": 0.66,
+      "text": "THE SUN",
+      "beard": "short",
+      "face": "right"
+     }
+    ],
+    "kasif": {
+     "x": 0.83,
+     "scale": 0.78,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "believed",
+       "pose": "shock",
+       "face": "left"
+      }
+     ]
+    }
+   },
+   "set": "city",
+   "camera": {
+    "move": "left"
+   }
+  },
+  {
+   "type": "moon_paper",
+   "text": "So how does a story this wild end up on breakfast tables across America? And why did the paper that printed it never take it back?",
+   "visual": "Close on The Sun's page with an engraved Moon in the panel; on 'back' a red 'RETRACTION?' stamp slams across the page.",
+   "title": {
+    "white": "Two",
+    "gray": "big questions"
+   },
+   "cues": {
+    "wild": "wild",
+    "back": "back"
+   },
+   "params": {
+    "masthead": "THE SUN",
+    "date": "NEW-YORK, AUGUST 1835",
+    "price": "ONE CENT",
+    "head": [
+     "LIFE ON THE MOON"
+    ],
+    "at": 0.2,
+    "engraving": {
+     "kind": "orb",
+     "at": 0.4,
+     "side": "left"
+    },
+    "page": {
+     "x": 0.625,
+     "y": 0.6,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": 1.5
+    },
+    "stamps": [
+     {
+      "text": "RETRACTION?",
+      "x": 0.52,
+      "y": 0.5,
+      "at": "back",
+      "rot": -9,
+      "size": 110
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "To answer that, you have to see New York in 1835.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'A Penny for the News' with a hand-drawn underline.",
+   "title": {},
+   "cues": {
+    "title": "York"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "A Penny for the News",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Penny for the News"
+  },
+  {
+   "type": "moon_street",
+   "text": "The city was loud, crowded and hungry for news.",
+   "visual": "Wide 1835 New York street: brick row-houses with 'THE SUN' office sign, a gas lamp, people walking both ways, two newsboys holding up papers, one shouting 'EXTRA!' on 'loud'; loose sheets blow across the cobbles.",
+   "title": {
+    "white": "New York",
+    "gray": "1835"
+   },
+   "cues": {
+    "loud": "loud",
+    "news": "news"
+   },
+   "params": {
+    "office": {
+     "x": 0.5,
+     "text": "THE SUN"
+    },
+    "lamp": 0.86,
+    "newsboys": [
+     {
+      "x": 0.3,
+      "face": "right",
+      "shout": {
+       "text": "EXTRA!",
+       "at": "loud",
+       "dx": 0.07,
+       "dy": 0.6
+      }
+     },
+     {
+      "x": 0.76,
+      "face": "left",
+      "text": "THE SUN"
+     }
+    ],
+    "crowd": [
+     {
+      "x": -0.05,
+      "to": 1.05,
+      "at": 0,
+      "dur": 7,
+      "accessory": "slouch"
+     },
+     {
+      "x": 1.05,
+      "to": 0.55,
+      "at": 0.3,
+      "dur": 4.5,
+      "beard": "short"
+     },
+     {
+      "x": 0.12,
+      "to": 0.45,
+      "at": 0.8,
+      "dur": 4,
+      "accessory": "beret"
+     }
+    ]
+   },
+   "set": "city",
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "moon_street",
+   "text": "Most newspapers cost six cents, which was real money back then, and they were full of shipping lists and politics.",
+   "visual": "A newsstand on the 1835 street: striped awning, stacks of papers, two papers on the rack; a '6 CENTS' price sign swings in on 'six', the headlines 'SHIPPING' and 'POLITICS' appear on their words; a bearded buyer recoils at the price.",
+   "title": {
+    "white": "Old papers"
+   },
+   "cues": {
+    "six": "six",
+    "ship": "shipping",
+    "pol": "politics"
+   },
+   "params": {
+    "office": false,
+    "lamp": 0.06,
+    "houses": {
+     "from": 0,
+     "to": 1
+    },
+    "stand": {
+     "x": 0.5,
+     "w": 0.44,
+     "papers": [
+      {
+       "head": "SHIPPING",
+       "at": "ship"
+      },
+      {
+       "head": "POLITICS",
+       "at": "pol"
+      }
+     ],
+     "price": "6 CENTS",
+     "price_at": "six"
+    },
+    "crowd": [
+     {
+      "x": 0.85,
+      "beard": "black",
+      "scale": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "six",
+        "pose": "shock"
+       }
+      ]
+     }
+    ],
+    "sheets": 1
+   },
+   "set": "city",
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_press",
+   "text": "Then, in 1833, a young printer named Benjamin Day started a paper called The Sun, and sold it for a single penny.",
+   "visual": "A print shop: a big cylinder press runs, the flywheel and belt turn, sheets slide in and fly onto a growing stack; the young printer stands by the stack; note 'Benjamin Day, 1833' on 'Benjamin', red note '1 cent!' on 'penny'.",
+   "title": {
+    "white": "The Sun",
+    "gray": "1833"
+   },
+   "cues": {
+    "day": "Benjamin",
+    "penny": "penny"
+   },
+   "params": {
+    "x": 0.55,
+    "at": 0.2,
+    "pressman": {
+     "x": 0.3,
+     "scale": 0.62,
+     "pose": "point",
+     "face": "left",
+     "dir": -10,
+     "seq": [
+      {
+       "at": "penny",
+       "pose": "hold",
+       "text": "1 CENT"
+      }
+     ],
+     "hat": false
+    },
+    "labels": [
+     {
+      "text": "Benjamin Day, 1833",
+      "x": 0.22,
+      "y": 0.36,
+      "at": "day",
+      "arrow": [
+       0.29,
+       0.52
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "source": "History.com"
+  },
+  {
+   "type": "moon_street",
+   "text": "Newsboys shouted it on every corner. It was cheap, it was fun, and it loved a good story.",
+   "visual": "Close on a newsboy in a cap holding up 'THE SUN' and shouting 'THE SUN! ONE CENT!' on 'shouted'; a passer-by stops to buy; paper sheets blow past.",
+   "title": {
+    "white": "Newsboys"
+   },
+   "cues": {
+    "shout": "shouted",
+    "fun": "fun"
+   },
+   "params": {
+    "office": false,
+    "lamp": false,
+    "houses": {
+     "from": 0,
+     "to": 1
+    },
+    "newsboys": [
+     {
+      "x": 0.42,
+      "face": "right",
+      "scale": 0.7,
+      "shout": {
+       "text": "ONE CENT!",
+       "at": "shout",
+       "dx": 0.15,
+       "dy": 0.44
+      }
+     }
+    ],
+    "crowd": [
+     {
+      "x": 0.9,
+      "to": 0.6,
+      "at": "fun",
+      "dur": 1.6,
+      "beard": "short",
+      "face": "left"
+     }
+    ]
+   },
+   "set": "city",
+   "camera": {
+    "focus": [
+     880,
+     620
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_press",
+   "text": "But a penny paper lives or dies by one thing: how many copies it sells tomorrow.",
+   "visual": "Close on the delivery stack of printed papers growing sheet by sheet as the press thumps; red note 'tomorrow?' on 'tomorrow'.",
+   "title": {
+    "white": "Copies",
+    "gray": "every day"
+   },
+   "cues": {
+    "copies": "copies",
+    "tom": "tomorrow"
+   },
+   "params": {
+    "x": 0.55,
+    "at": 0,
+    "period": 0.7,
+    "stack": {
+     "x": 0.17,
+     "start": 22,
+     "max": 60
+    },
+    "labels": [
+     {
+      "text": "tomorrow?",
+      "x": 0.24,
+      "y": 0.42,
+      "at": "tom",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     720,
+     640
+    ],
+    "zoom": 1.55,
+    "move": "push"
+   }
+  },
+  {
+   "type": "map",
+   "text": "Meanwhile, on the other side of the planet, one of the most famous scientists alive had gone out of reach.",
+   "visual": "Old map of the Atlantic: New York appears top left, then on 'planet' the Cape of Good Hope at the tip of Africa in red, far across the ocean.",
+   "title": {
+    "white": "Far away"
+   },
+   "cues": {
+    "ny": "Meanwhile",
+    "cape": "planet",
+    "note": "reach"
+   },
+   "params": {
+    "land": [
+     [
+      [
+       0.0,
+       0.0
+      ],
+      [
+       0.2857,
+       0.0
+      ],
+      [
+       0.2429,
+       0.0769
+      ],
+      [
+       0.2143,
+       0.1
+      ],
+      [
+       0.1857,
+       0.11
+      ],
+      [
+       0.1714,
+       0.1385
+      ],
+      [
+       0.1357,
+       0.1846
+      ],
+      [
+       0.1429,
+       0.2308
+      ],
+      [
+       0.1286,
+       0.2154
+      ],
+      [
+       0.0714,
+       0.2
+      ],
+      [
+       0.0214,
+       0.2231
+      ],
+      [
+       0.0214,
+       0.2692
+      ],
+      [
+       0.0714,
+       0.2846
+      ],
+      [
+       0.1214,
+       0.3462
+      ],
+      [
+       0.1643,
+       0.3615
+      ],
+      [
+       0.0,
+       0.3615
+      ]
+     ],
+     [
+      [
+       0.1643,
+       0.3615
+      ],
+      [
+       0.2,
+       0.3308
+      ],
+      [
+       0.2714,
+       0.3462
+      ],
+      [
+       0.3429,
+       0.3846
+      ],
+      [
+       0.3571,
+       0.4231
+      ],
+      [
+       0.4643,
+       0.4615
+      ],
+      [
+       0.4357,
+       0.5385
+      ],
+      [
+       0.4214,
+       0.5923
+      ],
+      [
+       0.3714,
+       0.6231
+      ],
+      [
+       0.3357,
+       0.6846
+      ],
+      [
+       0.3,
+       0.7154
+      ],
+      [
+       0.25,
+       0.7462
+      ],
+      [
+       0.2286,
+       0.8077
+      ],
+      [
+       0.0,
+       0.8077
+      ],
+      [
+       0.0,
+       0.3615
+      ]
+     ],
+     [
+      [
+       0.6714,
+       0.1462
+      ],
+      [
+       0.6429,
+       0.1923
+      ],
+      [
+       0.6,
+       0.2615
+      ],
+      [
+       0.5929,
+       0.3077
+      ],
+      [
+       0.6,
+       0.3308
+      ],
+      [
+       0.6214,
+       0.3615
+      ],
+      [
+       0.6571,
+       0.3885
+      ],
+      [
+       0.7,
+       0.3846
+      ],
+      [
+       0.75,
+       0.3769
+      ],
+      [
+       0.7786,
+       0.3923
+      ],
+      [
+       0.7786,
+       0.4231
+      ],
+      [
+       0.8,
+       0.4692
+      ],
+      [
+       0.8071,
+       0.5154
+      ],
+      [
+       0.8,
+       0.5538
+      ],
+      [
+       0.8143,
+       0.6
+      ],
+      [
+       0.8286,
+       0.6462
+      ],
+      [
+       0.8457,
+       0.6877
+      ],
+      [
+       0.8571,
+       0.6923
+      ],
+      [
+       0.9,
+       0.6846
+      ],
+      [
+       0.9429,
+       0.6462
+      ],
+      [
+       0.9643,
+       0.6077
+      ],
+      [
+       1.0,
+       0.5385
+      ],
+      [
+       1.0,
+       0.1462
+      ],
+      [
+       0.7857,
+       0.1385
+      ]
+     ],
+     [
+      [
+       0.6429,
+       0.0846
+      ],
+      [
+       0.65,
+       0.1231
+      ],
+      [
+       0.6714,
+       0.14
+      ],
+      [
+       0.7143,
+       0.1269
+      ],
+      [
+       0.7357,
+       0.1
+      ],
+      [
+       0.7857,
+       0.0846
+      ],
+      [
+       0.8214,
+       0.1154
+      ],
+      [
+       0.8571,
+       0.1154
+      ],
+      [
+       0.9143,
+       0.1308
+      ],
+      [
+       1.0,
+       0.1231
+      ],
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.7714,
+       0.0
+      ],
+      [
+       0.75,
+       0.0231
+      ],
+      [
+       0.7071,
+       0.0385
+      ],
+      [
+       0.6786,
+       0.0538
+      ],
+      [
+       0.7,
+       0.0692
+      ],
+      [
+       0.7036,
+       0.0885
+      ]
+     ],
+     [
+      [
+       0.6736,
+       0.0385
+      ],
+      [
+       0.725,
+       0.0308
+      ],
+      [
+       0.7143,
+       0.0115
+      ],
+      [
+       0.6929,
+       0.0
+      ],
+      [
+       0.6714,
+       0.0
+      ],
+      [
+       0.6786,
+       0.0254
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "Atlantic Ocean",
+      "x": 0.4286,
+      "y": 0.3308
+     }
+    ],
+    "waves": [
+     [
+      0.3929,
+      0.1923
+     ],
+     [
+      0.5714,
+      0.5
+     ],
+     [
+      0.5,
+      0.3846
+     ],
+     [
+      0.7143,
+      0.6538
+     ]
+    ],
+    "compass": "bl",
+    "cities": [
+     {
+      "name": "New York",
+      "x": 0.1857,
+      "y": 0.11,
+      "dx": 60,
+      "dy": 60,
+      "at": "ny"
+     },
+     {
+      "name": "Cape of Good Hope",
+      "x": 0.8457,
+      "y": 0.6862,
+      "color": "red",
+      "dx": -170,
+      "dy": -30,
+      "at": "cape"
+     }
+    ],
+    "note": {
+     "text": "out of reach",
+     "x": 0.6,
+     "y": 0.62,
+     "at": "note"
+    }
+   },
+   "camera": {
+    "focus": [
+     1010,
+     450
+    ],
+    "zoom": 1.6,
+    "move": "still"
+   }
+  },
+  {
+   "type": "moon_scope",
+   "text": "Sir John Herschel, son of the man who discovered Uranus, had sailed to the Cape of Good Hope with a big telescope to map the southern sky.",
+   "visual": "Night at the Cape: a long reflector telescope hangs from a tall wooden A-frame mast by ropes and sweeps slowly; Herschel stands on the gallery at its mouth looking in; note 'Sir John Herschel' with an arrow on 'Herschel'.",
+   "title": {
+    "white": "Herschel",
+    "gray": "Cape, 1834"
+   },
+   "cues": {
+    "name": "Herschel",
+    "cape": "Cape"
+   },
+   "params": {
+    "mode": "real",
+    "observer": {
+     "x": 0.585,
+     "y": 0.585,
+     "scale": 0.5,
+     "pose": "look",
+     "face": "left",
+     "hat": false
+    },
+    "labels": [
+     {
+      "text": "Sir John Herschel",
+      "x": 0.8,
+      "y": 0.27,
+      "at": "name",
+      "arrow": [
+       0.62,
+       0.42
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   },
+   "source": "Smithsonian"
+  },
+  {
+   "type": "moon_scope",
+   "text": "And I want you to remember this: Herschel was real, he was respected, and he was very far away.",
+   "visual": "The fez narrator in front of the night telescope holds up a sign 'REAL' on 'real', then a sign 'FAR AWAY' on 'far'.",
+   "title": {
+    "white": "Remember",
+    "gray": "this"
+   },
+   "cues": {
+    "real": "real",
+    "far": "far"
+   },
+   "params": {
+    "mode": "real",
+    "x": 0.6,
+    "observer": {
+     "x": 0.685,
+     "y": 0.585,
+     "scale": 0.5,
+     "pose": "look",
+     "face": "left",
+     "hat": false
+    },
+    "kasif": {
+     "x": 0.16,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "real",
+       "pose": "hold",
+       "text": "REAL"
+      },
+      {
+       "at": "far",
+       "pose": "hold",
+       "text": "FAR AWAY"
+      }
+     ]
+    }
+   },
+   "set": "night",
+   "camera": {
+    "focus": [
+     420,
+     640
+    ],
+    "zoom": 1.5,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "moon_ship",
+   "text": "A letter from the Cape took many weeks to reach New York. Nobody could just ask him.",
+   "visual": "Open ocean: a two-masted sailing ship, big in frame, rolls westward with bellied sails, a sealed letter swinging from its stern on 'letter'; waves roll past in front; on 'weeks' a big counter ticks 'WEEK 1' up to 'WEEK 6'.",
+   "title": {
+    "white": "By sail"
+   },
+   "cues": {
+    "letter": "letter",
+    "weeks": "weeks",
+    "ask": "ask"
+   },
+   "params": {
+    "x": 0.56,
+    "drift": -0.14,
+    "y": 0.78,
+    "s": 0.82,
+    "face": -1,
+    "letter": {
+     "at": "letter"
+    },
+    "counter": {
+     "label": "WEEK",
+     "from": 1,
+     "to": 6,
+     "at": "weeks",
+     "x": 0.8,
+     "y": 0.3
+    }
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 600
+   }
+  },
+  {
+   "type": "moon_letter",
+   "text": "And someone at The Sun counted on it!",
+   "visual": "Extreme close-up at candle light: the quill writes 'Great Astronomical' then 'Discoveries...' on a fresh manuscript sheet headed 'New-York, August 1835'.",
+   "title": {
+    "white": "Someone",
+    "gray": "at The Sun"
+   },
+   "cues": {
+    "knew": "counted"
+   },
+   "params": {
+    "sheet": {
+     "x": 0.56,
+     "y": 0.6,
+     "w": 0.5,
+     "h": 0.7
+    },
+    "heading": "New-York, August 1835",
+    "lines": [
+     {
+      "text": "Great Astronomical",
+      "at": 0.1,
+      "dur": 1.0
+     },
+     {
+      "text": "Discoveries...",
+      "at": 1.1,
+      "dur": 0.8
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1020,
+     500
+    ],
+    "zoom": 1.75,
+    "move": "right"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "On Tuesday, August 25th, 1835, The Sun ran a long story under a very serious headline.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'Six Days on the Moon'.",
+   "title": {},
+   "cues": {
+    "title": "Sun"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Six Days on the Moon",
+    "label": "CHAPTER"
+   },
+   "chapter": "Six Days on the Moon"
+  },
+  {
+   "type": "moon_paper",
+   "text": "Great Astronomical Discoveries Lately Made by Sir John Herschel. It claimed to be reprinted from the respected Edinburgh Journal of Science.",
+   "visual": "The Sun, August 25, 1835: the headline 'GREAT ASTRONOMICAL DISCOVERIES BY SIR JOHN HERSCHEL' sets word by word; the credit line 'Edinburgh Journal of Science' appears and gets a red ring on 'Edinburgh'; the columns print themselves; an engraving of a giant lens in the panel.",
+   "title": {
+    "white": "Aug 25",
+    "gray": "1835"
+   },
+   "cues": {
+    "head": "Great",
+    "ed": "Edinburgh"
+   },
+   "params": {
+    "masthead": "THE SUN",
+    "date": "NEW-YORK, AUGUST 25, 1835",
+    "price": "ONE CENT",
+    "head": [
+     "GREAT ASTRONOMICAL DISCOVERIES",
+     "BY SIR JOHN HERSCHEL"
+    ],
+    "at": "head",
+    "credit": "Edinburgh Journal of Science",
+    "engraving": {
+     "kind": "lens",
+     "at": "ed"
+    },
+    "ring": {
+     "target": "credit",
+     "at": "ed"
+    },
+    "page": {
+     "x": 0.625,
+     "y": 0.6,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": -1.5
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   },
+   "source": "The Sun, Aug 25, 1835"
+  },
+  {
+   "type": "moon_scope",
+   "text": "The first day was all about the machine: a telescope lens twenty-four feet across, weighing seven tons.",
+   "visual": "A giant glass lens hangs from a wooden derrick and swings, a glint sweeping over it; a dimension arrow across its top with '24 FEET' on the glass on 'twenty'; a tag '7 TONS' drops and swings on 'seven'; the fez narrator, big in the foreground, points up at it, then jumps back.",
+   "title": {
+    "white": "The lens"
+   },
+   "cues": {
+    "dim": "twenty",
+    "tag": "seven"
+   },
+   "params": {
+    "mode": "lens",
+    "size": 0.8,
+    "dim": {
+     "text": "24 FEET",
+     "at": "dim"
+    },
+    "tag": {
+     "text": "7 TONS",
+     "at": "tag"
+    },
+    "kasif": {
+     "x": 0.13,
+     "scale": 0.85,
+     "pose": "point",
+     "face": "right",
+     "dir": 60,
+     "seq": [
+      {
+       "at": "tag",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    }
+   },
+   "set": "hills",
+   "source": "Smithsonian"
+  },
+  {
+   "type": "moon_pages",
+   "text": "No life yet, just numbers and serious language. Smart, right? The real show was still coming.",
+   "visual": "In the print shop six front pages of The Sun hang on two drying lines with clothes-pins, one after another: Aug 25 the lens, Aug 26 bison, Aug 27 a beaver (top line), Aug 28 a man-bat, Aug 29 the temple, Aug 31 fire (bottom line); a red ring circles the first page (no life yet) on 'life'.",
+   "title": {
+    "white": "Six days"
+   },
+   "cues": {
+    "life": "life",
+    "coming": "coming"
+   },
+   "params": {
+    "y": 0.17,
+    "sag": 24,
+    "h": 0.36,
+    "ring": {
+     "index": 0,
+     "at": "life"
+    },
+    "pages": [
+     {
+      "date": "AUG 25",
+      "kind": "lens"
+     },
+     {
+      "date": "AUG 26",
+      "kind": "bison"
+     },
+     {
+      "date": "AUG 27",
+      "kind": "beaver"
+     },
+     {
+      "date": "AUG 28",
+      "kind": "manbat"
+     },
+     {
+      "date": "AUG 29",
+      "kind": "temple"
+     },
+     {
+      "date": "AUG 31",
+      "kind": "fire"
+     }
+    ],
+    "rows": 2,
+    "row_gap": 0.42,
+    "max_w": 360,
+    "ratio": 1.1,
+    "gap": 70
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   },
+   "camera": false
+  },
+  {
+   "type": "moon_vista",
+   "text": "On day two, the lens turned to the Moon and found forests, a white sand beach, and herds of brown animals that looked like bison.",
+   "visual": "Sunny lunar coast: ink trees rise on 'forests', a white sand beach unrolls on 'beach', and a herd of brown, bison-like animals walks in from the right on 'herds'.",
+   "title": {
+    "white": "Day 2",
+    "gray": "Aug 26"
+   },
+   "cues": {
+    "forest": "forests",
+    "beach": "beach",
+    "herds": "herds"
+   },
+   "params": {
+    "trees": [
+     {
+      "x": 0.06,
+      "s": 1.0
+     },
+     {
+      "x": 0.15,
+      "s": 0.8
+     },
+     {
+      "x": 0.24,
+      "s": 0.95
+     }
+    ],
+    "beach": {
+     "x0": 0.26,
+     "x1": 0.62,
+     "at": "beach"
+    },
+    "bison": {
+     "n": 3,
+     "x": 1.08,
+     "to": 0.58,
+     "s": 1.15,
+     "at": "herds",
+     "dur": 2.6,
+     "face": "left",
+     "gap": 0.16
+    },
+    "ground": 0.8
+   },
+   "set": {
+    "name": "coast",
+    "ground": 864
+   }
+  },
+  {
+   "type": "moon_lens",
+   "text": "Then goats with a single horn, the bluish color of lead.",
+   "visual": "The whole frame is the view through the telescope eyepiece (dark surround, turning brass ring): a big lead-blue goat with one long spiral horn grazes, a second hops; red note 'one horn!' with an arrow to the horn on 'single'.",
+   "title": {
+    "white": "Unicorn",
+    "gray": "goats"
+   },
+   "cues": {
+    "single": "single",
+    "lead": "lead"
+   },
+   "params": {
+    "ground": 0.78,
+    "goats": [
+     {
+      "x": 0.43,
+      "y": 0.78,
+      "s": 2.0,
+      "at": 0.15,
+      "face": "right"
+     },
+     {
+      "x": 0.68,
+      "y": 0.77,
+      "s": 0.9,
+      "at": "lead",
+      "face": "left",
+      "hop": true,
+      "graze": false
+     }
+    ],
+    "trees": [
+     {
+      "x": 0.24,
+      "s": 0.8,
+      "y": 0.78
+     }
+    ],
+    "labels": [
+     {
+      "text": "one horn!",
+      "x": 0.62,
+      "y": 0.27,
+      "at": "single",
+      "arrow": [
+       0.585,
+       0.34
+      ],
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "moon_vista",
+   "text": "Day three got stranger: a beaver that walked on two legs and carried its young in its arms like a human being.",
+   "visual": "Lunar hills: a brown beaver walks upright on two legs from the left, flat tail behind, carrying its baby in its arms; domed huts on the right; note 'walks on two legs' on 'legs'.",
+   "title": {
+    "white": "Day 3",
+    "gray": "Aug 27"
+   },
+   "cues": {
+    "beaver": "beaver",
+    "legs": "legs",
+    "young": "young"
+   },
+   "params": {
+    "beavers": [
+     {
+      "x": 0.15,
+      "to": 0.42,
+      "s": 1.6,
+      "at": "beaver",
+      "dur": 2.2,
+      "face": "right"
+     }
+    ],
+    "huts": [
+     {
+      "x": 0.74,
+      "s": 1.0
+     },
+     {
+      "x": 0.9,
+      "s": 0.7
+     }
+    ],
+    "trees": [
+     {
+      "x": 0.62,
+      "s": 0.8
+     }
+    ],
+    "labels": [
+     {
+      "text": "two legs!",
+      "x": 0.22,
+      "y": 0.3,
+      "at": "legs",
+      "arrow": [
+       0.36,
+       0.55
+      ],
+      "size": 64
+     }
+    ]
+   },
+   "set": "hills"
+  },
+  {
+   "type": "moon_lens",
+   "text": "Their huts even had smoke rising from them. These beavers knew fire!",
+   "visual": "Full-frame eyepiece view: a big domed hut with three curls of smoke rising from its roof on 'smoke', a beaver with its baby beside it; a huge red 'FIRE!' on 'fire'.",
+   "title": {
+    "white": "They had",
+    "gray": "fire"
+   },
+   "cues": {
+    "smoke": "smoke",
+    "fire": "fire"
+   },
+   "params": {
+    "ground": 0.78,
+    "huts": [
+     {
+      "x": 0.55,
+      "y": 0.78,
+      "s": 1.8,
+      "smoke": "smoke"
+     }
+    ],
+    "beavers": [
+     {
+      "x": 0.3,
+      "y": 0.78,
+      "s": 1.1,
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "FIRE!",
+      "x": 0.68,
+      "y": 0.32,
+      "at": "fire",
+      "color": "red",
+      "size": 130,
+      "font": "serif",
+      "underline": false
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "moon_paper",
+   "text": "Then came Friday, August 28th, and the man-bats.",
+   "visual": "Close on The Sun of Friday, August 28, 1835: the headline 'THE MAN-BATS' sets on 'man-bats' above a big engraving of a winged man-bat; the fez narrator, big in front of the page, jumps back in shock.",
+   "title": {
+    "white": "Aug 28",
+    "gray": "1835"
+   },
+   "cues": {
+    "fri": "Friday",
+    "bats": "man-bats"
+   },
+   "params": {
+    "page": {
+     "x": 0.625,
+     "y": 0.6,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": 1.5
+    },
+    "masthead": "THE SUN",
+    "date": "FRIDAY, AUGUST 28, 1835",
+    "price": "ONE CENT",
+    "head": [
+     "THE MAN-BATS"
+    ],
+    "at": "bats",
+    "engraving": {
+     "kind": "manbat",
+     "at": "fri",
+     "side": "left"
+    },
+    "kasif": {
+     "x": 0.27,
+     "y": 1.03,
+     "scale": 1.0,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "bats",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   },
+   "chapter": "The Man-Bats Arrive",
+   "camera": {
+    "focus": [
+     980,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_vista",
+   "text": "Winged people who walked upright and, in the paper's own words, were “doubtless innocent and happy creatures.”",
+   "visual": "Moonlit lunar lake: two man-bats stand upright on the shore, one waves; a third glides down and lands beside them; note 'innocent and happy' on 'innocent'.",
+   "title": {
+    "white": "Man-bats"
+   },
+   "cues": {
+    "up": "upright",
+    "hit": "innocent"
+   },
+   "params": {
+    "lake": {
+     "x": 0.5,
+     "w": 0.6,
+     "y": 0.8
+    },
+    "manbats": [
+     {
+      "x": 0.36,
+      "s": 1.0,
+      "at": 0
+     },
+     {
+      "x": 0.52,
+      "s": 0.9,
+      "at": 0.2,
+      "wave": true,
+      "face": "left"
+     },
+     {
+      "x": 0.85,
+      "y": 0.35,
+      "to": [
+       0.7,
+       0.86
+      ],
+      "fly": true,
+      "land": true,
+      "s": 0.85,
+      "at": "up",
+      "dur": 2.2,
+      "face": "left"
+     }
+    ],
+    "trees": [
+     {
+      "x": 0.08,
+      "s": 1.0
+     },
+     {
+      "x": 0.95,
+      "s": 0.85
+     }
+    ],
+    "labels": [
+     {
+      "text": "\"innocent and happy\"",
+      "x": 0.55,
+      "y": 0.3,
+      "at": "hit",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": "night",
+   "source": "The Sun, Aug 28, 1835"
+  },
+  {
+   "type": "moon_vista",
+   "text": "Day five brought a temple made of polished sapphire. Who built it? The story never really said.",
+   "visual": "Close on a temple of polished blue sapphire on a lunar hill: columns and roof rise on 'temple', glints blink on its facets; note 'sapphire' on 'sapphire', and a red 'who?' on 'Who'.",
+   "title": {
+    "white": "Day 5",
+    "gray": "Aug 29"
+   },
+   "cues": {
+    "temple": "temple",
+    "sapph": "sapphire",
+    "who": "Who"
+   },
+   "params": {
+    "temple": {
+     "x": 0.55,
+     "s": 1.25,
+     "at": "temple"
+    },
+    "trees": [
+     {
+      "x": 0.12,
+      "s": 1.0
+     },
+     {
+      "x": 0.92,
+      "s": 0.9
+     }
+    ],
+    "labels": [
+     {
+      "text": "sapphire",
+      "x": 0.42,
+      "y": 0.4,
+      "at": "sapph",
+      "arrow": [
+       0.48,
+       0.5
+      ],
+      "color": "blue",
+      "size": 66
+     },
+     {
+      "text": "who built it?",
+      "x": 0.72,
+      "y": 0.28,
+      "at": "who",
+      "color": "red",
+      "size": 62
+     }
+    ]
+   },
+   "set": "hills",
+   "camera": {
+    "focus": [
+     1056,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "moon_scope",
+   "text": "And on the last day, an accident with the giant lens set the observatory on fire, and the reports stopped. How convenient.",
+   "visual": "Bright day: the Sun stands high on the right; the giant lens on its stand catches it and a gold beam converges onto the wooden observatory on the left on 'accident'; smoke rises, then flames burst through the roof on 'fire'; red note 'How convenient!'.",
+   "title": {
+    "white": "Day 6",
+    "gray": "Aug 31"
+   },
+   "cues": {
+    "beam": "accident",
+    "fire": "fire",
+    "conv": "convenient"
+   },
+   "params": {
+    "mode": "burn",
+    "size": 0.9,
+    "x": 0.45,
+    "beam": {
+     "at": "beam"
+    },
+    "fire": {
+     "at": "beam",
+     "flame": "fire"
+    },
+    "labels": [
+     {
+      "text": "How convenient!",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "conv",
+      "color": "red",
+      "size": 70
+     }
+    ],
+    "flip": true,
+    "sun": {
+     "x": 0.775,
+     "y": 0.30833333333333335,
+     "r": 104,
+     "rays": false
+    }
+   },
+   "set": {
+    "name": "coast",
+    "ground": 929
+   }
+  },
+  {
+   "type": "moon_press",
+   "text": "By then, The Sun was bragging that it outsold every daily paper in the world, and it reprinted the series as a pamphlet.",
+   "visual": "Closer on the roaring press and its flywheel; on 'outsold' bundles of tied papers stamped 'THE SUN' pile up beside it; red note '\"biggest in the world\"' on 'world'.",
+   "title": {
+    "white": "Sold out"
+   },
+   "cues": {
+    "copies": "outsold",
+    "world": "world"
+   },
+   "params": {
+    "x": 0.45,
+    "at": 0,
+    "period": 0.8,
+    "stack": {
+     "x": 0.12
+    },
+    "bundles": {
+     "n": 6,
+     "x": 0.8,
+     "at": "copies"
+    },
+    "labels": [
+     {
+      "text": "\"biggest in the world\"",
+      "x": 0.66,
+      "y": 0.4,
+      "at": "world",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "source": "Museum of Hoaxes",
+   "camera": {
+    "focus": [
+     1350,
+     640
+    ],
+    "zoom": 1.45,
+    "move": "left"
+   }
+  },
+  {
+   "type": "moon_street",
+   "text": "Rival papers copied it, and some treated it as real news. But a few editors smelled something wrong.",
+   "visual": "Street: rival newsboys hold up other papers, 'ADVERTISER' and 'NEW-YORKER', and shout 'MOON MEN!'; on 'wrong' a bearded editor stops, frowns and thinks.",
+   "title": {
+    "white": "Rivals"
+   },
+   "cues": {
+    "cop": "copied",
+    "real": "real",
+    "wrong": "wrong"
+   },
+   "params": {
+    "office": false,
+    "lamp": 0.08,
+    "newsboys": [
+     {
+      "x": 0.24,
+      "text": "ADVERTISER",
+      "face": "right",
+      "shout": {
+       "text": "MOON MEN!",
+       "at": "real",
+       "dx": 0.1,
+       "dy": 0.5
+      }
+     },
+     {
+      "x": 0.47,
+      "text": "NEW-YORKER",
+      "face": "right"
+     }
+    ],
+    "crowd": [
+     {
+      "x": 0.76,
+      "beard": "black",
+      "scale": 0.68,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "wrong",
+        "pose": "think",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   },
+   "set": "city",
+   "camera": {
+    "focus": [
+     880,
+     600
+    ],
+    "zoom": 1.45,
+    "move": "left"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "So why did so many people fall for it?",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title 'Why Did They Believe?'.",
+   "title": {},
+   "cues": {
+    "title": "fall"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Why Did They Believe?",
+    "label": "CHAPTER"
+   },
+   "chapter": "Why Did They Believe?"
+  },
+  {
+   "type": "moon_pages",
+   "text": "It's easy to laugh today, but honestly, I think I would have believed it too. Look at what readers had in front of them.",
+   "visual": "Reading room: the fez narrator, big in the foreground, laughs and shrugs on 'laugh', then points up as four clue cards numbered 1 to 4 snap onto a line one by one.",
+   "title": {
+    "white": "4 clues"
+   },
+   "cues": {
+    "laugh": "laugh",
+    "look": "Look",
+    "readers": "readers",
+    "front": "front",
+    "them": "them."
+   },
+   "params": {
+    "y": 0.12,
+    "sag": 30,
+    "h": 0.42,
+    "pages": [
+     {
+      "big": "1",
+      "at": 0.3
+     },
+     {
+      "big": "2",
+      "at": "laugh"
+     },
+     {
+      "big": "3",
+      "at": "look"
+     },
+     {
+      "big": "4",
+      "at": "front"
+     }
+    ],
+    "kasif": {
+     "x": 0.86,
+     "y": 1.02,
+     "scale": 1.05,
+     "pose": "shrug",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "look",
+       "pose": "point",
+       "dir": 40,
+       "face": "left"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   }
+  },
+  {
+   "type": "moon_scope",
+   "text": "First, the name. Herschel was real, famous, and really was at the Cape with a big telescope. And he couldn't answer.",
+   "visual": "Close on Herschel on the gallery of his night telescope, eye to the instrument; note '1. a real name' on 'name'.",
+   "title": {
+    "white": "Clue 1",
+    "gray": "the name"
+   },
+   "cues": {
+    "name": "name",
+    "ans": "answer"
+   },
+   "params": {
+    "mode": "real",
+    "observer": {
+     "x": 0.585,
+     "y": 0.585,
+     "scale": 0.5,
+     "pose": "look",
+     "face": "left",
+     "seq": [
+      {
+       "at": "ans",
+       "pose": "shrug",
+       "face": "right"
+      }
+     ],
+     "hat": false
+    },
+    "labels": [
+     {
+      "text": "a real name",
+      "x": 0.8,
+      "y": 0.3,
+      "at": "name",
+      "arrow": [
+       0.63,
+       0.42
+      ],
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     1100,
+     470
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_paper",
+   "text": "Second, the source. The Edinburgh Journal of Science sounded perfect. Here's the twist: it had stopped publishing in 1833.",
+   "visual": "Close on the credit line 'Edinburgh Journal of Science' on the old page; on 'twist' a red line strikes through it and a red stamp 'CLOSED 1833' slams down.",
+   "title": {
+    "white": "Clue 2",
+    "gray": "the source"
+   },
+   "cues": {
+    "twist": "twist",
+    "y": "stopped"
+   },
+   "params": {
+    "masthead": "THE SUN",
+    "date": "NEW-YORK, AUGUST 25, 1835",
+    "price": "ONE CENT",
+    "head": [
+     "GREAT ASTRONOMICAL",
+     "DISCOVERIES"
+    ],
+    "at": 0,
+    "drop": false,
+    "credit": "Edinburgh Journal of Science",
+    "strike": {
+     "target": "credit",
+     "at": "twist"
+    },
+    "page": {
+     "x": 0.625,
+     "y": 0.62,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": -1
+    },
+    "stamps": [
+     {
+      "text": "CLOSED 1833",
+      "x": 0.55,
+      "y": 0.6,
+      "at": "y",
+      "rot": -7,
+      "size": 100
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   },
+   "source": "Museum of Hoaxes"
+  },
+  {
+   "type": "moon_paper",
+   "text": "Third, the details. Lens sizes, weights, the color of the goats. And too much detail feels like truth.",
+   "visual": "Close on a page of The Sun: in its columns the printed phrases '24 FEET', '7 TONS' and 'BLUE GOATS' get circled in red one by one.",
+   "title": {
+    "white": "Clue 3",
+    "gray": "the details"
+   },
+   "cues": {
+    "a": "sizes",
+    "b": "weights",
+    "c": "goats"
+   },
+   "params": {
+    "masthead": "THE SUN",
+    "date": "",
+    "price": "ONE CENT",
+    "head": [],
+    "at": 0,
+    "drop": false,
+    "page": {
+     "x": 0.625,
+     "y": 0.75,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": 1
+    },
+    "marks": [
+     {
+      "text": "24 FEET",
+      "x": 0.27,
+      "y": 0.27,
+      "at": "a"
+     },
+     {
+      "text": "7 TONS",
+      "x": 0.73,
+      "y": 0.34,
+      "at": "b"
+     },
+     {
+      "text": "BLUE GOATS",
+      "x": 0.5,
+      "y": 0.41,
+      "at": "c"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   },
+   "camera": {
+    "focus": [
+     1180,
+     560
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_lens",
+   "text": "Fourth, the part people forget: in 1824, a German astronomer, Franz von Gruithuisen, claimed he had spotted a city on the Moon.",
+   "visual": "Full-frame eyepiece view of a lunar plain: an oval walled city with towers and a gate draws itself, rows of little houses filling it, herringbone ridges as fields around it; red note 'Gruithuisen, 1824'.",
+   "title": {
+    "white": "Clue 4",
+    "gray": "Moon city"
+   },
+   "cues": {
+    "g": "Gruithuisen",
+    "astronomer": "astronomer"
+   },
+   "params": {
+    "ground": 0.8,
+    "crosshair": false,
+    "city": {
+     "x": 0.5,
+     "y": 0.74,
+     "s": 1.25,
+     "at": "astronomer"
+    },
+    "labels": [
+     {
+      "text": "Gruithuisen, 1824",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "g",
+      "size": 62,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Wikipedia"
+  },
+  {
+   "type": "title",
+   "text": "And a popular Scottish writer, Thomas Dick, had calculated the solar system held almost twenty-two trillion inhabitants.",
+   "visual": "Over lunar-looking hills: giant words '22 trillion' with 'trillion' in a red box, then 'inhabitants'; note 'Thomas Dick'.",
+   "title": {},
+   "cues": {
+    "w0": "twenty-two",
+    "w2": "inhabitants",
+    "note": "Dick"
+   },
+   "params": {
+    "lines": [
+     "22 trillion",
+     "inhabitants"
+    ],
+    "highlight": [
+     "trillion"
+    ],
+    "note": {
+     "text": "Thomas Dick",
+     "at": "note"
+    },
+    "arrow": false,
+    "y": 0.4
+   },
+   "source": "Wikipedia",
+   "set": {
+    "name": "hills",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "moon_vista",
+   "text": "So the man-bats were not a crazy new idea. They were the answer people were already waiting for.",
+   "visual": "Night: a whole flock of man-bat silhouettes in a V crosses the big bright Moon, as if they had always been there.",
+   "title": {
+    "white": "An old",
+    "gray": "dream"
+   },
+   "cues": {
+    "idea": "idea",
+    "wait": "waiting"
+   },
+   "params": {
+    "orb": {
+     "x": 0.468,
+     "y": 0.38,
+     "r": 0.34
+    },
+    "flock": {
+     "n": 7,
+     "from": [
+      -0.15,
+      0.62
+     ],
+     "to": [
+      1.15,
+      0.28
+     ],
+     "at": 0,
+     "dur": 7,
+     "s": 0.34,
+     "gap": 0.06,
+     "sil": true
+    },
+    "trees": [
+     {
+      "x": 0.05,
+      "s": 0.9
+     },
+     {
+      "x": 0.96,
+      "s": 1.0
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  },
+  {
+   "type": "moon_letter",
+   "text": "But who actually wrote them? And did The Sun ever admit the truth?",
+   "visual": "Candle light: a quill writes a big red 'Who wrote it?' on a blank sheet, then 'and the truth?' below it.",
+   "title": {
+    "white": "Who",
+    "gray": "wrote it?"
+   },
+   "cues": {
+    "who": "wrote",
+    "truth": "truth"
+   },
+   "params": {
+    "sheet": {
+     "x": 0.56,
+     "y": 0.6,
+     "w": 0.5,
+     "h": 0.7,
+     "rot": 1
+    },
+    "heading": "New-York, 1835",
+    "lines": [
+     {
+      "text": "Who wrote it?",
+      "at": "who",
+      "dur": 0.9,
+      "color": "red",
+      "size": 80
+     },
+     {
+      "text": "and the truth?",
+      "at": "truth",
+      "dur": 0.8,
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1075,
+     560
+    ],
+    "zoom": 1.25,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Let's start with the writer.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Paper That Never Said Sorry'.",
+   "title": {},
+   "cues": {
+    "title": "writer"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Paper That Never Said Sorry",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Paper That Never Said Sorry"
+  },
+  {
+   "type": "moon_letter",
+   "text": "It was almost certainly Richard Adams Locke, a Cambridge-educated reporter at The Sun. He later called it satire, aimed at serious books about life on other worlds. The joke simply worked too well.",
+   "visual": "Close on Richard Adams Locke, big, beside his writing desk: he shrugs happily on 'satire' while the quill writes 'just a satire!', then looks worried on 'well'.",
+   "title": {
+    "white": "Locke",
+    "gray": "the writer"
+   },
+   "cues": {
+    "name": "Locke",
+    "sat": "satire",
+    "well": "well"
+   },
+   "params": {
+    "sheet": {
+     "x": 0.58,
+     "y": 0.55,
+     "w": 0.26,
+     "h": 0.56,
+     "rot": -1
+    },
+    "heading": "New-York",
+    "candle": 0.95,
+    "lines": [
+     {
+      "text": "just a satire!",
+      "at": "sat",
+      "dur": 1.0,
+      "size": 66
+     }
+    ],
+    "cast": [
+     {
+      "hat": false,
+      "x": 0.32,
+      "y": 0.98,
+      "scale": 1.15,
+      "beard": "short",
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "sat",
+        "pose": "shrug",
+        "emotion": "happy"
+       },
+       {
+        "at": "well",
+        "pose": "think",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": []
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "source": "Museum of Hoaxes",
+   "camera": {
+    "focus": [
+     860,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_paper",
+   "text": "On September 16th, The Sun answered its critics. Some readers, it said, wanted it to confess the whole thing was a hoax.",
+   "visual": "The Sun, September 16, 1835: the date line gets a red ring on 'September'; on 'hoax' a red stamp 'HOAX?' slams onto the columns.",
+   "title": {
+    "white": "Sept 16",
+    "gray": "1835"
+   },
+   "cues": {
+    "date": "September",
+    "hoax": "hoax"
+   },
+   "params": {
+    "masthead": "THE SUN",
+    "date": "NEW-YORK, SEPTEMBER 16, 1835",
+    "price": "ONE CENT",
+    "head": [
+     "TO OUR READERS"
+    ],
+    "at": 0.3,
+    "page": {
+     "x": 0.625,
+     "y": 0.62,
+     "w": 0.62,
+     "h": 1.0,
+     "rot": 1
+    },
+    "ring": {
+     "target": "date",
+     "at": "date"
+    },
+    "stamps": [
+     {
+      "text": "HOAX?",
+      "x": 0.5,
+      "y": 0.55,
+      "at": "hoax",
+      "rot": -8,
+      "size": 140
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1040
+   },
+   "source": "Museum of Hoaxes"
+  },
+  {
+   "type": "moon_letter",
+   "text": "It refused, and told them to wait for the British papers. It never printed a retraction.",
+   "visual": "A big sheet with 'RETRACTION' on it; on 'never' it rips in two and the halves fall apart; the fez narrator, big on the left, points at it and then shrugs.",
+   "title": {},
+   "cues": {
+    "refused": "refused",
+    "never": "never"
+   },
+   "params": {
+    "sheet": false,
+    "quill": false,
+    "candle": false,
+    "tear": {
+     "text": "RETRACTION",
+     "at": "never",
+     "x": 0.6,
+     "y": 0.42,
+     "w": 0.4,
+     "h": 0.42,
+     "size": 110
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.98,
+     "scale": 1.05,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "refused",
+       "pose": "point",
+       "dir": 20,
+       "face": "right"
+      },
+      {
+       "at": "never",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "source": "Museum of Hoaxes",
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "moon_scope",
+   "text": "And Herschel? At the Cape, a visitor handed him the story. He laughed, and said his real discoveries would look humble next to it.",
+   "visual": "Daylight at the Cape beside the big telescope: a visitor hands Herschel a copy of The Sun; on 'laughed' Herschel throws up his hands, laughing, face clearly visible.",
+   "title": {
+    "white": "Herschel",
+    "gray": "reads it"
+   },
+   "cues": {
+    "hand": "handed",
+    "laugh": "laughed",
+    "hum": "humble"
+   },
+   "params": {
+    "mode": "real",
+    "x": 0.5,
+    "observer": {
+     "x": 0.6,
+     "scale": 0.68,
+     "pose": "idle",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hand",
+       "pose": "hold",
+       "text": "THE SUN"
+      },
+      {
+       "at": "laugh",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ],
+     "hat": false
+    },
+    "cast": [
+     {
+      "x": 0.86,
+      "scale": 0.66,
+      "beard": "short",
+      "pose": "hold",
+      "text": "THE SUN",
+      "face": "left",
+      "walk": {
+       "to": 0.74,
+       "at": 0,
+       "dur": 1.4
+      },
+      "seq": [
+       {
+        "at": "hand",
+        "pose": "point",
+        "dir": 0,
+        "face": "left"
+       }
+      ],
+      "hat": false
+     }
+    ],
+    "labels": [
+     {
+      "text": "Herschel",
+      "x": 0.6,
+      "y": 0.2,
+      "at": "laugh",
+      "size": 60
+     }
+    ]
+   },
+   "set": "hills",
+   "camera": {
+    "focus": [
+     1152,
+     620
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_letter",
+   "text": "But two years later he complained to his aunt that he was pestered from all quarters with that ridiculous hoax about the Moon, in four languages.",
+   "visual": "A letter at candle light, heading 'Cape of Good Hope, 1837': the quill writes '...that ridiculous hoax...' and underlines 'ridiculous' in red; a red stamp 'IN 4 LANGUAGES' slams on 'languages'.",
+   "title": {
+    "white": "Dear aunt",
+    "gray": "1837"
+   },
+   "cues": {
+    "pest": "pestered",
+    "rid": "ridiculous",
+    "lang": "languages"
+   },
+   "params": {
+    "heading": "Cape of Good Hope, 1837",
+    "sheet": {
+     "x": 0.5,
+     "y": 0.6,
+     "w": 0.5,
+     "h": 0.76,
+     "rot": 1.5
+    },
+    "lines": [
+     {
+      "text": "\"...that ridiculous hoax...\"",
+      "at": "pest",
+      "dur": 1.6,
+      "size": 66,
+      "underline": "rid"
+     }
+    ],
+    "tags": [
+     {
+      "text": "IN 4 LANGUAGES",
+      "x": 0.5,
+      "y": 0.66,
+      "at": "lang",
+      "rot": -6,
+      "size": 80
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "source": "Clements Library",
+   "camera": {
+    "focus": [
+     900,
+     540
+    ],
+    "zoom": 1.35,
+    "move": "up"
+   }
+  },
+  {
+   "type": "moon_vista",
+   "text": "Today real rockets are being built for the Moon, and the old recipe still works: a famous name, a faraway place, and lots of confident detail.",
+   "visual": "Night: a modern rocket climbs past the big Moon on a dashed trail; on the right three big words stamp in one by one: 'NAME', 'PLACE', 'DETAIL' (red).",
+   "title": {
+    "white": "The recipe"
+   },
+   "cues": {
+    "rk": "rockets",
+    "name": "name",
+    "place": "place",
+    "detail": "detail"
+   },
+   "params": {
+    "orb": {
+     "x": 0.429,
+     "y": 0.37,
+     "r": 0.27
+    },
+    "rocket": {
+     "from": [
+      0.66,
+      0.95
+     ],
+     "to": [
+      0.6,
+      0.02
+     ],
+     "at": "rk",
+     "dur": 7,
+     "s": 0.85
+    },
+    "labels": [
+     {
+      "text": "NAME",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "name",
+      "size": 110,
+      "font": "serif",
+      "underline": false
+     },
+     {
+      "text": "PLACE",
+      "x": 0.82,
+      "y": 0.48,
+      "at": "place",
+      "size": 110,
+      "font": "serif",
+      "underline": false
+     },
+     {
+      "text": "DETAIL",
+      "x": 0.82,
+      "y": 0.66,
+      "at": "detail",
+      "size": 110,
+      "font": "serif",
+      "color": "red",
+      "underline": false
+     }
+    ],
+    "trees": [
+     {
+      "x": 0.05,
+      "s": 0.8
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  },
+  {
+   "type": "moon_vista",
+   "text": "So, if you had bought The Sun in August 1835, would you have believed in the man-bats? Tell me in the comments, and subscribe to Stickstory for more true stories that sound made up.",
+   "visual": "Night valley under the Moon: the fez narrator holds up a sign 'THE SUN', thinks, a man-bat glides past the Moon behind him; on 'subscribe' he turns and waves.",
+   "title": {
+    "white": "Your",
+    "gray": "turn"
+   },
+   "cues": {
+    "bats": "man-bats",
+    "com": "comments",
+    "sub": "subscribe"
+   },
+   "params": {
+    "orb": {
+     "x": 0.687,
+     "y": 0.35,
+     "r": 0.25
+    },
+    "trees": [
+     {
+      "x": 0.06,
+      "s": 0.9
+     }
+    ],
+    "kasif": {
+     "x": 0.34,
+     "scale": 0.9,
+     "pose": "hold",
+     "text": "THE SUN",
+     "face": "right",
+     "seq": [
+      {
+       "at": "com",
+       "pose": "think"
+      },
+      {
+       "at": "sub",
+       "pose": "wave",
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "flock": {
+     "n": 3,
+     "from": [
+      1.1,
+      0.3
+     ],
+     "to": [
+      0.35,
+      0.22
+     ],
+     "at": "bats",
+     "dur": 5,
+     "s": 0.3,
+     "sil": true
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  }
+ ]
+}

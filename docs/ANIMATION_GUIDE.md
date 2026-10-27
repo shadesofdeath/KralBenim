@@ -50,7 +50,7 @@ Parametreler her dosyanın başındaki yorumda yazılıdır (`P: {...}`, `cues: 
 | Marka + kicker | 0–260, sol | `title` etiketi — sahne nesnesi koyma |
 | Ana sahne | 260–1150 | asıl çizim, Kaşif, dev yazı |
 | Altyazı şeridi | 1170–1320 | önemli detay koyma |
-| Alt boşluk | 1320–1500 | zemin, ön plan dokusu (buğday, su, duvar) |
+| Alt boşluk | 1320–1920 | **boş kalmaz:** ön plan katmanı (zemin, kaldırım, masa önü, su, kalabalık başları) |
 | YouTube arayüzü | > 1500 | hiçbir şey okunması gerekmesin |
 
 Yatay (1920×1080, uzun video): altyazı altta (bottom ≈ 92 px), ana sahne 120–840.

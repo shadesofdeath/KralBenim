@@ -166,7 +166,10 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   (`"camera": {"focus": [x, y], "zoom": 1.8, "move": "push"}`). Her video önceki videolardan kalıp olarak farklı.
 - **Çeşitlilik:** Shorts'ta en az 4 farklı tip; aynı tip üst üste en fazla 2 (`stage` 3); tek tip toplamın %60'ını geçmez.
 - **Kalite:** her sahnede sürekli hareket (kaynayan çizgi tek başına yetmez), girişlerde `spring()`, vurguda
-  `punch(lt, cue)` ya da Kaşif poz değişimi. Ekranda sahne başına en fazla 5 kelime, en küçük yazı 44 px. Dikey ekranda
+  `punch(lt, cue)` ya da Kaşif poz değişimi. Ekranda sahne başına en fazla 5 kelime, en küçük yazı 44 px.
+  **Kadraj dolu (2026-10-27 eleştirilerinden):** boş kâğıt üstünde küçük kart/diyagram/harita yok (tam kadraj ya da
+  bir mekânın içinde: masa, tezgâh, oda); dikeyde altyazının altı (y 1320–1920) boş kalmaz, ön plan katmanı (zemin,
+  kaldırım, masa önü, kalabalık başları) iner; gökyüzü kadrajın en fazla üçte biri; yakın plan zoom ≥ 1,6. Dikey ekranda
   önemli ayrıntı altyazı şeridine (y ≈ 1170–1320) ve YouTube arayüzüne (y > 1500) konmaz; sol üst marka + kicker'ındır.
 - Geçişler otomatik (`slide`, her üçüncüde `fade`); elle `"transition": "slide|fade|cut"`.
 - **Kaynaklar görünür (kanal sahibinin kararı, 2026-10-26; lint):** senaryoda `"sources": [{"title": "NASA — Phobos",
