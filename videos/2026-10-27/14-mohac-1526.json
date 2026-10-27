@@ -1,0 +1,2640 @@
+{
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "extra": true,
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "mohac-1526",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Kral",
+   "dereye",
+   "düştü"
+  ],
+  "highlight": [
+   "dereye"
+  ],
+  "scene": 1,
+  "t": 5.4,
+  "focus": [
+   790,
+   760
+  ],
+  "zoom": 1.9,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 980,
+   "y": 1100,
+   "scale": 1.0,
+   "face": 1
+  },
+  "size": 160
+ },
+ "sources": [
+  {
+   "title": "TDV İslâm Ansiklopedisi: Mohaç Muharebesi",
+   "url": "https://islamansiklopedisi.org.tr/mohac-muharebesi"
+  },
+  {
+   "title": "Battle of Mohács (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Moh%C3%A1cs"
+  },
+  {
+   "title": "Louis II of Hungary (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Louis_II_of_Hungary"
+  },
+  {
+   "title": "Pál Tomori (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/P%C3%A1l_Tomori"
+  }
+ ],
+ "youtube": {
+  "title": "Mohaç Meydan Muharebesi: Bir Krallık İki Saatte Nasıl Çöktü?",
+  "description": "Mohaç Meydan Muharebesi, 29 Ağustos 1526'da yalnızca iki saat sürdü ve Macar Krallığı'nın kaderini belirledi. Peki koca bir krallık nasıl bu kadar hızlı çöktü?\n\nKanuni Sultan Süleyman'ın ordusu Petervaradin'i aldı, Drava'yı gemilerden kurulan bir köprüyle geçti ve Mohaç ovasına indi. Genç Macar kralı İkinci Layoş'un ağır zırhlı şövalyeleri hücuma kalktı, ama karşılarında zincirli topları ve yeniçerileri buldular. Kral, kaçarken Csele deresinde boğuldu. Bu videoda Mohaç Savaşı'nın asıl nedenini, yani bölünmüş bir krallığın hikâyesini anlatıyoruz.\n\nBu videoda:\n• Macaristan neden içeriden bölünmüştü?\n• Keşişten komutana Pal Tomori ve Drava köprüsü\n• Ağır süvari hücumu, Osmanlı tuzağı ve zincirli toplar\n• İkinci Layoş'un Csele deresindeki ölümü\n• Budin, iki kral ve yüz elli yıl süren bölünme\n\nHer gün yeni bir tarih \"neden\"i için Düşün Bakalım'a abone ol. Sence Macaristan birlik olsaydı Mohaç'ın sonu değişir miydi? Yorumlara yaz!\n\n#mohaçmeydanmuharebesi #kanunisultansüleyman #osmanlıtarihi #tarih #düşünbakalım",
+  "tags": [
+   "mohaç meydan muharebesi",
+   "mohaç savaşı",
+   "mohaç meydan savaşı",
+   "mohaç muharebesi 1526",
+   "kanuni sultan süleyman",
+   "ikinci layoş",
+   "macar krallığı",
+   "osmanlı macar savaşı",
+   "pal tomori",
+   "zincirli toplar",
+   "yeniçeriler",
+   "budin",
+   "osmanlı tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-27T17:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Csele deresi",
+   "type": "mohac_stream",
+   "text": "Hava kararmak üzereydi. Yirmi yaşında bir kral, ağır zırhıyla, dik bir yamaca tırmanmaya çalışıyordu.",
+   "visual": "Gece, yağmur: önde sazlıklar ve kabarmış derenin akan suyu; sağda derenin üstünde yükselen dik, çamurlu yamaç; altın örtülü atıyla miğferli bir süvari yamaca tırmanmaya çalışıyor, 'çalışıyordu'da at şahlanıyor; gökte ay, yağmur çizgileri.",
+   "title": {
+    "white": "Csele deresi"
+   },
+   "set": {
+    "name": "night",
+    "ground": 800,
+    "horizon": 470
+   },
+   "camera": {
+    "focus": [
+     1010,
+     560
+    ],
+    "zoom": 1.55,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "zırhıyla",
+    "rear": "çalışıyordu"
+   },
+   "params": {
+    "mode": "climb",
+    "fall": 99,
+    "rear": "rear"
+   }
+  },
+  {
+   "type": "mohac_stream",
+   "text": "Altında yağmurla kabarmış bir dere akıyordu. At birden şahlandı… ve kral, sırtüstü suya devrildi.",
+   "visual": "Geniş plan aynı dere: süvari yamaçta; 'şahlandı'da at şahlanıyor, geriye kayıp suya devriliyor ve su yüzeyinin arkasında kayboluyor; sıçrayan damlalar ve genişleyen halkalar; önde sallanan sazlıklar.",
+   "title": {
+    "white": "Csele deresi"
+   },
+   "set": {
+    "name": "night",
+    "ground": 800,
+    "horizon": 470
+   },
+   "cues": {
+    "fall": "şahlandı",
+    "hit": "devrildi"
+   },
+   "params": {
+    "mode": "climb",
+    "fall": "fall"
+   }
+  },
+  {
+   "type": "mohac_field",
+   "text": "Arkasında ise, iki saat önce hâlâ ayakta olan koca bir ordu vardı. Artık o ordu yoktu.",
+   "visual": "Alacakaranlıkta, yakın çekim eğik ova: önde kararan sazlıklar; ovada dağılmış kırmızı Macar birlikleri, 'yoktu'da tamamen siliniyor; geride yanan ordugâh çadırları, sırtın önünde top dumanı ve mavi Osmanlı hattı.",
+   "title": {
+    "white": "Mohaç",
+    "gray": "29 Ağustos 1526"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1060,
+    "horizon": 200
+   },
+   "cues": {
+    "army": "ordu",
+    "hit": "yoktu"
+   },
+   "params": {
+    "dusk": 1,
+    "units": [
+     {
+      "side": "hu",
+      "kind": "cav",
+      "u": 0.45,
+      "v": 0.45,
+      "w": 0.3,
+      "d": 0.08,
+      "rows": 3,
+      "cols": 10,
+      "scatter": 0.2,
+      "fade": "hit"
+     },
+     {
+      "side": "hu",
+      "kind": "inf",
+      "u": 0.7,
+      "v": 0.38,
+      "w": 0.2,
+      "d": 0.06,
+      "rows": 3,
+      "cols": 8,
+      "scatter": 0.2,
+      "fade": "hit"
+     },
+     {
+      "side": "hu",
+      "kind": "camp",
+      "u": 0.62,
+      "v": 0.42,
+      "w": 0.32,
+      "d": 0.04,
+      "rows": 2,
+      "cols": 6,
+      "flag": false,
+      "burn": 0.1
+     },
+     {
+      "side": "ot",
+      "kind": "inf",
+      "u": 0.55,
+      "v": 0.74,
+      "w": 0.5,
+      "d": 0.05,
+      "rows": 2,
+      "cols": 14
+     },
+     {
+      "side": "ot",
+      "kind": "guns",
+      "u": 0.5,
+      "v": 0.78,
+      "w": 0.3,
+      "d": 0.01,
+      "rows": 1,
+      "cols": 8
+     }
+    ],
+    "smoke": [
+     {
+      "u": 0.5,
+      "v": 0.8,
+      "at": 0,
+      "w": 0.25,
+      "n": 4
+     }
+    ],
+    "fore": [
+     {
+      "type": "reeds",
+      "x": 220,
+      "y": 1040,
+      "h": 340
+     },
+     {
+      "type": "reeds",
+      "x": 1700,
+      "y": 1050,
+      "h": 300
+     }
+    ],
+    "size": 1.7
+   },
+   "camera": {
+    "focus": [
+     900,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki koca bir krallık nasıl olur da iki saatte çöker?",
+   "visual": "Dev Fraunces yazı kelime kelime: 'İki saatte bir krallık?', 'krallık' kırmızı kutuda; el yazısı not '29 Ağustos 1526'; sağda Kaşif çenesini tutup düşünüyor.",
+   "title": {},
+   "cues": {
+    "w0": "iki",
+    "note": "çöker"
+   },
+   "params": {
+    "lines": [
+     "İki saatte",
+     "bir krallık?"
+    ],
+    "highlight": [
+     "krallık"
+    ],
+    "note": {
+     "text": "29 Ağustos 1526",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.88,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.75
+    }
+   }
+  },
+  {
+   "type": "mohac_crown",
+   "text": "Cevap, sandığınız gibi sadece toplarda değil. Gelin, en baştan anlatayım!",
+   "visual": "Taş sütunlu, halılı saray salonu: masada kırmızı yastıkta Macar tacı; 'toplarda'da tacın üstünde bir parıltı geziyor; solda Kaşif önce omuz silkiyor, 'baştan'da tacı işaret ediyor.",
+   "title": {
+    "white": "Cevap",
+    "gray": "bu tacın hikâyesi"
+   },
+   "set": false,
+   "cues": {
+    "glint": "toplarda",
+    "hit": "baştan"
+   },
+   "params": {
+    "room": "hall",
+    "mode": "rest",
+    "x": 1100,
+    "glint": "glint",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "scale": 0.7,
+      "pose": "shrug",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Bölünmüş krallık",
+   "type": "chapter",
+   "text": "1526 yazında Macaristan, dışarıdan bakınca Avrupa'nın güçlü krallıklarından biriydi.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Bölünmüş krallık' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "1526",
+    "title": "Macaristan"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Bölünmüş krallık"
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Ama içeriden bakınca tablo bambaşkaydı. Tahtta İkinci Layoş vardı. Dokuz yaşında kral olmuştu ve hâlâ çok gençti.",
+   "visual": "Taş sütunlu saray salonu, kemer, asılı kırmızı duvar halıları, halı ve arkada yüksek taht: tahtın önünde taçlı, sakalsız genç Layoş; 'Layoş'ta üstünde 'II. Layoş' etiketi; iki yanında bereli, sakallı iki soylu birbirine dönüp söyleniyor; 'gençti'de Layoş endişeyle omuz silkiyor.",
+   "title": {
+    "white": "II. Layoş",
+    "gray": "Macar kralı"
+   },
+   "set": false,
+   "camera": false,
+   "cues": {
+    "name": "Layoş",
+    "hit": "gençti"
+   },
+   "params": {
+    "room": "hall",
+    "throne": true,
+    "cast": [
+     {
+      "who": "Layoş",
+      "accessory": "crown",
+      "x": 0.5,
+      "scale": 0.7,
+      "pose": "idle",
+      "face": "right",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "soylu",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.27,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "angry"
+     },
+     {
+      "who": "soylu2",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.73,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "left",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "II. Layoş",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "name",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_crown",
+   "text": "Hazine öyle boştu ki, kral bazen yiyecek ve giyecek parası için mücevherlerini rehin bırakıyordu.",
+   "visual": "Saray salonunda masada kırmızı yastık üstünde Macar Kutsal Tacı (eğik haç, mücevherli kuşak, sallanan zincirler); 'mücevherlerini'de taçta bir parıltı geziyor; sağda kapağı açılan, içi bomboş bir hazine sandığı.",
+   "title": {
+    "white": "Boş hazine"
+   },
+   "set": false,
+   "source": "Wikipedia: Louis II",
+   "cues": {
+    "glint": "mücevherlerini"
+   },
+   "params": {
+    "mode": "rest",
+    "x": 760,
+    "glint": "glint",
+    "empty": true,
+    "room": "hall"
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Asıl güç ise büyük soyluların elindeydi. Zapolya gibi güçlü beyler, saraydaki rakipleriyle yıllardır kavga ediyordu.",
+   "visual": "Saray salonu, iki karşıt kalabalık: solda kara sakallı Zapolya ve bereli yandaşları, sağda kır sakallı saray soylusu ve yandaşları; 'Zapolya'da sol grubun üstüne kırmızı 'Zapolya' damgası, karşı grubun üstüne mavi 'Saray' damgası; 'kavga'da iki taraf birbirini öfkeyle işaret ediyor.",
+   "title": {
+    "white": "Soylular",
+    "gray": "iki parti"
+   },
+   "set": false,
+   "cues": {
+    "z": "Zapolya",
+    "hit": "kavga"
+   },
+   "params": {
+    "room": "hall",
+    "cast": [
+     {
+      "who": "z2",
+      "accessory": "beret",
+      "beard": "short",
+      "x": 0.13,
+      "y": 0.73,
+      "scale": 0.5,
+      "face": "right",
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "z3",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.25,
+      "y": 0.73,
+      "scale": 0.5,
+      "face": "right",
+      "pose": "idle",
+      "at": "hit",
+      "then": "shrug",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "s2",
+      "accessory": "beret",
+      "beard": "short",
+      "x": 0.87,
+      "y": 0.73,
+      "scale": 0.5,
+      "face": "left",
+      "pose": "idle",
+      "at": "hit",
+      "then": "shrug",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "s3",
+      "accessory": "helmet",
+      "beard": "black",
+      "x": 0.75,
+      "y": 0.73,
+      "scale": 0.5,
+      "face": "left",
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "z0",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.07,
+      "y": 0.76,
+      "scale": 0.6,
+      "face": "right",
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "z1",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.31,
+      "y": 0.76,
+      "scale": 0.6,
+      "face": "right",
+      "pose": "idle",
+      "at": "hit",
+      "then": "shrug",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "s0",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.93,
+      "y": 0.76,
+      "scale": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "at": "hit",
+      "then": "shrug",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "s1",
+      "accessory": "helmet",
+      "beard": "grey",
+      "x": 0.69,
+      "y": 0.76,
+      "scale": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     },
+     {
+      "who": "Zapolya",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.2,
+      "scale": 0.72,
+      "face": "right",
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     },
+     {
+      "who": "saray",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.8,
+      "scale": 0.72,
+      "face": "left",
+      "pose": "idle",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Zapolya",
+      "x": 0.2,
+      "y": 0.3,
+      "at": "z",
+      "color": "red",
+      "stamp": true,
+      "size": 66,
+      "rot": -4
+     },
+     {
+      "text": "Saray",
+      "x": 0.8,
+      "y": 0.3,
+      "at": "z",
+      "color": "blue",
+      "stamp": true,
+      "size": 66,
+      "rot": 4
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_crown",
+   "text": "Bakın, işin acı tarafı şurada: düşman kapıya dayandığında bile bu kavga bitmeyecekti.",
+   "visual": "Aynı taç yastığın üstünde: 'kavga'da tepeden aşağı zikzak bir çatlak iniyor, taç ikiye ayrılıp iki yana kayıyor; solda Kaşif tacı işaret ediyor, çatlakta şokla geri sıçrıyor.",
+   "title": {
+    "white": "Bölünme"
+   },
+   "set": false,
+   "cues": {
+    "look": "acı",
+    "crack": "kavga"
+   },
+   "params": {
+    "mode": "split",
+    "x": 1080,
+    "crack": "crack",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "scale": 0.68,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right",
+      "at": "crack",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "room": "hall"
+   }
+  },
+  {
+   "type": "mohac_rivers",
+   "text": "Çünkü düşman çok yakındaydı. 1521'de Kanuni Sultan Süleyman, Macaristan'ın güney kapısı sayılan Belgrad'ı almıştı.",
+   "visual": "Nehir haritası (Tuna, Drava, Sava, Tisza): güneydoğudan mavi kesikli ok minik sancaklı bir kolla Belgrad'a uzanıyor; 'Belgrad'ı'nda Belgrad kırmızı halkayla beliriyor; kuzeyde Budin; el yazısı not '1521'.",
+   "title": {
+    "white": "Belgrad",
+    "gray": "1521"
+   },
+   "camera": {
+    "focus": [
+     1000,
+     760
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   },
+   "cues": {
+    "route": "Süleyman",
+    "city": "Belgrad'ı"
+   },
+   "params": {
+    "cities": [
+     {
+      "name": "Belgrad",
+      "x": 20.46,
+      "y": 44.82,
+      "at": "city",
+      "color": "red",
+      "dy": 60
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       22.4,
+       44.35
+      ],
+      [
+       21.4,
+       44.6
+      ],
+      [
+       20.46,
+       44.82
+      ]
+     ],
+     "at": "route",
+     "dur": 2
+    },
+    "labels": [
+     {
+      "text": "1521",
+      "x": 21.5,
+      "y": 45.2,
+      "at": "city",
+      "color": "red",
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_march",
+   "text": "Ve 23 Nisan 1526'da Kanuni, büyük bir orduyla İstanbul'dan yola çıktı. Hedefi Macaristan'ın kalbi Budin'di. Peki Macarlar bu orduyu nerede durduracaktı?",
+   "visual": "Yer seviyesinden, ufka uzanan toprak yol: mavi sancaklı Osmanlı kolu (ak börklü yeniçeriler, mızraklılar, atlılar) uzaktan kameraya doğru yürüyor, yaklaştıkça büyüyor; önde dev bir mavi sancak ve yürüyen iki asker; 'Budin'di'de yol kenarına kırmızı yazılı 'Budin' ok tabelası dikiliyor.",
+   "title": {
+    "white": "Sefer",
+    "gray": "23 Nisan 1526"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1060,
+    "horizon": 470
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "cues": {
+    "go": "yola",
+    "hit": "Budin'di",
+    "q": "durduracaktı"
+   },
+   "params": {
+    "sign": {
+     "text": "Budin",
+     "at": "hit",
+     "x": 1440
+    }
+   }
+  },
+  {
+   "chapter": "Nehirler ve bir karar",
+   "type": "chapter",
+   "text": "Önlerinde iki büyük nehir vardı: Tuna ve Drava.",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Nehirler ve bir karar' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Tuna",
+    "title": "Drava"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Nehirler ve bir karar"
+   }
+  },
+  {
+   "type": "mohac_rivers",
+   "text": "Temmuz sonunda Petervaradin kalesi düştü. Kuşatma için Osmanlı, Tuna'dan yaklaşık sekiz yüz gemi getirmişti.",
+   "visual": "Nehir haritası: Belgrad'dan Tuna boyunca mavi kesikli rota ve minik sancaklı kol Petervaradin'e ilerliyor; 'Petervaradin'de kale kırmızı halkayla beliriyor; 'sekiz'de nehrin üstünde el yazısı '~800 gemi' notu.",
+   "title": {
+    "white": "Petervaradin",
+    "gray": "Temmuz 1526"
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "camera": {
+    "focus": [
+     960,
+     760
+    ],
+    "zoom": 1.4,
+    "move": "left"
+   },
+   "cues": {
+    "route": "Temmuz",
+    "city": "Petervaradin",
+    "note": "sekiz"
+   },
+   "params": {
+    "cities": [
+     {
+      "name": "Belgrad",
+      "x": 20.46,
+      "y": 44.82,
+      "at": 0,
+      "dy": 60
+     },
+     {
+      "name": "Petervaradin",
+      "x": 19.86,
+      "y": 45.25,
+      "at": "city",
+      "color": "red",
+      "dx": 80,
+      "dy": -36
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       20.46,
+       44.82
+      ],
+      [
+       20.3,
+       45.0
+      ],
+      [
+       19.86,
+       45.26
+      ]
+     ],
+     "at": "route",
+     "dur": 2.2
+    },
+    "labels": [
+     {
+      "text": "~800 gemi",
+      "x": 21.0,
+      "y": 45.75,
+      "at": "note",
+      "color": "blue",
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Sırada Drava vardı. Macar komutan Pal Tomori, düşmanı bu nehrin kıyısında durdurmak istiyordu.",
+   "visual": "Drava kıyısı: arkada dar nehir ve ağaçlı karşı kıyı; miğferli, kır sakallı komutan Tomori sağdan yürüyüp nehre bakıyor ve karşı kıyıyı işaret ediyor; yanında 'Drava' damgası.",
+   "title": {
+    "white": "Pal Tomori",
+    "gray": "Macar komutan"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 820,
+    "horizon": 640
+   },
+   "camera": {
+    "focus": [
+     1060,
+     600
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   },
+   "cues": {
+    "walk": "Tomori",
+    "hit": "durdurmak"
+   },
+   "params": {
+    "bank": {
+     "y": 640
+    },
+    "cast": [
+     {
+      "who": "Tomori",
+      "accessory": "helmet",
+      "beard": "grey",
+      "x": 0.88,
+      "scale": 0.66,
+      "face": "left",
+      "pose": "idle",
+      "moves": [
+       {
+        "at": "walk",
+        "to": 0.62,
+        "dur": 1.8
+       }
+      ],
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Drava",
+      "x": 0.3,
+      "y": 0.5,
+      "at": 0.3,
+      "color": "blue",
+      "stamp": true,
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Şimdi size çok ilginç bir şey söyleyeceğim: Tomori aslında bir Fransisken keşişiydi! Servetini dağıtıp manastıra çekilmişti, ama papa onu başpiskopos yapmıştı.",
+   "visual": "Manastır avlusu, kemerli revak ve duvarda haç: ortada kahverengi keşiş cüppeli, ip kuşaklı, kır sakallı Tomori elinde tomarla duruyor; 'keşişiydi'de solda Kaşif şaşkınlıkla geri sıçrıyor; 'Servetini'de Tomori'nin elinden altın sikkeler yere saçılıyor; 'başpiskopos'ta Tomori tomarı kaldırıyor ve kırmızı 'Başpiskopos' etiketi düşüyor.",
+   "title": {
+    "white": "Tomori",
+    "gray": "keşişten komutana"
+   },
+   "set": false,
+   "source": "Wikipedia: Pál Tomori",
+   "cues": {
+    "k": "keşişiydi",
+    "coins": "Servetini",
+    "hit": "başpiskopos"
+   },
+   "params": {
+    "room": "monastery",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "right",
+      "at": "k",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "Tomori",
+      "beard": "grey",
+      "robe": true,
+      "x": 0.58,
+      "scale": 0.7,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "left",
+      "at": "hit",
+      "then": "point",
+      "dir": "up",
+      "emotion": "worried"
+     }
+    ],
+    "props": [
+     {
+      "type": "coins",
+      "x": 0.66,
+      "at": "coins"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Başpiskopos",
+      "x": 0.6,
+      "y": 0.18,
+      "at": "hit",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_bridge",
+   "text": "Ama Tomori'nin askeri azdı. Ağustos'ta Osmanlı ordusu, Ösek yakınında gemilerden kurulan bir köprüyle Drava'yı geçti.",
+   "visual": "Geniş nehir: sol alt köşeden karşı kıyıya perspektifle uzanan gemilerden kurulmuş tahta köprü; üstünde mavi sancaklı yaya, atlı ve deve kolu karşıya akıyor; önde mavi sancaklar ve köprüye adım atan iki asker; 'Drava'yı'da karşı kıyıdaki küçük kırmızı Macar atlıları dönüp uzaklaşıyor.",
+   "title": {
+    "white": "Drava",
+    "gray": "Ösek köprüsü"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1010,
+    "horizon": 600
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "cues": {
+    "few": "azdı",
+    "retreat": "Drava'yı"
+   },
+   "params": {
+    "retreat": "retreat",
+    "horizon": 600,
+    "to": [
+     1300,
+     620
+    ]
+   }
+  },
+  {
+   "type": "mohac_bridge",
+   "text": "Yaya askerler, atlılar, develer… Birlik birlik karşıya geçtiler. Ve onları durduran kimse çıkmadı.",
+   "visual": "Yakın plan köprünün yakın ucu: sallanan tekneler ve kalaslar üstünde yürüyen sarıklı ve börklü askerler, mızrak ve sancaklar; arkada köprü üstünde uzayıp giden kol.",
+   "title": {
+    "white": "Drava",
+    "gray": "geçiş"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1010,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     470,
+     860
+    ],
+    "zoom": 1.8,
+    "move": "right"
+   },
+   "cues": {
+    "camel": "develer",
+    "hit": "kimse"
+   },
+   "params": {
+    "flow": 1.6,
+    "horizon": 600,
+    "to": [
+     1300,
+     620
+    ]
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Macarlar artık bir karar vermek zorundaydı. Geri çekilip başkenti mi savunacaklardı, yoksa açık arazide savaşacaklar mıydı?",
+   "visual": "Savaş çadırı içi (çizgili kumaş, orta direk, sallanan kandil): önde masada Tuna ve Drava çizili bir harita; arkada taçlı Layoş düşünüyor; solda kır sakallı soylu haritayı işaret ediyor, üstünde 'Budin'e çekil!' notu; sağda kara sakallı soylu öfkeyle işaret ediyor, üstünde kırmızı 'Savaş!' notu; 'savaşacaklar'da Layoş omuz silkiyor.",
+   "title": {
+    "white": "Karar"
+   },
+   "set": false,
+   "cues": {
+    "a": "başkenti",
+    "b": "savaşacaklar"
+   },
+   "params": {
+    "room": "tent",
+    "table": true,
+    "cast": [
+     {
+      "who": "s1",
+      "accessory": "beret",
+      "beard": "grey",
+      "x": 0.22,
+      "scale": 0.66,
+      "pose": "point",
+      "dir": "down",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "Layoş",
+      "accessory": "crown",
+      "x": 0.5,
+      "y": 0.72,
+      "scale": 0.6,
+      "pose": "think",
+      "face": "left",
+      "at": "b",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "s2",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.78,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "left",
+      "at": "b",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Budin'e çekil!",
+      "x": 0.25,
+      "y": 0.33,
+      "at": "a",
+      "color": "blue",
+      "size": 60,
+      "rot": -4,
+      "stamp": true
+     },
+     {
+      "text": "Savaş!",
+      "x": 0.8,
+      "y": 0.33,
+      "at": "b",
+      "color": "red",
+      "size": 60,
+      "rot": 4,
+      "stamp": true
+     }
+    ],
+    "table_y": 870
+   }
+  },
+  {
+   "type": "mohac_rivers",
+   "text": "Üstelik Zapolya'nın ordusu hâlâ yoldaydı. Bitmek bilmeyen yağmurlar yolları çamura çevirmişti.",
+   "visual": "Nehir haritası: Segedin'den batıya kırmızı kesikli rota ve minik sancaklı Zapolya kolu Mohaç'a doğru çıkıyor, yolun yarısında duruyor; 'yağmurlar'da üstünde bir yağmur bulutu beliriyor, damlalar yağıyor; Mohaç kırmızı halkada bekliyor.",
+   "title": {
+    "white": "Zapolya",
+    "gray": "yolda"
+   },
+   "source": "Wikipedia: Battle of Mohács",
+   "camera": {
+    "focus": [
+     860,
+     560
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   },
+   "cues": {
+    "z": "Zapolya'nın",
+    "rain": "yağmurlar"
+   },
+   "params": {
+    "cities": [
+     {
+      "name": "Mohaç",
+      "x": 18.68,
+      "y": 45.99,
+      "at": 0,
+      "color": "red",
+      "dx": -80
+     },
+     {
+      "name": "Segedin",
+      "x": 20.15,
+      "y": 46.25,
+      "at": 0,
+      "dx": 70,
+      "dy": 50
+     },
+     {
+      "name": "Budin",
+      "x": 19.04,
+      "y": 47.5,
+      "at": 0
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       20.15,
+       46.25
+      ],
+      [
+       19.8,
+       46.2
+      ],
+      [
+       19.45,
+       46.12
+      ]
+     ],
+     "at": "z",
+     "dur": 2.5,
+     "color": "red"
+    },
+    "rain": {
+     "x": 19.5,
+     "y": 46.15,
+     "at": "rain"
+    },
+    "hide_names": [
+     "Sava"
+    ]
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Ama soylular beklemedi. Savaşmaya, hem de hemen savaşmaya karar verdiler. Seçtikleri yer Mohaç ovasıydı ve bu, Macar tarihinin en pahalı kararı olacaktı.",
+   "visual": "Açık ova: iki sakallı soylu 'hemen'de kılıçlarını havaya kaldırıyor; 'Mohaç'ta kırmızı 'Mohaç' damgası beliriyor; 'pahalı'da solda Kaşif şokla geri sıçrıyor.",
+   "title": {
+    "white": "Karar",
+    "gray": "Mohaç"
+   },
+   "set": {
+    "name": "field",
+    "ground": 820,
+    "horizon": 600
+   },
+   "cues": {
+    "swords": "hemen",
+    "hit": "Mohaç",
+    "cost": "pahalı"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.16,
+      "scale": 0.66,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right",
+      "at": "cost",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "s1",
+      "accessory": "beret",
+      "beard": "black",
+      "x": 0.48,
+      "scale": 0.68,
+      "pose": "talk",
+      "face": "right",
+      "at": "swords",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry",
+      "sword": "swords"
+     },
+     {
+      "who": "s2",
+      "accessory": "helmet",
+      "beard": "grey",
+      "x": 0.64,
+      "scale": 0.68,
+      "pose": "talk",
+      "face": "left",
+      "at": "swords",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry",
+      "sword": "swords"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Mohaç",
+      "x": 0.84,
+      "y": 0.4,
+      "at": "hit",
+      "color": "red",
+      "stamp": true,
+      "size": 72,
+      "rot": -5
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Mohaç ovası",
+   "type": "chapter",
+   "text": "Mohaç, Tuna kıyısında geniş bir ovaydı.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Mohaç ovası' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Mohaç",
+    "title": "ovaydı"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Mohaç ovası"
+   }
+  },
+  {
+   "type": "mohac_field",
+   "text": "Günlerdir yağan yağmur toprağı çamura çevirmişti. Bir yanda nehir ve sazlıklar, karşıda ise ovaya bakan yüksek bir sırt vardı.",
+   "visual": "Yakın çekim eğik ova: solda Tuna ve sazlık bataklık, ovada su birikintileri; ortada kırmızı Macar ordusu dizili; uzakta taralı, inişli çıkışlı sırt; 'nehir'de 'Tuna', 'sazlıklar'da 'Bataklık', 'sırt'ta kırmızı 'Sırt' etiketi; önde sazlar ve kırmızı bir sancak.",
+   "title": {
+    "white": "Mohaç ovası"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1060,
+    "horizon": 200
+   },
+   "cues": {
+    "r": "nehir",
+    "m": "sazlıklar",
+    "s": "sırt"
+   },
+   "params": {
+    "units": [
+     {
+      "side": "hu",
+      "kind": "cav",
+      "u": 0.3,
+      "v": 0.3,
+      "w": 0.18,
+      "d": 0.05,
+      "rows": 3,
+      "cols": 9
+     },
+     {
+      "side": "hu",
+      "kind": "inf",
+      "u": 0.55,
+      "v": 0.28,
+      "w": 0.16,
+      "d": 0.04,
+      "rows": 3,
+      "cols": 8
+     },
+     {
+      "side": "hu",
+      "kind": "cav",
+      "u": 0.8,
+      "v": 0.3,
+      "w": 0.18,
+      "d": 0.05,
+      "rows": 3,
+      "cols": 9
+     }
+    ],
+    "labels": [
+     {
+      "text": "Tuna",
+      "u": 0.2,
+      "v": 0.66,
+      "at": "r",
+      "color": "blue"
+     },
+     {
+      "text": "Bataklık",
+      "u": 0.27,
+      "v": 0.55,
+      "at": "m"
+     },
+     {
+      "text": "Sırt",
+      "u": 0.62,
+      "v": 0.86,
+      "at": "s",
+      "color": "red",
+      "size": 64
+     }
+    ],
+    "fore": [
+     {
+      "type": "reeds",
+      "x": 240,
+      "y": 980,
+      "h": 300
+     },
+     {
+      "type": "banner",
+      "x": 1180,
+      "y": 1000,
+      "h": 420,
+      "w": 200,
+      "side": "hu",
+      "face": -1
+     }
+    ],
+    "size": 1.7
+   },
+   "camera": {
+    "focus": [
+     720,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   }
+  },
+  {
+   "type": "mohac_field",
+   "text": "Osmanlı ordusu ovaya işte o sırttan inecekti.",
+   "visual": "Yakın plan sırt: taralı yamacın tepesinde mavi sancaklı Osmanlı yayaları ve topları beliriyor; 'inecekti'de kırmızı ok yamaçtan ovaya doğru iniyor. Önde, ovada bekleyen kırmızı Macar süvarileri.",
+   "title": {
+    "white": "Sırt"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1060,
+    "horizon": 200
+   },
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 2.1,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "inecekti"
+   },
+   "params": {
+    "units": [
+     {
+      "side": "ot",
+      "kind": "inf",
+      "u": 0.5,
+      "v": 1.0,
+      "w": 0.4,
+      "d": 0.05,
+      "rows": 3,
+      "cols": 14,
+      "hide_until": 0.4
+     },
+     {
+      "side": "ot",
+      "kind": "guns",
+      "u": 0.5,
+      "v": 1.08,
+      "w": 0.3,
+      "d": 0.01,
+      "rows": 1,
+      "cols": 8
+     },
+     {
+      "side": "hu",
+      "kind": "cav",
+      "u": 0.5,
+      "v": 0.64,
+      "w": 0.36,
+      "d": 0.04,
+      "rows": 1,
+      "cols": 12
+     }
+    ],
+    "arrows": [
+     {
+      "pts": [
+       [
+        0.5,
+        0.96
+       ],
+       [
+        0.52,
+        0.86
+       ],
+       [
+        0.5,
+        0.72
+       ]
+      ],
+      "at": "hit",
+      "color": "red"
+     }
+    ],
+    "size": 1.7
+   }
+  },
+  {
+   "type": "mohac_charge",
+   "text": "Macarların en büyük gücü, ağır zırhlı şövalyelerdi. Atıyla birlikte demire bürünmüş bir süvari… Bu hücumu durdurmak kolay değildi.",
+   "visual": "Yakın plan: 'şövalyelerdi'de kırmızı örtülü atı üstünde miğferli, sorguçlu dev bir Macar şövalyesi soldan kadraja giriyor; arkasında sıra sıra şövalyeler ve kırmızı sancak; 'kolay'da şövalye mızrağını öne indiriyor.",
+   "title": {
+    "white": "Şövalyeler",
+    "gray": "ağır süvari"
+   },
+   "set": {
+    "name": "field",
+    "ground": 820,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     760,
+     520
+    ],
+    "zoom": 1.75,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "şövalyelerdi",
+    "couch": "kolay"
+   },
+   "params": {
+    "mode": "ready",
+    "lead": {
+     "x": 760,
+     "s": 1.5,
+     "y": 900,
+     "at": "hit"
+    },
+    "banners": [
+     {
+      "x": 1150,
+      "row": 1
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_count",
+   "text": "Sayılar hâlâ tartışmalı. Ama Osmanlı ordusu, büyük olasılıkla çok daha kalabalıktı. Üstelik yanında yüzlerce top vardı.",
+   "visual": "Parşömen üstünde iki sıra minik mürekkep asker: 'tartışmalı'da kırmızı 'Macar ordusu' sırası tek tek doluyor; 'kalabalıktı'da altında çok daha uzun mavi 'Osmanlı ordusu' sırası doluyor; 'yüzlerce'de altta bir sıra küçük top; sağ üstte kırmızı 'sayılar tartışmalı' damgası.",
+   "title": {
+    "white": "İki ordu"
+   },
+   "source": "Wikipedia · TDV",
+   "camera": false,
+   "cues": {
+    "b0": "tartışmalı",
+    "b1": "kalabalıktı",
+    "top": "yüzlerce"
+   },
+   "params": {
+    "rows": [
+     {
+      "label": "Macar ordusu",
+      "side": "hu",
+      "n": 10,
+      "at": "b0",
+      "kind": "cav"
+     },
+     {
+      "label": "Osmanlı ordusu",
+      "side": "ot",
+      "n": 19,
+      "at": "b1"
+     }
+    ],
+    "guns": {
+     "label": "yüzlerce top",
+     "n": 13,
+     "at": "top"
+    },
+    "stamp": {
+     "text": "sayılar tartışmalı",
+     "at": "b0"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "mohac_ridge",
+   "text": "29 Ağustos 1526, öğleden sonra. Osmanlı öncüsü sırttan ovaya inmeye başladı. Macarlar da tam bu anı bekliyordu.",
+   "visual": "Macar safından orta plan: önde Macar şövalyelerinin miğferli sırtları, göğe dikili mızraklar ve kırmızı flamalar; arada çamurlu ova; karşıda taralı sırt; 'inmeye'de mavi sancaklı Osmanlı öncüsü uzun bir kol halinde yamaçtan aşağı iniyor; sağ üstte el yazısı '29 Ağustos, ikindi'.",
+   "title": {
+    "white": "29 Ağustos",
+    "gray": "ikindi"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1060,
+    "horizon": 360
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "cues": {
+    "down": "inmeye",
+    "hit": "bekliyordu"
+   },
+   "params": {
+    "down": "down",
+    "note": {
+     "text": "29 Ağustos, ikindi",
+     "at": 0.3
+    }
+   },
+   "camera": false
+  },
+  {
+   "type": "mohac_charge",
+   "text": "Tomori hücum emrini verdi. Binlerce zırhlı atlı, çamurun içinden dörtnala ileri atıldı!",
+   "visual": "Yandan ova: üç sıra kırmızı örtülü şövalye; 'hücum'da atlar dörtnala kalkıyor, 'zırhlı'da mızraklar öne iniyor; toynakların arkasında çamur ve toz bulutları; kırmızı sancak dalgalanıyor.",
+   "title": {
+    "white": "Hücum"
+   },
+   "set": {
+    "name": "field",
+    "ground": 820,
+    "horizon": 600
+   },
+   "cues": {
+    "go": "hücum",
+    "couch": "zırhlı"
+   },
+   "params": {
+    "mode": "charge",
+    "go": "go",
+    "couch": "couch",
+    "banners": [
+     {
+      "x": 900,
+      "row": 1
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_charge",
+   "text": "Ve ilk anda… işe yaradı! Osmanlı ön safları geri çekildi, Macar hatlarından zafer çığlıkları yükseldi.",
+   "visual": "Yandan ova, yakın plan: önde büyük şövalye dörtnala sağa ilerliyor; sağda börklü, sancaksız Osmanlı öncü atlıları 'çekildi'de dönüp sağa doğru uzaklaşıyor; arkada şövalye sıraları.",
+   "title": {
+    "white": "İlk an"
+   },
+   "set": {
+    "name": "field",
+    "ground": 820,
+    "horizon": 600
+   },
+   "camera": {
+    "focus": [
+     1100,
+     640
+    ],
+    "zoom": 1.5,
+    "move": "right"
+   },
+   "cues": {
+    "e": "çekildi",
+    "hit": "zafer"
+   },
+   "params": {
+    "mode": "charge",
+    "go": 0,
+    "couch": 0,
+    "enemy": {
+     "at": "e",
+     "n": 5
+    },
+    "lead": {
+     "x": 520,
+     "s": 1.35,
+     "y": 960
+    }
+   }
+  },
+  {
+   "type": "mohac_guns",
+   "text": "Ama bu geri çekiliş, sandıkları gibi bir kaçış değildi.",
+   "visual": "Sırtın önü, boş görünen çayır; uzakta küçük şövalyeler dörtnala geliyor; 'kaçış'ta yerden zincirli top dizisi ve diz çökmüş yeniçeriler yükseliyor; önde Kaşif çenesini tutup düşünüyor, 'kaçış'ta şokla geri sıçrıyor.",
+   "title": {
+    "white": "Geri çekiliş"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 820,
+    "horizon": 620
+   },
+   "cues": {
+    "back": "çekiliş",
+    "hit": "kaçış"
+   },
+   "params": {
+    "reveal": "hit",
+    "gunner": false,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.15,
+      "scale": 0.78,
+      "pose": "think",
+      "face": "right",
+      "at": "hit",
+      "then": "shock",
+      "emotion": "worried"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Tuzak",
+   "type": "chapter",
+   "text": "Çünkü anlatılana göre, önde savaşan Rumeli askerleri bilerek iki yana açılmıştı.",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Tuzak' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Rumeli",
+    "title": "açılmıştı"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Tuzak"
+   }
+  },
+  {
+   "type": "mohac_ridge",
+   "text": "Hücumun ortasındaki şövalyeler, birden karşılarında bambaşka bir şey buldu.",
+   "visual": "Macar şövalyelerinin sırtları arasından: önde miğferler, mızraklar ve kırmızı flamalar; karşıda iki mavi Rumeli bloğu 'ortasındaki'de iki yana kayarak açılıyor; açılan boşlukta, zincirle birbirine bağlı top ağızları doğrudan şövalyelere bakıyor, arkalarında yeniçeriler; 'bambaşka'da namlulardan alev çakıyor.",
+   "title": {
+    "white": "Tuzak"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1060,
+    "horizon": 360
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "camera": false,
+   "cues": {
+    "open": "ortasındaki",
+    "hit": "bambaşka"
+   },
+   "params": {
+    "open": "open",
+    "fire": "hit",
+    "guns": false
+   }
+  },
+  {
+   "type": "mohac_guns",
+   "text": "Birbirine zincirlerle bağlanmış toplar ve onların arkasında tüfekli yeniçeriler!",
+   "visual": "Yakın plan top dizisi: sola bakan toplar tekerlekten tekerleğe sarkan zincirlerle bağlı; 'zincirlerle'de zincir halkaları kırmızı parlıyor; topların arkasında diz çökmüş, ak börklü yeniçeriler tüfeklerini sola doğrultuyor; yanan fitilli topçu.",
+   "title": {
+    "white": "Zincirli toplar"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 820,
+    "horizon": 620
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "camera": {
+    "focus": [
+     1250,
+     960
+    ],
+    "zoom": 1.8,
+    "move": "left"
+   },
+   "cues": {
+    "chain": "zincirlerle",
+    "jan": "yeniçeriler"
+   },
+   "params": {
+    "chain_at": "chain",
+    "enemy": true,
+    "guns": [
+     {
+      "x": 1430,
+      "y": 960,
+      "s": 1.3
+     },
+     {
+      "x": 1010,
+      "y": 850,
+      "s": 0.95
+     },
+     {
+      "x": 700,
+      "y": 770,
+      "s": 0.7,
+      "jan": 0
+     },
+     {
+      "x": 470,
+      "y": 712,
+      "s": 0.52,
+      "jan": 0
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_guns",
+   "text": "Ve ateş başladı. Duman, gürültü, birbirine çarpan atlar…",
+   "visual": "Geniş plan top dizisi derinliğe uzanıyor: 'ateş'te en yakın toptan başlayarak toplar sırayla alev püskürtüp geri tepiyor, kalın duman sola, uzaktan gelen küçük şövalyelerin üstüne yuvarlanıyor; 'gürültü'de yeniçeriler yaylım ateşi açıyor.",
+   "title": {
+    "white": "Ateş"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 820,
+    "horizon": 620
+   },
+   "cues": {
+    "fire": "ateş",
+    "volley": "gürültü"
+   },
+   "params": {
+    "fire": "fire",
+    "volley": "volley"
+   }
+  },
+  {
+   "type": "mohac_charge",
+   "text": "Yeniçeriler sıra sıra ateş ederken, o görkemli hücum bir anda dağıldı.",
+   "visual": "Yandan ova: şövalye sıraları sağa dörtnala giderken sağdan duman duvarı yuvarlanıyor, içinde alevler çakıyor; 'dağıldı'da atlar şahlanıyor, süvariler geriye savruluyor, mızraklar düşüyor.",
+   "title": {
+    "white": "Hücum",
+    "gray": "dağıldı"
+   },
+   "set": {
+    "name": "field",
+    "ground": 820,
+    "horizon": 600
+   },
+   "cues": {
+    "guns": "ateş",
+    "hit": "dağıldı"
+   },
+   "params": {
+    "mode": "break",
+    "go": 0,
+    "couch": 0,
+    "hit": "hit",
+    "guns": {
+     "at": "guns"
+    }
+   }
+  },
+  {
+   "type": "mohac_field",
+   "text": "Üstelik kanatlardan da süvariler geliyordu. Pusuda bekleyen akıncılar, Macar ordugâhına kadar dolanıp onu ateşe verdi.",
+   "visual": "Kuşbakışı ova: iki yandan mavi kavisli oklar Macar bloklarını sarıyor, mavi atlı bloklar kanatlardan iniyor; 'ordugâhına'da arkadan dolanan mavi ok çadırlara ulaşıyor ve 'ateşe'de çadırlar alev alıyor.",
+   "title": {
+    "white": "Akıncılar",
+    "gray": "pusu"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1060,
+    "horizon": 200
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "cues": {
+    "wings": "kanatlardan",
+    "camp": "ordugâhına",
+    "fire": "ateşe"
+   },
+   "params": {
+    "units": [
+     {
+      "side": "hu",
+      "kind": "cav",
+      "u": 0.5,
+      "v": 0.52,
+      "w": 0.22,
+      "d": 0.08,
+      "rows": 4,
+      "cols": 9
+     },
+     {
+      "side": "hu",
+      "kind": "inf",
+      "u": 0.5,
+      "v": 0.36,
+      "w": 0.2,
+      "d": 0.04,
+      "rows": 3,
+      "cols": 8
+     },
+     {
+      "side": "hu",
+      "kind": "camp",
+      "u": 0.5,
+      "v": 0.3,
+      "w": 0.32,
+      "d": 0.04,
+      "rows": 2,
+      "cols": 6,
+      "flag": false,
+      "burn": "fire"
+     },
+     {
+      "side": "ot",
+      "kind": "cav",
+      "u": 0.05,
+      "v": 0.7,
+      "w": 0.1,
+      "d": 0.08,
+      "rows": 3,
+      "cols": 4,
+      "keys": [
+       {
+        "at": "wings",
+        "u": 0.22,
+        "v": 0.55,
+        "dur": 2
+       }
+      ]
+     },
+     {
+      "side": "ot",
+      "kind": "cav",
+      "u": 0.95,
+      "v": 0.7,
+      "w": 0.1,
+      "d": 0.08,
+      "rows": 3,
+      "cols": 4,
+      "keys": [
+       {
+        "at": "wings",
+        "u": 0.78,
+        "v": 0.55,
+        "dur": 2
+       }
+      ]
+     },
+     {
+      "side": "ot",
+      "kind": "guns",
+      "u": 0.5,
+      "v": 0.74,
+      "w": 0.3,
+      "d": 0.01,
+      "rows": 1,
+      "cols": 9
+     }
+    ],
+    "arrows": [
+     {
+      "pts": [
+       [
+        0.05,
+        0.75
+       ],
+       [
+        0.15,
+        0.6
+       ],
+       [
+        0.3,
+        0.5
+       ]
+      ],
+      "at": "wings",
+      "color": "blue"
+     },
+     {
+      "pts": [
+       [
+        0.95,
+        0.75
+       ],
+       [
+        0.85,
+        0.6
+       ],
+       [
+        0.7,
+        0.5
+       ]
+      ],
+      "at": "wings",
+      "color": "blue"
+     },
+     {
+      "pts": [
+       [
+        0.95,
+        0.5
+       ],
+       [
+        0.98,
+        0.3
+       ],
+       [
+        0.85,
+        0.16
+       ],
+       [
+        0.68,
+        0.16
+       ]
+      ],
+      "at": "camp",
+      "color": "blue",
+      "dur": 1.6
+     }
+    ],
+    "smoke": [
+     {
+      "u": 0.5,
+      "v": 0.73,
+      "at": 0,
+      "w": 0.24,
+      "n": 4
+     }
+    ],
+    "fore": [
+     {
+      "type": "reeds",
+      "x": 1720,
+      "y": 1000,
+      "h": 300
+     },
+     {
+      "type": "wheel",
+      "x": 220,
+      "y": 1010,
+      "s": 1.6,
+      "face": 1
+     }
+    ],
+    "size": 1.7
+   },
+   "camera": {
+    "focus": [
+     960,
+     650
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mohac_dusk",
+   "text": "Düşünün: sadece iki saat. İkindi vaktinde başlayan savaş, güneş batarken çoktan bitmişti.",
+   "visual": "Gün batımında ova, yer seviyesinden: ufukta dev, batan bir güneş; yerde kırık mızraklar ve düşmüş kırmızı sancaklar, uzaktan yükselen ince duman sütunları, dönen kargalar, binicisiz bir at ağır ağır geçiyor; 'sadece'de dev 'Sadece iki saat' yazısı, 'İkindi'de önde bir kum saati beliriyor ve kumu akıp bitiyor.",
+   "title": {},
+   "source": "TDV İslâm Ansiklopedisi",
+   "cues": {
+    "w0": "sadece",
+    "hg": "İkindi",
+    "sun": "batarken"
+   },
+   "params": {
+    "hourglass": {
+     "x": 1640,
+     "y": 980,
+     "at": "hg"
+    },
+    "words": [
+     {
+      "text": "Sadece",
+      "x": 0.27,
+      "y": 0.27,
+      "at": "w0",
+      "font": "serif",
+      "size": 120,
+      "color": "ink"
+     },
+     {
+      "text": "iki saat",
+      "x": 0.3,
+      "y": 0.43,
+      "at": "w0",
+      "font": "serif",
+      "size": 120,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 840,
+    "horizon": 620
+   }
+  },
+  {
+   "type": "mohac_dusk",
+   "text": "Ölenler arasında Tomori de vardı. Yedi piskopos, yirmi sekiz baron ve binlerce asker o ovada kaldı.",
+   "visual": "Gece, savaş alanı: ayın altında kırık mızraklar, düşmüş kırmızı sancaklar, yükselen ince dumanlar, binicisiz bir at; 'baron'da kırmızı el yazısı '7 piskopos, 28 baron'.",
+   "title": {
+    "white": "Kayıplar"
+   },
+   "set": {
+    "name": "night",
+    "ground": 840,
+    "horizon": 620
+   },
+   "source": "Wikipedia: Battle of Mohács",
+   "cues": {
+    "hit": "piskopos",
+    "note": "baron"
+   },
+   "params": {
+    "sun": false,
+    "hourglass": false,
+    "lances": 8,
+    "banners": 2,
+    "words": [
+     {
+      "text": "7 piskopos, 28 baron",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "note",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Peki ya kral? Şimdi en başta gördüğümüz o ana dönüyoruz.",
+   "visual": "Gece, dere kıyısı: önde akan su, iki yanda ağaçlar ve bir kaya; Kaşif dürbünle karşı kıyıya bakıyor; 'ana'da dönüp izleyiciyi işaret ediyor.",
+   "title": {
+    "white": "Ya kral?"
+   },
+   "set": {
+    "name": "night",
+    "ground": 820,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     700,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "q": "kral",
+    "hit": "ana"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "scale": 0.72,
+      "pose": "look",
+      "face": "right",
+      "at": "hit",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "worried"
+     }
+    ],
+    "props": [
+     {
+      "type": "tree",
+      "x": 0.84,
+      "scale": 0.9
+     },
+     {
+      "type": "rock",
+      "x": 0.62,
+      "scale": 0.7
+     },
+     {
+      "type": "tree",
+      "x": 0.08,
+      "scale": 0.7
+     }
+    ],
+    "foreground": "water"
+   }
+  },
+  {
+   "type": "mohac_stream",
+   "text": "Layoş, karanlıkta kaçarken Csele deresine geldi. Dik yamaca tırmanırken atı geriye devrildi ve kral ağır zırhıyla sudan bir daha kalkamadı.",
+   "visual": "Gece, yağmur, Csele deresi: altın örtülü atıyla kral yamaca tırmanıyor; 'devrildi'de at şahlanıp geriye, suya devriliyor; su yüzeyinde sıçrayan damlalar ve büyüyen halkalar; önde sazlıklar.",
+   "title": {
+    "white": "II. Layoş",
+    "gray": "Csele deresi"
+   },
+   "set": {
+    "name": "night",
+    "ground": 800,
+    "horizon": 470
+   },
+   "source": "Wikipedia: Louis II",
+   "cues": {
+    "flash": "karanlıkta",
+    "fall": "devrildi",
+    "hit": "kalkamadı"
+   },
+   "params": {
+    "mode": "climb",
+    "fall": "fall",
+    "x": 860,
+    "flash": "flash"
+   }
+  },
+  {
+   "type": "mohac_stream",
+   "text": "Cesedi ancak haftalar sonra, derenin çamurunda bulundu. Yirmi yaşındaydı. Ama asıl soru hâlâ ortada: Bu felaket gerçekten iki saatte mi yaşandı?",
+   "visual": "Yakın plan dere, gece: suyun üstünde ağır ağır yayılan halkalar, akıntıyla süzülen altın bir miğfer sorgucu; sazlıklarda kırık bir mızrak ve altın flama; yağmur dinmiş.",
+   "title": {
+    "white": "Csele deresi"
+   },
+   "set": {
+    "name": "night",
+    "ground": 800,
+    "horizon": 470
+   },
+   "camera": {
+    "focus": [
+     1000,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   },
+   "cues": {
+    "hit": "Yirmi",
+    "q": "gerçekten"
+   },
+   "params": {
+    "mode": "after",
+    "rain": false,
+    "labels": [
+     {
+      "text": "20 yaşında",
+      "x": 0.72,
+      "y": 0.3,
+      "at": "hit",
+      "color": "red",
+      "size": 68
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Peki neden?",
+   "type": "chapter",
+   "text": "Bakın, Mohaç aslında iki saatte kaybedilmedi. Yıllar içinde, kavgalarla kaybedildi.",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Peki neden?' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Mohaç",
+    "title": "Yıllar"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Peki neden?"
+   }
+  },
+  {
+   "type": "board",
+   "text": "Boş bir hazine, birbirini kıskanan soylular, gelmeyen ordular… Zapolya, savaşın ertesi günü bile hâlâ yoldaydı.",
+   "visual": "Pano: başlık 'Asıl nedenler'; kartta sırayla kırmızı ✗ ile 'Boş hazine', 'Bölünmüş soylular', 'Gelmeyen ordular' maddeleri beliriyor; altta kırmızı hap 'Zapolya hâlâ yolda'.",
+   "title": {
+    "white": "Asıl nedenler"
+   },
+   "source": "Wikipedia: Battle of Mohács",
+   "camera": false,
+   "cues": {
+    "a": "hazine",
+    "b": "soylular",
+    "c": "gelmeyen",
+    "pill": "ertesi"
+   },
+   "params": {
+    "title": "Asıl nedenler",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "Boş hazine",
+        "mark": "x",
+        "at": "a"
+       },
+       {
+        "text": "Bölünmüş soylular",
+        "mark": "x",
+        "at": "b"
+       },
+       {
+        "text": "Gelmeyen ordular",
+        "mark": "x",
+        "at": "c"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Zapolya hâlâ yolda",
+     "color": "red",
+     "at": "pill"
+    }
+   }
+  },
+  {
+   "type": "mohac_guns",
+   "text": "Bir de o karar vardı: daha büyük ve toplarla dolu bir orduya, açık arazide, beklemeden saldırmak.",
+   "visual": "Derinliğe uzanan, zincirli Osmanlı top hattı ve yeniçeriler; karşıda, ovanın ucunda küçük bir kırmızı şövalye grubu dörtnala bu hatta doğru geliyor; 'beklemeden'de yeniçeriler tüfeklerini doğrultuyor.",
+   "title": {
+    "white": "Karar"
+   },
+   "set": {
+    "name": "field",
+    "ground": 820,
+    "horizon": 620
+   },
+   "cues": {
+    "big": "büyük",
+    "hit": "beklemeden"
+   },
+   "params": {
+    "enemy": true,
+    "enemy_at": 0,
+    "gunner": false
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "11 Eylül'de Kanuni, hiçbir direnişle karşılaşmadan Budin'e girdi. Ama orada kalmadı, birkaç hafta sonra geri döndü.",
+   "visual": "Budin surları, mazgallı duvar ve kemerli kapı kulesi, kulede mavi sancak: sarıklı Osmanlı askerleri soldan yürüyüp 'Budin'e'de kapının önüne geliyor, kırmızı 'Budin' damgası beliriyor; 'döndü'de askerler dönüp sola, geri yürüyor.",
+   "title": {
+    "white": "Budin",
+    "gray": "11 Eylül 1526"
+   },
+   "set": {
+    "name": "city",
+    "ground": 820
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "cues": {
+    "walk": "Kanuni",
+    "city": "Budin'e",
+    "back": "döndü"
+   },
+   "params": {
+    "room": "gate",
+    "gate_x": 1300,
+    "cast": [
+     {
+      "who": "a1",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.02,
+      "scale": 0.66,
+      "face": "right",
+      "moves": [
+       {
+        "at": "walk",
+        "to": 0.48,
+        "dur": 2.4
+       },
+       {
+        "at": "back",
+        "to": 0.05,
+        "dur": 2.4
+       }
+      ]
+     },
+     {
+      "who": "a2",
+      "accessory": "turban",
+      "x": -0.1,
+      "scale": 0.6,
+      "face": "right",
+      "moves": [
+       {
+        "at": "walk",
+        "to": 0.36,
+        "dur": 2.4
+       },
+       {
+        "at": "back",
+        "to": -0.12,
+        "dur": 2.4
+       }
+      ]
+     },
+     {
+      "who": "a3",
+      "accessory": "turban",
+      "beard": "grey",
+      "x": -0.22,
+      "scale": 0.6,
+      "face": "right",
+      "moves": [
+       {
+        "at": "walk",
+        "to": 0.24,
+        "dur": 2.4
+       },
+       {
+        "at": "back",
+        "to": -0.25,
+        "dur": 2.4
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Budin",
+      "x": 0.68,
+      "y": 0.13,
+      "at": "city",
+      "color": "red",
+      "stamp": true,
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "mohac_crown",
+   "text": "Sonra işler karıştı. Kralsız kalan Macaristan, bir anda iki kral çıkardı: bir yanda Zapolya, öbür yanda Habsburg ailesinden Ferdinand.",
+   "visual": "Masada yastık üstünde Macar tacı: 'iki'de soldan kırmızı kollu, sağdan mavi kollu iki kol uzanıp tacı iki yana çekiştiriyor, taç sarsılıyor; solda 'Zapolya', sağda 'Ferdinand' el yazısı.",
+   "title": {
+    "white": "İki kral"
+   },
+   "set": false,
+   "camera": false,
+   "cues": {
+    "pull": "iki",
+    "z": "Zapolya",
+    "f": "Ferdinand"
+   },
+   "params": {
+    "mode": "tug",
+    "pull": "pull",
+    "left": {
+     "text": "Zapolya",
+     "color": "red"
+    },
+    "right": {
+     "text": "Ferdinand",
+     "color": "blue"
+    },
+    "room": "hall"
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Bu kavga, Kanuni'yi 1529'da Viyana kapılarına kadar getirdi. 1541'de ise Budin artık bir Osmanlı şehriydi.",
+   "visual": "Yatay zaman çizgisi: '1526 Mohaç', '1529 Viyana kuşatması', '1541 Budin Osmanlı'nın' sırayla beliriyor; '1541' kırmızı halkada.",
+   "title": {
+    "white": "Sonrası"
+   },
+   "cues": {
+    "c0": "kavga",
+    "c1": "1529'da",
+    "c2": "1541'de"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1526",
+      "text": "Mohaç",
+      "at": "c0"
+     },
+     {
+      "year": "1529",
+      "text": "Viyana kuşatması",
+      "at": "c1"
+     },
+     {
+      "year": "1541",
+      "text": "Budin Osmanlı'nın",
+      "at": "c2"
+     }
+    ],
+    "focus": 2
+   }
+  },
+  {
+   "type": "mohac_rivers",
+   "text": "Macaristan üçe bölündü ve bu bölünmüşlük yaklaşık yüz elli yıl sürdü.",
+   "visual": "Nehir haritası üçe bölünüyor: 'üçe'de ortada Tuna boyunca mavi 'Osmanlı' bölgesi, kuzeybatıda kırmızı 'Habsburg' bölgesi, doğuda yeşil 'Erdel' bölgesi sırayla doluyor; 'yüz'de büyük el yazısı '≈150 yıl'.",
+   "title": {
+    "white": "Üçe bölünme"
+   },
+   "source": "TDV İslâm Ansiklopedisi",
+   "camera": false,
+   "cues": {
+    "r0": "üçe",
+    "r1": "bölündü",
+    "r2": "bölünmüşlük",
+    "y": "yüz"
+   },
+   "params": {
+    "regions": [
+     {
+      "pts": [
+       [
+        18.0,
+        45.4
+       ],
+       [
+        18.3,
+        46.6
+       ],
+       [
+        18.4,
+        47.3
+       ],
+       [
+        19.3,
+        47.9
+       ],
+       [
+        20.6,
+        47.6
+       ],
+       [
+        20.6,
+        46.6
+       ],
+       [
+        21.2,
+        45.6
+       ],
+       [
+        21.0,
+        44.6
+       ],
+       [
+        19.2,
+        44.6
+       ]
+      ],
+      "at": "r0",
+      "color": "blue",
+      "label": "Osmanlı",
+      "lx": 19.7,
+      "ly": 46.4
+     },
+     {
+      "pts": [
+       [
+        15.6,
+        48.25
+       ],
+       [
+        15.8,
+        46.5
+       ],
+       [
+        17.6,
+        46.0
+       ],
+       [
+        18.2,
+        46.9
+       ],
+       [
+        18.4,
+        47.4
+       ],
+       [
+        19.3,
+        48.0
+       ],
+       [
+        21.0,
+        48.25
+       ]
+      ],
+      "at": "r1",
+      "color": "red",
+      "label": "Habsburg",
+      "lx": 16.9,
+      "ly": 47.35
+     },
+     {
+      "pts": [
+       [
+        21.3,
+        48.2
+       ],
+       [
+        21.0,
+        47.4
+       ],
+       [
+        21.4,
+        46.4
+       ],
+       [
+        21.6,
+        45.4
+       ],
+       [
+        22.6,
+        44.9
+       ],
+       [
+        24.4,
+        45.2
+       ],
+       [
+        24.4,
+        48.2
+       ]
+      ],
+      "at": "r2",
+      "color": "green",
+      "label": "Erdel",
+      "lx": 22.9,
+      "ly": 46.7
+     }
+    ],
+    "cities": [
+     {
+      "name": "Budin",
+      "x": 19.04,
+      "y": 47.5,
+      "at": 0,
+      "dy": 52
+     }
+    ],
+    "labels": [
+     {
+      "text": "≈150 yıl",
+      "x": 22.8,
+      "y": 44.7,
+      "at": "y",
+      "color": "red",
+      "size": 76,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "title",
+   "text": "Bugün Macarlar, kötü bir şey olduğunda hâlâ şöyle der: “Mohaç'ta bundan fazlası kaybedildi.” Yani üzülme, daha kötüsünü yaşadık.",
+   "visual": "Dev Fraunces yazı kelime kelime: 'Mohaç'ta daha fazlası kaybedildi', 'fazlası' kırmızı kutuda; el yazısı not 'Macar atasözü'.",
+   "title": {
+    "white": "Atasözü"
+   },
+   "source": "Wikipedia: Battle of Mohács",
+   "cues": {
+    "w0": "Mohaç'ta",
+    "note": "üzülme"
+   },
+   "params": {
+    "lines": [
+     "Mohaç'ta",
+     "daha fazlası",
+     "kaybedildi"
+    ],
+    "highlight": [
+     "fazlası"
+    ],
+    "note": {
+     "text": "Macar atasözü",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "type": "mohac_court",
+   "text": "Peki sizce Macaristan birlik olsaydı, Mohaç'ın sonu değişir miydi? Yorumlara yazın. Böyle hikâyeler için de abone olun.",
+   "visual": "Akşam, Mohaç ovası: yerde saplı kırık bir mızrak ve devrilmiş, rüzgârda kıpırdayan kırmızı bir sancak; Kaşif aralarında düşünüyor, 'sizce'de izleyiciyi işaret ediyor, 'abone'de el sallıyor.",
+   "title": {
+    "white": "Sizce?"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 820
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.3,
+    "move": "pull"
+   },
+   "cues": {
+    "q": "sizce",
+    "sub": "abone"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "scale": 0.75,
+      "pose": "think",
+      "face": "right",
+      "seq": [
+       {
+        "at": "q",
+        "pose": "point",
+        "dir": "forward"
+       },
+       {
+        "at": "sub",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "spear",
+      "x": 0.62
+     },
+     {
+      "type": "banner",
+      "x": 0.2,
+      "side": "hu"
+     }
+    ]
+   }
+  }
+ ]
+}
