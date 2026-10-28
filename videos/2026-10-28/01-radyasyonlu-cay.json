@@ -1,0 +1,352 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "radyasyonlu-cay",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "palette": "olive",
+  "cover": {
+    "lines": [
+      "Radyasyonlu",
+      "çayı",
+      "içti"
+    ],
+    "highlight": [
+      "radyasyonlu"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "focus": [
+      572,
+      775
+    ],
+    "zoom": 1.15,
+    "kasif": false
+  },
+  "sources": [
+    {
+      "title": "AA Teyit Hattı — Çernobil sonrası Rize'de çay içen bakan",
+      "url": "https://www.aa.com.tr/tr/teyithatti/politika/cahit-aral-cernobil-felaketinden-sonra-radyasyona-karsi-halka-guven-vermek-icin-gazetecilerin-karsisinda-cay-icmisti-/1814984"
+    },
+    {
+      "title": "Habertürk — Tonlarca radyasyonlu çay ne oldu?",
+      "url": "https://www.haberturk.com/tonlarca-radyasyonlu-cay-ne-oldu-2480788"
+    },
+    {
+      "title": "CNN Türk — Çernobil faciası neydi, Türkiye'yi nasıl etkilemişti?",
+      "url": "https://www.cnnturk.com/turkiye/cernobil-faciasi-neydi-turkiyeyi-nasil-etkilemisti-664222"
+    }
+  ],
+  "youtube": {
+    "title": "Çernobil Çayı: Radyasyonlu Çayı Bakan Neden İçti?",
+    "description": "Çernobil çayı, 1986'da Rize'nin çay bahçelerine yağan radyasyonun hikâyesi. Peki dönemin bakanı radyasyonlu çayı neden gazetecilerin önünde içti?\n\nAkkuyu'dan ilk elektrik beklenirken Türkiye'nin nükleerle ilk büyük karşılaşmasına dönüyoruz. 26 Nisan 1986'da Çernobil'de bir reaktör patladı; mayıs yağmurları radyoaktif tozu Karadeniz'e, tam ilk hasat günlerinde Rize'nin çay bahçelerine indirdi. Avrupa Türk çayını geri çevirdi, dönemin Sanayi ve Ticaret Bakanı 12 Ağustos 1986'da Rize'de gazetecilerin önünde çay içti. Sonunda tonlarca çay toplanıp beton bloklara gömüldü.\n\nHer gün böyle gerçek bir hikâye için Düşün Bakalım'a abone ol. Sence o gün orada olsan o çayı içer miydin? Yorumlara yaz!\n\n#shorts #çernobil #rizeçayı #tarih #düşünbakalım",
+    "tags": [
+      "çernobil çayı",
+      "çernobil çay",
+      "radyasyonlu çay",
+      "çernobil çayı hikayesi",
+      "çernobil",
+      "çernobil faciası",
+      "çernobil türkiye",
+      "rize çayı",
+      "karadeniz radyasyon",
+      "1986 çernobil",
+      "akkuyu",
+      "nükleer kaza",
+      "türkiye tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-28T19:00:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "cay_glass",
+      "text": "Bu çay radyasyonluydu, bir bakan yine de içti.",
+      "visual": "Yakın plan: kareli örtülü bir masada tabağıyla ince belli bir Türk çay bardağı, demli çaydan bardağın hemen üstünde kalın, kıvrım kıvrım buhar yükseliyor. 'radyasyonluydu'da bardağın etrafında altın ışıma halkaları atıyor, bardağın yanında elle çizilmiş altın bir radyasyon işareti beliriyor. Masa örtüsünün sağında, tahta döşemenin üstünde büyük Kaşif önce bardağı işaret ediyor, sonra şokla geri sıçrıyor. Masanın önü, ayakları ve döşeme ekranın altına kadar iniyor.",
+      "title": {},
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "cues": {
+        "glow": "radyasyon",
+        "hit": "içti"
+      },
+      "params": {
+        "mode": "hook",
+        "x": 0.34,
+        "s": 2.0,
+        "tref": [
+          115,
+          230,
+          0.6
+        ],
+        "kasif": {
+          "x": 0.7,
+          "y": 0.72,
+          "scale": 1.05,
+          "face": "left",
+          "pose": "point",
+          "dir": "down",
+          "seq": [
+            {
+              "at": "glow",
+              "pose": "shock"
+            }
+          ]
+        },
+        "steam_h": 150,
+        "steam_w": 1.8
+      }
+    },
+    {
+      "type": "cay_reactor",
+      "text": "1986'da Çernobil'de bir reaktör patladı",
+      "visual": "Gece, büyük bir nükleer santral kadrajın üst yarısını dolduruyor: uzun türbin binası, yüksek reaktör bloğu ve kırmızı bantlı havalandırma bacası. Reaktör bloğunun çatısı yarılmış, içinden donuk altın-kırmızı bir ışık geliyor, yarıktan rüzgârla sağa yatan bir duman sütunu yükseliyor. 'patladı'da ışık bir kez parlıyor, duman koyulaşıyor. Önde tel örgü, en altta kara çam ormanı.",
+      "title": {
+        "white": "Çernobil",
+        "gray": "26 Nisan 1986"
+      },
+      "set": {
+        "name": "night",
+        "ground": 1277
+      },
+      "source": "CNN Türk",
+      "cues": {
+        "hit": "patladı"
+      },
+      "params": {}
+    },
+    {
+      "type": "cay_map",
+      "text": "ve rüzgâr radyasyon bulutunu Karadeniz'e taşıdı.",
+      "visual": "Kenardan kenara eski harita: üstte Ukrayna ve Dinyeper, ortada Karadeniz, altında yatay bir yarımada olarak Anadolu, onun altında Kıbrıs'la birlikte Akdeniz, en altta Afrika kıyısı. Çernobil'de (kicker'ın altında) kırmızı bir işaret atıyor, yanında 'Çernobil' yazıyor; Rize baştan soluk bir etiketle işaretli. Mürekkep bir radyasyon bulutu Çernobil'den güneye, kesikli kırmızı rüzgâr okunu izleyerek Karadeniz'in üstünden doğuya süzülüyor, arkasında gri bir iz bırakıyor. 'Karadeniz'de bulut Rize'nin üstüne varıyor, Rize etiketi koyulaşıp kırmızı atıyor. Sağ altta küçük bir pusula.",
+      "title": {
+        "white": "Mayıs 1986",
+        "gray": "bulutun yolu"
+      },
+      "set": false,
+      "camera": {
+        "zoom": 1.0,
+        "move": "push"
+      },
+      "source": "CNN Türk",
+      "cues": {
+        "arrive": "Karadeniz"
+      },
+      "params": {}
+    },
+    {
+      "type": "cay_garden",
+      "text": "Mayıs yağmuru radyoaktif tozu Rize'nin çay bahçelerine indirdi.",
+      "visual": "Rize'de dik bir yamaç: teraslar halinde sıra sıra yuvarlak çay çalıları ekranın altına kadar iniyor, üst yamaçta kırmızı çatılı küçük ahşap bir ev. Tepede ağır, koyu bir bulut, sağanak yağıyor, yapraklarda damlalar. 'tozu'dan itibaren bazı damlalar altın parlıyor ve çalıların üstüne iri altın zerreler konuyor.",
+      "title": {
+        "white": "Rize",
+        "gray": "Mayıs 1986"
+      },
+      "set": {
+        "name": "storm",
+        "ground": 806
+      },
+      "source": "Habertürk",
+      "cues": {
+        "dust": "tozu"
+      },
+      "params": {
+        "mode": "rain"
+      }
+    },
+    {
+      "type": "cay_garden",
+      "text": "Düşünün, ilk hasat tam o günlerdeydi!",
+      "visual": "Yakın plan çay terasları arasında yazmalı, önlüklü bir çay toplayıcı kadın; sırtında hasır küfe. Eli çalının tepesinden taze yaprakları koparıp omzunun üstünden küfeye atıyor, yapraklar havada dönerek küfeye düşüyor. Çiseleyen yağmur, çalıların üstünde altın zerreler parlıyor. Ön sıradaki iri çalılar kadının belinden aşağısını örtüyor.",
+      "title": {
+        "white": "İlk hasat"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 806
+      },
+      "camera": {
+        "focus": [
+          610,
+          880
+        ],
+        "zoom": 1.65,
+        "move": "push"
+      },
+      "cues": {
+        "pluck": "tam"
+      },
+      "params": {
+        "mode": "pick"
+      }
+    },
+    {
+      "type": "cay_port",
+      "text": "Haber yayılınca Avrupa Türk çayını geri çevirdi.",
+      "visual": "Bir liman: solda rıhtıma yanaşmış, hafifçe sallanan bir yük gemisi; geminin bumbası bir sapan dolusu çay sandığını gemiden geri, rıhtıma indiriyor. Rıhtımda üst üste çay sandıkları; ortadaki büyük sandıkta 'TÜRK ÇAYI' yazıyor. 'geri'de yukarıdan bir lastik damga iniyor ve sandığa kırmızı 'İADE' damgası basıyor. Ön planda perspektifli rıhtım tahtaları, kadrajın altından taşan iri çay sandıkları ve bir baba.",
+      "title": {
+        "white": "Avrupa",
+        "gray": "çayı iade etti"
+      },
+      "set": {
+        "name": "coast",
+        "ground": 960
+      },
+      "source": "CNN Türk",
+      "cues": {
+        "stamp": "geri",
+        "land": "çevirdi"
+      },
+      "params": {}
+    },
+    {
+      "type": "cay_glass",
+      "text": "Bakan ise halka güven vermek için gazetecilerin önünde çayını içti.",
+      "visual": "Bir basın toplantısı: koyu takım elbiseli, kırmızı kravatlı, bıyıklı bir adam mikrofonlu uzun bir masanın arkasında oturuyor; arkasındaki pencereden çay terasları görünüyor. 'gazetecilerin'de eli önündeki gerçek boyutta çay bardağına uzanıyor, 'içti'de aynı boydaki bardağı kaldırıp bıyığının ucuna eğiyor; gözleri ve bıyığı açık. Ön planda arkadan görülen gazetecilerin başları, ceket yakaları ve dikişleri ekranın altına kadar iniyor; kaldırdıkları fotoğraf makinelerinin flaşları sırayla patlıyor.",
+      "title": {
+        "white": "Rize",
+        "gray": "12 Ağustos 1986"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "source": "AA Teyit Hattı",
+      "cues": {
+        "f1": "Bakan",
+        "lift": "gazetecilerin",
+        "f2": "önünde",
+        "f3": "çayını",
+        "drink": "içti"
+      },
+      "params": {
+        "mode": "press",
+        "x": 0.6,
+        "s": 0.55,
+        "flashes": [
+          "f1",
+          "f2",
+          "f3",
+          "drink"
+        ]
+      }
+    },
+    {
+      "type": "cay_bunker",
+      "text": "Ama sonunda tonlarca çay betona gömüldü,",
+      "visual": "Kesit görünüş: üstte zemin, altında ekranın sonuna kadar toprak katmanları ve taşlar; toprağın içinde beton duvarlı bir çukur. Soldaki damperli kamyon (kabini kadrajın içinde) kasasını kaldırmış, kasadaki yeşil çay yığını yoğun bir yaprak şelalesi halinde çukura akıyor, yığın yükseliyor. 'betona'da sağdaki beton mikserinin oluğu çukurun üstüne dönüyor, gri beton akıp çayın üstünü örtüyor; 'gömüldü'de çukurun üstüne beton bir kapak oturuyor.",
+      "title": {
+        "white": "Tonlarca çay",
+        "gray": "betona gömüldü"
+      },
+      "set": {
+        "name": "field",
+        "ground": 806
+      },
+      "source": "Habertürk",
+      "cues": {
+        "pour": "betona",
+        "seal": "gömüldü"
+      },
+      "params": {
+        "mode": "pour"
+      }
+    },
+    {
+      "type": "cay_bunker",
+      "text": "ve o çay hâlâ toprak altında.",
+      "visual": "Aynı kesit, yıllar sonra: yüzeyde çay çalıları yeniden yeşermiş, kökleri toprağa iniyor. Kalın bir toprak katmanının altında kapağı kapalı beton blok; içinde koyu çay yaprakları hâlâ duruyor, üstünde yavaşça nabız gibi atan soluk altın bir ışıltı. 'hâlâ'da '1986'dan beri' el yazısı notu bir okla bloğu gösteriyor. Kamera bloğa doğru yavaşça itiliyor.",
+      "title": {
+        "white": "Bugün"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 768
+      },
+      "camera": {
+        "focus": [
+          540,
+          940
+        ],
+        "zoom": 1.2,
+        "move": "push"
+      },
+      "cues": {
+        "note": "hâlâ"
+      },
+      "params": {
+        "mode": "section",
+        "label": {
+          "text": "1986'dan beri",
+          "x": 0.3,
+          "y": 0.47,
+          "at": "note",
+          "size": 66,
+          "color": "red",
+          "arrow": [
+            0.45,
+            0.56
+          ]
+        }
+      }
+    },
+    {
+      "type": "cay_garden",
+      "text": "Her gün böyle gerçek bir hikâye için abone olun.",
+      "visual": "Açık bir günde Rize'nin teraslı çay yamacı ekranın altına kadar iniyor. Bir terasın üstünde, Kaşif'in yanında buharı tüten ince belli çay bardağı (altyazı şeridinin üstünde); Kaşif yamacı işaret ediyor, 'abone'de izleyiciye dönüp el sallıyor.",
+      "title": {
+        "white": "Çernobil çayı",
+        "gray": "1986"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 806
+      },
+      "cues": {
+        "wave": "abone"
+      },
+      "params": {
+        "mode": "end",
+        "top": 0.42,
+        "kasif": {
+          "x": 0.66,
+          "y": 0.62,
+          "scale": 1.05,
+          "face": "left",
+          "pose": "point",
+          "dir": "down",
+          "seq": [
+            {
+              "at": "wave",
+              "pose": "wave",
+              "face": "right"
+            }
+          ]
+        },
+        "glass": {
+          "x": 0.3,
+          "y": 0.56,
+          "s": 0.95
+        }
+      },
+      "camera": {
+        "zoom": 1.0,
+        "move": "pull"
+      }
+    }
+  ]
+}
