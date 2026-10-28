@@ -1,0 +1,752 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "pig-war",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "War over",
+   "a pig"
+  ],
+  "highlight": [
+   "pig"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   610,
+   1000
+  ],
+  "zoom": 1.5,
+  "kasif": {
+   "pose": "shock",
+   "x": 300,
+   "y": 1750,
+   "face": 1,
+   "scale": 1.3
+  }
+ },
+ "sources": [
+  {
+   "title": "National Park Service, San Juan Island NHP — The Pig War (archived)",
+   "url": "https://webarchive.library.unt.edu/eot2008/20090508151349/http://www.nps.gov/sajh/historyculture/the-pig-war.htm"
+  },
+  {
+   "title": "The Canadian Encyclopedia — Pig War",
+   "url": "https://www.thecanadianencyclopedia.ca/en/article/pig-war"
+  },
+  {
+   "title": "Historic UK — The Pig War",
+   "url": "https://www.historic-uk.com/HistoryUK/HistoryofBritain/The-Pig-War/"
+  }
+ ],
+ "youtube": {
+  "title": "Pig War: Why Did Two Empires Nearly Fight Over a Pig?",
+  "description": "Pig War: in 1859, one dead pig on San Juan Island pushed the United States and Britain to the edge of war. How did a quarrel in a potato patch end with hundreds of soldiers facing British warships?\n\nAmerican farmer Lyman Cutlar shot a Hudson's Bay Company pig that kept digging up his potatoes. Both nations claimed the San Juan Islands, so the border dispute exploded, until British Rear Admiral Baynes refused to start a war over a pig. The two armies then shared the island for about 12 years, and in 1872 an arbitration under Kaiser Wilhelm I gave it to the United States.\n\nSubscribe to Stickstory for one strange true story every day. Would you have shot the pig? Tell me in the comments!\n\n#shorts #pigwar #weirdhistory #stickstory",
+  "tags": [
+   "pig war",
+   "pig war 1859",
+   "the pig war",
+   "pig war san juan island",
+   "san juan island",
+   "lyman cutlar",
+   "hudson's bay company",
+   "us britain border dispute",
+   "admiral baynes",
+   "weird history",
+   "strange history",
+   "history shorts",
+   "true story",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-28T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "pw_farm",
+   "text": "One pig almost started a war.",
+   "visual": "A big pig roots in a potato patch behind a split-rail fence; on the bay behind, a British steam warship (masts, furled sails, smoking funnel) rides at anchor. In the hook frame the cover's big shocked fez narrator stands at the lower left.",
+   "title": {
+    "white": "Pig War",
+    "gray": "1859"
+   },
+   "set": {
+    "name": "coast",
+    "horizon": 900,
+    "ground": 1080
+   },
+   "cues": {
+    "hit": "war"
+   },
+   "params": {
+    "ground": 0.5625,
+    "rows": 6,
+    "cabin": false,
+    "ship": {
+     "x": 0.62,
+     "y": 0.47,
+     "s": 0.5,
+     "face": -1
+    },
+    "pig": {
+     "x": 0.6,
+     "y": 0.76,
+     "s": 1.0,
+     "face": 1,
+     "root": 1,
+     "walk": true
+    },
+    "dug": [
+     [
+      0.86,
+      0.76
+     ],
+     [
+      0.92,
+      0.8
+     ]
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "pw_chart",
+   "text": "In 1859, on San Juan Island,",
+   "visual": "Full-frame old sea chart: the camera pushes in on San Juan Island between Vancouver Island and the mainland, the name 'SAN JUAN' springs in above it, the island pulses.",
+   "title": {
+    "white": "San Juan",
+    "gray": "1859"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     545,
+     830
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "Island"
+   },
+   "params": {
+    "claims": [],
+    "q": false,
+    "name": {
+     "text": "SAN JUAN",
+     "x": 0.505,
+     "y": 0.43
+    }
+   }
+  },
+  {
+   "type": "pw_farm",
+   "text": "an American farmer shot a pig in his potato patch.",
+   "visual": "The farm: log cabin with smoking chimney, fence, potato rows to the bottom; the farmer (slouch hat) aims his rifle at the pig rooting in his potatoes; on 'shot' a gold muzzle flash, smoke, red 'BANG!' and the pig keels over legs-up.",
+   "title": {
+    "white": "The farmer",
+    "gray": "June 1859"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 960
+   },
+   "cues": {
+    "shot": "shot",
+    "hit": "shot"
+   },
+   "params": {
+    "ground": 0.5,
+    "rows": 6,
+    "cabin": {
+     "x": 0.17,
+     "s": 0.9
+    },
+    "pig": {
+     "x": 0.7,
+     "y": 0.96,
+     "s": 1.2,
+     "face": -1,
+     "root": 1
+    },
+    "shot": "shot",
+    "dug": [
+     [
+      0.9,
+      0.95
+     ],
+     [
+      0.5,
+      0.97
+     ]
+    ],
+    "farmer": {
+     "x": 0.24,
+     "y": 0.99,
+     "scale": 1.0,
+     "pose": "point",
+     "dir": 0,
+     "face": "right",
+     "accessory": "slouch",
+     "emotion": "angry",
+     "rifle": true
+    },
+    "labels": [
+     {
+      "text": "BANG!",
+      "x": 0.62,
+      "y": 0.36,
+      "at": "shot",
+      "size": 110,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pw_close",
+   "text": "Big mistake. The pig was British,",
+   "visual": "Close-up on the ground: the pig lies legs-up in the potato soil filling the frame, a gold ear tag reads 'HBC' (Hudson's Bay Company); on 'British' a small British flag on a stake springs up beside it and a red box 'BRITISH PIG' pops in.",
+   "title": {
+    "white": "Big mistake"
+   },
+   "set": false,
+   "cues": {
+    "hit": "mistake",
+    "flag": "British"
+   },
+   "params": {
+    "soil": 0.3,
+    "pig": {
+     "x": 0.47,
+     "y": 0.68,
+     "s": 2.3,
+     "tag": "HBC"
+    },
+    "flag": {
+     "kind": "uk",
+     "x": 0.66,
+     "y": 0.56,
+     "s": 1.4,
+     "at": "flag"
+    },
+    "labels": [
+     {
+      "text": "BRITISH PIG",
+      "x": 0.55,
+      "y": 0.235,
+      "at": "flag",
+      "size": 100,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pw_chart",
+   "text": "and both countries claimed that island.",
+   "visual": "Full-frame old sea chart: Vancouver Island at the left, the mainland at the right, mountains of the far shore along the bottom, San Juan Island in the middle; a red dashed line with a US flag draws down Haro Strait ('HARO'), then a blue dashed line with a British flag down Rosario Strait ('ROSARIO'); on 'island' a big red '?' pops over San Juan.",
+   "title": {
+    "white": "Whose island?"
+   },
+   "set": false,
+   "cues": {
+    "us": "both",
+    "uk": "claimed",
+    "q": "island"
+   },
+   "params": {
+    "name": {
+     "text": "SAN JUAN",
+     "x": 0.505,
+     "y": 0.29
+    },
+    "claims": [
+     {
+      "pts": [
+       [
+        0.385,
+        0.05
+       ],
+       [
+        0.4,
+        0.2
+       ],
+       [
+        0.395,
+        0.4
+       ],
+       [
+        0.375,
+        0.56
+       ],
+       [
+        0.3,
+        0.66
+       ],
+       [
+        0.0,
+        0.7
+       ]
+      ],
+      "color": "red",
+      "flag": "us",
+      "label": "",
+      "lx": 0.2,
+      "ly": 0.33,
+      "at": "us"
+     },
+     {
+      "pts": [
+       [
+        0.79,
+        0.05
+       ],
+       [
+        0.775,
+        0.22
+       ],
+       [
+        0.765,
+        0.4
+       ],
+       [
+        0.76,
+        0.56
+       ],
+       [
+        0.72,
+        0.65
+       ],
+       [
+        0.5,
+        0.71
+       ],
+       [
+        0.0,
+        0.73
+       ]
+      ],
+      "color": "blue",
+      "flag": "uk",
+      "label": "",
+      "lx": 0.84,
+      "ly": 0.4,
+      "at": "uk"
+     }
+    ],
+    "straits": [
+     {
+      "text": "HARO",
+      "x": 0.41,
+      "y": 0.47,
+      "rot": -84,
+      "at": "us",
+      "size": 56
+     },
+     {
+      "text": "ROSARIO",
+      "x": 0.795,
+      "y": 0.5,
+      "rot": -88,
+      "at": "uk",
+      "size": 56
+     }
+    ]
+   }
+  },
+  {
+   "type": "pw_camp",
+   "text": "By late August, over 400 American soldiers had dug in,",
+   "visual": "US camp behind an earthwork: white A-tents, two cannons on the redoubt, the Stars and Stripes on a tall pole; three rows of blue-coated soldiers in kepis march in, the front row big at the bottom; a red counter races from 0 to '400+'.",
+   "title": {
+    "white": "US Army",
+    "gray": "August 1859"
+   },
+   "source": "National Park Service",
+   "set": {
+    "name": "hills",
+    "ground": 1037
+   },
+   "cues": {
+    "cnt": "August",
+    "hit": "soldiers"
+   },
+   "params": {
+    "ground": 0.54,
+    "counter": {
+     "from": 0,
+     "to": 400,
+     "suffix": "+",
+     "x": 0.56,
+     "y": 0.25,
+     "at": "cnt",
+     "dur": 1.5,
+     "size": 210
+    },
+    "rows": [
+     {
+      "y": 0.585,
+      "n": 9,
+      "s": 0.6,
+      "x0": 0.06,
+      "x1": 0.94,
+      "at": 0.05
+     },
+     {
+      "y": 0.73,
+      "n": 7,
+      "s": 0.9,
+      "x0": 0.05,
+      "x1": 0.95,
+      "at": 0.35
+     },
+     {
+      "y": 0.97,
+      "n": 5,
+      "s": 1.4,
+      "x0": 0.04,
+      "x1": 0.96,
+      "at": 0.7
+     }
+    ]
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "facing British warships.",
+   "visual": "The bay: a big British sailing warship with gunports and blue pennants glides in low in the frame, two more behind it on the water.",
+   "title": {
+    "white": "Royal Navy"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 690
+   },
+   "cues": {
+    "hit": "warships"
+   },
+   "params": {
+    "horizon": 0.36,
+    "shore": false,
+    "wind": {
+     "s": 0.7,
+     "dir": 1,
+     "lines": 5
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.48,
+      "to": 0.52,
+      "y": 0.77,
+      "scale": 2.0,
+      "face": 1
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.8,
+      "to": 0.83,
+      "y": 0.5,
+      "scale": 0.8,
+      "face": 1,
+      "depth": 0.3
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.2,
+      "to": 0.23,
+      "y": 0.49,
+      "scale": 0.8,
+      "face": 1,
+      "depth": 0.4
+     }
+    ],
+    "ledge": false,
+    "zoom": 1.05,
+    "focus": [
+     0.45,
+     0.6
+    ]
+   }
+  },
+  {
+   "type": "pw_deck",
+   "text": "But here's the crazy part: the British admiral refused.",
+   "visual": "On a frigate's deck: plank deck to the bottom, bulwark with a gunport, mast and shrouds at the left, a big cannon pointing out; the admiral (bicorne) stands by the gun and on 'refused' turns away with a shrug, red box 'NO WAR'; the fez narrator at the left points at him, surprised.",
+   "title": {
+    "white": "Adm. Baynes",
+    "gray": "Royal Navy"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 653,
+    "ground": 998
+   },
+   "cues": {
+    "crazy": "crazy",
+    "hit": "refused"
+   },
+   "params": {
+    "deck": 0.52,
+    "horizon": 0.34,
+    "cannon": {
+     "x": 0.5,
+     "s": 1,
+     "dy": 430
+    },
+    "admiral": {
+     "x": 0.74,
+     "y": 0.93,
+     "scale": 1.0,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "face": "left",
+       "emotion": "angry"
+      }
+     ]
+    },
+    "kasif": {
+     "x": 0.24,
+     "y": 0.95,
+     "scale": 0.95,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "crazy",
+       "pose": "point",
+       "dir": "forward",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "NO WAR",
+      "x": 0.6,
+      "y": 0.235,
+      "at": "hit",
+      "size": 120,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pw_deck",
+   "text": "He would not fight over a squabble about a pig.",
+   "visual": "Closer on the same deck: the admiral talks with a raised hand; giant words 'A SQUABBLE' then 'ABOUT A PIG.' spring in, 'PIG.' in a red box.",
+   "title": {
+    "white": "His words"
+   },
+   "source": "National Park Service",
+   "set": {
+    "name": "ocean",
+    "horizon": 653,
+    "ground": 998
+   },
+   "cues": {
+    "ab": "about",
+    "hit": "pig"
+   },
+   "params": {
+    "deck": 0.52,
+    "horizon": 0.34,
+    "cannon": {
+     "x": 0.26,
+     "s": 1,
+     "dy": 430
+    },
+    "shore": false,
+    "admiral": {
+     "x": 0.56,
+     "y": 0.95,
+     "scale": 1.05,
+     "pose": "talk",
+     "face": "left",
+     "emotion": "angry",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "face": "right",
+       "emotion": "angry"
+      }
+     ]
+    },
+    "close": {
+     "focus": [
+      0.5,
+      0.62
+     ],
+     "zoom": 1.25,
+     "to": [
+      0.5,
+      0.64
+     ]
+    },
+    "lines": [
+     {
+      "words": [
+       "A",
+       "SQUABBLE"
+      ],
+      "at": [
+       0.05,
+       0.05
+      ],
+      "y": 0.25,
+      "size": 130
+     },
+     {
+      "words": [
+       "ABOUT",
+       "A",
+       "PIG."
+      ],
+      "at": [
+       "ab",
+       "ab",
+       "hit"
+      ],
+      "y": 0.34,
+      "size": 130
+     }
+    ],
+    "highlight": "PIG."
+   }
+  },
+  {
+   "type": "pw_farm",
+   "text": "The only casualty? The pig.",
+   "visual": "Back in the potato patch: a little grave, a wooden board 'PIG 1859' on a mound with red flowers, a US flag and a British flag waving on either side; on 'pig' a red box 'CASUALTIES: 1' pops in.",
+   "title": {
+    "white": "Casualties"
+   },
+   "set": {
+    "name": "field",
+    "ground": 960
+   },
+   "cues": {
+    "hit": "pig"
+   },
+   "params": {
+    "ground": 0.5,
+    "rows": 6,
+    "cabin": false,
+    "grave": {
+     "x": 0.46,
+     "y": 0.56,
+     "s": 1.4,
+     "at": 0.05,
+     "spread": 230
+    },
+    "labels": [
+     {
+      "text": "CASUALTIES: 1",
+      "x": 0.55,
+      "y": 0.235,
+      "at": "hit",
+      "size": 100,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "pw_farm",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Wider on the grave in the potato patch with both flags; giant words 'ONE PIG.' and 'NO WAR.' ('PIG.' in a red box); the fez narrator stands at the left and waves at the viewer.",
+   "title": {
+    "white": "Pig War"
+   },
+   "set": {
+    "name": "field",
+    "ground": 960
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "ground": 0.5,
+    "rows": 6,
+    "cabin": false,
+    "grave": {
+     "x": 0.56,
+     "y": 0.57,
+     "s": 1.1,
+     "at": 0,
+     "spread": 230
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.93,
+     "scale": 1.0,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy"
+    },
+    "lines": [
+     {
+      "words": [
+       "ONE",
+       "PIG."
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.2,
+      "size": 140
+     },
+     {
+      "words": [
+       "NO",
+       "WAR."
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.29,
+      "size": 140
+     }
+    ],
+    "highlight": "PIG."
+   }
+  }
+ ]
+}

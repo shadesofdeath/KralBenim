@@ -1,0 +1,2370 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-thames-tunnel",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "THE RIVER",
+   "BROKE IN"
+  ],
+  "highlight": [
+   "RIVER"
+  ],
+  "scene": 28,
+  "t": 5.7,
+  "focus": [
+   960,
+   540
+  ],
+  "zoom": 1.45,
+  "size": 190,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.15,
+   "face": -1,
+   "x": 1640,
+   "y": 1060
+  }
+ },
+ "sources": [
+  {
+   "title": "Thames Tunnel (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Thames_Tunnel"
+  },
+  {
+   "title": "The Thames Tunnel: Marc Brunel's engineering marvel (London Museum)",
+   "url": "https://www.londonmuseum.org.uk/collections/london-stories/thames-tunnel-marc-brunels-engineering-marvel/"
+  },
+  {
+   "title": "Building Big: Thames Tunnel (PBS)",
+   "url": "https://www.pbs.org/wgbh/buildingbig/wonder/structure/thames.html"
+  },
+  {
+   "title": "Isambard Kingdom Brunel (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Isambard_Kingdom_Brunel"
+  },
+  {
+   "title": "Banquet in the Thames Tunnel (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Banquet_in_the_Thames_Tunnel"
+  }
+ ],
+ "youtube": {
+  "title": "Thames Tunnel: How a Worm Helped Dig Under a River",
+  "description": "The Thames Tunnel was the first tunnel ever successfully built under a navigable river, and it almost killed the man who later became Britain's most famous engineer. How did a father and son beat the River Thames with an idea copied from a worm?\n\nIn 1825 Marc Brunel started digging from Rotherhithe to Wapping with his new tunnelling shield: an iron frame with 36 cells, one miner in each. The river broke in again and again, young Isambard Kingdom Brunel nearly drowned in the 1828 flood, and the half-finished tunnel sat bricked up for seven years. It finally opened in 1843, and trains still run through it today on the London Overground.\n\nIn this video:\n- Why nobody could build a bridge or a tunnel there\n- The shipworm that inspired the tunnelling shield\n- The banquet under the river and the flood of 1828\n- Seven years of silence and the opening day crowds\n\nSubscribe to Stickstory for more true stories about how things were built. Would you have paid a penny to walk under the Thames in 1843? Tell me in the comments!\n\n#thamestunnel #brunel #londonhistory #engineering #stickstory",
+  "tags": [
+   "thames tunnel",
+   "thames tunnel history",
+   "brunel thames tunnel",
+   "thames tunnel 1843",
+   "marc brunel",
+   "isambard kingdom brunel",
+   "tunnelling shield",
+   "shipworm",
+   "first tunnel under a river",
+   "london history",
+   "london overground",
+   "how it was built",
+   "engineering history",
+   "victorian engineering",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-28T14:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "tt_section",
+   "text": "January 1828. Deep under the River Thames, a young engineer heard a sound no tunnel should ever make.",
+   "visual": "Cut-away of the Thames at night-dim: ships drift on the surface, warehouses on both banks, and deep below the riverbed the lit brick tunnel reaches halfway across; on 'sound' the mud above the shield shakes and the first water starts to trickle down; red note '1828'.",
+   "title": {
+    "white": "Thames Tunnel",
+    "gray": "1828"
+   },
+   "cues": {
+    "year": "January",
+    "deep": "Deep",
+    "sound": "sound"
+   },
+   "params": {
+    "progress": 0.5,
+    "flood": {
+     "at": "sound",
+     "dur": 9
+    },
+    "shake": "sound",
+    "ships": 3,
+    "surface": 0.34,
+    "labels": [
+     {
+      "text": "1828",
+      "x": 0.66,
+      "y": 0.66,
+      "at": "year",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "tunnel",
+      "x": 0.3,
+      "y": 0.6,
+      "at": "deep",
+      "arrow": [
+       0.3,
+       0.7
+      ],
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 367
+   },
+   "chapter": "The River Breaks In"
+  },
+  {
+   "type": "tt_arch",
+   "text": "The river was coming in. Water roared out of the dark, faster than anyone could run, and the lamps went out one by one.",
+   "visual": "Same tunnel: on 'coming' a wall of water rolls from the far end toward us, the lamps die from far to near on 'lamps'; the fez narrator in the foreground jumps back in shock on 'roared'.",
+   "title": {
+    "white": "The flood"
+   },
+   "cues": {
+    "coming": "coming",
+    "roared": "roared",
+    "lamps": "lamps"
+   },
+   "params": {
+    "end": "dark",
+    "flood": {
+     "at": "coming",
+     "dur": 3.4,
+     "level": 0.5
+    },
+    "dark": {
+     "at": "lamps"
+    },
+    "shake": "roared",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "y": 0.98,
+      "scale": 0.8,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right",
+      "seq": [
+       {
+        "at": "roared",
+        "pose": "shock",
+        "face": "right"
+       }
+      ]
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "tt_arch",
+   "text": "He was only twenty-one. His name was Isambard Kingdom Brunel, and he was about to drown under London.",
+   "visual": "Close on the young engineer at the shield deep in the tunnel, water rising around him; hand note 'Isambard K. Brunel, 21' with an arrow on 'Isambard'.",
+   "title": {
+    "white": "Isambard",
+    "gray": "age 21"
+   },
+   "cues": {
+    "name": "Isambard",
+    "drown": "drown"
+   },
+   "params": {
+    "end": "shield",
+    "rise": {
+     "at": 0.2,
+     "from": 0.08,
+     "to": 0.3,
+     "dur": 5
+    },
+    "cast": [
+     {
+      "who": "isambard",
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 0.62,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "drown",
+        "pose": "shock"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Isambard, 21",
+      "x": 0.68,
+      "y": 0.3,
+      "at": "name",
+      "arrow": [
+       0.55,
+       0.42
+      ],
+      "size": 64
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "So why would anyone dig under a river with tools from the 1820s? And how on earth did they ever finish it?",
+   "visual": "Giant words 'Why dig' / 'under a river?' set word by word with 'river' in a red box; the fez narrator on the right points at them, then shrugs.",
+   "title": {},
+   "cues": {
+    "w0": "why",
+    "w1": "river",
+    "w2": "tools",
+    "note": "finish"
+   },
+   "params": {
+    "lines": [
+     "Why dig",
+     "under a river?"
+    ],
+    "highlight": [
+     "river?"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "...and finish it?",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 25,
+     "face": -1,
+     "scale": 0.9,
+     "at": "w1",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "To understand that, you have to see the Thames back then.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, title 'A River Full of Ships' with a hand-drawn underline.",
+   "title": {},
+   "cues": {
+    "title": "Thames"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "A River Full of Ships",
+    "label": "CHAPTER"
+   },
+   "chapter": "A River Full of Ships"
+  },
+  {
+   "type": "tt_section",
+   "text": "It was one of the busiest rivers on the planet, packed with sailing ships from bank to bank.",
+   "visual": "Cut-away of the Thames between Rotherhithe and Wapping: warehouses on both banks, five sailing ships drift across the surface, riverbed mud below with no tunnel yet; red note 'busiest river' on 'busiest'.",
+   "title": {
+    "white": "The Thames",
+    "gray": "1820s"
+   },
+   "cues": {
+    "busy": "busiest",
+    "packed": "packed"
+   },
+   "params": {
+    "progress": 0,
+    "surface": 0.36,
+    "bed": 0.6,
+    "top": 0.72,
+    "bottom": 0.88,
+    "ships": [
+     {
+      "x": 0.22,
+      "s": 0.8,
+      "v": 0.006
+     },
+     {
+      "x": 0.38,
+      "s": 0.65,
+      "v": -0.004
+     },
+     {
+      "x": 0.52,
+      "s": 0.85,
+      "v": 0.005
+     },
+     {
+      "x": 0.67,
+      "s": 0.6,
+      "v": -0.006
+     },
+     {
+      "x": 0.8,
+      "s": 0.75,
+      "v": 0.004
+     }
+    ],
+    "banks": false,
+    "labels": [
+     {
+      "text": "busiest river",
+      "x": 0.5,
+      "y": 0.1,
+      "at": "busy",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 389
+   },
+   "camera": {
+    "focus": [
+     960,
+     330
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "A bridge down here? Forget it. The tall masts had to get through.",
+   "visual": "On the busy quay the fez narrator holds up a sign 'NO BRIDGE', then points up at the tall masts of a big sailing ship passing behind him on 'masts'.",
+   "title": {
+    "white": "No bridge"
+   },
+   "cues": {
+    "bridge": "bridge",
+    "masts": "masts"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "scale": 1.0,
+      "pose": "hold",
+      "text": "NO BRIDGE",
+      "face": "right",
+      "seq": [
+       {
+        "at": "masts",
+        "pose": "point",
+        "dir": "up",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.68,
+      "y": 0.86,
+      "scale": 1.6,
+      "move": {
+       "x": 0.6,
+       "at": 0,
+       "dur": 7
+      }
+     }
+    ],
+    "foreground": "water",
+    "depth": {
+     "near": "post",
+     "side": "left"
+    }
+   },
+   "set": "sea"
+  },
+  {
+   "type": "map",
+   "text": "So if you wanted to cross with a cart, you went the long way round, to London Bridge.",
+   "visual": "Old map of the Thames bend: north bank and south bank, Rotherhithe and Wapping facing each other across the water; a red dashed cart route runs from Rotherhithe all the way west to London Bridge and back east to Wapping; note 'the long way round'.",
+   "title": {
+    "white": "The detour"
+   },
+   "cues": {
+    "start": "cross",
+    "route": "long",
+    "lb": "London"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       1,
+       0.36
+      ],
+      [
+       0.8,
+       0.34
+      ],
+      [
+       0.6,
+       0.38
+      ],
+      [
+       0.4,
+       0.36
+      ],
+      [
+       0.2,
+       0.4
+      ],
+      [
+       0,
+       0.38
+      ]
+     ],
+     [
+      [
+       0,
+       1
+      ],
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       0.62
+      ],
+      [
+       0.8,
+       0.6
+      ],
+      [
+       0.6,
+       0.66
+      ],
+      [
+       0.4,
+       0.62
+      ],
+      [
+       0.2,
+       0.64
+      ],
+      [
+       0,
+       0.6
+      ]
+     ]
+    ],
+    "seas": [
+     {
+      "name": "River Thames",
+      "x": 0.56,
+      "y": 0.56
+     }
+    ],
+    "cities": [
+     {
+      "name": "Rotherhithe",
+      "x": 0.7,
+      "y": 0.68,
+      "at": "start",
+      "dx": 0,
+      "dy": 70
+     },
+     {
+      "name": "Wapping",
+      "x": 0.7,
+      "y": 0.33,
+      "at": "start",
+      "dx": 0,
+      "dy": -60
+     },
+     {
+      "name": "London Bridge",
+      "x": 0.16,
+      "y": 0.5,
+      "at": "lb",
+      "color": "red",
+      "dx": 40,
+      "dy": 0,
+      "anchor": "start"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.7,
+       0.68
+      ],
+      [
+       0.45,
+       0.7
+      ],
+      [
+       0.2,
+       0.68
+      ],
+      [
+       0.16,
+       0.5
+      ],
+      [
+       0.2,
+       0.33
+      ],
+      [
+       0.45,
+       0.31
+      ],
+      [
+       0.7,
+       0.33
+      ]
+     ],
+     "at": "route",
+     "dur": 2.6,
+     "color": "red"
+    },
+    "note": {
+     "text": "the long way round",
+     "x": 0.3,
+     "y": 0.9,
+     "at": "lb"
+    },
+    "compass": "bl",
+    "zoom": 1.35,
+    "focus": [
+     0.45,
+     0.5
+    ]
+   }
+  },
+  {
+   "type": "tt_section",
+   "text": "People had tried to go under the river before. Around 1807, Cornish miners, Richard Trevithick among them, dug a narrow test passage.",
+   "visual": "River cut-away: a narrow timber-propped test passage creeps from the left shaft under the riverbed; note 'Trevithick, 1807' on 'Trevithick'.",
+   "title": {
+    "white": "First try",
+    "gray": "1807"
+   },
+   "cues": {
+    "yr": "1807",
+    "trev": "Trevithick"
+   },
+   "params": {
+    "drift": true,
+    "progress": {
+     "from": 0.05,
+     "to": 0.8,
+     "at": 0,
+     "dur": 7
+    },
+    "banks": false,
+    "ships": 2,
+    "labels": [
+     {
+      "text": "Trevithick, 1807",
+      "x": 0.45,
+      "y": 0.57,
+      "at": "trev",
+      "size": 64
+     }
+    ]
+   },
+   "set": false,
+   "source": "Wikipedia: Thames Tunnel"
+  },
+  {
+   "type": "tt_section",
+   "text": "They got most of the way across. Then the river broke in, twice, and the project died.",
+   "visual": "Same cut-away: the passage is nearly across when on 'broke' the riverbed opens and water pours down and floods it back to the shaft; red stamp 'FLOODED x2' on 'twice'.",
+   "title": {
+    "white": "Flooded"
+   },
+   "cues": {
+    "broke": "broke",
+    "twice": "twice"
+   },
+   "params": {
+    "drift": true,
+    "progress": 0.8,
+    "banks": false,
+    "ships": 2,
+    "flood": {
+     "at": "broke",
+     "dur": 1.6
+    },
+    "shake": "broke",
+    "labels": [
+     {
+      "text": "FLOODED x2",
+      "x": 0.5,
+      "y": 0.15,
+      "at": "twice",
+      "stamp": true,
+      "size": 80
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "title",
+   "text": "The verdict was brutal: a tunnel under the Thames was impossible.",
+   "visual": "Giant words 'A tunnel here?' / 'Impossible.' with 'Impossible.' in a red box; hand note 'the experts, 1809'.",
+   "title": {},
+   "cues": {
+    "w0": "verdict",
+    "w1": "impossible",
+    "note": "impossible"
+   },
+   "params": {
+    "lines": [
+     "A tunnel here?",
+     "Impossible."
+    ],
+    "highlight": [
+     "Impossible."
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "the experts",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 1000
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_worm",
+   "text": "But one man refused to believe it, and he found his answer inside a piece of rotten wood.",
+   "visual": "Close cut through an old ship timber riddled with shell-lined holes; the fez narrator in front looks at it through binoculars, then points at it on 'wood'.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "refused": "refused",
+    "wood": "wood"
+   },
+   "params": {
+    "holes": [
+     [
+      [
+       -0.05,
+       0.25
+      ],
+      [
+       0.35,
+       0.3
+      ],
+      [
+       0.62,
+       0.22
+      ],
+      [
+       1.05,
+       0.28
+      ]
+     ],
+     [
+      [
+       0.4,
+       0.82
+      ],
+      [
+       0.7,
+       0.72
+      ],
+      [
+       1.05,
+       0.78
+      ]
+     ],
+     [
+      [
+       -0.05,
+       0.6
+      ],
+      [
+       0.25,
+       0.52
+      ],
+      [
+       0.45,
+       0.58
+      ]
+     ]
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 1.0,
+      "scale": 0.85,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "wood",
+        "pose": "point",
+        "dir": 15,
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "His name was Marc Brunel, Isambard's father, a French engineer living in London.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'A Worm's Idea' with a hand-drawn underline.",
+   "title": {},
+   "cues": {
+    "title": "Marc"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "A Worm's Idea",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Worm's Idea"
+  },
+  {
+   "type": "tt_worm",
+   "text": "He had been looking at ship timber eaten through by the shipworm.",
+   "visual": "Timber cut: a shipworm with a long soft body bores its way forward from the left, leaving a shell-lined tunnel; note 'shipworm' with an arrow on 'shipworm'.",
+   "title": {
+    "white": "Shipworm"
+   },
+   "cues": {
+    "worm": "shipworm"
+   },
+   "params": {
+    "holes": [
+     [
+      [
+       -0.05,
+       0.22
+      ],
+      [
+       0.4,
+       0.26
+      ],
+      [
+       1.05,
+       0.2
+      ]
+     ],
+     [
+      [
+       0.55,
+       0.85
+      ],
+      [
+       1.05,
+       0.8
+      ]
+     ]
+    ],
+    "worm": {
+     "path": [
+      [
+       -0.05,
+       0.6
+      ],
+      [
+       0.2,
+       0.52
+      ],
+      [
+       0.42,
+       0.6
+      ],
+      [
+       0.62,
+       0.52
+      ],
+      [
+       0.8,
+       0.56
+      ]
+     ],
+     "at": 0,
+     "dur": 7,
+     "from": 0.45
+    },
+    "labels": [
+     {
+      "text": "shipworm",
+      "x": 0.3,
+      "y": 0.38,
+      "at": "worm",
+      "arrow": [
+       0.38,
+       0.55
+      ],
+      "size": 70
+     }
+    ]
+   },
+   "set": false,
+   "source": "London Museum"
+  },
+  {
+   "type": "tt_worm",
+   "text": "It bores into wood with two hard shell plates on its head, and as it moves forward, it lines the hole behind it.",
+   "visual": "Close-up on the worm's head: two blue shell plates rock and grind the wood, sawdust flies; on 'lines' the white shell lining of the tunnel behind it gets a note 'lining'.",
+   "title": {
+    "white": "Two plates"
+   },
+   "cues": {
+    "plates": "plates",
+    "lines": "lines"
+   },
+   "params": {
+    "holes": [
+     [
+      [
+       -0.05,
+       0.2
+      ],
+      [
+       1.05,
+       0.24
+      ]
+     ]
+    ],
+    "worm": {
+     "path": [
+      [
+       -0.05,
+       0.56
+      ],
+      [
+       0.25,
+       0.5
+      ],
+      [
+       0.45,
+       0.56
+      ],
+      [
+       0.6,
+       0.5
+      ],
+      [
+       0.75,
+       0.52
+      ]
+     ],
+     "at": 0,
+     "dur": 9,
+     "from": 0.55
+    },
+    "labels": [
+     {
+      "text": "shell plates",
+      "x": 0.68,
+      "y": 0.3,
+      "at": "plates",
+      "arrow": [
+       0.66,
+       0.45
+      ],
+      "color": "blue",
+      "size": 64
+     },
+     {
+      "text": "lining",
+      "x": 0.5,
+      "y": 0.72,
+      "at": "lines",
+      "arrow": [
+       0.47,
+       0.58
+      ],
+      "size": 64
+     }
+    ]
+   },
+   "set": false,
+   "source": "London Museum",
+   "camera": {
+    "focus": [
+     1180,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "And Brunel thought: what if men could do the same? In 1818 he patented the tunnelling shield.",
+   "visual": "In a candle-lit study, Marc Brunel (grey beard) points at a drawing board; the fez narrator beside him holds up a sign 'PATENT 1818' on '1818'.",
+   "title": {
+    "white": "The idea",
+    "gray": "1818"
+   },
+   "cues": {
+    "same": "same",
+    "yr": "1818"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "marc",
+      "beard": "grey",
+      "x": 0.62,
+      "scale": 0.95,
+      "pose": "think",
+      "face": "left",
+      "seq": [
+       {
+        "at": "same",
+        "pose": "point",
+        "dir": "forward",
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "yr",
+        "pose": "hold",
+        "text": "PATENT 1818"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "map",
+      "x": 0.42,
+      "y": 0.62,
+      "scale": 1.0
+     }
+    ],
+    "depth": {
+     "near": "crate",
+     "side": "right"
+    }
+   },
+   "set": "interior",
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_face",
+   "text": "Picture a giant iron frame, as tall as a house, pressed against the mud. It had thirty-six cells, one miner in each.",
+   "visual": "The shield seen from the tunnel draws itself column by column: a huge iron frame of three storeys pressed against the wet mud, lamps above, drips falling; on 'thirty' miners pop into the 36 cells one by one while a big red counter ticks up to '36 cells'.",
+   "title": {
+    "white": "The shield",
+    "gray": "36 cells"
+   },
+   "cues": {
+    "frame": "frame",
+    "cells": "thirty"
+   },
+   "params": {
+    "draw": {
+     "at": 0.1,
+     "dur": 2.4
+    },
+    "fill": {
+     "at": "cells",
+     "dur": 2.2
+    },
+    "counter": {
+     "at": "cells",
+     "x": 0.78,
+     "y": 0.07,
+     "size": 90
+    }
+   },
+   "set": false,
+   "source": "PBS Building Big"
+  },
+  {
+   "type": "tt_face",
+   "text": "A miner pulled out one small board, dug away a few inches of clay, and put the board back.",
+   "visual": "Close-up on one cell: on 'pulled' a red ring circles it, the middle board slides out, the miner digs at the clay behind it, and on 'back' the board slides back in.",
+   "title": {
+    "white": "One board"
+   },
+   "cues": {
+    "pull": "pulled",
+    "dug": "dug",
+    "back": "back"
+   },
+   "params": {
+    "cell": [
+     5,
+     1
+    ],
+    "ring": "pull",
+    "pull": {
+     "at": "pull",
+     "back": "back"
+    },
+    "labels": [
+     {
+      "text": "a few inches",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "dug",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1050,
+     560
+    ],
+    "zoom": 1.9,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tt_section",
+   "text": "Then screws pushed the whole frame forward, and bricklayers closed the ring right behind it, so the mud never stood naked for long.",
+   "visual": "Cut-away close on the head of the tunnel: red arrows push the shield forward on 'screws', and new brick rings flash in right behind it on 'bricklayers'.",
+   "title": {
+    "white": "Push",
+    "gray": "and brick"
+   },
+   "cues": {
+    "screws": "screws",
+    "bricks": "bricklayers"
+   },
+   "params": {
+    "progress": 0.42,
+    "push": {
+     "at": "screws"
+    },
+    "banks": false,
+    "ships": 1,
+    "labels": [
+     {
+      "text": "new brick rings",
+      "x": 0.32,
+      "y": 0.57,
+      "at": "bricks",
+      "arrow": [
+       0.42,
+       0.66
+      ],
+      "size": 56
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     880,
+     760
+    ],
+    "zoom": 1.9,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tt_section",
+   "text": "In 1825 the digging began at Rotherhithe, and on a good week they moved a few feet. Slow, but it worked. Or so they thought.",
+   "visual": "Wide cut-away: from the Rotherhithe shaft the brick tunnel crawls a short way under the river as ships pass above; note '1825' on 'digging' and red note '1 to 8 feet a week' on 'week'.",
+   "title": {
+    "white": "Rotherhithe",
+    "gray": "1825"
+   },
+   "cues": {
+    "dig": "digging",
+    "week": "week",
+    "thought": "thought"
+   },
+   "params": {
+    "progress": {
+     "from": 0.02,
+     "to": 0.2,
+     "at": "dig",
+     "dur": 8
+    },
+    "ships": 3,
+    "labels": [
+     {
+      "text": "1825",
+      "x": 0.38,
+      "y": 0.66,
+      "at": "dig",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "1 to 8 feet a week",
+      "x": 0.64,
+      "y": 0.76,
+      "at": "week",
+      "color": "red",
+      "size": 58
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 324
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "chapter",
+   "text": "Because now the river started fighting back.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'The River Fights Back' with a hand-drawn underline.",
+   "title": {},
+   "cues": {
+    "title": "fighting"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The River Fights Back",
+    "label": "CHAPTER"
+   },
+   "chapter": "The River Fights Back"
+  },
+  {
+   "type": "tt_arch",
+   "text": "The water seeping in was basically London's sewage. Men fell sick, and gas from the mud could catch fire on the miners' lamps.",
+   "visual": "Inside the half-built tunnel, dirty water drips from the arches onto the miners at the shield; on 'fire' a wall lamp bursts into a red and gold gas flame.",
+   "title": {
+    "white": "Sewage",
+    "gray": "and gas"
+   },
+   "cues": {
+    "sew": "sewage",
+    "fire": "fire"
+   },
+   "params": {
+    "end": "shield",
+    "miners": true,
+    "drips": true,
+    "flare": {
+     "at": "fire"
+    },
+    "shake": "fire"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1300,
+     400
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tt_room",
+   "text": "Even Marc Brunel fell ill, so his son Isambard, only twenty, ran the whole dig.",
+   "visual": "A bedroom by the works: old Marc Brunel sits sick in bed under a blue blanket, looking worried; his young son Isambard walks in carrying the plans, then points ahead; note 'Isambard, 20'.",
+   "title": {
+    "white": "In charge",
+    "gray": "age 20"
+   },
+   "cues": {
+    "ill": "ill",
+    "isam": "Isambard",
+    "ran": "ran"
+   },
+   "params": {
+    "sickbed": {
+     "x": 0.3,
+     "y": 0.88,
+     "w": 0.34
+    },
+    "cast": [
+     {
+      "who": "marc",
+      "beard": "grey",
+      "x": 0.27,
+      "y": 0.73,
+      "scale": 0.7,
+      "pose": "sit",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "isambard",
+      "x": 1.05,
+      "to": 0.66,
+      "at": "isam",
+      "y": 0.88,
+      "pose": "walk",
+      "then": "hold",
+      "item": "scroll",
+      "face": "left",
+      "scale": 0.9,
+      "seq": [
+       {
+        "at": "ran",
+        "pose": "point",
+        "dir": "forward",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "ill",
+      "x": 0.18,
+      "y": 0.3,
+      "at": "ill",
+      "color": "red",
+      "size": 64
+     },
+     {
+      "text": "Isambard, 20",
+      "x": 0.78,
+      "y": 0.22,
+      "at": "isam",
+      "size": 60
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "tt_arch",
+   "text": "Meanwhile, curious Londoners paid a shilling just to come down and watch the shield.",
+   "visual": "Visitors in top hats and long dresses stroll down the lit tunnel toward the working shield; red note '1 shilling' on 'shilling'.",
+   "title": {
+    "white": "Tourists"
+   },
+   "cues": {
+    "paid": "shilling",
+    "watch": "watch"
+   },
+   "params": {
+    "end": "shield",
+    "miners": true,
+    "walkers": {
+     "n": 6,
+     "at": 0,
+     "speed": 0.05
+    },
+    "cast": [
+     {
+      "who": "lady",
+      "woman": true,
+      "dress": "blue",
+      "x": 0.3,
+      "y": 0.95,
+      "scale": 0.75,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right"
+     },
+     {
+      "who": "gent",
+      "x": 0.72,
+      "y": 0.96,
+      "scale": 0.78,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "watch",
+        "pose": "point",
+        "dir": "forward",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "1 shilling",
+      "x": 0.82,
+      "y": 0.16,
+      "at": "paid",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": false,
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_section",
+   "text": "In May 1827, the river broke through for the first time.",
+   "visual": "River cut-away: the brick tunnel is under the middle of the river when on 'broke' the riverbed above the shield opens and water pours down into it; red note 'May 1827'.",
+   "title": {
+    "white": "First flood",
+    "gray": "May 1827"
+   },
+   "cues": {
+    "may": "May",
+    "broke": "broke"
+   },
+   "params": {
+    "progress": 0.46,
+    "flood": {
+     "at": "broke",
+     "dur": 2.2
+    },
+    "shake": "broke",
+    "ships": 3,
+    "banks": false,
+    "labels": [
+     {
+      "text": "May 1827",
+      "x": 0.64,
+      "y": 0.6,
+      "at": "may",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 324
+   },
+   "camera": {
+    "focus": [
+     880,
+     520
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_section",
+   "text": "Isambard went down in a diving bell to find the hole, and they plugged it with bags of clay.",
+   "visual": "From a boat above the breach a diving bell is lowered on a rope to the riverbed, then clay bags drop one by one into the hole on 'bags'.",
+   "title": {
+    "white": "Diving bell"
+   },
+   "cues": {
+    "bell": "bell",
+    "bags": "bags"
+   },
+   "params": {
+    "progress": 0.46,
+    "bell": {
+     "at": "bell",
+     "x": 0.5
+    },
+    "bags": {
+     "at": "bags"
+    },
+    "ships": 0,
+    "banks": false,
+    "labels": [
+     {
+      "text": "diving bell",
+      "x": 0.68,
+      "y": 0.22,
+      "at": "bell",
+      "arrow": [
+       0.54,
+       0.34
+      ],
+      "size": 60
+     },
+     {
+      "text": "clay bags",
+      "x": 0.33,
+      "y": 0.56,
+      "at": "bags",
+      "arrow": [
+       0.48,
+       0.46
+      ],
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tt_arch",
+   "text": "Then, to prove the tunnel was safe, the company threw a banquet inside it. Long tables and candlelight, under the Thames!",
+   "visual": "Inside the tunnel a long banquet table with a red cloth sets itself down the middle, candles lit, guests seated both sides; the fez narrator in the foreground throws up his arms in delight on 'banquet'; note 'under the river!' on 'under'.",
+   "title": {
+    "white": "A banquet",
+    "gray": "Nov 1827"
+   },
+   "cues": {
+    "safe": "safe",
+    "ban": "banquet",
+    "under": "under"
+   },
+   "params": {
+    "end": "shield",
+    "table": {
+     "at": "ban"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.17,
+      "y": 0.99,
+      "scale": 0.82,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "ban",
+        "pose": "shock",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "under the river!",
+      "x": 0.62,
+      "y": 0.1,
+      "at": "under",
+      "color": "red",
+      "size": 64
+     }
+    ],
+    "cam": {
+     "zoom": 1.15,
+     "focus": [
+      0.5,
+      0.55
+     ]
+    }
+   },
+   "set": false,
+   "source": "Wikipedia"
+  },
+  {
+   "type": "title",
+   "text": "Two months later, the river came back, much harder.",
+   "visual": "Over a stormy river: giant words 'The river' / 'came back' with 'back' in a red box; red note 'January 1828'.",
+   "title": {},
+   "cues": {
+    "w0": "months",
+    "w1": "river",
+    "w2": "back",
+    "note": "harder"
+   },
+   "params": {
+    "lines": [
+     "The river",
+     "came back"
+    ],
+    "highlight": [
+     "back"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "January 1828",
+     "at": "note",
+     "color": "red"
+    }
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "tt_arch",
+   "text": "Isambard was at the shield with two miners when the ground above them gave way. The water hit like a wall.",
+   "visual": "Close on the far shield: Isambard and two miners dig at the face; on 'gave' a wall of water bursts from the shield and rolls down the tunnel at us while a miner runs toward us with his lantern; the lamps die.",
+   "title": {
+    "white": "The wall",
+    "gray": "of water"
+   },
+   "cues": {
+    "gave": "gave",
+    "hit": "hit"
+   },
+   "params": {
+    "end": "shield",
+    "miners": 3,
+    "miner_scale": 3.6,
+    "flood": {
+     "at": "gave",
+     "dur": 2.6,
+     "level": 0.6
+    },
+    "dark": {
+     "at": "hit"
+    },
+    "shake": "hit",
+    "runner": {
+     "at": "gave",
+     "dur": 2.4,
+     "from": 0.28,
+     "to": 0.75
+    }
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     500
+    ],
+    "zoom": 2.2,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tt_arch",
+   "text": "A falling timber trapped his leg, the water nearly swept him away, and he was pulled out unconscious.",
+   "visual": "Close: a heavy timber falls across the flooded tunnel on 'timber', the water rises around Isambard, and on 'pulled' another worker grabs him and drags him clear.",
+   "title": {
+    "white": "Trapped"
+   },
+   "cues": {
+    "timber": "timber",
+    "swept": "swept",
+    "pulled": "pulled"
+   },
+   "params": {
+    "end": "dark",
+    "beam": {
+     "at": "timber"
+    },
+    "rise": {
+     "at": "swept",
+     "from": 0.2,
+     "to": 0.36,
+     "dur": 2
+    },
+    "cast": [
+     {
+      "who": "isambard",
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 0.6,
+      "pose": "shock",
+      "face": "right"
+     },
+     {
+      "who": "worker",
+      "accessory": "beret",
+      "x": 0.85,
+      "to": 0.62,
+      "at": "pulled",
+      "pose": "walk",
+      "then": "point",
+      "dir": "forward",
+      "face": "left",
+      "scale": 0.6,
+      "y": 0.86
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1060,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Six men died that day, including the two who had been beside him.",
+   "visual": "Quiet card: giant words 'Six men' / 'never came home' with 'Six' in a red box, over a dark river.",
+   "title": {},
+   "cues": {
+    "w0": "Six",
+    "w1": "died"
+   },
+   "params": {
+    "lines": [
+     "Six men",
+     "never came home"
+    ],
+    "highlight": [
+     "Six"
+    ],
+    "y": 0.42
+   },
+   "set": {
+    "name": "night",
+    "ground": 1000
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_room",
+   "text": "Isambard was badly hurt, and he never worked on the tunnel again. And then came the worst part. Nothing happened at all.",
+   "visual": "Night by the tunnel shaft: Isambard limps away on a crutch, head down; the fez narrator steps in, thinks, then shrugs on 'Nothing'.",
+   "title": {
+    "white": "Then",
+    "gray": "nothing"
+   },
+   "cues": {
+    "hurt": "hurt",
+    "worst": "worst",
+    "noth": "Nothing"
+   },
+   "params": {
+    "crutch": 0,
+    "cast": [
+     {
+      "who": "isambard",
+      "x": 0.5,
+      "to": 0.88,
+      "y": 0.86,
+      "pose": "walk",
+      "at": "noth",
+      "walk_dur": 6,
+      "face": "right",
+      "emotion": "worried",
+      "scale": 0.8
+     },
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "worst",
+        "pose": "think"
+       },
+       {
+        "at": "noth",
+        "pose": "shrug"
+       }
+      ]
+     }
+    ]
+   },
+   "set": "night"
+  },
+  {
+   "type": "chapter",
+   "text": "In August 1828, they bricked up the tunnel face and walked away.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title 'Seven Years of Silence' with a hand-drawn underline.",
+   "title": {},
+   "cues": {
+    "title": "bricked"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Seven Years of Silence",
+    "label": "CHAPTER"
+   },
+   "chapter": "Seven Years of Silence"
+  },
+  {
+   "type": "tt_section",
+   "text": "Half a tunnel sat under the river, in the dark, for seven years.",
+   "visual": "River cut-away at night-dim: the tunnel ends halfway under the river at a red brick wall that builds itself on 'half'; its lamps are out; ships keep drifting above; red note '1828 to 1835' on 'seven'.",
+   "title": {
+    "white": "Abandoned"
+   },
+   "cues": {
+    "half": "Half",
+    "seven": "seven"
+   },
+   "params": {
+    "progress": 0.5,
+    "dark": true,
+    "wall": {
+     "at": "half"
+    },
+    "ships": 3,
+    "labels": [
+     {
+      "text": "1828 to 1835",
+      "x": 0.55,
+      "y": 0.62,
+      "at": "seven",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     930,
+     760
+    ],
+    "zoom": 2.0,
+    "move": "push"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Marc Brunel kept knocking on doors, and finally the government lent the money.",
+   "visual": "A London street: old Marc Brunel knocks on a big door, again and again; on 'government' a hand note 'Treasury loan, 1834' appears and the fez narrator holds up a sign 'LOAN!' on 'money'.",
+   "title": {
+    "white": "The loan",
+    "gray": "1834"
+   },
+   "cues": {
+    "knock": "knocking",
+    "gov": "government",
+    "money": "money"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "marc",
+      "beard": "grey",
+      "x": 0.45,
+      "scale": 0.95,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right"
+     },
+     {
+      "who": "kasif",
+      "x": 0.14,
+      "scale": 0.9,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "money",
+        "pose": "hold",
+        "text": "LOAN!"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "door",
+      "x": 0.7,
+      "y": 0.86,
+      "scale": 1.7
+     }
+    ],
+    "label": {
+     "text": "Treasury loan, 1834",
+     "x": 0.7,
+     "y": 0.16,
+     "at": "gov"
+    }
+   },
+   "set": "city",
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_face",
+   "text": "Here's the thing, though: the old shield was worn out. So Brunel built a new, heavier one, and the miners went back into the mud.",
+   "visual": "A new, heavier riveted shield draws itself column by column; on 'miners' the cells fill with miners again; note 'new shield, 1836'.",
+   "title": {
+    "white": "New shield"
+   },
+   "cues": {
+    "worn": "worn",
+    "new": "heavier",
+    "miners": "miners"
+   },
+   "params": {
+    "heavy": true,
+    "draw": {
+     "at": 0.1,
+     "dur": 2.6
+    },
+    "fill": {
+     "at": "miners",
+     "dur": 1.8
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "tt_section",
+   "text": "And the river broke in again. Four more times! But this time they were ready, and they kept going.",
+   "visual": "Cut-away: water bursts down through the riverbed into the tunnel on 'broke'; red stamp 'x4' on 'Four'; then the shield pushes on, new rings flashing, on 'going'.",
+   "title": {
+    "white": "4 more",
+    "gray": "floods"
+   },
+   "cues": {
+    "broke": "broke",
+    "four": "Four",
+    "go": "going"
+   },
+   "params": {
+    "progress": {
+     "from": 0.6,
+     "to": 0.72,
+     "at": "go",
+     "dur": 2.5
+    },
+    "flood": {
+     "at": "broke",
+     "x": 0.6,
+     "dur": 1.4
+    },
+    "push": {
+     "at": "go"
+    },
+    "shake": "broke",
+    "ships": 3,
+    "banks": false,
+    "labels": [
+     {
+      "text": "x4",
+      "x": 0.7,
+      "y": 0.38,
+      "at": "four",
+      "stamp": true,
+      "size": 96
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 324
+   },
+   "camera": {
+    "focus": [
+     1100,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_section",
+   "text": "In November 1841, the shield finally reached Wapping, on the other side. Was it worth it?",
+   "visual": "Cut-away: the brick tunnel crawls the last stretch and meets the Wapping shaft on the far bank on 'Wapping'; red note 'Nov 1841'.",
+   "title": {
+    "white": "Across!",
+    "gray": "1841"
+   },
+   "cues": {
+    "nov": "November",
+    "wap": "Wapping",
+    "worth": "worth"
+   },
+   "params": {
+    "progress": {
+     "from": 0.8,
+     "to": 1.0,
+     "at": 0,
+     "dur": 3.4
+    },
+    "ships": 4,
+    "surface": 0.42,
+    "bed": 0.56,
+    "top": 0.68,
+    "bottom": 0.82,
+    "labels": [
+     {
+      "text": "Nov 1841",
+      "x": 0.5,
+      "y": 0.62,
+      "at": "nov",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "worth it?",
+      "x": 0.7,
+      "y": 0.14,
+      "at": "worth",
+      "size": 64
+     }
+    ]
+   },
+   "set": false,
+   "camera": false,
+   "source": "Wikipedia"
+  },
+  {
+   "type": "chapter",
+   "text": "On the 25th of March, 1843, the Thames Tunnel opened, and London went crazy.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Eighth Wonder' with a hand-drawn underline.",
+   "title": {},
+   "cues": {
+    "title": "opened"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Eighth Wonder",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Eighth Wonder"
+  },
+  {
+   "type": "tt_arch",
+   "text": "About fifty thousand people walked through on the very first day.",
+   "visual": "The finished tunnel, lamps lit and stalls along the walls: a stream of visitors walks away from us down the arches; big red '50,000' on 'fifty'.",
+   "title": {
+    "white": "Day one",
+    "gray": "1843"
+   },
+   "cues": {
+    "fifty": "fifty",
+    "day": "first"
+   },
+   "params": {
+    "end": "open",
+    "walkers": {
+     "n": 14,
+     "at": 0,
+     "speed": 0.08
+    },
+    "labels": [
+     {
+      "text": "50,000",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "fifty",
+      "stamp": true,
+      "size": 110
+     }
+    ]
+   },
+   "set": false,
+   "source": "PBS Building Big"
+  },
+  {
+   "type": "tt_arch",
+   "text": "A million came in the first ten weeks, roughly half of London, at a penny each.",
+   "visual": "At the tunnel entrance a toll booth with a '1 PENNY' sign; a gold penny drops on the counter on 'penny'; visitors stream down the tunnel; red stamp '1,000,000' on 'million' and note 'half of London' on 'half'.",
+   "title": {
+    "white": "Ten weeks"
+   },
+   "cues": {
+    "m": "million",
+    "h": "half",
+    "p": "penny"
+   },
+   "params": {
+    "end": "open",
+    "booth": {
+     "x": 0.17,
+     "at": "p"
+    },
+    "walkers": {
+     "n": 10,
+     "at": 0,
+     "speed": 0.06
+    },
+    "labels": [
+     {
+      "text": "1,000,000",
+      "x": 0.62,
+      "y": 0.14,
+      "at": "m",
+      "stamp": true,
+      "size": 96
+     },
+     {
+      "text": "half of London",
+      "x": 0.66,
+      "y": 0.32,
+      "at": "h",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "source": "London Museum"
+  },
+  {
+   "type": "title",
+   "text": "People called it the eighth wonder of the world.",
+   "visual": "Giant words 'The eighth' / 'wonder' with 'eighth' in a red box; the fez narrator on the right points at it, delighted.",
+   "title": {},
+   "cues": {
+    "w0": "called",
+    "w1": "eighth",
+    "w2": "wonder"
+   },
+   "params": {
+    "lines": [
+     "The eighth",
+     "wonder"
+    ],
+    "highlight": [
+     "eighth"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "dir": 25,
+     "face": -1,
+     "scale": 0.9,
+     "at": "w1",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "tt_room",
+   "text": "There was just one problem. It was built for horses and carts, but the money ran out before the ramps.",
+   "visual": "The engineer's drawing board on his desk: a cut-away of the tunnel with a spiral cart ramp winding down each shaft, both labelled 'cart ramp'; Marc Brunel points at them; on 'ramps' both ramps get a big red cross; note 'no money' on 'money'.",
+   "title": {
+    "white": "One problem"
+   },
+   "cues": {
+    "horses": "horses",
+    "money": "money",
+    "ramps": "ramps"
+   },
+   "params": {
+    "plan": {
+     "cross": "ramps"
+    },
+    "cast": [
+     {
+      "who": "marc",
+      "beard": "grey",
+      "x": 0.26,
+      "y": 0.9,
+      "scale": 0.75,
+      "pose": "point",
+      "dir": 20,
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "cart ramp",
+      "x": 0.45,
+      "y": 0.22,
+      "at": "horses",
+      "arrow": [
+       0.35,
+       0.4
+      ],
+      "size": 58
+     },
+     {
+      "text": "cart ramp",
+      "x": 0.64,
+      "y": 0.22,
+      "at": "horses",
+      "arrow": [
+       0.76,
+       0.4
+      ],
+      "size": 58
+     },
+     {
+      "text": "no money",
+      "x": 0.9,
+      "y": 0.42,
+      "at": "money",
+      "color": "red",
+      "size": 56
+     }
+    ]
+   },
+   "set": "interior",
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "tt_arch",
+   "text": "So for over twenty years, it was a tunnel for walking, with stalls and fairs inside.",
+   "visual": "Inside the tunnel striped market stalls line both walls, people stroll in both directions; note 'stalls and fairs'.",
+   "title": {
+    "white": "A walk",
+    "gray": "under the river"
+   },
+   "cues": {
+    "walk": "walking",
+    "stalls": "stalls"
+   },
+   "params": {
+    "end": "open",
+    "stalls": true,
+    "walkers": {
+     "n": 10,
+     "at": 0,
+     "speed": 0.05
+    },
+    "labels": [
+     {
+      "text": "stalls and fairs",
+      "x": 0.5,
+      "y": 0.1,
+      "at": "stalls",
+      "size": 64
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     700,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tt_arch",
+   "text": "Then, in 1869, the trains came. And here's the best part: they never left. Today, London Overground trains still run through Brunel's tunnel.",
+   "visual": "Rails appear in the tunnel; on '1869' a steam engine rolls out of the dark towards us, smoke puffing; red note '1869' and on 'Today' the note 'still running today'.",
+   "title": {
+    "white": "Trains",
+    "gray": "since 1869"
+   },
+   "cues": {
+    "yr": "1869",
+    "left": "never",
+    "today": "Today"
+   },
+   "params": {
+    "end": "dark",
+    "train": {
+     "at": "yr",
+     "kind": "steam",
+     "dur": 4,
+     "stop": 0.7
+    },
+    "labels": [
+     {
+      "text": "1869",
+      "x": 0.15,
+      "y": 0.16,
+      "at": "yr",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "still running today",
+      "x": 0.78,
+      "y": 0.16,
+      "at": "today",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "source": "Wikipedia"
+  },
+  {
+   "type": "tt_worm",
+   "text": "And every giant tunnel boring machine under our cities still works the same way: a shield at the front, a lining right behind. An idea borrowed from a worm.",
+   "visual": "Back in the timber: the shipworm bores on, and on 'shield' a red shield grid lays itself over its head; note 'same idea' on 'worm'.",
+   "title": {
+    "white": "Same idea"
+   },
+   "cues": {
+    "shield": "shield",
+    "lining": "lining",
+    "worm": "worm"
+   },
+   "params": {
+    "holes": [
+     [
+      [
+       -0.05,
+       0.22
+      ],
+      [
+       1.05,
+       0.2
+      ]
+     ]
+    ],
+    "worm": {
+     "path": [
+      [
+       -0.05,
+       0.6
+      ],
+      [
+       0.25,
+       0.52
+      ],
+      [
+       0.45,
+       0.58
+      ],
+      [
+       0.58,
+       0.54
+      ]
+     ],
+     "at": 0,
+     "dur": 8,
+     "from": 0.5
+    },
+    "ghost": {
+     "at": "shield"
+    },
+    "labels": [
+     {
+      "text": "lining",
+      "x": 0.25,
+      "y": 0.8,
+      "at": "lining",
+      "arrow": [
+       0.3,
+       0.62
+      ],
+      "size": 60
+     },
+     {
+      "text": "same idea",
+      "x": 0.7,
+      "y": 0.85,
+      "at": "worm",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1050,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tt_arch",
+   "text": "So, would you have paid a penny to walk under the Thames in 1843? Tell me in the comments, and subscribe to Stickstory for more true stories like this.",
+   "visual": "The lit tunnel full of strolling visitors and stalls; the fez narrator in the foreground holds up a big penny coin on 'penny', then waves goodbye on 'subscribe'.",
+   "title": {
+    "white": "A penny?"
+   },
+   "cues": {
+    "penny": "penny",
+    "sub": "subscribe"
+   },
+   "params": {
+    "end": "open",
+    "stalls": true,
+    "walkers": {
+     "n": 8,
+     "at": 0,
+     "speed": 0.04
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "y": 0.98,
+      "scale": 0.95,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "penny",
+        "pose": "hold",
+        "item": "coin"
+       },
+       {
+        "at": "sub",
+        "pose": "wave"
+       }
+      ]
+     }
+    ]
+   },
+   "set": false
+  }
+ ]
+}

@@ -1,0 +1,862 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "voynich-manuscript",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Nobody",
+   "can read",
+   "this"
+  ],
+  "highlight": [
+   "nobody"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "focus": [
+   420,
+   1250
+  ],
+  "zoom": 1.25,
+  "kasif": {
+   "pose": "shock",
+   "x": 640,
+   "y": 1520,
+   "face": -1,
+   "scale": 1.5
+  }
+ },
+ "sources": [
+  {
+   "title": "Encyclopaedia Britannica — Voynich manuscript",
+   "url": "https://www.britannica.com/print/article/2059077"
+  },
+  {
+   "title": "University of Arizona via EurekAlert! — Experts determine age of book 'nobody can read'",
+   "url": "https://www.eurekalert.org/news-releases/624074"
+  },
+  {
+   "title": "NSA — M. E. D'Imperio, The Voynich Manuscript: An Elegant Enigma (1978)",
+   "url": "https://media.defense.gov/2021/Jul/13/2002761512/-1/-1/0/VOYNICH_MANUSCRIPT.PDF"
+  }
+ ],
+ "youtube": {
+  "title": "Voynich Manuscript: The 600-Year-Old Book Nobody Can Read",
+  "description": "The Voynich Manuscript is a 600-year-old book that nobody on Earth can read. Even America's top codebreakers tried, and failed. So what is it?\n\nThe Voynich Manuscript, kept at Yale's Beinecke Library, is filled with an unknown script, strange plants, star charts and bathing women. William Friedman's codebreaking team attacked it from 1944, and in 2009 radiocarbon dating put its vellum in the early 1400s, long before Wilfrid Voynich bought it in 1912. Its words even repeat in patterns, like a real language.\n\nSubscribe to Stickstory for a true story like this every day. Do you think it is a secret code or a lost language? Tell me in the comments!\n\n#shorts #voynichmanuscript #unsolvedmysteries #stickstory",
+  "tags": [
+   "voynich manuscript",
+   "voynich manuscript mystery",
+   "voynich manuscript decoded",
+   "the voynich manuscript",
+   "book nobody can read",
+   "unknown language",
+   "william friedman",
+   "codebreakers",
+   "radiocarbon dating",
+   "beinecke library",
+   "medieval manuscript",
+   "unsolved mysteries",
+   "history mysteries",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-28T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "voy_book",
+   "text": "Nobody on Earth can read this book.",
+   "visual": "Candle-lit scholar's desk seen from the front: a huge open vellum manuscript fills the lower two thirds of the frame, a big strange plant with blue petals and roots covers the whole left page, loopy unknown script fills the right page, a candle flickers behind it at the right, an open drawer full of loose folios at the very bottom; the pages glow gold on 'read'. Hook frame: the cover text on top and the big shocked fez narrator.",
+   "title": {
+    "white": "Voynich MS",
+    "gray": "Yale"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 902
+   },
+   "cues": {
+    "glow": "Nobody"
+   },
+   "params": {
+    "desk": 0.47,
+    "book": {
+     "x": 0.5,
+     "y": 0.87,
+     "w": 0.5,
+     "d": 0.38,
+     "glow": "glow",
+     "left": [
+      {
+       "kind": "plant",
+       "box": [
+        60,
+        40,
+        940,
+        1360
+       ]
+      }
+     ],
+     "right": [
+      {
+       "kind": "text",
+       "box": [
+        80,
+        60,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ],
+     "write": {
+      "at": 0.0,
+      "dur": 1.4
+     }
+    },
+    "candle": {
+     "x": 0.88,
+     "y": 0.5,
+     "s": 1.3
+    },
+    "quill": false,
+    "desk_d": 0.42,
+    "front": "drawer"
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "voy_page",
+   "text": "It's about 600 years old, in a script nobody knows.",
+   "visual": "One vellum page fills the frame: a plant drawing at the top left, the unknown script all over the page; a magnifying glass glides across the lines and enlarges the loopy letters; red box '600 YEARS OLD' pops in at the top, then a handwritten 'UNKNOWN SCRIPT' on 'nobody'.",
+   "title": {
+    "white": "The script"
+   },
+   "set": false,
+   "cues": {
+    "age": "600",
+    "hit": "nobody"
+   },
+   "params": {
+    "cy": 0.5,
+    "items": [
+     {
+      "kind": "plant",
+      "box": [
+       80,
+       80,
+       520,
+       700
+      ]
+     },
+     {
+      "kind": "text",
+      "box": [
+       560,
+       80,
+       930,
+       700
+      ],
+      "gs": 36
+     },
+     {
+      "kind": "text",
+      "box": [
+       70,
+       720,
+       930,
+       1340
+      ],
+      "gs": 40
+     }
+    ],
+    "lens": {
+     "from": [
+      0.3,
+      0.66
+     ],
+     "to": [
+      0.62,
+      0.5
+     ],
+     "at": 0.1,
+     "dur": 2.6,
+     "r": 170,
+     "zoom": 1.8
+    },
+    "labels": [
+     {
+      "text": "600 YEARS OLD",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 80,
+      "at": "age",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     },
+     {
+      "text": "UNKNOWN SCRIPT",
+      "x": 0.5,
+      "y": 0.8,
+      "size": 76,
+      "at": "hit",
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "voy_panels",
+   "text": "Inside? Strange plants, star charts, bathing women.",
+   "visual": "Top view of a wooden desk: three loose manuscript pages drop onto it one by one on their words: a strange plant with blue petals and roots, a round star chart with gold stars and a red sun, and green-blue pools full of little bathing women joined by a pipe; a quill lies at the bottom.",
+   "title": {
+    "white": "Inside"
+   },
+   "set": false,
+   "cues": {
+    "plant": "plants",
+    "star": "star",
+    "bath": "bathing"
+   },
+   "params": {
+    "pages": [
+     {
+      "items": [
+       {
+        "kind": "plant",
+        "box": [
+         80,
+         80,
+         920,
+         1000
+        ]
+       },
+       {
+        "kind": "text",
+        "box": [
+         80,
+         1030,
+         920,
+         1340
+        ],
+        "gs": 44
+       }
+      ],
+      "x": 0.3,
+      "y": 0.4,
+      "w": 0.6,
+      "rot": -7,
+      "at": "plant"
+     },
+     {
+      "items": [
+       {
+        "kind": "stars",
+        "box": [
+         60,
+         120,
+         940,
+         1000
+        ]
+       },
+       {
+        "kind": "text",
+        "box": [
+         80,
+         1030,
+         920,
+         1340
+        ],
+        "gs": 44
+       }
+      ],
+      "x": 0.7,
+      "y": 0.5,
+      "w": 0.6,
+      "rot": 6,
+      "at": "star"
+     },
+     {
+      "items": [
+       {
+        "kind": "bath",
+        "box": [
+         60,
+         80,
+         940,
+         1000
+        ]
+       },
+       {
+        "kind": "text",
+        "box": [
+         80,
+         1030,
+         920,
+         1340
+        ],
+        "gs": 44
+       }
+      ],
+      "x": 0.45,
+      "y": 0.7,
+      "w": 0.62,
+      "rot": -2,
+      "at": "bath"
+     }
+    ],
+    "quill": {
+     "x": 0.86,
+     "y": 0.97,
+     "s": 1.1
+    }
+   }
+  },
+  {
+   "type": "voy_room",
+   "text": "In 1944, America's top codebreakers attacked it.",
+   "visual": "A 1940s code room: a green blackboard fills with chalk copies of the unknown script, photostat pages pinned left and right; William Friedman stands in the middle behind a long table and points up at the board, one colleague thinks, another talks; papers on the table; an open drawer full of folios in the foreground with a red box 'W. FRIEDMAN'.",
+   "title": {
+    "white": "Codebreakers",
+    "gray": "1944"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "cues": {
+    "hit": "codebreakers"
+   },
+   "params": {
+    "table": 0.55,
+    "board": {
+     "x": 0.5,
+     "y": 0.21,
+     "w": 0.66,
+     "h": 0.16,
+     "at": 0
+    },
+    "cast": [
+     {
+      "x": 0.5,
+      "y": 0.62,
+      "scale": 1.1,
+      "pose": "point",
+      "dir": 55,
+      "face": "right",
+      "emotion": "neutral"
+     },
+     {
+      "x": 0.2,
+      "y": 0.62,
+      "scale": 1.0,
+      "pose": "think",
+      "face": "right"
+     },
+     {
+      "x": 0.8,
+      "y": 0.62,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "W. FRIEDMAN",
+      "x": 0.5,
+      "y": 0.73,
+      "size": 70,
+      "at": "hit",
+      "color": "red",
+      "font": "serif",
+      "rot": -2,
+      "box": true
+     }
+    ],
+    "lamp": false
+   }
+  },
+  {
+   "type": "voy_room",
+   "text": "It beat them.",
+   "visual": "Close-up on Friedman and his two colleagues behind the table (all three in frame): crumpled paper balls drop onto the table one after another, Friedman shrugs, the others hold their heads, worried; red box 'UNSOLVED' pops in above their heads.",
+   "title": {
+    "white": "Codebreakers",
+    "gray": "1944"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "camera": {
+    "focus": [
+     540,
+     720
+    ],
+    "zoom": 1.7,
+    "move": "still"
+   },
+   "cues": {
+    "hit": "beat"
+   },
+   "params": {
+    "table": 0.55,
+    "board": false,
+    "balls": {
+     "at": 0.05,
+     "n": 6
+    },
+    "cast": [
+     {
+      "x": 0.5,
+      "y": 0.62,
+      "scale": 1.0,
+      "pose": "think",
+      "face": "left",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "x": 0.33,
+      "y": 0.62,
+      "scale": 0.9,
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "x": 0.67,
+      "y": 0.62,
+      "scale": 0.9,
+      "pose": "shrug",
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "UNSOLVED",
+      "x": 0.5,
+      "y": 0.27,
+      "size": 84,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "lamp": false,
+    "front": "panels"
+   }
+  },
+  {
+   "type": "voy_book",
+   "text": "A modern fake?",
+   "visual": "Back at the candle-lit desk: the big fez narrator stands behind it at the right, hand on his chin, over the huge open manuscript (star wheel on the left page), then jumps back in shock; red box 'FAKE?' pops in at the upper left; open drawer with folios at the bottom.",
+   "title": {
+    "white": "Hoax?"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 902
+   },
+   "cues": {
+    "hit": "fake"
+   },
+   "params": {
+    "desk": 0.47,
+    "book": {
+     "x": 0.5,
+     "y": 0.87,
+     "w": 0.5,
+     "d": 0.38,
+     "left": [
+      {
+       "kind": "stars",
+       "box": [
+        60,
+        100,
+        940,
+        980
+       ]
+      },
+      {
+       "kind": "text",
+       "box": [
+        80,
+        1000,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ],
+     "right": [
+      {
+       "kind": "text",
+       "box": [
+        80,
+        60,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ]
+    },
+    "candle": false,
+    "quill": false,
+    "behind": [
+     {
+      "hat": true,
+      "x": 0.74,
+      "y": 0.6,
+      "scale": 1.5,
+      "pose": "think",
+      "face": "left",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "FAKE?",
+      "x": 0.3,
+      "y": 0.3,
+      "size": 110,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "desk_d": 0.42,
+    "front": "drawer"
+   }
+  },
+  {
+   "type": "voy_date",
+   "text": "Carbon dating says no: the vellum is from the early 1400s.",
+   "visual": "Lab bench: a big corner of a manuscript page lies across the bottom of the frame; a scalpel cuts a thin strip from the margin on 'dating', the strip lifts into a glass vial at the right on 'vellum'; a big card stamps in on '1400s': red '1404–1438' with handwritten 'carbon dated' under it.",
+   "title": {
+    "white": "Carbon test",
+    "gray": "2009"
+   },
+   "source": "University of Arizona",
+   "set": false,
+   "cues": {
+    "cut": "dating",
+    "lift": "vellum",
+    "hit": "1400s"
+   },
+   "params": {
+    "cut": "cut",
+    "lift": "lift",
+    "card": {
+     "text": "1404–1438",
+     "sub": "carbon dated",
+     "at": "hit",
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "type": "voy_page",
+   "text": "The crazy part? Its words repeat like a real language.",
+   "visual": "Close on a page of the script, letters big: the same word is ringed in gold four times across the page, one after another, joined by a red thread; red box 'SAME WORD' pops in at the top.",
+   "title": {
+    "white": "Patterns"
+   },
+   "source": "Britannica",
+   "set": false,
+   "cues": {
+    "hit": "repeat"
+   },
+   "params": {
+    "cy": 0.5,
+    "rot": 1.5,
+    "items": [
+     {
+      "kind": "text",
+      "box": [
+       60,
+       40,
+       940,
+       1360
+      ],
+      "gs": 62
+     }
+    ],
+    "mark": {
+     "word": 0,
+     "at": "hit",
+     "n": 4,
+     "dur": 1.6
+    },
+    "labels": [
+     {
+      "text": "SAME WORD",
+      "x": 0.5,
+      "y": 0.19,
+      "size": 84,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "voy_book",
+   "text": "Someone filled 240 pages for a reason. You still can't read one word.",
+   "visual": "Night, the desk lit by the candle: a bearded 15th-century scribe in a beret stands behind the huge open book and writes with a quill; the unknown script inks itself line by line under the quill tip, first the left page, then the right; handwritten '240 PAGES' on 'pages', red box 'STILL UNREAD' on 'word'; open drawer with folios at the bottom.",
+   "title": {
+    "white": "The scribe",
+    "gray": "1400s"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 902
+   },
+   "cues": {
+    "pages": "pages",
+    "hit": "word"
+   },
+   "params": {
+    "desk": 0.47,
+    "night": true,
+    "book": {
+     "x": 0.5,
+     "y": 0.87,
+     "w": 0.5,
+     "d": 0.38,
+     "write": {
+      "at": 0.0,
+      "dur": 3.2,
+      "seq": true
+     },
+     "left": [
+      {
+       "kind": "bath",
+       "box": [
+        60,
+        80,
+        940,
+        900
+       ]
+      },
+      {
+       "kind": "text",
+       "box": [
+        80,
+        930,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ],
+     "right": [
+      {
+       "kind": "text",
+       "box": [
+        80,
+        60,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ]
+    },
+    "candle": {
+     "x": 0.9,
+     "y": 0.6,
+     "s": 1.05
+    },
+    "quill": false,
+    "behind": [
+     {
+      "x": 0.56,
+      "y": 0.6,
+      "scale": 1.2,
+      "pose": "point",
+      "dir": -30,
+      "face": "right",
+      "accessory": "beret",
+      "beard": "grey",
+      "quill": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "240 PAGES",
+      "x": 0.58,
+      "y": 0.49,
+      "size": 70,
+      "at": "pages",
+      "color": "ink",
+      "font": "serif",
+      "rot": -3,
+      "box": true
+     },
+     {
+      "text": "STILL UNREAD",
+      "x": 0.58,
+      "y": 0.56,
+      "size": 76,
+      "at": "hit",
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "desk_d": 0.42,
+    "front": "drawer"
+   },
+   "camera": {
+    "focus": [
+     620,
+     1000
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "voy_book",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "The big fez narrator stands behind the desk at the right and waves at the viewer over the huge open manuscript; giant words '600 YEARS.' then '0 READERS.' with 'READERS.' in a red box; open drawer with folios at the bottom.",
+   "title": {
+    "white": "Voynich MS"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 902
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "desk": 0.47,
+    "book": {
+     "x": 0.5,
+     "y": 0.87,
+     "w": 0.5,
+     "d": 0.38,
+     "left": [
+      {
+       "kind": "plant",
+       "box": [
+        80,
+        60,
+        920,
+        900
+       ]
+      },
+      {
+       "kind": "text",
+       "box": [
+        80,
+        930,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ],
+     "right": [
+      {
+       "kind": "text",
+       "box": [
+        80,
+        60,
+        920,
+        1340
+       ],
+       "gs": 44
+      }
+     ]
+    },
+    "candle": false,
+    "quill": false,
+    "behind": [
+     {
+      "hat": true,
+      "x": 0.84,
+      "y": 0.68,
+      "scale": 1.5,
+      "pose": "wave",
+      "face": "left",
+      "emotion": "happy"
+     }
+    ],
+    "words": {
+     "lines": [
+      {
+       "words": [
+        "600",
+        "YEARS."
+       ],
+       "y": 0.19,
+       "size": 96,
+       "at": [
+        "s1",
+        "s1"
+       ]
+      },
+      {
+       "words": [
+        "0",
+        "READERS."
+       ],
+       "y": 0.255,
+       "size": 96,
+       "at": [
+        "s2",
+        "s2"
+       ]
+      }
+     ],
+     "highlight": "READERS."
+    },
+    "desk_d": 0.42,
+    "front": "drawer"
+   },
+   "camera": {
+    "move": "push"
+   }
+  }
+ ]
+}
