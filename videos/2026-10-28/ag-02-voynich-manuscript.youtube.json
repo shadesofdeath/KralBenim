@@ -1,0 +1,17 @@
+{
+ "id": "kfmFId9QIYQ",
+ "thumbnail": false,
+ "url": "https://youtu.be/kfmFId9QIYQ",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-10-28T23:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Voynich Manuscript: The 600-Year-Old Book Nobody Can Read",
+ "script": "videos/2026-10-28/ag-02-voynich-manuscript.json"
+}
