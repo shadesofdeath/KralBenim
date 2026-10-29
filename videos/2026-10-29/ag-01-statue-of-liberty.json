@@ -1,0 +1,678 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "statue-of-liberty",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Two pennies",
+   "thick"
+  ],
+  "highlight": [
+   "pennies"
+  ],
+  "scene": 0,
+  "t": 1.4,
+  "focus": [
+   600,
+   890
+  ],
+  "zoom": 1.3,
+  "kasif": {
+   "pose": "shock",
+   "x": 290,
+   "y": 1800,
+   "face": 1,
+   "scale": 1.25
+  }
+ },
+ "sources": [
+  {
+   "title": "National Park Service, Statue of Liberty NM — Statue Statistics",
+   "url": "https://www.nps.gov/stli/learn/historyculture/statue-statistics.htm"
+  },
+  {
+   "title": "National Park Service, Statue of Liberty NM — Creating the Statue of Liberty",
+   "url": "https://www.nps.gov/stli/learn/historyculture/places_creating_statue.htm"
+  },
+  {
+   "title": "Statue of Liberty-Ellis Island Foundation — Overview + History",
+   "url": "https://www.statueofliberty.org/statue-of-liberty/overview-history/"
+  },
+  {
+   "title": "Smithsonian Magazine — The Statue of Liberty Arrived in 350 Pieces",
+   "url": "https://www.smithsonianmag.com/smart-news/statue-liberty-arrived-350-pieces-180955920/"
+  }
+ ],
+ "youtube": {
+  "title": "Statue of Liberty: Why Is She Only Two Pennies Thick?",
+  "description": "Statue of Liberty: her copper skin is only about 2.4 millimeters thick, as thin as two pennies. So how does a giant that thin stand up in New York Harbor?\n\nThe statue was built in Paris between 1881 and 1884, then shipped to New York in 350 pieces packed in 214 crates aboard the French ship Isere, and unveiled on October 28, 1886. Inside, an iron pylon designed by Gustave Eiffel holds up the thin copper shell, a few years before he built the Eiffel Tower.\n\nSubscribe to Stickstory for one true story every day. Did you know Eiffel was hiding inside Lady Liberty? Tell me in the comments!\n\n#shorts #statueofliberty #eiffel #stickstory",
+  "tags": [
+   "statue of liberty",
+   "statue of liberty facts",
+   "statue of liberty built",
+   "statue of liberty copper",
+   "lady liberty",
+   "gustave eiffel",
+   "eiffel statue of liberty",
+   "bartholdi",
+   "statue of liberty history",
+   "liberty enlightening the world",
+   "new york history",
+   "how it was built",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-29T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "sl_skin",
+   "text": "Lady Liberty is two pennies thick.",
+   "visual": "Paris workshop bench: the statue's huge copper bust (crown, calm face, raised torch arm) rises behind the bench; on the bench a hammered copper sheet hangs over the front edge and two big pennies lie stacked beside it; on 'pennies' a gold dashed line shows the sheet edge and the coin stack are the same height. Hook frame: big shocked fez host lower left (cover overlay).",
+   "title": {
+    "white": "Lady Liberty"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "pennies",
+    "eq": "thick"
+   },
+   "params": {
+    "bench": 0.6,
+    "bust": {
+     "x": 0.66,
+     "y": 0.89,
+     "s": 1.3,
+     "drift": 0.04
+    },
+    "sheet": {
+     "x": 0.02,
+     "w": 0.4
+    },
+    "coins": {
+     "x": 0.76,
+     "s": 1.0
+    },
+    "eq": "eq",
+    "props": {
+     "y": 0.75
+    },
+    "hop": {
+     "at": 1.45,
+     "every": 1.0,
+     "h": 150
+    }
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "sl_harbor",
+   "text": "New York unveiled her 140 years ago this week,",
+   "visual": "New York harbor, 1886: the still copper-brown statue on her granite pedestal and star-shaped fort on the island, steamboats with flags firing salute smoke on 'unveiled', a cheering crowd of top hats and bowlers waving little flags along the bottom.",
+   "title": {
+    "white": "New York",
+    "gray": "October 28, 1886"
+   },
+   "source": "National Park Service",
+   "set": {
+    "name": "ocean",
+    "horizon": 1090,
+    "ground": 1130
+   },
+   "cues": {
+    "salute": "unveiled",
+    "hit": "140"
+   },
+   "params": {
+    "statue": {
+     "x": 0.56,
+     "y": 0.42,
+     "s": 0.5,
+     "pedestal": true
+    },
+    "salute": "salute",
+    "boats": [
+     {
+      "x": 0.16,
+      "y": 0.69,
+      "s": 0.42,
+      "face": 1
+     },
+     {
+      "x": 0.86,
+      "y": 0.66,
+      "s": 0.34,
+      "face": -1
+     }
+    ],
+    "crowd": {
+     "y": 0.8,
+     "rows": 3
+    }
+   },
+   "camera": {
+    "move": "up"
+   }
+  },
+  {
+   "type": "sl_paris",
+   "text": "but she was built in Paris,",
+   "visual": "Paris rooftops: rows of grey mansard roofs with smoking chimneys fill the lower frame; behind them the copper giant towers over the city inside wooden scaffolding, tiny workers hammering on the boards with gold sparks.",
+   "title": {
+    "white": "Paris",
+    "gray": "1881 to 1884"
+   },
+   "set": {
+    "name": "city",
+    "horizon": 1150,
+    "ground": 1230
+   },
+   "cues": {
+    "hit": "Paris"
+   },
+   "params": {
+    "statue": {
+     "x": 0.55,
+     "y": 0.69,
+     "s": 0.88
+    },
+    "scaffold": 0.5,
+    "workers": 6,
+    "roofs": [
+     {
+      "y": 0.64,
+      "s": 0.7
+     },
+     {
+      "y": 0.75,
+      "s": 1.0
+     },
+     {
+      "y": 0.88,
+      "s": 1.4
+     }
+    ]
+   },
+   "camera": {
+    "move": "left"
+   }
+  },
+  {
+   "type": "sl_crates",
+   "text": "and shipped across the ocean in 214 crates.",
+   "visual": "The quay at Rouen: the French transport ship Isere on the water, a derrick lowers a crate on 'ocean', stacks of wooden crates fill the foreground, one open crate in the middle with the statue's copper face and crown peeking out; a big red counter runs up to 214 with the word 'CRATES'.",
+   "title": {
+    "white": "Atlantic crossing",
+    "gray": "1885"
+   },
+   "source": "statueofliberty.org",
+   "set": {
+    "name": "coast",
+    "horizon": 950,
+    "ground": 1190
+   },
+   "cues": {
+    "drop": "shipped",
+    "cnt": "across",
+    "hit": "crates"
+   },
+   "params": {
+    "horizon": 0.5,
+    "quay": 0.62,
+    "ship": {
+     "x": 0.7,
+     "y": 0.5,
+     "s": 0.55
+    },
+    "counter": {
+     "to": 214,
+     "x": 0.62,
+     "y": 0.26,
+     "at": "cnt",
+     "dur": 1.0,
+     "size": 230
+    },
+    "open": {
+     "x": 0.64,
+     "y": 0.68,
+     "w": 470,
+     "h": 240,
+     "s": 1.45
+    },
+    "labels": [
+     {
+      "text": "CRATES",
+      "x": 0.62,
+      "y": 0.345,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "sl_skin",
+   "text": "Her copper skin is only 2.4 millimeters,",
+   "visual": "Close-up on the bench: the edge of the copper sheet next to the two stacked pennies; a steel caliper slides its jaw down onto the sheet edge on 'copper', a red box '2.4 MM' pops above it on 'millimeters', and on 'millimeters' the gold dashed line runs level from the sheet edge to the top of the coins: 'TWO PENNIES'. Below, the tool shelf: wooden repousse form, mallet, hammer, copper offcuts.",
+   "title": {
+    "white": "Copper skin",
+    "gray": "3/32 inch"
+   },
+   "source": "National Park Service",
+   "set": {
+    "name": "interior",
+    "ground": 1267
+   },
+   "cues": {
+    "cal": "copper",
+    "mm": "only",
+    "hit": "millimeters",
+    "eq": "millimeters"
+   },
+   "params": {
+    "bench": 0.66,
+    "bust": false,
+    "props": {
+     "y": 0.8
+    },
+    "sheet": {
+     "x": 0.1,
+     "w": 0.46
+    },
+    "coins": {
+     "x": 0.84,
+     "s": 1.0
+    },
+    "caliper": {
+     "at": "cal"
+    },
+    "eq": "eq",
+    "labels": [
+     {
+      "text": "2.4 MM",
+      "x": 0.6,
+      "y": 0.555,
+      "at": "mm",
+      "size": 70,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     },
+     {
+      "text": "TWO PENNIES",
+      "x": 0.72,
+      "y": 0.735,
+      "at": "eq",
+      "size": 50,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     740,
+     1230
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sl_xray",
+   "text": "far too thin to stand on its own. So who holds her up?",
+   "visual": "The statue alone on top of her pedestal in a storm: cut-away: her robe and arm are an empty shell, a thin copper skin between two ink lines with nothing but darkness inside; she leans in the gusts, storm waves and rocks crash below, and a huge red '?' pops on 'holds'.",
+   "title": {
+    "white": "Hollow shell"
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 1200,
+    "ground": 1240
+   },
+   "cues": {
+    "q": "holds",
+    "hit": "thin"
+   },
+   "params": {
+    "statue": {
+     "x": 0.6,
+     "y": 0.6,
+     "s": 0.85,
+     "hollow": true,
+     "wobble": {
+      "at": 0,
+      "amp": 6
+     }
+    },
+    "wind": {
+     "at": 0
+    },
+    "sea": {
+     "y": 0.8
+    },
+    "q": {
+     "x": 0.22,
+     "y": 0.42,
+     "at": "q"
+    }
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "sl_xray",
+   "text": "A hidden iron skeleton, designed by an engineer named Gustave Eiffel.",
+   "visual": "X-ray view: the copper skin fades to a ghost and Eiffel's iron pylon draws itself up through her body (cross-braced tower, struts out to the skin, a truss up the torch arm); on 'Eiffel' the pylon flashes red and a red box 'EIFFEL' pops in.",
+   "title": {
+    "white": "Iron pylon",
+    "gray": "Gustave Eiffel"
+   },
+   "source": "statueofliberty.org",
+   "set": {
+    "name": "night",
+    "horizon": 1200,
+    "ground": 1240
+   },
+   "cues": {
+    "xr": "hidden",
+    "hi": "Eiffel",
+    "hit": "skeleton"
+   },
+   "params": {
+    "statue": {
+     "x": 0.6,
+     "y": 0.66,
+     "s": 0.85,
+     "xray": "xr",
+     "hi": "hi"
+    },
+    "labels": [
+     {
+      "text": "EIFFEL",
+      "x": 0.26,
+      "y": 0.4,
+      "at": "hi",
+      "size": 100,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "sl_tower",
+   "text": "Yes, that Eiffel.",
+   "visual": "Over the Paris roofs: the x-rayed statue with her iron pylon at the left; at the right the Eiffel Tower draws itself up from the roofs on 'Eiffel'; the fez host in front points up at it in shock.",
+   "title": {
+    "white": "That Eiffel"
+   },
+   "set": {
+    "name": "city",
+    "horizon": 1150,
+    "ground": 1190
+   },
+   "cues": {
+    "tower": "that",
+    "hit": "Eiffel"
+   },
+   "params": {
+    "statue": {
+     "x": 0.25,
+     "y": 0.6,
+     "s": 0.55,
+     "xray": 0
+    },
+    "tower": {
+     "x": 0.73,
+     "base": 0.63,
+     "h": 0.5,
+     "at": 0.05
+    },
+    "roofs": [
+     {
+      "y": 0.63,
+      "s": 0.7
+     },
+     {
+      "y": 0.74,
+      "s": 1.0
+     }
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.93,
+     "scale": 0.8,
+     "pose": "point",
+     "face": "right",
+     "dir": "up",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "sl_xray",
+   "text": "And the man holding her up from the inside?",
+   "visual": "Close-up inside the statue: the copper skin is a ghost, Eiffel's cross-braced iron pylon fills the frame and pulses red on 'holding' while the struts reach out to the skin.",
+   "title": {
+    "white": "Inside her"
+   },
+   "set": {
+    "name": "night",
+    "horizon": 1200,
+    "ground": 1240
+   },
+   "cues": {
+    "hi": "holding",
+    "hit": "inside"
+   },
+   "params": {
+    "statue": {
+     "x": 0.6,
+     "y": 0.95,
+     "s": 0.85,
+     "xray": -5,
+     "hi": "hi"
+    },
+    "pedestal": false,
+    "sea": {
+     "y": 0.86
+    }
+   },
+   "camera": {
+    "focus": [
+     610,
+     1210
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sl_tower",
+   "text": "He went on to build the Eiffel Tower.",
+   "visual": "Over the Paris roofs: the statue's iron pylon and the finished Eiffel Tower side by side; a gold dashed arc links the two lattices on 'build' and a red box 'SAME MAN' pops in on 'Tower'.",
+   "title": {
+    "white": "Same engineer",
+    "gray": "Tower 1889"
+   },
+   "set": {
+    "name": "city",
+    "horizon": 1150,
+    "ground": 1190
+   },
+   "cues": {
+    "link": "build",
+    "hit": "Tower",
+    "same": "Tower"
+   },
+   "params": {
+    "statue": {
+     "x": 0.32,
+     "y": 0.62,
+     "s": 0.6,
+     "xray": -5
+    },
+    "tower": {
+     "x": 0.72,
+     "base": 0.64,
+     "h": 0.52,
+     "at": -5
+    },
+    "link": "link",
+    "roofs": [
+     {
+      "y": 0.64,
+      "s": 0.8
+     },
+     {
+      "y": 0.76,
+      "s": 1.1
+     },
+     {
+      "y": 0.9,
+      "s": 1.4
+     }
+    ],
+    "labels": [
+     {
+      "text": "SAME MAN",
+      "x": 0.62,
+      "y": 0.38,
+      "at": "same",
+      "size": 60,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     820
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sl_harbor",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "New York harbor today at sunset: the green statue on her island, a ferry passing in front; giant words 'COPPER SKIN.' and 'IRON BONES.' ('BONES.' in a red box); the fez host waves at the viewer from the lower left.",
+   "title": {
+    "white": "Lady Liberty",
+    "gray": "today"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 1050,
+    "ground": 1080
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "statue": {
+     "x": 0.68,
+     "y": 0.5,
+     "s": 0.4,
+     "pedestal": true,
+     "patina": 1
+    },
+    "sun": {
+     "x": 0.86,
+     "y": 0.42
+    },
+    "boats": [
+     {
+      "x": 0.7,
+      "y": 0.86,
+      "s": 0.85,
+      "face": -1
+     }
+    ],
+    "kasif": {
+     "x": 0.2,
+     "y": 0.885,
+     "scale": 0.85,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy"
+    },
+    "lines": [
+     {
+      "words": [
+       "COPPER",
+       "SKIN."
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.16,
+      "size": 120
+     },
+     {
+      "words": [
+       "IRON",
+       "BONES."
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.235,
+      "size": 120
+     }
+    ],
+    "highlight": "BONES."
+   },
+   "camera": {
+    "move": "pull"
+   }
+  }
+ ]
+}

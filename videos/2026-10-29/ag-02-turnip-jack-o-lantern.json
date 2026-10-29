@@ -1,0 +1,732 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "turnip-jack-o-lantern",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "Turnips",
+   "came first"
+  ],
+  "highlight": [
+   "turnips"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   660,
+   930
+  ],
+  "zoom": 1.22,
+  "kasif": {
+   "pose": "shock",
+   "x": 300,
+   "y": 1790,
+   "face": 1,
+   "scale": 1.5
+  }
+ },
+ "sources": [
+  {
+   "title": "Guinness World Records — Pumpkinpalooza!: how the world's biggest pumpkin record fell twice in one week (2026)",
+   "url": "https://www.guinnessworldrecords.com/news/2026/10/pumpkinpalooza-how-the-worlds-biggest-pumpkin-record-fell-twice-in-one-week"
+  },
+  {
+   "title": "Smithsonian Magazine — When People Carved Turnips Instead of Pumpkins for Halloween",
+   "url": "https://www.smithsonianmag.com/smart-news/when-people-carved-turnips-instead-of-pumpkins-for-halloween-180978922/"
+  },
+  {
+   "title": "Mental Floss — Before We Carved Pumpkins for Halloween, People Carved Turnips",
+   "url": "https://www.mentalfloss.com/article/651757/original-jack-o-lanterns-were-turnips"
+  },
+  {
+   "title": "IrishCentral — The original Irish jack-o'-lanterns were carved from turnips",
+   "url": "https://www.irishcentral.com/roots/history/jack-o-lantern-turnips-ireland"
+  }
+ ],
+ "youtube": {
+  "title": "Jack O Lantern Origin: Why Were the First Ones Turnips?",
+  "description": "Jack o lantern origin: the first jack-o'-lanterns were not pumpkins at all. They were scary faces carved into turnips in old Ireland. So how did a turnip turn into the grinning pumpkin on your porch?\n\nIn 2026, a Rhode Island pumpkin set a Guinness World Record at 3,156 pounds. But long before giant pumpkins, Irish families hollowed out turnips and other root vegetables for Halloween night. An Irish folk legend tells of Stingy Jack, who tricked the Devil, was shut out of heaven and hell, and wanders with a coal glowing inside a carved turnip. Irish immigrants brought the custom to America, where pumpkins were bigger and easier to carve.\n\nSubscribe to Stickstory for one strange true story every day. Would you carve a turnip this Halloween? Tell me in the comments!\n\n#shorts #jackolantern #halloween #stickstory",
+  "tags": [
+   "jack o lantern origin",
+   "jack o lantern history",
+   "jack o lantern",
+   "first jack o lanterns",
+   "turnip jack o lantern",
+   "stingy jack",
+   "stingy jack legend",
+   "halloween history",
+   "halloween origins",
+   "irish halloween",
+   "carved turnips",
+   "samhain",
+   "pumpkin carving",
+   "world record pumpkin",
+   "strange history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-29T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "jl_tale",
+   "text": "Jack-o'-lanterns were turnips first.",
+   "visual": "Night by a dry-stone wall: one big carved turnip lantern (purple top, wrinkled skin, thin root) sits on the wall, its angry face glowing gold from a coal inside, sparks rising, bats flitting across the moonlit sky, fog drifting; in the hook frame the shocked fez narrator stands at the lower left under the cover words.",
+   "title": {
+    "white": "Jack-o'-lantern",
+    "gray": "the original"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "turnips"
+   },
+   "params": {
+    "ground": 0.6,
+    "fog": true,
+    "bats": 4,
+    "bat_y": 0.19,
+    "lanterns": [
+     {
+      "kind": "turnip",
+      "x": 0.66,
+      "y": 0.566,
+      "s": 1.9,
+      "carve": 1,
+      "lit": 0,
+      "rock": 3
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "jl_weigh",
+   "text": "In 2026, a pumpkin hit a record 3,156 pounds!",
+   "visual": "A weigh-off in a field: a giant warty pumpkin on a pallet on a platform scale, a dark readout board on posts rolls from 0 to '3,156 LB', a grower in a cap cheers, the crowd's heads bob in the foreground; red box 'WORLD RECORD' pops in.",
+   "title": {
+    "white": "Rhode Island",
+    "gray": "2026"
+   },
+   "source": "Guinness World Records",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "cnt": "pumpkin",
+    "rec": "record",
+    "hit": "pounds"
+   },
+   "params": {
+    "ground": 0.6,
+    "pumpkin": {
+     "x": 0.52,
+     "s": 1.85
+    },
+    "board": {
+     "x": 0.68,
+     "y": 0.2,
+     "to": 3156,
+     "unit": "LB",
+     "at": "cnt",
+     "dur": 1.6
+    },
+    "figs": [
+     {
+      "x": 0.12,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "wave",
+      "face": "right",
+      "emotion": "happy",
+      "accessory": "beret",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "WORLD RECORD",
+      "x": 0.6,
+      "y": 0.33,
+      "at": "rec",
+      "size": 84,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "jl_room",
+   "text": "But long before pumpkins, the Irish carved scary faces into turnips.",
+   "visual": "Close-up in an Irish cottage at night: by the hearth fire a man in a flat cap leans over the table and saws a knife into a turnip; eyes, nose and a jagged mouth appear one by one, then the face lights up gold.",
+   "title": {
+    "white": "Old Ireland"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "cut": "Irish",
+    "hit": "turnips"
+   },
+   "params": {
+    "ground": 0.6,
+    "hearth": {
+     "x": 0.14,
+     "s": 1.0
+    },
+    "table_h": 200,
+    "lanterns": [
+     {
+      "kind": "turnip",
+      "x": 0.42,
+      "y": 0.6,
+      "s": 1.15,
+      "carve": "cut",
+      "cdur": 1.4,
+      "lit": "hit"
+     }
+    ],
+    "figs": [
+     {
+      "x": 0.66,
+      "y": 0.67,
+      "scale": 1.05,
+      "pose": "point",
+      "dir": "forward",
+      "face": "left",
+      "emotion": "angry",
+      "accessory": "beret",
+      "knife": {
+       "to": [
+        0.4,
+        0.49
+       ],
+       "at": "cut"
+      }
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     470,
+     960
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "jl_tale",
+   "text": "Why? Legend says Stingy Jack tricked the Devil,",
+   "visual": "Folk-tale night by a stone wall: the red-horned Devil is stuck up in a gnarled tree, waving in shock; below, Jack in a flat cap points up and laughs; on 'tricked' a cross is scratched into the trunk; red box 'LEGEND' pops in.",
+   "title": {
+    "white": "Stingy Jack",
+    "gray": "folk tale"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "leg": "Legend",
+    "hit": "tricked"
+   },
+   "params": {
+    "ground": 0.6,
+    "front_wall": {
+     "y": 0.85,
+     "h": 0.13
+    },
+    "tree": {
+     "x": 0.64,
+     "s": 0.55,
+     "cross": "hit"
+    },
+    "figs": [
+     {
+      "x": 0.68,
+      "y": 0.475,
+      "scale": 1.0,
+      "pose": "shock",
+      "face": "left",
+      "devil": true,
+      "emotion": "surprised"
+     },
+     {
+      "x": 0.24,
+      "y": 0.62,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "happy",
+      "accessory": "beret",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "up",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "LEGEND",
+      "x": 0.3,
+      "y": 0.23,
+      "at": "leg",
+      "size": 90,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "jl_gates",
+   "text": "so heaven and hell shut him out.",
+   "visual": "Night: up on a cloud bank a golden gate ('HEAVEN') swings shut, at the right a red-glowing door in a rock ('HELL') slams shut, a red X over each; Jack stands between them and shrugs, worried.",
+   "title": {
+    "white": "Shut out"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "heaven": "heaven",
+    "hell": "hell",
+    "hit": "out"
+   },
+   "params": {
+    "ground": 0.6,
+    "front_wall": {
+     "y": 0.85,
+     "h": 0.13
+    },
+    "heaven": {
+     "x": 0.32,
+     "y": 0.32,
+     "shut": "heaven"
+    },
+    "hell": {
+     "x": 0.77,
+     "shut": "hell"
+    },
+    "figs": [
+     {
+      "x": 0.4,
+      "y": 0.62,
+      "scale": 1.0,
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "accessory": "beret",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shrug",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "jl_tale",
+   "text": "He still wanders with a coal glowing in a turnip.",
+   "visual": "A misty night road by a stone wall: Jack walks along, a carved turnip lantern swinging from his hand on a string, its face glowing gold; fog drifts past.",
+   "title": {
+    "white": "Jack's lantern"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "coal"
+   },
+   "params": {
+    "ground": 0.6,
+    "fog": true,
+    "front_wall": {
+     "y": 0.83,
+     "h": 0.14
+    },
+    "figs": [
+     {
+      "x": 0.3,
+      "y": 0.6,
+      "scale": 1.05,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right",
+      "emotion": "worried",
+      "accessory": "beret",
+      "walk": {
+       "to": 0.4,
+       "at": 0,
+       "dur": 3.6
+      },
+      "lantern": {
+       "s": 0.55,
+       "lit": 0
+      }
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     480,
+     880
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   }
+  },
+  {
+   "type": "pv_sea",
+   "text": "Irish families brought it to America,",
+   "visual": "The open Atlantic: a big emigrant sailing ship glides to the right across the waves, wind streaks in the sky; a red hand-written 'TO AMERICA' with an arrow pops in.",
+   "title": {
+    "white": "To America",
+    "gray": "1800s"
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 614
+   },
+   "cues": {
+    "lab": "brought",
+    "hit": "America"
+   },
+   "params": {
+    "horizon": 0.32,
+    "shore": false,
+    "wind": {
+     "s": 0.9,
+     "dir": 1,
+     "lines": 9
+    },
+    "ships": [
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.36,
+      "to": 0.58,
+      "y": 0.585,
+      "scale": 1.55,
+      "face": 1
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.82,
+      "to": 0.86,
+      "y": 0.42,
+      "scale": 0.7,
+      "face": 1,
+      "depth": 0.4
+     },
+     {
+      "kind": "sail",
+      "side": "hl",
+      "x": 0.14,
+      "to": 0.18,
+      "y": 0.41,
+      "scale": 0.5,
+      "face": 1,
+      "depth": 0.6
+     }
+    ],
+    "labels": [
+     {
+      "text": "TO AMERICA",
+      "x": 0.55,
+      "y": 0.2,
+      "at": "lab",
+      "size": 96,
+      "color": "red",
+      "rot": -3
+     }
+    ],
+    "ledge": false,
+    "zoom": 1.05,
+    "focus": [
+     0.45,
+     0.6
+    ]
+   }
+  },
+  {
+   "type": "jl_porch",
+   "text": "where pumpkins were bigger and easier to carve.",
+   "visual": "An American farmhouse porch in autumn: the fez narrator points in surprise from a small turnip lantern to a huge pumpkin; on 'carve' a grinning face cuts into the pumpkin; red boxes 'BIGGER' and 'EASIER' pop in; leaves fall.",
+   "title": {
+    "white": "America"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "big": "bigger",
+    "easy": "easier",
+    "cv": "carve"
+   },
+   "params": {
+    "ground": 0.6,
+    "wall": 0.42,
+    "lanterns": [
+     {
+      "kind": "turnip",
+      "x": 0.45,
+      "y": 0.6,
+      "s": 0.8,
+      "carve": 1,
+      "lit": false
+     },
+     {
+      "kind": "pumpkin",
+      "x": 0.75,
+      "y": 0.6,
+      "s": 1.3,
+      "carve": "big",
+      "cdur": 1.4,
+      "lit": false,
+      "at": 0
+     }
+    ],
+    "kasif": {
+     "x": 0.22,
+     "y": 0.62,
+     "scale": 1.0,
+     "pose": "point",
+     "dir": "forward",
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "easy",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "BIGGER",
+      "x": 0.7,
+      "y": 0.2,
+      "at": "big",
+      "size": 90,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     },
+     {
+      "text": "EASIER",
+      "x": 0.7,
+      "y": 0.29,
+      "at": "easy",
+      "size": 90,
+      "color": "blue",
+      "box": true,
+      "font": "serif",
+      "rot": 3
+     }
+    ]
+   }
+  },
+  {
+   "type": "jl_night",
+   "text": "So that grin on your porch started as a turnip.",
+   "visual": "Halloween night on a porch: a big glowing jack-o'-lantern by a lit window, small lit pumpkins on the steps; a little glowing turnip lantern pops in beside it; giant words 'STARTED AS' / 'A TURNIP.' ('TURNIP.' in a red box).",
+   "title": {
+    "white": "Halloween"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "st": "started",
+    "hit": "turnip"
+   },
+   "params": {
+    "ground": 0.6,
+    "wall": 0.34,
+    "window": {
+     "x": 0.8,
+     "y": 0.44,
+     "w": 0.22,
+     "h": 0.16
+    },
+    "lanterns": [
+     {
+      "kind": "pumpkin",
+      "x": 0.6,
+      "y": 0.6,
+      "s": 1.3,
+      "carve": 1,
+      "lit": 0
+     },
+     {
+      "kind": "turnip",
+      "x": 0.24,
+      "y": 0.6,
+      "s": 0.85,
+      "carve": 1,
+      "lit": "hit",
+      "at": "hit"
+     },
+     {
+      "kind": "pumpkin",
+      "x": 0.16,
+      "y": 0.798,
+      "s": 0.7,
+      "carve": 1,
+      "lit": 0,
+      "hit": false
+     },
+     {
+      "kind": "pumpkin",
+      "x": 0.86,
+      "y": 0.798,
+      "s": 0.7,
+      "carve": 1,
+      "lit": 0,
+      "hit": false
+     }
+    ],
+    "lines": [
+     {
+      "words": [
+       "STARTED",
+       "AS"
+      ],
+      "at": [
+       "st",
+       "st"
+      ],
+      "y": 0.18,
+      "size": 140
+     },
+     {
+      "words": [
+       "A",
+       "TURNIP."
+      ],
+      "at": [
+       "hit",
+       "hit"
+      ],
+      "y": 0.27,
+      "size": 140
+     }
+    ],
+    "highlight": "TURNIP."
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "jl_night",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Wider on the night porch: the fez narrator waves at the viewer beside a glowing turnip lantern and a glowing pumpkin, side by side; leaves drift down.",
+   "title": {
+    "white": "Turnip first"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "s1": "Subscribe"
+   },
+   "params": {
+    "ground": 0.6,
+    "wall": 0.34,
+    "lanterns": [
+     {
+      "kind": "turnip",
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.85,
+      "carve": 1,
+      "lit": 0
+     },
+     {
+      "kind": "pumpkin",
+      "x": 0.77,
+      "y": 0.6,
+      "s": 1.05,
+      "carve": 1,
+      "lit": 0
+     },
+     {
+      "kind": "pumpkin",
+      "x": 0.14,
+      "y": 0.798,
+      "s": 0.7,
+      "carve": 1,
+      "lit": 0,
+      "hit": false
+     },
+     {
+      "kind": "pumpkin",
+      "x": 0.86,
+      "y": 0.798,
+      "s": 0.7,
+      "carve": 1,
+      "lit": 0,
+      "hit": false
+     }
+    ],
+    "kasif": {
+     "x": 0.2,
+     "y": 0.62,
+     "scale": 1.05,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy"
+    }
+   }
+  }
+ ]
+}
