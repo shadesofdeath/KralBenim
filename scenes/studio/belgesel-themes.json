@@ -1,0 +1,8 @@
+{
+ "_comment": "Belgesel (documentary) style themes, \"theme\": \"belgesel\" (docs/BELGESEL.md). Same token roles as palettes.json so every shot reads INK.* / THEME_PARCHMENT.*: paper = background, paperLight = raised surface, paperDark = deepest shadow, stain = light/glow colour, ink = main line and text, inkSoft = secondary line, gold = the one accent. dark: light lines on a dark ground. build.py picks one per video (stable hash of the file name), or the script's \"palette\".",
+ "obsidyen": {"dark": true,  "paper": "#14110E", "paperLight": "#221C17", "paperDark": "#0A0806", "stain": "#C27A36", "ink": "#EDE4D3", "inkSoft": "#8F8473", "blue": "#7393AA", "red": "#C4593F", "gold": "#DA9C4B", "green": "#829C6C"},
+ "derin":    {"dark": true,  "paper": "#0B141D", "paperLight": "#14212C", "paperDark": "#060B10", "stain": "#4E8FA8", "ink": "#E3EBEE", "inkSoft": "#7A8D99", "blue": "#72B2CA", "red": "#C9664F", "gold": "#E2B661", "green": "#7FAE9A"},
+ "grafit":   {"dark": true,  "paper": "#1A1B1D", "paperLight": "#26282B", "paperDark": "#0F1011", "stain": "#A3ABB4", "ink": "#ECECE8", "inkSoft": "#8B8E92", "blue": "#829FBA", "red": "#C65D4E", "gold": "#D9B66C", "green": "#86A487"},
+ "fildisi":  {"dark": false, "paper": "#ECE7DC", "paperLight": "#F7F4EE", "paperDark": "#D6CEBF", "stain": "#B7A386", "ink": "#1C1B19", "inkSoft": "#6D6962", "blue": "#3D5E79", "red": "#A2392B", "gold": "#A8742A", "green": "#4E6D51"},
+ "kum":      {"dark": false, "paper": "#E4D9C5", "paperLight": "#F1EADD", "paperDark": "#CDBFA6", "stain": "#B4875A", "ink": "#2A2119", "inkSoft": "#76695A", "blue": "#47657E", "red": "#A4442C", "gold": "#B07A2E", "green": "#5C7350"}
+}

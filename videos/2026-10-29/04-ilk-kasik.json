@@ -1,0 +1,672 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "obsidyen",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "extra": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Erdalkıran 2015, Barcın Höyük Neolitik Dönem Kemik Kaşıkları (TÜBA-AR)",
+   "url": "https://dergipark.org.tr/en/pub/tubaar/issue/61840/925460"
+  },
+  {
+   "title": "Villa vd. 2020, Neandertals on the beach (PLOS ONE)",
+   "url": "https://doi.org/10.1371/journal.pone.0226690"
+  },
+  {
+   "title": "Wu vd. 2012, Early Pottery at 20,000 Years Ago in Xianrendong Cave (Science)",
+   "url": "https://www.science.org/doi/10.1126/science.1218643"
+  },
+  {
+   "title": "Çatalhöyük 1996 Arşiv Raporu (boynuz kaşık)",
+   "url": "https://catalhoyuk.com/archive_reports/1996/ar96_11.html"
+  },
+  {
+   "title": "The Met, Cosmetic Spoon in the Shape of Swimming Woman",
+   "url": "https://www.metmuseum.org/art/collection/search/548584"
+  },
+  {
+   "title": "Plinius, Naturalis Historia 28.4 (Perseus)",
+   "url": "https://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0137:book=28:chapter=4"
+  },
+  {
+   "title": "Kaşıkçı Elması (Spoonmaker's Diamond)",
+   "url": "https://en.wikipedia.org/wiki/Spoonmaker%27s_Diamond"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Mezardaki",
+   "kaşık"
+  ],
+  "highlight": [
+   "kaşık"
+  ],
+  "scene": 1,
+  "t": 4.5,
+  "focus": [
+   820,
+   640
+  ],
+  "zoom": 1.25,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Sekiz bin yıldan uzun bir süre önce, bugünkü Bursa'nın yakınlarında, biri toprağa verildi.",
+   "type": "bt_grave",
+   "visual": "Gece, yıldızlar altında alçak bir höyük; toprağın içinde tek bir küçük altın ışık",
+   "chapter": "Mezardaki kaşık",
+   "params": {
+    "stage": "surface"
+   }
+  },
+  {
+   "text": "Yanına küçük bir şey bırakıldı. Ne bir silah, ne bir süs.",
+   "type": "bt_grave",
+   "visual": "Toprağın kesiti: büzülmüş yatırılmış bir iskeletin çizgisi, ellerinin yanında parlayan küçük kemik kaşık",
+   "params": {
+    "stage": "cut"
+   }
+  },
+  {
+   "text": "Kemikten yontulmuş… bir kaşık.",
+   "type": "bt_object",
+   "visual": "Koyu zeminde tek başına, kendini çizen kemik kaşık",
+   "params": {
+    "obj": "bonespoon",
+    "scale": 1.15
+   }
+  },
+  {
+   "text": "Üstelik yeni değildi. Üzerinde uzun süre kullanılmanın izleri vardı. Büyük olasılıkla, onun kendi kaşığıydı.",
+   "type": "bt_object",
+   "visual": "Aynı kaşığa yakın plan; ağız kenarındaki aşınma izleri altınla belirir",
+   "params": {
+    "obj": "bonespoon",
+    "scale": 1.15,
+    "opts": {
+     "wear": true
+    }
+   },
+   "camera": {
+    "focus": [
+     690,
+     486
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "text": "İnsan bu fikre nasıl ulaştı? Ve bir kaşık, nasıl oldu da bir mezara girecek kadar değerli sayıldı?",
+   "type": "bt_text",
+   "visual": "İki ince büyük kelime belirir: nasıl? ve neden?",
+   "params": {
+    "lines": [
+     {
+      "text": "nasıl?",
+      "at": "nasıl",
+      "italic": true
+     },
+     {
+      "text": "neden?",
+      "at": "neden",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "nasıl": "nasıl",
+    "neden": "değerli"
+   }
+  },
+  {
+   "text": "Cevap, bir mezarda değil, bir avucun içinde başlıyor.",
+   "type": "bt_object",
+   "visual": "Avuç içi yukarı bakan, suyla dolu tek bir el; parmak uçlarından damlalar düşer",
+   "params": {
+    "obj": "hands",
+    "scale": 1.3
+   }
+  },
+  {
+   "text": "Yüz binlerce yıl boyunca, insanın tek kaşığı kendi eliydi.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: I, ince çizgi, Avuç",
+   "chapter": "Avuç",
+   "params": {
+    "n": "I",
+    "title": "Avuç"
+   }
+  },
+  {
+   "text": "Susadığınızda avuçlarınızı birleştirip suya eğilirdiniz. Yemeklerin çoğu zaten katıydı: meyve, kök, ateşte et.",
+   "type": "bt_figure",
+   "visual": "Şafakta bir derenin kıyısında diz çökmüş bir siluet, avucundan su içiyor; suda halkalar",
+   "params": {
+    "pose": "kneel"
+   }
+  },
+  {
+   "text": "Ama doğa, insanın önüne çoktan hazır bir kaşık bırakmıştı. Kıyıya vuran bir deniz kabuğu.",
+   "type": "bt_shore",
+   "visual": "Gece kıyısı: ay, denizde yansıma, solda mağara ağzı, kumda eğilip kabuk toplayan bir siluet"
+  },
+  {
+   "text": "İtalya'nın batı kıyısındaki bir mağarada, yaklaşık yüz bin yıl önce, Neandertaller deniz kabukları topladı.",
+   "type": "bt_map",
+   "visual": "Sade Akdeniz haritası; İtalya'nın batı kıyısında yanıp sönen altın nokta: Grotta dei Moscerini",
+   "params": {
+    "bounds": [
+     3,
+     35.5,
+     26,
+     47
+    ],
+    "points": [
+     {
+      "lon": 13.4,
+      "lat": 41.25,
+      "label": "Grotta dei Moscerini",
+      "sub": "yaklaşık 100.000 yıl önce",
+      "at": "mağarada"
+     }
+    ]
+   },
+   "cues": {
+    "mağarada": "mağarada"
+   }
+  },
+  {
+   "text": "Bazılarını kumsaldan aldılar. Bazılarını ise nefeslerini tutup denizin dibine dalarak çıkardılar.",
+   "type": "bt_dive",
+   "visual": "Su altı: yüzeyden süzülen ışık, dibe doğru dalan bir siluet, deniz dibinde kabuklar, yükselen kabarcıklar"
+  },
+  {
+   "text": "Ama o kabukların çoğunu kaşık olarak değil, keskin birer kazıyıcı olarak kullandılar. Şekil oradaydı. Fikir henüz gelmemişti.",
+   "type": "bt_object",
+   "visual": "Tek bir deniz kabuğu; keskin alt kenarı altınla çizilir",
+   "params": {
+    "obj": "shell",
+    "scale": 1.15,
+    "opts": {
+     "edge": true
+    },
+    "label": "kazıyıcı",
+    "sub": "Callista chione kabuğu"
+   },
+   "cues": {
+    "show": "kabukların"
+   }
+  },
+  {
+   "text": "Ama kaşığı gerçekten vazgeçilmez yapan şey, ne kabuktu ne de tahta. O şey… ateşin üstünde kaynıyordu.",
+   "type": "bt_fire",
+   "visual": "Gece ateşi; taşlara oturtulmuş çömlekten buhar yükselir, solda oturan bir siluet",
+   "params": {
+    "mode": "camp"
+   }
+  },
+  {
+   "text": "İnsan uzun süre yemeğini ateşe tutarak pişirdi. Sonra suyu kaynatmanın yolunu buldu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: II, Kaynayan su",
+   "chapter": "Kaynayan su",
+   "params": {
+    "n": "II",
+    "title": "Kaynayan su"
+   }
+  },
+  {
+   "text": "Çömlek yokken bile bir çaresi vardı. Ateşte kızdırılan taşlar, deriden bir kaptaki suya atılırdı.",
+   "type": "bt_stones",
+   "visual": "Ateşte kızdırılmış bir taş, deriyle kaplı su çukuruna düşer; su kabarcıklanır, buhar yükselir",
+   "cues": {
+    "drop": "atılırdı"
+   }
+  },
+  {
+   "text": "Bilinen en eski çömleklerden bazıları ise Çin'deki bir mağarada bulundu. Yaklaşık yirmi bin yaşındalar. Yani tarımdan on bin yıl daha eskiler.",
+   "type": "bt_relic",
+   "visual": "Müze kaidesinde ışık altında tek bir eski çömlek, yanında küçük etiket",
+   "params": {
+    "obj": "pot",
+    "scale": 0.82,
+    "label": "En eski çömlekler",
+    "sub": "Xianrendong, Çin · yaklaşık 20.000 yıl"
+   }
+  },
+  {
+   "text": "Ve kaynayan bir kabın içine elinizi sokamazsınız.",
+   "type": "bt_fire",
+   "visual": "Yakın plan: kaynayan çömleğin ağzına doğru uzanan bir el, buhar yüzünden geri çekilir",
+   "params": {
+    "mode": "hand"
+   },
+   "cues": {
+    "back": "sokamazsınız"
+   }
+  },
+  {
+   "text": "İşte o an, bir kabuk ya da bir tahta parçası, eli ateşten koruyan bir köprüye dönüştü.",
+   "type": "bt_dip",
+   "visual": "Tahta bir kaşık kaynayan çömleğe dalar ve sıvıyla geri çıkar",
+   "cues": {
+    "dip": "köprüye"
+   }
+  },
+  {
+   "text": "Sonra tarım geldi. Buğday, arpa, mercimek. Sofraya lapalar ve çorbalar girdi.",
+   "type": "bt_field",
+   "visual": "Gün doğumunda buğday tarlası; güneş yavaşça yükselir"
+  },
+  {
+   "text": "Sulu bir yemeği elle yiyemezsiniz. Ve bu ihtiyacın en eski izlerinden biri, Anadolu'nun toprağında saklıydı.",
+   "type": "bt_object",
+   "visual": "Buharı tüten bir kap tahıl lapası",
+   "params": {
+    "obj": "bowl",
+    "scale": 1.2
+   }
+  },
+  {
+   "text": "Bursa'nın Yenişehir Ovası'nda, Barcın Höyük denen bir tepe var. Altında, sekiz bin yıldan eski bir köyün kalıntıları yatıyor.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: III, Barcın Höyük, altında yer ve tarih",
+   "chapter": "Barcın Höyük",
+   "params": {
+    "n": "III",
+    "title": "Barcın Höyük",
+    "sub": "Yenişehir, Bursa · MÖ 6600–6000"
+   }
+  },
+  {
+   "text": "Arkeologlar burada kemikten yapılmış binlerce eşya buldu. Bunların yüz yirmi dokuzu kaşıktı.",
+   "type": "bt_count",
+   "visual": "Binlerce küçük çizgiden bir alan; 129'u altın renge döner, yanda 129 sayısı",
+   "params": {
+    "total": 2737,
+    "hit": 129,
+    "label": "kaşık",
+    "note": "binlerce kemik eşya içinde"
+   },
+   "cues": {
+    "hit": "yirmi"
+   }
+  },
+  {
+   "text": "Çoğu, sığırların bacak kemiklerinden yapılmıştı. Çakmaktaşıyla yontulmuş, taşlara sürtülerek düzeltilmişti.",
+   "type": "bt_object",
+   "visual": "Uzun bir sığır bacak kemiği; içinde kesilecek kaşığın altın kontürü",
+   "params": {
+    "obj": "legbone",
+    "scale": 1.15,
+    "opts": {
+     "cut": true
+    },
+    "label": "sığır bacak kemiği"
+   }
+  },
+  {
+   "text": "Bir deneyde, tek bir kemik kaşık yapmak yaklaşık yirmi beş saat sürdü. Yirmi beş saat. Tek bir kaşık için.",
+   "type": "bt_clock",
+   "visual": "24 saatlik ince bir kadran tamamen dolar, bir saat daha altınla taşar; ortada sayı 25'e çıkar",
+   "params": {
+    "hours": 25,
+    "label": "saat"
+   },
+   "cues": {
+    "run": "kemik"
+   }
+  },
+  {
+   "text": "Ve bu kaşıklar birbirinin aynısı değildi. Uzun saplılar büyük olasılıkla ocağın başında, kısa saplılar ise sofrada kullanıldı.",
+   "type": "bt_compare",
+   "visual": "Yan yana uzun saplı ve kısa saplı iki kemik kaşık",
+   "params": {
+    "mode": "length",
+    "left": {
+     "label": "uzun sap: ocak"
+    },
+    "right": {
+     "label": "kısa sap: sofra"
+    }
+   },
+   "cues": {
+    "left": "Uzun",
+    "right": "kısa"
+   }
+  },
+  {
+   "text": "Çukur olanlar sulu yemekler içindi. Düz olanlar ise ezmeler ve lapalar için.",
+   "type": "bt_compare",
+   "visual": "Yandan kesit: içinde sıvı olan çukur kaşık ve üstünde lapa olan düz kaşık",
+   "params": {
+    "mode": "profile",
+    "left": {
+     "label": "çukur: sulu yemek"
+    },
+    "right": {
+     "label": "düz: ezme, lapa"
+    }
+   },
+   "cues": {
+    "left": "Çukur",
+    "right": "Düz"
+   }
+  },
+  {
+   "text": "Ve bazıları, tıpkı hikâyenin başındaki o aşınmış kaşık gibi, sahibiyle birlikte mezara girdi. Yirmi beş saatlik bir emek, her gün aynı ağza giden bir eşya. Bir kaşık, sahibinin bir parçasıydı.",
+   "type": "bt_grave",
+   "visual": "Baştaki mezar kesitine dönüş; kamera kaşığa yaklaşır",
+   "params": {
+    "stage": "cut"
+   },
+   "camera": {
+    "focus": [
+     690,
+     690
+    ],
+    "zoom": 1.8,
+    "move": "push"
+   }
+  },
+  {
+   "text": "Güneydoğuda, Konya Ovası'ndaki Çatalhöyük'te ise kaşık çok daha nadirdi. Orada boynuzdan yapılmış bir kaşık, yine bir mezarın içinden çıktı.",
+   "type": "bt_village",
+   "visual": "Gece Çatalhöyük: bitişik kerpiç evler, damlardaki kapaklardan sızan ışık, merdivenler"
+  },
+  {
+   "text": "Belki de orada kaşık, sadece özel günlerin eşyasıydı. Ama binlerce yıl sonra kaşık, bambaşka bir anlam kazanacaktı.",
+   "type": "bt_relic",
+   "visual": "Kaidede, çentikli ve delikli süslü boynuz kaşık; yanında etiket",
+   "params": {
+    "obj": "antlerspoon",
+    "scale": 0.8,
+    "label": "Boynuz kaşık",
+    "sub": "Çatalhöyük · bir mezardan"
+   }
+  },
+  {
+   "text": "Zamanla kaşık, sadece bir alet olmaktan çıktı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: IV, Kaşığın gücü",
+   "chapter": "Kaşığın gücü",
+   "params": {
+    "n": "IV",
+    "title": "Kaşığın gücü"
+   }
+  },
+  {
+   "text": "Antik Mısır'da, yüzen bir kadın biçiminde oyulmuş zarif kaşıklar yapıldı. Ama bunlarla yemek yenmedi. İçlerinde büyük olasılıkla merhem vardı.",
+   "type": "bt_relic",
+   "visual": "Kaidede yüzen kadın biçiminde kozmetik kaşığı, elinde kap",
+   "params": {
+    "obj": "egyptspoon",
+    "scale": 0.82,
+    "label": "Kozmetik kaşığı",
+    "sub": "Mısır · yaklaşık MÖ 1390–1352"
+   }
+  },
+  {
+   "text": "Romalıların kaşığının ise bir ucu sivriydi. O sivri uçla salyangozu ve midyeyi kabuğundan çıkarır, yumurtayı yerlerdi.",
+   "type": "bt_relic",
+   "visual": "Kaidede yuvarlak ağızlı, sapı sivri uçlu Roma kaşığı; yanında küçük bir salyangoz ve yumurta belirir",
+   "params": {
+    "obj": "romanspoon",
+    "scale": 0.75,
+    "label": "Cochleare",
+    "sub": "Roma kaşığı",
+    "extras": [
+     {
+      "obj": "snail",
+      "x": -150,
+      "y": 175,
+      "scale": 0.2,
+      "at": "salyangoz"
+     },
+     {
+      "obj": "egg",
+      "x": 160,
+      "y": 180,
+      "scale": 0.3,
+      "at": "yumurta"
+     }
+    ]
+   },
+   "cues": {
+    "salyangoz": "salyangozu",
+    "yumurta": "yumurtayı"
+   }
+  },
+  {
+   "text": "Kaşığın Latince adı da buradan gelir: “cochlear”. Kelimenin kökü, salyangoz kabuğu anlamına gelen “cochlea”dır.",
+   "type": "bt_word",
+   "visual": "Latince: cochlea (salyangoz kabuğu) → cochlear (kaşık)",
+   "params": {
+    "from": {
+     "word": "cochlea",
+     "gloss": "salyangoz kabuğu",
+     "icon": "snail"
+    },
+    "to": {
+     "word": "cochlear",
+     "gloss": "kaşık"
+    }
+   },
+   "cues": {
+    "to": "kökü"
+   }
+  },
+  {
+   "text": "İngilizcedeki “spoon” ise eskiden, ağaçtan kopan ince bir yonga demekti. Bir dilde kabuk, diğerinde tahta.",
+   "type": "bt_word",
+   "visual": "Eski İngilizce: spōn (yonga) → spoon (kaşık)",
+   "params": {
+    "from": {
+     "word": "spōn",
+     "gloss": "ağaç yongası",
+     "icon": "chip"
+    },
+    "to": {
+     "word": "spoon",
+     "gloss": "kaşık"
+    }
+   },
+   "cues": {
+    "to": "yonga"
+   }
+  },
+  {
+   "text": "Ve tuhaf bir inançları vardı. Yumurtayı yedikten sonra kabuğunu kaşığın sivri ucuyla delerlerdi. Bunu, büyüden korunmak için yaparlardı.",
+   "type": "bt_egg",
+   "visual": "Boş bir yumurta kabuğu; kaşığın sivri ucu yavaşça gelip kabuğu deler",
+   "cues": {
+    "hit": "delerlerdi"
+   }
+  },
+  {
+   "text": "Osmanlı'da ise Konya, büyük bir kaşık merkeziydi. Buradaki kaşıklar Mısır'a, hatta Cezayir'e kadar gitti.",
+   "type": "bt_map",
+   "visual": "Akdeniz haritası: Konya'dan Mısır'a ve Cezayir'e uzanan altın rotalar",
+   "params": {
+    "bounds": [
+     -3,
+     27.5,
+     40,
+     45.5
+    ],
+    "points": [
+     {
+      "lon": 32.48,
+      "lat": 37.87,
+      "label": "Konya",
+      "at": "Konya"
+     },
+     {
+      "lon": 31.2,
+      "lat": 30.05,
+      "label": "Mısır",
+      "at": "Mısır"
+     },
+     {
+      "lon": 3.06,
+      "lat": 36.75,
+      "label": "Cezayir",
+      "at": "Cezayir"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "Mısır"
+     ],
+     [
+      0,
+      2,
+      "Cezayir"
+     ]
+    ]
+   },
+   "cues": {
+    "Konya": "Konya",
+    "Mısır": "Mısır",
+    "Cezayir": "Cezayir"
+   }
+  },
+  {
+   "text": "Bir de rivayet var. İstanbul'da, Eğrikapı'daki bir çöplükte parlak bir taş bulunur. Bulan kişi onu, üç kaşık karşılığında bir kaşıkçıya verir.",
+   "type": "bt_trade",
+   "visual": "Solda parlak, ham bir taş; eşittir işareti; sağda üç tahta kaşık tek tek belirir",
+   "params": {
+    "n": 3
+   },
+   "cues": {
+    "eq": "karşılığında",
+    "three": "üç"
+   }
+  },
+  {
+   "text": "Rivayete göre o taş, bugün Topkapı Sarayı'nda duran seksen altı kıratlık Kaşıkçı Elması'dır.",
+   "type": "bt_relic",
+   "visual": "Kaidede armut biçimli büyük elmas, çevresinde çift sıra küçük elmaslar",
+   "params": {
+    "obj": "diamond",
+    "scale": 0.82,
+    "label": "Kaşıkçı Elması",
+    "sub": "86 kırat · Topkapı Sarayı"
+   }
+  },
+  {
+   "text": "Bugün Konya'da ve Silifke'de, tahta kaşıklar birbirine vurularak oyunlarda çalınır. Kaşık, sessizce bir müzik aletine dönüştü.",
+   "type": "bt_object",
+   "visual": "Tek bir tahta oyun kaşığı; altında kaşık oyunları yazısı",
+   "chapter": "Bugün",
+   "params": {
+    "obj": "woodspoon",
+    "scale": 1.0,
+    "rot": -8,
+    "label": "kaşık oyunları",
+    "sub": "Konya · Silifke"
+   }
+  },
+  {
+   "text": "Ama her kaşığın içinde o eski hikâye hâlâ saklı. Bir avuç, bir kabuk, kaynayan bir kap ve bir mezardaki aşınmış bir kemik.",
+   "type": "bt_lineup",
+   "visual": "Bir çizginin üstünde sırayla: avuç, kabuk, çömlek, kemik kaşık",
+   "params": {
+    "items": [
+     {
+      "obj": "hands",
+      "at": "avuç",
+      "scale": 0.5
+     },
+     {
+      "obj": "shell",
+      "at": "kabuk",
+      "scale": 0.45
+     },
+     {
+      "obj": "pot",
+      "at": "kap",
+      "scale": 0.55
+     },
+     {
+      "obj": "bonespoon",
+      "at": "kemik",
+      "scale": 0.38,
+      "opts": {
+       "wear": true
+      }
+     }
+    ]
+   },
+   "cues": {
+    "avuç": "avuç",
+    "kabuk": "kabuk",
+    "kap": "kaynayan",
+    "kemik": "kemik"
+   }
+  },
+  {
+   "text": "Belki de insanlığın en büyük icatları, en sessiz olanlardır. Hiç fark etmeden, her gün onlarla yaşarız.",
+   "type": "bt_grid",
+   "visual": "Satır satır birbirinin aynısı onlarca çelik kaşık; ortadaki biri altınla aydınlanır",
+   "params": {
+    "cols": 11,
+    "rows": 5
+   },
+   "cues": {
+    "hit": "sessiz"
+   }
+  },
+  {
+   "text": "Sizce hayatımızdaki en önemli ama en çok unutulan icat hangisi? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_object",
+   "visual": "Tek bir modern kaşık; ağzında küçük bir alevin yansıması",
+   "params": {
+    "obj": "steelspoon",
+    "scale": 1.1,
+    "opts": {
+     "flame": true
+    }
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Kaşık Nasıl İcat Edildi? İnsanlar Neden Kaşığıyla Gömüldü?",
+  "description": "Kaşık nasıl icat edildi? Sekiz bin yıl önce Anadolu'da insanlar, yıllarca kullandıkları kemik kaşıklarla birlikte toprağa verildi. Bu küçük aletin hikâyesi bir avuçla, bir deniz kabuğuyla ve ateşte kaynayan ilk çömleklerle başlıyor.\n\nNeandertallerin denizin dibinden çıkardığı kabuklardan Bursa'daki Barcın Höyük'ün 129 kemik kaşığına, Mısır'ın kozmetik kaşıklarından Kaşıkçı Elması rivayetine kadar kaşığın tarihini sakin bir belgesel diliyle anlatıyoruz.\n\nBu videoda:\n• İlk insanlar neden kaşığa ihtiyaç duymadı?\n• Kaynayan çömlekler kaşığı nasıl zorunlu kıldı?\n• Barcın Höyük'te bir kemik kaşık kaç saatte yapılıyordu?\n• Romalılar yumurta kabuğunu neden kaşıkla delerdi?\n• Kaşıkçı Elması adını nereden aldı?\n\nHer gün yeni bir 'neden?' için abone ol. Sence hayatımızdaki en önemli ama en çok unutulan icat hangisi? Yorumlara yaz!\n\n#kaşık #arkeoloji #tarih #düşünbakalım",
+  "tags": [
+   "kaşık nasıl icat edildi",
+   "kaşığın tarihi",
+   "ilk kaşık nasıl icat edildi",
+   "kaşık ne zaman icat edildi",
+   "kemik kaşık",
+   "barcın höyük",
+   "çatalhöyük",
+   "neolitik anadolu",
+   "kaşıkçı elması",
+   "ilk çömlek",
+   "arkeoloji",
+   "tarih",
+   "tarih hikayeleri",
+   "icatların tarihi",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-30T20:30:00+03:00"
+ }
+}

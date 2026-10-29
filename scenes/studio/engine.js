@@ -4,11 +4,12 @@
 // HUD (kicker, captions, brand, progress) · cover.
 'use strict';
 
-let D, S = [], W, H;
+let D, S = [], W, H, BT = false;   // BT: belgesel (documentary) style, "theme": "belgesel" (docs/BELGESEL.md)
 let PAPER = null, PCAP = null, PBRAND = null, BG_AT = { i: 0, prev: -1, p: 1 };   // parchment-theme.js
 const $ = id => document.getElementById(id);
 
 function makeKicker(sc) {
+  if (BT) return { update() {} };   // belgesel: nothing in the top-left corner (owner, 2026-10-29)
   // scene "source": a short on-screen source note under the kicker ("Kaynak: NASA"), BRAND.md §6.12
   return PARCHMENT.kicker($('kickers'), W, H, Object.assign({}, sc.title || {},
     sc.source ? { source: (D.lang === 'en' ? 'Source: ' : 'Kaynak: ') + sc.source } : {}));
@@ -22,15 +23,17 @@ window.init = async (data) => {
   // the channel's narrator (Kaşif's explorer hat, or Stickstory's fez) before any shot builds a rig
   if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
-  for (const k of ['paper', 'paperLight', 'ink', 'red', 'blue']) root.style.setProperty('--' + k, THEME_PARCHMENT[k]);
+  BT = D.theme === 'belgesel';
+  window.INK_STILL = BT;           // _ink.js: no boil, every line stands still
+  for (const k of ['paper', 'paperLight', 'paperDark', 'ink', 'inkSoft', 'red', 'blue', 'gold']) root.style.setProperty('--' + k, THEME_PARCHMENT[k]);
   root.classList.add(D.format || 'short');
-  root.classList.add('parchment');   // the only theme
+  root.classList.add(BT ? 'belgesel' : 'parchment');
   // each channel its own HUD and cover type (BRAND.md §11): Stickstory (fez narrator) never looks like Düşün Bakalım
   const skin = D.narrator === 'fes' ? 'ag' : 'db';
   root.classList.add('ch-' + skin); PARCHMENT.setSkin(skin);
 
   const bg = $('bg'); bg.width = W / 2; bg.height = H / 2;
-  PAPER = PARCHMENT.background(bg, W, H, { scale: 0.5 });
+  PAPER = BT ? BELGESEL.background(bg, W, H) : PARCHMENT.background(bg, W, H, { scale: 0.5 });
   // shots measure text while building: fonts must be ready first
   await Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"', '700 100px "Zilla Slab"', '600 100px "Zilla Slab"'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
 
@@ -57,7 +60,7 @@ window.init = async (data) => {
   S.forEach((o, i) => {
     o.env = { prevP: null, prevCam: null };
     // paper slide or a soft cross-dissolve; every third boundary fades
-    o.trans = i === 0 ? 'cut' : (o.sc.transition || (i % 3 === 2 ? 'fade' : 'slide'));
+    o.trans = i === 0 ? 'cut' : (o.sc.transition || (BT ? (o.sc.chapter ? 'dip' : 'dissolve') : (i % 3 === 2 ? 'fade' : 'slide')));
     if (!TRANS_WIN[o.trans]) o.trans = 'slide';
     // cue times that belong to this scene (captions colour these words)
     o.cueTimes = Object.values(o.sc.cues || {});
@@ -68,8 +71,8 @@ window.init = async (data) => {
     const so = S[sceneAt(w.t)], key = keys.some(kt => Math.abs(kt - w.t) < 0.01);
     return { t: w.t, text: w.text, cue: key ? (so && so.P.caption_color === 'red' ? 'red' : true) : false };
   }) }));
-  PCAP = PARCHMENT.captions($('kickers'), W, H, groups);
-  PBRAND = PARCHMENT.brand($('kickers'), W, H, D.channel || '');
+  PCAP = (BT ? BELGESEL : PARCHMENT).captions($('kickers'), W, H, groups);
+  PBRAND = BT ? null : PARCHMENT.brand($('kickers'), W, H, D.channel || '');
 
   await document.fonts.ready;
   await window.seek(0);
@@ -103,11 +106,20 @@ function transStyle(kind, role, t, T) {
     if (role === 'out') { const p = lin(t, T - 0.2, 0.4); return { show: p < 1, tf: '', op: 1 - EASE_IO(p), blur: 0 }; }
     const q = lin(t, T - 0.2, 0.4); return { show: q > 0, tf: `scale(${lerp(1.02, 1, EASE(q))})`, op: EASE_IO(q), blur: 0 };
   }
+  // belgesel: the next shot dissolves in over the still one; a chapter dips through the empty ground
+  if (kind === 'dissolve') {
+    if (role === 'out') return { show: t < T + 0.6, tf: '', op: 1, blur: 0 };
+    const q = lin(t, T - 0.6, 1.2); return { show: q > 0, tf: '', op: EASE_IO(q), blur: 0 };
+  }
+  if (kind === 'dip') {
+    if (role === 'out') { const p = lin(t, T - 0.7, 0.7); return { show: p < 1, tf: '', op: 1 - EASE_IO(p), blur: 0 }; }
+    const q = lin(t, T + 0.1, 0.9); return { show: q > 0, tf: '', op: EASE_IO(q), blur: 0 };
+  }
   // cut: hard switch at T
   if (role === 'out') return { show: t < T, tf: '', op: 1, blur: 0 };
   return { show: t >= T, tf: '', op: 1, blur: 0 };
 }
-const TRANS_WIN = { cut: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2] };
+const TRANS_WIN = { cut: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2], dissolve: [0.6, 0.6], dip: [0.7, 1.0] };
 
 function applyStyle(node, st, cam = '') {
   node.style.display = st.show ? '' : 'none';
@@ -125,6 +137,7 @@ function applyStyle(node, st, cam = '') {
 // {zoom, focus: [x, y] (stage px, the close-up's subject), move: 'push'|'pull'|'left'|'right'|'up'|'down'|'still'}.
 const CAM_MOVES = ['push', 'left', 'pull', 'push', 'right', 'up'];
 function cameraArea() {   // the picture area: under the brand/kicker, above the caption strip
+  if (BT) return H > W ? { x0: 40, x1: W - 40, y0: 200, y1: 1150 } : { x0: 60, x1: W - 60, y0: 60, y1: H - 150 };
   return H > W ? { x0: 40, x1: W - 40, y0: 300, y1: 1150 } : { x0: 80, x1: W - 80, y0: 210, y1: H - 190 };
 }
 function measureInk(o) {
@@ -151,6 +164,8 @@ function planCamera(o, i, b) {
   const c = o.sc.camera, A = cameraArea();
   if (c === false || o.sc.type === 'photo') return null;      // photos frame themselves (Ken Burns)
   const C = typeof c === 'object' && c ? c : {};
+  // belgesel: shots are composed full-frame; no automatic reframing, only an explicit close-up (focus) moves in
+  if (BT && !Array.isArray(C.focus)) return null;
   let s, fx, fy;
   if (Array.isArray(C.focus)) {
     [fx, fy] = C.focus; s = C.zoom ?? 1.8;
@@ -170,6 +185,11 @@ function planCamera(o, i, b) {
 // transform for scene-local time lt: p -> C + T + s (p - C) about the stage centre, clamped so the stage covers the frame
 function cameraAt(o, lt, pk) {
   const k = o.cam, p = progIO(lt, 0, Math.max(o.dur, 1)), cx = W / 2, cy = H / 2;
+  if (BT) {   // belgesel: one slow, steady push-in; no drift, no punch, no sway (owner: "sabit ve net")
+    if (!k) return { s: lerp(1, 1.03, p), tx: 0, ty: 0 };
+    const s = k.s * lerp(1, 1.04, p), lx = (s - 1) * cx, ly = (s - 1) * cy;
+    return { s, tx: Math.max(-lx, Math.min(lx, k.ax - cx - s * (k.fx - cx))), ty: Math.max(-ly, Math.min(ly, k.ay - cy - s * (k.fy - cy))) };
+  }
   if (!k) return { s: (1 + 0.025 * pk) * lerp(1, 1.035, p), tx: 0, ty: 0 };
   const sw = Math.min(k.s - 1, 0.08) + 0.04;              // move amplitude, relative to the framing
   let s = k.s, dx = 0, dy = 0;
@@ -188,7 +208,7 @@ const camCss = k => (k.tx || k.ty ? `translate(${k.tx.toFixed(1)}px, ${k.ty.toFi
 // the scene's set (sets.js): "set": "<name>" | {name, ground, horizon} | false; a shot with a ground line gets "field"
 function planSet(o, b) {
   const v = o.sc.set;
-  if (v === false || typeof SETS === 'undefined') return null;
+  if (BT || v === false || typeof SETS === 'undefined') return null;   // belgesel shots draw their own (sparse) world
   const name = typeof v === 'string' ? v : (v && v.name) || (b && b.ground ? 'field' : null);
   if (!name || !SETS.names.includes(name)) return null;
   const gy = (v && v.ground) || (b && b.ground) || H * 0.6, hy = v && v.horizon;
@@ -198,7 +218,7 @@ function planSet(o, b) {
 // draw one frame. visible = [{o, lt, st}], hook/cover handled by callers
 function compose(t, visible, pend, coverCam) {
   for (const v of visible) {   // the cover frames its own focus (stage px); scenes use their camera
-    let pk = 0; for (const c of Object.values(localCues(v.o))) pk = Math.max(pk, punch(v.lt, c, 0.5));
+    let pk = 0; if (!BT) for (const c of Object.values(localCues(v.o))) pk = Math.max(pk, punch(v.lt, c, 0.5));
     v.cam = coverCam || cameraAt(v.o, v.lt, pk);
   }
   drawBg(t, visible);
@@ -276,7 +296,7 @@ function buildCoverText(c) {
 function coverKasif(c, lt) {
   const node = $('kasifcover');
   node.innerHTML = '';
-  if (c.kasif === false || typeof KASIF === 'undefined' || !KASIF || typeof KASIF.create !== 'function') return;
+  if (c.kasif === false || BT || typeof KASIF === 'undefined' || !KASIF || typeof KASIF.create !== 'function') return;
   node.setAttribute('width', W); node.setAttribute('height', H); node.setAttribute('viewBox', `0 0 ${W} ${H}`);
   const portrait = H > W, k = typeof c.kasif === 'object' ? c.kasif : { pose: c.kasif };
   const pose = k.pose || 'shock';

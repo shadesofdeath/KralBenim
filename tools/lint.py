@@ -17,9 +17,11 @@ from plan import LIMITS, SCENES  # noqa: E402
 from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
+BELGESEL_VOICE = "mF7tIc9VLrznhGooGjaT"   # slow documentary voice of the belgesel style (owner, 2026-10-29)
 SETS = ["field", "hills", "desert", "sea", "ocean", "coast", "city", "interior", "night", "snow", "storm"]   # scenes/studio/sets.js
 CAM_MOVES = ["push", "pull", "left", "right", "up", "down", "still"]                                  # engine.js camera
 THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
+BELGESEL = "belgesel"  # experimental documentary style (docs/BELGESEL.md, owner 2026-10-29): Düşün Bakalım only
 # channel analytics (owner, 2026-10-26): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
 # halfway (39% average view), long-video CTR 0.96%, Shorts viewers rarely subscribe. The rules below target that.
 GREETING = re.compile(r"\b(merhaba|selam(lar)?|hoş ?geldiniz|kanal(ım)?a hoş|bu videoda|bugün sizlere|bugün size|"
@@ -64,8 +66,9 @@ def lint(path, kinds):
 
     if s.get("engine") != "studio":
         err.append('"engine" must be "studio"')
-    if s.get("theme") != THEME:
-        err.append(f'"theme" must be "{THEME}": the channel has one style, sepia parchment + Kaşif (brand/kit/BRAND.md)')
+    bt = s.get("theme") == BELGESEL
+    if s.get("theme") not in (THEME, BELGESEL):
+        err.append(f'"theme" must be "{THEME}" (sepia parchment + Kaşif, brand/kit/BRAND.md) or "{BELGESEL}" (docs/BELGESEL.md)')
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
     # channel: on-screen name, file prefix and narrator must agree (tools/channels.py)
@@ -83,6 +86,10 @@ def lint(path, kinds):
     en = cfg["lang"] == "en"
     voice = cfg["voice_id"]
     tts = s.get("tts", {})
+    if bt:   # the documentary voice (owner, 2026-10-29); Düşün Bakalım only
+        voice = BELGESEL_VOICE
+        if ch != "Düşün Bakalım":
+            err.append(f'"theme": "{BELGESEL}" is a Düşün Bakalım style (docs/BELGESEL.md)')
     if tts.get("voice_id") != voice or tts.get("model") != MODEL or tts.get("provider") != "elevenlabs":
         err.append(f"tts must be elevenlabs / {voice} / {MODEL} for {ch}")
 
@@ -127,7 +134,9 @@ def lint(path, kinds):
         if short and len(x.get("text", "").split()) > 14:
             warn.append(f"{tag}: {len(x['text'].split())} words, likely > 4 s on screen; split it")
         t = x.get("title", {})
-        if len(t.get("white", "").split()) > 2 or len(t.get("gray", "").split()) > 3:
+        if bt and (t.get("white") or t.get("gray")):
+            warn.append(f"{tag}: belgesel style shows no kicker title (top-left stays empty)")
+        elif len(t.get("white", "").split()) > 2 or len(t.get("gray", "").split()) > 3:
             warn.append(f"{tag}: kicker title too long (white <= 2, gray <= 3 words)")
         for name, needle in (x.get("cues") or {}).items():
             words = [low(w) for w in x.get("text", "").split()]
@@ -172,7 +181,9 @@ def lint(path, kinds):
         return bool(p.get("kasif")) or any(
             isinstance(c, dict) and (c.get("who") or "kasif") == "kasif" for c in (p.get("cast") or []))
     nk = sum(1 for x in sc if has_kasif(x))
-    if types:
+    if bt and nk:
+        err.append("belgesel style has no on-screen host: remove params.kasif / Kaşif cast (docs/BELGESEL.md)")
+    if types and not bt:
         share = nk / len(types)
         if nk == 0:
             err.append("Kaşif in no scene: the host opens or turns the story at least once (BRAND.md §2)")
@@ -192,9 +203,11 @@ def lint(path, kinds):
         if c not in (None, False) and not (isinstance(c, dict) and (not c.get("focus") or (isinstance(c["focus"], list) and len(c["focus"]) == 2))
                                            and c.get("move", "push") in CAM_MOVES):
             err.append(f'scene {i}: "camera" is false or {{"focus": [x, y], "zoom", "move": {"|".join(CAM_MOVES)}}}')
-    if not named - {False, None}:
+    if bt and named - {False, None}:
+        warn.append('belgesel shots draw their own sparse world; "set" is ignored')
+    if not bt and not named - {False, None}:
         warn.append('no scene has a "set": give the story its world (hills, sea, city, interior, night...; BRAND.md §5.1)')
-    if close < (1 if short else 4):
+    if not bt and close < (1 if short else 4):
         warn.append(f'{close} close-up(s) ("camera": {{"focus": [x, y], "zoom"}}): use >= {1 if short else 4} to vary the shot sizes (BRAND.md §5.1)')
     # first ~30 s (~420 chars): straight into the event, no greeting / channel intro / "in this video"
     if GREETING.search(text[:420]):
@@ -241,13 +254,13 @@ def lint(path, kinds):
     elif not any(str(x.get("url", "")).startswith("http") for x in srcs):
         warn.append("sources: no entry has a url; add the page you verified the facts on")
     notes = [x for x in sc if x.get("source")]
-    if len(notes) < (1 if short else 3):
+    if not bt and len(notes) < (1 if short else 3):
         err.append(f'scene "source" (short on-screen note, e.g. "NASA"): need >= {1 if short else 3} scenes with one, on the key facts')
     for i, x in enumerate(notes):
         if len(str(x["source"]).split()) > 5:
             warn.append(f"scene {sc.index(x)}: on-screen source note too long (<= 5 words)")
-    pals = json.loads((ROOT / "scenes/studio/palettes.json").read_text())
-    own = [k for k in pals if not k.startswith("_") and k.startswith("ag-") == (ch == "Stickstory")]
+    pals = json.loads((ROOT / "scenes/studio" / ("belgesel-themes.json" if bt else "palettes.json")).read_text())
+    own = [k for k in pals if not k.startswith("_") and (bt or k.startswith("ag-") == (ch == "Stickstory"))]
     if s.get("palette") and s["palette"] not in own:
         err.append(f'"palette" must be one of this channel\'s sets: {", ".join(own)} (or leave it out: random per video)')
 

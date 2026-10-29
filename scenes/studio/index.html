@@ -69,6 +69,12 @@
   html.ch-ag.cover #covertext { font-family: 'Zilla Slab', Georgia, serif; font-weight: 700; letter-spacing: 0; word-spacing: 0.08em; line-height: 0.98; }
   html.ch-ag.cover #covertext .hl { color: var(--paperLight, #F0EFEA); background: var(--ink, #1B2230); border: 0; border-radius: 4px; transform: none;
     box-shadow: 12px 12px 0 var(--red, #C4562B); padding: .04em .16em .08em; }
+  /* ---- belgesel (documentary) style, docs/BELGESEL.md: no progress bar, no frame, a clean typographic cover */
+  html.belgesel #progress, html.belgesel #coverframe { display: none !important; }
+  html.belgesel.cover #covertext { font-family: Fraunces, serif; font-weight: 700; letter-spacing: 0.01em; word-spacing: 0.1em; line-height: 1.02;
+    color: var(--ink); text-shadow: 0 4px 30px var(--paper); }
+  html.belgesel.cover #covertext .hl { color: var(--gold); background: none; border: 0; padding: 0; margin: 0; transform: none; box-shadow: none; display: inline; }
+  html.belgesel.long.cover #covershade { background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 30%, transparent 58%); }
 </style>
 </head>
 <body>
@@ -86,6 +92,7 @@
 <script src="core.js"></script>
 <script src="parchment-theme.js"></script>
 <script src="sets.js"></script>
+<script src="belgesel-theme.js"></script>
 <script src="engine.js"></script>
 </body>
 </html>

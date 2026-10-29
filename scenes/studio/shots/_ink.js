@@ -36,6 +36,7 @@ const inkFrame = t => Math.floor(t * INK_FPS + 1e-6);
 
 // [dx, dy] in [-amp, amp], constant for 1/8 s, then jumps (the "boil" of hand-drawn animation)
 function boil(seed, t, amp = 2) {
+  if (window.INK_STILL) return [0, 0];   // belgesel style: lines stand still (owner, 2026-10-29)
   const r = rng(inkHash(seed, inkFrame(t)));
   r();
   return [(r() * 2 - 1) * amp, (r() * 2 - 1) * amp];
@@ -87,7 +88,7 @@ function inkPath(points, opts = {}) {
   const n = s.length;
   if (n < 2) return '';
   // smooth width noise along the stroke (4 knots that re-roll with the boil)
-  const r = rng(inkHash(seed + 7777, inkFrame(t)));
+  const r = rng(inkHash(seed + 7777, window.INK_STILL ? 0 : inkFrame(t)));
   const knots = [r(), r(), r(), r(), r()].map(v => 1 + vary * (v * 2 - 1));
   const width = i => {
     const u = i / (n - 1), x = u * 4, k = Math.min(3, Math.floor(x)), f = x - k;

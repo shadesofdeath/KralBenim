@@ -52,11 +52,13 @@ def main():
     motion = None if a.times else [frame_change(out / f"frame_{2 * i:02d}.png", out / f"frame_{2 * i + 1:02d}.png")
                                    for i in range(len(tl["scenes"]))]
     for i, s in enumerate(tl["scenes"]):
-        m = "" if motion is None else f" motion={motion[i]:4.1f}" + ("  <- STATIC? add drift/flow" if motion[i] < STATIC else "")
+        still = STATIC_BELGESEL if tl.get("theme") == "belgesel" else STATIC   # belgesel: calm by design
+        m = "" if motion is None else f" motion={motion[i]:4.1f}" + ("  <- STATIC? add drift/flow" if motion[i] < still else "")
         print(f"  {i:2d} {s['start']:6.1f}-{s['end']:6.1f}  {s['type']:15s}{m} cues={list(s['cues'])}")
 
 
 STATIC = 1.5   # mean abs pixel change (0-255) below which a scene reads as a still image
+STATIC_BELGESEL = 0.3   # belgesel style: slow push and quiet motion are the point; only a frozen frame is flagged
 
 
 def frame_change(a, b):
