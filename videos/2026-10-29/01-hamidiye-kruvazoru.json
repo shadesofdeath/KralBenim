@@ -1,0 +1,409 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "hamidiye-kruvazoru",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "palette": "ash",
+  "cover": {
+    "lines": [
+      "Sekiz",
+      "ay",
+      "yakalanmadı"
+    ],
+    "highlight": [
+      "yakalanmadı"
+    ],
+    "scene": 0,
+    "t": 1.5,
+    "focus": [
+      645,
+      1150
+    ],
+    "zoom": 1.15,
+    "kasif": false
+  },
+  "sources": [
+    {
+      "title": "Wikipedia — Ottoman cruiser Hamidiye",
+      "url": "https://en.wikipedia.org/wiki/Ottoman_cruiser_Hamidiye"
+    },
+    {
+      "title": "Naval Encyclopedia — Hamidiye (1903)",
+      "url": "https://naval-encyclopedia.com/ww1/ottoman-fleet/hamidiye.php"
+    },
+    {
+      "title": "Turkey's War — Hamidiye",
+      "url": "https://turkeyswar.com/navy/turkish-warships/hamidiye/"
+    }
+  ],
+  "youtube": {
+    "title": "Hamidiye Kruvazörü: Kömürü Biten Gemi Nasıl Yakalanmadı?",
+    "description": "Hamidiye kruvazörü, 1913'te Yunan ablukasını yarıp sekiz ay boyunca yakalanmayan Osmanlı gemisi. Peki kömürü hep bitmek üzere olan bir gemi bunu nasıl başardı?\n\nCumhuriyet Bayramı'nda donanmanın gemileri limanlarda halka açılırken Türk denizcilik tarihinin en ünlü akınına dönüyoruz. 14 Ocak 1913 gecesi Hamidiye, Rauf Bey (Orbay) komutasında Çanakkale'den fark edilmeden çıktı ve Balkan Savaşı boyunca Ege'de ve Doğu Akdeniz'de dolaştı. En büyük derdi kömürdü: Malta'da 24 saatlik izni, makine arızası bahanesiyle üç gün uzattı. Eylül 1913'te İstanbul'a döndüğünde kahraman gibi karşılandı.\n\nHer gün böyle gerçek bir hikâye için Düşün Bakalım'a abone ol. Sence Rauf Bey'in bahanesi bugün de işe yarar mıydı? Yorumlara yaz!\n\n#shorts #hamidiyekruvazörü #osmanlıdonanması #tarih #düşünbakalım",
+    "tags": [
+      "hamidiye kruvazörü",
+      "hamidiye kruvazörü akını",
+      "hamidiye gemisi",
+      "hamidiye kruvazörü hikayesi",
+      "rauf orbay",
+      "hüseyin rauf bey",
+      "balkan savaşı",
+      "1913 balkan savaşı",
+      "osmanlı donanması",
+      "çanakkale ablukası",
+      "malta",
+      "osmanlı tarihi",
+      "deniz tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-29T19:00:00+03:00",
+    "related": "videos/2026-10-20/05-nusret-mayin-gemisi.json"
+  },
+  "scenes": [
+    {
+      "type": "hmd_night",
+      "text": "Bu gemi sekiz ay yakalanmadı.",
+      "visual": "Gece: yıldızlı koyu gökyüzü, ufukta alçak karanlık kıyı, ay yolu parlayan dalgalı deniz. Üç bacalı, iki direkli, ışıkları sönük Hamidiye kruvazörü koyu bir siluet olarak soldan sağa belirgin biçimde kayıyor; kıçta ay yıldızlı sancak, arkasında köpüklü iz, pruvada dalga. Solda ufukta ışıkları yanan küçük bir Yunan savaş gemisi projektörünü suya tutuyor; hüzmenin sudaki parlak lekesi soldan sağa kayıyor ve 'yakalanmadı'da kruvazörün kıçının hemen arkasından geçiyor, gemiye değmiyor. Sağ altta ıslak kaya çıkıntısında büyük Kaşif önce kruvazörü işaret ediyor, 'sekiz'de şokla geri sıçrıyor; kayaya dalgalar vuruyor.",
+      "title": {},
+      "set": {
+        "name": "night",
+        "ground": 800,
+        "horizon": 768
+      },
+      "cues": {
+        "shock": "sekiz",
+        "miss": "yakalan"
+      },
+      "params": {
+        "mode": "hook",
+        "horizon": 0.4,
+        "moon": [
+          0.8,
+          0.12
+        ],
+        "far": [
+          {
+            "x": 0.12,
+            "y": 0.44,
+            "s": 0.36,
+            "face": 1
+          }
+        ],
+        "ship": {
+          "x": 0.42,
+          "to": 0.53,
+          "y": 0.565,
+          "s": 0.76,
+          "face": 1
+        },
+        "kasif": {
+          "x": 0.82,
+          "y": 0.75,
+          "scale": 1.0,
+          "pose": "point",
+          "face": "left",
+          "dir": "forward",
+          "seq": [
+            {
+              "at": "shock",
+              "pose": "shock"
+            }
+          ]
+        },
+        "rock_y": 0.75,
+        "rock_x": 0.66
+      }
+    },
+    {
+      "type": "hmd_map",
+      "text": "1913'tü ve Yunan donanması Çanakkale Boğazı'nın ağzını kapatmıştı.",
+      "visual": "Kenardan kenara eski harita: üstte Marmara ve İstanbul, ortada Çanakkale Boğazı, aşağıda adalarıyla Ege, en altta Girit. Boğazın ağzının önünde mavi flamalı savaş gemisi işaretleri birer birer beliriyor ve bir yay çiziyor; 'kapatmıştı'da mavi kesikli bir zincir onları birleştiriyor, boğazın çıkışına kırmızı bir çarpı oturuyor ve 'Yunan donanması' yazısı beliriyor. 'Çanakkale' kırmızı, 'İstanbul' mürekkep; sağda pusula gülü.",
+      "title": {
+        "white": "Ocak 1913",
+        "gray": "Balkan Savaşı"
+      },
+      "set": false,
+      "camera": {
+        "zoom": 1.0,
+        "move": "push"
+      },
+      "source": "Wikipedia",
+      "cues": {
+        "close": "kapatmış"
+      },
+      "params": {
+        "mode": "blockade"
+      }
+    },
+    {
+      "type": "hmd_night",
+      "text": "Hamidiye kruvazörü bir gece, kimseye görünmeden ablukayı yardı.",
+      "visual": "Geniş plan, gece boğazın ağzı: yıldızlı gök, ufukta karanlık kıyı. Solda ve sağda ışıkları yanan iki Yunan savaş gemisi projektörlerini suya tutuyor; hüzmelerin sudaki parlak lekeleri birbirine doğru kayıyor. Ortada ışıksız, kapkara Hamidiye üç bacasından duman bırakarak sağdan sola, açık denize doğru geçiyor; 'görünmeden'de iki leke tam kıçının arkasında, suyun üstünde kesişip geçiyor, gemiye değmiyor. Ön planda ekranın altına kadar iki sıra büyük, köpüklü dalga sırtı.",
+      "title": {
+        "white": "Çanakkale",
+        "gray": "14 Ocak 1913"
+      },
+      "set": {
+        "name": "night",
+        "ground": 800,
+        "horizon": 690
+      },
+      "camera": {
+        "zoom": 1.15,
+        "move": "left"
+      },
+      "cues": {
+        "miss": "görünmeden"
+      },
+      "params": {
+        "mode": "slip",
+        "horizon": 0.36,
+        "moon": [
+          0.74,
+          0.11
+        ]
+      }
+    },
+    {
+      "type": "hmd_coal",
+      "text": "Ama sizce asıl düşman kimdi? Kömür!",
+      "visual": "Yakın plan, geminin kazan dairesi: perçinli iki kazanın önünde ızgaralı ocak kapakları kor gibi parlıyor, basınç göstergeleri titriyor. İsli yüzlü, kolsuz yelekli bir ateşçi sağdaki kömür yığınından kürekle alıp ocağa atıyor, ocaktan kıvılcımlar fışkırıyor. Yığın her kürekte küçülüyor; 'düşman'dan itibaren ateş sönükleşiyor, gösterge iğneleri düşüyor; 'Kömür'de kürek çıplak saçı kazıyor ve kırmızı 'kömür bitiyor' yazısı beliriyor. Perçinli zemin sacları ekranın altına kadar iniyor.",
+      "title": {
+        "white": "Kazan dairesi"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "camera": {
+        "focus": [
+          640,
+          900
+        ],
+        "zoom": 1.6,
+        "move": "push"
+      },
+      "cues": {
+        "low": "düşman",
+        "empty": "Kömür"
+      },
+      "params": {
+        "mode": "stokehold",
+        "label": {
+          "text": "kömür bitiyor",
+          "x": 0.62,
+          "y": 0.36,
+          "at": "empty",
+          "size": 86,
+          "color": "red",
+          "rot": -5
+        }
+      }
+    },
+    {
+      "type": "hmd_malta",
+      "text": "Malta'da sadece 24 saat kalma izni vardı.",
+      "visual": "Malta'nın büyük limanı: iki yanda sudan dimdik yükselen bal rengi taş tabyalar, üstlerinde düz damlı evler, büyük bir kilise kubbesi ve iki çan kulesi. Limanın ortasında demirli Hamidiye hafifçe sallanıyor. Gökyüzünde sağda büyük, elle çizilmiş bir kum saati beliriyor ve 'saat'te kumu akmaya başlıyor; altında kırmızı '24 saat' yazısı. Ön planda taş rıhtım, bir baba ve kangal halat.",
+      "title": {
+        "white": "Malta",
+        "gray": "Şubat 1913"
+      },
+      "set": {
+        "name": "coast",
+        "ground": 960,
+        "horizon": 760
+      },
+      "source": "Naval Encyclopedia",
+      "cues": {
+        "clock": "saat"
+      },
+      "params": {
+        "mode": "harbour",
+        "label": {
+          "text": "24 saat",
+          "x": 0.78,
+          "y": 0.345,
+          "at": "clock",
+          "size": 96,
+          "color": "red",
+          "rot": -4,
+          "card": true,
+          "bold": true
+        }
+      }
+    },
+    {
+      "type": "hmd_malta",
+      "text": "Rauf Bey makine arızası dedi,",
+      "visual": "Rıhtımda iki adam: solda beyaz üniformalı İngiliz liman subayı elindeki izin kâğıdını uzatıyor. Sağda lacivert ceketli, bıyıklı komutan Rauf Bey önce ellerini açıyor, sonra kolunu uzatıp aralarındaki demirli Hamidiye'nin ortadaki bacasını işaret ediyor ve kaşını kaldırıyor; 'arızası'nda o bacadan tek bir kara duman öksürüyor, gökyüzünde kâğıt bir etikette kırmızı 'makine arızası!' yazısı patlıyor, subay eğilip bakıyor. Arkada Malta tabyaları ve kubbe; ön planda taş rıhtım ve ekranın altından taşan tahta sandıklar.",
+      "title": {
+        "white": "Rauf Bey",
+        "gray": "komutan"
+      },
+      "set": {
+        "name": "coast",
+        "ground": 1190,
+        "horizon": 845
+      },
+      "cues": {
+        "excuse": "arıza"
+      },
+      "params": {
+        "mode": "excuse",
+        "label": {
+          "text": "makine arızası!",
+          "x": 0.5,
+          "y": 0.2,
+          "at": "excuse",
+          "size": 90,
+          "color": "red",
+          "rot": -4,
+          "card": true,
+          "bold": true,
+          "underline": false
+        }
+      }
+    },
+    {
+      "type": "hmd_coal",
+      "text": "üç gün fazladan kaldı ve kömürlüklerini doldurdu.",
+      "visual": "Kömür yükleme: solda Hamidiye'nin perçinli gövdesi, bacası ve açık kömür lombozu; sağ altta, ekranın altına kadar inen kara kömür yığınıyla dolu bir mavna. Mavnadan lomboza uzanan tahta iskelede sırtında çuval taşıyan hamallar sırayla yukarı çıkıp çuvalları boşaltıyor. Sağ üstte güneş hızla üç kez doğup batıyor; sağda elle çizilmiş takvim yaprağı '+1 gün', '+2 gün', '+3 gün' diye dönüyor.",
+      "title": {
+        "white": "Malta",
+        "gray": "kömür yükleniyor"
+      },
+      "set": {
+        "name": "coast",
+        "ground": 960,
+        "horizon": 700
+      },
+      "camera": {
+        "zoom": 1.0,
+        "move": "push"
+      },
+      "source": "Naval Encyclopedia",
+      "cues": {
+        "extra": "fazladan",
+        "fill": "kömürlük"
+      },
+      "params": {
+        "mode": "load",
+        "prefix": "+",
+        "days": 3
+      }
+    },
+    {
+      "type": "hmd_map",
+      "text": "Sekiz ay sonra, kömürü hep bitmek üzere olan o gemi,",
+      "visual": "Kenardan kenara Doğu Akdeniz haritası: solda İtalya, Sicilya ve Malta, ortada Girit ve Ege, sağda Kıbrıs, Levant kıyısı, Nil deltası, Süveyş kanalı ve aşağıda Kızıldeniz. Geminin uğradığı limanlar (Sira, Beyrut, Port Said, Malta, Hayfa) küçük mürekkep noktalarıyla beliriyor. Kızıldeniz'den kırmızı bir gemi işareti yola çıkıyor; Süveyş'ten Akdeniz'e, Ege'den Çanakkale Boğazı'na (kırmızı nokta) ve Marmara üzerinden İstanbul'a kırmızı bir çizgi çiziyor; 'gemi'de İstanbul noktası atıyor ve kırmızı '8 ay' yazısı patlıyor.",
+      "title": {
+        "white": "Eylül 1913",
+        "gray": "eve dönüş"
+      },
+      "set": false,
+      "camera": {
+        "zoom": 1.0,
+        "move": "pull"
+      },
+      "source": "Turkey's War",
+      "cues": {
+        "home": "gemi"
+      },
+      "params": {
+        "mode": "route"
+      }
+    },
+    {
+      "type": "hmd_halic",
+      "text": "Haliç'e bir kahraman gibi girdi.",
+      "visual": "Haliç: karşıda tepede dört minareli büyük bir cami, kubbeler, kıyıya inen evler, sağda Galata Kulesi. Duman tüten Hamidiye soldan sağa Haliç'e giriyor, çevresinde kürek çeken kayıklar. Ön planda arkadan görülen kalabalık ekranın altına kadar iniyor: kollar havada, kırmızı ay yıldızlı bayraklar ve mendiller sallanıyor; 'kahraman'da bütün kollar aynı anda havaya kalkıyor, bayraklar büyüyor.",
+      "title": {
+        "white": "Haliç",
+        "gray": "Eylül 1913"
+      },
+      "set": {
+        "name": "city",
+        "ground": 845,
+        "horizon": 760
+      },
+      "cues": {
+        "cheer": "kahraman"
+      },
+      "params": {
+        "mode": "crowd",
+        "water": 0.42,
+        "ship": {
+          "x": 0.28,
+          "to": 0.48,
+          "y": 0.515,
+          "s": 0.85,
+          "face": 1
+        }
+      }
+    },
+    {
+      "type": "hmd_halic",
+      "text": "Her gün böyle gerçek bir hikâye için abone olun.",
+      "visual": "Haliç'in taş rıhtımı: arkada demirli Hamidiye, karşı kıyıda cami ve Galata Kulesi, suda kayıklar. Rıhtımın kenarında (altyazı şeridinin üstünde) Kaşif gemiyi işaret ediyor, 'abone'de izleyiciye dönüp el sallıyor. En altta kalabalığın başları ve sallanan bayraklar.",
+      "title": {
+        "white": "Hamidiye",
+        "gray": "1913"
+      },
+      "set": {
+        "name": "city",
+        "ground": 845,
+        "horizon": 760
+      },
+      "camera": {
+        "zoom": 1.0,
+        "move": "pull"
+      },
+      "cues": {
+        "wave": "abone"
+      },
+      "params": {
+        "mode": "end",
+        "water": 0.42,
+        "quay": 0.6,
+        "ship": {
+          "x": 0.62,
+          "to": 0.64,
+          "y": 0.5,
+          "s": 0.8,
+          "face": -1
+        },
+        "crowd": {
+          "top": 0.88,
+          "n": 6
+        },
+        "kasif": {
+          "x": 0.28,
+          "y": 0.6,
+          "scale": 1.1,
+          "pose": "point",
+          "face": "right",
+          "dir": "forward",
+          "seq": [
+            {
+              "at": "wave",
+              "pose": "wave",
+              "face": "left"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

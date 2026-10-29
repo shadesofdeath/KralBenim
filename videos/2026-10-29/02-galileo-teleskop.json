@@ -1,0 +1,2158 @@
+{
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "j4vJUfke1j8j9OYq8V3b",
+  "model": "eleven_v3"
+ },
+ "slug": "galileo-teleskop",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Ay pürüzsüz",
+   "değildi"
+  ],
+  "highlight": [
+   "değildi"
+  ],
+  "scene": 3,
+  "t": 4.0,
+  "focus": [
+   845,
+   508
+  ],
+  "zoom": 1.12,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 0.95,
+   "face": -1,
+   "x": 880,
+   "y": 1010
+  },
+  "size": 130
+ },
+ "sources": [
+  {
+   "title": "Britannica: Galileo — Telescopic discoveries",
+   "url": "https://www.britannica.com/biography/Galileo-Galilei/Telescopic-discoveries"
+  },
+  {
+   "title": "Museo Galileo: Galileo's telescope",
+   "url": "https://brunelleschi.imss.fi.it/esplora/cannocchiale/dswmedia/storia/estoria2_st.html"
+  },
+  {
+   "title": "Museo Galileo: The drama of the trial",
+   "url": "https://brunelleschi.imss.fi.it/galileopalazzostrozzi/section/TheDramaOfTheTrial.html"
+  },
+  {
+   "title": "Britannica: Hans Lippershey",
+   "url": "https://www.britannica.com/biography/Hans-Lippershey"
+  },
+  {
+   "title": "Linda Hall Library: Thomas Harriot",
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/thomas-harriot/"
+  },
+  {
+   "title": "History of Science Museum, Oxford: The uses of the telescope, 1609-10",
+   "url": "https://www.cabinet.ox.ac.uk/uses-telescope-1609-10"
+  },
+  {
+   "title": "Sidereus Nuncius (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Sidereus_Nuncius"
+  },
+  {
+   "title": "Famous Trials: Galileo chronology",
+   "url": "https://famous-trials.com/galileotrial/1015-chronology"
+  },
+  {
+   "title": "And yet it moves (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/And_yet_it_moves"
+  },
+  {
+   "title": "Astronomy.com: Oct. 31, 1992 — the pope addresses the Galileo affair",
+   "url": "https://www.astronomy.com/today-in-the-history-of-astronomy/oct-31-1992-the-pope-addresses-the-galileo-affair/"
+  },
+  {
+   "title": "NASA: Galileo mission",
+   "url": "https://science.nasa.gov/mission/galileo/"
+  },
+  {
+   "title": "ShiftDelete.Net: Türkiye'nin Ay'a gidecek uzay aracı hazır",
+   "url": "https://shiftdelete.net/turkiyenin-aya-gidecek-uzay-araci-hazir"
+  }
+ ],
+ "youtube": {
+  "title": "Galileo Galilei: Teleskopla Ay'a Bakan Adam Neden Mahkûm Oldu?",
+  "description": "Galileo Galilei, 1609'un sonunda kendi yaptığı teleskobu Ay'a çevirdi ve iki bin yıllık inancı yıktı: Ay pürüzsüz değildi. Peki gökyüzüne bakan bu adam neden ömrünün sonunu kendi evinde bir mahkûm olarak geçirdi?\n\nHollanda'da bir panayır oyuncağı sanılan boru, Galileo'nun ellerinde yirmi kat büyüten bir teleskoba dönüştü. Ay'daki dağları, Jüpiter'in dört uydusunu ve Venüs'ün evrelerini gördü; Kopernik'in haklı olduğunu savundu. Bunun bedelini 1633'teki Galileo davasında, kardinallerin önünde diz çökerek ödedi.\n\nBu videoda:\n• Hans Lipperhey'in patenti neden reddedildi?\n• Galileo teleskobu Venedik'e nasıl bir silah olarak sattı?\n• Thomas Harriot'un çekmecede kalan Ay çizimi\n• Ay'daki dağlar ve Jüpiter'in uyduları: Yıldız Habercisi\n• 1633 yargılanması, \"Yine de dönüyor\" efsanesi ve 1992\n\nTarihin \"neden\"leri için Düşün Bakalım'a abone ol. Sence Galileo diz çökmekte haklı mıydı? Yorumlara yaz!\n\n#galileo #teleskop #bilimtarihi #tarih #düşünbakalım",
+  "tags": [
+   "galileo galilei",
+   "galileo",
+   "galileo teleskop",
+   "galileo yargılanması",
+   "galileo galilei hayatı",
+   "teleskobun icadı",
+   "ay'daki dağlar",
+   "jüpiter'in uyduları",
+   "yıldız habercisi",
+   "sidereus nuncius",
+   "kopernik",
+   "eppur si muove",
+   "bilim tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-29T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "chapter": "Ay'a bakılan gece",
+   "type": "gal_a_garden",
+   "text": "Padova, 1609'un sonları. Bir matematik hocası, kendi yaptığı bir boruyu Ay'a çevirdi.",
+   "visual": "Gece, Padova çatıları (kiremit çatılar, bacalar, bir çan kulesi, birkaç sarı yanan pencere); önde düz bir taraçada sakallı, koyu cüppeli Galileo uzun deri kaplı bir boruyu sehpasıyla yukarı, sağ üstteki büyük yarım Ay'a çeviriyor; 'çevirdi'de boru Ay'a kilitleniyor, borunun ucunda altın bir parıltı; gökte titreşen yıldızlar.",
+   "title": {
+    "white": "Padova",
+    "gray": "1609'un sonları"
+   },
+   "set": false,
+   "cues": {
+    "aim": "çevirdi"
+   },
+   "params": {
+    "mode": "wide",
+    "ground": 0.8,
+    "roofs": {
+     "kind": "padua",
+     "lights": 0.4
+    },
+    "moon": {
+     "x": 0.78,
+     "y": 0.24,
+     "r": 150,
+     "term": 0.0,
+     "rough": 0.15
+    },
+    "scope": {
+     "x": 0.42,
+     "ang0": -8,
+     "ang": -34,
+     "at": "aim",
+     "tripod": true
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "young",
+     "x": 0.36,
+     "scale": 0.66,
+     "face": "right",
+     "pose": "point",
+     "dir": 40
+    }
+   }
+  },
+  {
+   "type": "gal_a_garden",
+   "text": "Gözünü camdan çektiğinde, iki bin yıllık bir inancın yıkıldığını biliyordu.",
+   "visual": "Yakın plan: Galileo'nun sakallı yüzü ve gözüne dayalı borunun ucu; 'çektiğinde' başını geri çekiyor, kaşları yukarı fırlıyor, şaşkınlıkla boruya bakıyor; arkada flu çatılar ve ayın ışığı yüzüne vuruyor.",
+   "title": {
+    "white": "Padova"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     700,
+     640
+    ],
+    "zoom": 1.9,
+    "move": "push"
+   },
+   "cues": {
+    "pull": "çektiğinde",
+    "hit": "yıkıldığını"
+   },
+   "params": {
+    "mode": "close",
+    "ground": 0.8,
+    "roofs": {
+     "kind": "padua",
+     "lights": 0.4
+    },
+    "moon": {
+     "x": 0.86,
+     "y": 0.18,
+     "r": 120,
+     "term": 0.0,
+     "rough": 1
+    },
+    "scope": {
+     "x": 0.43,
+     "ang": -34,
+     "tripod": true
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "young",
+     "x": 0.36,
+     "scale": 0.66,
+     "face": "right",
+     "pose": "point",
+     "dir": 40,
+     "at": "pull",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "gal_a_lens",
+   "text": "Herkes Ay'ı kusursuz, pürüzsüz bir küre sanırdı.",
+   "visual": "Pirinç halkalı yuvarlak teleskop görüntüsü, içinde koyu gece: kusursuz, cilalı bir inci gibi parlayan pürüzsüz Ay; el yazısı not 'kusursuz küre?' bir okla Ay'ı gösteriyor.",
+   "title": {
+    "white": "Eski inanç"
+   },
+   "set": false,
+   "camera": false,
+   "cues": {
+    "note": "pürüzsüz"
+   },
+   "params": {
+    "lens": {
+     "x": 0.5,
+     "y": 0.47,
+     "r": 0.4
+    },
+    "view": "moon",
+    "moon": {
+     "r": 0.32,
+     "term": -1,
+     "rough": 0
+    },
+    "labels": [
+     {
+      "text": "kusursuz küre?",
+      "x": 0.18,
+      "y": 0.28,
+      "at": "note",
+      "arrow": [
+       0.36,
+       0.38
+      ],
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_lens",
+   "text": "Ama bu adamın gördüğü Ay'da dağlar ve çukurlar vardı. Tıpkı Dünya gibi!",
+   "visual": "Aynı teleskop görüntüsü: 'dağlar'da pürüzsüz Ay kraterli, lekeli, yarısı karanlık gerçek Ay'a dönüşüyor, aydınlık-karanlık sınırı tırtıklı; sağda halkanın dışında Kaşif 'Dünya'da geri sıçrıyor, ağzı 'o', şapkası başında.",
+   "title": {
+    "white": "Gerçek Ay"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     510
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   },
+   "cues": {
+    "morph": "dağlar",
+    "hit": "Dünya"
+   },
+   "params": {
+    "lens": {
+     "x": 0.44,
+     "y": 0.47,
+     "r": 0.4
+    },
+    "view": "moon",
+    "moon": {
+     "r": 0.32,
+     "term": 0,
+     "rough0": 0,
+     "rough": 1,
+     "at": "morph",
+     "term0": -1
+    },
+    "kasif": {
+     "x": 0.74,
+     "y": 0.86,
+     "scale": 0.62,
+     "pose": "point",
+     "dir": "left",
+     "face": "left",
+     "at": "hit",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Peki gökyüzüne bakan bu adam, neden ömrünün sonunu kendi evinde bir mahkûm olarak geçirdi?",
+   "visual": "Dev Fraunces yazı kelime kelime: 'Neden mahkûm oldu?', 'mahkûm' kırmızı kutuda; el yazısı not 'kendi evinde'; sağda Kaşif çenesini tutup düşünüyor, 'baştan'da öne işaret ediyor.",
+   "title": {},
+   "cues": {
+    "w0": "neden",
+    "note": "evinde"
+   },
+   "params": {
+    "lines": [
+     "Neden",
+     "mahkûm oldu?"
+    ],
+    "highlight": [
+     "mahkûm"
+    ],
+    "note": {
+     "text": "kendi evinde",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.75
+    }
+   }
+  },
+  {
+   "type": "gal_a_bridge",
+   "text": "Bugün bir Türk aracı da Ay'a gitmeye hazırlanıyor, 2027'de fırlatılacak. Oysa Ay'ın gerçek yüzünü ilk anlatan bu adamın elinde sadece bir boru ve iki cam vardı. Peki her şey nerede başladı?",
+   "visual": "Sol üstte büyük kraterli Ay, etrafında kesikli bir yörünge ve üstünde ay-yıldızlı bayrak taşıyan küçük bir modern uzay aracı süzülüyor, yanında '2027' etiketi; 'boru'da sahnenin altından Kaşif elinde eski deri bir boruyla giriyor, 'iki cam'da borunun yanında iki yuvarlak mercek parlıyor; 'başladı'da Kaşif yukarı işaret ediyor; sağ yarıyı büyük Kaşif ve duvardaki eski Ay gravürü dolduruyor.",
+   "title": {
+    "white": "2027",
+    "gray": "Türkiye'nin Ay aracı"
+   },
+   "set": false,
+   "source": "ShiftDelete.Net",
+   "cues": {
+    "craft": "2027'de",
+    "tube": "boru",
+    "glass": "cam",
+    "q": "başladı"
+   },
+   "params": {
+    "moon": {
+     "x": 0.33,
+     "y": 0.4,
+     "r": 260,
+     "rough": 1,
+     "term": 0.15
+    },
+    "craft": {
+     "at": "craft",
+     "rx": 360,
+     "ry": 110,
+     "flag": true,
+     "label": "2027"
+    },
+    "tube": {
+     "at": "tube"
+    },
+    "lenses": {
+     "at": "glass"
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.86,
+     "scale": 1.35,
+     "pose": "talk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "tube",
+       "pose": "hold",
+       "item": "scope",
+       "dir": 25
+      },
+      {
+       "at": "glass",
+       "pose": "hold",
+       "item": "scope",
+       "dir": 25,
+       "emotion": "happy"
+      },
+      {
+       "at": "q",
+       "pose": "point",
+       "dir": "up",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "chapter": "Bir panayır oyuncağı",
+   "type": "chapter",
+   "text": "Hikâye 1608'de Hollanda'da başlar.",
+   "visual": "BÖLÜM 1 / 5 kartı: mavi dairede 1, altında 'Bir panayır oyuncağı' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "1608'de",
+    "title": "Hollanda'da"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Bir panayır oyuncağı"
+   }
+  },
+  {
+   "type": "gal_a_shop",
+   "text": "Gözlükçü Hans Lipperhey, uzağı yakın gösteren bir alet için patent istedi.",
+   "visual": "Hollanda'da küçük bir gözlükçü dükkânı: duvarda raflarda gözlükler ve mercekler, kurşun çerçeveli pencere, tezgâh; bereli, beyaz yakalı Lipperhey tezgâhın arkasında kısa bir boruyu kaldırıp gösteriyor; 'patent'te tezgâhta mühürlü bir dilekçe kâğıdı beliriyor, üstünde 'PATENT?' yazıyor.",
+   "title": {
+    "white": "Hans Lipperhey",
+    "gray": "gözlükçü"
+   },
+   "set": false,
+   "cues": {
+    "show": "uzağı",
+    "hit": "patent"
+   },
+   "params": {
+    "mode": "shop",
+    "paper": {
+     "text": "PATENT?",
+     "at": "hit"
+    },
+    "cast": [
+     {
+      "who": "Lipperhey",
+      "accessory": "beret",
+      "beard": "short",
+      "robe": "doublet",
+      "x": 0.44,
+      "scale": 0.8,
+      "face": "right",
+      "pose": "idle",
+      "at": "show",
+      "then": "hold",
+      "item": "scope",
+      "y": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_shop",
+   "text": "İki mercek, bir boru, o kadar! Peki patenti aldı mı? Hayır, çünkü alet çok kolay kopyalanıyordu.",
+   "visual": "Yakın plan tezgâh: iki yuvarlak mercek havada süzülüp kısa bir borunun iki ucuna yerleşiyor; 'Hayır'da dilekçenin üstüne kırmızı bir 'RED' mührü basılıyor; 'kopyalanıyordu'da tezgâhta aynı borudan üç, sonra beş tane çoğalıyor.",
+   "title": {
+    "white": "Patent",
+    "gray": "1608"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     980,
+     640
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "source": "Britannica",
+   "cues": {
+    "lens": "mercek",
+    "stamp": "Hayır",
+    "copy": "kopyalanıyordu"
+   },
+   "params": {
+    "mode": "bench",
+    "assemble": "lens",
+    "paper": {
+     "text": "PATENT?",
+     "at": 0,
+     "stamp": "stamp",
+     "stamp_text": "RED"
+    },
+    "copies": {
+     "at": "copy",
+     "n": 5
+    }
+   }
+  },
+  {
+   "type": "gal_a_fair",
+   "text": "Bu borular kısa sürede panayırlarda oyuncak diye satıldı.",
+   "visual": "Kalabalık bir panayır meydanı: çizgili tenteli bir tezgâhta asılı borular, tabelada 'uzağı gör!'; bir çocuk ve bereli bir adam boruyu ters tutup gülerek bakıyor, bir satıcı boruları sallıyor; arkada başka tenteler, bayraklar, çatılar.",
+   "title": {
+    "white": "Panayır",
+    "gray": "1608–1609"
+   },
+   "set": {
+    "name": "city",
+    "ground": 870
+   },
+   "cues": {
+    "hit": "oyuncak"
+   },
+   "params": {
+    "sign": {
+     "text": "uzağı gör!",
+     "at": "hit"
+    },
+    "cast": [
+     {
+      "who": "satıcı",
+      "accessory": "beret",
+      "beard": "black",
+      "robe": "doublet",
+      "x": 0.5,
+      "scale": 0.89,
+      "face": "left",
+      "pose": "hold",
+      "item": "scope"
+     },
+     {
+      "who": "çocuk",
+      "x": 0.13,
+      "scale": 0.64,
+      "face": "right",
+      "pose": "look",
+      "dir": "up",
+      "at": "hit",
+      "then": "shrug",
+      "emotion": "happy"
+     },
+     {
+      "who": "adam",
+      "accessory": "slouch",
+      "x": 0.87,
+      "scale": 0.86,
+      "face": "left",
+      "pose": "look",
+      "dir": "forward",
+      "emotion": "happy"
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_portrait",
+   "text": "O sırada Padova'da Galileo Galilei adında bir hoca vardı. Zeki, inatçı, sivri dilli ve borç içinde.",
+   "visual": "Padova Üniversitesi'nde ahşap kürsülü bir derslik: duvarda yaldızlı oval çerçevede kızıl sakallı genç Galileo'nun mürekkep portresi ve altında pirinç levha 'Galileo Galilei'; 'borç'ta portrenin köşesine iliştirilmiş kırmızı bir borç senedi kâğıdı sallanıyor.",
+   "title": {
+    "white": "Galileo Galilei",
+    "gray": "Padova, 1609"
+   },
+   "set": false,
+   "cues": {
+    "name": "Galileo",
+    "hit": "borç"
+   },
+   "params": {
+    "room": "lecture",
+    "plate": {
+     "text": "Galileo Galilei",
+     "at": "name"
+    },
+    "bill": {
+     "at": "hit",
+     "text": "BORÇ"
+    },
+    "sitter": {
+     "who": "galileo",
+     "age": "young"
+    }
+   }
+  },
+  {
+   "type": "gal_a_desk",
+   "text": "Kız kardeşlerinin çeyiz borçları onun omzundaydı. Ders verdi, pergel sattı, ama para hiç yetmedi.",
+   "visual": "Galileo'nun çalışma odası: mumla aydınlanan masada açık bir hesap defteri, yanında pirinç bir pergel; Galileo masada oturuyor; 'çeyiz'de defterin üstüne iki çeyiz sandığı ve rakam çizgileri beliriyor; 'pergel'de pergeli bir öğrenciye uzatıyor; 'yetmedi'de masadaki altın sikkeler tek tek kayboluyor, Galileo başını ellerine alıyor.",
+   "title": {
+    "white": "Borçlar"
+   },
+   "set": false,
+   "cues": {
+    "dowry": "çeyiz",
+    "sell": "pergel",
+    "hit": "yetmedi"
+   },
+   "params": {
+    "mode": "debts",
+    "dowry": "dowry",
+    "coins": {
+     "n": 6,
+     "vanish": "hit"
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "young",
+     "x": 0.42,
+     "pose": "idle",
+     "face": "right",
+     "seq": [
+      {
+       "at": "sell",
+       "pose": "point",
+       "dir": "forward"
+      },
+      {
+       "at": "hit",
+       "pose": "think",
+       "emotion": "worried"
+      }
+     ],
+     "scale": 0.85
+    },
+    "cast": [
+     {
+      "who": "öğrenci",
+      "x": 0.84,
+      "scale": 0.75,
+      "face": "left",
+      "pose": "idle",
+      "hide_until": "sell"
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_desk",
+   "text": "Ve 1609 yazında kulağına Hollanda'daki o borunun söylentisi geldi…",
+   "visual": "Aynı odada açık pencere, dışarıda yaz günü ve Padova çatıları; pencereden bir mektup uçarak masaya düşüyor, mührü açılıyor, üstünde kısa bir boru çizimi beliriyor; Galileo yerinden doğrulup mektubu eline alıyor, kaşları kalkıyor; sağda Kaşif kulağını eliyle büyütüp dinliyor.",
+   "title": {
+    "white": "Söylenti",
+    "gray": "1609 yazı"
+   },
+   "set": false,
+   "cues": {
+    "letter": "kulağına",
+    "hit": "söylenti",
+    "open": "borunun"
+   },
+   "params": {
+    "mode": "letter",
+    "window": true,
+    "letter": {
+     "at": "letter",
+     "open": "open"
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "young",
+     "x": 0.42,
+     "pose": "idle",
+     "face": "right",
+     "at": "hit",
+     "then": "shock",
+     "emotion": "surprised",
+     "scale": 0.85
+    },
+    "kasif": {
+     "x": 0.84,
+     "y": 0.86,
+     "scale": 0.8,
+     "pose": "think",
+     "face": "left",
+     "at": "hit",
+     "then": "point",
+     "dir": "left",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "chapter": "Venedik'te bir kule",
+   "type": "chapter",
+   "text": "Peki bir matematik hocası bu oyuncaktan ne çıkardı?",
+   "visual": "BÖLÜM 2 / 5 kartı: mavi dairede 2, altında 'Venedik'te bir kule' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "matematik",
+    "title": "oyuncaktan"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Venedik'te bir kule"
+   }
+  },
+  {
+   "type": "gal_a_desk",
+   "text": "Galileo aleti hiç görmemişti, ama nasıl çalıştığını kafasında çözdü ve merceklerini kendisi taşladı.",
+   "visual": "Atölye tezgâhı yakın plan: Galileo'nun elleri pedallı bir taşlama çarkında bir camı bastırıyor, çark dönüyor, cam tozu kıvılcım gibi saçılıyor; 'çözdü'de başının üstünde iki mercek ve kırılan ışık çizgileriyle küçük bir el çizimi şema beliriyor.",
+   "title": {
+    "white": "Atölye"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     860,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   },
+   "cues": {
+    "idea": "çözdü",
+    "grind": "taşladı"
+   },
+   "params": {
+    "mode": "grind",
+    "idea": {
+     "at": "idea"
+    },
+    "wheel": {
+     "at": 0,
+     "fast": "grind"
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "young",
+     "x": 0.42,
+     "pose": "point",
+     "face": "right",
+     "dir": -20,
+     "scale": 0.85
+    }
+   }
+  },
+  {
+   "type": "gal_a_desk",
+   "text": "İlk borusu üç kat büyütüyordu, sonra sekiz kat. Ve şimdi işin kurnaz kısmına geliyoruz.",
+   "visual": "Masada uzun bir boru; önünde yuvarlak bir büyüteç dairesinde uzaktaki bir çan kulesi önce küçük ('3x'), 'sekiz'de büyüyor ('8x', kırmızı); sağda Kaşif 'kurnaz'da göz kırpıp işaret parmağını kaldırıyor.",
+   "title": {
+    "white": "Büyütme",
+    "gray": "3x, sonra 8x"
+   },
+   "set": false,
+   "source": "Museo Galileo",
+   "cues": {
+    "x3": "üç",
+    "x8": "sekiz",
+    "hit": "kurnaz"
+   },
+   "params": {
+    "mode": "power",
+    "steps": [
+     {
+      "text": "3x",
+      "at": "x3",
+      "zoom": 1
+     },
+     {
+      "text": "8x",
+      "at": "x8",
+      "zoom": 2.4,
+      "color": "red"
+     }
+    ],
+    "kasif": {
+     "x": 0.52,
+     "y": 0.86,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": "left",
+     "at": "hit",
+     "then": "point",
+     "dir": "up",
+     "emotion": "happy"
+    }
+   }
+  },
+  {
+   "type": "gal_a_tower",
+   "text": "Galileo onu bilim aracı değil, silah olarak sundu. Ağustos 1609'da Venedik'in ileri gelenlerini San Marco çan kulesine çıkardı.",
+   "visual": "Venedik, gün ışığı: lagün kıyısında yüksek tuğla San Marco çan kulesi (yeşil piramit çatı, tepede altın melek) kendini aşağıdan yukarı çiziyor; yanında kemerli saray ve kubbeler; kırmızı cüppeli senatörler ve Galileo kulenin dibinden merdivene doğru yürüyor; 'kulesine'de kamera kulenin tepesine tırmanıyor.",
+   "title": {
+    "white": "Venedik",
+    "gray": "Ağustos 1609"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 880,
+    "horizon": 700
+   },
+   "cues": {
+    "weapon": "silah",
+    "tower": "kulesine"
+   },
+   "params": {
+    "mode": "wide",
+    "tower": {
+     "x": 0.62,
+     "h": 760,
+     "build": 0
+    },
+    "pan": "tower",
+    "cast": [
+     {
+      "who": "galileo",
+      "age": "young",
+      "x": 0.3,
+      "scale": 0.5,
+      "face": "right",
+      "pose": "hold",
+      "item": "scope",
+      "moves": [
+       {
+        "at": "weapon",
+        "to": 0.5,
+        "dur": 2.4
+       }
+      ]
+     },
+     {
+      "who": "senatör1",
+      "robe": "senator",
+      "beard": "grey",
+      "x": 0.18,
+      "scale": 0.5,
+      "face": "right",
+      "moves": [
+       {
+        "at": "weapon",
+        "to": 0.4,
+        "dur": 2.6
+       }
+      ]
+     },
+     {
+      "who": "senatör2",
+      "robe": "senator",
+      "beard": "black",
+      "x": 0.08,
+      "scale": 0.5,
+      "face": "right",
+      "moves": [
+       {
+        "at": "weapon",
+        "to": 0.32,
+        "dur": 2.8
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_lens",
+   "text": "Galileo'ya göre bu boruyla düşman gemisi, çıplak gözden iki saat önce görülürdü.",
+   "visual": "Bölünmüş görüntü: solda küçük dairede 'çıplak göz' ile ufukta minicik bir nokta; sağda pirinç halkalı büyük teleskop dairesinde aynı ufukta üç direkli bir gemi net ve büyük, dalgalarda sallanıyor; 'iki saat'te altında kırmızı '2 saat önce' etiketi.",
+   "title": {
+    "white": "Lagün"
+   },
+   "set": false,
+   "source": "Oxford Bilim Tarihi Müzesi",
+   "cues": {
+    "ship": "düşman",
+    "hit": "saat"
+   },
+   "params": {
+    "lens": {
+     "x": 0.6,
+     "y": 0.47,
+     "r": 0.4
+    },
+    "view": "ship",
+    "ship": {
+     "at": "ship",
+     "s": 0.9,
+     "flag": "red"
+    },
+    "naked": {
+     "x": 0.17,
+     "y": 0.32,
+     "r": 0.15,
+     "text": "çıplak göz"
+    },
+    "labels": [
+     {
+      "text": "2 saat önce",
+      "x": 0.17,
+      "y": 0.78,
+      "at": "hit",
+      "color": "red",
+      "size": 64,
+      "font": "serif"
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_tower",
+   "text": "Bir deniz şehri için bundan değerli ne olabilirdi ki? Ödül hemen geldi: yılda bin florin maaş ve ömür boyu kürsü.",
+   "visual": "Yakın plan kulenin tepesindeki kemerli çan katı: senatörler sırayla boruya eğilip denize bakıyor, biri şaşkınlıkla geri çekiliyor; 'Ödül'de Galileo'nun önüne altın keseler düşüyor, üstünde '1000 florin' etiketi, yanında mühürlü 'ömür boyu' belgesi.",
+   "title": {
+    "white": "Ödül",
+    "gray": "San Marco kulesi"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     600
+    ],
+    "zoom": 1.35,
+    "move": "right"
+   },
+   "source": "Museo Galileo",
+   "cues": {
+    "look": "deniz",
+    "reward": "Ödül",
+    "hit": "florin"
+   },
+   "params": {
+    "mode": "top",
+    "tower": {
+     "x": 0.62,
+     "h": 760
+    },
+    "reward": {
+     "at": "reward",
+     "text": "1000 florin",
+     "seal": "ömür boyu",
+     "seal_at": "hit"
+    },
+    "cast": [
+     {
+      "who": "galileo",
+      "age": "young",
+      "x": 0.26,
+      "scale": 0.6,
+      "face": "right",
+      "pose": "point",
+      "dir": "forward",
+      "at": "reward",
+      "then": "wave",
+      "emotion": "happy"
+     },
+     {
+      "who": "senatör1",
+      "robe": "senator",
+      "beard": "grey",
+      "x": 0.47,
+      "scale": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "at": "look",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "senatör2",
+      "robe": "senator",
+      "cap": "doge",
+      "beard": "grey",
+      "x": 0.74,
+      "scale": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "at": "reward",
+      "then": "point",
+      "dir": "left"
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_garden",
+   "text": "Ama Galileo durmadı. Yirmi kat büyüten bir boru yaptı ve onu denize değil, gökyüzüne çevirdi.",
+   "visual": "Alacakaranlık, Padova taraçası: Galileo yeni, daha uzun bir boruyu sehpaya koyuyor; '20x' etiketi beliriyor; 'denize'de boru ufka bakıyor, 'gökyüzüne'de yavaşça yukarı dönüp yükselen Ay'a kilitleniyor; yıldızlar tek tek yanıyor.",
+   "title": {
+    "white": "20x",
+    "gray": "1609 sonbaharı"
+   },
+   "set": false,
+   "cues": {
+    "power": "Yirmi",
+    "sea": "denize",
+    "sky": "gökyüzüne"
+   },
+   "params": {
+    "mode": "swing",
+    "ground": 0.8,
+    "roofs": {
+     "kind": "padua",
+     "lights": 0.2
+    },
+    "dusk": true,
+    "moon": {
+     "x": 0.82,
+     "y": 0.22,
+     "r": 120,
+     "term": 0.1,
+     "rough": 0.5,
+     "rise": "sky"
+    },
+    "scope": {
+     "x": 0.46,
+     "ang0": 0,
+     "ang": -36,
+     "at": "sky",
+     "tripod": true,
+     "len": 620
+    },
+    "badge": {
+     "text": "20x",
+     "at": "power"
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "young",
+     "x": 0.38,
+     "scale": 0.66,
+     "face": "right",
+     "pose": "idle",
+     "at": "sky",
+     "then": "point",
+     "dir": 40
+    }
+   }
+  },
+  {
+   "type": "gal_a_sheet",
+   "text": "Size bir sır vereyim: Galileo Ay'a teleskopla bakan ilk insan değildi! İngiliz Thomas Harriot, Ay'ı 26 Temmuz 1609'da çizmişti.",
+   "visual": "Masada yıpranmış eski bir kâğıt: üstünde kaba, el çizimi bir hilal Ay ve tırtıklı bir sınır çizgisi kendini çiziyor (Harriot'un gerçek 1609 çiziminin mürekkep kopyası), köşede '26 Temmuz 1609' notu ve 'Th. Harriot' imzası; solda Kaşif parmağını dudağına götürüp 'sır' işareti yapıyor, 'değildi'de şaşkın.",
+   "title": {
+    "white": "Thomas Harriot",
+    "gray": "İngiltere, 1609"
+   },
+   "set": false,
+   "source": "Linda Hall Kütüphanesi",
+   "cues": {
+    "secret": "sır",
+    "hit": "değildi",
+    "draw": "Harriot",
+    "date": "Temmuz"
+   },
+   "params": {
+    "mode": "harriot",
+    "draw": "draw",
+    "date": {
+     "text": "26 Temmuz 1609",
+     "at": "date"
+    },
+    "sign": "Th. Harriot",
+    "kasif": {
+     "x": 0.14,
+     "y": 0.86,
+     "scale": 0.8,
+     "pose": "talk",
+     "face": "right",
+     "at": "hit",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "type": "gal_a_desk",
+   "text": "Ama Harriot çizimini hiç yayımlamadı. Peki Galileo, onun kaçırdığı neyi gördü?",
+   "visual": "İngiliz bir çalışma odası: kolalı beyaz yakalı Harriot Ay çizimini bir çekmeceye koyuyor, çekmece kapanıyor, üstüne toz çizgileri iniyor; 'Galileo'da sağdaki pencereden kraterli Ay görünüyor; Kaşif omuz silkip 'neyi'de pencereyi, Ay'ı işaret ediyor.",
+   "title": {
+    "white": "Çekmecede",
+    "gray": "Thomas Harriot"
+   },
+   "set": false,
+   "cues": {
+    "shut": "yayımlamadı",
+    "q": "neyi"
+   },
+   "params": {
+    "mode": "drawer",
+    "drawer": {
+     "at": "shut"
+    },
+    "window": true,
+    "moon_window": {
+     "at": "q"
+    },
+    "cast": [
+     {
+      "who": "Harriot",
+      "robe": "doublet",
+      "beard": "short",
+      "x": 0.36,
+      "scale": 0.8,
+      "face": "right",
+      "pose": "hold",
+      "item": "paper",
+      "at": "shut",
+      "then": "idle"
+     }
+    ],
+    "kasif": {
+     "x": 0.62,
+     "y": 0.86,
+     "scale": 0.8,
+     "pose": "shrug",
+     "face": "right",
+     "at": "q",
+     "then": "point",
+     "dir": "up",
+     "emotion": "surprised"
+    }
+   }
+  },
+  {
+   "chapter": "Ay'ın gerçek yüzü",
+   "type": "chapter",
+   "text": "Bakın, işin sırrı Ay'da aydınlıkla karanlığın buluştuğu sınırdaydı.",
+   "visual": "BÖLÜM 3 / 5 kartı: mavi dairede 3, altında 'Ay'ın gerçek yüzü' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "sırrı",
+    "title": "sınırdaydı"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Ay'ın gerçek yüzü"
+   }
+  },
+  {
+   "type": "gal_b_moon",
+   "text": "Galileo karanlık tarafta minik ışık noktaları gördü.",
+   "visual": "Kadrajı dolduran dev yarım Ay (sağ yarısı aydınlık, kraterli; sol yarısı koyu); aydınlık-karanlık sınırının hemen solunda, karanlık tarafta minik altın ışık noktaları tek tek yanıyor; el yazısı not 'ışık noktaları' bir okla.",
+   "title": {
+    "white": "Sınır çizgisi"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "dots": "minik",
+    "note": "noktaları"
+   },
+   "params": {
+    "mode": "dots",
+    "moon": {
+     "x": 0.55,
+     "y": 0.5,
+     "r": 470,
+     "term": 0.0
+    },
+    "dots": {
+     "at": "dots",
+     "dur": 1.6
+    },
+    "labels": [
+     {
+      "text": "ışık noktaları",
+      "x": 0.36,
+      "y": 0.31,
+      "at": "note",
+      "size": 64,
+      "arrow": [
+       0.505,
+       0.44
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_b_moon",
+   "text": "Saatler geçtikçe bu noktalar büyüdü ve aydınlığa katıldı.",
+   "visual": "Aynı dev Ay: köşede kum saati dönüyor; ışık noktaları büyüyüp sınıra doğru kayıyor ve aydınlık tarafla birleşiyor, sınır çizgisi tırtıklı hale geliyor.",
+   "title": {
+    "white": "Saatler sonra"
+   },
+   "set": false,
+   "cues": {
+    "hours": "Saatler",
+    "merge": "katıldı"
+   },
+   "params": {
+    "mode": "grow",
+    "moon": {
+     "x": 0.55,
+     "y": 0.5,
+     "r": 470,
+     "term": 0.0
+    },
+    "grow": {
+     "at": "hours",
+     "dur": 3.0
+    },
+    "hourglass": {
+     "x": 0.14,
+     "y": 0.66,
+     "at": "hours",
+     "size": 1.5
+    }
+   }
+  },
+  {
+   "type": "gal_b_sunrise",
+   "text": "Dünya'da da sabah güneşi önce dağların tepesine vurur. Yani bunlar dağlardı!",
+   "visual": "Şafak, dağlık bir vadi: ufukta güneş doğuyor; yüksek sivri dağların tepeleri altın ışıkla yanıyor, vadi ve yamaçlar hâlâ koyu gölgede; ışık yavaş yavaş aşağı iniyor; vadide Kaşif 'tepesine'de yanan zirveyi işaret ediyor, 'dağlardı'da yukarıya, sağ üstteki küçük yarım Ay'a dönüp parmağını kaldırıyor.",
+   "title": {
+    "white": "Şafak",
+    "gray": "Dünya'da da"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 880,
+    "horizon": 620
+   },
+   "cues": {
+    "peak": "tepesine",
+    "hit": "dağlardı"
+   },
+   "params": {
+    "peaks": [
+     {
+      "x": 0.3,
+      "h": 0.5
+     },
+     {
+      "x": 0.55,
+      "h": 0.62
+     },
+     {
+      "x": 0.8,
+      "h": 0.45
+     }
+    ],
+    "sun": {
+     "x": 0.08,
+     "y": 0.6,
+     "at": 0
+    },
+    "light": {
+     "at": "peak",
+     "dur": 3.5
+    },
+    "moon": {
+     "x": 0.88,
+     "y": 0.16,
+     "r": 70,
+     "at": "hit"
+    },
+    "kasif": {
+     "x": 0.64,
+     "y": 0.86,
+     "scale": 0.95,
+     "pose": "idle",
+     "face": "left",
+     "seq": [
+      {
+       "at": "peak",
+       "pose": "point",
+       "dir": "up",
+       "face": "left"
+      },
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "up",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "type": "gal_b_moon",
+   "text": "Galileo gölgelerden bu dağların yüksekliğini bile hesapladı.",
+   "visual": "Yakın plan Ay'ın kenarındaki bir dağ: güneş ışını dağın tepesine teğet vuruyor, uzun bir gölge düşüyor; ışın, gölge ve dağ kendini çizen mürekkep bir dik üçgene dönüşüyor; dağın yanında yükseklik oku büyüyor, 'yüksekliğini'de soru işareti yerine kırmızı bir ölçü çizgisi.",
+   "title": {
+    "white": "Hesap"
+   },
+   "set": false,
+   "source": "Sidereus Nuncius, 1610",
+   "cues": {
+    "ray": "gölgelerden",
+    "hit": "yüksekliğini"
+   },
+   "params": {
+    "mode": "shadow",
+    "moon": {
+     "x": 0.5,
+     "y": 2.6,
+     "r": 2400,
+     "term": -0.25
+    },
+    "ray": {
+     "at": "ray"
+    },
+    "measure": {
+     "at": "hit"
+    },
+    "peak": {
+     "x": 0.62,
+     "h": 220,
+     "len": 0.3
+    }
+   }
+  },
+  {
+   "type": "gal_a_sheet",
+   "text": "Ay, bizimki gibi taşlı, engebeli bir dünyaydı.",
+   "visual": "Açık eski bir kitabın iki sayfası: Galileo'nun Yıldız Habercisi'ndeki gerçek Ay çizimlerinin mürekkep-yıkama kopyaları (farklı evrelerde kraterli Ay, büyük yuvarlak bir krater) sırayla beliriyor; sayfa kenarında Latince 'SIDEREUS NUNCIUS' başlığı.",
+   "title": {
+    "white": "Yıldız Habercisi",
+    "gray": "1610"
+   },
+   "set": false,
+   "camera": {
+    "move": "push"
+   },
+   "cues": {
+    "hit": "engebeli"
+   },
+   "params": {
+    "mode": "plates",
+    "plates": [
+     {
+      "term": -0.3,
+      "at": 0.2
+     },
+     {
+      "term": 0.25,
+      "at": "hit"
+     }
+    ],
+    "heading": "SIDEREUS NUNCIUS"
+   }
+  },
+  {
+   "type": "gal_a_lens",
+   "text": "Ama asıl şok birkaç hafta sonra geldi. 7 Ocak 1610 gecesi Galileo, Jüpiter'in yanında üç küçük yıldız gördü.",
+   "visual": "Pirinç halkalı teleskop görüntüsü, koyu gece: ortada çizgili parlak Jüpiter diski; 'üç'te aynı hizada üç küçük yıldız tek tek beliriyor (ikisi solda, biri sağda); altta el yazısı '7 Ocak 1610'.",
+   "title": {
+    "white": "Jüpiter",
+    "gray": "7 Ocak 1610"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     500
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   },
+   "cues": {
+    "date": "Ocak",
+    "s1": "üç",
+    "s2": "küçük",
+    "s3": "yıldız"
+   },
+   "params": {
+    "lens": {
+     "x": 0.5,
+     "y": 0.47,
+     "r": 0.4
+    },
+    "view": "jupiter",
+    "jupiter": {
+     "r": 50,
+     "moons": [
+      {
+       "dx": -230,
+       "at": "s1"
+      },
+      {
+       "dx": -120,
+       "at": "s2"
+      },
+      {
+       "dx": 160,
+       "at": "s3"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "7 Ocak 1610",
+      "x": 0.5,
+      "y": 0.26,
+      "at": "date",
+      "color": "gold",
+      "size": 62
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_a_sheet",
+   "text": "Ertesi gece yıldızlar yer değiştirmişti. Sonra bir dördüncüsü çıktı. Bu yıldızlar Jüpiter'in etrafında dönüyordu!",
+   "visual": "Eski bir defter sayfası (Galileo'nun Ocak 1610 gözlem notlarının mürekkep kopyası): her satırda bir gece, ortada Jüpiter dairesi ve yanında yıldızlar; satırlar tek tek yazılıyor, yıldızların yeri her satırda değişiyor; 'dördüncüsü'nde bir satırda dört yıldız, kırmızı halkayla; 'dönüyordu'da sayfanın kenarında kesikli bir yörünge oku dönüyor.",
+   "title": {
+    "white": "Gözlem notları",
+    "gray": "Ocak 1610"
+   },
+   "set": false,
+   "source": "Galileo'nun defteri",
+   "cues": {
+    "next": "Ertesi",
+    "four": "dördüncüsü",
+    "hit": "dönüyordu"
+   },
+   "params": {
+    "mode": "log",
+    "rows": [
+     {
+      "date": "7",
+      "moons": [
+       -2,
+       -1,
+       1
+      ],
+      "at": 0.2
+     },
+     {
+      "date": "8",
+      "moons": [
+       1,
+       2,
+       3
+      ],
+      "at": "next"
+     },
+     {
+      "date": "10",
+      "moons": [
+       -2,
+       -1
+      ],
+      "at": 1.6
+     },
+     {
+      "date": "13",
+      "moons": [
+       -1,
+       1,
+       2,
+       3
+      ],
+      "at": "four",
+      "ring": true
+     }
+    ],
+    "orbit": {
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "gal_b_sky",
+   "text": "Yani gökyüzündeki her şey Dünya'nın etrafında dönmüyordu.",
+   "visual": "Kadrajı dolduran gök diyagramı: solda küçük mavi Dünya ve onun etrafında dönen her şeyi gösteren eski çember yörüngeler; sağda büyük Jüpiter etrafında dört uydu kesikli yörüngelerde dönüyor; 'dönmüyordu'da Dünya'nın çemberlerinden biri kırmızı kırılıyor; ortada Kaşif şaşkınlıkla iki sistemin arasında, şapkasını tutarak geri sıçrıyor.",
+   "title": {
+    "white": "Dört uydu"
+   },
+   "set": false,
+   "cues": {
+    "hit": "dönmüyordu"
+   },
+   "params": {
+    "mode": "jupiter",
+    "earth": {
+     "x": 0.2,
+     "y": 0.45
+    },
+    "jupiter": {
+     "x": 0.72,
+     "y": 0.45,
+     "r": 70,
+     "orbits": 4
+    },
+    "break": "hit",
+    "kasif": {
+     "x": 0.47,
+     "y": 0.86,
+     "scale": 0.92,
+     "pose": "point",
+     "dir": "right",
+     "face": "right",
+     "at": "hit",
+     "then": "shock",
+     "emotion": "surprised"
+    },
+    "labels": [
+     {
+      "text": "Dünya",
+      "x": 0.2,
+      "y": 0.712,
+      "at": 0.6,
+      "size": 54,
+      "underline": false
+     },
+     {
+      "text": "Jüpiter",
+      "x": 0.72,
+      "y": 0.66,
+      "at": 1.0,
+      "size": 54,
+      "underline": false
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_b_book",
+   "text": "Mart 1610'da hepsini Yıldız Habercisi adlı ince bir kitapta yayımladı ve uydulara Floransa'nın hükümdar ailesinin adını verdi: Medici Yıldızları.",
+   "visual": "Bir matbaa: ahşap baskı presi iniyor, kalkıyor; ince bir kitap açılıyor, kapağında 'SIDEREUS NUNCIUS' ve 'Venedik 1610'; 'Medici'de sayfadan dört altın yıldız havalanıp Medici armasının (altın kalkan üstünde toplar) çevresinde dönüyor, altında 'Medici Yıldızları' yazısı.",
+   "title": {
+    "white": "Yıldız Habercisi",
+    "gray": "Mart 1610"
+   },
+   "set": false,
+   "source": "Britannica",
+   "cues": {
+    "press": "Mart",
+    "book": "kitapta",
+    "hit": "Medici"
+   },
+   "params": {
+    "mode": "sidereus",
+    "press": {
+     "at": "press"
+    },
+    "book": {
+     "at": "book",
+     "title": "SIDEREUS NUNCIUS",
+     "sub": "1610"
+    },
+    "medici": {
+     "at": "hit",
+     "label": "Medici Yıldızları"
+    }
+   }
+  },
+  {
+   "type": "gal_b_hall",
+   "text": "Hamle tuttu: Floransa sarayının baş matematikçisi oldu. Ama şöhret, beraberinde güçlü düşmanlar da getirecekti.",
+   "visual": "Floransa sarayında yüksek tavanlı bir salon: taçlı, mavi pelerinli Büyük Dük Galileo'ya mühürlü bir belge uzatıyor, Galileo eğiliyor; 'düşmanlar'da arka planda sütunların arkasında kırmızı şapkalı iki din adamı belirip birbirine fısıldıyor, salon gölgeleniyor.",
+   "title": {
+    "white": "Floransa",
+    "gray": "1610"
+   },
+   "set": false,
+   "cues": {
+    "bow": "Hamle",
+    "hit": "düşmanlar"
+   },
+   "params": {
+    "room": "palace",
+    "shade": {
+     "at": "hit"
+    },
+    "cast": [
+     {
+      "who": "galileo",
+      "age": "young",
+      "x": 0.38,
+      "scale": 0.62,
+      "face": "right",
+      "pose": "idle",
+      "bow": "bow",
+      "at": "hit",
+      "then": "look",
+      "dir": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "Dük",
+      "accessory": "crown",
+      "robe": "duke",
+      "x": 0.62,
+      "scale": 0.64,
+      "face": "left",
+      "pose": "hold",
+      "item": "paper"
+     },
+     {
+      "who": "rahip1",
+      "robe": "cardinal",
+      "cap": "biretta",
+      "x": 0.12,
+      "scale": 0.5,
+      "face": "right",
+      "pose": "idle",
+      "hide_until": "hit"
+     },
+     {
+      "who": "rahip2",
+      "robe": "cardinal",
+      "cap": "zucchetto",
+      "x": 0.2,
+      "scale": 0.5,
+      "face": "left",
+      "pose": "talk",
+      "hide_until": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "chapter": "Venüs ve Roma",
+   "type": "chapter",
+   "text": "Peki bir teleskop, bir adamı nasıl mahkemeye kadar götürdü? Cevap Venüs'teydi.",
+   "visual": "BÖLÜM 4 / 5 kartı: mavi dairede 4, altında 'Venüs ve Roma' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "teleskop",
+    "title": "Venüs'teydi"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Venüs ve Roma"
+   }
+  },
+  {
+   "type": "gal_b_sky",
+   "text": "Galileo, Venüs'ün de tıpkı Ay gibi hilalden dolunaya döndüğünü gördü. Bu ancak Venüs, Güneş'in etrafında dönüyorsa mümkündü.",
+   "visual": "Kadrajı dolduran diyagram: üstte bir sıra Venüs evresi soldan sağa çiziliyor (büyük ince hilal → yarım → küçük dolunay); 'Güneş'te sıra aşağı kayıp ortada altın Güneş, onun etrafındaki çemberde dönen Venüs ve dışarıda mavi Dünya'dan Venüs'e bakan kesikli bir çizgiye dönüşüyor; Venüs döndükçe evresi değişiyor.",
+   "title": {
+    "white": "Venüs'ün evreleri"
+   },
+   "set": false,
+   "source": "Britannica",
+   "cues": {
+    "phases": "hilalden",
+    "orbit": "Güneş'in"
+   },
+   "params": {
+    "mode": "venus",
+    "phases": {
+     "at": "phases",
+     "n": 5
+    },
+    "orbit": {
+     "at": "orbit"
+    }
+   }
+  },
+  {
+   "type": "gal_b_sky",
+   "text": "Yani Kopernik haklıydı ve Dünya evrenin merkezi değildi. Sorun şu ki o çağda bu bir inanç meselesiydi.",
+   "visual": "Büyük bir mürekkep orrery: ortadaki Dünya 'merkezi'nde yerinden kayıp Güneş'in etrafındaki yörüngesine oturuyor, Güneş ortada parlıyor; el yazısı 'Kopernik'; 'inanç'ta kadrajın arkasına koyu bir kilise kubbesi silueti yükseliyor ve diyagramın üstüne gölgesi düşüyor.",
+   "title": {
+    "white": "Kopernik",
+    "gray": "Güneş merkezde"
+   },
+   "set": false,
+   "cues": {
+    "name": "Kopernik",
+    "move": "merkezi",
+    "hit": "inanç"
+   },
+   "params": {
+    "mode": "helio",
+    "label": {
+     "text": "Kopernik",
+     "at": "name"
+    },
+    "move": "move",
+    "dome": {
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "gal_b_hall",
+   "text": "1616'da Kardinal Bellarmino, Galileo'ya bu fikri savunmamasını emretti. Galileo yıllarca sustu… ta ki 1632'ye kadar.",
+   "visual": "Roma'da loş bir oda: kırmızı cüppeli, kırmızı şapkalı Kardinal Bellarmino parmağını sallıyor; karşısında Galileo başını eğiyor; 'sustu'da duvardaki takvim yaprakları hızla akıyor (1616 → 1632); '1632'de Galileo'nun elinde yeni bir kitap beliriyor ve başını kaldırıyor.",
+   "title": {
+    "white": "Roma",
+    "gray": "1616"
+   },
+   "set": false,
+   "source": "Famous Trials",
+   "cues": {
+    "warn": "emretti",
+    "quiet": "sustu",
+    "hit": "1632'ye"
+   },
+   "params": {
+    "room": "office",
+    "calendar": {
+     "from": 1616,
+     "to": 1632,
+     "at": "quiet",
+     "end": "hit"
+    },
+    "cast": [
+     {
+      "who": "Bellarmino",
+      "robe": "cardinal",
+      "cap": "biretta",
+      "beard": "short",
+      "x": 0.66,
+      "scale": 0.64,
+      "face": "left",
+      "pose": "talk",
+      "at": "warn",
+      "then": "point",
+      "dir": "left",
+      "emotion": "angry"
+     },
+     {
+      "who": "galileo",
+      "age": "young",
+      "x": 0.34,
+      "scale": 0.62,
+      "face": "right",
+      "pose": "idle",
+      "bow": "warn",
+      "at": "hit",
+      "then": "hold",
+      "item": "book",
+      "unbow": "hit"
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_b_book",
+   "text": "O yıl yayımladığı Diyalog kitabı tarafsız görünüyordu, ama herkes kimin kazandığını anladı.",
+   "visual": "Masada açık büyük bir kitap: 'DİYALOG, 1632'; sayfalarda iki çöp adam tartışıyor, biri Dünya merkezli çemberi, diğeri Güneş merkezli çemberi tutuyor; 'kazandığını'da kitabın üstündeki terazi Güneş merkezli tarafa ağır basıyor, diğer taraf havaya fırlıyor.",
+   "title": {
+    "white": "Diyalog",
+    "gray": "1632"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "debate": "tarafsız",
+    "hit": "kazandığını"
+   },
+   "params": {
+    "mode": "dialogue",
+    "book": {
+     "title": "DİYALOG",
+     "sub": "1632"
+    },
+    "debate": {
+     "at": "debate"
+    },
+    "scale": {
+     "at": "hit"
+    }
+   }
+  },
+  {
+   "type": "gal_b_road",
+   "text": "Roma öfkelendi. Yetmişine yaklaşmış, hasta Galileo Roma'ya çağrıldı ve defalarca sorgulandı.",
+   "visual": "Kış, Toskana tepeleri: çamurlu bir yolda bir at arabası Roma'ya doğru ağır ağır ilerliyor, içinde bastonlu, gri sakallı yaşlı Galileo öksürüyor; ufukta Roma'nın kubbeleri; 'sorgulandı'da yol bir sorgu odasına dönüşür gibi üstüne soru işaretleri yağıyor.",
+   "title": {
+    "white": "Roma'ya",
+    "gray": "1633 kışı"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 860,
+    "horizon": 600
+   },
+   "cues": {
+    "anger": "öfkelendi",
+    "hit": "sorgulandı"
+   },
+   "params": {
+    "cart": {
+     "from": 0.1,
+     "to": 0.62,
+     "at": 0,
+     "dur": 6
+    },
+    "rome": {
+     "x": 0.86,
+     "at": "anger"
+    },
+    "questions": {
+     "at": "hit",
+     "n": 6,
+     "lead": 0.9
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "old",
+     "cane": true,
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "gal_b_hall",
+   "text": "Ve 22 Haziran 1633'te, kardinallerin önünde diz çöktü. Dünya'nın döndüğü fikrini lanetlediğini yüksek sesle okudu.",
+   "visual": "Minerva manastırının taş kemerli salonu: yüksek masanın arkasında sıra sıra kırmızı şapkalı kardinaller; önde beyaz tövbe gömlekli, gri sakallı yaşlı Galileo 'diz'de dizlerinin üstüne çöküyor, elindeki kâğıdı okuyor; yakın plan yüzü; kâğıdın üstünde 'ABIURO' (vazgeçiyorum) yazısı.",
+   "title": {
+    "white": "Diz çöktü",
+    "gray": "22 Haziran 1633"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     800,
+     590
+    ],
+    "zoom": 1.55,
+    "move": "push"
+   },
+   "source": "Museo Galileo",
+   "cues": {
+    "kneel": "diz",
+    "read": "lanetlediğini"
+   },
+   "params": {
+    "room": "trial",
+    "judges": 7,
+    "paper": {
+     "text": "ABIURO",
+     "at": "read"
+    },
+    "cast": [
+     {
+      "who": "galileo",
+      "age": "old",
+      "robe": "penitent",
+      "x": 0.4,
+      "scale": 0.66,
+      "face": "right",
+      "pose": "hold",
+      "item": "paper",
+      "kneel": "kneel",
+      "emotion": "worried",
+      "y": 0.74
+     }
+    ]
+   }
+  },
+  {
+   "type": "gal_b_hall",
+   "text": "Belki duymuşsunuzdur: ayağa kalkarken \"Yine de dönüyor!\" diye mırıldanmış. Bu büyük olasılıkla bir efsane.",
+   "visual": "Aynı salon, geniş plan: Galileo ayağa kalkıyor, yanında bir konuşma balonunda 'Yine de dönüyor!'; 'efsane'de balonun üstüne kırmızı 'EFSANE?' damgası basılıyor; sağda Kaşif omuz silkip başını sallıyor.",
+   "title": {
+    "white": "Efsane mi?"
+   },
+   "set": false,
+   "source": "Scientific American",
+   "cues": {
+    "say": "dönüyor",
+    "hit": "efsane"
+   },
+   "params": {
+    "room": "trial",
+    "judges": 7,
+    "bubble": {
+     "text": "Yine de dönüyor!",
+     "at": "say",
+     "stamp": "EFSANE?",
+     "stamp_at": "hit"
+    },
+    "cast": [
+     {
+      "who": "galileo",
+      "age": "old",
+      "robe": "penitent",
+      "x": 0.36,
+      "scale": 0.62,
+      "face": "right",
+      "pose": "idle",
+      "kneel": true,
+      "rise": 0.5
+     }
+    ],
+    "kasif": {
+     "x": 0.84,
+     "y": 0.86,
+     "scale": 0.62,
+     "pose": "talk",
+     "face": "left",
+     "at": "hit",
+     "then": "shrug",
+     "emotion": "worried"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "Gerçek çok daha sessizdi… ve çok daha acı.",
+   "visual": "Dev Fraunces yazı kelime kelime: 'Gerçek daha acıydı', 'acıydı' kırmızı kutuda; el yazısı not '1633'.",
+   "title": {},
+   "cues": {
+    "w0": "Gerçek",
+    "note": "acı"
+   },
+   "params": {
+    "lines": [
+     "Gerçek",
+     "daha acıydı"
+    ],
+    "highlight": [
+     "acıydı"
+    ],
+    "note": {
+     "text": "1633",
+     "at": "note"
+    }
+   }
+  },
+  {
+   "chapter": "Dört yüz yıl sonra",
+   "type": "chapter",
+   "text": "Peki Galileo'ya sonra ne oldu?",
+   "visual": "BÖLÜM 5 / 5 kartı: mavi dairede 5, altında 'Dört yüz yıl sonra' ve el çizimi alt çizgi.",
+   "title": {},
+   "cues": {
+    "n": "Galileo'ya",
+    "title": "sonra"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "Dört yüz yıl sonra"
+   }
+  },
+  {
+   "type": "gal_b_villa",
+   "text": "Galileo ömrünün geri kalanını Floransa yakınlarındaki Arcetri'de, kendi evinde gözaltında geçirdi. 1638'de, gökyüzüne herkesten önce bakan o gözler tamamen kör oldu.",
+   "visual": "Gece, Arcetri'deki taş villanın penceresi (içeriden): yaşlı Galileo pencerenin önünde sandalyede oturuyor, gözleri kapalı; pencerede parlayan Ay 'kör'de yavaşça bulanıklaşıp mürekkep lekesi gibi sönüyor; duvara yaslanmış eski teleskop.",
+   "title": {
+    "white": "Arcetri",
+    "gray": "1638"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     930,
+     540
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   },
+   "cues": {
+    "hit": "kör"
+   },
+   "params": {
+    "mode": "blind",
+    "fade": {
+     "at": "hit",
+     "dur": 1.3
+    },
+    "galileo": {
+     "who": "galileo",
+     "age": "old",
+     "pose": "sit",
+     "face": "right"
+    },
+    "guard": true
+   }
+  },
+  {
+   "type": "gal_b_villa",
+   "text": "Galileo 8 Ocak 1642'de, hâlâ bir mahkûm olarak öldü. İşte açılıştaki sorunun cevabı: Ay'ı gördüğü için değil, gördüğünü söylemekten vazgeçmediği için.",
+   "visual": "Aynı oda, geniş plan: boş sandalye, sönmüş mum, pencerede Ay; kapıda bir nöbetçi gölgesi; 'cevabı'nda Kaşif içeri yürüyüp duvardaki teleskobu eline alıyor, 'söylemekten'de onu pencereden Ay'a doğrultuyor.",
+   "title": {
+    "white": "Arcetri",
+    "gray": "8 Ocak 1642"
+   },
+   "set": false,
+   "source": "Britannica",
+   "cues": {
+    "walk": "cevabı",
+    "hit": "söylemekten"
+   },
+   "params": {
+    "mode": "empty",
+    "candle": {
+     "out": 0.3
+    },
+    "guard": true,
+    "kasif": {
+     "x": 0.12,
+     "y": 0.86,
+     "scale": 0.64,
+     "pose": "walk",
+     "face": "right",
+     "moves": [
+      {
+       "at": "walk",
+       "to": 0.41,
+       "dur": 1.8
+      }
+     ],
+     "emotion": "worried"
+    },
+    "aim": "hit"
+   }
+  },
+  {
+   "type": "gal_a_arc",
+   "text": "Ama hikâye orada bitmedi. 1992'de Papa İkinci Jean Paul, Galileo davasında hata yapıldığını kabul etti. Tam üç yüz elli dokuz yıl sonra!",
+   "visual": "Taş duvarlı bir salon: solda kürsüde açık bir dava defteri ve '1633 Dava' yazısı, sağda kürsüde mühürlü bir belge ve '1992 Hata kabul edildi'; aralarında duvarı boydan boya geçen dev kesikli bir yay çiziliyor, yayın üstünde ilerleyen ışık noktasının yanında yıl sayacı 1633'ten 1992'ye akıyor; 'üç'te ortada kırmızı kutuda dev '359 yıl' kartı patlıyor.",
+   "title": {
+    "white": "Sonrası"
+   },
+   "source": "Astronomy.com",
+   "cues": {
+    "c0": "hikâye",
+    "c1": "1992'de",
+    "c2": "üç"
+   },
+   "params": {
+    "from": {
+     "year": "1633",
+     "text": "Dava",
+     "at": "c0"
+    },
+    "to": {
+     "year": "1992",
+     "text": "Hata kabul edildi",
+     "at": "c1"
+    },
+    "big": {
+     "text": "359 yıl",
+     "at": "c2"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "gal_b_probe",
+   "text": "1995'te ise Galileo adında bir uzay sondası, onun keşfettiği o dört uydunun arasına ulaştı.",
+   "visual": "Uzay, parşömen üstünde koyu mürekkep gece: kadrajı dolduran çizgili dev Jüpiter, önünde dört uydu (Io, Europa, Ganymede, Callisto); soldan anteni açık 'GALILEO' yazılı sonda süzülerek uyduların arasına giriyor; '1995' etiketi.",
+   "title": {
+    "white": "Galileo sondası",
+    "gray": "1995"
+   },
+   "set": false,
+   "source": "NASA",
+   "cues": {
+    "probe": "sondası",
+    "hit": "ulaştı"
+   },
+   "params": {
+    "mode": "jupiter",
+    "probe": {
+     "at": 0,
+     "arrive": "hit",
+     "label": "GALILEO"
+    },
+    "badge": {
+     "text": "1995",
+     "at": "probe"
+    }
+   }
+  },
+  {
+   "type": "gal_b_probe",
+   "text": "Dört yüz yıl sonra bu kez bir Türk aracı, Galileo'nun iki camla gösterdiği o dağların yüz kilometre yukarısından geçecek.",
+   "visual": "Yakın, kraterli büyük Ay yüzeyi ve ufkunda dağlar; üstünde ay-yıldızlı bayraklı küçük bir uzay aracı süzülüyor, 'Kameraları'nda kamerasından bir ışık konisi dağlara iniyor ve flaş patlıyor; altta küçük bir çerçevede Galileo'nun eski borusu silueti.",
+   "title": {
+    "white": "2027",
+    "gray": "Türkiye'nin Ay aracı"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     980,
+     480
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "cues": {
+    "craft": "Türk",
+    "old": "camla",
+    "hit": "yukarısından"
+   },
+   "params": {
+    "mode": "moon",
+    "craft": {
+     "at": "craft",
+     "flag": true
+    },
+    "glow": {
+     "at": "hit"
+    },
+    "inset": {
+     "at": "old"
+    }
+   }
+  },
+  {
+   "type": "gal_a_garden",
+   "text": "Peki siz Galileo'nun yerinde olsaydınız diz çöker miydiniz, yoksa direnir miydiniz? Yorumlara yazın ve tarihin \"neden\"leri için Düşün Bakalım'a abone olun.",
+   "visual": "Gece, Padova taraçası (açılıştaki yer): Kaşif Galileo'nun sehpalı borusunun yanında; 'diz'de çenesini tutup düşünüyor, 'abone'de izleyiciye dönüp el sallıyor; arkada kraterli Ay ve yıldızlar.",
+   "title": {
+    "white": "Sizce?"
+   },
+   "set": false,
+   "camera": {
+    "move": "pull"
+   },
+   "cues": {
+    "q": "diz",
+    "hit": "abone"
+   },
+   "params": {
+    "mode": "wide",
+    "ground": 0.8,
+    "roofs": {
+     "kind": "padua",
+     "lights": 0.5
+    },
+    "moon": {
+     "x": 0.78,
+     "y": 0.24,
+     "r": 150,
+     "term": 0.0,
+     "rough": 1
+    },
+    "scope": {
+     "x": 0.32,
+     "ang": -34,
+     "tripod": true
+    },
+    "kasif": {
+     "x": 0.58,
+     "y": 0.8,
+     "scale": 0.72,
+     "pose": "point",
+     "dir": "up",
+     "face": "left",
+     "seq": [
+      {
+       "at": "q",
+       "pose": "think"
+      },
+      {
+       "at": "hit",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
