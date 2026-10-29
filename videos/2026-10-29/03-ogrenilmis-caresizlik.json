@@ -1,0 +1,378 @@
+{
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "subtitles": true,
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "j4vJUfke1j8j9OYq8V3b",
+    "model": "eleven_v3"
+  },
+  "slug": "ogrenilmis-caresizlik",
+  "engine": "studio",
+  "theme": "parchment",
+  "format": "short",
+  "fps": 30,
+  "palette": "indigo",
+  "extra": true,
+  "cover": {
+    "lines": [
+      "Kaçabilirdi",
+      "ama",
+      "denemedi"
+    ],
+    "highlight": [
+      "denemedi"
+    ],
+    "scene": 0,
+    "t": 2.1,
+    "focus": [
+      486,
+      679
+    ],
+    "zoom": 1.15,
+    "kasif": false
+  },
+  "sources": [
+    {
+      "title": "Seligman & Maier (1967) — Failure to escape traumatic shock, Journal of Experimental Psychology",
+      "url": "https://doi.org/10.1037/h0024514"
+    },
+    {
+      "title": "Maier & Seligman (2016) — Learned helplessness at fifty: Insights from neuroscience, Psychological Review",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4920136/"
+    },
+    {
+      "title": "Wikipedia — Learned helplessness",
+      "url": "https://en.wikipedia.org/wiki/Learned_helplessness"
+    }
+  ],
+  "youtube": {
+    "title": "Öğrenilmiş Çaresizlik: Bu Köpekler Neden Kaçmadı?",
+    "description": "Öğrenilmiş çaresizlik, 1967'deki bir köpek deneyinde keşfedildi: kaçabilecekleri halde yere yatıp bekleyen köpekler. Peki neden denemediler?\n\nPennsylvania Üniversitesi'nde iki psikolog, Martin Seligman ve Steven Maier, kaçamadıkları şoklar alan köpekleri alçak bölmeli bir mekik kutusuna koydu. Tek bir zıplama şoku bitirecekti ama köpeklerin çoğu yere yattı ve bekledi. Elli yıl sonra, 2016'da aynı ikili teorilerini tersine çevirdi: beyin araştırmaları pes etmenin öğrenilmediğini, uzun süren kötü olaylara karşı beynin ilk tepkisi olduğunu gösterdi. Öğrenilen şey kontrol, yani umut.\n\nHer gün böyle gerçek bir hikâye için Düşün Bakalım'a abone ol. Sence insan pes etmeyi mi öğrenir, umut etmeyi mi? Yorumlara yaz!\n\n#shorts #öğrenilmişçaresizlik #psikoloji #düşünbakalım",
+    "tags": [
+      "öğrenilmiş çaresizlik",
+      "öğrenilmiş çaresizlik deneyi",
+      "öğrenilmiş çaresizlik nedir",
+      "seligman köpek deneyi",
+      "martin seligman",
+      "köpek deneyi",
+      "psikoloji",
+      "psikoloji deneyleri",
+      "ünlü psikoloji deneyleri",
+      "pes etmemek",
+      "umut",
+      "motivasyon",
+      "kişisel gelişim",
+      "bilim tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-10-29T21:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "lh_box",
+      "text": "Bu köpek kaçabilirdi ama denemedi.",
+      "visual": "1960'lar laboratuvarı: duvarda saat ve kavanozlu raf. Kadrajı dolduran iki bölmeli tahta mekik kutusu; ortadaki kalın, alçak tahta bölme. Sol bölme soğuk ve gri: ızgara zeminde kulakları düşük, başı patilerinde bir köpek yatıyor, kuyruğu yavaşça sallanıyor, üstünde küçük altın zikzaklar çakıyor. Sağ bölme sıcak altın ışıkla aydınlık (sağ üstten içeri düşen ışık hüzmesi); orada büyük Kaşif önce bölmeyi işaret ediyor, 'denemedi'de şokla geri sıçrıyor. Kutunun uzun ön tahtaları kadrajın altını dolduruyor.",
+      "title": {},
+      "set": {
+        "name": "interior",
+        "ground": 1420
+      },
+      "cues": {
+        "shock": "denemedi"
+      },
+      "params": {
+        "mode": "hook",
+        "kasif": {
+          "x": 0.63,
+          "y": 0.547,
+          "scale": 1.0,
+          "pose": "point",
+          "face": "left",
+          "dir": -30,
+          "seq": [
+            {
+              "at": "shock",
+              "pose": "shock"
+            }
+          ]
+        },
+        "dog": {
+          "x": 280,
+          "s": 1.0
+        }
+      }
+    },
+    {
+      "type": "lh_lab",
+      "text": "1967'de iki psikolog, köpeklere kaçamadıkları şoklar verdi.",
+      "visual": "Laboratuvar: solda masa üstünde tahta çerçeveye dört deri kayış ve tokayla asılı, dikişli bez bir hamakta duran köpek, başının yanında küçük bir panel. 'şoklar'da masada patilerinin altında küçük altın zikzaklar çakıyor, köpek irkilip kulaklarını kaldırıyor. Sağda iki şapkasız genç psikolog: gözlüklü, beyaz önlüklü Seligman klipsli tahtaya yazıyor; kazaklı Maier elindeki şalter kutusunun kolunu 'şoklar'da indiriyor, kutunun kablosu masaya uzanıyor. Başlarının üstünde el yazısıyla 'Seligman', 'Maier'; duvarda '1967' takvimi. Ön planda cam şişeli laboratuvar tezgâhı ekranın altına iniyor.",
+      "title": {
+        "white": "Pennsylvania",
+        "gray": "1967"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "source": "Seligman & Maier, 1967",
+      "cues": {
+        "zap": "şoklar"
+      },
+      "params": {
+        "year": "1967",
+        "names": [
+          "Seligman",
+          "Maier"
+        ]
+      }
+    },
+    {
+      "type": "lh_box",
+      "text": "Sonra tek zıplamayla kaçabilecekleri bir kutuya koydular.",
+      "visual": "Mekik kutusunun bölmesine yakın plan: solda soğuk gri ızgarada köpek yatıyor, üstünde zikzaklar çakıyor; sağ bölmede asma lambanın altında sıcak altın ışık havuzu, zikzak yok. 'zıplama'da köpeğin başından kalın bölmenin üstünden aydınlık tarafa kesikli altın bir yay çiziliyor, ucunda ok; üstünde kartta altın 'TEK ZIPLAMA'. Alt kısmı kutunun ön tahtaları dolduruyor.",
+      "title": {
+        "white": "Mekik kutusu"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1420
+      },
+      "camera": {
+        "focus": [
+          590,
+          960
+        ],
+        "zoom": 1.7,
+        "move": "push"
+      },
+      "cues": {
+        "arc": "zıplama"
+      },
+      "params": {
+        "mode": "jump",
+        "arc_h": 150,
+        "label": {
+          "text": "TEK ZIPLAMA",
+          "x": 0.55,
+          "y": 0.41,
+          "at": "arc",
+          "size": 76,
+          "color": "gold",
+          "rot": -4,
+          "card": true,
+          "bold": true,
+          "underline": false
+        },
+        "dog": {
+          "x": 280,
+          "s": 1.0
+        }
+      }
+    },
+    {
+      "type": "lh_box",
+      "text": "Ama çoğu yere yattı ve bekledi.",
+      "visual": "Köpeğin yüzüne göz hizasında çok yakın plan: başı patilerinde, gözleri açık ve hüzünlü, kaşları içe-yukarı kalkık, ağzı aşağı; bakışı hemen önündeki kalın bölmeye ve ötedeki aydınlık tarafa. Önünde gri ızgara zemin uzanıyor; üstünde zikzaklar çakıyor ama köpek kıpırdamıyor. Altta kutunun tahta ön kenarı.",
+      "title": {
+        "white": "Köpekler",
+        "gray": "kaçmadı"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1420
+      },
+      "camera": {
+        "focus": [
+          480,
+          1090
+        ],
+        "zoom": 2.6,
+        "move": "push"
+      },
+      "cues": {
+        "wait": "bekledi"
+      },
+      "params": {
+        "mode": "wait",
+        "clock": false,
+        "spin": 1.4,
+        "dog": {
+          "x": 280,
+          "s": 1.0
+        },
+        "box": {
+          "ff": 1300,
+          "rim": 120
+        }
+      }
+    },
+    {
+      "type": "lh_board",
+      "text": "Buna öğrenilmiş çaresizlik dendi.",
+      "visual": "Kenardan kenara laboratuvar kara tahtası: tebeşir harf harf 'ÖĞRENİLMİŞ / ÇARESİZLİK' yazıyor, 'çaresizlik'te altı iki kez çiziliyor ve kelime büyüyor. Tahtanın sağ alt köşesinde kırmızı raptiyeyle iliştirilmiş '1967' dergi sayfası hafifçe sallanıyor. Altta tebeşir rafı, ön planda kitaplı, buharı tüten kupalı tahta masa ekranın altına iniyor.",
+      "title": {
+        "white": "Yeni kavram",
+        "gray": "1967"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "source": "J. Exp. Psychology",
+      "cues": {
+        "term": "çaresizlik"
+      },
+      "params": {
+        "lines": [
+          "ÖĞRENİLMİŞ",
+          "ÇARESİZLİK"
+        ],
+        "note": "1967"
+      }
+    },
+    {
+      "type": "lh_flip",
+      "text": "İşin şaşırtıcı kısmı? Elli yıl sonra aynı ikili, teorilerini tersine çevirdi.",
+      "visual": "Solda alçakta duvar takvimi: 'Elli'de yaprakları uçuşarak 1967'den 2016'ya sayıyor. Sağ üstte küçük kara tahtada tebeşirle 'ÇARESİZLİK'; 'tersine'de etrafına kırmızı kıvrık bir ok çiziliyor, kelime baş aşağı dönüyor ve tahtanın sol kenarına, okun ucuna bitişik kırmızı 'TERS!' beliriyor. Altta yaşlanmış ikili: ak saçlı, gözlüklü, önlüklü Seligman defterine bakıp 'tersine'de kaşlarını kaldırıyor; ak saçlı, kazaklı Maier tahtayı işaret ediyor. Ön planda kitaplı masa.",
+      "title": {
+        "white": "2016",
+        "gray": "elli yıl sonra"
+      },
+      "set": {
+        "name": "interior",
+        "ground": 1152
+      },
+      "source": "Psychological Review, 2016",
+      "cues": {
+        "years": "Elli",
+        "flip": "tersine"
+      },
+      "params": {
+        "from": 1967,
+        "to": 2016,
+        "word": "ÇARESİZLİK",
+        "label": "TERS!"
+      }
+    },
+    {
+      "type": "lh_brain",
+      "text": "Pes etmek beynin ilk tepkisiydi; öğrenilen şey kontroldü.",
+      "visual": "Masada açık anatomi defteri sayfası, kadrajı dolduruyor: elle çizilmiş büyük beyin kesiti (önü sağda). 'tepkisi'nde beyin sapında küçük bir bölge kendiliğinden kırmızı yanıp atıyor, solda okla kırmızı 'PES ET'. 'öğrenilen'de beynin ön kısmında altın ışık büyüyor, noktalı altın bir yol beyin sapına iniyor ve kırmızı sönüyor; sağ üstte altın 'KONTROL', altında '= UMUT'. Sayfanın altında masada kalem, katlanmış gözlük, silgi kırıntıları.",
+      "title": {
+        "white": "Beyin",
+        "gray": "asıl neden"
+      },
+      "set": false,
+      "camera": {
+        "zoom": 1.0,
+        "move": "push"
+      },
+      "source": "Maier & Seligman, 2016",
+      "cues": {
+        "red": "tepkisi",
+        "gold": "öğrenilen"
+      },
+      "params": {
+        "red_label": "PES ET",
+        "gold_label": "KONTROL",
+        "gold_sub": "= UMUT"
+      }
+    },
+    {
+      "type": "lh_person",
+      "text": "Yani denemeyi bıraktıysanız tembel değilsiniz; henüz kazanmadınız.",
+      "visual": "Bugün, gece küçük bir oda: büyük pencereden yıldızlar ve ay. Masa lambasının küçük ışığında kırmızı çarpılı buruşuk kâğıtlar; hardal kazaklı bir adam sandalyede omuzları düşük, iki kolu masada, yüzü yorgun ve eğik oturuyor. Ayaklarının önünde yerde, hafif aydınlık, köpeklerin kutusundaki bölmenin aynısı alçak tahta bir bölme duruyor; ona bakmıyor. 'kazanmadınız'da yukarıdan masaya, elinin yanına büyük bir altın yıldız düşüp parlıyor. Ön planda döşeme, çöp kutusu ve buruşuk kâğıtlar.",
+      "title": {
+        "white": "Bugün"
+      },
+      "set": {
+        "name": "night",
+        "ground": 1152,
+        "horizon": 700
+      },
+      "cues": {
+        "star": "kazanma"
+      },
+      "params": {}
+    },
+    {
+      "type": "lh_field",
+      "text": "Pes etmeyi değil, umudu öğreniriz.",
+      "visual": "Sabah, tepeli çayır, ufuk alçakta: çimlerin ortasında aynı alçak tahta bölme. Köpek soldan koşarak geliyor, 'umudu'nda bölmenin üstünden büyük bir yayla zıplıyor, çayırda sağa doğru koşup geri dönüyor ve neşeyle oturuyor (dili dışarıda, kuyruğu sallanıyor). Gökte kuşlar; ön planda uzun çimler ve çiçekler ekranın altına iniyor.",
+      "title": {
+        "white": "Umut",
+        "gray": "öğrenilir"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 1152,
+        "horizon": 620
+      },
+      "cues": {
+        "jump": "umud"
+      },
+      "params": {
+        "mode": "leap",
+        "bar": 0.4,
+        "dog": {
+          "x": -0.12,
+          "to": 0.68,
+          "s": 1.0
+        }
+      }
+    },
+    {
+      "type": "lh_field",
+      "text": "Her gün böyle bir hikâye için abone olun.",
+      "visual": "Orta plan, aynı çayır: köpek kuyruğunu sallayarak Kaşif'in yanında oturuyor, bölme arkada küçük. Kaşif gülümseyerek köpeği işaret ediyor, 'abone'de izleyiciye dönüp el sallıyor. Ön planda çimler ve çiçekler.",
+      "title": {
+        "white": "Her gün",
+        "gray": "gerçek bir hikâye"
+      },
+      "set": {
+        "name": "hills",
+        "ground": 1152,
+        "horizon": 620
+      },
+      "camera": {
+        "focus": [
+          500,
+          930
+        ],
+        "zoom": 1.45,
+        "move": "pull"
+      },
+      "cues": {
+        "wave": "abone"
+      },
+      "params": {
+        "mode": "end",
+        "dog": {
+          "x": 0.3,
+          "s": 1.05
+        },
+        "kasif": {
+          "x": 0.66,
+          "y": 0.6,
+          "scale": 1.1,
+          "pose": "point",
+          "face": "left",
+          "dir": -10,
+          "emotion": "happy",
+          "seq": [
+            {
+              "at": "wave",
+              "pose": "wave",
+              "emotion": "happy"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
