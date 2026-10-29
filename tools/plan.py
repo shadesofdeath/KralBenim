@@ -27,6 +27,13 @@ MONTHLY_CHARS = 231442                 # ElevenLabs Creator plan credits (panel,
 BILLING_DAY = 20                       # credits renew on this day of the month
 # narration chars: target min, target max, hard max (~14 chars/s: Shorts 28-35 s, long videos 5-6 min)
 LIMITS = {"short": (400, 500, 550), "long": (4300, 5000, 5400)}
+# belgesel style (docs/BELGESEL.md §3): the slow documentary voice reads fewer characters per second
+# (4,355 chars = 5:23 on 2026-10-29), so the same durations need shorter texts
+LIMITS_BELGESEL = {"short": (330, 420, 480), "long": (3900, 4500, 5000)}
+
+
+def limits_of(cfg):
+    return LIMITS_BELGESEL if cfg.get("theme") == "belgesel" else LIMITS
 SCENES = {"short": (8, 11), "long": (40, 50)}
 
 
@@ -84,7 +91,7 @@ def budget(d, planned):
     used = month_usage(d)
     renew = d.replace(day=BILLING_DAY) if d.day < BILLING_DAY else \
         (d.replace(day=1) + timedelta(days=32)).replace(day=BILLING_DAY)
-    per_day = sum(LIMITS["short"][1] * len(c["short_slots"]) + LIMITS["long"][1] / c["long_every"]
+    per_day = sum(limits_of(c)["short"][1] * len(c["short_slots"]) + limits_of(c)["long"][1] / c["long_every"]
                   for c in CHANNELS.values())
     projected = round(used + planned + per_day * ((renew - d).days - 1))
     return {"used_this_month": used, "today_max": planned, "monthly_budget": MONTHLY_CHARS,
@@ -92,8 +99,8 @@ def budget(d, planned):
             "warning": used + planned > MONTHLY_CHARS or projected > MONTHLY_CHARS}
 
 
-def limits(fmt):
-    lo, hi, hard = LIMITS[fmt]
+def limits(fmt, cfg):
+    lo, hi, hard = limits_of(cfg)[fmt]
     return f"{lo}-{hi} (hard max {hard})"
 
 
@@ -127,16 +134,16 @@ def main():
         taken.add(f"{n:02d}")
         return f"{pre}{n:02d}-<slug>.json"
 
-    head = {"channel": ch, "narrator": cfg["narrator"], "lang": cfg["lang"], "voice_id": cfg["voice_id"],
+    head = {"channel": ch, "narrator": cfg["narrator"], "lang": cfg["lang"], "voice_id": cfg["voice_id"], "theme": cfg["theme"],
             "date": d.isoformat(), "folder": str(folder.relative_to(ROOT))}
     if a.extra:    # earliest publish time lint accepts: now + 1 h, rounded up to 5 minutes
         t = now + timedelta(hours=1)
         t = (t + timedelta(minutes=(5 - t.minute % 5) % 5)).replace(second=0, microsecond=0)
         print(json.dumps({**head, "extra": True, "category": category(ch, d, len(taken)),
                           "video": {"file": free_number(), "format": a.extra, "publish_at": t.isoformat(),
-                                    "chars": limits(a.extra), "scenes": SCENES[a.extra]},
+                                    "chars": limits(a.extra, cfg), "scenes": SCENES[a.extra]},
                           "note": 'write "extra": true at the top level of the script; publish_at is the earliest allowed',
-                          "elevenlabs_chars": budget(d, LIMITS[a.extra][1])}, ensure_ascii=False, indent=1))
+                          "elevenlabs_chars": budget(d, limits_of(cfg)[a.extra][1])}, ensure_ascii=False, indent=1))
         return
 
     tz = ZoneInfo(cfg["tz"])
@@ -147,13 +154,13 @@ def main():
         v["istanbul"] = datetime.fromisoformat(v["publish_at"]).astimezone(TZ).strftime("%d.%m %H:%M")
     for k, v in enumerate(videos):
         done = existing[v["format"]].pop(0) if existing[v["format"]] else None
-        v.update(file=done or free_number(), done=done, chars=limits(v["format"]),
+        v.update(file=done or free_number(), done=done, chars=limits(v["format"], cfg),
                  scenes=SCENES[v["format"]], category=category(ch, d, k))
     todo = [v for v in videos if not v["done"]]
     print(json.dumps({**head, "long_video_today": is_long_day(d, ch),
                       "next_long_video": next_long(d + timedelta(days=1), ch).isoformat(),
                       "videos": videos, "todo": [v["file"] for v in todo],
-                      "elevenlabs_chars": budget(d, sum(LIMITS[v["format"]][1] for v in todo))},
+                      "elevenlabs_chars": budget(d, sum(limits_of(cfg)[v["format"]][1] for v in todo))},
                      ensure_ascii=False, indent=1))
 
 

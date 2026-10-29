@@ -19,13 +19,13 @@
   SH.bt_object = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), x = P.x ?? W / 2, y = P.y ?? H * 0.45;
+      const portrait = H > W, g = el(svg, 'g'), x = P.x ?? W / 2, y = P.y ?? (portrait ? 620 : H * 0.45), ly = portrait ? 1000 : H * 0.73;
       const gl = P.glow === false ? null : BTL.glow(svg, defs, x, y, 520 * (P.scale || 1), C.stain, 0.16, g);
       const D = BTL.drawing(place(g, x, y, P.scale || 1, P.rot || 0));
       BTL.OBJ[P.obj || 'bonespoon'](D, P.opts || {});
       const drops = P.obj === 'hands' ? [0, 1, 2].map(i => el(g, 'path', { fill: C.blue, 'fill-opacity': 0 })) : [];
-      const lab = P.label ? label(g, P.label, W / 2, H * 0.73, 52, {}) : null;
-      const sub = P.sub ? label(g, P.sub, W / 2, H * 0.73 + 54, 40, { font: LO, italic: true, color: C.inkSoft }) : null;
+      const lab = P.label ? label(g, P.label, W / 2, ly, portrait ? 60 : 52, {}) : null;
+      const sub = P.sub ? label(g, P.sub, W / 2, ly + (portrait ? 64 : 54), portrait ? 46 : 40, { font: LO, italic: true, color: C.inkSoft }) : null;
       return {
         update(lt, dur, cues) {
           const t0 = cue(cues, 'show', 0);
@@ -47,7 +47,7 @@
   SH.bt_relic = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), cx = W * (P.cx ?? 0.4), py = H * 0.72, oy = H * 0.5;
+      const portrait = H > W, g = el(svg, 'g'), cx = portrait ? W / 2 : W * (P.cx ?? 0.4), py = portrait ? 900 : H * 0.72, oy = portrait ? 640 : H * 0.5;
       const beam = el(g, 'path', { d: `M${cx - 70} 0L${cx + 70} 0L${cx + 430} ${py + 40}L${cx - 430} ${py + 40}Z`, fill: C.stain, 'fill-opacity': 0 });
       const gl = BTL.glow(svg, defs, cx, oy, 460, C.stain, 0, g);
       const ped = el(g, 'g');
@@ -57,10 +57,13 @@
       const D = BTL.drawing(place(g, cx + (P.dx || 0), oy + (P.dy || 0), P.scale || 0.9, P.rot || 0));
       BTL.OBJ[P.obj || 'pot'](D, P.opts || {});
       const ex = (P.extras || []).map(x => { const d = BTL.drawing(place(g, cx + x.x, oy + x.y, x.scale || 0.4, x.rot || 0)); BTL.OBJ[x.obj](d, x.opts || {}); return { x, d }; });
-      const right = P.labelSide !== 'left', lx = right ? cx + 400 : cx - 400, an = right ? 'start' : 'end';
-      const lab = P.label ? label(g, P.label, lx, H * 0.36, 54, { anchor: an }) : null;
-      const sub = P.sub ? label(g, P.sub, lx, H * 0.36 + 58, 40, { font: LO, italic: true, color: C.inkSoft, anchor: an }) : null;
-      const rule = P.label ? el(g, 'path', { d: `M${lx} ${H * 0.36 + 88}L${lx + (right ? 180 : -180)} ${H * 0.36 + 88}`, stroke: C.gold, 'stroke-width': 2, pathLength: 1, fill: 'none' }) : null;
+      // the museum label: beside the object on a wide frame, above it on a vertical one
+      const right = P.labelSide !== 'left', lx = portrait ? W / 2 : right ? cx + 400 : cx - 400, an = portrait ? 'middle' : right ? 'start' : 'end';
+      const ly = portrait ? 230 : H * 0.36, r0 = portrait ? lx - 90 : lx, r1 = portrait ? lx + 90 : lx + (right ? 180 : -180);
+      const lab = P.label ? label(g, P.label, lx, ly, portrait ? 62 : 54, { anchor: an }) : null;
+      const sub = P.sub ? label(g, P.sub, lx, ly + (portrait ? 64 : 58), portrait ? 44 : 40, { font: LO, italic: true, color: C.inkSoft, anchor: an }) : null;
+      if (portrait) for (const t of [lab, sub]) if (t) BTL.fit(t, W - 100);
+      const rule = P.label ? el(g, 'path', { d: `M${r0} ${ly + (portrait ? 100 : 88)}L${r1} ${ly + (portrait ? 100 : 88)}`, stroke: C.gold, 'stroke-width': 2, pathLength: 1, fill: 'none' }) : null;
       return {
         update(lt, dur, cues) {
           beam.setAttribute('fill-opacity', (0.07 * BTL.ease(lt, 0, 1.6)).toFixed(3));
@@ -78,10 +81,11 @@
   SH.bt_compare = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), xs = [W * 0.29, W * 0.71], y = H * 0.42;
-      BTL.glow(svg, defs, W / 2, y, 700, C.stain, 0.1, g);
+      // side by side on a wide frame, one above the other on a vertical one
+      const portrait = H > W, g = el(svg, 'g'), xs = portrait ? [W / 2, W / 2] : [W * 0.29, W * 0.71], ys = portrait ? [360, 800] : [H * 0.42, H * 0.42];
+      BTL.glow(svg, defs, W / 2, portrait ? 600 : ys[0], 700, C.stain, 0.1, g);
       const sides = [P.left || {}, P.right || {}].map((sd, i) => {
-        const gg = place(g, xs[i], y, 1), D = BTL.drawing(gg);
+        const gg = place(g, xs[i], ys[i], portrait && P.mode === 'profile' ? 0.85 : 1), D = BTL.drawing(gg);
         if (P.mode === 'profile') {   // side view of the bowl: deep with liquid vs flat with mash
           if (i === 0) {
             D.f('M-260-40C-240 80-120 130 0 130C120 130 240 80 260-40Z', C.paperLight, 1);
@@ -95,7 +99,7 @@
             D.s('M-150 52C-120-20-40-40 0-40C50-40 120-20 150 52', { w: 3, color: C.gold });
           }
         } else {                       // same spoon, long handle vs short handle
-          const sp = place(gg, 0, i === 0 ? 0 : 60, 0.85, -90);
+          const sp = portrait ? place(gg, i === 0 ? 0 : -60, 0, 0.75, 0) : place(gg, 0, i === 0 ? 0 : 60, 0.85, -90);
           const d2 = BTL.drawing(sp);
           if (i === 0) BTL.OBJ.bonespoon(d2, {});
           else {
@@ -105,7 +109,7 @@
           }
           D.items.push(...d2.items);
         }
-        const lab = sd.label ? label(g, sd.label, xs[i], H * 0.82, 48, { font: LO, italic: true }) : null;
+        const lab = sd.label ? label(g, sd.label, xs[i], portrait ? ys[i] + (P.mode === 'profile' ? 170 : 120) : H * 0.82, portrait ? 52 : 48, { font: LO, italic: true }) : null;
         return { D, lab };
       });
       return {
@@ -123,11 +127,13 @@
   SH.bt_trade = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), y = H * 0.44;
-      const gl = BTL.glow(svg, defs, W * 0.27, y, 380, C.gold, 0, g);
-      const S = BTL.drawing(place(g, W * 0.27, y, 0.95, -6)); BTL.OBJ.stone(S);
-      const eq = el(g, 'path', { d: `M${W * 0.47} ${y - 18}L${W * 0.53} ${y - 18}M${W * 0.47} ${y + 18}L${W * 0.53} ${y + 18}`, stroke: C.inkSoft, 'stroke-width': 4, pathLength: 1, fill: 'none', 'stroke-linecap': 'round' });
-      const spoons = [0, 1, 2].slice(0, P.n || 3).map(i => { const D = BTL.drawing(place(g, W * 0.73, y - 120 + i * 120, 0.42, 0)); BTL.OBJ.woodspoon(D); return D; });
+      // stone = spoons: left to right on a wide frame, top to bottom on a vertical one
+      const portrait = H > W, g = el(svg, 'g'), y = H * 0.44;
+      const sx = portrait ? W / 2 : W * 0.27, sy = portrait ? 340 : y, ex = portrait ? W / 2 : W * 0.5, ey = portrait ? 590 : y;
+      const gl = BTL.glow(svg, defs, sx, sy, 380, C.gold, 0, g);
+      const S = BTL.drawing(place(g, sx, sy, 0.95, -6)); BTL.OBJ.stone(S);
+      const eq = el(g, 'path', { d: `M${ex - 58} ${ey - 18}L${ex + 58} ${ey - 18}M${ex - 58} ${ey + 18}L${ex + 58} ${ey + 18}`, stroke: C.inkSoft, 'stroke-width': 4, pathLength: 1, fill: 'none', 'stroke-linecap': 'round' });
+      const spoons = [0, 1, 2].slice(0, P.n || 3).map(i => { const D = BTL.drawing(place(g, portrait ? W / 2 : W * 0.73, portrait ? 780 + i * 115 : y - 120 + i * 120, 0.42, 0)); BTL.OBJ.woodspoon(D); return D; });
       return {
         update(lt, dur, cues) {
           S.reveal(BTL.ease(lt, 0, 1.8)); gl.set(0.18 * BTL.ease(lt, 0.5, 2));
@@ -142,10 +148,12 @@
   SH.bt_lineup = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), L = P.items || [], n = L.length, y = H * 0.44, step = (W - 640) / Math.max(1, n - 1);
-      BTL.glow(svg, defs, W / 2, y, 800, C.stain, 0.08, g);
-      const base = el(g, 'path', { d: `M120 ${y + 170}L${W - 120} ${y + 170}`, stroke: C.inkSoft, 'stroke-width': 2, pathLength: 1, fill: 'none', 'stroke-opacity': 0.6 });
-      const items = L.map((it, i) => { const D = BTL.drawing(place(g, 320 + i * step, y, it.scale || 0.42, it.rot || 0)); BTL.OBJ[it.obj](D, it.opts || {}); return { it, D }; });
+      // a row on a wide frame, a 2 x 2 grid on a vertical one
+      const portrait = H > W, g = el(svg, 'g'), L = P.items || [], n = L.length, y = H * 0.44, step = (W - 640) / Math.max(1, n - 1);
+      const at = i => portrait ? [W * (i % 2 ? 0.73 : 0.27), 380 + Math.floor(i / 2) * 430] : [320 + i * step, y];
+      BTL.glow(svg, defs, W / 2, portrait ? 600 : y, 800, C.stain, 0.08, g);
+      const base = el(g, 'path', { d: portrait ? '' : `M120 ${y + 170}L${W - 120} ${y + 170}`, stroke: C.inkSoft, 'stroke-width': 2, pathLength: 1, fill: 'none', 'stroke-opacity': 0.6 });
+      const items = L.map((it, i) => { const D = BTL.drawing(place(g, at(i)[0], at(i)[1], (it.scale || 0.42) * (portrait ? 1.05 : 1), it.rot || 0)); BTL.OBJ[it.obj](D, it.opts || {}); return { it, D }; });
       return {
         update(lt, dur, cues) {
           draw(base, BTL.ease(lt, 0, 2.4));
@@ -158,7 +166,8 @@
   SH.bt_grid = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), cols = P.cols || 11, rows = P.rows || 5, sx = (W - 260) / (cols - 1), sy = (H * 0.72 - 150) / (rows - 1);
+      const portrait = H > W, g = el(svg, 'g'), cols = portrait ? 5 : P.cols || 11, rows = portrait ? 8 : P.rows || 5;
+      const sx = (W - 260) / (cols - 1), sy = portrait ? 900 / (rows - 1) : (H * 0.72 - 150) / (rows - 1);
       const spoon = 'M-320 0C-320-62-268-86-206-86C-150-86-112-52-100-24C-40-16 120-14 280-22C320-24 344-10 344 0C344 10 320 24 280 22C120 14-40 16-100 24C-112 52-150 86-206 86C-268 86-320 62-320 0Z';
       const ci = Math.floor(rows / 2) * cols + Math.floor(cols / 2);
       const gl = BTL.glow(svg, defs, W / 2, 130 + Math.floor(rows / 2) * sy, 300, C.gold, 0, g);
@@ -182,7 +191,7 @@
   SH.bt_egg = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), cx = W * 0.44, cy = H * 0.42;
+      const portrait = H > W, g = el(svg, 'g'), cx = W * (portrait ? 0.4 : 0.44), cy = portrait ? 600 : H * 0.42;
       const gl = BTL.glow(svg, defs, cx, cy, 460, C.stain, 0, g);
       const E0 = BTL.drawing(place(g, cx, cy, 1.05)); BTL.OBJ.egg(E0, {});
       const hole = BTL.drawing(place(g, cx, cy, 1.05)); hole.f(BTL.E(52, 130, 14, 18), C.paperDark, 1);

@@ -42,18 +42,18 @@
   SH.bt_grave = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: P.stage === 'cut' ? 880 : 960 });
       if (P.stage !== 'cut') {
         const st = BTL.stars(g, 260, 41, [0, 0, W, 620]);
-        P0(g, `M0 720C380 712 600 560 960 548C1320 560 1540 712 1920 720L1920 1080L0 1080Z`, C.paperLight, 0.85);
+        P0(g, `M0 720C380 712 600 560 960 548C1320 560 1540 712 1920 720L1920 1800L0 1800Z`, C.paperLight, 0.85);
         L0(g, `M0 720C380 712 600 560 960 548C1320 560 1540 712 1920 720`, C.inkSoft, 2.5);
-        P0(g, `M0 860C500 840 1400 840 1920 860L1920 1080L0 1080Z`, C.paperDark, 0.8);
+        P0(g, `M0 860C500 840 1400 840 1920 860L1920 1800L0 1800Z`, C.paperDark, 0.8);
         const gl = BTL.glow(svg, defs, 960, 690, 140, C.gold, 0, g);
         el(g, 'circle', { cx: 960, cy: 690, r: 5, fill: C.gold, 'fill-opacity': 0.9 });
         return { update(lt) { st.update(lt); gl.set(0.35 + 0.2 * Math.sin(lt * 0.8)); } };
       }
       // cross-section: surface, soil layers, a flexed burial, the spoon by the hands
-      P0(g, `M0 250L1920 250L1920 1080L0 1080Z`, C.paperLight, 0.55);
+      P0(g, `M0 250L1920 250L1920 1800L0 1800Z`, C.paperLight, 0.55);
       L0(g, 'M0 250L1920 250', C.inkSoft, 3);
       let grass = ''; for (let x = 30; x < 1920; x += 46) grass += `M${x} 250l-6 -18M${x + 9} 250l5 -14`;
       L0(g, grass, C.inkSoft, 2, 0.7);
@@ -86,16 +86,16 @@
   SH.bt_shore = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: 1200 });
       const st = BTL.stars(g, 160, 77, [0, 0, W, 520]);
       BTL.glow(svg, defs, 1420, 230, 260, C.stain, 0.22, g);
       P0(g, BTL.E(1420, 230, 62, 62), C.ink, 0.92);
-      P0(g, `M0 560L1920 560L1920 1080L0 1080Z`, C.paper, 1);
+      P0(g, `M0 560L1920 560L1920 1800L0 1800Z`, C.paper, 1);
       L0(g, 'M0 560L1920 560', C.inkSoft, 2);
       const waves = el(g, 'g'); const wl = [];
       for (let i = 0; i < 26; i++) { const y = 580 + (i % 13) * 16 + Math.floor(i / 13) * 8, x = (i * 397) % 1800; wl.push({ e: L0(waves, '', C.inkSoft, 2, 0.45), x, y, len: 60 + (i % 5) * 26 }); }
       const refl = []; for (let i = 0; i < 9; i++) refl.push({ e: L0(g, '', C.stain, 4, 0.5), y: 590 + i * 22, w: 90 - i * 6 });
-      const sand = `M0 820C500 790 1100 780 1920 800L1920 1080L0 1080Z`;
+      const sand = `M0 820C500 790 1100 780 1920 800L1920 1800L0 1800Z`;
       P0(g, sand, C.paperLight, 1);
       const foam = L0(g, '', C.ink, 2.5, 0.5);
       P0(g, `M0 260C150 250 300 320 360 470C400 580 380 700 460 840L0 840Z`, C.paperDark, 1);
@@ -119,11 +119,11 @@
   SH.bt_dive = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: 900, ty: 470 });
       P0(g, `M0 0L1920 0L1920 140L0 140Z`, C.paperLight, 0.5);
       const surf = L0(g, '', C.inkSoft, 2.5);
       const rays = [380, 760, 1180, 1560].map((x, i) => P0(g, `M${x - 40} 140L${x + 40} 140L${x + 220 + i * 20} 1080L${x + 20 + i * 20} 1080Z`, C.stain, 0.06));
-      P0(g, `M0 930C400 900 900 940 1300 912C1600 896 1800 920 1920 916L1920 1080L0 1080Z`, C.paperLight, 0.9);
+      P0(g, `M0 930C400 900 900 940 1300 912C1600 896 1800 920 1920 916L1920 1800L0 1800Z`, C.paperLight, 0.9);
       L0(g, `M0 930C400 900 900 940 1300 912C1600 896 1800 920 1920 916`, C.inkSoft, 2.5);
       L0(g, `M120 980C220 970 320 990 420 978M700 1000C820 988 920 1004 1040 992M1320 970C1440 960 1540 976 1660 966`, C.inkSoft, 2, 0.5);
       [[1180, 930, 0.1], [1320, 950, 0.08], [980, 960, 0.09], [1500, 935, 0.07]].forEach(([x, y, s]) => { const D = BTL.drawing(place(g, x, y, s)); BTL.OBJ.shell(D); D.reveal(1); });
@@ -154,10 +154,10 @@
   SH.bt_figure = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: 1000 });
       BTL.glow(svg, defs, 1300, 560, 700, C.stain, 0.14, g);
       L0(g, `M0 560C400 548 800 570 1200 552C1500 540 1720 556 1920 552`, C.inkSoft, 2, 0.6);
-      P0(g, `M0 600C600 590 1300 600 1920 590L1920 1080L0 1080Z`, C.paperLight, 0.7);
+      P0(g, `M0 600C600 590 1300 600 1920 590L1920 1800L0 1800Z`, C.paperLight, 0.7);
       const stream = `M1180 600C1160 680 1020 760 1060 860C1100 960 1300 1020 1400 1080L1920 1080L1920 1000C1700 960 1360 900 1330 820C1300 740 1400 660 1340 600Z`;
       P0(g, stream, C.blue, 0.28);
       L0(g, `M1180 600C1160 680 1020 760 1060 860C1100 960 1300 1020 1400 1080M1340 600C1400 660 1300 740 1330 820C1360 900 1700 960 1920 1000`, C.inkSoft, 2.5);
@@ -174,7 +174,7 @@
   SH.bt_fire = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: P.mode === 'hand' ? 1050 : 880 });
       if (P.mode === 'hand') {
         const fi = fire(g, svg, defs, 840, 900, 1.2);
         const pot = BTL.drawing(place(g, 840, 640, 1.15)); BTL.OBJ.pot(pot, { liquid: true });
@@ -198,7 +198,7 @@
         };
       }
       const st = BTL.stars(g, 120, 17, [0, 0, W, 460]);
-      P0(g, `M0 820C600 800 1300 806 1920 818L1920 1080L0 1080Z`, C.paperLight, 0.6);
+      P0(g, `M0 820C600 800 1300 806 1920 818L1920 1800L0 1800Z`, C.paperLight, 0.6);
       const fi = fire(g, svg, defs, 1060, 830, 1);
       L0(g, 'M900 840L1000 560M1220 840L1120 560M1000 560L1120 560', C.inkSoft, 4);
       const pot = BTL.drawing(place(g, 1060, 650, 0.62)); BTL.OBJ.pot(pot, { liquid: true });
@@ -216,8 +216,8 @@
   SH.bt_stones = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
-      P0(g, `M0 520L1920 520L1920 1080L0 1080Z`, C.paperLight, 0.5);
+      const { g } = BTL.stage(svg, W, H, { fx: 1000 });
+      P0(g, `M0 520L1920 520L1920 1800L0 1800Z`, C.paperLight, 0.5);
       L0(g, 'M0 520L1920 520', C.inkSoft, 3);
       const fi = fire(g, svg, defs, 420, 520, 0.8);
       const hot = [[360, 500], [470, 506]].map(([x, y]) => P0(g, BTL.E(x, y, 26, 18), C.red, 0.9));
@@ -249,7 +249,7 @@
   SH.bt_dip = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: 1000, ty: 480 });
       const fi = fire(g, svg, defs, 900, 1100, 1.4);
       const pot = BTL.drawing(place(g, 900, 690, 1.6)); BTL.OBJ.pot(pot, { liquid: true });
       const st = [0, 1, 2].map(() => L0(g, '', C.ink, 3));
@@ -269,12 +269,12 @@
   SH.bt_field = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: 1150 });
       const sun = el(g, 'g'); const sg = BTL.glow(svg, defs, 0, 0, 480, C.stain, 0.3, sun); const disc = P0(sun, BTL.E(0, 0, 80, 80), C.gold, 0.9);
       sg.e.setAttribute('cx', 0); sg.e.setAttribute('cy', 0);
-      P0(g, `M0 600C300 560 600 590 900 570C1200 552 1500 590 1920 570L1920 1080L0 1080Z`, C.paper, 1);
+      P0(g, `M0 600C300 560 600 590 900 570C1200 552 1500 590 1920 570L1920 1800L0 1800Z`, C.paper, 1);
       L0(g, `M0 600C300 560 600 590 900 570C1200 552 1500 590 1920 570`, C.inkSoft, 2.5);
-      P0(g, `M0 660L1920 660L1920 1080L0 1080Z`, C.paperLight, 0.35);
+      P0(g, `M0 660L1920 660L1920 1800L0 1800Z`, C.paperLight, 0.35);
       const r = rng(311); let back = '', front = '';
       for (let row = 0; row < 3; row++) {
         const y = 700 + row * 70, h = 40 + row * 34, n = 26 - row * 6;
@@ -300,7 +300,7 @@
   SH.bt_village = {
     kind: '2d',
     build({ W, H, svg, defs }) {
-      const g = el(svg, 'g');
+      const { g } = BTL.stage(svg, W, H, { fx: 960 });
       const st = BTL.stars(g, 200, 23, [0, 0, W, 420]);
       P0(g, BTL.E(380, 170, 46, 46), C.ink, 0.85);
       L0(g, `M0 520C500 500 1400 506 1920 516`, C.inkSoft, 2, 0.6);

@@ -13,15 +13,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from plan import LIMITS, SCENES  # noqa: E402
+from plan import LIMITS_BELGESEL, LIMITS, SCENES  # noqa: E402
 from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
-BELGESEL_VOICE = "mF7tIc9VLrznhGooGjaT"   # slow documentary voice of the belgesel style (owner, 2026-10-29)
 SETS = ["field", "hills", "desert", "sea", "ocean", "coast", "city", "interior", "night", "snow", "storm"]   # scenes/studio/sets.js
 CAM_MOVES = ["push", "pull", "left", "right", "up", "down", "still"]                                  # engine.js camera
-THEME = "parchment"   # the channel's only visual style: sepia parchment + Kaşif (brand/kit/BRAND.md)
-BELGESEL = "belgesel"  # experimental documentary style (docs/BELGESEL.md, owner 2026-10-29): Düşün Bakalım only
+THEME = "parchment"   # sepia parchment + Kaşif (brand/kit/BRAND.md): Stickstory
+BELGESEL = "belgesel"  # documentary style (docs/BELGESEL.md, owner 2026-10-29): every Düşün Bakalım video
 # channel analytics (owner, 2026-10-26): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
 # halfway (39% average view), long-video CTR 0.96%, Shorts viewers rarely subscribe. The rules below target that.
 GREETING = re.compile(r"\b(merhaba|selam(lar)?|hoş ?geldiniz|kanal(ım)?a hoş|bu videoda|bugün sizlere|bugün size|"
@@ -67,8 +66,10 @@ def lint(path, kinds):
     if s.get("engine") != "studio":
         err.append('"engine" must be "studio"')
     bt = s.get("theme") == BELGESEL
-    if s.get("theme") not in (THEME, BELGESEL):
-        err.append(f'"theme" must be "{THEME}" (sepia parchment + Kaşif, brand/kit/BRAND.md) or "{BELGESEL}" (docs/BELGESEL.md)')
+    want = CHANNELS.get(s.get("channel"), {}).get("theme")
+    if want and s.get("theme") != want:
+        err.append(f'"theme" must be "{want}" for {s.get("channel")} (tools/channels.py; '
+                   + ("docs/BELGESEL.md" if want == BELGESEL else "brand/kit/BRAND.md") + ")")
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
     # channel: on-screen name, file prefix and narrator must agree (tools/channels.py)
@@ -86,10 +87,6 @@ def lint(path, kinds):
     en = cfg["lang"] == "en"
     voice = cfg["voice_id"]
     tts = s.get("tts", {})
-    if bt:   # the documentary voice (owner, 2026-10-29); Düşün Bakalım only
-        voice = BELGESEL_VOICE
-        if ch != "Düşün Bakalım":
-            err.append(f'"theme": "{BELGESEL}" is a Düşün Bakalım style (docs/BELGESEL.md)')
     if tts.get("voice_id") != voice or tts.get("model") != MODEL or tts.get("provider") != "elevenlabs":
         err.append(f"tts must be elevenlabs / {voice} / {MODEL} for {ch}")
 
@@ -97,7 +94,7 @@ def lint(path, kinds):
     if not lo <= len(sc) <= hi:
         err.append(f"{len(sc)} scenes, need {lo}-{hi}")
     text = " ".join(x.get("text", "") for x in sc)
-    tlo, thi, hard = LIMITS[fmt]
+    tlo, thi, hard = (LIMITS_BELGESEL if bt else LIMITS)[fmt]
     if len(text) > hard:
         err.append(f"{len(text)} chars > hard limit {hard}")
     elif not tlo <= len(text) <= thi:
@@ -205,6 +202,10 @@ def lint(path, kinds):
             err.append(f'scene {i}: "camera" is false or {{"focus": [x, y], "zoom", "move": {"|".join(CAM_MOVES)}}}')
     if bt and named - {False, None}:
         warn.append('belgesel shots draw their own sparse world; "set" is ignored')
+    if bt and not s.get("palette"):
+        warn.append('no "palette": pick the belgesel theme that fits the topic and differs from the last video (docs/BELGESEL.md)')
+    if bt and any(not str(x.get("type", "")).startswith("bt_") and x.get("type") != "photo" for x in sc):
+        err.append("belgesel videos use only bt_* shots (and photo); parchment shots (stage, map, board...) are another style")
     if not bt and not named - {False, None}:
         warn.append('no scene has a "set": give the story its world (hills, sea, city, interior, night...; BRAND.md §5.1)')
     if not bt and close < (1 if short else 4):

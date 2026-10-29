@@ -10,6 +10,7 @@
   kind: '2d',
   build(ctx) {
     const { P, pal, W, H, root, svg } = ctx;
+    const BTH = ctx.theme === 'belgesel';   // docs/BELGESEL.md: a quiet black-and-white print, no paper multiply
     const TP = THEME_PARCHMENT;
     const dpr = devicePixelRatio;
     const cv = document.createElement('canvas');
@@ -32,7 +33,7 @@
       const i = Math.max(0, Math.min(F.count - 1, Math.floor(lt * F.fps * (P.rate || 1))));
       return F.pattern.replace('%05d', String(i + 1).padStart(5, '0'));
     };
-    const grade = P.grade === 'mono' ? 'grayscale(1) contrast(0.9) brightness(1.08)'
+    const grade = BTH ? 'grayscale(1) contrast(1.05) brightness(0.9)' : P.grade === 'mono' ? 'grayscale(1) contrast(0.9) brightness(1.08)'
       : 'grayscale(1) sepia(0.85) contrast(0.82) brightness(1.12)';
     const marksG = el(svg, 'g');
     const marks = (P.marks || []).map(m => ({ m, g: el(marksG, 'g') }));
@@ -59,7 +60,7 @@
         // ink printed on paper: multiply by the parchment colour, then let the edges dissolve into the page
         const CW = cv.width, CH = cv.height, portrait = H > W;
         g2.save();
-        g2.globalCompositeOperation = 'multiply'; g2.fillStyle = TP.paper; g2.fillRect(0, 0, CW, CH);
+        if (!BTH) { g2.globalCompositeOperation = 'multiply'; g2.fillStyle = TP.paper; g2.fillRect(0, 0, CW, CH); }
         g2.globalCompositeOperation = 'destination-in';
         const gx = g2.createLinearGradient(0, 0, CW, 0);
         gx.addColorStop(0, 'rgba(0,0,0,0)'); gx.addColorStop(0.1, 'rgba(0,0,0,1)'); gx.addColorStop(0.9, 'rgba(0,0,0,1)'); gx.addColorStop(1, 'rgba(0,0,0,0)');
@@ -95,7 +96,7 @@
           if (m.text) {
             const tx = X + (m.dx ?? 0), ty = Y + (m.dy ?? -((m.r || 0.08) * iw * geom.s) - 40);
             const t = svgText(g, m.text, tx, ty, m.size || 56,
-              { fill: TP.ink, 'font-family': "'Patrick Hand', sans-serif", opacity: clamp01(a * 1.4), style: `paint-order: stroke; stroke: ${TP.paperLight}; stroke-width: 12px` });
+              { fill: TP.ink, 'font-family': BTH ? 'Lora, Georgia, serif' : "'Patrick Hand', sans-serif", opacity: clamp01(a * 1.4), style: `paint-order: stroke; stroke: ${TP.paperLight}; stroke-width: 12px` });
             t.setAttribute('transform', `translate(${tx} ${ty}) scale(${lerp(0.6, 1, a)}) translate(${-tx} ${-ty})`);
           }
         });

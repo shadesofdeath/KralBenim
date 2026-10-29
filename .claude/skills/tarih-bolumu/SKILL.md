@@ -1,11 +1,15 @@
 ---
 name: tarih-bolumu
-description: Düşün Bakalım kanalı için tarih hikâyesi bölümü (Shorts ya da uzun video) planlarken ve senaryosunu yazarken kullan. Konu seçimi, hikâye yapısı, Kaşif karakterinin sahne sahne kullanımı, sepya parşömen stilinde sahne seçimi ve anlatım kuralları. Senaryo JSON'u yazmadan önce yükle.
+description: Düşün Bakalım (belgesel tarzı) ve Stickstory (parşömen + çöp adam) için tarih hikâyesi bölümü (Shorts ya da uzun video) planlarken ve senaryosunu yazarken kullan. Konu seçimi, hikâye yapısı, sahne seçimi ve anlatım kuralları. Senaryo JSON'u yazmadan önce yükle.
 ---
 
 # Tarih bölümü yazma becerisi
 
-Önce `brand/kit/BRAND.md` dosyasını oku; bu beceri onun uygulamasıdır.
+**Düşün Bakalım:** önce `docs/BELGESEL.md` oku (anayasa; 2026-10-29'dan beri bütün videolar belgesel tarzında, ses
+`mF7tIc9VLrznhGooGjaT`). Bu becerinin §1–2'si (konu, yapı) aynen geçerli; sahne seçimi ve anlatım için §3b ve §4b'ye bak,
+§3 ve §4 Stickstory'nindir.
+
+**Stickstory:** önce `brand/kit/BRAND.md` dosyasını oku; §3 ve §4 onun uygulamasıdır.
 
 **Stickstory (eski Anlatayım Gel; global, İngilizce):** aynı yapı ve kurallar; metin, ekran yazıları ve kapak İngilizce
 (BRAND.md §11), konu önce `python tools/news.py` manşetlerinden (kategoriye uyan manşetin arkasındaki gerçek hikâye; CLAUDE.md), uyan yoksa `tools/plan.py --channel ag` çıktısındaki `category`'den; "-yor"/devrik cümle kuralları
@@ -37,9 +41,26 @@ yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPT
 5–6 dakika sıkı bir anlatım ister: hikâyeyi uzatma, derinleştir: olayın içinde 1–2 ara dönüm noktası, gerçek insanların kararları ve sözleri, beklenmedik ayrıntılar. Tekrar ve dolgu yok; her bölüm yeni bir soru açıp kapatır.
 Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmemişti." Her 45–60 saniyede bir görsel
 değişim (yeni yer, harita, büyük sayı, yakın plan); her bölüm bir sonrakine çeken bir cümleyle biter.
-Kapak: tek nesne + büyük Kaşif, 2–4 kelime, uzunda `cover.focus` zorunlu. Başlık bilgi değil kanca (CLAUDE.md).
+Kapak: Düşün Bakalım'da tek özne ışık havuzunda, Kaşif yok (BELGESEL.md §7); Stickstory'de tek nesne + büyük Kaşif.
+2–4 kelime, uzunda `cover.focus` zorunlu. Başlık bilgi değil kanca (CLAUDE.md).
 
-## 3. Sahne seçimi (sepya stil, `"theme": "parchment"`)
+## 3b. Sahne seçimi — Düşün Bakalım (belgesel, `"theme": "belgesel"`)
+
+Sadece `bt_*` ve `photo` (BELGESEL.md §6). Sahne başına tek özne; konuya özel nesne ya da mekân yoksa kendi dosyanda
+(`scenes/studio/shots/bt_<konu>.js`) yeni tip yaz. Ritim: mekân (siluet + ışık) → nesne (`bt_object`/`bt_relic`) → veri
+(`bt_count`/`bt_clock`/`bt_map`) dönüşümlü; aynı tip üst üste en fazla 2. Uzunda her bölüm `bt_chapter` ile açılabilir
+(ilk sahne hariç: soğuk açılış olayın içinde). Tema (`palette`) konuya göre, bir öncekinden farklı. Kaşif, dekor (`set`),
+kicker (`title`), ekranda kaynak notu yok.
+
+## 4b. Anlatım — Düşün Bakalım (belgesel)
+
+Yavaş, alçak, hafif ürkütücü, merak uyandıran belgesel sesi (BELGESEL.md §3): kısa ağır cümleler + arada akan uzun
+cümle, sessizlik bırakan noktalama, derin zaman/karanlık/bilinmeyen imgeleri, cevabı bekleten yapı. Enerjik YouTuber
+kalıpları ("Peki", "inanılmaz", "hemen anlatayım", ünlem) yok; "siz" hitabı seyrek ve sakin. Devrik cümle yok, "-yor"
+≤ 1/3, geçmiş zaman ağırlıklı, kısaltma yok, tartışmalı bilgi "büyük olasılıkla"/"rivayete göre". Karakter: uzun
+3.900–4.500, Shorts 330–420.
+
+## 3. Sahne seçimi — Stickstory (sepya stil, `"theme": "parchment"`)
 
 | Anlatılan şey | Sahne tipi |
 |---|---|
@@ -59,7 +80,7 @@ Kapak: tek nesne + büyük Kaşif, 2–4 kelime, uzunda `cover.focus` zorunlu. B
 - Aynı tip üst üste en fazla 2 sahne; `stage` 3 sahne sürebilir.
 - Kaşif anlatıcıdır; olayın kahramanları şapkasız dönem figürleridir (defne tacı, sarık, bere, miğfer).
 
-## 4. Anlatım
+## 4. Anlatım — Stickstory
 
 - Ses ayarı yok: `pacing`, `tone`, `tts.settings` kullanılmaz; ses doğal okur, tonlamayı noktalama taşır (BRAND.md §6.2).
 - **Düz anlatım yok:** izleyiciye seslen, merakı bekletip cevapla, zıtlık ve duyusal ayrıntı kullan,
@@ -73,4 +94,5 @@ Kapak: tek nesne + büyük Kaşif, 2–4 kelime, uzunda `cover.focus` zorunlu. B
 
 ## 5. Kontrol
 
-`brand/kit/BRAND.md` §10 kontrol listesi + `tools/lint.py` + `tools/preview.py` (sheet ve cover'ı aç, bak).
+Düşün Bakalım: `docs/BELGESEL.md` §8; Stickstory: `brand/kit/BRAND.md` §10 kontrol listesi. Sonra `tools/lint.py` +
+`tools/preview.py` (sheet ve cover'ı aç, bak).

@@ -9,6 +9,7 @@ Scripts of every channel live in videos/<date>/; a channel's files start with it
   youtube_env   env var / GitHub secret holding that channel's YouTube token JSON (never another channel's)
   lang          narration / on-screen / YouTube metadata language ("lang" in the script must match)
   voice_id      ElevenLabs voice of the channel (model eleven_v3; owner's choice, never change)
+  theme         the channel's visual + narration style: "belgesel" (docs/BELGESEL.md) or "parchment" (brand/kit/BRAND.md)
   hashtag       the channel's own hashtag; brand_tag the channel tag every video carries
   categories    content pool the daily task rotates through (plan.py suggests one per video)
   category_id   YouTube category every upload of the channel gets (27 Education, 28 Science & Technology)
@@ -22,7 +23,8 @@ CHANNELS = {
         # fewer but better (owner, 2026-10-26: YouTube's "mass-produced content" review): a long video every 2nd day
         "long_every": 2, "long_anchor": "2026-10-23", "long_slot": "20:30",
         "youtube_env": "YOUTUBE_TOKEN_JSON",
-        "lang": "tr", "voice_id": "j4vJUfke1j8j9OYq8V3b",
+        # belgesel style and its slow documentary voice for every video, long and Shorts (owner, 2026-10-29)
+        "lang": "tr", "voice_id": "mF7tIc9VLrznhGooGjaT", "theme": "belgesel",
         "hashtag": "#düşünbakalım", "brand_tag": "düşün bakalım",
         "category_id": "27", "ai_disclosure": False,
         # topics start from Turkey's front page too (tools/news.py --channel db; owner, 2026-10-26)
@@ -43,7 +45,7 @@ CHANNELS = {
         "short_slots": ["13:00", "19:00"],
         "long_every": 2, "long_anchor": "2026-10-22", "long_slot": "14:00",
         "youtube_env": "YOUTUBE_TOKEN_JSON_AG",
-        "lang": "en", "voice_id": "2t85BBUECtLLKQzxLD95",
+        "lang": "en", "voice_id": "2t85BBUECtLLKQzxLD95", "theme": "parchment",
         "hashtag": "#stickstory", "brand_tag": "stickstory",
         "category_id": "28", "ai_disclosure": True,                 # Science & Technology, AI use: yes (owner, 2026-10-26)
         "categories": ["history's strangest moments", "unsolved mysteries", "how it was built",

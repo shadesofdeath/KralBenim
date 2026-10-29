@@ -2,7 +2,14 @@
 
 Her video yayına gitmeden önce **senaryoyu yazmayan** bir eleştirmen ajan tarafından puanlanır.
 Eleştirmen önce **sadece anlatım metnini** (tüm sahnelerin `text` alanları art arda) görüntüye bakmadan okur ve "Senaryo" puanını verir. Sonra taze gözle bakar: sadece `sheet.png`, `cover.jpg`, senaryo JSON'u, `tools/lint.py` ve
-`tools/preview.py` çıktısını görür. Görsel kriterlerde ölçü `brand/kit/BRAND.md`'dir (§2 Kaşif, §3 renkler, §5 çizim dili, §9 kapak, §10 kontrol listesi).
+`tools/preview.py` çıktısını görür. Görsel kriterlerde ölçü Stickstory için `brand/kit/BRAND.md` (§2 Kaşif, §3 renkler, §5 çizim dili, §9 kapak, §10 kontrol listesi), **Düşün Bakalım için `docs/BELGESEL.md`**'dir.
+
+**Düşün Bakalım (belgesel) videolarında kriterler şöyle okunur:** *Senaryo/Kanca*: anlatım yavaş, hafif ürkütücü,
+merak uyandıran belgesel sesi mi (enerjik YouTuber kalıbı varsa en fazla 6)? *Hareket*: sabit ve net mi; titreyen,
+sallanan, zıplayan öğe varsa en fazla 5 (yavaş doğal hareket yeterli, `motion` eşiği 0,3). *Kompozisyon + Kaşif* yerine
+**Kompozisyon + sadelik**: sahne başına tek özne, gereksiz süs yok, sol üst boş, Kaşif ve dekor yok. *Derinlik + marka*
+yerine **Tema**: temanın token renkleri, ışık havuzu, bir önceki videodan farklı tema. *Doğruluk*: ekranda kaynak notu
+aranmaz, `sources` listesi yeter. *Kapak*: BELGESEL.md §7.
 
 ## Puanlama (1–10)
 

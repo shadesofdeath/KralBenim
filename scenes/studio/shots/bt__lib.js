@@ -6,6 +6,8 @@
 //   BTL.person(parent, pose, x, y, h, o) -> silhouette (stand, bend, kneel, sit, dive)
 //   BTL.glow(svg, defs, cx, cy, r, color, alpha) -> {e, set(alpha)}   soft radial light pool
 //   BTL.stars(parent, n, seed, box) -> {update(lt)}   still stars, a few breathe very slowly
+//   BTL.stage(svg, W, H, {fx, k, ty}) -> {g, portrait}   1920x1080 stage of a place, framed for a vertical Short
+//   BTL.fit(textEl, maxW)          shrink a one-line text to fit
 //   BTL.E(cx, cy, rx, ry) ellipse path · BTL.ease(lt, a, d) eased 0..1 · BTL.FR / BTL.LO fonts
 'use strict';
 
@@ -55,6 +57,19 @@ const BTL = (() => {
     el(rg, 'stop', { offset: '1', 'stop-color': color, 'stop-opacity': 0 });
     const e = el(parent || svg, 'circle', { cx, cy, r, fill: `url(#${id})`, 'fill-opacity': alpha });
     return { e, set(a) { e.setAttribute('fill-opacity', Math.max(0, a).toFixed(3)); } };
+  }
+
+  // places are composed on a 1920x1080 stage. On a vertical (Shorts) frame the stage is enlarged (k) around fx so the
+  // subject fills the picture above the subtitles; the ground fills run on below 1080 so the lower frame is not empty.
+  function stage(svg, W, H, o = {}) {
+    if (W >= H) return { g: el(svg, 'g'), portrait: false };
+    const k = o.k ?? 1.5, fx = o.fx ?? 960, fy = o.fy ?? 540, ty = o.ty ?? 560;
+    return { g: el(svg, 'g', { transform: `translate(${(W / 2 - k * fx).toFixed(1)} ${(ty - k * fy).toFixed(1)}) scale(${k})` }), portrait: true };
+  }
+  // shrink a one-line svg text until it fits maxW
+  function fit(e, maxW) {
+    try { const w = e.getComputedTextLength(), fs = parseFloat(e.getAttribute('font-size')); if (w > maxW) e.setAttribute('font-size', (fs * maxW / w).toFixed(1)); } catch (err) { /* not laid out */ }
+    return e;
   }
 
   function stars(parent, n, seed, box) {
@@ -244,5 +259,5 @@ const BTL = (() => {
     D.s('M30-50l20-10M40-30l14 4', { w: 3, color: C.gold });
   };
 
-  return { C, FR, LO, E, ease, drawing, glow, stars, person, OBJ };
+  return { C, FR, LO, E, ease, drawing, glow, stage, fit, stars, person, OBJ };
 })();

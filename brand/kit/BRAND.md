@@ -1,4 +1,9 @@
-# Düşün Bakalım — Marka Kitabı
+# Marka Kitabı (parşömen tarzı — Stickstory)
+
+> **2026-10-29'dan beri Düşün Bakalım'ın bütün videoları belgesel tarzındadır: anayasası `docs/BELGESEL.md`**
+> (kanal sahibinin kararı). Bu dosyanın görsel kuralları (§2 Kaşif, §3 renkler, §4–5 çizim, §6.0 YouTuber anlatıcı,
+> §9 kapak, §10–11) artık **Stickstory**'nin parşömen tarzı içindir. Düşün Bakalım için buradan sadece §1 (kimlik,
+> niş, konu havuzu) ve §6.1, §6.3, §6.3b, §6.6, §6.7, §6.12 geçerlidir.
 
 Kanalın "anayasası". Senaryo yazan, sahne kodlayan, ya da kapak üreten **her ajan
 önce bunu okur**. Burada yazmayan bir görünüm kullanılmaz; çelişki varsa bu dosya kazanır.

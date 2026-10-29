@@ -1,5 +1,8 @@
 # Animasyon rehberi (parşömen + Kaşif)
 
+> Bu rehber **Stickstory**'nin parşömen tarzı içindir. Düşün Bakalım 2026-10-29'dan beri belgesel tarzındadır:
+> görsel dil, `bt_*` sahne tipleri ve yeni tip şablonu `docs/BELGESEL.md`'de.
+
 Kanalın **tek** görsel tarzı: sepya parşömen üstüne elle çizilmiş mürekkep ve çöp adam anlatıcı **Kaşif**
 (`brand/kit/BRAND.md`). Her ajan, yeni sahne tipi yazmadan ya da senaryo kurmadan önce BRAND.md'yi ve bunu
 okur. Amaç: farklı ajanların yazdığı sahneler aynı defterden çıkmış gibi görünsün. Eski "Studio" tarzı

@@ -20,11 +20,11 @@
   SH.bt_chapter = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), cx = W / 2, cy = H * 0.44;
+      const g = el(svg, 'g'), cx = W / 2, cy = H > W ? 640 : H * 0.44;
       BTL.glow(svg, defs, cx, cy, 560, C.stain, 0.1, g);
       const num = txt(g, P.n || 'I', cx, cy - 120, 58, { color: C.gold, weight: 400, spacing: '0.08em' });
       const rule = el(g, 'path', { d: `M${cx - 160} ${cy - 70}L${cx + 160} ${cy - 70}`, stroke: C.inkSoft, 'stroke-width': 2, pathLength: 1, fill: 'none' });
-      const title = txt(g, P.title || '', cx, cy + 50, 118, { weight: 300 });
+      const title = BTL.fit(txt(g, P.title || '', cx, cy + 50, 118, { weight: 300 }), W - 120);
       const sub = P.sub ? txt(g, P.sub, cx, cy + 130, 44, { font: LO, italic: true, color: C.inkSoft, weight: 400 }) : null;
       return {
         update(lt) {
@@ -39,10 +39,10 @@
   SH.bt_text = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), L = P.lines || [], n = L.length;
-      BTL.glow(svg, defs, W / 2, H * 0.44, 520, C.stain, 0.08, g);
-      const gap = P.gap || 190, y0 = H * 0.44 - (n - 1) * gap / 2 + 40;
-      const items = L.map((l, i) => ({ l, e: txt(g, l.text, W / 2, y0 + i * gap, l.size || 150, { italic: l.italic, weight: l.weight || 300, color: l.accent ? C.gold : C.ink }) }));
+      const g = el(svg, 'g'), L = P.lines || [], n = L.length, cy = H > W ? 640 : H * 0.44;
+      BTL.glow(svg, defs, W / 2, cy, 520, C.stain, 0.08, g);
+      const gap = P.gap || 190, y0 = cy - (n - 1) * gap / 2 + 40;
+      const items = L.map((l, i) => ({ l, e: BTL.fit(txt(g, l.text, W / 2, y0 + i * gap, l.size || 150, { italic: l.italic, weight: l.weight || 300, color: l.accent ? C.gold : C.ink }), W - 120) }));
       return {
         update(lt, dur, cues) {
           items.forEach(({ l, e }, i) => {
@@ -58,18 +58,23 @@
   SH.bt_word = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), A = P.from || {}, B = P.to || {}, y = H * 0.5, xa = W * 0.29, xb = W * 0.71;
-      BTL.glow(svg, defs, W / 2, H * 0.44, 600, C.stain, 0.08, g);
+      // word -> word: left to right on a wide frame, top to bottom on a vertical one
+      const portrait = H > W, g = el(svg, 'g'), A = P.from || {}, B = P.to || {};
+      const xa = portrait ? W / 2 : W * 0.29, xb = portrait ? W / 2 : W * 0.71, ya = portrait ? 420 : H * 0.5, yb = portrait ? 860 : H * 0.5;
+      BTL.glow(svg, defs, W / 2, portrait ? 600 : H * 0.44, 600, C.stain, 0.08, g);
       const D = BTL.drawing(g);
-      const ic = el(g, 'g', { transform: `translate(${xa} ${y - 230}) scale(0.36)` });
+      const ic = el(g, 'g', { transform: `translate(${xa} ${ya - 230}) scale(0.36)` });
       const DI = BTL.drawing(ic);
       if (A.icon === 'snail') BTL.OBJ.snail(DI);
       else if (A.icon === 'chip') { DI.f('M-260-30L200-60L280-20L240 40L-220 50Z', C.paperLight, 1); DI.s('M-260-30L200-60L280-20L240 40L-220 50Z', { w: 6 }); DI.s('M-180-10L180-30M-160 26L200 10', { w: 4, color: C.inkSoft }); }
-      const wa = txt(g, A.word || '', xa, y + 40, 116, { italic: true, weight: 300 });
-      const ga = txt(g, A.gloss || '', xa, y + 120, 46, { font: LO, italic: true, color: C.inkSoft, weight: 400 });
-      const ar = D.s(`M${W / 2 - 80} ${y + 10}L${W / 2 + 80} ${y + 10}M${W / 2 + 56} ${y - 10}L${W / 2 + 80} ${y + 10}L${W / 2 + 56} ${y + 30}`, { w: 3, color: C.gold });
-      const wb = txt(g, B.word || '', xb, y + 40, 116, { italic: true, weight: 300, color: B.accent === false ? C.ink : C.gold });
-      const gb = txt(g, B.gloss || '', xb, y + 120, 46, { font: LO, italic: true, color: C.inkSoft, weight: 400 });
+      const wa = txt(g, A.word || '', xa, ya + 40, 116, { italic: true, weight: 300 });
+      const ga = txt(g, A.gloss || '', xa, ya + 120, 46, { font: LO, italic: true, color: C.inkSoft, weight: 400 });
+      const arD = portrait ? `M${W / 2} ${ya + 180}L${W / 2} ${yb - 120}M${W / 2 - 20} ${yb - 144}L${W / 2} ${yb - 120}L${W / 2 + 20} ${yb - 144}`
+        : `M${W / 2 - 80} ${ya + 10}L${W / 2 + 80} ${ya + 10}M${W / 2 + 56} ${ya - 10}L${W / 2 + 80} ${ya + 10}L${W / 2 + 56} ${ya + 30}`;
+      const ar = D.s(arD, { w: 3, color: C.gold });
+      const wb = txt(g, B.word || '', xb, yb + 40, 116, { italic: true, weight: 300, color: B.accent === false ? C.ink : C.gold });
+      const gb = txt(g, B.gloss || '', xb, yb + 120, 46, { font: LO, italic: true, color: C.inkSoft, weight: 400 });
+      for (const t of [wa, wb]) BTL.fit(t, (portrait ? W : W / 2) - 120);
       return {
         update(lt, dur, cues) {
           DI.reveal(BTL.ease(lt, 0, 2.2));
@@ -85,7 +90,7 @@
   SH.bt_clock = {
     kind: '2d',
     build({ P, W, H, svg, defs }) {
-      const g = el(svg, 'g'), cx = W / 2, cy = H * 0.45, R = 300, hours = P.hours || 25;
+      const g = el(svg, 'g'), cx = W / 2, cy = H > W ? 640 : H * 0.45, R = 300, hours = P.hours || 25;
       BTL.glow(svg, defs, cx, cy, 560, C.stain, 0.1, g);
       el(g, 'circle', { cx, cy, r: R, fill: 'none', stroke: C.inkSoft, 'stroke-width': 2 });
       let ticks = '';
@@ -112,8 +117,9 @@
   SH.bt_count = {
     kind: '2d',
     build({ P, W, H, svg, defs, seed }) {
-      const g = el(svg, 'g'), total = P.total || 2737, hit = P.hit || 129, cols = 74, rows = Math.ceil(total / cols);
-      const x0 = 90, y0 = 170, sx = 14.4, sy = 18.4, r = rng(seed * 31 + 7), pick = new Set();
+      // a field of marks: number beside it on a wide frame, above it on a vertical one
+      const portrait = H > W, g = el(svg, 'g'), total = P.total || 2737, hit = P.hit || 129, cols = portrait ? 58 : 74, rows = Math.ceil(total / cols);
+      const x0 = portrait ? 66 : 90, y0 = portrait ? 500 : 170, sx = portrait ? 16.4 : 14.4, sy = portrait ? 13.4 : 18.4, r = rng(seed * 31 + 7), pick = new Set();
       while (pick.size < hit) pick.add(Math.floor(r() * total));
       let dA = '', dB = '';
       for (let i = 0; i < total; i++) {
@@ -122,10 +128,10 @@
       }
       const all = el(g, 'path', { d: dA, stroke: C.inkSoft, 'stroke-width': 3, 'stroke-linecap': 'round', fill: 'none' });
       const gold = el(g, 'path', { d: dB, stroke: C.inkSoft, 'stroke-width': 3, 'stroke-linecap': 'round', fill: 'none' });
-      const tx = x0 + cols * sx + 380;
-      const num = txt(g, '0', tx, H * 0.47, 210, { weight: 300, color: C.gold });
-      const lab = txt(g, P.label || '', tx, H * 0.47 + 76, 52, { font: LO, italic: true, color: C.ink, weight: 400 });
-      const note = P.note ? txt(g, P.note, tx, H * 0.47 + 140, 40, { font: LO, italic: true, color: C.inkSoft, weight: 400 }) : null;
+      const tx = portrait ? W / 2 : x0 + cols * sx + 380, ny = portrait ? 330 : H * 0.47;
+      const num = txt(g, '0', tx, ny, 210, { weight: 300, color: C.gold });
+      const lab = txt(g, P.label || '', tx, ny + 76, 52, { font: LO, italic: true, color: C.ink, weight: 400 });
+      const note = P.note ? txt(g, P.note, tx, portrait ? 130 : ny + 140, portrait ? 46 : 40, { font: LO, italic: true, color: C.inkSoft, weight: 400 }) : null;
       return {
         update(lt, dur, cues) {
           const th = cue(cues, 'hit', dur * 0.45);
@@ -156,9 +162,9 @@
     build({ P, W, H, svg, defs }) {
       const g = el(svg, 'g'), [l0, b0, l1, b1] = P.bounds || [-2, 28, 40, 46];
       // the requested bounds fit inside the picture (above the subtitles); the land then runs on to every frame edge
-      const k = Math.cos((b0 + b1) / 2 * Math.PI / 180), aw = W - 180, ah = H - 230;
+      const portrait = H > W, k = Math.cos((b0 + b1) / 2 * Math.PI / 180), aw = W - (portrait ? 120 : 180), ah = portrait ? 1000 : H - 230;
       const s = Math.min(aw / ((l1 - l0) * k), ah / (b1 - b0));
-      const ox = W / 2 - (l1 - l0) * k * s / 2, oy = (H - 90) / 2 - (b1 - b0) * s / 2;
+      const ox = W / 2 - (l1 - l0) * k * s / 2, oy = (portrait ? 640 : (H - 90) / 2) - (b1 - b0) * s / 2;
       const X = lon => ox + (lon - l0) * k * s, Y = lat => oy + (b1 - lat) * s;
       const mg = el(g, 'g');
       let grat = '';
