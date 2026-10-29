@@ -1,0 +1,171 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "fildisi",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "extra": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Lathan 2010, Caroline Hampton Halsted: the first to use rubber gloves in the operating room (Proc Bayl Univ Med Cent, PMC)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2943454/"
+  },
+  {
+   "title": "Science History Institute, Distillations: The Nurse Who Introduced Gloves to the Operating Room",
+   "url": "https://www.sciencehistory.org/stories/magazine/the-nurse-who-introduced-gloves-to-the-operating-room/"
+  },
+  {
+   "title": "Lathan 2011, Rubber gloves redux (Proc Bayl Univ Med Cent, PMC)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3205159/"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Mikroplar",
+   "için değil"
+  ],
+  "highlight": [
+   "değil"
+  ],
+  "scene": 0,
+  "t": 3.0,
+  "focus": [
+   540,
+   570
+  ],
+  "zoom": 1.15,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "İlk ameliyat eldiveni mikroplar için yapılmadı.",
+   "type": "bt_glove",
+   "visual": "Açık fildişi zeminde, ışık havuzunun içinde dik duran tek bir ince lastik eldiven; uzun bilekliği aşağıda, çizgileri kendini çizer",
+   "params": {
+    "mode": "hero"
+   }
+  },
+  {
+   "text": "1889 kışında hemşire Hampton'ın elleri yara içindeydi.",
+   "type": "bt_hands",
+   "visual": "Avuçları izleyiciye dönük iki kalkık el ve önkol; avuçlarda, parmaklarda ve önkollarda kırmızı tahriş lekeleri yavaşça yayılır, ince çatlaklar belirir; üstte küçük italik 'Caroline Hampton, 1889'",
+   "params": {
+    "mode": "sore",
+    "label": "Caroline Hampton, 1889"
+   },
+   "cues": {
+    "sore": "yara"
+   }
+  },
+  {
+   "text": "Suçlu, mikrop öldüren cıvalı sıvıydı.",
+   "type": "bt_basin",
+   "visual": "Masada etiketli koyu bir eczane şişesi ('Cıva klorür') ve önünde içi sıvı dolu emaye bir leğen; sıvının yüzünde yavaşça açılan halkalar",
+   "params": {
+    "label": [
+     "Cıva",
+     "klorür"
+    ]
+   },
+   "cues": {
+    "label": "cıvalı"
+   }
+  },
+  {
+   "text": "Cerrah Halsted ona ince lastik eldivenler yaptırdı.",
+   "type": "bt_don",
+   "visual": "Boş, parmakları sarkık bir lastik eldiven; alttan kızarık lekeli bir el yavaşça içine girer, parmaklar dolar ve doğrulur",
+   "params": {
+    "label": "Goodyear, New York"
+   }
+  },
+  {
+   "text": "Elleri iyileşti.",
+   "type": "bt_hands",
+   "visual": "Aynı iki kalkık el; kırmızı lekeler ve çatlaklar yavaşça silinir",
+   "params": {
+    "mode": "healed"
+   }
+  },
+  {
+   "text": "Birkaç ay sonra evlendiler.",
+   "type": "bt_couple",
+   "visual": "Kemerli uzun bir pencerenin ışığında, el ele tutuşmuş iki siluet: cerrah ve uzun etekli hemşire; ışıkta yavaşça süzülen toz",
+   "camera": false
+  },
+  {
+   "text": "Cerrahlar ise yıllarca çıplak elle çalıştı.",
+   "type": "bt_theatre",
+   "visual": "1890'ların ameliyathanesi: tavan penceresinden düşen ışık, gaz lambası, örtülü hasta yatan masa, masaya eğilmiş cerrah silueti; 'çıplak'ta açık renk elleri altın ışıkla belirir",
+   "cues": {
+    "bare": "çıplak"
+   }
+  },
+  {
+   "text": "Eldiven gelince enfeksiyon, yüzde on yediden ikinin altına indi.",
+   "type": "bt_rate",
+   "visual": "İki sütun: 'eldivensiz' %17 uzun gri sütun, 'eldivenli' %1,8 kısa altın sütun; üstte 'Bloodgood, fıtık ameliyatları'",
+   "params": {
+    "note": "Bloodgood, fıtık ameliyatları",
+    "a": {
+     "label": "eldivensiz",
+     "value": 17.3,
+     "text": "%17"
+    },
+    "b": {
+     "label": "eldivenli",
+     "value": 1.8,
+     "text": "%1,8"
+    }
+   },
+   "cues": {
+    "b": "ikinin"
+   }
+  },
+  {
+   "text": "Milyonları koruyan eldiven, bir hemşirenin elleri için doğdu. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_glove",
+   "visual": "Sıra sıra aynı eldivenler; 'hemşirenin'de ortadaki tek eldiven altın çizgiyle aydınlanıp yavaşça büyür, diğerleri solar; üstte 'Caroline Hampton'",
+   "params": {
+    "mode": "many",
+    "label": "Caroline Hampton"
+   },
+   "cues": {
+    "hit": "hemşirenin"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Ameliyat Eldiveni: Aslında Mikroplar İçin İcat Edilmedi",
+  "description": "Ameliyat eldiveni mikroplar için icat edilmedi. 1889 kışında Johns Hopkins Hastanesi'nde hemşire Caroline Hampton'ın elleri, mikrop öldüren cıva klorürlü sıvıdan yara içinde kaldı.\n\nCerrah William Halsted, Goodyear Lastik Şirketi'nden onun için ince lastik eldivenler yaptırdı. Elleri iyileşti, 1890 haziranında evlendiler. Cerrahlar eldiveni ancak yıllar sonra benimsedi ve ameliyat enfeksiyonları çarpıcı biçimde azaldı.\n\nHer gün yeni bir 'neden?' için abone ol. Sence tıp tarihinin en tesadüfi buluşu hangisi? Yorumlara yaz!\n\n#shorts #ameliyateldiveni #tıptarihi #düşünbakalım",
+  "tags": [
+   "ameliyat eldiveni",
+   "ilk ameliyat eldiveni",
+   "ameliyat eldiveni tarihi",
+   "cerrahi eldiven",
+   "lastik eldiven",
+   "eldiven nasıl icat edildi",
+   "caroline hampton",
+   "william halsted",
+   "johns hopkins",
+   "tıp tarihi",
+   "hemşire",
+   "cıva klorür",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-30T14:00:00+03:00",
+  "related": "videos/2026-10-29/04-ilk-kasik.json"
+ }
+}
