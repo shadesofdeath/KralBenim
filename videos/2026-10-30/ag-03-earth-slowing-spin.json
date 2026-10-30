@@ -1,0 +1,2230 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-earth-slowing-spin",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "EARTH IS",
+   "SLOWING"
+  ],
+  "highlight": [
+   "SLOWING"
+  ],
+  "scene": 0,
+  "t": 6.5,
+  "focus": [
+   1060,
+   300
+  ],
+  "zoom": 1.12,
+  "size": 190,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.3,
+   "face": -1,
+   "x": 1640,
+   "y": 990,
+   "dir": 60
+  }
+ },
+ "sources": [
+  {
+   "title": "A 2,700-year-old solar eclipse has solved an ancient mystery (BBC Sky at Night)",
+   "url": "https://skyatnightmagazine.com/news/solar-eclipse-china-709-bce-study"
+  },
+  {
+   "title": "A 2,700-Year-Old Solar Eclipse Revealed Something Surprising About Earth (ScienceDaily)",
+   "url": "https://sciencedaily.com/releases/2026/10/261025073055.htm"
+  },
+  {
+   "title": "Measurement of the Earth's rotation: 720 BC to AD 2016 (Proceedings of the Royal Society A)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5247521/"
+  },
+  {
+   "title": "Measuring the Moon's Distance (NASA Eclipse Web Site)",
+   "url": "https://eclipse.gsfc.nasa.gov/help/ApolloLaser.html"
+  },
+  {
+   "title": "John W. Wells & Coral Geochronometry (Paleontological Research Institution)",
+   "url": "https://www.priweb.org/blog-post/john-wells-and-coral-geochronometry"
+  },
+  {
+   "title": "The Leap Second is History. Long Live the 'Leap Hour' (Universe Today)",
+   "url": "https://www.universetoday.com/articles/the-leap-second-is-history-long-live-the-leap-hour"
+  }
+ ],
+ "youtube": {
+  "title": "Earth's Rotation Is Slowing: How a 709 BC Eclipse Proved It",
+  "description": "Earth's rotation is slowing down, and a 2,700-year-old eclipse record from ancient China proves it. How did scribes in 709 BC catch our planet losing time?\n\nIn 709 BC, court scribes in the state of Lu wrote that the Sun was totally eclipsed. Run that eclipse back with today's spin and the shadow misses China, because the Moon's tides have been braking Earth for thousands of years. Fossil corals from the Devonian show years of about 400 days, atomic clocks forced us to add 27 leap seconds, and now Earth's spin is playing tricks again. In October 2026, timekeepers voted to stop leap seconds altogether.\n\nIn this video:\n- The 709 BC eclipse that missed China on the computer\n- How the Moon's tides brake Earth's spin\n- John Wells and the 400-day coral year\n- Leap seconds, crashed websites and the end of the leap second\n- Why Earth has spun faster since 2020\n\nSubscribe to Stickstory for more strange true stories about our planet. If you could add one extra hour to every day, what would you do with it? Tell me in the comments!\n\n#earthrotation #leapsecond #eclipse #space #stickstory",
+  "tags": [
+   "earth's rotation",
+   "earth's rotation slowing",
+   "earth's rotation eclipse",
+   "earth's rotation leap second",
+   "earth is slowing down",
+   "709 bc eclipse",
+   "leap second",
+   "leap second abolished",
+   "moon moving away",
+   "tidal braking",
+   "john wells coral",
+   "devonian coral 400 days",
+   "length of day",
+   "atomic clock",
+   "space",
+   "planet earth",
+   "science",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-30T14:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "es_eclipse",
+   "text": "July 17th, 709 BC. In the state of Lu, in ancient China, the Sun went out in the middle of the day.",
+   "visual": "An ancient Chinese court at noon: a hall with upswept eaves on the left, a gate tower on the right; two scribes in the courtyard point up as the black Moon slides over the Sun; on 'out' the sky fills with ink hatching, stars appear and the gold corona flares.",
+   "title": {
+    "white": "Lu, China",
+    "gray": "709 BC"
+   },
+   "cues": {
+    "lu": "Lu",
+    "out": "out"
+   },
+   "params": {
+    "cover": {
+     "at": 0.0,
+     "dur": 5.2,
+     "from": 0.35,
+     "to": 1
+    },
+    "total": "out",
+    "cover_hide": true,
+    "spin_arrow": {
+     "cover_only": true,
+     "r": 2.05
+    },
+    "sun": {
+     "x": 0.52,
+     "y": 0.26,
+     "r": 110
+    },
+    "cast": [
+     {
+      "who": "scribe",
+      "hat": false,
+      "beard": "black",
+      "x": 0.42,
+      "y": 0.8,
+      "scale": 0.62,
+      "pose": "point",
+      "face": "right",
+      "dir": "up",
+      "emotion": "surprised"
+     },
+     {
+      "who": "scribe",
+      "hat": false,
+      "beard": "black",
+      "x": 0.6,
+      "y": 0.8,
+      "scale": 0.62,
+      "pose": "shock",
+      "face": "left",
+      "dir": "up",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "709 BC",
+      "x": 0.8,
+      "y": 0.14,
+      "at": "lu",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "shake": "out"
+   },
+   "set": false,
+   "chapter": "The Sun Went Out"
+  },
+  {
+   "type": "es_eclipse",
+   "text": "The court scribes watched the light drain from the sky, and they wrote down one short line: the Sun was totally eclipsed.",
+   "visual": "Close on a bundle of bamboo slips on a low table under the black eclipsed Sun with its gold corona; a brush writes column after column of ink characters; on 'totally' a red note 'the Sun was totally eclipsed'.",
+   "title": {
+    "white": "The record"
+   },
+   "cues": {
+    "wrote": "wrote",
+    "tot": "totally"
+   },
+   "params": {
+    "cover": {
+     "from": 1,
+     "to": 1
+    },
+    "total": 0,
+    "dark": 1,
+    "sun": {
+     "x": 0.3,
+     "y": 0.4,
+     "r": 90
+    },
+    "court": true,
+    "hall_x": 0.1,
+    "gate_x": 1.02,
+    "slips": {
+     "x": 0.62,
+     "y": 0.86,
+     "s": 1.05,
+     "n": 10,
+     "at": "wrote",
+     "dur": 5
+    },
+    "labels": [
+     {
+      "text": "\"totally eclipsed\"",
+      "x": 0.3,
+      "y": 0.7,
+      "at": "tot",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.12,
+    "move": "push"
+   },
+   "source": "Spring and Autumn Annals"
+  },
+  {
+   "type": "es_globe",
+   "text": "Here's the problem. Run that eclipse backwards on a computer, with Earth spinning at today's speed, and the shadow misses China completely.",
+   "visual": "Earth in space spinning; a red pin 'Lu' sits on China; on 'shadow' the dark eclipse shadow band sweeps across the globe but stops far away from the pin; red note 'today's spin'.",
+   "title": {
+    "white": "Rewind"
+   },
+   "cues": {
+    "comp": "computer",
+    "shadow": "shadow",
+    "miss": "misses"
+   },
+   "params": {
+    "earth": {
+     "x": 0.5,
+     "y": 0.54,
+     "r": 340
+    },
+    "pin": {
+     "u": 0.32,
+     "v": -0.28,
+     "text": "Lu",
+     "at": 0.3,
+     "dx": 40
+    },
+    "track": {
+     "at": "shadow",
+     "from": -1.9,
+     "to": -1.05,
+     "dur": 2.2,
+     "w": 80,
+     "dv": 0.45
+    },
+    "labels": [
+     {
+      "text": "today's spin",
+      "x": 0.16,
+      "y": 0.42,
+      "at": "comp",
+      "size": 76,
+      "color": "red"
+     },
+     {
+      "text": "MISS!",
+      "x": 0.82,
+      "y": 0.8,
+      "at": "miss",
+      "size": 100,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "title",
+   "text": "It lands thousands of kilometers away. So who got it wrong? The scribes, or the planet?",
+   "visual": "Giant words 'The scribes' / 'or the planet?' set word by word with 'planet?' in a red box; the fez narrator on the right shrugs, then points at 'planet'.",
+   "title": {},
+   "cues": {
+    "w0": "scribes",
+    "w1": "planet",
+    "note": "thousands"
+   },
+   "params": {
+    "lines": [
+     "The scribes",
+     "or the planet?"
+    ],
+    "highlight": [
+     "planet"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "thousands of km off",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.9,
+     "at": "w0",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "To answer that, you have to meet some accidental scientists.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, title 'Accidental Scientists'.",
+   "title": {},
+   "cues": {
+    "title": "accidental"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Accidental Scientists",
+    "label": "CHAPTER"
+   },
+   "chapter": "Accidental Scientists"
+  },
+  {
+   "type": "es_eclipse",
+   "text": "For those scribes, an eclipse was an omen, a warning from heaven, so it went straight into the court records.",
+   "visual": "Back in the Lu court under the black, totally eclipsed Sun with its gold corona; one scribe holds up a scroll, another points at the sky in fear; red note 'an omen' on 'omen', slips being written on the table at the front.",
+   "title": {
+    "white": "An omen"
+   },
+   "cues": {
+    "omen": "omen",
+    "warn": "warning",
+    "rec": "records"
+   },
+   "params": {
+    "cover": {
+     "from": 1,
+     "to": 1
+    },
+    "total": 0,
+    "sun": {
+     "x": 0.62,
+     "y": 0.24,
+     "r": 90
+    },
+    "hall_x": 0.18,
+    "gate_x": 1.02,
+    "cast": [
+     {
+      "who": "scribe",
+      "hat": false,
+      "beard": "black",
+      "x": 0.36,
+      "y": 0.8,
+      "scale": 0.62,
+      "pose": "point",
+      "face": "right",
+      "dir": "up",
+      "emotion": "worried"
+     },
+     {
+      "who": "scribe",
+      "hat": false,
+      "beard": "black",
+      "x": 0.5,
+      "y": 0.8,
+      "scale": 0.62,
+      "pose": "hold",
+      "face": "left",
+      "dir": "up",
+      "text": "OMEN!",
+      "emotion": "worried"
+     }
+    ],
+    "slips": {
+     "x": 0.8,
+     "y": 0.92,
+     "s": 0.6,
+     "n": 8,
+     "at": "rec",
+     "dur": 2.5
+    },
+    "labels": [
+     {
+      "text": "from heaven",
+      "x": 0.4,
+      "y": 0.3,
+      "at": "warn",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     520
+    ],
+    "zoom": 1.12,
+    "move": "left"
+   }
+  },
+  {
+   "type": "es_tablet",
+   "text": "And they weren't alone. In Babylon, astronomers pressed eclipses into clay tablets for centuries, often with the time of day.",
+   "visual": "A big clay tablet on a wooden table fills the frame; a reed stylus presses cuneiform wedges into it row after row; on 'eclipses' a small eclipse disc is scratched in the corner; note 'Babylon'.",
+   "title": {
+    "white": "Babylon"
+   },
+   "cues": {
+    "bab": "Babylon",
+    "ecl": "eclipses",
+    "time": "time"
+   },
+   "params": {
+    "mode": "tablet",
+    "write": {
+     "at": 0.2,
+     "dur": 7
+    },
+    "sign": {
+     "at": "ecl"
+    },
+    "labels": [
+     {
+      "text": "Babylon",
+      "x": 0.76,
+      "y": 0.24,
+      "at": "bab",
+      "size": 84,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "+ the time!",
+      "x": 0.77,
+      "y": 0.6,
+      "at": "time",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     540
+    ],
+    "zoom": 1.12,
+    "move": "push"
+   }
+  },
+  {
+   "type": "es_tablet",
+   "text": "Those tablets became one of the best clocks we have.",
+   "visual": "Shelves full of clay tablets slide in one by one; on 'clocks' a big red-rimmed clock face pops up in front of them with its hands turning.",
+   "title": {
+    "white": "Clay clocks"
+   },
+   "cues": {
+    "slide": "tablets",
+    "clock": "clocks"
+   },
+   "params": {
+    "mode": "shelf",
+    "slide": {
+     "at": 0
+    },
+    "clock": "clock",
+    "clock_y": 0.4,
+    "table": 0.88
+   },
+   "set": false
+  },
+  {
+   "type": "stage",
+   "text": "Fast forward to 1695. The English astronomer Edmond Halley, yes, the comet guy, compared those old eclipses with his own tables.",
+   "visual": "A candle-lit study: Edmond Halley (grey beard) at his desk points at an open book of tables; through the window a comet with a long tail; the fez narrator walks in and holds up a sign 'COMET GUY' on 'comet'; note 'Halley, 1695'.",
+   "title": {
+    "white": "Edmond Halley",
+    "gray": "1695"
+   },
+   "cues": {
+    "yr": "1695",
+    "comet": "comet",
+    "tab": "tables"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "halley",
+      "beard": "grey",
+      "x": 0.6,
+      "scale": 0.95,
+      "pose": "think",
+      "face": "left",
+      "seq": [
+       {
+        "at": "tab",
+        "pose": "point",
+        "dir": "down",
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.08,
+      "to": 0.26,
+      "at": "comet",
+      "scale": 0.95,
+      "pose": "walk",
+      "then": "hold",
+      "text": "COMET GUY",
+      "face": "right"
+     }
+    ],
+    "props": [
+     {
+      "type": "scroll",
+      "x": 0.78,
+      "y": 0.86,
+      "scale": 1.1
+     },
+     {
+      "type": "clock",
+      "x": 0.92,
+      "y": 0.86,
+      "scale": 0.9
+     }
+    ],
+    "label": {
+     "text": "Halley, 1695",
+     "x": 0.58,
+     "y": 0.16,
+     "at": "yr",
+     "size": 80
+    }
+   },
+   "set": "interior"
+  },
+  {
+   "type": "es_tide",
+   "text": "And something didn't add up. The Moon seemed to be speeding up over the centuries.",
+   "visual": "Earth in space with the Moon on a dashed orbit; on 'speeding' the Moon races faster and faster round the orbit leaving a trail; red note 'faster?!'.",
+   "title": {
+    "white": "Faster Moon?"
+   },
+   "cues": {
+    "add": "add",
+    "speed": "speeding"
+   },
+   "params": {
+    "earth": {
+     "x": 0.5,
+     "y": 0.5,
+     "r": 170
+    },
+    "moon": {
+     "d": 620,
+     "r": 60,
+     "ang": 20
+    },
+    "orbit": {
+     "speed": 0.06,
+     "fast": {
+      "at": "speed",
+      "to": 0.32
+     }
+    },
+    "arrow": false,
+    "labels": [
+     {
+      "text": "faster?!",
+      "x": 0.84,
+      "y": 0.14,
+      "at": "speed",
+      "size": 96,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "stage",
+   "text": "Halley had found a real clue. But he was reading it backwards, because the Moon wasn't the only thing that had changed. The real culprit was right under his feet.",
+   "visual": "Halley stands puzzled with his book; the fez narrator beside him shakes his head, then points down at the ground under Halley's feet on 'feet'; red note 'look down!'.",
+   "title": {
+    "white": "The clue"
+   },
+   "cues": {
+    "clue": "clue",
+    "back": "backwards",
+    "culprit": "culprit",
+    "feet": "feet"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "halley",
+      "beard": "grey",
+      "x": 0.42,
+      "scale": 1.0,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "back",
+        "pose": "think"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.7,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "feet",
+        "pose": "point",
+        "dir": "down",
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "label": {
+     "text": "look down!",
+     "x": 0.56,
+     "y": 0.24,
+     "at": "culprit",
+     "size": 84,
+     "arrow": [
+      0.45,
+      0.8
+     ]
+    }
+   },
+   "set": "hills",
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "And now the twist. Our planet is the clock, and that clock is running slow.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'The Thief'.",
+   "title": {},
+   "cues": {
+    "title": "twist"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Thief",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Thief"
+  },
+  {
+   "type": "es_tide",
+   "text": "And the thief? It's the Moon. Its gravity pulls the oceans into two huge bulges of water, the tides.",
+   "visual": "Earth on the left, the Moon on the right in space; on 'bulges' the blue ocean swells into an oval stretched toward the Moon and away from it; note 'tides'.",
+   "title": {
+    "white": "The tides"
+   },
+   "cues": {
+    "moon": "Moon",
+    "bulge": "bulges",
+    "tides": "tides"
+   },
+   "params": {
+    "earth": {
+     "x": 0.3,
+     "y": 0.5,
+     "r": 210
+    },
+    "moon": {
+     "d": 980,
+     "r": 80,
+     "ang": -4
+    },
+    "bulge": {
+     "at": "bulge",
+     "amp": 0.38
+    },
+    "arrow": false,
+    "labels": [
+     {
+      "text": "the thief",
+      "x": 0.8,
+      "y": 0.22,
+      "at": "moon",
+      "size": 86,
+      "color": "red"
+     },
+     {
+      "text": "tides",
+      "x": 0.3,
+      "y": 0.1,
+      "at": "tides",
+      "size": 90,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "es_tide",
+   "text": "Earth spins underneath them, and all that water dragging across the seafloor works like a brake.",
+   "visual": "Close on Earth spinning under the tidal bulge; the bulge is dragged slightly ahead; on 'brake' two thick red arrows push against the spin and red friction marks flicker around the planet; red note 'BRAKE'.",
+   "title": {
+    "white": "A brake"
+   },
+   "cues": {
+    "spin": "spins",
+    "brake": "brake"
+   },
+   "params": {
+    "earth": {
+     "x": 0.36,
+     "y": 0.5,
+     "r": 260
+    },
+    "moon": {
+     "d": 1250,
+     "r": 80,
+     "ang": -2
+    },
+    "bulge": {
+     "at": 0,
+     "amp": 0.34,
+     "lag": 16
+    },
+    "brake": {
+     "at": "brake"
+    },
+    "spin": 3,
+    "labels": [
+     {
+      "text": "BRAKE",
+      "x": 0.66,
+      "y": 0.62,
+      "at": "brake",
+      "size": 120,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     540
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "es_orbit",
+   "text": "And that lost spin doesn't vanish. It pushes the Moon a little farther away every year.",
+   "visual": "Earth and Moon in space; on 'pushes' the Moon slides outward along its path, a red ruler marks the gap between where it was and where it is.",
+   "title": {
+    "white": "Pushed away"
+   },
+   "cues": {
+    "lost": "lost",
+    "push": "pushes"
+   },
+   "params": {
+    "earth": {
+     "x": 0.2,
+     "y": 0.52,
+     "r": 170
+    },
+    "moon": {
+     "d": 900,
+     "r": 70,
+     "ang": -6
+    },
+    "recede": {
+     "at": "push",
+     "dur": 3,
+     "to": 1250,
+     "ruler": {
+      "text": "farther",
+      "size": 80
+     }
+    },
+    "bulge": {
+     "at": 0,
+     "amp": 0.3
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "es_moon",
+   "text": "How do we know? In 1969, the Apollo 11 astronauts left a mirror on the Moon.",
+   "visual": "Standing on the grey Moon: craters, boot prints and the Apollo 11 laser reflector, a panel of round corner mirrors on three legs; Earth hangs in the black sky; note 'Apollo 11, 1969'.",
+   "title": {
+    "white": "Apollo 11",
+    "gray": "1969"
+   },
+   "cues": {
+    "yr": "1969",
+    "mir": "mirror"
+   },
+   "params": {
+    "mode": "mirror",
+    "ground": 0.58,
+    "earth": {
+     "x": 0.82,
+     "y": 0.2,
+     "r": 110
+    },
+    "labels": [
+     {
+      "text": "Apollo 11, 1969",
+      "x": 0.42,
+      "y": 0.13,
+      "at": "yr",
+      "size": 84,
+      "color": "paper"
+     },
+     {
+      "text": "mirror",
+      "x": 0.74,
+      "y": 0.5,
+      "at": "mir",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "NASA"
+  },
+  {
+   "type": "es_moon",
+   "text": "Scientists still fire lasers at it and time the light bouncing back.",
+   "visual": "Close on the reflector panel on the Moon: a red laser beam comes down from Earth in the sky, the panel flashes gold and the beam goes back up, again and again.",
+   "title": {
+    "white": "Laser"
+   },
+   "cues": {
+    "fire": "fire",
+    "back": "bouncing"
+   },
+   "params": {
+    "mode": "mirror",
+    "ground": 0.58,
+    "earth": {
+     "x": 0.8,
+     "y": 0.16,
+     "r": 100
+    },
+    "laser": {
+     "at": "fire",
+     "period": 2.0
+    },
+    "labels": [
+     {
+      "text": "there... and back",
+      "x": 0.3,
+      "y": 0.86,
+      "at": "back",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "es_orbit",
+   "text": "The answer: the Moon moves away about 3.8 centimeters a year. That's about as fast as your fingernails grow.",
+   "visual": "Close on the Moon drifting outward from Earth; a red ruler between its old and new spot reads '3.8 cm a year'; note 'like fingernails' on 'fingernails'.",
+   "title": {
+    "white": "3.8 cm",
+    "gray": "a year"
+   },
+   "cues": {
+    "ans": "answer",
+    "cm": "centimeters",
+    "nail": "fingernails"
+   },
+   "params": {
+    "earth": {
+     "x": 0.12,
+     "y": 0.55,
+     "r": 170
+    },
+    "moon": {
+     "d": 860,
+     "r": 90,
+     "ang": -8
+    },
+    "recede": {
+     "at": "cm",
+     "dur": 2.5,
+     "to": 1240,
+     "ruler": {
+      "text": "3.8 cm a year",
+      "size": 90
+     }
+    },
+    "arrow": false,
+    "labels": [
+     {
+      "text": "like fingernails",
+      "x": 0.7,
+      "y": 0.66,
+      "at": "nail",
+      "size": 80,
+      "color": "ink"
+     }
+    ]
+   },
+   "set": false,
+   "source": "NASA"
+  },
+  {
+   "type": "es_clock",
+   "text": "Now add that braking up. Each day gets longer by less than two thousandths of a second per century. Tiny, right?",
+   "visual": "A big day-length display on a desk: it reads '24h 00.0000 s', then on 'century' the last digits tick to a red '24h 00.0018 s' with a note 'per century'; a red note 'tiny, right?' pops up on 'Tiny'.",
+   "title": {
+    "white": "Per century"
+   },
+   "cues": {
+    "w0": "longer",
+    "w1": "century",
+    "note": "Tiny"
+   },
+   "params": {
+    "mode": "leap",
+    "size": 150,
+    "ring": false,
+    "seq": [
+     {
+      "at": 0,
+      "text": "24h 00.0000 s"
+     },
+     {
+      "at": "w1",
+      "text": "24h 00.0018 s",
+      "color": "red"
+     }
+    ],
+    "tag": "one day, per century",
+    "tag_at": "w0",
+    "tag_y": 0.16,
+    "tag_size": 70,
+    "panel": {
+     "x0": 0.1,
+     "x1": 0.9,
+     "y0": 0.24,
+     "y1": 0.7
+    },
+    "labels": [
+     {
+      "text": "tiny, right?",
+      "x": 0.84,
+      "y": 0.12,
+      "at": "note",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Royal Society, 2016"
+  },
+  {
+   "type": "es_clock",
+   "text": "But those slivers pile up, day after day, for about a million days.",
+   "visual": "A tear-off calendar on a desk: its pages fly off faster and faster while a big red counter races up to '1,000,000 days'.",
+   "title": {
+    "white": "Million days"
+   },
+   "cues": {
+    "pile": "pile",
+    "mil": "million"
+   },
+   "params": {
+    "mode": "pages",
+    "x": 0.26,
+    "count": {
+     "from": 1,
+     "to": 1000000,
+     "at": 0.3,
+     "dur": 3.4,
+     "x": 0.7,
+     "y": 0.68,
+     "label": "days",
+     "size": 170,
+     "ease": false
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "es_globe",
+   "text": "By the time of the eclipse in Lu, the difference adds up to more than five and a half hours of spin.",
+   "visual": "Earth in space turning; on 'difference' a red slice of the globe grows to about a quarter of a turn, labelled '5.5 hours'.",
+   "title": {
+    "white": "5.5 hours",
+    "gray": "of spin"
+   },
+   "cues": {
+    "diff": "difference",
+    "hrs": "hours"
+   },
+   "params": {
+    "earth": {
+     "x": 0.42,
+     "y": 0.54,
+     "r": 320
+    },
+    "wedge": {
+     "at": "diff",
+     "deg": 86,
+     "text": "5.5 hours"
+    },
+    "labels": [
+     {
+      "text": "lost spin",
+      "x": 0.82,
+      "y": 0.6,
+      "at": "hrs",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Astrophysical Journal Letters"
+  },
+  {
+   "type": "es_planet",
+   "text": "When a Japanese team led by Hisashi Hayakawa rechecked this record, they even had to move the old capital, Qufu, about eight kilometers on the map.",
+   "visual": "Close on the globe over China: the red pin 'Qufu' jumps a little on 'move'; a note 'moved 8 km' appears; the eclipse shadow band slides in from the left toward it.",
+   "title": {
+    "white": "Qufu",
+    "gray": "8 km"
+   },
+   "cues": {
+    "team": "team",
+    "move": "move",
+    "km": "eight"
+   },
+   "params": {
+    "earth": {
+     "x": 0.5,
+     "y": 0.58,
+     "r": 420
+    },
+    "pin": {
+     "u": 0.18,
+     "v": -0.22,
+     "text": "Qufu",
+     "at": 0.2,
+     "hit": "move",
+     "dx": 50
+    },
+    "track": {
+     "at": "team",
+     "from": -1.6,
+     "to": -0.25,
+     "dur": 5,
+     "w": 90
+    },
+    "labels": [
+     {
+      "text": "moved 8 km",
+      "x": 0.76,
+      "y": 0.3,
+      "at": "km",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     440
+    ],
+    "zoom": 1.18,
+    "move": "push"
+   },
+   "source": "Hayakawa et al., 2025"
+  },
+  {
+   "type": "es_planet",
+   "text": "With both fixes, the shadow fell right on the court. The scribes were right. But what if we could go back much, much further?",
+   "visual": "The eclipse shadow band slides the last stretch and runs straight across the red pin 'Lu'; the fez narrator at the bottom right throws an arm up in triumph; red stamp 'RIGHT!' on 'right'.",
+   "title": {
+    "white": "Perfect fit"
+   },
+   "cues": {
+    "fit": "fell",
+    "right": "scribes"
+   },
+   "params": {
+    "earth": {
+     "x": 0.42,
+     "y": 0.52,
+     "r": 330
+    },
+    "pin": {
+     "u": 0.3,
+     "v": -0.26,
+     "text": "Lu",
+     "at": 0,
+     "hit": "fit",
+     "dx": 40
+    },
+    "track": {
+     "at": 0,
+     "from": -0.3,
+     "to": 0,
+     "dur": 1.4,
+     "w": 80
+    },
+    "kasif": {
+     "x": 0.8,
+     "y": 0.9,
+     "scale": 0.95,
+     "pose": "point",
+     "dir": "up",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "right",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "RIGHT!",
+      "x": 0.78,
+      "y": 0.24,
+      "at": "right",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "The proof was hiding in stone.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'Proof in Stone'.",
+   "title": {},
+   "cues": {
+    "title": "proof"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Proof in Stone",
+    "label": "CHAPTER"
+   },
+   "chapter": "Proof in Stone"
+  },
+  {
+   "type": "es_coral",
+   "text": "In 1963, an American paleontologist named John Wells looked closely at fossil corals.",
+   "visual": "A lamp-lit desk: a big fossil horn coral lies on it; John Wells (short beard) stands at its end and a hand lens slides from his side over the coral on 'corals'; note 'John Wells, 1963'.",
+   "title": {
+    "white": "John Wells",
+    "gray": "1963"
+   },
+   "cues": {
+    "yr": "1963",
+    "cor": "corals"
+   },
+   "params": {
+    "mode": "desk",
+    "coral": {
+     "x": 0.56,
+     "s": 1.0
+    },
+    "lens": {
+     "at": "cor",
+     "x": 0.5,
+     "y": 0.38,
+     "r": 120,
+     "flip": true
+    },
+    "cast": [
+     {
+      "who": "wells",
+      "beard": "short",
+      "x": 0.26,
+      "y": 0.74,
+      "scale": 0.8,
+      "pose": "point",
+      "dir": "forward",
+      "face": "right",
+      "seq": [
+       {
+        "at": "cor",
+        "pose": "think",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "John Wells, 1963",
+      "x": 0.74,
+      "y": 0.13,
+      "at": "yr",
+      "size": 84
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "es_fossil",
+   "text": "Corals grow a bit like trees. They add a thin line every day, and a thicker band every year.",
+   "visual": "Extreme close on the coral's wall: thin ridges draw in one after another across the frame, every twelfth one a thick band; arrows tag '1 day' on 'day' and '1 year' on 'year'.",
+   "title": {
+    "white": "Daily lines"
+   },
+   "cues": {
+    "trees": "trees",
+    "day": "day",
+    "year": "year"
+   },
+   "params": {
+    "mode": "lines",
+    "top": 0.24,
+    "bottom": 0.8,
+    "ridges": 48,
+    "band": 12,
+    "draw": {
+     "at": 0,
+     "dur": 4.5
+    },
+    "tags": {
+     "day": "day",
+     "year": "year"
+    }
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.15,
+    "move": "right"
+   }
+  },
+  {
+   "type": "es_coral",
+   "text": "Wells counted the daily lines inside one yearly band. In living corals he found about 360, close to our 365.",
+   "visual": "The coral on the desk under the magnifier: the ridges under the lens light up red one by one while a red counter ticks up to '360'; note 'living coral'.",
+   "title": {
+    "white": "Living coral"
+   },
+   "cues": {
+    "count": "counted",
+    "liv": "living",
+    "n": "360"
+   },
+   "params": {
+    "mode": "desk",
+    "coral": {
+     "x": 0.42,
+     "s": 1.05
+    },
+    "lens": {
+     "at": 0,
+     "x": 0.5,
+     "y": 0.42
+    },
+    "ridges": 60,
+    "band": 15,
+    "count": {
+     "from": 0,
+     "to": 360,
+     "at": "count",
+     "dur": 4,
+     "x": 0.82,
+     "y": 0.3,
+     "label": "days a year",
+     "color": "blue"
+    },
+    "labels": [
+     {
+      "text": "living coral",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "liv",
+      "size": 80
+     }
+    ]
+   },
+   "set": "interior",
+   "source": "Nature, 1963"
+  },
+  {
+   "type": "es_fossil",
+   "text": "Then he counted corals from the Devonian, almost 400 million years ago. About 400 lines!",
+   "visual": "Close on an old grey fossil coral: the counter races past 365 to a red '400'; on 'lines' a red box stamp '400 DAYS'; the fez narrator on the right jumps back in shock.",
+   "title": {
+    "white": "400 lines!",
+    "gray": "Devonian"
+   },
+   "cues": {
+    "dev": "Devonian",
+    "four": "About",
+    "lines": "lines"
+   },
+   "params": {
+    "mode": "desk",
+    "coral": {
+     "x": 0.4,
+     "s": 1.1
+    },
+    "lens": {
+     "at": 0,
+     "x": 0.46,
+     "y": 0.4
+    },
+    "ridges": 70,
+    "band": 14,
+    "count": {
+     "from": 0,
+     "to": 400,
+     "at": "dev",
+     "dur": 3.4,
+     "x": 0.5,
+     "y": 0.18,
+     "label": "",
+     "color": "red",
+     "size": 190
+    },
+    "stamp": {
+     "text": "400 DAYS",
+     "at": "lines",
+     "x": 0.5,
+     "y": 0.42
+    },
+    "kasif": {
+     "x": 0.82,
+     "y": 0.86,
+     "scale": 0.78,
+     "pose": "point",
+     "face": "left",
+     "dir": "forward",
+     "seq": [
+      {
+       "at": "lines",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "set": "interior",
+   "camera": {
+    "focus": [
+     960,
+     500
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   },
+   "source": "Nature, 1963"
+  },
+  {
+   "type": "es_clock",
+   "text": "The year itself takes about the same time as always. That means the days had to be shorter, roughly 22 hours each.",
+   "visual": "A big 24-hour clock dial with a hand sweeping round; on 'shorter' a red slice cuts out of the dial while the red number beside it drops from '24 hours' to '22 hours'.",
+   "title": {
+    "white": "22-hour days"
+   },
+   "cues": {
+    "year": "year",
+    "short": "shorter"
+   },
+   "params": {
+    "mode": "dial",
+    "hours": {
+     "from": 24,
+     "to": 22,
+     "at": "short",
+     "dur": 2.4
+    },
+    "sub": "in one day"
+   },
+   "set": false
+  },
+  {
+   "type": "stage",
+   "text": "The slowing is real. But it creates a very modern headache.",
+   "visual": "A city street at night: the fez narrator holds up a big ink clock, looks at it, then grabs his head in worry on 'headache'; note 'headache!'.",
+   "title": {
+    "white": "A headache"
+   },
+   "cues": {
+    "real": "real",
+    "head": "headache"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "scale": 1.15,
+      "pose": "hold",
+      "item": "clock",
+      "face": "right",
+      "seq": [
+       {
+        "at": "head",
+        "pose": "shock",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.15,
+      "y": 0.86,
+      "scale": 1.2
+     },
+     {
+      "type": "house",
+      "x": 0.86,
+      "y": 0.86,
+      "scale": 1.0
+     }
+    ],
+    "label": {
+     "text": "headache!",
+     "x": 0.66,
+     "y": 0.22,
+     "at": "head",
+     "size": 90
+    }
+   },
+   "set": "city",
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Because in 1955, the first caesium atomic clock started ticking in England.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title 'The Clock Problem'.",
+   "title": {},
+   "cues": {
+    "title": "atomic"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "The Clock Problem",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Clock Problem"
+  },
+  {
+   "type": "es_clock",
+   "text": "Suddenly we had a clock better than the planet. Atoms don't slow down. Earth does.",
+   "visual": "A lab bench: a long caesium beam tube on two stands with atoms flying through it and a readout counting seconds; on the right a small Earth wobbles as it turns; notes 'atoms' and 'Earth' on the words.",
+   "title": {
+    "white": "Atom clock",
+    "gray": "1955"
+   },
+   "cues": {
+    "better": "better",
+    "atoms": "Atoms",
+    "earth": "Earth"
+   },
+   "params": {
+    "mode": "atomic",
+    "labels": [
+     {
+      "text": "1955",
+      "x": 0.72,
+      "y": 0.2,
+      "at": 0.2,
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "never slows",
+      "x": 0.4,
+      "y": 0.64,
+      "at": "atoms",
+      "size": 72,
+      "color": "blue"
+     },
+     {
+      "text": "slows down",
+      "x": 0.82,
+      "y": 0.66,
+      "at": "earth",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "NPL"
+  },
+  {
+   "type": "stage",
+   "text": "In 1972, timekeepers made a deal. Whenever Earth fell too far behind, they would add one extra second to the world's clocks. A leap second.",
+   "visual": "A timekeepers' office with a big wall clock: two bare-headed timekeepers shake on the deal and point at the clock; the fez narrator in front holds up a sign '+1 SECOND' on 'leap'; note '1972'.",
+   "title": {
+    "white": "The deal",
+    "gray": "1972"
+   },
+   "cues": {
+    "yr": "1972",
+    "deal": "deal",
+    "extra": "extra",
+    "leap": "leap"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "k1",
+      "beard": "grey",
+      "x": 0.6,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "extra",
+        "pose": "point",
+        "dir": "up",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "who": "k2",
+      "beard": "short",
+      "x": 0.74,
+      "scale": 0.85,
+      "pose": "talk",
+      "face": "left",
+      "seq": [
+       {
+        "at": "deal",
+        "pose": "wave",
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.26,
+      "scale": 1.05,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "leap",
+        "pose": "hold",
+        "text": "+1 SECOND",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "clock",
+      "x": 0.88,
+      "y": 0.86,
+      "scale": 1.5
+     }
+    ],
+    "label": {
+     "text": "1972",
+     "x": 0.66,
+     "y": 0.18,
+     "at": "yr",
+     "size": 96
+    }
+   },
+   "set": "interior"
+  },
+  {
+   "type": "es_display",
+   "text": "The clock would tick fifty-eight, fifty-nine, sixty, and only then midnight.",
+   "visual": "A huge clock display: '23:59:58', '23:59:59', then a red '23:59:60' ringed in red, then '00:00:00'.",
+   "title": {
+    "white": "23:59:60"
+   },
+   "cues": {
+    "a": "fifty-eight",
+    "b": "fifty-nine",
+    "c": "sixty",
+    "d": "midnight"
+   },
+   "params": {
+    "mode": "leap",
+    "seq": [
+     {
+      "at": 0,
+      "text": "23:59:57"
+     },
+     {
+      "at": "a",
+      "text": "23:59:58"
+     },
+     {
+      "at": "b",
+      "text": "23:59:59"
+     },
+     {
+      "at": "c",
+      "text": "23:59:60",
+      "color": "red"
+     },
+     {
+      "at": "d",
+      "text": "00:00:00"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "es_rack",
+   "text": "Sounds harmless, right? It's not. Computers hate a minute with sixty-one seconds.",
+   "visual": "Four server racks full of glowing screens with scrolling lines; on 'hate' screen after screen flips to a big red X and sparks fly.",
+   "title": {
+    "white": "Computers",
+    "gray": "hate it"
+   },
+   "cues": {
+    "not": "not",
+    "hate": "hate"
+   },
+   "params": {
+    "mode": "servers",
+    "crash": {
+     "at": "hate",
+     "n": 8
+    },
+    "labels": [
+     {
+      "text": "61 seconds?!",
+      "x": 0.5,
+      "y": 0.08,
+      "at": "hate",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "shake": "hate"
+  },
+  {
+   "type": "es_rack",
+   "text": "In 2012, one leap second helped crash Reddit and scrambled check-in systems at the airline Qantas.",
+   "visual": "Close on the server racks as the screens die one by one with red X marks; notes 'Reddit' and 'Qantas' pop up in red on the words; note '2012'.",
+   "title": {
+    "white": "2012"
+   },
+   "cues": {
+    "yr": "2012",
+    "red": "Reddit",
+    "qan": "Qantas"
+   },
+   "params": {
+    "mode": "servers",
+    "crash": {
+     "at": "red",
+     "n": 8
+    },
+    "labels": [
+     {
+      "text": "2012",
+      "x": 0.14,
+      "y": 0.06,
+      "at": "yr",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "Reddit",
+      "x": 0.3,
+      "y": 0.5,
+      "at": "red",
+      "size": 85,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     },
+     {
+      "text": "Qantas",
+      "x": 0.68,
+      "y": 0.5,
+      "at": "qan",
+      "size": 85,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.3,
+    "move": "left"
+   },
+   "source": "Universe Today"
+  },
+  {
+   "type": "es_clock",
+   "text": "Since 1972, they added twenty-seven. The last one came on New Year's Eve, 2016.",
+   "visual": "A dark wall board: 27 white tally marks draw in, in groups of five; the last one is circled in red and tagged 'Dec 31, 2016'.",
+   "title": {
+    "white": "27 leaps"
+   },
+   "cues": {
+    "add": "added",
+    "last": "last"
+   },
+   "params": {
+    "mode": "tally",
+    "n": 27,
+    "draw": {
+     "at": "add",
+     "dur": 2.6
+    },
+    "last": {
+     "text": "last: Dec 31, 2016",
+     "at": "last",
+     "x": 0.7,
+     "y": 0.62,
+     "size": 90
+    }
+   },
+   "set": false,
+   "source": "Universe Today"
+  },
+  {
+   "type": "stage",
+   "text": "But then something strange happened.",
+   "visual": "On a field at dusk the fez narrator looks up through his binoculars, then jumps back in surprise.",
+   "title": {
+    "white": "Then..."
+   },
+   "cues": {
+    "str": "strange"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "scale": 1.2,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "str",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": "field",
+   "camera": {
+    "focus": [
+     860,
+     430
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Since 2020, Earth has actually been spinning a little faster.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Planet Speeds Up'.",
+   "title": {},
+   "cues": {
+    "title": "faster"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Planet Speeds Up",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Planet Speeds Up"
+  },
+  {
+   "type": "es_globe",
+   "text": "Some days in 2024 came out more than a thousandth of a second shorter than twenty-four hours.",
+   "visual": "Earth in space suddenly spins faster with speed streaks whipping around it; red note '-0.001 s' on 'thousandth', note '2024'.",
+   "title": {
+    "white": "Faster!",
+    "gray": "2024"
+   },
+   "cues": {
+    "yr": "2024",
+    "fast": "days",
+    "ms": "thousandth"
+   },
+   "params": {
+    "earth": {
+     "x": 0.5,
+     "y": 0.54,
+     "r": 320
+    },
+    "fast": {
+     "at": "fast",
+     "k": 4
+    },
+    "labels": [
+     {
+      "text": "2024",
+      "x": 0.86,
+      "y": 0.13,
+      "at": "yr",
+      "size": 90,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "-0.001 s",
+      "x": 0.72,
+      "y": 0.3,
+      "at": "ms",
+      "size": 100,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": false,
+   "source": "timeanddate.com"
+  },
+  {
+   "type": "es_display",
+   "text": "Timekeepers even started talking about the first negative leap second, maybe around 2029.",
+   "visual": "The huge clock display jumps from '23:59:58' straight to '00:00:00', skipping a second; red note 'minus 1 second?' and '2029?'.",
+   "title": {
+    "white": "Minus one?"
+   },
+   "cues": {
+    "neg": "negative",
+    "yr": "2029"
+   },
+   "params": {
+    "mode": "leap",
+    "seq": [
+     {
+      "at": 0,
+      "text": "23:59:57"
+     },
+     {
+      "at": 1.2,
+      "text": "23:59:58"
+     },
+     {
+      "at": "neg",
+      "text": "00:00:00",
+      "color": "red"
+     }
+    ],
+    "ring_dx": 0,
+    "tag": "2029?",
+    "tag_at": "yr"
+   },
+   "set": false
+  },
+  {
+   "type": "es_globe",
+   "text": "And the weirdest part? Melting polar ice sends water toward the equator, and that slows Earth down again, like a figure skater opening her arms.",
+   "visual": "Earth with white polar ice caps; on 'melting' the caps shrink and blue arrows run from the poles toward the equator; the fez narrator points at the poles, then spreads his arms wide like a skater on 'skater'.",
+   "title": {
+    "white": "Melting ice"
+   },
+   "cues": {
+    "melt": "Melting",
+    "slow": "slows",
+    "skater": "skater"
+   },
+   "params": {
+    "earth": {
+     "x": 0.42,
+     "y": 0.52,
+     "r": 320
+    },
+    "ice": {
+     "at": "melt"
+    },
+    "kasif": {
+     "x": 0.8,
+     "y": 0.9,
+     "scale": 0.95,
+     "pose": "point",
+     "dir": "forward",
+     "face": "left",
+     "seq": [
+      {
+       "at": "skater",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "slower again",
+      "x": 0.78,
+      "y": 0.22,
+      "at": "slow",
+      "size": 84,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Nature, 2024"
+  },
+  {
+   "type": "stage",
+   "text": "This October, the world's timekeepers met in Versailles and said: enough. No more leap seconds after May 2027.",
+   "visual": "A grand hall with columns: three bare-headed delegates raise their hands; the fez narrator in front holds up a sign 'NO MORE!' on 'enough'; note 'Versailles, Oct 2026'.",
+   "title": {
+    "white": "Versailles",
+    "gray": "2026"
+   },
+   "cues": {
+    "ver": "Versailles",
+    "enough": "enough",
+    "may": "May"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "d1",
+      "beard": "short",
+      "x": 0.6,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "enough",
+        "pose": "wave",
+        "dir": "up"
+       }
+      ]
+     },
+     {
+      "who": "d2",
+      "x": 0.72,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "enough",
+        "pose": "wave",
+        "dir": "up"
+       }
+      ]
+     },
+     {
+      "who": "d3",
+      "beard": "grey",
+      "x": 0.84,
+      "scale": 0.8,
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "enough",
+        "pose": "wave",
+        "dir": "up"
+       }
+      ]
+     },
+     {
+      "who": "kasif",
+      "x": 0.26,
+      "scale": 1.0,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "enough",
+        "pose": "hold",
+        "text": "NO MORE!"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "column",
+      "x": 0.06,
+      "y": 0.86,
+      "scale": 1.3
+     },
+     {
+      "type": "column",
+      "x": 0.95,
+      "y": 0.86,
+      "scale": 1.3
+     }
+    ],
+    "label": {
+     "text": "Versailles, Oct 2026",
+     "x": 0.6,
+     "y": 0.14,
+     "at": "ver",
+     "size": 76
+    }
+   },
+   "set": "interior",
+   "source": "Universe Today"
+  },
+  {
+   "type": "es_clock",
+   "text": "Clocks and planet can now drift apart by up to a whole hour. One day, someone may get a leap hour.",
+   "visual": "Two clocks side by side: a digital 'ATOMS' clock on the left and a turning Earth on the right; a red bar grows between them labelled 'UP TO 1 HOUR'; note 'a leap hour?'.",
+   "title": {
+    "white": "Leap hour?"
+   },
+   "cues": {
+    "drift": "drift",
+    "leap": "leap"
+   },
+   "params": {
+    "mode": "drift",
+    "gap": {
+     "at": "drift",
+     "dur": 2.8,
+     "text": "UP TO 1 HOUR"
+    },
+    "labels": [
+     {
+      "text": "a leap hour?",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "leap",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "es_tide",
+   "text": "And the Moon? It keeps braking, and your day keeps getting longer, just too slowly to notice.",
+   "visual": "Earth and the Moon in space: the tidal bulge drags, red brake arrows push against the spin, and the Moon creeps away; note 'longer days'.",
+   "title": {
+    "white": "Still braking"
+   },
+   "cues": {
+    "moon": "Moon",
+    "brake": "braking",
+    "long": "longer"
+   },
+   "params": {
+    "earth": {
+     "x": 0.36,
+     "y": 0.5,
+     "r": 220
+    },
+    "moon": {
+     "d": 860,
+     "r": 72,
+     "ang": -6
+    },
+    "bulge": {
+     "at": 0,
+     "amp": 0.32,
+     "lag": 16
+    },
+    "brake": {
+     "at": "brake"
+    },
+    "recede": {
+     "at": "long",
+     "dur": 5,
+     "to": 960
+    },
+    "labels": [
+     {
+      "text": "longer days",
+      "x": 0.36,
+      "y": 0.1,
+      "at": "long",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "es_eclipse",
+   "text": "So, if you could add one extra hour to every day, what would you do with it? Tell me in the comments, and subscribe to Stickstory for more strange true stories about our planet.",
+   "visual": "Back in the Lu courtyard under the full eclipse with its gold corona: the fez narrator in front holds up a sign '+1 HOUR?' and on 'subscribe' waves goodbye.",
+   "title": {
+    "white": "+1 hour?"
+   },
+   "cues": {
+    "hour": "hour",
+    "sub": "subscribe"
+   },
+   "params": {
+    "cover": {
+     "from": 1,
+     "to": 1
+    },
+    "total": 0,
+    "sun": {
+     "x": 0.62,
+     "y": 0.24,
+     "r": 100
+    },
+    "hall_x": 0.14,
+    "gate_x": 1.0,
+    "kasif": {
+     "x": 0.42,
+     "y": 0.86,
+     "scale": 1.05,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "hour",
+       "pose": "hold",
+       "text": "+1 HOUR?"
+      },
+      {
+       "at": "sub",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "set": false
+  }
+ ]
+}

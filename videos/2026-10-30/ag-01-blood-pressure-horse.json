@@ -1,0 +1,644 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "blood-pressure-horse",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "8 feet",
+   "of blood"
+  ],
+  "highlight": [
+   "blood"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "kasif": {
+   "pose": "shock",
+   "x": 290,
+   "y": 1840,
+   "face": 1,
+   "scale": 1.2
+  }
+ },
+ "sources": [
+  {
+   "title": "Hektoen International — Stephen Hales: the priest who pioneered clinical physiology",
+   "url": "https://hekint.org/2017/01/29/stephen-hales-the-priest-who-pioneered-clinical-physiology/"
+  },
+  {
+   "title": "Wood Library-Museum of Anesthesiology — Hales 1733, Haemastaticks",
+   "url": "https://www.woodlibrarymuseum.org/wp-content/uploads/reflections/048_Hales_1733_Haemastaticks_Bause_GS.pdf"
+  },
+  {
+   "title": "American Heart Association, Early Career Voice — Stephen Hales and the first direct measurement of blood pressure",
+   "url": "https://earlycareervoice.professional.heart.org/?p=3662"
+  }
+ ],
+ "youtube": {
+  "title": "Blood Pressure: Why the First Reading Was 8 Feet Tall",
+  "description": "Blood pressure was first measured on a horse, and the blood climbed eight feet up a glass tube. How did a country parson pull that off, and what does it have to do with the cuff on your arm?\n\nIn 1733 the English parson Stephen Hales described in Haemastaticks how he tied down an old mare, fixed a nine-foot glass tube to the artery in her leg with a brass pipe, and watched her blood rise eight feet three inches. It was the first measurement of blood pressure, the same push a modern arm cuff reads today: a reading of 120 would lift your blood about five feet.\n\nSubscribe to Stickstory for one true story every day. Would you have guessed the first blood pressure came from a horse? Tell me in the comments!\n\n#shorts #bloodpressure #stephenhales #stickstory",
+  "tags": [
+   "blood pressure",
+   "blood pressure history",
+   "first blood pressure reading",
+   "blood pressure facts",
+   "high blood pressure",
+   "stephen hales",
+   "haemastaticks",
+   "stephen hales horse",
+   "history of medicine",
+   "human body facts",
+   "heart and blood",
+   "science history",
+   "medical history",
+   "true story",
+   "history shorts",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-30T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "hp_barn",
+   "text": "The first blood pressure was eight feet tall.",
+   "visual": "Barn floor by lantern light: an old grey mare lies on the straw with her legs folded, ropes over her back to stakes; a brass pipe runs from her stretched hind leg to a tall glass tube lashed to a wooden pole in the middle of the frame; the red blood column stands at the 8-foot mark with a gold line — far taller than a man. Hook frame: shocked fez host (cover overlay).",
+   "title": {
+    "white": "Blood pressure",
+    "gray": "the first one"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1306
+   },
+   "cues": {
+    "hit": "tall"
+   },
+   "params": {
+    "ground": 0.68,
+    "mare": {
+     "x": 0.64,
+     "y": 0.705,
+     "s": 0.7,
+     "face": 1,
+     "nod": 26
+    },
+    "ropes": true,
+    "tube": {
+     "x": 0.36,
+     "base": 0.68,
+     "ft": 80,
+     "w": 22,
+     "from": 7.2,
+     "to": 8.25,
+     "at": 0,
+     "dur": 1.1,
+     "mark": 1.0,
+     "pulseAmp": 34
+    },
+    "lantern": {
+     "x": 0.84,
+     "y": 0.24
+    },
+    "motes": true
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "hp_book",
+   "text": "In 1733, English parson Stephen Hales wrote down how.",
+   "visual": "Candlelit study: the wigged parson in his black gown stands behind his desk writing down how he did it, with a quill in a big open book titled 'Haemastaticks'; on the left page an ink sketch of the lying mare and the tall tube whose red column rises; lines of writing appear behind the quill; red box '1733' pops in; bookshelf on the wall.",
+   "title": {
+    "white": "Stephen Hales",
+    "gray": "English parson"
+   },
+   "source": "Hales, Haemastaticks, 1733",
+   "set": {
+    "name": "interior",
+    "ground": 960
+   },
+   "cues": {
+    "hit": "1733",
+    "write": "parson"
+   },
+   "params": {
+    "desk": 0.5,
+    "write": "write",
+    "hales": {
+     "x": 0.8,
+     "y": 0.62,
+     "scale": 1.25,
+     "pose": "point",
+     "dir": "down",
+     "face": "left"
+    },
+    "labels": [
+     {
+      "text": "1733",
+      "x": 0.27,
+      "y": 0.33,
+      "at": "hit",
+      "size": 110,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "book": {
+     "x": 0.45,
+     "w": 0.3
+    }
+   },
+   "camera": {
+    "move": "left"
+   }
+  },
+  {
+   "type": "hp_field",
+   "text": "He used a horse.",
+   "visual": "A paddock outside the village: an old grey sway-backed mare grazes, then lifts her head on 'horse'; the fez host at the left points at her in shock; a small church tower on the horizon, wooden fence and grass in the foreground.",
+   "title": {
+    "white": "The subject",
+    "gray": "an old mare"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152,
+    "horizon": 700
+   },
+   "cues": {
+    "hit": "horse",
+    "lift": "used"
+   },
+   "params": {
+    "mare": {
+     "x": 0.6,
+     "y": 0.6,
+     "s": 0.95,
+     "face": 1,
+     "graze": 0.9,
+     "lift": "lift"
+    },
+    "church": {
+     "x": 0.36,
+     "y": 0.365,
+     "s": 0.42
+    },
+    "fence": {
+     "y": 0.76
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 0.85,
+     "pose": "point",
+     "face": "right",
+     "dir": "forward",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "hp_barn",
+   "text": "He tied down an old mare,",
+   "visual": "Back in the barn, closer: the mare lies on the straw, head up; on 'tied' the two ropes swing up over her back and pull taut to their stakes, and the rope on her stretched hind leg tightens; the empty glass tube on its pole waits at the left.",
+   "title": {
+    "white": "Tied down"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1536
+   },
+   "cues": {
+    "ropes": "tied",
+    "hit": "mare"
+   },
+   "params": {
+    "ground": 0.8,
+    "mare": {
+     "x": 0.6,
+     "y": 0.82,
+     "s": 1.0,
+     "face": 1,
+     "nod": 10
+    },
+    "ropes": "ropes",
+    "tube": {
+     "x": 0.1,
+     "base": 0.8,
+     "ft": 92,
+     "to": 0
+    },
+    "lantern": {
+     "x": 0.6,
+     "y": 0.24
+    }
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "hp_leg",
+   "text": "and fixed a nine-foot glass tube to an artery in her leg.",
+   "visual": "Close-up of the mare's hind thigh: the red artery under the skin with a thread tied round it, a gloved-lace hand holds the thread end; on 'glass' a glass tube drops into place at the left, on 'artery' a brass pipe slides from the tube foot into the artery; a red arrow shoots up the tube and a red box '9 FEET' pops in on 'nine'.",
+   "title": {
+    "white": "Glass tube",
+    "gray": "nine feet tall"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1267
+   },
+   "cues": {
+    "tube": "glass",
+    "arrow": "nine",
+    "hit": "nine",
+    "pipe": "artery"
+   },
+   "params": {
+    "tube": {
+     "at": "tube"
+    },
+    "pipe": {
+     "at": "pipe"
+    },
+    "untie": false,
+    "flow": false,
+    "arrow": {
+     "at": "arrow",
+     "x": 0.42,
+     "y0": 0.5,
+     "y1": 0.2
+    },
+    "labels": [
+     {
+      "text": "9 FEET",
+      "x": 0.66,
+      "y": 0.23,
+      "at": "arrow",
+      "size": 96,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "tubeTop": 0.16
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "hp_leg",
+   "text": "Then he let go.",
+   "visual": "Same close-up: on 'let' the hand pulls the thread bow loose off the artery, and on 'go' the red blood surges up the glass tube out of the top of the frame.",
+   "title": {
+    "white": "Let go"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1267
+   },
+   "cues": {
+    "untie": "let",
+    "flow": "go",
+    "hit": "go"
+   },
+   "params": {
+    "untie": "untie",
+    "flow": "flow"
+   },
+   "camera": {
+    "move": "up"
+   }
+  },
+  {
+   "type": "hp_tube",
+   "text": "The blood climbed past his head,",
+   "visual": "The tall tube against the barn wall with a foot ruler 1 to 9; the brass pipe runs down to the mare's rump, tail and stretched hind leg roped to a stake on the straw at the bottom right; the worried wigged parson looks up beside the tube; the red column climbs and passes his head on 'past', and he jumps back in shock.",
+   "title": {
+    "white": "Rising"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "rise": "climbed",
+    "head": "past"
+   },
+   "params": {
+    "tube": {
+     "x": 0.42,
+     "base": 0.6,
+     "ft": 92,
+     "from": 0,
+     "to": 7.0,
+     "at": "rise",
+     "dur": 2.2
+    },
+    "flank": false,
+    "leg": true,
+    "hales": {
+     "x": 0.74,
+     "y": 0.6,
+     "scale": 1.1,
+     "pose": "point",
+     "face": "left",
+     "dir": "up",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "head",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "move": "up"
+   }
+  },
+  {
+   "type": "hp_tube",
+   "text": "and stopped at eight feet three inches.",
+   "visual": "Close-up on the top of the tube: the red column creeps up to just under the 9 on the ruler and stops on 'stopped'; a gold line marks the level on 'eight' and a red box '8 FT 3 IN' pops in on 'inches'; the shocked parson has climbed onto a wooden crate beside the tube to read the top.",
+   "title": {
+    "white": "Blood column",
+    "gray": "Hales, 1733"
+   },
+   "source": "Hales, Haemastaticks, 1733",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "stop": "stopped",
+    "mark": "eight",
+    "lab": "inches",
+    "hit": "inches"
+   },
+   "params": {
+    "tube": {
+     "x": 0.42,
+     "base": 0.6,
+     "ft": 92,
+     "from": 7.0,
+     "to": 8.25,
+     "at": "stop",
+     "dur": 0.9,
+     "mark": "mark"
+    },
+    "hales": {
+     "x": 0.72,
+     "y": 0.525,
+     "scale": 0.95,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised"
+    },
+    "labels": [
+     {
+      "text": "8 FT 3 IN",
+      "x": 0.62,
+      "y": 0.255,
+      "at": "lab",
+      "size": 70,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "box": {
+     "x": 0.72,
+     "y": 0.525,
+     "w": 300
+    }
+   },
+   "camera": {
+    "focus": [
+     580,
+     440
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hp_cuff",
+   "text": "Your arm cuff measures that same push.",
+   "visual": "A clinic table today: the patient's arm (sleeve, blue cuff on the upper arm, forearm, hand) lies on the table; a nurse's hand squeezes the rubber bulb and the dial needle climbs and pulses; at the right a faded ghost of Hales' nine-foot tube with its red column; on 'same' a gold dashed arc runs from the old column top to the dial and 'SAME PUSH' pops in. A tablecloth, a stethoscope and the tiled clinic floor fill the bottom.",
+   "title": {
+    "white": "Today",
+    "gray": "the arm cuff"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 960
+   },
+   "cues": {
+    "pump": "cuff",
+    "link": "same",
+    "hit": "push"
+   },
+   "params": {
+    "table": 0.5,
+    "pump": "pump",
+    "link": "link",
+    "dial": {
+     "x": 0.45,
+     "y": 0.27,
+     "r": 170,
+     "numbers": true,
+     "to": 0.4
+    },
+    "ghost": {
+     "x": 0.88,
+     "base": 0.5,
+     "ft": 70,
+     "to": 8.25,
+     "alpha": 0.35
+    },
+    "labels": [
+     {
+      "text": "SAME PUSH",
+      "x": 0.68,
+      "y": 0.385,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": false
+  },
+  {
+   "type": "hp_cuff",
+   "text": "A reading of 120 would lift your blood about five feet.",
+   "visual": "Same clinic: the patient's arm and cuff at the left, the numbered dial needle resting on 120; on the table top stand two glass tubes: a full red column with a foot ruler climbs to about five feet, beside the faded 8-foot ghost of Hales' tube; a gold line marks five on 'five' and a red box '120: ABOUT 5 FT' pops in.",
+   "title": {
+    "white": "A reading",
+    "gray": "of 120"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 960
+   },
+   "cues": {
+    "pump": "reading",
+    "rise": "lift",
+    "mark": "five",
+    "hit": "five"
+   },
+   "params": {
+    "table": 0.5,
+    "pump": "pump",
+    "link": false,
+    "dial": {
+     "x": 0.24,
+     "y": 0.3,
+     "r": 150,
+     "numbers": true,
+     "from": 0.4,
+     "to": 0.4
+    },
+    "ghost": {
+     "x": 0.8,
+     "base": 0.55,
+     "ft": 60,
+     "to": 8.25,
+     "alpha": 0.35,
+     "outline": true
+    },
+    "twin": {
+     "x": 0.62,
+     "base": 0.55,
+     "ft": 60,
+     "from": 0,
+     "to": 5.05,
+     "at": "rise",
+     "dur": 1.4,
+     "mark": "mark",
+     "w": 22
+    },
+    "labels": [
+     {
+      "text": "120: ABOUT 5 FT",
+      "x": 0.62,
+      "y": 0.175,
+      "at": "hit",
+      "size": 70,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "arm": 0.62,
+    "bulb": false,
+    "front": true
+   },
+   "camera": false
+  },
+  {
+   "type": "hp_field",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "The paddock at sunset: the old mare grazes peacefully, the fez host waves at the viewer from the left; giant words '8 FEET' and 'OF BLOOD.' ('BLOOD.' in a red box).",
+   "title": {
+    "white": "Stephen Hales",
+    "gray": "1677 to 1761"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1152,
+    "horizon": 760
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "mare": {
+     "x": 0.64,
+     "y": 0.6,
+     "s": 0.85,
+     "face": -1,
+     "graze": 0.85
+    },
+    "sun": {
+     "x": 0.82,
+     "y": 0.42
+    },
+    "fence": {
+     "y": 0.78
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 0.85,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy"
+    },
+    "lines": [
+     {
+      "words": [
+       "8",
+       "FEET"
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.18,
+      "size": 130
+     },
+     {
+      "words": [
+       "OF",
+       "BLOOD."
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.26,
+      "size": 130
+     }
+    ],
+    "highlight": "BLOOD."
+   },
+   "camera": {
+    "move": "pull"
+   }
+  }
+ ]
+}

@@ -1,0 +1,530 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "fire-salamander",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Born in",
+   "fire?"
+  ],
+  "highlight": [
+   "fire"
+  ],
+  "scene": 0,
+  "t": 1.8,
+  "focus": [
+   360,
+   1060
+  ],
+  "zoom": 1.6,
+  "kasif": {
+   "pose": "shock",
+   "x": 500,
+   "y": 1860,
+   "face": -1,
+   "scale": 1.05
+  }
+ },
+ "sources": [
+  {
+   "title": "Max Planck Society — Biofluorescence discovered in the fire salamander (27 May 2026)",
+   "url": "https://www.mpg.de/26539418/biofluorescence-discovered-in-the-fire-salamander"
+  },
+  {
+   "title": "Smithsonian Magazine — Scientists have been studying these salamanders for more than 250 years. They just discovered the creatures glow under UV light",
+   "url": "https://www.smithsonianmag.com/smart-news/scientists-have-been-studying-these-salamanders-for-more-than-250-years-they-just-discovered-the-creatures-glow-under-uv-light-180988900/"
+  },
+  {
+   "title": "National Geographic — Fire salamanders may scare away predators with fluorescent glowing goo",
+   "url": "https://www.nationalgeographic.com/animals/article/fire-salamanders-biofluorescent-goo"
+  },
+  {
+   "title": "AmphibiaWeb — Salamandra salamandra (Linnaeus, 1758)",
+   "url": "https://amphibiaweb.org/species/4284"
+  },
+  {
+   "title": "Pliny the Elder, Natural History, Book 10, ch. 86 (Bostock & Riley translation)",
+   "url": "https://peterburk.github.io/pliny/ChaptersHtml/10.%20Book%20X.%20The%20Natural%20History%20Of%20Birds./86.%20Chap.%2086.%20(66.)-Salamanders..html"
+  }
+ ],
+ "youtube": {
+  "title": "Fire Salamander: Why Did People Think It Was Born in Fire?",
+  "description": "Fire salamander: for centuries people believed this black-and-yellow animal was born in fire. Pliny the Elder even wrote it was so cold it could put out flames.\n\nThe real reason is firewood: fire salamanders hide in damp, rotting logs, so when a log went on the fire, a salamander crawled out of the flames. Its true superpower is a toxic skin that can spray poison from glands behind its eyes. And in 2026 scientists found that its skin and its poison glow blue-green under UV light.\n\nSubscribe to Stickstory for one strange true story a day. Did you know salamanders could glow? Tell me in the comments!\n\n#shorts #firesalamander #biofluorescence #stickstory",
+  "tags": [
+   "fire salamander",
+   "fire salamander facts",
+   "fire salamander glow",
+   "salamander born in fire",
+   "salamander myth",
+   "biofluorescence",
+   "glowing salamander",
+   "uv light animals",
+   "salamandra salamandra",
+   "pliny the elder",
+   "poisonous amphibians",
+   "animal superpowers",
+   "amphibian facts",
+   "animal facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-30T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "fs_hearth",
+   "text": "People thought this animal was born in fire.",
+   "visual": "A medieval stone fireplace fills the frame: logs blazing on iron firedogs, sparks rising; a black-and-yellow fire salamander crawls out of the hollow end of the burning front log onto the flagstone hearth, as if stepping out of the flames. Firewood stack in front. Hook frame: big shocked fez host (cover overlay).",
+   "title": {
+    "white": "Fire salamander"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "fire"
+   },
+   "params": {
+    "sal": {
+     "x": 0.12,
+     "y": 0.552,
+     "s": 1.05,
+     "rot": 180,
+     "walk": {
+      "from": [
+       0.38,
+       0.552
+      ],
+      "at": 0,
+      "dur": 2.2
+     }
+    },
+    "log": {
+     "char": 0.45,
+     "r": 90
+    },
+    "lick": 1,
+    "fireK": 1.1,
+    "puff": "hit",
+    "pail": false
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "fs_pliny",
+   "text": "A Roman writer, Pliny, said it was so cold, it put out flames.",
+   "visual": "A Roman terrace at night: Pliny the Elder (laurel wreath) points at his table, a scroll and an oil lamp; a small salamander walks across the table to the lamp and on 'put' the flame goes out in a curl of smoke; 'SO COLD?' pops up. In front, a mosaic floor and a big scroll with his sketch of a salamander in flames.",
+   "title": {
+    "white": "Pliny",
+    "gray": "Roman writer"
+   },
+   "source": "Pliny, Natural History",
+   "set": {
+    "name": "night",
+    "ground": 1150,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "cold",
+    "snuff": "put"
+   },
+   "params": {
+    "snuff": "snuff",
+    "pliny": {
+     "x": 0.17,
+     "y": 0.6,
+     "scale": 1.15,
+     "pose": "talk",
+     "face": "right",
+     "accessory": "laurel",
+     "seq": [
+      {
+       "at": "snuff",
+       "pose": "point",
+       "face": "right",
+       "dir": "forward"
+      }
+     ]
+    },
+    "sal": {
+     "x": 0.74,
+     "y": 0.47,
+     "s": 0.4,
+     "rot": 0,
+     "walk": {
+      "from": [
+       0.42,
+       0.47
+      ],
+      "at": 0,
+      "dur": 2.4
+     }
+    },
+    "labels": [
+     {
+      "text": "SO COLD?",
+      "x": 0.6,
+      "y": 0.33,
+      "at": "hit",
+      "size": 96,
+      "color": "red",
+      "font": "hand"
+     }
+    ]
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "fs_log",
+   "text": "The truth? It sleeps in damp, rotting logs.",
+   "visual": "A wet forest floor in the rain: a big mossy log with mushrooms; a cut-away window into its hollow shows the fire salamander curled up asleep inside the rotten wood, little 'Z's rising; ferns and leaf litter fill the foreground.",
+   "title": {
+    "white": "Rotting logs"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1110,
+    "horizon": 700
+   },
+   "cues": {
+    "hit": "rotting"
+   },
+   "params": {
+    "log": {
+     "x0": 0.2,
+     "x1": 0.98,
+     "cut": [
+      0.32,
+      0.77
+     ]
+    },
+    "sal": {
+     "x": 0.35,
+     "y": 0.485,
+     "s": 0.62,
+     "rot": 172,
+     "curl": 0.22,
+     "sleep": true,
+     "wig": 0.03,
+     "idle": false
+    }
+   },
+   "camera": {
+    "focus": [
+     560,
+     880
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fs_hearth",
+   "text": "Toss that log on the fire, and out crawls a salamander.",
+   "visual": "Back at the fireplace: a peasant in a slouch hat, standing on the hearth outside the fireplace arch, throws a log onto the fire on 'log', the flames flare up; on 'crawls' the salamander crawls out of the log's hollow end onto the hearth and the peasant jumps back in shock.",
+   "title": {
+    "white": "Firewood"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "toss": "log",
+    "crawl": "crawls",
+    "hit": "salamander"
+   },
+   "params": {
+    "toss": {
+     "at": "toss"
+    },
+    "log": {
+     "char": 0.15
+    },
+    "pail": false,
+    "sal": {
+     "x": 0.2,
+     "y": 0.555,
+     "s": 1.1,
+     "rot": 180,
+     "walk": {
+      "from": [
+       0.4,
+       0.555
+      ],
+      "at": "crawl",
+      "dur": 1.0
+     }
+    },
+    "peasant": {
+     "x": 0.78,
+     "y": 0.68,
+     "scale": 1.05,
+     "pose": "hold",
+     "face": "left",
+     "accessory": "slouch",
+     "seq": [
+      {
+       "at": "toss",
+       "pose": "point",
+       "face": "left",
+       "dir": "down"
+      },
+      {
+       "at": "crawl",
+       "pose": "shock",
+       "face": "left"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "focus": [
+     600,
+     960
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fs_head",
+   "text": "Its real superpower is poison, sprayed from behind its eyes.",
+   "visual": "Extreme close-up from above: the salamander's head and front body fill the frame on leaf litter, the two bulging yellow poison glands right behind its eyes; on 'sprayed' milky droplets of poison squirt out of both glands; red box 'POISON'.",
+   "title": {
+    "white": "Poison skin"
+   },
+   "set": "field",
+   "cues": {
+    "hit": "poison",
+    "spray": "sprayed"
+   },
+   "params": {
+    "spray": "spray",
+    "labels": [
+     {
+      "text": "POISON",
+      "x": 0.7,
+      "y": 0.13,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "fs_lab",
+   "text": "Then in 2026, scientists shone a UV lamp on one,",
+   "visual": "A dim lab with shelves of jars: the salamander sits on moss in a glass tank on the bench; a gloved hand in a white lab-coat sleeve comes in from the left with a UV torch, and on 'lamp' the blue beam switches on and the salamander starts to glow.",
+   "title": {
+    "white": "UV lamp",
+    "gray": "2026"
+   },
+   "source": "Max Planck Society",
+   "set": false,
+   "cues": {
+    "uv": "lamp"
+   },
+   "params": {
+    "uv": "uv"
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "fs_lab",
+   "text": "and it glowed blue-green!",
+   "visual": "Close-up in the UV beam: the salamander's yellow spots now glow blue-green, a constellation of glowing dots along its sides, a soft halo around the body; the beam flickers softly.",
+   "title": {
+    "white": "Blue-green",
+    "gray": "glow"
+   },
+   "set": false,
+   "cues": {
+    "hit": "glowed"
+   },
+   "params": {
+    "uv": 0,
+    "tankTop": 380
+   },
+   "camera": {
+    "focus": [
+     600,
+     1040
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fs_years",
+   "text": "Studied for over 250 years, and nobody noticed.",
+   "visual": "A naturalist's study: a big red counter runs up to 250 with 'YEARS'; field sketches of the salamander get pinned to the wall one after another, a stack of notebooks grows on the desk next to a magnifier; on 'nobody' the fez host behind the desk shrugs.",
+   "title": {
+    "white": "Since 1758",
+    "gray": "Linnaeus"
+   },
+   "source": "Smithsonian",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "cnt": "Studied",
+    "hit": "nobody",
+    "yrs": "years"
+   },
+   "params": {
+    "counter": {
+     "to": 250,
+     "x": 0.6,
+     "y": 0.235,
+     "at": "cnt",
+     "dur": 1.5,
+     "size": 180
+    },
+    "labels": [
+     {
+      "text": "YEARS",
+      "x": 0.835,
+      "y": 0.222,
+      "at": "yrs",
+      "size": 56,
+      "color": "ink",
+      "font": "serif",
+      "rot": 0,
+      "underline": false
+     }
+    ],
+    "kasif": {
+     "x": 0.86,
+     "y": 0.6,
+     "scale": 0.95,
+     "pose": "think",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shrug",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "move": "up"
+   }
+  },
+  {
+   "type": "fs_log",
+   "text": "Subscribe for one strange true story a day.",
+   "visual": "The forest at night: the salamander walks along the top of the mossy log, glowing blue-green in the beam of a UV torch held by the fez host at the left, who looks at the viewer; giant words 'NOT FIRE.' and 'IT GLOWS.' ('GLOWS.' in a red box).",
+   "title": {
+    "white": "Fire salamander",
+    "gray": "today"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1110,
+    "horizon": 760
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "log": {
+     "x0": 0.4,
+     "x1": 1.02,
+     "y": 0.5,
+     "r": 0.065,
+     "cut": false
+    },
+    "rain": false,
+    "torch": true,
+    "mushrooms": [
+     [
+      0.93,
+      0.8
+     ]
+    ],
+    "sal": {
+     "x": 0.52,
+     "y": 0.43,
+     "s": 0.7,
+     "rot": 182,
+     "curl": 0,
+     "sleep": false,
+     "wig": 0.1,
+     "uv": 1,
+     "idle": true
+    },
+    "kasif": {
+     "x": 0.2,
+     "y": 0.6,
+     "scale": 0.95,
+     "pose": "point",
+     "face": "right",
+     "dir": "down",
+     "emotion": "happy"
+    },
+    "lines": [
+     {
+      "words": [
+       "NOT",
+       "FIRE."
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.2,
+      "size": 120
+     },
+     {
+      "words": [
+       "IT",
+       "GLOWS."
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.275,
+      "size": 120
+     }
+    ],
+    "highlight": "GLOWS."
+   },
+   "camera": {
+    "move": "pull"
+   }
+  }
+ ]
+}
