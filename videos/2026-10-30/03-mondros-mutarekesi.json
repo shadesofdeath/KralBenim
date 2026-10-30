@@ -1,0 +1,209 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "grafit",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Armistice of Mudros (Wikipedia, Wikiwand)",
+   "url": "https://wikiwand.com/EN/Armistice_of_Mudros"
+  },
+  {
+   "title": "Küre Ansiklopedi: Mondros Mütarekesi",
+   "url": "https://kureansiklopedi.com/tr/detay/mondros-mutarekesi-2"
+  },
+  {
+   "title": "Atatürk Ansiklopedisi: İstanbul'un İşgali",
+   "url": "https://ataturkansiklopedisi.gov.tr/bilgi/istanbulun-isgali/"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Savaş bir",
+   "gemide bitti"
+  ],
+  "highlight": [
+   "gemide"
+  ],
+  "scene": 0,
+  "t": 3.0,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Bir imparatorluğun savaşı, bir düşman gemisinde bitti.",
+   "type": "bt_warship",
+   "visual": "Gece, durgun liman suyu; arkada Limni'nin alçak tepeleri, yıldızlar; tek bir zırhlı silueti (iki baca, iki direk, ön ve arka top kuleleri), sıra sıra yanan lomboz ışıkları, ışıkların suda yavaşça titreyen yansıması, bacalardan sürüklenen ince duman"
+  },
+  {
+   "text": "Yer, Limni'deki Mondros limanıydı.",
+   "type": "bt_aegean",
+   "visual": "Kuzey Ege haritası: solda büyük, açık renk Limni adası (güneyinde derin Mondros koyu), ortada Gökçeada, sağda Gelibolu yarımadası ve Troas kıyısı; 'Mondros'ta koydaki altın nokta halkalarla atar, ince altın çizgiyle sağdaki 'Mondros' ve italik '30 Ekim 1918' etiketine bağlanır; adanın güneyinde demirli büyük zırhlı silueti ve italik 'Agamemnon'",
+   "params": {
+    "label": "Mondros",
+    "sub": "30 Ekim 1918",
+    "ship": "Agamemnon"
+   },
+   "cues": {
+    "m": "Mondros"
+   }
+  },
+  {
+   "text": "Osmanlı heyeti, Agamemnon'da dört gün pazarlık etti.",
+   "type": "bt_cabin",
+   "visual": "Zırhlının kamarası: tavandan sarkan lamba ve ışık havuzu, arkada iki lomboz (camın ardında ay ışığında yavaşça inip kalkan su), ortada üstünde kâğıtlar olan masa, iki yanında karşılıklı oturan iki yüzsüz siluet, kül tablasından yükselen ince duman"
+  },
+  {
+   "text": "İyi bir anlaşma sandılar. Ama tehlike yedinci maddedeydi.",
+   "type": "bt_treaty",
+   "visual": "Tek sayfa belge, başlığı 'MÜTAREKE'; paragraf satırları ince çizgilerle sakin sakin kendini yazar (iyi bir anlaşma gibi); 'yedinci'de bir paragraf altın renge döner, solunda altın köşeli parantez ve 'Madde 7' belirir, öteki satırlar söner, kamera o maddeye yavaşça yaklaşır",
+   "params": {
+    "n": 7,
+    "label": "Madde 7"
+   },
+   "cues": {
+    "hit": "yedinci"
+   }
+  },
+  {
+   "text": "Tehdidi gören İtilaf,",
+   "type": "bt_text",
+   "visual": "Boş koyu zeminde, ışık havuzunun ortasında tek büyük altın kelime: 'İtilaf'",
+   "params": {
+    "lines": [
+     {
+      "text": "İtilaf",
+      "accent": true,
+      "size": 190
+     }
+    ]
+   },
+   "cues": {
+    "hit": "İtilaf"
+   }
+  },
+  {
+   "text": "her stratejik noktayı işgal edebilecekti.",
+   "type": "bt_occupy",
+   "visual": "Anadolu ve Boğazlar haritası; kelime kelime Boğazlar, İstanbul, İzmir, Samsun, Mersin, Antakya ve Batum'da altın noktalar yanar, her birinin çevresinde yavaşça yayılan altın bölge halkaları; 'Boğazlar' (üstte), 'İstanbul' ve 'İzmir' (sağda) etiketli",
+   "params": {
+    "bounds": [
+     24.0,
+     35.5,
+     42.5,
+     42.0
+    ],
+    "points": [
+     {
+      "lon": 26.4,
+      "lat": 40.15,
+      "label": "Boğazlar",
+      "at": "a",
+      "side": "above"
+     },
+     {
+      "lon": 28.98,
+      "lat": 41.01,
+      "label": "İstanbul",
+      "at": "a"
+     },
+     {
+      "lon": 27.14,
+      "lat": 38.42,
+      "label": "İzmir",
+      "at": "b"
+     },
+     {
+      "lon": 36.33,
+      "lat": 41.29,
+      "at": "c"
+     },
+     {
+      "lon": 34.64,
+      "lat": 36.8,
+      "at": "c"
+     },
+     {
+      "lon": 36.16,
+      "lat": 36.2,
+      "at": "d"
+     },
+     {
+      "lon": 41.64,
+      "lat": 41.64,
+      "at": "d"
+     }
+    ]
+   },
+   "cues": {
+    "a": "her",
+    "b": "stratejik",
+    "c": "noktayı",
+    "d": "işgal"
+   }
+  },
+  {
+   "text": "Günler içinde Musul gitti.",
+   "type": "bt_mosul",
+   "visual": "Alacakaranlıkta Musul: düz damlı alçak evler, Nuri Camii'nin kubbesi ve yanında doğuya eğik, tuğla desenli tek minare (el-Hadba); 'Musul'da evlerin yanan pencereleri tek tek ve gökyüzünün aydınlığı yavaşça söner, yıldızlar belirir; altta 'Musul' ve italik 'Kasım 1918'",
+   "params": {
+    "label": "Musul",
+    "sub": "Kasım 1918"
+   },
+   "cues": {
+    "m": "Musul"
+   }
+  },
+  {
+   "text": "İki hafta sonra donanma İstanbul'daydı.",
+   "type": "bt_bosphorus",
+   "visual": "Alacakaranlıkta İstanbul'un tarihi yarımadası silueti (kubbeler ve minareler), birkaç yanan pencere; önünde suda sağdan birer birer süzülerek gelen, öndekiler büyük arkadakiler küçük sıra sıra zırhlı siluetleri",
+   "cues": {
+    "hit": "İstanbul'da"
+   }
+  },
+  {
+   "text": "Barış sanılan kâğıt, kapının anahtarıydı. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_key",
+   "visual": "Antlaşma sayfası solar; yerinde ışık havuzunda çapraz duran eski demir anahtar kendini çizer, halkası ve dişleri altınlanır; 'Böyle'de sağda bir kapı kenarı ve anahtar deliği plakası belirir, anahtar yavaşça düzleşip deliğe girer, çeyrek tur döner ve kapı aralığından altın bir ışık açılır",
+   "cues": {
+    "key": "anahtarıydı",
+    "lock": "Böyle"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Mondros Mütarekesi: Savaşı Bitiren Kâğıt Neden Kapıyı Açtı?",
+  "description": "Mondros Mütarekesi savaşı bitirdi ama bir ülkenin kapısını da açtı. 30 Ekim 1918'de Osmanlı heyeti, Limni adasındaki Mondros limanında İngiliz zırhlısı Agamemnon'da ateşkesi imzaladı.\n\nBahriye Nâzırı Rauf Bey'in heyeti dört gün pazarlık etti. Yedinci madde, güvenliği tehdit eden bir durumda İtilaf'a her stratejik noktayı işgal hakkı veriyordu. Günler içinde Musul işgal edildi, 13 Kasım'da İtilaf donanması İstanbul'a geldi.\n\nHer gün yeni bir 'neden?' için abone ol. Sence bu ateşkes imzalanmasaydı ne olurdu? Yorumlara yaz!\n\n#shorts #mondrosmütarekesi #osmanlıtarihi #düşünbakalım",
+  "tags": [
+   "mondros mütarekesi",
+   "mondros ateşkes antlaşması",
+   "mondros mütarekesi 7. madde",
+   "mondros mütarekesi maddeleri",
+   "30 ekim 1918",
+   "agamemnon zırhlısı",
+   "rauf orbay",
+   "istanbulun işgali",
+   "birinci dünya savaşı",
+   "osmanlı tarihi",
+   "osmanlı imparatorluğu",
+   "kurtuluş savaşı",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-30T19:00:00+03:00",
+  "related": "videos/2026-10-27/02-cumhuriyetin-ilani-1923.json"
+ }
+}
