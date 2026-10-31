@@ -1,0 +1,175 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "obsidyen",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Nautilus: The Sound So Loud That It Circled the Earth Four Times",
+   "url": "https://nautil.us/the-sound-so-loud-that-it-circled-the-earth-four-times-235101/"
+  },
+  {
+   "title": "Wikipedia: 1883 eruption of Krakatoa",
+   "url": "https://en.wikipedia.org/wiki/1883_eruption_of_Krakatoa"
+  },
+  {
+   "title": "Oregon State University, Volcano World: Historical eruption sounds",
+   "url": "https://volcano.oregonstate.edu/historical-eruption-sounds"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Bu ses",
+   "dünyayı dolaştı"
+  ],
+  "highlight": [
+   "dünyayı"
+  ],
+  "scene": 0,
+  "t": 3.0,
+  "kasif": false,
+  "focus": [
+   460,
+   780
+  ],
+  "zoom": 1.2
+ },
+ "scenes": [
+  {
+   "text": "Bu ses dünyanın etrafını dolaştı.",
+   "type": "bt_krakatoa",
+   "visual": "Gece, karanlık deniz; ufukta tek dik ada konisi (Krakatoa), suda soluk yansıması; tepesinden havaya ince altın halkalar ve deniz yüzeyinde yassı halkalar halinde yavaşça yayılan ses dalgaları, yıldızlar",
+   "params": {
+    "mode": "rings"
+   }
+  },
+  {
+   "text": "27 Ağustos 1883. Krakatoa yanardağı kendini parçaladı.",
+   "type": "bt_krakatoa",
+   "visual": "Aynı ada; 'parçaladı'da tepedeki ağızda ateş ışığı açılır, kül sütunu yuvarlak bulutlar halinde yavaşça yükselip genişler; altta denizin üstünde 'Krakatoa'",
+   "params": {
+    "mode": "erupt",
+    "label": "Krakatoa"
+   },
+   "cues": {
+    "hit": "parçaladı"
+   }
+  },
+  {
+   "text": "4.800 kilometre ötede,",
+   "type": "bt_ocean",
+   "visual": "Hint Okyanusu haritası: Hindistan'ın ucu, Sri Lanka, Malay yarımadası, Sumatra ve Cava; Krakatoa'da altın nokta, ondan yavaşça yayılan soluk halka; 'kilometre'de okyanusun üstünden batıya altın bir yay çizilir, ucunda 'Rodrigues' adası yanar, yayın altında '4.800 km'",
+   "params": {
+    "dist": "4.800 km"
+   },
+   "cues": {
+    "go": "kilometre"
+   }
+  },
+  {
+   "text": "bir adada top atışı sanıldı.",
+   "type": "bt_rodrigues",
+   "visual": "Alacakaranlıkta alçak bir ada kıyısı; kıyıda denize bakan tek yüzsüz siluet, ufukta küçük üç direkli yelkenli; denizden kıyıya soluk ses yayları gelir; 'top'ta geminin çizgileri altınlanır",
+   "cues": {
+    "hit": "top"
+   }
+  },
+  {
+   "text": "Ama asıl iz kulaklarda kalmadı.",
+   "type": "bt_barograph",
+   "visual": "Gece bir rasat odası: tavandan sarkan lambanın ışığında masada bir barograf (kâğıt sarılı tambur, aneroid kutular, kalem kolu), arkada yıldızlı pencere; kalem tamburun üstüne sakin, düz bir çizgi yazar",
+   "params": {
+    "mode": "room"
+   }
+  },
+  {
+   "text": "Dünyanın her yanında barometreler sıçradı.",
+   "type": "bt_barograph",
+   "visual": "Yakın plan barograf kâğıdı: ızgara, kayan zaman çizgileri, kalemin yazdığı düz basınç çizgisi; 'sıçradı'da kalem keskin bir tepe çizip salınarak durulur; üstte italik 'hava basıncı'",
+   "params": {
+    "mode": "close",
+    "label": "hava basıncı"
+   },
+   "cues": {
+    "hit": "sıçradı"
+   }
+  },
+  {
+   "text": "Basınç dalgası gezegeni üç buçuk kez dolaştı.",
+   "type": "bt_wave",
+   "visual": "Karanlıkta Krakatoa merkezli küre (Asya, Avustralya, Afrika kıyıları, ince enlem-boylam çizgileri); altın noktadan altın bir halka yayılır, ufka varır, arka yüzde kesik çizgiyle karşı uca gidip geri döner; üstte sayaç '3,5 tur'a çıkar",
+   "params": {
+    "laps": 3.5,
+    "unit": "tur"
+   },
+   "cues": {
+    "go": "dolaştı"
+   }
+  },
+  {
+   "text": "Aynı kâğıtlara yedi kez çizildi.",
+   "type": "bt_trace",
+   "visual": "Uzun barograf şeridi, beş sütun ('1. gün' … '5. gün'); kalem soldan sağa yazar, yedi tepe sırayla ve giderek küçülerek çizilir, her tepenin üstünde altın nokta; 'yedi'de üstte büyük altın '7'",
+   "params": {
+    "days": 5,
+    "n": 7
+   },
+   "cues": {
+    "hit": "yedi"
+   }
+  },
+  {
+   "text": "Bir yanardağ bir sabah haykırdı, gezegen onu beş gün duydu.",
+   "type": "bt_krakatoa",
+   "visual": "Sabah ışığı, sakin deniz; adanın yerinde yarısı kopmuş tek dik uçurum (Rakata kalıntısı, katman çizgileri); 'haykırdı'da yerinden son, soluk bir altın halka yayılıp uzaklaşır",
+   "params": {
+    "mode": "after"
+   },
+   "cues": {
+    "hit": "haykırdı"
+   }
+  },
+  {
+   "text": "Böyle gerçek hikâyeler için abone olun.",
+   "type": "bt_wave",
+   "visual": "Karanlıkta sakin küre; Krakatoa'dan son altın halka yavaşça yayılıp ufka varır ve giderek söner; sayaç yok",
+   "params": {
+    "fade": true
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Krakatoa Patlaması: Dünyanın Etrafını Dolaşan Ses",
+  "description": "Krakatoa patlaması, kayıtlara geçmiş en yüksek sesi çıkardı ve bu ses dünyanın etrafını dolaştı. 27 Ağustos 1883 sabahı Sunda Boğazı'ndaki Krakatoa yanardağı patladığında, 4.800 kilometre ötedeki Rodrigues adasında bu ses bir top atışı sanıldı.\n\nAsıl iz ise kâğıtta kaldı: dünyanın dört bir yanındaki barograflar basınç dalgasını kaydetti. Dalga gezegeni üç buçuk kez dolaştı, bazı istasyonlarda beş gün içinde yedi kez çizildi.\n\nHer gün yeni bir 'neden?' için abone ol. Sence tarihin en yüksek sesini bugün duysaydık ne olurdu? Yorumlara yaz!\n\n#shorts #krakatoa #yanardağ #düşünbakalım",
+  "tags": [
+   "krakatoa patlaması",
+   "krakatoa",
+   "krakatoa 1883",
+   "krakatoa yanardağı",
+   "krakatau",
+   "dünyanın en yüksek sesi",
+   "en yüksek ses",
+   "yanardağ patlaması",
+   "basınç dalgası",
+   "barograf",
+   "rodrigues adası",
+   "endonezya tarihi",
+   "doğal afetler",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-31T19:00:00+03:00"
+ }
+}

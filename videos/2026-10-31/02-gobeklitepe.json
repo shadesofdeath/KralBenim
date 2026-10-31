@@ -1,0 +1,676 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "kum",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "UNESCO Dünya Mirası Listesi — Göbekli Tepe (1572)",
+   "url": "https://whc.unesco.org/en/list/1572"
+  },
+  {
+   "title": "DAI, The Tepe Telegrams — A (Re-)Discovery (1994–1996)",
+   "url": "https://www.dainst.blog/the-tepe-telegrams/?p=861"
+  },
+  {
+   "title": "Clare 2020, Göbekli Tepe: A brief summary of research at a new World Heritage Site (2015–2019), e-Forschungsberichte des DAI",
+   "url": "https://publications.dainst.org/journals/efb/article/view/2596"
+  },
+  {
+   "title": "DAI, The Tepe Telegrams — Of animals and a headless man: Göbekli Tepe Pillar 43",
+   "url": "https://www.dainst.blog/the-tepe-telegrams/2016/10/14/of-animals-and-a-headless-man-gobekli-tepe-pillar-43/"
+  },
+  {
+   "title": "Taş Tepeler — Göbeklitepe",
+   "url": "https://tastepeler.org/en/settlements/gobeklitepe"
+  },
+  {
+   "title": "Taş Tepeler — Karahantepe",
+   "url": "https://tastepeler.org/en/settlements/karahantepe"
+  },
+  {
+   "title": "Dietrich vd. 2019, Cereal processing at Early Neolithic Göbekli Tepe (PLoS ONE)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6493732"
+  },
+  {
+   "title": "Smithsonian Magazine — Gobekli Tepe: The World's First Temple?",
+   "url": "https://www.smithsonianmag.com/history/gobekli-tepe-the-worlds-first-temple-83613665/"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Onları",
+   "kim gömdü?"
+  ],
+  "highlight": [
+   "gömdü"
+  ],
+  "scene": 46,
+  "t": 7.0,
+  "focus": [
+   960,
+   520
+  ],
+  "zoom": 1.3,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Göbeklitepe: Tarımdan Önce Dikilen Taşları Kim Gömdü?",
+  "description": "Göbeklitepe'yi kim yaptı ve bu dev taşlar neden toprağın altında kaldı? Yaklaşık 11.600 yıl önce, tarımdan ve yazıdan önce, avcı-toplayıcılar Şanlıurfa'da beş buçuk metreyi bulan T biçimli dikilitaşlar diktiler.\n\n1963'te bir mezarlık sanılan tepeyi 1994'te Klaus Schmidt yeniden gördü. Kollu, kemerli dev taşlardan tilki, akbaba ve akrep kabartmalarına, \"önce tapınak, sonra şehir\" fikrinden Karahantepe'nin kayaya oyulmuş odasına kadar Taş Tepeler'in hikâyesini sakin bir belgesel diliyle anlatıyoruz.\n\nBu videoda:\n• Göbeklitepe neden 30 yıl boyunca bir mezarlık sanıldı?\n• T biçimli taşların üzerindeki kollar ve eller ne anlatıyor?\n• \"Önce tapınak, sonra şehir\" fikri neden sarsıldı?\n• Karahantepe'deki kayaya oyulmuş odada ne var?\n• Göbeklitepe bilerek mi gömüldü, yoksa tepe kendi kendini mi gömdü?\n\nHer gün yeni bir 'neden?' için abone ol. Sence bu taşlar kimi temsil ediyordu: ataları mı, tanrıları mı? Yorumlara yaz!\n\n#göbeklitepe #taştepeler #arkeoloji #tarih #düşünbakalım",
+  "tags": [
+   "göbeklitepe",
+   "göbekli tepe",
+   "göbeklitepe kim yaptı",
+   "göbeklitepe neden gömüldü",
+   "göbeklitepe gizemi",
+   "karahantepe",
+   "taş tepeler",
+   "klaus schmidt",
+   "t biçimli dikilitaşlar",
+   "neolitik anadolu",
+   "şanlıurfa",
+   "dünyanın en eski tapınağı",
+   "arkeoloji",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-10-31T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "text": "Toprağın altında, karanlıkta, insan boyunu aşan taşlar dimdik duruyordu.",
+   "type": "bt_gt_tepe",
+   "visual": "Tepenin kesiti: yüzeyin altında toprak katmanları, toprağın içinde halka hâlinde dikilmiş T biçimli taşlar, ortadaki iki büyük taşın üstünde altın ışık",
+   "params": {
+    "mode": "buried"
+   },
+   "chapter": "Toprağın altındaki taşlar"
+  },
+  {
+   "text": "On bin yıl boyunca kimse onları görmedi.",
+   "type": "bt_gt_pillar",
+   "visual": "Toprak katmanlarının içinde tek bir T biçimli dikilitaş, etrafında taşlar; üstünde yavaşça açılan ışık havuzu",
+   "params": {
+    "soil": true,
+    "h": 640
+   }
+  },
+  {
+   "text": "Onları dikenler ne tarla sürmüştü, ne de tek bir kelime yazmıştı.",
+   "type": "bt_text",
+   "visual": "İki ince büyük satır sırayla belirir: tarladan önce · yazıdan önce",
+   "params": {
+    "lines": [
+     {
+      "text": "tarladan önce",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "yazıdan önce",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "tarla",
+    "c2": "kelime"
+   }
+  },
+  {
+   "text": "Avcıydılar. Toplayıcıydılar. Ve bu taşları, yaklaşık on bir bin altı yüz yıl önce diktiler.",
+   "type": "bt_gt_tepe",
+   "visual": "Şafakta tepenin üstünde mızraklı tek bir avcı silueti; aşağıda ovada yavaşça yürüyen küçük ceylan sürüsü",
+   "params": {
+    "mode": "ridge"
+   }
+  },
+  {
+   "text": "Ve bir gün, bu taşların hepsi toprağın altında kayboldu.",
+   "type": "bt_gt_ring",
+   "visual": "Taş duvarlı yuvarlak yapı, halka boyunca T taşları ve ortadaki iki dev taş; toprak yavaş yavaş yükselip hepsini örter",
+   "params": {
+    "mode": "fill"
+   }
+  },
+  {
+   "text": "Onları kim gömdü? Yoksa… onları kimse gömmedi mi?",
+   "type": "bt_text",
+   "visual": "İki büyük soru belirir: kim gömdü? · yoksa kimse mi?",
+   "params": {
+    "lines": [
+     {
+      "text": "kim gömdü?",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "yoksa kimse mi?",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "gömdü",
+    "c2": "kimse"
+   }
+  },
+  {
+   "text": "1963. İstanbul ve Chicago üniversitelerinden bir ekip, Urfa'nın tepelerini dolaşıyordu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: I, Mezarlık, Urfa · 1963",
+   "params": {
+    "n": "I",
+    "title": "Mezarlık",
+    "sub": "Urfa · 1963"
+   },
+   "chapter": "Mezarlık sanılan tepe"
+  },
+  {
+   "text": "Şehrin kuzeydoğusunda, Harran Ovası'na bakan çıplak bir tepeye vardılar.",
+   "type": "bt_gt_map",
+   "visual": "Yakın plan harita: Şanlıurfa, kuzeydoğusundaki tepeler, güneyde Harran Ovası ve Harran; tepelerde altın nokta: Göbeklitepe",
+   "params": {
+    "mode": "near",
+    "points": [
+     {
+      "lon": 38.92,
+      "lat": 37.22,
+      "label": "Göbeklitepe",
+      "sub": "Şanlıurfa",
+      "at": "tepeye"
+     }
+    ]
+   },
+   "cues": {
+    "tepeye": "tepeye"
+   }
+  },
+  {
+   "text": "Yamaçta binlerce çakmaktaşı parçası vardı. Topraktan kırık kireçtaşı levhalar çıkıyordu.",
+   "type": "bt_gt_tepe",
+   "visual": "Ovaya bakan tepe; yamaçta güneşte yavaşça parlayan çakmaktaşı kırıntıları, topraktan çıkan eğik taş levhalar, iki araştırmacı silueti",
+   "params": {
+    "mode": "survey"
+   }
+  },
+  {
+   "text": "Araştırmacılar levhaları mezar taşı sandı. Tepeyi sıradan bir Neolitik yer diye not edip geçtiler.",
+   "type": "bt_gt_tepe",
+   "visual": "Aynı yamaç; levhaların üstünde soru gibi belirir: mezarlık?",
+   "params": {
+    "mode": "survey",
+    "label": "mezarlık?"
+   },
+   "cues": {
+    "show": "mezar"
+   },
+   "camera": {
+    "focus": [
+     880,
+     560
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "text": "Otuz yıl boyunca o tepeye kimse dönüp bakmadı.",
+   "type": "bt_text",
+   "visual": "Tek büyük ince yazı: otuz yıl",
+   "params": {
+    "lines": [
+     {
+      "text": "otuz yıl",
+      "at": "c1",
+      "italic": true,
+      "accent": true,
+      "size": 170
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Otuz"
+   }
+  },
+  {
+   "text": "Yalnızca çiftçiler geldi. Sabanlarına takılan taşları söküp tarlanın kenarına yığdılar. Tepenin altında ne olduğunu kimse bilmiyordu.",
+   "type": "bt_gt_tepe",
+   "visual": "Tepede sabanla ağır ağır ilerleyen bir çiftçi silueti, toprakta saban izleri; tarlanın kenarında taşlar tek tek yığılır",
+   "params": {
+    "mode": "plough"
+   }
+  },
+  {
+   "text": "Ekim 1994. Akşam güneşi tepeyi turuncuya boyamıştı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: II, Ekim 1994, Klaus Schmidt",
+   "params": {
+    "n": "II",
+    "title": "Ekim 1994",
+    "sub": "Klaus Schmidt"
+   },
+   "chapter": "Ekim 1994"
+  },
+  {
+   "text": "Klaus Schmidt, yakındaki Nevalı Çori'de yıllarca kazmıştı. O köy artık bir baraj gölünün altındaydı.",
+   "type": "bt_gt_tepe",
+   "visual": "Durgun bir baraj gölü, suda güneşin yansıması; suyun altında soluk duvar izleri ve bir T taşının hayaleti",
+   "params": {
+    "mode": "lake"
+   }
+  },
+  {
+   "text": "Şimdi eski kayıtlardaki Neolitik yerleri geziyordu. Bir köylü çocuğu ona yolu gösterdi.",
+   "type": "bt_gt_tepe",
+   "visual": "Gün batımında bir adam ve küçük bir çocuk silueti yamaçtan yavaşça tırmanır; yerde çakmaktaşları parlar",
+   "params": {
+    "mode": "walk"
+   }
+  },
+  {
+   "text": "Yamaçta çakmaktaşları ışıldıyordu. Schmidt eğilip baktı. Bunlar doğanın kırdığı taşlar değildi.",
+   "type": "bt_gt_object",
+   "visual": "Yakın plan: tek bir çakmaktaşı dilgisi, üzerinde insan elinin yonga izleri",
+   "params": {
+    "obj": "flint",
+    "rot": -6,
+    "scale": 1.6
+   }
+  },
+  {
+   "text": "Sonra bir taş yığınında bir taşın başını gördü. Taş… T harfi biçimindeydi.",
+   "type": "bt_gt_tepe",
+   "visual": "Tarla kenarındaki taş yığını; yığının içinden eğik bir T taşının başı çıkar ve altınla çevrelenip parlar",
+   "params": {
+    "mode": "heap"
+   },
+   "cues": {
+    "show": "harfi"
+   }
+  },
+  {
+   "text": "Schmidt bu biçimi Nevalı Çori'den tanıyordu. Bu tepe bir mezarlık değildi.",
+   "type": "bt_gt_pillar",
+   "visual": "Işık havuzunda tek bir T biçimli dikilitaş, yanında etiket: T biçimli dikilitaş",
+   "params": {
+    "label": "T biçimli dikilitaş",
+    "sub": "Nevalı Çori'de de vardı",
+    "h": 640,
+    "x": 760
+   }
+  },
+  {
+   "text": "Ertesi yıl kazılar başladı. Ama toprağın altından çıkan şey, insanlık tarihinin bilinen sırasını bozacaktı.",
+   "type": "bt_gt_ring",
+   "visual": "Kazı: tepeyi örten toprağın üstünde altın renkli ip ızgara, topraktan T taşlarının başları görünür, diz çökmüş bir kazıcı",
+   "params": {
+    "mode": "dig"
+   }
+  },
+  {
+   "text": "Kazılar yıllarca sürdü. Toprak her yıl biraz daha fazlasını gösterdi.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: III, Taş halkalar",
+   "params": {
+    "n": "III",
+    "title": "Taş halkalar",
+    "sub": "yaklaşık 11.600 yıl önce"
+   },
+   "chapter": "Taş halkalar"
+  },
+  {
+   "text": "Kazıcılar dev halkalar buldu. Her halkanın ortasında iki dev taş karşı karşıya duruyordu.",
+   "type": "bt_gt_ring",
+   "visual": "Yuvarlak taş duvar, halka boyunca küçük T taşları belirir; ortadaki iki dev taşın arkasında altın ışık açılır",
+   "params": {
+    "mode": "plan"
+   },
+   "cues": {
+    "center": "ortasında"
+   }
+  },
+  {
+   "text": "En büyükleri beş buçuk metreyi buluyordu. Bazıları on tona yaklaşıyordu.",
+   "type": "bt_gt_pillar",
+   "visual": "Tek dev T taşı, yanında küçük bir insan silueti; boyunu gösteren altın ölçü çizgisi: 5,5 m",
+   "params": {
+    "person": true,
+    "h": 700,
+    "x": 900
+   }
+  },
+  {
+   "text": "Taşlar ana kayadan, metal alet olmadan kesildi. Ama asıl sır, taşların yüzündeydi.",
+   "type": "bt_gt_tepe",
+   "visual": "Kireçtaşı düzlüğü; ana kayadan henüz ayrılmamış, yarım kalmış bir T taşının çevresi altınla belirir",
+   "params": {
+    "mode": "quarry"
+   }
+  },
+  {
+   "text": "Bazı taşların yanlarında ince kollar vardı. Eller karnın önünde birleşiyordu.",
+   "type": "bt_gt_pillar",
+   "visual": "T taşının geniş yüzünde kabartma kollar kendini çizer; dirsek kırılır, parmaklar taşın önünde birleşir",
+   "params": {
+    "arms": true,
+    "gold": "arms",
+    "h": 700,
+    "x": 900
+   },
+   "cues": {
+    "arms": "kollar"
+   }
+  },
+  {
+   "text": "Bellerinde bir kemer, kemerden sarkan bir hayvan postu vardı.",
+   "type": "bt_gt_pillar",
+   "visual": "Aynı taş, yakın plan: belde kabartma kemer ve ondan sarkan post belirir",
+   "params": {
+    "arms": true,
+    "belt": true,
+    "pelt": true,
+    "gold": "belt",
+    "h": 700,
+    "x": 900
+   },
+   "cues": {
+    "belt": "kemer"
+   }
+  },
+  {
+   "text": "Yani bu taşlar yalnızca taş değildi. Büyük olasılıkla, başı ve kolları olan dev bedenlerdi.",
+   "type": "bt_gt_ring",
+   "visual": "Halkanın ortasındaki iki dev taş, kollu ve kemerli, karşı karşıya; arkalarında alçak duvar ve küçük taşlar, ışık havuzu",
+   "params": {
+    "mode": "pair"
+   }
+  },
+  {
+   "text": "Ve etraflarında hayvanlar vardı. Tilkiler, yaban domuzları, yılanlar.",
+   "type": "bt_gt_relief",
+   "visual": "Tek taş yüzeyde alt alta kabartma bir tilki, bir yaban domuzu, bir yılan sırayla belirir",
+   "params": {
+    "animals": [
+     {
+      "a": "fox",
+      "at": "fox"
+     },
+     {
+      "a": "boar",
+      "at": "boar"
+     },
+     {
+      "a": "snake",
+      "at": "snake"
+     }
+    ]
+   },
+   "cues": {
+    "boar": "Tilkiler",
+    "snake": "domuzları"
+   }
+  },
+  {
+   "text": "Bir taşta kanatlarını açmış bir akbaba duruyor. Hemen altında, dev bir akrep.",
+   "type": "bt_gt_relief",
+   "visual": "Taş yüzeyde kanatlarını açmış kabartma akbaba ve yanında bir yuvarlak; altında dev bir akrep belirir",
+   "params": {
+    "mode": "p43"
+   },
+   "cues": {
+    "v": "kanatlarını",
+    "akrep": "altında"
+   }
+  },
+  {
+   "text": "Burada yenen hayvanların çoğu ceylandı. Ama taşlara yırtıcılar ve zehirli canlılar kazındı. Bu taşları kim, ne için dikmişti?",
+   "type": "bt_gt_bones",
+   "visual": "Yüz küçük kemik çizimi; altmışı altın renge döner, yanında: %60, ceylan",
+   "params": {
+    "n": 100,
+    "hit": 60,
+    "big": "%60+",
+    "label": "ceylan",
+    "sub": "bulunan hayvan kemikleri"
+   },
+   "cues": {
+    "hit": "ceylandı"
+   }
+  },
+  {
+   "text": "Uzun süre şöyle düşünüldü: İnsan önce toprağı ekti, köyler kurdu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: IV, Önce tapınak",
+   "params": {
+    "n": "IV",
+    "title": "Önce tapınak"
+   },
+   "chapter": "Önce tapınak"
+  },
+  {
+   "text": "Tapınaklar ancak çok sonra, artan ürünle birlikte geldi.",
+   "type": "bt_field",
+   "visual": "Gün doğumunda buğday tarlası; güneş yavaşça yükselir"
+  },
+  {
+   "text": "Göbeklitepe bu sırayı bozdu. Bu taşlar dikildiğinde Mısır piramitlerine daha yedi bin yıl vardı.",
+   "type": "bt_gt_time",
+   "visual": "Bugünden geriye uzanan zaman çizgisi; Piramitler ve Yazı yakın geçmişte, en uçta altın: Göbeklitepe 11.600 yıl önce",
+   "params": {
+    "marks": [
+     {
+      "ago": 0,
+      "label": "bugün",
+      "up": true
+     },
+     {
+      "ago": 4500,
+      "label": "Piramitler",
+      "sub": "4.500 yıl",
+      "up": true,
+      "at": "pir"
+     },
+     {
+      "ago": 5200,
+      "label": "Yazı",
+      "sub": "5.200 yıl",
+      "up": false,
+      "at": "pir"
+     },
+     {
+      "ago": 11600,
+      "label": "Göbeklitepe",
+      "sub": "11.600 yıl",
+      "up": true,
+      "gold": true,
+      "anchor": "start",
+      "at": "gt"
+     }
+    ]
+   },
+   "cues": {
+    "gt": "Göbeklitepe",
+    "pir": "piramitlerine"
+   }
+  },
+  {
+   "text": "Klaus Schmidt bunu tek cümleyle söyledi: Önce tapınak geldi, sonra şehir.",
+   "type": "bt_text",
+   "visual": "İki satır: önce tapınak · sonra şehir",
+   "params": {
+    "lines": [
+     {
+      "text": "önce tapınak",
+      "at": "c1",
+      "italic": true,
+      "accent": true
+     },
+     {
+      "text": "sonra şehir",
+      "at": "c2",
+      "italic": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "söyledi",
+    "c2": "sonra"
+   }
+  },
+  {
+   "text": "Ona göre burası bir dağ tapınağıydı. Uzaktaki topluluklar burada buluşup ziyafet veriyordu. Ama son yıllarda toprak başka bir şey anlatmaya başladı.",
+   "type": "bt_gt_tepe",
+   "visual": "Akşam ışığında tepe; ovanın iki yanından küçük insan siluetleri yavaşça tepeye doğru yürür, tepede ışık",
+   "params": {
+    "mode": "gather"
+   }
+  },
+  {
+   "text": "Yeni kazılar, tahıl öğütmek için kullanılmış binlerce taş buldu.",
+   "type": "bt_gt_object",
+   "visual": "Işık havuzunda 3/4 açıdan uzun, çukur bir taş tekne, üstünde yassı el taşı, önünde tahıl taneleri",
+   "params": {
+    "obj": "grinder",
+    "scale": 1.5,
+    "label": "öğütme taşı"
+   }
+  },
+  {
+   "text": "Halkaların yanında sıradan evler de vardı. Burada insanlar yaşıyordu. Göbeklitepe yalnızca bir tapınak değildi.",
+   "type": "bt_gt_tepe",
+   "visual": "Tepede taş halkaların çevresinde yuvarlak evler, damlardan yavaşça yükselen duman",
+   "params": {
+    "mode": "village"
+   }
+  },
+  {
+   "text": "Ve yalnız da değildi. Şanlıurfa'nın tepelerinde aynı çağdan başka yerler de var: Taş Tepeler.",
+   "type": "bt_gt_tepe",
+   "visual": "Üst üste sıradağlar; tepelerde altın noktalar sırayla yanar, ikisi etiketli: Göbeklitepe, Karahantepe",
+   "params": {
+    "mode": "hills"
+   },
+   "cues": {
+    "show": "başka"
+   }
+  },
+  {
+   "text": "Bunlardan biri Karahantepe. Burada ana kayaya oyulmuş bir oda var.",
+   "type": "bt_gt_karahan",
+   "visual": "Ana kayanın kesiti: kayaya oyulmuş dikdörtgen oda, içinde iki sıra kayadan bırakılmış dikme",
+   "cues": {
+    "head": "oyulmuş"
+   }
+  },
+  {
+   "text": "Odanın duvarından bir insan başı çıkıyor. Karşısında, kayadan bırakılmış on dikme sıra sıra bekliyor.",
+   "type": "bt_gt_karahan",
+   "visual": "Yakın plan: kaya duvarından çıkan büyük insan başı, altın ışıkta",
+   "params": {
+    "mode": "head"
+   },
+   "cues": {
+    "head": "Odanın"
+   }
+  },
+  {
+   "text": "Ama bu yerlerin çoğunun ortak bir sırrı var. Bir gün toprağın altında kaldılar.",
+   "type": "bt_gt_tepe",
+   "visual": "Akşam, yumuşak bir tepe silueti; tepenin içinde T taşlarının soluk hayaletleri belirir ve yavaşça kaybolur",
+   "params": {
+    "mode": "mound"
+   }
+  },
+  {
+   "text": "Göbeklitepe'deki halkaların içi tıka basa doluydu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: V, Toprak",
+   "params": {
+    "n": "V",
+    "title": "Toprak"
+   },
+   "chapter": "Toprak"
+  },
+  {
+   "text": "Schmidt bunun bilinçli bir gömme olduğunu düşündü: yapılar, bir veda töreni gibi elle doldurulmuştu.",
+   "type": "bt_gt_section",
+   "visual": "Yamaç kesiti: halkanın içindeki iki taş; kenarda eğilmiş siluetler toprak atar, dolgu düz katmanlar hâlinde yükselir",
+   "params": {
+    "mode": "ritual"
+   }
+  },
+  {
+   "text": "Schmidt 2014'te öldü. Sonraki ekip dolguya yeniden baktı. İçinde farklı dönemlerin kalıntıları karışmıştı.",
+   "type": "bt_gt_tepe",
+   "visual": "Kazı çukurunun duvarı: eğik, karışık toprak katmanları, içinde kemik ve çakmaktaşı parçaları, bazıları altınla belirir; eğilmiş bir siluet uzattığı fırçayla duvarı temizler",
+   "params": {
+    "mode": "wall"
+   }
+  },
+  {
+   "text": "Tepe bir yamaçtı. Yukarıdaki yerleşimin molozu, çöpü, yıkılan duvarları zamanla aşağı kaydı ve yapıların içine doldu.",
+   "type": "bt_gt_section",
+   "visual": "Yamaç kesiti: yukarıda evler, yamaçtan aşağı yavaşça kayan moloz dilleri; halkanın içi eğik katmanlarla dolar",
+   "params": {
+    "mode": "slide"
+   }
+  },
+  {
+   "text": "Bugünkü ekibe göre halkaların çoğunu kimse gömmedi. Tepe, yavaş yavaş, kendi kendini gömdü.",
+   "type": "bt_gt_section",
+   "visual": "Aynı yamaç kesiti, dolgu tamamlanmış: halkanın içi eğik katmanlarla dolu, gömülü iki taş altın çizgiyle belirir",
+   "params": {
+    "mode": "slide",
+    "done": true
+   }
+  },
+  {
+   "text": "Ama en az bir yapı büyük olasılıkla bilerek doldurulmuştu. Ve tepenin yalnızca küçük bir kısmı kazıldı.",
+   "type": "bt_gt_tepe",
+   "visual": "Büyük, kazılmamış tepe; tepesinde altınla çevrili küçük bir kazı penceresi, içinde düz katmanlarla doldurulmuş tek bir halka ve iki T taşının başı",
+   "params": {
+    "mode": "ratio"
+   }
+  },
+  {
+   "text": "Belki de en ürkütücü olan şu: Bu taşların çoğunu zaman gömdü. Ve aynı zaman, onları on bin yıl boyunca bizim için sakladı.",
+   "type": "bt_gt_pillar",
+   "visual": "Toprak katmanlarının içinde tek T taşı, kolları ve kemeriyle; ışık yavaşça açılır",
+   "params": {
+    "soil": true,
+    "dark": true,
+    "arms": true,
+    "belt": true,
+    "pelt": true,
+    "h": 640,
+    "slow": true
+   }
+  },
+  {
+   "text": "Sizce bu taşlar kimi temsil ediyordu: atalarını mı, tanrılarını mı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_gt_ring",
+   "visual": "Gün batımı: iki dev taşın arasında alçak güneş, taşlar koyu siluet, kolları ve kemerleri görünür",
+   "params": {
+    "mode": "pair",
+    "dusk": true
+   }
+  }
+ ]
+}
