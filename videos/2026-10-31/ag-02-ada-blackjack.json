@@ -1,0 +1,767 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ada-blackjack",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "Only she",
+   "came back"
+  ],
+  "highlight": [
+   "she"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "focus": [
+   560,
+   800
+  ],
+  "zoom": 1.6,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "x": 850,
+   "y": 1880,
+   "face": -1,
+   "scale": 1.25
+  }
+ },
+ "sources": [
+  {
+   "title": "Atlas Obscura — The Woman Who Survived Two Years in the Arctic With Only a Cat",
+   "url": "https://www.atlasobscura.com/articles/ada-blackjack-arctic-survivor"
+  },
+  {
+   "title": "History.com — The Inuit Woman Who Survived Alone on an Arctic Island After a Disastrous Expedition",
+   "url": "https://www.history.com/articles/ada-blackjack-inuit-wrangel-island"
+  },
+  {
+   "title": "Dartmouth Library — The diary of Ada Blackjack, sole survivor of the Wrangel Island expedition, 1923",
+   "url": "https://www.library.dartmouth.edu/digital/digital-collections/ada-blackjack-diary"
+  },
+  {
+   "title": "Wikipedia — Ada Blackjack",
+   "url": "https://en.wikipedia.org/wiki/Ada_Blackjack"
+  }
+ ],
+ "youtube": {
+  "title": "Ada Blackjack: How Did She Survive Alone on Wrangel Island?",
+  "description": "Ada Blackjack was the only one who came back from Wrangel Island. In 1921 four young explorers took her, their Iñupiat seamstress, to a frozen island north of Siberia.\n\nThe food ran out. In January 1923 three men set off across the sea ice for help and were never seen again. Ada nursed the last man, Lorne Knight, until he died of scurvy. Alone and terrified of polar bears, she taught herself to shoot, trapped foxes and built a lookout platform, until the schooner Donaldson arrived in August 1923. An Arctic survival story with one survivor and a cat named Vic.\n\nSubscribe to Stickstory for one true survival story a day. Could you have lasted alone on that island? Tell me in the comments!\n\n#shorts #adablackjack #survivalstory #stickstory",
+  "tags": [
+   "ada blackjack",
+   "ada blackjack story",
+   "ada blackjack wrangel island",
+   "ada blackjack survival",
+   "wrangel island",
+   "wrangel island expedition",
+   "arctic survival",
+   "survival story",
+   "true survival stories",
+   "lorne knight",
+   "vilhjalmur stefansson",
+   "polar bears",
+   "inupiat history",
+   "alone in the arctic",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-31T19:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "ab_ice",
+   "text": "Only she came back from this island.",
+   "visual": "Hook frame: a snowy Arctic island camp. Ada (red fur-trimmed parka hood, rifle on her shoulder) stands alone in the middle of the snow, a polar bear walks slowly along the ice behind her on the left, the canvas tent on the right, snow falling, ice blocks and drifts fill the bottom. Cover overlay: big shocked fez host.",
+   "title": {
+    "white": "Ada Blackjack"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 680
+   },
+   "cues": {
+    "hit": "came"
+   },
+   "params": {
+    "camp": {
+     "x": 0.8,
+     "s": 0.85
+    },
+    "ada": {
+     "x": 0.56,
+     "y": 0.5989583333333334,
+     "scale": 0.95,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "worried",
+     "rifle": {
+      "mode": "carry",
+      "side": "front"
+     }
+    },
+    "bears": [
+     {
+      "x": 0.02,
+      "to": 0.2,
+      "y": 0.595,
+      "s": 0.85,
+      "at": 0,
+      "dur": 3.5,
+      "look": 1.8
+     }
+    ],
+    "snow": 45,
+    "far_y": 760,
+    "tracks": [
+     [
+      0.95,
+      0.75,
+      0.55,
+      0.62
+     ]
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_map",
+   "text": "In 1921, four explorers took Ada, their seamstress, to Wrangel Island.",
+   "visual": "Old Arctic chart: Siberia on the left, Alaska on the right, the Bering Strait between; a dashed red route is drawn from Nome up through the strait to Wrangel Island, a little ship sails along it; the island pops up with a red ring and the hand label 'WRANGEL ISLAND', red '1921' over the sea.",
+   "title": {
+    "white": "Wrangel Island",
+    "gray": "1921"
+   },
+   "source": "History.com",
+   "set": false,
+   "cues": {
+    "route": "explorers",
+    "island": "Wrangel",
+    "yr": "1921"
+   },
+   "params": {
+    "route": {
+     "at": "route",
+     "dur": 2.6
+    },
+    "island": "island",
+    "labels": [
+     {
+      "text": "1921",
+      "x": 0.5,
+      "y": 0.43,
+      "at": "yr",
+      "size": 100,
+      "color": "red",
+      "font": "hand"
+     },
+     {
+      "text": "WRANGEL ISLAND",
+      "x": 0.3,
+      "y": 0.34,
+      "at": "island",
+      "size": 64,
+      "color": "red",
+      "font": "hand",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "move": "up"
+   }
+  },
+  {
+   "type": "ab_hut",
+   "text": "Food ran out,",
+   "visual": "Inside the canvas tent by the light of a hanging oil lamp: Ada pries open a big supply crate, the lid flips off, the crate is empty, empty tins roll across the floor; she jumps back in shock; red box 'EMPTY'; the cat Vic sits by the crates.",
+   "title": {
+    "white": "No food"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "open": "Food",
+    "tins": "ran",
+    "hit": "out"
+   },
+   "params": {
+    "mode": "food",
+    "open": "open",
+    "tins": "tins",
+    "crate": {
+     "x": 0.64
+    },
+    "lamp": {
+     "x": 0.5,
+     "y": 0.25
+    },
+    "ada": {
+     "x": 0.3,
+     "y": 0.5989583333333334,
+     "scale": 0.85,
+     "pose": "point",
+     "dir": "down",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    },
+    "cat": {
+     "x": 0.86,
+     "y": 0.6019583333333334,
+     "s": 0.9,
+     "face": -1
+    },
+    "labels": [
+     {
+      "text": "EMPTY",
+      "x": 0.66,
+      "y": 0.4,
+      "at": "hit",
+      "size": 96,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_trek",
+   "text": "so three men crossed the sea ice for help.",
+   "visual": "The frozen Chukchi Sea: rows of pressure-ridge ice blocks; three men in berets haul a sledge and walk away through a gap in the ice towards the horizon, getting smaller, footprints behind them; Ada in her red hood watches from the left and waves; hand label 'TO SIBERIA'.",
+   "title": {
+    "white": "Sea ice",
+    "gray": "Jan 1923"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 700
+   },
+   "cues": {
+    "go": "three",
+    "hit": "help"
+   },
+   "params": {
+    "from": [
+     0.46,
+     0.6,
+     0.62
+    ],
+    "to": [
+     0.64,
+     0.43,
+     0.2
+    ],
+    "at": 0,
+    "dur": 3.4,
+    "watch": [
+     {
+      "x": 0.2,
+      "y": 0.615,
+      "scale": 0.72,
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "hood": true,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "wave",
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "TO SIBERIA →",
+      "x": 0.72,
+      "y": 0.33,
+      "at": "hit",
+      "size": 70,
+      "color": "ink",
+      "font": "hand",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_trek",
+   "text": "Nobody saw them again.",
+   "visual": "Blowing snow over the white sea ice: the three bereted men and their sledge, already small near the horizon, keep walking and fade into the blizzard by 'again'; their footprints fill in; red box 'NEVER SEEN AGAIN'.",
+   "title": {
+    "white": "Vanished"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 700
+   },
+   "cues": {
+    "gone": "saw",
+    "hit": "again"
+   },
+   "params": {
+    "from": [
+     0.5,
+     0.56,
+     0.42
+    ],
+    "to": [
+     0.58,
+     0.46,
+     0.26
+    ],
+    "at": 0,
+    "dur": 1.8,
+    "gone": "gone",
+    "storm": true,
+    "labels": [
+     {
+      "text": "NEVER SEEN AGAIN",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "hit",
+      "size": 78,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ab_hut",
+   "text": "Ada nursed Lorne Knight until he died.",
+   "visual": "Close-up inside the tent, the oil lamp hanging above the cot: Lorne Knight lies under a blanket on a cot, breathing; Ada sits beside him, worried; on 'died' his breathing stops and the oil lamp flame goes out in a curl of smoke.",
+   "title": {
+    "white": "Lorne Knight",
+    "gray": "June 1923"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "hit": "Knight",
+    "out": "died"
+   },
+   "params": {
+    "mode": "nurse",
+    "out": "out",
+    "lamp": {
+     "x": 0.62,
+     "y": 0.34
+    },
+    "cot_x0": 0.47,
+    "cot_x1": 0.9,
+    "ada": {
+     "x": 0.37,
+     "y": 0.5989583333333334,
+     "scale": 0.85,
+     "pose": "sit",
+     "face": "right",
+     "emotion": "worried"
+    }
+   },
+   "camera": {
+    "focus": [
+     620,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_ice",
+   "text": "Imagine you're her: alone, wind howling, scared of polar bears.",
+   "visual": "Ada stands alone on the empty snow in a howling wind (snow streaks blow sideways), her red hood the only colour; she looks small and alone; a big polar bear walks in from the right and lifts its head to sniff; she jumps back in shock.",
+   "title": {
+    "white": "Alone"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 680
+   },
+   "cues": {
+    "al": "alone",
+    "bear": "howling",
+    "hit": "polar"
+   },
+   "params": {
+    "camp": false,
+    "ada": {
+     "x": 0.36,
+     "y": 0.5989583333333334,
+     "scale": 0.68,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    },
+    "bears": [
+     {
+      "x": 1.3,
+      "to": 0.8,
+      "y": 0.6,
+      "s": 0.9,
+      "at": "bear",
+      "dur": 1.8,
+      "face": -1,
+      "look": "hit"
+     }
+    ],
+    "snow": 70,
+    "wind": 2.6,
+    "far_y": 760
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_ice",
+   "text": "But she learned to shoot and built a lookout.",
+   "visual": "Ada aims her rifle up at the sky: on 'shoot' a muzzle puff and three birds flap away while the fez host behind her flinches; on 'built' a lookout platform rises plank by plank on driftwood posts above her tent, with a ladder and a rail, and the host points at it.",
+   "title": {
+    "white": "Lookout"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 680
+   },
+   "cues": {
+    "shot": "shoot",
+    "build": "built",
+    "hit": "lookout"
+   },
+   "params": {
+    "camp": {
+     "x": 0.68,
+     "s": 0.6
+    },
+    "crates": false,
+    "platform": {
+     "x": 0.68,
+     "w": 320,
+     "h": 320,
+     "build": "build",
+     "dur": 1.4
+    },
+    "ada": {
+     "x": 0.3,
+     "y": 0.5989583333333334,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": 25,
+     "face": "right",
+     "emotion": "angry",
+     "rifle": {
+      "mode": "aim",
+      "ang": 25
+     }
+    },
+    "kasif": {
+     "x": 0.09,
+     "y": 0.5989583333333334,
+     "scale": 0.8,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "shot",
+       "pose": "shock",
+       "face": "right"
+      },
+      {
+       "at": "build",
+       "pose": "point",
+       "dir": 30,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "shot": "shot",
+    "snow": 30,
+    "far_y": 760,
+    "labels": [
+     {
+      "text": "LOOKOUT",
+      "x": 0.68,
+      "y": 0.33,
+      "at": "hit",
+      "size": 72,
+      "color": "red",
+      "font": "hand",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_shore",
+   "text": "In 1923 a ship found one survivor:",
+   "visual": "The island shore in summer: open grey water with drifting floes; a two-masted schooner, the Donaldson, sails in from the right; Ada in her red hood waves from the shingle, the cat at her feet; then a red box 'ONE SURVIVOR'.",
+   "title": {
+    "white": "Rescued",
+    "gray": "Aug 1923"
+   },
+   "source": "Atlas Obscura",
+   "set": {
+    "name": "coast",
+    "ground": 1150,
+    "horizon": 860
+   },
+   "cues": {
+    "yr": "1923",
+    "ship": "ship",
+    "hit": "survivor"
+   },
+   "params": {
+    "ship": {
+     "from": 1.45,
+     "to": 0.68,
+     "y": 0.47,
+     "s": 0.75,
+     "at": 0,
+     "dur": 2.0
+    },
+    "ada": {
+     "x": 0.26,
+     "y": 0.5989583333333334,
+     "scale": 0.82,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "ship",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "cat": {
+     "x": 0.4,
+     "y": 0.6029583333333334,
+     "s": 0.8,
+     "face": 1
+    },
+    "labels": [
+     {
+      "text": "ONE SURVIVOR",
+      "x": 0.42,
+      "y": 0.3,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "ab_shore",
+   "text": "the seamstress nobody trained.",
+   "visual": "Closer on the shore: Ada stands tall with her rifle on her shoulder and the cat beside her, the schooner at anchor behind; on 'nobody' a red box 'NOBODY TRAINED HER'.",
+   "title": {
+    "white": "Seamstress"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1150,
+    "horizon": 860
+   },
+   "cues": {
+    "hit": "nobody"
+   },
+   "params": {
+    "ship": {
+     "from": 0.68,
+     "to": 0.68,
+     "y": 0.47,
+     "s": 0.75
+    },
+    "ada": {
+     "x": 0.36,
+     "y": 0.5989583333333334,
+     "scale": 0.9,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "neutral",
+     "rifle": "carry",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "idle",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "cat": {
+     "x": 0.54,
+     "y": 0.6029583333333334,
+     "s": 0.85,
+     "face": -1
+    },
+    "labels": [
+     {
+      "text": "NOBODY TRAINED HER",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "hit",
+      "size": 74,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ab_ice",
+   "text": "Subscribe for a true story every day.",
+   "visual": "Ada stands on her finished lookout above the tent, rifle on her shoulder, face clearly visible; the cat sits below; the fez host points up at her; giant words 'ONLY SHE / CAME BACK.' ('SHE' in a red box).",
+   "title": {
+    "white": "Ada Blackjack",
+    "gray": "1898–1983"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 680
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "camp": {
+     "x": 0.5,
+     "s": 0.6
+    },
+    "crates": false,
+    "platform": {
+     "x": 0.5,
+     "w": 320,
+     "h": 220
+    },
+    "ada": {
+     "x": 0.47,
+     "y": 0.47708333333333336,
+     "scale": 0.62,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "happy",
+     "rifle": "carry"
+    },
+    "cat": {
+     "x": 0.24,
+     "y": 0.6029583333333334,
+     "s": 0.85,
+     "face": 1
+    },
+    "kasif": {
+     "x": 0.82,
+     "y": 0.5989583333333334,
+     "scale": 0.82,
+     "pose": "point",
+     "dir": 35,
+     "face": "left",
+     "emotion": "happy"
+    },
+    "lines": [
+     {
+      "words": [
+       "ONLY",
+       "SHE"
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.165,
+      "size": 120
+     },
+     {
+      "words": [
+       "CAME",
+       "BACK."
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.235,
+      "size": 120
+     }
+    ],
+    "highlight": "SHE",
+    "snow": 30,
+    "far_y": 760
+   },
+   "camera": {
+    "move": "pull"
+   }
+  }
+ ]
+}

@@ -1,0 +1,716 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "caroline-herschel",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-dusk",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Raised as",
+   "a maid"
+  ],
+  "highlight": [
+   "maid"
+  ],
+  "scene": 0,
+  "t": 1.9,
+  "focus": [
+   610,
+   800
+  ],
+  "zoom": 1.08,
+  "kasif": {
+   "pose": "shock",
+   "x": 850,
+   "y": 1790,
+   "face": -1,
+   "scale": 1.1
+  }
+ },
+ "sources": [
+  {
+   "title": "Royal Museums Greenwich — Caroline Herschel: the first paid female astronomer",
+   "url": "https://www.rmg.co.uk/stories/space-astronomy/caroline-herschel-first-paid-female-astronomer"
+  },
+  {
+   "title": "Max Planck Society — Female pioneers of science: Caroline Herschel",
+   "url": "https://www.mpg.de/female-pioneers-of-science/caroline-herschel"
+  },
+  {
+   "title": "MacTutor (University of St Andrews) — Caroline Herschel",
+   "url": "https://mathshistory.st-andrews.ac.uk/BEA/herschel_caroline_bea.pdf"
+  },
+  {
+   "title": "Wikipedia — Caroline Herschel",
+   "url": "https://en.wikipedia.org/wiki/Caroline_Herschel"
+  }
+ ],
+ "youtube": {
+  "title": "Caroline Herschel: How Did a Family Maid Find Comets?",
+  "description": "Caroline Herschel was raised to be a maid, then she found eight comets. Typhus at age ten left her just four foot three, and her mother wanted her to keep house.\n\nIn England she kept house for her brother William, the astronomer. But at night she swept the sky with a small telescope, and on 1 August 1786, while William was away, she spotted a fuzzy dot that moved: her first comet. In 1787 King George III gave her a salary of 50 pounds a year: the girl raised to be a maid became the first woman paid as an astronomer.\n\nSubscribe to Stickstory for one strange true story a day. Had you ever heard of Caroline Herschel? Tell me in the comments!\n\n#shorts #carolineherschel #comets #stickstory",
+  "tags": [
+   "caroline herschel",
+   "caroline herschel comet",
+   "caroline herschel facts",
+   "caroline herschel astronomer",
+   "first female astronomer",
+   "first woman paid astronomer",
+   "william herschel",
+   "comet discovery",
+   "comet hunter",
+   "women in science",
+   "astronomy history",
+   "king george iii",
+   "space facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-10-31T13:00:00-04:00"
+ },
+ "scenes": [
+  {
+   "type": "ch_garden",
+   "text": "She was raised to be a maid.",
+   "visual": "A night lawn: a young woman in a long dress, apron and frilled mob cap is at the eyepiece of her small telescope on a wooden tripod when a gold comet flares up over it; she jumps back in shock and awe; her big broom leans beside her; grass and a hedge in front. Hook frame: big shocked fez host (cover overlay).",
+   "title": {
+    "white": "Caroline Herschel"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "maid"
+   },
+   "params": {
+    "carol": {
+     "x": 0.38,
+     "y": 0.6,
+     "scale": 1.05,
+     "face": "right",
+     "pose": "point",
+     "dress": "blue",
+     "emotion": "neutral",
+     "dir": "forward",
+     "seq": [
+      {
+       "at": 1.3,
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "scope": {
+     "ang": 74,
+     "sweep": 6,
+     "dx": 110,
+     "dy": 40
+    },
+    "broom": {
+     "x": 0.24,
+     "size": 1.3,
+     "sweep": 30
+    },
+    "comet": {
+     "x": 0.69,
+     "y": 0.32,
+     "len": 220,
+     "ang": -30,
+     "r": 34,
+     "at": 0,
+     "grow": 2.0
+    },
+    "lantern": false
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ch_kitchen",
+   "text": "Typhus at ten left Caroline Herschel four foot three,",
+   "visual": "Close-up in a German house kitchen: the small girl in an apron and cap stands with her back against a doorframe covered in height marks; on 'three' a red line is drawn right across the top of her head and '4 FT 3' appears above it; a pot steams over the hearth fire behind.",
+   "title": {
+    "white": "Typhus",
+    "gray": "age ten"
+   },
+   "source": "Wikipedia",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "Typhus",
+    "mark": "three"
+   },
+   "params": {
+    "carol": {
+     "x": 0.74,
+     "y": 0.6,
+     "scale": 0.95,
+     "face": "left",
+     "pose": "idle",
+     "emotion": "worried",
+     "dress": "blue"
+    },
+    "chart": {
+     "x": 0.86,
+     "at": "mark",
+     "text": "4 FT 3"
+    }
+   },
+   "camera": {
+    "focus": [
+     800,
+     780
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ch_kitchen",
+   "text": "and her mother wanted a servant, not a scholar.",
+   "visual": "Wide shot of the kitchen: the tall mother in a cap points down at the girl, who kneels on the floor scrubbing it with a brush next to a big washtub of laundry and a bucket; on 'servant' a red box 'SERVANT' pops up; a laundry basket fills the foreground.",
+   "title": {
+    "white": "Hanover",
+    "gray": "Germany"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "servant",
+    "mom": "mother"
+   },
+   "params": {
+    "mother": {
+     "x": 0.44,
+     "y": 0.6,
+     "scale": 1.15,
+     "face": "right",
+     "pose": "talk",
+     "dress": "soft",
+     "apron": false,
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "down",
+       "emotion": "angry"
+      }
+     ]
+    },
+    "carol": {
+     "x": 0.76,
+     "y": 0.6,
+     "scale": 0.95,
+     "face": "left",
+     "pose": "point",
+     "dir": -60,
+     "emotion": "worried",
+     "dress": "blue",
+     "wob": {
+      "amp": 16,
+      "f": 1.4
+     },
+     "kneel": 150
+    },
+    "brush": true,
+    "chart": {
+     "x": 0.86,
+     "at": 99,
+     "text": ""
+    },
+    "labels": [
+     {
+      "text": "SERVANT",
+      "x": 0.6,
+      "y": 0.2,
+      "at": "hit",
+      "size": 84,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "left"
+   }
+  },
+  {
+   "type": "ch_study",
+   "text": "So she kept house for her brother William, who loved stars.",
+   "visual": "A Georgian room in Bath at night: a tall sash window full of stars with a big telescope at it; her brother William rubs a big metal telescope mirror on a wooden post (polishing swirls), then on 'stars' points up at the window; Caroline walks in with a tray, a cup and a candle; a table in front with a star chart, a spare mirror and a candle.",
+   "title": {
+    "white": "Bath",
+    "gray": "England"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "stars"
+   },
+   "params": {
+    "will": {
+     "x": 0.62,
+     "y": 0.6,
+     "scale": 1.15,
+     "face": "left",
+     "pose": "point",
+     "dir": "down",
+     "wob": {
+      "amp": 14,
+      "f": 1.1
+     },
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": "up",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "carol": {
+     "x": 0.22,
+     "y": 0.6,
+     "scale": 0.95,
+     "face": "right",
+     "pose": "point",
+     "dir": "forward",
+     "dress": "blue",
+     "walk": {
+      "from": -0.05,
+      "at": 0,
+      "dur": 1.4
+     }
+    },
+    "post": 0.47
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "ch_garden",
+   "text": "At night, she swept the sky with a telescope.",
+   "visual": "The lawn at night, closer: Caroline at the side eyepiece slowly swings the small telescope across the sky; on 'swept' a dashed arc is drawn across the stars from the tube mouth; the lantern glows on the grass, a hedge in front.",
+   "title": {
+    "white": "Comet sweeper"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "hit": "telescope",
+    "arc": "swept"
+   },
+   "params": {
+    "carol": {
+     "x": 0.32,
+     "y": 0.6,
+     "scale": 1.1,
+     "face": "right",
+     "pose": "point",
+     "dir": "forward",
+     "dress": "blue"
+    },
+    "scope": {
+     "ang": 66,
+     "sweep": 7
+    },
+    "comet": false,
+    "arc": {
+     "at": "arc",
+     "r": 360
+    },
+    "lantern": 0.84,
+    "stool": true
+   },
+   "camera": {
+    "focus": [
+     460,
+     820
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ch_eyepiece",
+   "text": "In August 1786, with William away, a fuzzy dot moved.",
+   "visual": "The view through the eyepiece: a round brass-rimmed window of night sky full of stars; on 'fuzzy' a soft gold dot slides away from its first place, a dashed ghost ring stays behind and a red arrow points from it to the dot; below the subtitle, her notebook page with '1 Aug 1786' where a quill sketches the little comet.",
+   "title": {
+    "white": "Slough",
+    "gray": "1 Aug 1786"
+   },
+   "set": false,
+   "cues": {
+    "moved": "fuzzy",
+    "sk": "moved"
+   },
+   "params": {
+    "date": "1 Aug 1786",
+    "dateAt": 0.2,
+    "at": "moved",
+    "sketch": "sk",
+    "dot": {
+     "from": [
+      -0.34,
+      0.18
+     ],
+     "to": [
+      0.22,
+      -0.16
+     ]
+    }
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ch_garden",
+   "text": "A comet. Her first of eight.",
+   "visual": "Back on the lawn: on 'comet' a big gold comet blazes into the sky over the telescope, Caroline jumps back in shock and the fez host beside her stares up; on 'first' seven more comets pop up across the sky, the host points at them and a red '8 COMETS' box appears at the top.",
+   "title": {
+    "white": "Eight comets",
+    "gray": "1786 to 1797"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "comet",
+    "c": "comet",
+    "eight": "first"
+   },
+   "params": {
+    "carol": {
+     "x": 0.24,
+     "y": 0.6,
+     "scale": 1.0,
+     "face": "right",
+     "pose": "point",
+     "dir": "forward",
+     "dress": "blue",
+     "seq": [
+      {
+       "at": "c",
+       "pose": "shock",
+       "face": "right"
+      }
+     ]
+    },
+    "scope": {
+     "ang": 74
+    },
+    "comet": {
+     "x": 0.2,
+     "y": 0.3,
+     "len": 300,
+     "ang": -15,
+     "r": 36,
+     "at": "c",
+     "grow": 0.7
+    },
+    "more": {
+     "n": 7,
+     "at": "eight",
+     "dur": 0.6,
+     "r": 14,
+     "len": 140,
+     "pts": [
+      [
+       0.55,
+       0.27
+      ],
+      [
+       0.85,
+       0.26
+      ],
+      [
+       0.5,
+       0.36
+      ],
+      [
+       0.7,
+       0.31
+      ],
+      [
+       0.93,
+       0.38
+      ],
+      [
+       0.63,
+       0.41
+      ],
+      [
+       0.64,
+       0.49
+      ]
+     ]
+    },
+    "lantern": false,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.6,
+     "scale": 0.95,
+     "face": "left",
+     "pose": "shock",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "eight",
+       "pose": "point",
+       "dir": "up",
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "8 COMETS",
+      "x": 0.52,
+      "y": 0.16,
+      "at": "eight",
+      "size": 84,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ch_court",
+   "text": "The girl raised to be a maid?",
+   "visual": "Windsor: the castle with its round tower and flag on the far hill; King George III in a crown and red ermine robe holds out a sealed scroll that passes to Caroline on 'raised'; '£50 A YEAR' pops up on 'maid'; a gravel path and a hedge with flowers in front.",
+   "title": {
+    "white": "George III",
+    "gray": "1787"
+   },
+   "source": "Royal Museums Greenwich",
+   "set": {
+    "name": "hills",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "give": "raised",
+    "pay": "maid"
+   },
+   "params": {
+    "give": "give",
+    "king": {
+     "x": 0.3,
+     "y": 0.6,
+     "scale": 1.15,
+     "face": "right",
+     "pose": "point",
+     "dir": "forward",
+     "accessory": "crown",
+     "emotion": "happy"
+    },
+    "carol": {
+     "x": 0.72,
+     "y": 0.6,
+     "scale": 1.0,
+     "face": "left",
+     "pose": "point",
+     "dir": "forward",
+     "dress": "blue",
+     "emotion": "happy"
+    },
+    "labels": [
+     {
+      "text": "£50 A YEAR",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "pay",
+      "size": 100,
+      "color": "ink",
+      "font": "serif"
+     }
+    ],
+    "castleX": 470
+   },
+   "camera": {
+    "move": "up"
+   }
+  },
+  {
+   "type": "ch_court",
+   "text": "She became the first woman paid as an astronomer.",
+   "visual": "Close-up at Windsor: Caroline, smiling, holds the king's sealed scroll; on 'first' a big red 'FIRST' box pops up above her; the castle behind her.",
+   "title": {
+    "white": "First paid",
+    "gray": "astronomer"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "first": "first"
+   },
+   "params": {
+    "give": 0,
+    "king": {
+     "x": -0.4,
+     "y": 0.6,
+     "scale": 1.15,
+     "face": "right",
+     "pose": "point",
+     "dir": "forward",
+     "accessory": "crown",
+     "emotion": "happy"
+    },
+    "carol": {
+     "x": 0.72,
+     "y": 0.6,
+     "scale": 1.0,
+     "face": "left",
+     "pose": "point",
+     "dir": -30,
+     "dress": "blue",
+     "emotion": "happy"
+    },
+    "labels": [
+     {
+      "text": "FIRST",
+      "x": 0.82,
+      "y": 0.295,
+      "at": "first",
+      "size": 70,
+      "color": "red",
+      "box": true,
+      "font": "serif"
+     }
+    ],
+    "castleX": 470
+   },
+   "camera": {
+    "focus": [
+     720,
+     880
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ch_garden",
+   "text": "Subscribe for a true story every day.",
+   "visual": "The lawn at night once more: Caroline at her telescope under the comet; the fez host at the right points at her and smiles at the viewer; giant words 'FROM MAID' / 'TO ASTRONOMER' ('ASTRONOMER' in a red box).",
+   "title": {
+    "white": "Caroline Herschel",
+    "gray": "astronomer"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "carol": {
+     "x": 0.26,
+     "y": 0.6,
+     "scale": 1.0,
+     "face": "right",
+     "pose": "point",
+     "dir": "forward",
+     "dress": "blue"
+    },
+    "scope": {
+     "ang": 70
+    },
+    "comet": {
+     "x": 0.36,
+     "y": 0.42,
+     "len": 380,
+     "ang": -18,
+     "r": 26,
+     "at": 0,
+     "grow": 0.6
+    },
+    "lantern": false,
+    "kasif": {
+     "x": 0.8,
+     "y": 0.6,
+     "scale": 0.95,
+     "face": "left",
+     "pose": "point",
+     "dir": "forward",
+     "emotion": "happy"
+    },
+    "lines": [
+     {
+      "words": [
+       "FROM",
+       "MAID"
+      ],
+      "at": [
+       "s1",
+       "s1"
+      ],
+      "y": 0.205,
+      "size": 120
+     },
+     {
+      "words": [
+       "TO",
+       "ASTRONOMER"
+      ],
+      "at": [
+       "s2",
+       "s2"
+      ],
+      "y": 0.285,
+      "size": 104
+     }
+    ],
+    "highlight": "ASTRONOMER"
+   },
+   "camera": {
+    "move": "pull"
+   }
+  }
+ ]
+}
