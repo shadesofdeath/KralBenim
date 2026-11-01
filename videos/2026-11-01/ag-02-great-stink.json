@@ -1,0 +1,785 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "great-stink",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "A smell",
+   "saved London"
+  ],
+  "highlight": [
+   "smell"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "London Museum — A very smelly summer in the city: the Great Stink of 1858",
+   "url": "https://londonmuseum.org.uk/collections/london-stories/great-stink-of-1858"
+  },
+  {
+   "title": "Historic UK — London's Great Stink",
+   "url": "https://www.historic-uk.com/HistoryUK/HistoryofBritain/Londons-Great-Stink/"
+  },
+  {
+   "title": "History.co.uk — The Great Stink: London's unbearable summer of 1858",
+   "url": "https://www.history.co.uk/articles/the-great-stink-londons-unbearable-summer-of-1858"
+  },
+  {
+   "title": "History.co.uk — Sir Joseph Bazalgette and London's sewers",
+   "url": "https://www.history.co.uk/history-of-london/sir-joseph-bazalgette-and-londons-sewers"
+  }
+ ],
+ "youtube": {
+  "title": "The Great Stink: How a Bad Smell Saved London",
+  "description": "The Great Stink of 1858: a bad smell saved London. In the hot summer of 1858 the River Thames was an open sewer, and the stench reached the Houses of Parliament on its bank.\n\nThe curtains were soaked in chloride of lime, and some MPs wanted to move Parliament out of London. Cholera had killed tens of thousands of Londoners, yet the sewer plans went nowhere. Then the stink did it: Benjamin Disraeli's bill became law in 18 days, and Joseph Bazalgette built the sewers that still run under London.\n\nSubscribe to Stickstory for one strange true story a day. Would you have stayed in Parliament that summer? Tell me in the comments!\n\n#shorts #greatstink #londonhistory #stickstory",
+  "tags": [
+   "the great stink",
+   "great stink of london",
+   "great stink 1858",
+   "the great stink london",
+   "london sewers",
+   "joseph bazalgette",
+   "river thames history",
+   "cholera london",
+   "victorian london",
+   "history of london",
+   "disraeli",
+   "strange history",
+   "weird history facts",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-01T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "gs_river",
+   "text": "A bad smell saved London.",
+   "visual": "Hook frame: the brown, filthy Thames with ripples, floating muck and popping bubbles, the Palace of Westminster with its clock tower on the far bank and its broken reflection in the water; the fez host stands big in a little rowing boat, eyes squeezed shut, cheeks puffed, pinching his nose, while a thick green stink plume curls up out of the river beside his face.",
+   "title": {
+    "white": "Great Stink"
+   },
+   "set": {
+    "name": "city",
+    "ground": 998,
+    "horizon": 880
+   },
+   "cues": {
+    "hit": "smell"
+   },
+   "params": {
+    "water": 0.52,
+    "parl": {
+     "x": 0.5,
+     "s": 1.12
+    },
+    "boat": {
+     "x": 0.47,
+     "y": 0.8,
+     "s": 1.15
+    },
+    "kasif": {
+     "x": 0.42,
+     "y": 0.767,
+     "scale": 1.55,
+     "pose": "think",
+     "face": "right",
+     "emotion": "angry",
+     "disgust": true
+    },
+    "plume": {
+     "x": 0.8,
+     "y": 0.79,
+     "n": 3,
+     "w": 40,
+     "rise": 620,
+     "drift": -0.18
+    },
+    "stink": {
+     "n": 10,
+     "at": 0,
+     "rise": 600,
+     "from": [
+      [
+       0.1,
+       0.58
+      ],
+      [
+       0.5,
+       0.6
+      ],
+      [
+       0.9,
+       0.58
+      ]
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_outfall",
+   "text": "In the summer of 1858, the Thames was an open sewer,",
+   "visual": "Close on the river wall: a brick arch outfall gushes a thick brown stream into the Thames; slime streaks down the bricks, a dead fish floats belly-up, heavy stink wisps rise; red '1858' and hand label 'OPEN SEWER'.",
+   "title": {
+    "white": "The Thames",
+    "gray": "1858"
+   },
+   "source": "London Museum",
+   "set": {
+    "name": "city",
+    "ground": 1270,
+    "horizon": 1000
+   },
+   "cues": {
+    "yr": "1858",
+    "gush": "Thames",
+    "hit": "sewer"
+   },
+   "params": {
+    "gush": "gush",
+    "water": 0.66,
+    "arch": {
+     "x": 0.32,
+     "y": 0.47,
+     "r": 150
+    },
+    "wall": {
+     "x0": -0.05,
+     "x1": 0.62,
+     "top": 0.2
+    },
+    "fish": {
+     "x": 0.72,
+     "y": 0.79,
+     "s": 1.1
+    },
+    "labels": [
+     {
+      "text": "1858",
+      "x": 0.8,
+      "y": 0.27,
+      "at": "yr",
+      "size": 130,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "OPEN SEWER",
+      "x": 0.76,
+      "y": 0.4,
+      "at": "hit",
+      "size": 72,
+      "color": "ink",
+      "font": "hand",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_river",
+   "text": "and Parliament sat right on its bank.",
+   "visual": "The Palace of Westminster fills the frame right on the water's edge; the stinking brown river laps at its wall and green stink wisps drift from the water straight up into its windows; red box 'PARLIAMENT'.",
+   "title": {
+    "white": "Westminster"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1140,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "Parliament"
+   },
+   "params": {
+    "water": 0.594,
+    "parl": {
+     "x": 0.47,
+     "s": 1.12
+    },
+    "stink": {
+     "n": 16,
+     "at": 0,
+     "rise": 760,
+     "drift": 0.4,
+     "from": [
+      [
+       0.15,
+       0.66
+      ],
+      [
+       0.4,
+       0.7
+      ],
+      [
+       0.65,
+       0.66
+      ],
+      [
+       0.9,
+       0.7
+      ]
+     ]
+    },
+    "labels": [
+     {
+      "text": "PARLIAMENT",
+      "x": 0.56,
+      "y": 0.33,
+      "at": "hit",
+      "size": 64,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     720
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_room",
+   "text": "They soaked the curtains in chloride of lime. It didn't help!",
+   "visual": "Inside Parliament: two tall Gothic windows with heavy crimson curtains; a top-hatted MP mops the curtains with a long brush from a steaming pail of chloride of lime, the curtains darken and drip; on 'didn't' green stink pours in through the windows and a second MP jumps back and clamps a handkerchief to his nose; green leather benches in front.",
+   "title": {
+    "white": "Parliament",
+    "gray": "July 1858"
+   },
+   "source": "Historic UK",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "soak": "soaked",
+    "lime": "chloride",
+    "seep": "didn't",
+    "hit": "help"
+   },
+   "params": {
+    "soak": "soak",
+    "seep": "seep",
+    "pail": {
+     "x": 0.44
+    },
+    "brush": 0,
+    "cast": [
+     {
+      "who": "mp",
+      "x": 0.64,
+      "y": 0.5989583333333334,
+      "scale": 0.72,
+      "pose": "point",
+      "face": "left",
+      "hat": false,
+      "tophat": true,
+      "beard": "black",
+      "emotion": "neutral",
+      "dir": 60,
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "who": "mp",
+      "x": 0.8,
+      "y": 0.5989583333333334,
+      "scale": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "hat": false,
+      "tophat": true,
+      "beard": "grey",
+      "emotion": "neutral",
+      "kerchief": "seep",
+      "seq": [
+       {
+        "at": "seep",
+        "pose": "shock",
+        "face": "left"
+       },
+       {
+        "at": "hit",
+        "pose": "think",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "CHLORIDE OF LIME",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "lime",
+      "size": 66,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_street",
+   "text": "Some wanted to move Parliament out of London.",
+   "visual": "A cobbled London street: the Parliament building small on the left under a green stink cloud; two top-hatted MPs with handkerchiefs and carpet bags walk away to the right; a signpost pops up arrow boards 'OXFORD', 'EDINBURGH', 'DUBLIN'.",
+   "title": {
+    "white": "Leave London?"
+   },
+   "source": "History.co.uk",
+   "set": {
+    "name": "city",
+    "ground": 1150,
+    "horizon": 1000
+   },
+   "cues": {
+    "s1": "move",
+    "s2": "Parliament",
+    "s3": "London"
+   },
+   "params": {
+    "mode": "road",
+    "parl": {
+     "x": 0.26,
+     "y": 0.5,
+     "s": 0.5
+    },
+    "post_x": 0.55,
+    "signs": [
+     {
+      "text": "OXFORD",
+      "at": "s1",
+      "dir": 1
+     },
+     {
+      "text": "EDINBURGH",
+      "at": "s2",
+      "dir": 1
+     },
+     {
+      "text": "DUBLIN",
+      "at": "s3",
+      "dir": 1
+     }
+    ],
+    "cast": [
+     {
+      "who": "mp",
+      "x": 0.1,
+      "y": 0.5989583333333334,
+      "scale": 0.7,
+      "pose": "walk",
+      "face": "right",
+      "hat": false,
+      "tophat": true,
+      "beard": "black",
+      "emotion": "neutral",
+      "kerchief": true,
+      "bag": true,
+      "walk": {
+       "to": 0.4,
+       "at": 0,
+       "dur": 3.2
+      }
+     },
+     {
+      "who": "mp",
+      "x": -0.08,
+      "y": 0.5989583333333334,
+      "scale": 0.66,
+      "pose": "walk",
+      "face": "right",
+      "hat": false,
+      "tophat": true,
+      "beard": "grey",
+      "emotion": "neutral",
+      "kerchief": true,
+      "bag": true,
+      "walk": {
+       "to": 0.22,
+       "at": 0.2,
+       "dur": 3.0
+      }
+     }
+    ]
+   },
+   "camera": {
+    "move": "left"
+   }
+  },
+  {
+   "type": "gs_street",
+   "text": "You know what's crazy? Cholera had killed thousands,",
+   "visual": "A sooty brick wall in a London street: three black-headed cholera notices slap onto the wall one by one, '1832', '1849', '1854'; a cast-iron street pump drips in front; cobbles below.",
+   "title": {
+    "white": "Cholera"
+   },
+   "source": "Historic UK",
+   "set": {
+    "name": "city",
+    "ground": 1150,
+    "horizon": 1000
+   },
+   "cues": {
+    "p1": "crazy",
+    "p2": "Cholera",
+    "p3": "thousands"
+   },
+   "params": {
+    "mode": "wall",
+    "parl": false,
+    "wall_top": 330,
+    "posters": [
+     {
+      "text": "1832",
+      "at": "p1",
+      "x": 0.2,
+      "y": 0.36
+     },
+     {
+      "text": "1849",
+      "at": "p2",
+      "x": 0.5,
+      "y": 0.33
+     },
+     {
+      "text": "1854",
+      "at": "p3",
+      "x": 0.8,
+      "y": 0.36
+     }
+    ],
+    "pump": {
+     "x": 0.5,
+     "s": 0.85
+    }
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_desk",
+   "text": "and the sewer plans sat there.",
+   "visual": "An office: the wall calendar flips 1856, 1857, 1858; a pendulum clock swings; on the desk, rolled sewer plans tied with red ribbon gather dust and a cobweb spins itself across them; red box 'SEWER PLANS' on the wall.",
+   "title": {
+    "white": "Sewer plans"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 840
+   },
+   "cues": {
+    "pl": "plans",
+    "y3": "there"
+   },
+   "params": {
+    "desk_y": 840,
+    "cal_y": 560,
+    "cal_x": 0.75,
+    "clock_y": 520,
+    "clock_x": 0.2,
+    "pages": [
+     {
+      "text": "1856",
+      "at": 0
+     },
+     {
+      "text": "1857",
+      "at": "pl"
+     },
+     {
+      "text": "1858",
+      "at": "y3"
+     }
+    ],
+    "dust": 0,
+    "labels": [
+     {
+      "text": "SEWER PLANS",
+      "x": 0.5,
+      "y": 0.168,
+      "at": "pl",
+      "size": 76,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_desk",
+   "text": "Then the stink got a sewer law passed in 18 days.",
+   "visual": "Close on the desk: the calendar's day pages flip fast from '15 JULY' to '2 AUGUST'; a plan unrolls showing the Thames with red sewer lines drawing along both banks; a red 'LAW' stamp slams onto it; red box '18 DAYS'.",
+   "title": {
+    "white": "18 days",
+    "gray": "1858"
+   },
+   "source": "History.co.uk",
+   "set": {
+    "name": "interior",
+    "ground": 840
+   },
+   "cues": {
+    "fl": "stink",
+    "law": "law",
+    "hit": "days"
+   },
+   "params": {
+    "desk_y": 840,
+    "cal_y": 470,
+    "cal_x": 0.62,
+    "clock": false,
+    "rolls": false,
+    "unroll": 0.3,
+    "stamp": "law",
+    "days": {
+     "at": "fl",
+     "dur": 1.7,
+     "list": [
+      [
+       "15",
+       "JULY"
+      ],
+      [
+       "16",
+       "JULY"
+      ],
+      [
+       "17",
+       "JULY"
+      ],
+      [
+       "18",
+       "JULY"
+      ],
+      [
+       "19",
+       "JULY"
+      ],
+      [
+       "20",
+       "JULY"
+      ],
+      [
+       "21",
+       "JULY"
+      ],
+      [
+       "22",
+       "JULY"
+      ],
+      [
+       "23",
+       "JULY"
+      ],
+      [
+       "24",
+       "JULY"
+      ],
+      [
+       "25",
+       "JULY"
+      ],
+      [
+       "26",
+       "JULY"
+      ],
+      [
+       "27",
+       "JULY"
+      ],
+      [
+       "28",
+       "JULY"
+      ],
+      [
+       "29",
+       "JULY"
+      ],
+      [
+       "30",
+       "JULY"
+      ],
+      [
+       "31",
+       "JULY"
+      ],
+      [
+       "1",
+       "AUGUST"
+      ],
+      [
+       "2",
+       "AUGUST"
+      ]
+     ]
+    },
+    "labels": [
+     {
+      "text": "18 DAYS",
+      "x": 0.3,
+      "y": 0.27,
+      "at": "hit",
+      "size": 96,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_tunnel",
+   "text": "A smell did what death couldn't.",
+   "visual": "Close cut-away: the finished egg-shaped brick sewer under the embankment carries the brown flow away (streaks and arrows moving right); on 'death' the cholera notices pinned to the shoring fall away; on 'couldn't' clear blue water washes through the river above; red box 'BAZALGETTE'S SEWERS' over the river.",
+   "title": {
+    "white": "Bazalgette"
+   },
+   "source": "History.co.uk",
+   "set": false,
+   "cues": {
+    "hit": "smell",
+    "fade": "death",
+    "clear": "couldn't"
+   },
+   "params": {
+    "river_top": 478,
+    "river_bottom": 638,
+    "cy": 900,
+    "r": 200,
+    "fade": "fade",
+    "clear": "clear",
+    "posters": [
+     "1849",
+     "1854"
+    ],
+    "labels": [
+     {
+      "text": "BAZALGETTE'S SEWERS",
+      "x": 0.5,
+      "y": 0.3046875,
+      "at": 0.3,
+      "size": 40,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -2
+     }
+    ],
+    "side": 1.35,
+    "poster_s": 0.6,
+    "poster_y": 132
+   },
+   "camera": {
+    "focus": [
+     540,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gs_river",
+   "text": "Subscribe for one strange true story a day.",
+   "visual": "The Thames today, clear blue with ripples and the palace's clean reflection; the fez host stands big in his rowing boat, smiling and waving, then points at the viewer; Westminster behind him; no stink, no headline.",
+   "title": {
+    "white": "The Thames",
+    "gray": "today"
+   },
+   "set": {
+    "name": "city",
+    "ground": 998,
+    "horizon": 880
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "water": 0.52,
+    "clean": true,
+    "parl": {
+     "x": 0.5,
+     "s": 1.12
+    },
+    "boat": {
+     "x": 0.5,
+     "y": 0.8,
+     "s": 1.15
+    },
+    "kasif": {
+     "x": 0.47,
+     "y": 0.767,
+     "scale": 1.5,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  }
+ ]
+}

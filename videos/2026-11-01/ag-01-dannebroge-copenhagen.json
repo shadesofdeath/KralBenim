@@ -1,0 +1,584 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "dannebroge-copenhagen",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-newsprint",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Exploded.",
+   "Now found."
+  ],
+  "highlight": [
+   "found"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "focus": [
+   540,
+   900
+  ],
+  "zoom": 1.45,
+  "kasif": {
+   "pose": "shock",
+   "x": 700,
+   "y": 1800,
+   "face": -1,
+   "scale": 1.2
+  }
+ },
+ "sources": [
+  {
+   "title": "Viking Ship Museum (Roskilde) — Flagship Dannebroge found 225 years after the Battle of Copenhagen",
+   "url": "https://www.vikingeskibsmuseet.dk/en/news/flagship-dannebroge-found-225-years-after-battle-of-copenhagen"
+  },
+  {
+   "title": "AP via The Philadelphia Inquirer — Archaeologists find Danish warship sunk in Nelson's attack on Copenhagen",
+   "url": "https://www.inquirer.com/news/nation-world/denmark-archaeologists-warship-nelson-copenhagen-dannebroge-lynetteholm-20260402.html"
+  },
+  {
+   "title": "Royal Museums Greenwich — The Battle of Copenhagen, 2 April 1801",
+   "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-12021"
+  },
+  {
+   "title": "History Today — The Battle of Copenhagen",
+   "url": "https://www.historytoday.com/archive/battle-copenhagen"
+  },
+  {
+   "title": "HeritageDaily — Wreck of Danish flagship discovered 225 years after Battle of Copenhagen",
+   "url": "https://www.heritagedaily.com/2026/04/wreck-of-danish-flagship-discovered-225-years-after-battle-of-copenhagen/157655"
+  }
+ ],
+ "youtube": {
+  "title": "Battle of Copenhagen: Divers Found the Flagship That Blew Up",
+  "description": "Battle of Copenhagen, 1801: the Danish flagship Dannebroge exploded, and in 2026 divers found her in the harbor mud. That is the battle where Nelson reportedly raised his telescope to his blind eye.\n\nOn 2 April 1801 Horatio Nelson attacked the Danish defense line at Copenhagen. When he was signaled to stop, he reportedly put the telescope to his blind eye and kept fighting, the moment behind the phrase \"turn a blind eye\". British fire set the Dannebroge ablaze, and she drifted and blew up with a roar heard across the city. Archaeologists from the Viking Ship Museum have now found her wreck: timbers, two cannons, shoes and a sailor's jaw, right where the new Lynetteholm island is being built.\n\nSubscribe to Stickstory for one strange true story a day. Would you have obeyed the signal? Tell me in the comments!\n\n#shorts #battleofcopenhagen #nelson #shipwreck #stickstory",
+  "tags": [
+   "battle of copenhagen",
+   "battle of copenhagen 1801",
+   "battle of copenhagen nelson",
+   "copenhagen 1801",
+   "dannebroge",
+   "dannebroge wreck",
+   "turn a blind eye",
+   "nelson blind eye",
+   "horatio nelson",
+   "shipwreck discovery",
+   "naval history",
+   "napoleonic wars",
+   "lynetteholm",
+   "maritime archaeology",
+   "history facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-01T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "cph_sea",
+   "text": "Divers found this exploded flagship.",
+   "visual": "Close on a big Danish ship of the line in Copenhagen harbor, red-and-white Danish ensign, sails furled, flames along her deck; on 'exploded' she bursts apart: an orange-gold fireball with planks flying, a water column and a thin shock ring; the frame shakes. Hook frame: big shocked fez host (cover overlay).",
+   "title": {
+    "white": "Dannebroge"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1150,
+    "horizon": 1010
+   },
+   "cues": {
+    "boom": "exploded"
+   },
+   "params": {
+    "water": 0.6,
+    "city": {
+     "y": 0.535,
+     "spires": 5
+    },
+    "ships": [
+     {
+      "x": 0.5,
+      "y": 0.62,
+      "s": 1.25,
+      "face": 1,
+      "sails": 0,
+      "flag": "dk",
+      "fire": 0,
+      "boom": "boom",
+      "roll": 0.6
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "type": "cph_sea",
+   "text": "Ever heard \"turn a blind eye\"? It goes back to Copenhagen, 1801.",
+   "visual": "On a stone quay of Copenhagen harbor: the fez host looks through his binoculars at warships firing in the roadstead, the city's green spires behind them; the words 'TURN A BLIND EYE' pop up; on 'Copenhagen' he lowers the glasses and points at the battle.",
+   "title": {
+    "white": "Copenhagen",
+    "gray": "2 April 1801"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1290,
+    "horizon": 930
+   },
+   "cues": {
+    "phrase": "blind",
+    "city": "Copenhagen"
+   },
+   "params": {
+    "water": 0.49,
+    "city": {
+     "y": 0.475,
+     "spires": 6
+    },
+    "ships": [
+     {
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.55,
+      "face": 1,
+      "sails": 1,
+      "flag": "uk",
+      "guns": true
+     },
+     {
+      "x": 0.78,
+      "y": 0.57,
+      "s": 0.45,
+      "face": -1,
+      "sails": 0,
+      "flag": "dk",
+      "guns": true,
+      "gun_ph": 0.7
+     }
+    ],
+    "quay": {
+     "y": 0.67,
+     "bollard": 0.12
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.64,
+      "y": 0.67,
+      "scale": 0.9,
+      "pose": "look",
+      "face": "left",
+      "at": "city",
+      "then": "point",
+      "dir": "forward",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "TURN A BLIND EYE",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "phrase",
+      "size": 92,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "cph_nelson",
+   "text": "Nelson was ordered to stop,",
+   "visual": "On the quarterdeck behind Nelson (bicorne, blue coat, telescope lowered): far off on the left the commander-in-chief's flagship runs up a row of signal flags on 'ordered'; a red hand-written 'LEAVE OFF ACTION' with an arrow points at them.",
+   "title": {
+    "white": "Nelson",
+    "gray": "the signal"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 960
+   },
+   "cues": {
+    "flags": "ordered"
+   },
+   "params": {
+    "x": 0.56,
+    "y": 0.4,
+    "r": 118,
+    "raise": 99,
+    "horizon": 0.5,
+    "deck": 0.72,
+    "far": {
+     "x": 0.16,
+     "y": 0.47,
+     "s": 0.36,
+     "face": 1
+    },
+    "hoist": {
+     "at": "flags",
+     "n": 3
+    },
+    "labels": [
+     {
+      "text": "LEAVE OFF ACTION",
+      "x": 0.3,
+      "y": 0.31,
+      "at": "flags",
+      "size": 64,
+      "color": "red",
+      "arrow": [
+       0.18,
+       0.39
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.1,
+     "focus": [
+      0.45,
+      0.4
+     ]
+    },
+    "look": -1
+   },
+   "camera": {
+    "focus": [
+     330,
+     760
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "cph_nelson",
+   "text": "so he reportedly raised his telescope to his blind eye.",
+   "visual": "Close-up: Nelson, his empty right sleeve pinned to his chest, lifts the long brass telescope with his left hand on 'raised' to his right eye (viewer's left), aimed at the far flagship's signal flags; 'BLIND EYE' with an arrow points at that eye; a carronade and cannonballs on the deck in front.",
+   "title": {
+    "white": "Nelson"
+   },
+   "source": "Royal Museums Greenwich",
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 960
+   },
+   "cues": {
+    "raise": "raised",
+    "lab": "blind"
+   },
+   "params": {
+    "x": 0.56,
+    "y": 0.4,
+    "r": 118,
+    "raise": "raise",
+    "horizon": 0.5,
+    "deck": 0.72,
+    "far": {
+     "x": 0.16,
+     "y": 0.47,
+     "s": 0.36,
+     "face": 1
+    },
+    "hoist": {
+     "at": 0,
+     "n": 3
+    },
+    "labels": [
+     {
+      "text": "BLIND EYE",
+      "x": 0.7,
+      "y": 0.24,
+      "at": "lab",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "arrow": [
+       0.49,
+       0.385
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.1,
+     "focus": [
+      0.45,
+      0.4
+     ]
+    },
+    "look": -1
+   }
+  },
+  {
+   "type": "cph_sea",
+   "text": "The Danish flagship Dannebroge was already burning,",
+   "visual": "The Dannebroge (red-and-white Danish ensign, sails furled) lies in the Danish line with Copenhagen's spires behind, already burning: flames along her deck and a black smoke column; a big British ship fires from the foreground; on her name 'DANNEBROGE' with an arrow points at her.",
+   "title": {
+    "white": "Danish line",
+    "gray": "Copenhagen"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 980
+   },
+   "cues": {
+    "lab": "Dannebroge"
+   },
+   "params": {
+    "water": 0.53,
+    "city": {
+     "y": 0.51,
+     "spires": 5
+    },
+    "ships": [
+     {
+      "x": 0.62,
+      "y": 0.62,
+      "s": 0.85,
+      "face": -1,
+      "sails": 0,
+      "flag": "dk",
+      "fire": 0
+     },
+     {
+      "x": 0.25,
+      "y": 0.9,
+      "s": 1.0,
+      "face": 1,
+      "sails": 1,
+      "flag": "uk",
+      "guns": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "DANNEBROGE",
+      "x": 0.45,
+      "y": 0.25,
+      "at": "lab",
+      "size": 84,
+      "color": "ink",
+      "font": "serif",
+      "arrow": [
+       0.6,
+       0.33
+      ]
+     }
+    ],
+    "cam": {
+     "zoom": 1.08,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "type": "cph_sea",
+   "text": "and that afternoon she blew up with a roar the whole city heard.",
+   "visual": "From the Copenhagen waterfront: the backs of townspeople's heads and hats fill the foreground as they watch the burning flagship far out on the water; on 'roar' she explodes in a fireball with shock rings and a smoke cloud, the frame shakes and the heads jump.",
+   "title": {
+    "white": "The blast"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 890
+   },
+   "cues": {
+    "boom": "roar",
+    "crowd": "city"
+   },
+   "params": {
+    "water": 0.47,
+    "city": {
+     "y": 0.455,
+     "spires": 6
+    },
+    "ships": [
+     {
+      "x": 0.55,
+      "y": 0.52,
+      "s": 0.55,
+      "face": -1,
+      "sails": 0,
+      "flag": "dk",
+      "fire": 0,
+      "boom": "boom"
+     }
+    ],
+    "crowd": {
+     "y": 0.76,
+     "n": 5,
+     "r": 92,
+     "at": "boom"
+    },
+    "cam": {
+     "zoom": 1.06,
+     "focus": [
+      0.55,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "type": "cph_mud",
+   "text": "Divers found two cannons in the mud, and a sailor's jaw.",
+   "visual": "Seabed in murky water: a diver (mask, tank, fins) shines his torch past the charred hull frames on their keel; two cannon barrels lie on the mud; on 'sailor' the beam lands on a human lower jawbone with its teeth and a red ink ring circles it; cannonballs, a bar shot, a buckled shoe, loose planks and a clay pipe lie in the mud below.",
+   "title": {
+    "white": "15 meters",
+    "gray": "down"
+   },
+   "source": "Viking Ship Museum",
+   "set": false,
+   "cues": {
+    "find": "sailor"
+   },
+   "params": {
+    "mode": "find",
+    "floor": 0.44,
+    "wreck_x": 0.52,
+    "wreck_scale": 0.85,
+    "jaw": {
+     "x": 0.52,
+     "dy": 175,
+     "s": 1.3
+    },
+    "diver": {
+     "x": 0.3,
+     "y": 0.25,
+     "s": 1.1
+    }
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "cph_island",
+   "text": "Soon, a new island will be built over her.",
+   "visual": "Cross-section of the harbor: water above, the seabed and the wreck lying in the mud (red dashed outline, ribs, a cannon); on 'island' a barge's crane drops sand and a new island of sand and stone grows from the left until it rises above the water right over the wreck.",
+   "title": {
+    "white": "Lynetteholm",
+    "gray": "new island"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 902,
+    "horizon": 860
+   },
+   "cues": {
+    "build": "island"
+   },
+   "params": {
+    "surf": 0.47,
+    "bed": 0.56,
+    "wreck": {
+     "x": 0.55
+    },
+    "build": "build",
+    "island": {
+     "from": -0.05,
+     "to": 0.8,
+     "top": 0.44
+    },
+    "wreck_dy": 40
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "cph_island",
+   "text": "Subscribe for a true story every day.",
+   "visual": "The finished island over the wreck: the fez host stands on top, points down at the Dannebroge lying in the mud below him, then turns and waves at the viewer.",
+   "title": {
+    "white": "Dannebroge",
+    "gray": "1772 to 1801"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 902,
+    "horizon": 860
+   },
+   "cues": {
+    "wave": "story"
+   },
+   "params": {
+    "surf": 0.47,
+    "bed": 0.56,
+    "wreck": {
+     "x": 0.55
+    },
+    "done": true,
+    "barge": false,
+    "island": {
+     "from": -0.05,
+     "to": 0.75,
+     "top": 0.44
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "scale": 1.0,
+      "pose": "point",
+      "dir": "down",
+      "face": "right",
+      "emotion": "surprised",
+      "at": "wave",
+      "then": "wave",
+      "emotion0": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "DANNEBROGE",
+      "x": 0.66,
+      "y": 0.3,
+      "at": 0.3,
+      "size": 64,
+      "color": "red",
+      "font": "serif",
+      "arrow": [
+       0.6,
+       0.565
+      ]
+     }
+    ],
+    "wreck_dy": 40
+   },
+   "camera": {
+    "move": "push"
+   }
+  }
+ ]
+}

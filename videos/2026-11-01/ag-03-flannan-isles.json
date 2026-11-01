@@ -1,0 +1,3024 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-flannan-isles",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "THE LIGHT",
+   "WENT OUT"
+  ],
+  "highlight": [
+   "OUT"
+  ],
+  "scene": 14,
+  "t": 0.6,
+  "focus": [
+   880,
+   380
+  ],
+  "zoom": 1.2,
+  "size": 190,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 0.9,
+   "face": -1,
+   "x": 1680,
+   "y": 1010,
+   "dir": 60
+  }
+ },
+ "sources": [
+  {
+   "title": "Flannan Isles Lighthouse (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Flannan_Isles_Lighthouse"
+  },
+  {
+   "title": "Flannan Isles lighthouse keepers: the disappearance (National Records of Scotland blog)",
+   "url": "https://blog.nrscotland.gov.uk/2023/12/12/flannan-isles-lighthouse-keepers-the-disappearance/"
+  },
+  {
+   "title": "The Flannan Isle Lighthouse: Moore's memorandum and Muirhead's report (Scotia)",
+   "url": "https://userhome.brooklyn.cuny.edu/anthro/jbeatty/Scotia/issue38/issue38a.html"
+  },
+  {
+   "title": "Flannan Isle Mystery: When Three Lighthouse Keepers Vanished Forever (History Hit)",
+   "url": "https://www.historyhit.com/the-flannan-isle-mystery-when-three-lighthouse-keepers-vanished-overnight/"
+  },
+  {
+   "title": "Mystery of Eilean Mor lighthouse keepers as records released (STV News)",
+   "url": "https://news.stv.tv/highlands-islands/mystery-of-eilean-mor-lighthouse-keepers-disappearance-as-records-released-for-first-time"
+  }
+ ],
+ "youtube": {
+  "title": "Flannan Isles Lighthouse: Where Did Three Keepers Vanish To?",
+  "description": "The Flannan Isles lighthouse mystery: in December 1900, three keepers vanished from a tiny rock off Scotland. What really happened to them?\n\nOn Boxing Day 1900, the relief ship Hesperus reached Eilean Mor and nobody answered. The beds were empty, the clock had stopped and one coat still hung on its peg. Legends grew fast: an uneaten meal, a knocked-over chair, eerie logbook entries. But those details are fiction. Superintendent Robert Muirhead's real report points to something stranger and sadder at the west landing.\n\nIn this video:\n- The relief ship that got no answer\n- What Joseph Moore found inside the lighthouse\n- How a 1912 poem and fake log entries built the legend\n- The damage Muirhead found at the west landing\n- The giant wave theory and why it still haunts people\n\nSubscribe to Stickstory for more true mysteries. Do you think one giant wave explains it, or did the record miss something? Tell me in the comments!\n\n#flannanisles #lighthouse #unsolvedmysteries #scotland #stickstory",
+  "tags": [
+   "flannan isles lighthouse",
+   "flannan isles mystery",
+   "flannan lighthouse keepers",
+   "flannan isles 1900",
+   "eilean mor lighthouse",
+   "lighthouse keepers vanished",
+   "missing lighthouse keepers",
+   "flannan isle",
+   "outer hebrides",
+   "robert muirhead",
+   "james ducat",
+   "unsolved mysteries",
+   "scottish history",
+   "rogue wave",
+   "lighthouse mystery",
+   "history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-01T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "fl_isle",
+   "text": "December 26th, 1900. A relief ship rocked below a tiny island in the Atlantic, and nobody came down to meet it.",
+   "visual": "Stormy sea: the relief steamer Hesperus rocks on the left below the cliff island of Eilean Mor with its dark lighthouse on top; the fez narrator on a near rock at the bottom right points at the island and jumps back in shock on 'nobody'.",
+   "title": {
+    "white": "Flannan Isles",
+    "gray": "December 1900"
+   },
+   "cues": {
+    "isl": "island",
+    "nobody": "nobody"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.56,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "off",
+    "ship": {
+     "x": 0.16,
+     "s": 0.75
+    },
+    "rain": true,
+    "rock": {
+     "x": 0.88,
+     "w": 0.3,
+     "y": 0.9
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.9,
+     "scale": 0.62,
+     "pose": "point",
+     "dir": 30,
+     "face": "left",
+     "seq": [
+      {
+       "at": "nobody",
+       "pose": "shock",
+       "emotion": "worried",
+       "face": "left"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "storm",
+    "ground": 790,
+    "horizon": 778
+   },
+   "chapter": "Nobody Answered"
+  },
+  {
+   "type": "fl_isle",
+   "text": "The captain blew the ship's whistle. He fired a rocket into the grey sky. Nothing came back.",
+   "visual": "Closer on the steamer below the island: on 'whistle' a white steam puff and sound arcs burst from the funnel; on 'rocket' a red trail climbs into the sky and bursts into gold sparks; the lighthouse stays dark.",
+   "title": {
+    "white": "Hesperus"
+   },
+   "cues": {
+    "wh": "whistle",
+    "rk": "rocket",
+    "noth": "Nothing"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.7,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "off",
+    "ship": {
+     "x": 0.3,
+     "s": 1.05
+    },
+    "whistle": "wh",
+    "rocket": "rk",
+    "rain": true,
+    "labels": [
+     {
+      "text": "no answer",
+      "x": 0.78,
+      "y": 0.1,
+      "at": "noth",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 790,
+    "horizon": 778
+   }
+  },
+  {
+   "type": "fl_landing",
+   "text": "No flag on the flagpole. No supply boxes waiting at the landing.",
+   "visual": "The island's landing in the rain: on the cliff top a bare flagpole with no flag, red note 'no flag'; down at the water the concrete landing platform stands empty, red note 'no boxes'.",
+   "title": {
+    "white": "No signal"
+   },
+   "cues": {
+    "flag": "flag",
+    "box": "boxes"
+   },
+   "params": {
+    "pole": {
+     "x": 0.86,
+     "h": 0.15,
+     "flag": false
+    },
+    "rain": true,
+    "labels": [
+     {
+      "text": "no flag",
+      "x": 0.68,
+      "y": 0.1,
+      "at": "flag",
+      "color": "red",
+      "size": 74,
+      "arrow": [
+       0.84,
+       0.08
+      ]
+     },
+     {
+      "text": "no boxes",
+      "x": 0.4,
+      "y": 0.66,
+      "at": "box",
+      "color": "red",
+      "size": 74,
+      "arrow": [
+       0.3,
+       0.78
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   }
+  },
+  {
+   "type": "fl_landing",
+   "text": "So Joseph Moore jumped onto the rocks and climbed the steps to the lighthouse, alone.",
+   "visual": "Side view of the island landing in the rain: Joseph Moore (bare-headed keeper, short beard) climbs the long concrete stair beside the iron tramway up the cliff, alone; note 'Joseph Moore'.",
+   "title": {
+    "white": "Joseph Moore"
+   },
+   "cues": {
+    "moore": "Moore",
+    "alone": "alone"
+   },
+   "params": {
+    "men": [
+     {
+      "u": 0.04,
+      "to": 0.5,
+      "at": 0.2,
+      "dur": 4.6,
+      "scale": 0.42,
+      "beard": "short",
+      "pose": "idle",
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Joseph Moore",
+      "x": 0.52,
+      "y": 0.84,
+      "at": "moore",
+      "size": 64
+     }
+    ],
+    "rain": true,
+    "pole": {
+     "x": 0.86,
+     "h": 0.15
+    },
+    "zoom": 1.05,
+    "focus": [
+     0.45,
+     0.6
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   }
+  },
+  {
+   "type": "fl_room",
+   "text": "The gate was shut. The door was shut. And inside, the kitchen clock had stopped.",
+   "visual": "Inside the keepers' kitchen: Moore steps in from the right and stops; the wall clock's hands stand still and on 'stopped' a red ring circles it; the table is clean and empty.",
+   "title": {
+    "white": "The kitchen"
+   },
+   "cues": {
+    "door": "door",
+    "stop": "stopped"
+   },
+   "params": {
+    "mode": "kitchen",
+    "table": "clean",
+    "clock": {
+     "x": 0.62,
+     "y": 0.3,
+     "r": 80,
+     "stopped": true,
+     "ring": "stop",
+     "time": [
+      3,
+      50
+     ]
+    },
+    "men": [
+     {
+      "x": 0.98,
+      "to": 0.72,
+      "at": 0.3,
+      "dur": 1.8,
+      "scale": 0.5,
+      "beard": "short",
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "stop",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "title",
+   "text": "Three keepers had vanished from a rock in the sea. Where did they go? Stay with me, because the truth is sadder than the legend.",
+   "visual": "Giant words 'Three men' / 'vanished' set word by word with 'vanished' in a red box; the fez narrator on the right shrugs on 'Where', then points at the words; note 'where did they go?'.",
+   "title": {},
+   "cues": {
+    "w0": "Three",
+    "w1": "vanished",
+    "note": "Where"
+   },
+   "params": {
+    "lines": [
+     "Three men",
+     "vanished"
+    ],
+    "highlight": [
+     "vanished"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "where did they go?",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "shrug",
+     "face": -1,
+     "scale": 0.9,
+     "at": "w1",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "To see why this scared people so much, you have to see the place.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, title 'The Rock'.",
+   "title": {},
+   "cues": {
+    "n": "see",
+    "title": "why",
+    "line": "scared"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "The Rock",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Rock"
+  },
+  {
+   "type": "fl_chart",
+   "text": "The Flannan Isles sit about twenty miles west of the Isle of Lewis, off the northwest coast of Scotland.",
+   "visual": "Full-frame sea chart of the Outer Hebrides: wave strokes drift over the sea, the Isle of Lewis and the Scottish mainland with cliff hatching; a red dashed route runs west from Lewis to the tiny Flannan Isles with a blinking lighthouse; note '20 miles of open sea'.",
+   "title": {
+    "white": "Outer Hebrides"
+   },
+   "cues": {
+    "fl": "Flannan",
+    "route": "twenty",
+    "lew": "Lewis",
+    "sco": "Scotland"
+   },
+   "params": {
+    "land": [
+     {
+      "pts": [
+       [
+        0.539,
+        0.187
+       ],
+       [
+        0.564,
+        0.28
+       ],
+       [
+        0.556,
+        0.346
+       ],
+       [
+        0.572,
+        0.43
+       ],
+       [
+        0.503,
+        0.486
+       ],
+       [
+        0.528,
+        0.645
+       ],
+       [
+        0.458,
+        0.738
+       ],
+       [
+        0.403,
+        0.832
+       ],
+       [
+        0.328,
+        0.916
+       ],
+       [
+        0.311,
+        0.841
+       ],
+       [
+        0.306,
+        0.682
+       ],
+       [
+        0.319,
+        0.561
+       ],
+       [
+        0.325,
+        0.449
+       ],
+       [
+        0.372,
+        0.43
+       ],
+       [
+        0.394,
+        0.393
+       ],
+       [
+        0.458,
+        0.327
+       ]
+      ],
+      "cliffs": true
+     },
+     {
+      "pts": [
+       [
+        1.056,
+        -0.075
+       ],
+       [
+        0.917,
+        0.093
+       ],
+       [
+        0.889,
+        0.093
+       ],
+       [
+        0.856,
+        0.28
+       ],
+       [
+        0.819,
+        0.486
+       ],
+       [
+        0.792,
+        0.673
+       ],
+       [
+        0.722,
+        0.785
+       ],
+       [
+        0.667,
+        0.86
+       ],
+       [
+        0.708,
+        1.047
+       ],
+       [
+        0.681,
+        1.14
+       ],
+       [
+        0.681,
+        1.187
+       ],
+       [
+        1.05,
+        1.08
+       ],
+       [
+        1.05,
+        -0.05
+       ]
+      ],
+      "cliffs": true
+     },
+     {
+      "pts": [
+       [
+        0.528,
+        0.953
+       ],
+       [
+        0.569,
+        1.14
+       ],
+       [
+        0.444,
+        1.14
+       ],
+       [
+        0.472,
+        1.028
+       ]
+      ]
+     },
+     {
+      "pts": [
+       [
+        0.157,
+        0.392
+       ],
+       [
+        0.18300000000000002,
+        0.39
+       ],
+       [
+        0.18100000000000002,
+        0.41200000000000003
+       ],
+       [
+        0.159,
+        0.41400000000000003
+       ]
+      ]
+     }
+    ],
+    "places": [
+     {
+      "name": "Flannan Isles",
+      "x": 0.169,
+      "y": 0.402,
+      "at": "fl",
+      "color": "red",
+      "icon": "lighthouse",
+      "dy": 50,
+      "size": 64
+     },
+     {
+      "name": "Lewis",
+      "x": 0.47600000000000003,
+      "y": 0.497,
+      "at": "lew",
+      "icon": "none",
+      "dy": 0,
+      "size": 70
+     },
+     {
+      "name": "Scotland",
+      "x": 0.86,
+      "y": 0.62,
+      "at": "sco",
+      "dy": 0,
+      "size": 70,
+      "icon": "none"
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.406,
+       0.477
+      ],
+      [
+       0.288,
+       0.39
+      ],
+      [
+       0.169,
+       0.402
+      ]
+     ],
+     "at": "route",
+     "dur": 1.8,
+     "color": "red"
+    },
+    "labels": [
+     {
+      "text": "20 miles of open sea",
+      "x": 0.24,
+      "y": 0.62,
+      "at": "route",
+      "color": "red",
+      "size": 62
+     }
+    ],
+    "compass_x": 0.62,
+    "compass_y": 0.86,
+    "zoom": 1.05,
+    "focus": [
+     0.4,
+     0.45
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "fl_chart",
+   "text": "The biggest one, Eilean Mor, is a lump of rock walled in by cliffs.",
+   "visual": "Full-frame plan of Eilean Mor: the island fills the frame, hatched cliffs all round its coast, the lighthouse in the middle with iron rail tracks running to the East and West landings; note 'cliffs on every side'.",
+   "title": {
+    "white": "Eilean Mor"
+   },
+   "cues": {
+    "em": "Eilean",
+    "cl": "cliffs"
+   },
+   "params": {
+    "land": [
+     {
+      "pts": [
+       [
+        0.1,
+        0.56
+       ],
+       [
+        0.17,
+        0.36
+       ],
+       [
+        0.3,
+        0.27
+       ],
+       [
+        0.46,
+        0.2
+       ],
+       [
+        0.62,
+        0.22
+       ],
+       [
+        0.76,
+        0.27
+       ],
+       [
+        0.88,
+        0.38
+       ],
+       [
+        0.92,
+        0.55
+       ],
+       [
+        0.85,
+        0.71
+       ],
+       [
+        0.68,
+        0.79
+       ],
+       [
+        0.5,
+        0.84
+       ],
+       [
+        0.32,
+        0.81
+       ],
+       [
+        0.18,
+        0.73
+       ]
+      ],
+      "cliffs": true
+     }
+    ],
+    "rails": [
+     [
+      [
+       0.14,
+       0.62
+      ],
+      [
+       0.28,
+       0.56
+      ],
+      [
+       0.42,
+       0.48
+      ],
+      [
+       0.53,
+       0.45
+      ]
+     ],
+     [
+      [
+       0.89,
+       0.55
+      ],
+      [
+       0.74,
+       0.5
+      ],
+      [
+       0.58,
+       0.45
+      ]
+     ]
+    ],
+    "places": [
+     {
+      "name": "Lighthouse",
+      "x": 0.55,
+      "y": 0.44,
+      "at": "em",
+      "icon": "lighthouse",
+      "dy": 40,
+      "size": 60
+     },
+     {
+      "name": "West landing",
+      "x": 0.12,
+      "y": 0.62,
+      "at": 0.6,
+      "dy": 60,
+      "dx": 80,
+      "size": 56
+     },
+     {
+      "name": "East landing",
+      "x": 0.91,
+      "y": 0.55,
+      "at": 0.9,
+      "dy": 60,
+      "dx": -60,
+      "size": 56
+     }
+    ],
+    "labels": [
+     {
+      "text": "cliffs on every side",
+      "x": 0.5,
+      "y": 0.1,
+      "at": "cl",
+      "color": "red",
+      "size": 66
+     }
+    ],
+    "compass_x": 0.88,
+    "compass_y": 0.16,
+    "zoom": 1.04
+   },
+   "set": false
+  },
+  {
+   "type": "fl_isle",
+   "text": "In December 1899, a brand-new lighthouse was lit on top, more than three hundred feet above the waves.",
+   "visual": "Close on the lighthouse at dusk: on 'lit' the lantern glows gold and the beam starts to sweep; a red note '1899' and a ruler-like note '300+ feet' with an arrow down to the sea.",
+   "title": {
+    "white": "The light",
+    "gray": "1899"
+   },
+   "cues": {
+    "yr": "1899",
+    "lit": "lit",
+    "ft": "hundred"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.56,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": {
+     "on": "lit"
+    },
+    "flag": "flag",
+    "gulls": 2,
+    "labels": [
+     {
+      "text": "1899",
+      "x": 0.66,
+      "y": 0.1,
+      "at": "yr",
+      "color": "red",
+      "size": 90,
+      "font": "serif"
+     },
+     {
+      "text": "300+ feet up",
+      "x": 0.68,
+      "y": 0.42,
+      "at": "ft",
+      "size": 70,
+      "arrow": [
+       0.56,
+       0.3
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 790,
+    "horizon": 778
+   },
+   "camera": {
+    "focus": [
+     1000,
+     260
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "fl_isle",
+   "text": "Three men kept that light alive: James Ducat, Thomas Marshall, and Donald MacArthur, a stand-in.",
+   "visual": "On the island top beside the lighthouse: three bare-headed keepers stand in a row (Ducat grey beard, Marshall black beard, MacArthur short beard); each name appears above him on its word.",
+   "title": {
+    "white": "The keepers"
+   },
+   "cues": {
+    "d": "Ducat",
+    "m": "Marshall",
+    "a": "MacArthur"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.56,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "on",
+    "flag": "flag",
+    "gulls": 2,
+    "tower": 0.24,
+    "men": [
+     {
+      "u": 0.17,
+      "scale": 0.34,
+      "beard": "grey",
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "d",
+        "pose": "wave",
+        "face": "right"
+       }
+      ]
+     },
+     {
+      "u": 0.52,
+      "scale": 0.34,
+      "beard": "black",
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "m",
+        "pose": "wave",
+        "face": "left"
+       }
+      ]
+     },
+     {
+      "u": 0.62,
+      "scale": 0.34,
+      "beard": "short",
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "a",
+        "pose": "wave",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Ducat",
+      "x": 0.35,
+      "y": 0.14,
+      "at": "d",
+      "size": 60
+     },
+     {
+      "text": "Marshall",
+      "x": 0.58,
+      "y": 0.1,
+      "at": "m",
+      "size": 60
+     },
+     {
+      "text": "MacArthur",
+      "x": 0.72,
+      "y": 0.16,
+      "at": "a",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 790,
+    "horizon": 778
+   },
+   "camera": {
+    "focus": [
+     930,
+     250
+    ],
+    "zoom": 1.55,
+    "move": "right"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Ducat had a wife and four children waiting at home. MacArthur had a wife and two.",
+   "visual": "Two small cottages on Lewis: in front of the left one a woman and four children wave; in front of the right one a woman and two children; notes 'Ducat' and 'MacArthur'.",
+   "title": {
+    "white": "Back home"
+   },
+   "cues": {
+    "d": "Ducat",
+    "four": "four",
+    "m": "MacArthur",
+    "two": "two"
+   },
+   "params": {
+    "scale": 1.0,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "mrs_ducat",
+      "x": 0.2,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.9,
+      "at": "d",
+      "then": "wave"
+     },
+     {
+      "who": "c1",
+      "x": 0.28,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.5,
+      "at": "four",
+      "then": "wave"
+     },
+     {
+      "who": "c2",
+      "x": 0.33,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.45
+     },
+     {
+      "who": "c3",
+      "x": 0.38,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.42,
+      "at": "four",
+      "then": "wave"
+     },
+     {
+      "who": "c4",
+      "x": 0.43,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.36
+     },
+     {
+      "who": "mrs_mac",
+      "x": 0.66,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.9,
+      "at": "m",
+      "then": "wave"
+     },
+     {
+      "who": "c5",
+      "x": 0.72,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.5,
+      "at": "two",
+      "then": "wave"
+     },
+     {
+      "who": "c6",
+      "x": 0.77,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.42
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.1,
+      "scale": 1.0
+     },
+     {
+      "type": "house",
+      "x": 0.9,
+      "scale": 1.0
+     }
+    ],
+    "label": {
+     "text": "4 + 2 children",
+     "x": 0.5,
+     "y": 0.16,
+     "size": 70,
+     "at": "two"
+    }
+   },
+   "set": "hills"
+  },
+  {
+   "type": "fl_lantern",
+   "text": "Their job: keep the lamp clean, keep it full of oil, and never let it go dark.",
+   "visual": "Inside the lantern room: the big beehive lens glowing gold on its pedestal, storm panes behind; the fez narrator beside it points at the lens on 'clean', then holds up a sign 'KEEP LIT' on 'never'.",
+   "title": {
+    "white": "The job"
+   },
+   "cues": {
+    "cl": "clean",
+    "oil": "oil",
+    "nev": "never"
+   },
+   "params": {
+    "mode": "lantern",
+    "lamp": "on",
+    "floor": 0.8,
+    "kasif": {
+     "x": 0.27,
+     "scale": 0.72,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "cl",
+       "pose": "point",
+       "dir": 20,
+       "face": "right"
+      },
+      {
+       "at": "nev",
+       "pose": "hold",
+       "text": "KEEP LIT",
+       "face": "right"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "oil",
+      "x": 0.84,
+      "y": 0.62,
+      "at": "oil",
+      "arrow": [
+       0.76,
+       0.72
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 864,
+    "horizon": 640
+   }
+  },
+  {
+   "type": "fl_isle",
+   "text": "But on the night of December 15th, the steamer Archtor passed by, and her crew saw something wrong.",
+   "visual": "Night at sea: the steamer Archtor crosses the frame from left to right in front of the black island; the lighthouse on top is dark; note 'Archtor' with an arrow, red note 'Dec 15'.",
+   "title": {
+    "white": "Archtor",
+    "gray": "Dec 15"
+   },
+   "cues": {
+    "arch": "Archtor",
+    "wr": "wrong"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.62,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "off",
+    "ship": {
+     "x": -0.05,
+     "to": 0.4,
+     "s": 0.6,
+     "y": 0.735
+    },
+    "rain": true,
+    "gulls": 0,
+    "labels": [
+     {
+      "text": "Archtor",
+      "x": 0.2,
+      "y": 0.5,
+      "at": "arch",
+      "size": 66
+     },
+     {
+      "text": "Dec 15",
+      "x": 0.84,
+      "y": 0.1,
+      "at": 0.3,
+      "color": "red",
+      "size": 80,
+      "font": "serif"
+     },
+     {
+      "text": "?",
+      "x": 0.6,
+      "y": 0.06,
+      "at": "wr",
+      "color": "red",
+      "size": 110,
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 790,
+    "horizon": 778
+   }
+  },
+  {
+   "type": "fl_isle",
+   "text": "The light was out. Completely dark.",
+   "visual": "Extreme close on the dead lantern under a black storm sky: the lantern glass is solid ink-black, the darkest thing on screen; a red note 'light out' points at it; on 'dark' a faint, cut-off ghost of the old beam flickers once beside it.",
+   "title": {
+    "white": "Dark"
+   },
+   "cues": {
+    "out": "out",
+    "dark": "dark"
+   },
+   "params": {
+    "sea": 0.92,
+    "isle": {
+     "x": 0.56,
+     "w": 0.6,
+     "h": 0.26
+    },
+    "light": "off",
+    "dead": true,
+    "ghost": "dark",
+    "gulls": 0,
+    "rain": true,
+    "tower": 0.5,
+    "labels": [
+     {
+      "text": "light out",
+      "x": 0.39,
+      "y": 0.13,
+      "at": 0.15,
+      "color": "red",
+      "size": 72,
+      "arrow": [
+       0.455,
+       0.2
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1000,
+    "horizon": 994
+   },
+   "camera": {
+    "focus": [
+     914,
+     230
+    ],
+    "zoom": 2.8,
+    "move": "push"
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "The Archtor reported it three days later, and a gale kept the relief ship, the Hesperus, stuck on Lewis. For eleven days, nobody knew.",
+   "visual": "Horizontal time line: 'Dec 15 light out', 'Dec 18 reported', 'Dec 26 ship arrives' in red appear one after another.",
+   "title": {
+    "white": "11 days"
+   },
+   "cues": {
+    "a": "reported",
+    "b": "Hesperus",
+    "c": "eleven"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Dec 15",
+      "text": "Light out",
+      "at": 0.3
+     },
+     {
+      "year": "Dec 18",
+      "text": "Reported",
+      "at": "a"
+     },
+     {
+      "year": "Dec 26",
+      "text": "Ship arrives",
+      "at": "c"
+     }
+    ],
+    "focus": 2
+   },
+   "source": "National Records of Scotland"
+  },
+  {
+   "type": "chapter",
+   "text": "She finally reached the island at noon on Boxing Day. Let's go inside with Moore.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'The Empty Rooms'.",
+   "title": {},
+   "cues": {
+    "n": "She",
+    "title": "finally",
+    "line": "reached"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Empty Rooms",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Empty Rooms"
+  },
+  {
+   "type": "fl_room",
+   "text": "The beds were empty, and the fire hadn't been lit for days.",
+   "visual": "The keepers' bedroom: two box beds with neat blue blankets, nobody in them; a cold black stove with no flame; Moore walks in from the left and looks around; note 'cold'.",
+   "title": {
+    "white": "Empty beds"
+   },
+   "cues": {
+    "beds": "beds",
+    "fire": "fire"
+   },
+   "params": {
+    "mode": "beds",
+    "fire": false,
+    "men": [
+     {
+      "x": -0.05,
+      "to": 0.08,
+      "at": 0.1,
+      "dur": 1.6,
+      "scale": 0.5,
+      "beard": "short",
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "fire",
+        "pose": "think",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "cold",
+      "x": 0.84,
+      "y": 0.42,
+      "at": "fire",
+      "color": "blue",
+      "size": 70,
+      "arrow": [
+       0.84,
+       0.62
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "fl_room",
+   "text": "The kitchen was clean, the pots washed and put away, as if the men finished dinner and stepped out.",
+   "visual": "Close on the kitchen: the table bare and wiped clean, chairs tucked in; above it a wall shelf with plates stacked and the pots put away; note 'clean', note 'put away' with an arrow to the shelf.",
+   "title": {
+    "white": "Clean kitchen"
+   },
+   "cues": {
+    "cl": "clean",
+    "pots": "pots",
+    "out": "stepped"
+   },
+   "params": {
+    "mode": "kitchen",
+    "table": "clean",
+    "clock": {
+     "x": 0.62,
+     "y": 0.3,
+     "r": 70,
+     "stopped": true
+    },
+    "labels": [
+     {
+      "text": "clean",
+      "x": 0.44,
+      "y": 0.6,
+      "at": "cl",
+      "color": "green",
+      "size": 80
+     },
+     {
+      "text": "put away",
+      "x": 0.66,
+      "y": 0.52,
+      "at": "pots",
+      "size": 62,
+      "arrow": [
+       0.52,
+       0.43
+      ]
+     }
+    ],
+    "shelf": true
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     860,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Moore's report, 1900"
+  },
+  {
+   "type": "fl_lantern",
+   "text": "Up in the tower, the lamp was cleaned and filled, ready for a night that never came.",
+   "visual": "The lantern room, now cold: the big lens is dark, the lamp unlit, a full oil can on the floor; a checklist 'The lamp' pinned on the glass beside the lens: 'Cleaned' gets a green tick, 'Filled' a green tick, 'Lit' a red cross.",
+   "title": {
+    "white": "The lamp"
+   },
+   "cues": {
+    "c0": "cleaned",
+    "i1": "filled",
+    "i2": "never"
+   },
+   "params": {
+    "lamp": "off",
+    "floor": 0.8,
+    "card": {
+     "title": "The lamp",
+     "x": 0.69,
+     "y": 0.1,
+     "w": 0.27,
+     "size": 60,
+     "items": [
+      {
+       "text": "Cleaned",
+       "mark": "check",
+       "at": "c0"
+      },
+      {
+       "text": "Filled",
+       "mark": "check",
+       "at": "i1"
+      },
+      {
+       "text": "Lit",
+       "mark": "x",
+       "at": "i2"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "storm",
+    "ground": 864,
+    "horizon": 640
+   }
+  },
+  {
+   "type": "fl_room",
+   "text": "And in the hallway, one coat was still hanging on its peg. Donald MacArthur's.",
+   "visual": "The hallway: a row of three coat pegs, two empty, one with a long oilskin coat swaying; on 'coat' a red ring circles it; note 'MacArthur's'; the outside door stands open to the rain.",
+   "title": {
+    "white": "One coat"
+   },
+   "cues": {
+    "coat": "coat",
+    "mac": "MacArthur"
+   },
+   "params": {
+    "mode": "hall",
+    "coats": [
+     "empty",
+     "empty",
+     "coat"
+    ],
+    "hl": {
+     "i": 2,
+     "at": "coat"
+    },
+    "door": "open",
+    "labels": [
+     {
+      "text": "MacArthur's",
+      "x": 0.5,
+      "y": 0.88,
+      "at": "mac",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So whoever left last went out into a December storm in his shirtsleeves. Why would anyone do that?",
+   "visual": "On a wet rocky cliff top in a storm, rain and lightning: the fez narrator hugs himself, shivering, then turns to us and shrugs with a sign 'NO COAT?' on 'Why'.",
+   "title": {
+    "white": "No coat"
+   },
+   "cues": {
+    "st": "storm",
+    "why": "Why"
+   },
+   "params": {
+    "scale": 1.15,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "storm": {
+     "at": 0.2,
+     "flash": "st",
+     "hatch": true
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "pose": "think",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "why",
+        "pose": "hold",
+        "text": "NO COAT?",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.15,
+      "scale": 1.3
+     },
+     {
+      "type": "rock",
+      "x": 0.85,
+      "scale": 1.0
+     }
+    ],
+    "foreground": "hatch"
+   },
+   "set": "storm"
+  },
+  {
+   "type": "fl_isle",
+   "text": "Moore and two sailors searched the island. No bodies, no message, nothing.",
+   "visual": "On the island top in the rain: three small figures walk across the grass searching, one of them looks over the cliff edge; notes 'no bodies', 'no message' in red.",
+   "title": {
+    "white": "The search"
+   },
+   "cues": {
+    "sea": "searched",
+    "b": "bodies",
+    "m": "message"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.56,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "off",
+    "rain": true,
+    "gulls": 0,
+    "tower": 0.22,
+    "men": [
+     {
+      "u": 0.1,
+      "to": 0.06,
+      "at": "sea",
+      "dur": 2.0,
+      "scale": 0.3,
+      "beard": "short",
+      "pose": "look",
+      "face": "left"
+     },
+     {
+      "u": 0.5,
+      "to": 0.72,
+      "at": "sea",
+      "dur": 3.0,
+      "scale": 0.3,
+      "accessory": "beret",
+      "pose": "idle",
+      "face": "right"
+     },
+     {
+      "u": 0.62,
+      "to": 0.88,
+      "at": "sea",
+      "dur": 3.4,
+      "scale": 0.3,
+      "accessory": "beret",
+      "pose": "idle",
+      "face": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "no bodies",
+      "x": 0.46,
+      "y": 0.12,
+      "at": "b",
+      "color": "red",
+      "size": 66
+     },
+     {
+      "text": "no message",
+      "x": 0.72,
+      "y": 0.12,
+      "at": "m",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 790,
+    "horizon": 778
+   },
+   "camera": {
+    "focus": [
+     960,
+     330
+    ],
+    "zoom": 1.35,
+    "move": "left"
+   }
+  },
+  {
+   "type": "fl_paper",
+   "text": "The captain sent a telegram: a dreadful accident has happened at the Flannans.",
+   "visual": "A telegraph form on a desk by lamplight: header 'TELEGRAM'; scribbled lines write themselves, then 'Dreadful accident' is written large in red ink.",
+   "title": {
+    "white": "Telegram"
+   },
+   "cues": {
+    "tel": "telegram",
+    "dr": "dreadful"
+   },
+   "params": {
+    "kind": "telegram",
+    "scribble": {
+     "rows": 5,
+     "at": "tel",
+     "dur": 2.0,
+     "y0": 0.26,
+     "y1": 0.5
+    },
+    "lines": [
+     {
+      "text": "Dreadful accident",
+      "at": "dr",
+      "dur": 1.4,
+      "size": 78,
+      "color": "red",
+      "x": 0.1,
+      "y": 0.7
+     }
+    ]
+   },
+   "set": false,
+   "source": "Captain Harvie"
+  },
+  {
+   "type": "fl_isle",
+   "text": "But what accident takes three men and leaves no trace? That's where the story started to grow.",
+   "visual": "Wide night view: the black island alone in a rough sea, lighthouse dark, rain; a red stamp 'NO TRACE' lands over the sky on 'trace'.",
+   "title": {
+    "white": "No trace"
+   },
+   "cues": {
+    "tr": "trace",
+    "gr": "grow"
+   },
+   "params": {
+    "sea": 0.74,
+    "isle": {
+     "x": 0.5,
+     "w": 0.66,
+     "h": 0.4
+    },
+    "light": "off",
+    "rain": true,
+    "gulls": 0,
+    "labels": [
+     {
+      "text": "No trace",
+      "x": 0.5,
+      "y": 0.18,
+      "at": "tr",
+      "stamp": true,
+      "color": "red",
+      "size": 100
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 810,
+    "horizon": 799
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "If you've heard this story before, you've probably heard a much creepier version.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'The Legend'.",
+   "title": {},
+   "cues": {
+    "n": "heard",
+    "title": "story",
+    "line": "before"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Legend",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Legend"
+  },
+  {
+   "type": "fl_room",
+   "text": "In that version, a meal sat uneaten and a chair lay knocked over, as if the men fled in terror.",
+   "visual": "Close on the same kitchen table, but in the legend version: plates of food and cups left on it, one chair knocked over on the floor; note 'the legend'.",
+   "title": {
+    "white": "The legend"
+   },
+   "cues": {
+    "meal": "meal",
+    "ch": "chair",
+    "fled": "fled"
+   },
+   "params": {
+    "mode": "kitchen",
+    "table": "meal",
+    "chair": "down",
+    "clock": {
+     "x": 0.62,
+     "y": 0.3,
+     "r": 70,
+     "stopped": true
+    },
+    "labels": [
+     {
+      "text": "uneaten?",
+      "x": 0.42,
+      "y": 0.42,
+      "at": "meal",
+      "size": 66,
+      "arrow": [
+       0.48,
+       0.58
+      ]
+     },
+     {
+      "text": "knocked over?",
+      "x": 0.68,
+      "y": 0.46,
+      "at": "ch",
+      "size": 64,
+      "arrow": [
+       0.76,
+       0.74
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1000,
+     650
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mcB_desk",
+   "text": "Those details come from a poem: Flannan Isle, a ballad Wilfrid Gibson published in 1912.",
+   "visual": "A writer's desk by lamplight: a big sheet titled 'Flannan Isle' / '1912' in Fraunces; hand-written verse lines fill the page as a quill writes; red stamp 'A POEM' on 'poem'.",
+   "title": {
+    "white": "A poem",
+    "gray": "1912"
+   },
+   "cues": {
+    "poem": "poem",
+    "title": "Flannan",
+    "yr": "1912"
+   },
+   "params": {
+    "title": [
+     "Flannan Isle",
+     "1912"
+    ],
+    "title_at": "title",
+    "write": {
+     "at": 0.4,
+     "dur": 5
+    },
+    "labels": [
+     {
+      "text": "Poem",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "yr",
+      "stamp": true,
+      "color": "red",
+      "size": 96
+     }
+    ],
+    "cam": {
+     "zoom": 1.05,
+     "focus": [
+      0.6,
+      0.5
+     ]
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "fl_room",
+   "text": "But Moore actually saw a clean kitchen, everything put away.",
+   "visual": "The clean kitchen as Moore saw it: Moore's record pinned on the wall beside the clock: 'Clean kitchen' gets a green tick, 'Meal left' a red cross, 'Fallen chair' a red cross; the table below is bare.",
+   "title": {
+    "white": "The record"
+   },
+   "cues": {
+    "c0": "clean",
+    "i1": "everything"
+   },
+   "params": {
+    "mode": "kitchen",
+    "table": "clean",
+    "shelf": {
+     "x": 0.04,
+     "y": 0.5,
+     "w": 0.2
+    },
+    "clock": {
+     "x": 0.74,
+     "y": 0.3,
+     "r": 70,
+     "stopped": true
+    },
+    "card": {
+     "title": "What Moore saw",
+     "x": 0.33,
+     "y": 0.08,
+     "w": 0.34,
+     "size": 58,
+     "items": [
+      {
+       "text": "Clean kitchen",
+       "mark": "check",
+       "at": "c0"
+      },
+      {
+       "text": "Meal left",
+       "mark": "x",
+       "at": "i1"
+      },
+      {
+       "text": "Fallen chair",
+       "mark": "x",
+       "at": "i1"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Then came the logbook, with strange entries from the keepers' final days.",
+   "visual": "A dim keepers' room by lamplight: the fez narrator holds up a big scroll 'THE LOGBOOK' and leans in, worried, on 'strange'.",
+   "title": {
+    "white": "The logbook"
+   },
+   "cues": {
+    "log": "logbook",
+    "str": "strange"
+   },
+   "params": {
+    "scale": 1.15,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.42,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "log",
+        "pose": "hold",
+        "text": "THE LOGBOOK"
+       },
+       {
+        "at": "str",
+        "pose": "hold",
+        "text": "THE LOGBOOK",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "clock",
+      "x": 0.8,
+      "scale": 1.0
+     }
+    ]
+   },
+   "set": "interior"
+  },
+  {
+   "type": "fl_paper",
+   "text": "A storm like nothing they had seen, Ducat quiet, MacArthur crying, prayers. And a last line: God is over all.",
+   "visual": "Close on the right page of the ledger: big hand-written entries appear one by one on their words, 'Storm', 'Ducat quiet', 'MacArthur crying', 'Prayers', and finally 'God is over all' written large at the bottom.",
+   "title": {
+    "white": "The entries"
+   },
+   "cues": {
+    "st": "storm",
+    "duc": "Ducat",
+    "cry": "crying",
+    "pray": "prayers",
+    "god": "God"
+   },
+   "params": {
+    "kind": "log",
+    "scribble": {
+     "rows": 3,
+     "at": 0,
+     "dur": 1.2,
+     "y0": 0.12,
+     "y1": 0.22
+    },
+    "lines": [
+     {
+      "text": "Storm",
+      "at": "st",
+      "dur": 0.6,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.32
+     },
+     {
+      "text": "Ducat quiet",
+      "at": "duc",
+      "dur": 0.8,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.44
+     },
+     {
+      "text": "MacArthur crying",
+      "at": "cry",
+      "dur": 0.9,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.56
+     },
+     {
+      "text": "Prayers",
+      "at": "pray",
+      "dur": 0.6,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.68
+     },
+     {
+      "text": "God is over all",
+      "at": "god",
+      "dur": 1.6,
+      "size": 92,
+      "x": 0.56,
+      "y": 0.83
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1300,
+     640
+    ],
+    "zoom": 1.45,
+    "move": "down"
+   }
+  },
+  {
+   "type": "fl_paper",
+   "text": "It's chilling. It's also fake. Writer Mike Dash checked the records: those entries were added much later.",
+   "visual": "The whole ledger: the same entries; on 'fake' a red line strikes through 'God is over all' and a red stamp 'FAKE' slams down on the left page; note 'added later' on 'later'.",
+   "title": {
+    "white": "Fake",
+    "gray": "Mike Dash"
+   },
+   "cues": {
+    "fake": "fake",
+    "dash": "Dash",
+    "late": "later"
+   },
+   "params": {
+    "kind": "log",
+    "scribble": {
+     "rows": 3,
+     "at": 0,
+     "dur": 0.1,
+     "y0": 0.12,
+     "y1": 0.22
+    },
+    "lines": [
+     {
+      "text": "Storm",
+      "at": 0,
+      "dur": 0.1,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.32
+     },
+     {
+      "text": "Ducat quiet",
+      "at": 0,
+      "dur": 0.1,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.44
+     },
+     {
+      "text": "MacArthur crying",
+      "at": 0,
+      "dur": 0.1,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.56
+     },
+     {
+      "text": "Prayers",
+      "at": 0,
+      "dur": 0.1,
+      "size": 70,
+      "x": 0.56,
+      "y": 0.68
+     },
+     {
+      "text": "God is over all",
+      "at": 0,
+      "dur": 0.1,
+      "size": 92,
+      "x": 0.56,
+      "y": 0.83,
+      "strike": "fake"
+     }
+    ],
+    "stamp": {
+     "text": "Fake",
+     "at": "fake",
+     "x": 0.3,
+     "y": 0.4
+    },
+    "labels": [
+     {
+      "text": "added later",
+      "x": 0.7,
+      "y": 0.2,
+      "at": "late",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": false,
+   "source": "Fortean Times"
+  },
+  {
+   "type": "stage",
+   "text": "Then everyone piled on: a sea serpent, foreign spies, three men running off to new lives.",
+   "visual": "On a windy coast the fez narrator holds up signs one after another: 'SEA SERPENT?', then 'SPIES?', then 'RAN AWAY?', and shrugs at the end.",
+   "title": {
+    "white": "Wild theories"
+   },
+   "cues": {
+    "ser": "serpent",
+    "spy": "spies",
+    "run": "running"
+   },
+   "params": {
+    "scale": 1.15,
+    "cam": {
+     "zoom": 1.06,
+     "pan": 24
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "pose": "talk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "ser",
+        "pose": "hold",
+        "text": "SEA SERPENT?"
+       },
+       {
+        "at": "spy",
+        "pose": "hold",
+        "text": "SPIES?"
+       },
+       {
+        "at": "run",
+        "pose": "hold",
+        "text": "RAN AWAY?",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "rock",
+      "x": 0.85,
+      "scale": 1.1
+     }
+    ],
+    "foreground": "water"
+   },
+   "set": "coast"
+  },
+  {
+   "type": "title",
+   "text": "But the man who actually walked that island never needed a monster.",
+   "visual": "Giant words build in order: 'No' on 'walked', 'monster' (red box) on 'never', 'needed' on 'monster'; note 'just the island'.",
+   "title": {},
+   "cues": {
+    "w0": "walked",
+    "w1": "never",
+    "w2": "monster",
+    "note": "monster"
+   },
+   "params": {
+    "lines": [
+     "No monster",
+     "needed"
+    ],
+    "highlight": [
+     "monster"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "just the island",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "His name was Robert Muirhead. He had hired all three missing men himself.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title 'The Investigator'.",
+   "title": {},
+   "cues": {
+    "n": "name",
+    "title": "Robert",
+    "line": "Muirhead"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "The Investigator",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Investigator"
+  },
+  {
+   "type": "fl_paper",
+   "text": "Their slate notes put the men on duty until dinner time on December 15th. The same day the light went out.",
+   "visual": "A framed slate on the desk: chalk scribbles fill it, then 'Dec 15' and 'dinner' are written in chalk; on 'light' the last line gets a red underline.",
+   "title": {
+    "white": "The slate",
+    "gray": "Dec 15"
+   },
+   "cues": {
+    "sl": "slate",
+    "dec": "December",
+    "din": "dinner",
+    "lig": "light"
+   },
+   "params": {
+    "kind": "slate",
+    "scribble": {
+     "rows": 4,
+     "at": "sl",
+     "dur": 2.4,
+     "y0": 0.12,
+     "y1": 0.45
+    },
+    "lines": [
+     {
+      "text": "Dec 15",
+      "at": "dec",
+      "dur": 0.8,
+      "size": 90,
+      "x": 0.1,
+      "y": 0.62
+     },
+     {
+      "text": "on duty till dinner",
+      "at": "din",
+      "dur": 1.4,
+      "size": 72,
+      "x": 0.1,
+      "y": 0.8
+     }
+    ],
+    "labels": [
+     {
+      "text": "light out that night",
+      "x": 0.62,
+      "y": 0.66,
+      "at": "lig",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "source": "Muirhead report, 1901"
+  },
+  {
+   "type": "fl_chart",
+   "text": "Then he walked down to the west landing.",
+   "visual": "The full-frame plan of Eilean Mor again: a red dashed path runs from the lighthouse along the rail track down to the West landing, which lights up in red.",
+   "title": {
+    "white": "West landing"
+   },
+   "cues": {
+    "lh": "walked",
+    "route": "down",
+    "west": "west"
+   },
+   "params": {
+    "land": [
+     {
+      "pts": [
+       [
+        0.1,
+        0.56
+       ],
+       [
+        0.17,
+        0.36
+       ],
+       [
+        0.3,
+        0.27
+       ],
+       [
+        0.46,
+        0.2
+       ],
+       [
+        0.62,
+        0.22
+       ],
+       [
+        0.76,
+        0.27
+       ],
+       [
+        0.88,
+        0.38
+       ],
+       [
+        0.92,
+        0.55
+       ],
+       [
+        0.85,
+        0.71
+       ],
+       [
+        0.68,
+        0.79
+       ],
+       [
+        0.5,
+        0.84
+       ],
+       [
+        0.32,
+        0.81
+       ],
+       [
+        0.18,
+        0.73
+       ]
+      ],
+      "cliffs": true
+     }
+    ],
+    "rails": [
+     [
+      [
+       0.14,
+       0.62
+      ],
+      [
+       0.28,
+       0.56
+      ],
+      [
+       0.42,
+       0.48
+      ],
+      [
+       0.53,
+       0.45
+      ]
+     ],
+     [
+      [
+       0.89,
+       0.55
+      ],
+      [
+       0.74,
+       0.5
+      ],
+      [
+       0.58,
+       0.45
+      ]
+     ]
+    ],
+    "places": [
+     {
+      "name": "Lighthouse",
+      "x": 0.55,
+      "y": 0.44,
+      "at": 0,
+      "icon": "lighthouse",
+      "lit": false,
+      "dy": 40,
+      "size": 60
+     },
+     {
+      "name": "West landing",
+      "x": 0.12,
+      "y": 0.62,
+      "at": "west",
+      "color": "red",
+      "dy": 60,
+      "dx": 80,
+      "size": 66
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.55,
+       0.47
+      ],
+      [
+       0.42,
+       0.51
+      ],
+      [
+       0.28,
+       0.59
+      ],
+      [
+       0.13,
+       0.65
+      ]
+     ],
+     "at": "route",
+     "dur": 1.4,
+     "color": "red"
+    },
+    "compass_x": 0.88,
+    "compass_y": 0.16,
+    "zoom": 1.12,
+    "focus": [
+     0.35,
+     0.55
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "fl_landing",
+   "text": "A box of ropes, wedged in a crack a hundred and ten feet above the sea, was smashed open.",
+   "visual": "Close on the cliff face: a wooden rope box wedged in a dark crevice; a red dashed line marks '110 feet' from the ruler; on 'smashed' the lid flies off and the ropes spill down the rocks.",
+   "title": {
+    "white": "Rope box"
+   },
+   "cues": {
+    "box": "box",
+    "ft": "hundred",
+    "sm": "smashed"
+   },
+   "params": {
+    "marks": [
+     {
+      "ft": 110,
+      "text": "110 feet",
+      "at": "ft",
+      "x1": 0.55,
+      "lx": 0.21
+     }
+    ],
+    "box": {
+     "u": 0.42,
+     "smash": "sm"
+    },
+    "spray": false
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   },
+   "camera": {
+    "focus": [
+     880,
+     470
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Muirhead report, 1901"
+  },
+  {
+   "type": "fl_landing",
+   "text": "Iron railings were bent, and part of the iron rail track was ripped out of its concrete. A rock weighing more than a ton had been moved.",
+   "visual": "The landing stair: on 'bent' the iron railing posts fold over; on 'ripped' a section of the tramway rails lifts and twists off the cliff; on 'moved' a huge boulder slides across the platform; note 'over a ton'.",
+   "title": {
+    "white": "The damage"
+   },
+   "cues": {
+    "bent": "bent",
+    "rip": "ripped",
+    "ton": "ton",
+    "mv": "moved"
+   },
+   "params": {
+    "railing": {
+     "bend": "bent"
+    },
+    "rail": {
+     "rip": "rip"
+    },
+    "boulder": {
+     "move": "mv"
+    },
+    "box": {
+     "u": 0.42,
+     "smash": 0
+    },
+    "labels": [
+     {
+      "text": "over a ton",
+      "x": 0.42,
+      "y": 0.58,
+      "at": "ton",
+      "color": "red",
+      "size": 70,
+      "arrow": [
+       0.42,
+       0.68
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   },
+   "source": "Muirhead report, 1901"
+  },
+  {
+   "type": "fl_isle",
+   "text": "And at the top of the cliff, more than two hundred feet up, the turf was torn away.",
+   "visual": "From the sea, close on the island's west cliff: a red note '200+ feet' with an arrow up the cliff to the green top; on 'torn' a red ring circles the torn edge; note 'turf torn away'.",
+   "title": {
+    "white": "200 feet"
+   },
+   "cues": {
+    "top": "top",
+    "ft": "hundred",
+    "torn": "torn"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.62,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "off",
+    "rain": true,
+    "gulls": 2,
+    "labels": [
+     {
+      "text": "200+ feet",
+      "x": 0.2,
+      "y": 0.52,
+      "at": "ft",
+      "color": "red",
+      "size": 78,
+      "arrow": [
+       0.3,
+       0.36
+      ]
+     },
+     {
+      "text": "turf torn away",
+      "x": 0.42,
+      "y": 0.1,
+      "at": "torn",
+      "color": "red",
+      "size": 66,
+      "arrow": [
+       0.38,
+       0.27
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 790,
+    "horizon": 778
+   },
+   "camera": {
+    "focus": [
+     640,
+     420
+    ],
+    "zoom": 1.6,
+    "move": "up"
+   },
+   "source": "Muirhead report, 1901"
+  },
+  {
+   "type": "fl_landing",
+   "text": "Muirhead admitted some of it was hard to believe unless you saw it. So what could reach that high?",
+   "visual": "Wide on the wrecked landing: smashed box, twisted rails, the moved boulder; the fez narrator on the platform looks all the way up the cliff and jumps back in shock on 'high'.",
+   "title": {
+    "white": "That high?"
+   },
+   "cues": {
+    "bel": "believe",
+    "high": "high"
+   },
+   "params": {
+    "broken": 0,
+    "kasif": {
+     "x": 0.27,
+     "y": 0.81,
+     "scale": 0.5,
+     "pose": "look",
+     "dir": 60,
+     "face": "right",
+     "seq": [
+      {
+       "at": "high",
+       "pose": "shock",
+       "emotion": "surprised",
+       "face": "right"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.62,
+      "y": 0.06,
+      "at": "high",
+      "color": "red",
+      "size": 120,
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "And the coats told him the rest.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Wave'.",
+   "title": {},
+   "cues": {
+    "n": "And",
+    "title": "coats",
+    "line": "told"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Wave",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Wave"
+  },
+  {
+   "type": "fl_room",
+   "text": "Ducat and Marshall's oilskins and sea boots were gone. They dressed for the weather.",
+   "visual": "The hallway again: two empty pegs circled in red, the last oilskin hangs alone, the outside door bangs open in the rain; note 'two gone'.",
+   "title": {
+    "white": "Two gone"
+   },
+   "cues": {
+    "oil": "oilskins",
+    "gone": "gone"
+   },
+   "params": {
+    "mode": "hall",
+    "coats": [
+     "empty",
+     "empty",
+     "coat"
+    ],
+    "hl": {
+     "i": 0,
+     "at": "gone"
+    },
+    "door": "open",
+    "labels": [
+     {
+      "text": "two gone",
+      "x": 0.3,
+      "y": 0.86,
+      "at": "gone",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "fl_landing",
+   "text": "Most likely, they went down to secure that box of ropes before the storm took it.",
+   "visual": "Rain on the west landing: two keepers in their oilskins (grey beard, black beard) hurry down the stair towards the rope box in its crevice.",
+   "title": {
+    "white": "Two keepers"
+   },
+   "cues": {
+    "down": "down",
+    "box": "box"
+   },
+   "params": {
+    "men": [
+     {
+      "u": 0.75,
+      "to": 0.48,
+      "at": 0.2,
+      "dur": 3.4,
+      "scale": 0.42,
+      "beard": "grey",
+      "pose": "idle",
+      "face": "left",
+      "run": true
+     },
+     {
+      "u": 0.85,
+      "to": 0.56,
+      "at": 0.4,
+      "dur": 3.4,
+      "scale": 0.42,
+      "beard": "black",
+      "pose": "idle",
+      "face": "left",
+      "run": true
+     }
+    ],
+    "rain": true,
+    "zoom": 1.05,
+    "focus": [
+     0.6,
+     0.5
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   }
+  },
+  {
+   "type": "title",
+   "text": "Here's the detail that hurts. Marshall had once been fined five shillings for losing gear in a gale.",
+   "visual": "Giant words 'Fined' / 'five shillings' word by word with 'shillings' in a red box; note 'for gear lost in a gale'.",
+   "title": {},
+   "cues": {
+    "w0": "fined",
+    "w1": "shillings",
+    "note": "gale"
+   },
+   "params": {
+    "lines": [
+     "Fined",
+     "five shillings"
+    ],
+    "highlight": [
+     "shillings"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "lost gear in a gale",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1000
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "fl_landing",
+   "text": "Then, Muirhead believed, an extra large sea rushed up the face of the rock, and swept them away.",
+   "visual": "The west landing: the two keepers by the rope box; on 'sea' a wall of white water rises up the cliff with spray flying high, the frame shakes; on 'swept' the two figures are gone.",
+   "title": {
+    "white": "Huge sea"
+   },
+   "cues": {
+    "sea": "sea",
+    "sw": "swept"
+   },
+   "params": {
+    "men": [
+     {
+      "u": 0.46,
+      "scale": 0.42,
+      "beard": "grey",
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "sea",
+        "pose": "shock",
+        "face": "left"
+       }
+      ],
+      "swept": "sw"
+     },
+     {
+      "u": 0.52,
+      "scale": 0.42,
+      "beard": "black",
+      "pose": "idle",
+      "face": "left",
+      "seq": [
+       {
+        "at": "sea",
+        "pose": "shock",
+        "face": "left"
+       }
+      ],
+      "swept": "sw"
+     }
+    ],
+    "wave": {
+     "at": "sea",
+     "dur": 2.2,
+     "to": 0.3,
+     "hold": 1.2
+    },
+    "shake": "sea",
+    "rain": true
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   },
+   "source": "Muirhead report, 1901"
+  },
+  {
+   "type": "fl_landing",
+   "text": "And MacArthur? He may have seen the danger from above and run out, coatless, to warn them.",
+   "visual": "The cliff top in the storm: MacArthur (short beard, no coat) runs from the top of the stair down towards the landing, waving an arm; the sea still foams far below.",
+   "title": {
+    "white": "MacArthur"
+   },
+   "cues": {
+    "mac": "MacArthur",
+    "run": "run",
+    "warn": "warn"
+   },
+   "params": {
+    "men": [
+     {
+      "u": 0.93,
+      "to": 0.72,
+      "at": "run",
+      "dur": 2.6,
+      "scale": 0.42,
+      "beard": "short",
+      "pose": "look",
+      "face": "left",
+      "run": true,
+      "seq": [
+       {
+        "at": "warn",
+        "pose": "wave",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "broken": 0,
+    "rain": true
+   },
+   "set": {
+    "name": "storm",
+    "ground": 930,
+    "horizon": 929
+   },
+   "camera": {
+    "focus": [
+     1350,
+     400
+    ],
+    "zoom": 1.6,
+    "move": "left"
+   }
+  },
+  {
+   "type": "fl_isle",
+   "text": "No bodies were ever found. Muirhead's answer: they went down to the sea in a storm, and the sea came up to take them.",
+   "visual": "Wide on the island in a storm: a giant white wave climbs the left cliff up to the top and falls back; red note 'never found'.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "nf": "found",
+    "up": "came"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.58,
+     "w": 0.62,
+     "h": 0.44
+    },
+    "light": "off",
+    "rain": true,
+    "gulls": 0,
+    "wave": {
+     "at": "up",
+     "dur": 2.4,
+     "top": 0.92,
+     "side": "left",
+     "hold": 0.8
+    },
+    "shake": "up",
+    "labels": [
+     {
+      "text": "never found",
+      "x": 0.8,
+      "y": 0.1,
+      "at": "nf",
+      "color": "red",
+      "size": 74
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 790,
+    "horizon": 778
+   }
+  },
+  {
+   "type": "fl_isle",
+   "text": "The light still shines. It was automated in 1971, and nobody has lived on Eilean Mor since.",
+   "visual": "Night: the lighthouse beam sweeps again over a calmer sea; the fez narrator on a near rock looks up at the light, then lowers his head; note 'automated 1971'.",
+   "title": {
+    "white": "Since 1971"
+   },
+   "cues": {
+    "sh": "shines",
+    "yr": "1971",
+    "nob": "nobody"
+   },
+   "params": {
+    "sea": 0.72,
+    "isle": {
+     "x": 0.6,
+     "w": 0.6,
+     "h": 0.44
+    },
+    "light": "on",
+    "gulls": 0,
+    "rock": {
+     "x": 0.14,
+     "w": 0.32,
+     "y": 0.9
+    },
+    "kasif": {
+     "x": 0.14,
+     "y": 0.9,
+     "scale": 0.62,
+     "pose": "look",
+     "dir": 40,
+     "face": "right",
+     "seq": [
+      {
+       "at": "nob",
+       "pose": "idle",
+       "emotion": "worried",
+       "face": "right"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "automated 1971",
+      "x": 0.78,
+      "y": 0.12,
+      "at": "yr",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 790,
+    "horizon": 778
+   }
+  },
+  {
+   "type": "title",
+   "text": "So what do you think: one giant wave, or something the record missed? Tell me in the comments, and subscribe to Stickstory for more true mysteries.",
+   "visual": "Giant words 'One wave' / 'or more?' with 'wave' in a red box over a night sea; the fez narrator on the right thinks, then holds up a sign 'YOUR TAKE?' on 'comments'.",
+   "title": {},
+   "cues": {
+    "w0": "giant",
+    "w1": "record",
+    "note": "comments",
+    "sub": "subscribe"
+   },
+   "params": {
+    "lines": [
+     "One wave",
+     "or more?"
+    ],
+    "highlight": [
+     "wave"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "tell me below",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.9,
+     "at": "note",
+     "then": "hold",
+     "text": "YOUR TAKE?"
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 1000
+   }
+  }
+ ]
+}
