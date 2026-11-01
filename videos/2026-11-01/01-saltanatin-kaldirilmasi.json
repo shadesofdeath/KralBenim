@@ -1,0 +1,172 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "derin",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Wikipedia: Abolition of the Ottoman sultanate",
+   "url": "https://en.wikipedia.org/wiki/Abolition_of_the_Ottoman_sultanate"
+  },
+  {
+   "title": "Wikipedia: Mehmed VI",
+   "url": "https://en.wikipedia.org/wiki/Mehmed_VI"
+  },
+  {
+   "title": "Cumhuriyet, Alev Coşkun: Padişahlığın sonu... 100 yıl önceki Meclis kararı",
+   "url": "https://www.cumhuriyet.com.tr/yazarlar/alev-coskun/padisahligin-sonu-100-yil-onceki-meclis-karari-2000026"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Altı asırlık",
+   "taht boşaldı"
+  ],
+  "highlight": [
+   "boşaldı"
+  ],
+  "scene": 0,
+  "t": 3.0,
+  "kasif": false,
+  "focus": [
+   540,
+   720
+  ],
+  "zoom": 1.15
+ },
+ "scenes": [
+  {
+   "text": "Altı asırlık taht, tek bir günde boşaldı.",
+   "type": "bt_throne",
+   "visual": "Karanlık bir salon, arkada ince sivri bir niş; iki basamaklı kaidenin üstünde tek, boş bir Osmanlı tahtı (yuvarlak kemerli alçak sırt, ortada altın gül motifi, tepede topun üstünde boynuzları yukarı bakan hilalli alem, alçak kollar, minder); yukarıdan inen ışık hüzmesinde toz zerreleri yavaşça yükselir; 'boşaldı'da boş minderin kenarı boyunca ince altın bir çizgi çizilir",
+   "params": {
+    "mode": "lit"
+   },
+   "cues": {
+    "hit": "boşaldı"
+   }
+  },
+  {
+   "text": "1 Kasım 1922.",
+   "type": "bt_date",
+   "visual": "Üstte ince büyük yazıyla '1 Kasım 1922' ve altında kısa altın çizgi; aşağıda ışıklı döşeme zeminde küçük boş taht, soldaki ışıktan düşen uzun gölgesi zemin boyunca yavaşça uzar",
+   "params": {
+    "text": "1 Kasım 1922"
+   }
+  },
+  {
+   "text": "Barış masasına iki hükümet çağrılmıştı: İstanbul'daki padişah ve Ankara.",
+   "type": "bt_table",
+   "visual": "Tavandan sarkan lambanın altında uzun barış masası, arkasında iki boş yüksek sırtlı sandalye; 'iki'de iki mühürlü davet zarfı masaya, her sandalyenin önüne birer tane iner; 'padişah'ta soldaki zarfın mührü yanar ve altında 'İstanbul', 'Ankara'da sağdaki zarfın mührü yanar ve altında 'Ankara' belirir; masanın önünde lambanın zemindeki ışık havuzu ve döşeme çizgileri",
+   "params": {
+    "mode": "names",
+    "a": "İstanbul",
+    "b": "Ankara"
+   },
+   "cues": {
+    "hit": "iki",
+    "a": "padişah",
+    "b": "Ankara"
+   }
+  },
+  {
+   "text": "Ankara, masada tek bir Türkiye istedi.",
+   "type": "bt_table",
+   "visual": "Aynı masa, iki zarf ve isimler; 'tek'te soldaki sandalye, İstanbul zarfı ve adı karanlığa çekilir, lamba ışığı sağa kayar; sağda 'Ankara' sandalyesi ve zarfı kendi ışık havuzunda tek başına kalır",
+   "params": {
+    "mode": "one",
+    "a": "İstanbul",
+    "b": "Ankara"
+   },
+   "cues": {
+    "hit": "tek"
+   }
+  },
+  {
+   "text": "Meclis oylamaya geçti.",
+   "type": "bt_assembly",
+   "visual": "Gece, yıldızlar altında Ankara'daki ilk meclis binasının sade iki katlı taş cephesi (kırma çatı, ortada küçük alınlıklı giriş, bayrak direğinde yavaşça dalgalanan bayrak), önünde döşeli avlu ve iki alçak duvar; pencereler tek tek yanar; 'oylamaya'da kapının üstündeki pencere altın ışıkla parlar, kapıdan avluya ince bir ışık yolu düşer",
+   "cues": {
+    "hit": "oylamaya"
+   }
+  },
+  {
+   "text": "Ve saltanatı tek oturumda kaldırdı.",
+   "type": "bt_decree",
+   "visual": "Lamba ışığında, yukarıdan görülen bir masada tek bir karar kâğıdı; satırlar kendiliğinden sırayla yazılır; 'kaldırdı'da sayfanın altına yuvarlak altın bir mühür basılır; kâğıdın sağında üstten görülen küçük kare bir mürekkep hokkası, aşağıda ahşap damarlı masa ve masanın ön kenarı",
+   "cues": {
+    "hit": "kaldırdı"
+   }
+  },
+  {
+   "text": "On altı gün sonra son padişah,",
+   "type": "bt_malaya",
+   "visual": "Sisli bir şafakta Boğaz kıyısı: soldan suya uzanan uzun ahşap bir iskele; üstünde tek, yüzsüz bir siluet iskelenin ucuna doğru yavaşça yürür; uzakta, sisin içinde gri bir zırhlı savaş gemisi bekler",
+   "params": {
+    "mode": "pier"
+   }
+  },
+  {
+   "text": "bir İngiliz savaş gemisine bindi.",
+   "type": "bt_malaya",
+   "visual": "Sisli suda kadrajı dolduran gri zırhlı savaş gemisi (HMS Malaya: üç ayaklı ön direk, iki baca, dört çift top kulesi); küçük bir motorbot içinde tek siluetle gemiye doğru ilerler; 'savaş'ta geminin lombozları ve direk feneri yanar",
+   "params": {
+    "mode": "ship"
+   },
+   "cues": {
+    "hit": "savaş"
+   }
+  },
+  {
+   "text": "Altı asırlık saltanat, sessizce denize açıldı.",
+   "type": "bt_nightsea",
+   "visual": "Yıldızlı gece denizi; ufka doğru uzaklaşan küçük bir gemi silueti ve üstündeki tek ışık, sudaki yansıması titrer; 'sessizce'den sonra ışık küçülür ve söner",
+   "cues": {
+    "hit": "sessizce"
+   }
+  },
+  {
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_throne",
+   "visual": "Karanlık salonda yine boş taht; ışık hüzmesi ve ışık havuzu yavaşça kararır, toz zerreleri kaybolur",
+   "params": {
+    "mode": "fade"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Saltanatın Kaldırılması: 623 Yıllık Taht Nasıl Bitti?",
+  "description": "Saltanatın kaldırılması, altı asırlık Osmanlı tahtını tek bir günde boşalttı. 1 Kasım 1922'de Ankara'daki Büyük Millet Meclisi padişahlığı kaldırdı; o günlerde Lozan'daki barış masasına hem İstanbul'daki padişah hükümeti hem Ankara davet edilmişti ve Ankara masada tek bir Türkiye istiyordu.\n\nOn altı gün sonra, 17 Kasım 1922'de son padişah Vahdettin (VI. Mehmed) İngiliz savaş gemisi HMS Malaya'ya binerek İstanbul'dan ayrıldı. 1299'da kurulan saltanat, 623 yıl sonra 1922'de böyle sessizce sona erdi; halifelik ise Abdülmecid Efendi ile Mart 1924'e kadar sürdü.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence o sabah İstanbul'da insanlar neler hissetti? Yorumlara yaz!\n\n#shorts #saltanatınkaldırılması #osmanlı #düşünbakalım",
+  "tags": [
+   "saltanatın kaldırılması",
+   "saltanatın kaldırılması 1922",
+   "1 kasım 1922",
+   "saltanat kaldırıldı",
+   "son padişah",
+   "vahdettin",
+   "vi. mehmed",
+   "hms malaya",
+   "osmanlı hanedanı",
+   "lozan konferansı",
+   "saltanatın kaldırılması tarihi",
+   "osmanlı tarihi",
+   "türkiye tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-01T19:00:00+03:00",
+  "related": "videos/2026-10-27/02-cumhuriyetin-ilani-1923.json"
+ }
+}
