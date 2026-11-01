@@ -1,0 +1,17 @@
+{
+ "id": "Dr9pyqzwxAo",
+ "thumbnail": false,
+ "url": "https://youtu.be/Dr9pyqzwxAo",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-02T00:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "The Great Stink: How a Bad Smell Saved London",
+ "script": "videos/2026-11-01/ag-02-great-stink.json"
+}
