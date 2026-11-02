@@ -1,0 +1,17 @@
+{
+ "id": "IhFosghxYOQ",
+ "thumbnail": false,
+ "url": "https://youtu.be/IhFosghxYOQ",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-03T00:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Hoover Dam: Why Would It Take 125 Years to Cool?",
+ "script": "videos/2026-11-02/ag-02-hoover-dam.json"
+}

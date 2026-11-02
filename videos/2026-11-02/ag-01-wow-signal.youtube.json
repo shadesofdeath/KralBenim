@@ -1,0 +1,17 @@
+{
+ "id": "aaAu9SmZyWI",
+ "thumbnail": false,
+ "url": "https://youtu.be/aaAu9SmZyWI",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-02T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Wow! Signal: 72 Seconds From Space Nobody Can Explain",
+ "script": "videos/2026-11-02/ag-01-wow-signal.json"
+}
