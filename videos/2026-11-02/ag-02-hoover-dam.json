@@ -1,0 +1,594 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "hoover-dam",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-newsprint",
+ "cover": {
+  "lines": [
+   "125 years",
+   "to cool"
+  ],
+  "highlight": [
+   "cool"
+  ],
+  "scene": 0,
+  "t": 2.7,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "U.S. Bureau of Reclamation — Hoover Dam: Concrete",
+   "url": "https://www.usbr.gov/lc/hooverdam/History/essays/concrete.html"
+  },
+  {
+   "title": "U.S. Bureau of Reclamation — Hoover Dam FAQs",
+   "url": "https://www.usbr.gov/lc/hooverdam/faqs/damfaqs.html"
+  }
+ ],
+ "youtube": {
+  "title": "Hoover Dam: Why Would It Take 125 Years to Cool?",
+  "description": "Hoover Dam would have taken about 125 years to cool if its concrete had been poured in one piece. Curing concrete gets hot, and the stress would have cracked the dam apart.\n\nSo the engineers built Hoover Dam as separate concrete columns and buried more than 582 miles of 1-inch steel pipe inside. River water ran through the pipes first, then ice-cold water from a refrigeration plant on the river that could make 1,000 tons of ice in 24 hours. Afterwards the pipes were filled with grout, and they are still inside the dam today.\n\nSubscribe to Stickstory for one true story like this every day. Would you have guessed a dam needs ice water? Tell me in the comments!\n\n#shorts #hooverdam #engineering #stickstory",
+  "tags": [
+   "hoover dam",
+   "hoover dam construction",
+   "how hoover dam was built",
+   "hoover dam concrete",
+   "hoover dam cooling pipes",
+   "concrete cooling",
+   "mass concrete",
+   "black canyon",
+   "colorado river",
+   "civil engineering",
+   "engineering history",
+   "how it was built",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-02T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "hd_canyon",
+   "text": "This dam would take 125 years to cool.",
+   "visual": "Hook frame: Hoover Dam fills Black Canyon, its concrete face glowing red-orange with heat shimmer, thick steam columns rising off it; a big thermometer on the left canyon wall bursts at the top on 'years'; the fez host stands big in front, jumping back in shock and sweating.",
+   "title": {
+    "white": "Hoover Dam"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1229,
+    "horizon": 640
+   },
+   "cues": {
+    "hit": "years"
+   },
+   "params": {
+    "mode": "dam",
+    "heat": 1.0,
+    "steam": {
+     "n": 24,
+     "at": 0,
+     "rise": 850,
+     "w": 18,
+     "spread": 150
+    },
+    "kasif": {
+     "x": 0.612,
+     "y": 1.0,
+     "scale": 2.0,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised",
+     "sweat": true
+    },
+    "thermo": {
+     "x": 0.2,
+     "y0": 0.42,
+     "y1": 0.66,
+     "level": 0.95,
+     "s": 1.7,
+     "burst": "hit"
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_pour",
+   "text": "Concrete gets hot as it hardens,",
+   "visual": "Close-up of a pour: a giant concrete bucket on a cable tips grey concrete into a timber form that sits on older lifts; the level rises, steam and red heat shimmer rise off it, a big thermometer's red column climbs on 'hot'; red box 'HEAT'. Foreground: rebar ends and old form planks on the lower lifts, a plank walkway with two hard hats and a shovel.",
+   "title": {
+    "white": "Curing",
+    "gray": "concrete"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1210,
+    "horizon": 700
+   },
+   "cues": {
+    "pour": "Concrete",
+    "hot": "hot"
+   },
+   "params": {
+    "pour": "pour",
+    "hot": "hot",
+    "labels": [
+     {
+      "text": "HEAT",
+      "x": 0.84,
+      "y": 0.2,
+      "at": "hot",
+      "size": 92,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_canyon",
+   "text": "and Hoover Dam is a mountain of it.",
+   "visual": "Wide shot of Black Canyon during construction: the dam rises as staggered concrete columns from wall to wall, a cableway bucket travels over them, tiny hard-hat workers on top, the river below; red box 'HOOVER DAM'.",
+   "title": {
+    "white": "Black Canyon",
+    "gray": "1933"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1229,
+    "horizon": 640
+   },
+   "cues": {
+    "name": "Hoover",
+    "hit": "mountain"
+   },
+   "params": {
+    "mode": "build",
+    "grow": {
+     "at": 0,
+     "dur": 2.4
+    },
+    "level": 1.0,
+    "heat": 0.25,
+    "labels": [
+     {
+      "text": "HOOVER DAM",
+      "x": 0.55,
+      "y": 0.27,
+      "at": "name",
+      "size": 78,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "hd_canyon",
+   "text": "Poured in one piece, it would have cracked.",
+   "visual": "Push in on the dam as one single giant block glowing hot red, heavy steam pouring off it; on 'cracked' red-ink cracks race across the face; red box 'ONE POUR'.",
+   "title": {
+    "white": "One pour?"
+   },
+   "source": "USBR",
+   "set": {
+    "name": "desert",
+    "ground": 1229,
+    "horizon": 640
+   },
+   "cues": {
+    "one": "one",
+    "cracks": "cracked",
+    "hit": "cracked"
+   },
+   "params": {
+    "mode": "mono",
+    "heat": 0.85,
+    "cracks": "cracks",
+    "steam": {
+     "n": 18,
+     "at": 0,
+     "rise": 520,
+     "w": 13,
+     "spread": 160
+    },
+    "labels": [
+     {
+      "text": "ONE POUR",
+      "x": 0.5,
+      "y": 0.4,
+      "at": "one",
+      "size": 84,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_plan",
+   "text": "So the engineers built it in columns,",
+   "visual": "An engineer's office: a big blueprint of the dam pinned to the wall; a hard-hat engineer points at it as the dam splits into columns (vertical joints draw in) and staggered blocks shade in; a drafting table with rolled plans, T-square and lamp in front; red box 'COLUMNS'.",
+   "title": {
+    "white": "The plan"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "eng": "engineers",
+    "grid": "built",
+    "hit": "columns"
+   },
+   "params": {
+    "grid": "grid",
+    "blocks": "hit",
+    "cast": [
+     {
+      "x": 0.12,
+      "y": 0.6,
+      "scale": 1.0,
+      "pose": "idle",
+      "face": "right",
+      "hat": false,
+      "accessory": "helmet",
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "eng",
+        "pose": "point",
+        "dir": 20,
+        "face": "right"
+       },
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": 40,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ],
+      "who": "engineer"
+     }
+    ],
+    "labels": [
+     {
+      "text": "COLUMNS",
+      "x": 0.66,
+      "y": 0.12,
+      "at": "hit",
+      "size": 84,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_cut",
+   "text": "and hid 582 miles of steel pipe inside.",
+   "visual": "Close cut-away of three hot concrete columns built in lifts: serpentine steel cooling pipes draw themselves in lift by lift, risers run down to a header pipe with a red valve wheel in the bedrock; steam rises off the column tops; red box '582 MILES'.",
+   "title": {
+    "white": "Cooling pipes"
+   },
+   "source": "USBR",
+   "set": false,
+   "cues": {
+    "pipes": "hid",
+    "hit": "miles"
+   },
+   "params": {
+    "pipes": "pipes",
+    "pdur": 2.0,
+    "heat": [
+     0.7,
+     0.7
+    ],
+    "labels": [
+     {
+      "text": "582 MILES",
+      "x": 0.5,
+      "y": 0.48,
+      "at": "hit",
+      "size": 92,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     950
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_canyon",
+   "text": "River water ran through them first.",
+   "visual": "Close on the canyon floor: a plank pump house with a turning flywheel on the river pushes river water up a pipe into the base of the rising columns, blue flow dashes racing along the pipe; blue box 'RIVER WATER'.",
+   "title": {
+    "white": "Step one"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 960,
+    "horizon": 480
+   },
+   "cues": {
+    "flow": "water",
+    "hit": "first"
+   },
+   "params": {
+    "mode": "build",
+    "level": 0.7,
+    "heat": 0.45,
+    "bucket": false,
+    "workers": false,
+    "steam": {
+     "n": 9,
+     "at": 0,
+     "rise": 300,
+     "w": 8
+    },
+    "pump": {
+     "x": 0.32,
+     "at": "flow",
+     "dy": 40,
+     "s": 1.7
+    },
+    "labels": [
+     {
+      "text": "RIVER WATER",
+      "x": 0.33,
+      "y": 0.446,
+      "at": "flow",
+      "size": 56,
+      "color": "blue",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ],
+    "crest": 0.22,
+    "base": 0.5
+   },
+   "camera": {
+    "focus": [
+     350,
+     1000
+    ],
+    "zoom": 1.8,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_cut",
+   "text": "Then ice water,",
+   "visual": "The column cut-away again: ice-blue water rushes through the coils and the header, frost spikes grow on every pipe, the hot red tint drains out of the concrete and the steam dies away; blue box 'ICE WATER'.",
+   "title": {
+    "white": "Step two"
+   },
+   "set": false,
+   "cues": {
+    "flow": "ice",
+    "hit": "water"
+   },
+   "params": {
+    "pipes": 0,
+    "pdur": 0.01,
+    "flow": "flow",
+    "water": "ice",
+    "heat": [
+     0.6,
+     0.0
+    ],
+    "labels": [
+     {
+      "text": "ICE WATER",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "flow",
+      "size": 92,
+      "color": "blue",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "hd_plant",
+   "text": "from a plant that could make 1,000 tons of ice a day.",
+   "visual": "The refrigeration plant on the lower cofferdam: a plank shed with ammonia tanks and a vapour vent, frosted pipes running off to the dam in the canyon behind; a pile of ice blocks drawn only as dashed outlines builds up in the foreground (capacity, not real ice); red counter box counts up to '1,000 TONS', hand note 'OF ICE A DAY'.",
+   "title": {
+    "white": "Cofferdam",
+    "gray": "ice plant"
+   },
+   "source": "USBR",
+   "set": {
+    "name": "desert",
+    "ground": 1010,
+    "horizon": 600
+   },
+   "cues": {
+    "plant": "plant",
+    "hit": "tons"
+   },
+   "params": {
+    "plant": "plant",
+    "hit": "hit",
+    "count": {
+     "to": 1000,
+     "suffix": " TONS",
+     "x": 0.6,
+     "y": 0.2,
+     "size": 100
+    },
+    "labels": [
+     {
+      "text": "OF ICE A DAY",
+      "x": 0.6,
+      "y": 0.28,
+      "at": "hit",
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "rot": -4
+     }
+    ],
+    "ghost": true
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_cut",
+   "text": "Those pipes are still inside the dam, filled with grout.",
+   "visual": "Cut-away of the finished, cool columns with their staggered tops and edges framing the coils (no red tint, no steam); the pipes are light and hollow until 'filled', then dark grout floods through every coil and riser; red box 'STILL INSIDE'.",
+   "title": {
+    "white": "Today"
+   },
+   "source": "USBR",
+   "set": false,
+   "cues": {
+    "in": "still",
+    "grout": "filled",
+    "hit": "grout"
+   },
+   "params": {
+    "pipes": -5,
+    "pdur": 0.01,
+    "heat": [
+     0.0,
+     0.0
+    ],
+    "steam": false,
+    "grout": "grout",
+    "labels": [
+     {
+      "text": "STILL INSIDE",
+      "x": 0.65,
+      "y": 0.31,
+      "at": "in",
+      "size": 64,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ],
+    "tops": [
+     720,
+     680,
+     700
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     1000
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_canyon",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "The finished, cool Hoover Dam today, river below; the fez host big on a foreground boulder waves at the viewer, then points back at the dam.",
+   "title": {
+    "white": "Hoover Dam",
+    "gray": "today"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1229,
+    "horizon": 640
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "mode": "dam",
+    "heat": 0,
+    "kasif": {
+     "x": 0.66,
+     "y": 0.92,
+     "scale": 1.6,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 30,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "focus": [
+     600,
+     1150
+    ],
+    "zoom": 1.3,
+    "move": "pull"
+   }
+  }
+ ]
+}

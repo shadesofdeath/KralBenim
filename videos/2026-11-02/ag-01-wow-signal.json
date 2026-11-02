@@ -1,0 +1,675 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "wow-signal",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "72 seconds,",
+   "never again"
+  ],
+  "highlight": [
+   "never"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": false,
+  "focus": [
+   440,
+   820
+  ],
+  "zoom": 1.25
+ },
+ "sources": [
+  {
+   "title": "History.com — Wow! signal detected (August 15, 1977)",
+   "url": "https://www.history.com/this-day-in-history/august-15/wow-signal-detected"
+  },
+  {
+   "title": "Méndez, Ortiz Ceballos, Zuluaga — Arecibo Wow! I: An Astrophysical Explanation for the Wow! Signal (arXiv 2408.08513)",
+   "url": "https://www.arxiv.org/abs/2408.08513"
+  },
+  {
+   "title": "Universe Today — The Wow! Signal Deciphered? It Was Hydrogen All Along",
+   "url": "https://www.universetoday.com/168176/the-wow-signal-deciphered-it-was-hydrogen-all-along/"
+  },
+  {
+   "title": "ExplorersWeb — Exploration Mysteries: The Wow! Signal",
+   "url": "https://explorersweb.com/exploration-mysteries-wow-signal/"
+  }
+ ],
+ "youtube": {
+  "title": "Wow! Signal: 72 Seconds From Space Nobody Can Explain",
+  "description": "The Wow! signal: for 72 seconds in 1977 a radio telescope heard something from space, and nobody has heard it again. On 15 August, Ohio State's Big Ear caught a narrowband burst near the hydrogen line, so loud that the printout ran out of digits and read 6EQUJ5.\n\nDays later astronomer Jerry Ehman circled the code in red pen and wrote \"Wow!\" in the margin. Telescopes have searched that patch of sky in Sagittarius for decades and found nothing. In 2024 a team suggested a natural cause: a flare that briefly lit up a cold hydrogen cloud. It is a hypothesis, not proof.\n\nSubscribe to Stickstory for a true story like this every day. What do you think sent the Wow! signal? Tell me in the comments!\n\n#shorts #wowsignal #space #stickstory",
+  "tags": [
+   "wow signal",
+   "the wow signal",
+   "wow signal 1977",
+   "wow signal explained",
+   "6EQUJ5",
+   "big ear telescope",
+   "jerry ehman",
+   "radio signal from space",
+   "seti",
+   "hydrogen line",
+   "unsolved mysteries",
+   "space mysteries",
+   "astronomy",
+   "alien signal",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-02T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ws_print",
+   "text": "A signal from space: 72 seconds.",
+   "visual": "Hook frame at night in a grassy field by a fence: the fez host stands big on the left, eyebrows shot up in shock, holding up a long sheet of green-barred line-printer paper; on it one column of digits reads 6, E, Q, U, J, 5 top to bottom, circled in red, with a red hand-written 'Wow!' beside it; three wavy gold signal strands fall from a bright star in the top right onto the circled code.",
+   "title": {
+    "white": "Wow! signal"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1190,
+    "horizon": 980
+   },
+   "cues": {
+    "hit": "72"
+   },
+   "params": {
+    "mode": "held",
+    "gy": 0.62,
+    "cols": 6,
+    "size": 46,
+    "hl": 4,
+    "row0": 1,
+    "rows": 10,
+    "sheet": {
+     "w": 560,
+     "h": 660,
+     "top": 70,
+     "grip": 40
+    },
+    "circle": true,
+    "wow": true,
+    "wowAt": [
+     0.3,
+     0.3
+    ],
+    "clear": [
+     [
+      0,
+      2,
+      2,
+      4
+     ]
+    ],
+    "signal": {
+     "from": [
+      0.66,
+      0.12
+     ]
+    },
+    "kasif": {
+     "x": 0.17,
+     "y": 0.62,
+     "scale": 1.25,
+     "pose": "point",
+     "dir": "forward",
+     "face": "right",
+     "emotion": "surprised",
+     "gasp": true
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_sky",
+   "text": "Then it was gone.",
+   "visual": "Close on the night sky: a bright gold point pulses with rings inside a dashed red circle near the teapot stars of Sagittarius, then shrinks and goes out; the circle stays empty; red box 'GONE'.",
+   "title": {
+    "white": "Sagittarius"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "gone": "gone"
+   },
+   "params": {
+    "spot": [
+     0.56,
+     0.3
+    ],
+    "r": 110,
+    "teapot": [
+     0.5,
+     0.42,
+     110
+    ],
+    "flare": {
+     "at": 0,
+     "gone": "gone"
+    },
+    "gy": 0.6,
+    "labels": [
+     {
+      "text": "GONE",
+      "x": 0.56,
+      "y": 0.205,
+      "at": "gone",
+      "size": 96,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     600,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_ear",
+   "text": "In August 1977, a radio telescope in Ohio caught a burst,",
+   "visual": "The Big Ear radio telescope at night, side view: a tilted flat reflector on the left, the long aluminium ground plane, the curved standing reflector on the right and the feed-horn hut in the middle; gold pulses run from a star down to the flat reflector, across to the curved wall and into the horn, which flashes on 'burst'; red box 'BIG EAR', hand label 'OHIO, AUG 1977'; a country road with a dashed centre line and a gravel verge in front.",
+   "title": {
+    "white": "The telescope"
+   },
+   "source": "Ohio State, Big Ear",
+   "set": {
+    "name": "night",
+    "ground": 1192,
+    "horizon": 1000
+   },
+   "cues": {
+    "yr": "August",
+    "tel": "telescope",
+    "hit": "burst"
+   },
+   "params": {
+    "gy": 0.6,
+    "star": [
+     0.24,
+     0.17
+    ],
+    "arrive": 0,
+    "fg": "road",
+    "labels": [
+     {
+      "text": "BIG EAR",
+      "x": 0.64,
+      "y": 0.2,
+      "at": "tel",
+      "size": 96,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     },
+     {
+      "text": "OHIO, AUG 1977",
+      "x": 0.64,
+      "y": 0.29,
+      "at": "yr",
+      "size": 66,
+      "color": "ink",
+      "font": "hand",
+      "rot": -2
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_print",
+   "text": "so loud the printer ran out of digits and used letters: 6EQUJ5.",
+   "visual": "A 1970s line printer: green-barred paper with tractor holes scrolls up out of the slot under a top rail while the print head shuttles; rows of quiet 1s go by, then on 'used' one column prints 6, E, Q, U, J, 5 row by row, darker and bigger; hand notes on the paper: '1 = quiet' beside the 6 and a red 'U = LOUD!' beside the U; below the slot the printer front with dials, a blinking red lamp, a name plate and a pile of fan-fold paper fills the bottom.",
+   "title": {
+    "white": "The printout"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "ran": "ran",
+    "dig": "digits",
+    "let": "letters",
+    "hit": "6EQUJ5"
+   },
+   "params": {
+    "mode": "feed",
+    "fg": false,
+    "cols": 6,
+    "size": 64,
+    "hl": 3,
+    "row0": 14,
+    "sheet": {
+     "x": 0.5,
+     "y": 0.35,
+     "w": 760,
+     "h": 1000
+    },
+    "feed": {
+     "head": 0.6,
+     "at": "ran",
+     "step": 0.24,
+     "top": 0.17,
+     "stop": 1
+    },
+    "clear": [
+     [
+      0,
+      2,
+      14,
+      14
+     ],
+     [
+      4,
+      5,
+      16,
+      18
+     ]
+    ],
+    "notes": [
+     {
+      "text": "1 = quiet",
+      "col": 1,
+      "row": 14,
+      "at": "dig",
+      "size": 64
+     },
+     {
+      "text": "U = LOUD!",
+      "col": 4.95,
+      "row": 17,
+      "at": "let",
+      "size": 62,
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.08,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_print",
+   "text": "Jerry Ehman circled it in red pen and wrote: \"Wow!\"",
+   "visual": "Close-up, top view of the printout on a desk: a small ink-line hand with a thin red pen comes in from the bottom right, draws a red ring round the 6EQUJ5 column, then writes a big red 'Wow!' in the empty left margin and underlines it; red box 'JERRY EHMAN' above.",
+   "title": {
+    "white": "Days later"
+   },
+   "source": "History.com",
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "cues": {
+    "ci": "circled",
+    "wo": "pen",
+    "nm": "Jerry"
+   },
+   "params": {
+    "mode": "desk",
+    "fg": "desk",
+    "gy": 0.66,
+    "cols": 6,
+    "size": 58,
+    "hl": 4,
+    "rows": 13,
+    "sheet": {
+     "x": 0.5,
+     "y": 0.47,
+     "w": 820,
+     "h": 1080,
+     "rot": -5
+    },
+    "row0": 1,
+    "circle": "ci",
+    "wow": "wo",
+    "wowAt": [
+     0.31,
+     0.34
+    ],
+    "wowSize": 3.2,
+    "pen": true,
+    "clear": [
+     [
+      0,
+      2,
+      1,
+      6
+     ],
+     [
+      3,
+      3,
+      1,
+      1
+     ]
+    ],
+    "labels": [
+     {
+      "text": "JERRY EHMAN",
+      "x": 0.33,
+      "y": 0.265,
+      "at": "nm",
+      "size": 40,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     485,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_sky",
+   "text": "So who sent it? We've searched that spot for decades.",
+   "visual": "Night field: a big red '?' pops up inside the dashed red circle in the sky; then three radio dishes of different sizes on the ground swing round one by one and point at the circle, dashed gold beams drawing up to it, while a big year counter runs from 1977 to 2026.",
+   "title": {
+    "white": "The search"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "ask": "who",
+    "d1": "We've",
+    "d2": "searched",
+    "d3": "spot",
+    "yr": "decades"
+   },
+   "params": {
+    "spot": [
+     0.62,
+     0.21
+    ],
+    "r": 95,
+    "ask": "ask",
+    "teapot": false,
+    "gy": 0.6,
+    "dishes": [
+     {
+      "x": 0.18,
+      "s": 0.62,
+      "at": "d1"
+     },
+     {
+      "x": 0.5,
+      "s": 0.92,
+      "at": "d2"
+     },
+     {
+      "x": 0.84,
+      "s": 0.7,
+      "at": "d3"
+     }
+    ],
+    "counter": {
+     "from": 1977,
+     "to": 2026,
+     "at": "d2",
+     "dur": 1.6,
+     "x": 0.27,
+     "y": 0.235,
+     "size": 140
+    }
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ws_print",
+   "text": "Nothing.",
+   "visual": "The line printer again, wider: the paper scrolls out with nothing but 1s and blanks; a big red stamp 'NOTHING' slams onto the sheet.",
+   "title": {
+    "white": "Since then"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "st": "Nothing"
+   },
+   "params": {
+    "mode": "feed",
+    "fg": false,
+    "blank": true,
+    "cols": 6,
+    "size": 64,
+    "hl": 3,
+    "row0": 14,
+    "sheet": {
+     "x": 0.5,
+     "y": 0.35,
+     "w": 760,
+     "h": 1000
+    },
+    "feed": {
+     "head": 0.6,
+     "at": 0,
+     "step": 0.26,
+     "top": 0.21
+    },
+    "stamp": {
+     "text": "NOTHING",
+     "at": 0.05,
+     "y": 0.5
+    }
+   },
+   "camera": {
+    "zoom": 1.08,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ws_cloud",
+   "text": "A 2024 study suggests a flare lit up a hydrogen cloud. Maybe.",
+   "visual": "Deep space above the curved horizon of the Earth (ocean, hatched continents, latitude lines, atmosphere ring): a spinning magnetar with two short lighthouse beams flares, a thick gold ring races out and reaches a blue hatched hydrogen cloud, which glows gold and sends a thin wavy gold beam down to the Earth; red box '2024 STUDY', hand label 'HYDROGEN CLOUD', then red box 'MAYBE?' in the empty space left of the cloud.",
+   "title": {
+    "white": "New idea",
+    "gray": "2024"
+   },
+   "source": "Méndez et al., 2024",
+   "set": false,
+   "cues": {
+    "yr": "2024",
+    "flare": "flare",
+    "hy": "hydrogen",
+    "may": "Maybe"
+   },
+   "params": {
+    "mag": [
+     0.2,
+     0.25
+    ],
+    "cloud": [
+     0.62,
+     0.41,
+     250,
+     160
+    ],
+    "flare": "flare",
+    "earth": 0.69,
+    "earthR": 950,
+    "beam": 150,
+    "labels": [
+     {
+      "text": "2024 STUDY",
+      "x": 0.68,
+      "y": 0.205,
+      "at": "yr",
+      "size": 80,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -3
+     },
+     {
+      "text": "HYDROGEN CLOUD",
+      "x": 0.6,
+      "y": 0.545,
+      "at": "hy",
+      "size": 66,
+      "color": "ink",
+      "font": "hand",
+      "rot": -2
+     },
+     {
+      "text": "MAYBE?",
+      "x": 0.25,
+      "y": 0.505,
+      "at": "may",
+      "size": 80,
+      "color": "red",
+      "box": true,
+      "font": "serif",
+      "rot": -5
+     }
+    ]
+   },
+   "camera": {
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_sky",
+   "text": "Whoever sent it, we're still listening.",
+   "visual": "Close-up on the mouth of one big modern radio dish at night, tilted up at the dashed red circle in the sky; gold listening rings travel down from the circle straight into the dish and its feed.",
+   "title": {
+    "white": "2026"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "who": "Whoever",
+    "li": "listening"
+   },
+   "params": {
+    "spot": [
+     0.76,
+     0.2
+    ],
+    "r": 80,
+    "teapot": false,
+    "listen": 0,
+    "gy": 0.6,
+    "dishes": [
+     {
+      "x": 0.46,
+      "s": 1.45,
+      "from": 60,
+      "at": 0
+     }
+    ],
+    "fg": false
+   },
+   "camera": {
+    "focus": [
+     560,
+     600
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ws_sky",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Night field by the fence: the fez host stands big next to a radio dish that listens to the dashed circle in the sky (gold rings travelling down into it); he waves, then points at the viewer.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "spot": [
+     0.76,
+     0.19
+    ],
+    "r": 80,
+    "listen": 0,
+    "gy": 0.6,
+    "teapot": false,
+    "dishes": [
+     {
+      "x": 0.76,
+      "s": 0.85,
+      "at": 0
+     }
+    ],
+    "kasif": {
+     "x": 0.3,
+     "y": 0.6,
+     "scale": 1.35,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}
