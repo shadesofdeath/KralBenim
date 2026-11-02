@@ -1,0 +1,182 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "obsidyen",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Ransom Room",
+      "url": "https://en.wikipedia.org/wiki/Ransom_Room"
+    },
+    {
+      "title": "World History Encyclopedia: Pizarro and Atahualpa, the Curse of the Lost Inca Gold",
+      "url": "https://www.worldhistory.org/article/704/"
+    },
+    {
+      "title": "World History Encyclopedia: The Gold of the Conquistadors",
+      "url": "https://www.worldhistory.org/article/2045/the-gold-of-the-conquistadors/"
+    },
+    {
+      "title": "PBS Conquistadors: The Conquest of the Incas",
+      "url": "https://www.pbs.org/conquistadors/pizarro/pizarro_h02.html"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Altın",
+      "yetmedi"
+    ],
+    "highlight": [
+      "yetmedi"
+    ],
+    "scene": 0,
+    "t": 2.4,
+    "kasif": false,
+    "focus": [
+      540,
+      720
+    ],
+    "zoom": 1.35
+  },
+  "scenes": [
+    {
+      "text": "Bir oda dolusu altın, bir canı kurtaramadı.",
+      "type": "bt_goldroom",
+      "visual": "Kapıdan görülen taş bir İnka odası: birbirine oturan çokgen taş duvarlar, iki trapez niş; arka duvarı boydan boya geçen yatay altın çizgiye kadar yükselen bir altın yığını (seyrek, ayrık tabaklar, kupalar, kaplar), üstünde yavaşça parlayıp sönen ışıltılar, ışıkta süzülen toz; 'kurtaramadı'da duvardaki çizgi altın ışıkla parlar",
+      "params": {
+        "mode": "full"
+      },
+      "cues": {
+        "hit": "kurtaramadı"
+      }
+    },
+    {
+      "text": "1532'de bir avuç İspanyol, İnka imparatorunu esir aldı.",
+      "type": "bt_captive",
+      "visual": "Çokgen taş duvarda içeriden aydınlanan çift sövelli trapez bir İnka kapısı; kapının içinde başında altın bant ve alnına inen kısa kırmızı saçak olan tek yüzsüz siluet; ön planda kapının iki yanında arkası dönük, miğferli (morion) iki İspanyol askeri siluet; 'esir'de ellerindeki uzun teberler dönüp kapının önünde, figürün bel/diz hizasında çaprazlanır; teber ağızları figürün gövdesinin dışında kalır",
+      "params": {
+        "mode": "taken"
+      },
+      "cues": {
+        "hit": "esir"
+      }
+    },
+    {
+      "text": "Atahualpa elini duvara uzattı.",
+      "type": "bt_goldroom",
+      "visual": "Aynı taş oda, boş; arka duvarın önünde başında altın bant ve kırmızı saçak olan tek yüzsüz siluet, bir kolu yukarıda, eli duvarda; 'duvara'da parmak ucundan iki yana duvar boyunca ince altın bir çizgi çizilir",
+      "params": {
+        "mode": "reach"
+      },
+      "cues": {
+        "hit": "duvara"
+      }
+    },
+    {
+      "text": "Odayı o çizgiye kadar altınla dolduracaktı.",
+      "type": "bt_goldroom",
+      "visual": "Boş oda, duvarda altın çizgi; zeminden çizgiye kadar yükselen bir yığının kesik çizgili hayaleti çizilir; 'altınla'da hayaletin içi aşağıdan yukarı çizgiye kadar altınla dolar",
+      "params": {
+        "mode": "measure"
+      },
+      "cues": {
+        "hit": "altınla"
+      }
+    },
+    {
+      "text": "Altın aylarca aktı.",
+      "type": "bt_road",
+      "visual": "Alacakaranlıkta dağ yamacı, silik taraçalar; yamaçta zikzak inen bir İnka yolu; sırtında altın yükler taşıyan bir lama kervanı yol boyunca yavaşça bize doğru iner; önde kadrajı boydan boya kesen çokgen taşlı bir taraça duvarı"
+    },
+    {
+      "text": "Tapınak levhaları eritildi.",
+      "type": "bt_furnace",
+      "visual": "Taş bir ocağın üstünde pota, ocağın kemerli ağzında yavaşça dalgalanan alevler; çivi delikli, dövme izli ince altın bir tapınak levhası yavaşça potaya iner; 'eritildi'de levha erir, erimiş yüzey parlar, kıvılcımlar yükselir",
+      "cues": {
+        "hit": "eritildi"
+      }
+    },
+    {
+      "text": "Ama İspanyollar onun ordularından korktu.",
+      "type": "bt_andes",
+      "visual": "Gece, yıldızlar altında And Dağları sırtları ve vadide sis; sol üçte birde (y≈700–1150) arkası dönük, miğferli tek İspanyol askeri silueti dağlara bakar; 'ordularından'da sırtlarda birer birer büyük kamp ateşleri yanar",
+      "params": {
+        "mode": "fires"
+      },
+      "cues": {
+        "hit": "ordularından"
+      }
+    },
+    {
+      "text": "1533'te idam edildi.",
+      "type": "bt_captive",
+      "visual": "Aynı çift sövelli trapez kapı, içi boş; eşikte, ışık havuzunun ortasında yere düşmüş büyük kraliyet saçağı (altın bant, altın tüpler, kırmızı püsküller); kamera yavaşça saçağa yaklaşır; 'idam'da kapının içindeki ışık yavaşça söner",
+      "params": {
+        "mode": "empty"
+      },
+      "cues": {
+        "hit": "idam"
+      },
+      "camera": {
+        "focus": [
+          540,
+          1180
+        ],
+        "zoom": 1.3,
+        "move": "push"
+      }
+    },
+    {
+      "text": "Duvardaki çizgi kaldı. İmparator kalmadı.",
+      "type": "bt_goldroom",
+      "visual": "Boş taş oda; duvarda sadece altın çizgi kaldı, ışık yavaşça soğur",
+      "params": {
+        "mode": "line"
+      },
+      "cues": {
+        "hit": "kalmadı"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_andes",
+      "visual": "Yıldızlar altında And Dağları; vadideki tek sıcak ışık yavaşça söner",
+      "params": {
+        "mode": "fade"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Atahualpa: Oda Dolusu Altın Onu Neden Kurtaramadı?",
+    "description": "Atahualpa, İnka İmparatorluğu'nun son büyük hükümdarıydı ve özgürlüğünü bir oda dolusu altınla satın almaya çalıştı. 1532'de Cajamarca'da Francisco Pizarro'nun küçük birliği onu esir aldı. Atahualpa, tutulduğu odayı elinin uzanabildiği yüksekliğe kadar altınla, bir başka odayı da iki kez gümüşle doldurmayı teklif etti.\n\nAylarca imparatorluğun dört bir yanından altın geldi; tapınak levhaları, kaplar ve heykeller dokuz ocakta eritilip külçe yapıldı. Fidye toplandı; ama İspanyollar serbest kalacak bir imparatorun ordularını yeniden toplamasından korktu ve Atahualpa 1533'te idam edildi. Atahualpa'nın fidyesi, İnka altınının sonunun başlangıcı oldu.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Atahualpa, İspanyolların sözünü tutacağına gerçekten inanmış mıydı? Yorumlara yaz!\n\n#shorts #atahualpa #inka #düşünbakalım",
+    "tags": [
+      "atahualpa",
+      "atahualpa fidyesi",
+      "atahualpa'nın fidye odası",
+      "atahualpa'nın idamı",
+      "inka imparatoru atahualpa",
+      "fidye odası",
+      "cajamarca",
+      "francisco pizarro",
+      "inka imparatorluğu",
+      "inka altını",
+      "ispanyol fethi",
+      "peru tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-02T19:00:00+03:00"
+  }
+}

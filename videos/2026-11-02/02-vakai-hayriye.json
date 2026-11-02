@@ -1,0 +1,816 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "grafit",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "TDV İslâm Ansiklopedisi — Vak‘a-i Hayriyye",
+   "url": "https://islamansiklopedisi.org.tr/vaka-i-hayriyye"
+  },
+  {
+   "title": "TDV İslâm Ansiklopedisi — Mahmud II",
+   "url": "https://islamansiklopedisi.org.tr/mahmud-ii-2"
+  },
+  {
+   "title": "TDV İslâm Ansiklopedisi — Asâkir-i Mansûre-i Muhammediyye",
+   "url": "https://islamansiklopedisi.org.tr/asakir-i-mansure-i-muhammediyye"
+  },
+  {
+   "title": "Küre Ansiklopedi — Vak‘a-i Hayriye",
+   "url": "https://kureansiklopedi.com/tr/detay/vaka-i-hayriye-2"
+  },
+  {
+   "title": "Erhan Afyoncu, Sabah (14.06.2026) — Yeniçeri Ocağı tam 200 yıl önce ortadan kaldırıldı",
+   "url": "https://www.sabah.com.tr/yazarlar/erhan-afyoncu/2026/06/14/isyanlar-ve-maglubiyetler-sonlarini-getirdi-yeniceri-ocagi-tam-200-yil-once-ortadan-kaldirildi"
+  },
+  {
+   "title": "Britannica — Auspicious Incident",
+   "url": "https://www.britannica.com/topic/Auspicious-Incident"
+  },
+  {
+   "title": "TDV İslâm Ansiklopedisi — Alemdar Mustafa Paşa",
+   "url": "https://islamansiklopedisi.org.tr/alemdar-mustafa-pasa"
+  },
+  {
+   "title": "Wikipedia — Mustafa IV",
+   "url": "https://en.wikipedia.org/wiki/Mustafa_IV"
+  },
+  {
+   "title": "Wikipedia — Alemdar Mustafa Pasha",
+   "url": "https://en.wikipedia.org/wiki/Alemdar_Mustafa_Pasha"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Kazanlar",
+   "devrildi"
+  ],
+  "highlight": [
+   "devrildi"
+  ],
+  "scene": 2,
+  "t": 4.0,
+  "focus": [
+   930,
+   600
+  ],
+  "zoom": 1.3,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Haziran 1826. İstanbul'da, Et Meydanı'nda, gece yarısı.",
+   "type": "bt_vh_city",
+   "visual": "Gece, suyun üstünde İstanbul'un tarihi yarımadası silueti (kubbeler, minareler), yıldızlar, birkaç yanan pencere; şehrin ortasında meşale ışıkları birer birer toplanır, altlarında altın bir ışık havuzu büyür; suda yavaş kıpırdayan altın yansımalar",
+   "params": {
+    "mode": "night"
+   },
+   "chapter": "Kazanların gecesi"
+  },
+  {
+   "text": "Bakır kazanlar birer birer meydana taşındı. Ve sonra, yere devrildi.",
+   "type": "bt_vh_kazan",
+   "visual": "Gece meydanı: arkada uzun alçak kışla duvarı ve çatısı, iki yanda meşale; önde sıra halinde beş bakır yeniçeri kazanı; 'devrildi'de kazanlar soldan sağa birer birer yana devrilir, önlerinde altın bir döküntü yayılır",
+   "params": {
+    "mode": "row"
+   },
+   "cues": {
+    "hit": "devrildi"
+   }
+  },
+  {
+   "text": "O ses, şehrin bildiği bir sesti. Yeniçeriler isyan etmişti.",
+   "type": "bt_vh_kazan",
+   "visual": "Yakın plan: geriye yuvarlanmış tek büyük bakır kazan, karanlık ağzı izleyiciye dönük, kulpları ve bantları altın; ağzından yere akan altın çorba ve yayılan döküntü, yanında sönmekte olan küçük köz, son buhar telleri",
+   "params": {
+    "mode": "fallen"
+   }
+  },
+  {
+   "text": "Yüzyıllar boyunca bu ses, sultanları bile titretmişti.",
+   "type": "bt_vh_throne",
+   "visual": "Karanlık salonda iki basamaklı kaide üstünde boş bir Osmanlı tahtı (kemerli sırt, tepede altın alem, kırmızı minder), yukarıdan inen ışık hüzmesinde yavaşça yükselen toz zerreleri",
+   "params": {
+    "mode": "lit"
+   }
+  },
+  {
+   "text": "Ama bu kez, sarayda onları bekleyen biri vardı.",
+   "type": "bt_vh_saray",
+   "visual": "Gece saray silueti: uzun duvar, küçük kubbeler, sivri külah bacalar, ayın ışığı; ortadaki tek kemerli pencere altın renkte yanar ve içinde yüzsüz, ayakta duran tek bir siluet belirir",
+   "params": {
+    "mode": "window"
+   }
+  },
+  {
+   "text": "Dört yüz yıllık bir ordu, nasıl oldu da tek bir günde yok oldu?",
+   "type": "bt_text",
+   "visual": "Boş koyu zeminde ışık havuzunun ortasında önce ince 'dört yüz yıl', sonra altın renkte 'tek bir gün'",
+   "params": {
+    "lines": [
+     {
+      "text": "dört yüz yıl",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "tek bir gün",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "yıllık",
+    "c2": "günde"
+   }
+  },
+  {
+   "text": "Ocak, on dördüncü yüzyılda, sultanın kendi askeri olarak kuruldu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Kazan', altında italik 'Yeniçeri Ocağı'",
+   "params": {
+    "n": "I",
+    "title": "Kazan",
+    "sub": "Yeniçeri Ocağı"
+   },
+   "chapter": "Kazan"
+  },
+  {
+   "text": "Hayatları bir mutfağın etrafında dönüyordu. Birliklerine orta, komutanlarına çorbacı denirdi.",
+   "type": "bt_vh_kazan",
+   "visual": "Işık havuzunda, alçak ateşin üstünde ayakları üzerinde duran tek büyük bakır kazan, kazandan buhar telleri yükselir; 'orta'da solda italik 'orta', 'çorbacı'da sağda altın italik 'çorbacı' belirir",
+   "params": {
+    "mode": "one",
+    "labels": [
+     {
+      "text": "orta",
+      "at": "orta",
+      "x": 430,
+      "y": 430
+     },
+     {
+      "text": "çorbacı",
+      "at": "corba",
+      "x": 1490,
+      "y": 430,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "orta": "orta",
+    "corba": "çorbacı"
+   }
+  },
+  {
+   "text": "Börklerinin önünde bir kaşık taşırlardı.",
+   "type": "bt_vh_bork",
+   "visual": "Işık havuzunda tek bir yeniçeri börkü: arkaya uzun bir yatırma sarkan beyaz keçe külah, önünde dikey metal kılıf; 'kaşık'ta kılıftaki kaşık altın renge döner ve hafifçe parlar",
+   "cues": {
+    "hit": "kaşık"
+   }
+  },
+  {
+   "text": "Ve her ortanın, kutsal sayılan bir kazanı vardı. Sultanın çorbasını içmek, sadakat demekti. Kazanı devirmek ise o sadakatin bittiği anlamına geliyordu.",
+   "type": "bt_vh_kazan",
+   "visual": "Ateş üstündeki tek bakır kazan, ağzı ve buharı görünür; 'sadakat'te sağda altın italik 'sadakat' belirir; 'devirmek'te kazan yavaşça geriye yuvarlanır, karanlık ağzı izleyiciye döner, içinden altın çorba yere akar, ateş küçülür",
+   "params": {
+    "mode": "tip",
+    "labels": [
+     {
+      "text": "sadakat",
+      "at": "s",
+      "x": 1500,
+      "y": 380,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "s": "sadakat",
+    "hit": "devirmek"
+   }
+  },
+  {
+   "text": "Zamanla ocak değişti. Yeniçeriler evlendi, dükkân açtı, esnaf oldu. Cephede değil, sokakta güçlüydüler.",
+   "type": "bt_vh_dukkan",
+   "visual": "Alacakaranlıkta küçük bir dükkân: tahta sundurma, açık tezgâhın üstünde küçük bakır kaplar, içeride oturan yüzsüz bir esnaf silueti, asılı lamba yavaşça yanar; önde arnavut kaldırımı"
+  },
+  {
+   "text": "Ve öfkelendiklerinde, bir sultanı tahtından indirebiliyorlardı. Ama bunun bedelini en ağır biçimde, bir sultan ödeyecekti.",
+   "type": "bt_text",
+   "visual": "Boş koyu zeminde ince italik 'sultanı bile', sonra altın büyük 'tahtından'",
+   "params": {
+    "lines": [
+     {
+      "text": "sultanı bile",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "tahtından",
+      "at": "c2",
+      "accent": true,
+      "size": 170
+     }
+    ]
+   },
+   "cues": {
+    "c1": "sultanı",
+    "c2": "tahtından"
+   }
+  },
+  {
+   "text": "Ve her şey, 1807'de başladı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'II', ince çizgi, büyük ince 'Son şehzade', altında italik '1807–1808'",
+   "params": {
+    "n": "II",
+    "title": "Son şehzade",
+    "sub": "1807–1808"
+   },
+   "chapter": "Son şehzade"
+  },
+  {
+   "text": "Üçüncü Selim, Avrupa usulü yeni bir ordu kurmuştu: Nizam-ı Cedid. Yeniçeriler bu orduda kendi sonlarını gördü.",
+   "type": "bt_vh_drill",
+   "visual": "Açık talim alanı, alçak ufuk ışığı; omzunda tüfek, başında küçük başlık olan yüzsüz asker siluetleri dümdüz bir sıra halinde birer birer belirir ve sıra çok yavaşça ileri yürür; 'Nizam'da sıranın üstünde altın italik 'Nizam-ı Cedid'",
+   "params": {
+    "n": 7,
+    "hat": "cap",
+    "label": "Nizam-ı Cedid"
+   },
+   "cues": {
+    "hit": "Nizam"
+   }
+  },
+  {
+   "text": "Ayaklandılar. Selim tahtını kaybetti.",
+   "type": "bt_vh_throne",
+   "visual": "Boş taht ışık hüzmesinde; ışık yavaşça söner",
+   "params": {
+    "mode": "fade"
+   }
+  },
+  {
+   "text": "Bir yıl sonra Alemdar Mustafa Paşa, onu geri getirmek için askerleriyle İstanbul'a yürüdü.",
+   "type": "bt_map",
+   "visual": "Balkanlar ve Karadeniz'in batısı: Tuna kıyısında 'Rusçuk' noktası, sonra 'İstanbul' noktası yanar, aralarında altın bir yürüyüş rotası çizilir",
+   "params": {
+    "bounds": [
+     21,
+     39.5,
+     32,
+     45.5
+    ],
+    "points": [
+     {
+      "lon": 25.97,
+      "lat": 43.85,
+      "label": "Rusçuk",
+      "at": "Alemdar"
+     },
+     {
+      "lon": 28.98,
+      "lat": 41.01,
+      "label": "İstanbul",
+      "sub": "1808",
+      "at": "İstanbul'a"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "yürüdü"
+     ]
+    ]
+   },
+   "cues": {
+    "Alemdar": "Alemdar",
+    "İstanbul'a": "İstanbul'a",
+    "yürüdü": "askerleriyle"
+   }
+  },
+  {
+   "text": "Ama saraya girdiğinde geç kalmıştı. Selim, öldürülmüştü.",
+   "type": "bt_vh_saray",
+   "visual": "Gece sarayın iki kuleli kapısı: sivri külahlı iki kule, aralarında kemerli kapı; kapının içindeki altın ışık 'öldürülmüştü'de yavaşça söner",
+   "params": {
+    "mode": "gate"
+   },
+   "cues": {
+    "hit": "öldürülmüştü"
+   }
+  },
+  {
+   "text": "Katiller bir şehzadeyi daha arıyordu: Selim'in kuzeni Mahmud'u. Rivayete göre bir cariye, katillerin yüzüne kül attı. Mahmud damlardan kaçtı ve kurtuldu.",
+   "type": "bt_vh_saray",
+   "visual": "Gece saray damları: kubbeler ve külah bacalar; kamera dama yaklaşmış; eğilmiş yüzsüz bir siluet dam çizgisi boyunca soldan sağa yavaşça ilerler; soldaki pencerenin lamba ışığı söner",
+   "params": {
+    "mode": "roof"
+   },
+   "camera": {
+    "focus": [
+     760,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "text": "Mahmud aynı gün tahta çıktı. Ama birkaç ay sonra yeniçeriler, sadrazam Alemdar'ın konağını kuşattı. Alemdar, mahzendeki barutu ateşledi.",
+   "type": "bt_vh_konak",
+   "visual": "Gece iki katlı ahşap konak, çevresinde yerde küçük meşaleler; 'ateşledi'de konağın alt kenarından derin altın bir ışık parlar, konak karanlığa çekilir, yavaşça duman yükselir",
+   "cues": {
+    "hit": "ateşledi"
+   }
+  },
+  {
+   "text": "Aynı günlerde Mahmud, ağabeyi Dördüncü Mustafa'nın öldürülmesini emretti.",
+   "type": "bt_vh_tree",
+   "visual": "Hanedan ağacı: yukarıdan inen uzun soluk ata zinciri, iki dala ayrılır; altta üç düğüm 'Selim', 'Mustafa', 'Mahmud'; Selim zaten sönük, 'emretti'de Mustafa da kararır; Mahmud'un çevresinde hafif ışık",
+   "params": {
+    "mode": "fall"
+   },
+   "cues": {
+    "m": "öldürülmesini"
+   }
+  },
+  {
+   "text": "Ve 1808'in sonunda Mahmud, Osmanlı hanedanının hayatta kalan tek erkek üyesiydi.",
+   "type": "bt_vh_tree",
+   "visual": "Aynı hanedan ağacı; Selim ve Mustafa sönük; 'tek'te ata zinciri yukarıdan aşağı altın renge döner ve altın çizgi Mahmud'a iner, Mahmud'un düğümü ve adı altın yanar",
+   "params": {
+    "mode": "one"
+   },
+   "cues": {
+    "hit": "tek"
+   }
+  },
+  {
+   "text": "Onu öldürmek, beş yüz yıllık bir hanedanı bitirmek demekti. Mahmud bunu biliyordu. Ama acele etmedi, sessizce bekledi.",
+   "type": "bt_vh_saray",
+   "visual": "Gece saray silueti; ortadaki tek pencere altın yanar, içinde ayakta duran yüzsüz siluet; kamera pencereye yavaşça yaklaşır",
+   "params": {
+    "mode": "window"
+   },
+   "camera": {
+    "focus": [
+     1090,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "text": "Tam on sekiz yıl. Mahmud bu yılları sabırla, adım adım bir hazırlığa çevirdi.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'III', ince çizgi, büyük ince 'On sekiz yıl', altında italik '1808–1826'",
+   "params": {
+    "n": "III",
+    "title": "On sekiz yıl",
+    "sub": "1808–1826"
+   },
+   "chapter": "On sekiz yıl"
+  },
+  {
+   "text": "Bu yıllarda yeniçerilere değil, onların sevmediği ocaklara yaklaştı: topçulara, humbaracılara.",
+   "type": "bt_vh_top",
+   "visual": "Işık havuzunda tek bir tunç top, tekerlekli kundağıyla yandan; 'topçulara'da namlu boyunca ince altın bir ışık çizgisi akar",
+   "params": {
+    "mode": "still"
+   },
+   "cues": {
+    "hit": "topçulara"
+   }
+  },
+  {
+   "text": "Sadık adamlarını, ocağın tam içinde yükseltti. Ağa Hüseyin Paşa bunlardan biriydi.",
+   "type": "bt_vh_bork",
+   "visual": "Yan yana yedi yeniçeri börkü; 'Hüseyin'de ortadaki börkün kenarı altın yanar, ötekiler kararır, üstünde altın italik 'Ağa Hüseyin Paşa'",
+   "params": {
+    "mode": "many",
+    "label": "Ağa Hüseyin Paşa"
+   },
+   "cues": {
+    "hit": "Hüseyin"
+   }
+  },
+  {
+   "text": "Sonra Mora'daki isyan, yıllarca bastırılamadı. Mısır'dan gelen düzenli askerler, ocağın yapamadığını yaptı.",
+   "type": "bt_map",
+   "visual": "Doğu Akdeniz haritası: 'Mora' noktası yanar, sonra 'Mısır' noktası; 'düzenli'de Mısır'dan Mora'ya deniz üstünden altın bir rota çizilir",
+   "params": {
+    "bounds": [
+     19,
+     29.5,
+     34,
+     41.5
+    ],
+    "points": [
+     {
+      "lon": 22.2,
+      "lat": 37.5,
+      "label": "Mora",
+      "at": "Mora'daki"
+     },
+     {
+      "lon": 29.9,
+      "lat": 31.2,
+      "label": "Mısır",
+      "at": "Mısır'dan"
+     }
+    ],
+    "routes": [
+     [
+      1,
+      0,
+      "düzenli"
+     ]
+    ]
+   },
+   "cues": {
+    "Mora'daki": "Mora'daki",
+    "Mısır'dan": "Mısır'dan",
+    "düzenli": "düzenli"
+   }
+  },
+  {
+   "text": "Ve Mayıs 1826'nın son günlerinde, yeni bir karar okundu.",
+   "type": "bt_vh_ferman",
+   "visual": "Lamba ışığında koyu masada uzun tek bir ferman kâğıdı; satırlar sırayla kendini yazar; 'karar'da sayfanın üstünde altın tuğra kendini çizer",
+   "params": {
+    "mode": "read"
+   },
+   "cues": {
+    "hit": "karar"
+   }
+  },
+  {
+   "text": "Her ortadan yüz elli asker seçilecek, Avrupa usulü talim yapacaktı. Adları Eşkinciydi.",
+   "type": "bt_vh_drill",
+   "visual": "Talim alanında sola dönük, aralıklı, daha iri dört asker silueti (omzunda tüfek) birer birer belirir ve yavaşça sola ilerler; 'Eşkinciydi'de üstte altın italik 'Eşkinci'",
+   "params": {
+    "n": 4,
+    "hat": "cap",
+    "label": "Eşkinci",
+    "dir": -1,
+    "gap": 260,
+    "h": 380
+   },
+   "cues": {
+    "hit": "Eşkinciydi"
+   }
+  },
+  {
+   "text": "Ocağın subayları bile kararı imzaladı. Ama Haziran'da Et Meydanı'nda talimler başlayınca, kazanlar meydana çıktı.",
+   "type": "bt_vh_kazan",
+   "visual": "Gece meydanı, arkada uzun kışla duvarı, iki yanda meşale; bakır kazanlar birer birer meydana taşınır ve sıra halinde durur",
+   "params": {
+    "mode": "out"
+   }
+  },
+  {
+   "text": "O gece İstanbul'da kimse uyumadı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'IV', ince çizgi, büyük ince 'Et Meydanı', altında italik '15 Haziran 1826'",
+   "params": {
+    "n": "IV",
+    "title": "Et Meydanı",
+    "sub": "15 Haziran 1826"
+   },
+   "chapter": "Et Meydanı"
+  },
+  {
+   "text": "Yeniçeriler şehre dağıldı. Ağa kapısını bastılar, yeni düzenin adamlarını aradılar.",
+   "type": "bt_vh_saray",
+   "visual": "Gece, iki kuleli büyük kapı (Ağa kapısı), kapı aralığında altın ışık; 'Ağa'da iki yandan elinde meşale taşıyan yüzsüz siluetler kapının önüne doğru yavaşça toplanır, yerde altın ışık büyür",
+   "params": {
+    "mode": "gate",
+    "raid": true
+   },
+   "cues": {
+    "hit": "Ağa"
+   }
+  },
+  {
+   "text": "Ama sabah olduğunda, Topkapı'nın en kutsal odası açıldı.",
+   "type": "bt_vh_sancak",
+   "visual": "Karanlıkta eski bir sandık; 'Topkapı'da kapağı yavaşça kalkar, içindeki katlanmış altın kumaş parlar, yukarı ince ışık çizgileri yükselir",
+   "params": {
+    "mode": "chest"
+   },
+   "cues": {
+    "hit": "Topkapı'nın"
+   }
+  },
+  {
+   "text": "İçinden Peygamber'in sancağı, Sancak-ı Şerif çıkarıldı ve Sultanahmet Camii'nin minberine dikildi.",
+   "type": "bt_vh_sancak",
+   "visual": "Caminin içinde ışık hüzmesinde basamaklı minber ve külahlı köşkü; 'minberine'de minberin tepesinde direğe bağlı altın bir sancak yavaşça yükselir",
+   "params": {
+    "mode": "minber"
+   },
+   "cues": {
+    "hit": "minberine"
+   }
+  },
+  {
+   "text": "Tellallar halkı sancağın altına çağırdı. Sarayın cephaneliğinden silah dağıtıldı.",
+   "type": "bt_vh_crowd",
+   "visual": "Şafak: altı minareli büyük caminin silueti, kubbeler; önündeki meydanda yüzsüz baş siluetlerinden sıralar ortadan kenarlara doğru yavaşça toplanır, gökyüzü yavaşça aydınlanır",
+   "cues": {
+    "hit": "halkı"
+   }
+  },
+  {
+   "text": "Artık bu bir askerin isyanı değildi. Sancağa karşı bir başkaldırıydı.",
+   "type": "bt_text",
+   "visual": "Boş koyu zeminde ince italik 'isyan değil', sonra altın 'sancağa karşı'",
+   "params": {
+    "lines": [
+     {
+      "text": "isyan değil",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "sancağa karşı",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "isyanı",
+    "c2": "Sancağa"
+   }
+  },
+  {
+   "text": "Topçular Et Meydanı'na yürüdü. Yeniçeriler kışlaya çekilip kapıları kapadı.",
+   "type": "bt_vh_kisla",
+   "visual": "Gece Et Meydanı kışlası: iki katlı uzun bina, sıra sıra yanan pencereler, ortada kemerli kapı; 'kapadı'da iki kanatlı kapı kapanır ve pencerelerin ışığı birer birer söner",
+   "params": {
+    "mode": "closed"
+   },
+   "cues": {
+    "hit": "kışlaya"
+   }
+  },
+  {
+   "text": "Ve toplar ateş açtı.",
+   "type": "bt_vh_top",
+   "visual": "Işık havuzunda yandan tunç top; fitilde küçük kıvılcım; 'ateş'te namlunun ağzında altın bir parlama, sonra yavaşça sağa yuvarlanan duman",
+   "params": {
+    "mode": "fire"
+   },
+   "cues": {
+    "hit": "ateş"
+   }
+  },
+  {
+   "text": "Kışla yandı. İçeride kalanların çoğu kurtulamadı.",
+   "type": "bt_vh_kisla",
+   "visual": "Aynı kışla; çatısında yavaşça büyüyen alevler, yükselen ağır duman sütunları, pencerelerde kızıl ışık, gökyüzüne yayılan kızıl ışık",
+   "params": {
+    "mode": "fire"
+   }
+  },
+  {
+   "text": "O gün kaç kişinin öldüğünü bugün kimse kesin bilmiyor. Kaynaklar yalnızca binlerce diyor.",
+   "type": "bt_vh_city",
+   "visual": "Suyun üstünde şehrin silueti; şehrin ortasından koyu bir duman sütunu yavaşça göğe yükselir, altında kızıl bir ışık, suda kızıl yansımalar",
+   "params": {
+    "mode": "smoke"
+   },
+   "cues": {
+    "hit": "binlerce"
+   }
+  },
+  {
+   "text": "Birkaç gün sonra bir ferman okundu. Yeniçeri Ocağı, kaldırılmıştı.",
+   "type": "bt_vh_ferman",
+   "visual": "Lamba ışığında tek bir ferman; tuğra en başta altın, satırlar kendini yazar; 'kaldırılmıştı'da son satırın altına altın bir çizgi çekilir, öteki satırlar söner",
+   "params": {
+    "mode": "seal"
+   },
+   "cues": {
+    "hit": "kaldırılmıştı"
+   }
+  },
+  {
+   "text": "Saray bu güne bir ad verdi: Vaka-i Hayriye. Yani hayırlı olay. Ama kimin için hayırlıydı?",
+   "type": "bt_text",
+   "visual": "Boş koyu zeminde büyük 'Vaka-i Hayriye', altında altın italik 'hayırlı olay'",
+   "params": {
+    "lines": [
+     {
+      "text": "Vaka-i Hayriye",
+      "at": "c1",
+      "size": 130
+     },
+     {
+      "text": "hayırlı olay",
+      "at": "c2",
+      "italic": true,
+      "accent": true,
+      "size": 110
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Vaka",
+    "c2": "hayırlı"
+   }
+  },
+  {
+   "text": "Sonra, uzun bir av başladı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'V', ince çizgi, büyük ince 'Hayırlı olay', altında italik '1826–1829'",
+   "params": {
+    "n": "V",
+    "title": "Hayırlı olay",
+    "sub": "1826–1829"
+   },
+   "chapter": "Hayırlı olay"
+  },
+  {
+   "text": "Kaçanlar aylarca arandı. Binlercesi sürgüne gönderildi.",
+   "type": "bt_vh_road",
+   "visual": "Alacakaranlıkta ufka uzanan tek bir toprak yol; öne yakın iri, uzakta küçülen yüzsüz siluetlerden bir kolon yolda yavaşça uzaklaşır",
+   "cues": {
+    "hit": "sürgüne"
+   }
+  },
+  {
+   "text": "Ocakla bağı olan Bektaşi tekkeleri kapatıldı. Yüzyıllık bir ağ, birkaç hafta içinde sustu.",
+   "type": "bt_vh_tekke",
+   "visual": "Alacakaranlıkta iki selvi arasında küçük kubbeli bir tekke; açık kapıdan sıcak ışık dökülür; 'kapatıldı'da kapı kapanır, ışık söner ve kapının önüne ince altın bir sürgü çizilir",
+   "cues": {
+    "hit": "kapatıldı"
+   }
+  },
+  {
+   "text": "Yerine yeni bir ordu kuruldu: Asakir-i Mansure-i Muhammediye. Ama bir ordu tek günde yıkılabilir. Yenisini kurmak ise yıllar ister.",
+   "type": "bt_vh_drill",
+   "visual": "Talim alanında kırmızı fesli, omzunda tüfekli yüzsüz asker siluetleri seyrek bir sıra halinde birer birer belirir, sıra yavaşça ilerler; üstte altın italik 'Asakir-i Mansure'",
+   "params": {
+    "n": 5,
+    "hat": "fez",
+    "label": "Asakir-i Mansure"
+   },
+   "cues": {
+    "hit": "kuruldu"
+   }
+  },
+  {
+   "text": "İki yıl sonra Rusya ile savaş başladı. Yeni ordu henüz hazır değildi. 1829'da Rus ordusu Edirne'ye kadar geldi.",
+   "type": "bt_map",
+   "visual": "Balkanlar haritası: 'Tuna' kıyısında bir nokta, 'Edirne' noktası ve 'İstanbul'; 'Edirne'de kuzeyden Edirne'ye uzanan altın bir rota çizilir",
+   "params": {
+    "bounds": [
+     21,
+     39.5,
+     32,
+     45.5
+    ],
+    "points": [
+     {
+      "lon": 27.0,
+      "lat": 44.1,
+      "label": "Tuna",
+      "at": "Rusya"
+     },
+     {
+      "lon": 26.56,
+      "lat": 41.68,
+      "label": "Edirne",
+      "at": "Edirne'ye"
+     },
+     {
+      "lon": 28.98,
+      "lat": 41.01,
+      "label": "İstanbul",
+      "at": "hazır"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "Edirne'ye"
+     ]
+    ]
+   },
+   "cues": {
+    "Rusya": "Rusya",
+    "hazır": "hazır",
+    "Edirne'ye": "Edirne'ye"
+   }
+  },
+  {
+   "text": "Yine de Mahmud geri dönmedi. Ordu, okul, kıyafet, devlet. Her şey o günden sonra yavaş yavaş değişti.",
+   "type": "bt_vh_bork",
+   "visual": "Solda yeniçeri börkü ışık havuzunda; 'kıyafet'te börk geriye solar, sağda sade kırmızı bir fes ve altın püskülü kendini çizer",
+   "params": {
+    "mode": "fez"
+   },
+   "cues": {
+    "hit": "kıyafet"
+   }
+  },
+  {
+   "text": "Dört yüz yıllık bir ordu nasıl tek günde yok oldu? Cevap o günde değil, ondan önceki on sekiz yıldaydı.",
+   "type": "bt_text",
+   "visual": "Boş koyu zeminde ince italik 'tek bir gün değil', sonra altın 'on sekiz yıl'",
+   "params": {
+    "lines": [
+     {
+      "text": "tek bir gün değil",
+      "at": "c1",
+      "italic": true,
+      "size": 110
+     },
+     {
+      "text": "on sekiz yıl",
+      "at": "c2",
+      "italic": true,
+      "accent": true,
+      "size": 160
+     }
+    ]
+   },
+   "cues": {
+    "c1": "ordu",
+    "c2": "sekiz"
+   }
+  },
+  {
+   "text": "Bir sultan susarak bekledi. Kazanların bir gün yine devrileceğini biliyordu. Ve o gün geldiğinde, topları hazırdı.",
+   "type": "bt_vh_top",
+   "visual": "Kararan ışıkta yandan tek tunç top; namlu boyunca ince altın ışık çizgisi akar, ışık havuzu yavaşça kısılır",
+   "params": {
+    "mode": "dusk"
+   },
+   "camera": {
+    "focus": [
+     1000,
+     560
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "text": "Sizce Vaka-i Hayriye gerçekten hayırlı bir olay mıydı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_vh_kazan",
+   "visual": "Karanlıkta yere yan yatmış tek bakır kazan, kulpları altın, önünde soğumuş altın döküntü; buhar yok, sadece yavaş nefes alan ışık havuzu",
+   "params": {
+    "mode": "fallen",
+    "cold": true
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Vaka-i Hayriye: 400 Yıllık Ordu Tek Günde Nasıl Yok Oldu?",
+  "description": "Vaka-i Hayriye, dört yüz yılı aşkın Yeniçeri Ocağı'nın Haziran 1826'da tek bir günde sona erdiği olaydır. Et Meydanı'nda kazanlar devrildi, Sancak-ı Şerif çıkarıldı ve toplar kışlaya ateş açtı.\n\nII. Mahmud bu güne on sekiz yıl hazırlandı. III. Selim'in ve Nizam-ı Cedid'in sonu, Alemdar Mustafa Paşa, hanedanın hayatta kalan tek erkek üyesi olarak geçen yıllar ve Eşkinci kararı: yeniçerilerin kaldırılmasını sakin bir belgesel diliyle anlatıyoruz.\n\nBu videoda:\n• Yeniçeriler için kazan neden kutsaldı, kazan kaldırmak ne demekti?\n• II. Mahmud 1808'de ölümden nasıl kurtuldu?\n• Eşkinci ocağı neden son kıvılcım oldu?\n• 15 Haziran 1826'da Et Meydanı'nda ne oldu?\n• Asakir-i Mansure-i Muhammediye 1828–29 savaşına neden hazır değildi?\n\nHer gün yeni bir 'neden?' için abone ol. Sence Vaka-i Hayriye gerçekten hayırlı bir olay mıydı? Yorumlara yaz!\n\n#vakaihayriye #yeniçeriocağı #osmanlıtarihi #tarih #düşünbakalım",
+  "tags": [
+   "vaka-i hayriye",
+   "vaka-i hayriye nedir",
+   "yeniçeri ocağı",
+   "yeniçeri ocağının kaldırılması",
+   "yeniçeri neden kaldırıldı",
+   "ii. mahmud",
+   "et meydanı",
+   "sancak-ı şerif",
+   "nizam-ı cedid",
+   "alemdar mustafa paşa",
+   "asakir-i mansure",
+   "vaka-i hayriye 1826",
+   "vaka-i hayriye olayı",
+   "osmanlı tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-02T20:30:00+03:00"
+ }
+}
