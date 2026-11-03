@@ -1,0 +1,659 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "stomach-window",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "Hole in",
+   "his stomach"
+  ],
+  "highlight": [
+   "hole"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": false,
+  "focus": [
+   560,
+   1150
+  ],
+  "zoom": 1.2
+ },
+ "sources": [
+  {
+   "title": "Science History Institute — Probing the Mysteries of Human Digestion",
+   "url": "https://www.sciencehistory.org/stories/magazine/probing-the-mysteries-of-human-digestion"
+  },
+  {
+   "title": "Wikipedia — William Beaumont",
+   "url": "https://en.wikipedia.org/wiki/William_Beaumont"
+  },
+  {
+   "title": "Wikipedia — Alexis St. Martin",
+   "url": "https://en.wikipedia.org/wiki/Alexis_St._Martin"
+  }
+ ],
+ "youtube": {
+  "title": "Alexis St. Martin: The Man With a Hole Into His Stomach",
+  "description": "Alexis St. Martin had a hole into his stomach, and a doctor lowered food into it on a silk string. In 1822 a musket went off by accident in a fur trading store on Mackinac Island and hit the young voyageur at close range.\n\nArmy surgeon William Beaumont saved his life, but the wound healed into a permanent opening. Over about 200 experiments, Beaumont showed that digestion is chemical: gastric juice is acid, and it dissolves food instead of grinding it. His book came out in 1833. St. Martin hated being a test subject and fled home to Canada more than once.\n\nSubscribe to Stickstory for a true story like this every day. Would you have let a doctor study you like that? Tell me in the comments!\n\n#shorts #alexisstmartin #digestion #stickstory",
+  "tags": [
+   "alexis st martin",
+   "alexis st martin stomach",
+   "alexis st martin story",
+   "william beaumont",
+   "william beaumont experiments",
+   "gastric fistula",
+   "hole in stomach",
+   "how digestion works",
+   "stomach acid",
+   "gastric juice",
+   "history of medicine",
+   "weird history",
+   "mackinac island",
+   "human body",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-03T19:00:00-05:00",
+  "related": "videos/2026-10-24/ag-04-phineas-gage.json"
+ },
+ "scenes": [
+  {
+   "type": "sw_room",
+   "text": "This man had a hole in his stomach.",
+   "visual": "Hook frame in a plain 1820s room: young St. Martin stands big on the left, side-on, blue cap, uneasy face, shirt hanging open; on his left side under the ribs a round gauze pad with a small dark round opening into his stomach, a red ring pulsing round it on 'hole'; the fez host stands big on the right in shock (wide eyes, open mouth), arm stretched out, a silk string running from his hand to a chunk of meat that hangs just above the hole.",
+   "title": {
+    "white": "1822"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1766
+   },
+   "cues": {
+    "hole": "hole"
+   },
+   "params": {
+    "mode": "bare",
+    "gy": 0.92,
+    "cast": [
+     {
+      "who": "stmartin",
+      "hat": false,
+      "accessory": "beret",
+      "x": 0.32,
+      "y": 0.92,
+      "scale": 1.9,
+      "pose": "idle",
+      "face": "right",
+      "emotion": "worried",
+      "shirt": true,
+      "patch": {
+       "open": true,
+       "ring": "hole",
+       "r": 30,
+       "hole": 13
+      }
+     },
+     {
+      "x": 0.74,
+      "y": 0.92,
+      "scale": 1.7,
+      "pose": "point",
+      "dir": 32,
+      "face": "left",
+      "emotion": "surprised",
+      "gasp": true,
+      "string": {
+       "hand": 1,
+       "to": [
+        0.4,
+        0.615
+       ],
+       "food": [
+        "meat"
+       ],
+       "s": 1.35
+      }
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sw_island",
+   "text": "In 1822, a musket went off,",
+   "visual": "Mackinac Island from the shore: Fort Mackinac's white walls, blockhouse and waving flag on a green bluff to the right, the fur company's log store with a smoking chimney on the left; on 'musket' a big gold muzzle flash bursts from the store door and a cloud of smoke rolls out; hand label 'MACKINAC ISLAND' and red box '1822'.",
+   "title": {
+    "white": "Mackinac Island"
+   },
+   "source": "Science History Institute",
+   "set": {
+    "name": "coast",
+    "ground": 1150,
+    "horizon": 880
+   },
+   "cues": {
+    "yr": "1822",
+    "fired": "musket"
+   },
+   "params": {
+    "gy": 0.6,
+    "fort": {
+     "x": 0.72,
+     "y": 0.47,
+     "s": 0.95
+    },
+    "store": {
+     "x": 0.3,
+     "s": 1.05
+    },
+    "shot": {
+     "at": "fired",
+     "size": 1.8,
+     "dur": 0.7
+    },
+    "labels": [
+     {
+      "text": "1822",
+      "x": 0.3,
+      "y": 0.26,
+      "at": "yr",
+      "size": 96,
+      "color": "red",
+      "stamp": true,
+      "rot": -4
+     },
+     {
+      "text": "MACKINAC ISLAND",
+      "x": 0.5,
+      "y": 0.78,
+      "at": 0.3,
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "rot": -2
+     }
+    ]
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "sw_room",
+   "text": "and hit fur trader Alexis St. Martin.",
+   "visual": "Inside the fur company store: shelves of fur bundles and striped blanket stacks, a long counter with a musket on it that flashes and smokes; fur trader St. Martin (blue cap) is knocked back in shock on 'hit', smoke drifting past him; a keg and a crate in front; red box 'ALEXIS ST. MARTIN'.",
+   "title": {
+    "white": "The store"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "hit": "hit",
+    "nm": "Alexis"
+   },
+   "params": {
+    "mode": "store",
+    "gy": 0.6,
+    "musket": {
+     "x": 0.7,
+     "y": 0.475,
+     "at": 0,
+     "drift": [
+      90,
+      -230
+     ],
+     "smoke": 0.9
+    },
+    "cast": [
+     {
+      "who": "stmartin",
+      "hat": false,
+      "accessory": "beret",
+      "x": 0.3,
+      "y": 0.6,
+      "scale": 1.15,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "shock",
+        "face": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "ALEXIS ST. MARTIN",
+      "x": 0.52,
+      "y": 0.2,
+      "at": "nm",
+      "size": 72,
+      "color": "red",
+      "stamp": true,
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sw_room",
+   "text": "William Beaumont saved him, but the wound never closed.",
+   "visual": "A doctor's room: bottle shelf, framed certificate, a hanging oil lamp; St. Martin sits with a bandage on his side while Dr. Beaumont stands and points at it; on 'closed' a small round dark window opens in the bandage, a red ring pulses round it, red box 'STILL OPEN' with an arrow; front table with a doctor's bag, a bowl and a flickering candle.",
+   "title": {
+    "white": "The doctor"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "doc": "Beaumont",
+    "closed": "closed"
+   },
+   "params": {
+    "mode": "clinic",
+    "gy": 0.6,
+    "cast": [
+     {
+      "who": "stmartin",
+      "hat": false,
+      "accessory": "beret",
+      "x": 0.3,
+      "y": 0.6,
+      "scale": 1.15,
+      "pose": "sit",
+      "face": "right",
+      "emotion": "worried",
+      "patch": {
+       "open": "closed",
+       "ring": "closed"
+      }
+     },
+     {
+      "who": "beaumont",
+      "hat": false,
+      "x": 0.68,
+      "y": 0.6,
+      "scale": 1.15,
+      "pose": "talk",
+      "face": "left",
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "closed",
+        "pose": "point",
+        "dir": -10,
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Dr. Beaumont",
+      "x": 0.74,
+      "y": 0.19,
+      "at": "doc",
+      "size": 66,
+      "color": "ink",
+      "font": "hand",
+      "rot": -2
+     },
+     {
+      "text": "STILL OPEN",
+      "x": 0.5,
+      "y": 0.28,
+      "at": "closed",
+      "size": 80,
+      "color": "red",
+      "stamp": true,
+      "rot": -4,
+      "arrow": [
+       0.33,
+       0.47
+      ]
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "sw_belly",
+   "text": "So he tied food to a silk string,",
+   "visual": "Close-up of St. Martin's healed side: the open shirt hangs on both sides of a round gauze pad round a small round opening, the shirt hem and trousers at the bottom; a hand in a blue army-coat cuff with gold buttons holds a hanging silk string above it; a chunk of meat, a piece of bread and a cabbage leaf pop onto the string one under the other; hand label 'silk string' with an arrow.",
+   "title": {
+    "white": "The string"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "food": "food",
+    "silk": "silk",
+    "str": "string"
+   },
+   "params": {
+    "win": [
+     0.44,
+     0.516
+    ],
+    "r": 40,
+    "lower": 20,
+    "food": [
+     {
+      "kind": "meat",
+      "at": "food"
+     },
+     {
+      "kind": "bread",
+      "at": "silk"
+     },
+     {
+      "kind": "leaf",
+      "at": "str"
+     }
+    ],
+    "labels": [
+     {
+      "text": "silk string",
+      "x": 0.64,
+      "y": 0.47,
+      "at": "silk",
+      "size": 70,
+      "color": "ink",
+      "font": "hand",
+      "rot": -4,
+      "arrow": [
+       0.48,
+       0.45
+      ]
+     }
+    ],
+    "hand_y": 0.39,
+    "food_s": 0.62,
+    "gap": 0.34,
+    "hem": true,
+    "trousers": 0.62,
+    "flaps": true
+   },
+   "camera": {
+    "focus": [
+     540,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sw_cut",
+   "text": "dropped it in, and pulled it out hours later.",
+   "visual": "A cut-away of the body side: the skin line on the left, ribs at the top, a big J-shaped stomach with folds and the short tunnel through the wall; on 'dropped' the string slides the meat, bread and leaf through the tunnel into the stomach; on 'hours' the hands of a clock spin round; on 'pulled' the food comes back out, much smaller.",
+   "title": {
+    "white": "Inside"
+   },
+   "set": false,
+   "cues": {
+    "drop": "dropped",
+    "hours": "hours",
+    "pull": "pulled"
+   },
+   "params": {
+    "mode": "drop",
+    "drop": "drop",
+    "hours": "hours",
+    "pull": "pull",
+    "labels": [
+     {
+      "text": "HOURS LATER",
+      "x": 0.74,
+      "y": 0.39,
+      "at": "hours",
+      "size": 64,
+      "color": "red",
+      "stamp": true,
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "sw_cut",
+   "text": "It wasn't ground up. Acid dissolved it.",
+   "visual": "The same cut-away: on 'ground' a pair of turning millstones beside the stomach gets a big red X; then gold gastric juice pools in the stomach, drops run down the wall and bubbles fizz while the food shrinks away; red box 'ACID'.",
+   "title": {
+    "white": "The secret"
+   },
+   "source": "Beaumont, 1833",
+   "set": false,
+   "cues": {
+    "ground": "ground",
+    "acid": "Acid"
+   },
+   "params": {
+    "mode": "acid",
+    "ground": "ground",
+    "acid": "acid",
+    "labels": [
+     {
+      "text": "ACID",
+      "x": 0.44,
+      "y": 0.27,
+      "at": "acid",
+      "size": 110,
+      "color": "red",
+      "stamp": true,
+      "rot": -5
+     }
+    ],
+    "mill_x": 0.75
+   },
+   "camera": {
+    "focus": [
+     600,
+     760
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sw_island",
+   "text": "St. Martin hated being a test subject and fled to Canada.",
+   "visual": "On the beach by the fur company store: St. Martin sits in a birch-bark canoe on the water with a paddle, a small round patch at his side, angry; on 'Canada' the canoe slides off to the right; Dr. Beaumont is left on the sand holding his notes, worried, then reaches after him; hand label 'to Canada' with an arrow.",
+   "title": {
+    "white": "Test subject"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1150,
+    "horizon": 880
+   },
+   "cues": {
+    "test": "test",
+    "can": "Canada"
+   },
+   "params": {
+    "gy": 0.6,
+    "fort": false,
+    "store": {
+     "x": 0.15,
+     "s": 0.9
+    },
+    "canoe": {
+     "x": 0.55,
+     "to": 0.75,
+     "at": "can",
+     "dur": 1.4,
+     "y": 0.565,
+     "s": 0.85,
+     "rider": {
+      "who": "stmartin",
+      "accessory": "beret",
+      "scale": 0.75,
+      "pose": "sit",
+      "face": "right",
+      "emotion": "angry",
+      "patch": {
+       "open": true
+      }
+     }
+    },
+    "cast": [
+     {
+      "who": "beaumont",
+      "hat": false,
+      "x": 0.32,
+      "y": 0.74,
+      "scale": 1.2,
+      "pose": "hold",
+      "item": "scroll",
+      "face": "right",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "can",
+        "pose": "point",
+        "dir": 15,
+        "face": "right",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "to Canada",
+      "x": 0.7,
+      "y": 0.36,
+      "at": "can",
+      "size": 66,
+      "color": "ink",
+      "font": "hand",
+      "rot": -3,
+      "arrow": [
+       0.9,
+       0.5
+      ]
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "sw_book",
+   "text": "But that hole taught the world how your stomach works.",
+   "visual": "Top view of a desk: Beaumont's 1833 book lies open, a page turns, the left page reads 'GASTRIC JUICE' and '1833', on the right page a stomach sketch with a string draws itself; quill and inkwell, spectacles and a candle around it; gold rings spread out from the book on 'world' (that hole taught the world).",
+   "title": {
+    "white": "The book",
+    "gray": "1833"
+   },
+   "source": "Beaumont, 1833",
+   "set": {
+    "name": "interior",
+    "ground": 576
+   },
+   "cues": {
+    "world": "world"
+   },
+   "params": {
+    "world": "world"
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sw_island",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "The beach below the fort: the fez host stands big and waves, then points at the viewer; the canoe rests on the sand, Fort Mackinac's flag waves on the bluff.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1150,
+    "horizon": 880
+   },
+   "cues": {
+    "s1": "Subscribe",
+    "s2": "story"
+   },
+   "params": {
+    "gy": 0.6,
+    "fort": {
+     "x": 0.74,
+     "y": 0.43,
+     "s": 0.85
+    },
+    "store": false,
+    "canoe": {
+     "x": 0.7,
+     "y": 0.84,
+     "s": 1.05
+    },
+    "cast": [
+     {
+      "x": 0.32,
+      "y": 0.6,
+      "scale": 1.35,
+      "pose": "wave",
+      "face": "right",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "s2",
+        "pose": "point",
+        "dir": 0,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

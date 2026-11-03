@@ -1,0 +1,498 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "velcro",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "A weed",
+   "invented this"
+  ],
+  "highlight": [
+   "weed"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": false,
+  "focus": [
+   530,
+   700
+  ],
+  "zoom": 1.2
+ },
+ "sources": [
+  {
+   "title": "WIPO — From a Mountain Walk to 2,100 Patents: The Velcro IP Story",
+   "url": "https://www.wipo.int/en/web/ip-advantage/w/stories/the-velcro-ip-story"
+  },
+  {
+   "title": "Wikipedia — George de Mestral",
+   "url": "https://en.wikipedia.org/wiki/George_de_Mestral"
+  },
+  {
+   "title": "Live Science — Who Invented Velcro?",
+   "url": "https://livescience.com/34572-velcro.html"
+  }
+ ],
+ "youtube": {
+  "title": "Velcro Invention: How a Weed Stuck on a Dog Started It",
+  "description": "The Velcro invention began with a weed stuck on a dog. Swiss engineer George de Mestral came home from a walk in the Swiss mountains with his dog covered in burdock burrs, and instead of just pulling them off, he put one under a microscope.\n\nHe saw hundreds of tiny hooks that grabbed every loop of fur and thread. So he copied nature: hooks on one strip, loops on the other. Cotton wore out fast, nylon held, it took him years, and he named his hook-and-loop fastener Velcro, from the French velours (velvet) and crochet (hook). And no, NASA did not invent it; astronauts only made it famous.\n\nSubscribe to Stickstory for a true story like this every day. What everyday thing do you think was copied from nature? Tell me in the comments!\n\n#shorts #velcro #inventions #stickstory",
+  "tags": [
+   "velcro invention",
+   "who invented velcro",
+   "velcro history",
+   "how velcro was invented",
+   "george de mestral",
+   "burdock burr",
+   "hook and loop",
+   "biomimicry",
+   "inventions inspired by nature",
+   "accidental inventions",
+   "everyday inventions",
+   "swiss inventions",
+   "origin of everyday things",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-03T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "vc_field",
+   "text": "A weed on a dog invented this.",
+   "visual": "Hook frame in an Alpine meadow under snowy peaks: the fez host stands big in shock (hands up, round 'O' mouth, shock ticks); in his left hand a giant spiky burr whose spikes end in tiny hooks, from his right hand hangs a red hook strip with a blue loop strip half peeled off it; a bold red dashed arrow swings under his arms from the burr to the strap; a sitting dog covered in burrs on the left.",
+   "title": {
+    "white": "Velcro"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1190,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "invented"
+   },
+   "params": {
+    "mode": "hook",
+    "burr": {
+     "r": 92,
+     "at": 0
+    },
+    "strap": {
+     "w": 1,
+     "l": 1
+    },
+    "dog": {
+     "x": 0.13,
+     "s": 1.0,
+     "burrs": 11,
+     "face": 1
+    },
+    "plants": [
+     0.05
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.645,
+     "scale": 1.35,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised"
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_walk",
+   "text": "George de Mestral came home from a walk in the Swiss mountains.",
+   "visual": "Wide shot of the Swiss mountains: snowy peaks, a wooden chalet with a smoking chimney on the right; George de Mestral (hatless, red sweater) stands at the door; his dog runs in from the left past two burdock plants, picks up burrs at each one and sits in front of him; George's hand goes to his head; red card 'SWITZERLAND', hand label 'George de Mestral'.",
+   "title": {
+    "white": "1940s"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1190,
+    "horizon": 960
+   },
+   "cues": {
+    "alps": "Swiss",
+    "name": "George",
+    "arrive": "home"
+   },
+   "params": {
+    "mode": "home",
+    "labels": [
+     {
+      "text": "SWITZERLAND",
+      "x": 0.42,
+      "y": 0.2,
+      "at": "alps",
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "move": "right"
+   }
+  },
+  {
+   "type": "vc_walk",
+   "text": "His dog was covered in burrs.",
+   "visual": "Close-up of the sitting dog with worried brows: one spiky burr after another pops onto its coat, back and head; a burdock plant with burr heads stands on the right, grass in front.",
+   "title": {
+    "white": "The burrs"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1190,
+    "horizon": 960
+   },
+   "cues": {
+    "burrs": "covered"
+   },
+   "params": {
+    "mode": "dog"
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_field",
+   "text": "Most of us pull them off.",
+   "visual": "The fez host stands in the meadow, annoyed, five big burrs stuck on his legs; from 'pull' they fly off one by one in high arcs; burdock plants on both sides.",
+   "title": {
+    "white": "Us"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1190,
+    "horizon": 1000
+   },
+   "cues": {
+    "off": "pull"
+   },
+   "params": {
+    "mode": "pluck",
+    "dog": false,
+    "burrR": 32,
+    "plants": [
+     0.1,
+     0.9
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.64,
+     "scale": 1.3,
+     "pose": "point",
+     "dir": "down",
+     "face": "left",
+     "emotion": "angry"
+    }
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "left"
+   }
+  },
+  {
+   "type": "vc_scope",
+   "text": "Under a microscope, George saw tiny hooks,",
+   "visual": "Indoors at a wooden desk under a hanging lamp: George sits and leans into a microscope with a tiny burr on its slide; a big magnified bubble opens above right, joined to the eyepiece by dashed lines, showing the burr turning, every spike ending in a hook; a red ring circles one hook; red box 'TINY HOOKS'.",
+   "title": {
+    "white": "The microscope"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "cues": {
+    "look": "microscope",
+    "hooks": "hooks"
+   },
+   "params": {
+    "mode": "desk",
+    "labels": [
+     {
+      "text": "TINY HOOKS",
+      "x": 0.66,
+      "y": 0.465,
+      "at": "hooks",
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_scope",
+   "text": "grabbing every loop of fur.",
+   "visual": "Full-frame view through the eyepiece (dark ring round a bright circle): thick ink hooks hang from the burr's skin at the top; loops rise from fur at the bottom; on 'grabbing' the hooks drop and catch each loop, then tug; labels 'HOOKS' and 'LOOPS'.",
+   "title": {
+    "white": "Up close"
+   },
+   "set": false,
+   "cues": {
+    "grab": "grabbing",
+    "loop": "loop"
+   },
+   "params": {
+    "mode": "zoom",
+    "labels": [
+     {
+      "text": "HOOKS",
+      "x": 0.5,
+      "y": 0.19,
+      "at": 0.1,
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "LOOPS",
+      "x": 0.5,
+      "y": 0.53,
+      "at": "loop",
+      "size": 84,
+      "color": "blue",
+      "font": "serif",
+      "card": true,
+      "rot": 2,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.08,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_strip",
+   "text": "He copied it: hooks on one strip, loops on another. It took years.",
+   "visual": "A big workbench top fills the frame (y 580–1190): a burr lies at the top between serif cards 'HOOKS' and 'LOOPS'; a tall white strip covered in big hooks and a tall blue strip covered in loops slide in on their words; on 'another' the strips press together and pull apart again with red rip marks.",
+   "title": {
+    "white": "The copy"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 600
+   },
+   "cues": {
+    "hooks": "hooks",
+    "loops": "loops",
+    "press": "another"
+   },
+   "params": {
+    "mode": "copy",
+    "gy": 0.63,
+    "labels": [
+     {
+      "text": "HOOKS",
+      "x": 0.24,
+      "y": 0.335,
+      "at": "hooks",
+      "size": 88,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "LOOPS",
+      "x": 0.76,
+      "y": 0.335,
+      "at": "loops",
+      "size": 88,
+      "color": "blue",
+      "font": "serif",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "move": "pull"
+   }
+  },
+  {
+   "type": "vc_strip",
+   "text": "Cotton wore out. Nylon held.",
+   "visual": "Two test rigs hang from a wooden beam, each a pair of strips holding an iron weight: on 'Cotton' the left pair frays and its weight drops onto the bench, a big red X stamps over it, label 'COTTON'; on 'Nylon' the blue right pair keeps swinging with its weight and a green tick appears, label 'NYLON'.",
+   "title": {
+    "white": "The test"
+   },
+   "source": "Wikipedia, George de Mestral",
+   "set": {
+    "name": "interior",
+    "ground": 1267
+   },
+   "cues": {
+    "cotton": "Cotton",
+    "nylon": "Nylon"
+   },
+   "params": {
+    "mode": "test",
+    "labels": [
+     {
+      "text": "COTTON",
+      "x": 0.3,
+      "y": 0.555,
+      "at": "cotton",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "NYLON",
+      "x": 0.7,
+      "y": 0.555,
+      "at": "nylon",
+      "size": 72,
+      "color": "blue",
+      "font": "serif",
+      "card": true,
+      "rot": 2,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_name",
+   "text": "The name Velcro? Velvet and hook, in French.",
+   "visual": "A big cork pinboard fills the wall: 'VELCRO' pops in a red box at the top; on 'Velvet' an arrow runs from VEL down to a pinned card 'VELOURS' with a red hand note 'velvet', on 'hook' an arrow from CRO to 'CROCHET' with 'hook'; a burr on the desk below.",
+   "title": {
+    "white": "The name"
+   },
+   "source": "WIPO",
+   "set": {
+    "name": "interior",
+    "ground": 1344
+   },
+   "cues": {
+    "velcro": "Velcro",
+    "velvet": "Velvet",
+    "hook": "hook"
+   },
+   "params": {
+    "noteAt": [
+     "velvet",
+     "hook"
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_shoe",
+   "text": "That rip on your shoes? A Swiss weed.",
+   "visual": "A child's sneaker on a wooden floor: on 'rip' its two red hook-and-loop straps peel up with red rip marks and a big red 'RIIIP!' top left; on 'weed' a big spiky burr pops in right above the straps and a bold red arrow points from it to the strap's hooks.",
+   "title": {
+    "white": "Today"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "cues": {
+    "rip": "rip",
+    "weed": "Swiss"
+   },
+   "params": {
+    "burrAt": [
+     0.64,
+     0.34
+    ],
+    "arrowTo": [
+     0.47,
+     0.4
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "vc_field",
+   "text": "Subscribe for a true story every day.",
+   "visual": "Back in the Alpine meadow: the fez host stands big on the left and waves, then points at the viewer; his dog sits on the right wagging its tail with one burr on its back; a burdock plant behind, snowy peaks far away.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1190,
+    "horizon": 1000
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}
