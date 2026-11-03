@@ -1,0 +1,17 @@
+{
+ "id": "5fRt4h6JusM",
+ "thumbnail": false,
+ "url": "https://youtu.be/5fRt4h6JusM",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-03T19:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Bat Echolocation: The Sound Nobody Heard for 145 Years",
+ "script": "videos/2026-11-03/ag-03-bat-echolocation.json"
+}
