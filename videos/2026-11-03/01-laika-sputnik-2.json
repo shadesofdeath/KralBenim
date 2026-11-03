@@ -1,0 +1,160 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Britannica: Laika",
+      "url": "https://www.britannica.com/topic/Laika"
+    },
+    {
+      "title": "Space.com: Laika the space dog, first living creature in orbit",
+      "url": "https://www.space.com/38660-laika-space-dog-launch-60th-anniversary.html"
+    },
+    {
+      "title": "Mail & Guardian (2002): Fate of first canine cosmonaut revealed",
+      "url": "https://mg.co.za/article/2002-01-01-fate-of-first-canine-cosmonaut-revealed"
+    },
+    {
+      "title": "Wikipedia: Sputnik 2",
+      "url": "https://en.wikipedia.org/wiki/Sputnik_2"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Dönüşü",
+      "yoktu"
+    ],
+    "highlight": [
+      "yoktu"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "kasif": false,
+    "focus": [
+      540,
+      600
+    ],
+    "zoom": 1.0
+  },
+  "scenes": [
+    {
+      "text": "Uzaya giden bu köpeğin dönüşü yoktu.",
+      "type": "bt_lk_capsule",
+      "visual": "Karanlık uzayda süzülen perçinli silindir kabin (kubbeli tepe, iki anten); altta y≈1000'den başlayan Dünya kenarı (kapakta y≈1600): koyu okyanus, düzensiz kıyılı kıtalar yavaşça kayar, ince soğuk atmosfer halesi; yuvarlak lombozun içinde sıcak ışık havuzunda profilden köpek başı (yuvarlak alın, kısa burun, dik kulaklar, boynunda koşum kayışı); 'yoktu'da lombozun çevresine ince altın bir halka çizilir",
+      "params": {
+        "mode": "window"
+      },
+      "cues": {
+        "hit": "yoktu"
+      }
+    },
+    {
+      "text": "Adı Laika'ydı. Moskova sokaklarında bulunmuştu.",
+      "type": "bt_lk_street",
+      "visual": "Gece, ince yağmur altında Moskova sokağı: koyu bina sırası ve uzakta tek soğan kubbe, ıslak parke taşları, tek sokak lambası; lambanın ışık havuzunda küçük bir sokak köpeği silueti durur, lambanın yansıması ıslak taşlarda yavaşça dalgalanır; 'sokaklarında'da ışık havuzu köpeğin çevresinde yavaşça genişler",
+      "cues": {
+        "hit": "sokaklarında"
+      }
+    },
+    {
+      "text": "3 Kasım 1957'de Sputnik 2 ile yörüngeye çıktı.",
+      "type": "bt_lk_launch",
+      "visual": "Gece bozkır; geniş beton fırlatma platformu (perspektif derzler, roketin altında alev çukuru), iki yanda kafes servis kuleleri yavaşça dışa açılır; tabanda alevler yanar, duman platform ve bozkır boyunca alt kenara kadar yayılır; R-7 (gövde + yan iticiler) yavaşça yükselip kadrajın üstünden çıkar",
+      "cues": {
+        "hit": "yörüngeye"
+      }
+    },
+    {
+      "text": "Sovyetler, onun günlerce yaşadığını söyledi.",
+      "type": "bt_lk_vitals",
+      "visual": "Bir kontrol panelinin içinde yuvarlak osiloskop ekranı (merkez y≈740), düzenli atan kalp çizgisi; panelin üstünde italik 'Resmî açıklama'; ekranın hemen altında, altyazının üstünde panel penceresinde 'günlerce'den itibaren '1. gün'den '6. gün'e sayan altın sayaç; altyazının altında iki döner düğme ve yavaş salınan iğneli küçük kadran",
+      "params": {
+        "mode": "claim"
+      },
+      "cues": {
+        "hit": "günlerce"
+      }
+    },
+    {
+      "text": "Gerçek kırk beş yıl sonra ortaya çıktı.",
+      "type": "bt_lk_file",
+      "visual": "Koyu bir masada ışık havuzunda kapalı bir dosya: kapağında kırmızı 'GİZLİ' damgası ve '1957'; ışıkta toz süzülür; 'Gerçek'ten hemen sonra kapak menteşesinden açılır, içteki sayfada altın renkte '2002' görünür",
+      "params": {
+        "cover": "1957",
+        "page": "2002",
+        "stamp": "GİZLİ"
+      },
+      "cues": {
+        "hit": "Gerçek"
+      }
+    },
+    {
+      "text": "Kabin ısınmıştı. Laika birkaç saat içinde ölmüştü.",
+      "type": "bt_lk_capsule",
+      "visual": "Açılıştaki kabin, Dünya kenarının üstünde; 'ısınmıştı'da lombozun arkasındaki sıcak altın ışık kırmızıya döner (kabin aşırı ısınır); 'saat'ten sonra ışık yavaşça söner, köpek başı silueti karanlığa karışır",
+      "params": {
+        "mode": "dark"
+      },
+      "cues": {
+        "heat": "ısınmıştı",
+        "hit": "saat"
+      }
+    },
+    {
+      "text": "Kapsül, beş ay boyunca Dünya'nın çevresinde dönen bir mezar oldu.",
+      "type": "bt_lk_orbit",
+      "visual": "Kadrajın alt yarısında büyük Dünya (koyu okyanus, kıtalar sadece altyazı şeridinin altında, gece tarafı, ince atmosfer halesi); diske yakın, hafif eğik tek yörünge, eski turların çok soluk izleri; kapsül ışığı (hale ile) yörüngede döner, diskin arkasına geçince gizlenir; üstte '0 gün'den '162 gün'e tırmanan altın sayaç ve italik 'yörüngede'; 'mezar'da kapsülün ışığı 0,8 sn'de altından soğuk griye döner, halesi küçülür",
+      "params": {
+        "mode": "tomb",
+        "days": 162
+      },
+      "cues": {
+        "hit": "mezar"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_lk_orbit",
+      "visual": "Dünya'nın kenarı (koyu okyanus, kıtalar, atmosfer halesi) ve yıldızlar; üstte italik '14 Nisan 1958'; küçük altın bir iz çapraz kayarak atmosfere değer, orada parlar, atmosfer çizgisi bir an altın yanar ve söner",
+      "params": {
+        "mode": "burn",
+        "label": "14 Nisan 1958"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Laika: Yörüngeye Çıkan İlk Canlının Saklanan Sonu",
+    "description": "Laika, Dünya'nın çevresinde yörüngeye çıkan ilk canlıydı ve yolculuğunun bir dönüşü yoktu. Moskova sokaklarında bulunan bu küçük köpek, 3 Kasım 1957'de Sputnik 2 ile fırlatıldı. Kapsül geri dönmek için tasarlanmamıştı.\n\nSovyetler yıllarca Laika'nın yörüngede günlerce yaşadığını söyledi. 2002'de Rus bilim insanı Dimitri Malaşenko gerçeği açıkladı: kabin aşırı ısınmıştı ve Laika fırlatmadan birkaç saat sonra ölmüştü. Sputnik 2, 14 Nisan 1958'de atmosfere girip yanana kadar yaklaşık 162 gün Dünya'nın çevresinde döndü.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Laika'nın hikâyesi uzay yarışının bedeli miydi? Yorumlara yaz!\n\n#shorts #laika #sputnik2 #uzaytarihi #düşünbakalım",
+    "tags": [
+      "laika",
+      "laika köpek",
+      "uzay köpeği laika",
+      "laika'nın ölümü",
+      "sputnik 2",
+      "uzaya giden köpek",
+      "yörüngeye çıkan ilk canlı",
+      "sovyet uzay programı",
+      "uzay yarışı",
+      "1957",
+      "uzay tarihi",
+      "soğuk savaş",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-03T19:00:00+03:00"
+  }
+}
