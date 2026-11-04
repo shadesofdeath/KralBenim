@@ -1,0 +1,170 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "obsidyen",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "TDV İslâm Ansiklopedisi: Sokullu Mehmed Paşa",
+      "url": "https://islamansiklopedisi.org.tr/sokullu-mehmed-pasa"
+    },
+    {
+      "title": "TDV İslâm Ansiklopedisi: Sigetvar",
+      "url": "https://islamansiklopedisi.org.tr/sigetvar"
+    },
+    {
+      "title": "Erhan Afyoncu, Sabah: 450 yıl önceki muhteşem şehadet",
+      "url": "https://www.sabah.com.tr/yazarlar/erhan-afyoncu/2016/09/11/450-yil-onceki-muhtesem-sehadet"
+    },
+    {
+      "title": "Daily Sabah: The last days of Suleiman the Magnificent",
+      "url": "https://www.dailysabah.com/feature/2018/09/12/the-last-days-of-suleiman-the-magnificent"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Sultan",
+      "ölmüştü"
+    ],
+    "highlight": [
+      "ölmüştü"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "kasif": false,
+    "focus": [
+      540,
+      700
+    ],
+    "zoom": 1.35
+  },
+  "scenes": [
+    {
+      "text": "Ordunun sultanı çoktan ölmüştü.",
+      "type": "bt_zg_kavuk",
+      "visual": "Otağın içi, kemerli paneller; alçak sedirde ışık havuzunda Kanuni'nin fildişi, katları belirgin büyük kavuğu (sorguç, mücevher); sağ üstte sarkan kandilin alevi salınır, ışıkta toz süzülür, ışık havuzu yavaşça nefes alır; 'ölmüştü'de kavuk bandı altın yanar",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "ölmüştü"
+      }
+    },
+    {
+      "text": "Eylül 1566. Zigetvar.",
+      "type": "bt_zg_fort",
+      "visual": "Yakın plan: bataklıktaki adada kale kadrajın yarısına yakın (iç kule ve tabyalı surlar büyük), büyük yansıma, durgun suda yavaş dalgalar, önde sazlar, surlardan ince dumanlar; üstte '1566' ve italik 'Zigetvar'",
+      "params": {
+        "mode": "siege",
+        "text": "1566",
+        "sub": "Zigetvar"
+      }
+    },
+    {
+      "text": "Kanuni, zaferi göremeden çadırında son nefesini verdi.",
+      "type": "bt_zg_otag",
+      "visual": "Yıldızlı gecede tepedeki padişah otağı (sivri çatı, dilimli saçak, altın alem); kapısı içeriden yanar; 'nefesini'de içerideki ışık yavaşça köze iner",
+      "params": {
+        "mode": "night"
+      },
+      "cues": {
+        "hit": "nefesini"
+      }
+    },
+    {
+      "text": "Sadrazam Sokullu bu ölümü sakladı.",
+      "type": "bt_zg_door",
+      "visual": "Otağın girişi yakından: iki ağır desenli perde arasında ışıklı bir aralık; solda uzun kaftanlı, yüksek kavuklu yüzsüz bir siluet (sadrazam) durur; 'sakladı'da perdeler yavaşça kapanır, ışık aralığı söner",
+      "cues": {
+        "hit": "sakladı"
+      }
+    },
+    {
+      "text": "Çünkü bir söylenti orduyu dağıtabilirdi.",
+      "type": "bt_zg_camp",
+      "visual": "Gece ordugâh yakından: önde üç büyük konik çadır (iplerle), ortada tek ateş (alev, kıvılcım, duman), arkada sisli seyrek küçük çadır sıraları; 'söylenti'den sonra ateş yavaşça söner, uzaktaki küçük ateşler de tek tek kararır",
+      "cues": {
+        "hit": "söylenti"
+      }
+    },
+    {
+      "text": "Sonra kale düştü.",
+      "type": "bt_zg_fort",
+      "visual": "Aynı kale geniş planda; sol surda gedik ve moloz, gedikten ağır ve yavaş duman, sönmekte olan ateş ışığı; gediğin üstünde tuğ (altın toplu direk, at kuyruğu) yükselir",
+      "params": {
+        "mode": "fallen"
+      },
+      "cues": {
+        "hit": "düştü"
+      }
+    },
+    {
+      "text": "Gizli bir mektup, Kütahya'daki Şehzade Selim'e gitti.",
+      "type": "bt_zg_ferman",
+      "visual": "Koyu masada kandil ışığında fetihname, başındaki altın tuğra kendini çizer; 'mektup'ta katlanmış, kırmızı mühürlü gizli mektup aşağıdan kayarak öne gelir, altında italik 'Şehzade Selim’e'",
+      "cues": {
+        "hit": "mektup"
+      }
+    },
+    {
+      "text": "Ordu, haftalarca ölü bir sultanla yürüdü.",
+      "type": "bt_zg_march",
+      "visual": "Ay ışığında yol: alçak, düz çatılı, saçaklı, perdeleri kapalı Osmanlı arabası (dört küçük tekerlek döner), önde iki at, arkada fener; börklü asker kolu arkada ve yanında; bütün kol yavaşça sağa kayar (10 px/sn), bacaklar yavaşça adım atar; 'haftalarca'da fener biraz parlar",
+      "cues": {
+        "hit": "haftalarca"
+      }
+    },
+    {
+      "text": "O haftalarda imparatorluğu bir ordu değil, bir sır ayakta tuttu.",
+      "type": "bt_zg_kavuk",
+      "visual": "Açılıştaki kavuk sedirin üstünde; ışık havuzu yavaşça daralır, kandilin alevi küçülür ama sönmez",
+      "params": {
+        "mode": "end"
+      },
+      "cues": {
+        "hit": "sır"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_zg_otag",
+      "visual": "Şafak: kadrajın ortasında genişliğin yarısı kadar büyük, kapısı karanlık otağ; arkasından güneş yükselir, gök ağarır, yıldızlar söner; sağda közden ince duman; yol yok",
+      "params": {
+        "mode": "dawn"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Zigetvar 1566: Kanuni'nin Ölümü Neden Haftalarca Saklandı?",
+    "description": "Zigetvar 1566: Kanuni Sultan Süleyman kuşatma sürerken çadırında öldü, ama ordusu bunu haftalarca bilmedi. Sadrazam Sokullu Mehmed Paşa, 6/7 Eylül 1566 gecesi ölen padişahın sırrını sakladı.\n\nKale düştü, emirler sultan yaşıyormuş gibi yürütüldü ve gizli bir mektup Kütahya'daki Şehzade Selim'e gitti. Kaynaklar sırrın ne kadar saklandığı konusunda farklı süreler verir; ölüm ancak ordu Belgrad'a yaklaşınca açıklandı. Kanuni'nin ölümü, II. Selim'in tahta çıkışı ve Osmanlı tarihinin en sessiz kararlarından biri.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Sokullu doğru olanı mı yaptı? Yorumlara yaz!\n\n#shorts #zigetvar #kanuni #osmanlıtarihi #düşünbakalım",
+    "tags": [
+      "zigetvar",
+      "zigetvar kuşatması",
+      "zigetvar seferi",
+      "sigetvar 1566",
+      "kanuni sultan süleyman",
+      "kanuni'nin ölümü",
+      "kanuni nasıl öldü",
+      "sokullu mehmed paşa",
+      "ikinci selim",
+      "osmanlı tarihi",
+      "osmanlı padişahları",
+      "1566",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-04T19:00:00+03:00"
+  }
+}

@@ -1,0 +1,648 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "kum",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Griffith Institute, Oxford — Tutankhamun: Anatomy of an Excavation, 1st Season (1922–1923)",
+   "url": "https://tutankhamun.griffith.ox.ac.uk/seasons/1st-season-1922-1923"
+  },
+  {
+   "title": "Griffith Institute Archive — Howard Carter's diary for 1922 (TAA i.2.21)",
+   "url": "https://archive.griffith.ox.ac.uk/index.php/tutankhamun-archive-i-2-21"
+  },
+  {
+   "title": "World History Encyclopedia — The Discovery of Tutankhamun's Tomb",
+   "url": "https://www.worldhistory.org/article/2063/the-discovery-of-tutankhamuns-tomb/"
+  },
+  {
+   "title": "Wikipedia — Tomb of Tutankhamun (KV62)",
+   "url": "https://en.wikipedia.org/wiki/Tomb_of_Tutankhamun"
+  },
+  {
+   "title": "University of Manchester — 90th anniversary of the curse of Tutankhamen: how a modern myth was born",
+   "url": "https://www.manchester.ac.uk/about/news/90th-anniversary-of-the-curse-of-tutankhamen--how-a-modern-myth-was-born/"
+  },
+  {
+   "title": "Theodore M. Davis, The Tombs of Harmhabi and Touatânkhamanou (1912) — \"I fear that the Valley of the Tombs is now exhausted\"",
+   "url": "https://en.wikipedia.org/wiki/Theodore_M._Davis"
+  },
+  {
+   "title": "Wikipedia — KV54 (Tutankhamun embalming cache)",
+   "url": "https://en.wikipedia.org/wiki/KV54"
+  },
+  {
+   "title": "Theban Mapping Project — KV 62 (Tutankhamen)",
+   "url": "https://thebanmappingproject.com/tombs/kv-62-tutankhamen"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Karanlıkta",
+   "harika şeyler"
+  ],
+  "highlight": [
+   "harika"
+  ],
+  "scene": 47,
+  "t": 4.0,
+  "focus": [
+   960,
+   450
+  ],
+  "zoom": 1.15,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Tutankamon'un Mezarı: 3.000 Yıl Kimse Neden Bulamadı?",
+  "description": "Tutankamon'un mezarı, herkesin kazdığı bir vadide 3.000 yılı aşkın süre gizli kaldı. 4 Kasım 1922'de Howard Carter'ın ekibi işçi kulübelerinin altında ilk basamağı buldu; birkaç hafta sonra mum ışığında içeri bakan Carter'ın sözleri tarihe geçti: \"Harika şeyler.\"\n\nCarter'ın o anki sözleri kaynaklarda farklı biçimlerde aktarılır. Bu belgeselde KV62'nin, yani Krallar Vadisi'ndeki Tutankamon mezarının bulunuşunu, mühürlü kapıların ardındaki altın hazineyi ve bu küçük mezarın neden soyguncuların gözünden kaçtığını anlatıyoruz. Sonunda da Lord Carnarvon'un ölümüyle doğan \"firavunun laneti\" efsanesinin gazetelerden nasıl çıktığına bakıyoruz.\n\nBu videoda:\n• Carter'ın yıllarca süren boş kazısı ve Carnarvon'un son sezonu\n• 4 Kasım 1922: ilk basamak ve mühürlü kapı\n• Mum ışığında ön oda ve mühürlü mezar odası, iç içe sandıklar, altın tabut ve maske\n• Mezar neden 3.000 yıl bozulmadan kaldı?\n• Tutankamon'un laneti: efsane ve gerçek\n\nHer gün yeni bir 'neden?' için abone ol. Sence Krallar Vadisi'nde hâlâ bulunmamış bir mezar var mı? Yorumlara yaz!\n\n#tutankamon #mısır #tarih #arkeoloji #düşünbakalım",
+  "tags": [
+   "tutankamon",
+   "tutankamon mezarı",
+   "tutankamon'un mezarı",
+   "tutankamon laneti",
+   "kv62",
+   "krallar vadisi",
+   "howard carter",
+   "lord carnarvon",
+   "firavun",
+   "antik mısır",
+   "mısır tarihi",
+   "arkeoloji",
+   "altın maske",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-04T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "text": "Kayaya oyulmuş bir koridorun dibinde, mühürlü bir kapı. Kasım 1922. Mısır.",
+   "type": "bt_tut_hole",
+   "visual": "Kaya duvarın ortasında sıvalı, mühür baskılarıyla dolu bir kapı; üstte taş lento, önde zemin, kapının önünde yumuşak ışık havuzu",
+   "params": {
+    "mode": "wall"
+   },
+   "chapter": "Mum ışığı"
+  },
+  {
+   "text": "Kapının üst köşesinde küçük bir delik açıldı. İçeri bir mum uzatıldı.",
+   "type": "bt_tut_hole",
+   "visual": "Aynı kapı; sol üst köşesinde karanlık bir delik açılır, sağ alttan bir kol elindeki mumu yavaşça deliğe uzatır",
+   "params": {
+    "mode": "candle"
+   },
+   "cues": {
+    "hole": "delik"
+   }
+  },
+  {
+   "text": "Alev yana eğildi. İçeriden, binlerce yıldır kapalı kalmış sıcak hava kaçıyordu.",
+   "type": "bt_tut_breach",
+   "visual": "Yakın plan: sıvadaki karanlık deliğin önünde mum; alev deliğin dışına doğru yavaşça eğilip doğrulur, etrafında altın ışık",
+   "params": {
+    "mode": "flame"
+   }
+  },
+  {
+   "text": "Sonra karanlığın içinde bir şey parladı. Altın.",
+   "type": "bt_tut_breach",
+   "visual": "Deliğin içi: kapkaranlık bir boşluk; 'Altın'da içinden altın çizgiler (hayvan başlı bir yatak ucu, bir tekerlek, bir sandık kenarı) ve yavaş parıltılar belirir",
+   "params": {
+    "mode": "glint"
+   },
+   "cues": {
+    "hit": "parladı"
+   }
+  },
+  {
+   "text": "Arkadan bir ses sordu: Bir şey görebiliyor musunuz?",
+   "type": "bt_text",
+   "visual": "Boş kum zeminde ışık havuzu; önce ince 'bir şey', sonra 'görebiliyor musunuz?'",
+   "params": {
+    "lines": [
+     {
+      "text": "bir şey",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "görebiliyor musunuz?",
+      "at": "c2",
+      "italic": true,
+      "size": 120
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Arkadan",
+    "c2": "görebiliyor"
+   }
+  },
+  {
+   "text": "Ve cevap geldi: Evet. Harika şeyler.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda önce 'Evet.', sonra altın renkte 'harika şeyler'",
+   "params": {
+    "lines": [
+     {
+      "text": "Evet.",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "harika şeyler",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Evet",
+    "c2": "Harika"
+   }
+  },
+  {
+   "text": "Bu mezar, herkesin kazdığı bir vadide, üç bin yıl nasıl gizli kalmıştı?",
+   "type": "bt_tut_valley",
+   "visual": "Krallar Vadisi geniş plan: iki yanda kayalıklar, arkada piramit biçimli zirve, vadi tabanı boş ve sessiz, üstte soluk güneş ışığı",
+   "params": {
+    "mode": "wide"
+   }
+  },
+  {
+   "text": "Bu hikâye, bugünden tam yüz dört yıl önce başladı. Ama önce, uzun bir hayal kırıklığı vardı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Boş vadi', altında italik '1917–1922'",
+   "params": {
+    "n": "I",
+    "title": "Boş vadi",
+    "sub": "1917–1922"
+   },
+   "chapter": "Boş vadi"
+  },
+  {
+   "text": "Howard Carter, İngiliz bir arkeologdu. Yıllarca, Krallar Vadisi'nde kazmıştı.",
+   "type": "bt_tut_nile",
+   "visual": "Sade Mısır haritası: Akdeniz ve Kızıldeniz kıyıları, mavi Nil kendini çizer, deltası açılır; Luksor'un batısında altın nokta yanar: 'Krallar Vadisi / Luksor'",
+   "params": {
+    "place": "luksor"
+   },
+   "cues": {
+    "hit": "Vadisi"
+   }
+  },
+  {
+   "text": "Ondan önce burada kazan Theodore Davis, 1912'de vadinin artık tükendiğinden korktuğunu yazmıştı.",
+   "type": "bt_tut_valley",
+   "visual": "Vadi tabanında moloz yığınları, başlarında sepet taşıyan yedi küçük yüzsüz siluet yavaşça yürür, toz yükselir",
+   "params": {
+    "mode": "dig"
+   }
+  },
+  {
+   "text": "Kazının parasını Lord Carnarvon ödüyordu. 1922 yazında, onun da sabrı tükenmişti.",
+   "type": "bt_tut_lamp",
+   "visual": "Gece, bir odada pencere (yıldızlar ve hilal), önünde küçük masada yanan bir kandil; alev sakin yanar",
+   "params": {
+    "mode": "lit"
+   }
+  },
+  {
+   "text": "Carter ondan son bir kış istedi. Carnarvon kabul etti. Bu, son şanstı.",
+   "type": "bt_tut_hourglass",
+   "visual": "Işık havuzunda tek bir kum saati; üst hazne boşalır, kum ince bir iple alta akar; altında italik 'son sezon'",
+   "params": {
+    "label": "son sezon"
+   }
+  },
+  {
+   "text": "Davis, Tutankamon adını taşıyan küçük bir çukur da bulmuştu. Carter'a göre bu unutulmuş firavun hâlâ buradaydı. Ama nerede?",
+   "type": "bt_tut_cartouche",
+   "visual": "Dikey bir kral adı halkası (kartuş); içindeki işaretler birer birer çizilir; 'Tutankamon'da altında italik 'Tutankamon'",
+   "params": {
+    "mode": "name",
+    "label": "Tutankamon"
+   },
+   "cues": {
+    "hit": "Tutankamon"
+   }
+  },
+  {
+   "text": "Kasımın ilk günü, büyük bir firavun mezarının hemen önünde kazı başladı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'II', ince çizgi, büyük ince 'İlk basamak', altında italik '4 Kasım 1922'",
+   "params": {
+    "n": "II",
+    "title": "İlk basamak",
+    "sub": "4 Kasım 1922"
+   },
+   "chapter": "İlk basamak"
+  },
+  {
+   "text": "Orada, eski mezar işçilerinin taş kulübeleri vardı. Carter, bu kez onları da kaldırttı.",
+   "type": "bt_tut_valley",
+   "visual": "Sağda kayalığa oyulmuş büyük, karanlık bir mezar kapısı; önündeki moloz yamacında dört yıkık taş kulübe; 'kaldırttı'da bir kulübenin altında soluk altın bir basamak çizgisi belirir",
+   "params": {
+    "mode": "huts",
+    "glow": true
+   },
+   "cues": {
+    "hit": "kaldırttı"
+   }
+  },
+  {
+   "text": "Dört Kasım sabahı, kulübelerin altından kayaya oyulmuş bir basamak çıktı.",
+   "type": "bt_tut_stairs",
+   "visual": "Kesit: yüzeyde iki kulübe, altında moloz dolu bir merdiven kuyusu; sadece en üstteki basamak açığa çıkar, 'basamak'ta altınla çizilir",
+   "params": {
+    "mode": "first"
+   },
+   "cues": {
+    "hit": "basamak"
+   }
+  },
+  {
+   "text": "Rivayete göre onu su taşıyan bir çocuk buldu. Carter'ın günlüğü ise kısadır: İlk basamaklar bulundu.",
+   "type": "bt_tut_diary",
+   "visual": "Açık bir defter; sol sayfada '4 Kasım 1922', sağ sayfada kalemle kendini yazan italik satır 'ilk basamaklar bulundu'",
+   "params": {
+    "date": "4 Kasım 1922",
+    "line": "ilk basamaklar bulundu"
+   }
+  },
+  {
+   "text": "Basamaklar aşağı indi. On ikincisinde, mühürlü bir kapının üst kısmı göründü.",
+   "type": "bt_tut_stairs",
+   "visual": "Aynı kesit: moloz geri çekildikçe basamaklar birer birer açılır, en altta mühürlü kapının üst kısmı görünür",
+   "params": {
+    "mode": "down"
+   }
+  },
+  {
+   "text": "Sıvanın üstünde, dokuz tutsağın üzerinde yatan bir çakal vardı. Krallar mezarlığının mührü.",
+   "type": "bt_tut_seal",
+   "visual": "Sıva parçası üstünde oval mühür baskısı: tepede yatan bir çakal, altında üç sıra halinde dokuz bağlı tutsak; ışık soldan sağa yavaşça geçer; altta italik 'krallar mezarlığının mührü'"
+  },
+  {
+   "text": "Carter kapıyı açmadı. Merdiveni yeniden doldurdu ve İngiltere'ye telgraf çekti: Sonunda harika bir keşif. Mühürleri sağlam.",
+   "type": "bt_tut_telegram",
+   "visual": "Bir telgraf kâğıdı, başlığı 'TELGRAF'; üstüne iki yapıştırma şerit belirir: 'HARİKA KEŞİF', 'MÜHÜRLER SAĞLAM'",
+   "params": {
+    "lines": [
+     "HARİKA KEŞİF",
+     "MÜHÜRLER SAĞLAM"
+    ],
+    "at": [
+     "k1",
+     "k2"
+    ]
+   },
+   "cues": {
+    "k1": "harika",
+    "k2": "Mühürleri"
+   }
+  },
+  {
+   "text": "Üç hafta bekledi. Kapının ardında ne olduğunu, henüz kimse bilmiyordu.",
+   "type": "bt_tut_valley",
+   "visual": "Gece Krallar Vadisi: kayalıklar, arkada zirve, gökte yavaşça nefes alan yıldızlar ve hilal; vadi boş",
+   "params": {
+    "mode": "night"
+   }
+  },
+  {
+   "text": "Carnarvon, yirmi üç Kasım'da kızı Evelyn'le birlikte Luksor'a geldi.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'III', ince çizgi, büyük ince 'Harika şeyler', altında italik '26 Kasım 1922'",
+   "params": {
+    "n": "III",
+    "title": "Harika şeyler",
+    "sub": "26 Kasım 1922"
+   },
+   "chapter": "Harika şeyler"
+  },
+  {
+   "text": "Merdiven sonuna kadar açıldı. On altı basamak. Kapının altında, artık okunabilen bir isim vardı.",
+   "type": "bt_tut_stairs",
+   "visual": "Kesit: on altı basamak tamamen açık, en altta mühürlü kapı; 'isim'de kapının alt kısmında altın bir kartuş parlar, yanında italik 'Tutankamon'",
+   "params": {
+    "mode": "full"
+   },
+   "cues": {
+    "hit": "isim"
+   }
+  },
+  {
+   "text": "Ama bir şey tuhaftı. Kapının bir köşesi açılıp yeniden kapatılmıştı. Biri, onlardan önce girmişti.",
+   "type": "bt_tut_door",
+   "visual": "Önden mühürlü sıvalı kapı; 'yeniden'de sol üst köşede farklı mühürlü, yeniden sıvanmış bir parça kırmızı çizgiyle belirir",
+   "params": {
+    "mode": "resealed"
+   },
+   "cues": {
+    "hit": "yeniden"
+   }
+  },
+  {
+   "text": "Ardında taş parçalarıyla dolu bir koridor, sonunda ise ikinci bir mühürlü kapı vardı.",
+   "type": "bt_tut_hole",
+   "visual": "Perspektif koridor: duvarlar sona doğru daralır; koridoru dolduran taş parçaları önden arkaya temizlenir, sonda ikinci mühürlü kapı belirir ve ışık alır",
+   "params": {
+    "mode": "corridor"
+   },
+   "cues": {
+    "hit": "ikinci"
+   }
+  },
+  {
+   "text": "Yirmi altı Kasım. Carter bu kapıda da küçük bir delik açtı ve mumu içeri uzattı.",
+   "type": "bt_tut_hole",
+   "visual": "Mühürlü kapının sol üst köşesinde delik açılır; elinde mum tutan bir kol yavaşça deliğe uzanır",
+   "params": {
+    "mode": "candle"
+   },
+   "cues": {
+    "hole": "delik"
+   }
+  },
+  {
+   "text": "Gözleri karanlığa alışınca, şekiller belirdi. Hayvan başlı, yaldızlı yataklar.",
+   "type": "bt_tut_room",
+   "visual": "Karanlık bir oda, soldan mum ışığı; karanlıktan altın çizgilerle hayvan başlı uzun bir yatak yavaşça belirir",
+   "params": {
+    "mode": "first"
+   }
+  },
+  {
+   "text": "Sökülmüş savaş arabaları. Üst üste sandıklar. Ve her yerde, altının parıltısı.",
+   "type": "bt_tut_room",
+   "visual": "Aynı karanlık oda: yatağın yanında önce iki savaş arabası tekerleği, sonra üst üste sandıklar altın çizgilerle belirir; 'parıltısı'nda her yerde altın parıltılar",
+   "params": {
+    "mode": "all"
+   },
+   "cues": {
+    "a": "arabaları",
+    "b": "sandıklar",
+    "hit": "parıltısı"
+   }
+  },
+  {
+   "text": "Bir duvarın önünde iki siyah heykel nöbet tutuyordu. Aralarında mühürlü bir kapı daha vardı. Ardında ne vardı?",
+   "type": "bt_tut_door",
+   "visual": "Mühürlü kapının iki yanında altın etekli, altın başlıklı, ellerinde asa tutan iki siyah nöbetçi heykel; soldan mum ışığı",
+   "params": {
+    "mode": "guards"
+   }
+  },
+  {
+   "text": "On altı Şubat 1923. O son kapı da açıldı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'IV', ince çizgi, büyük ince 'Mühürlü oda', altında italik '16 Şubat 1923'",
+   "params": {
+    "n": "IV",
+    "title": "Mühürlü oda",
+    "sub": "16 Şubat 1923"
+   },
+   "chapter": "Mühürlü oda"
+  },
+  {
+   "text": "İçeride, odayı neredeyse dolduran altın kaplı dev bir sandık vardı.",
+   "type": "bt_tut_shrine",
+   "visual": "İki duvar arasına zor sığan altın kaplı dev bir türbe sandığı (kornişli çatı, çift kapı); yanında ölçek için küçük yüzsüz bir siluet",
+   "params": {
+    "mode": "outer"
+   }
+  },
+  {
+   "text": "İçinden ikinci bir sandık çıktı. Sonra üçüncüsü. Sonra dördüncüsü.",
+   "type": "bt_tut_shrine",
+   "visual": "Altın türbenin çizgisi; içinde 'ikinci', 'üçüncüsü', 'dördüncüsü'nde birer birer daha küçük türbe çizgileri belirir",
+   "params": {
+    "mode": "nest"
+   },
+   "cues": {
+    "n2": "ikinci",
+    "n3": "üçüncüsü",
+    "n4": "dördüncüsü"
+   }
+  },
+  {
+   "text": "En içte taş bir lahit, onun da içinde iç içe üç tabut vardı. Sonuna ulaşmak yıllar sürdü.",
+   "type": "bt_tut_coffin",
+   "visual": "Yukarıdan bakış: taş lahit; içinde iç içe üç insan biçimli tabut çizgisi; 'tabut'ta en içteki altına döner",
+   "params": {
+    "mode": "coffins"
+   },
+   "cues": {
+    "hit": "tabut"
+   }
+  },
+  {
+   "text": "En içteki tabut, yüz on kilo som altındı.",
+   "type": "bt_tut_coffin",
+   "visual": "Yukarıdan, ışık havuzunda tek bir altın tabut: göğsünde çapraz kollar, asa ve kırbaç; 'kilo'da altında büyük '110 kg'",
+   "params": {
+    "mode": "gold",
+    "label": "110 kg"
+   },
+   "cues": {
+    "hit": "kilo"
+   }
+  },
+  {
+   "text": "Kralın yüzünde altın bir maske vardı. Gözleri, üç bin yılı aşkın süre aynı karanlığa bakmıştı.",
+   "type": "bt_tut_mask",
+   "visual": "Ön cepheden altın maske: çizgili başlık, sakin yüz, sürmeli gözler, örgülü sakal, geniş gerdanlık; ışık havuzu yavaşça büyür",
+   "params": {
+    "mode": "dark"
+   }
+  },
+  {
+   "text": "Mezardan beş bin üç yüzü aşkın eser çıktı. Ama asıl soru hâlâ cevapsızdı.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda büyük ince '5.398 eser', sonra altın renkte italik 'asıl soru'",
+   "params": {
+    "lines": [
+     {
+      "text": "5.398 eser",
+      "at": "c1"
+     },
+     {
+      "text": "asıl soru",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "eser",
+    "c2": "soru"
+   }
+  },
+  {
+   "text": "Soyguncular bu mezarı nasıl kaçırmıştı? Cevap, işçi kulübelerinin altındaydı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'V', ince çizgi, büyük ince 'Unutulmuş kral', altında italik 'Neden bozulmadı?'",
+   "params": {
+    "n": "V",
+    "title": "Unutulmuş kral",
+    "sub": "Neden bozulmadı?"
+   },
+   "chapter": "Unutulmuş kral"
+  },
+  {
+   "text": "Tutankamon, büyük olasılıkla on dokuz yaşında öldü ve küçük bir mezara aceleyle gömüldü.",
+   "type": "bt_tut_plans",
+   "visual": "İki yer planı yan yana: solda uzun koridorlu, sütunlu salonlu büyük bir kraliyet mezarı (italik 'büyük kraliyet mezarı'); sağda merdiven, koridor ve dört küçük odadan oluşan KV62 planı, 'aceleyle'de altına boyanır (italik 'Tutankamon')",
+   "cues": {
+    "hit": "aceleyle"
+   }
+  },
+  {
+   "text": "Kısa süre sonra hırsızlar iki kez girdi. Görevliler kapıları her seferinde yeniden mühürledi.",
+   "type": "bt_tut_section",
+   "visual": "Vadi tabanının kesiti: küçük mezar (merdiven, koridor, ön oda, mezar odası) karanlık; iki altın kesikli tünel birer birer koridora uzanır; sonra kapılarda altın mühürler belirir",
+   "params": {
+    "mode": "thieves"
+   },
+   "cues": {
+    "t1": "hırsızlar",
+    "t2": "kez",
+    "seal": "mühürledi"
+   }
+  },
+  {
+   "text": "Yüz elli yılı aşkın süre sonra, hemen yukarıda başka bir firavuna mezar kazıldı. Moloz aşağı döküldü, üstüne işçi kulübeleri kuruldu.",
+   "type": "bt_tut_section",
+   "visual": "Aynı kesit; sağdaki kayalıkta büyük yeni bir mezarın karanlık koridoru, yanında italik 'yeni büyük mezar'; 'Moloz'da yamaçtan dökülen moloz küçük mezarın merdiveninin üstünü örter, 'kulübeleri'nde üstünde küçük taş kulübeler belirir",
+   "params": {
+    "mode": "rubble"
+   },
+   "cues": {
+    "hit": "Moloz",
+    "huts": "kulübeleri"
+   }
+  },
+  {
+   "text": "Adı da sonraki kralların listelerinden silindi. Kapısı toprağın, adı unutuluşun altında kaldı.",
+   "type": "bt_tut_cartouche",
+   "visual": "Kral adı halkası; 'silindi'de içindeki işaretler birer birer silinir, boş halka kalır",
+   "params": {
+    "mode": "erase"
+   },
+   "cues": {
+    "hit": "silindi"
+   }
+  },
+  {
+   "text": "Unutulmak onu korumuştu. Ama mezar açıldıktan haftalar sonra, karanlık bir hikâye doğdu.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda ince italik 'Unutulmak' ve altın renkte 'onu korumuştu'",
+   "params": {
+    "lines": [
+     {
+      "text": "Unutulmak",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "onu korumuştu",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Unutulmak",
+    "c2": "korumuştu"
+   }
+  },
+  {
+   "text": "Beş Nisan 1923. Lord Carnarvon, Kahire'de öldü.",
+   "type": "bt_tut_nile",
+   "visual": "Aynı sade Mısır haritası; Nil kendini çizer, deltanın başında altın nokta yanar: 'Kahire'",
+   "params": {
+    "place": "kahire"
+   },
+   "cues": {
+    "hit": "Kahire"
+   }
+  },
+  {
+   "text": "Tıraş olurken bir sivrisinek ısırığını kesmişti. Yara mikrop kaptı. Kan zehirlenmesi onu götürdü.",
+   "type": "bt_tut_lamp",
+   "visual": "Gece penceresi önünde küçük masada kandil; alev yavaş yavaş küçülür ve söner, ışık çekilir",
+   "params": {
+    "mode": "out"
+   }
+  },
+  {
+   "text": "Ama gazeteler başka bir şey yazdı. Bir romancı, mezara girenleri ölümün beklediğini ilan etmişti. Böyle bir yazı, mezarda hiç bulunmadı.",
+   "type": "bt_tut_paper",
+   "visual": "Tek bir gazete ön sayfası; büyük manşet 'FİRAVUNUN LANETİ', altında italik 'mezara girenleri ölüm bekler'",
+   "params": {
+    "mode": "headline",
+    "head": "FİRAVUNUN LANETİ",
+    "sub": "mezara girenleri ölüm bekler"
+   }
+  },
+  {
+   "text": "Gerçek daha sessizdi. Howard Carter on altı yıl, Lady Evelyn ise elli yedi yıl daha yaşadı. 2002'deki bir araştırma da laneti doğrulamadı.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda ince italik 'Carter +16 · Evelyn +57', altında altın 'lanet yok'",
+   "params": {
+    "lines": [
+     {
+      "text": "Carter +16 · Evelyn +57",
+      "at": "c1",
+      "italic": true,
+      "size": 110
+     },
+     {
+      "text": "lanet yok",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Carter",
+    "c2": "araştırma"
+   }
+  },
+  {
+   "text": "Bugün Tutankamon hâlâ kendi mezarında yatıyor. Üç bin yıldan fazla kimse onu bulamadı, çünkü herkes onu unutmuştu.",
+   "type": "bt_tut_section",
+   "visual": "Vadi kesiti: karanlık küçük mezar odasında altın bir ışık yavaşça yanar, yüzeyde hiçbir iz yok",
+   "params": {
+    "mode": "tomb"
+   }
+  },
+  {
+   "text": "Sizce bu vadinin altında, bulunmayı bekleyen bir oda daha var mı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_tut_mask",
+   "visual": "Altın maske ışık havuzunda, sakin; ışık yavaşça nefes alır",
+   "params": {
+    "mode": "lit"
+   }
+  }
+ ]
+}
