@@ -1,0 +1,157 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "fildisi",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Second Battle of Panipat",
+      "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Panipat"
+    },
+    {
+      "title": "Panipat İdaresi (Hindistan): Second Battle of Panipat",
+      "url": "https://panipat.gov.in/second-battle/"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Tek bir",
+      "ok"
+    ],
+    "highlight": [
+      "ok"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": false,
+    "focus": [
+      540,
+      610
+    ],
+    "zoom": 1.12
+  },
+  "scenes": [
+    {
+      "text": "Savaşı tek bir ok bitirdi.",
+      "type": "bt_pn_howdah",
+      "visual": "Ağır çekim: fil sırtındaki kubbeli köşk (sağda, kubbe ve sancak kadrajda), korkuluğun üstünde sarıklı yüzsüz siluet (Hemu); kadrajın sol üçte birinde tek ok (altın tüyler, hız çizgileri) göz hizasında başa doğru gözle görülür biçimde ilerler ama ulaşmaz; saçak püskülleri ve sancak yavaşça salınır, filin sırtında toz yükselir",
+      "params": {
+        "mode": "hook"
+      }
+    },
+    {
+      "text": "5 Kasım 1556. Panipat.",
+      "type": "bt_pn_plain",
+      "visual": "Geniş Panipat ovası: ufukta iki ordu (solda ince çizgi sıraları, sağda küçük fil siluetleri) arasında boş ova, üstlerinde yavaş toz; üstte ince büyük '1556', altında italik 'Panipat' ve altın çizgi",
+      "params": {
+        "mode": "date",
+        "text": "1556",
+        "sub": "Panipat"
+      }
+    },
+    {
+      "text": "Delhi'yi yeni alan Hemu, kazanmak üzereydi.",
+      "type": "bt_pn_elephant",
+      "visual": "Yandan zırhlı savaş fili (başlık zırhı, altın kenarlı örtü), sırtında kubbeli köşk (hevdah) ve içinde sarıklı yüzsüz bir siluet; hortum, kulak ve kuyruk yavaşça sallanır, köşkün arkasındaki sancak rüzgârda dalgalanır, önde ve arkada toz; 'kazanmak'ta sancak altın rengine döner",
+      "cues": {
+        "hit": "kazanmak"
+      }
+    },
+    {
+      "text": "Rakibi Ekber bir çocuktu, kilometrelerce gerideydi.",
+      "type": "bt_pn_camp",
+      "visual": "Hafif bir yükseltide yuvarlak bir çadır (flama dalgalanır), önünde uzun boylu bir adam ve bir çocuk siluetleri sola, uzak ufka bakar; ufkun solunda küçük bir toz bulutu; 'kilometrelerce'de çocuğun ayağından toza kadar noktalı altın bir çizgi çizilir",
+      "cues": {
+        "hit": "kilometrelerce"
+      }
+    },
+    {
+      "text": "Kimin attığı bilinmeyen bir ok, Hemu'nun gözüne saplandı.",
+      "type": "bt_pn_howdah",
+      "visual": "Köşkün yakın planı: kubbe, saçak püskülleri sallanır, korkuluğun üstünde sarıklı yüzsüz siluet; 'saplandı'ya kadar soldan hız çizgileriyle ok gelir ve siluetin yüzüne, göz hizasına ulaşır (kan yok), siluet yavaşça geriye yaslanır",
+      "params": {
+        "mode": "arrow"
+      },
+      "cues": {
+        "hit": "saplandı"
+      }
+    },
+    {
+      "text": "Bayıldı, gözden kayboldu.",
+      "type": "bt_pn_howdah",
+      "visual": "Aynı köşk: okla geriye yaslanmış siluet 'bayıldı'dan sonra yavaşça korkuluğun arkasına çöker, ok da onunla kaybolur; köşk boş kalır, sancak dalgalanmaya devam eder",
+      "params": {
+        "mode": "fall"
+      },
+      "cues": {
+        "hit": "bayıldı"
+      }
+    },
+    {
+      "text": "Ordusu onu ölü sandı, dağıldı.",
+      "type": "bt_pn_plain",
+      "visual": "Daha yakın: ovada boş köşklü fil (kadrajın ortasında, büyük); önünde iri asker siluetleri iki yana, tozun içine açılarak uzaklaşır; 'dağıldı'da dağılma hızlanır, toz kalınlaşır",
+      "params": {
+        "mode": "rout"
+      },
+      "cues": {
+        "hit": "dağıldı"
+      }
+    },
+    {
+      "text": "O tek ok, Ekber'in yarım asırlık saltanatını kurtardı.",
+      "type": "bt_pn_line",
+      "visual": "Ovanın üstünde kalın, yatay bir ok; ucundan sağa kalın zaman çizgisi (ilk karede çizili, on yılda bir çentik) '1556' → '1605'; erken gelen büyük altın '49 yıl' ve altın kavis; 'yarım'da italik 'Ekber'in saltanatı' (kurtulan saltanat); küçük altın ışık çizgi boyunca yavaşça ilerler; altta ova, toz ve otlar",
+      "params": {
+        "from": 1556,
+        "to": 1605,
+        "text": "49 yıl",
+        "sub": "Ekber'in saltanatı"
+      },
+      "cues": {
+        "hit": "yarım"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_pn_arrow",
+      "visual": "Alacakaranlıkta boş ova: aynı ok toprağa saplı durur, güneş battıkça gölgesi zeminde uzar, havada altın toz zerreleri süzülür, önde otlar hafifçe sallanır",
+      "params": {
+        "mode": "ground"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Panipat Savaşı: Tek Bir Ok Bir İmparatorluğu Nasıl Kurtardı?",
+    "description": "Panipat Savaşı 1556: Hemu dev bir savaş filinin sırtında kazanmak üzereydi, ama kimin attığı bilinmeyen tek bir ok her şeyi değiştirdi.\n\n5 Kasım 1556'da İkinci Panipat Savaşı'nda ok Hemu'nun gözüne saplandı, Hemu filin üstündeki köşkte gözden kayboldu ve lidersiz kalan ordusu dağıldı. Delhi'yi birkaç hafta önce Hemu'ya kaptıran Babürlerin çocuk hükümdarı Ekber kilometrelerce geride bekliyordu; o yılın şubatında tahta çıkan Ekber'in saltanatı böyle kurtuldu.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence o ok atılmasaydı Hindistan'ın tarihi nasıl yazılırdı? Yorumlara yaz!\n\n#shorts #panipatsavaşı #babürimparatorluğu #ekber #düşünbakalım",
+    "tags": [
+      "panipat savaşı",
+      "ikinci panipat savaşı",
+      "panipat 1556",
+      "panipat savaşı 1556",
+      "hemu",
+      "ekber şah",
+      "babür imparatorluğu",
+      "babürler",
+      "bayram han",
+      "savaş filleri",
+      "hindistan tarihi",
+      "imparatorlukların çöküşü",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-05T19:00:00+03:00"
+  }
+}
