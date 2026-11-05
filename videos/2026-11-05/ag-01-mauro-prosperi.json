@@ -1,0 +1,565 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "mauro-prosperi",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "He ate",
+   "bats"
+  ],
+  "highlight": [
+   "bats"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "focus": [
+   500,
+   900
+  ],
+  "zoom": 1.15,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": -1,
+   "x": 815,
+   "y": 1345,
+   "scale": 1.22
+  }
+ },
+ "sources": [
+  {
+   "title": "History-Computer (via AOL) — The Remarkable Story of How One Man Survived 9 Days Lost in the Sahara Desert",
+   "url": "https://www.aol.com/remarkable-story-one-man-survived-140228866.html"
+  },
+  {
+   "title": "OffGrid — Alone in the Sahara: The Survival Story of Mauro Prosperi",
+   "url": "https://www.offgridweb.com/survival/alone-in-the-sahara-the-survival-story-of-mauro-prosperi/"
+  },
+  {
+   "title": "Wikipedia — Mauro Prosperi",
+   "url": "https://en.wikipedia.org/wiki/Mauro_Prosperi"
+  }
+ ],
+ "youtube": {
+  "title": "Mauro Prosperi: How Did He Survive 9 Days in the Sahara?",
+  "description": "Mauro Prosperi got lost in the Sahara during a desert race, and he survived by eating bats. This is the true story of his nine days alone in the sand.\n\nIn 1994, the Italian police officer was running the Marathon des Sables in Morocco when a sandstorm wiped out the trail. His water ran out, so he drank his own urine. He sheltered in an empty desert shrine and ate the bats that lived inside it. Nine days later, a nomad girl found him in Algeria, 180 miles off course. And years later, he ran the race again.\n\nSubscribe to Stickstory for a wild true survival story like this every day. What would you have done in his place? Tell me in the comments!\n\n#shorts #mauroprosperi #survival #stickstory",
+  "tags": [
+   "mauro prosperi",
+   "mauro prosperi sahara",
+   "mauro prosperi story",
+   "lost in the sahara",
+   "marathon des sables",
+   "marathon des sables 1994",
+   "sahara survival",
+   "desert survival story",
+   "survival stories",
+   "man ate bats",
+   "sandstorm",
+   "true survival story",
+   "lost in the desert",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-05T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "pros_desert",
+   "text": "He survived the Sahara by eating bats.",
+   "visual": "Hook frame in the open Sahara under a red sun: one big black bat with spread, veined wings and pointed ears flaps over the dunes in the middle of the frame; a sand dune with ripples, stones and dry scrub fills the bottom; the fez host appears big on the right in shock as the cover overlay.",
+   "title": {
+    "white": "Sahara"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "bats"
+   },
+   "params": {
+    "mode": "hook",
+    "bat": [
+     0.4,
+     0.4,
+     1.25
+    ],
+    "shrine": false,
+    "flock": false
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "pros_desert",
+   "text": "In 1994, Mauro Prosperi was running a race across the Moroccan desert.",
+   "visual": "Wide desert: a line of runners with backpacks and race bibs runs across the dunes between red race flags; Mauro, in a plain pale head-wrap with a short beard and a blue backpack, leads in front; red card '1994' and hand label 'MOROCCO'; hot sun on the right, a near dune at the bottom.",
+   "title": {
+    "white": "1994"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "y": "1994",
+    "m": "Moroccan"
+   },
+   "params": {
+    "mode": "race",
+    "labels": [
+     {
+      "text": "1994",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "y",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "MOROCCO",
+      "x": 0.74,
+      "y": 0.5,
+      "at": "m",
+      "size": 70,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "pros_storm",
+   "text": "Then a sandstorm hit, and the trail was gone.",
+   "visual": "Under a dark storm sky a huge rolling wall of sand billows in from the right; sand streaks fly across the frame; Mauro walks into the wind with his arm over his face; the red race flags bend and fall over; on 'gone' his footprint trail behind him fades away; red card 'NO TRAIL'.",
+   "title": {
+    "white": "Sandstorm"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "sandstorm",
+    "gone": "gone"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "NO TRAIL",
+      "x": 0.3,
+      "y": 0.32,
+      "at": "gone",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "left"
+   }
+  },
+  {
+   "type": "pros_bottle",
+   "text": "His water ran out. So what did he do?",
+   "visual": "Close-up on Mauro under a blazing sun with heat shimmer rising from the sand: he holds his plastic bottle upside down over his face; on 'ran' one last blue drop falls out of it; sweat drips; red card 'EMPTY'; on 'what' a big red question mark pops up.",
+   "title": {
+    "white": "No water"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "out": "ran",
+    "what": "what"
+   },
+   "params": {
+    "mode": "empty",
+    "man": {
+     "x": 0.42,
+     "scale": 1.2
+    },
+    "labels": [
+     {
+      "text": "EMPTY",
+      "x": 0.62,
+      "y": 0.28,
+      "at": "out",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "?",
+      "x": 0.66,
+      "y": 0.42,
+      "at": "what",
+      "size": 170,
+      "color": "red",
+      "font": "serif",
+      "card": false,
+      "rot": 6,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "pros_bottle",
+   "text": "He drank his own urine.",
+   "visual": "In the hot dunes Mauro, on the left, drinks from his bottle, now holding a gold liquid; the fez host on the right first thinks, then jumps back in shock on 'urine' with shock ticks around his head; gold card 'URINE'.",
+   "title": {
+    "white": "Survival"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "urine"
+   },
+   "params": {
+    "mode": "drink",
+    "kasif": {
+     "x": 0.74,
+     "y": 0.62,
+     "scale": 1.15,
+     "pose": "think",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "URINE",
+      "x": 0.36,
+      "y": 0.27,
+      "at": "hit",
+      "size": 90,
+      "color": "gold",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "pros_shrine",
+   "text": "Then he found a shrine, full of bats.",
+   "visual": "Night in the desert under the moon: a whitewashed cube shrine with a dome stands on a dune; Mauro walks up to its dark arched door; on 'bats' a swarm of bats pours out of the small dome window and circles the dome, and Mauro jumps back looking up; hand label 'EMPTY SHRINE'.",
+   "title": {
+    "white": "The shrine"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "shrine": "shrine",
+    "bats": "full"
+   },
+   "params": {
+    "mode": "find",
+    "labels": [
+     {
+      "text": "EMPTY SHRINE",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "shrine",
+      "size": 72,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": -2,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "pros_shrine",
+   "text": "So he ate them raw.",
+   "visual": "Close-up inside the shrine: whitewashed mud walls, an arched doorway full of sunlight and sand on the right, bats hang upside down from a wooden beam; Mauro, thin and grim, holds up a bat with half-open wings; on 'raw' one bat is missing from the beam; scratched tally marks on the wall count the days; red card 'RAW'.",
+   "title": {
+    "white": "Dinner"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "raw": "ate"
+   },
+   "params": {
+    "mode": "eat",
+    "labels": [
+     {
+      "text": "RAW",
+      "x": 0.53,
+      "y": 0.28,
+      "at": "raw",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     480,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "pros_desert",
+   "text": "Nine days later, a nomad girl found him,",
+   "visual": "An oasis edge by two palm trees and three grazing horned goats spaced apart: a little nomad girl in a long blue dress and a dark head-scarf stands by the goats; a thin, sweating Mauro staggers in from the left; on 'found' the girl turns to him and waves; red card 'DAY 9'.",
+   "title": {
+    "white": "Day 9"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "nine": "Nine",
+    "found": "found"
+   },
+   "params": {
+    "mode": "girl",
+    "goats": [
+     [
+      0.5,
+      30,
+      0.95,
+      -1
+     ],
+     [
+      0.62,
+      -40,
+      0.7,
+      1
+     ],
+     [
+      0.95,
+      40,
+      1.0,
+      -1
+     ]
+    ],
+    "labels": [
+     {
+      "text": "DAY 9",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "nine",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "pros_map",
+   "text": "in Algeria, 180 miles off course.",
+   "visual": "Full-frame old map of the desert: Morocco on the left, Algeria shaded on the right, a dashed border between them, the race route with camp circles in Morocco; a red wandering track leaves the route, crosses the border and ends at a big red X on 'course'; red card '180 MILES'.",
+   "title": {
+    "white": "Algeria"
+   },
+   "source": "History-Computer",
+   "set": false,
+   "cues": {
+    "lost": "Algeria",
+    "mi": "180",
+    "x": "course"
+   },
+   "params": {
+    "namePos": [
+     [
+      0.26,
+      0.68
+     ],
+     [
+      0.78,
+      0.7
+     ]
+    ],
+    "labels": [
+     {
+      "text": "180 MILES",
+      "x": 0.55,
+      "y": 0.27,
+      "at": "mi",
+      "size": 88,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "pros_desert",
+   "text": "Yes, he went back and ran that race again.",
+   "visual": "A race start in the dunes: a cloth banner 'START' hangs between two poles, runners with backpacks run under it; Mauro runs through in front and throws his arm up in a happy wave on 'again'; red card 'AGAIN'.",
+   "title": {
+    "white": "Again"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "race"
+   },
+   "params": {
+    "mode": "again",
+    "labels": [
+     {
+      "text": "AGAIN",
+      "x": 0.78,
+      "y": 0.37,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "pros_desert",
+   "text": "Subscribe for a wild true story every day.",
+   "visual": "In the dunes under the sun: the fez host stands on the left and waves, then points at the viewer on 'story'; Mauro jogs along the dune ridge behind him; a near dune at the bottom.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.32,
+     "y": 0.62,
+     "scale": 1.15,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

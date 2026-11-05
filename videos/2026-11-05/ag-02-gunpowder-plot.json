@@ -1,0 +1,670 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "gunpowder-plot",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "One letter",
+   "saved Parliament"
+  ],
+  "highlight": [
+   "letter"
+  ],
+  "scene": 0,
+  "t": 1.3,
+  "focus": [
+   540,
+   1000
+  ],
+  "zoom": 1.0,
+  "kasif": {
+   "pose": "shock",
+   "x": 730,
+   "y": 1330,
+   "scale": 1.55,
+   "face": -1,
+   "emotion": "surprised"
+  }
+ },
+ "sources": [
+  {
+   "title": "The National Archives blog — How the Gunpowder Treason was discovered",
+   "url": "https://blog.nationalarchives.gov.uk/how-the-gunpowder-treason-was-discovered/"
+  },
+  {
+   "title": "UK Parliament — Frequently Asked Questions: The Gunpowder Plot",
+   "url": "https://www.parliament.uk/about/faqs/house-of-commons-faqs/gunpowder-plot/"
+  },
+  {
+   "title": "London Museum — Guy Fawkes and the Gunpowder Plot",
+   "url": "https://www.londonmuseum.org.uk/collections/london-stories/guy-fawkes-gunpowder-plot/"
+  },
+  {
+   "title": "UK Parliament — State Opening: elements unseen by the public",
+   "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentwork/offices-and-ceremonies/overview/state-opening/elements-unseen-by-the-public/"
+  }
+ ],
+ "youtube": {
+  "title": "Gunpowder Plot: How Did One Letter Stop It?",
+  "description": "The Gunpowder Plot almost blew up King James I and the whole House of Lords in 1605. So why does Britain light bonfires every 5 November? Because of one unsigned letter.\n\nPlotters rented the cellar under the House of Lords and hid 36 barrels of gunpowder there for the State Opening of Parliament on 5 November. Ten days before, Lord Monteagle got an anonymous letter warning of \"a terrible blow\", and he took it to the government. Near midnight, guards searched the undercroft and caught Guy Fawkes with the powder. Remember, remember the fifth of November: that is why Bonfire Night exists.\n\nSubscribe to Stickstory for a true story like this every day. Who do you think wrote the Monteagle letter? Tell me in the comments!\n\n#shorts #gunpowderplot #bonfirenight #stickstory",
+  "tags": [
+   "gunpowder plot",
+   "the gunpowder plot",
+   "gunpowder plot 1605",
+   "gunpowder plot for kids",
+   "guy fawkes",
+   "guy fawkes night",
+   "bonfire night",
+   "remember the fifth of november",
+   "monteagle letter",
+   "king james i",
+   "house of lords",
+   "5th november",
+   "british history",
+   "history facts",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-05T19:00:00-05:00",
+  "related": "videos/2026-10-26/ag-04-siege-of-malta.json"
+ },
+ "scenes": [
+  {
+   "type": "gp_palace",
+   "text": "One letter saved Parliament.",
+   "visual": "Night over the Thames: the dark Old Palace of Westminster (Westminster Hall's huge roof and towers, St Stephen's chapel, the Abbey behind) with lit pointed windows rises high; a big sealed letter with a red wax seal glows and floats in the sky above the roofs; gold reflections ripple on the river with a small boat. On the cover/hook frame the big fez host stands on the bank at the right in shock.",
+   "title": {
+    "white": "Bonfire Night"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1150,
+    "horizon": 700
+   },
+   "cues": {
+    "hit": "saved"
+   },
+   "params": {
+    "gy": 0.6,
+    "tall": 1.8,
+    "win_y": 120,
+    "letter": {
+     "x": 0.36,
+     "y": 0.4,
+     "s": 1.3,
+     "at": 0
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gp_cellar",
+   "text": "In 1605, 36 barrels of gunpowder",
+   "source": "National Archives",
+   "visual": "Inside a stone vault with two big arches: 36 gunpowder barrels pop in one by one into a stacked pile of four rows while a red serif card counts up to '36 BARRELS'; flagstone floor and big cropped barrels fill the bottom.",
+   "title": {
+    "white": "1605"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "gunpowder"
+   },
+   "params": {
+    "mode": "count",
+    "gy": 0.6,
+    "barrels": {
+     "at": 0.1,
+     "step": 0.045
+    },
+    "count": {
+     "to": 36,
+     "at": 0.15,
+     "dur": 1.6,
+     "y": 0.28
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gp_cellar",
+   "text": "sat under the House of Lords.",
+   "visual": "Cut-away: on top the House of Lords chamber with tall lit windows, lords on red benches and the throne under a red cloth; below its thick stone floor, the vault with the barrel pile under firewood; a red dashed arrow runs from the powder straight up to the throne; red card 'HOUSE OF LORDS'.",
+   "title": {
+    "white": "Westminster"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "cues": {
+    "up": "under",
+    "lords": "Lords"
+   },
+   "params": {
+    "mode": "below",
+    "gy": 0.62,
+    "arrow": {
+     "at": "up"
+    },
+    "labels": [
+     {
+      "text": "HOUSE OF LORDS",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "lords",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -2,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "gp_throne",
+   "text": "The target? King James himself.",
+   "visual": "Close-up in the Lords chamber (card above the crown): King James I with a gold crown, short beard and red ermine robe sits on a gold throne under a red cloth of estate, lords' heads on red benches at both sides; under the floor a strip of the dark cellar shows the barrels right below him; a red target ring closes around the king; card 'KING JAMES I'.",
+   "title": {
+    "white": "The target"
+   },
+   "set": false,
+   "cues": {
+    "target": "target",
+    "james": "James"
+   },
+   "params": {
+    "gy": 0.6,
+    "target": "target",
+    "labels": [
+     {
+      "text": "KING JAMES I",
+      "x": 0.5,
+      "y": 0.29,
+      "at": "james",
+      "size": 40,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -2,
+      "underline": false
+     }
+    ],
+    "king_pose": "idle"
+   },
+   "camera": {
+    "focus": [
+     530,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gp_street",
+   "text": "Ten days before, a lord got an unsigned letter.",
+   "visual": "A London street of half-timbered houses at night, cobbles and a puddle with gold window reflections in front, a lamp post with a glowing lantern at the right: a messenger in a blue beret walks up and holds out a sealed letter to Lord Monteagle (hatless, short beard), who stops and frowns; red serif card 'NO NAME' in the sky.",
+   "title": {
+    "white": "Oct 26"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 700
+   },
+   "cues": {
+    "lord": "lord",
+    "letter": "letter",
+    "name": "unsigned"
+   },
+   "params": {
+    "houses": 4,
+    "ground": 0.6,
+    "embers": false,
+    "cast": [
+     {
+      "who": "messenger",
+      "accessory": "beret",
+      "x": 0.1,
+      "to": 0.36,
+      "pose": "walk",
+      "at": "letter",
+      "then": "hold",
+      "item": "scroll",
+      "face": "right",
+      "scale": 1.0
+     },
+     {
+      "who": "monteagle",
+      "beard": "short",
+      "x": 0.7,
+      "pose": "idle",
+      "face": "left",
+      "at": "name",
+      "then": "think",
+      "emotion": "worried",
+      "scale": 1.05
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    },
+    "lamp": "right",
+    "cards": [
+     {
+      "text": "NO NAME",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "name",
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "right"
+   }
+  },
+  {
+   "type": "moon_letter",
+   "text": "It warned of a terrible blow.",
+   "visual": "The letter fills the desk by candlelight, its sheet running down to the bottom of the frame: a quill writes 'My Lord,' and then, in red, 'a terrible blow', which gets a red underline; a candle gutters beside it.",
+   "title": {
+    "white": "The warning"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "t": "terrible",
+    "b": "blow"
+   },
+   "params": {
+    "sheet": {
+     "x": 0.5,
+     "y": 0.56,
+     "w": 0.86,
+     "h": 0.64,
+     "rot": -2
+    },
+    "heading": "",
+    "lines": [
+     {
+      "text": "My Lord,",
+      "at": 0.05,
+      "dur": 0.8,
+      "size": 84
+     },
+     {
+      "text": "a terrible blow",
+      "at": "t",
+      "dur": 1.0,
+      "size": 100,
+      "color": "red",
+      "underline": "b"
+     }
+    ],
+    "candle": 0.86
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gp_street",
+   "text": "And here's the thing: he didn't keep it quiet.",
+   "visual": "The same night street: Lord Monteagle runs off along the cobbles with the sealed letter in his hand; the fez host stands at the right, points after him with a grin; red serif card 'TO WHITEHALL' in the sky.",
+   "title": {
+    "white": "Reported"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 700
+   },
+   "cues": {
+    "th": "thing",
+    "q": "quiet"
+   },
+   "params": {
+    "houses": 4,
+    "ground": 0.6,
+    "lamp": "left",
+    "embers": false,
+    "cast": [
+     {
+      "who": "monteagle",
+      "beard": "short",
+      "x": 0.12,
+      "to": 0.5,
+      "pose": "run",
+      "at": "q",
+      "then": "hold",
+      "item": "scroll",
+      "face": "right",
+      "scale": 1.0
+     },
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "pose": "talk",
+      "face": "left",
+      "at": "th",
+      "then": "point",
+      "dir": 10,
+      "emotion": "happy",
+      "scale": 1.15
+     }
+    ],
+    "cards": [
+     {
+      "text": "TO WHITEHALL",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "q",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "cam": {
+     "zoom": 1.04,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "left"
+   }
+  },
+  {
+   "type": "gp_cellar",
+   "text": "At midnight, guards searched the cellar,",
+   "visual": "The same vault now dark: two bearded guards walk in from the left holding swinging lanterns, gold light pools sliding over the barrel pile with flat firewood bundles laid on top; gold card 'MIDNIGHT'.",
+   "title": {
+    "white": "Nov 4"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "m": "midnight",
+    "s": "searched"
+   },
+   "params": {
+    "mode": "dark",
+    "gy": 0.6,
+    "figures": [
+     {
+      "x": 0.44,
+      "y": 0.6,
+      "scale": 1.15,
+      "face": "right",
+      "lantern": true,
+      "walk": {
+       "from": 0.0,
+       "at": 0,
+       "dur": 2.0
+      },
+      "seq": [
+       {
+        "at": "s",
+        "pose": "point",
+        "dir": -10,
+        "face": "right"
+       }
+      ],
+      "beard": "short"
+     },
+     {
+      "x": 0.24,
+      "y": 0.6,
+      "scale": 1.05,
+      "face": "right",
+      "lantern": true,
+      "walk": {
+       "from": 0.0,
+       "at": 0.3,
+       "dur": 2.0
+      },
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "MIDNIGHT",
+      "x": 0.65,
+      "y": 0.3,
+      "at": "m",
+      "size": 50,
+      "color": "gold",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     920
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gp_cellar",
+   "text": "and caught Guy Fawkes.",
+   "visual": "Close-up in the dark vault: Guy Fawkes (black beard) stands by the barrels holding his own lantern; a bearded guard steps in from the left and points at him, Fawkes jumps back in shock; red card 'GUY FAWKES' above their heads.",
+   "title": {
+    "white": "Caught"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "c": "caught",
+    "f": "Fawkes"
+   },
+   "params": {
+    "mode": "dark",
+    "gy": 0.6,
+    "front": false,
+    "figures": [
+     {
+      "x": 0.66,
+      "y": 0.6,
+      "scale": 0.95,
+      "beard": "black",
+      "face": "left",
+      "lantern": true,
+      "pose": "idle",
+      "seq": [
+       {
+        "at": "c",
+        "pose": "shock",
+        "face": "left",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "x": 0.36,
+      "y": 0.6,
+      "scale": 0.95,
+      "face": "right",
+      "lantern": true,
+      "walk": {
+       "from": 0.05,
+       "at": 0,
+       "dur": 1.0
+      },
+      "seq": [
+       {
+        "at": "c",
+        "pose": "point",
+        "dir": 10,
+        "face": "right",
+        "emotion": "angry"
+       }
+      ],
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "GUY FAWKES",
+      "x": 0.52,
+      "y": 0.34,
+      "at": "f",
+      "size": 38,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     860
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gp_bonfire",
+   "text": "Every November fifth, Britain lights bonfires for a bomb that never went off.",
+   "visual": "Bonfire Night, every 5 November: a huge bonfire roars on a dark green with sparks and smoke rising, fireworks in gold, red and blue burst over a far London skyline with the Elizabeth Tower; the heads and shoulders of a crowd fill the bottom.",
+   "title": {
+    "white": "Every year"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1190,
+    "horizon": 900
+   },
+   "cues": {
+    "hit": "never"
+   },
+   "params": {
+    "gy": 0.62,
+    "fire": {
+     "x": 0.5,
+     "s": 1.0,
+     "at": 0
+    },
+    "crowd": {
+     "n": 5,
+     "y": 0.84,
+     "s": 1.3
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "gp_bonfire",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Close-up by the bonfire: the fez host stands big in its warm light, points at the flames while fireworks burst above, then turns to the viewer and waves.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1190,
+    "horizon": 900
+   },
+   "cues": {
+    "s": "story"
+   },
+   "params": {
+    "gy": 0.62,
+    "fire": {
+     "x": 0.3,
+     "s": 0.9,
+     "at": 0
+    },
+    "crowd": false,
+    "kasif": {
+     "x": 0.68,
+     "y": 0.7,
+     "scale": 1.3,
+     "pose": "point",
+     "dir": 10,
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "focus": [
+     640,
+     920
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   }
+  }
+ ]
+}

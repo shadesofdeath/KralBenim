@@ -1,0 +1,3102 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-1904-olympic-marathon",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-newsprint",
+ "cover": {
+  "lines": [
+   "HE TOOK",
+   "A CAR"
+  ],
+  "highlight": [
+   "CAR"
+  ],
+  "scene": 3,
+  "t": 1.2,
+  "focus": [
+   1150,
+   620
+  ],
+  "zoom": 1.1,
+  "size": 190,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.05,
+   "face": -1,
+   "x": 1630,
+   "y": 1010,
+   "dir": 20
+  }
+ },
+ "sources": [
+  {
+   "title": "The 1904 Olympic Marathon May Have Been the Strangest Ever (Smithsonian Magazine)",
+   "url": "https://www.smithsonianmag.com/history/the-1904-olympic-marathon-may-have-been-the-strangest-ever-14910747"
+  },
+  {
+   "title": "Athletics at the 1904 Summer Olympics, Men's marathon (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Athletics_at_the_1904_Summer_Olympics_%E2%80%93_Men%27s_marathon"
+  },
+  {
+   "title": "Marathon, Men, 1904 Summer Olympics (Olympedia)",
+   "url": "https://www.olympedia.org/results/56131"
+  },
+  {
+   "title": "1967: Creation of the IOC Medical Commission (Olympics.com)",
+   "url": "https://olympics.com/ioc/1967-creation-of-the-ioc-medical-commission"
+  }
+ ],
+ "youtube": {
+  "title": "1904 Olympic Marathon: The Winner Was Fed Rat Poison",
+  "description": "The 1904 Olympic marathon was the strangest race ever run: the first man across the line rode in a car, and the real winner was kept going with rat poison.\n\nSt. Louis, 30 August 1904: 90 degree heat, dusty roads and only two places to drink, because the organizer wanted to study \"purposeful dehydration\". Fred Lorz quit, rode about 11 miles in a car and was nearly crowned by Alice Roosevelt. Thomas Hicks was fed strychnine, egg whites and brandy and carried across the line. Cuban mail carrier Andarín Carvajal ate rotten apples, took a nap and still finished fourth.\n\nIn this video:\n- The dehydration \"experiment\" of the 1904 St. Louis Olympics\n- The dust clouds that nearly killed William Garcia\n- Fred Lorz and the car ride that almost won gold\n- Thomas Hicks, strychnine and the first Olympic doping\n- Carvajal, Len Taunyane, Jan Mashiani and the wild dogs\n\nSubscribe to Stickstory for more of history's strangest true stories. Which of these runners do you think deserved the gold? Tell me in the comments!\n\n#1904olympics #marathon #olympichistory #historysstrangestmoments #stickstory",
+  "tags": [
+   "1904 olympic marathon",
+   "1904 olympics marathon",
+   "1904 st louis olympic marathon",
+   "strangest olympic marathon",
+   "fred lorz",
+   "thomas hicks",
+   "thomas hicks strychnine",
+   "andarin carvajal",
+   "felix carvajal",
+   "len taunyane",
+   "1904 st louis olympics",
+   "olympic history",
+   "marathon history",
+   "first olympic doping",
+   "weird history",
+   "history's strangest moments",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-05T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "mar_stadium",
+   "text": "A runner bursts into the stadium, way ahead of everyone. The crowd jumps to its feet.",
+   "visual": "The 1904 stadium: a wooden grandstand packed with spectators in hats under red, blue and gold bunting; a lone runner with a blank race number sprints in from the left along the cinder track; on 'jumps' the whole crowd leaps up waving.",
+   "title": {
+    "white": "St. Louis",
+    "gray": "1904"
+   },
+   "cues": {
+    "in": "bursts",
+    "jumps": "jumps"
+   },
+   "params": {
+    "cheer": "jumps",
+    "people": [
+     {
+      "bib": "1904",
+      "pose": "run",
+      "face": "right",
+      "scale": 0.8,
+      "x": -0.05,
+      "to": 0.55,
+      "at": 0.0,
+      "dur": 3.2,
+      "linear": true,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "jumps",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "push"
+   },
+   "chapter": "The Wrong Winner"
+  },
+  {
+   "type": "mar_stadium",
+   "text": "The President's daughter steps forward with a wreath, ready to crown the champion.",
+   "visual": "Closer: a young woman in a long pale dress and a wide flowered hat walks in from the right holding up a green laurel wreath; the runner waits, panting and smiling, the crowd still waving behind.",
+   "title": {
+    "white": "The wreath"
+   },
+   "cues": {
+    "dau": "daughter",
+    "wr": "wreath",
+    "cr": "crown"
+   },
+   "params": {
+    "cheer": 0.6,
+    "people": [
+     {
+      "bib": "1904",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.8,
+      "x": 0.4,
+      "emotion": "happy"
+     },
+     {
+      "x": 0.86,
+      "to": 0.6,
+      "at": 0.2,
+      "dur": 2.4,
+      "dress": true,
+      "hold_wreath": true,
+      "face": "left",
+      "pose": "point",
+      "dir": 10,
+      "scale": 0.72
+     }
+    ],
+    "labels": [
+     {
+      "text": "the President's daughter",
+      "x": 0.66,
+      "y": 0.3,
+      "at": "dau",
+      "size": 54,
+      "box": true,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1000,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "There's just one problem. For about eleven miles of this race, he wasn't running.",
+   "visual": "Giant words '11 miles' / 'not running' word by word, 'not' in a red box; the fez narrator on the right holds up a sign 'IN A CAR?' on 'running' with raised brows.",
+   "title": {
+    "white": "One problem"
+   },
+   "cues": {
+    "prob": "problem",
+    "w0": "eleven",
+    "run": "running"
+   },
+   "params": {
+    "lines": [
+     "11 miles",
+     "not running"
+    ],
+    "highlight": [
+     "not"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "talk",
+     "face": -1,
+     "scale": 0.9,
+     "at": "run",
+     "then": "hold",
+     "text": "IN A CAR?",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "mar_car",
+   "text": "He was sitting in a car.",
+   "visual": "A dusty country road: a red 1904 open touring car rolls fast past fence posts and telegraph poles, a driver in a bowler hat at the wheel and the same runner sitting comfortably in the back seat; dust billows behind.",
+   "title": {
+    "white": "The car"
+   },
+   "cues": {
+    "car": "car"
+   },
+   "params": {
+    "speed": 420,
+    "heat": 0.6,
+    "cars": [
+     {
+      "x": 0.52,
+      "s": 1.2
+     }
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.5,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.72
+     },
+     {
+      "bib": "1904",
+      "pose": "run",
+      "face": "right",
+      "scale": 0.72,
+      "x": 0.4,
+      "ride": {
+       "car": 0,
+       "seat": "back"
+      },
+      "emotion": "happy",
+      "bib_s": 1.6,
+      "bib_k": 0.5
+     }
+    ],
+    "labels": [
+     {
+      "text": "in a car!",
+      "x": 0.2,
+      "y": 0.2,
+      "at": "car",
+      "color": "red",
+      "size": 84
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "And the man who really won? He was being kept on his feet with rat poison.",
+   "visual": "Close on another runner, exhausted, staggering on a sun-cracked open stretch with half-closed eyes; a trainer in a bowler hat grips his arm with one hand and holds up a small skull-labelled bottle with the other; on 'poison' a red note 'rat poison' with an arrow to the bottle.",
+   "title": {
+    "white": "The winner?"
+   },
+   "cues": {
+    "won": "won",
+    "poi": "poison"
+   },
+   "params": {
+    "speed": 110,
+    "heat": 0.8,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "cracks",
+      "x": 0.5,
+      "s": 1.2,
+      "drift": 1.0
+     }
+    ],
+    "grips": [
+     [
+      1,
+      0
+     ]
+    ],
+    "people": [
+     {
+      "bib": " ",
+      "pose": "stagger",
+      "face": "right",
+      "scale": 0.75,
+      "x": 0.45,
+      "emotion": "worried"
+     },
+     {
+      "bowler": true,
+      "x": 0.535,
+      "pose": "point",
+      "dir": 55,
+      "face": "left",
+      "scale": 0.78,
+      "bottle": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "rat poison",
+      "x": 0.68,
+      "y": 0.4,
+      "at": "poi",
+      "color": "red",
+      "size": 72,
+      "arrow": [
+       0.62,
+       0.5
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     630
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "This is the 1904 Olympic marathon, and every word of it is true.",
+   "visual": "Giant words 'Every word' / 'is true' word by word, 'true' in a red box; note '1904 Olympic marathon'; the fez narrator on the right points at the words.",
+   "title": {},
+   "cues": {
+    "note": "1904",
+    "w0": "every",
+    "tr": "true"
+   },
+   "params": {
+    "lines": [
+     "Every word",
+     "is true"
+    ],
+    "highlight": [
+     "true"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "1904 Olympic marathon",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "face": -1,
+     "scale": 0.9,
+     "at": "tr",
+     "then": "point",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "So how did the real winner end up nearly dying out there? To understand that, you have to see the course.",
+   "visual": "An empty, sun-cracked dirt road with a dead tree, heat shimmering; the fez narrator walks in from the right, holds up a sign 'HOW?' on 'dying', then points down the road on 'course'.",
+   "title": {
+    "white": "How?"
+   },
+   "cues": {
+    "dy": "dying",
+    "co": "course"
+   },
+   "params": {
+    "speed": 0,
+    "heat": 1.0,
+    "fence": false,
+    "scenery": [
+     {
+      "type": "deadtree",
+      "x": 0.18,
+      "s": 1.1,
+      "drift": 0
+     },
+     {
+      "type": "cracks",
+      "x": 0.5,
+      "s": 1.2,
+      "drift": 0
+     }
+    ],
+    "kasif": {
+     "x": 1.05,
+     "to": 0.5,
+     "at": 0.0,
+     "dur": 1.8,
+     "scale": 0.9,
+     "pose": "walk",
+     "face": "left",
+     "seq": [
+      {
+       "at": "dy",
+       "pose": "hold",
+       "text": "HOW?",
+       "emotion": "worried",
+       "face": "right"
+      },
+      {
+       "at": "co",
+       "pose": "point",
+       "dir": "forward",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "St. Louis, summer of 1904.",
+   "visual": "CHAPTER 1 / 6 card: blue disc with 1, title 'The Thirsty Fair'.",
+   "title": {},
+   "cues": {
+    "n": "St",
+    "title": "summer",
+    "line": "1904"
+   },
+   "params": {
+    "n": 1,
+    "total": 6,
+    "title": "The Thirsty Fair",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Thirsty Fair"
+  },
+  {
+   "type": "mar_fair",
+   "text": "The city is hosting a World's Fair, and the Olympics are part of it.",
+   "visual": "The 1904 World's Fair: a domed white palace with colonnades on a rippling lagoon, a giant observation wheel turning on the right, flags waving, a row of visitors in hats and parasols in front; notes 'World's Fair' and 'the Olympics too'.",
+   "title": {
+    "white": "World's Fair"
+   },
+   "cues": {
+    "wf": "World",
+    "oly": "Olympics"
+   },
+   "params": {
+    "wheel": {
+     "x": 0.79,
+     "r": 0.26
+    },
+    "labels": [
+     {
+      "text": "World's Fair",
+      "x": 0.18,
+      "y": 0.2,
+      "at": "wf",
+      "size": 64,
+      "box": true,
+      "color": "blue"
+     },
+     {
+      "text": "the Olympics too",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "oly",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 860
+   }
+  },
+  {
+   "type": "mar_stadium",
+   "text": "On August 30th, at three in the afternoon, thirty-two men line up for the marathon.",
+   "visual": "The start line on the cinder track: a row of six runners with blank race numbers stands ready, facing right; a starter in a bowler hat on the left raises his pistol; notes 'Aug 30, 3 pm' and red '32 runners'.",
+   "title": {
+    "white": "The start"
+   },
+   "cues": {
+    "aug": "August",
+    "th": "thirty"
+   },
+   "params": {
+    "cheer": {
+     "at": 0,
+     "base": 0.25
+    },
+    "people": [
+     {
+      "x": 0.3,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "emotion": null
+     },
+     {
+      "x": 0.41,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "emotion": "worried"
+     },
+     {
+      "x": 0.52,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "emotion": null
+     },
+     {
+      "x": 0.63,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "emotion": "worried"
+     },
+     {
+      "x": 0.74,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "emotion": null
+     },
+     {
+      "x": 0.85,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "emotion": "worried"
+     },
+     {
+      "bowler": true,
+      "x": 0.13,
+      "pose": "point",
+      "dir": "up",
+      "face": "right",
+      "scale": 0.72
+     }
+    ],
+    "labels": [
+     {
+      "text": "Aug 30, 3 pm",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "aug",
+      "size": 60,
+      "box": true,
+      "color": "blue"
+     },
+     {
+      "text": "32 runners",
+      "x": 0.72,
+      "y": 0.3,
+      "at": "th",
+      "color": "red",
+      "size": 64,
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "left"
+   },
+   "source": "Olympedia"
+  },
+  {
+   "type": "mar_prop",
+   "text": "It's about 90 degrees. The course was nearly 25 miles of dirt roads.",
+   "visual": "Big close-up thermometer on the sun-baked roadside: its red column climbs to '90°F', a gold sun blazes behind it; on 'miles' a note '25 miles of dirt'.",
+   "title": {
+    "white": "90°F"
+   },
+   "cues": {
+    "deg": "90",
+    "mi": "miles"
+   },
+   "params": {
+    "item": "thermo",
+    "x": 0.4,
+    "y": 0.44,
+    "s": 0.8,
+    "table": false,
+    "thermo": {
+     "deg": 90,
+     "at": "deg"
+    },
+    "labels": [
+     {
+      "text": "25 miles of dirt",
+      "x": 0.73,
+      "y": 0.75,
+      "at": "mi",
+      "size": 74
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "timeline",
+   "text": "And here's the crazy part. In all those miles, there were only two places to drink: a water tower at mile six, and a well at mile twelve.",
+   "visual": "Horizontal time line of the course: 'Mile 0 start', 'Mile 6 water tower', 'Mile 12 well', 'Mile 25 finish'; the marker jumps to each water stop as it is named, the well in red.",
+   "title": {
+    "white": "Two drinks"
+   },
+   "cues": {
+    "crazy": "crazy",
+    "dr": "drink",
+    "six": "six",
+    "tw": "twelve"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Mile 0",
+      "text": "start",
+      "at": 0.1
+     },
+     {
+      "year": "Mile 6",
+      "text": "water tower",
+      "at": "six"
+     },
+     {
+      "year": "Mile 12",
+      "text": "well",
+      "at": "tw"
+     },
+     {
+      "year": "Mile 25",
+      "text": "finish",
+      "at": "dr"
+     }
+    ],
+    "focus": 2
+   },
+   "source": "Smithsonian"
+  },
+  {
+   "type": "mar_well",
+   "text": "That was on purpose. The chief organizer, James Sullivan, wanted to study what he called purposeful dehydration. Thirty-two runners were about to become his experiment!",
+   "visual": "By a stone roadside well in the heat, an official in a bowler hat (James Sullivan) points at the well; note 'James Sullivan', then red 'purposeful dehydration'; on 'experiment' the fez narrator on the right holds up a sign 'THE EXPERIMENT?' in shock.",
+   "title": {
+    "white": "On purpose"
+   },
+   "cues": {
+    "pur": "purpose",
+    "js": "Sullivan",
+    "pd": "purposeful",
+    "ex": "experiment"
+   },
+   "params": {
+    "speed": 0,
+    "heat": 0.9,
+    "fence": false,
+    "poles": false,
+    "well": {
+     "x": 0.24,
+     "s": 1.0,
+     "bucket": "pur"
+    },
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.42,
+      "pose": "talk",
+      "face": "left",
+      "scale": 0.8,
+      "seq": [
+       {
+        "at": "pd",
+        "pose": "point",
+        "dir": "down",
+        "face": "left"
+       }
+      ]
+     }
+    ],
+    "kasif": {
+     "x": 0.8,
+     "scale": 0.85,
+     "pose": "think",
+     "face": "left",
+     "seq": [
+      {
+       "at": "ex",
+       "pose": "hold",
+       "text": "THE EXPERIMENT?",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "James Sullivan",
+      "x": 0.45,
+      "y": 0.2,
+      "at": "js",
+      "size": 64
+     },
+     {
+      "text": "purposeful dehydration",
+      "x": 0.5,
+      "y": 0.33,
+      "at": "pd",
+      "color": "red",
+      "size": 74
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   },
+   "source": "Smithsonian"
+  },
+  {
+   "type": "mar_stadium",
+   "text": "The gun fired, and after five laps of the stadium, the runners hit the open road.",
+   "visual": "The start line: on 'gun' the starter's pistol cracks in a puff of smoke and the six runners burst away to the right along the track.",
+   "title": {
+    "white": "Bang!"
+   },
+   "cues": {
+    "gun": "gun",
+    "laps": "laps"
+   },
+   "params": {
+    "cheer": {
+     "at": "gun",
+     "base": 0.3
+    },
+    "pistol": {
+     "x": 0.2,
+     "y": 0.42,
+     "at": "gun"
+    },
+    "people": [
+     {
+      "x": 0.3,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "to": 1.05,
+      "at": "gun",
+      "dur": 3.6,
+      "move_pose": "run",
+      "ph0": 0.0
+     },
+     {
+      "x": 0.41,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "to": 1.16,
+      "at": "gun",
+      "dur": 3.6,
+      "move_pose": "run",
+      "ph0": 0.17
+     },
+     {
+      "x": 0.52,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "to": 1.27,
+      "at": "gun",
+      "dur": 3.6,
+      "move_pose": "run",
+      "ph0": 0.34
+     },
+     {
+      "x": 0.63,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "to": 1.38,
+      "at": "gun",
+      "dur": 3.6,
+      "move_pose": "run",
+      "ph0": 0.51
+     },
+     {
+      "x": 0.74,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "to": 1.49,
+      "at": "gun",
+      "dur": 3.6,
+      "move_pose": "run",
+      "ph0": 0.68
+     },
+     {
+      "x": 0.85,
+      "bib": " ",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.62,
+      "to": 1.6,
+      "at": "gun",
+      "dur": 3.6,
+      "move_pose": "run",
+      "ph0": 0.8500000000000001
+     },
+     {
+      "bowler": true,
+      "x": 0.13,
+      "pose": "point",
+      "dir": "up",
+      "face": "right",
+      "scale": 0.72
+     }
+    ],
+    "labels": [
+     {
+      "text": "5 laps, then the road",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "laps",
+      "size": 58,
+      "box": true,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "left"
+   }
+  },
+  {
+   "type": "mar_car",
+   "text": "That's when the cars showed up. Officials, doctors and coaches drove alongside the runners, and every car threw up a cloud of dust.",
+   "visual": "Three runners run along the dirt road past fence posts; a red touring car with two men in bowler hats drives in from the left beside them, a huge dust cloud boiling up behind it; note 'officials, doctors, coaches'.",
+   "title": {
+    "white": "The cars"
+   },
+   "cues": {
+    "cars": "cars",
+    "off": "Officials",
+    "dust": "dust"
+   },
+   "params": {
+    "speed": 300,
+    "heat": 0.4,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "farmhouse",
+      "x": 0.95,
+      "s": 1.0,
+      "drift": 0.35
+     },
+     {
+      "type": "barn",
+      "x": 0.35,
+      "s": 0.8,
+      "drift": 0.35
+     }
+    ],
+    "cars": [
+     {
+      "x": -0.3,
+      "to": 0.72,
+      "at": "cars",
+      "dur": 4.5,
+      "s": 1.1
+     }
+    ],
+    "people": [
+     {
+      "x": 0.24,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.66,
+      "ph0": 0.3
+     },
+     {
+      "x": 0.4,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.66,
+      "ph0": 0.6
+     },
+     {
+      "x": 0.56,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.66
+     },
+     {
+      "bowler": true,
+      "x": 0.5,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.66
+     }
+    ],
+    "labels": [
+     {
+      "text": "officials, doctors, coaches",
+      "x": 0.5,
+      "y": 0.13,
+      "at": "off",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "You couldn't see. You couldn't breathe. Runners coughed and choked.",
+   "visual": "Close on a runner inside a thick rolling dust cloud that fills the frame; on 'coughed' he doubles over, hand at his mouth, eyebrows up in distress.",
+   "title": {
+    "white": "Dust"
+   },
+   "cues": {
+    "see": "see",
+    "br": "breathe",
+    "co": "coughed"
+   },
+   "params": {
+    "speed": 200,
+    "fence": false,
+    "scenery": [
+     {
+      "type": "farmhouse",
+      "x": 0.85,
+      "s": 1.0,
+      "drift": 0.3
+     }
+    ],
+    "dust": {
+     "from": 0.35,
+     "to": 1.0,
+     "at": "see",
+     "dur": 1.2
+    },
+    "dust_y": 0.15,
+    "people": [
+     {
+      "x": 0.5,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.8,
+      "emotion": "worried",
+      "cough": "co"
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "One American, William Garcia, was found collapsed by the road. The dust had torn up his insides. Another hour, and he could have bled to death.",
+   "visual": "The dust settles over the empty road: a runner lies collapsed on the roadside; an official in a bowler hat runs in from the right and kneels-points down at him; notes 'William Garcia' and red 'nearly bled to death'.",
+   "title": {
+    "white": "Collapsed"
+   },
+   "cues": {
+    "wg": "Garcia",
+    "fo": "found",
+    "ins": "insides",
+    "ho": "hour"
+   },
+   "params": {
+    "speed": 0,
+    "dust": 0.3,
+    "dust_y": 0.45,
+    "heat": 0.4,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "barn",
+      "x": 0.8,
+      "s": 1.0,
+      "drift": 0
+     }
+    ],
+    "people": [
+     {
+      "x": 0.3,
+      "y": 0.75,
+      "bib": " ",
+      "pose": "lie",
+      "face": "right",
+      "scale": 0.75
+     },
+     {
+      "bowler": true,
+      "x": 1.05,
+      "to": 0.62,
+      "at": "fo",
+      "dur": 1.6,
+      "pose": "idle",
+      "move_pose": "run",
+      "face": "left",
+      "scale": 0.75,
+      "seq": [
+       {
+        "at": "ins",
+        "pose": "point",
+        "dir": "down",
+        "face": "left",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "William Garcia",
+      "x": 0.3,
+      "y": 0.32,
+      "at": "wg",
+      "size": 70
+     },
+     {
+      "text": "nearly bled to death",
+      "x": 0.6,
+      "y": 0.15,
+      "at": "ho",
+      "color": "red",
+      "size": 76
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   },
+   "source": "Smithsonian"
+  },
+  {
+   "type": "mar_car",
+   "text": "But he wasn't even the strangest story of the day.",
+   "visual": "A shady tree-lined lane: a red touring car idles at the roadside, its driver in a bowler hat waiting at the wheel; the fez narrator on the left shrugs on 'strangest', then holds up a sign 'EASIER WAY?' and leans toward the car.",
+   "title": {
+    "white": "A shortcut"
+   },
+   "cues": {
+    "str": "strangest",
+    "day": "day."
+   },
+   "params": {
+    "speed": 0,
+    "heat": 0.3,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "lane",
+      "x": 0.5,
+      "s": 1.0,
+      "drift": 0
+     }
+    ],
+    "cars": [
+     {
+      "x": 0.64,
+      "s": 1.2
+     }
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.6,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.72
+     }
+    ],
+    "kasif": {
+     "x": 0.24,
+     "scale": 0.9,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "str",
+       "pose": "shrug",
+       "emotion": "worried"
+      },
+      {
+       "at": "day",
+       "pose": "hold",
+       "text": "EASIER WAY?",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Because one of the leaders had just found a much easier way to run a marathon!",
+   "visual": "CHAPTER 2 / 6 card: blue disc with 2, title 'The Man in the Car'.",
+   "title": {},
+   "cues": {
+    "n": "leaders",
+    "title": "easier",
+    "line": "marathon"
+   },
+   "params": {
+    "n": 2,
+    "total": 6,
+    "title": "The Man in the Car",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Man in the Car"
+  },
+  {
+   "type": "mar_car",
+   "text": "His name was Fred Lorz. He led early, but around mile nine, cramps hit him and he quit. Then he climbed into a car.",
+   "visual": "Fred Lorz runs along the road past a wooden mile post 'MILE 9'; on 'cramps' he doubles over clutching his side and the road slows to a stop; red note 'quit!'; a red touring car pulls up and on 'climbed' he hops into the back seat, smiling.",
+   "title": {
+    "white": "Mile 9"
+   },
+   "cues": {
+    "fl": "Fred",
+    "cr": "cramps",
+    "qu": "quit",
+    "cl": "climbed"
+   },
+   "params": {
+    "speed": 280,
+    "stop": "cr",
+    "heat": 0.6,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "milepost",
+      "x": 1.05,
+      "s": 1.0,
+      "drift": 0.9,
+      "text": "9"
+     }
+    ],
+    "cars": [
+     {
+      "x": 1.45,
+      "to": 0.68,
+      "at": "qu",
+      "dur": 1.6,
+      "s": 1.2
+     }
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.68,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.72
+     },
+     {
+      "bib": "1904",
+      "pose": "run",
+      "face": "right",
+      "scale": 0.78,
+      "x": 0.36,
+      "cough": "cr",
+      "cough_until": "cl",
+      "emotion": null,
+      "seq": [
+       {
+        "at": "cl",
+        "pose": "idle",
+        "emotion": "happy"
+       }
+      ],
+      "ride": {
+       "car": 0,
+       "seat": "back",
+       "from": "cl"
+      }
+     }
+    ],
+    "labels": [
+     {
+      "text": "Fred Lorz",
+      "x": 0.28,
+      "y": 0.2,
+      "at": "fl",
+      "size": 70
+     },
+     {
+      "text": "quit!",
+      "x": 0.2,
+      "y": 0.36,
+      "at": "qu",
+      "color": "red",
+      "size": 90
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "And as it rolled along the course, Lorz waved at the runners he was passing.",
+   "visual": "Close on the car rolling across a wooden creek bridge, Lorz in the back seat waving cheerfully; behind it two tired runners fall back to the left in the dust.",
+   "title": {
+    "white": "Waving"
+   },
+   "cues": {
+    "rol": "rolled",
+    "wav": "waved"
+   },
+   "params": {
+    "speed": 420,
+    "heat": 0.4,
+    "road": false,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "lane",
+      "x": 0.9,
+      "s": 0.8,
+      "drift": 0.25
+     },
+     {
+      "type": "bridge",
+      "x": 0.5,
+      "s": 1.4,
+      "drift": 0
+     }
+    ],
+    "cars": [
+     {
+      "x": 0.6,
+      "s": 1.2
+     }
+    ],
+    "people": [
+     {
+      "x": 0.24,
+      "to": -0.15,
+      "at": 0,
+      "dur": 4.5,
+      "linear": true,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.66,
+      "emotion": "worried",
+      "gait_k": 1.3
+     },
+     {
+      "x": 0.12,
+      "to": -0.3,
+      "at": 0,
+      "dur": 4.5,
+      "linear": true,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.66,
+      "emotion": "worried",
+      "gait_k": 1.3,
+      "ph0": 0.4
+     },
+     {
+      "bowler": true,
+      "x": 0.6,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.72
+     },
+     {
+      "bib": "1904",
+      "pose": "run",
+      "face": "right",
+      "scale": 0.72,
+      "x": 0.5,
+      "emotion": "happy",
+      "ride": {
+       "car": 0,
+       "seat": "back",
+       "wave": "wav"
+      }
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "left"
+   }
+  },
+  {
+   "type": "mar_car",
+   "text": "Then, near mile nineteen, the car broke down. So Lorz did something unbelievable. He hopped out and started running again.",
+   "visual": "A tree-lined lane: a wooden mile post 'MILE 19' slides in and the car slows and stops beside it, steam puffing from its hood; the fez narrator on the left jumps back in shock on 'unbelievable' as Lorz leaps out of the back seat and runs off to the right.",
+   "title": {
+    "white": "Mile 19"
+   },
+   "cues": {
+    "nin": "nineteen",
+    "brk": "broke",
+    "unb": "unbelievable",
+    "hop": "hopped"
+   },
+   "params": {
+    "speed": 300,
+    "stop": "brk",
+    "heat": 0.4,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "lane",
+      "x": 0.75,
+      "s": 0.9,
+      "drift": 0.3
+     },
+     {
+      "type": "milepost",
+      "x": 1.2,
+      "s": 1.0,
+      "drift": 0.9,
+      "text": "19"
+     }
+    ],
+    "cars": [
+     {
+      "x": 0.6,
+      "s": 1.2,
+      "stop": "brk"
+     }
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.6,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.72
+     },
+     {
+      "bib": "1904",
+      "pose": "run",
+      "face": "right",
+      "scale": 0.72,
+      "x": 0.5,
+      "emotion": "happy",
+      "ride": {
+       "car": 0,
+       "seat": "back",
+       "until": "hop"
+      },
+      "exit_speed": 420
+     }
+    ],
+    "kasif": {
+     "x": 0.16,
+     "scale": 0.85,
+     "pose": "point",
+     "face": "right",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "unb",
+       "pose": "shock"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mar_finish",
+   "text": "He jogged into the stadium in first place, and the crowd went wild.",
+   "visual": "The stadium: Lorz jogs in from the left, fresh and smiling, and breaks the red finish tape under a 'FINISH' banner on 'first'; on 'wild' the packed stands leap up waving.",
+   "title": {
+    "white": "First?"
+   },
+   "cues": {
+    "fir": "first",
+    "wild": "wild"
+   },
+   "params": {
+    "cheer": "wild",
+    "tape": {
+     "x": 0.6,
+     "h": 190,
+     "break": "fir"
+    },
+    "people": [
+     {
+      "bib": "1904",
+      "pose": "run",
+      "face": "right",
+      "scale": 0.75,
+      "x": -0.05,
+      "to": 0.72,
+      "at": 0,
+      "dur": 2.8,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "wild",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "right"
+   }
+  },
+  {
+   "type": "mar_stadium",
+   "text": "Alice Roosevelt placed a wreath on his head.",
+   "visual": "Close on Lorz at the finish: Alice Roosevelt in a long dress and a wide flowered hat beside him; on 'wreath' a green laurel wreath drops onto his head; note 'Alice Roosevelt'.",
+   "title": {
+    "white": "The crown"
+   },
+   "cues": {
+    "al": "Alice",
+    "wr": "wreath"
+   },
+   "params": {
+    "cheer": 0.7,
+    "people": [
+     {
+      "bib": "1904",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.78,
+      "x": 0.44,
+      "emotion": "happy",
+      "wreath": "wr"
+     },
+     {
+      "x": 0.6,
+      "dress": true,
+      "face": "left",
+      "pose": "point",
+      "dir": 20,
+      "scale": 0.74
+     }
+    ],
+    "labels": [
+     {
+      "text": "Alice Roosevelt",
+      "x": 0.6,
+      "y": 0.27,
+      "at": "al",
+      "size": 54,
+      "box": true,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mar_stadium",
+   "text": "She was about to hand him the gold medal, when someone shouted that he hadn't run the race.",
+   "visual": "Alice holds out a gold medal to the wreathed Lorz; on 'shouted' a spectator in a bowler hat in the front right points at him and a red note 'HE RODE IN A CAR!' slams in; the crowd stops cheering, Lorz's face drops.",
+   "title": {
+    "white": "Busted"
+   },
+   "cues": {
+    "med": "medal",
+    "sh": "shouted"
+   },
+   "params": {
+    "cheer": {
+     "at": 0,
+     "until": "sh",
+     "base": 0.0
+    },
+    "people": [
+     {
+      "bib": "1904",
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.74,
+      "x": 0.38,
+      "emotion": "happy",
+      "wreath": 0.0,
+      "seq": [
+       {
+        "at": "sh",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "x": 0.54,
+      "dress": true,
+      "face": "left",
+      "pose": "point",
+      "dir": 20,
+      "scale": 0.72
+     },
+     {
+      "bowler": true,
+      "x": 0.84,
+      "pose": "idle",
+      "face": "left",
+      "scale": 0.86,
+      "seq": [
+       {
+        "at": "sh",
+        "pose": "point",
+        "dir": 20,
+        "face": "left",
+        "emotion": "angry"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "gold medal",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "med",
+      "color": "gold",
+      "size": 56,
+      "box": true
+     },
+     {
+      "text": "HE RODE IN A CAR!",
+      "x": 0.66,
+      "y": 0.42,
+      "at": "sh",
+      "color": "red",
+      "size": 70,
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "push"
+   }
+  },
+  {
+   "type": "board",
+   "text": "It was just a joke, he said. Officials banned him for life.",
+   "visual": "Pinned board 'Fred Lorz': card 'His story' ('rode about 11 miles' cross, 'just a joke' cross), card 'The verdict' ('disqualified' cross, 'banned for life' cross); red pill 'No gold medal'.",
+   "title": {
+    "white": "Banned"
+   },
+   "cues": {
+    "jo": "joke",
+    "off": "Officials",
+    "ban": "banned",
+    "life": "life"
+   },
+   "params": {
+    "title": "Fred Lorz",
+    "cards": [
+     {
+      "title": "His story",
+      "items": [
+       {
+        "text": "rode about 11 miles",
+        "mark": "x",
+        "at": 0.2
+       },
+       {
+        "text": "\"just a joke\"",
+        "mark": "x",
+        "at": "jo"
+       }
+      ]
+     },
+     {
+      "title": "The verdict",
+      "items": [
+       {
+        "text": "disqualified",
+        "mark": "x",
+        "at": "off"
+       },
+       {
+        "text": "banned for life",
+        "mark": "x",
+        "at": "ban"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "No gold medal",
+     "color": "red",
+     "at": "life"
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "mar_road",
+   "text": "But while all this was happening, the real leader was still out on the road.",
+   "visual": "Back out on a glaring, empty, sun-cracked road with a dead tree: the fez narrator on the left points down the road at a small far-off runner staggering alone in the heat.",
+   "title": {
+    "white": "Meanwhile"
+   },
+   "cues": {
+    "lea": "leader",
+    "road": "road."
+   },
+   "params": {
+    "speed": 80,
+    "heat": 1.0,
+    "fence": false,
+    "scenery": [
+     {
+      "type": "deadtree",
+      "x": 0.9,
+      "s": 1.0,
+      "drift": 0.2
+     },
+     {
+      "type": "cracks",
+      "x": 0.5,
+      "s": 1.2,
+      "drift": 1.0
+     }
+    ],
+    "people": [
+     {
+      "bib": " ",
+      "pose": "stagger",
+      "face": "right",
+      "scale": 0.5,
+      "x": 0.72,
+      "emotion": "worried"
+     }
+    ],
+    "kasif": {
+     "x": 0.2,
+     "scale": 0.92,
+     "pose": "talk",
+     "face": "right",
+     "seq": [
+      {
+       "at": "lea",
+       "pose": "point",
+       "dir": "forward",
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "And he was in terrible shape.",
+   "visual": "CHAPTER 3 / 6 card: blue disc with 3, title 'The Poisoned Winner'.",
+   "title": {},
+   "cues": {
+    "n": "And",
+    "title": "terrible",
+    "line": "shape"
+   },
+   "params": {
+    "n": 3,
+    "total": 6,
+    "title": "The Poisoned Winner",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Poisoned Winner"
+  },
+  {
+   "type": "mar_road",
+   "text": "Thomas Hicks was leading by a mile and a half, but he was falling apart. With ten miles to go, he begged to lie down. His trainers said no.",
+   "visual": "Close on Thomas Hicks staggering on a sun-cracked open stretch, a trainer in a bowler hat gripping each arm and holding him up; note '10 miles to go'; on 'begged' he sags; on 'no' the trainer on the right scowls and a red 'no!' pops.",
+   "title": {
+    "white": "Lie down?"
+   },
+   "cues": {
+    "th": "Thomas",
+    "ten": "ten",
+    "beg": "begged",
+    "no": "no."
+   },
+   "params": {
+    "speed": 120,
+    "heat": 0.8,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "cracks",
+      "x": 0.5,
+      "s": 1.2,
+      "drift": 1.0
+     },
+     {
+      "type": "deadtree",
+      "x": 0.15,
+      "s": 1.0,
+      "drift": 0.2
+     }
+    ],
+    "grips": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.4,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.76,
+      "pace": 0.5
+     },
+     {
+      "bib": " ",
+      "pose": "stagger",
+      "face": "right",
+      "scale": 0.78,
+      "x": 0.48,
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "beg",
+        "pose": "think",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "bowler": true,
+      "x": 0.56,
+      "pose": "walk",
+      "face": "left",
+      "scale": 0.76,
+      "pace": 0.5,
+      "seq": [
+       {
+        "at": "no",
+        "pose": "talk",
+        "face": "left",
+        "emotion": "angry"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Thomas Hicks",
+      "x": 0.4,
+      "y": 0.38,
+      "at": "th",
+      "size": 58
+     },
+     {
+      "text": "10 miles to go",
+      "x": 0.66,
+      "y": 0.42,
+      "at": "ten",
+      "size": 58
+     },
+     {
+      "text": "no!",
+      "x": 0.64,
+      "y": 0.52,
+      "at": "no",
+      "color": "red",
+      "size": 80
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     620
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mar_prop",
+   "text": "Instead, they gave him a dose of strychnine mixed with egg whites. Strychnine is rat poison.",
+   "visual": "Close-up on a trainer's table: a hand in a dark sleeve lifts a small blue bottle with a skull label 'STRYCHNINE' and tips it over a cup on 'dose', drops falling in; on 'egg' a cracked egg lands on the table and its white fills the cup; on 'rat' a red note 'rat poison!'.",
+   "title": {
+    "white": "Strychnine"
+   },
+   "cues": {
+    "dose": "dose",
+    "egg": "egg",
+    "rat": "rat"
+   },
+   "params": {
+    "item": "bottle",
+    "x": 0.46,
+    "y": 0.5,
+    "s": 0.95,
+    "bottle": {
+     "label": "STRYCHNINE",
+     "pour": "dose",
+     "egg": "egg"
+    },
+    "labels": [
+     {
+      "text": "rat poison!",
+      "x": 0.2,
+      "y": 0.3,
+      "at": "rat",
+      "color": "red",
+      "size": 84
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "title",
+   "text": "Back then, a tiny dose was thought to work as a stimulant. It's the first recorded use of drugs in the modern Olympics.",
+   "visual": "Giant words 'First Olympic' / 'doping' word by word, 'doping' in a red box; note 'a tiny dose'; the fez narrator on the right jumps back in shock on 'drugs'.",
+   "title": {
+    "white": "First doping"
+   },
+   "cues": {
+    "note": "tiny",
+    "w0": "first",
+    "w1": "recorded",
+    "dr": "drugs"
+   },
+   "params": {
+    "lines": [
+     "First Olympic",
+     "doping"
+    ],
+    "highlight": [
+     "doping"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "a tiny dose",
+     "at": "note"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "face": -1,
+     "scale": 0.9,
+     "at": "dr",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "mar_road",
+   "text": "Later, they gave him more, with brandy. By the end, he was hallucinating. He thought the finish was still twenty miles away.",
+   "visual": "Close on Hicks on a glaring, empty, sun-cracked stretch with a dead tree: a trainer grips his arm; note 'brandy' on 'brandy'; on 'hallucinating' gold stars circle his head; on 'twenty' a red note 'finish: 20 miles?'.",
+   "title": {
+    "white": "Hallucinating"
+   },
+   "cues": {
+    "bra": "brandy",
+    "hal": "hallucinating",
+    "tw": "twenty"
+   },
+   "params": {
+    "speed": 100,
+    "heat": 1.0,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "deadtree",
+      "x": 0.78,
+      "s": 1.2,
+      "drift": 0.2
+     },
+     {
+      "type": "cracks",
+      "x": 0.5,
+      "s": 1.2,
+      "drift": 1.0
+     }
+    ],
+    "grips": [
+     [
+      1,
+      0
+     ]
+    ],
+    "people": [
+     {
+      "bib": " ",
+      "pose": "stagger",
+      "face": "right",
+      "scale": 0.8,
+      "x": 0.5,
+      "emotion": "worried",
+      "dizzy": "hal"
+     },
+     {
+      "bowler": true,
+      "x": 0.42,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.78,
+      "pace": 0.45
+     }
+    ],
+    "labels": [
+     {
+      "text": "+ brandy",
+      "x": 0.36,
+      "y": 0.42,
+      "at": "bra",
+      "color": "gold",
+      "size": 66
+     },
+     {
+      "text": "finish: 20 miles?",
+      "x": 0.64,
+      "y": 0.4,
+      "at": "tw",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     620
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mar_finish",
+   "text": "In the last stretch, his trainers held him up, and his feet shuffled across the line.",
+   "visual": "Close at the finish: two trainers in bowler hats grip Hicks under both arms and hold him up as all three stagger forward; Hicks' feet shuffle and the red tape breaks on 'line'.",
+   "title": {
+    "white": "The finish"
+   },
+   "cues": {
+    "held": "held",
+    "line": "line"
+   },
+   "params": {
+    "cheer": {
+     "at": "line",
+     "base": 0.2
+    },
+    "tape": {
+     "x": 0.66,
+     "h": 190,
+     "break": "line"
+    },
+    "grips": [
+     [
+      0,
+      1
+     ],
+     [
+      2,
+      1
+     ]
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.22,
+      "to": 0.56,
+      "at": 0,
+      "dur": 3.0,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.76,
+      "pace": 0.6
+     },
+     {
+      "bib": " ",
+      "pose": "stagger",
+      "face": "right",
+      "scale": 0.76,
+      "x": 0.3,
+      "to": 0.64,
+      "at": 0,
+      "dur": 3.0,
+      "emotion": "worried"
+     },
+     {
+      "bowler": true,
+      "x": 0.38,
+      "to": 0.72,
+      "at": 0,
+      "dur": 3.0,
+      "pose": "walk",
+      "face": "left",
+      "scale": 0.76,
+      "pace": 0.6
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1100,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "right"
+   }
+  },
+  {
+   "type": "mar_prop",
+   "text": "His time: three hours, twenty-eight minutes, the slowest winning time in Olympic marathon history.",
+   "visual": "Big gold stopwatch on a table: the hands sweep round to 3:28:53, the readout counts up; on 'slowest' a red note 'slowest ever'.",
+   "title": {
+    "white": "3:28:53"
+   },
+   "cues": {
+    "ti": "time",
+    "slo": "slowest"
+   },
+   "params": {
+    "item": "watch",
+    "x": 0.52,
+    "y": 0.42,
+    "s": 0.78,
+    "watch": {
+     "h": 3,
+     "m": 28,
+     "s": 53,
+     "at": "ti"
+    },
+    "labels": [
+     {
+      "text": "slowest ever",
+      "x": 0.72,
+      "y": 0.72,
+      "at": "slo",
+      "color": "red",
+      "size": 84
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   },
+   "source": "Olympedia"
+  },
+  {
+   "type": "mar_stadium",
+   "text": "It took four doctors to get him back on his feet!",
+   "visual": "On the track Hicks lies flat; four doctors in bowler hats crowd round him, pointing and fussing; on 'four' a red note '4 doctors'.",
+   "title": {
+    "white": "4 doctors"
+   },
+   "cues": {
+    "fo": "four",
+    "fe": "feet"
+   },
+   "params": {
+    "cheer": 0.15,
+    "people": [
+     {
+      "bib": " ",
+      "pose": "lie",
+      "face": "right",
+      "scale": 0.8,
+      "x": 0.4,
+      "y": 0.76
+     },
+     {
+      "bowler": true,
+      "x": 0.24,
+      "pose": "point",
+      "dir": "down",
+      "face": "right",
+      "scale": 0.72,
+      "emotion": "worried"
+     },
+     {
+      "bowler": true,
+      "x": 0.34,
+      "pose": "point",
+      "dir": "down",
+      "face": "right",
+      "scale": 0.72,
+      "emotion": "worried"
+     },
+     {
+      "bowler": true,
+      "x": 0.66,
+      "pose": "point",
+      "dir": "down",
+      "face": "left",
+      "scale": 0.72,
+      "emotion": "worried"
+     },
+     {
+      "bowler": true,
+      "x": 0.76,
+      "pose": "point",
+      "dir": "down",
+      "face": "left",
+      "scale": 0.72,
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "4 doctors",
+      "x": 0.5,
+      "y": 0.32,
+      "at": "fo",
+      "color": "red",
+      "size": 72,
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "right"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "That was the winner. But wait until you hear about the man who came fourth.",
+   "visual": "CHAPTER 4 / 6 card: blue disc with 4, title 'The Other Heroes'.",
+   "title": {},
+   "cues": {
+    "n": "winner",
+    "title": "wait",
+    "line": "fourth"
+   },
+   "params": {
+    "n": 4,
+    "total": 6,
+    "title": "The Other Heroes",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Other Heroes"
+  },
+  {
+   "type": "mar_car",
+   "text": "Andarín Carvajal was a mail carrier from Cuba. On the way, he lost every cent gambling in New Orleans. So he hitchhiked the rest of the way.",
+   "visual": "A farm road with a farmhouse behind: a small man in a long shirt (Carvajal) stands at the roadside with empty pockets; notes 'Andarín Carvajal' and red 'broke in New Orleans'; on 'hitchhiked' he sticks out his arm, a car pulls up and he hops into the back seat.",
+   "title": {
+    "white": "Broke"
+   },
+   "cues": {
+    "and": "Andar",
+    "gam": "gambling",
+    "hit": "hitchhiked",
+    "rest": "rest"
+   },
+   "params": {
+    "speed": 0,
+    "heat": 0.3,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "farmhouse",
+      "x": 0.86,
+      "s": 0.9,
+      "drift": 0
+     }
+    ],
+    "cars": [
+     {
+      "x": 1.35,
+      "to": 0.62,
+      "at": "hit",
+      "dur": 1.6,
+      "s": 1.1
+     }
+    ],
+    "people": [
+     {
+      "bowler": true,
+      "x": 0.62,
+      "ride": {
+       "car": 0,
+       "seat": "front"
+      },
+      "scale": 0.66
+     },
+     {
+      "x": 0.28,
+      "street": true,
+      "pose": "shrug",
+      "face": "right",
+      "scale": 0.7,
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "hit",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "happy"
+       }
+      ],
+      "ride": {
+       "car": 0,
+       "seat": "back",
+       "from": "rest"
+      }
+     }
+    ],
+    "labels": [
+     {
+      "text": "Andarín Carvajal",
+      "x": 0.26,
+      "y": 0.18,
+      "at": "and",
+      "size": 64
+     },
+     {
+      "text": "broke in New Orleans",
+      "x": 0.6,
+      "y": 0.13,
+      "at": "gam",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "He ran in his street clothes, the trousers cut off at the knee.",
+   "visual": "Close on Carvajal running along an open road between green hills in a loose shirt and long trousers cut off at the knee; note 'cut at the knee' with an arrow to the trousers.",
+   "title": {
+    "white": "Street clothes"
+   },
+   "cues": {
+    "str": "street",
+    "kn": "knee"
+   },
+   "params": {
+    "speed": 260,
+    "heat": 0.5,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "lane",
+      "x": 1.2,
+      "s": 0.9,
+      "drift": 0.5
+     }
+    ],
+    "people": [
+     {
+      "x": 0.5,
+      "street": true,
+      "pose": "run",
+      "scale": 0.82,
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "cut at the knee",
+      "x": 0.68,
+      "y": 0.45,
+      "at": "kn",
+      "size": 64,
+      "arrow": [
+       0.53,
+       0.62
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     980,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mar_orchard",
+   "text": "Starving, he stopped at an orchard and ate some apples. They were rotten.",
+   "visual": "An apple orchard beside the road: Carvajal stands under a tree with his hand at his mouth, eating; on 'rotten' the red apples turn brown, flies circle and a red note 'rotten!' slams in.",
+   "title": {
+    "white": "The orchard"
+   },
+   "cues": {
+    "orc": "orchard",
+    "ate": "ate",
+    "rot": "rotten"
+   },
+   "params": {
+    "speed": 0,
+    "heat": 0.3,
+    "fence": false,
+    "poles": false,
+    "trees": [
+     {
+      "x": 0.16,
+      "s": 1.05
+     },
+     {
+      "x": 0.55,
+      "s": 1.2,
+      "rotten": "rot"
+     },
+     {
+      "x": 0.9,
+      "s": 0.95,
+      "rotten": "rot"
+     }
+    ],
+    "people": [
+     {
+      "x": 0.38,
+      "street": true,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.74,
+      "seq": [
+       {
+        "at": "ate",
+        "pose": "think",
+        "emotion": "happy"
+       },
+       {
+        "at": "rot",
+        "pose": "shock",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "rotten!",
+      "x": 0.72,
+      "y": 0.15,
+      "at": "rot",
+      "color": "red",
+      "size": 96
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mar_orchard",
+   "text": "The cramps got so bad, he lay down by the road and took a nap. And he still finished fourth. Fourth!",
+   "visual": "Close under the apple tree: Carvajal doubles over on 'cramps', then lies down on 'lay' and sleeps, 'z z z' drifting up; on 'still' a big red note 'still 4th!' slams in.",
+   "title": {
+    "white": "A nap"
+   },
+   "cues": {
+    "cr": "cramps",
+    "lay": "lay",
+    "nap": "nap",
+    "sti": "still"
+   },
+   "params": {
+    "speed": 0,
+    "heat": 0.3,
+    "fence": false,
+    "poles": false,
+    "trees": [
+     {
+      "x": 0.7,
+      "s": 1.0,
+      "rotten": 0
+     }
+    ],
+    "people": [
+     {
+      "x": 0.36,
+      "y": 0.76,
+      "street": true,
+      "pose": "idle",
+      "face": "right",
+      "scale": 0.8,
+      "cough": "cr",
+      "cough_until": "lay",
+      "seq": [
+       {
+        "at": "lay",
+        "pose": "lie"
+       }
+      ],
+      "zzz": "nap"
+     }
+    ],
+    "labels": [
+     {
+      "text": "still 4th!",
+      "x": 0.4,
+      "y": 0.34,
+      "at": "sti",
+      "color": "red",
+      "size": 80,
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     860,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mar_road",
+   "text": "And he wasn't the only one. Len Taunyane and Jan Mashiani were Tswana men from South Africa.",
+   "visual": "Two runners run side by side along the road past fence posts; notes 'Len Taunyane' and 'Jan Mashiani' pop up over each as they are named, then 'South Africa'.",
+   "title": {
+    "white": "Two more"
+   },
+   "cues": {
+    "len": "Len",
+    "jan": "Jan",
+    "sa": "South"
+   },
+   "params": {
+    "speed": 280,
+    "heat": 0.4,
+    "people": [
+     {
+      "x": 0.38,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.74,
+      "ph0": 0.2
+     },
+     {
+      "x": 0.6,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.74
+     }
+    ],
+    "labels": [
+     {
+      "text": "Len Taunyane",
+      "x": 0.33,
+      "y": 0.2,
+      "at": "len",
+      "size": 70
+     },
+     {
+      "text": "Jan Mashiani",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "jan",
+      "size": 70
+     },
+     {
+      "text": "South Africa",
+      "x": 0.5,
+      "y": 0.06,
+      "at": "sa",
+      "color": "blue",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   }
+  },
+  {
+   "type": "title",
+   "text": "They were the first Black Africans ever to compete at the Olympics.",
+   "visual": "Giant words 'First Black' / 'African Olympians' word by word, 'First' in a red box; note 'St. Louis, 1904'.",
+   "title": {
+    "white": "A first"
+   },
+   "cues": {
+    "w0": "first",
+    "w1": "Black",
+    "note": "Olympics"
+   },
+   "params": {
+    "lines": [
+     "First Black",
+     "African Olympians"
+    ],
+    "highlight": [
+     "First"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "St. Louis, 1904",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1000
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "mar_road",
+   "text": "Taunyane was running well, until wild dogs chased him about a mile off the course.",
+   "visual": "A farmyard by the road: a red barn and an open swinging gate on the left; Taunyane runs past; on 'dogs' two snarling dogs burst out of the gate and chase him; he sprints off to the right; note 'a mile off course'.",
+   "title": {
+    "white": "Wild dogs"
+   },
+   "cues": {
+    "dog": "dogs",
+    "cha": "chased",
+    "mi": "mile"
+   },
+   "params": {
+    "speed": 0,
+    "heat": 0.3,
+    "fence": false,
+    "poles": false,
+    "scenery": [
+     {
+      "type": "barn",
+      "x": 0.14,
+      "s": 1.1,
+      "drift": 0
+     },
+     {
+      "type": "gate",
+      "x": 0.33,
+      "s": 1.0,
+      "drift": 0
+     }
+    ],
+    "dogs": [
+     {
+      "x": 0.2,
+      "to": 0.5,
+      "at": "dog",
+      "dur": 2.0,
+      "s": 0.8
+     },
+     {
+      "x": 0.12,
+      "to": 0.36,
+      "at": "dog",
+      "dur": 2.2,
+      "s": 0.7
+     }
+    ],
+    "people": [
+     {
+      "x": 0.5,
+      "to": 0.94,
+      "at": "cha",
+      "dur": 3.0,
+      "bib": " ",
+      "pose": "run",
+      "scale": 0.74,
+      "seq": [
+       {
+        "at": "dog",
+        "pose": "run",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "a mile off course",
+      "x": 0.7,
+      "y": 0.18,
+      "at": "mi",
+      "color": "red",
+      "size": 80
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 864
+   }
+  },
+  {
+   "type": "board",
+   "text": "He ran back and still finished ninth, and Mashiani came twelfth. Of thirty-two starters, only fourteen finished! But the story didn't end at the finish line.",
+   "visual": "Pinned board 'They finished': cards 'Taunyane' ('9th' tick, 'chased by dogs'), 'Mashiani' ('12th' tick, 'Tswana runner'), 'Carvajal' ('4th' tick, 'napped mid-race'); blue pill '32 started, 14 finished'.",
+   "title": {
+    "white": "Results"
+   },
+   "cues": {
+    "nin": "ninth",
+    "twe": "twelfth",
+    "fou": "fourteen",
+    "end": "end"
+   },
+   "params": {
+    "title": "They finished",
+    "cards": [
+     {
+      "title": "Taunyane",
+      "items": [
+       {
+        "text": "9th",
+        "mark": "check",
+        "at": "nin"
+       },
+       {
+        "text": "chased by dogs",
+        "at": 0.3
+       }
+      ]
+     },
+     {
+      "title": "Mashiani",
+      "items": [
+       {
+        "text": "12th",
+        "mark": "check",
+        "at": "twe"
+       },
+       {
+        "text": "Tswana runner",
+        "at": "twe"
+       }
+      ]
+     },
+     {
+      "title": "Carvajal",
+      "items": [
+       {
+        "text": "4th",
+        "mark": "check",
+        "at": 0.6
+       },
+       {
+        "text": "napped mid-race",
+        "at": 0.9
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "32 started, 14 finished",
+     "color": "blue",
+     "at": "fou"
+    }
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "chapter",
+   "text": "So what happened after all this?",
+   "visual": "CHAPTER 5 / 6 card: blue disc with 5, title 'The Aftermath'.",
+   "title": {},
+   "cues": {
+    "n": "So",
+    "title": "happened",
+    "line": "this"
+   },
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "The Aftermath",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Aftermath"
+  },
+  {
+   "type": "moon_letter",
+   "text": "The race was such a scandal that the marathon was nearly dropped from the Olympics for good.",
+   "visual": "An official's report by lamp light: the quill writes 'The marathon:' then red 'a scandal' (underlined on 'dropped') and 'drop it for good?'; a red stamp 'SCANDAL' slams onto the page on 'scandal'.",
+   "title": {
+    "white": "Scandal"
+   },
+   "cues": {
+    "sca": "scandal",
+    "dro": "dropped"
+   },
+   "params": {
+    "heading": "St. Louis, 1904",
+    "lines": [
+     {
+      "text": "The marathon:",
+      "at": 0.2,
+      "dur": 0.8
+     },
+     {
+      "text": "a scandal",
+      "at": "sca",
+      "dur": 0.7,
+      "color": "red"
+     },
+     {
+      "text": "drop it for good?",
+      "at": "dro",
+      "dur": 1.0
+     }
+    ],
+    "tags": [
+     {
+      "text": "SCANDAL",
+      "x": 0.74,
+      "y": 0.3,
+      "at": "sca",
+      "rot": -8,
+      "color": "red",
+      "size": 90
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   },
+   "source": "Smithsonian"
+  },
+  {
+   "type": "timeline",
+   "text": "Lorz's lifetime ban was cut to six months, and the next spring, he won the Boston Marathon.",
+   "visual": "Horizontal time line: '1904 banned for life', '1905 ban cut to 6 months', '1905 wins Boston' (in red) as the marker moves along.",
+   "title": {
+    "white": "Lorz"
+   },
+   "cues": {
+    "six": "six",
+    "bos": "Boston"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1904",
+      "text": "banned for life",
+      "at": 0.1
+     },
+     {
+      "year": "1905",
+      "text": "ban: 6 months",
+      "at": "six"
+     },
+     {
+      "year": "1905",
+      "text": "wins Boston",
+      "at": "bos"
+     }
+    ],
+    "focus": 2
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "title",
+   "text": "And drugs? The Olympics didn't test athletes for them until 1968, sixty-four years later.",
+   "visual": "Giant words 'Drug tests' / 'in 1968' word by word, '1968' in a red box; note '64 years later'.",
+   "title": {
+    "white": "Doping"
+   },
+   "cues": {
+    "w0": "drugs",
+    "w1": "test",
+    "note": "sixty"
+   },
+   "params": {
+    "lines": [
+     "Drug tests",
+     "in 1968"
+    ],
+    "highlight": [
+     "1968"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "64 years later",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 1000
+   },
+   "source": "IOC"
+  },
+  {
+   "type": "mar_stadium",
+   "text": "So think back to that wreath on Fred Lorz's head. The crowd cheered a man who rode in a car, while the real winner could barely stand.",
+   "visual": "The stadium again: Lorz with the laurel wreath waves to the cheering stands; on 'barely' Hicks staggers in on the right between two trainers; the fez narrator on the left points from one to the other.",
+   "title": {
+    "white": "Wrong man"
+   },
+   "cues": {
+    "wr": "wreath",
+    "che": "cheered",
+    "bar": "barely"
+   },
+   "params": {
+    "cheer": "che",
+    "people": [
+     {
+      "bib": "1904",
+      "pose": "wave",
+      "face": "right",
+      "scale": 0.72,
+      "x": 0.4,
+      "emotion": "happy",
+      "wreath": 0.0
+     },
+     {
+      "bowler": true,
+      "x": 0.62,
+      "pose": "walk",
+      "face": "right",
+      "scale": 0.7,
+      "pace": 0.5
+     },
+     {
+      "bib": " ",
+      "pose": "stagger",
+      "face": "right",
+      "scale": 0.7,
+      "x": 0.7,
+      "emotion": "worried",
+      "dizzy": 0.0
+     },
+     {
+      "bowler": true,
+      "x": 0.78,
+      "pose": "walk",
+      "face": "left",
+      "scale": 0.7,
+      "pace": 0.5
+     }
+    ],
+    "kasif": {
+     "x": 0.14,
+     "scale": 0.9,
+     "pose": "point",
+     "face": "right",
+     "dir": 10,
+     "seq": [
+      {
+       "at": "bar",
+       "pose": "point",
+       "dir": 30,
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Which of these runners do you think deserved the gold? Tell me in the comments, and subscribe to Stickstory for more of history's strangest true stories.",
+   "visual": "Giant words 'Who deserved' / 'the gold?' with 'gold?' in a red box; the fez narrator on the right points at the words, then holds up a sign 'YOUR PICK?' on 'comments'.",
+   "title": {
+    "white": "Your pick?"
+   },
+   "cues": {
+    "w0": "Which",
+    "w1": "gold",
+    "com": "comments",
+    "sub": "subscribe"
+   },
+   "params": {
+    "lines": [
+     "Who deserved",
+     "the gold?"
+    ],
+    "highlight": [
+     "gold"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "point",
+     "face": -1,
+     "scale": 0.9,
+     "at": "com",
+     "then": "hold",
+     "text": "YOUR PICK?",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  }
+ ]
+}
