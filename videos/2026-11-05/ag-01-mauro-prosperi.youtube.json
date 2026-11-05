@@ -1,0 +1,17 @@
+{
+ "id": "VNMjM3LybJ4",
+ "thumbnail": false,
+ "url": "https://youtu.be/VNMjM3LybJ4",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-05T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Mauro Prosperi: How Did He Survive 9 Days in the Sahara?",
+ "script": "videos/2026-11-05/ag-01-mauro-prosperi.json"
+}
