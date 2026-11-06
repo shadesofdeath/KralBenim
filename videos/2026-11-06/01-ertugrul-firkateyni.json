@@ -1,0 +1,179 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Nippon.com: The Sinking of the Ertugrul, Japan and Turkey Mark the 125th Anniversary",
+      "url": "https://www.nippon.com/en/behind/l00127/the-sinking-of-the-ertugrul-japan-and-turkey-mark-the-125th-anniversary-of-the-tragedy.html"
+    },
+    {
+      "title": "Wikipedia: Ottoman frigate Ertuğrul",
+      "url": "https://en.wikipedia.org/wiki/Ottoman_frigate_Ertu%C4%9Frul"
+    },
+    {
+      "title": "Turkish Airlines: Ertuğrul 1890 ve 1985 Tahran tahliyesi",
+      "url": "https://www.turkishairlines.com/en-us/press-room/featured-news/press-release-2/"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "İyilik",
+      "95 yıl bekledi"
+    ],
+    "highlight": [
+      "iyilik"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": false,
+    "focus": [
+      540,
+      1152
+    ],
+    "zoom": 1.0
+  },
+  "scenes": [
+    {
+      "text": "Bir iyilik 95 yıl bekledi.",
+      "type": "bt_er_light",
+      "visual": "Gece, tayfun: sağda 40 metrelik kayalığın üstünde kısa beyaz bir fener (Kashinozaki), huzmesi denizin üstünde geniş ve yavaş gidip gelir; ufukta üç direkli fırkateyn büyük dalgalarda belirgin ama yavaş yalpalar; eğik yağmur",
+      "params": {
+        "mode": "hook",
+        "dy": 380
+      }
+    },
+    {
+      "text": "1890, Japonya.",
+      "type": "bt_er_date",
+      "visual": "Yağmur altında fırtınalı karanlık deniz; üstte ince büyük '1890', altında italik 'Kii Oshima' ve altın çizgi",
+      "params": {
+        "mode": "sea",
+        "text": "1890",
+        "sub": "Kii Oshima"
+      }
+    },
+    {
+      "text": "Tayfun, Osmanlı gemisi Ertuğrul'u kayalara attı.",
+      "type": "bt_er_ship",
+      "visual": "Yandan fırkateyn (üç direk, sarılı yelkenler, tek baca, bacadan duman) tayfunda yavaşça yalpalar; sağda gövdenin ilerisinde, su hizasında kara kayalar; 'kayalara'da kıç kayaya dayanır, temas noktasında altın çizgi ve köpük",
+      "cues": {
+        "hit": "kayalara"
+      }
+    },
+    {
+      "text": "Beş yüzü aşkın denizci öldü.",
+      "type": "bt_er_sea",
+      "visual": "Karanlık deniz: suyun üstünde sadece kırık bir direk ve iki seren kalmış, yavaşça batar; çevresinde halkalar yayılır, birkaç tahta parçası süzülür, ince yağmur",
+      "params": {
+        "mode": "lost"
+      }
+    },
+    {
+      "text": "Kurtulanlar fenerin ışığına tırmandı.",
+      "type": "bt_er_light",
+      "visual": "Kayalığa daha yakın: yüzü olmayan küçük siluetler kayalığın yüzündeki patikadan yukarı, fenerin ışığına doğru tırmanır; huzme denizi tarar; 'ışığına'da fenerin lambası altın rengine döner",
+      "params": {
+        "mode": "climb"
+      },
+      "cues": {
+        "hit": "ışığına"
+      }
+    },
+    {
+      "text": "Köylüler kıt erzaklarını paylaştı.",
+      "type": "bt_er_village",
+      "visual": "Gece, balıkçı kulübesinin içi: asılı yağ lambası, kâğıt pencerenin ardında yağmur; solda battaniyeye sarılı oturan bir denizci, sağda dik diz çökmüş bir köylü iki kolunu uzatmış, aralarındaki boşlukta buharı tüten ayrı bir kâse; 'paylaştı'da kâsenin kenarı altın rengine döner",
+      "cues": {
+        "hit": "paylaştı"
+      }
+    },
+    {
+      "text": "1985. Saddam İran üstündeki her uçağı vuracağını ilan etti.",
+      "type": "bt_er_date",
+      "visual": "Gece Tahran: ortada Azadi Kulesi, arkada Elburz dağları, ufuk boyunca şehir ışıkları; iki projektör huzmesi gökyüzünü yavaşça tarar; üstte ince büyük '1985', italik 'Tahran'; 'ilan'da altın italik '48 saat' (son tarih) belirir",
+      "params": {
+        "mode": "city",
+        "text": "1985",
+        "sub": "Tahran",
+        "note": "48 saat"
+      },
+      "cues": {
+        "hit": "ilan"
+      }
+    },
+    {
+      "text": "Japon uçağı gelmedi.",
+      "type": "bt_er_plane",
+      "visual": "Gece boş pist, arkada Elburz: hiç uçak yok; solda terminal binası, ışıklı pencereler, önünde uzun bir sıra küçük bekleyen siluet (sayı yok); kuledeki işaret ışığı yavaşça döner, pist ışıkları",
+      "params": {
+        "mode": "empty"
+      }
+    },
+    {
+      "text": "215 Japonu son anda iki Türk uçağı çıkardı.",
+      "type": "bt_er_plane",
+      "visual": "Gece pist, arkada Elburz: üç motorlu bir yolcu uçağı (kuyrukta üçüncü motor) pistten yavaşça yükselir, ileride ikinci uçağın küçük silueti; üstte büyük altın sayı 0'dan 215'e sayar, altında italik 'Japon'; 'çıkardı'da uçağın pencere sırası altın rengine döner",
+      "cues": {
+        "hit": "çıkardı"
+      },
+      "params": {
+        "count": 215,
+        "label": "Japon"
+      }
+    },
+    {
+      "text": "Çünkü Türkler Ertuğrul'u unutmamıştı.",
+      "type": "bt_er_light",
+      "visual": "Sakin, yıldızlı gece: aynı fener kayalığın üstünde, huzmesi durgun denizi tarar; yukarıda küçük bir yolcu uçağı yanıp sönen ışığıyla gökyüzünü geçer; 'unutmamıştı'da uçağın pencereleri altın rengine döner",
+      "params": {
+        "mode": "end"
+      },
+      "cues": {
+        "hit": "unutmamıştı"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_er_sea",
+      "visual": "Şafak: durgun deniz, ufukta güneş yavaşça yükselir, suyun üstünde altın yansımalar",
+      "params": {
+        "mode": "calm"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Ertuğrul Fırkateyni: Bir İyilik Neden 95 Yıl Bekledi?",
+    "description": "Ertuğrul Fırkateyni 1890'da Japonya'da bir tayfunda battı; o gece yapılan bir iyilik 95 yıl sonra karşılık buldu.\n\n16 Eylül 1890 gecesi Osmanlı fırkateyni Ertuğrul, Kii Oshima açıklarında kayalara çarptı ve beş yüzü aşkın denizci hayatını kaybetti. Kurtulanlar Kashinozaki fenerinin ışığını izledi; yoksul köylüler kıt erzaklarını onlarla paylaştı. Mart 1985'te Saddam Hüseyin, 48 saat sonra İran hava sahasındaki her uçağın vurulacağını duyurdu. Japon uçağı gelmedi; Tahran'da mahsur kalan 215 Japonu son saatlerde iki Türk uçağı çıkardı ve Türk yetkililer Ertuğrul'u hatırlattı.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence bir iyilik gerçekten bir asır sonra karşılık bulur mu? Yorumlara yaz!\n\n#shorts #ertuğrulfırkateyni #türkjaponyadostluğu #osmanlı #düşünbakalım",
+    "tags": [
+      "ertuğrul fırkateyni",
+      "ertuğrul fırkateyni faciası",
+      "ertuğrul faciası 1890",
+      "ertuğrul gemisi",
+      "ertuğrul 1890",
+      "kushimoto",
+      "kashinozaki feneri",
+      "türk japon dostluğu",
+      "1985 tahran tahliyesi",
+      "osmanlı donanması",
+      "osmanlı tarihi",
+      "deniz kazaları",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-06T19:00:00+03:00"
+  }
+}

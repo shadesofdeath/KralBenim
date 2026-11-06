@@ -1,0 +1,687 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "grafit",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Penn Museum, Expedition 57-3 — Tumulus MM (53 m, 300 m, ca. 740 BCE, contents)",
+   "url": "https://www.penn.museum/sites/expedition?p=23439"
+  },
+  {
+   "title": "Rodney S. Young, \"The Gordion Tomb\", Expedition (1958) — drilling, tunnel, the chamber, the skeleton",
+   "url": "https://www.penn.museum/sites/expedition?p=9"
+  },
+  {
+   "title": "Penn Museum, Expedition — The Myth of Midas' Golden Touch (no gold in MM, goethite textile)",
+   "url": "https://www.penn.museum/sites/expedition?p=23386"
+  },
+  {
+   "title": "Penn Gazette — New Treasures From King Midas' Tomb (McGovern's residue analysis)",
+   "url": "https://thepenngazette.com/new-treasures-from-king-midas-tomb/"
+  },
+  {
+   "title": "Biblical Archaeology Society — The Death of Midas: An Eternal Feast",
+   "url": "https://library.biblicalarchaeology.org/sidebar/the-death-of-midas-an-eternal-feast/"
+  },
+  {
+   "title": "Anatolian Studies — Reconstructing King Midas: a First Report (age 60–65)",
+   "url": "https://www.cambridge.org/core/journals/anatolian-studies/article/reconstructing-king-midas-a-first-report/3D5EBD41EA43EB8BFD0C63F5AB632AD7"
+  },
+  {
+   "title": "Penn Museum — Gordion named on the UNESCO World Heritage List (2023)",
+   "url": "https://penn.museum/about/press-room/press-releases/gordion-first-active-penn-museum-archaeological-site-named-in-unesco-world-heritage-list"
+  },
+  {
+   "title": "Wikipedia — Gordion (Destruction Level redating, Gordian Knot, Mita in Assyrian records)",
+   "url": "https://en.wikipedia.org/wiki/Gordion"
+  },
+  {
+   "title": "HeritageDaily — Royal tomb unearthed in Gordion could belong to King Midas' family (Tumulus 47)",
+   "url": "https://www.heritagedaily.com/2025/06/royal-tomb-unearthed-in-gordion-could-belong-to-king-midas-family/155371"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Mezarda",
+   "altın yoktu"
+  ],
+  "highlight": [
+   "altın"
+  ],
+  "scene": 43,
+  "t": 5.5,
+  "focus": [
+   960,
+   590
+  ],
+  "zoom": 1.3,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Midas Mezarı: Altına Dokunan Kralın Mezarında Neden Altın Yoktu?",
+  "description": "Midas mezarı sanılan Gordion'daki Büyük Tümülüs, dokunduğu her şeyi altına çeviren kralın adını taşır. 1957'de Rodney Young'ın ekibi höyüğün içine bir tünel kazıp 2.700 yıldır kapalı kütük mezar odasına ulaştı; ama içeride tek bir altın parçası yoktu.\n\nBu belgeselde Frigya'nın başkenti Gordion'u, Büyük Tümülüs'ün (Tümülüs MM) nasıl açıldığını, ardıç ve çam kütüklerinden yapılmış odadaki bronz kazanları, fibulaları ve kakmalı masayı anlatıyoruz. Ağaç halkaları mezarın Kral Midas'a değil, büyük olasılıkla babasına ait olduğunu gösterdi; kapların dibindeki kalıntılar ise bir cenaze ziyafetini ortaya çıkardı.\n\nBu videoda:\n• 1957: Midas Höyüğü'nün içine kazılan tünel ve kütük duvar\n• 60'lı yaşlarında bir kral, 182 fibula, üç bronz kazan ve altının yokluğu\n• Dendrokronoloji: mezar neden Midas'ın değil?\n• Kral Midas'ın cenaze ziyafeti: güveç ve şarap, bira, bal şarabı karışımı\n• Gordion düğümü, İskender ve götit boyalı örtünün sırrı\n\nHer gün yeni bir 'neden?' için abone ol. Sence Midas'ın kendi mezarı hâlâ Gordion'un höyüklerinden birinin altında mı? Yorumlara yaz!\n\n#gordion #midas #frigya #arkeoloji #düşünbakalım",
+  "tags": [
+   "midas mezarı",
+   "midas höyüğü",
+   "kral midas",
+   "midas'ın mezarı",
+   "gordion",
+   "gordion antik kenti",
+   "büyük tümülüs",
+   "frigya",
+   "frigler",
+   "gordion düğümü",
+   "büyük iskender",
+   "rodney young",
+   "arkeoloji",
+   "anadolu tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-06T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "text": "Gordion'da toprak yine bir kraliyet mezarı verdi. Ama en büyüğü, 1957'de açılmıştı. Elli metrelik bir tepenin altında, kütüklerden bir duvar.",
+   "type": "bt_gd_wall",
+   "visual": "Karanlık bir tünelin sonunda, kadrajı dolduran üst üste dizilmiş yatay kütüklerden bir duvar kendini çizer; sol altta küçük bir kandil yanar, sıcak ışık kütüklere vurur",
+   "params": {
+    "mode": "logs"
+   },
+   "chapter": "Kütük duvar"
+  },
+  {
+   "text": "Duvarda küçük bir pencere açıldı. İçeri bir baş, bir kol ve bir el feneri uzandı.",
+   "type": "bt_gd_wall",
+   "visual": "Aynı kütük duvar; 'pencere'de ortada dikdörtgen karanlık bir açıklık belirir, sağ alttan bir kol elindeki el fenerini açıklığa uzatır, fenerin ışık konisi karanlıkta yavaşça gezinir",
+   "params": {
+    "mode": "window"
+   },
+   "cues": {
+    "hole": "pencere"
+   }
+  },
+  {
+   "text": "Rodney Young o anı şöyle yazdı: Mezar büyüktü, hava ağırdı, fener zayıftı.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda önce italik 'mezar büyüktü', sonra altın renkte italik 'fener zayıftı'",
+   "params": {
+    "lines": [
+     {
+      "text": "mezar büyüktü",
+      "at": "c1",
+      "italic": true
+     },
+     {
+      "text": "fener zayıftı",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "büyüktü",
+    "c2": "zayıftı"
+   }
+  },
+  {
+   "text": "Işık karanlıkta gezindi. Bronz kazanlar, ahşap masalar. Ve bir tabutun içinde, bir adamın kemikleri.",
+   "type": "bt_gd_scan",
+   "visual": "Kapkaranlık oda; alttan gelen fener ışığı soldan sağa gezinir: önce bir bronz kazan, sonra bir ahşap masa, en sonda içinde ince kemik çizgileri olan açık bir kütük tabut ışığa girer",
+   "params": {
+    "mode": "reveal"
+   },
+   "cues": {
+    "a": "kazanlar",
+    "b": "masalar",
+    "c": "tabutun"
+   }
+  },
+  {
+   "text": "Bu odaya iki bin yedi yüz yıldır kimse girmemişti. Ama ışık nereye dönse, altın yoktu.",
+   "type": "bt_gd_scan",
+   "visual": "Karanlık oda; fener ışığı zemin çizgisi boyunca yavaşça bir sağa bir sola tarar, ışıkta sadece toz zerreleri, hiçbir parıltı yok",
+   "params": {
+    "mode": "empty"
+   }
+  },
+  {
+   "text": "Burası, dokunduğu her şeyi altına çeviren kralın adını taşıyordu: Midas Höyüğü. Bu mezarda neden altın yoktu?",
+   "type": "bt_gd_mound",
+   "visual": "Alacakaranlıkta bozkırda tek, dev, yumuşak kubbeli bir toprak höyük kendini çizer; 'Midas'ta altında 'Midas Höyüğü', italik 'Gordion, 1957'",
+   "params": {
+    "mode": "dusk",
+    "label": "Midas Höyüğü",
+    "sub": "Gordion, 1957"
+   },
+   "cues": {
+    "hit": "Midas"
+   }
+  },
+  {
+   "text": "Cevap, Ankara'nın batısındaki sessiz bir bozkırda yatıyordu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Altına dokunan kral', altında italik 'Gordion'",
+   "params": {
+    "n": "I",
+    "title": "Altına dokunan kral",
+    "sub": "Gordion"
+   },
+   "chapter": "Altına dokunan kral"
+  },
+  {
+   "text": "Sakarya ile Porsuk'un birleştiği yerde, bir zamanlar Frigyalıların başkenti vardı. Adı Gordion'du.",
+   "type": "bt_map",
+   "visual": "Sade Anadolu haritası: kıyı çizgileri; 'Gordion'da Ankara'nın batısında altın nokta yanar, altında italik 'Frigya başkenti'",
+   "params": {
+    "bounds": [
+     26,
+     35.6,
+     42,
+     42.4
+    ],
+    "points": [
+     {
+      "lon": 31.99,
+      "lat": 39.65,
+      "label": "Gordion",
+      "sub": "Frigya başkenti",
+      "at": "p2"
+     }
+    ]
+   },
+   "cues": {
+    "p2": "Gordion"
+   }
+  },
+  {
+   "text": "Eski şehrin çevresinde yüzü aşkın höyük yükselir. Hepsi birer mezardır.",
+   "type": "bt_gd_mound",
+   "visual": "Bozkırın ufkunda soldan sağa irili ufaklı höyükler birer birer belirir; sağda biri ötekilerden çok büyük",
+   "params": {
+    "mode": "field"
+   },
+   "cues": {
+    "hit": "mezardır"
+   }
+  },
+  {
+   "text": "Rivayete göre bir tanrı Midas'a bir dilek hakkı verdi: dokunduğu her şey altına dönecekti.",
+   "type": "bt_gd_king",
+   "visual": "Yukarıdan inen ışıkta pelerinli, sakallı, altın taçlı yüzsüz bir kral büstü (profil); 'altına'da başının ardında altın bir hale ve ışık belirir",
+   "params": {
+    "mode": "wish"
+   },
+   "cues": {
+    "hit": "altına"
+   }
+  },
+  {
+   "text": "Ekmek altına döndü. Su altına döndü. Kral, altınının ortasında aç kaldı.",
+   "type": "bt_gd_touch",
+   "visual": "Bir masa çizgisi üstünde bir somun ekmek ve bir kupa; 'Ekmek'te somun, 'Su'da kupa altın rengine döner ve yanar",
+   "cues": {
+    "a": "Ekmek",
+    "b": "Su"
+   }
+  },
+  {
+   "text": "Ama Midas sadece bir efsane değildi.",
+   "type": "bt_gd_king",
+   "visual": "Aynı pelerinli kral büstü; altın hale ve ışık söner, yanından yere uzun, gerçek bir gölge düşer",
+   "params": {
+    "mode": "real"
+   },
+   "cues": {
+    "hit": "efsane"
+   }
+  },
+  {
+   "text": "Ama o kralın adını taşıyan odaya ulaşmak, yıllar sürecekti.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'II', ince çizgi, büyük ince 'Tünel', altında italik '1955–1957'",
+   "params": {
+    "n": "II",
+    "title": "Tünel",
+    "sub": "1955–1957"
+   },
+   "chapter": "Tünel"
+  },
+  {
+   "text": "Bu höyük elli üç metre yüksekliğinde, üç yüz metre genişliğindedir. Mezarın nerede olduğunu kimse bilmiyordu.",
+   "type": "bt_gd_mound",
+   "visual": "Gece, yıldızlar altında dev höyük; 'elli'de tepeden zemine altın bir yükseklik çizgisi ve '53 m', 'yüz'de tabanında altın genişlik çizgisi ve '300 m', 'nerede'de höyüğün üstünde büyük altın bir '?'",
+   "params": {
+    "mode": "dims"
+   },
+   "cues": {
+    "h": "elli",
+    "w": "genişliğindedir",
+    "c": "nerede"
+   }
+  },
+  {
+   "text": "Young bu yüzden önce delmeyi seçti. İki mevsim boyunca, küçük bir sondaj makinesi höyüğü defalarca deldi.",
+   "type": "bt_gd_section",
+   "visual": "Höyüğün kesiti (toprak katmanları); tepede küçük bir sondaj kulesi yer değiştirir, her yerde aşağı doğru ince bir delme çizgisi iner, beş delik birer birer",
+   "params": {
+    "mode": "drill"
+   }
+  },
+  {
+   "text": "Sonunda matkap taşa çarptı. Merkezin biraz yanında, otuz metre genişliğinde bir taş yığını vardı.",
+   "type": "bt_gd_section",
+   "visual": "Aynı kesit, eski delikler kesikli; merkezin biraz solunda altın bir delme çizgisi iner, 'taşa'da tabanda taş yığını belirir, altında altın '30 m' çizgisi",
+   "params": {
+    "mode": "stone"
+   },
+   "cues": {
+    "hit": "taşa"
+   }
+  },
+  {
+   "text": "1957'de Zonguldaklı madenciler, höyüğün içine yetmiş metrelik bir tünel kazdı.",
+   "type": "bt_gd_tunnel",
+   "visual": "Tek kaçış noktalı perspektifte ahşap destekli bir tünel; destek çerçeveleri önden arkaya birer birer çizilir, tavanda bir kandil yanar; 'yetmiş'te altta altın '70 metre'",
+   "params": {
+    "mode": "dig",
+    "label": "70 metre"
+   },
+   "cues": {
+    "hit": "yetmiş"
+   }
+  },
+  {
+   "text": "Tünelin ucunda kaba bir taş duvar belirdi. Delik açılınca, taşlar bir hafta boyunca tünele döküldü.",
+   "type": "bt_gd_tunnel",
+   "visual": "Aynı tünel; sonunda kaba taşlardan bir duvar; 'Delik'te ortasında karanlık bir delik açılır, içinden küçük taşlar yavaşça yuvarlanıp önde yığılır",
+   "params": {
+    "mode": "stones"
+   },
+   "cues": {
+    "hit": "Delik"
+   }
+  },
+  {
+   "text": "Taşların ardında kütükten bir duvar, onun da ardında ikinci bir ahşap duvar vardı.",
+   "type": "bt_gd_wall",
+   "visual": "Kütük duvarda kesilmiş dikdörtgen bir pencere; 'ikinci'de pencerenin ardında altın çizgili, dikey düzgün kalaslardan ikinci bir duvar görünür",
+   "params": {
+    "mode": "double"
+   },
+   "cues": {
+    "hit": "ikinci"
+   }
+  },
+  {
+   "text": "Burgu bu kez taşa değil… boşluğa saplandı.",
+   "type": "bt_gd_wall",
+   "visual": "Yandan kesit: solda taş moloz, ortada kütük duvar ve kalas duvar, sağda karanlık boşluk; uzun bir burgu soldan iki duvarı deler, 'boşluğa'da ucu karanlığa girer ve italik 'boşluk' belirir",
+   "params": {
+    "mode": "auger",
+    "label": "boşluk"
+   },
+   "cues": {
+    "hit": "boşluğa"
+   }
+  },
+  {
+   "text": "İçeride, hiç çökmemiş bir oda vardı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'III', ince çizgi, büyük ince 'Kütük oda', altında italik '2.700 yıl kapalı'",
+   "params": {
+    "n": "III",
+    "title": "Kütük oda",
+    "sub": "2.700 yıl kapalı"
+   },
+   "chapter": "Kütük oda"
+  },
+  {
+   "text": "Oda, yaklaşık beş metreye altı metreydi. Duvarları çam ve ardıç kütükleriydi.",
+   "type": "bt_gd_room",
+   "visual": "Önden açılmış mezar odası: arkada üst üste kütüklerden duvar, iki yanda perspektif yan duvarlar, üstte alçak çift eğimli çatı kendini çizer",
+   "params": {
+    "mode": "build"
+   }
+  },
+  {
+   "text": "Kuzey duvarın önünde, açık bir kütük tabutta bir adam yatıyordu. Kemiklere göre altmış ile altmış beş yaşları arasındaydı.",
+   "type": "bt_gd_room",
+   "visual": "Işık havuzunda yandan açık bir kütük tabut, dört köşe ayağı; içinde ince, sakin kemik çizgileri, kafatası doğu (sağ) ucunda; arkada soluk kütük duvar; 'altmış'ta altta altın '60–65 yaş'",
+   "params": {
+    "mode": "coffin",
+    "label": "60–65 yaş"
+   },
+   "cues": {
+    "hit": "altmış"
+   }
+  },
+  {
+   "text": "Tabutun yanında, bir torba dolusu bronz iğne vardı. Mezardan toplam yüz seksen iki tane çıktı.",
+   "type": "bt_gd_fibula",
+   "visual": "Solda ışık havuzunda tek, büyük kemerli bir Frig fibulası (bronz çengelli iğne, altın boğumlar) kendini çizer; 'seksen'de sağda altın sayı 0'dan 182'ye sayar, altında italik 'fibula'",
+   "params": {
+    "n": 182,
+    "label": "fibula"
+   },
+   "cues": {
+    "hit": "seksen"
+   }
+  },
+  {
+   "text": "Demir ayaklar üstünde üç dev bronz kazan. Yanlarında, tam yüz içki kâsesi.",
+   "type": "bt_gd_cauldron",
+   "visual": "Ortada demir üç ayak üstünde boğa başı tutamaklı dev bir bronz kazan çizilir; 'üç'te iki yanında soluk iki kazan daha belirir; altta italik '3 kazan · 100 kâse'",
+   "params": {
+    "mode": "still",
+    "label": "3 kazan · 100 kâse"
+   },
+   "cues": {
+    "hit": "kazan"
+   }
+  },
+  {
+   "text": "Dokuz ahşap masa vardı. Biri, ince kakmalarla işlenmiş bir şaheserdi.",
+   "type": "bt_gd_table",
+   "visual": "Önden kakmalı ahşap bir masa: kalın tabla, iki sıra kare panel, içlerinde altın eşkenar dörtgen kakmalar yavaşça çizilir, kıvrık ayaklar; altta italik 'kakmalı masa'",
+   "params": {
+    "label": "kakmalı masa"
+   }
+  },
+  {
+   "text": "Ama altın yoktu. Ne bir taç, ne bir yüzük, ne bir altın kâse.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda önce ince 'taç · yüzük · kâse', sonra altın renkte italik 'altın yok'",
+   "params": {
+    "lines": [
+     {
+      "text": "taç · yüzük · kâse",
+      "at": "c1",
+      "size": 110
+     },
+     {
+      "text": "altın yok",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "taç",
+    "c2": "kâse"
+   }
+  },
+  {
+   "text": "Bu adam gerçekten Midas mıydı?",
+   "type": "bt_gd_mound",
+   "visual": "Gece, yıldızlar altında dev höyük; 'Midas'ta üstünde büyük, ince, altın bir soru işareti belirir",
+   "params": {
+    "mode": "ask"
+   },
+   "cues": {
+    "hit": "Midas"
+   }
+  },
+  {
+   "text": "Cevabı, odanın kütükleri verecekti.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'IV', ince çizgi, büyük ince 'Ağaç halkaları', altında italik 'Kütüklerin tanıklığı'",
+   "params": {
+    "n": "IV",
+    "title": "Ağaç halkaları",
+    "sub": "Kütüklerin tanıklığı"
+   },
+   "chapter": "Ağaç halkaları"
+  },
+  {
+   "text": "Her ağaç, her yıl gövdesine bir halka ekler. Kurak yıllar ince, yağışlı yıllar kalın.",
+   "type": "bt_gd_rings",
+   "visual": "Işık havuzunda büyük bir kütük kesiti; yıllık halkalar merkezden dışarı doğru birer birer belirir, kimi ince kimi kalın",
+   "params": {
+    "mode": "grow"
+   }
+  },
+  {
+   "text": "Halkalar, bir ağaç takvimiyle karşılaştırıldı. Kütükler, milattan önce 740 dolaylarında kesilmişti.",
+   "type": "bt_gd_rings",
+   "visual": "Aynı kütük kesiti; merkezden kabuğa altın bir ölçüm şeridi çizilir; '740'ta en dış halka altına döner, sağda büyük altın 'MÖ 740', altında italik 'kütükler kesildi'",
+   "params": {
+    "mode": "date",
+    "label": "MÖ 740",
+    "sub": "kütükler kesildi"
+   },
+   "cues": {
+    "hit": "740"
+   }
+  },
+  {
+   "text": "Oysa Asur kayıtları, milattan önce 709'da bile Muşkili Mita adında yaşayan bir kraldan söz eder.",
+   "type": "bt_gd_tablet",
+   "visual": "Işık havuzunda çivi yazılı bir kil tablet; işaret sıraları çizilir, 'Mita'da ortadaki bir grup işaret altına döner, altta altın italik 'Muşkili Mita · MÖ 709'",
+   "params": {
+    "label": "Muşkili Mita · MÖ 709"
+   },
+   "cues": {
+    "hit": "Mita"
+   }
+  },
+  {
+   "text": "Yani mezar Midas'ın değildi. Büyük olasılıkla babasının, belki de Gordias'ın mezarıydı.",
+   "type": "bt_gd_years",
+   "visual": "Yatay zaman çizgisi (MÖ 760 → 690); sağda 'Mita / MÖ 709' işareti; 'mezar'da solda altın 'mezar / MÖ 740' işareti ve aralarında kesikli bir çizgi; 'Gordias'ta altında altın italik 'babası?'",
+   "cues": {
+    "a": "mezar",
+    "b": "Gordias"
+   }
+  },
+  {
+   "text": "Yıllar sonra, Patrick McGovern kapların dibindeki kalıntıları inceledi.",
+   "type": "bt_gd_vessel",
+   "visual": "Ortadan kesilmiş bir küp: açık tonlu iç çeper, kalın dış çeper, dipte belirgin bir kalıntı kabuğu; 'kalıntıları'nda kabuktaki zerreler altın renkte yanar; altta italik 'kalıntı'",
+   "params": {
+    "label": "kalıntı"
+   },
+   "cues": {
+    "hit": "kalıntıları"
+   }
+  },
+  {
+   "text": "Cenazede baharatlı bir güveç pişirilmişti. Bal, şarap ve zeytinyağıyla koyun ya da keçi eti, yanında mercimek.",
+   "type": "bt_gd_cauldron",
+   "visual": "Işık havuzunda tek bronz kazan, içinde altın renkli güveç yüzeyi; üstünden yavaş buhar telleri yükselir; altta italik 'güveç'",
+   "params": {
+    "mode": "stew",
+    "label": "güveç"
+   },
+   "cues": {
+    "hit": "güveç"
+   }
+  },
+  {
+   "text": "Kâselerdeki içki ise tuhaftı: üzüm şarabı, arpa birası ve bal şarabı, tek bir karışımda.",
+   "type": "bt_gd_bowl",
+   "visual": "Altta göbekli bir içki kâsesi; üstünde 'üzüm'de üzüm salkımı, 'arpa'da arpa başağı, 'bal'da petek belirir (italik 'şarap', 'bira', 'bal'), her birinden kâseye altın bir akış çizgisi iner",
+   "params": {
+    "mode": "mix"
+   },
+   "cues": {
+    "a": "üzüm",
+    "b": "arpa",
+    "c": "bal"
+   }
+  },
+  {
+   "text": "Yaklaşık yüz kişi, kral için son kez içmişti. Ama o kral kimdi?",
+   "type": "bt_gd_bowl",
+   "visual": "Solda on sıra onar küçük kâse birer birer belirip altına döner; sağda büyük altın sayı 0'dan 100'e, altında italik 'kâse'",
+   "params": {
+    "mode": "many",
+    "label": "kâse"
+   },
+   "cues": {
+    "hit": "kişi"
+   }
+  },
+  {
+   "text": "Cevabın bir ucu, ünlü bir düğümde saklıydı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'V', ince çizgi, büyük ince 'Gordias'ın düğümü', altında italik 'MÖ 333'",
+   "params": {
+    "n": "V",
+    "title": "Gordias'ın düğümü",
+    "sub": "MÖ 333"
+   },
+   "chapter": "Gordias'ın düğümü"
+  },
+  {
+   "text": "Milattan önce 333. Genç bir komutan Gordion'a geldi. Adı İskender'di.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda büyük ince 'MÖ 333', sonra altın renkte italik 'İskender'",
+   "params": {
+    "lines": [
+     {
+      "text": "MÖ 333",
+      "at": "c1"
+     },
+     {
+      "text": "İskender",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "333",
+    "c2": "İskender"
+   }
+  },
+  {
+   "text": "Kalede eski bir araba duruyordu. Rivayete göre Gordias'ındı ve oğlu Midas onu tanrılara adamıştı.",
+   "type": "bt_gd_knot",
+   "visual": "Soldan uzanan bir araba oku ile dikey boyunduruğun birleştiği yerde, iç içe dolanmış ilmeklerden bir düğüm yavaşça kendini çizer",
+   "params": {
+    "mode": "knot"
+   }
+  },
+  {
+   "text": "Kehanete göre bu düğümü çözen, Asya'ya hükmedecekti. İskender onu kılıcıyla kesti. Bazı yazarlara göre ise çiviyi çekti.",
+   "type": "bt_gd_knot",
+   "visual": "Aynı düğüm; 'kesti'de çapraz bir kılıç çizgisi geçer, düğüm iki yarıya ayrılıp açılır; 'çiviyi'de okun ucundan altın bir çivi yavaşça dışarı kayar",
+   "params": {
+    "mode": "cut"
+   },
+   "cues": {
+    "hit": "kesti",
+    "pin": "çiviyi"
+   }
+  },
+  {
+   "text": "Yani efsane bile bir baba ile oğlu anlatıyordu. Höyükteki adam, büyük olasılıkla o babaydı.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda büyük ince 'Gordias', altında altın renkte italik 've oğlu Midas'",
+   "params": {
+    "lines": [
+     {
+      "text": "Gordias",
+      "at": "c1"
+     },
+     {
+      "text": "ve oğlu Midas",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "baba",
+    "c2": "babaydı"
+   }
+  },
+  {
+   "text": "Ya altın? Cevap, tabutun içindeydi. Adamın üstündeki örtü, götit adlı bir toprak boyasıyla boyanmıştı.",
+   "type": "bt_gd_cloth",
+   "visual": "Açık kütük tabut; üstüne serilmiş örtü vücudun şeklini alır (ayaklar alçak, göğüs, sağ uçta baş), ön kenardan sarkar, altından tabutun gövdesi ve iki ucundaki kütük kesitleri görünür; 'götit'te örtünün üstünde soldan sağa yavaş bir altın parıltı geçer, ince altın iplik çizgileri belirir; altta altın italik 'götit'",
+   "params": {
+    "label": "götit"
+   },
+   "cues": {
+    "hit": "götit"
+   }
+  },
+  {
+   "text": "Işıkta, altın gibi parlıyordu. Kral altın takmamıştı. Altın renkli bir örtünün altında yatıyordu.",
+   "type": "bt_gd_cloth",
+   "visual": "Yakın plan: aynı örtülü tabut, örtünün altında baş ucu belli; altın parıltı yavaşça üstünden geçer, iplikler parlar",
+   "params": {
+    "s": 0.65
+   },
+   "cues": {
+    "hit": "altın"
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.6
+   }
+  },
+  {
+   "text": "Belki efsane buradan doğdu. Parlayan kumaşlardan ve yüzyıllar sonra yazılan hikâyelerden.",
+   "type": "bt_gd_king",
+   "visual": "Altın kenar çizgili pelerinli kral büstü, üstünde ışık; 'kumaşlardan'da pelerininin üstünde altın kumaş kıvrımı çizgileri belirir",
+   "params": {
+    "mode": "gold"
+   },
+   "cues": {
+    "hit": "kumaşlardan"
+   }
+  },
+  {
+   "text": "Asıl hazine altın değildi. Bir ziyafet, sessiz bir oda ve iki bin yedi yüz yıl dayanan ahşaptı.",
+   "type": "bt_gd_section",
+   "visual": "Höyüğün kesiti: tabanda taş yığını, içinde küçük çatılı mezar odası ve minik açık tabut altın çizgiyle yavaşça yanar, yandan gelen kesikli tünel izi",
+   "params": {
+    "mode": "glow"
+   }
+  },
+  {
+   "text": "Gordion, 2023'te UNESCO Dünya Mirası oldu. Yeni açılan kraliyet mezarı ise belki bir gün, Midas'ın kendisine götürecek.",
+   "type": "bt_gd_mound",
+   "visual": "Şafakta bozkırda dev höyük; sağdan altın bir şafak ışığı yavaşça büyür; 'UNESCO'da altında 'UNESCO Dünya Mirası', italik '2023'",
+   "params": {
+    "mode": "dawn",
+    "label": "UNESCO Dünya Mirası",
+    "sub": "2023"
+   },
+   "cues": {
+    "hit": "UNESCO"
+   }
+  },
+  {
+   "text": "Sizce bu höyükler, Midas'ın kendi mezarını hâlâ saklıyor mu? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_gd_mound",
+   "visual": "Gece, yavaşça nefes alan yıldızlar altında bozkırda dev höyük; sessiz",
+   "params": {
+    "mode": "night"
+   }
+  }
+ ]
+}
