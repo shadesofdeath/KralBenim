@@ -1,0 +1,17 @@
+{
+ "id": "kEdzoKqymkk",
+ "thumbnail": false,
+ "url": "https://youtu.be/kEdzoKqymkk",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-06T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Exploding Whale: Why Did Oregon Blow Up a Dead Whale?",
+ "script": "videos/2026-11-06/ag-01-exploding-whale.json"
+}
