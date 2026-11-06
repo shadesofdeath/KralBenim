@@ -1,0 +1,566 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "hessdalen-lights",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "Lights nobody",
+   "can explain"
+  ],
+  "highlight": [
+   "nobody"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": -1,
+   "x": 760,
+   "y": 1560,
+   "scale": 1.35
+  },
+  "focus": [
+   480,
+   760
+  ],
+  "zoom": 1.5
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — Hessdalen lights",
+   "url": "https://en.wikipedia.org/wiki/Hessdalen_lights"
+  },
+  {
+   "title": "Science Norway — Little valley, a giant battery? (Jader Monari, 2014)",
+   "url": "https://www.sciencenorway.no/electricity-forskningno-geology/little-valley--a-giant-battery/1401223"
+  },
+  {
+   "title": "Project Hessdalen — About (Blue Box station, live cameras)",
+   "url": "https://www.hessdalen.org/about"
+  },
+  {
+   "title": "Project Hessdalen — The 1984 field investigation (radar and cameras)",
+   "url": "https://old.hessdalen.org/reports/Hessdal-article2000.shtml"
+  },
+  {
+   "title": "Society for UAP Studies — Project Hessdalen",
+   "url": "https://societyforuapstudies.org/project-hessdalen"
+  }
+ ],
+ "youtube": {
+  "title": "Hessdalen Lights: Why Does This Norway Valley Glow?",
+  "description": "The Hessdalen lights are glowing balls that float over a quiet valley in Norway, and nobody can explain them. This is the true story of the lights scientists are still watching.\n\nIn the early 1980s, people in Hessdalen saw them up to 20 times a week, sometimes hanging in the sky for over an hour. In 1984 Project Hessdalen brought cameras and radar into the snow, and since 1998 an automatic station has watched the valley day and night. One theory, from Italian engineer Jader Monari, says the valley works like a giant natural battery: iron and zinc in the rock on one slope, copper on the other, and a river in between. But nobody has proved it yet.\n\nSubscribe to Stickstory for one strange true story every day. What do you think the lights are? Tell me in the comments!\n\n#shorts #hessdalen #norway #stickstory",
+  "tags": [
+   "hessdalen lights",
+   "hessdalen",
+   "hessdalen valley",
+   "hessdalen lights norway",
+   "project hessdalen",
+   "norway lights mystery",
+   "unexplained lights",
+   "ball lightning",
+   "strange lights in the sky",
+   "unsolved mysteries",
+   "mystery lights",
+   "norway",
+   "earth lights",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-06T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "hd_valley",
+   "text": "This valley makes lights nobody can explain.",
+   "visual": "Hook frame at night over a snowy valley between two dark slopes with little spruces: one big glowing gold ball of light hovers in the middle of the sky and flares on 'nobody'; small red farmhouses with lit windows below, a faint second light far up the valley; a snow bank and spruces fill the bottom; the fez host appears big on the right in shock as the cover overlay.",
+   "title": {
+    "white": "Norway"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "nobody"
+   },
+   "params": {
+    "mode": "hook",
+    "orb": [
+     0.42,
+     0.4,
+     95
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_valley",
+   "text": "In the early 1980s, Hessdalen, Norway,",
+   "visual": "Daylight snow: a wooden signpost with an arrow board 'HESSDALEN' springs up on 'Hessdalen' beside a red wooden farmhouse with a snowy roof and chimney smoke; spruces, a half-buried fence and footprints in the snow; snow falls; red card 'NORWAY'.",
+   "title": {
+    "white": "Hessdalen"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "Hessdalen",
+    "no": "Norway"
+   },
+   "params": {
+    "mode": "sign",
+    "labels": [
+     {
+      "text": "NORWAY",
+      "x": 0.7,
+      "y": 0.25,
+      "at": "no",
+      "size": 100,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "hd_window",
+   "text": "saw them up to 20 times a week.",
+   "visual": "Inside a farmhouse at night: plank wall, a big window with red curtains onto the dark valley where the glowing ball floats; on the wall a pinned sheet 'THIS WEEK' fills with tally marks up to 20 by 'week'; a table with a steaming blue mug and a candle in front; red card '20 A WEEK'.",
+   "title": {
+    "white": "Every week"
+   },
+   "source": "Project Hessdalen",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "n": "20",
+    "full": "week"
+   },
+   "params": {
+    "mode": "tally",
+    "labels": [
+     {
+      "text": "20 A WEEK",
+      "x": 0.66,
+      "y": 0.5,
+      "at": "n",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_window",
+   "text": "You look out, and a glowing ball hangs there.",
+   "visual": "Close-up at the window at night: a bearded villager in a green sweater stands at the glass and points out; the glowing ball hangs over the snowy hills outside and flares on 'glowing', its light spilling into the room, and he leans back in surprise; mug and candle on the table in front.",
+   "title": {
+    "white": "Outside"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "glowing"
+   },
+   "params": {
+    "mode": "look",
+    "tableY": 0.66,
+    "manY": 0.64
+   },
+   "camera": {
+    "focus": [
+     560,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_valley",
+   "text": "Sometimes for over an hour.",
+   "visual": "Night: the glowing ball hangs low over the snowy roof of a red farmhouse, its glow on the roof; a wall clock in the sky races its hand round; red card '1 HOUR+' on 'hour'.",
+   "title": {
+    "white": "1 hour"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hour": "Sometimes",
+    "h": "hour"
+   },
+   "params": {
+    "mode": "hover",
+    "far": false,
+    "labels": [
+     {
+      "text": "1 HOUR+",
+      "x": 0.32,
+      "y": 0.25,
+      "at": "h",
+      "size": 100,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -1,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "left"
+   }
+  },
+  {
+   "type": "hd_camp",
+   "text": "Scientists came with cameras and radar.",
+   "visual": "A 1984 snow camp in the valley: a wooden hut, a radar dish turning on a mast and sending red pings toward the glowing ball on 'radar', a camera on a tripod aimed at the ball from 'cameras'; two scientists in knit caps and parkas, one pointing up; red card '1984'.",
+   "title": {
+    "white": "Project Hessdalen"
+   },
+   "source": "Project Hessdalen",
+   "set": {
+    "name": "snow",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "y": "Scientists",
+    "cam": "cameras",
+    "radar": "radar",
+    "hit": "radar"
+   },
+   "params": {
+    "mode": "radar",
+    "labels": [
+     {
+      "text": "1984",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "y",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "hd_battery",
+   "text": "One idea? Iron and zinc on one slope, copper on the other.",
+   "visual": "Full-frame cross-section of the valley at night: the left rock labelled 'IRON + ZINC' on 'Iron', the right rock 'COPPER' on 'copper', the river at the bottom of the V; big '+' and '−' signs pop up and gold current starts to run through the rock.",
+   "title": {
+    "white": "One idea"
+   },
+   "source": "Monari, 2014",
+   "set": false,
+   "cues": {
+    "fe": "Iron",
+    "cu": "copper",
+    "flow": "other"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "IRON + ZINC",
+      "x": 0.27,
+      "y": 0.8,
+      "at": "fe",
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "COPPER",
+      "x": 0.73,
+      "y": 0.8,
+      "at": "cu",
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ],
+    "orbY": 0.37,
+    "signs": [
+     [
+      0.1,
+      0.93
+     ],
+     [
+      0.38,
+      0.97
+     ],
+     [
+      0.9,
+      0.93
+     ],
+     [
+      0.62,
+      0.97
+     ]
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_battery",
+   "text": "A river between. A giant battery.",
+   "visual": "The same cross-section, closer: the river at the bottom of the V is marked 'RIVER', current streams through both slopes and under it, sparks pour up and a glowing ball forms above on 'battery'; the fez host on the right slope thinks, then points at the ball; red card 'GIANT BATTERY?'.",
+   "title": {
+    "white": "Battery"
+   },
+   "set": false,
+   "cues": {
+    "riv": "river",
+    "hit": "battery"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.84,
+     "y": 0.52,
+     "scale": 0.85,
+     "pose": "think",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "point",
+       "dir": 40,
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "RIVER",
+      "x": 0.5,
+      "y": 0.76,
+      "at": "riv",
+      "size": 60,
+      "color": "blue",
+      "font": "hand",
+      "card": true,
+      "rot": -2,
+      "underline": false
+     },
+     {
+      "text": "GIANT BATTERY?",
+      "x": 0.62,
+      "y": 0.22,
+      "at": "hit",
+      "size": 66,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "orbY": 0.37,
+    "signs": [
+     [
+      0.1,
+      0.93
+     ],
+     [
+      0.38,
+      0.97
+     ],
+     [
+      0.9,
+      0.93
+     ],
+     [
+      0.62,
+      0.97
+     ]
+    ],
+    "flow_at": 0
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "hd_camp",
+   "text": "But nobody has proved it.",
+   "visual": "Night in the snow camp: the hut, the radar dish turning on its mast, the tripod camera aimed at the glowing ball drifting over the ridge; the two scientists in knit caps first look up, then shrug; on 'proved' a big red rubber stamp 'NOT PROVED' slams down across the sky.",
+   "title": {
+    "white": "No proof"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "proved"
+   },
+   "params": {
+    "mode": "doubt",
+    "orb": [
+     0.8,
+     0.37,
+     44
+    ],
+    "stamp": {
+     "text": "NOT PROVED",
+     "at": "hit",
+     "x": 0.46,
+     "y": 0.27,
+     "size": 104,
+     "rot": -8
+    },
+    "mast": 330
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "hd_camp",
+   "text": "Tonight, a camera there is still watching.",
+   "visual": "Close-up at night: the blue container station on the snowy slope, a camera on its mast turns to follow the glowing ball over the ridge, a faint gold view cone links lens and light, the red REC light blinks; red card 'LIVE'.",
+   "title": {
+    "white": "Blue Box"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "live": "Tonight",
+    "hit": "watching"
+   },
+   "params": {
+    "mode": "box",
+    "labels": [
+     {
+      "text": "LIVE",
+      "x": 0.6,
+      "y": 0.22,
+      "at": "live",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     520,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hd_valley",
+   "text": "Subscribe for one strange true story a day.",
+   "visual": "Night valley in the snow: the fez host stands on the left and waves, then points at the viewer on 'story'; the glowing ball drifts over the ridge behind him, farmhouse windows glow.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.3,
+     "y": 0.62,
+     "scale": 1.1,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

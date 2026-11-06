@@ -1,0 +1,510 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "exploding-whale",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "Blew up",
+   "a whale"
+  ],
+  "highlight": [
+   "whale"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 260,
+   "y": 1800,
+   "scale": 1.15
+  }
+ },
+ "sources": [
+  {
+   "title": "Mental Floss — Remembering Oregon's Exploding Whale",
+   "url": "https://www.mentalfloss.com/history/florence-oregon-exploding-whale-1970"
+  },
+  {
+   "title": "Jalopnik — The Story Behind the Oldsmobile Crushed by Exploded Whale Remains in 1970",
+   "url": "https://www.jalopnik.com/heres-the-story-behind-the-oldsmobile-crushed-by-300-lb-1848658789/"
+  },
+  {
+   "title": "Offbeat Oregon History — The Exploding Whale",
+   "url": "https://offbeatoregon.com/H001_ExplodWhale.html"
+  }
+ ],
+ "youtube": {
+  "title": "Exploding Whale: Why Did Oregon Blow Up a Dead Whale?",
+  "description": "The exploding whale is real: in 1970, Oregon blew up a dead sperm whale with half a ton of dynamite, and it rained blubber.\n\nOn 12 November 1970, a 45-foot sperm whale lay rotting on the beach near Florence, Oregon. The state highway crew packed 20 cases of dynamite under it, hoping seagulls would eat the small pieces. Instead, blubber rained down on the crowd, and one chunk flattened a brand-new car in the parking lot. Nobody was hurt, and much of the whale stayed right where it was.\n\nSubscribe to Stickstory for a strange true story like this every day. What would you have done with the whale? Tell me in the comments!\n\n#shorts #explodingwhale #oregon #stickstory",
+  "tags": [
+   "exploding whale",
+   "exploding whale oregon",
+   "oregon exploding whale 1970",
+   "florence oregon whale",
+   "whale explosion",
+   "dead whale dynamite",
+   "blew up a whale",
+   "sperm whale beach",
+   "strange history",
+   "weird history",
+   "history shorts",
+   "true story",
+   "oregon history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-06T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "wh_blast",
+   "text": "Oregon once blew up a whale.",
+   "visual": "Hook frame on a grey Oregon beach: a huge dead sperm whale lies on the sand; on 'blew' it erupts into a giant plume of sand and smoke, pink blubber chunks fly in every direction; the fez host appears big on the right in shock as the cover overlay.",
+   "title": {
+    "white": "Oregon"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "blew"
+   },
+   "params": {
+    "mode": "hook",
+    "whale": [
+     0.56,
+     0.78,
+     1
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "wh_beach",
+   "text": "In 1970, a dead sperm whale washed up near Florence.",
+   "visual": "Wide beach under a pale sky: the long grey sperm whale with its huge blunt head lies on the sand, foam washing round it, gulls circling; a local man in a coat walks up and jumps back on 'whale'; red card '1970' and hand label 'FLORENCE, OREGON'; driftwood and dune grass in the foreground.",
+   "title": {
+    "white": "1970"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 960,
+    "horizon": 640
+   },
+   "cues": {
+    "y": "1970",
+    "hit": "whale",
+    "fl": "Florence"
+   },
+   "params": {
+    "mode": "arrive",
+    "labels": [
+     {
+      "text": "1970",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "y",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "FLORENCE, OREGON",
+      "x": 0.62,
+      "y": 0.29,
+      "at": "fl",
+      "size": 66,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ],
+    "gy": 0.5,
+    "front": 0.62,
+    "whale": [
+     0.52,
+     0.95,
+     1
+    ],
+    "manScale": 0.85
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "wh_beach",
+   "text": "It stank, so the highway crew made a plan.",
+   "visual": "Close-up by the whale's huge head: thick green stink lines rise off it, flies swarm; a road-crew worker in a yellow hard hat and orange vest gets a clothes-peg on his nose on 'stank', then on 'crew' holds up a sign 'PLAN'; red card 'STINK'.",
+   "title": {
+    "white": "The plan"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "stank",
+    "plan": "crew"
+   },
+   "params": {
+    "mode": "stink",
+    "whale": [
+     -0.2,
+     1.15,
+     1
+    ],
+    "w1": 0.5,
+    "labels": [
+     {
+      "text": "STINK",
+      "x": 0.35,
+      "y": 0.55,
+      "at": "hit",
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     500,
+     860
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "wh_crew",
+   "text": "Half a ton of dynamite, and seagulls would eat the bits.",
+   "visual": "On the beach beside the whale's flank, wooden crates stamped 'DYNAMITE' stack up one by one into a pyramid while a worker in a hard hat carries one more on his shoulder; on 'seagulls' a flock of gulls swoops in low over the whale; red card 'HALF A TON', hand label '20 CASES'.",
+   "title": {
+    "white": "Dynamite"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "source": "Offbeat Oregon",
+   "cues": {
+    "box": "Half",
+    "ton": "ton",
+    "gulls": "seagulls"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "HALF A TON",
+      "x": 0.42,
+      "y": 0.26,
+      "at": "ton",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "20 CASES",
+      "x": 0.7,
+      "y": 0.36,
+      "at": "ton",
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "wh_beach",
+   "text": "Can you guess what happened?",
+   "visual": "Wide beach: the whale lies far off on the right, red wires run from it to a plunger box where a worker in a hard hat points down at the handle; the fez host stands in the near sand on the left, points at the whale, then jumps back in shock on 'happened'; big red '?'.",
+   "title": {
+    "white": "Ready?"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 960,
+    "horizon": 640
+   },
+   "cues": {
+    "hit": "happened"
+   },
+   "params": {
+    "mode": "wait",
+    "log": 0.75,
+    "kasif": {
+     "x": 0.2,
+     "y": 0.66,
+     "scale": 1.05,
+     "pose": "point",
+     "dir": 10,
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.62,
+      "y": 0.24,
+      "at": "hit",
+      "size": 190,
+      "color": "red",
+      "font": "serif",
+      "card": false,
+      "rot": 6,
+      "underline": false
+     }
+    ],
+    "gy": 0.5,
+    "front": 0.62,
+    "whale": [
+     0.72,
+     0.5,
+     1
+    ],
+    "box": 0.34
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "wh_blast",
+   "text": "It rained blubber.",
+   "visual": "Behind the dunes a grey plume still hangs over the whale; pink blubber lumps rain down out of the sky with smoke trails; spectators on the dune run to the left with their arms up; gold card 'BLUBBER!'.",
+   "title": {
+    "white": "Blubber"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "rained",
+    "b": "blubber"
+   },
+   "params": {
+    "mode": "rain",
+    "labels": [
+     {
+      "text": "BLUBBER!",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "b",
+      "size": 96,
+      "color": "gold",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "down"
+   }
+  },
+  {
+   "type": "wh_car",
+   "text": "One chunk flew a quarter mile and crushed a brand-new car.",
+   "visual": "A 1970 parking lot by the dunes with parked cars: a big blubber lump arcs in from the left along a dashed red track and on 'crushed' lands on the roof of a shiny new blue sedan, flattening it; glass flies, dust puffs, red shock ticks; red card 'QUARTER MILE'.",
+   "title": {
+    "white": "Parking lot"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "source": "Jalopnik",
+   "cues": {
+    "q": "quarter",
+    "hit": "crushed"
+   },
+   "params": {
+    "mode": "crush",
+    "labels": [
+     {
+      "text": "QUARTER MILE",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "q",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "wh_beach",
+   "text": "Nobody got hurt. Much of the whale stayed put.",
+   "visual": "Back on the beach: the whale is still lying there almost whole, a black blast hole in its side, smoke wisps rising, small blubber lumps scattered on the sand; blue card 'NO ONE HURT', red card 'STILL THERE'.",
+   "title": {
+    "white": "After"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "hurt": "hurt",
+    "st": "stayed"
+   },
+   "params": {
+    "mode": "after",
+    "labels": [
+     {
+      "text": "NO ONE HURT",
+      "x": 0.36,
+      "y": 0.25,
+      "at": "hurt",
+      "size": 76,
+      "color": "blue",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "STILL THERE",
+      "x": 0.58,
+      "y": 0.35,
+      "at": "st",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "wh_car",
+   "text": "And that car's dealer? Its slogan was \"a whale of a deal.\"",
+   "visual": "A 1970 car lot under a string of red and gold pennants: a big dealer sign on two posts pops up on 'slogan' reading 'A WHALE / OF A DEAL' with a little smiling whale painted in the corner; a shiny new red sedan gleams under it.",
+   "title": {
+    "white": "The dealer"
+   },
+   "set": "city",
+   "cues": {
+    "hit": "slogan"
+   },
+   "params": {
+    "mode": "dealer"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "wh_beach",
+   "text": "Subscribe for a strange true story every day.",
+   "visual": "On the beach: the fez host stands on the left and waves, then points at the viewer on 'story'; the smoking whale lies far behind on the right, gulls circle.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "log": 0.6,
+    "kasif": {
+     "x": 0.3,
+     "y": 0.62,
+     "scale": 1.05,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}
