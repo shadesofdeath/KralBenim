@@ -1,0 +1,17 @@
+{
+ "id": "Fj8M93o4LQY",
+ "thumbnail": false,
+ "url": "https://youtu.be/Fj8M93o4LQY",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-07T19:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Ignaz Semmelweis: Why Doctors Refused to Wash Their Hands",
+ "script": "videos/2026-11-07/ag-03-semmelweis-handwashing.json"
+}
