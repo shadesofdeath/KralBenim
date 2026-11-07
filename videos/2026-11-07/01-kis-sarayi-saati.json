@@ -1,0 +1,179 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "obsidyen",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "TASS: Hermitage clock that stopped at the moment the Provisional Government was arrested starts again",
+      "url": "https://tass.com/society/972750"
+    },
+    {
+      "title": "Encyclopaedia of Saint Petersburg: Aurora fires a blank shot, 25 October 1917",
+      "url": "https://www.encspb.ru/object/2804022752?lc=en"
+    },
+    {
+      "title": "Wikipedia: Storming of the Winter Palace",
+      "url": "https://en.wikipedia.org/wiki/Storming_of_the_Winter_Palace"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Saat",
+      "yüz yıl durdu"
+    ],
+    "highlight": [
+      "durdu"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "focus": [
+      540,
+      795
+    ],
+    "zoom": 1.5,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu saat yüz yıl boyunca durdu.",
+      "type": "bt_ks_clock",
+      "visual": "Karanlık bir odada ışık havuzunun içinde tek şömine saati: kubbeli gövde, altın çerçeveli krem kadran, kısa kalın altın akrep ve ince uzun yelkovan 2.10'da, durgun sarkaç; altında soğuk şömine, ışıkta yavaşça süzülen toz",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "durdu"
+      }
+    },
+    {
+      "text": "7 Kasım 1917 gecesi, Petrograd.",
+      "type": "bt_ks_city",
+      "visual": "Gece: Neva'nın karşı kıyısında Kış Sarayı'nın uzun barok cephesi, çatıda heykel sırası, birkaç penceresi altın ışıklı ve suda yansıyor; üstte ince büyük '1917', italik 'Petrograd' ve altın çizgi",
+      "params": {
+        "mode": "night",
+        "text": "1917",
+        "sub": "Petrograd"
+      }
+    },
+    {
+      "text": "Aurora kruvazörü kurusıkı ateşledi.",
+      "type": "bt_ks_ship",
+      "visual": "Gece nehirde yandan Aurora: üç uzun eğik baca, iki direk, baş topu; bacalardan yavaş duman; 'kurusıkı'da baş topunun ağzında tek bir altın parlama, suda yansıması ve yavaşça yayılan duman bulutu (mermi yok)",
+      "cues": {
+        "hit": "kurusıkı"
+      }
+    },
+    {
+      "text": "Kış Sarayı'nda bakanlar yemek odasında bekledi.",
+      "type": "bt_ks_room",
+      "visual": "Mum ışığında yemek odası: uzun masanın arkasında baş, boyun ve omuzlarıyla yüzsüz beş oturan siluet, ortada üç mumlu şamdan, solda kemerli gece penceresi, sağ duvarda küçük şömine ve üstünde aynı saat",
+      "params": {
+        "mode": "wait"
+      }
+    },
+    {
+      "text": "Ayak sesleri yaklaştı.",
+      "type": "bt_ks_hall",
+      "visual": "Tek kaçış noktalı uzun karanlık saray koridoru (pilastrlar, tavan kirişleri, parke); dipteki açıklıktan küçük üç yüzsüz siluet yürüyerek büyür, öndekinin göğüs hizasına kaldırdığı fenerin ışık havuzu onlarla birlikte ilerler"
+    },
+    {
+      "text": "Gece ikiyi on geçe kapı açıldı.",
+      "type": "bt_ks_door",
+      "visual": "Karanlık duvarda yüksek çift kanatlı kapı, üstünde düz saray kapı pervazı, altından titrek bir ışık çizgisi; 'açıldı'da iki kanat açılır, aralıkta tek bir siluet durur, ışık yere üçgen olarak dökülür (altyazı bandında soluk, altında açılır); üstte altın italik 'gece 2.10'",
+      "params": {
+        "note": "gece 2.10"
+      },
+      "cues": {
+        "hit": "açıldı"
+      }
+    },
+    {
+      "text": "Geçici Hükûmet'in bakanları orada tutuklandı.",
+      "type": "bt_ks_room",
+      "visual": "Aynı yemek odası boş: yüksek arkalıklı sandalyeler geriye itilmiş ve eğik, masada yan yatmış bir kadeh, tek mum; 'tutuklandı'da mum söner, ince bir duman yükselir, oda kararır",
+      "params": {
+        "mode": "empty"
+      },
+      "cues": {
+        "hit": "tutuklandı"
+      }
+    },
+    {
+      "text": "İbreler o anda dondu.",
+      "type": "bt_ks_clock",
+      "visual": "Yakın plan kadran kadrajı doldurur: kısa kalın altın akrep, ince uzun koyu yelkovan; yelkovan son dakikayı yavaşça geçer ve 2.10'da durur, 'dondu'da kadranın çerçevesi altın ışıkla yanar",
+      "params": {
+        "mode": "close"
+      },
+      "cues": {
+        "hit": "dondu"
+      }
+    },
+    {
+      "text": "Ama Sovyetler onu hiç kurmadı.",
+      "type": "bt_ks_room",
+      "visual": "Soğuk şöminenin üstünde aynı saat, ibreler 2.10; soldaki yüksek pencereden giren ışık duvarı tekrar tekrar geçer (günler); üstte yıl 1917'den 2016'ya sayar, ibreler kıpırdamaz",
+      "params": {
+        "mode": "years",
+        "from": 1917,
+        "to": 2016
+      },
+      "transition": "dip"
+    },
+    {
+      "text": "Saat ancak devrimin yüzüncü yılında yeniden işledi.",
+      "type": "bt_ks_clock",
+      "visual": "Işık havuzunda saat: sarkaç yeniden yavaşça sallanır, ince yelkovan 2.10'dan ileri kayar; üstte ince büyük '2017', italik 'yüz yıl sonra'; 'yeniden'de kadranın çerçevesi altın ışıkla yanar",
+      "params": {
+        "mode": "wind",
+        "text": "2017",
+        "sub": "yüz yıl sonra"
+      },
+      "cues": {
+        "hit": "yeniden"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_ks_city",
+      "visual": "Şafak: Neva'nın karşısında sarayın cephesi, pencereler sönük; güneş henüz ufkun altında, çatının arkasında soluk sıcak ışık yükselir, durgun suda altın yansımalar",
+      "params": {
+        "mode": "dawn"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Kış Sarayı Saati: Bir Hükûmet Neden 2.10'da Dondu?",
+    "description": "Kış Sarayı saati 1917'de gece 2.10'da durdu ve yüz yıl boyunca kimse onu kurmadı. Bu saatin ibreleri bir hükûmetin son anını saklıyor.\n\n7 Kasım 1917 (eski takvimle 25 Ekim) akşamı Petrograd'da Aurora kruvazörü saat 21.40'ta tek bir kurusıkı atış yaptı ve Kış Sarayı'na saldırı başladı. Geçici Hükûmet'in bakanları sarayın Küçük Yemek Odası'nda bekledi. 7'yi 8 Kasım'a bağlayan gece saat 2.10'da (eski takvimle 26 Ekim) kapı açıldı ve bakanlar tutuklandı. Odadaki şömine saatinin ibreleri 2.10'da kaldı; saat Sovyet döneminde hiç kurulmadı ve Ermitaj onu 2017'de, Ekim Devrimi'nin yüzüncü yılında yeniden çalıştırdı.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence bir saat tarihin bir anını gerçekten saklayabilir mi? Yorumlara yaz!\n\n#shorts #kışsarayı #ekimdevrimi #rustarihi #düşünbakalım",
+    "tags": [
+      "kış sarayı saati",
+      "kış sarayı",
+      "kış sarayı baskını",
+      "kış sarayı 1917",
+      "ekim devrimi",
+      "1917 rus devrimi",
+      "bolşevik devrimi",
+      "aurora kruvazörü",
+      "geçici hükümet",
+      "ermitaj müzesi",
+      "petrograd",
+      "rus tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-07T19:00:00+03:00"
+  }
+}
