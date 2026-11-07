@@ -1,0 +1,425 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ketchup-medicine",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-newsprint",
+ "cover": {
+  "lines": [
+   "Ketchup",
+   "was medicine"
+  ],
+  "highlight": [
+   "medicine"
+  ],
+  "scene": 0,
+  "t": 1.5,
+  "focus": [
+   648,
+   730
+  ],
+  "zoom": 1.3,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 320,
+   "y": 1830,
+   "scale": 1.6
+  },
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "Atlas Obscura — When Tomato Pills Were a Cure-All",
+   "url": "https://www.atlasobscura.com/articles/tomato-pill"
+  },
+  {
+   "title": "Mental Floss — When Tomatoes Were Marketed as Medicine",
+   "url": "https://www.mentalfloss.com/article/620380/when-tomatoes-were-marketed-medicine"
+  },
+  {
+   "title": "Popular Science — Ketchup was once a diarrhea cure",
+   "url": "https://www.popsci.com/science/ketchup-history-medicine/"
+  },
+  {
+   "title": "Smithsonian Magazine — There's Something Fishy About the Ketchup You Put On Your Burgers",
+   "url": "https://www.smithsonianmag.com/smart-news/ketchup-fishy-origins-180963511/"
+  }
+ ],
+ "youtube": {
+  "title": "Ketchup as Medicine: What Was Really in Tomato Pills?",
+  "description": "Ketchup as medicine sounds like a joke, but in 1830s America doctors really prescribed tomatoes, even as ketchup. So what was really inside those tomato pills?\n\nIn 1834, Ohio doctor John Cook Bennett claimed tomatoes could treat diarrhea and indigestion, and urged people to eat them raw, cooked or in catsup. By 1837, Archibald Miles was selling \"Dr. Miles' Compound Extract of Tomato\", and his rival Guy Phelps sold his own tomato pills. The two fought in the newspapers; Phelps said Miles had about as much claim to the title of doctor as his horse. When the pills were analysed, they held no tomato at all: they were basically laxatives. Bonus: the word ketchup itself comes from a fermented fish sauce, ke-tsiap.\n\nSubscribe to Stickstory for a strange true story like this every day. Would you have taken a tomato pill? Tell me in the comments!\n\n#shorts #ketchup #foodhistory #stickstory",
+  "tags": [
+   "ketchup as medicine",
+   "ketchup medicine",
+   "ketchup was medicine",
+   "tomato pills",
+   "tomato pill craze",
+   "ketchup history",
+   "history of ketchup",
+   "john cook bennett",
+   "archibald miles",
+   "patent medicine",
+   "weird history",
+   "food history",
+   "strange history",
+   "true story",
+   "history shorts",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-07T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "kc_shop",
+   "text": "Ketchup was once a medicine.",
+   "visual": "Hook frame in an 1830s apothecary: shelves of coloured jars behind a wooden counter; a big bottle of red sauce labelled 'TOMATO / KETCHUP' gleams in the middle of the counter like a remedy, a spoonful of red sauce (the dose) lies in front of it, pills roll out of a tipped pillbox on the left, a tomato on the right; on 'medicine' the bottle pulses and a gold sparkle flashes; the fez host big in the lower left in open-mouthed shock as the cover overlay.",
+   "title": {
+    "white": "America",
+    "gray": "1830s"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1123
+   },
+   "cues": {
+    "hit": "medicine"
+   },
+   "params": {
+    "mode": "hook",
+    "bottle": {
+     "s": 1.2
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kc_hall",
+   "text": "In 1834, an Ohio doctor named Bennett claimed tomatoes could cure diarrhea,",
+   "visual": "A lecture room: a doctor in a dark frock coat with sideburns stands beside a wooden lectern, talks, then on 'cure' lifts a big tomato high; on the blackboard behind him a chalk tomato, an arrow and a bean-shaped stomach with a '+' draw themselves; the backs of the audience's heads fill the bottom of the frame; red card '1834', hand label 'OHIO'.",
+   "title": {
+    "white": "Dr. Bennett"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "y": "1834",
+    "draw": "Ohio",
+    "hit": "cure"
+   },
+   "params": {
+    "mode": "lecture",
+    "labels": [
+     {
+      "text": "1834",
+      "x": 0.2,
+      "y": 0.22,
+      "at": "y",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     },
+     {
+      "text": "OHIO",
+      "x": 0.66,
+      "y": 0.53,
+      "at": "draw",
+      "size": 70,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "kc_kitchen",
+   "text": "and told people to eat them as ketchup.",
+   "visual": "Close-up on a kitchen table (a plain wooden table: top, drawer apron and two legs fill the bottom of the frame): a black pot of bubbling red ketchup with thin steam curls rising and a wooden spoon stirring; tomatoes on the table; a recipe card on the right where a quill writes 'TOMATO / KETCHUP' in red and then the recipe lines.",
+   "title": {
+    "white": "Recipes"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 960
+   },
+   "cues": {
+    "write": "told",
+    "hit": "ketchup"
+   },
+   "params": {},
+   "camera": {
+    "focus": [
+     515,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kc_street",
+   "text": "Ads for tomato pills filled the newspapers.",
+   "visual": "A city brick wall: newspaper posters slap onto it one after another, the big one reads 'TOMATO / PILLS!', another 'CURES / ALL!', one shows a tomato; a newsboy at the foot of the wall, right of the posters, holds up an 'EXTRA!' sign; loose papers drift on the cobbles.",
+   "title": {
+    "white": "The ads"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1152
+   },
+   "cues": {
+    "box": "Ads",
+    "hit": "newspapers"
+   },
+   "params": {
+    "mode": "ads"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "kc_street",
+   "text": "One seller said his rival was no more a doctor than his horse.",
+   "visual": "A street: on the left a seller in a dark frock coat stands beside his horse and points angrily at his rival (green coat) in front of a pill cart with bottles and a tomato sign on the right; on 'horse' he turns and points at his horse, which throws its head up and neighs, while the rival jumps back; red card 'DR. HORSE?' over the horse.",
+   "title": {
+    "white": "The feud"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1152
+   },
+   "source": "Atlas Obscura",
+   "cues": {
+    "hit": "horse"
+   },
+   "params": {
+    "mode": "feud",
+    "labels": [
+     {
+      "text": "DR. HORSE?",
+      "x": 0.4,
+      "y": 0.3,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kc_hall",
+   "text": "But when the pills were tested, they had no tomato at all.",
+   "visual": "A lab: a shelf of glass flasks and coloured liquids on the back wall; a chemist in an apron behind a slate lab bench with drawers; a mortar and pestle grinding, pills, a big magnifying glass slides over one pill; on 'tomato' a thick red X is drawn over the tomato on the right and the chemist jumps back; red card 'NO TOMATO'.",
+   "title": {
+    "white": "The test"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1112
+   },
+   "source": "Atlas Obscura",
+   "cues": {
+    "hit": "tomato"
+   },
+   "params": {
+    "mode": "lab",
+    "labels": [
+     {
+      "text": "NO TOMATO",
+      "x": 0.6,
+      "y": 0.2,
+      "at": "hit",
+      "size": 88,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "kc_shop",
+   "text": "So what was inside? Laxatives.",
+   "visual": "Back in the apothecary: the fez host behind the counter points at a big bottle of pills labelled 'TOMATO / PILLS', then thinks on 'inside' while a big red '?' pops up; on 'Laxatives' the label flips over to 'LAXATIVE' and a red card 'LAXATIVES' slams on, the bottle rattles and the host jumps back in shock.",
+   "title": {
+    "white": "Inside"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1123
+   },
+   "cues": {
+    "q": "inside",
+    "flip": "Laxatives"
+   },
+   "params": {
+    "mode": "ask",
+    "bottle": {
+     "lines": [
+      "TOMATO",
+      "PILLS"
+     ],
+     "lines2": [
+      "LAXATIVE"
+     ],
+     "content": "pills"
+    },
+    "kasif": {
+     "x": 0.27,
+     "scale": 1.1,
+     "pose": "point",
+     "dir": -10,
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "q",
+       "pose": "think",
+       "face": "right",
+       "emotion": "worried"
+      },
+      {
+       "at": "flip",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.8,
+      "y": 0.2,
+      "at": "q",
+      "size": 190,
+      "color": "red",
+      "font": "serif",
+      "card": false,
+      "rot": 6,
+      "underline": false
+     },
+     {
+      "text": "LAXATIVES",
+      "x": 0.6,
+      "y": 0.3,
+      "at": "flip",
+      "size": 92,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kc_street",
+   "text": "The cure for diarrhea sent you running to the toilet.",
+   "visual": "A back yard: a man in a frock coat runs from the left with both hands on his belly, a pained face and sweat drops, towards a wooden outhouse with a crescent moon on the door; he dives in and on 'toilet' the door slams and the outhouse shakes; a white picket fence and grass in front.",
+   "title": {
+    "white": "Oops"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "toilet"
+   },
+   "params": {
+    "mode": "run"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "kc_shop",
+   "text": "Subscribe for a strange true story every day.",
+   "visual": "The apothecary counter: the fez host behind it waves, then points at the viewer on 'story'; the ketchup bottle and two tomatoes beside him.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1123
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.3,
+     "scale": 1.1,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

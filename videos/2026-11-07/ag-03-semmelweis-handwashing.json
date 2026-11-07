@@ -1,0 +1,2431 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-semmelweis-handwashing",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "HANDS THAT",
+   "KILLED"
+  ],
+  "highlight": [
+   "KILLED"
+  ],
+  "scene": 4,
+  "t": 1.0,
+  "focus": [
+   900,
+   560
+  ],
+  "zoom": 1.15,
+  "size": 190,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.5,
+   "face": -1,
+   "x": 1560,
+   "y": 1400
+  }
+ },
+ "sources": [
+  {
+   "title": "Ignaz Semmelweis (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Ignaz_Semmelweis"
+  },
+  {
+   "title": "Ignaz Philipp Semmelweis (1818–1865): herald of hygienic medicine (Medical Journal of Australia, 2018)",
+   "url": "https://www.mja.com.au/journal/2018/209/11/ignaz-philipp-semmelweis-1818-1865-herald-hygienic-medicine"
+  },
+  {
+   "title": "Ignaz Philipp Semmelweis (1818–1865) – a public health visionary and champion of hand hygiene (GMS Hygiene and Infection Control)",
+   "url": "https://books.publisso.de/en/journals/hic/volume20/dgkh000608"
+  },
+  {
+   "title": "It Took Surprisingly Long for Doctors to Figure Out the Benefits of Hand Washing (History.com)",
+   "url": "https://www.history.com/articles/hand-washing-disease-infection"
+  },
+  {
+   "title": "Semmelweis, Ignaz Philipp (Encyclopedia.com)",
+   "url": "https://www.encyclopedia.com/people/medicine/medicine-biographies/ignaz-philipp-semmelweis"
+  }
+ ],
+ "youtube": {
+  "title": "Ignaz Semmelweis: Why Doctors Refused to Wash Their Hands",
+  "description": "Ignaz Semmelweis found out why mothers were dying in Vienna's best maternity ward, and the answer was the doctors' own hands.\n\nVienna General Hospital, 1846: in the First Clinic, run by doctors and medical students, about one mother in nine died of childbed fever, while the midwives' Second Clinic lost fewer than three in a hundred. Women begged not to be admitted, and street births were safer than the ward. Then Jakob Kolletschka died after a scalpel cut during an autopsy, Semmelweis made everyone wash in chlorinated lime, and deaths fell to about one percent. So why did the doctors refuse to believe him?\n\nIn this video:\n- The two maternity clinics of Vienna and the deadly one\n- The priest's bell and the other theories Semmelweis ruled out\n- Kolletschka's scalpel and the cadaverous particles idea\n- The chlorine bowl and the drop in childbed fever deaths\n- Why doctors rejected handwashing, and the Semmelweis reflex\n\nSubscribe to Stickstory for more true stories that changed the world. Would you have believed Semmelweis in 1847? Tell me in the comments!\n\n#semmelweis #handwashing #medicalhistory #humanbody #stickstory",
+  "tags": [
+   "ignaz semmelweis",
+   "semmelweis",
+   "semmelweis handwashing",
+   "semmelweis reflex",
+   "childbed fever",
+   "puerperal fever",
+   "history of handwashing",
+   "vienna general hospital",
+   "jakob kolletschka",
+   "chlorinated lime",
+   "germ theory",
+   "medical history",
+   "hand hygiene",
+   "doctors who washed hands",
+   "history of medicine",
+   "human body",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-07T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "sem_gate",
+   "text": "Vienna, 1846. A young woman in labor stands at the gate of the biggest hospital in the city, and she is begging.",
+   "visual": "Snowy night street in front of the long two-storey Vienna General Hospital with rows of windows and a big arched iron gate; a gas lamp glows on the left; a pregnant young woman in a blue shawl walks up to the gate, and on 'begging' she reaches out with both hands; a doctor in a dark coat stands in the gate; note 'Vienna, 1846'.",
+   "title": {
+    "white": "Vienna",
+    "gray": "1846"
+   },
+   "cues": {
+    "v": "Vienna",
+    "beg": "begging"
+   },
+   "params": {
+    "snow": true,
+    "glow": 0.4,
+    "sign": "General Hospital",
+    "cast": [
+     {
+      "who": "woman",
+      "role": "pregnant",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.22,
+      "to": 0.4,
+      "walk_at": 0.2,
+      "walk_dur": 2.6,
+      "face": "right",
+      "then": "point",
+      "at": "beg",
+      "emotion": "worried",
+      "dir": 10
+     },
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.56,
+      "face": "left",
+      "pose": "idle",
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Vienna, 1846",
+      "x": 0.8,
+      "y": 0.2,
+      "at": "v",
+      "size": 70,
+      "stamp": true,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "push"
+   },
+   "chapter": "The Woman at the Gate"
+  },
+  {
+   "type": "sem_gate",
+   "text": "Not for a doctor. She is begging, on her knees, not to be taken to the ward with the doctors.",
+   "visual": "Closer at the gate: the woman in the blue shawl kneels in the snow, hands raised, face worried; the doctor beside the gate points inside.",
+   "title": {
+    "white": "Please, no"
+   },
+   "cues": {
+    "kn": "knees",
+    "w": "ward"
+   },
+   "params": {
+    "snow": true,
+    "glow": 0.4,
+    "sign": "General Hospital",
+    "cast": [
+     {
+      "who": "woman",
+      "role": "pregnant",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.4,
+      "kneel": true,
+      "face": "right",
+      "pose": "talk",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "kn",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     },
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.56,
+      "face": "left",
+      "pose": "point",
+      "dir": "right",
+      "beard": "short"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     900,
+     620
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_ward",
+   "text": "Because everyone in Vienna knew something the doctors didn't. In that ward, mothers died.",
+   "visual": "Inside a long ward: a row of five iron beds with mothers resting under blankets, curtains swaying; red placard 'FIRST CLINIC' high on the wall; on 'died' the middle bed slowly empties and a small candle is lit beside it.",
+   "title": {
+    "white": "The ward"
+   },
+   "cues": {
+    "kn": "knew",
+    "d": "died"
+   },
+   "params": {
+    "beds": 5,
+    "placard": {
+     "text": "First Clinic",
+     "x": 0.5
+    },
+    "empty": [
+     {
+      "i": 2,
+      "at": "d"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "sem_gate",
+   "text": "So why was the clinic with the best-trained doctors the deadliest place to give birth?",
+   "visual": "The hospital at night, a few windows glowing gold; the fez narrator walks in from the right, stops in front of the gate and holds up a sign 'WHY?' on 'deadliest' with raised brows.",
+   "title": {
+    "white": "Why?"
+   },
+   "cues": {
+    "dd": "deadliest"
+   },
+   "params": {
+    "snow": false,
+    "glow": 0.6,
+    "lamp": 0.84,
+    "cast": [
+     {
+      "role": "kasif",
+      "scale": 0.9,
+      "y": 0.8,
+      "x": 0.95,
+      "to": 0.66,
+      "walk_dur": 1.6,
+      "face": "left",
+      "at": "dd",
+      "then": "hold",
+      "text": "WHY?",
+      "emotion": "surprised"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_hands",
+   "text": "The answer was hiding in plain sight, but it would cost one man everything.",
+   "visual": "Close-up: one doctor's hand in a black coat cuff hovers over a white basin; a few red-brown stains on the back of the hand; on 'sight' a hand-written note 'the answer?' with an arrow to the hands.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "s": "sight",
+    "c": "cost"
+   },
+   "params": {
+    "mode": "wash",
+    "dirty": true,
+    "one": true,
+    "stains": 8,
+    "stain_size": 12,
+    "labels": [
+     {
+      "text": "the answer?",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "s",
+      "size": 80,
+      "color": "red",
+      "arrow": [
+       0.5,
+       0.36
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "The hospital had two maternity clinics, side by side.",
+   "visual": "CHAPTER 1 / 6 card: blue disc with 1, title 'Two Clinics'.",
+   "title": {},
+   "cues": {
+    "n": "hospital",
+    "title": "two",
+    "line": "side"
+   },
+   "params": {
+    "n": 1,
+    "total": 6,
+    "title": "Two Clinics",
+    "label": "CHAPTER"
+   },
+   "chapter": "Two Clinics"
+  },
+  {
+   "type": "sem_ward",
+   "text": "The First Clinic trained medical students. The Second Clinic trained midwives.",
+   "visual": "A ward split by a wall: left placard 'FIRST CLINIC' (red) with a doctor and a medical student between the beds; right placard 'SECOND CLINIC' (blue) with a midwife in a bonnet and apron; each placard drops in as it is named.",
+   "title": {
+    "white": "Two clinics"
+   },
+   "cues": {
+    "f": "First",
+    "s": "Second",
+    "st": "students",
+    "m": "midwives"
+   },
+   "params": {
+    "beds": 4,
+    "split": {
+     "x": 0.5,
+     "left": "First Clinic",
+     "right": "Second Clinic",
+     "at_left": "f",
+     "at_right": "s"
+    },
+    "cast": [
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 0.62,
+      "y": 0.8,
+      "x": 0.2,
+      "face": "right",
+      "pose": "talk",
+      "beard": "short"
+     },
+     {
+      "who": "student",
+      "role": "student",
+      "scale": 0.6,
+      "y": 0.8,
+      "x": 0.33,
+      "face": "left",
+      "pose": "point",
+      "at": "st",
+      "then": "point"
+     },
+     {
+      "who": "midwife",
+      "role": "midwife",
+      "scale": 0.62,
+      "y": 0.8,
+      "x": 0.74,
+      "face": "left",
+      "pose": "idle",
+      "at": "m",
+      "then": "wave"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "right"
+   }
+  },
+  {
+   "type": "sem_notes",
+   "text": "And yet, in 1846, about one mother in nine who gave birth in the First Clinic died. In the Second Clinic, fewer than three in a hundred.",
+   "visual": "A big case-notes sheet pinned to the ward wall, a desk edge with a candle and inkwell in front: title 'Deaths in 1846'; column 'First Clinic' with a long red bar '11.4%', column 'Second Clinic' with a short blue bar '2.8%'; red pill 'about 1 in 9' on 'nine'.",
+   "title": {
+    "white": "1846"
+   },
+   "cues": {
+    "one": "First",
+    "two": "Second",
+    "pill": "nine"
+   },
+   "params": {
+    "title": "Mothers who died, 1846",
+    "cols": [
+     {
+      "title": "First Clinic",
+      "bars": [
+       {
+        "label": "doctors",
+        "text": "11.4%",
+        "value": 0.57,
+        "color": "red",
+        "at": "one"
+       }
+      ]
+     },
+     {
+      "title": "Second Clinic",
+      "bars": [
+       {
+        "label": "midwives",
+        "text": "2.8%",
+        "value": 0.14,
+        "color": "blue",
+        "at": "two"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "about 1 in 9",
+     "color": "red",
+     "at": "pill"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 890
+   },
+   "source": "Semmelweis's own tables"
+  },
+  {
+   "type": "sem_ward",
+   "text": "The killer was childbed fever. It struck a few days after the birth, and then, very often, death.",
+   "visual": "Close on one bed in the ward: a mother resting under a blanket; red note 'childbed fever' on 'fever'; on 'death' the bed empties softly and a candle is lit.",
+   "title": {
+    "white": "Childbed fever"
+   },
+   "cues": {
+    "f": "fever",
+    "d": "death"
+   },
+   "params": {
+    "beds": 3,
+    "x0": 0.18,
+    "x1": 0.82,
+    "empty": [
+     {
+      "i": 1,
+      "at": "d"
+     }
+    ],
+    "labels": [
+     {
+      "text": "childbed fever",
+      "x": 0.5,
+      "y": 0.37,
+      "at": "f",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     930,
+     640
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_gate",
+   "text": "So women did the math. Some gave birth on the street on purpose, and arrived afterwards.",
+   "visual": "A snowy street, the hospital far on the right: a pregnant woman in a blue shawl walks slowly from right to left in the falling snow, away from the gate; note 'born on the street' on 'street' and, on 'afterwards', blue note 'arrive later'.",
+   "title": {
+    "white": "The trick"
+   },
+   "cues": {
+    "st": "street",
+    "af": "afterwards"
+   },
+   "params": {
+    "snow": true,
+    "gate": 0.8,
+    "glow": 0.2,
+    "lamp": 0.4,
+    "cast": [
+     {
+      "who": "woman",
+      "role": "pregnant",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.62,
+      "to": 0.22,
+      "walk_at": 0.2,
+      "walk_dur": 4.0,
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "born on the street",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "st",
+      "size": 70
+     },
+     {
+      "text": "arrive later",
+      "x": 0.62,
+      "y": 0.42,
+      "at": "af",
+      "size": 64,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_gate",
+   "text": "And here's the strange part. Those street births almost never got the fever.",
+   "visual": "Snowy street by a gas lamp: a mother in a blue shawl stands holding her bundled baby; the fez narrator beside her jumps back in shock, then holds up a sign 'NO FEVER?!' on 'fever'.",
+   "title": {
+    "white": "Strange"
+   },
+   "cues": {
+    "str": "strange",
+    "fv": "fever"
+   },
+   "params": {
+    "snow": true,
+    "gate": 0.9,
+    "glow": 0.2,
+    "lamp": 0.12,
+    "cast": [
+     {
+      "who": "mother",
+      "role": "woman",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.38,
+      "face": "right",
+      "pose": "hold",
+      "item": "coin",
+      "baby": true,
+      "emotion": "happy"
+     },
+     {
+      "role": "kasif",
+      "scale": 0.9,
+      "y": 0.8,
+      "x": 0.62,
+      "face": "left",
+      "pose": "shock",
+      "seq": [
+       {
+        "at": "fv",
+        "pose": "hold",
+        "text": "NO FEVER?!",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.08,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "So what did the First Clinic have that a cold street didn't?",
+   "visual": "Giant words 'What did' / 'the ward have?' word by word, 'ward' in a red box; small note 'First Clinic'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "note": "First",
+    "w0": "what",
+    "h": "street"
+   },
+   "params": {
+    "lines": [
+     "What did",
+     "the ward have?"
+    ],
+    "highlight": [
+     "ward"
+    ],
+    "y": 0.44,
+    "note": {
+     "text": "First Clinic vs. a cold street",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In July 1846, a young Hungarian doctor named Ignaz Semmelweis became an assistant in the First Clinic.",
+   "visual": "CHAPTER 2 / 6 card: blue disc with 2, title 'The Hunt'.",
+   "title": {},
+   "cues": {
+    "n": "July",
+    "title": "Ignaz",
+    "line": "assistant"
+   },
+   "params": {
+    "n": 2,
+    "total": 6,
+    "title": "The Hunt",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Hunt"
+  },
+  {
+   "type": "sem_ward",
+   "text": "And the deaths haunted him. He started treating the wards like a crime scene.",
+   "visual": "The ward with five beds, two of them empty with candles; young Dr. Semmelweis (dark coat, short beard) walks in and stops, worried, then points at the beds; note 'Ignaz Semmelweis' and red 'crime scene'.",
+   "title": {
+    "white": "Semmelweis"
+   },
+   "cues": {
+    "h": "haunted",
+    "cr": "crime"
+   },
+   "params": {
+    "beds": 5,
+    "placard": {
+     "text": "First Clinic",
+     "x": 0.5
+    },
+    "empty": [
+     {
+      "i": 1,
+      "at": 0
+     },
+     {
+      "i": 3,
+      "at": 0
+     }
+    ],
+    "cast": [
+     {
+      "who": "semmelweis",
+      "role": "doctor",
+      "scale": 0.74,
+      "y": 0.8,
+      "x": 1.05,
+      "to": 0.62,
+      "walk_dur": 2.0,
+      "face": "left",
+      "beard": "short",
+      "at": "cr",
+      "then": "point",
+      "dir": "down",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Ignaz Semmelweis",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "h",
+      "size": 66,
+      "color": "blue"
+     },
+     {
+      "text": "crime scene",
+      "x": 0.8,
+      "y": 0.3,
+      "at": "cr",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_notes",
+   "text": "Was it crowding? No. The Second Clinic was even more crowded.",
+   "visual": "The case-notes sheet on the wall, desk in front: title 'Suspects'; first line 'too crowded?' crossed out in red on 'No'; blue pill 'Second Clinic: busier'.",
+   "title": {
+    "white": "Suspects"
+   },
+   "cues": {
+    "cr": "crowding",
+    "no": "No",
+    "pill": "crowded"
+   },
+   "params": {
+    "title": "Suspects",
+    "cols": [
+     {
+      "title": "Ideas he tested",
+      "items": [
+       {
+        "text": "too crowded?",
+        "mark": "x",
+        "at": "no"
+       },
+       {
+        "text": "the air?",
+        "mark": null,
+        "at": 0.3
+       },
+       {
+        "text": "something else?",
+        "mark": null,
+        "at": 0.5
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Second Clinic: busier",
+     "color": "blue",
+     "at": "pill"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 890
+   }
+  },
+  {
+   "type": "sem_ward",
+   "text": "Then he noticed the priest. To reach the dying, the priest walked through the First Clinic ringing a little bell.",
+   "visual": "The ward: a priest in a long black cassock with a white collar walks slowly between the beds from left to right, ringing a small gold bell that sways and rings; the mothers lie still; note 'the priest's bell'.",
+   "title": {
+    "white": "The bell"
+   },
+   "cues": {
+    "pr": "priest",
+    "b": "bell"
+   },
+   "params": {
+    "beds": 5,
+    "placard": {
+     "text": "First Clinic",
+     "x": 0.5
+    },
+    "cast": [
+     {
+      "who": "priest",
+      "role": "priest",
+      "scale": 0.72,
+      "y": 0.8,
+      "x": 0.08,
+      "to": 0.7,
+      "walk_at": 0.4,
+      "walk_dur": 5.5,
+      "face": "right",
+      "bell": true,
+      "pose": "walk",
+      "then": "idle"
+     }
+    ],
+    "labels": [
+     {
+      "text": "the priest's bell",
+      "x": 0.78,
+      "y": 0.3,
+      "at": "b",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "right"
+   }
+  },
+  {
+   "type": "sem_ward",
+   "text": "Maybe the women were frightened to death? So Semmelweis asked him to take another route, with no bell. Nothing changed.",
+   "visual": "Close in the ward: the fez narrator stands by a bed, hand on chin thinking, then holds up a sign 'NO BELL' on 'route'; on 'Nothing' he shrugs while red stamp 'NO CHANGE' lands on the wall.",
+   "title": {
+    "white": "No bell"
+   },
+   "cues": {
+    "fr": "frightened",
+    "ro": "route",
+    "no": "Nothing"
+   },
+   "params": {
+    "beds": 3,
+    "x0": 0.06,
+    "x1": 0.6,
+    "cast": [
+     {
+      "role": "kasif",
+      "scale": 0.9,
+      "y": 0.8,
+      "x": 0.82,
+      "face": "left",
+      "pose": "think",
+      "seq": [
+       {
+        "at": "ro",
+        "pose": "hold",
+        "text": "NO BELL"
+       },
+       {
+        "at": "no",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "no change",
+      "x": 0.6,
+      "y": 0.36,
+      "at": "no",
+      "size": 90,
+      "stamp": true,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1300,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_notes",
+   "text": "In the Second Clinic, women gave birth lying on their side. He tried that too. Nothing.",
+   "visual": "The case-notes sheet: 'Ideas he tested' with three lines crossed out one after another: 'too crowded?', 'the priest's bell?', 'lying on the side?' (on 'Nothing'); red pill 'Still dying'.",
+   "title": {
+    "white": "Suspects"
+   },
+   "cues": {
+    "sd": "side",
+    "no": "Nothing",
+    "pill": "Nothing"
+   },
+   "params": {
+    "title": "Suspects",
+    "cols": [
+     {
+      "title": "Ideas he tested",
+      "items": [
+       {
+        "text": "too crowded?",
+        "mark": "x",
+        "at": 0.1
+       },
+       {
+        "text": "the priest's bell?",
+        "mark": "x",
+        "at": 0.4
+       },
+       {
+        "text": "lying on the side?",
+        "mark": "x",
+        "at": "no"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Still dying",
+     "color": "red",
+     "at": "pill"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 890
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "And then, in March 1847, the answer came from a death nobody expected.",
+   "visual": "Horizontal time line: 'July 1846: Semmelweis arrives', 'March 1847: a death' (red); the marker jumps to March 1847 on 'March'.",
+   "title": {
+    "white": "1847"
+   },
+   "cues": {
+    "m": "March",
+    "d": "death"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1846",
+      "text": "he arrives",
+      "at": 0.1
+     },
+     {
+      "year": "1847",
+      "text": "a death",
+      "at": "m"
+     }
+    ],
+    "focus": 1
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Jakob Kolletschka was a professor and a good friend of Semmelweis.",
+   "visual": "CHAPTER 3 / 6 card: blue disc with 3, title 'The Scalpel'.",
+   "title": {},
+   "cues": {
+    "n": "Jakob",
+    "title": "professor",
+    "line": "friend"
+   },
+   "params": {
+    "n": 3,
+    "total": 6,
+    "title": "The Scalpel",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Scalpel"
+  },
+  {
+   "type": "sem_hands",
+   "text": "During an autopsy, a student's scalpel slipped and nicked his finger. A tiny cut. Within days, Kolletschka was dead.",
+   "visual": "Close-up: one hand in a black coat cuff; a scalpel slides in from the upper right and grazes the fingertip on 'nicked', leaving a tiny red mark and one red drop; note 'Jakob Kolletschka'; on 'dead' a dark note 'March 1847'.",
+   "title": {
+    "white": "The cut"
+   },
+   "cues": {
+    "au": "autopsy",
+    "cut": "nicked",
+    "dd": "dead"
+   },
+   "params": {
+    "mode": "cut",
+    "cut": "cut",
+    "labels": [
+     {
+      "text": "Jakob Kolletschka",
+      "x": 0.72,
+      "y": 0.7,
+      "at": "au",
+      "size": 66,
+      "color": "blue"
+     },
+     {
+      "text": "March 1847",
+      "x": 0.3,
+      "y": 0.26,
+      "at": "dd",
+      "size": 70,
+      "stamp": true,
+      "color": "ink"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_desk",
+   "text": "Semmelweis read the autopsy report, and his blood ran cold.",
+   "visual": "A desk at night with a candle, a thick red book 'REPORT' and a quill scratching; Semmelweis stands at the right of the desk, reading, then jumps back in shock on 'cold'.",
+   "title": {
+    "white": "The report"
+   },
+   "cues": {
+    "rep": "report",
+    "c": "cold"
+   },
+   "params": {
+    "book": "Report",
+    "cast": [
+     {
+      "who": "semmelweis",
+      "role": "doctor",
+      "scale": 0.74,
+      "y": 0.8,
+      "x": 0.86,
+      "face": "left",
+      "pose": "hold",
+      "item": "scroll",
+      "beard": "short",
+      "at": "c",
+      "then": "shock",
+      "emotion": "worried"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1200,
+     560
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_notes",
+   "text": "Inside, his friend's body looked just like the mothers'.",
+   "visual": "The case-notes sheet: two columns 'Kolletschka' and 'The mothers', each with 'fever' and 'inflammation' ticked; red pill 'The same killer'.",
+   "title": {
+    "white": "The same"
+   },
+   "cues": {
+    "fr": "friend",
+    "mo": "mothers",
+    "pill": "mothers"
+   },
+   "params": {
+    "title": "Autopsy findings",
+    "cols": [
+     {
+      "title": "Kolletschka",
+      "items": [
+       {
+        "text": "fever",
+        "mark": "check",
+        "at": 0.2
+       },
+       {
+        "text": "inflammation",
+        "mark": "check",
+        "at": 0.6
+       }
+      ]
+     },
+     {
+      "title": "The mothers",
+      "items": [
+       {
+        "text": "fever",
+        "mark": "check",
+        "at": "mo"
+       },
+       {
+        "text": "inflammation",
+        "mark": "check",
+        "at": "mo"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "The same killer",
+     "color": "red",
+     "at": "pill"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 890
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "title",
+   "text": "Something from a dead body got in through a cut.",
+   "visual": "Giant words 'Through' / 'a cut' word by word, 'cut' in a red box; the fez narrator on the right, hand on chin, then points at the words on 'cut'.",
+   "title": {
+    "white": "Think"
+   },
+   "cues": {
+    "w0": "Something",
+    "c": "cut"
+   },
+   "params": {
+    "lines": [
+     "Through",
+     "a cut"
+    ],
+    "highlight": [
+     "cut"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.9,
+     "at": "c",
+     "then": "point",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "sem_corridor",
+   "text": "And who touched dead bodies every morning? The doctors and students of the First Clinic.",
+   "visual": "A long vaulted hospital corridor: a dark door on the left under red plate 'AUTOPSY', a pale door on the right under blue plate 'MOTHERS'; a doctor and two students step out of the autopsy door on 'doctors'.",
+   "title": {
+    "white": "Every morning"
+   },
+   "cues": {
+    "who": "who",
+    "doc": "doctors"
+   },
+   "params": {
+    "left": "Autopsy",
+    "right": "Mothers",
+    "cast": [
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 1.05,
+      "y": 0.8,
+      "x": 0.05,
+      "to": 0.24,
+      "walk_at": "doc",
+      "walk_dur": 1.6,
+      "beard": "short"
+     },
+     {
+      "who": "student",
+      "role": "student",
+      "scale": 1.0,
+      "y": 0.8,
+      "x": 0.0,
+      "to": 0.38,
+      "walk_at": "doc",
+      "walk_dur": 1.9
+     },
+     {
+      "who": "student2",
+      "role": "student",
+      "scale": 0.98,
+      "y": 0.8,
+      "x": -0.04,
+      "to": 0.52,
+      "walk_at": "doc",
+      "walk_dur": 2.2
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "right"
+   }
+  },
+  {
+   "type": "sem_corridor",
+   "text": "They did autopsies, then walked down the corridor and examined women in labor.",
+   "visual": "The same corridor: a doctor walks from the autopsy door to the mothers' door; dotted footprints follow him and faint red specks drift from his hands along the way; red note 'unwashed hands' on 'examined'.",
+   "title": {
+    "white": "The corridor"
+   },
+   "cues": {
+    "wk": "walked",
+    "ex": "examined"
+   },
+   "params": {
+    "left": "Autopsy",
+    "right": "Mothers",
+    "trail": {
+     "from": "wk",
+     "x0": 0.16,
+     "x1": 0.8,
+     "dur": 3.4
+    },
+    "cast": [
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 1.05,
+      "y": 0.8,
+      "x": 0.14,
+      "to": 0.8,
+      "walk_at": "wk",
+      "walk_dur": 3.4,
+      "beard": "short",
+      "dirty": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "unwashed hands",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "ex",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_ward",
+   "text": "The midwives never did autopsies. And the women on the street? Nobody examined them at all.",
+   "visual": "The split ward again: the right side lights up as a midwife in a bonnet waves; note 'no autopsies' with an arrow to her; on 'Nobody' a blue note 'street: no exams'.",
+   "title": {
+    "white": "The midwives"
+   },
+   "cues": {
+    "mw": "midwives",
+    "nb": "Nobody"
+   },
+   "params": {
+    "beds": 4,
+    "split": {
+     "x": 0.5,
+     "left": "First Clinic",
+     "right": "Second Clinic",
+     "at_left": 0,
+     "at_right": 0
+    },
+    "cast": [
+     {
+      "who": "midwife",
+      "role": "midwife",
+      "scale": 0.64,
+      "y": 0.8,
+      "x": 0.74,
+      "face": "left",
+      "pose": "idle",
+      "at": "mw",
+      "then": "wave"
+     }
+    ],
+    "labels": [
+     {
+      "text": "no autopsies",
+      "x": 0.74,
+      "y": 0.3,
+      "at": "mw",
+      "size": 70,
+      "color": "green",
+      "arrow": [
+       0.74,
+       0.46
+      ]
+     },
+     {
+      "text": "street: no exams",
+      "x": 0.26,
+      "y": 0.3,
+      "at": "nb",
+      "size": 64,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "left"
+   }
+  },
+  {
+   "type": "sem_scope",
+   "text": "Semmelweis called it cadaverous particles. He couldn't see them. But maybe he could wash them away.",
+   "visual": "A brass microscope on the left; a big round field of view opens on the right, empty except for drifting grey question marks; note 'cadaverous particles' on 'cadaverous', blue 'wash them away?' on 'wash'.",
+   "title": {
+    "white": "Invisible"
+   },
+   "cues": {
+    "op": "called",
+    "cd": "cadaverous",
+    "w": "wash"
+   },
+   "params": {
+    "at": "op",
+    "q": true,
+    "labels": [
+     {
+      "text": "cadaverous particles",
+      "x": 0.4,
+      "y": 0.12,
+      "at": "cd",
+      "size": 64,
+      "color": "red"
+     },
+     {
+      "text": "wash them away?",
+      "x": 0.84,
+      "y": 0.12,
+      "at": "w",
+      "size": 64,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In May 1847, he put a bowl at the door of the ward.",
+   "visual": "CHAPTER 4 / 6 card: blue disc with 4, title 'The Chlorine Bowl'.",
+   "title": {},
+   "cues": {
+    "n": "May",
+    "title": "bowl",
+    "line": "door"
+   },
+   "params": {
+    "n": 4,
+    "total": 6,
+    "title": "The Chlorine Bowl",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Chlorine Bowl"
+  },
+  {
+   "type": "sem_corridor",
+   "text": "It held chlorinated lime, a kind of bleach. Every doctor and student had to scrub in it before touching a patient.",
+   "visual": "The corridor by the mothers' door: a wash stand with a white bowl of pale green liquid pops up on 'held'; note 'chlorinated lime'; a doctor walks up to it and holds his hands over it on 'scrub'.",
+   "title": {
+    "white": "The bowl"
+   },
+   "cues": {
+    "h": "held",
+    "cl": "chlorinated",
+    "sc": "scrub"
+   },
+   "params": {
+    "left": "Autopsy",
+    "right": "Mothers",
+    "doors": [
+     null,
+     0.8
+    ],
+    "bowl": {
+     "x": 0.62,
+     "at": "h"
+    },
+    "cast": [
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 1.0,
+      "y": 0.8,
+      "x": 0.2,
+      "to": 0.52,
+      "walk_at": "cl",
+      "walk_dur": 2.2,
+      "beard": "short",
+      "dirty": true,
+      "wash": "sc",
+      "at": "sc",
+      "then": "point",
+      "dir": "down"
+     }
+    ],
+    "labels": [
+     {
+      "text": "chlorinated lime",
+      "x": 0.42,
+      "y": 0.34,
+      "at": "cl",
+      "size": 72,
+      "color": "green",
+      "arrow": [
+       0.59,
+       0.5
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1100,
+     600
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_hands",
+   "text": "It stung. And it worked.",
+   "visual": "Close-up: the two hands dip into the bowl and scrub; the pale green liquid ripples, bubbles rise, the red specks fade away; on 'worked' a green stamp 'IT WORKED' lands.",
+   "title": {
+    "white": "Scrub"
+   },
+   "cues": {
+    "st": "stung",
+    "wk": "worked"
+   },
+   "params": {
+    "mode": "wash",
+    "dirty": true,
+    "wash": "st",
+    "labels": [
+     {
+      "text": "it stung",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "st",
+      "size": 66
+     },
+     {
+      "text": "it worked",
+      "x": 0.76,
+      "y": 0.18,
+      "at": "wk",
+      "size": 96,
+      "stamp": true,
+      "color": "green"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_chart",
+   "text": "In April, almost one mother in five in the First Clinic had died. By June, about two in a hundred. In 1848, the whole year ended at just over one percent.",
+   "visual": "A full-frame ledger page with a hand-drawn red line: 'Apr 1847' at 18.3%, dropping steeply after a red vertical line 'chlorine' to 'Jun 1847' 2.2%, 'Jul' 1.2%, and '1848' 1.3%.",
+   "title": {
+    "white": "The drop"
+   },
+   "cues": {
+    "ap": "April",
+    "ju": "June",
+    "yr": "1848"
+   },
+   "params": {
+    "title": "First Clinic: mothers who died",
+    "xs": [
+     "Apr 1847",
+     "Jun 1847",
+     "Jul 1847",
+     "1848"
+    ],
+    "a": [
+     18.3,
+     2.2,
+     1.2,
+     1.27
+    ],
+    "b": [],
+    "max": 20,
+    "names": [],
+    "draw": [
+     "ap",
+     4.5
+    ],
+    "mark": {
+     "i": 0.5,
+     "text": "chlorine",
+     "at": "ju"
+    }
+   },
+   "source": "Semmelweis's own tables"
+  },
+  {
+   "type": "sem_gate",
+   "text": "You'd think Vienna would carry him through the streets. Instead, the doctors turned on him!",
+   "visual": "The hospital front by day: the fez narrator waves happily with a sign 'HERO?'; on 'turned' three doctors in dark coats in front of the gate turn their backs, and the narrator jumps in shock.",
+   "title": {
+    "white": "A hero?"
+   },
+   "cues": {
+    "car": "carry",
+    "tu": "turned"
+   },
+   "params": {
+    "snow": false,
+    "glow": 0,
+    "cast": [
+     {
+      "who": "d1",
+      "role": "doctor",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.42,
+      "face": "right",
+      "pose": "talk",
+      "beard": "grey",
+      "seq": [
+       {
+        "at": "tu",
+        "face": "left",
+        "pose": "idle",
+        "emotion": "angry"
+       }
+      ]
+     },
+     {
+      "who": "d2",
+      "role": "doctor",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.52,
+      "face": "right",
+      "pose": "idle",
+      "beard": "short",
+      "seq": [
+       {
+        "at": "tu",
+        "face": "left",
+        "emotion": "angry"
+       }
+      ]
+     },
+     {
+      "who": "d3",
+      "role": "student",
+      "scale": 0.85,
+      "y": 0.8,
+      "x": 0.62,
+      "face": "left",
+      "pose": "idle",
+      "seq": [
+       {
+        "at": "tu",
+        "face": "left",
+        "pose": "shrug",
+        "emotion": "angry"
+       }
+      ]
+     },
+     {
+      "role": "kasif",
+      "scale": 0.9,
+      "y": 0.8,
+      "x": 0.84,
+      "face": "left",
+      "pose": "hold",
+      "text": "HERO?",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "tu",
+        "pose": "shock"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In 1847, nobody knew germs existed.",
+   "visual": "CHAPTER 5 / 6 card: blue disc with 5, title 'Why They Said No'.",
+   "title": {},
+   "cues": {
+    "n": "1847",
+    "title": "nobody",
+    "line": "germs"
+   },
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "Why They Said No",
+    "label": "CHAPTER"
+   },
+   "chapter": "Why They Said No"
+  },
+  {
+   "type": "sem_scope",
+   "text": "Semmelweis could show that washing worked, but he couldn't explain why.",
+   "visual": "The microscope and its empty round field of view with drifting question marks; note 'it works' in green, then red 'but why?' on 'why'.",
+   "title": {
+    "white": "But why?"
+   },
+   "cues": {
+    "op": "show",
+    "wk": "worked",
+    "why": "why"
+   },
+   "params": {
+    "at": 0.1,
+    "q": true,
+    "labels": [
+     {
+      "text": "it works",
+      "x": 0.42,
+      "y": 0.12,
+      "at": "wk",
+      "size": 66,
+      "color": "green"
+     },
+     {
+      "text": "but why?",
+      "x": 0.84,
+      "y": 0.12,
+      "at": "why",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "sem_hands",
+   "text": "And his idea carried a terrible message: the doctors were bringing death on their own hands.",
+   "visual": "Close-up: the doctor's hands over the basin, red specks on the fingers; on 'hands' a red note 'their own hands' with an arrow.",
+   "title": {
+    "white": "Their hands"
+   },
+   "cues": {
+    "msg": "terrible",
+    "h": "hands"
+   },
+   "params": {
+    "mode": "wash",
+    "dirty": true,
+    "basin": true,
+    "labels": [
+     {
+      "text": "their own hands",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "h",
+      "size": 84,
+      "color": "red",
+      "arrow": [
+       0.4,
+       0.36
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     760,
+     520
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_corridor",
+   "text": "Many of them were offended. Doctors were gentlemen, and a gentleman's hands were not dirty.",
+   "visual": "The hospital corridor by the wash stand: three doctors in dark coats, one grey-bearded, stand with angry brows; one points away from the bowl, another shrugs; blue stamp 'gentlemen' on 'gentlemen', red note 'not dirty!' on 'dirty'.",
+   "title": {
+    "white": "Offended"
+   },
+   "cues": {
+    "of": "offended",
+    "g": "gentlemen",
+    "d": "dirty"
+   },
+   "params": {
+    "left": "Autopsy",
+    "right": "Mothers",
+    "doors": [
+     0.13,
+     0.8
+    ],
+    "bowl": {
+     "x": 0.68,
+     "at": 0
+    },
+    "cast": [
+     {
+      "who": "d1",
+      "role": "doctor",
+      "scale": 1.0,
+      "y": 0.8,
+      "x": 0.3,
+      "face": "right",
+      "pose": "point",
+      "dir": "up",
+      "beard": "grey",
+      "emotion": "angry"
+     },
+     {
+      "who": "d2",
+      "role": "doctor",
+      "scale": 1.0,
+      "y": 0.8,
+      "x": 0.45,
+      "face": "left",
+      "pose": "shrug",
+      "beard": "short",
+      "emotion": "angry",
+      "at": "d",
+      "then": "talk"
+     },
+     {
+      "who": "d3",
+      "role": "student",
+      "scale": 0.95,
+      "y": 0.8,
+      "x": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "gentlemen",
+      "x": 0.46,
+      "y": 0.18,
+      "at": "g",
+      "size": 84,
+      "stamp": true,
+      "color": "blue"
+     },
+     {
+      "text": "not dirty!",
+      "x": 0.62,
+      "y": 0.32,
+      "at": "d",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_desk",
+   "text": "His boss, Professor Johann Klein, never accepted it. And for years, Semmelweis barely published a word.",
+   "visual": "A desk at night with a candle and a thick red book with a blank cover; grey-bearded Professor Johann Klein stands at the right with angry brows, arms folded into a shrug; note 'Prof. Johann Klein'; on 'published' a red note 'almost nothing in print'.",
+   "title": {
+    "white": "Klein"
+   },
+   "cues": {
+    "k": "Klein",
+    "p": "published"
+   },
+   "params": {
+    "book": "",
+    "cast": [
+     {
+      "who": "klein",
+      "role": "doctor",
+      "scale": 0.74,
+      "y": 0.8,
+      "x": 0.86,
+      "face": "left",
+      "pose": "shrug",
+      "beard": "grey",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Prof. Johann Klein",
+      "x": 0.82,
+      "y": 0.12,
+      "at": "k",
+      "size": 62,
+      "color": "blue"
+     },
+     {
+      "text": "almost nothing in print",
+      "x": 0.4,
+      "y": 0.28,
+      "at": "p",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "In 1849, Klein refused to renew his post. Semmelweis went home to Pest, in Hungary, and at Saint Rochus Hospital he did it again.",
+   "visual": "Horizontal time line: '1849: post not renewed' (red), '1850: home to Pest', '1851: St. Rochus Hospital' (marker jumps along as each is named).",
+   "title": {
+    "white": "Pest"
+   },
+   "cues": {
+    "r": "refused",
+    "p": "Pest",
+    "sr": "Rochus"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1849",
+      "text": "post not renewed",
+      "at": "r"
+     },
+     {
+      "year": "1850",
+      "text": "home to Pest",
+      "at": "p"
+     },
+     {
+      "year": "1851",
+      "text": "St. Rochus",
+      "at": "sr"
+     }
+    ],
+    "focus": 2
+   },
+   "source": "MJA, 2018"
+  },
+  {
+   "type": "sem_ward",
+   "text": "And childbed fever almost vanished.",
+   "visual": "A brighter ward in Pest: warm window light falls across the floor, a door with a wash stand and a green chlorine bowl beside it, placard 'ST. ROCHUS, PEST' (red), four beds with mothers resting, none empty; the fez narrator points at the bowl, then waves happily on 'vanished'.",
+   "title": {
+    "white": "Pest"
+   },
+   "cues": {
+    "ch": "childbed",
+    "va": "vanished"
+   },
+   "params": {
+    "beds": 4,
+    "x0": 0.05,
+    "x1": 0.6,
+    "light": true,
+    "door": {
+     "x": 0.87
+    },
+    "bowl": {
+     "x": 0.7,
+     "at": 0
+    },
+    "placard": {
+     "text": "St. Rochus, Pest",
+     "x": 0.34
+    },
+    "cast": [
+     {
+      "role": "kasif",
+      "scale": 0.8,
+      "y": 0.8,
+      "x": 0.62,
+      "face": "right",
+      "pose": "point",
+      "dir": "down",
+      "emotion": "happy",
+      "at": "va",
+      "then": "wave"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_desk",
+   "text": "In 1861 he finally wrote his book. Critics tore it apart, and he answered with furious open letters, calling them murderers.",
+   "visual": "The desk: a thick red book '1861' with a quill scratching; Semmelweis at the right turns angry on 'furious'; two letters fly up from the desk, each stamped 'OPEN LETTER' in red.",
+   "title": {
+    "white": "1861"
+   },
+   "cues": {
+    "b": "book",
+    "cr": "Critics",
+    "fu": "furious",
+    "mu": "murderers"
+   },
+   "params": {
+    "book": "1861",
+    "letters": [
+     {
+      "at": "fu",
+      "text": "Open letter"
+     },
+     {
+      "at": "mu",
+      "text": "Open letter"
+     }
+    ],
+    "cast": [
+     {
+      "who": "semmelweis",
+      "role": "doctor",
+      "scale": 0.74,
+      "y": 0.8,
+      "x": 0.88,
+      "face": "left",
+      "pose": "talk",
+      "beard": "short",
+      "at": "fu",
+      "then": "point",
+      "dir": "up",
+      "emotion": "angry"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "sem_gate",
+   "text": "By 1865, his mind was failing. He was taken to an asylum in Vienna, and two weeks later he was dead, at only 47.",
+   "visual": "A quiet snowy night in Vienna: a low, dark asylum building behind iron railings with spear tips, a closed iron gate, only one window lit gold, a gas lamp; soft snow falls; note 'Vienna, 1865' and, on 'dead', 'age 47'.",
+   "title": {
+    "white": "1865"
+   },
+   "cues": {
+    "y": "1865",
+    "as": "asylum",
+    "d": "dead"
+   },
+   "params": {
+    "building": "asylum",
+    "lit": 4,
+    "snow": true,
+    "lamp": 0.08,
+    "labels": [
+     {
+      "text": "Vienna, 1865",
+      "x": 0.8,
+      "y": 0.14,
+      "at": "as",
+      "size": 70,
+      "color": "gold"
+     },
+     {
+      "text": "age 47",
+      "x": 0.8,
+      "y": 0.25,
+      "at": "d",
+      "size": 70,
+      "color": "gold"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.08,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "title",
+   "text": "The cause? An infected wound.",
+   "visual": "Giant words 'An infected' / 'wound' word by word, 'infected' in a red box.",
+   "title": {},
+   "cues": {
+    "w0": "cause",
+    "h": "infected"
+   },
+   "params": {
+    "lines": [
+     "An infected",
+     "wound"
+    ],
+    "highlight": [
+     "infected"
+    ],
+    "y": 0.44
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   },
+   "source": "Wikipedia"
+  },
+  {
+   "type": "chapter",
+   "text": "And here's the cruel part. Within twenty years, the world caught up.",
+   "visual": "CHAPTER 6 / 6 card: blue disc with 6, title 'Proven Right'.",
+   "title": {},
+   "cues": {
+    "n": "cruel",
+    "title": "twenty",
+    "line": "caught"
+   },
+   "params": {
+    "n": 6,
+    "total": 6,
+    "title": "Proven Right",
+    "label": "CHAPTER"
+   },
+   "chapter": "Proven Right"
+  },
+  {
+   "type": "sem_scope",
+   "text": "Joseph Lister began cleaning wounds with antiseptic. Louis Pasteur showed that tiny living germs cause disease.",
+   "visual": "The microscope; Louis Pasteur (dark coat, short beard) stands beside it pointing; first a note 'Joseph Lister: antiseptic' on 'Lister', then 'Louis Pasteur' on 'Pasteur', and the round field of view fills with wriggling red rod-shaped germs on 'germs'.",
+   "title": {
+    "white": "Germs"
+   },
+   "cues": {
+    "l": "Lister",
+    "op": "Pasteur",
+    "g": "germs"
+   },
+   "params": {
+    "at": 0.1,
+    "q": true,
+    "reveal": "g",
+    "scope_x": 0.3,
+    "field_x": 0.68,
+    "cast": [
+     {
+      "who": "pasteur",
+      "role": "doctor",
+      "scale": 0.8,
+      "y": 0.8,
+      "x": 0.1,
+      "face": "right",
+      "pose": "point",
+      "dir": 20,
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Louis Pasteur",
+      "x": 0.11,
+      "y": 0.38,
+      "at": "op",
+      "size": 62,
+      "color": "blue"
+     },
+     {
+      "text": "Joseph Lister: antiseptic",
+      "x": 0.78,
+      "y": 0.09,
+      "at": "l",
+      "size": 60,
+      "color": "green"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_corridor",
+   "text": "Germs explained everything Semmelweis had seen. Today he's called the savior of mothers.",
+   "visual": "The corridor between 'AUTOPSY' and 'MOTHERS': red specks drift in the air along the footprints; the fez narrator points at them, then on 'savior' holds up a sign 'SAVIOR OF MOTHERS'.",
+   "title": {
+    "white": "Explained"
+   },
+   "cues": {
+    "g": "Germs",
+    "sv": "savior"
+   },
+   "params": {
+    "left": "Autopsy",
+    "right": "Mothers",
+    "doors": [
+     0.38,
+     0.7
+    ],
+    "trail": {
+     "from": 0,
+     "x0": 0.38,
+     "x1": 0.7,
+     "dur": 0.1
+    },
+    "cast": [
+     {
+      "role": "kasif",
+      "scale": 0.9,
+      "y": 0.8,
+      "x": 0.5,
+      "face": "left",
+      "pose": "point",
+      "dir": "up",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "sv",
+        "pose": "hold",
+        "text": "SAVIOR OF MOTHERS",
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_notes",
+   "text": "There's even a name for what happened to him: the Semmelweis reflex, rejecting new evidence because it clashes with old beliefs.",
+   "visual": "The case-notes sheet titled 'The Semmelweis reflex': 'new evidence arrives' (tick), 'it clashes with old beliefs' (cross), 'rejected anyway' (cross); blue pill 'Still happens today'.",
+   "title": {
+    "white": "The reflex"
+   },
+   "cues": {
+    "ev": "evidence",
+    "cl": "clashes",
+    "pill": "beliefs"
+   },
+   "params": {
+    "title": "The Semmelweis reflex",
+    "cols": [
+     {
+      "title": "How it works",
+      "items": [
+       {
+        "text": "new evidence arrives",
+        "mark": "check",
+        "at": 0.2
+       },
+       {
+        "text": "it clashes with old beliefs",
+        "mark": "x",
+        "at": "cl"
+       },
+       {
+        "text": "rejected anyway",
+        "mark": "x",
+        "at": "pill"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Still happens today",
+     "color": "blue",
+     "at": "pill"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 890
+   }
+  },
+  {
+   "type": "sem_ward",
+   "text": "So why was the best ward in Vienna the deadliest? Because of the doctors' own hands.",
+   "visual": "The First Clinic ward once more: a doctor with red specks on his hands walks between the beds towards a mother; on 'hands' a red note 'their own hands' with an arrow to his hands.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "w": "why",
+    "h": "hands"
+   },
+   "params": {
+    "beds": 5,
+    "placard": {
+     "text": "First Clinic",
+     "x": 0.5
+    },
+    "cast": [
+     {
+      "who": "doctor",
+      "role": "doctor",
+      "scale": 0.74,
+      "y": 0.8,
+      "x": 0.08,
+      "to": 0.5,
+      "walk_dur": 3.0,
+      "face": "right",
+      "beard": "short",
+      "dirty": true,
+      "at": "h",
+      "then": "point",
+      "dir": "down"
+     }
+    ],
+    "labels": [
+     {
+      "text": "their own hands",
+      "x": 0.72,
+      "y": 0.3,
+      "at": "h",
+      "size": 76,
+      "color": "red",
+      "arrow": [
+       0.55,
+       0.58
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sem_corridor",
+   "text": "And the cure was a bowl of bleach, plus the courage to admit you might be the problem.",
+   "visual": "The corridor: the fez narrator walks to the wash stand with the bowl, washes, then points at himself; note 'a bowl of bleach' and, on 'courage', blue 'and courage'.",
+   "title": {
+    "white": "The cure"
+   },
+   "cues": {
+    "cu": "cure",
+    "co": "courage",
+    "pr": "problem"
+   },
+   "params": {
+    "left": "Autopsy",
+    "right": "Mothers",
+    "doors": [
+     0.16,
+     0.84
+    ],
+    "bowl": {
+     "x": 0.62,
+     "at": 0
+    },
+    "cast": [
+     {
+      "role": "kasif",
+      "scale": 0.9,
+      "y": 0.8,
+      "x": 0.22,
+      "to": 0.53,
+      "walk_dur": 2.0,
+      "face": "right",
+      "dirty": true,
+      "wash": "co",
+      "at": "co",
+      "then": "point",
+      "dir": "down",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "pr",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "a bowl of bleach",
+      "x": 0.68,
+      "y": 0.24,
+      "at": "cu",
+      "size": 70,
+      "color": "green"
+     },
+     {
+      "text": "and courage",
+      "x": 0.4,
+      "y": 0.24,
+      "at": "co",
+      "size": 70,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sem_gate",
+   "text": "Would you have believed him in 1847? Tell me in the comments, and subscribe to Stickstory for more true stories that changed the world.",
+   "visual": "The hospital gate on a snowy evening, windows glowing gold: the fez narrator holds up a sign 'WOULD YOU?', then waves goodbye on 'subscribe'.",
+   "title": {
+    "white": "Would you?"
+   },
+   "cues": {
+    "bel": "believed",
+    "sub": "subscribe"
+   },
+   "params": {
+    "snow": true,
+    "glow": 0.8,
+    "cast": [
+     {
+      "role": "kasif",
+      "scale": 1.0,
+      "y": 0.8,
+      "x": 0.7,
+      "face": "left",
+      "pose": "hold",
+      "text": "WOULD YOU?",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "sub",
+        "pose": "wave"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "pull"
+   }
+  }
+ ]
+}
