@@ -1,0 +1,740 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "long",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "TDV İslâm Ansiklopedisi — Patrona İsyanı (Abdülkadir Özcan)",
+      "url": "https://islamansiklopedisi.org.tr/patrona-isyani"
+    },
+    {
+      "title": "TDV İslâm Ansiklopedisi — Lâle Devri (839 çeşit, narh, Sadabad, adın sonradan konması)",
+      "url": "https://islamansiklopedisi.org.tr/lale-devri"
+    },
+    {
+      "title": "TDV İslâm Ansiklopedisi — Damad İbrâhim Paşa, Nevşehirli (M. Münir Aktepe)",
+      "url": "https://islamansiklopedisi.org.tr/damad-ibrahim-pasa-nevsehirli"
+    },
+    {
+      "title": "TDV İslâm Ansiklopedisi — Ahmed III (M. Münir Aktepe)",
+      "url": "https://islamansiklopedisi.org.tr/ahmed-iii"
+    },
+    {
+      "title": "Wikipedia — Western Persia campaign of 1730 (Tebriz, 12 Ağustos 1730)",
+      "url": "https://en.wikipedia.org/wiki/Western_Persia_campaign_of_1730"
+    },
+    {
+      "title": "Wikipedia — Ibrahim Muteferrika (Vankulu Lügati, 1729)",
+      "url": "https://en.wikipedia.org/wiki/Ibrahim_Muteferrika"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Kapı",
+      "kapandı"
+    ],
+    "highlight": [
+      "kapandı"
+    ],
+    "scene": 40,
+    "t": 1.9,
+    "focus": [
+      1060,
+      600
+    ],
+    "zoom": 1.15,
+    "size": 200,
+    "kasif": false
+  },
+  "youtube": {
+    "title": "Patrona Halil İsyanı: Bir Avuç Adam Sultanı Nasıl Tahttan İndirdi?",
+    "description": "Patrona Halil isyanı, 1730'da İstanbul'da bir avuç adamla başladı ve birkaç gün içinde 27 yıllık Sultan III. Ahmed'i tahttan indirdi. Lale Devri'nin zarif bahçeleri, Sadabad'ın köşkleri ve mum ışıklı geceleri tek bir sonbaharda söndü.\n\nBu belgeselde Nevşehirli Damat İbrahim Paşa'nın on iki yılını, lale merakını, İbrahim Müteferrika matbaasını, İran cephesinde Tebriz'in kaybını ve Üsküdar'da bekleyen orduyu anlatıyoruz. Beyazıt'ta kapanan dükkânlardan sarayda kapanan bir kapıya: isyanı başlatan adamın sonu ve 'Lale Devri' adının asıl hikâyesi.\n\nBu videoda:\n• Lale Devri: 839 lale çeşidi, narh ve Sadabad\n• 1730: Tebriz'in düşüşü ve Üsküdar'da bekleyen ordu\n• Beyazıt'ta başlayan isyan ve kapanan çarşı\n• III. Ahmed sadrazamını neden feda etti, yine de neden tahttan indi?\n• Patrona Halil'in sonu ve 'Lale Devri' adını kim koydu?\n\nHer gün yeni bir 'neden?' için abone ol. Sence bir döneme adını onu yaşayanlar mı vermeli, ardından gelenler mi? Yorumlara yaz!\n\n#patronahalil #laledevri #osmanlı #tarih #düşünbakalım",
+    "tags": [
+      "patrona halil isyanı",
+      "patrona halil",
+      "patrona isyanı",
+      "1730 isyanı",
+      "lale devri",
+      "III. ahmed",
+      "nevşehirli damat ibrahim paşa",
+      "sadabad",
+      "ibrahim müteferrika",
+      "I. mahmud",
+      "osmanlı tarihi",
+      "osmanlı isyanları",
+      "istanbul tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-08T20:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "text": "Bir eylül sabahı, İstanbul'un en kalabalık çarşısında dükkânlar birer birer kapandı. Kepenkler indi. Sokaklar sustu.",
+      "type": "bt_pt_kepenk",
+      "visual": "Kubbeli bir çarşı sokağı: kemerli beş dükkân, içleri sıcak ışıkla dolu; 'birer'de ahşap kepenkler birer birer iner, her dükkânın ışığı söner",
+      "params": {
+        "mode": "close"
+      },
+      "cues": {
+        "hit": "birer"
+      },
+      "chapter": "Kapanan dükkânlar"
+    },
+    {
+      "text": "Beyazıt Camii'nin kapısında bir avuç adam duruyordu. Ellerinde bir bayrak vardı.",
+      "type": "bt_pt_kapi",
+      "visual": "Şafakta büyük bir caminin yüksek taç kapısı (sivri niş, mukarnas sıraları, karanlık kapı); önünde beş yüzsüz siluet; 'bayrak'ta birinin elindeki direkte bir bayrak belirir, rüzgârda yavaşça dalgalanır",
+      "params": {
+        "mode": "few",
+        "n": 5
+      },
+      "cues": {
+        "hit": "bayrak"
+      }
+    },
+    {
+      "text": "Birkaç gün sonra, yirmi yedi yıldır tahtta oturan bir sultan, tahtını yeğenine bırakacaktı.",
+      "type": "bt_vh_throne",
+      "visual": "Karanlık salonda yukarıdan inen ışık hüzmesinde boş bir taht; ışıkta toz zerreleri, hüzme yavaşça söner",
+      "params": {
+        "mode": "fade"
+      }
+    },
+    {
+      "text": "Bir avuç adam, koca bir imparatorluğun sultanını tahtından nasıl indirdi?",
+      "type": "bt_text",
+      "visual": "Işık havuzunda önce ince 'Bir avuç adam', sonra altın renkte italik 'bir sultan?'",
+      "params": {
+        "lines": [
+          {
+            "text": "Bir avuç adam",
+            "at": "c1"
+          },
+          {
+            "text": "bir sultan?",
+            "at": "c2",
+            "italic": true,
+            "accent": true
+          }
+        ]
+      },
+      "cues": {
+        "c1": "avuç",
+        "c2": "sultanını"
+      }
+    },
+    {
+      "text": "Cevap, bir çiçeğin gölgesinde saklıydı.",
+      "type": "bt_chapter",
+      "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Lale', altında italik '1718–1730'",
+      "params": {
+        "n": "I",
+        "title": "Lale",
+        "sub": "1718–1730"
+      },
+      "chapter": "Lale"
+    },
+    {
+      "text": "1718'de, Pasarofça'da imzalanan barışla uzun savaşlar bitti.",
+      "type": "bt_map",
+      "visual": "Sade Balkanlar haritası: önce 'İstanbul' noktası; 'Pasarofça'da Tuna kıyısında altın nokta yanar, altında italik '1718 barışı'",
+      "params": {
+        "bounds": [
+          17,
+          38.5,
+          31,
+          46.5
+        ],
+        "points": [
+          {
+            "lon": 28.97,
+            "lat": 41.01,
+            "label": "İstanbul"
+          },
+          {
+            "lon": 21.19,
+            "lat": 44.62,
+            "label": "Pasarofça",
+            "sub": "1718 barışı",
+            "at": "p"
+          }
+        ]
+      },
+      "cues": {
+        "p": "Pasarofça"
+      }
+    },
+    {
+      "text": "Aynı yıl Sultan Üçüncü Ahmed, damadı Nevşehirli İbrahim Paşa'yı sadrazam yaptı. On iki yıl boyunca devleti o yönetecekti.",
+      "type": "bt_pt_muhur",
+      "visual": "Işık havuzunda püsküllü kırmızı bir minder, üstünde topuzlu yuvarlak sadrazamlık mührü; 'sadrazam'da sağda bir kâğıt üstünde mührün altın baskısı belirir, altında altın italik 'sadrazam · 12 yıl'",
+      "params": {
+        "mode": "lit",
+        "label": "sadrazam · 12 yıl"
+      },
+      "cues": {
+        "hit": "sadrazam"
+      }
+    },
+    {
+      "text": "İstanbul'da sessiz bir tutku başladı: lale.",
+      "type": "bt_pt_lale",
+      "visual": "Işık havuzunda tek, ince, iğne uçlu yapraklı bir Osmanlı lalesi kendini çizer, çok yavaş salınır",
+      "params": {
+        "mode": "one"
+      }
+    },
+    {
+      "text": "Bahçelerde yüzlerce çeşit yetişti. Bir kayda göre, sekiz yüz otuz dokuz.",
+      "type": "bt_pt_lale",
+      "visual": "Gece bir bahçe: önden arkaya sıra sıra küçük laleler belirir; 'sekiz'de üstte altın sayı 0'dan 839'a sayar, altında italik 'çeşit'",
+      "params": {
+        "mode": "garden",
+        "n": 839,
+        "label": "çeşit"
+      },
+      "cues": {
+        "hit": "sekiz"
+      }
+    },
+    {
+      "text": "Soğanların fiyatı öyle yükseldi ki, 1722'de devlet laleye fiyat sınırı koydu.",
+      "type": "bt_pt_bulb",
+      "visual": "Işık havuzunda bir terazi: sol kefede bir lale soğanı, sağ kefede altın kenarlı sikkeler üst üste yükselir, terazi yavaşça sağa yatar; 'sınırı'nda sikkelerin üstünde altın bir sınır çizgisi çizilir, altında italik 'narh · 1722'",
+      "params": {
+        "label": "narh · 1722"
+      },
+      "cues": {
+        "hit": "sınırı"
+      }
+    },
+    {
+      "text": "Kâğıthane'de, iki ay içinde bir saray yükseldi. Adı Sadabad'dı. Derenin iki yanına paşaların köşkleri dizildi.",
+      "type": "bt_pt_sadabad",
+      "visual": "Alacakaranlıkta bir dere: karşı kıyıda geniş saçaklı, iki katlı uzun bir köşk-saray kendini çizer; 'Derenin'de kıyı boyunca küçük köşkler ve servi ağaçları birer birer belirir; suda yavaş halkalar",
+      "params": {
+        "mode": "build"
+      },
+      "cues": {
+        "hit": "Derenin"
+      }
+    },
+    {
+      "text": "Yaz gecelerinde bahçelerde mumlar yakıldı. Kaynaklara göre bazı mumlar, ağır ağır yürüyen kaplumbağaların sırtındaydı.",
+      "type": "bt_pt_tortoise",
+      "visual": "Yakın plan: gece bir bahçe, arkada lale siluetleri; çimenin üstünde sırtında yanan bir mum taşıyan bir kaplumbağa ağır ağır sağa yürür; 'kaplumbağaların'da uzakta ikinci bir mum ışığı belirir",
+      "params": {},
+      "cues": {
+        "hit": "kaplumbağaların"
+      },
+      "camera": {
+        "focus": [
+          820,
+          690
+        ],
+        "zoom": 1.6
+      }
+    },
+    {
+      "text": "Ama bu ışıklar, şehrin her köşesine ulaşmıyordu.",
+      "type": "bt_vh_city",
+      "visual": "Gece, suyun üstünde İstanbul'un kubbe ve minare silueti; birkaç küçük pencere ışığı, ortada birkaç meşale ışığı toplanır, suda yavaş yansımalar",
+      "params": {
+        "mode": "night"
+      }
+    },
+    {
+      "text": "Aynı yıllarda bir kapı daha aralandı.",
+      "type": "bt_chapter",
+      "visual": "Bölüm kartı: altın 'II', ince çizgi, büyük ince 'Mürekkep ve barut', altında italik '1727–1730'",
+      "params": {
+        "n": "II",
+        "title": "Mürekkep ve barut",
+        "sub": "1727–1730"
+      },
+      "chapter": "Mürekkep ve barut"
+    },
+    {
+      "text": "1727'de İbrahim Müteferrika, İstanbul'da Türkçe kitap basan ilk matbaayı kurdu. İlk kitabı, iki ciltlik bir sözlüktü. Ama matbaa, çarşının yükünü azaltmadı.",
+      "type": "bt_pt_press",
+      "visual": "Solda ahşap vidalı bir baskı makinesi; 'matbaayı'nda baskı tablası iner ve kalkar, sağda satırları kendini yazan basılı bir sayfa ve altın italik '1727' belirir; 'sözlüktü'de sayfanın yerini iki kalın cilt ve altın italik '1729 · sözlük' alır",
+      "params": {
+        "label": "1727",
+        "book": "1729 · sözlük"
+      },
+      "cues": {
+        "hit": "matbaayı",
+        "book": "sözlüktü"
+      }
+    },
+    {
+      "text": "Doğuda ise kapanmamış bir hesap vardı. İran'la savaş yıllardır sürüyordu.",
+      "type": "bt_map",
+      "visual": "Sade harita: solda 'İstanbul', sağda 'Tebriz' noktası; 'savaş'ta İstanbul'dan Tebriz'e altın bir yay çizilir",
+      "params": {
+        "bounds": [
+          26,
+          35,
+          49,
+          44
+        ],
+        "points": [
+          {
+            "lon": 28.97,
+            "lat": 41.01,
+            "label": "İstanbul"
+          },
+          {
+            "lon": 46.29,
+            "lat": 38.08,
+            "label": "Tebriz",
+            "sub": "İran cephesi",
+            "at": "t"
+          }
+        ],
+        "routes": [
+          [
+            0,
+            1,
+            "r"
+          ]
+        ]
+      },
+      "cues": {
+        "t": "Doğuda",
+        "r": "savaş"
+      }
+    },
+    {
+      "text": "1730 yazında Nadir adlı bir komutan, Hemedan'ı ve Tebriz'i geri aldı. Şehirde, sadrazamın Tebriz'in düştüğünü gizlediği konuşuluyordu.",
+      "type": "bt_pt_tug",
+      "visual": "Alacakaranlıkta mazgallı bir şehir surunun üstünde at kılı püsküllü bir tuğ, arkada uzak bir kubbe; 'Tebriz'i'de tuğ yavaşça yana yatıp surun arkasına iner, altta altın italik 'Tebriz · 1730'",
+      "params": {
+        "label": "Tebriz · 1730"
+      },
+      "cues": {
+        "hit": "Tebriz'i"
+      }
+    },
+    {
+      "text": "Sultan ve sadrazam sefer için Üsküdar'a geçti. Ordu toplandı ve bekledi. Haftalar geçti, ama sefer başlamadı.",
+      "type": "bt_pt_ordu",
+      "visual": "Gece Üsküdar kıyısı: suyun karşısında küçük şehir silueti; yakın tepede sıra sıra tepesi sivri yuvarlak çadırlar, ortada kapısı ışıklı büyük bir otağ, aralarda küçük ateşler; ay gökyüzünü yavaşça geçer; 'Haftalar'da ateşler birer birer kısılır",
+      "params": {},
+      "cues": {
+        "hit": "Haftalar"
+      }
+    },
+    {
+      "text": "Vergiler ağırdı. Kahvehanelerde öfke, alçak sesle konuşuluyordu. Ama bu öfkenin içinde, bir hamamda çalışan bir adam vardı.",
+      "type": "bt_pt_kahve",
+      "visual": "Akşam bir kahvehane: arka duvar boyunca alçak bir sedirde oturan üç yüzsüz adam, yanlarında küçük fincanlar, asılı tek bir kandil; önde mangalın üstünde bir cezve, yavaş buhar; 'alçak'ta yandaki iki adam ortadakine doğru eğilir",
+      "params": {},
+      "cues": {
+        "hit": "alçak"
+      }
+    },
+    {
+      "text": "Adı Halil'di. Arnavut asıllıydı.",
+      "type": "bt_chapter",
+      "visual": "Bölüm kartı: altın 'III', ince çizgi, büyük ince 'Bir avuç adam', altında italik 'Eylül 1730'",
+      "params": {
+        "n": "III",
+        "title": "Bir avuç adam",
+        "sub": "Eylül 1730"
+      },
+      "chapter": "Bir avuç adam"
+    },
+    {
+      "text": "Gemilerde levent, sokaklarda seyyar satıcı, hamamda tellak olmuştu.",
+      "type": "bt_pt_hamam",
+      "visual": "Bir hamamın içi: yıldız biçimli küçük ışık delikleri olan büyük kubbe, eğik ışık hüzmeleri, ortada göbek taşı, yavaş yükselen buhar; sağda ayakta tek bir yüzsüz siluet; 'tellak'ta siluetin kenarı ince altın çizgiyle yanar",
+      "params": {},
+      "cues": {
+        "hit": "tellak"
+      }
+    },
+    {
+      "text": "Bir zamanlar yeniçeriydi. Herkes ona Patrona Halil derdi. Bu lakap, rivayete göre levent olduğu gemilerden kalmıştı.",
+      "type": "bt_vh_bork",
+      "visual": "Işık havuzunda yüzsüz bir baş ve omuzlar, başında uzun yeniçeri börkü, önündeki kılıfta bir kaşık; 'yeniçeriydi'de kaşık altına döner",
+      "params": {
+        "mode": "one"
+      },
+      "cues": {
+        "hit": "yeniçeriydi"
+      }
+    },
+    {
+      "text": "Eylül 1730'un son günlerinde, Halil ve birkaç arkadaşı Beyazıt Camii'nin kapısında toplandı.",
+      "type": "bt_pt_kapi",
+      "visual": "Caminin taç kapısının önünde dört yüzsüz siluet; 'toplandı'da öndekinin elindeki direkte bir bayrak belirir ve yavaşça dalgalanır",
+      "params": {
+        "mode": "few",
+        "n": 4
+      },
+      "cues": {
+        "hit": "toplandı"
+      }
+    },
+    {
+      "text": "Sayıları bir avucu geçmiyordu. Söyledikleri tek bir cümleydi: Şeriatla davamız var.",
+      "type": "bt_text",
+      "visual": "Işık havuzunda önce küçük italik 'bir avuç', sonra büyük ince 'Şeriatla', en son altın renkte italik 'davamız var'",
+      "params": {
+        "lines": [
+          {
+            "text": "bir avuç",
+            "at": "c0",
+            "italic": true,
+            "size": 96
+          },
+          {
+            "text": "Şeriatla",
+            "at": "c1"
+          },
+          {
+            "text": "davamız var",
+            "at": "c2",
+            "italic": true,
+            "accent": true
+          }
+        ],
+        "gap": 170
+      },
+      "cues": {
+        "c0": "avucu",
+        "c1": "cümleydi",
+        "c2": "davamız"
+      }
+    },
+    {
+      "text": "Kapalıçarşı'ya yürüdüler. Esnafa dükkânlarını kapatmasını söylediler. Ve dükkânlar kapandı.",
+      "type": "bt_pt_kepenk",
+      "visual": "Yakın plan: çarşının kemerli dükkânları, içleri ışıklı; 'söylediler'de kepenkler birer birer iner, ışıklar söner",
+      "params": {
+        "mode": "close"
+      },
+      "cues": {
+        "hit": "söylediler"
+      },
+      "camera": {
+        "focus": [
+          960,
+          600
+        ],
+        "zoom": 1.6
+      }
+    },
+    {
+      "text": "Korkudan mı, öfkeden mi, bunu kimse bilemedi.",
+      "type": "bt_pt_kepenk",
+      "visual": "Bütün kepenkleri inmiş sessiz çarşı; ortadaki kemerde asılı tek bir kandil, ışığında yavaşça yükselen toz zerreleri",
+      "params": {
+        "mode": "empty"
+      }
+    },
+    {
+      "text": "Kısa sürede yanlarında binlerce kişi vardı. Haber Üsküdar'a ulaştığında, şehir çoktan susmuştu. Ama kalabalık dağılmak için bir bedel istiyordu.",
+      "type": "bt_vh_crowd",
+      "visual": "Şafakta minareli bir cami silueti; önündeki meydanda sıra sıra baş belirir, kalabalık büyür",
+      "params": {},
+      "cues": {
+        "hit": "binlerce"
+      }
+    },
+    {
+      "text": "Bu bedel, devletin en güçlü adamıydı.",
+      "type": "bt_chapter",
+      "visual": "Bölüm kartı: altın 'IV', ince çizgi, büyük ince 'Kurban', altında italik 'Ekim 1730'",
+      "params": {
+        "n": "IV",
+        "title": "Kurban",
+        "sub": "Ekim 1730"
+      },
+      "chapter": "Kurban"
+    },
+    {
+      "text": "Asilerin istediği ilk şey, sadrazamdı.",
+      "type": "bt_pt_muhur",
+      "visual": "Yakın plan: kırmızı minderin üstünde tek başına duran sadrazamlık mührü, ışık havuzunda",
+      "params": {
+        "mode": "lit",
+        "sheet": false
+      },
+      "cues": {
+        "hit": "sadrazamdı"
+      },
+      "camera": {
+        "focus": [
+          960,
+          560
+        ],
+        "zoom": 1.7
+      }
+    },
+    {
+      "text": "Üçüncü Ahmed önce pazarlık etmeyi denedi. Sonra on iki yıl yanında duran adamı, kendi damadını, teslim etti.",
+      "type": "bt_pt_muhur",
+      "visual": "Minderin üstündeki mühür; 'Sonra'da mühür yavaşça sağa, ışığın dışına, karanlığa kayar; ışık boş minderin üstünde daralır",
+      "params": {
+        "mode": "take"
+      },
+      "cues": {
+        "hit": "Sonra"
+      }
+    },
+    {
+      "text": "İbrahim Paşa sarayda öldürüldü. Cesedi asilere verildi.",
+      "type": "bt_vh_saray",
+      "visual": "Gece, iki kuleli saray kapısı, kemerli kapıdan sıcak ışık sızar; 'öldürüldü'de kapının ışığı yavaşça söner",
+      "params": {
+        "mode": "gate"
+      },
+      "cues": {
+        "hit": "öldürüldü"
+      }
+    },
+    {
+      "text": "Sultan, böylece tahtını kurtardığını sandı. Ama kalabalık dağılmadı.",
+      "type": "bt_vh_city",
+      "visual": "Gece, suyun üstünde şehir silueti; 'dağılmadı'da ortada toplanmış meşale ışıkları bütün şehre yayılır",
+      "params": {
+        "mode": "torches"
+      },
+      "cues": {
+        "hit": "dağılmadı"
+      }
+    },
+    {
+      "text": "Artık başka bir şey istiyorlardı: yeni bir padişah.",
+      "type": "bt_vh_throne",
+      "visual": "Karanlık salonda ışık hüzmesinin altında boş taht; ışıkta yavaşça yükselen toz",
+      "params": {
+        "mode": "lit"
+      }
+    },
+    {
+      "text": "2 Ekim 1730'da, yirmi yedi yıllık sultan tahttan çekildi. Yeğeni Mahmud'u tahta kendi eliyle oturttu.",
+      "type": "bt_text",
+      "visual": "Işık havuzunda önce ince '2 Ekim 1730', sonra altın renkte italik 'I. Mahmud'",
+      "params": {
+        "lines": [
+          {
+            "text": "2 Ekim 1730",
+            "at": "c1"
+          },
+          {
+            "text": "I. Mahmud",
+            "at": "c2",
+            "italic": true,
+            "accent": true
+          }
+        ]
+      },
+      "cues": {
+        "c1": "Ekim",
+        "c2": "Mahmud'u"
+      }
+    },
+    {
+      "text": "Kâğıthane'deki yüzden fazla köşk yıkıldı. Bahçelerin ağaçları kesildi.",
+      "type": "bt_pt_sadabad",
+      "visual": "Gece aynı dere: karşı kıyıda saray ve küçük köşkler, pencerelerde ışık; 'köşk'te küçük köşkler ve serviler birer birer karanlığa karışıp kaybolur, sarayın pencereleri söner",
+      "params": {
+        "mode": "ruin"
+      },
+      "cues": {
+        "hit": "köşk"
+      }
+    },
+    {
+      "text": "Mumların yandığı o geceler, birkaç gün içinde bitti. Ama hikâyenin en sessiz kısmı, isyanı başlatan adamın başına gelenlerdi.",
+      "type": "bt_pt_lale",
+      "visual": "Işık havuzunda tek lale; 'yandığı'nda yaprakları birer birer kopup yavaşça aşağı süzülür, ışık kısılır",
+      "params": {
+        "mode": "wilt"
+      },
+      "cues": {
+        "hit": "yandığı"
+      }
+    },
+    {
+      "text": "Önce, beklenmedik bir yükseliş geldi.",
+      "type": "bt_chapter",
+      "visual": "Bölüm kartı: altın 'V', ince çizgi, büyük ince 'Son oda', altında italik 'Kasım 1730'",
+      "params": {
+        "n": "V",
+        "title": "Son oda",
+        "sub": "Kasım 1730"
+      },
+      "chapter": "Son oda"
+    },
+    {
+      "text": "Birkaç hafta içinde, eski tellak devletin en güçlü adamlarından biri oldu. Rivayete göre yeni sultan Eyüp'te kılıç kuşanırken, Patrona onun yanındaydı.",
+      "type": "bt_pt_alay",
+      "visual": "Şafakta bir yol, sağda tepede tek kubbeli iki minareli bir cami; iki yüzsüz siluet yavaşça sağa yürür: önde uzun sarıklı biri, arkasında başı açık biri; 'Patrona'da arkadakinin kenar çizgisi altına döner",
+      "params": {},
+      "cues": {
+        "hit": "Patrona"
+      }
+    },
+    {
+      "text": "Dostlarını makamlara getirtiyordu. Ama saray sabırlıydı.",
+      "type": "bt_vh_saray",
+      "visual": "Gece, kubbeli ve bacalı saray silueti; tek bir pencerede ışık yanar, içinde ayakta duran bir siluet",
+      "params": {
+        "mode": "window"
+      }
+    },
+    {
+      "text": "25 Kasım 1730'da Patrona, bir toplantı için saraya çağrıldı.",
+      "type": "bt_pt_oda",
+      "visual": "Gece bir saray koridoru, çinili duvar; ortada yarı açık, içi ışıklı kemerli çift kanatlı bir kapı; soldan tek bir yüzsüz siluet yavaşça kapıya yürür ve ışığın içinde kaybolur",
+      "params": {
+        "mode": "enter"
+      }
+    },
+    {
+      "text": "Bir işaret verildi. Saklanan silahlı adamlar ortaya çıktı.",
+      "type": "bt_pt_oda",
+      "visual": "Aynı koridor; ışıklı kapı açık; 'işaret'te iki kanat yavaşça kapanır, ışık önce ince bir çizgiye iner, sonra söner",
+      "params": {
+        "mode": "close"
+      },
+      "cues": {
+        "hit": "işaret"
+      }
+    },
+    {
+      "text": "Patrona Halil, o odadan bir daha çıkmadı. İsyanı başlatan adam, iki ay bile dolmadan, aynı sarayın içinde yok oldu.",
+      "type": "bt_pt_kandil",
+      "visual": "Yakın plan: karanlık bir nişte üç zincirle asılı tek bir cam kandil; 'çıkmadı'da alev küçülüp söner, ışık kaybolur, ince bir duman ipliği yükselir",
+      "params": {
+        "mode": "out"
+      },
+      "cues": {
+        "hit": "çıkmadı"
+      },
+      "camera": {
+        "focus": [
+          960,
+          480
+        ],
+        "zoom": 1.5
+      }
+    },
+    {
+      "text": "Yani bir avuç adam, sultanı tek başına indirmedi.",
+      "type": "bt_text",
+      "visual": "Işık havuzunda önce ince 'Bir avuç adam', sonra altın renkte italik 'tek başına değil'",
+      "params": {
+        "lines": [
+          {
+            "text": "Bir avuç adam",
+            "at": "c1"
+          },
+          {
+            "text": "tek başına değil",
+            "at": "c2",
+            "italic": true,
+            "accent": true
+          }
+        ]
+      },
+      "cues": {
+        "c1": "avuç",
+        "c2": "tek"
+      }
+    },
+    {
+      "text": "Kaybedilen bir savaş, gizlenen bir yenilgi, ağır vergiler ve haftalarca bekleyen bir ordu… O sabah Beyazıt'ta yalnızca bir kıvılcım çakıldı.",
+      "type": "bt_pt_sebep",
+      "visual": "Bir sırada dört küçük işaret, sözcükleriyle birer birer belirir: tuğ 'savaş', mühürlü mektup 'yenilgi', sikke yığını 'vergi', çadır 'ordu'; 'kıvılcım'da dördünden altta tek bir noktaya ince altın çizgiler iner ve orada küçük altın bir kıvılcım yanar",
+      "params": {
+        "labels": [
+          "savaş",
+          "yenilgi",
+          "vergi",
+          "ordu"
+        ]
+      },
+      "cues": {
+        "a": "savaş",
+        "b": "gizlenen",
+        "c": "vergiler",
+        "d": "ordu",
+        "hit": "kıvılcım"
+      }
+    },
+    {
+      "text": "Bir ayrıntı daha var. O on iki yılı yaşayanlar, ona hiçbir zaman Lale Devri demedi.",
+      "type": "bt_pt_lale",
+      "visual": "Solda ışık havuzunda tek lale, sağda büyük ince 'Lâle Devri'; 'hiçbir'de yazının üstünden ince altın bir çizgi geçer, yazı soluklaşır",
+      "params": {
+        "mode": "name",
+        "text": "Lâle Devri"
+      },
+      "cues": {
+        "hit": "hiçbir"
+      }
+    },
+    {
+      "text": "Bu adı yirminci yüzyılın başında şair Yahya Kemal kullandı. Tarihçi Ahmed Refik, 1913'te yaydı.",
+      "type": "bt_pt_gazete",
+      "visual": "Lamba ışığında eski bir gazete sayfası: sütunlar kendini yazar, büyük başlık 'Lâle Devri'; '1913'te sağında altın italik '1913' belirir",
+      "params": {
+        "text": "Lâle Devri",
+        "year": "1913"
+      },
+      "cues": {
+        "hit": "1913"
+      }
+    },
+    {
+      "text": "Yani o çağın adını bile, neredeyse iki yüz yıl sonra biz koyduk.",
+      "type": "bt_text",
+      "visual": "Işık havuzunda önce ince '1730', sonra altın renkte italik '1913'",
+      "params": {
+        "lines": [
+          {
+            "text": "1730",
+            "at": "c1"
+          },
+          {
+            "text": "1913",
+            "at": "c2",
+            "italic": true,
+            "accent": true
+          }
+        ]
+      },
+      "cues": {
+        "c1": "çağın",
+        "c2": "sonra"
+      }
+    },
+    {
+      "text": "Sizce bir döneme adını, onu yaşayanlar mı vermeli, yoksa ardından gelenler mi? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_pt_lale",
+      "visual": "Işık havuzunda tek, ince bir lale; çok yavaş salınır, sessiz",
+      "params": {
+        "mode": "one"
+      }
+    }
+  ]
+}

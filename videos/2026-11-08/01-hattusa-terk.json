@@ -1,0 +1,163 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "kum",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "UNESCO World Heritage Centre: Hattusha, the Hittite Capital",
+   "url": "https://whc.unesco.org/en/list/377/"
+  },
+  {
+   "title": "UNESCO Silk Roads: The Hittite cuneiform tablets from Boğazköy",
+   "url": "https://en.unesco.org/silkroad/silk-road-themes/documentary-heritage/hittite-cuneiform-tablets-bogazkoy"
+  },
+  {
+   "title": "Biblical Archaeology Society: The Last Days of Hattusa",
+   "url": "https://www.biblicalarchaeology.org/daily/the-last-days-of-hattusa/"
+  },
+  {
+   "title": "Wikipedia: Hattusa",
+   "url": "https://en.wikipedia.org/wiki/Hattusa"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Kendi",
+   "başkentini",
+   "boşalttı"
+  ],
+  "highlight": [
+   "boşalttı"
+  ],
+  "scene": 0,
+  "t": 1.5,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Bir imparatorluk, kendi başkentini boşalttı.",
+   "type": "bt_ht_gate",
+   "visual": "Alacakaranlık: Aslanlı Kapı, dev taş blokların çevrelediği parabol kemer, iki yandaki söve taşlarından yana doğru fırlayan aslan ön gövdeleri (profil), poligonal surlar; kemerin ardında karanlık, boş şehir; eşikte sıcak ışık havuzu, içinden süzülen toz; hiç insan yok",
+   "params": {
+    "mode": "hook",
+    "dy": 0
+   }
+  },
+  {
+   "text": "Hitit başkenti Hattuşa, üç bin iki yüz yıl önce.",
+   "type": "bt_ht_city",
+   "visual": "Batan güneşin önünde tepe: kuleli sur kendini yamaç boyunca çizer, kuleler sırayla belirir, tepede Büyükkale; üstte italik 'Hattuşa' ve altın çizgi",
+   "params": {
+    "mode": "ridge",
+    "label": "Hattuşa"
+   }
+  },
+  {
+   "text": "Surlar sessizdi.",
+   "type": "bt_ht_city",
+   "visual": "Yakın: toprak setin üstünde taş temelli, kerpiç gövdeli sur ve dört kule sağa doğru uzanır, kendini çizer; üstünden yavaş bir ışık geçer, toz sürüklenir, kimse yok",
+   "params": {
+    "mode": "walls"
+   }
+  },
+  {
+   "text": "Saray yandı… ama içi neredeyse boştu.",
+   "type": "bt_ht_hall",
+   "visual": "Sütunlu saray salonu yanıyor: arka duvar boyunca alevler, iki kömürleşmiş direk kütüğü, duman; 'içi'nde alevler köze iner, ışık havuzu boş zemini, boş duvar nişlerini ve boş taş kaideyi gösterir",
+   "cues": {
+    "hit": "içi"
+   }
+  },
+  {
+   "text": "Kral ve maiyeti, büyük olasılıkla, çoktan gitmişti.",
+   "type": "bt_ht_exodus",
+   "visual": "Şehirden dışarı uzanan, tepelere kıvrılan yol: yüzsüz siluetlerden bir kafile, bazıları sırtında bohçayla yavaşça uzaklaşır ve ufukta küçülür",
+   "params": {
+    "mode": "leave"
+   }
+  },
+  {
+   "text": "Nereye? Bilinmiyor.",
+   "type": "bt_ht_exodus",
+   "visual": "Aynı yol bomboş, ortada biter; oradan üç kesik çizgili patika ufka doğru ayrılır ve birer birer silinir; toz sürüklenir",
+   "params": {
+    "mode": "road"
+   }
+  },
+  {
+   "text": "Geride on binlerce tablet kaldı.",
+   "type": "bt_ht_archive",
+   "visual": "Kiler odası: dört katlı ahşap raflar, soldan lamba ışığı; 'binlerce'de raflar kil tabletlerle dolar",
+   "params": {
+    "mode": "rows"
+   },
+   "cues": {
+    "hit": "binlerce"
+   }
+  },
+  {
+   "text": "Değerlileri götürdüler. Yazıyı bıraktılar.",
+   "type": "bt_ht_archive",
+   "visual": "Tek raf yakından: solda altın kap, testi, kâse; 'götürdüler'de sola kayıp kaybolur, yerlerinde kesik çizgili hayaletleri kalır; sağda üç kil tablet, 'bıraktılar'da kenarları altın ışıkla yanar",
+   "params": {
+    "mode": "left"
+   },
+   "cues": {
+    "a": "götürdüler",
+    "b": "bıraktılar"
+   }
+  },
+  {
+   "text": "Tabletler çok şey anlatır. Ama nereye gittiklerini yazmaz.",
+   "type": "bt_ht_tablet",
+   "visual": "Işık havuzunda tek büyük kil tablet, köşesi kırık; üstte satır satır çivi yazısı, alt kısmı yazısız; 'anlatır'da satırlar sırayla altına döner; 'yazmaz'da altın söner, yazısız boş kil soluk bir ışıkla aydınlanır",
+   "cues": {
+    "hit": "anlatır",
+    "b": "yazmaz"
+   }
+  },
+  {
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_ht_gate",
+   "visual": "Şafak: aynı Aslanlı Kapı, kemerin içinde güneş yavaşça yükselir, ışık havuzu büyür, toz sürüklenir",
+   "params": {
+    "mode": "dawn"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Hattuşa: Hititler Başkentlerini Neden Terk Etti?",
+  "description": "Hattuşa, Hitit İmparatorluğu'nun başkenti, MÖ 1200 dolaylarında yandı; ama kazılar şehrin yangından önce boşaltıldığını gösteriyor.\n\nBoğazkale'deki Hattuşa kazılarında yanmış saray ve tapınaklarda değerli eşya neredeyse hiç bulunmadı. Arkeologlara göre son Hitit kralı II. Şuppiluliuma ve sarayı büyük olasılıkla başkenti önceden terk etti; nereye gittikleri hâlâ bilinmiyor. Geride, Mısır'la yapılan Kadeş Antlaşması'nın Hititçe metni de dahil on binlerce çivi yazılı kil tablet kaldı.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Hititler başkentlerini neden kendi elleriyle boşalttı? Yorumlara yaz!\n\n#shorts #hattuşa #hititler #anadolutarihi #düşünbakalım",
+  "tags": [
+   "hattuşa",
+   "hattuşa antik kenti",
+   "hattuşa hitit başkenti",
+   "hattuşa neden terk edildi",
+   "hititler",
+   "hitit imparatorluğu",
+   "boğazkale",
+   "şuppiluliuma",
+   "kil tabletler",
+   "kadeş antlaşması",
+   "tunç çağı çöküşü",
+   "anadolu tarihi",
+   "kayıp şehirler",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-08T19:00:00+03:00"
+ }
+}
