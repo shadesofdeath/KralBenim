@@ -1,0 +1,466 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "michel-siffre-cave",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "He lost",
+   "25 days"
+  ],
+  "highlight": [
+   "days"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   560,
+   1000
+  ],
+  "zoom": 1.3,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 290,
+   "y": 1860,
+   "scale": 1.5
+  },
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "IFLScience — In 1962, a geologist went into a cave. 2 months later, he'd accidentally invented a new field of biology",
+   "url": "https://www.iflscience.com/in-1962-a-geologist-went-into-a-cave-2-months-later-hed-accidentally-invented-a-new-field-of-biology-82082"
+  },
+  {
+   "title": "Gizmodo — An experiment that tested a man's tolerance for isolation",
+   "url": "https://gizmodo.com/an-experiment-that-tested-a-mans-tolerance-for-isolati-1503280842"
+  },
+  {
+   "title": "Cabinet Magazine — Caveman: An Interview with Michel Siffre (Joshua Foer, 2008)",
+   "url": "https://www.cabinetmagazine.org/issues/30/foer.php"
+  },
+  {
+   "title": "Wikipedia — Michel Siffre",
+   "url": "https://en.wikipedia.org/wiki/Michel_Siffre"
+  }
+ ],
+ "youtube": {
+  "title": "Michel Siffre: How Did He Lose 25 Days in a Cave?",
+  "description": "Michel Siffre lived alone in an ice cave for two months with no clock and no sun, and when it ended he had lost track of 25 whole days. How does that happen?\n\nOn July 16, 1962, the 23-year-old French geologist went down about 130 meters into the Scarasson cave, an underground glacier in the Alps. He phoned his team whenever he woke, ate or slept, but they never told him the time. Counting to 120 seconds took him about five minutes. When they called on September 14 to say the experiment was over, he was sure it was August 20. His time-in-the-dark experiment helped start the science of the body clock.\n\nSubscribe to Stickstory for a strange true story like this every day. How long do you think you would last without a clock? Tell me in the comments!\n\n#shorts #michelsiffre #bodyclock #stickstory",
+  "tags": [
+   "michel siffre",
+   "michel siffre cave",
+   "michel siffre experiment",
+   "siffre cave experiment",
+   "cave experiment",
+   "man who lived in a cave",
+   "scarasson cave",
+   "body clock",
+   "circadian rhythm",
+   "sense of time",
+   "time isolation experiment",
+   "chronobiology",
+   "weird science",
+   "true story",
+   "science shorts",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-08T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "sf_cave",
+   "text": "He lost 25 days in a cave.",
+   "visual": "Hook frame inside an ice-cave chamber: dark rock wall with strata, icicles hanging from the ceiling with one drip falling, a pale ice floor down to the frame bottom; a big tear-off calendar nailed to the rock reads 'DAY ?' while blank leaves keep tearing off and flying into the dark; a lantern glows; a caver in a yellow helmet with a headlamp sits on a rock on the right and stares at it; on 'days' the calendar jolts; the fez host big in the lower left in shock as the cover overlay.",
+   "title": {
+    "white": "Ice cave"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "days"
+   },
+   "params": {
+    "mode": "hook",
+    "header": "DAY",
+    "day": "?"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sf_camp",
+   "text": "In July 1962, a young Frenchman, Michel Siffre,",
+   "visual": "A sunny mountain meadow in the Alps: a rocky flank with a snow cap and a dark cave mouth on the right, the team's tent on the left with a telephone wire running into the cave; a young caver in a helmet with a headlamp and a coil of rope over his shoulder walks towards the cave mouth and points into it; a red card '1962' and a hand label 'MICHEL SIFFRE'; grass and stones fill the bottom of the frame.",
+   "title": {
+    "white": "The Alps",
+    "gray": "July 1962"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1192
+   },
+   "cues": {
+    "y": "1962",
+    "n": "Siffre"
+   },
+   "params": {
+    "mode": "start",
+    "labels": [
+     {
+      "text": "1962",
+      "x": 0.2,
+      "y": 0.3,
+      "at": "y",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     },
+     {
+      "text": "MICHEL SIFFRE",
+      "x": 0.45,
+      "y": 0.47,
+      "at": "n",
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "sf_shaft",
+   "text": "went down into an ice cave in the Alps.",
+   "visual": "A cross-section of the mountain: a thin grassy surface strip at the top with the team's tent and a team member by a field telephone; below it layered rock, a narrow shaft with a rope ladder down to a dark cave chamber with a small glowing tent and lantern, and a big lens of blue ice (the underground glacier) under it; the caver in a helmet climbs down the ladder all the way to the chamber floor; a red depth arrow on the right with the label '130 m'.",
+   "title": {
+    "white": "Scarasson"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 384
+   },
+   "source": "IFLScience",
+   "cues": {
+    "d": "ice"
+   },
+   "params": {
+    "mode": "descend",
+    "labels": [
+     {
+      "text": "130 m",
+      "x": 0.84,
+      "y": 0.34,
+      "at": "d",
+      "size": 72,
+      "color": "red",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "down"
+   }
+  },
+  {
+   "type": "sf_cave",
+   "text": "No clock, no sun.",
+   "visual": "In the ice cave: the caver in his helmet sits on a rock by the glowing tent, thinking, his headlamp beam on the ice; on 'clock' a big clock pops up over his left and is struck out with a red X, on 'sun' a sun pops up on the right and is struck out too, and he shrugs.",
+   "title": {
+    "white": "Alone"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "clock": "clock",
+    "sun": "sun"
+   },
+   "params": {
+    "mode": "dark"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sf_shaft",
+   "text": "Each time he woke, he phoned his team,",
+   "visual": "The same mountain cross-section: down in the chamber the caver gets up from his rock and lifts the receiver of a field telephone; on 'phoned' gold pulses run up the wire through the shaft to the surface, where the telephone by the team's tent rings and the team member picks up; red card 'RING!'.",
+   "title": {
+    "white": "The phone"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 384
+   },
+   "cues": {
+    "hit": "phoned"
+   },
+   "params": {
+    "mode": "call",
+    "labels": [
+     {
+      "text": "RING!",
+      "x": 0.6,
+      "y": 0.11,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "sf_camp",
+   "text": "and they never told him the time.",
+   "visual": "Inside the team's tent on the surface (pale canvas walls with stitched seams, a tent pole): a team member in a beret holds the receiver to his ear behind a wooden table; on the table a field telephone, a logbook where a pen writes lines, and an alarm clock; under the table a crate, a rucksack and a coil of phone wire on the tent floor; on 'never' a striped tea towel drops over the clock, one corner of the dial and a bell still peeking out, and a red card 'SECRET' slams on.",
+   "title": {
+    "white": "Surface camp"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "never"
+   },
+   "params": {
+    "mode": "secret",
+    "labels": [
+     {
+      "text": "SECRET",
+      "x": 0.6,
+      "y": 0.27,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sf_count",
+   "text": "Try counting to 120. It took him five minutes.",
+   "visual": "In the ice cave: on the left a big thought bubble counts up from 1 to 120, on the right a big stopwatch whose hand sweeps round and round, with the time ticking from 0:00 to 5:00 under it; the fez host between them points at the stopwatch and jumps back in shock on 'five'; on 'five' the 5:00 jumps.",
+   "title": {
+    "white": "The test"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "source": "Gizmodo",
+   "cues": {
+    "count": "Try",
+    "hit": "five"
+   },
+   "params": {
+    "to": 120,
+    "turns": 5,
+    "kasif": {
+     "x": 0.47,
+     "scale": 1.0,
+     "pose": "point",
+     "dir": 30,
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": []
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "sf_cave",
+   "text": "When they said it was over, he was sure it was August 20.",
+   "visual": "Close-up in the ice cave: the caver in his helmet holds the telephone receiver to his ear and smiles; a thought bubble pops up beside his head holding a calendar sheet 'AUGUST / 20'; the glowing tent and lantern behind him.",
+   "title": {
+    "white": "His guess"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "sure"
+   },
+   "params": {
+    "mode": "sure",
+    "month": "AUGUST",
+    "day": 20
+   },
+   "camera": {
+    "focus": [
+     590,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sf_calendar",
+   "text": "It was September 14.",
+   "visual": "A big tear-off calendar nailed to the cave rock fills the frame: its leaves rip off one after another from 'AUGUST 20' through to 'SEPTEMBER 14', which stays and turns red; a red card '+25 DAYS'; a lantern and the telephone on the ice ledge below.",
+   "title": {
+    "white": "The truth"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1190
+   },
+   "cues": {
+    "hit": "September"
+   },
+   "params": {
+    "from": [
+     "AUGUST",
+     20
+    ],
+    "to": [
+     "SEPTEMBER",
+     14
+    ],
+    "labels": [
+     {
+      "text": "+25 DAYS",
+      "x": 0.5,
+      "y": 0.525,
+      "at": 1.05,
+      "size": 92,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sf_camp",
+   "text": "His body clock kept ticking. His sense of time didn't.",
+   "visual": "Outside on the mountain: a rocky flank with a snow cap and a dark cave mouth; the caver walks out of it into the meadow while the sun rises with turning rays and he stops, dazzled; on 'clock' a small clock glows on his chest and ticks steadily, on 'sense' a thought bubble pops up over his head with a clock whose hands spin wildly; grass and stones fill the bottom of the frame.",
+   "title": {
+    "white": "Daylight"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1192
+   },
+   "cues": {
+    "body": "clock",
+    "hit": "sense"
+   },
+   "params": {
+    "mode": "sun"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "sf_camp",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "The mountain meadow by the cave mouth, the team's tent on the left with the phone wire running into the cave, the sun up: the fez host waves, then points at the viewer on 'story'.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1192
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.52,
+     "scale": 1.05,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

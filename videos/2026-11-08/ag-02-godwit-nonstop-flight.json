@@ -1,0 +1,490 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "godwit-nonstop-flight",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "11 days",
+   "no landing"
+  ],
+  "highlight": [
+   "landing"
+  ],
+  "scene": 0,
+  "t": 1.5,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 205,
+   "y": 1778,
+   "scale": 1.2
+  }
+ },
+ "sources": [
+  {
+   "title": "Guinness World Records — Longest non-stop migration by a bird",
+   "url": "https://www.guinnessworldrecords.com/world-records/86385-longest-non-stop-migration-by-a-bird"
+  },
+  {
+   "title": "Guinness World Records — The record-breaking bird that flew from Alaska to Australia without stopping",
+   "url": "https://www.guinnessworldrecords.com/news/2023/1/the-record-breaking-bird-that-flew-from-alaska-to-australia-731576"
+  },
+  {
+   "title": "NPR — A non-stop flight from Alaska to Tasmania may be for the birds",
+   "url": "https://www.npr.org/2022/10/28/1132171095/a-non-stop-flight-from-alaska-to-tasmania-may-be-for-the-birds-and-a-possible-re"
+  },
+  {
+   "title": "USGS — Guts don't fly: small digestive organs in obese bar-tailed godwits (Piersma & Gill, 1998)",
+   "url": "https://pubs.usgs.gov/publication/70020664"
+  }
+ ],
+ "youtube": {
+  "title": "Bar-Tailed Godwit: How Did a Baby Bird Fly 11 Days Nonstop?",
+  "description": "Bar-tailed godwit 234684 was only five months old when it left Alaska in October 2022 and flew 11 days nonstop to Tasmania. How did a baby bird do that?\n\nOn 13 October 2022 the young godwit, tracked by a satellite tag on its back, left southwest Alaska and crossed the Pacific without landing once: about 13,560 kilometers (8,400+ miles) in 11 days and 1 hour, ending at Ansons Bay in northeast Tasmania. Guinness World Records lists it as the longest non-stop bird migration ever recorded. Godwits can't rest on the water, so before the trip they get extremely fat, and their stomach (gizzard), liver and gut shrink to save weight. The bird lost about half its body weight on the way.\n\nSubscribe to Stickstory for one strange true story a day. Could you go 11 days without food, water or sleep? Tell me in the comments!\n\n#shorts #godwit #birdmigration #stickstory",
+  "tags": [
+   "bar-tailed godwit",
+   "bar-tailed godwit migration",
+   "bar-tailed godwit flight",
+   "bar-tailed godwit record",
+   "godwit 234684",
+   "godwit nonstop flight",
+   "longest nonstop flight",
+   "longest bird migration",
+   "bird migration",
+   "alaska to tasmania",
+   "world record bird",
+   "animal superpowers",
+   "animal facts",
+   "nature shorts",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-08T19:00:00-05:00",
+  "related": "videos/2026-11-03/ag-03-bat-echolocation.json"
+ },
+ "scenes": [
+  {
+   "type": "gw_sky",
+   "text": "This bird flew eleven days without landing.",
+   "visual": "Hook frame over the open Pacific: a big bar-tailed godwit (long slightly upturned pink-and-dark bill, mottled buff back, a tiny satellite tag with a thin antenna on its lower back) flaps hard across the upper middle of the frame, wind streaks stream behind it, clouds drift past; a red-and-white striped buoy bobs in the lower left with foam round it; rows of rolling swell fill the lower frame; on 'landing' the bird gives a small punch.",
+   "title": {
+    "white": "Pacific"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 1500,
+    "horizon": 1000
+   },
+   "cues": {
+    "hit": "landing"
+   },
+   "params": {
+    "mode": "hook",
+    "bird": {
+     "x": 0.44,
+     "y": 0.33,
+     "s": 1.75,
+     "ph0": 0.63
+    },
+    "buoy": [
+     0.19,
+     0.772,
+     220
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gw_flat",
+   "text": "In October 2022, a godwit just five months old left Alaska.",
+   "visual": "An Alaska mudflat at the sea's edge: the young godwit stands on the wet mud, pecks, crouches and on 'left' takes off, climbing out to the right with wind streaks; far birds over the horizon; shining puddles with ripples, worm casts, bird tracks and sedge tufts fill the foreground; red card 'OCT 2022' on 'October', ink card 'ALASKA' on 'Alaska'; it heads out to sea.",
+   "title": {
+    "white": "Alaska",
+    "gray": "2022"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "oct": "October",
+    "ak": "Alaska",
+    "go": "left"
+   },
+   "params": {
+    "mode": "takeoff",
+    "labels": [
+     {
+      "text": "OCT 2022",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "oct",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "ALASKA",
+      "x": 0.3,
+      "y": 0.42,
+      "at": "ak",
+      "size": 72,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "gw_sky",
+   "text": "No food, no water, no rest,",
+   "visual": "Closer over the ocean: the godwit flaps on in the middle; above it three big paper discs pop in one by one on their words, a worm on 'food', a water drop on 'water', a bed on 'rest', and a thin red X is drawn over each a moment later.",
+   "title": {
+    "white": "Nonstop"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 1500,
+    "horizon": 1000
+   },
+   "cues": {
+    "i0": "food",
+    "i1": "water",
+    "i2": "rest"
+   },
+   "params": {
+    "mode": "none",
+    "icons": [
+     0.5,
+     0.22,
+     105
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "gw_sky",
+   "text": "because a godwit that lands on the sea dies.",
+   "visual": "A storm at sea: dark clouds race past, rain streaks slant down, the godwit dips toward the dark water as a huge wave crest rears up under it with flying spray; on 'sea' it pulls up hard and flaps faster; red card 'NO LANDING' on 'dies'.",
+   "title": {
+    "white": "The sea"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1500,
+    "horizon": 980
+   },
+   "source": "Guinness World Records",
+   "cues": {
+    "sea": "sea",
+    "hit": "dies"
+   },
+   "params": {
+    "mode": "storm",
+    "labels": [
+     {
+      "text": "NO LANDING",
+      "x": 0.6,
+      "y": 0.3,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "gw_flat",
+   "text": "So how? Before takeoff, it got hugely fat.",
+   "visual": "Back on the Alaska mudflat before the trip: the fez host on the left looks through binoculars, a big red '?' pops up on 'how' and he thinks; the godwit on the right keeps pulling worms out of the mud and on 'fat' swells into a round, plump bird while the host points at it in surprise.",
+   "title": {
+    "white": "Before"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "how": "how",
+    "fat": "fat"
+   },
+   "params": {
+    "mode": "feast",
+    "kasif": {
+     "x": 0.22,
+     "scale": 1.0
+    },
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.42,
+      "y": 0.26,
+      "at": "how",
+      "size": 190,
+      "color": "red",
+      "font": "serif",
+      "card": false,
+      "rot": 6,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gw_body",
+   "text": "Its stomach and liver shrank to save weight.",
+   "visual": "The plump godwit standing on the mudflat drawn as a cut-away: under the skin a thick gold layer of fat, inside it a red stomach, a dark liver, a gut and a beating heart; on 'stomach' the stomach shrinks, on 'liver' the liver shrinks, red squeeze arrows; on 'save' the gold fat swells to fill the space; cards 'STOMACH', 'LIVER', 'FAT'.",
+   "title": {
+    "white": "Inside"
+   },
+   "set": {
+    "name": "coast",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "source": "USGS",
+   "cues": {
+    "stomach": "stomach",
+    "liver": "liver",
+    "room": "save"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "STOMACH",
+      "x": 0.3,
+      "y": 0.31,
+      "at": "stomach",
+      "size": 66,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "LIVER",
+      "x": 0.66,
+      "y": 0.28,
+      "at": "liver",
+      "size": 66,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "FAT",
+      "x": 0.17,
+      "y": 0.55,
+      "at": "room",
+      "size": 80,
+      "color": "gold",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     480,
+     840
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gw_map",
+   "text": "More than 8,400 miles later,",
+   "visual": "An old ink map of the Pacific in a double frame: Alaska top right, Asia and Japan top left, Australia, Tasmania and New Zealand at the bottom, island dots, Antarctica's coast and a compass rose on the southern ocean; a red dashed route draws itself from Alaska south over the ocean to Tasmania with a small flying godwit at its head; a card counter runs up to '8,400 MILES' by the word 'miles'; ink card 'ALASKA', red card 'TASMANIA'.",
+   "title": {
+    "white": "The route"
+   },
+   "set": false,
+   "params": {
+    "value": 8400,
+    "unit": "MILES",
+    "labels": [
+     {
+      "text": "ALASKA",
+      "x": 0.83,
+      "y": 0.175,
+      "at": 0.2,
+      "size": 58,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "TASMANIA",
+      "x": 0.3,
+      "y": 0.515,
+      "at": "later",
+      "size": 58,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "plus": false
+   },
+   "cues": {
+    "later": "later",
+    "done": "miles"
+   },
+   "camera": false
+  },
+  {
+   "type": "gw_beach",
+   "text": "it dropped onto a beach in Tasmania, nearly half its weight gone.",
+   "visual": "A Tasmanian beach: the skinny godwit glides down from the sky, drops its legs and lands on the sand on 'dropped', wobbles and sags with sweat drops; on 'half' a big red dashed outline of its old fat body appears round it and a red card '~50% LOST' pops up; foam washes in and out, shells, seaweed and marram grass in front.",
+   "title": {
+    "white": "Tasmania"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "land": "dropped",
+    "half": "half"
+   },
+   "params": {
+    "mode": "land",
+    "labels": [
+     {
+      "text": "~50% LOST",
+      "x": 0.6,
+      "y": 0.33,
+      "at": "half",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "gw_medal",
+   "text": "Its first trip ever was a world record.",
+   "visual": "Close on the beach: the thin godwit stands on the left; a big gold rosette with red and blue ribbon tails reading 'WORLD RECORD' swings down on a string and lands beside it on 'record'; the bird lifts its bill proudly, gold sparkles twinkle round the rosette.",
+   "title": {
+    "white": "Record"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "source": "Guinness World Records",
+   "cues": {
+    "hit": "record"
+   },
+   "params": {
+    "rosette": [
+     0.67,
+     0.4,
+     120
+    ],
+    "bird": {
+     "x": 0.4,
+     "s": 1.1
+    }
+   },
+   "camera": {
+    "focus": [
+     560,
+     860
+    ],
+    "zoom": 1.6,
+    "move": "still"
+   }
+  },
+  {
+   "type": "gw_beach",
+   "text": "Subscribe for one true story a day.",
+   "visual": "The beach: the fez host waves, then points at the viewer on 'day'; the godwit pecks the sand beside him.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "s2": "day"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.3,
+     "scale": 1.05
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}
