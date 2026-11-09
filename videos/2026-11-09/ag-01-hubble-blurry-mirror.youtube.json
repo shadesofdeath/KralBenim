@@ -1,0 +1,17 @@
+{
+ "id": "vAu-t386QvU",
+ "thumbnail": false,
+ "url": "https://youtu.be/vAu-t386QvU",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-09T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Hubble Space Telescope: Why Was It Born Blurry?",
+ "script": "videos/2026-11-09/ag-01-hubble-blurry-mirror.json"
+}
