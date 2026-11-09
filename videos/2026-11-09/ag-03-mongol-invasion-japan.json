@@ -1,0 +1,2515 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-mongol-invasion-japan",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "SAVED BY",
+   "A STORM?"
+  ],
+  "highlight": [
+   "STORM"
+  ],
+  "scene": 34,
+  "t": 0.9,
+  "focus": [
+   1150,
+   600
+  ],
+  "zoom": 1.35,
+  "size": 190,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.2,
+   "face": -1,
+   "x": 1650,
+   "y": 1000
+  }
+ },
+ "sources": [
+  {
+   "title": "Kamikaze of 1274 and 1281 (Encyclopaedia Britannica)",
+   "url": "https://www.britannica.com/event/kamikaze-of-1274-and-1281"
+  },
+  {
+   "title": "The Mongol Invasions of Japan, 1274 & 1281 CE (World History Encyclopedia)",
+   "url": "https://www.worldhistory.org/article/1415/the-mongol-invasions-of-japan-1274--1281-ce/"
+  },
+  {
+   "title": "Khubilai Khan Fleet (Archaeology Magazine)",
+   "url": "https://archaeology.org/issues/online/collection/khubilai-khan-fleet-2"
+  },
+  {
+   "title": "The Origins of the Lost Fleet of the Mongol Empire, Randall Sasaki (Texas A&M thesis, via Medievalists.net)",
+   "url": "https://www.medievalists.net/2011/04/the-origin-of-the-lost-fleet-of-the-mongol-empire/"
+  },
+  {
+   "title": "Dice and game tiles found in a Mongol warship off Takashima (Ancient Origins, 2026)",
+   "url": "https://www.ancient-origins.net/news-history-archaeology/dice-game-tiles-mongol-warship-takashima-1281-00128360"
+  },
+  {
+   "title": "Archaeologists found a 745-year-old shipwreck from a famous failed invasion (Popular Mechanics via AOL, 2026)",
+   "url": "https://www.aol.com/articles/archaeologists-found-745-old-shipwreck-123000882.html"
+  }
+ ],
+ "youtube": {
+  "title": "Mongol Invasion of Japan: Was It Really a Divine Wind?",
+  "description": "The Mongol invasion of Japan should have worked: Kublai Khan sent the biggest invasion fleet the world had ever seen, and one night off Takashima most of it was gone.\n\nIn 1274 and again in 1281 the Mongol Yuan empire sailed for Kyushu. Samurai met massed archers, war drums and exploding clay bombs at Hakata Bay. Japan answered with a stone wall about 20 kilometers long, the fleet waited for weeks, and then a typhoon struck. Japan called it kamikaze, the divine wind. But underwater archaeologists at Takashima found a very different story in the wrecks, and this fall they even found the soldiers' dice and game tiles.\n\nIn this video:\n- Kublai Khan's letter and the silence of Hojo Tokimune\n- The 1274 landing at Hakata Bay and the clay bombs of the scroll\n- The Hakata stone wall and the great fleet of 1281\n- The typhoon of August 1281, the kamikaze\n- What divers found off Takashima: river boats, weak keels, dice\n\nSubscribe to Stickstory for more history that's stranger than the legend. What really saved Japan: the storm, the wall, or the samurai? Tell me in the comments!\n\n#mongolinvasion #kamikaze #samurai #kublaikhan #stickstory",
+  "tags": [
+   "mongol invasion of japan",
+   "mongol invasions of japan",
+   "mongol invasion japan 1281",
+   "kublai khan japan",
+   "kamikaze divine wind",
+   "kamikaze typhoon 1281",
+   "takashima shipwreck",
+   "hakata bay",
+   "genko borui stone wall",
+   "samurai vs mongols",
+   "hojo tokimune",
+   "kublai khan fleet",
+   "underwater archaeology",
+   "history stories",
+   "medieval japan",
+   "empires and battles",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-09T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "mi_bay",
+   "text": "August 1281. A bay off a small Japanese island called Takashima is packed with ships.",
+   "visual": "Bay seen from the water at dusk: the low hump of Takashima island on the horizon at right; dozens of war junks with battened sails and red pennants pop in across the water, packed hull to hull; two big junks in front; note 'Takashima, 1281'.",
+   "title": {
+    "white": "Takashima",
+    "gray": "1281"
+   },
+   "cues": {
+    "isl": "island",
+    "pk": "packed"
+   },
+   "params": {
+    "horizon": 0.52,
+    "island": {
+     "x": 0.8,
+     "w": 0.32,
+     "h": 0.07
+    },
+    "fleet": {
+     "n": 30,
+     "at": "pk"
+    },
+    "ships": [
+     {
+      "x": 0.3,
+      "y": 0.8,
+      "s": 0.85,
+      "face": 1
+     },
+     {
+      "x": 0.68,
+      "y": 0.86,
+      "s": 0.95,
+      "face": -1
+     }
+    ],
+    "labels": [
+     {
+      "text": "Takashima, 1281",
+      "x": 0.8,
+      "y": 0.36,
+      "at": "isl",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   },
+   "chapter": "The Last Night"
+  },
+  {
+   "type": "mi_bay",
+   "text": "Thousands, so close you could walk from deck to deck. And then the sky turns black.",
+   "visual": "Close on the packed junks: three big hulls side by side almost touching, red pennants flapping; on 'black' a wall of black storm cloud rolls down over the sky.",
+   "title": {
+    "white": "Packed"
+   },
+   "cues": {
+    "cl": "close",
+    "bk": "black"
+   },
+   "params": {
+    "horizon": 0.5,
+    "island": false,
+    "dark": "bk",
+    "fleet": {
+     "n": 18,
+     "s0": 0.22,
+     "s1": 0.36
+    },
+    "ships": [
+     {
+      "x": 0.22,
+      "y": 0.78,
+      "s": 0.85,
+      "face": 1
+     },
+     {
+      "x": 0.52,
+      "y": 0.8,
+      "s": 0.9,
+      "face": 1
+     },
+     {
+      "x": 0.82,
+      "y": 0.84,
+      "s": 0.95,
+      "face": 1
+     }
+    ],
+    "labels": [
+     {
+      "text": "deck to deck",
+      "x": 0.37,
+      "y": 0.2,
+      "at": "cl",
+      "size": 66,
+      "arrow": [
+       0.37,
+       0.5
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     960,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mi_storm",
+   "text": "This was the biggest invasion fleet the world had ever seen. And in one night, most of it vanished.",
+   "visual": "Storm at sea: huge breaking waves, rain, a lightning bolt; the packed junks pitch wildly and on 'vanished' sink one after another into the waves; a big junk's mast snaps.",
+   "title": {
+    "white": "One night"
+   },
+   "cues": {
+    "bg": "biggest",
+    "vn": "vanished"
+   },
+   "params": {
+    "horizon": 0.5,
+    "fleet": {
+     "n": 22,
+     "gone": "vn",
+     "s0": 0.18,
+     "s1": 0.34
+    },
+    "bolts": [
+     "bg",
+     "vn"
+    ],
+    "ships": [
+     {
+      "x": 0.5,
+      "y": 0.82,
+      "s": 0.95,
+      "face": 1,
+      "mast": "vn",
+      "sink": "vn"
+     }
+    ],
+    "labels": [
+     {
+      "text": "biggest fleet ever",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "bg",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mi_storm",
+   "text": "Japan called it kamikaze, the divine wind. But was Japan really saved by the gods?",
+   "visual": "Rain-lashed rocky shore at left with the fez narrator standing on it; behind him the storm sea with broken junks; he holds up a sign 'DIVINE WIND?' on 'divine', then jumps back in shock on 'gods'.",
+   "title": {
+    "white": "Kamikaze"
+   },
+   "cues": {
+    "dv": "divine",
+    "gd": "gods"
+   },
+   "params": {
+    "horizon": 0.5,
+    "fleet": {
+     "n": 12,
+     "s0": 0.18,
+     "s1": 0.3
+    },
+    "bolts": [
+     "gd"
+    ],
+    "bolt_x": 0.7,
+    "shore": {
+     "side": "left",
+     "w": 0.46,
+     "y": 0.86,
+     "wall": false
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.24,
+      "y": 0.8,
+      "scale": 0.95,
+      "face": "right",
+      "pose": "idle",
+      "at": "dv",
+      "then": "hold",
+      "text": "DIVINE WIND?",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "gd",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mi_seabed",
+   "text": "Divers have searched this seabed for forty years. And last month, they pulled up something nobody expected.",
+   "visual": "Underwater: a diver with a gold air tank glides over the dark mud, torch beam sweeping, old hull ribs sticking out of the seabed; on 'nobody' a red question mark '?' pops over the mud.",
+   "title": {
+    "white": "The seabed"
+   },
+   "cues": {
+    "fy": "forty",
+    "nb": "nobody"
+   },
+   "params": {
+    "mode": "search",
+    "labels": [
+     {
+      "text": "40 years of diving",
+      "x": 0.62,
+      "y": 0.2,
+      "at": "fy",
+      "size": 62
+     },
+     {
+      "text": "?",
+      "x": 0.72,
+      "y": 0.5,
+      "at": "nb",
+      "size": 180,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "It all started in 1268.",
+   "visual": "CHAPTER 1 / 6 card: blue disc with 1, title 'The Khan's Letter'.",
+   "title": {},
+   "cues": {
+    "n": "started",
+    "title": "1268"
+   },
+   "params": {
+    "n": 1,
+    "total": 6,
+    "title": "The Khan's Letter",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Khan's Letter"
+  },
+  {
+   "type": "mi_court",
+   "text": "Kublai Khan, grandson of Genghis Khan, ruled the largest empire on Earth.",
+   "visual": "A throne hall with red pillars and gold banners swaying: Kublai Khan, black beard and gold crown, sits on a red throne on a stepped dais, two helmeted guards with spears; note 'Kublai Khan' and, on 'largest', red 'largest empire on Earth'.",
+   "title": {
+    "white": "Kublai Khan"
+   },
+   "cues": {
+    "kk": "Kublai",
+    "lg": "largest"
+   },
+   "params": {
+    "mode": "khan",
+    "ruler": {
+     "x": 0.5,
+     "s": 0.9,
+     "pose": "sit",
+     "at": "lg",
+     "then": "point",
+     "dir": 20,
+     "emotion": "happy"
+    },
+    "labels": [
+     {
+      "text": "Kublai Khan",
+      "x": 0.5,
+      "y": 0.1,
+      "at": "kk",
+      "size": 72,
+      "font": "serif"
+     },
+     {
+      "text": "largest empire on Earth",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "lg",
+      "size": 58,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_letter",
+   "text": "And he sent Japan a letter. It was polite. Then came the last line: nobody wants to use force, do they?",
+   "visual": "Close-up of an unrolled handscroll letter: columns of brush characters appear right to left; on 'last' a red square seal stamps down; on 'force' a red note 'use force?' with an arrow to the last column.",
+   "title": {
+    "white": "The letter",
+    "gray": "1268"
+   },
+   "cues": {
+    "lt": "letter",
+    "ls": "last",
+    "fo": "force",
+    "polite": "polite"
+   },
+   "params": {
+    "mode": "letter",
+    "write": "lt",
+    "seal": "ls",
+    "seal_x": 0.3,
+    "seal_y": 0.62,
+    "labels": [
+     {
+      "text": "polite...",
+      "x": 0.82,
+      "y": 0.73,
+      "at": "polite",
+      "size": 60
+     },
+     {
+      "text": "use force?",
+      "x": 0.52,
+      "y": 0.73,
+      "at": "fo",
+      "size": 72,
+      "color": "red",
+      "arrow": [
+       0.34,
+       0.6
+      ]
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mi_court",
+   "text": "Here's the thing. The real power in Japan was a samurai regent named Hojo Tokimune, and he was just seventeen.",
+   "visual": "A Kamakura hall with paper shoji screens and tatami: young regent Hojo Tokimune sits on a low dais fanning himself; the fez narrator walks in from the right and points at him; note 'Hojo Tokimune', then red 'age 17' on 'seventeen'.",
+   "title": {
+    "white": "Tokimune"
+   },
+   "cues": {
+    "rp": "regent",
+    "sv": "seventeen"
+   },
+   "params": {
+    "mode": "shogun",
+    "ruler": {
+     "x": 0.42,
+     "s": 0.85,
+     "pose": "sit",
+     "emotion": "angry"
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.95,
+      "to": 0.74,
+      "walk_at": 0.2,
+      "walk_dur": 1.6,
+      "y": 0.84,
+      "scale": 0.85,
+      "face": "left",
+      "pose": "idle",
+      "at": "rp",
+      "then": "point",
+      "dir": 10,
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Hojo Tokimune",
+      "x": 0.42,
+      "y": 0.1,
+      "at": "rp",
+      "size": 72,
+      "font": "serif"
+     },
+     {
+      "text": "age 17",
+      "x": 0.6,
+      "y": 0.22,
+      "at": "sv",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_letter",
+   "text": "So what did he write back? Nothing, not a single word. More envoys came, and they went home empty-handed too.",
+   "visual": "Close-up of a blank sheet of paper on its scroll rods; a brush hovers above it, a drop of ink falls, but nothing is written; red stamp 'NO REPLY' lands on 'Nothing'; on 'envoys' a note 'more envoys...' appears.",
+   "title": {
+    "white": "No reply"
+   },
+   "cues": {
+    "nt": "Nothing",
+    "en": "envoys"
+   },
+   "params": {
+    "mode": "blank",
+    "labels": [
+     {
+      "text": "No reply",
+      "x": 0.36,
+      "y": 0.46,
+      "at": "nt",
+      "stamp": true,
+      "color": "red",
+      "size": 110
+     },
+     {
+      "text": "more envoys, same silence",
+      "x": 0.36,
+      "y": 0.7,
+      "at": "en",
+      "size": 60
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "title",
+   "text": "To a man who ruled half the world, silence was an answer. And it was the wrong one!",
+   "visual": "Giant words 'Silence' / 'was an answer' word by word, 'Silence' in a red box; the fez narrator beside them thinks, hand on chin, then points at the words on 'answer'.",
+   "title": {
+    "white": "Silence"
+   },
+   "cues": {
+    "w0": "man",
+    "an": "answer"
+   },
+   "params": {
+    "lines": [
+     "Silence",
+     "was an answer"
+    ],
+    "highlight": [
+     "Silence"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.9,
+     "at": "an",
+     "then": "point",
+     "emotion": "worried"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In 1274, Kublai sent his ships.",
+   "visual": "CHAPTER 2 / 6 card: blue disc with 2, title 'The First Landing'.",
+   "title": {},
+   "cues": {
+    "n": "1274",
+    "title": "Kublai",
+    "line": "ships"
+   },
+   "params": {
+    "n": 2,
+    "total": 6,
+    "title": "The First Landing",
+    "label": "CHAPTER"
+   },
+   "chapter": "The First Landing"
+  },
+  {
+   "type": "mi_map",
+   "text": "Historians think around 900 ships sailed from Korea, carrying maybe 30,000 men. In November, they landed at Hakata Bay.",
+   "visual": "Full-frame old map: China coast, the Korean peninsula, Tsushima, Iki and Kyushu; a red dashed route with ship icons runs from southern Korea past Tsushima and Iki to Hakata Bay; notes 'about 900 ships', 'maybe 30,000 men'; 'Hakata Bay' in red on 'Hakata'.",
+   "title": {
+    "white": "1274"
+   },
+   "cues": {
+    "rt": "sailed",
+    "mn": "men",
+    "hk": "Hakata"
+   },
+   "params": {
+    "bounds": [
+     124,
+     134,
+     31.5,
+     37.5
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        128.6,
+        35.0
+       ],
+       [
+        129.0,
+        34.6
+       ],
+       [
+        129.5,
+        34.0
+       ],
+       [
+        129.75,
+        33.8
+       ],
+       [
+        130.2,
+        33.65
+       ],
+       [
+        130.38,
+        33.62
+       ]
+      ],
+      "at": "rt",
+      "dur": 3.2,
+      "fleet": 7
+     }
+    ],
+    "places": [
+     {
+      "name": "KOREA",
+      "x": 127.2,
+      "y": 36.3,
+      "at": 0.1,
+      "dot": false,
+      "size": 64,
+      "anchor": "middle"
+     },
+     {
+      "name": "Tsushima",
+      "x": 129.4,
+      "y": 34.45,
+      "at": 0.3,
+      "dot": false,
+      "dx": 40
+     },
+     {
+      "name": "Iki",
+      "x": 129.75,
+      "y": 33.8,
+      "at": "mn",
+      "dot": false,
+      "dx": 36,
+      "dy": -26
+     },
+     {
+      "name": "Hakata Bay",
+      "x": 130.38,
+      "y": 33.62,
+      "at": "hk",
+      "color": "red",
+      "dx": 26,
+      "dy": -34
+     },
+     {
+      "name": "KYUSHU",
+      "x": 130.9,
+      "y": 32.6,
+      "at": 0.4,
+      "dot": false,
+      "size": 60,
+      "anchor": "middle"
+     }
+    ],
+    "seas": [
+     {
+      "name": "Korea Strait",
+      "x": 128.4,
+      "y": 33.9
+     }
+    ],
+    "labels": [
+     {
+      "text": "about 900 ships",
+      "x": 0.26,
+      "y": 0.52,
+      "at": "rt",
+      "size": 62
+     },
+     {
+      "text": "maybe 30,000 men",
+      "x": 0.26,
+      "y": 0.62,
+      "at": "mn",
+      "size": 62
+     }
+    ]
+   },
+   "set": false,
+   "source": "Britannica"
+  },
+  {
+   "type": "mi_beach",
+   "text": "And the samurai were in for a shock. A samurai expected a battle to start with a challenge: one warrior, his name, his family. The invaders didn't care.",
+   "visual": "Hakata beach: in front at left a single samurai with a horned helmet and bow steps forward and calls out (sound arcs); across the sand at right a dense block of invaders with round shields and spears; on 'care' the block marches forward and the samurai jumps back in shock.",
+   "title": {
+    "white": "Hakata",
+    "gray": "1274"
+   },
+   "cues": {
+    "ch": "challenge",
+    "nm": "name",
+    "cr": "care"
+   },
+   "params": {
+    "sea": 0.5,
+    "ships": [
+     {
+      "x": 0.6,
+      "y": 0.52,
+      "s": 0.22
+     },
+     {
+      "x": 0.8,
+      "y": 0.53,
+      "s": 0.26,
+      "face": -1
+     },
+     {
+      "x": 0.4,
+      "y": 0.52,
+      "s": 0.2
+     }
+    ],
+    "samurai": [
+     {
+      "x": 0.2,
+      "s": 0.95,
+      "pose": "point",
+      "face": "right",
+      "dir": 30,
+      "call": "ch",
+      "at": "cr",
+      "then": "shock",
+      "emotion": "surprised",
+      "bow": true
+     }
+    ],
+    "blocks": [
+     {
+      "x": 0.62,
+      "y": 0.88,
+      "cols": 6,
+      "rows": 3,
+      "s": 1.5,
+      "face": -1,
+      "march": {
+       "to": 0.5,
+       "at": "cr",
+       "dur": 1.6
+      }
+     }
+    ],
+    "labels": [
+     {
+      "text": "\"I am...\"",
+      "x": 0.36,
+      "y": 0.26,
+      "at": "nm",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_beach",
+   "text": "They fought in tight blocks that moved to the beat of drums. They shot clouds of arrows.",
+   "visual": "Wider beach: two dense invader blocks march left to the beat of a big red war drum that pulses; on 'arrows' clouds of arrows arc from the blocks towards the samurai line at left.",
+   "title": {
+    "white": "Drums"
+   },
+   "cues": {
+    "bl": "blocks",
+    "dr": "drums",
+    "ar": "arrows"
+   },
+   "params": {
+    "sea": 0.48,
+    "ships": [
+     {
+      "x": 0.5,
+      "y": 0.5,
+      "s": 0.2
+     },
+     {
+      "x": 0.7,
+      "y": 0.51,
+      "s": 0.24,
+      "face": -1
+     }
+    ],
+    "blocks": [
+     {
+      "x": 0.56,
+      "y": 0.8,
+      "cols": 5,
+      "rows": 3,
+      "s": 1.2,
+      "face": -1,
+      "drum": true,
+      "at": "bl",
+      "march": {
+       "to": 0.48,
+       "at": "bl",
+       "dur": 3
+      }
+     },
+     {
+      "x": 0.7,
+      "y": 0.94,
+      "cols": 5,
+      "rows": 2,
+      "s": 1.4,
+      "face": -1,
+      "at": "bl"
+     }
+    ],
+    "samurai": [
+     {
+      "x": 0.08,
+      "s": 0.8,
+      "pose": "idle",
+      "face": "right",
+      "bow": true,
+      "at": "ar",
+      "then": "shock"
+     },
+     {
+      "x": 0.2,
+      "s": 0.85,
+      "pose": "idle",
+      "face": "right",
+      "bow": true,
+      "at": "ar",
+      "then": "shock"
+     }
+    ],
+    "volleys": [
+     {
+      "x0": 0.62,
+      "y0": 0.6,
+      "x1": 0.14,
+      "y1": 0.62,
+      "at": "ar",
+      "n": 16
+     }
+    ],
+    "labels": [
+     {
+      "text": "boom... boom...",
+      "x": 0.42,
+      "y": 0.18,
+      "at": "dr",
+      "size": 62,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_bomb",
+   "text": "And they threw something Japan had never seen: clay bombs packed with gunpowder.",
+   "visual": "Close-up on the sand: a round clay bomb with a short fizzing fuse sits in front of us, shivering; on 'gunpowder' it bursts in a gold flash with an ink shock ring, shards and smoke; red note 'clay bomb' on 'clay'.",
+   "title": {
+    "white": "Bombs"
+   },
+   "cues": {
+    "cl": "clay",
+    "at": "gunpowder"
+   },
+   "params": {
+    "x": 0.5,
+    "y": 0.78,
+    "r": 170,
+    "at": "at",
+    "labels": [
+     {
+      "text": "clay bomb",
+      "x": 0.64,
+      "y": 0.34,
+      "at": "cl",
+      "size": 76,
+      "color": "red",
+      "arrow": [
+       0.56,
+       0.5
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 907
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mi_scroll",
+   "text": "We know because a samurai named Takezaki Suenaga paid for a scroll of his own deeds. And right above his wounded horse, a bomb is exploding.",
+   "visual": "An unrolled handscroll painting in the style of the Mongol invasion scroll: a samurai with horned helmet and bow on a rearing horse, arrows flying across from the left; on 'exploding' a round bomb above the horse bursts in a gold flash; note 'Takezaki Suenaga'.",
+   "title": {
+    "white": "The scroll"
+   },
+   "cues": {
+    "tz": "Takezaki",
+    "ex": "exploding"
+   },
+   "params": {
+    "bomb": "ex",
+    "labels": [
+     {
+      "text": "Takezaki Suenaga",
+      "x": 0.3,
+      "y": 0.66,
+      "at": "tz",
+      "size": 62
+     }
+    ]
+   },
+   "set": false,
+   "source": "Moko Shurai Ekotoba"
+  },
+  {
+   "type": "mi_bay",
+   "text": "By nightfall, the defenders had fallen back. But the next morning, people looked out at the bay and froze. The fleet was gone.",
+   "visual": "Dawn over an empty Hakata Bay, a pale sun low on the horizon: only calm waves; on the shore at left the fez narrator holds a spyglass, looks out, then jumps back in shock on 'gone'; note 'gone!' in red.",
+   "title": {
+    "white": "Morning"
+   },
+   "cues": {
+    "mo": "morning",
+    "gn": "gone"
+   },
+   "params": {
+    "horizon": 0.52,
+    "island": {
+     "x": 0.7,
+     "w": 0.4,
+     "h": 0.05
+    },
+    "sun": {
+     "x": 0.72,
+     "y": 0.36
+    },
+    "shore": {
+     "side": "left",
+     "w": 0.42,
+     "y": 0.86,
+     "wall": false
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.22,
+      "y": 0.8,
+      "scale": 0.95,
+      "face": "right",
+      "pose": "look",
+      "at": "gn",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "gone!",
+      "x": 0.62,
+      "y": 0.64,
+      "at": "gn",
+      "size": 110,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mi_storm",
+   "text": "Some records say a storm caught it on the way home. Historians still argue about that storm. But one thing was sure: they would be back.",
+   "visual": "Far out at sea in a storm: a few junks sail away to the right into rain and lightning, rolling; note 'a storm? still debated' on 'argue'; on 'back' red note 'they'll be back'.",
+   "title": {
+    "white": "A storm?"
+   },
+   "cues": {
+    "st": "storm",
+    "ag": "argue",
+    "bk": "back"
+   },
+   "params": {
+    "horizon": 0.52,
+    "fleet": {
+     "n": 10,
+     "x0": 0.4,
+     "x1": 0.95,
+     "s0": 0.16,
+     "s1": 0.26
+    },
+    "bolts": [
+     "st"
+    ],
+    "bolt_x": 0.8,
+    "ships": [
+     {
+      "x": 0.3,
+      "to": 0.6,
+      "y": 0.8,
+      "s": 0.75,
+      "face": 1
+     }
+    ],
+    "labels": [
+     {
+      "text": "a storm? still debated",
+      "x": 0.56,
+      "y": 0.22,
+      "at": "ag",
+      "size": 62
+     },
+     {
+      "text": "they'll be back",
+      "x": 0.74,
+      "y": 0.36,
+      "at": "bk",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "So Japan did something simple. It built a wall.",
+   "visual": "CHAPTER 3 / 6 card: blue disc with 3, title 'The Wall'.",
+   "title": {},
+   "cues": {
+    "n": "Japan",
+    "title": "simple",
+    "line": "wall"
+   },
+   "params": {
+    "n": 3,
+    "total": 6,
+    "title": "The Wall",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Wall"
+  },
+  {
+   "type": "mi_beach",
+   "text": "From 1276, workers stacked stone along the beaches of Hakata Bay, about twenty kilometers of it.",
+   "visual": "The beach at Hakata: workers in straw hats carry round stones back and forth, and a long stone wall rises along the sand row by row, left to right; note 'from 1276' and, on 'twenty', red 'about 20 km'.",
+   "title": {
+    "white": "The wall",
+    "gray": "1276"
+   },
+   "cues": {
+    "st": "stacked",
+    "tw": "twenty"
+   },
+   "params": {
+    "sea": 0.46,
+    "ground": 0.74,
+    "wall": {
+     "x0": 0.0,
+     "x1": 1.0,
+     "y": 0.74,
+     "h": 0.15,
+     "build": "st",
+     "dur": 3.6
+    },
+    "workers": [
+     {
+      "x": 0.15,
+      "to": 0.4,
+      "at": 0,
+      "dur": 2.4,
+      "s": 0.55
+     },
+     {
+      "x": 0.85,
+      "to": 0.6,
+      "at": 0.4,
+      "dur": 2.2,
+      "s": 0.6
+     },
+     {
+      "x": 0.45,
+      "to": 0.7,
+      "at": 0.8,
+      "dur": 2.6,
+      "s": 0.5
+     }
+    ],
+    "labels": [
+     {
+      "text": "from 1276",
+      "x": 0.44,
+      "y": 0.22,
+      "at": 0.3,
+      "size": 66
+     },
+     {
+      "text": "about 20 km",
+      "x": 0.72,
+      "y": 0.2,
+      "at": "tw",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 799
+   },
+   "source": "World History Encyclopedia"
+  },
+  {
+   "type": "mi_wall",
+   "text": "Sheer on the sea side, sloped on the inside, so archers could run up and shoot. Every landowner in Kyushu had to guard his own stretch.",
+   "visual": "Cross-section of the stone wall: the sea on the left beats against a sheer stone face; on the right a long stone slope; a samurai archer with a bow runs up the slope on 'run' and aims over the top at 'shoot', an arrow flies out to sea; notes 'sheer' and 'sloped'.",
+   "title": {
+    "white": "Inside view"
+   },
+   "cues": {
+    "sh": "Sheer",
+    "sl": "sloped",
+    "rn": "run",
+    "sh2": "shoot",
+    "ld": "landowner"
+   },
+   "params": {
+    "x": 0.36,
+    "top": 0.4,
+    "run": "rn",
+    "aim": "sh2",
+    "labels": [
+     {
+      "text": "sheer",
+      "x": 0.24,
+      "y": 0.3,
+      "at": "sh",
+      "size": 70,
+      "color": "red",
+      "arrow": [
+       0.35,
+       0.5
+      ]
+     },
+     {
+      "text": "sloped",
+      "x": 0.72,
+      "y": 0.42,
+      "at": "sl",
+      "size": 70,
+      "color": "blue"
+     },
+     {
+      "text": "guard your own stretch",
+      "x": 0.7,
+      "y": 0.2,
+      "at": "ld",
+      "size": 56
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 907
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mi_yard",
+   "text": "And Kublai? He had just conquered southern China, which gave him something new: the shipyards of the Song dynasty.",
+   "visual": "A busy shipyard on slipways: two junk hulls of bare frames getting planked, workers in straw hats swinging hammers with gold sparks; the fez narrator walks in and points at the hulls; note 'Song shipyards'.",
+   "title": {
+    "white": "Shipyards"
+   },
+   "cues": {
+    "cq": "conquered",
+    "sy": "shipyards"
+   },
+   "params": {
+    "hulls": 2,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.96,
+      "to": 0.9,
+      "walk_at": 0.1,
+      "walk_dur": 1.2,
+      "y": 0.84,
+      "scale": 0.8,
+      "face": "left",
+      "pose": "idle",
+      "at": "sy",
+      "then": "point",
+      "dir": 10,
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "southern China",
+      "x": 0.4,
+      "y": 0.26,
+      "at": "cq",
+      "size": 60
+     },
+     {
+      "text": "Song shipyards",
+      "x": 0.62,
+      "y": 0.24,
+      "at": "sy",
+      "size": 74,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "title",
+   "text": "So this time, he didn't send one fleet. He sent two!",
+   "visual": "Giant words 'Not one fleet.' / 'Two fleets!' word by word, 'Two' in a red box.",
+   "title": {
+    "white": "Two"
+   },
+   "cues": {
+    "w0": "time",
+    "tw": "two"
+   },
+   "params": {
+    "lines": [
+     "Not one fleet.",
+     "Two fleets!"
+    ],
+    "highlight": [
+     "Two"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "1281",
+     "at": "tw"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In 1281, an eastern fleet of about 900 ships left Korea again.",
+   "visual": "CHAPTER 4 / 6 card: blue disc with 4, title 'The Great Fleet Waits'.",
+   "title": {},
+   "cues": {
+    "n": "1281",
+    "title": "eastern",
+    "line": "Korea"
+   },
+   "params": {
+    "n": 4,
+    "total": 6,
+    "title": "The Great Fleet Waits",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Great Fleet Waits"
+  },
+  {
+   "type": "mi_map",
+   "text": "A far bigger fleet sailed from southern China. Old records claim 4,400 ships and over 100,000 men. Historians think the real numbers were smaller.",
+   "visual": "Full-frame old map from China to Japan: a blue dashed route with ship icons leaves Korea for Iki; a much longer red dashed route with more ship icons crosses the East China Sea from southern China; note 'southern fleet' on the red route; on 'claim' a red stamp '4,400 SHIPS?', then 'probably fewer' on 'smaller'.",
+   "title": {
+    "white": "1281"
+   },
+   "cues": {
+    "bg": "bigger",
+    "es": "claim",
+    "sm": "smaller"
+   },
+   "params": {
+    "bounds": [
+     119,
+     135,
+     28.5,
+     38.5
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        128.6,
+        35.0
+       ],
+       [
+        129.2,
+        34.4
+       ],
+       [
+        129.7,
+        33.85
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.6,
+      "color": "blue",
+      "fleet": 4
+     },
+     {
+      "pts": [
+       [
+        121.6,
+        29.9
+       ],
+       [
+        123.5,
+        30.6
+       ],
+       [
+        126.0,
+        31.8
+       ],
+       [
+        128.0,
+        32.8
+       ],
+       [
+        129.4,
+        33.3
+       ]
+      ],
+      "at": "bg",
+      "dur": 3.0,
+      "fleet": 10
+     }
+    ],
+    "places": [
+     {
+      "name": "KOREA",
+      "x": 127.2,
+      "y": 36.6,
+      "at": 0.1,
+      "dot": false,
+      "size": 60,
+      "anchor": "middle"
+     },
+     {
+      "name": "CHINA",
+      "x": 119.8,
+      "y": 31.5,
+      "at": 0.1,
+      "dot": false,
+      "size": 60,
+      "anchor": "middle"
+     },
+     {
+      "name": "KYUSHU",
+      "x": 131.0,
+      "y": 32.4,
+      "at": 0.2,
+      "dot": false,
+      "size": 56,
+      "anchor": "middle"
+     },
+     {
+      "name": "Takashima",
+      "x": 129.76,
+      "y": 33.31,
+      "at": "es",
+      "color": "red",
+      "dx": -30,
+      "dy": 40,
+      "anchor": "end"
+     }
+    ],
+    "seas": [
+     {
+      "name": "East China Sea",
+      "x": 125.5,
+      "y": 29.6
+     }
+    ],
+    "labels": [
+     {
+      "text": "southern fleet",
+      "x": 0.34,
+      "y": 0.5,
+      "at": "bg",
+      "size": 62
+     },
+     {
+      "text": "4,400 ships?",
+      "x": 0.64,
+      "y": 0.2,
+      "at": "es",
+      "size": 84,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "probably fewer",
+      "x": 0.64,
+      "y": 0.33,
+      "at": "sm",
+      "size": 64
+     }
+    ]
+   },
+   "set": false,
+   "source": "Britannica"
+  },
+  {
+   "type": "mi_bay",
+   "text": "The eastern fleet arrived first, in June. It sailed into Hakata Bay, and found the wall. There was nowhere to land!",
+   "visual": "From the sea: junks sail in from the right towards the shore at left, where a long stone wall runs along the beach with samurai archers standing on top; on 'nowhere' red stamp 'NOWHERE TO LAND'.",
+   "title": {
+    "white": "Hakata",
+    "gray": "June 1281"
+   },
+   "cues": {
+    "jn": "June",
+    "wl": "wall",
+    "nw": "nowhere"
+   },
+   "params": {
+    "horizon": 0.5,
+    "island": false,
+    "fleet": {
+     "n": 16,
+     "x0": 0.45,
+     "x1": 0.98,
+     "s0": 0.16,
+     "s1": 0.28
+    },
+    "ships": [
+     {
+      "x": 1.05,
+      "to": 0.66,
+      "y": 0.8,
+      "s": 0.8,
+      "face": -1,
+      "at": 0,
+      "dur": 3.0
+     }
+    ],
+    "shore": {
+     "side": "left",
+     "w": 0.4,
+     "y": 0.84,
+     "wall": true,
+     "samurai": [
+      {
+       "x": 0.08,
+       "s": 0.42,
+       "face": "right",
+       "bow": true
+      },
+      {
+       "x": 0.18,
+       "s": 0.42,
+       "face": "right",
+       "bow": true,
+       "at": "wl",
+       "then": "point"
+      },
+      {
+       "x": 0.28,
+       "s": 0.42,
+       "face": "right",
+       "bow": true
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "Nowhere to land",
+      "x": 0.62,
+      "y": 0.22,
+      "at": "nw",
+      "stamp": true,
+      "color": "red",
+      "size": 86
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mi_bay",
+   "text": "And at night, samurai rowed out in small boats, climbed aboard, fought, and vanished into the dark.",
+   "visual": "Night on the bay under a black sky: three small boats with rowing samurai in horned helmets glide out from the left towards a big dark junk at right; on 'vanished' they row back into the dark.",
+   "title": {
+    "white": "Night raids"
+   },
+   "cues": {
+    "rw": "rowed",
+    "cl": "climbed",
+    "vn": "vanished"
+   },
+   "params": {
+    "horizon": 0.5,
+    "dark": true,
+    "island": false,
+    "ships": [
+     {
+      "x": 0.76,
+      "y": 0.72,
+      "s": 0.85,
+      "face": -1
+     }
+    ],
+    "boats": [
+     {
+      "x": -0.1,
+      "to": 0.5,
+      "at": "rw",
+      "dur": 2.6,
+      "y": 0.82,
+      "n": 3,
+      "s": 0.6
+     },
+     {
+      "x": -0.2,
+      "to": 0.3,
+      "at": "rw",
+      "dur": 3.0,
+      "y": 0.92,
+      "n": 2,
+      "s": 0.55
+     }
+    ],
+    "labels": [
+     {
+      "text": "night raid",
+      "x": 0.3,
+      "y": 0.2,
+      "at": "cl",
+      "size": 68,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mi_deck",
+   "text": "So the fleet waited for weeks, tens of thousands of men on crowded decks in the summer heat.",
+   "visual": "Close on a junk's deck under a blazing sun: heat shimmer, a mast and rail, rows of crowded soldiers behind; two soldiers sit on the planks; note 'weeks...' and, on 'heat', red 'summer heat'.",
+   "title": {
+    "white": "Waiting"
+   },
+   "cues": {
+    "wk": "weeks",
+    "ht": "heat"
+   },
+   "params": {
+    "dice": 99,
+    "labels": [
+     {
+      "text": "weeks...",
+      "x": 0.3,
+      "y": 0.16,
+      "at": "wk",
+      "size": 74
+     },
+     {
+      "text": "summer heat",
+      "x": 0.72,
+      "y": 0.16,
+      "at": "ht",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_seabed",
+   "text": "And that's what the divers found last month. In the stern of a third wreck: five tiny dice and 29 little game tiles.",
+   "visual": "Close-up on the seabed mud: five small dice and a row of thin game tiles with dot marks lie in the silt; a brush sweeps the mud away; notes 'five dice' and '29 game tiles' on their cues.",
+   "title": {
+    "white": "Third wreck",
+    "gray": "2026"
+   },
+   "cues": {
+    "st": "stern",
+    "dc": "dice",
+    "tl": "tiles"
+   },
+   "params": {
+    "mode": "dice",
+    "find": "st",
+    "labels": [
+     {
+      "text": "five dice",
+      "x": 0.31,
+      "y": 0.18,
+      "at": "dc",
+      "size": 70,
+      "color": "red"
+     },
+     {
+      "text": "29 game tiles",
+      "x": 0.72,
+      "y": 0.18,
+      "at": "tl",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Kokugakuin University"
+  },
+  {
+   "type": "mi_deck",
+   "text": "Some headlines called them playing cards. Soldiers, killing time.",
+   "visual": "The crowded deck: two soldiers sit facing each other and dice tumble across the planks between them; the fez narrator at right holds up a sign 'PLAYING CARDS?' and then shrugs on 'killing'.",
+   "title": {
+    "white": "Killing time"
+   },
+   "cues": {
+    "pc": "playing",
+    "dc": "Soldiers",
+    "kt": "killing"
+   },
+   "params": {
+    "dice": "dc",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.88,
+      "y": 0.84,
+      "scale": 0.85,
+      "face": "left",
+      "pose": "hold",
+      "text": "PLAYING CARDS?",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "kt",
+        "pose": "shrug",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_map",
+   "text": "The southern fleet came late. In August, the two fleets gathered off Takashima, packed close together. But it was typhoon season.",
+   "visual": "Close map of northwest Kyushu: Iki, Hirado and Takashima; a swarm of tiny ship icons packs the water off Takashima; on 'typhoon' a red note 'typhoon season'.",
+   "title": {
+    "white": "August 1281"
+   },
+   "cues": {
+    "lt": "late",
+    "gt": "gathered",
+    "ty": "typhoon"
+   },
+   "params": {
+    "bounds": [
+     128.9,
+     130.7,
+     32.9,
+     34.0
+    ],
+    "swarm": {
+     "x": 129.68,
+     "y": 33.42,
+     "n": 34,
+     "r": 0.13,
+     "at": "gt"
+    },
+    "routes": [
+     {
+      "pts": [
+       [
+        129.1,
+        33.0
+       ],
+       [
+        129.4,
+        33.25
+       ],
+       [
+        129.6,
+        33.38
+       ]
+      ],
+      "at": "lt",
+      "dur": 1.6,
+      "fleet": 4
+     }
+    ],
+    "places": [
+     {
+      "name": "Takashima",
+      "x": 129.76,
+      "y": 33.31,
+      "at": "gt",
+      "color": "red",
+      "dx": 30,
+      "dy": 30
+     },
+     {
+      "name": "Iki",
+      "x": 129.73,
+      "y": 33.78,
+      "at": 0.2,
+      "dot": false,
+      "dx": 50
+     },
+     {
+      "name": "Hakata Bay",
+      "x": 130.38,
+      "y": 33.62,
+      "at": 0.4,
+      "dx": 20,
+      "dy": -30
+     },
+     {
+      "name": "KYUSHU",
+      "x": 130.2,
+      "y": 33.15,
+      "at": 0.3,
+      "dot": false,
+      "size": 60
+     }
+    ],
+    "labels": [
+     {
+      "text": "typhoon season",
+      "x": 0.22,
+      "y": 0.46,
+      "at": "ty",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "Around the fifteenth of August, the typhoon hit.",
+   "visual": "CHAPTER 5 / 6 card: blue disc with 5, title 'The Divine Wind'.",
+   "title": {},
+   "cues": {
+    "n": "fifteenth",
+    "title": "August",
+    "line": "hit"
+   },
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "The Divine Wind",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Divine Wind"
+  },
+  {
+   "type": "mi_storm",
+   "text": "Waves lifted ships and smashed them into each other and onto the rocks.",
+   "visual": "Typhoon: towering breaking waves, rain and lightning; the packed junks heave and crash together; a big junk at front rolls hard and its hull splits on 'smashed'.",
+   "title": {
+    "white": "Typhoon"
+   },
+   "cues": {
+    "lf": "lifted",
+    "sm": "smashed",
+    "rk": "rocks"
+   },
+   "params": {
+    "horizon": 0.48,
+    "fleet": {
+     "n": 20,
+     "s0": 0.2,
+     "s1": 0.36,
+     "gone": "rk"
+    },
+    "bolts": [
+     "lf",
+     "rk"
+    ],
+    "ships": [
+     {
+      "x": 0.36,
+      "y": 0.8,
+      "s": 0.85,
+      "face": 1,
+      "roll": 16
+     },
+     {
+      "x": 0.7,
+      "y": 0.86,
+      "s": 0.95,
+      "face": -1,
+      "split": "sm",
+      "roll": 14
+     }
+    ],
+    "labels": [
+     {
+      "text": "smash!",
+      "x": 0.72,
+      "y": 0.24,
+      "at": "sm",
+      "size": 90,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mi_storm",
+   "text": "Masts snapped. Hulls split open.",
+   "visual": "Close on one junk in the storm: a huge wave lifts it, the main mast snaps on 'snapped' and the hull cracks into two halves on 'split'.",
+   "title": {
+    "white": "Snap"
+   },
+   "cues": {
+    "ms": "snapped",
+    "sp": "split"
+   },
+   "params": {
+    "horizon": 0.42,
+    "fleet": false,
+    "ships": [
+     {
+      "x": 0.5,
+      "y": 0.78,
+      "s": 1.2,
+      "face": 1,
+      "mast": "ms",
+      "split": "sp",
+      "roll": 18,
+      "bold": true
+     }
+    ],
+    "bolts": [
+     "ms"
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "ground": 920,
+    "horizon": 560
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mi_bay",
+   "text": "When the storm passed, most of the fleet was gone. At least half the army was lost. Japan had survived, again.",
+   "visual": "A grey calm sea after the storm: broken planks and a snapped mast float on the water, only two damaged junks without sails remain far away; note 'at least half lost' on 'half'.",
+   "title": {
+    "white": "After"
+   },
+   "cues": {
+    "ps": "passed",
+    "hf": "half",
+    "sv": "survived"
+   },
+   "params": {
+    "horizon": 0.48,
+    "island": {
+     "x": 0.2,
+     "w": 0.3,
+     "h": 0.06
+    },
+    "debris": {
+     "n": 16,
+     "at": "ps"
+    },
+    "ships": [
+     {
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.4,
+      "face": -1,
+      "sail": 0,
+      "roll": 6
+     },
+     {
+      "x": 0.86,
+      "y": 0.62,
+      "s": 0.34,
+      "face": 1,
+      "sail": 0,
+      "roll": 8
+     }
+    ],
+    "labels": [
+     {
+      "text": "at least half lost",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "hf",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   },
+   "source": "Britannica"
+  },
+  {
+   "type": "title",
+   "text": "Temples had prayed for exactly this, so the storm got a holy name: kamikaze.",
+   "visual": "Giant words 'Kamikaze' / 'the divine wind' word by word, 'Kamikaze' in a red box; small note 'temples prayed for it'.",
+   "title": {
+    "white": "Kamikaze"
+   },
+   "cues": {
+    "w0": "Temples",
+    "km": "kamikaze",
+    "note": "prayed"
+   },
+   "params": {
+    "lines": [
+     "Kamikaze",
+     "the divine wind"
+    ],
+    "highlight": [
+     "Kamikaze"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "temples prayed for it",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "mi_bay",
+   "text": "But storms hit ships all the time. So why did this fleet break apart so completely?",
+   "visual": "The calm grey sea with floating wreckage; the fez narrator on a rock at right picks up a broken plank, thinks with hand on chin, then holds up a sign 'WHY?' on 'completely'.",
+   "title": {
+    "white": "Why?"
+   },
+   "cues": {
+    "st": "storms",
+    "wh": "why",
+    "cp": "completely"
+   },
+   "params": {
+    "horizon": 0.48,
+    "island": false,
+    "debris": {
+     "n": 12,
+     "at": 0
+    },
+    "shore": {
+     "side": "right",
+     "w": 0.36,
+     "y": 0.86,
+     "wall": false
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.8,
+      "y": 0.8,
+      "scale": 0.95,
+      "face": "left",
+      "pose": "think",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "cp",
+        "pose": "hold",
+        "text": "WHY?",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 920,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Since the 1980s, divers have searched the mud here.",
+   "visual": "CHAPTER 6 / 6 card: blue disc with 6, title 'What the Divers Found'.",
+   "title": {},
+   "cues": {
+    "n": "1980s",
+    "title": "divers",
+    "line": "mud"
+   },
+   "params": {
+    "n": 6,
+    "total": 6,
+    "title": "What the Divers Found",
+    "label": "CHAPTER"
+   },
+   "chapter": "What the Divers Found"
+  },
+  {
+   "type": "mi_seabed",
+   "text": "They've pulled up thousands of objects: helmets, swords, anchors, and the same clay bombs from the scroll.",
+   "visual": "Underwater over the mud: a diver with a torch glides by while finds appear one by one on their words: an iron helmet, a sword, a stone-stock anchor and a round clay bomb; notes for each.",
+   "title": {
+    "white": "The finds"
+   },
+   "cues": {
+    "th": "thousands",
+    "hm": "helmets",
+    "sw": "swords",
+    "an": "anchors",
+    "bm": "bombs"
+   },
+   "params": {
+    "mode": "finds",
+    "items": [
+     {
+      "kind": "helmet",
+      "x": 0.16,
+      "y": 0.8,
+      "at": "hm",
+      "s": 1.5
+     },
+     {
+      "kind": "sword",
+      "x": 0.4,
+      "y": 0.84,
+      "at": "sw",
+      "s": 1.4
+     },
+     {
+      "kind": "anchor",
+      "x": 0.63,
+      "y": 0.84,
+      "at": "an",
+      "s": 1.3
+     },
+     {
+      "kind": "bomb",
+      "x": 0.86,
+      "y": 0.84,
+      "at": "bm",
+      "s": 1.4
+     }
+    ],
+    "labels": [
+     {
+      "text": "thousands of finds",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "th",
+      "size": 70
+     },
+     {
+      "text": "clay bomb",
+      "x": 0.84,
+      "y": 0.52,
+      "at": "bm",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Archaeology Magazine"
+  },
+  {
+   "type": "mi_log",
+   "text": "Then came real hulls, in 2011, 2014 and 2023.",
+   "visual": "A full-frame dive logbook page lying on a dive-boat table, a blue pen moving: title 'Takashima dive log'; entries appear on their years, each with a small hull sketch: '2011: first hull', '2014: second hull', '2023: third hull', then red '2026: dice and tiles'.",
+   "title": {
+    "white": "Dive log"
+   },
+   "cues": {
+    "a": "2011",
+    "b": "2014",
+    "c": "2023"
+   },
+   "params": {
+    "title": "Takashima dive log",
+    "rows": [
+     {
+      "text": "2011: first hull",
+      "at": "a",
+      "mark": "hull"
+     },
+     {
+      "text": "2014: second hull",
+      "at": "b",
+      "mark": "hull"
+     },
+     {
+      "text": "2023: third hull",
+      "at": "c",
+      "mark": "hull"
+     },
+     {
+      "text": "2026: dice and tiles",
+      "at": 3.2,
+      "mark": "hull",
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mi_seabed",
+   "text": "And the wood told a strange story. Many timbers came from small Yangtze River boats, some with flat bottoms.",
+   "visual": "Underwater: a long wooden hull lies in the mud, keel line, ribs and planks exposed; a diver with a torch measures it; notes 'small river boats?' on 'boats' and red 'flat bottoms' on 'flat'.",
+   "title": {
+    "white": "The wood"
+   },
+   "cues": {
+    "wd": "wood",
+    "bt": "boats",
+    "ft": "flat"
+   },
+   "params": {
+    "mode": "hull",
+    "labels": [
+     {
+      "text": "Yangtze river boats",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "bt",
+      "size": 66
+     },
+     {
+      "text": "flat bottoms",
+      "x": 0.74,
+      "y": 0.28,
+      "at": "ft",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Sasaki, Texas A&M"
+  },
+  {
+   "type": "mi_hull",
+   "text": "River boats, not ocean ships. Many seem to have lacked a strong keel, the spine that holds a sea ship together.",
+   "visual": "Two hull cross-sections floating side by side: left a deep V-shaped sea ship with a thick keel (blue note 'keel'), right a flat river boat; the fez narrator at the bottom points at the keel on 'keel'; a wave rolls in and the flat boat tips hard.",
+   "title": {
+    "white": "No keel"
+   },
+   "cues": {
+    "rb": "River",
+    "kl": "keel",
+    "wave": "spine"
+   },
+   "params": {
+    "water": 0.42,
+    "wave": "wave",
+    "crack": 99,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.97,
+      "scale": 0.6,
+      "face": "left",
+      "pose": "idle",
+      "at": "kl",
+      "then": "point",
+      "dir": 40,
+      "emotion": "surprised"
+     }
+    ],
+    "labels": [
+     {
+      "text": "ocean ship",
+      "x": 0.28,
+      "y": 0.13,
+      "at": 0.3,
+      "size": 62
+     },
+     {
+      "text": "river boat",
+      "x": 0.72,
+      "y": 0.13,
+      "at": "rb",
+      "size": 62,
+      "color": "red"
+     },
+     {
+      "text": "keel",
+      "x": 0.14,
+      "y": 0.72,
+      "at": "kl",
+      "size": 66,
+      "color": "blue",
+      "arrow": [
+       0.26,
+       0.66
+      ]
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "mi_yard",
+   "text": "Others were rushed out of the shipyards to meet a deadline.",
+   "visual": "The shipyard again: workers hammer twice as fast, sparks flying, half-planked hulls; red stamp 'RUSH JOB' lands on 'rushed', note 'deadline!' on 'deadline'.",
+   "title": {
+    "white": "Rush job"
+   },
+   "cues": {
+    "rs": "rushed",
+    "dl": "deadline"
+   },
+   "params": {
+    "hulls": 2,
+    "rush": "rs",
+    "labels": [
+     {
+      "text": "Rush job",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "rs",
+      "stamp": true,
+      "color": "red",
+      "size": 96
+     },
+     {
+      "text": "deadline!",
+      "x": 0.82,
+      "y": 0.34,
+      "at": "dl",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mi_hull",
+   "text": "Kublai's fleet was huge on paper, but much of it was never built for the open sea, let alone a typhoon.",
+   "visual": "Close-up: one flat-bottomed river boat in a rough sea; a big wave rolls in, tips it hard and a red crack splits its bottom on 'typhoon', water spurting in.",
+   "title": {
+    "white": "Doomed"
+   },
+   "cues": {
+    "pp": "paper",
+    "wave": "open",
+    "ty": "typhoon"
+   },
+   "params": {
+    "single": true,
+    "water": 0.5,
+    "wave": "wave",
+    "crack": "ty",
+    "labels": [
+     {
+      "text": "huge on paper",
+      "x": 0.36,
+      "y": 0.3,
+      "at": "pp",
+      "size": 66
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mi_log",
+   "text": "So was Japan saved by a wind from the gods? By a storm, yes. But also by a stone wall that kept the fleet waiting for weeks, and by ships that were built to fail.",
+   "visual": "A full-frame notebook page on the table, titled 'What saved Japan?': green ticks appear with 'a typhoon', 'a stone wall', 'ships built to fail' on their words; red pill 'Not just the gods' at the bottom.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "st": "storm",
+    "wl": "wall",
+    "sh": "ships",
+    "pill": "fail"
+   },
+   "params": {
+    "title": "What saved Japan?",
+    "rows": [
+     {
+      "text": "a typhoon",
+      "mark": "check",
+      "at": "st"
+     },
+     {
+      "text": "a stone wall",
+      "mark": "check",
+      "at": "wl"
+     },
+     {
+      "text": "ships built to fail",
+      "mark": "check",
+      "at": "sh"
+     }
+    ],
+    "pill": {
+     "text": "Not just the gods",
+     "color": "red",
+     "at": "pill"
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mi_beach",
+   "text": "What do you think really saved Japan: the storm, the wall, or the samurai? Tell me in the comments, and subscribe to Stickstory for more history that's stranger than the legend.",
+   "visual": "Evening at the Hakata stone wall: the fez narrator stands on the sand in front of the wall holding a sign 'STORM, WALL OR SAMURAI?', a samurai on the wall top; he waves goodbye on 'subscribe'.",
+   "title": {
+    "white": "Your call"
+   },
+   "cues": {
+    "th": "think",
+    "sb": "subscribe"
+   },
+   "params": {
+    "sea": 0.46,
+    "ground": 0.74,
+    "dusk": true,
+    "wall": {
+     "x0": 0.0,
+     "x1": 1.0,
+     "y": 0.74,
+     "h": 0.15,
+     "build": false
+    },
+    "ships": [
+     {
+      "x": 0.7,
+      "y": 0.47,
+      "s": 0.18
+     }
+    ],
+    "samurai": [
+     {
+      "x": 0.2,
+      "y": 0.6,
+      "s": 0.4,
+      "face": "right",
+      "bow": true
+     }
+    ],
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.6,
+      "y": 0.92,
+      "scale": 0.95,
+      "face": "left",
+      "pose": "hold",
+      "text": "STORM, WALL OR SAMURAI?",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "sb",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 799
+   }
+  }
+ ]
+}

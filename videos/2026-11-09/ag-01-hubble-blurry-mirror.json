@@ -1,0 +1,473 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "hubble-blurry-mirror",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-newsprint",
+ "cover": {
+  "lines": [
+   "It couldn't",
+   "see"
+  ],
+  "highlight": [
+   "see"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": -1,
+   "x": 720,
+   "y": 1870,
+   "scale": 1.15
+  },
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "NASA Science — Hubble Optics (mirror curvature off by 1/50 the width of a human hair; COSTAR)",
+   "url": "https://science.nasa.gov/mission/hubble/observatory/design/optics/"
+  },
+  {
+   "title": "NASA Technical Reports — The Hubble Space Telescope Optical Systems Failure Report (1990; null corrector lens 1.3 mm out of place)",
+   "url": "https://ntrs.nasa.gov/citations/19910003124"
+  },
+  {
+   "title": "ESA/Hubble — Servicing Mission 1 (December 1993, COSTAR and WFPC2)",
+   "url": "https://esahubble.org/about/history/servicing_mission_1/"
+  },
+  {
+   "title": "Space.com — 30 years ago, astronauts saved the Hubble Space Telescope",
+   "url": "https://www.space.com/hubble-space-telescope-nasa-astronaut-servicing-missions-30-years"
+  }
+ ],
+ "youtube": {
+  "title": "Hubble Space Telescope: Why Was It Born Blurry?",
+  "description": "The Hubble Space Telescope reached orbit in April 1990 and could not see clearly. Its first pictures came back blurry. How do you build the most precise mirror in history and still get it wrong?\n\nHubble's 2.4 meter main mirror was polished beautifully smooth, but to the wrong shape: the error was about one fiftieth of the width of a human hair, according to NASA. The cause was the tool used to test it, where one lens sat 1.3 millimeters out of place. In December 1993, astronauts on the shuttle Endeavour flew up and installed corrective optics, Hubble's glasses.\n\nSubscribe to Stickstory for a true story like this every day. Would you have spotted a mistake that small? Tell me in the comments!\n\n#shorts #hubble #stickstory",
+  "tags": [
+   "hubble space telescope",
+   "hubble telescope",
+   "hubble mirror flaw",
+   "hubble space telescope mirror",
+   "hubble blurry images",
+   "hubble repair mission",
+   "costar",
+   "sts-61",
+   "nasa",
+   "space telescope",
+   "spherical aberration",
+   "space history",
+   "space shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-09T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "hu_space",
+   "text": "NASA launched a telescope that couldn't see.",
+   "visual": "Hook frame in orbit: the Hubble Space Telescope (silver tube, open aperture door, two blue solar wings) drifts and turns in the dark-blue sky full of twinkling stars, aiming at a big blurred star smeared into halo rings in the upper right, a pale view cone between them; the Earth's curve with drifting clouds and green land fills the bottom of the frame; on 'see' the blur swells; the fez host big in the lower left in shock as the cover overlay.",
+   "title": {
+    "white": "Hubble"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1880,
+    "horizon": 1700
+   },
+   "cues": {
+    "hit": "see"
+   },
+   "params": {
+    "mode": "hook",
+    "star": [
+     0.78,
+     0.33
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hu_space",
+   "text": "In April 1990, Hubble reached orbit,",
+   "visual": "Space above the Earth: the space shuttle Discovery in profile with its payload bay open; its robot arm lifts Hubble up out of the bay while the solar wings unroll and the aperture door swings open; red card 'APRIL 1990'; the Earth's curve fills the bottom.",
+   "title": {
+    "white": "Launch",
+    "gray": "Discovery"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1880,
+    "horizon": 1700
+   },
+   "cues": {
+    "y": "1990"
+   },
+   "params": {
+    "mode": "deploy",
+    "labels": [
+     {
+      "text": "APRIL 1990",
+      "x": 0.74,
+      "y": 0.17,
+      "at": "y",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "up"
+   }
+  },
+  {
+   "type": "hu_room",
+   "text": "and its first photos came back blurry.",
+   "visual": "Mission control: a huge monitor on the wall shows the first image, a star smeared into a blurry halo with two smaller smudges; two scientists in lab coats stand behind a console with blinking buttons and stare up at it; the fez host on the right points at the screen, then jumps back in shock on 'blurry'; the console front fills the bottom of the frame.",
+   "title": {
+    "white": "First image"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "blurry"
+   },
+   "params": {
+    "mode": "blurry",
+    "kasif": {
+     "x": 0.86,
+     "y": 0.66,
+     "scale": 0.85,
+     "pose": "point",
+     "dir": 40,
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "hu_mirror",
+   "text": "Its huge mirror was perfectly smooth, and the wrong shape.",
+   "visual": "A clean room: the 2.4 meter primary mirror stands on its frame, a glassy blue disc with a centre hole and a reflected grid; on 'smooth' a bright gleam sweeps across it; on 'wrong' the edge ring turns red and the reflected grid bends there; a technician in a white hood, mask and lab coat looks on and raises a hand; a lab bench with glassware fills the bottom; hand label '2.4 m' above, red card 'EDGE TOO FLAT'.",
+   "title": {
+    "white": "The mirror"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "cues": {
+    "smooth": "smooth",
+    "hit": "wrong"
+   },
+   "params": {
+    "mode": "polish",
+    "labels": [
+     {
+      "text": "2.4 m",
+      "x": 0.56,
+      "y": 0.14,
+      "at": 0.3,
+      "size": 72,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 2,
+      "underline": false
+     },
+     {
+      "text": "EDGE TOO FLAT",
+      "x": 0.62,
+      "y": 0.535,
+      "at": "hit",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hu_hair",
+   "text": "The error was one fiftieth of a hair's width.",
+   "visual": "Close-up: one long dark brown hair runs in from the right with a slight curve and ends in a small dark cut-end disc; two callout lines open from its edges onto a big vertical ruler of 50 ticks on the left, measuring the hair's width; on 'fiftieth' one tick and a thin slice of the disc turn red, joined by a red line; red card '1/50'; the mirror's glassy rim with a red sliver and a lab bench fill the bottom.",
+   "title": {
+    "white": "The error"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "source": "NASA",
+   "cues": {
+    "hit": "fiftieth"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "1/50",
+      "x": 0.6,
+      "y": 0.215,
+      "at": "hit",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hu_mirror",
+   "text": "The cause?",
+   "visual": "Close-up on the test tool in the clean room: a tall tube on two legs above the face-up mirror, cut open to show two small mirrors and one lens, a red laser fan running down from it; no people, just the tool and the mirror.",
+   "title": {
+    "white": "Test tool"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "params": {
+    "mode": "test",
+    "slip": false,
+    "tech": false
+   },
+   "camera": {
+    "focus": [
+     454,
+     500
+    ],
+    "zoom": 1.8,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hu_mirror",
+   "text": "One lens in the test tool sat 1.3 millimeters out of place.",
+   "visual": "The clean room, wider: the mirror lies face up, the test tool above it sends a red laser fan onto it; on 'millimeters' the lens slips down out of its green ghost outline and a big magnifier pops up on the right showing the gap with a red double arrow; red card '1.3 mm' right under the magnifier; the technician in a hood watches; a lab bench fills the bottom.",
+   "title": {
+    "white": "The lens"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1190
+   },
+   "source": "NASA failure report",
+   "cues": {
+    "hit": "millimeters"
+   },
+   "params": {
+    "mode": "test",
+    "mag": 215,
+    "magX": 0.7,
+    "magY": 0.28,
+    "labels": [
+     {
+      "text": "1.3 mm",
+      "x": 0.7,
+      "y": 0.465,
+      "at": "hit",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "left"
+   }
+  },
+  {
+   "type": "hu_space",
+   "text": "In 1993, astronauts flew up,",
+   "visual": "Space above the Earth: the shuttle Endeavour in profile with Hubble standing upright in its open payload bay, solar wings spread; an astronaut in a white suit with a gold visor rides the end of the robot arm beside Hubble's open aft doors and works with a tool; red card '1993'; the Earth's curve fills the bottom.",
+   "title": {
+    "white": "Endeavour",
+    "gray": "December 1993"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1880,
+    "horizon": 1700
+   },
+   "cues": {
+    "y": "1993"
+   },
+   "params": {
+    "mode": "service",
+    "labels": [
+     {
+      "text": "1993",
+      "x": 0.8,
+      "y": 0.19,
+      "at": "y",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "right"
+   }
+  },
+  {
+   "type": "hu_space",
+   "text": "and gave Hubble glasses.",
+   "visual": "Close front view of Hubble: its round open tube with the dark aperture, the secondary mirror and four vanes, the door tilted open above, solar wings left and right, the Earth below; on 'glasses' a big pair of ink spectacles drops onto the tube, and through the second lens the stars are sharp with four spikes; hand label 'COSTAR'.",
+   "title": {
+    "white": "The fix"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1880,
+    "horizon": 1700
+   },
+   "cues": {
+    "hit": "glasses"
+   },
+   "params": {
+    "mode": "glasses",
+    "labels": [
+     {
+      "text": "COSTAR",
+      "x": 0.72,
+      "y": 0.17,
+      "at": "hit",
+      "size": 76,
+      "color": "gold",
+      "font": "hand",
+      "card": false,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "hu_room",
+   "text": "One tiny slip blurred the whole universe.",
+   "visual": "Mission control: the big monitor now shows a split screen, BEFORE (the blurred star) on the left and AFTER (a sharp spiral galaxy) wiping in from the right on 'universe'; the two scientists behind the blinking console, one raises an arm; the console front fills the bottom.",
+   "title": {
+    "white": "Fixed"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "universe"
+   },
+   "params": {
+    "mode": "sharp"
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "hu_sky",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Night hills under a starry sky: Hubble crosses the sky as a small glinting craft with a gold trail; the fez host on the hilltop waves, then points up at it on 'story'; tall grass and flowers fill the bottom.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1210
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.42,
+     "y": 0.62,
+     "scale": 0.95,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 60,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

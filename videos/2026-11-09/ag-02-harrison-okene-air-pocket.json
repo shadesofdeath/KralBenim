@@ -1,0 +1,469 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "harrison-okene-air-pocket",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "The hand",
+   "grabbed back"
+  ],
+  "highlight": [
+   "grabbed"
+  ],
+  "scene": 0,
+  "t": 2.4,
+  "focus": [
+   560,
+   1000
+  ],
+  "zoom": 1.3,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 300,
+   "y": 1880,
+   "scale": 1.4
+  },
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "The Maritime Executive (Reuters) — Nigerian cook survives 2 days under sea in shipwreck air bubble",
+   "url": "https://maritime-executive.com/article/Nigerian-Cook-Survives-2-Days-Under-Sea-in-Shipwreck-Air-Bubble-2013-06-12"
+  },
+  {
+   "title": "The Irish Times — Sailor survives three days trapped at bottom of Atlantic",
+   "url": "https://www.irishtimes.com/news/world/africa/video-sailor-survives-three-days-trapped-at-bottom-of-atlantic-1.1616615"
+  },
+  {
+   "title": "KSL / Associated Press — Nigerian survivor almost missed rescue diver",
+   "url": "https://www.ksl.com/article/27984259"
+  }
+ ],
+ "youtube": {
+  "title": "Harrison Okene: How Did He Survive 60 Hours Underwater?",
+  "description": "Harrison Okene spent about 60 hours trapped at the bottom of the sea, and the divers who came for his crew never expected a hand to grab them back.\n\nOn May 26, 2013, the tugboat Jascon-4 capsized in heavy swell off Nigeria and sank upside down, about 30 meters down. Okene, the ship's cook, ended up in a small pocket of air trapped inside the hull, in total darkness, with the water up to his chest. He was the only one of the 12 men on board to survive. When a dive team reached the wreck to recover the crew, the hand they found grabbed back. Even then, he needed about 60 more hours in a decompression chamber before he could breathe normal air again.\n\nSubscribe to Stickstory for a true story like this every day. Could you stay calm in the dark for 60 hours? Tell me in the comments!\n\n#shorts #harrisonokene #survivalstory #stickstory",
+  "tags": [
+   "harrison okene",
+   "harrison okene rescue",
+   "harrison okene air pocket",
+   "jascon 4",
+   "man trapped in sunken ship",
+   "air pocket survival",
+   "survived 60 hours underwater",
+   "sunken tugboat",
+   "shipwreck survivor",
+   "diver finds survivor",
+   "decompression chamber",
+   "survival story",
+   "true survival stories",
+   "ocean",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-09T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ho_hand",
+   "text": "The diver grabbed the hand. It grabbed back.",
+   "visual": "Hook frame inside the sunken hull, all underwater and dark: diagonal hull ribs, a dark doorway on the left; a diver's torch beam cuts in from the top right with specks drifting in it; a limp bare hand and forearm reach out of the doorway into the light; the diver's grey glove on a red drysuit sleeve comes in along the beam and closes on it on 'grabbed'; on 'back' the bare fingers clamp round the glove, both jerk, pale shock strokes burst round the clasp; wreck debris fills the bottom; the fez host big in the lower left in shock as the cover overlay.",
+   "title": {
+    "white": "The wreck"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1500
+   },
+   "cues": {
+    "grab": "grabbed",
+    "hit": "back"
+   },
+   "params": {
+    "mode": "hook"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ho_tug",
+   "text": "In May 2013, a tug capsized off Nigeria,",
+   "visual": "Storm at sea, end-on view of a red tugboat with black tyre fenders, white wheelhouse and mast lights rolling in a heavy swell; red card 'MAY 2013', hand label 'NIGERIA'; on 'capsized' the tug rolls right over until its keel points at the sky, spray flies, the swell grows; dark near swell fills the bottom of the frame.",
+   "title": {
+    "white": "Off Nigeria"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1056,
+    "horizon": 902
+   },
+   "cues": {
+    "y": "2013",
+    "flip": "capsized",
+    "n": "Nigeria"
+   },
+   "params": {
+    "mode": "capsize",
+    "labels": [
+     {
+      "text": "MAY 2013",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "y",
+      "size": 86,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "NIGERIA",
+      "x": 0.7,
+      "y": 0.28,
+      "at": "n",
+      "size": 72,
+      "color": "ink",
+      "font": "hand",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ho_section",
+   "text": "and sank 30 meters.",
+   "visual": "Cross-section of the sea: the surface at the top under a grey sky, water darkening with depth, pale light rays and three fish; the keel-up tug sinks from the surface all the way down and settles upside down on the sandy seabed (rocks, swaying seagrass), a silt puff rises; a red depth arrow draws itself down the right edge and a red card '30 m' pops on '30'.",
+   "title": {
+    "white": "Going down"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 384,
+    "horizon": 384
+   },
+   "source": "Reuters",
+   "cues": {
+    "hit": "30"
+   },
+   "params": {
+    "mode": "sink",
+    "labels": [
+     {
+      "text": "30 m",
+      "x": 0.78,
+      "y": 0.38,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "down"
+   }
+  },
+  {
+   "type": "ho_hull",
+   "text": "Its cook, Harrison Okene, was trapped in the dark.",
+   "visual": "Inside the upturned cabin (under the water: the old ceiling as floor, an upturned table, a fallen lamp): the floor planks are now the ceiling, the door hangs upside down with its handle high, a bunk and its mattress hang overhead, a porthole shows black water with bubbles; dark water up to the chest of the cook (hatless figure, blue T-shirt), who holds on to the upside-down washbasin above him; a floating torch throws a gold beam across the room, it flickers and dies on 'dark' and the room sinks into darkness; label 'HARRISON OKENE'.",
+   "title": {
+    "white": "The cook"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1000
+   },
+   "cues": {
+    "n": "Okene",
+    "dark": "dark"
+   },
+   "params": {
+    "mode": "dark",
+    "labels": [
+     {
+      "text": "HARRISON OKENE",
+      "x": 0.52,
+      "y": 0.24,
+      "at": "n",
+      "size": 62,
+      "color": "paper",
+      "font": "hand",
+      "card": false,
+      "rot": -2,
+      "underline": false,
+      "halo": "ink"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ho_section",
+   "text": "But the upturned hull held a bubble of air,",
+   "visual": "Close-up on the tug lying upside down on the seabed: a cut-away compartment in the hull shows a glowing gold pocket of air at the top over dark water, the cook's head just above the waterline inside it; tiny bubbles; on 'bubble' the air pulses and a gold card 'AIR' pops with an arrow pointing into the pocket.",
+   "title": {
+    "white": "Air pocket"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 384,
+    "horizon": 384
+   },
+   "cues": {
+    "hit": "bubble"
+   },
+   "params": {
+    "mode": "bubble",
+    "arrow": false,
+    "arrowFrom": [
+     0.74,
+     0.455
+    ],
+    "labels": [
+     {
+      "text": "AIR",
+      "x": 0.72,
+      "y": 0.43,
+      "at": "hit",
+      "size": 80,
+      "color": "gold",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     716,
+     955
+    ],
+    "zoom": 2.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ho_glass",
+   "text": "like an upside-down glass in water.",
+   "visual": "Kitchen table: a glass bowl of water on a wooden table whose front with a drawer fills the bottom of the frame; the fez host, surprised, stands on the table and pushes an upside-down drinking glass (clear outline, thick base on top) down into the water; the water rises only a little inside it and a pale pocket of air stays trapped above the inner water line; on 'water' a gold card 'AIR' pops.",
+   "title": {
+    "white": "Try it"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "water"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.24,
+     "scale": 1.3,
+     "emotion": "surprised"
+    },
+    "labels": [
+     {
+      "text": "AIR",
+      "x": 0.82,
+      "y": 0.36,
+      "at": "hit",
+      "size": 90,
+      "color": "gold",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "ho_hull",
+   "text": "For 60 hours, he breathed and waited.",
+   "visual": "The same upside-down cabin in near darkness: the cook holds on to the basin chest-deep in black water (an upturned table and a fallen ceiling lamp on the old ceiling under the water), his breath mists, ripples spread from him, the water creeps up; a big gold counter on the wall climbs from 0 to 60 with 'HOURS' under it and punches on 'waited'.",
+   "title": {
+    "white": "Waiting"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1000
+   },
+   "source": "Reuters",
+   "cues": {
+    "count": "For",
+    "hit": "waited"
+   },
+   "params": {
+    "mode": "wait",
+    "hours": 60
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ho_section",
+   "text": "Then divers came for the crew.",
+   "visual": "The sea cross-section: a dive support ship rocks on the surface on the right; two divers in red drysuits and gold helmets, torch beams pointing down, sink on their hoses towards the upturned tug on the seabed.",
+   "title": {
+    "white": "The divers"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 384,
+    "horizon": 384
+   },
+   "cues": {},
+   "params": {
+    "mode": "divers"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "down"
+   }
+  },
+  {
+   "type": "ho_hand",
+   "text": "That hand was his.",
+   "visual": "Close-up of the clasp from the opening, still underwater in the wreck: the diver's grey glove and the cook's brown hand locked together in the torch beam; behind the clasp, in the dark doorway, the cook's face lit gold by the torch, eyes wide, brows up, mouth open: stunned and scared; red card 'ALIVE' on 'hand'.",
+   "title": {
+    "white": "Found"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1500
+   },
+   "cues": {
+    "hit": "hand"
+   },
+   "params": {
+    "mode": "face",
+    "labels": [
+     {
+      "text": "ALIVE",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "hit",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     430,
+     800
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ho_pocket",
+   "text": "Eleven men never came home. He did, thanks to one bubble of air.",
+   "visual": "The pocket of air, big and still: riveted keel plates overhead, a glowing gold dome of trapped air under them; Okene's head and shoulders above the calm waterline in the middle, lit, breathing slowly, ripples spreading from him; on 'Eleven' eleven small gold lights appear in the dark water below and sink and go out one by one (abstract, no bodies); on 'bubble' the pocket's glow pulses.",
+   "title": {
+    "white": "One bubble"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1000
+   },
+   "cues": {
+    "gone": "Eleven",
+    "hit": "bubble"
+   },
+   "params": {},
+   "camera": {
+    "focus": [
+     540,
+     800
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ho_tug",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Calm dusk sea: the dive support ship side-on, the fez host on its after deck waves, then points at the viewer on 'story'; a thin string of gold bubbles rises to the surface beside the ship; water fills the bottom of the frame.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1075,
+    "horizon": 960
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.36,
+     "y": 0.522,
+     "scale": 0.8,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 0,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}
