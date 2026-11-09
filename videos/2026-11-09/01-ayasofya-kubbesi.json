@@ -1,0 +1,167 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "fildisi",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Columbia University, Medieval Architecture: The Collapse of Hagia Sophia's First Dome",
+   "url": "https://projects.mcah.columbia.edu/medieval-architecture/htm/or/ma_or_gloss_collapse.htm"
+  },
+  {
+   "title": "History Today: Sancta Sophia Collapses",
+   "url": "https://www.historytoday.com/archive/months-past/sancta-sophia-collapses"
+  },
+  {
+   "title": "HagiaSophia.com: Hagia Sophia Dome",
+   "url": "https://www.hagiasophia.com/hagia-sophia-dome"
+  },
+  {
+   "title": "World History Encyclopedia: Hagia Sophia",
+   "url": "https://www.worldhistory.org/Hagia_Sophia"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "İlk kubbe",
+   "çöktü"
+  ],
+  "highlight": [
+   "çöktü"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   540,
+   540
+  ],
+  "zoom": 1.4,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Ayasofya'nın ilk kubbesi çöktü.",
+   "type": "bt_ay_dome",
+   "visual": "Işık havuzunda tek başına yassı ilk kubbe ve kırk pencereli kasnağı (nef yok); kubbenin doğu kısmı dağınık taşlar halinde kopmuş, taşlar havada farklı yüksekliklerde dönerek çok yavaş iniyor, iki kırık kenar altın ışıkla yanıyor, toz süzülüyor; kasnak yerinde",
+   "params": {
+    "mode": "hook"
+   }
+  },
+  {
+   "text": "Yıl 558. Kubbe yirmi yaşındaydı.",
+   "type": "bt_ay_church",
+   "visual": "Dışarıdan 6. yüzyıl Ayasofya silueti, minaresiz: pencere halkası üstünde yassı kubbe, iki yarım kubbe, payandalar, alçak yan nefler, servi ağaçları; arkada alçak güneş; üstte italik '558' ve altın çizgi",
+   "params": {
+    "mode": "558",
+    "label": "558"
+   }
+  },
+  {
+   "text": "Ama iki deprem onu çatlatmıştı.",
+   "type": "bt_ay_dome",
+   "visual": "Aynı kesit, yakın (sunak yok): bütün ilk kubbe; 'deprem'de sağda, 'çatlat'ta solda pencere kasnağından tepeye doğru ince birer çatlak kendini çizer",
+   "params": {
+    "mode": "crack"
+   },
+   "cues": {
+    "a": "deprem",
+    "b": "çatlat"
+   }
+  },
+  {
+   "text": "Bir mayıs sabahı doğu kısmı, sunağın üstüne indi.",
+   "type": "bt_ay_dome",
+   "visual": "Nefin içinden kesit: bütün kubbe; 'doğu'da kubbenin doğu kısmı dağınık taşlar halinde kopar, ağır ağır sunağın üstüne düşer ve orada bir moloz yığını olur; sunak yığının altında kaybolur, toz yükselir; batı kısmı ve doğuda kısa bir kalıntı ayakta, kırık kenarlar altın",
+   "params": {
+    "mode": "fall"
+   },
+   "cues": {
+    "hit": "doğu"
+   }
+  },
+  {
+   "text": "Gerisi havada asılı gibi kaldı.",
+   "type": "bt_ay_hang",
+   "visual": "Yakın plan: ışık havuzunda kalan kubbe (batı kısmı + doğuda kalıntı), aradaki boşluk; kırık kenarlar altın, boşluktan toz yavaşça iner; sunak yok",
+   "cues": {
+    "hit": "asılı"
+   }
+  },
+  {
+   "text": "Yeniden kuran bir yeğendi. İlk mimarlardan birinin yeğeni.",
+   "type": "bt_ay_compass",
+   "visual": "Mimar çizim kâğıdı: taban çizgisi, pencere kasnağı, soluk kesik çizgiyle eski yassı profil; bir pergel yavaşça yeni, daha yüksek kubbe yayını çizer; 'yeğen'de üstte italik 'Genç İsidoros' ve altın çizgi",
+   "params": {
+    "label": "Genç İsidoros"
+   },
+   "cues": {
+    "hit": "yeğen"
+   }
+  },
+  {
+   "text": "Kubbeyi daha yükseğe kurdu.",
+   "type": "bt_ay_profile",
+   "visual": "Aynı taban üstünde iki kubbe profili: kesik çizgili ilk kubbe ('537'); 'yükseğe'de yaklaşık %14 daha yüksek ikinci kubbe kendini çizer ('562'), aradaki hilal altın tonla dolar, tepeler arasında altın ok",
+   "params": {
+    "a": "537",
+    "b": "562"
+   },
+   "cues": {
+    "hit": "yükseğe"
+   }
+  },
+  {
+   "text": "Bugün baktığınız kubbe, o ikinci kubbenin yamalı hâlidir.",
+   "type": "bt_ay_dome",
+   "visual": "İçeriden bugünkü yüksek ikinci kubbe, bütün; kırk pencereden içeri ışık hüzmeleri iner, hüzmelerde toz zerreleri süzülür, sunak örtüsü yerinde",
+   "params": {
+    "mode": "inside"
+   },
+   "cues": {
+    "hit": "ikinci"
+   }
+  },
+  {
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_ay_church",
+   "visual": "Alacakaranlıkta bugünkü Ayasofya silueti: daha yüksek kubbe, dört minare kadraj içinde, payandalar; kasnaktaki birkaç pencere yavaşça altın renkte yanar",
+   "params": {
+    "mode": "today"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Ayasofya Kubbesi: İlk Kubbe Neden Yirmi Yılda Çöktü?",
+  "description": "Ayasofya kubbesi aslında ikinci kubbe: ilki 537'de açıldı ve yirmi yıl sonra, 7 Mayıs 558'de doğu kısmı sunağın üstüne çöktü.\n\n553 ve 557 depremleri yassı ilk kubbeyi çatlatmıştı. Çöküşten sonra kubbenin geri kalanı ayakta kaldı. İlk mimarlardan Miletoslu İsidoros'un yeğeni Genç İsidoros kubbeyi daha dik ve yaklaşık altı metre daha yüksek kurdu; Ayasofya 24 Aralık 562'de yeniden açıldı. Bu ikinci kubbe de 989 ve 1346'da kısmen çöktü ve onarıldı: bugün İstanbul'da baktığımız kubbe, onun yamalı hâlidir.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Ayasofya'nın kubbesi bin beş yüz yıldır nasıl ayakta? Yorumlara yaz!\n\n#shorts #ayasofya #istanbul #bizans #düşünbakalım",
+  "tags": [
+   "ayasofya kubbesi",
+   "ayasofya",
+   "ayasofya ilk kubbesi",
+   "ayasofya kubbesi nasıl yapıldı",
+   "ayasofya kubbesi kaç kez çöktü",
+   "ayasofya 558 depremi",
+   "genç isidoros",
+   "miletoslu isidoros",
+   "trallesli anthemios",
+   "justinianus",
+   "bizans mimarisi",
+   "istanbul tarihi",
+   "bizans",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-09T19:00:00+03:00"
+ }
+}
