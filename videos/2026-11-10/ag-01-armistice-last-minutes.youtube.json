@@ -1,0 +1,17 @@
+{
+ "id": "HI11_NY1doE",
+ "thumbnail": false,
+ "url": "https://youtu.be/HI11_NY1doE",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-10T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Armistice Day 1918: Why Did Men Die After the War Ended?",
+ "script": "videos/2026-11-10/ag-01-armistice-last-minutes.json"
+}
