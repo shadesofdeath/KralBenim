@@ -1,0 +1,443 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "livingstone-i-presume",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-newsprint",
+ "cover": {
+  "lines": [
+   "A",
+   "fake",
+   "greeting?"
+  ],
+  "highlight": [
+   "fake"
+  ],
+  "scene": 0,
+  "t": 2.6,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": -1,
+   "x": 845,
+   "y": 1840,
+   "scale": 1.1
+  },
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "Smithsonian Magazine — Stanley Meets Livingstone (Zanzibar, March 1871; Ujiji; the missing journal page)",
+   "url": "https://www.smithsonianmag.com/history/stanley-meets-livingstone-91118102/"
+  },
+  {
+   "title": "Livingstone Online — The Date of the Livingstone-Stanley Meeting (October or November 1871)",
+   "url": "https://livingstoneonline.org/node/204"
+  },
+  {
+   "title": "BRANCH — Matthew Rubery, On Henry Morton Stanley's Search for Dr. Livingstone, 1871-72",
+   "url": "https://branchcollective.org/?p=1001"
+  },
+  {
+   "title": "The New York Review of Books — The Restless Conqueror (on Tim Jeal's Stanley biography)",
+   "url": "https://www.nybooks.com/articles/2007/12/06/the-restless-conqueror/"
+  }
+ ],
+ "youtube": {
+  "title": "Dr Livingstone, I Presume: Was the Famous Line Made Up?",
+  "description": "\"Dr. Livingstone, I presume?\" may be the most famous hello in history, and it might never have been said. In 1871 the New York Herald's reporter Henry Morton Stanley marched for about seven months to find the missing explorer David Livingstone.\n\nStanley found him at Ujiji on Lake Tanganyika and later wrote that he greeted him with those four words. But the page of Stanley's own diary for that moment is missing, torn out, and Livingstone's letters never mention the line. Biographer Tim Jeal thinks Stanley invented it for the newspaper.\n\nSubscribe to Stickstory for a true story like this every day. Do you think Stanley really said it? Tell me in the comments!\n\n#shorts #livingstone #stickstory",
+  "tags": [
+   "dr livingstone i presume",
+   "doctor livingstone i presume",
+   "livingstone i presume",
+   "i presume meaning",
+   "stanley and livingstone",
+   "henry morton stanley",
+   "david livingstone",
+   "lake tanganyika",
+   "ujiji",
+   "new york herald",
+   "explorer history",
+   "history facts",
+   "strange history",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-10T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "lv_shore",
+   "text": "History's most famous greeting might be fake.",
+   "visual": "Hook frame on the shore of Lake Tanganyika: Henry Stanley in a white sun helmet (left) lifts it to a grey-bearded David Livingstone in a faded blue cap (right); a speech bubble 'I PRESUME?' pops over them; on 'might' a red stamp 'FAKE?' slams across the bubble; mountains across the lake, a dhow, palms and mud houses behind; onlookers' heads and reeds fill the bottom; the fez host big in the lower right in shock as the cover overlay.",
+   "title": {
+    "white": "1871"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1344,
+    "horizon": 930
+   },
+   "cues": {
+    "hit": "might"
+   },
+   "params": {
+    "mode": "hook",
+    "bubble": {
+     "text": [
+      "I PRESUME?"
+     ],
+     "at": 0.1,
+     "x": 0.4,
+     "y": 0.335,
+     "size": 84,
+     "tx": 0.3,
+     "ty": 0.4,
+     "bob": 14
+    },
+    "stamp": {
+     "text": "FAKE?",
+     "at": "hit",
+     "x": 0.75,
+     "y": 0.36,
+     "size": 92,
+     "rot": -12
+    },
+    "ground": 0.7,
+    "horizon": 0.485,
+    "sway": 3
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lv_office",
+   "text": "A New York newspaper sent a reporter",
+   "visual": "A newspaper office: a big black sign 'NEW YORK HERALD' on the wall, a wall map of Africa with a red '?' on the great lakes; the editor behind his desk points at the map, then on 'reporter' a letter flies from his hand into the hands of the young reporter standing on the right; the desk front with drawers fills the bottom.",
+   "title": {
+    "white": "The Herald"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "hit": "reporter"
+   },
+   "params": {
+    "sign": "NEW YORK HERALD"
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "right"
+   }
+  },
+  {
+   "type": "lv_map",
+   "text": "to find a man lost in Africa for years.",
+   "visual": "An old map of Africa fills the frame: coastline, Lake Victoria, Lake Tanganyika and Lake Nyasa in blue, Zanzibar off the east coast; a big red '?' pulses over Lake Tanganyika and on 'lost' a red ring draws around it and a red stamp 'MISSING' lands; a compass rose and a small sailing ship on the ocean fill the bottom.",
+   "title": {
+    "white": "Missing"
+   },
+   "set": false,
+   "cues": {
+    "hit": "lost"
+   },
+   "params": {
+    "stamp": {
+     "text": "MISSING",
+     "at": "hit",
+     "x": 0.66,
+     "y": 0.27,
+     "size": 100,
+     "rot": 7
+    },
+    "labels": [
+     {
+      "text": "Zanzibar",
+      "x": 0.83,
+      "y": 0.6,
+      "at": 0.4,
+      "size": 52,
+      "color": "ink",
+      "font": "hand",
+      "card": false,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lv_trek",
+   "text": "In 1871, Henry Stanley marched for seven months.",
+   "visual": "Dry grassland under a racing sun (days passing): Stanley in his white sun helmet leads the caravan, a flag bearer with the Stars and Stripes behind him and a long line of porters carrying loads on their heads; flat-topped acacias slide past, dust rises; tall grass fills the bottom; red card '7 MONTHS' slams in on 'seven'.",
+   "title": {
+    "white": "The march"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1150,
+    "horizon": 860
+   },
+   "source": "Smithsonian Magazine",
+   "cues": {
+    "m": "seven"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "7 MONTHS",
+      "x": 0.62,
+      "y": 0.2,
+      "at": "m",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "left"
+   }
+  },
+  {
+   "type": "lv_shore",
+   "text": "At Lake Tanganyika, he found David Livingstone,",
+   "visual": "Wide shot of Ujiji on the lakeshore: Stanley's caravan, flag first, walks in from the left; Livingstone in his faded blue cap stands in front of a flat-roofed mud house on the right and turns and raises a hand on 'Livingstone'; dhow on the lake, palms; onlookers' heads fill the bottom.",
+   "title": {
+    "white": "Ujiji"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 770
+   },
+   "cues": {
+    "hit": "Livingstone"
+   },
+   "params": {
+    "mode": "arrive"
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "right"
+   }
+  },
+  {
+   "type": "lv_shore",
+   "text": "and said, Doctor Livingstone, I presume?",
+   "visual": "Closer two-shot on the shore: Stanley lifts his white helmet on 'said', the speech bubble 'DR. LIVINGSTONE, I PRESUME?' pops up on 'Doctor'; Livingstone, grey beard and blue cap, faces him; a mud house and a palm behind; onlookers' heads at the bottom.",
+   "title": {
+    "white": "Four words"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 770
+   },
+   "cues": {
+    "hat": "said",
+    "b": "Doctor"
+   },
+   "params": {
+    "mode": "greet",
+    "bubble": {
+     "text": [
+      "DR. LIVINGSTONE,",
+      "I PRESUME?"
+     ],
+     "at": "b",
+     "x": 0.5,
+     "y": 0.22,
+     "size": 66,
+     "tx": 0.34,
+     "ty": 0.3
+    }
+   },
+   "camera": false
+  },
+  {
+   "type": "lv_diary",
+   "text": "But his diary page for that moment is torn out.",
+   "visual": "Close-up on Stanley's open diary on a desk: the left page full of handwriting; on 'page' the right page rips out and flutters away, leaving a jagged stub along the spine and a blank sheet below; a red ring draws around the stub and stays; the fez host stands big on the right, jumps back in shock as the page rips, then points at the stub on 'torn'; a candle and an inkpot with a quill fill the bottom.",
+   "title": {
+    "white": "Torn out"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 640
+   },
+   "source": "Smithsonian, Tim Jeal",
+   "cues": {
+    "hit": "page",
+    "pt": "torn"
+   },
+   "params": {
+    "mode": "torn",
+    "head": "",
+    "cx": 0.42,
+    "pw": 0.36,
+    "top": 0.34,
+    "ph": 0.32,
+    "ringRy": 0.5,
+    "ringDelay": 0.35,
+    "kasif": {
+     "x": 0.7,
+     "y": 0.68,
+     "scale": 1.0,
+     "pose": "think",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      },
+      {
+       "at": "pt",
+       "pose": "point",
+       "dir": -15,
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "focus": [
+     600,
+     880
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "moon_paper",
+   "text": "The most famous greeting may have been made up for the paper.",
+   "visual": "Close on a New York Herald front page: masthead, headline 'STANLEY FINDS LIVINGSTONE' setting itself word by word, columns printing; the printed phrase 'I PRESUME?' in the columns gets a red ring on 'greeting', then a red stamp 'MADE UP?' slams onto the page on 'made'.",
+   "title": {
+    "white": "The paper"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "h": "greeting",
+    "made": "made"
+   },
+   "params": {
+    "masthead": "NEW YORK HERALD",
+    "date": "",
+    "price": "",
+    "head": [
+     "STANLEY FINDS",
+     "LIVINGSTONE"
+    ],
+    "at": 0.1,
+    "page": {
+     "x": 0.5,
+     "y": 0.5,
+     "w": 0.88,
+     "h": 0.66,
+     "rot": -2
+    },
+    "engraving": false,
+    "marks": [
+     {
+      "text": "I PRESUME?",
+      "x": 0.5,
+      "y": 0.55,
+      "size": 70,
+      "at": "h"
+     }
+    ],
+    "stamps": [
+     {
+      "text": "MADE UP?",
+      "x": 0.5,
+      "y": 0.43,
+      "at": "made",
+      "rot": -8,
+      "size": 100
+     }
+    ],
+    "emblems": false
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lv_shore",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Lake Tanganyika at sunset: a low gold sun and its glitter on the water, a dhow sails across, palms and a mud house; the fez host on the sandy shore waves, then points out at the dhow on 'story'; a beached dhow and reeds fill the foreground.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "sea",
+    "ground": 1150,
+    "horizon": 770
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "dusk",
+    "kasif": {
+     "x": 0.45,
+     "y": 0.66,
+     "scale": 1.0,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 20,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

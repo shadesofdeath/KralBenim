@@ -1,0 +1,692 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "armistice-last-minutes",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "War over.",
+   "Still",
+   "shooting"
+  ],
+  "highlight": [
+   "shooting"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "kasif": false,
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "History.com — The last American killed in World War I (Henry Gunther, 10:59 a.m.; at least 2,738 dead on the last day, Persico)",
+   "url": "https://www.history.com/news/world-war-i-armistice-last-american-death"
+  },
+  {
+   "title": "The National Archives (UK) — Milestones to peace: the Armistice at Compiègne (signed at 05:00 in a railway carriage, ceasefire at 11:00)",
+   "url": "https://blog.nationalarchives.gov.uk/milestones-to-peace-armistice-compiegne"
+  },
+  {
+   "title": "Wikipedia — Armistice of 11 November 1918 (10,944 casualties, 2,738 dead on the last day)",
+   "url": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918"
+  },
+  {
+   "title": "Wikipedia — Henry Gunther (killed at 10:59 a.m., 11 November 1918; Persico, Eleventh Month, Eleventh Day, Eleventh Hour)",
+   "url": "https://en.wikipedia.org/wiki/Henry_Gunther"
+  }
+ ],
+ "youtube": {
+  "title": "Armistice Day 1918: Why Did Men Die After the War Ended?",
+  "description": "Armistice Day 1918: the First World War ended at five in the morning, yet the guns kept firing until eleven. Why did men keep dying after the war was over?\n\nGermany signed the armistice in a railway car in the forest of Compiègne at about 5 a.m. on November 11, 1918, but the ceasefire only started at 11 a.m. In those last hours some commanders kept attacking, and 2,738 men died on the war's final day. At 10:59, the American private Henry Gunther charged a German machine gun, one minute before the guns went silent.\n\nSubscribe to Stickstory for a true story like this every day. Would you have stayed in the trench? Tell me in the comments!\n\n#shorts #armisticeday #stickstory",
+  "tags": [
+   "armistice day",
+   "armistice day 1918",
+   "armistice of 1918",
+   "11 november 1918",
+   "world war 1",
+   "ww1 history",
+   "henry gunther",
+   "last soldier killed in ww1",
+   "eleventh hour",
+   "remembrance day",
+   "veterans day",
+   "compiegne",
+   "western front",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-10T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "am_watch",
+   "text": "The war ended at five in the morning.",
+   "visual": "Hook frame in a trench at dawn: a big brass pocket watch hangs on its chain from a nail on a timber post in front of a plank wall topped with sandbags; its hands show five o'clock and the red second hand ticks; far gun flashes blink over the parapet and smoke drifts; duckboards, a puddle and sandbags fill the bottom; the fez host big in the lower left jumps back in shock (cover overlay).",
+   "title": {
+    "white": "Western Front"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1420,
+    "horizon": 880
+   },
+   "cues": {
+    "hit": "five"
+   },
+   "params": {
+    "from": [
+     5,
+     0,
+     0
+    ],
+    "x": 0.38,
+    "y": 0.45,
+    "r": 0.25,
+    "wall": 0.6,
+    "bursts": [
+     {
+      "x": 0.9,
+      "y": 0.47,
+      "at": 0.05,
+      "size": 0.9
+     },
+     {
+      "x": 0.78,
+      "y": 0.5,
+      "at": 0.85,
+      "size": 1.3
+     }
+    ],
+    "kasif": {
+     "x": 0.74,
+     "y": 0.8,
+     "scale": 1.4,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised"
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "am_carriage",
+   "text": "In 1918, Germany signed the armistice in a train car,",
+   "visual": "Inside the railway dining car before dawn: arched ceiling, three dark windows with forest outside, flickering brass wall lamps; Marshal Foch in a kepi with a moustache stands on the left, a German delegate in glasses and a German officer stand behind the long green table; on 'signed' four signatures write themselves on the document in the middle, a red seal drops on 'armistice'; red card '5 A.M.'; chair backs fill the bottom.",
+   "title": {
+    "white": "Compiègne",
+    "gray": "Nov 11, 1918"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1229
+   },
+   "source": "UK National Archives",
+   "cues": {
+    "sign": "signed",
+    "stamp": "armistice"
+   },
+   "params": {
+    "lamp": false,
+    "cast": [
+     {
+      "who": "foch",
+      "helmet": "cap",
+      "moustache": true,
+      "x": 0.3,
+      "y": 0.67,
+      "scale": 1.25,
+      "pose": "idle",
+      "face": "right",
+      "at": "sign",
+      "then": "point",
+      "dir": "down"
+     },
+     {
+      "who": "erzberger",
+      "glasses": true,
+      "x": 0.6,
+      "y": 0.67,
+      "scale": 1.25,
+      "pose": "think",
+      "face": "left",
+      "at": "sign",
+      "then": "point",
+      "dir": "down"
+     },
+     {
+      "who": "officer",
+      "helmet": "cap",
+      "x": 0.86,
+      "y": 0.67,
+      "scale": 1.25,
+      "pose": "idle",
+      "face": "left",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "5 A.M.",
+      "x": 0.5,
+      "y": 0.71,
+      "at": "sign",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "am_watch",
+   "text": "but the guns would stop at eleven.",
+   "visual": "Close-up of the pocket watch in the trench: the hands race forward from five to eleven o'clock; on 'eleven' the numeral 11 is circled in red; gun flashes keep blinking behind the parapet; red card '11:00' top right.",
+   "title": {
+    "white": "Ceasefire"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1420,
+    "horizon": 880
+   },
+   "cues": {
+    "spin": "guns",
+    "mark": "eleven"
+   },
+   "params": {
+    "from": [
+     5,
+     0,
+     0
+    ],
+    "to": [
+     11,
+     0,
+     0
+    ],
+    "spin_dur": 1.6,
+    "mark": 11,
+    "y": 0.36,
+    "labels": [
+     {
+      "text": "11:00",
+      "x": 0.5,
+      "y": 0.72,
+      "at": "mark",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     720
+    ],
+    "zoom": 1.08,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "For six hours, some generals kept attacking,",
+   "visual": "No man's land under a stormy sky: an officer in a peaked cap points forward from a trench on the left while soldiers in dish helmets walk out across the craters with rifles towards the barbed wire; shell bursts go up; red card '6 HOURS'.",
+   "title": {
+    "white": "Last morning"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1500,
+    "horizon": 900
+   },
+   "cues": {
+    "hit": "attacking"
+   },
+   "camera": {
+    "focus": [
+     620,
+     1330
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "params": {
+    "ground": 0.84,
+    "trenches": [
+     {
+      "x": 0.24,
+      "w": 0.14,
+      "depth": 160
+     }
+    ],
+    "craters": [
+     {
+      "x": 0.6,
+      "w": 0.14,
+      "d": 36
+     }
+    ],
+    "wire": [
+     {
+      "x0": 0.8,
+      "x1": 1.05,
+      "h": 80
+     }
+    ],
+    "bursts": [
+     {
+      "x": 0.86,
+      "y": 0.66,
+      "at": 0.5,
+      "size": 110
+     },
+     {
+      "x": 0.62,
+      "y": 0.64,
+      "at": "hit",
+      "size": 100
+     }
+    ],
+    "parapet": {
+     "from": 0,
+     "to": 1,
+     "y": 0.95
+    },
+    "cast": [
+     {
+      "who": "officer",
+      "helmet": "cap",
+      "moustache": true,
+      "x": 0.36,
+      "y": 0.84,
+      "scale": 1.1,
+      "pose": "point",
+      "face": "right",
+      "dir": 5,
+      "emotion": "angry"
+     },
+     {
+      "who": "s1",
+      "helmet": "brodie",
+      "x": 0.48,
+      "to": 0.6,
+      "y": 0.85,
+      "scale": 1.0,
+      "pose": "walk",
+      "walk_at": 0.1,
+      "walk_dur": 3,
+      "rifle": true,
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "s2",
+      "helmet": "brodie",
+      "x": 0.62,
+      "to": 0.74,
+      "y": 0.86,
+      "scale": 1.0,
+      "pose": "walk",
+      "walk_at": 0.3,
+      "walk_dur": 3,
+      "rifle": true,
+      "face": "right",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "6 HOURS",
+      "x": 0.64,
+      "y": 0.5,
+      "at": 0.3,
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "stamp": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "am_field",
+   "text": "and 2,738 men died that day.",
+   "visual": "A grey field under a low sky: rows of white wooden crosses rise row by row from the horizon towards the viewer; a big red number on a paper card rolls up to 2,738 on 'died'; mist drifts; red poppies sway in the foreground.",
+   "title": {
+    "white": "The cost"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1800,
+    "horizon": 845
+   },
+   "source": "Joseph Persico",
+   "cues": {
+    "died": "died"
+   },
+   "params": {
+    "mode": "crosses",
+    "count": {
+     "to": 2738,
+     "at": "died",
+     "dur": 1.4,
+     "y": 0.21,
+     "size": 180
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_field",
+   "text": "At 10:59, an American private, Henry Gunther, charged a German machine gun.",
+   "visual": "Misty no man's land: Henry Gunther, an American soldier in a dish helmet with a rifle, climbs out and runs right across the mud past the barbed wire; red card '10:59' and the hand label 'Henry Gunther' above him.",
+   "title": {
+    "white": "Henry Gunther",
+    "gray": "313th Infantry"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1500,
+    "horizon": 900
+   },
+   "cues": {
+    "t": "10:59",
+    "ch": "charged"
+   },
+   "params": {
+    "ground": 0.78,
+    "craters": [
+     {
+      "x": 0.3,
+      "w": 0.14,
+      "d": 30
+     }
+    ],
+    "wire": [
+     {
+      "x0": 0.62,
+      "x1": 0.9,
+      "h": 70
+     }
+    ],
+    "stumps": [
+     0.85
+    ],
+    "parapet": {
+     "from": 0,
+     "to": 0.4,
+     "y": 0.9
+    },
+    "cast": [
+     {
+      "who": "gunther",
+      "helmet": "brodie",
+      "x": 0.08,
+      "to": 0.62,
+      "y": 0.8,
+      "scale": 1.0,
+      "pose": "run",
+      "run": true,
+      "walk_at": "t",
+      "walk_dur": 4.6,
+      "rifle": true,
+      "face": "right",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "10:59",
+      "x": 0.68,
+      "y": 0.4,
+      "at": "t",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "stamp": true
+     },
+     {
+      "text": "Henry Gunther",
+      "x": 0.46,
+      "y": 0.5,
+      "at": 0.8,
+      "size": 76
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     1300
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tank_mg",
+   "text": "The Germans waved him back. He kept running.",
+   "visual": "A German machine-gun nest behind sandbags, the heavy gun pointing left and silent; two German gunners in coal-scuttle helmets stand up and wave both arms at the left; on 'running' Gunther runs in from the left towards them.",
+   "title": {
+    "white": "Last minute"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1250
+   },
+   "cues": {
+    "w": "waved",
+    "r": "running"
+   },
+   "params": {
+    "x": 0.62,
+    "y": 0.58,
+    "face": -1,
+    "s": 1.0,
+    "fire": 1000000,
+    "cast": [
+     {
+      "who": "g1",
+      "helmet": "stahl",
+      "x": 0.66,
+      "y": 0.66,
+      "scale": 0.85,
+      "pose": "idle",
+      "face": "left",
+      "at": "w",
+      "then": "wave",
+      "emotion": "worried"
+     },
+     {
+      "who": "g2",
+      "helmet": "stahl",
+      "x": 0.8,
+      "y": 0.66,
+      "scale": 0.85,
+      "pose": "idle",
+      "face": "left",
+      "at": "w",
+      "then": "wave",
+      "emotion": "worried"
+     },
+     {
+      "who": "gunther",
+      "helmet": "brodie",
+      "x": -0.15,
+      "to": 0.25,
+      "y": 1.07,
+      "scale": 1.3,
+      "pose": "run",
+      "run": true,
+      "walk_at": 0.1,
+      "walk_dur": 3.4,
+      "rifle": true,
+      "face": "right",
+      "emotion": "angry"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     1200
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "am_watch",
+   "text": "Sixty seconds later, the guns went silent.",
+   "visual": "Extreme close-up of the pocket watch face: the red second hand sweeps the last minute from 10:59 up to twelve; on 'silent' all hands meet at 11:00, the 12 is circled in red, the gun flashes stop and the smoke thins.",
+   "title": {
+    "white": "11:00"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1420,
+    "horizon": 880
+   },
+   "cues": {
+    "spin": "Sixty",
+    "quiet": "silent",
+    "mark": "silent"
+   },
+   "params": {
+    "from": [
+     10,
+     59,
+     0
+    ],
+    "to": [
+     11,
+     0,
+     0
+    ],
+    "spin_dur": 2.0,
+    "mark": 12,
+    "y": 0.36
+   },
+   "camera": {
+    "focus": [
+     540,
+     690
+    ],
+    "zoom": 1.55,
+    "move": "push"
+   }
+  },
+  {
+   "type": "am_field",
+   "text": "He missed peace by one minute.",
+   "visual": "A quiet field after the guns stopped: one rifle stuck bayonet-down in the mud with a soldier's dish helmet on its butt, the far rows of crosses small behind it; on 'peace' red poppies open around it; mist drifts; red card '1 MINUTE'.",
+   "title": {
+    "white": "Peace"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1270,
+    "horizon": 845
+   },
+   "cues": {
+    "bloom": "peace",
+    "hit": "minute"
+   },
+   "params": {
+    "mode": "marker",
+    "labels": [
+     {
+      "text": "1 MINUTE",
+      "x": 0.5,
+      "y": 0.74,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "am_field",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "A poppy field rolling to the horizon under a calm sky; the fez host stands calmly among the poppies, waves, then points at a big poppy on 'story'; big poppies fill the bottom.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1250,
+    "horizon": 845
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "poppies",
+    "kasif": {
+     "x": 0.42,
+     "y": 0.7,
+     "scale": 1.15,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": -20,
+       "face": "right",
+       "emotion": "neutral"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "focus": [
+     480,
+     1150
+    ],
+    "zoom": 1.3,
+    "move": "pull"
+   }
+  }
+ ]
+}

@@ -9,7 +9,8 @@
 //     ring: {target: "price"|"credit"|"head"|"date", at, color: "red"} (hand-drawn ellipse around it),
 //     stamps: [{text, x: 0.5, y: 0.6 (0..1 of page), at, color: "red"|"ink"|"blue", rot: -8, size: 120}],
 //     strike: {target: "credit", at} (red line through it), marks: [{text, x, y (0..1 of page), size: 64, at}] (printed
-//     phrases in the columns, circled in red on their cue), kasif: K (MOON.K), cast: [K]}
+//     phrases in the columns, circled in red on their cue), kasif: K (MOON.K), cast: [K],
+//     emblems: false (no sun emblems beside the masthead; for papers other than The Sun)}
 // cues: whatever "at"s reference.
 'use strict';
 
@@ -115,7 +116,7 @@
           rules.setAttribute('d', rd);
           // two little suns beside the masthead, rays turning
           let sd = '', sr = '';
-          for (const k of [-1, 1]) {
+          for (const k of (P.emblems === false ? [] : [-1, 1])) {
             const cx = px + pw / 2 + k * (mw / 2 + 90), cy = py + 100, r = 38, a0 = t * 0.6 * k;
             sd += inkCircle(cx, cy, r, seed * 13 + k, t, { fill: true }) + ' ';
             sr += inkCircle(cx, cy, r, seed * 13 + k + 3, t, { w: 4 }) + ' ';
