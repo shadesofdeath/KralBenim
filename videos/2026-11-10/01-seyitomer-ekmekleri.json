@@ -1,0 +1,156 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "obsidyen",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Hürriyet Daily News: Ancient bread remains unearthed at Seyitömer Mound",
+   "url": "https://www.hurriyetdailynews.com/ancient-bread-remains-unearthed-at-seyitomer-mound-229122"
+  },
+  {
+   "title": "Diken: Kütahya'da 5 bin yıllık ekmek kalıntıları bulundu",
+   "url": "https://www.diken.com.tr/kutahyada-5-bin-yillik-ekmek-kalintilari-bulundu/"
+  },
+  {
+   "title": "Yeni Asır: Kütahya'da 5 bin yıllık ekmek kalıntıları bulundu",
+   "url": "https://www.yeniasir.com.tr/ege/kutahya/2026/11/06/kutahyada-5-bin-yillik-ekmek-kalintilari-bulundu"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Yangın",
+   "kurtardı"
+  ],
+  "highlight": [
+   "kurtardı"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   540,
+   820
+  ],
+  "zoom": 1.3,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Bu ekmeği bir yangın kurtardı.",
+   "type": "bt_ek_loaf",
+   "visual": "Işık havuzunda tek, büyük, kömürleşmiş yuvarlak somun; kabuk çatlakları kor gibi yavaşça parlayıp söner, sağ kenarda kırık kabuk, üstünden birkaç kıvılcım yavaşça yükselir; ilk kareden dolu",
+   "params": {
+    "mode": "hook"
+   }
+  },
+  {
+   "text": "Beş bin yıl önce, Kütahya'da. Bir höyükte, sekiz somun.",
+   "type": "bt_ek_mound",
+   "visual": "Höyük kesiti: tepenin çizgisi ve iç katmanlar kendini çizer, üstte italik 'Seyitömer Höyüğü' ve altın çizgi; derinde geniş, yanık bir oda belirir ve kamera yavaşça ona yaklaşır; 'sekiz'de odada sekiz somun bir saniye içinde soldan sağa altın renkte yanar",
+   "params": {
+    "mode": "site"
+   },
+   "cues": {
+    "hit": "sekiz"
+   }
+  },
+  {
+   "text": "Bir oda, bir fırın, duvarda bir raf.",
+   "type": "bt_ek_room",
+   "visual": "Kerpiç odanın kesiti (tavan kirişleri, tuğla sıraları); 'fırın'da solda kubbeli fırın kendini çizer, ağzında sönük kor; 'raf'ta sağda duvara dayalı ahşap raf (iki dikme, iki tahta) çizilir, üst tahtada ağzı büzülüp bağlanmış, geniş tabanlı, dokulu çuvallar, alt tahtada somunlar belirir",
+   "params": {
+    "mode": "build"
+   },
+   "cues": {
+    "a": "fırın",
+    "b": "raf"
+   }
+  },
+  {
+   "text": "Sonra bir yangın çıktı.",
+   "type": "bt_ek_room",
+   "visual": "Aynı oda yanıyor: zemin boyunca ve rafın üstünde yavaş alevler, duman yükselir, duvar kararır, kıvılcımlar süzülür",
+   "params": {
+    "mode": "fire"
+   }
+  },
+  {
+   "text": "Raf çöktü. Buğday ve mercimek, ekmeklere karıştı.",
+   "type": "bt_ek_shelf",
+   "visual": "Yakın plan raf: sağ dikme kırılır, raf tahtası yavaşça aşağı eğilir; somunlar yere kayar, ağzı büzülüp bağlanmış, geniş tabanlı, dokulu çuvallardan altın buğday ve gri mercimek taneleri ağır ağır dökülüp somunların çevresine çöker; arkada kor ışığı",
+   "cues": {
+    "hit": "çöktü"
+   }
+  },
+  {
+   "text": "Ateş onları yok edebilirdi… ama kömüre çevirdi.",
+   "type": "bt_ek_loaf",
+   "visual": "Önce bütün kömürleşmiş somun; ince altın bir kesme çizgisi onu ortadan böler ve kesik yüz görünür: açık renkli gözenekli iç; 'kömür'de kabuktan merkeze doğru ince bir altın kor çizgisi ~1 sn'de merkeze ilerler, iç tamamen siyah kömüre döner, kül zerreleri yükselir; sahne siyah somunla biter",
+   "params": {
+    "mode": "section"
+   },
+   "cues": {
+    "hit": "kömür"
+   }
+  },
+  {
+   "text": "Kömür çürümez. Toprak onu sadece sakladı.",
+   "type": "bt_ek_mound",
+   "visual": "En altta tek siyah somun, son koru sönüyor; üstüne toprak katmanları birer birer yavaşça iner ve kapanır",
+   "params": {
+    "mode": "bury"
+   }
+  },
+  {
+   "text": "O gün kimsenin yiyemediği ekmek, bugün bir müze vitrininde duruyor.",
+   "type": "bt_ek_loaf",
+   "visual": "Bugün: somun alçak bir müze kaidesinin üstünde, ince cam vitrin çizgileri kendini çizer, dar bir spot ışığı, toz zerreleri; kaidede okunur italik 'Kütahya Müzesi'",
+   "params": {
+    "mode": "museum",
+    "label": "Kütahya Müzesi"
+   }
+  },
+  {
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_ek_loaf",
+   "visual": "Yakın plan: somunun çatlaklı kabuğu kadrajı doldurur (~2 kat), çatlaklardaki son kor ve ışık havuzu yavaşça söner, birkaç kıvılcım yükselir",
+   "params": {
+    "mode": "ember"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "5000 Yıllık Ekmek: Yangın Bu Somunları Nasıl Korudu?",
+  "description": "5000 yıllık ekmek Kütahya'da toprağın altından çıktı: Seyitömer Höyüğü'nde, Erken Tunç Çağı'ndan kalma sekiz kömürleşmiş somun.\n\nKazı ekibi geçen yıl höyükte fırınlı bir oda ve duvara dayalı raf kalıntıları bulmuştu. Bu yıl ekmekler, rafın ayakları arasında, buğday ve mercimek kalıntılarıyla birlikte ortaya çıktı. Kazı başkanı Sevgi Gürdal'a göre bir yangın sırasında raf çöktü ve üstündeki çuvallar ile ekmekler birbirine karıştı. Yangın ekmeği yok etmedi, kömürleştirdi; kömürleşen ekmek çürümedi ve beş bin yıl toprağın altında kaldı. Bugün Kütahya Arkeoloji ve Madencilik Müzesi'nde sergileniyor.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence beş bin yıl önceki bu ekmeğin tadı nasıldı? Yorumlara yaz!\n\n#shorts #5000yıllıkekmek #kütahya #arkeoloji #düşünbakalım",
+  "tags": [
+   "5000 yıllık ekmek",
+   "5 bin yıllık ekmek",
+   "kütahya 5000 yıllık ekmek",
+   "en eski ekmek",
+   "seyitömer höyüğü",
+   "seyitömer höyüğü ekmek",
+   "kömürleşmiş ekmek",
+   "kütahya",
+   "tunç çağı",
+   "erken tunç çağı",
+   "anadolu arkeolojisi",
+   "arkeoloji",
+   "kütahya müzesi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-10T19:00:00+03:00"
+ }
+}

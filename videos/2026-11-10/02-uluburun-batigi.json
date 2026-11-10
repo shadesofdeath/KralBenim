@@ -1,0 +1,1043 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "derin",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — Uluburun shipwreck (discovery 1982, 22,413 dives, 354 ingots, 1 t tin, glass, ebony, ivory, dating)",
+   "url": "https://en.wikipedia.org/wiki/Uluburun_shipwreck"
+  },
+  {
+   "title": "Institute of Nautical Archaeology — Uluburun Late Bronze Age Shipwreck Excavation (1984–1994, 11 seasons)",
+   "url": "https://nauticalarch.org/projects/uluburun-late-bronze-age-shipwreck-excavation/"
+  },
+  {
+   "title": "HeritageDaily — World's oldest shipwreck reveals incredible cargo (20-minute dives, seven cultures, Nefertiti scarab, writing board)",
+   "url": "https://www.heritagedaily.com/2013/01/worlds-oldest-shipwreck-reveals-incredible-cargo/71101"
+  },
+  {
+   "title": "Archaeology Magazine — Cape Gelidonya and Uluburun",
+   "url": "https://archaeology.org/exclusives/articles/642-turkey-cape-gelidonya-uluburun-bronze-age"
+  },
+  {
+   "title": "Wikipedia — Amarna letter EA 35 (King of Alashiya: 500 talents of copper)",
+   "url": "https://en.wikipedia.org/wiki/Amarna_letter_EA_35"
+  },
+  {
+   "title": "Hürriyet Daily News — World's oldest shipwreck enters Guinness World Records (Kekova, 2026)",
+   "url": "https://www.hurriyetdailynews.com/worlds-oldest-shipwreck-enters-guinness-world-records-229010"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Kulaklı",
+   "bisküviler"
+  ],
+  "highlight": [
+   "bisküviler"
+  ],
+  "scene": 48,
+  "t": 2.5,
+  "focus": [
+   1010,
+   650
+  ],
+  "zoom": 1.45,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Uluburun Batığı: 3.300 Yıllık Gemi Kimin Yükünü Taşıyordu?",
+  "description": "Uluburun batığı, Kaş açıklarında 50 metre derinde yatan 3.300 yıllık bir Tunç Çağı ticaret gemisi. 1982'de bir sünger avcısı dipte \"kulaklı metal bisküviler\" gördü; bunlar on ton bakır külçenin ilk parçalarıydı.\n\nKekova'daki 4.700 yıllık batık Guinness'e bilinen en eski batık olarak girerken, aynı kıyının en zengin batığına iniyoruz. On bir yıllık kazı, 22.413 dalış ve bir ambarda bütün bir dünya: Kıbrıs bakırı ve kalay, mavi cam külçeler, Afrika abanozu, fil dişi, Baltık kehribarı ve Nefertiti'nin adını taşıyan altın skarabe. Bu Geç Tunç Çağı gemisi kimin yükünü, nereye taşıyordu?\n\nBu videoda:\n• 1982: Mehmet Çakır'ın keşfi ve öküz derisi biçimli bakır külçeler\n• 354 bakır külçe + 1 ton kalay = 11 ton bronz\n• Nefertiti skarabesi ve katlanır tahta yazı tableti\n• Kenan kıyısından Miken sarayına: Cemal Pulak'a göre gemideki iki Mikenli elçi\n• Geç Tunç Çağı çöküşü ve Bodrum Sualtı Arkeoloji Müzesi\n\nHer gün yeni bir 'neden?' için abone ol. Sence o iki Mikenli yolcu elçi miydi, yoksa tüccar mı? Yorumlara yaz!\n\n#uluburun #batık #tunççağı #arkeoloji #düşünbakalım",
+  "tags": [
+   "uluburun batığı",
+   "uluburun",
+   "uluburun gemisi",
+   "kaş uluburun batığı",
+   "tunç çağı batığı",
+   "bakır külçe",
+   "nefertiti skarabesi",
+   "bodrum sualtı arkeoloji müzesi",
+   "geç tunç çağı çöküşü",
+   "sualtı arkeolojisi",
+   "cemal pulak",
+   "kekova batığı",
+   "amarna mektupları",
+   "arkeoloji",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-10T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "text": "1982 yazı. Kaş açıklarında, elli metre derinde, bir sünger avcısı karanlığa iniyordu.",
+   "type": "bt_ul_sea",
+   "visual": "Mavi karanlık su; yukarıdan inen soluk ışık hüzmeleri, yavaşça süzülen deniz karı; yüzsüz bir dalgıç silueti baş aşağı yavaşça dibe doğru iner, kabarcıklar yükselir; altta kayalık dip",
+   "params": {
+    "mode": "descend"
+   },
+   "chapter": "Elli metre derinde"
+  },
+  {
+   "text": "Adı Mehmet Çakır'dı. Kayaların arasında, kuma gömülü garip şeyler gördü.",
+   "type": "bt_ul_sea",
+   "visual": "Deniz dibi: kuma yarı gömülü, dibe yatık üç öküz derisi bakır külçe (dört köşede dışa uzanan kulaklar, bakır tonu) kendini çizer; solda yatay süzülen dalgıç eli uzanmış; 'garip'te külçelerin üstünde altın ışık havuzu",
+   "params": {
+    "mode": "find"
+   },
+   "cues": {
+    "hit": "garip"
+   }
+  },
+  {
+   "text": "Yukarı çıkınca onları tek bir sözle anlattı: kulaklı metal bisküviler.",
+   "type": "bt_ul_ingot",
+   "visual": "Karanlıkta, tarif edilen şekil ince çizgilerle kendini çizer: içbükey kenarlı levha; dört köşedeki kulaklar altın, dışarıdan dört altın ok onları gösterir; altında altın italik 'kulaklı metal bisküviler'",
+   "params": {
+    "mode": "sketch",
+    "label": "kulaklı metal bisküviler"
+   },
+   "cues": {
+    "hit": "kulaklı"
+   }
+  },
+  {
+   "text": "O bisküvilerin altında, üç bin üç yüz yıllık bir gemi yatıyordu.",
+   "type": "bt_ul_sea",
+   "visual": "Yamacın geniş planı: sıra sıra yatık külçeler, Kenan küpleri, taş çapalar, mavi cam diskler eğimli dibe dağılmış; kesikli bir gemi gövdesi izi; yukarıdan bir lamba hüzmesi yavaşça döner",
+   "params": {
+    "mode": "scatter"
+   }
+  },
+  {
+   "text": "Bu gemi kimin yükünü taşıyordu? Ve nereye gidiyordu?",
+   "type": "bt_ul_ship",
+   "visual": "Alacakaranlıkta sakin deniz, ufukta alçak güneş; tek direkli, kare yelkenli, uçları kalkık bir Tunç Çağı ticaret gemisi silueti yavaşça sağa süzülür; 'nereye'de üstünde ince altın bir soru işareti",
+   "params": {
+    "mode": "sail",
+    "ask": true
+   },
+   "cues": {
+    "hit": "nereye"
+   }
+  },
+  {
+   "text": "2026 sonbaharında, aynı kıyıda, Kekova açıklarındaki dört bin yedi yüz yıllık bir batık, bilinen en eski batık olarak Guinness Rekorlar Kitabı'na girdi.",
+   "type": "bt_ul_map",
+   "visual": "Elle çizilmiş sade Likya kıyısı (kara denizden açık tonda, yumuşak kıyı, Kekova adası); 'Kekova'da altın nokta: 'Kekova', italik '4.700 yıl'; italik bölge adı 'Likya'",
+   "params": {
+    "bounds": [
+     28.95,
+     35.85,
+     30.75,
+     36.85
+    ],
+    "regions": [
+     {
+      "lon": 29.55,
+      "lat": 36.55,
+      "text": "L İ K Y A"
+     }
+    ],
+    "points": [
+     {
+      "lon": 29.86,
+      "lat": 36.16,
+      "label": "Kekova",
+      "sub": "4.700 yıl",
+      "at": "p1",
+      "side": "right",
+      "dy": 40
+     }
+    ]
+   },
+   "cues": {
+    "p1": "Kekova"
+   }
+  },
+  {
+   "text": "Ama o kıyının en zengin batığı, biraz batıda, Çakır'ın gördüğü yerde yatıyordu.",
+   "type": "bt_ul_map",
+   "visual": "Aynı Likya haritası; Kekova noktası soluk durur; 'batıda'da batısında, Kaş'ın önündeki burnun ucunda ikinci altın nokta: 'Uluburun', italik 'Kaş, 1982'",
+   "params": {
+    "bounds": [
+     28.95,
+     35.85,
+     30.75,
+     36.85
+    ],
+    "regions": [
+     {
+      "lon": 29.55,
+      "lat": 36.55,
+      "text": "L İ K Y A"
+     }
+    ],
+    "points": [
+     {
+      "lon": 29.86,
+      "lat": 36.16,
+      "label": "Kekova",
+      "sub": "4.700 yıl",
+      "at": "p0",
+      "side": "right",
+      "dy": 40
+     },
+     {
+      "lon": 29.687,
+      "lat": 36.129,
+      "label": "Uluburun",
+      "sub": "Kaş, 1982",
+      "at": "p1",
+      "side": "left",
+      "dy": 40
+     }
+    ]
+   },
+   "cues": {
+    "p0": "Ama",
+    "p1": "batıda"
+   }
+  },
+  {
+   "text": "Cevap, önce o bisküvilerdeydi.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Kulaklı bisküviler', altında italik 'Kaş, 1982'",
+   "params": {
+    "n": "I",
+    "title": "Kulaklı bisküviler",
+    "sub": "Kaş, 1982"
+   },
+   "chapter": "Kulaklı bisküviler"
+  },
+  {
+   "text": "Çakır'ın tarifini duyanlar, ne olduklarını hemen anladı. Bunlar, Tunç Çağı'nın bakır külçeleriydi.",
+   "type": "bt_ul_ingot",
+   "visual": "Işık havuzunda tek, büyük, 3/4 açıdan görülen öküz derisi biçimli bakır külçe (bakır tonu yüzey, kalın kenar, dört köşede uzun kulaklar) kendini çizer; 'bakır'da kulaklar altın yanar; altta italik 'bakır külçe', 'Tunç Çağı'",
+   "params": {
+    "mode": "one",
+    "label": "bakır külçe",
+    "sub": "Tunç Çağı"
+   },
+   "cues": {
+    "hit": "bakır"
+   }
+  },
+  {
+   "text": "Dört köşesi kulak gibi uzanan, öküz derisine benzeyen metal levhalar.",
+   "type": "bt_ul_ingot",
+   "visual": "Aynı külçe yakın plan; 'öküz'de çevresinde, kulaklarıyla birlikte gerilmiş bir öküz postunun ince altın dış çizgisi yavaşça çizilir",
+   "params": {
+    "mode": "hide"
+   },
+   "cues": {
+    "hit": "öküz"
+   },
+   "camera": {
+    "focus": [
+     960,
+     450
+    ],
+    "zoom": 1.2
+   }
+  },
+  {
+   "text": "1984'te kazı başladı. Önce George Bass, sonra Cemal Pulak. Bodrum'daki müze ve Amerikalı bir enstitü birlikte çalıştı.",
+   "type": "bt_ul_sea",
+   "visual": "Deniz dibinde kazı: eğimli kumun üstüne altın ince çizgili kazı ızgarası çizilir, içinde sıra sıra yatık küçük külçeler; iki yüzsüz dalgıç ızgaranın üstünde yavaşça süzülür, kabarcıklar yükselir",
+   "params": {
+    "mode": "dig"
+   }
+  },
+  {
+   "text": "O derinlikte bir dalgıç, günde iki kez, yirmişer dakika kalabiliyordu.",
+   "type": "bt_ul_section",
+   "visual": "Burnun kesiti: üstte deniz yüzeyi ve küçük bir tekne, solda 0–60 m derinlik cetveli, sağdan inen kayalık yamaç; 50 metrede bir dalgıç; sağda daire içinde altın yay 0'dan 20'ye dolar, altında 'dakika'; altın italik '≈ 50 m'",
+   "params": {
+    "mode": "time"
+   },
+   "cues": {
+    "hit": "yirmişer"
+   }
+  },
+  {
+   "text": "On bir yaz boyunca, yirmi iki bin dört yüz on üç dalış yapıldı. Ama her dalış, dipten biraz daha tuhaf bir dünya çıkardı.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda büyük ince '22.413', altında altın italik 'dalış'",
+   "params": {
+    "lines": [
+     {
+      "text": "22.413",
+      "at": "c1",
+      "size": 190
+     },
+     {
+      "text": "dalış",
+      "at": "c2",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "yirmi",
+    "c2": "dalış"
+   }
+  },
+  {
+   "text": "Dipten çıkan ilk şey, bir servetti.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'II', ince çizgi, büyük ince 'Ambar', altında italik 'Nereden geliyordu?'",
+   "params": {
+    "n": "II",
+    "title": "Ambar",
+    "sub": "Nereden geliyordu?"
+   },
+   "chapter": "Ambar"
+  },
+  {
+   "text": "Bakır külçelerin sayısı üç yüz elli dörttü. Toplam on ton. Bu bakır, büyük olasılıkla Kıbrıs'tan geliyordu.",
+   "type": "bt_ul_ingot",
+   "visual": "Solda ışık havuzunda üst üste beş sıra yatık bakır külçe birer birer belirir; sağda altın sayı 0'dan 354'e sayar, altında italik 'bakır külçe'; 'on'da 'toplam 10 ton'; 'Kıbrıs'ta altında altın 'Kıbrıs'",
+   "params": {
+    "mode": "count",
+    "n": 354,
+    "label": "bakır külçe",
+    "sub": "toplam 10 ton",
+    "from": "Kıbrıs"
+   },
+   "cues": {
+    "hit": "Toplam",
+    "from": "Kıbrıs"
+   }
+  },
+  {
+   "text": "Yanlarında bir ton da kalay vardı. Kalayın bir kısmı Toros Dağları'ndan, bir kısmı ise çok uzaklardan, Orta Asya'dan gelmişti.",
+   "type": "bt_ul_relic",
+   "visual": "Işık havuzunda tek, gri, kubbeli bir kalay külçesi hızla kendini çizer; 'kalay'da altta italik '1 ton kalay', sonra 'Toros · Orta Asya'",
+   "params": {
+    "obj": "tin",
+    "label": "1 ton kalay",
+    "sub": "Toros · Orta Asya"
+   },
+   "cues": {
+    "hit": "kalay"
+   }
+  },
+  {
+   "text": "Bir düşünün. Dokuz ölçü bakıra bir ölçü kalay katarsanız bronz elde edersiniz.",
+   "type": "bt_ul_alloy",
+   "visual": "Soldan sağa: 'bakıra'da dokuz küçük bakır külçe ('9 bakır'), '+', 'kalay'da tek kalay külçesi ('1 kalay'), '=', 'bronz'da altın renkli bir bronz kılıç ('bronz')",
+   "params": {
+    "a": "9 bakır",
+    "b": "1 kalay",
+    "c": "bronz"
+   },
+   "cues": {
+    "a": "bakıra",
+    "b": "kalay",
+    "c": "bronz"
+   }
+  },
+  {
+   "text": "Bu gemi, on bir ton bronzun hammaddesini taşıyordu. Tunç Çağı'nda bronz, kılıç demekti, saban demekti, güç demekti. Bu kadar metali kim gönderebilirdi?",
+   "type": "bt_ul_relic",
+   "visual": "Işık havuzunda yatay uzun bir bronz kılıç altın çizgilerle kendini çizer; 'kılıç'ta altın ışık büyür; altta italik '11 ton bronz'",
+   "params": {
+    "obj": "sword",
+    "label": "11 ton bronz"
+   },
+   "cues": {
+    "hit": "kılıç"
+   }
+  },
+  {
+   "text": "Ambarda yüz yetmiş beş mavi cam külçe de vardı.",
+   "type": "bt_ul_relic",
+   "visual": "Işık havuzunda kobalt mavisi, disk biçimli bir ham cam külçe; arkasında iki soluk disk daha; 'cam'da altta italik '175 cam külçe'",
+   "params": {
+    "obj": "glass",
+    "label": "175 cam külçe"
+   },
+   "cues": {
+    "hit": "cam"
+   }
+  },
+  {
+   "text": "Abanoz Afrika'dan geliyordu. Bir fil dişi ve on dört su aygırı dişi de vardı.",
+   "type": "bt_ul_goods",
+   "visual": "Işık havuzlarında yan yana sırayla: koyu bir abanoz kütüğü ('Afrika'dan abanoz'), kavisli bir fil dişi ('fil dişi'), kalın hilal biçimli bir su aygırı dişi ('su aygırı dişi')",
+   "params": {
+    "items": [
+     "ebony",
+     "tusk",
+     "hippo"
+    ],
+    "labels": [
+     "Afrika'dan abanoz",
+     "fil dişi",
+     "su aygırı dişi"
+    ]
+   },
+   "cues": {
+    "a": "Abanoz",
+    "b": "fil",
+    "c": "aygırı"
+   }
+  },
+  {
+   "text": "Kehribar ise binlerce kilometre kuzeyden, Baltık kıyılarından gelmişti. Tek bir ambarda, bilinen dünyanın iki ucu yan yana duruyordu.",
+   "type": "bt_ul_goods",
+   "visual": "Solda abanoz kütüğü ('Afrika'), sağda altın kehribar boncuk dizisi ('Baltık'); ikisi aynı ışıkta yan yana",
+   "params": {
+    "items": [
+     "ebony",
+     "amber"
+    ],
+    "labels": [
+     "Afrika",
+     "Baltık"
+    ]
+   },
+   "cues": {
+    "a": "Kehribar",
+    "b": "Baltık"
+   }
+  },
+  {
+   "text": "Eşyalar, en az yedi farklı kültüre aitti. Mısır, Kıbrıs, Kenan, Miken, Asur…",
+   "type": "bt_ul_map",
+   "visual": "Elle çizilmiş sade Doğu Akdeniz; italik bölge adları 'Anadolu', 'Girit'; sırayla altın noktalar yanar: Mısır, Kıbrıs, Kenan, Miken, Asur",
+   "params": {
+    "bounds": [
+     20.5,
+     29,
+     45,
+     41
+    ],
+    "regions": [
+     {
+      "lon": 33,
+      "lat": 39.2,
+      "text": "A N A D O L U"
+     },
+     {
+      "lon": 24.9,
+      "lat": 34.55,
+      "text": "Girit"
+     }
+    ],
+    "points": [
+     {
+      "lon": 31.2,
+      "lat": 30.05,
+      "label": "Mısır",
+      "at": "p1"
+     },
+     {
+      "lon": 33.3,
+      "lat": 35.1,
+      "label": "Kıbrıs",
+      "at": "p2"
+     },
+     {
+      "lon": 35.0,
+      "lat": 32.8,
+      "label": "Kenan",
+      "at": "p3",
+      "side": "right"
+     },
+     {
+      "lon": 22.75,
+      "lat": 37.73,
+      "label": "Miken",
+      "at": "p4",
+      "side": "left"
+     },
+     {
+      "lon": 43.15,
+      "lat": 36.36,
+      "label": "Asur",
+      "at": "p5",
+      "side": "left"
+     }
+    ]
+   },
+   "cues": {
+    "p1": "Mısır",
+    "p2": "Kıbrıs",
+    "p3": "Kenan",
+    "p4": "Miken",
+    "p5": "Asur"
+   }
+  },
+  {
+   "text": "Ama asıl ipucu, çok daha küçük bir şeydi. Altından bir böcek. Bir skarabe.",
+   "type": "bt_ul_relic",
+   "visual": "Işık havuzunda tek, altın bir skarabe (bok böceği biçimli mühür), üstten; kanat çizgileri ve bacaklar kendini çizer; 'skarabe'de altta italik 'altın skarabe'",
+   "params": {
+    "obj": "scarab",
+    "label": "altın skarabe",
+    "cart": false
+   },
+   "cues": {
+    "hit": "skarabe"
+   },
+   "chapter": "Skarabe ve tablet"
+  },
+  {
+   "text": "Üzerinde, Mısır kraliçesi Nefertiti'nin adı yazıyordu.",
+   "type": "bt_ul_relic",
+   "visual": "Solda aynı altın skarabe; 'Nefertiti'de sağında altın çerçeveli dikey bir kartuş belirir; altında altın italik 'Nefertiti'",
+   "params": {
+    "obj": "scarab",
+    "label": "Nefertiti"
+   },
+   "cues": {
+    "hit": "Nefertiti"
+   },
+   "camera": {
+    "focus": [
+     1000,
+     450
+    ],
+    "zoom": 1.15
+   }
+  },
+  {
+   "text": "Ve bir de, fildişi menteşeli, katlanır tahta bir yazı tableti.",
+   "type": "bt_ul_tablet",
+   "visual": "Işık havuzunda kapalı bir tahta tablet, ortasında üç fildişi menteşe; sağ kanadı yavaşça açılır, içinde mum için oyulmuş iki koyu yüzey; 'tableti'nde altta italik 'yazı tableti'",
+   "params": {
+    "mode": "open",
+    "label": "yazı tableti"
+   },
+   "cues": {
+    "hit": "tableti"
+   }
+  },
+  {
+   "text": "İçi mumla kaplanırdı, üstüne yazı yazılırdı. Mum çoktan yok olmuştu.",
+   "type": "bt_ul_tablet",
+   "visual": "Açık tablet; iki koyu mum yüzeyinde soluk el yazısı satırları; 'yok'ta satırlar yavaşça silinir, yüzey boş kalır",
+   "params": {
+    "mode": "wax"
+   },
+   "cues": {
+    "hit": "yok"
+   },
+   "camera": {
+    "focus": [
+     960,
+     450
+    ],
+    "zoom": 1.2
+   }
+  },
+  {
+   "text": "Belki bu geminin bütün sırrı… o kayıp satırlardaydı.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda altın italik 'kayıp satırlar'",
+   "params": {
+    "lines": [
+     {
+      "text": "kayıp satırlar",
+      "at": "c1",
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "sırrı"
+   }
+  },
+  {
+   "text": "Geriye başka ipuçları kaldı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'III', ince çizgi, büyük ince 'Kimin gemisi?', altında italik 'Kenan'dan Ege'ye'",
+   "params": {
+    "n": "III",
+    "title": "Kimin gemisi?",
+    "sub": "Kenan'dan Ege'ye"
+   },
+   "chapter": "Kimin gemisi?"
+  },
+  {
+   "text": "Gemi yaklaşık on beş metreydi ve Lübnan sedirinden yapılmıştı.",
+   "type": "bt_ul_ship",
+   "visual": "Teknik çizim gibi: geminin yan görünüşü (uçları kalkık gövde, kaplama tahtaları), gövdede altın zıvana çivileri, altında altın ölçü çizgisi ve '≈ 15 metre'; 'sedirinden'de 'Lübnan sediri'",
+   "params": {
+    "mode": "plan",
+    "label": "Lübnan sediri"
+   },
+   "cues": {
+    "hit": "sedirinden"
+   }
+  },
+  {
+   "text": "Taş çapaları ve gündelik kapları, Karmel Dağı çevresinden, yani Kenan kıyısından geliyordu. Kazıyı yöneten Cemal Pulak'a göre gemi oradan yola çıkmış, kıyı boyunca batıya, Ege'ye ilerliyordu.",
+   "type": "bt_ul_map",
+   "visual": "Sade Doğu Akdeniz; 'Karmel'de Kenan kıyısında altın nokta 'Karmel / Kenan kıyısı'; 'batıya'da denizden, kıyı boyunca altın rota Uluburun'a çizilir; 'Ege'ye'de oradan Ege'ye soluk bir devam çizgisi",
+   "params": {
+    "bounds": [
+     23.5,
+     31.3,
+     37,
+     38.6
+    ],
+    "regions": [
+     {
+      "lon": 32.5,
+      "lat": 38.0,
+      "text": "A N A D O L U"
+     }
+    ],
+    "points": [
+     {
+      "lon": 35.0,
+      "lat": 32.8,
+      "label": "Karmel",
+      "sub": "Kenan kıyısı",
+      "at": "p1",
+      "side": "left"
+     },
+     {
+      "lon": 29.687,
+      "lat": 36.129,
+      "label": "Uluburun",
+      "at": "p2",
+      "side": "left",
+      "dy": 50
+     },
+     {
+      "lon": 25.2,
+      "lat": 37.1,
+      "label": "Ege",
+      "at": "p3",
+      "side": "right"
+     }
+    ],
+    "routes": [
+     {
+      "path": [
+       [
+        35.0,
+        32.85
+       ],
+       [
+        34.75,
+        33.6
+       ],
+       [
+        35.25,
+        34.6
+       ],
+       [
+        34.6,
+        35.95
+       ],
+       [
+        33.3,
+        35.9
+       ],
+       [
+        32.2,
+        36.25
+       ],
+       [
+        31.0,
+        36.45
+       ],
+       [
+        30.3,
+        36.1
+       ],
+       [
+        29.69,
+        36.08
+       ]
+      ],
+      "at": "p2"
+     },
+     {
+      "path": [
+       [
+        29.69,
+        36.08
+       ],
+       [
+        28.7,
+        36.3
+       ],
+       [
+        27.6,
+        36.55
+       ],
+       [
+        26.4,
+        36.8
+       ],
+       [
+        25.2,
+        37.1
+       ]
+      ],
+      "at": "p3",
+      "dashed": true
+     }
+    ]
+   },
+   "cues": {
+    "p1": "Karmel",
+    "p2": "batıya",
+    "p3": "Ege'ye"
+   }
+  },
+  {
+   "text": "O yıllarda krallar birbirine mektup yazardı. Mısır'da bulunan Amarna tabletlerinde, Alaşiya kralı, yani büyük olasılıkla Kıbrıs kralı, firavuna şöyle yazmıştı: Şimdi sana beş yüz bakır gönderdim.",
+   "type": "bt_gd_tablet",
+   "visual": "Işık havuzunda çivi yazılı bir kil tablet; işaret sıraları çizilir, 'bakır'da ortadaki bir grup işaret altına döner; altta altın italik 'Alaşiya kralından firavuna'",
+   "params": {
+    "label": "Alaşiya kralından firavuna"
+   },
+   "cues": {
+    "hit": "bakır"
+   }
+  },
+  {
+   "text": "Gemide yüz elliye yakın terazi ağırlığı da vardı. Yani yükün bir kısmı tüccarların olabilirdi.",
+   "type": "bt_ul_relic",
+   "visual": "Işık havuzunda sade bir terazi ve altında büyükten küçüğe sıralı altı kubbeli terazi ağırlığı; 'ağırlığı'nda altta italik '~150 terazi ağırlığı'",
+   "params": {
+    "obj": "weights",
+    "label": "~150 terazi ağırlığı"
+   },
+   "cues": {
+    "hit": "ağırlığı"
+   }
+  },
+  {
+   "text": "Ama eşyaların arasında, iki Mikenliye ait mühürler, kılıçlar ve içki takımları da bulundu. Pulak'a göre bu iki yolcu, yükü bir Miken sarayına götüren elçiler olabilirdi.",
+   "type": "bt_ul_hold",
+   "visual": "Boyuna kesilmiş geminin dolu ambarı (külçeler, küpler, cam, abanoz, çapalar); güvertede yan yana iki yüzsüz yolcu silueti; 'elçiler'de başlarının üstünde altın bir ışık",
+   "params": {
+    "mode": "envoys",
+    "label": "iki Mikenli yolcu"
+   },
+   "cues": {
+    "hit": "elçiler"
+   }
+  },
+  {
+   "text": "Kimin olursa olsun, gemi o saraya asla varamadı.",
+   "type": "bt_ul_ship",
+   "visual": "Gece, yıldızlar; sağda karanlık, kayalık bir burun denize iner; gemi silueti kıçında küçük bir kandil yanarak yavaşça buruna doğru ilerler",
+   "params": {
+    "mode": "night"
+   }
+  },
+  {
+   "text": "Uluburun, büyük burun demektir.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'IV', ince çizgi, büyük ince 'Büyük burun', altında italik 'Batış'",
+   "params": {
+    "n": "IV",
+    "title": "Büyük burun",
+    "sub": "Batış"
+   },
+   "chapter": "Büyük burun"
+  },
+  {
+   "text": "Sarp, kayalık bir burun. Belki bir fırtına, gemiyi o kayalara sürdü.",
+   "type": "bt_ul_ship",
+   "visual": "Alacakaranlık; sağdan denize inen büyük, sarp, kayalık bir burun silueti, dibinde yavaş köpük çizgileri; solda alçak güneş; 'Uluburun' ve italik 'büyük burun'",
+   "params": {
+    "mode": "cape",
+    "label": "Uluburun",
+    "sub": "büyük burun"
+   },
+   "cues": {
+    "hit": "Sarp"
+   }
+  },
+  {
+   "text": "Belki rüzgâr bir anda döndü. Bunu kimse bilmiyor.",
+   "type": "bt_ul_ship",
+   "visual": "Fırtınalı gece: eğik yağmur çizgileri, büyük dalgalar; gemi belirgin biçimde (~13°) yana yatmış, sağdaki karanlık buruna doğru sürüklenir, kıçında kandil",
+   "params": {
+    "mode": "storm"
+   }
+  },
+  {
+   "text": "Bildiğimiz tek şey şu: gemi bu burnun dibinde, sarp bir yokuşta yatıyordu.",
+   "type": "bt_ul_section",
+   "visual": "Burnun kesiti: yüzeyde küçük tekne, solda derinlik cetveli; yamaç boyunca 44 ile 61 metre arasında altın bir şerit çizilir, üstünde küçük külçeler; '44 m', '61 m'",
+   "params": {
+    "mode": "slope"
+   },
+   "cues": {
+    "hit": "yokuşta"
+   }
+  },
+  {
+   "text": "Yük, eğimli dibe dağıldı. Kum, hepsini yavaş yavaş örttü.",
+   "type": "bt_ul_sea",
+   "visual": "Yamacın geniş planı: sıra sıra külçeler, küpler, taş çapalar, mavi cam diskler; kesikli gövde izi solar; yukarıdan kum taneleri yağar, kum seviyesi yavaşça yükselip eşyaları örter",
+   "params": {
+    "mode": "settle"
+   }
+  },
+  {
+   "text": "Ahşabın çoğu çürüdü. Ama metal, cam ve taş kaldı.",
+   "type": "bt_ul_sea",
+   "visual": "Aynı yamaç: 'çürüdü'de kesikli gemi gövdesi izi silinir; 'metal'de kalan külçelerin, küplerin ve cam disklerin çizgileri altın olur",
+   "params": {
+    "mode": "remain"
+   },
+   "cues": {
+    "hit": "çürüdü",
+    "keep": "metal"
+   }
+  },
+  {
+   "text": "Gemideki bir dalın halkaları ve radyokarbon ölçümleri, batışı yaklaşık milattan önce 1320'ye koyuyor.",
+   "type": "bt_gd_rings",
+   "visual": "Işık havuzunda bir dal kesiti; yıllık halkalar; merkezden kabuğa altın ölçüm şeridi; '1320'de en dış halka altın olur, sağda altın '≈ MÖ 1320', altında italik 'batış'",
+   "params": {
+    "mode": "date",
+    "label": "≈ MÖ 1320",
+    "sub": "batış"
+   },
+   "cues": {
+    "hit": "1320"
+   }
+  },
+  {
+   "text": "Ama yukarıda, karada, o dünyanın sonu yaklaşıyordu.",
+   "type": "bt_ul_collapse",
+   "visual": "Gece ufkunda üç saray silueti (iki kuleli Hattuşa kapısı, Ugarit sarayı, büyük taş duvarlı Miken Aslanlı Kapısı), önlerinde sıcak altın ışıklar; altlarında italik adları",
+   "params": {
+    "mode": "lit"
+   }
+  },
+  {
+   "text": "Bir asır kadar sonra, Doğu Akdeniz'in büyük krallıkları birer birer çöktü.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'V', ince çizgi, büyük ince 'Çöküş', altında italik 'MÖ 1200 dolayları'",
+   "params": {
+    "n": "V",
+    "title": "Çöküş",
+    "sub": "MÖ 1200 dolayları"
+   },
+   "chapter": "Çöküş"
+  },
+  {
+   "text": "Hitit başkenti terk edildi. Ugarit yandı. Miken sarayları yıkıldı.",
+   "type": "bt_ul_collapse",
+   "visual": "Aynı üç saray; 'Hitit'te Hattuşa'nın, 'Ugarit'te Ugarit'in, 'Miken'de Miken'in ışığı söner, siluetler soluklaşır",
+   "params": {
+    "mode": "fall"
+   },
+   "cues": {
+    "a": "Hitit",
+    "b": "yandı",
+    "c": "Miken"
+   }
+  },
+  {
+   "text": "Bu gemiyi yola çıkaran ticaret yolları, bir daha aynı şekilde açılmadı.",
+   "type": "bt_ul_ship",
+   "visual": "Alacakaranlıkta boş, sakin bir deniz; ufukta alçak güneş, hiç yelken yok; yavaş dalga çizgileri",
+   "params": {
+    "mode": "empty"
+   }
+  },
+  {
+   "text": "Uluburun, o dünyanın çökmeden hemen önce çekilmiş bir fotoğrafı gibiydi.",
+   "type": "bt_ul_hold",
+   "visual": "Boyuna kesilmiş geminin dolu ambarı; 'fotoğrafı'nda etrafına ince altın bir fotoğraf çerçevesi kendini çizer",
+   "params": {
+    "mode": "world"
+   },
+   "cues": {
+    "hit": "fotoğrafı"
+   }
+  },
+  {
+   "text": "Bugün o fotoğraf, Bodrum Sualtı Arkeoloji Müzesi'nde.",
+   "type": "bt_ul_ship",
+   "visual": "Karanlık müze salonu: yukarıdan inen spot ışığının altında bir kaide, üstünde geminin kopyası; altta 'Bodrum', italik 'Sualtı Arkeoloji Müzesi'",
+   "params": {
+    "mode": "museum",
+    "label": "Bodrum",
+    "sub": "Sualtı Arkeoloji Müzesi"
+   }
+  },
+  {
+   "text": "Bu gemi kimin yükünü taşıyordu? Büyük olasılıkla Kenan kıyısındaki bir hükümdarın ya da seçkinin. Ve büyük olasılıkla bir Miken sarayına gidiyordu, belki de iki elçinin gözetiminde.",
+   "type": "bt_ul_map",
+   "visual": "Sade Doğu Akdeniz; 'hükümdarın'da Kenan kıyısında altın nokta 'Kenan', 'Miken'de Mora'da ikinci nokta 'Miken'; aralarında denizden, Malea burnunu dolaşan altın rota; Uluburun'dan sonrası soluk",
+   "params": {
+    "bounds": [
+     20.5,
+     30.8,
+     37,
+     39.6
+    ],
+    "regions": [
+     {
+      "lon": 32.5,
+      "lat": 38.7,
+      "text": "A N A D O L U"
+     }
+    ],
+    "points": [
+     {
+      "lon": 35.0,
+      "lat": 32.8,
+      "label": "Kenan",
+      "at": "p1",
+      "side": "left"
+     },
+     {
+      "lon": 22.75,
+      "lat": 37.73,
+      "label": "Miken",
+      "at": "p2",
+      "side": "right",
+      "dy": -60
+     }
+    ],
+    "routes": [
+     {
+      "path": [
+       [
+        35.0,
+        32.85
+       ],
+       [
+        34.75,
+        33.6
+       ],
+       [
+        35.25,
+        34.6
+       ],
+       [
+        34.6,
+        35.95
+       ],
+       [
+        33.3,
+        35.9
+       ],
+       [
+        32.2,
+        36.25
+       ],
+       [
+        31.0,
+        36.45
+       ],
+       [
+        30.3,
+        36.1
+       ],
+       [
+        29.69,
+        36.08
+       ]
+      ],
+      "at": "p1"
+     },
+     {
+      "path": [
+       [
+        29.69,
+        36.08
+       ],
+       [
+        28.7,
+        36.3
+       ],
+       [
+        27.6,
+        36.55
+       ],
+       [
+        26.4,
+        36.8
+       ],
+       [
+        25.2,
+        37.1
+       ],
+       [
+        24.2,
+        36.75
+       ],
+       [
+        23.6,
+        36.42
+       ],
+       [
+        23.35,
+        36.75
+       ],
+       [
+        23.35,
+        37.15
+       ]
+      ],
+      "at": "p2",
+      "dashed": true
+     }
+    ]
+   },
+   "cues": {
+    "p1": "hükümdarın",
+    "p2": "Miken"
+   }
+  },
+  {
+   "text": "Ama taşıdığı şey, bir kralın hediyesinden fazlasıydı. Bütün bir dünyaydı.",
+   "type": "bt_ul_sea",
+   "visual": "Karanlık deniz dibi; kuma yarı gömülü, dibe yatık tek bakır külçe (kulakları kumdan çıkmış) ışık havuzunda, üstünde altın bir parıltı yavaşça nefes alır; deniz karı süzülür",
+   "params": {
+    "mode": "glint"
+   },
+   "cues": {
+    "hit": "dünyaydı"
+   },
+   "camera": {
+    "focus": [
+     1010,
+     690
+    ],
+    "zoom": 1.25
+   }
+  },
+  {
+   "text": "Sizce o iki Mikenli yolcu elçi miydi, yoksa tüccar mı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_ul_ship",
+   "visual": "Gece, yıldızlar altında sakin deniz; gemi silueti kıçında küçük kandille buruna doğru yavaşça ilerler; sessiz",
+   "params": {
+    "mode": "night"
+   }
+  }
+ ]
+}
