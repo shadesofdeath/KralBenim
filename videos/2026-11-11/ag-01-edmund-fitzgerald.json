@@ -1,0 +1,490 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "edmund-fitzgerald",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "Holding",
+   "our own"
+  ],
+  "highlight": [
+   "own"
+  ],
+  "scene": 0,
+  "t": 1.0,
+  "kasif": {
+   "pose": "shock",
+   "x": 250,
+   "y": 1640,
+   "scale": 1.25,
+   "face": 1
+  }
+ },
+ "sources": [
+  {
+   "title": "Britannica — Edmund Fitzgerald (729 ft; 10 Nov 1975; 29 dead; \"We are holding our own\" at 7:10 p.m.; no distress call; about 530 ft deep in two sections; no definitive cause)",
+   "url": "https://www.britannica.com/topic/Edmund-Fitzgerald"
+  },
+  {
+   "title": "Great Lakes Shipwreck Museum — The Fateful Journey (last words to the Arthur M. Anderson; radar contact lost about 7:15 p.m.; Coast Guard hatch theory vs. Six Fathom Shoal)",
+   "url": "https://www.shipwreckmuseum.com/edmund-fitzgerald/the-fateful-journey/"
+  },
+  {
+   "title": "History.com — The Edmund Fitzgerald sinking (no distress call; 530 feet down, broken in two; hatches, rogue waves, shoal theories)",
+   "url": "https://www.history.com/articles/edmund-fitzgerald-sinking-lake-superior"
+  }
+ ],
+ "youtube": {
+  "title": "Edmund Fitzgerald: Why Did She Vanish With No Mayday?",
+  "description": "Edmund Fitzgerald: on November 10, 1975, her captain radioed \"We are holding our own.\" Minutes later the giant ship was gone, with no mayday at all.\n\nThe SS Edmund Fitzgerald, a 729-foot ore freighter, was fighting a storm on Lake Superior when she vanished from the radar of the ship behind her. All 29 men were lost. The wreck lies about 530 feet down, broken in two. The Coast Guard blamed leaking hatch covers; others point to a hidden shoal or rogue waves. Nearly fifty years later, the cause of this Great Lakes shipwreck is still unproven.\n\nSubscribe to Stickstory for a true story like this every day. What do you think sank her? Tell me in the comments!\n\n#shorts #edmundfitzgerald #stickstory",
+  "tags": [
+   "edmund fitzgerald",
+   "ss edmund fitzgerald",
+   "edmund fitzgerald sinking",
+   "wreck of the edmund fitzgerald",
+   "edmund fitzgerald mystery",
+   "lake superior",
+   "great lakes shipwreck",
+   "shipwreck mystery",
+   "unsolved mysteries",
+   "november 10 1975",
+   "ernest mcsorley",
+   "arthur m anderson",
+   "rogue wave",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-11T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ef_lake",
+   "text": "The captain radioed: \"We are holding our own.\"",
+   "visual": "Hook frame on the storm lake: the long red-hulled ore freighter, lights still on, tilted with her bow already under a huge swell and her stern rising; spray bursts where the bow goes in; in the foreground a dark rock breakwater, where the fez host (cover overlay) stands shocked, both hands on his head; big foreground waves fill the bottom.",
+   "title": {
+    "white": "Lake Superior"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 780,
+    "horizon": 560
+   },
+   "cues": {
+    "hit": "holding"
+   },
+   "params": {
+    "mode": "plunge",
+    "y": 0.36,
+    "x": 0.5,
+    "L": 0.74,
+    "plunge": {
+     "rot": 13,
+     "sink": 40
+    },
+    "near": false,
+    "deck": {
+     "kind": "rock",
+     "y": 0.72,
+     "x0": -0.05,
+     "x1": 0.45
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_radio",
+   "text": "On November 10, 1975, on Lake Superior,",
+   "visual": "Inside her pilothouse in the storm: three big windows with grey waves rolling past and rain streaking, the radio set on the console crackling with gold sound arcs, its red lamp lit and the needle trembling, the handset on its coiled cord; dials and gauges fill the bottom.",
+   "title": {
+    "white": "Lake Superior",
+    "gray": "Nov 10, 1975"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "Superior"
+   },
+   "params": {
+    "mode": "talk"
+   },
+   "camera": {
+    "focus": [
+     540,
+     700
+    ],
+    "zoom": 1.1,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_lake",
+   "text": "the 729-foot Edmund Fitzgerald fought a storm.",
+   "visual": "A long, low Great Lakes ore freighter side-on across the whole frame (red hull, white pilothouse at the bow, engine house and black funnel at the stern, a long deck of hatch covers) pitching in grey swells, big foreground waves and spray filling the bottom of the frame under a storm sky; rain streaks; on '729' a red dimension arrow draws itself from stern to bow with '729 FT'.",
+   "title": {
+    "white": "Edmund Fitzgerald"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 870,
+    "horizon": 650
+   },
+   "source": "Britannica",
+   "cues": {
+    "m": "729"
+   },
+   "params": {
+    "mode": "storm",
+    "y": 0.45,
+    "measure": {
+     "at": "m",
+     "text": "729 FT",
+     "dy": -290
+    },
+    "labels": [],
+    "L": 0.86
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_radar",
+   "text": "Minutes later, she vanished from the radar of the ship behind her.",
+   "visual": "The radar scope of the Arthur M. Anderson, the ship following her, in a grey console: range rings, a turning gold sweep, sea clutter round the centre and the shoreline echo; one blip labelled 'FITZGERALD' lights up as the sweep passes; the fez host leans in from the right pointing at it, and on 'vanished' the blip stops coming back, a red dashed ring marks the empty spot and the host jumps back in shock.",
+   "title": {
+    "white": "The Anderson"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1200
+   },
+   "cues": {
+    "gone": "vanished"
+   },
+   "params": {
+    "blip": [
+     0.55,
+     -2.05
+    ],
+    "name": "FITZGERALD",
+    "cy": 0.3,
+    "r": 330,
+    "kasif": {
+     "x": 0.78,
+     "y": 0.76,
+     "scale": 1.15,
+     "pose": "point",
+     "face": "left",
+     "dir": 20,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "gone",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "shelf": 0.765
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_lake",
+   "text": "No mayday. Twenty-nine men, gone.",
+   "visual": "The empty storm lake where the ship was: rolling swells, rain, one swamped empty lifeboat drifting on the waves; on 'mayday' a red stamp 'NO MAYDAY' slams on, on 'gone' a second card '29 MEN' appears below it.",
+   "title": {
+    "white": "All hands"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 870,
+    "horizon": 650
+   },
+   "cues": {
+    "m": "mayday",
+    "hit": "gone"
+   },
+   "params": {
+    "mode": "empty",
+    "y": 0.45,
+    "boat": {
+     "x": 0.38
+    },
+    "labels": [
+     {
+      "text": "NO MAYDAY",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "m",
+      "size": 100,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "29 MEN",
+      "x": 0.5,
+      "y": 0.31,
+      "at": "hit",
+      "size": 96,
+      "color": "ink",
+      "stamp": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_wreck",
+   "text": "She lies 530 feet down, snapped in two.",
+   "visual": "The dark lake bed far below the surface: light rays and drifting silt; the bow section stands upright in the mud on the left, the stern section lies upside down on the right with its rudder and propeller pointing up, ore pellets and torn plates between them; on '530' a red depth arrow runs from the surface down to the bed with '530 FT'; on 'two' red crack marks flash on both broken ends.",
+   "title": {
+    "white": "The wreck",
+    "gray": "Found 1975"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 1500,
+    "horizon": 230
+   },
+   "source": "Shipwreck Museum",
+   "cues": {
+    "d": "530",
+    "split": "two"
+   },
+   "params": {
+    "bed": 0.7,
+    "depth": {
+     "at": "d",
+     "text": "530 FT",
+     "x": 0.85,
+     "dx": 200
+    },
+    "stern_x": 0.7
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_deck",
+   "text": "Leaking hatches?",
+   "visual": "Cutaway close-up of the freighter's deck in the storm: three hatch coamings with their steel covers and clamps, grey-blue water washing across the deck; below, the cargo hold with a long pile of iron-ore pellets; on 'Leaking' water streams in through the cover seams and the water in the hold rises; hand label 'HATCHES?'.",
+   "title": {
+    "white": "Theory 1"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 880,
+    "horizon": 560
+   },
+   "cues": {
+    "leak": "Leaking"
+   },
+   "params": {
+    "deck": 0.46,
+    "leak": "leak",
+    "labels": [
+     {
+      "text": "HATCHES?",
+      "x": 0.5,
+      "y": 0.2,
+      "at": 0.15,
+      "size": 100,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_lake",
+   "text": "A shoal? A rogue wave?",
+   "visual": "The freighter rolls in the storm while the water below is shown cut away: on 'shoal' a ridge of jagged rocks rises right under the hull with the hand label 'SHOAL?'; on 'rogue' a huge wave rears up from the left behind the ship with the label 'ROGUE WAVE?'.",
+   "title": {
+    "white": "Other theories"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 780,
+    "horizon": 700
+   },
+   "cues": {
+    "shoal": "shoal",
+    "wave": "rogue"
+   },
+   "params": {
+    "mode": "theory",
+    "y": 0.4,
+    "L": 0.82,
+    "shoal": {
+     "at": "shoal"
+    },
+    "wave": {
+     "at": "wave"
+    },
+    "labels": [
+     {
+      "text": "SHOAL?",
+      "x": 0.3,
+      "y": 0.56,
+      "at": "shoal",
+      "size": 84,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "ROGUE WAVE?",
+      "x": 0.62,
+      "y": 0.2,
+      "at": "wave",
+      "size": 84,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_wreck",
+   "text": "Nobody can tell you why.",
+   "visual": "Close-up on the lake bed between the two broken halves of the wreck: the torn end of the bow section and the upturned stern, ore pellets and plates in the mud, silt drifting, bubbles rising; a big red hand-written question mark appears between them.",
+   "title": {
+    "white": "Still unsolved"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 1500,
+    "horizon": 230
+   },
+   "cues": {
+    "hit": "why"
+   },
+   "params": {
+    "bed": 0.7,
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.52,
+      "y": 0.56,
+      "at": 0.3,
+      "size": 220,
+      "color": "red",
+      "font": "serif"
+     }
+    ],
+    "stern_x": 0.7
+   },
+   "camera": {
+    "focus": [
+     540,
+     1180
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ef_lake",
+   "text": "She was holding her own, until she wasn't.",
+   "visual": "The freighter rides the storm with her lights on; on 'wasn't' her windows go dark, the bow plunges into a huge swell and the whole ship slides under the waves, big foreground waves fill the bottom, leaving foam and rising bubbles.",
+   "title": {
+    "white": "7:15 p.m."
+   },
+   "set": {
+    "name": "storm",
+    "ground": 870,
+    "horizon": 650
+   },
+   "cues": {
+    "dive": "until"
+   },
+   "params": {
+    "mode": "dive",
+    "y": 0.45,
+    "dive": "dive",
+    "L": 0.8,
+    "dive_dur": 1.4
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "still"
+   }
+  },
+  {
+   "type": "ef_shore",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Night on the north shore of Lake Superior: a lighthouse on a high cliff on the right sweeps its gold beam over the dark lake, waves roll below; the fez host stands calmly on the rock ledge in front, waves, then points up at the lighthouse beam on 'story'.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1530,
+    "horizon": 1075
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.3,
+     "y": 0.8,
+     "scale": 1.15,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 40,
+       "face": "right",
+       "emotion": "neutral"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

@@ -1,0 +1,682 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "berlin-wall-overnight",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "Split in",
+   "one night"
+  ],
+  "highlight": [
+   "night"
+  ],
+  "scene": 0,
+  "t": 1.7,
+  "kasif": false,
+  "fade": false
+ },
+ "sources": [
+  {
+   "title": "German Federal Government (archive) — A dark day for Germany: construction of the Berlin Wall (Sunday morning 13 August 1961; barbed wire; tens of thousands had already fled west; Ulbricht on 15 June: \"Nobody intends to build a wall\")",
+   "url": "https://www.bundesregierung.de/breg-en/service/archive/construction-berlin-wall-1777024"
+  },
+  {
+   "title": "HISTORY.com — Berlin is divided (work began shortly after midnight on 13 August 1961; barbed wire, soon replaced by concrete)",
+   "url": "https://www.history.com/this-day-in-history/august-13/berlin-is-divided"
+  },
+  {
+   "title": "Chronik der Mauer — 13 August 1961 and the following days (cement slabs laid across road crossings from 15 August 1961)",
+   "url": "https://www.chronik-der-mauer.de/en/chronicle/182142/13-august-1961"
+  }
+ ],
+ "youtube": {
+  "title": "Berlin Wall: How Did a City Get Split in One Night?",
+  "description": "The Berlin Wall began as barbed wire. In one night in August 1961, a whole city was cut in half while it slept. How do you split a city of millions overnight?\n\nEarly on Sunday, August 13, 1961, East German soldiers and police rolled barbed wire across the streets of Berlin, and families woke up on two sides of it. Two days later the first concrete slabs arrived. Two months before, East Germany's leader Walter Ulbricht had said: \"Nobody intends to build a wall.\" The Wall stood for 28 years, until November 1989.\n\nSubscribe to Stickstory for a true story like this every day. What would you have done that Sunday morning? Tell me in the comments!\n\n#shorts #berlinwall #stickstory",
+  "tags": [
+   "berlin wall",
+   "berlin wall history",
+   "berlin wall 1961",
+   "how the berlin wall was built",
+   "barbed wire sunday",
+   "13 august 1961",
+   "cold war",
+   "east germany",
+   "west berlin",
+   "walter ulbricht",
+   "fall of the berlin wall",
+   "divided berlin",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-11T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "bw_street",
+   "text": "Berlin was split in one night.",
+   "visual": "Hook frame: a Berlin street at night seen head-on, apartment blocks left and right whose windows light up one by one, a far gate silhouette in the gap; a thick barbed-wire coil unrolls across the whole near pavement from left to right behind a drum that a helmeted soldier pushes; a thinner wire fence already cuts the street behind; the fez host stands on the right of the pavement, the coil rolling towards him, and jumps back in shock (cover).",
+   "title": {
+    "white": "Berlin",
+    "gray": "1961"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1056,
+    "horizon": 900
+   },
+   "cues": {
+    "hit": "split",
+    "lit": "night"
+   },
+   "params": {
+    "mode": "wire",
+    "roll": 0.0,
+    "roll_dur": 2.6,
+    "lit": "lit",
+    "cast": [
+     {
+      "who": "pusher",
+      "side": "front",
+      "helmet": "stahl",
+      "x": -0.05,
+      "to": 0.8,
+      "y": 0.75,
+      "scale": 0.95,
+      "pose": "walk",
+      "walk_at": 0.0,
+      "walk_dur": 3.2,
+      "face": "right",
+      "emotion": "angry"
+     },
+     {
+      "who": "s2",
+      "helmet": "stahl",
+      "x": 0.08,
+      "to": 0.5,
+      "y": 0.55,
+      "scale": 0.6,
+      "pose": "walk",
+      "walk_at": 0.0,
+      "walk_dur": 3.0,
+      "face": "right",
+      "emotion": "angry"
+     }
+    ],
+    "kasif": {
+     "x": 0.8,
+     "y": 0.72,
+     "scale": 0.95,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised"
+    },
+    "lamp": false,
+    "front": {
+     "y": 0.75,
+     "r": 85,
+     "roll": 0.0,
+     "dur": 3.2,
+     "start": 0.12,
+     "end": 0.86
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_clock",
+   "text": "Early on Sunday, August 13, 1961,",
+   "visual": "Close-up of a round street clock on a cast-iron post at night, its glass face glowing in the lamp light; the hands pass one o'clock, the red second hand ticks; building corners with a few lit windows on both sides; a barbed-wire fence draws itself across the cobbles at the bottom; hand label 'Sunday, Aug 13, 1961'.",
+   "title": {
+    "white": "1 a.m."
+   },
+   "set": {
+    "name": "night",
+    "ground": 1650,
+    "horizon": 1500
+   },
+   "cues": {
+    "hit": "Sunday"
+   },
+   "params": {
+    "from": [
+     0,
+     59,
+     20
+    ],
+    "speed": 20,
+    "y": 0.3,
+    "roll": 0.3,
+    "labels": [
+     {
+      "text": "Sunday, Aug 13, 1961",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "hit",
+      "size": 60,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -2,
+      "underline": false
+     }
+    ],
+    "r": 0.26
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_coil",
+   "text": "soldiers rolled barbed wire across the streets,",
+   "visual": "Street level at night: a coil of barbed wire already lies on the left; on 'rolled' two helmeted soldiers roll the drum to the right and the coil visibly unrolls behind it; concrete posts appear and barbed strands stretch post to post; a near kerb with post stubs and a second big coil fill the bottom.",
+   "title": {
+    "white": "Barbed wire"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "roll": "rolled"
+   },
+   "params": {
+    "mode": "roll",
+    "ground": 0.6,
+    "roll": "roll",
+    "roll_dur": 3.0,
+    "coil": {
+     "x0": -0.05,
+     "x1": 1.05,
+     "r": 110
+    },
+    "cast": [
+     {
+      "who": "soldier",
+      "helmet": "stahl",
+      "x": 0.07999999999999999,
+      "to": 0.82,
+      "y": 0.6,
+      "scale": 0.85,
+      "pose": "walk",
+      "walk_at": "roll",
+      "walk_dur": 3.0,
+      "face": "right",
+      "emotion": "angry"
+     },
+     {
+      "who": "police",
+      "helmet": "stahl",
+      "x": -0.12,
+      "to": 0.55,
+      "y": 0.6,
+      "scale": 0.85,
+      "pose": "walk",
+      "walk_at": "roll",
+      "walk_dur": 3.0,
+      "face": "right",
+      "emotion": "angry"
+     }
+    ],
+    "start": 0.2
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "bw_coil",
+   "text": "to stop people fleeing west.",
+   "visual": "Behind the finished wire, a man and a woman with suitcases hurry to the right along the street, a boy runs after them; red card 'WEST →' on the right; the near kerb, post stubs and a big coil fill the bottom.",
+   "title": {
+    "white": "Why?"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "hit": "west"
+   },
+   "params": {
+    "mode": "still",
+    "ground": 0.6,
+    "posts": [
+     0.08,
+     0.55,
+     0.98
+    ],
+    "coil": {
+     "x0": -0.05,
+     "x1": 1.05,
+     "r": 100
+    },
+    "cast": [
+     {
+      "who": "man",
+      "x": 0.05,
+      "to": 0.6,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "walk",
+      "walk_at": 0.0,
+      "walk_dur": 2.6,
+      "run": true,
+      "face": "right",
+      "emotion": "worried",
+      "suitcase": true
+     },
+     {
+      "who": "woman",
+      "woman": true,
+      "dress": "blue",
+      "x": -0.15,
+      "to": 0.38,
+      "y": 0.6,
+      "scale": 0.8,
+      "pose": "walk",
+      "walk_at": 0.0,
+      "walk_dur": 2.6,
+      "face": "right",
+      "emotion": "worried",
+      "suitcase": true
+     },
+     {
+      "who": "boy",
+      "x": -0.3,
+      "to": 0.18,
+      "y": 0.6,
+      "scale": 0.5,
+      "pose": "walk",
+      "walk_at": 0.0,
+      "walk_dur": 2.6,
+      "run": true,
+      "face": "right",
+      "emotion": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "WEST →",
+      "x": 0.74,
+      "y": 0.22,
+      "at": "hit",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "bw_street",
+   "text": "By dawn, families woke up on two sides of it.",
+   "visual": "The same street in morning light: the barbed-wire line runs across the whole street; behind it a man waves from the far side, in front of it a woman in a blue dress waves back with a child; heads and shoulders of neighbours watch from the bottom of the frame; windows open in the apartment blocks.",
+   "title": {
+    "white": "Sunday morning"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1056,
+    "horizon": 880
+   },
+   "cues": {
+    "w": "families",
+    "two": "two"
+   },
+   "params": {
+    "mode": "morning",
+    "lamp": false,
+    "crowd": true,
+    "cast": [
+     {
+      "who": "father",
+      "side": "far",
+      "x": 0.46,
+      "y": 0.545,
+      "scale": 0.55,
+      "pose": "idle",
+      "at": "w",
+      "then": "wave",
+      "face": "right",
+      "emotion": "worried"
+     },
+     {
+      "who": "mother",
+      "side": "near",
+      "woman": true,
+      "dress": "blue",
+      "x": 0.66,
+      "y": 0.62,
+      "scale": 0.72,
+      "pose": "idle",
+      "at": "two",
+      "then": "wave",
+      "face": "left",
+      "emotion": "worried"
+     },
+     {
+      "who": "child",
+      "side": "near",
+      "x": 0.8,
+      "y": 0.62,
+      "scale": 0.45,
+      "pose": "idle",
+      "at": "two",
+      "then": "point",
+      "dir": "up",
+      "face": "left",
+      "emotion": "worried"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_street",
+   "text": "Two days later, concrete arrived.",
+   "visual": "Daylight, closer on the line: a crane lowers a grey concrete slab onto the wire line beside four slabs already standing; dust puffs when it lands; red card 'Aug 15'; onlookers' heads fill the bottom.",
+   "title": {
+    "white": "Concrete"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1056,
+    "horizon": 880
+   },
+   "source": "Chronik der Mauer",
+   "cues": {
+    "drop": "concrete",
+    "hit": "arrived"
+   },
+   "params": {
+    "mode": "slabs",
+    "lamp": false,
+    "slabs": {
+     "placed": 4,
+     "drop": "drop",
+     "x": 0.72
+    },
+    "labels": [
+     {
+      "text": "Aug 15",
+      "x": 0.54,
+      "y": 0.63,
+      "at": "drop",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "crowd": {
+     "y": 0.8,
+     "r": 55,
+     "n": 7
+    }
+   },
+   "camera": {
+    "focus": [
+     700,
+     1000
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_podium",
+   "text": "Yet East Germany's leader had said two months earlier,",
+   "visual": "A 1961 press conference: curtain wall, a long table with a green cloth, four thin microphones on stands; Walter Ulbricht in glasses with a thin goatee sits behind them and talks; reporters' heads and notebooks fill the lower third, flash bulbs pop; red card 'June 15, 1961' and the hand label 'Walter Ulbricht'.",
+   "title": {
+    "white": "Press conference"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1056
+   },
+   "source": "German Government",
+   "cues": {
+    "hit": "Yet"
+   },
+   "params": {
+    "speaker": {
+     "who": "ulbricht",
+     "x": 0.5,
+     "y": 0.665,
+     "scale": 1.0,
+     "pose": "talk",
+     "face": "right",
+     "glasses": true,
+     "emotion": "neutral",
+     "goatee": true
+    },
+    "labels": [
+     {
+      "text": "June 15, 1961",
+      "x": 0.5,
+      "y": 0.27,
+      "at": 0.4,
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -2,
+      "underline": false
+     },
+     {
+      "text": "Walter Ulbricht",
+      "x": 0.74,
+      "y": 0.4,
+      "at": 0.8,
+      "size": 60
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_podium",
+   "text": "\"Nobody intends to build a wall.\"",
+   "visual": "Close-up of Walter Ulbricht (glasses, thin goatee) behind thin microphones on stands, talking; on 'Nobody' flash bulbs fire all around him; red hand label 'No wall?' appears on 'Nobody'; reporters' heads at the bottom.",
+   "title": {
+    "white": "June 15",
+    "gray": "1961"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1056
+   },
+   "cues": {
+    "quote": "Nobody"
+   },
+   "params": {
+    "speaker": {
+     "who": "ulbricht",
+     "x": 0.5,
+     "y": 0.665,
+     "scale": 1.0,
+     "pose": "talk",
+     "face": "right",
+     "glasses": true,
+     "emotion": "neutral",
+     "goatee": true
+    },
+    "labels": [
+     {
+      "text": "No wall?",
+      "x": 0.4,
+      "y": 0.36,
+      "at": "quote",
+      "size": 80,
+      "color": "red",
+      "font": "hand",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_street",
+   "text": "The Berlin Wall stood for 28 years,",
+   "visual": "Night again: the wire is gone, a tall concrete wall with a round pipe on top runs across the whole street; a watchtower rises behind it on the right and its searchlight beam sweeps the street; a big red year rolls from 1961 up to 1989 above the rooftops.",
+   "title": {
+    "white": "1961–1989"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1056,
+    "horizon": 900
+   },
+   "cues": {
+    "count": "stood"
+   },
+   "params": {
+    "mode": "wall",
+    "tower": {
+     "x": 0.82
+    },
+    "count": {
+     "from": 1961,
+     "to": 1989,
+     "at": "count",
+     "dur": 2.0,
+     "x": 0.3,
+     "y": 0.22,
+     "size": 190
+    },
+    "crowd": true
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "bw_coil",
+   "text": "and it began as a roll of wire.",
+   "visual": "Extreme close-up at street level: one coil of barbed wire lies on the cobbles in front of a concrete post, three barbed strands stretched above it sway slightly, a gold glint slides along the barbs.",
+   "title": {
+    "white": "Day one"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "hit": "wire"
+   },
+   "params": {
+    "mode": "still",
+    "ground": 0.6,
+    "posts": [
+     0.5
+    ],
+    "coil": {
+     "x0": -0.05,
+     "x1": 1.05,
+     "r": 120
+    }
+   },
+   "camera": {
+    "focus": [
+     540,
+     1150
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_street",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Daylight today: two remaining wall sections with a gap between them, red roses and small candles at their foot; the fez host stands on the pavement, waves, then points at the roses on 'story'.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1056,
+    "horizon": 880
+   },
+   "cues": {
+    "s2": "true"
+   },
+   "params": {
+    "mode": "memorial",
+    "lamp": false,
+    "kasif": {
+     "x": 0.62,
+     "y": 0.72,
+     "scale": 1.05,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": -25,
+       "face": "left",
+       "emotion": "neutral"
+      }
+     ]
+    },
+    "crowd": true
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  }
+ ]
+}

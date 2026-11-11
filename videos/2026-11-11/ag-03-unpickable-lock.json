@@ -1,0 +1,2276 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-unpickable-lock",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "UNPICKABLE",
+   "FOR",
+   "61 YEARS?"
+  ],
+  "highlight": [
+   "UNPICKABLE"
+  ],
+  "scene": 38,
+  "t": 0.6,
+  "focus": [
+   1160,
+   560
+  ],
+  "zoom": 1.1,
+  "size": 230,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.45,
+   "face": -1,
+   "x": 1600,
+   "y": 1030
+  }
+ },
+ "sources": [
+  {
+   "title": "Lock (security device), Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/technology/lock-security"
+  },
+  {
+   "title": "Bramah lock (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Bramah_lock"
+  },
+  {
+   "title": "Chubb detector lock (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Chubb_detector_lock"
+  },
+  {
+   "title": "Alfred Charles Hobbs, Scientist of the Day (Linda Hall Library)",
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/alfred-charles-hobbs/"
+  },
+  {
+   "title": "The Man Who Picked Victorian London's Unpickable Lock (Mental Floss)",
+   "url": "https://www.mentalfloss.com/history/man-who-picked-victorian-londons-unpickable-lock"
+  },
+  {
+   "title": "Archeologists crack a shipwreck's 400-year-old combination lock (Popular Science, 2026)",
+   "url": "https://www.popsci.com/technology/shipwreck-combination-lock-ann-francis/"
+  },
+  {
+   "title": "Cryptic padlock from a 400-year-old shipwreck finally opened (Live Science, 2026)",
+   "url": "https://www.livescience.com/archaeology/cryptic-padlock-from-a-400-year-old-shipwreck-finally-opened-but-it-leaves-a-mystery"
+  }
+ ],
+ "youtube": {
+  "title": "Unpickable Lock: Who Finally Cracked London's 61-Year Challenge?",
+  "description": "The unpickable lock sat in a London shop window for 61 years, with a prize of 200 guineas for anyone who could pick it. Nobody could, until an American walked in.\n\nIt starts with a brass padlock from the Ann Francis, a ship wrecked off South Wales in 1583, whose letter code scientists just read with a micro CT scanner. Then we go back to the first wooden pin locks of the ancient world, Roman ring keys and medieval warded locks that a bent wire could beat. In 1790 Joseph Bramah put his challenge padlock in his Piccadilly window. In 1851, at the Great Exhibition, Alfred Charles Hobbs picked a Chubb detector lock in about 25 minutes, then spent about 51 hours over 16 days on the Bramah lock. And the key in your pocket? It is a 4,000-year-old idea.\n\nIn this video:\n- The 1583 shipwreck padlock and its secret code\n- Wooden pin locks, Roman ring keys and wards\n- Bramah's 200 guinea challenge in the shop window\n- Alfred Hobbs at the 1851 Great Exhibition\n- Linus Yale and the pin tumbler key in your pocket\n\nSubscribe to Stickstory for more everyday things with wild stories. What do you think the code A, N, C, E meant? Tell me in the comments!\n\n#unpickablelock #lockpicking #historyoflocks #stickstory",
+  "tags": [
+   "unpickable lock",
+   "unpickable lock history",
+   "unpickable lock challenge",
+   "bramah lock",
+   "bramah lock challenge",
+   "alfred hobbs",
+   "chubb detector lock",
+   "history of locks",
+   "history of locks and keys",
+   "egyptian pin lock",
+   "linus yale",
+   "pin tumbler lock",
+   "ann francis padlock",
+   "great exhibition 1851",
+   "lock picking history",
+   "origins of everyday things",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-11T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "lk_seabed",
+   "text": "This brass padlock spent more than four hundred years at the bottom of the sea.",
+   "visual": "Underwater close-up: a crusted brass barrel padlock with four lettered rings and a U shackle lies half buried in the sand; light rays, rising bubbles, swaying seaweed and two small fish swim past; note '400 years underwater' on 'four'.",
+   "title": {
+    "white": "The padlock"
+   },
+   "cues": {
+    "fh": "hundred",
+    "sea": "bottom"
+   },
+   "params": {
+    "mode": "seabed",
+    "lock": {
+     "x": 0.5,
+     "y": 0.62,
+     "s": 1.0,
+     "rot": -6
+    },
+    "labels": [
+     {
+      "text": "400+ years underwater",
+      "x": 0.6,
+      "y": 0.33,
+      "at": "fh",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "chapter": "The Padlock"
+  },
+  {
+   "type": "lk_seabed",
+   "text": "It came from the Ann Francis, a ship that wrecked off South Wales in 1583. And it was still locked.",
+   "visual": "Underwater, wider: the broken wooden ribs of a wreck stick out of the sand; the small padlock lies in front of them; note 'Ann Francis, 1583'; red stamp 'STILL LOCKED' on 'locked'.",
+   "title": {
+    "white": "Ann Francis",
+    "gray": "1583"
+   },
+   "cues": {
+    "af": "Francis",
+    "wr": "wrecked",
+    "lk": "locked"
+   },
+   "params": {
+    "mode": "wreck",
+    "lock": {
+     "x": 0.62,
+     "y": 0.8,
+     "s": 0.55,
+     "rot": -8
+    },
+    "labels": [
+     {
+      "text": "Ann Francis, 1583",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "wr",
+      "size": 74
+     },
+     {
+      "text": "Still locked",
+      "x": 0.3,
+      "y": 0.58,
+      "at": "lk",
+      "size": 80,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "lk_table",
+   "text": "No keyhole, just rings of letters. So how do you open a lock when whoever knew the code died centuries ago?",
+   "visual": "On a museum table with a blue cloth: the cleaned padlock, big, its four rings rolling through letters; the fez narrator stands at right and thinks, then holds up a sign 'CODE?' on 'code'.",
+   "title": {
+    "white": "No keyhole"
+   },
+   "cues": {
+    "rg": "rings",
+    "cd": "code"
+   },
+   "params": {
+    "mode": "table",
+    "lock": {
+     "x": 0.38,
+     "y": 0.5,
+     "s": 1.05
+    },
+    "spin": "rg",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.84,
+      "y": 0.86,
+      "scale": 0.85,
+      "face": "left",
+      "pose": "think",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "cd",
+        "pose": "hold",
+        "text": "CODE?",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "no keyhole",
+      "x": 0.38,
+      "y": 0.17,
+      "at": 0.4,
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_scan",
+   "text": "Scientists at Cardiff University found out without even touching it. A micro CT scanner built a 3D picture of the inside.",
+   "visual": "A lab: a big micro-CT scanner with a round bore; the padlock sits inside, a gold scan beam sweeps across it; on the monitor at right the x-ray of the inside fills in from left to right; note 'micro CT' on 'scanner'.",
+   "title": {
+    "white": "Cardiff"
+   },
+   "cues": {
+    "tc": "touching",
+    "ct": "scanner"
+   },
+   "params": {
+    "mode": "scan",
+    "scan": "ct",
+    "labels": [
+     {
+      "text": "micro CT",
+      "x": 0.75,
+      "y": 0.68,
+      "at": "ct",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "source": "Cardiff University"
+  },
+  {
+   "type": "lk_xray",
+   "text": "The notches lined up, and the code appeared: A, N, C, E.",
+   "visual": "Close-up x-ray panel: inside the padlock four rings each show a gold notch that drifts up and down, then they line up with the locking bar on 'lined'; the letters A, N, C, E pop in gold above the rings one by one.",
+   "title": {
+    "white": "The code"
+   },
+   "cues": {
+    "al": "notches",
+    "cd": "appeared"
+   },
+   "params": {
+    "mode": "xray",
+    "align": "al",
+    "code": "cd"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     960,
+     420
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_shop",
+   "text": "Here's the thing. Every lock ever made has a weakness.",
+   "visual": "A London street: a Georgian shop front with a bow window; the fez narrator walks up to the window from the left and peers at the padlock through his spyglass on 'weakness'.",
+   "title": {
+    "white": "London"
+   },
+   "cues": {
+    "ev": "Every",
+    "wk": "weakness"
+   },
+   "params": {
+    "mode": "window",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.02,
+      "y": 0.86,
+      "scale": 0.9,
+      "face": "right",
+      "pose": "idle",
+      "at": "wk",
+      "then": "look",
+      "emotion": "surprised",
+      "to": 0.16,
+      "walk_at": 0.1
+     }
+    ],
+    "labels": [
+     {
+      "text": "a weakness?",
+      "x": 0.17,
+      "y": 0.34,
+      "at": "wk",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_shop",
+   "text": "And for sixty-one years, one lock in a London shop window promised a fortune to anyone who could find it.",
+   "visual": "The same shop front, closer: in the bow window a brass padlock sits on a red cloth stand with a card '200 GUINEAS'; a light glint sweeps across the glass; a red year counter runs 1790 to 1851 at top right.",
+   "title": {
+    "white": "Piccadilly"
+   },
+   "cues": {
+    "sy": "sixty",
+    "fo": "fortune"
+   },
+   "params": {
+    "mode": "window",
+    "years": {
+     "from": 1790,
+     "to": 1851,
+     "at": "sy",
+     "dur": 3,
+     "x": 0.8,
+     "y": 0.22
+    },
+    "labels": [
+     {
+      "text": "a fortune",
+      "x": 0.6,
+      "y": 0.4,
+      "at": "fo",
+      "size": 64,
+      "color": "red",
+      "arrow": [
+       0.6,
+       0.47
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     1000,
+     500
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_map",
+   "text": "Nobody could, until a man arrived from America. Who was he, and how did he do it?",
+   "visual": "Full-frame old map of the North Atlantic: a red dashed route draws itself from Boston across the ocean to London on 'arrived'; a big red '?' pops up over London on 'Who'.",
+   "title": {
+    "white": "1851"
+   },
+   "cues": {
+    "am": "arrived",
+    "wh": "Who"
+   },
+   "params": {
+    "bounds": [
+     -80,
+     15,
+     25,
+     60
+    ],
+    "places": [
+     {
+      "name": "Boston",
+      "x": -71.06,
+      "y": 42.36,
+      "at": 0.2,
+      "dx": 20,
+      "dy": 60
+     },
+     {
+      "name": "London",
+      "x": -0.1,
+      "y": 51.5,
+      "at": 0.3,
+      "color": "red",
+      "dx": -30,
+      "dy": -50,
+      "anchor": "end"
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        -71.06,
+        42.36
+       ],
+       [
+        -55,
+        47
+       ],
+       [
+        -35,
+        51
+       ],
+       [
+        -15,
+        52
+       ],
+       [
+        -0.1,
+        51.5
+       ]
+      ],
+      "at": "am",
+      "dur": 2.4
+     }
+    ],
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.7,
+      "y": 0.3,
+      "at": "wh",
+      "size": 220,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "To answer that, we need to go way back.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, title 'The First Lock'.",
+   "title": {},
+   "cues": {
+    "n": "answer",
+    "title": "way"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "The First Lock",
+    "label": "CHAPTER"
+   },
+   "chapter": "The First Lock"
+  },
+  {
+   "type": "lk_door",
+   "text": "Picture a door in the ancient world, with everything you own behind it. How do you keep it safe?",
+   "visual": "Desert: a mud-brick storeroom with a palm tree; the wall is cut open at right showing clay jars and a small heap of gold; a wooden door with a wooden lock; the fez narrator stands at left, points at the jars on 'everything', then thinks on 'safe'.",
+   "title": {
+    "white": "Long ago"
+   },
+   "cues": {
+    "ev": "everything",
+    "sf": "safe"
+   },
+   "params": {
+    "mode": "store",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.13,
+      "y": 0.86,
+      "scale": 0.85,
+      "face": "right",
+      "pose": "idle",
+      "at": "ev",
+      "then": "point",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "sf",
+        "pose": "think",
+        "emotion": "worried"
+       }
+      ],
+      "dir": 10
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_map",
+   "text": "One of the oldest locks ever found comes from the ruins of a palace at Khorsabad, in what is now Iraq. And it was made of wood.",
+   "visual": "Full-frame old map from the Atlantic to Mesopotamia; a red dot and the name 'Khorsabad' pop up in northern Iraq on 'Khorsabad'; 'Egypt' and 'IRAQ' notes; red note 'made of wood' on 'wood'.",
+   "title": {
+    "white": "Khorsabad"
+   },
+   "cues": {
+    "ol": "oldest",
+    "kh": "Khorsabad",
+    "wd": "wood"
+   },
+   "params": {
+    "bounds": [
+     -20,
+     55,
+     20,
+     52
+    ],
+    "seas": [
+     {
+      "name": "Mediterranean",
+      "x": 17,
+      "y": 34.3
+     }
+    ],
+    "places": [
+     {
+      "name": "Khorsabad",
+      "x": 43.2,
+      "y": 36.5,
+      "at": "kh",
+      "color": "red",
+      "dx": -30,
+      "dy": -50,
+      "anchor": "end"
+     },
+     {
+      "name": "IRAQ",
+      "x": 44,
+      "y": 32.5,
+      "at": "kh",
+      "dot": false,
+      "size": 64
+     },
+     {
+      "name": "Egypt",
+      "x": 30,
+      "y": 27.5,
+      "at": 0.3,
+      "dot": false,
+      "size": 60
+     }
+    ],
+    "labels": [
+     {
+      "text": "made of wood",
+      "x": 0.75,
+      "y": 0.3,
+      "at": "wd",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "source": "Britannica"
+  },
+  {
+   "type": "lk_pinlock",
+   "text": "A wooden bolt slid across the door. When it closed, small wooden pins dropped into holes in the bolt and jammed it.",
+   "visual": "Cutaway of an ancient wooden lock filling the frame: the door jamb at left, a wooden housing on the door with three pin channels, a long hollow bolt; on 'slid' the bolt slides left into the jamb; on 'dropped' three gold wooden pins drop into holes in the bolt; notes 'bolt' and red 'pins'.",
+   "title": {
+    "white": "Inside"
+   },
+   "cues": {
+    "sl": "slid",
+    "dr": "dropped",
+    "jm": "jammed"
+   },
+   "params": {
+    "mode": "wood",
+    "close": "sl",
+    "labels": [
+     {
+      "text": "bolt",
+      "x": 0.82,
+      "y": 0.6,
+      "at": "sl",
+      "size": 70
+     },
+     {
+      "text": "pins",
+      "x": 0.75,
+      "y": 0.24,
+      "at": "dr",
+      "size": 76,
+      "color": "red",
+      "arrow": [
+       0.6,
+       0.36
+      ]
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "lk_pinlock",
+   "text": "To open it, you pushed in a big wooden key with pegs on top. The pegs lifted the pins, and the bolt slid free.",
+   "visual": "Close-up of the same cutaway: a wooden key with three pegs slides into the hollow bolt from the right on 'pushed'; on 'lifted' the key rises and the pegs push the three pins up out of the bolt; on 'free' the bolt and key slide right; note 'key' and green 'free!'.",
+   "title": {
+    "white": "The key"
+   },
+   "cues": {
+    "ps": "pushed",
+    "lf": "lifted",
+    "fr": "free"
+   },
+   "params": {
+    "mode": "wood",
+    "closed": true,
+    "key": "ps",
+    "lift": "lf",
+    "slide": "fr",
+    "labels": [
+     {
+      "text": "key",
+      "x": 0.86,
+      "y": 0.82,
+      "at": "ps",
+      "size": 72
+     },
+     {
+      "text": "free!",
+      "x": 0.84,
+      "y": 0.3,
+      "at": "fr",
+      "size": 84,
+      "color": "green"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     480
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_door",
+   "text": "People call it the Egyptian lock, because it was so common in Egypt.",
+   "visual": "Egypt: two pyramids on the horizon, a palm tree, a mud-brick storeroom; a wooden peg key slides into the wooden lock on the door and the bolt draws back; note 'the Egyptian lock' in red.",
+   "title": {
+    "white": "Egypt"
+   },
+   "cues": {
+    "eg": "Egyptian",
+    "cm": "common"
+   },
+   "params": {
+    "mode": "egypt",
+    "key": 0.4,
+    "open": "cm",
+    "labels": [
+     {
+      "text": "the Egyptian lock",
+      "x": 0.58,
+      "y": 0.18,
+      "at": "eg",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 929
+   }
+  },
+  {
+   "type": "title",
+   "text": "Remember those pins. But wood is clumsy. So what did the Romans do?",
+   "visual": "Giant words 'Remember' / 'the pins' word by word, 'pins' in a red box; the fez narrator beside them points at the words on 'Remember', then shrugs on 'Romans'.",
+   "title": {
+    "white": "Pins"
+   },
+   "cues": {
+    "w0": "Remember",
+    "rm": "Romans"
+   },
+   "params": {
+    "lines": [
+     "Remember",
+     "the pins"
+    ],
+    "highlight": [
+     "pins"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.85,
+     "pose": "point",
+     "face": -1,
+     "scale": 0.85,
+     "at": "rm",
+     "then": "shrug",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "They made locks out of metal.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'Iron and Wards'.",
+   "title": {},
+   "cues": {
+    "n": "made",
+    "title": "metal"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Iron and Wards",
+    "label": "CHAPTER"
+   },
+   "chapter": "Iron and Wards"
+  },
+  {
+   "type": "lk_ward",
+   "text": "And they added wards: little ridges inside the lock that block any key without the right slots.",
+   "visual": "Inside an iron lock case, front view: two curved iron ridges (wards) circle the keyhole; a red key with no slots turns and hits the ward on 'block' (red X); then a key with slots in its bit turns right past the wards on 'slots' and the bolt below slides.",
+   "title": {
+    "white": "Wards"
+   },
+   "cues": {
+    "wd": "wards",
+    "bl": "block",
+    "sl": "slots"
+   },
+   "params": {
+    "mode": "block",
+    "wrong": "bl",
+    "right": "sl",
+    "labels": [
+     {
+      "text": "wards",
+      "x": 0.84,
+      "y": 0.3,
+      "at": "wd",
+      "size": 76,
+      "color": "red",
+      "arrow": [
+       0.56,
+       0.38
+      ]
+     },
+     {
+      "text": "right slots",
+      "x": 0.86,
+      "y": 0.6,
+      "at": "sl",
+      "size": 62,
+      "color": "green"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_ring",
+   "text": "Some Roman keys were so small that people wore them on their fingers as rings.",
+   "visual": "Close-up: a hand rises into frame with a small bronze ring key on one finger, a gold sparkle on it; note 'Roman ring key' on 'rings'.",
+   "title": {
+    "white": "Ring keys"
+   },
+   "cues": {
+    "sm": "small",
+    "rg": "rings"
+   },
+   "params": {
+    "mode": "ring",
+    "labels": [
+     {
+      "text": "Roman ring key",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "rg",
+      "size": 70,
+      "color": "red",
+      "arrow": [
+       0.47,
+       0.4
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     880,
+     420
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Britannica"
+  },
+  {
+   "type": "lk_forge",
+   "text": "For centuries, locksmiths made beautiful iron locks with more and more wards.",
+   "visual": "A medieval locksmith's forge: fire roaring in a brick hearth, a smith behind the anvil, a hammer swinging down on a glowing lock plate with sparks; keys swing on a wall rack; a round inset at right fills with five ward rings, one after another, on 'more'.",
+   "title": {
+    "white": "The forge"
+   },
+   "cues": {
+    "bt": "beautiful",
+    "mw": "more"
+   },
+   "params": {
+    "inset": "mw",
+    "cast": [
+     {
+      "who": "smith",
+      "beard": "black",
+      "x": 0.62,
+      "y": 0.86,
+      "scale": 0.85,
+      "face": "left",
+      "pose": "idle",
+      "emotion": "angry"
+     }
+    ],
+    "labels": [
+     {
+      "text": "more and more wards",
+      "x": 0.6,
+      "y": 0.2,
+      "at": "mw",
+      "size": 68,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_ward",
+   "text": "But here's the problem. Wards only block the key. They don't guard the bolt.",
+   "visual": "Inside the iron lock case, the fez narrator drawn small stands on the floor of the cutaway next to the end of the bolt; on 'bolt' he pushes it along by hand and it slides open; red note 'bolt unguarded'.",
+   "title": {
+    "white": "The problem"
+   },
+   "cues": {
+    "pr": "problem",
+    "bl": "block",
+    "bo": "bolt"
+   },
+   "params": {
+    "mode": "block",
+    "push": "bo",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.25,
+      "y": 0.84,
+      "scale": 0.42,
+      "face": "right",
+      "pose": "point",
+      "emotion": "worried",
+      "dir": 0,
+      "to": 0.335,
+      "walk_at": "bo"
+     }
+    ],
+    "labels": [
+     {
+      "text": "unguarded!",
+      "x": 0.54,
+      "y": 0.6,
+      "at": "bo",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     620,
+     740
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_thief",
+   "text": "A thief just needed a bent piece of metal that slipped around them.",
+   "visual": "Night: a stone storeroom wall with a heavy wooden door and an iron lock plate; a lantern glows on the ground; a thief in a slouch hat crouches at the door and slides a thin red bent wire into the keyhole on 'bent'.",
+   "title": {
+    "white": "At night"
+   },
+   "cues": {
+    "th": "thief",
+    "bt": "bent",
+    "ar": "around"
+   },
+   "params": {
+    "mode": "store",
+    "wire": "bt",
+    "cast": [
+     {
+      "who": "thief",
+      "accessory": "slouch",
+      "x": 0.36,
+      "y": 0.86,
+      "scale": 0.82,
+      "face": "right",
+      "pose": "point",
+      "dir": 0,
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "bent wire",
+      "x": 0.85,
+      "y": 0.32,
+      "at": "bt",
+      "size": 76,
+      "color": "gold"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_thief",
+   "text": "So a lock looked strong, but it was easy to beat.",
+   "visual": "Close-up of the iron lock plate on the dark planks: the red bent wire wiggles in the keyhole; red stamp 'EASY TO BEAT' lands on 'easy'.",
+   "title": {
+    "white": "Easy"
+   },
+   "cues": {
+    "st": "strong",
+    "ez": "easy"
+   },
+   "params": {
+    "mode": "close",
+    "wire": 0.1,
+    "labels": [
+     {
+      "text": "strong?",
+      "x": 0.66,
+      "y": 0.3,
+      "at": "st",
+      "size": 76
+     },
+     {
+      "text": "Easy to beat",
+      "x": 0.55,
+      "y": 0.6,
+      "at": "ez",
+      "size": 96,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Then a London engineer decided to fix that for good.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'The Challenge in the Window'.",
+   "title": {},
+   "cues": {
+    "n": "London",
+    "title": "engineer"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Challenge in the Window",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Challenge in the Window"
+  },
+  {
+   "type": "lk_workshop",
+   "text": "His name was Joseph Bramah, and he patented his lock in 1784. It used a tiny tube-shaped key.",
+   "visual": "Bramah's workshop: shelves of locks, a turning lathe wheel and belt, a workbench with sparks; a period engineer (no hat) works at the bench; the tiny tube-shaped key drawn big on the bench; notes 'Joseph Bramah', 'patent 1784', red 'tube key' on 'tube'.",
+   "title": {
+    "white": "Bramah",
+    "gray": "1784"
+   },
+   "cues": {
+    "jb": "Bramah",
+    "pt": "patented",
+    "tb": "tiny"
+   },
+   "params": {
+    "mode": "workshop",
+    "hit": "tb",
+    "cast": [
+     {
+      "who": "bramah",
+      "x": 0.24,
+      "y": 0.86,
+      "scale": 0.82,
+      "face": "right",
+      "pose": "talk",
+      "beard": "short",
+      "at": "tb",
+      "then": "point",
+      "dir": -10
+     }
+    ],
+    "labels": [
+     {
+      "text": "Joseph Bramah",
+      "x": 0.3,
+      "y": 0.43,
+      "at": "jb",
+      "size": 62
+     },
+     {
+      "text": "patent 1784",
+      "x": 0.82,
+      "y": 0.12,
+      "at": "pt",
+      "size": 64
+     },
+     {
+      "text": "tube key",
+      "x": 0.62,
+      "y": 0.47,
+      "at": "tb",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "source": "Britannica"
+  },
+  {
+   "type": "lk_bramah",
+   "text": "Inside, sliders all had to be pushed to exactly the right depth at once. One slider off by a hair, and nothing turned.",
+   "visual": "Close-up end view inside a Bramah lock: a big brass disc with eight radial sliders around a round core; the tube key enters and pushes the sliders, their notches meet a gold ring and turn green on 'depth'; on 'off' one slider overshoots and turns red, the core only shudders and a red X appears; the tube key drawn at right.",
+   "title": {
+    "white": "Inside"
+   },
+   "cues": {
+    "sl": "sliders",
+    "dp": "depth",
+    "of": "off",
+    "nt": "nothing"
+   },
+   "params": {
+    "mode": "bramah",
+    "push": "sl",
+    "miss": "of",
+    "labels": [
+     {
+      "text": "right depth",
+      "x": 0.8,
+      "y": 0.16,
+      "at": "dp",
+      "size": 60,
+      "color": "green"
+     },
+     {
+      "text": "nothing turns",
+      "x": 0.8,
+      "y": 0.26,
+      "at": "nt",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_inside",
+   "text": "In 1790, Bramah was so sure of it that he put a padlock in his Piccadilly shop window, with a sign.",
+   "visual": "Reverse angle from inside the dark shop: the back of the brass padlock on its red stand and the back of the sign card in the bow window; outside, a crowd of Londoners in hats press their faces to the glass and stare; note '1790'.",
+   "title": {
+    "white": "Piccadilly",
+    "gray": "1790"
+   },
+   "cues": {
+    "y0": "1790",
+    "pc": "Piccadilly",
+    "sg": "sign"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "1790",
+      "x": 0.86,
+      "y": 0.78,
+      "at": "y0",
+      "size": 80,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "lk_sign",
+   "text": "It said: The artist who can make an instrument that will pick or open this lock shall receive 200 guineas the moment it is produced.",
+   "visual": "Close-up of the framed card from the window: lines of copperplate handwriting write themselves; on 'guineas' a big red '200 GUINEAS' lands; a small padlock drawing at lower right.",
+   "title": {
+    "white": "The sign"
+   },
+   "cues": {
+    "ar": "artist",
+    "gn": "guineas"
+   },
+   "params": {
+    "mode": "sign",
+    "prize": "gn"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   },
+   "source": "Linda Hall Library"
+  },
+  {
+   "type": "lk_shop",
+   "text": "That was a fortune. Bramah died in 1814, and the lock was still waiting.",
+   "visual": "The shop front at night under the gas lamp, window glowing; the red year counter ticks on from 1814 to 1817; red note 'still waiting'.",
+   "title": {
+    "white": "Waiting"
+   },
+   "cues": {
+    "fo": "fortune",
+    "dd": "1814",
+    "wt": "waiting"
+   },
+   "params": {
+    "mode": "window",
+    "night": true,
+    "years": {
+     "from": 1814,
+     "to": 1817,
+     "at": "dd",
+     "dur": 2,
+     "x": 0.84,
+     "y": 0.2
+    },
+    "labels": [
+     {
+      "text": "still waiting...",
+      "x": 0.84,
+      "y": 0.31,
+      "at": "wt",
+      "size": 54,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_thief",
+   "text": "In 1818, after thieves used false keys at Portsmouth Dockyard, Jeremiah Chubb won a government prize with his detector lock.",
+   "visual": "Portsmouth Dockyard at night under the moon: a brick storehouse with a big door, ships' masts behind; two thieves at the door, a ring of false keys jiggling in the lock on 'false'; notes 'Portsmouth Dockyard' and red 'Chubb wins, 1818' on 'Chubb'.",
+   "title": {
+    "white": "Portsmouth"
+   },
+   "cues": {
+    "fk": "false",
+    "pd": "Portsmouth",
+    "jc": "Chubb"
+   },
+   "params": {
+    "mode": "dock",
+    "keys": "fk",
+    "cast": [
+     {
+      "who": "t1",
+      "accessory": "slouch",
+      "x": 0.12,
+      "y": 0.86,
+      "scale": 0.8,
+      "face": "right",
+      "pose": "point",
+      "dir": 10,
+      "emotion": "angry"
+     },
+     {
+      "who": "t2",
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 0.76,
+      "face": "left",
+      "pose": "look"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Chubb wins, 1818",
+      "x": 0.79,
+      "y": 0.4,
+      "at": "jc",
+      "size": 64,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   },
+   "source": "Chubb detector lock"
+  },
+  {
+   "type": "lk_lever",
+   "text": "Lift a lever too high, and it jammed and gave the thief away.",
+   "visual": "Close-up of the levers: the pick lifts one lever too high on 'high', the red detector drops and catches it, the bolt shudders; red stamp 'JAMMED' on 'jammed'.",
+   "title": {
+    "white": "Jammed"
+   },
+   "cues": {
+    "lv": "lever",
+    "hi": "high",
+    "jm": "jammed"
+   },
+   "params": {
+    "mode": "lever",
+    "lift": "lv",
+    "jam": "hi",
+    "labels": [
+     {
+      "text": "Jammed",
+      "x": 0.5,
+      "y": 0.62,
+      "at": "jm",
+      "size": 90,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     1180,
+     420
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "So by 1851, London had two unpickable locks. But that summer, the whole world came to town.",
+   "visual": "Giant words 'Two' / 'unpickable locks' word by word, 'unpickable' in a red box; the fez narrator holds up a sign '1851' and waves on 'world'.",
+   "title": {
+    "white": "1851"
+   },
+   "cues": {
+    "w0": "1851",
+    "wd": "world"
+   },
+   "params": {
+    "lines": [
+     "Two",
+     "unpickable",
+     "locks"
+    ],
+    "highlight": [
+     "unpickable"
+    ],
+    "y": 0.4,
+    "kasif": {
+     "x": 0.88,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "at": "wd",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "The Great Exhibition opened in a giant hall of glass and iron: the Crystal Palace.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title '1851: The Locksmith from Boston'.",
+   "title": {},
+   "cues": {
+    "n": "Exhibition",
+    "title": "glass"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "1851: The Locksmith from Boston",
+    "label": "CHAPTER"
+   },
+   "chapter": "1851: The Locksmith from Boston"
+  },
+  {
+   "type": "lk_hall",
+   "text": "Among the visitors was a locksmith from Boston named Alfred Charles Hobbs. He came to sell American locks. Instead, he picked one.",
+   "visual": "Inside the Crystal Palace: glass-and-iron arches, a big elm tree, red and blue pennants swaying, a crowd of heads in front; a period man (Hobbs, short beard) walks in from the left and holds up a pick on 'picked'; notes 'Alfred C. Hobbs' and 'from Boston'.",
+   "title": {
+    "white": "Crystal Palace"
+   },
+   "cues": {
+    "bs": "Boston",
+    "hb": "Hobbs",
+    "pk": "picked"
+   },
+   "params": {
+    "mode": "wide",
+    "cast": [
+     {
+      "who": "hobbs",
+      "beard": "short",
+      "x": 0.1,
+      "to": 0.3,
+      "walk_at": 0.2,
+      "walk_dur": 2,
+      "y": 0.88,
+      "scale": 0.9,
+      "face": "right",
+      "pose": "walk",
+      "at": "pk",
+      "then": "point",
+      "dir": 40,
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Alfred C. Hobbs",
+      "x": 0.36,
+      "y": 0.38,
+      "at": "hb",
+      "size": 78,
+      "color": "red"
+     },
+     {
+      "text": "from Boston",
+      "x": 0.72,
+      "y": 0.4,
+      "at": "bs",
+      "size": 72
+     }
+    ]
+   },
+   "set": false,
+   "source": "Linda Hall Library"
+  },
+  {
+   "type": "lk_demo",
+   "text": "In front of astonished onlookers, Hobbs opened a Chubb detector lock in about 25 minutes.",
+   "visual": "A Westminster room with striped wallpaper and a tall curtained window: a table with a brass Chubb lock, Hobbs at the left picking it, onlookers at the right; a big clock at top right sweeps a red wedge as the counter climbs to '25 min'; on 'minutes' the bolt pops out and the onlookers jump.",
+   "title": {
+    "white": "Chubb picked"
+   },
+   "cues": {
+    "on": "onlookers",
+    "op": "opened",
+    "mn": "minutes"
+   },
+   "params": {
+    "room": true,
+    "open": "mn",
+    "clock": {
+     "from": 0,
+     "to": 25,
+     "at": "on",
+     "dur": 3,
+     "unit": "min"
+    },
+    "cast": [
+     {
+      "who": "hobbs",
+      "beard": "short",
+      "x": 0.24,
+      "y": 0.86,
+      "scale": 0.8,
+      "face": "right",
+      "pose": "point",
+      "dir": -20
+     },
+     {
+      "who": "o1",
+      "x": 0.75,
+      "y": 0.86,
+      "scale": 0.72,
+      "face": "left",
+      "pose": "idle",
+      "at": "mn",
+      "then": "shock",
+      "emotion": "surprised"
+     },
+     {
+      "who": "o2",
+      "accessory": "slouch",
+      "x": 0.84,
+      "y": 0.86,
+      "scale": 0.76,
+      "face": "left",
+      "pose": "idle",
+      "at": "mn",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "source": "Mental Floss"
+  },
+  {
+   "type": "lk_demo",
+   "text": "When they asked him to do it again, he did it in seven.",
+   "visual": "Same room, medium shot: the clock counter now runs only to '7 min'; the fez narrator, whole figure at right, jumps back in shock on 'seven'.",
+   "title": {
+    "white": "Again"
+   },
+   "cues": {
+    "ag": "again",
+    "sv": "seven"
+   },
+   "params": {
+    "room": true,
+    "open": "sv",
+    "clock": {
+     "from": 0,
+     "to": 7,
+     "at": "ag",
+     "dur": 1.4,
+     "unit": "min"
+    },
+    "cast": [
+     {
+      "who": "hobbs",
+      "beard": "short",
+      "x": 0.24,
+      "y": 0.86,
+      "scale": 0.8,
+      "face": "right",
+      "pose": "point",
+      "dir": -20
+     },
+     {
+      "who": "kasif",
+      "x": 0.72,
+      "y": 0.86,
+      "scale": 0.85,
+      "face": "left",
+      "pose": "idle",
+      "at": "sv",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     1150,
+     540
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_shop",
+   "text": "But the big prize was still in that shop window, so Hobbs took the challenge.",
+   "visual": "Close-up at the bow window: Hobbs, big in the foreground at left, leans towards the glass and points at the brass padlock on its red stand on 'challenge'; red note 'challenge!'.",
+   "title": {
+    "white": "Piccadilly"
+   },
+   "cues": {
+    "pz": "prize",
+    "ch": "challenge"
+   },
+   "params": {
+    "mode": "window",
+    "cast": [
+     {
+      "who": "hobbs",
+      "beard": "short",
+      "x": 0.17,
+      "y": 1.2,
+      "scale": 1.7,
+      "face": "right",
+      "pose": "idle",
+      "at": "ch",
+      "then": "point",
+      "dir": 20,
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "challenge!",
+      "x": 0.31,
+      "y": 0.4,
+      "at": "ch",
+      "size": 68,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     800,
+     500
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_pick",
+   "text": "He could use any tools, but the lock had to survive unharmed.",
+   "visual": "A room above the shop: the Bramah padlock clamped in a vice on a table, a row of thin picks laid out, an oil lamp flickering, a wall clock and a red day calendar; two picks wiggle in the keyhole; Hobbs stands at left watching; notes 'any tools' and red 'no damage'.",
+   "title": {
+    "white": "The rules"
+   },
+   "cues": {
+    "tl": "tools",
+    "uh": "unharmed"
+   },
+   "params": {
+    "mode": "pick",
+    "days": {
+     "from": 1,
+     "to": 1,
+     "at": 0,
+     "dur": 0.1
+    },
+    "cast": [
+     {
+      "who": "hobbs",
+      "beard": "short",
+      "x": 0.2,
+      "y": 0.86,
+      "scale": 0.82,
+      "face": "right",
+      "pose": "think",
+      "emotion": "neutral"
+     }
+    ],
+    "labels": [
+     {
+      "text": "any tools",
+      "x": 0.8,
+      "y": 0.5,
+      "at": "tl",
+      "size": 64
+     },
+     {
+      "text": "no damage",
+      "x": 0.42,
+      "y": 0.47,
+      "at": "uh",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_pick",
+   "text": "He worked for about 51 hours, spread over 16 days.",
+   "visual": "Close on the table: the picks wiggle in the Bramah keyhole, the wall clock hands spin fast, the red calendar flips from DAY 1 to DAY 16; red note '51 hours'.",
+   "title": {
+    "white": "16 days"
+   },
+   "cues": {
+    "hr": "hours",
+    "dy": "days"
+   },
+   "params": {
+    "mode": "pick",
+    "days": {
+     "from": 1,
+     "to": 16,
+     "at": "hr",
+     "dur": 2.6
+    },
+    "labels": [
+     {
+      "text": "51 hours",
+      "x": 0.45,
+      "y": 0.3,
+      "at": "hr",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     1250,
+     420
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "source": "Linda Hall Library"
+  },
+  {
+   "type": "lk_bramah",
+   "text": "And then the lock opened. After sixty-one years, the unpickable lock was picked.",
+   "visual": "Big close-up of the Bramah padlock with a pick in its keyhole; on 'opened' the shackle springs up with gold rays bursting round it; red stamp '61 YEARS' on 'sixty'.",
+   "title": {
+    "white": "Open"
+   },
+   "cues": {
+    "op": "opened",
+    "sx": "sixty",
+    "pk": "picked"
+   },
+   "params": {
+    "mode": "bramah_open",
+    "pick": "red",
+    "open": "op",
+    "labels": [
+     {
+      "text": "61 years",
+      "x": 0.8,
+      "y": 0.2,
+      "at": "sx",
+      "size": 96,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "picked!",
+      "x": 0.2,
+      "y": 0.36,
+      "at": "pk",
+      "size": 84,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  },
+  {
+   "type": "lk_club",
+   "text": "Critics complained: no real burglar gets sixteen days alone with a lock. Fair point.",
+   "visual": "A Victorian club room with green striped wallpaper, a portrait and a fire: a critic in a red armchair waves a newspaper with the headline '16 DAYS?'; a second critic points at it; the fez narrator at left thinks, then shrugs on 'Fair'.",
+   "title": {
+    "white": "Critics"
+   },
+   "cues": {
+    "cr": "Critics",
+    "bg": "burglar",
+    "fp": "Fair"
+   },
+   "params": {
+    "headline": "16 DAYS?",
+    "wave": "cr",
+    "cast": [
+     {
+      "who": "critic",
+      "beard": "grey",
+      "x": 0.62,
+      "y": 0.86,
+      "scale": 0.8,
+      "face": "left",
+      "pose": "sit",
+      "emotion": "angry"
+     },
+     {
+      "who": "c2",
+      "beard": "black",
+      "x": 0.84,
+      "y": 0.86,
+      "scale": 0.8,
+      "face": "left",
+      "pose": "point",
+      "dir": 30,
+      "emotion": "angry"
+     },
+     {
+      "who": "kasif",
+      "x": 0.1,
+      "y": 0.86,
+      "scale": 0.95,
+      "face": "right",
+      "pose": "think",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "fp",
+        "pose": "shrug",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "no real burglar...",
+      "x": 0.8,
+      "y": 0.12,
+      "at": "bg",
+      "size": 62,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  },
+  {
+   "type": "title",
+   "text": "But the lesson stuck: every lock can be picked. It's only a question of time. So what do you put on your door after that?",
+   "visual": "Giant words 'Every lock' / 'can be picked' word by word, 'picked' in a red box; small note 'only a question of time' on 'time'.",
+   "title": {
+    "white": "The lesson"
+   },
+   "cues": {
+    "w0": "lesson",
+    "pk": "picked",
+    "note": "time"
+   },
+   "params": {
+    "lines": [
+     "Every lock",
+     "can be picked"
+    ],
+    "highlight": [
+     "picked"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "only a question of time",
+     "at": "note"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "The answer came from America, and it was very old.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Key in Your Pocket'.",
+   "title": {},
+   "cues": {
+    "n": "answer",
+    "title": "America"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Key in Your Pocket",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Key in Your Pocket"
+  },
+  {
+   "type": "lk_map",
+   "text": "In 1848, a locksmith named Linus Yale made a pin tumbler lock based on the Egyptian idea: pins that drop and jam, and a key that lifts them.",
+   "visual": "Full-frame old map across the Atlantic: Egypt and Khorsabad in the east, London, and a red dashed route arcing across the ocean to Connecticut in America; notes 'Linus Yale, 1848' and 'the Egyptian idea'.",
+   "title": {
+    "white": "Yale",
+    "gray": "1848"
+   },
+   "cues": {
+    "ly": "Yale",
+    "eg": "Egyptian",
+    "pn": "pins"
+   },
+   "params": {
+    "bounds": [
+     -80,
+     45,
+     22,
+     58
+    ],
+    "places": [
+     {
+      "name": "Egypt",
+      "x": 31,
+      "y": 30,
+      "at": 0.2,
+      "dx": -30,
+      "dy": 50,
+      "anchor": "end"
+     },
+     {
+      "name": "London",
+      "x": -0.1,
+      "y": 51.5,
+      "at": 0.4,
+      "dx": -20,
+      "dy": -40,
+      "anchor": "end"
+     },
+     {
+      "name": "Connecticut",
+      "x": -72.7,
+      "y": 41.6,
+      "at": "ly",
+      "color": "red",
+      "dx": 20,
+      "dy": 60
+     }
+    ],
+    "routes": [
+     {
+      "pts": [
+       [
+        31,
+        30
+       ],
+       [
+        10,
+        40
+       ],
+       [
+        -20,
+        45
+       ],
+       [
+        -50,
+        46
+       ],
+       [
+        -72.7,
+        41.6
+       ]
+      ],
+      "at": "eg",
+      "dur": 2.4
+     }
+    ],
+    "labels": [
+     {
+      "text": "Linus Yale, 1848",
+      "x": 0.42,
+      "y": 0.45,
+      "at": "ly",
+      "size": 70,
+      "color": "red"
+     },
+     {
+      "text": "the Egyptian idea",
+      "x": 0.55,
+      "y": 0.7,
+      "at": "eg",
+      "size": 62
+     }
+    ]
+   },
+   "set": false,
+   "source": "Britannica"
+  },
+  {
+   "type": "lk_yale",
+   "text": "In the 1860s, his son, Linus Yale Junior, made it small. He put the pins in a little cylinder and shrank the big wooden key into flat metal with a jagged edge.",
+   "visual": "Cutaway of a Yale pin tumbler cylinder filling the frame: a brass housing with five pin chambers, springs, grey driver pins and gold key pins; a flat key with a jagged edge slides in from the right on 'flat', its bumps lift the pins; notes 'Linus Yale Jr.' and 'cylinder'.",
+   "title": {
+    "white": "Yale Jr.",
+    "gray": "1860s"
+   },
+   "cues": {
+    "jr": "Junior",
+    "cy": "cylinder",
+    "fl": "flat"
+   },
+   "params": {
+    "mode": "yale",
+    "key": "fl",
+    "labels": [
+     {
+      "text": "Linus Yale Jr.",
+      "x": 0.5,
+      "y": 0.1,
+      "at": "jr",
+      "size": 70,
+      "color": "red"
+     },
+     {
+      "text": "cylinder",
+      "x": 0.88,
+      "y": 0.14,
+      "at": "cy",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": false
+  },
+  {
+   "type": "lk_yale",
+   "text": "Each bump lifts one pin to exactly the right height, and the cylinder turns.",
+   "visual": "Close-up of the pins: the key is fully in, every gap sits exactly on the shear line, which glows green; the key's bow turns on 'turns'; green note 'turns!'.",
+   "title": {
+    "white": "Click"
+   },
+   "cues": {
+    "bp": "bump",
+    "ht": "height",
+    "tn": "turns"
+   },
+   "params": {
+    "mode": "yale",
+    "key": -3,
+    "turn": "tn",
+    "labels": [
+     {
+      "text": "right height",
+      "x": 0.5,
+      "y": 0.9,
+      "at": "ht",
+      "size": 56,
+      "color": "green"
+     },
+     {
+      "text": "turns!",
+      "x": 0.88,
+      "y": 0.2,
+      "at": "tn",
+      "size": 84,
+      "color": "green"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_key",
+   "text": "Go look at your front door key. Those bumps are pin heights.",
+   "visual": "A front door of wooden planks with a round brass lock; a big modern flat key floats across the frame, and above each bump a gold pin rises on a dotted line up to a green line; the fez narrator at right points at the bumps on 'bumps'.",
+   "title": {
+    "white": "Your key"
+   },
+   "cues": {
+    "lk": "look",
+    "bp": "bumps",
+    "ph": "heights"
+   },
+   "params": {
+    "bumps": "bp",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.23,
+      "y": 0.86,
+      "scale": 0.6,
+      "face": "right",
+      "pose": "idle",
+      "at": "bp",
+      "then": "point",
+      "emotion": "happy",
+      "dir": 30
+     }
+    ],
+    "labels": [
+     {
+      "text": "pin heights",
+      "x": 0.55,
+      "y": 0.71,
+      "at": "ph",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "timeline",
+   "text": "You carry a four thousand year old idea in your pocket. And yes, it can be picked too.",
+   "visual": "Horizontal timeline: 'Khorsabad / wooden pins', 'Rome / ring keys', '1784 / Bramah', '1851 / Hobbs', '1860s / Yale'; the marker runs to Yale.",
+   "title": {
+    "white": "4,000 years"
+   },
+   "cues": {
+    "a": "four",
+    "b": "idea",
+    "c": "pocket",
+    "d": "yes",
+    "e": "picked"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Ancient",
+      "text": "wooden pins",
+      "at": "a"
+     },
+     {
+      "year": "Rome",
+      "text": "ring keys",
+      "at": "b"
+     },
+     {
+      "year": "1784",
+      "text": "Bramah",
+      "at": "c"
+     },
+     {
+      "year": "1851",
+      "text": "Hobbs",
+      "at": "d"
+     },
+     {
+      "year": "1860s",
+      "text": "Yale",
+      "at": "e"
+     }
+    ],
+    "focus": 4
+   },
+   "set": false
+  },
+  {
+   "type": "lk_chest",
+   "text": "Which brings us back to Wales. The Ann Francis belonged to Francis Shaxton, a merchant said to be a smuggler, and the padlock probably guarded a chest.",
+   "visual": "Inside the dark hold of a wooden ship: curved ribs, barrels; a sea chest with iron bands, the brass letter padlock swinging on its hasp; silver coins spill out onto the planks on 'smuggler'; notes 'Francis Shaxton' and red 'smuggler?'.",
+   "title": {
+    "white": "The hold"
+   },
+   "cues": {
+    "sx": "Shaxton",
+    "sm": "smuggler",
+    "ch": "chest"
+   },
+   "params": {
+    "mode": "chest",
+    "hold": true,
+    "coins": "sm",
+    "labels": [
+     {
+      "text": "Francis Shaxton",
+      "x": 0.42,
+      "y": 0.1,
+      "at": "sx",
+      "size": 66
+     },
+     {
+      "text": "smuggler?",
+      "x": 0.62,
+      "y": 0.22,
+      "at": "sm",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     810,
+     560
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   },
+   "source": "Live Science"
+  },
+  {
+   "type": "lk_table",
+   "text": "And nobody knows why its owner chose those four letters.",
+   "visual": "Close-up of the padlock on the table: its four rings show A, N, C, E and glow, letter by letter.",
+   "title": {
+    "white": "ANCE"
+   },
+   "cues": {
+    "nb": "nobody",
+    "ch": "chose"
+   },
+   "params": {
+    "mode": "table",
+    "lock": {
+     "x": 0.5,
+     "y": 0.5,
+     "s": 1.2
+    },
+    "code": "nb"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "camera": {
+    "focus": [
+     960,
+     540
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lk_table",
+   "text": "So what do you think A, N, C, E meant? Tell me in the comments, and subscribe to Stickstory for more everyday things with wild stories.",
+   "visual": "Medium shot: the fez narrator, big, stands next to the padlock on the table and turns its rings with his hand; they roll and stop on A N C E on 'think'; he holds up a sign 'ANCE = ?' and waves goodbye on 'subscribe'.",
+   "title": {
+    "white": "Your guess"
+   },
+   "cues": {
+    "th": "think",
+    "sb": "subscribe"
+   },
+   "params": {
+    "mode": "table",
+    "lock": {
+     "x": 0.36,
+     "y": 0.5,
+     "s": 1.05
+    },
+    "spin": true,
+    "code": "th",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.68,
+      "y": 0.9,
+      "scale": 1.25,
+      "face": "left",
+      "pose": "point",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "th",
+        "pose": "hold",
+        "text": "ANCE = ?",
+        "emotion": "surprised"
+       },
+       {
+        "at": "sb",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ],
+      "dir": -10
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   }
+  }
+ ]
+}
