@@ -1,0 +1,17 @@
+{
+ "id": "W10IbN0gNmI",
+ "thumbnail": false,
+ "url": "https://youtu.be/W10IbN0gNmI",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-12T00:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Berlin Wall: How Did a City Get Split in One Night?",
+ "script": "videos/2026-11-11/ag-02-berlin-wall-overnight.json"
+}
