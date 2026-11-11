@@ -1,0 +1,187 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "grafit",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "TDV İslâm Ansiklopedisi: Varna Muharebesi",
+      "url": "https://islamansiklopedisi.org.tr/varna-muharebesi"
+    },
+    {
+      "title": "Wikipedia: Władysław III of Poland",
+      "url": "https://en.wikipedia.org/wiki/W%C5%82adys%C5%82aw_III_of_Poland"
+    },
+    {
+      "title": "Wikipedia: Battle of Varna",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Varna"
+    },
+    {
+      "title": "Britannica: Władysław III Warneńczyk",
+      "url": "https://www.britannica.com/biography/Wladyslaw-III-Warnenczyk"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Mezarı",
+      "boş"
+    ],
+    "highlight": [
+      "boş"
+    ],
+    "scene": 0,
+    "t": 1.2,
+    "focus": [
+      500,
+      900
+    ],
+    "zoom": 1.1,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu kralın mezarı boş.",
+      "type": "bt_va_tomb",
+      "visual": "Karanlık mezar odasında ışık havuzunda tek taş lahit, yukarıdan; ön yüzünde altın taç oyması; beşik kapak geriye ve sağa kaymış, açıklıktan lahdin boş dibi ve iç duvarı görünür, soluk ışıkta toz zerreleri; kapak çok yavaş kayar; ilk kareden dolu",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "boş"
+      }
+    },
+    {
+      "text": "Varna, 10 Kasım 1444.",
+      "type": "bt_va_place",
+      "visual": "Sisli şafakta Karadeniz kıyısı: koy, sağdaki tepede sıra sıra küçük çadırlar, ince duman telleri, alçak sis; üstte büyük ince '1444', altında italik 'Varna · 10 Kasım'",
+      "params": {
+        "mode": "shore",
+        "text": "1444",
+        "sub": "Varna · 10 Kasım"
+      }
+    },
+    {
+      "text": "Yirmi yaşındaki kral Vladislav, beş yüz atlıyla sultanın üstüne sürdü.",
+      "type": "bt_va_battle",
+      "visual": "Işık havuzunda tek zırhlı atlı siluet, miğferinde küçük altın taç, ileri uzanmış mızrak ve dalgalanan flama, pelerini uçuşur, yavaş dörtnala sağa ilerler; arkasında tozun içinde soluk atlılar; 'sultan'da ufukta sağda bir tuğ ve çadırlar belirir",
+      "params": {
+        "mode": "charge"
+      },
+      "cues": {
+        "hit": "sultan"
+      }
+    },
+    {
+      "text": "Yeniçerilerin arasında düştü.",
+      "type": "bt_va_battle",
+      "visual": "Ortada ışık havuzunda taçlı atlı; etrafında dört yüzsüz yeniçeri silueti (uzun börk, arkaya düşen yatırtma) iki yandan yavaşça kapanır; 'düştü'de taç ve mızrak yere düşer, taç yerde soluk parlar, atlı siluetlerin arkasında sise karışıp silinir; alt kadraj düz zemin ve alçak sis, altyazı şeridinde çizgi yok",
+      "params": {
+        "mode": "vanish"
+      },
+      "cues": {
+        "hit": "düştü"
+      }
+    },
+    {
+      "text": "Ama cesedi de zırhı da hiç bulunmadı.",
+      "type": "bt_va_armor",
+      "visual": "Alacakaranlıkta sisli boş bir tarla; ışık havuzunda taçlı yuvarlak miğfer (siperlik yarıkları), omuz plakaları, bel hattı ve etek lamaları olan göğüs zırhının hayalet gibi dış hattı kendini çizer; 'bulunmadı'da sise karışıp silinir, geriye boş toprak kalır",
+      "cues": {
+        "hit": "bulunmadı"
+      }
+    },
+    {
+      "text": "Haçlı ordusu o gün dağıldı.",
+      "type": "bt_va_map",
+      "visual": "Koyu zemin üstünde sadece kıyı çizgisi: Karadeniz'in batı kıyısı ve Tuna (ince gri), deniz biraz daha koyu; Varna kadrajın ortasında, arkasında ışık havuzu, altın nokta yanıp söner; 'Karadeniz' ilk karede okunur; 'dağıldı'da Varna'dan kuzeye ve batıya altın çizgiler ve noktalar dağılıp söner",
+      "cues": {
+        "hit": "dağıldı"
+      }
+    },
+    {
+      "text": "Ve Bizans'ın en büyük umudu da onunla söndü.",
+      "type": "bt_va_place",
+      "visual": "Yakın plan: alacakaranlıkta Konstantinopolis'in büyük kubbesi (minaresiz) ve önünde kuleli deniz surları kadrajı doldurur, pencerelerde altın ışıklar, suda yansımaları (y≈1100); 'söndü'de ışıklar ve yansımaları teker teker söner, gök kararır, yıldızlar çıkar",
+      "params": {
+        "mode": "city",
+        "label": "Konstantinopolis"
+      },
+      "cues": {
+        "hit": "söndü"
+      },
+      "camera": {
+        "focus": [
+          560,
+          720
+        ],
+        "zoom": 1.7
+      }
+    },
+    {
+      "text": "Bugün Varna'da onun adına bir mezar var.",
+      "type": "bt_va_place",
+      "visual": "Bugün: yuvarlak, çimenli eski bir höyük, üstünde küçük taş anıt-mezar ve karanlık kapısı, merdiven, yanlarda ağaçlar, yavaş bulutlar; üstte italik 'Varna, bugün'; 'mezar'da kapının çevresine ince altın çizgi çizilir",
+      "params": {
+        "mode": "mound",
+        "label": "Varna, bugün"
+      },
+      "cues": {
+        "hit": "mezar"
+      }
+    },
+    {
+      "text": "İçinde kimse yok.",
+      "type": "bt_va_tomb",
+      "visual": "Yakın ve yukarıdan: kapak 'kimse'de geriye kayar, içeri soluk ışık düşer; lahdin tabanı, taş derzleri ve iç duvar çizgileri görünür, içi bomboş, ışıkta toz; lahit kadraj içinde",
+      "params": {
+        "mode": "empty"
+      },
+      "cues": {
+        "hit": "kimse"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_va_tomb",
+      "visual": "Aynı lahit, kapak aralık; ışık havuzu ve içerideki soluk ışık yavaşça daralıp kararır, yerde alçak sis süzülür",
+      "params": {
+        "mode": "end"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Varna Savaşı 1444: Bu Kralın Mezarı Neden Boş?",
+    "description": "Varna Savaşı, 10 Kasım 1444: yirmi yaşındaki Macar ve Leh kralı Vladislav'ın mezarı bugün hâlâ boş.\n\nII. Murad tahtı oğlu II. Mehmed'e bırakmıştı; Haçlı ordusu yürüyünce geri döndü ve iki ordu Karadeniz kıyısında, Varna'da karşılaştı. Kral Vladislav yanındaki yaklaşık beş yüz atlıyla sultanın merkezine hücum etti ve yeniçerilerin arasında öldü. Cesedi de zırhı da hiç bulunamadı. Haçlı ordusu dağıldı; Avrupa Bizans'ı kurtarmak için bir daha büyük bir Haçlı ordusu göndermedi ve dokuz yıl sonra İstanbul fethedildi. Bugün Varna'da, eski bir Trak höyüğünün üstünde onun adına sembolik bir mezar var.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Vladislav o gün Hunyadi'yi dinleseydi tarih değişir miydi? Yorumlara yaz!\n\n#shorts #varnasavaşı #osmanlıtarihi #2murad #düşünbakalım",
+    "tags": [
+      "varna savaşı",
+      "varna savaşı 1444",
+      "varna muharebesi",
+      "varna meydan muharebesi",
+      "kral vladislav",
+      "vladislav mezarı",
+      "władysław iii",
+      "ikinci murad",
+      "yeniçeriler",
+      "haçlı seferi",
+      "son haçlı seferi",
+      "osmanlı tarihi",
+      "osmanlı savaşları",
+      "bizans",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-11T19:00:00+03:00"
+  }
+}
