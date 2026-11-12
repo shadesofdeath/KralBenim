@@ -1,0 +1,519 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "mosquito-magnet",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Mosquitoes'",
+   "favorite",
+   "human"
+  ],
+  "highlight": [
+   "favorite"
+  ],
+  "scene": 0,
+  "t": 1.4,
+  "focus": [
+   560,
+   700
+  ],
+  "zoom": 1.08,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "Rockefeller University — Why mosquitoes bite some people more (nylon stockings, six hours, three-year tournament, Subject 33: 4× the next, 100× the least attractive; carboxylic acids in sebum)",
+   "url": "https://www.rockefeller.edu/news/33019-why-mosquitoes-bite-some-people-more/"
+  },
+  {
+   "title": "ScienceDaily (2022) — Why some people are mosquito magnets (Cell; magnets stayed magnets over the study)",
+   "url": "https://www.sciencedaily.com/releases/2022/10/221027124001.htm"
+  },
+  {
+   "title": "Scientific American — Some people really are mosquito magnets, and they're stuck that way (soap did not seem to change attractiveness)",
+   "url": "https://www.scientificamerican.com/article/some-people-really-are-mosquito-magnets-and-theyre-stuck-that-way/"
+  },
+  {
+   "title": "ScienceDaily (10 Nov 2026) — Scientists discover why some mosquitoes love you and others don't (FIU, iScience; three species, different favorites)",
+   "url": "https://www.sciencedaily.com/releases/2026/11/261106174541.htm"
+  }
+ ],
+ "youtube": {
+  "title": "Mosquito Magnets: Why Do They Bite Some People More?",
+  "description": "Mosquito magnets are real: in one lab test, mosquitoes liked one person 100 times more than another. So why do mosquitoes bite some people more?\n\nAt Rockefeller University, volunteers wore nylon stockings on their forearms for six hours, and Aedes aegypti mosquitoes chose between them, two at a time, in a tournament that ran for three years. The winner, Subject 33, had far more carboxylic acids in the oily layer of their skin, and the magnets stayed magnets over time. A 2026 study of three mosquito species found that each kind prefers different people.\n\nSubscribe to Stickstory for a true story like this every day. Are you a mosquito magnet? Tell me in the comments!\n\n#shorts #mosquitoes #stickstory",
+  "tags": [
+   "mosquito magnets",
+   "mosquito magnet",
+   "mosquitoes bite some people",
+   "why mosquitoes bite me",
+   "mosquito bites",
+   "mosquito attraction",
+   "carboxylic acids",
+   "skin odor",
+   "aedes aegypti",
+   "rockefeller university",
+   "leslie vosshall",
+   "subject 33",
+   "human body facts",
+   "science shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-12T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "mq_swarm",
+   "text": "Mosquitoes loved one person 100 times more.",
+   "visual": "Summer evening in a meadow: the fez host stands on the left, shocked, hands on his head, while a thick swarm of striped mosquitoes circles his head; beside him a hatless man in a blue sweater stands calm with not a single mosquito; on '100' a big red '100×' pops up between them; tall grass and flowers fill the bottom.",
+   "title": {
+    "white": "Mosquito bites"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "100"
+   },
+   "params": {
+    "gy": 0.6,
+    "front": 0.615,
+    "kasif": {
+     "x": 0.42,
+     "y": 0.6,
+     "scale": 1.3,
+     "pose": "shock",
+     "face": "right",
+     "emotion": "surprised",
+     "swarm": 16,
+     "at": -3,
+     "rx": 195,
+     "ry": 150,
+     "ms": 0.48,
+     "lift": 40,
+     "dx": 60,
+     "ring": true
+    },
+    "people": [
+     {
+      "x": 0.82,
+      "scale": 1.3,
+      "col": "blue",
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "100×",
+      "x": 0.63,
+      "y": 0.335,
+      "size": 140,
+      "color": "red",
+      "at": "hit",
+      "font": "serif",
+      "rot": -6
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_swarm",
+   "text": "Scientists call people like that mosquito magnets.",
+   "visual": "Three hatless people in a summer field: the mosquitoes fly past the two on the sides and all crowd around the one in the middle, who flaps at them; on 'magnets' a big red horseshoe magnet appears above his head with pulsing pull arcs, and the label 'MOSQUITO MAGNET'.",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "a": "people",
+    "m": "magnets"
+   },
+   "params": {
+    "gy": 0.6,
+    "front": 0.615,
+    "people": [
+     {
+      "x": 0.18,
+      "scale": 1.0,
+      "col": "gold",
+      "face": "right"
+     },
+     {
+      "x": 0.5,
+      "scale": 1.05,
+      "col": "green",
+      "face": "right",
+      "swarm": 11,
+      "kind": "aedes",
+      "at": 0,
+      "rx": 200,
+      "ry": 120,
+      "ms": 0.45
+     },
+     {
+      "x": 0.82,
+      "scale": 1.0,
+      "col": "red",
+      "face": "left"
+     }
+    ],
+    "magnet": {
+     "x": 0.5,
+     "y": 0.235,
+     "size": 95,
+     "at": "m"
+    },
+    "labels": [
+     {
+      "text": "MOSQUITO MAGNET",
+      "x": 0.5,
+      "y": 0.14,
+      "size": 76,
+      "color": "ink",
+      "at": "m",
+      "card": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "right"
+   }
+  },
+  {
+   "type": "mq_lab",
+   "text": "The proof started with nylon stockings.",
+   "visual": "A lab at Rockefeller University: a hatless scientist in a white lab coat and glasses stands behind a wooden lab bench and lifts a worn, sheer nylon stocking up to the light, it swings gently; a mesh cage of mosquitoes buzzes on the bench; jars on a wall shelf; on 'nylon' a red hand label 'THE PROOF' appears.",
+   "title": {
+    "white": "The lab",
+    "gray": "New York"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "hit": "nylon"
+   },
+   "params": {
+    "mode": "hold",
+    "bench": 0.64,
+    "labels": [
+     {
+      "text": "THE PROOF",
+      "x": 0.74,
+      "y": 0.235,
+      "size": 80,
+      "color": "red",
+      "at": "hit",
+      "rot": 4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_wear",
+   "text": "Volunteers wore them for six hours,",
+   "visual": "Close-up: the fez host stands behind a lab table and holds his arm out; a sheer nylon stocking slides on over his forearm like a sleeve and gold scent wisps rise from it; on the table an hourglass runs under a card counting '1 HOUR' up to a red '6 HOURS' on 'six'.",
+   "title": {
+    "white": "Six hours"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1229
+   },
+   "cues": {
+    "hit": "six"
+   },
+   "params": {
+    "table": 0.64,
+    "kasif": {
+     "x": 0.36,
+     "y": 0.8,
+     "scale": 1.45,
+     "pose": "point",
+     "dir": 4,
+     "face": "right",
+     "emotion": "happy"
+    },
+    "glass": [
+     0.68,
+     0.64
+    ],
+    "card": [
+     0.63,
+     0.405
+    ],
+    "hours": 6
+   },
+   "camera": {
+    "focus": [
+     540,
+     990
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_lab",
+   "text": "then mosquitoes judged them in pairs.",
+   "visual": "A clear two-choice box across the lab bench: mosquitoes buzz in the middle chamber, tubes lead left and right to two chambers each holding a worn stocking (tags 'A' and 'B'), gold scent drifts down the tubes; on 'judged' the red gates lift and the mosquitoes fly out, most of them into chamber A.",
+   "title": {
+    "white": "Two-choice test"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "go": "judged"
+   },
+   "params": {
+    "mode": "test",
+    "bench": 0.62,
+    "tags": [
+     "A",
+     "B"
+    ],
+    "n": 14,
+    "split": 11
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_board",
+   "text": "For three years, one arm kept winning: Subject 33.",
+   "visual": "A cork board on the lab wall: eight pinned cards, each with a little stocking, and tournament bracket lines draw themselves round by round, the winner's path in red; on 'winning' a champion card '33' with a gold crown pops up at the top.",
+   "title": {
+    "white": "The tournament"
+   },
+   "source": "Rockefeller University",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "win": "winning"
+   },
+   "params": {
+    "mode": "bracket",
+    "champ": "33",
+    "winner": 5,
+    "bench": 0.63
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mq_skin",
+   "text": "The secret? Acids in the oil on their skin.",
+   "visual": "A big magnifying glass over a forearm lying on a wooden table: inside the lens the skin is huge, ridges, pores with hairs, glossy beads of skin oil and wriggling bacteria; on 'Acids' little gold acid molecules bubble up out of the oil and float to a big striped mosquito hovering nose-down at the top right; labels 'ACIDS' and 'SKIN OIL'.",
+   "title": {
+    "white": "The secret"
+   },
+   "source": "Cell, 2022",
+   "set": {
+    "name": "interior",
+    "ground": 1270
+   },
+   "cues": {
+    "acids": "Acids",
+    "oil": "oil"
+   },
+   "params": {
+    "lens": [
+     0.45,
+     0.38,
+     0.34
+    ],
+    "arm": 0.66,
+    "table": 0.84,
+    "bug": 2.0,
+    "bugx": 0.8,
+    "bugy": 0.14,
+    "labels": [
+     {
+      "text": "ACIDS",
+      "x": 0.8,
+      "y": 0.37,
+      "size": 84,
+      "color": "red",
+      "at": "acids",
+      "card": true
+     },
+     {
+      "text": "SKIN OIL",
+      "x": 0.3,
+      "y": 0.47,
+      "size": 68,
+      "color": "ink",
+      "at": "oil",
+      "card": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_board",
+   "text": "And magnets stayed magnets.",
+   "visual": "Close-up of a hand-drawn line chart pinned to the cork board: grey lines crawl along the bottom while a red marker pen draws one thick red line that stays far above them; on 'stayed' a red tag '33' pops onto its end; hand label 'YEAR AFTER YEAR'.",
+   "title": {
+    "white": "Over time"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "win": "stayed"
+   },
+   "params": {
+    "mode": "chart",
+    "champ": "33",
+    "bench": 0.63,
+    "labels": [
+     {
+      "text": "YEAR AFTER YEAR",
+      "x": 0.6,
+      "y": 0.4,
+      "size": 72,
+      "color": "ink",
+      "at": 0.1
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     690,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_arm",
+   "text": "So it's mostly not your soap. It's your skin.",
+   "visual": "A bathroom: blue tile wall, a mirror, a dripping tap; a bare forearm on the tiled counter is scrubbed with a bar of soap, foam bubbles pile up, but four mosquitoes keep circling right above it; on 'soap' the label 'MOSTLY NOT SOAP' appears, on 'skin' a red 'YOUR SKIN'.",
+   "title": {
+    "white": "Bath time"
+   },
+   "source": "Scientific American",
+   "set": {
+    "name": "interior",
+    "ground": 1270
+   },
+   "cues": {
+    "soap": "soap",
+    "skin": "skin"
+   },
+   "params": {
+    "mode": "soap",
+    "room": "bath",
+    "table": 0.66,
+    "bugs": 4,
+    "labels": [
+     {
+      "text": "MOSTLY NOT SOAP",
+      "x": 0.6,
+      "y": 0.355,
+      "size": 70,
+      "color": "ink",
+      "at": "soap",
+      "card": true
+     },
+     {
+      "text": "YOUR SKIN",
+      "x": 0.66,
+      "y": 0.44,
+      "size": 96,
+      "color": "red",
+      "at": "skin",
+      "card": true,
+      "rot": 4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mq_swarm",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "A summer night in the meadow under the stars: the fez host peers through binoculars at one mosquito circling beside his head, then on 'story' lowers them and points at the viewer with a grin; tall grass fills the bottom.",
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "gy": 0.6,
+    "front": 0.615,
+    "kasif": {
+     "x": 0.42,
+     "y": 0.62,
+     "scale": 1.55,
+     "pose": "look",
+     "dir": 20,
+     "face": "right",
+     "emotion": "surprised",
+     "swarm": 1,
+     "at": -3,
+     "rx": 110,
+     "ry": 70,
+     "ms": 0.7,
+     "lift": 40,
+     "dx": 300,
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

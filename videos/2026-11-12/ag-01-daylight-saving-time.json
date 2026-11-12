@@ -1,0 +1,551 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "daylight-saving-time",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Blame the",
+   "bug man"
+  ],
+  "highlight": [
+   "bug"
+  ],
+  "scene": 0,
+  "t": 2.7,
+  "kasif": false,
+  "focus": [
+   520,
+   975
+  ],
+  "zoom": 1.12
+ },
+ "sources": [
+  {
+   "title": "Te Ara: Dictionary of New Zealand Biography — Hudson, George Vernon (post office clerk and entomologist; daylight saving paper to the Wellington Philosophical Society, 16 October 1895; the idea was ridiculed)",
+   "url": "https://teara.govt.nz/en/biographies/3h42/hudson-george-vernon"
+  },
+  {
+   "title": "Nautilus — The 19th-century entomologist who dreamed up daylight saving (two-hour shift proposed in 1895; members called it unscientific and impracticable)",
+   "url": "https://nautil.us/the-19th-century-entomologist-who-dreamed-up-daylight-savings-1245301"
+  },
+  {
+   "title": "Western Front Association — Spring forward, fall back: the changing of the clocks and the First World War (Germany and Austria-Hungary, 30 April 1916, to conserve coal)",
+   "url": "https://www.westernfrontassociation.com/world-war-i-articles/spring-forward-fall-back-the-changing-of-the-clocks-and-ww1"
+  },
+  {
+   "title": "timeanddate — When did DST start in Europe? (German Empire, 30 April 1916, first countrywide daylight saving time; others followed within weeks)",
+   "url": "https://www.timeanddate.com/time/europe/daylight-saving-history.html"
+  }
+ ],
+ "youtube": {
+  "title": "Daylight Saving Time: Who Really Stole Your Hour?",
+  "description": "Daylight saving time was not Benjamin Franklin's idea. One of the first people to propose it was a bug collector in New Zealand who wanted more daylight after work.\n\nIn 1895 George Vernon Hudson, a post office clerk and insect collector in Wellington, asked the Wellington Philosophical Society to move the clocks two hours in summer. Members called the idea unscientific and impracticable and ridiculed it. Two decades later, in the First World War, Germany moved its clocks forward on 30 April 1916 to save coal, and within weeks other countries followed. This fall British Columbia stopped changing its clocks, but the story of who invented daylight saving time starts with one man and his moths.\n\nSubscribe to Stickstory for a true story like this every day. Would you keep the clock change or scrap it? Tell me in the comments!\n\n#shorts #daylightsavingtime #stickstory",
+  "tags": [
+   "daylight saving time",
+   "who invented daylight saving",
+   "daylight saving time history",
+   "daylight savings",
+   "why do we change the clocks",
+   "george vernon hudson",
+   "george hudson entomologist",
+   "time change",
+   "fall back spring forward",
+   "germany 1916",
+   "british columbia time change",
+   "new zealand history",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-12T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "dst_clock",
+   "text": "A bug collector stole your hour of sleep.",
+   "visual": "Night bedroom: a big clock on the right with three moths fluttering round it; at the left a large bearded collector raises his butterfly net, and on 'stole' a winged gold '1 HOUR' token flies out of the clock, loops and dives into the mesh bag, where it struggles while the hands jump from two to three; bottom right a wooden headboard, pillow and patchwork quilt where the fez host sits up in bed, hands on his head in shock.",
+   "title": {
+    "white": "Your hour"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1190,
+    "horizon": 1000
+   },
+   "cues": {
+    "st": "stole",
+    "hit": "sleep"
+   },
+   "params": {
+    "mode": "steal",
+    "at": "st",
+    "time": [
+     2,
+     0
+    ],
+    "to": [
+     3,
+     0
+    ],
+    "cx": 0.76,
+    "cy": 0.38,
+    "r": 150,
+    "kasif": {
+     "x": 0.7,
+     "y": 0.87,
+     "scale": 1.1,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "st",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "fig_x": 0.24,
+    "fig_y": 0.67,
+    "bed_y": 0.72,
+    "pillow_x": 0.72,
+    "bed_x": 0.5,
+    "pole": 120,
+    "hoop": 100,
+    "fig_scale": 1.35
+   },
+   "camera": false
+  },
+  {
+   "type": "dst_clock",
+   "text": "British Columbia quit changing clocks. The idea began in 1895.",
+   "visual": "Dark winter morning in a Canadian town: a stone clock tower fills the middle of the frame, its clock ticking onto eight o'clock under a starry sky; a street lamp glows on the left; three children with satchels walk past under it on the pavement, a railing in front; on 'quit' a red stamp 'NO FALL BACK' slams on, on '1895' a second stamp '1895'.",
+   "title": {
+    "white": "British Columbia"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1150,
+    "horizon": 1060
+   },
+   "cues": {
+    "q": "quit",
+    "y": "1895"
+   },
+   "params": {
+    "mode": "tower",
+    "r": 190,
+    "cy": 0.27,
+    "ground": 0.6,
+    "cast": [
+     {
+      "who": "kid",
+      "x": 0.05,
+      "to": 0.4,
+      "y": 0.8,
+      "scale": 0.55,
+      "pose": "walk",
+      "walk_at": 0,
+      "walk_dur": 3.2,
+      "face": "right"
+     },
+     {
+      "who": "kid",
+      "x": -0.1,
+      "to": 0.25,
+      "y": 0.82,
+      "scale": 0.5,
+      "pose": "walk",
+      "walk_at": 0.2,
+      "walk_dur": 3.2,
+      "face": "right"
+     },
+     {
+      "who": "kid",
+      "x": 1.05,
+      "to": 0.72,
+      "y": 0.81,
+      "scale": 0.52,
+      "pose": "walk",
+      "walk_at": 0.1,
+      "walk_dur": 3.0,
+      "face": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "NO FALL BACK",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "q",
+      "size": 84,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "1895",
+      "x": 0.64,
+      "y": 0.66,
+      "at": "y",
+      "size": 110,
+      "color": "ink",
+      "stamp": true,
+      "rot": 5
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "up"
+   }
+  },
+  {
+   "type": "dst_post",
+   "text": "George Hudson was a postal clerk in New Zealand.",
+   "visual": "Inside the Wellington post office in the 1890s: a pigeonhole rack stuffed with letters, a window where the sun sinks behind green hills, a small wall clock nearly at five; the bearded, bare-headed clerk George Hudson thumps a rubber stamp on an open ledger beside a stack of envelopes, then on 'clerk' turns and points at the setting sun; the counter front with panels and two bulging mail sacks fill the bottom.",
+   "title": {
+    "white": "Wellington, 1895"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1270
+   },
+   "source": "Te Ara",
+   "cues": {
+    "s": "Hudson",
+    "l": "clerk"
+   },
+   "params": {
+    "stamp": "s",
+    "look": "l"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "dst_bugs",
+   "text": "He wanted daylight after work to hunt insects.",
+   "visual": "Close-up at dusk in a meadow: a low red sun, moths fluttering in the air; Hudson in his work clothes swings his butterfly net through them and on 'insects' catches one in the bag, smiling; ferns and tall grass sway across the whole bottom of the frame.",
+   "title": {
+    "white": "After work"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1230,
+    "horizon": 900
+   },
+   "cues": {
+    "n": "insects"
+   },
+   "params": {
+    "mode": "hunt",
+    "net": "n",
+    "moths": 6,
+    "fx": 0.34,
+    "fy": 0.64
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dst_clock",
+   "text": "His idea: move the clocks two hours.",
+   "visual": "Extreme close-up of the post-office wall clock above the counter with letters and a red stamp: on 'two' the hour hand sweeps forward from four to six, a gold wedge fills the jump and the clock shudders; a red stamp '+2 HOURS' slams on.",
+   "title": {
+    "white": "His idea"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1270
+   },
+   "cues": {
+    "j": "two",
+    "hit": "hours"
+   },
+   "params": {
+    "mode": "jump",
+    "at": "j",
+    "time": [
+     4,
+     0
+    ],
+    "to": [
+     6,
+     0
+    ],
+    "r": 360,
+    "cy": 0.33,
+    "counter": 0.66,
+    "labels": [
+     {
+      "text": "+2 HOURS",
+      "x": 0.5,
+      "y": 0.58,
+      "at": "hit",
+      "size": 100,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dst_hall",
+   "text": "Experts mocked it.",
+   "visual": "The Wellington Philosophical Society room: a blackboard with a chalk clock and '+2'; Hudson at the lectern on the right holding his paper; across the bottom the bearded members in dark coats, and on 'mocked' they rock with laughter, mouths open in their beards, while Hudson shrugs; hand-written 'HA!' and 'HA HA!' pop up.",
+   "title": {
+    "white": "The society"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "source": "Te Ara",
+   "cues": {
+    "la": "mocked"
+   },
+   "params": {
+    "laugh": "la",
+    "labels": [
+     {
+      "text": "HA!",
+      "x": 0.3,
+      "y": 0.5,
+      "at": "la",
+      "size": 96,
+      "color": "red",
+      "font": "hand",
+      "rot": -8
+     },
+     {
+      "text": "HA HA!",
+      "x": 0.48,
+      "y": 0.42,
+      "at": 0.9,
+      "size": 90,
+      "color": "ink",
+      "font": "hand",
+      "rot": 6
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "dst_war",
+   "text": "Then war came.",
+   "visual": "A muddy field in the rain: a column of soldiers in grey steel helmets marches left to right with rifles on their shoulders; on 'war' an ink lightning bolt cracks the sky and they look up worried; a sandbag parapet fills the bottom.",
+   "title": {
+    "white": "1914–1918"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1150,
+    "horizon": 900
+   },
+   "cues": {
+    "w": "war"
+   },
+   "params": {
+    "at": "w"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dst_coal",
+   "text": "In 1916, Germany did it to save coal,",
+   "visual": "A German factory town in 1916: three red smokestacks puffing grey smoke above a long factory hall with a big clock on its gable; on 'Germany' the clock's hour hand jumps forward one hour with a gold wedge; a black coal heap with a shovel fills the bottom, lumps rolling down; stamps '1916' and 'SAVE COAL'.",
+   "title": {
+    "white": "Germany",
+    "gray": "30 April 1916"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1150,
+    "horizon": 700
+   },
+   "source": "Western Front Assoc.",
+   "cues": {
+    "g": "Germany",
+    "c": "coal"
+   },
+   "params": {
+    "at": "g",
+    "labels": [
+     {
+      "text": "1916",
+      "x": 0.25,
+      "y": 0.42,
+      "at": 0.2,
+      "size": 100,
+      "color": "ink",
+      "stamp": true,
+      "rot": -6
+     },
+     {
+      "text": "SAVE COAL",
+      "x": 0.68,
+      "y": 0.66,
+      "at": "c",
+      "size": 90,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "dst_clock",
+   "text": "and the world copied.",
+   "visual": "A wall of four station clocks with name plates BERLIN, LONDON, PARIS, NEW YORK above a desk covered in telegram slips: from 'world' each clock jumps forward an hour in turn with a gold wedge while more telegrams slide in.",
+   "title": {
+    "white": "Copied"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1300
+   },
+   "cues": {
+    "w": "world"
+   },
+   "params": {
+    "mode": "wall",
+    "at": "w",
+    "base": 6,
+    "r": 135
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "still"
+   }
+  },
+  {
+   "type": "dst_bugs",
+   "text": "It started with a man who wanted more time with his bugs.",
+   "visual": "Night: a gas street lamp with a glowing flame, moths circling it; old Hudson stands on the left, smiling, lifting his net toward them; across the bottom his glass specimen case of pinned moths.",
+   "title": {
+    "white": "Hudson's moths"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1270,
+    "horizon": 1100
+   },
+   "cues": {
+    "n": "time",
+    "hit": "bugs"
+   },
+   "params": {
+    "mode": "lamp",
+    "net": "n",
+    "moths": 7,
+    "fy": 0.63
+   },
+   "camera": {
+    "focus": [
+     560,
+     760
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dst_bugs",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Night by the gas lamp with its moths: a big clock stands beside the fez host; he waves, then on 'story' reaches up and the hour hand turns back from three to two with a gold wedge; the specimen case fills the bottom.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1270,
+    "horizon": 1100
+   },
+   "cues": {
+    "s2": "story"
+   },
+   "params": {
+    "mode": "lamp",
+    "who": false,
+    "moths": 6,
+    "lx": 0.8,
+    "ly": 0.3,
+    "clock": {
+     "x": 0.36,
+     "y": 0.27,
+     "r": 190,
+     "at": "s2",
+     "from": [
+      3,
+      0
+     ],
+     "to": [
+      2,
+      0
+     ]
+    },
+    "kasif": {
+     "x": 0.3,
+     "y": 0.7,
+     "scale": 1.0,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 60,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}
