@@ -1,0 +1,17 @@
+{
+ "id": "UrWYGK2X4gc",
+ "thumbnail": false,
+ "url": "https://youtu.be/UrWYGK2X4gc",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-12T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Daylight Saving Time: Who Really Stole Your Hour?",
+ "script": "videos/2026-11-12/ag-01-daylight-saving-time.json"
+}
