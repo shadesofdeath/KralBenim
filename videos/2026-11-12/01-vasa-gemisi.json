@@ -1,0 +1,182 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Britannica: Vasa (warship)",
+      "url": "https://www.britannica.com/topic/Vasa-warship"
+    },
+    {
+      "title": "Vasa Museum: The excavation (Vasamuseet)",
+      "url": "https://www.vasamuseet.se/en/vasa-history/excavation"
+    },
+    {
+      "title": "Vrak – Museum of Wrecks: 1628 Vasa",
+      "url": "https://www.vrak.se/en/explore/dive-deep-among-the-wrecks/1600-talet/1628-vasa"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Yarım saat",
+      "bile yüzemedi"
+    ],
+    "highlight": [
+      "yüzemedi"
+    ],
+    "scene": 0,
+    "t": 1.2,
+    "focus": [
+      500,
+      760
+    ],
+    "zoom": 1.1,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu gemi yarım saat bile yüzemedi.",
+      "type": "bt_vasa_ship",
+      "visual": "Lacivert karanlıkta, ışık havuzunun içinde tek büyük 17. yüzyıl kalyonu, yandan; ilk kareden pruvadan belirgin biçimde (~10°) eğilmiş: pruva güvertesi su çizgisinde, iki sıra top kapağının çoğu su altında, kıç kasarası havada; su altındaki gövde soluk çizgi; su çizgisi boyunca kabarcıklar yükselir, gemi yavaşça daha da gömülür",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "yüzemedi"
+      }
+    },
+    {
+      "text": "Stockholm, 10 Ağustos 1628.",
+      "type": "bt_vasa_harbor",
+      "visual": "Suyun üstünde 1620'lerin Stockholm silueti: uzun kuleli Tre Kronor şatosu (sivri ucunda küçük altın taç), büyük kilisenin kulesi, kırma çatılı evler; sağda küçük Vasa yavaşça limandan ayrılır; suda ışık yansımaları; üstte büyük ince '1628', altında italik 'Stockholm · 10 Ağustos'",
+      "params": {
+        "mode": "date",
+        "text": "1628",
+        "sub": "Stockholm · 10 Ağustos"
+      }
+    },
+    {
+      "text": "Vasa, krallığın en güçlü gemisiydi.",
+      "type": "bt_vasa_ship",
+      "visual": "Dik duran Vasa yandan kendini çizer: yüksek kıç kasarası, iki sıra top kapağı, üç direk, sarılı ana yelken, açık pruva ve gabya yelkenleri, ince arma halatları; 'güçlü'de pruvadaki aslan figürü ve kıçtaki oymalar altın renkte yanar",
+      "params": {
+        "mode": "profile"
+      },
+      "cues": {
+        "hit": "güçlü"
+      }
+    },
+    {
+      "text": "Ama ağır topları çok yukarıdaydı.",
+      "type": "bt_vasa_front",
+      "visual": "Gemi pruvadan, kesit: gövdenin içinde iki top güvertesi, her iki yanda dışarı uzanan toplar, dipte birkaç küçük safra taşı, su çizgisi kesik mavi çizgi; altın ağırlık merkezi işareti su çizgisinin altından yukarı, su çizgisinin üstüne çıkar, yanında italik 'ağırlık merkezi'",
+      "params": {
+        "mode": "section"
+      },
+      "cues": {
+        "hit": "yukarıdaydı"
+      }
+    },
+    {
+      "text": "Hafif bir rüzgâr onu yatırdı.",
+      "type": "bt_vasa_front",
+      "visual": "Aynı gemi pruvadan, açık yelkenleriyle karanlık suda; soldan ince rüzgâr çizgileri geçer; 'yatırdı'da gemi yavaşça sağa yatar, sağ bordanın alt top kapağı suya yaklaşır; su altındaki gövde soluk bir çizgi olarak görünür",
+      "params": {
+        "mode": "heel"
+      },
+      "cues": {
+        "hit": "yatırdı"
+      }
+    },
+    {
+      "text": "Su, açık top kapaklarından içeri doldu.",
+      "type": "bt_vasa_port",
+      "visual": "Yakın plan: gövdenin ahşap kaplaması, ortada kapağı yukarı kalkık (altın menteşe ve demir kayışlar) açık bir top kapağı, karanlık içinde top ağzı; deniz yavaşça yükselir, eşiği aşar, mavi su çizgileri eşikten içeri kıvrılarak akar",
+      "cues": {
+        "hit": "doldu"
+      }
+    },
+    {
+      "text": "Gemi, herkesin gözü önünde battı.",
+      "type": "bt_vasa_harbor",
+      "visual": "Ön planda taş rıhtım, kenarlarda duran yüzsüz siluetler (ikisi solda, üçü sağda; gemiyle üst üste binmez); karşı kıyının alçak çizgisi; ortada Vasa pruvadan eğilerek suya gömülür, 'battı'da gövdesi tamamen kaybolur, sadece direkler ve yatık yelkenler kalır; su yüzünde kabarcıklar",
+      "params": {
+        "mode": "watch"
+      },
+      "cues": {
+        "hit": "battı"
+      }
+    },
+    {
+      "text": "Üç yüz otuz üç yıl karanlıkta kaldı.",
+      "type": "bt_vasa_years",
+      "visual": "Karanlık deniz dibinde, ışık huzmeleri ve yavaşça düşen deniz karı içinde kuma yarı gömülü, direkleri kırık Vasa gövdesi; üstte ilk saniyede beliren büyük altın sayaç 0'dan 333'e sayar, altında italik 'yıl'",
+      "params": {
+        "total": 333,
+        "label": "yıl"
+      }
+    },
+    {
+      "text": "Onu batıran deniz, onu sakladı.",
+      "type": "bt_vasa_deep",
+      "visual": "Yakın plan, deniz dibi: kuma yarı gömülü gövdenin oymalı kıç kasarası, kıç pencereleri ve sağlam ahşap kaplama tahtaları; yukarıdan soluk ışık huzmeleri, yavaşça düşen deniz karı; 'sakladı'da gövdenin çizgisi boyunca ince altın çizgi ilerler, altında sıcak ışık",
+      "params": {
+        "mode": "kept"
+      },
+      "cues": {
+        "hit": "sakladı"
+      },
+      "camera": {
+        "focus": [
+          210,
+          940
+        ],
+        "zoom": 1.7
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_vasa_deep",
+      "visual": "Aynı gövde altın çizgisiyle dipten yavaşça yükselir, omurgasından kum taneleri dökülür, yukarıdaki ışık artar",
+      "params": {
+        "mode": "rise"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Vasa Gemisi: İlk Yolculuğunda Neden Battı?",
+    "description": "Vasa gemisi, İsveç'in en güçlü savaş gemisi olacaktı ama 10 Ağustos 1628'de, ilk yolculuğunda, Stockholm limanında yarım saat bile yüzemeden battı.\n\nİki sıra top güvertesi, ağır toplar ve süslemeler gemiyi tepeden ağır yapmıştı. Limandan çıktıktan kısa bir süre sonra hafif bir rüzgâr onu yana yatırdı, açık top kapaklarından giren su gemiyi herkesin gözü önünde batırdı; gemideki yaklaşık 150 kişiden 30 kadarı öldü. Vasa 333 yıl Baltık'ın soğuk ve az tuzlu suyunda bekledi, 1961'de yüzeye çıkarıldı. Bugün Stockholm'deki Vasa Müzesi'nde, dünyanın en iyi korunmuş 17. yüzyıl gemisi olarak duruyor.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence bir geminin kendi denizi tarafından korunması bir ironi mi? Yorumlara yaz!\n\n#shorts #vasagemisi #batıklar #denizcilik #düşünbakalım",
+    "tags": [
+      "vasa gemisi",
+      "vasa gemisi neden battı",
+      "vasa savaş gemisi",
+      "vasa batığı",
+      "vasa müzesi",
+      "vasa 1628",
+      "isveç savaş gemisi",
+      "stockholm",
+      "batık gemiler",
+      "ünlü batıklar",
+      "denizcilik tarihi",
+      "gemi kazaları",
+      "17. yüzyıl",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-12T19:00:00+03:00",
+    "related": "videos/2026-11-10/02-uluburun-batigi.json"
+  }
+}

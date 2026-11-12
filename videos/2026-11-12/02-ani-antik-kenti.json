@@ -1,0 +1,1264 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "kum",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "sources": [
+  {
+   "title": "UNESCO World Heritage Centre — Archaeological Site of Ani (Silk Road gate, Bagratid capital, Mongol invasion, 1319 earthquake, change in trade routes)",
+   "url": "https://whc.unesco.org/en/list/1518"
+  },
+  {
+   "title": "Wikipedia — Ani (961 capital, cathedral 989–1001/1010, 1045 Byzantium, 1064 siege, 1072 Shaddadids, 1199 Tamar, 1236 Mongols, 1319, abandonment)",
+   "url": "https://en.wikipedia.org/wiki/Ani"
+  },
+  {
+   "title": "Wikipedia — Trdat (architect): repair of the dome of Hagia Sophia after the 989 earthquake",
+   "url": "https://en.wikipedia.org/wiki/Trdat_(architect)"
+  },
+  {
+   "title": "Daily Sabah — Türkiye restores Anatolia's first conquest mosque at Ani ruins (Fethiye Camii, 16 Ağustos 1064)",
+   "url": "https://www.dailysabah.com/turkiye/turkiye-restores-anatolias-first-conquest-mosque-at-ani-ruins/news"
+  },
+  {
+   "title": "Anadolu Ajansı — Ani'de Selçuklu Çarşısı'ndaki kazılarda 5 büyük küplü erzak deposuna ulaşıldı (23.07.2026)",
+   "url": "https://www.aa.com.tr/tr/kultur/anide-selcuklu-carsisindaki-kazilarda-5-buyuk-kuplu-erzak-deposuna-ulasildi/4006621"
+  },
+  {
+   "title": "GZT — UNESCO Dünya Mirası Listesi'ndeki Ani Ören Yeri'nde beş dev küp (20.07.2026)",
+   "url": "https://www.gzt.com/tarih/unesco-dunya-mirasi-listesindeki-ani-oren-yeri-4244615"
+  }
+ ],
+ "cover": {
+  "lines": [
+   "Bu şehri",
+   "kim",
+   "öldürdü?"
+  ],
+  "highlight": [
+   "öldürdü"
+  ],
+  "scene": 42,
+  "t": 4.0,
+  "focus": [
+   960,
+   520
+  ],
+  "zoom": 1.2,
+  "kasif": false
+ },
+ "youtube": {
+  "title": "Ani Antik Kenti: Bin Bir Kilise Şehri Neden Boşaldı?",
+  "description": "Ani antik kenti, Kars'ın doğusunda, Arpaçay'ın kıyısında bozkırın ortasında duran boş bir başkent. 2026 kazısında Selçuklu Çarşısı'ndaki bir erzak deposunda beş dev küp bulundu. Bu kadar büyük bir şehri kim öldürdü?\n\nAni ören yeri, 961'de Ermeni Bagratlı krallığının başkenti oldu ve İpek Yolu'nun Anadolu'ya giren bir kolunda zenginleşti. Bin bir kilise şehri denen bu kentin katedralini, Ayasofya'nın kubbesini onaran Ermeni mimar Trdat yaptı. Sonra Bizans, Alp Arslan, Şeddadiler, Gürcüler ve Moğollar geldi; 1319 depremi kubbeyi yıktı. Ama asıl son, sessizce geldi.\n\nBu videoda:\n• 961: Üçüncü Aşot başkenti Kars'tan Ani'ye taşıyor\n• Katedral, Ermeni mimar Trdat ve Ayasofya'nın kubbesi\n• 1064: Alp Arslan'ın 25 günlük kuşatması ve Fethiye Camii\n• Ebu'l-Menuçehr Camii, Gürcüler ve 1236 Moğol yağması\n• 1319 depremi, kayan ticaret yolları ve Selçuklu Çarşısı'ndaki beş küp\n\nHer gün yeni bir 'neden?' için abone ol. Sence bir şehri en çok ne öldürür: savaş mı, deprem mi, unutulmak mı? Yorumlara yaz!\n\n#ani #kars #anadolu #tarih #düşünbakalım",
+  "tags": [
+   "ani antik kenti",
+   "ani ören yeri",
+   "ani antik kenti kars",
+   "ani antik kent tarihi",
+   "bin bir kilise şehri",
+   "ani katedrali",
+   "alp arslan ani fethi",
+   "fethiye camii",
+   "ebu'l menuçehr camii",
+   "mimar trdat",
+   "1319 depremi",
+   "ipek yolu",
+   "selçuklu çarşısı",
+   "kars tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-12T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "text": "Kars'ın doğusunda, bozkırın ortasında, bir kazı çukuru.",
+   "type": "bt_an_dig",
+   "visual": "Bozkırda dikdörtgen bir kazı çukuru, kenarında ip gerili kazıklar; içinde topraktan yalnızca beş küpün ağız halkaları görünür; toprak seviyesi çok yavaş alçalır; uzak ufukta küçük kilise siluetleri, havada toz zerreleri",
+   "params": {
+    "mode": "pit"
+   },
+   "chapter": "Beş boş küp"
+  },
+  {
+   "text": "Toprağın altından beş dev küp çıktı. Boyları bir metreyi buluyordu.",
+   "type": "bt_an_dig",
+   "visual": "Aynı çukur, toprağı alınmış; 'beş'te beş dev küp (geniş omuz, dar dip, kalın ağız, omuzda S kabartma şeridi) birer birer belirir; 'metreyi'de sağda altın dikey ölçü çizgisi ve '> 1 m'",
+   "params": {
+    "mode": "jars"
+   },
+   "cues": {
+    "hit": "beş",
+    "m": "metreyi"
+   }
+  },
+  {
+   "text": "Ağızları yarım metre genişliğindeydi. Bir erzak deposunun içinde duruyorlardı.",
+   "type": "bt_an_jar",
+   "visual": "Işık havuzunda tek büyük küp; 'yarım'da ağzının üstünde altın ölçü çizgisi ve '≈ 50 cm'; 'erzak'ta ağzın içi yavaşça kararır",
+   "params": {
+    "mode": "mouth"
+   },
+   "cues": {
+    "hit": "yarım",
+    "b": "erzak"
+   }
+  },
+  {
+   "text": "Biri onları doldurmuştu. Sonra bir gün gitti… ve bir daha geri gelmedi.",
+   "type": "bt_an_jar",
+   "visual": "Küpün içi kesit gibi açık; 'doldurmuştu'da içi taneli erzakla yavaşça dolar; 'gelmedi'de taneler solar, yerinde yalnızca altın kesikli bir seviye çizgisi kalır",
+   "params": {
+    "mode": "fill"
+   },
+   "cues": {
+    "hit": "doldurmuştu",
+    "b": "gelmedi"
+   }
+  },
+  {
+   "text": "Bu küpler, bir zamanlar bin bir kilise şehri denen bir yerin çarşısındaydı. Ani'nin.",
+   "type": "bt_an_skyline",
+   "visual": "Alçak güneşte yaylanın silueti: solda kuleli sur, ortada katedral, kubbesi kırık kiliseler, ince bir minare, sağda vadiye inen yar; 'Ani'nin'de üstte 'Ani', altında italik 'bin bir kilise şehri'; kuşlar yavaşça geçer",
+   "params": {
+    "mode": "ruins",
+    "label": "Ani",
+    "sub": "bin bir kilise şehri"
+   },
+   "cues": {
+    "hit": "Ani'nin"
+   }
+  },
+  {
+   "text": "Bu kadar büyük bir şehri kim öldürdü? Bir kılıç mı, bir deprem mi, yoksa bir yol mu?",
+   "type": "bt_text",
+   "visual": "Işık havuzunda alt alta üç kelime sırayla belirir: 'kılıç?', 'deprem?' ve altın italik 'yol?'",
+   "params": {
+    "lines": [
+     {
+      "text": "kılıç?",
+      "at": "c1",
+      "size": 130
+     },
+     {
+      "text": "deprem?",
+      "at": "c2",
+      "size": 130
+     },
+     {
+      "text": "yol?",
+      "at": "c3",
+      "size": 130,
+      "accent": true,
+      "italic": true
+     }
+    ],
+    "gap": 170
+   },
+   "cues": {
+    "c1": "kılıç",
+    "c2": "deprem",
+    "c3": "yol"
+   }
+  },
+  {
+   "text": "Cevap için bin yıl geriye gitmek gerekir.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Bozkırdaki başkent', altında italik '961'",
+   "params": {
+    "n": "I",
+    "title": "Bozkırdaki başkent",
+    "sub": "961"
+   },
+   "chapter": "Bozkırdaki başkent"
+  },
+  {
+   "text": "Ani, iki derin vadinin arasında, üçgen bir yaylanın üstüne kurulmuştu. Doğusunda, dipte Arpaçay akardı.",
+   "type": "bt_an_plateau",
+   "visual": "Yukarıdan sade plan: iki vadi arasında, ucu güneye bakan üçgen yayla kendini çizer, kenarlarında yar taramaları, içinde küçük yıkıntı işaretleri ve 'Ani'; batıda ince bir dere; 'Arpaçay'da doğuda mavi nehir çizilir ve italik mavi 'Arpaçay'",
+   "params": {
+    "mode": "site"
+   },
+   "cues": {
+    "hit": "Arpaçay"
+   }
+  },
+  {
+   "text": "Kuzeyde tek bir açık yan kalıyordu. Oraya çifte sur ördüler, yarım daire kulelerle.",
+   "type": "bt_an_plateau",
+   "visual": "Aynı plan; üçgenin açık kuzey kenarında önce mürekkep bir sur çizgisi, 'çifte'de onun önünde ikinci altın sur ve üstte altın italik 'çifte sur'; 'yarım'da surun üstüne yarım daire kuleler çizilir",
+   "params": {
+    "mode": "walls"
+   },
+   "cues": {
+    "hit": "çifte",
+    "b": "yarım"
+   }
+  },
+  {
+   "text": "961 yılında Ermeni Bagratlı kralı Üçüncü Aşot, başkentini Kars'tan buraya taşıdı.",
+   "type": "bt_an_map",
+   "visual": "Yakın bölge haritası, neredeyse tam kadraj: mavi Arpaçay ve Aras nehirleri, italik 'Anadolu', ilk andan altın nokta 'Kars'; 'buraya'da Arpaçay kıyısında ikinci nokta 'Ani' ve italik '961', aralarında kesikli altın ok",
+   "params": {
+    "bounds": [
+     40.9,
+     39.6,
+     45.9,
+     41.4
+    ],
+    "regions": [
+     {
+      "lon": 41.8,
+      "lat": 40.15,
+      "text": "A N A D O L U"
+     },
+     {
+      "lon": 44.25,
+      "lat": 40.95,
+      "text": "Arpaçay",
+      "blue": true
+     },
+     {
+      "lon": 44.9,
+      "lat": 39.75,
+      "text": "Aras",
+      "blue": true
+     }
+    ],
+    "rivers": [
+     [
+      [
+       43.45,
+       41.25
+      ],
+      [
+       43.5,
+       41.0
+      ],
+      [
+       43.64,
+       40.75
+      ],
+      [
+       43.68,
+       40.5
+      ],
+      [
+       43.8,
+       40.3
+      ],
+      [
+       43.95,
+       40.12
+      ]
+     ],
+     [
+      [
+       41.0,
+       39.9
+      ],
+      [
+       42.0,
+       40.0
+      ],
+      [
+       43.0,
+       40.1
+      ],
+      [
+       43.95,
+       40.12
+      ],
+      [
+       44.6,
+       39.95
+      ],
+      [
+       45.4,
+       39.62
+      ],
+      [
+       45.9,
+       39.4
+      ]
+     ]
+    ],
+    "points": [
+     {
+      "lon": 43.1,
+      "lat": 40.6,
+      "label": "Kars",
+      "at": "p0",
+      "side": "left"
+     },
+     {
+      "lon": 43.57,
+      "lat": 40.51,
+      "label": "Ani",
+      "sub": "961",
+      "at": "p2",
+      "side": "right"
+     }
+    ],
+    "routes": [
+     {
+      "path": [
+       [
+        43.16,
+        40.59
+       ],
+       [
+        43.35,
+        40.6
+       ],
+       [
+        43.5,
+        40.54
+       ]
+      ],
+      "at": "p2",
+      "dashed": true
+     }
+    ]
+   },
+   "cues": {
+    "p2": "buraya"
+   }
+  },
+  {
+   "text": "Şehir hızla büyüdü. Çünkü İpek Yolu'nun bir kolu, tam bu yayladan Anadolu'ya giriyordu.",
+   "type": "bt_an_map",
+   "visual": "Aynı harita; 'Ani' noktası; 'İpek'te doğudan, Hazar'ın güneyinden gelen altın kervan yolu Ani'ye çizilir; 'Anadolu'ya'da yol Ani'den batıya, Anadolu'nun içine uzanır",
+   "params": {
+    "bounds": [
+     36.5,
+     37.0,
+     50.5,
+     43.4
+    ],
+    "regions": [
+     {
+      "lon": 39.0,
+      "lat": 38.2,
+      "text": "A N A D O L U"
+     },
+     {
+      "lon": 38.6,
+      "lat": 42.4,
+      "text": "Karadeniz"
+     },
+     {
+      "lon": 49.6,
+      "lat": 41.6,
+      "text": "Hazar"
+     }
+    ],
+    "points": [
+     {
+      "lon": 43.57,
+      "lat": 40.51,
+      "label": "Ani",
+      "at": "p1",
+      "side": "right",
+      "dy": -40
+     }
+    ],
+    "routes": [
+     {
+      "path": [
+       [
+        54,
+        38.6
+       ],
+       [
+        50.5,
+        38.4
+       ],
+       [
+        48.3,
+        38.3
+       ],
+       [
+        46.3,
+        38.1
+       ],
+       [
+        44.9,
+        39.4
+       ],
+       [
+        43.57,
+        40.51
+       ]
+      ],
+      "at": "r1"
+     },
+     {
+      "path": [
+       [
+        43.57,
+        40.51
+       ],
+       [
+        42.3,
+        40.2
+       ],
+       [
+        41.27,
+        39.9
+       ],
+       [
+        39.5,
+        39.75
+       ],
+       [
+        37.0,
+        39.75
+       ],
+       [
+        34.5,
+        39.4
+       ],
+       [
+        32.0,
+        39.1
+       ],
+       [
+        30,
+        39.3
+       ]
+      ],
+      "at": "r2"
+     }
+    ]
+   },
+   "cues": {
+    "p1": "büyüdü",
+    "r1": "İpek",
+    "r2": "Anadolu'ya"
+   }
+  },
+  {
+   "text": "Kervanlar doğudan ve batıdan geldi. Hanlar doldu, çarşılar doldu, depolar doldu.",
+   "type": "bt_an_caravan",
+   "visual": "Alçak güneşte bozkır; sağda yaylanın üstünde şehrin küçük silueti; soldan, kıvrılan yol boyunca yükü sırtında altı deveden bir kervan ve önünde yürüyen bir adam yavaşça şehre doğru ilerler; ayaklarından hafif toz kalkar",
+   "params": {
+    "mode": "come"
+   }
+  },
+  {
+   "text": "Büyük olasılıkla on binlerce insan bu surların içinde ve çevresinde yaşadı.",
+   "type": "bt_an_city",
+   "visual": "Gece, yıldızlar; önde mazgallı sur, arkasında yamaca yığılmış düz damlı taş evler, pencerelerinde sıcak altın ışıklar yavaşça nefes alır; en üstte katedralin küçük silueti; bacalardan ince duman",
+   "params": {
+    "mode": "lit"
+   }
+  },
+  {
+   "text": "Kiliseler birbiri ardına yükseldi. Halk ona bin bir kilise şehri dedi.",
+   "type": "bt_an_skyline",
+   "visual": "Yaylanın silueti; solda sur; kiliseler, katedral ve minare soldan sağa birer birer belirir; 'bin'de üstte 'bin bir kilise'",
+   "params": {
+    "mode": "rise",
+    "label": "bin bir kilise"
+   },
+   "cues": {
+    "hit": "bin"
+   }
+  },
+  {
+   "text": "En büyüğü katedraldi. Bin yılının hemen ardından tamamlandı. Mimarı Ermeni usta Trdat'tı.",
+   "type": "bt_an_cathedral",
+   "visual": "Işık havuzunda katedral kendini çizer: uzun gövde, ince yüksek kör kemerler, kapı, üçgen çatı, pencereli kasnak ve konik kubbe, tepede küçük haç; 'katedraldi'de sağda 'Katedral', 'Trdat'ta altında italik 'mimar Trdat'",
+   "params": {
+    "mode": "build",
+    "label": "Katedral",
+    "sub": "mimar Trdat"
+   },
+   "cues": {
+    "hit": "katedraldi",
+    "b": "Trdat"
+   }
+  },
+  {
+   "text": "989'da büyük bir deprem İstanbul'u sarsmış, Ayasofya'nın kubbesi kısmen çökmüştü. Onu yeniden kuran usta, bu adamdı.",
+   "type": "bt_an_dome",
+   "visual": "Ayasofya'nın sade silueti: alçak gövde, yarım kubbeler, pencere halkası ve büyük kubbe; kubbenin batı yarısı kırık, kesikli çizgiyle; 'yeniden'de eksik yarı altın çizgiyle yeniden çizilir; sağda 'Ayasofya', italik '989 depremi'",
+   "params": {
+    "label": "Ayasofya",
+    "sub": "989 depremi"
+   },
+   "cues": {
+    "hit": "yeniden"
+   }
+  },
+  {
+   "text": "Ama zengin bir kapı, herkesin istediği kapıdır.",
+   "type": "bt_an_map",
+   "visual": "Bölge haritası; altın nokta 'Ani', italik 'kapı'; 'zengin'de batıdan, 'kapı'da doğudan Ani'ye doğru iki kesikli altın yol uzanır",
+   "params": {
+    "bounds": [
+     36.5,
+     37.0,
+     50.5,
+     43.4
+    ],
+    "regions": [
+     {
+      "lon": 39.0,
+      "lat": 38.2,
+      "text": "A N A D O L U"
+     },
+     {
+      "lon": 38.6,
+      "lat": 42.4,
+      "text": "Karadeniz"
+     },
+     {
+      "lon": 49.6,
+      "lat": 41.6,
+      "text": "Hazar"
+     }
+    ],
+    "points": [
+     {
+      "lon": 43.57,
+      "lat": 40.51,
+      "label": "Ani",
+      "sub": "kapı",
+      "at": "p1",
+      "side": "right",
+      "dy": -40
+     }
+    ],
+    "routes": [
+     {
+      "path": [
+       [
+        36.5,
+        39.2
+       ],
+       [
+        38.5,
+        39.6
+       ],
+       [
+        40.5,
+        40.0
+       ],
+       [
+        42.3,
+        40.3
+       ],
+       [
+        43.45,
+        40.48
+       ]
+      ],
+      "at": "r1",
+      "dashed": true,
+      "alpha": 0.9,
+      "dur": 1.3
+     },
+     {
+      "path": [
+       [
+        50.5,
+        38.0
+       ],
+       [
+        48.0,
+        38.4
+       ],
+       [
+        46.0,
+        39.2
+       ],
+       [
+        44.6,
+        40.0
+       ],
+       [
+        43.7,
+        40.45
+       ]
+      ],
+      "at": "r2",
+      "dashed": true,
+      "alpha": 0.9,
+      "dur": 1.3
+     }
+    ]
+   },
+   "cues": {
+    "p1": "Ama",
+    "r1": "zengin",
+    "r2": "kapı"
+   }
+  },
+  {
+   "text": "Ve bu kapıya, önce batıdan biri uzandı.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'II', ince çizgi, büyük ince 'Kılıç', altında italik '1045 – 1064'",
+   "params": {
+    "n": "II",
+    "title": "Kılıç",
+    "sub": "1045 – 1064"
+   },
+   "chapter": "Kılıç"
+  },
+  {
+   "text": "1045'te Bizans, Ani'yi kendi topraklarına kattı. Bagratlı krallığı sona erdi.",
+   "type": "bt_an_line",
+   "visual": "Sade zaman çizelgesi 950–1100; soluk '961 · Bagratlı' işareti; 'Bizans'ta altın işaret '1045', altında italik 'Bizans'",
+   "params": {
+    "range": [
+     950,
+     1100
+    ],
+    "items": [
+     {
+      "year": 961,
+      "label": "Bagratlı",
+      "at": "a",
+      "dim": true
+     },
+     {
+      "year": 1045,
+      "label": "Bizans",
+      "at": "b",
+      "up": false
+     }
+    ]
+   },
+   "cues": {
+    "a": "Bagratlı",
+    "b": "Bizans"
+   }
+  },
+  {
+   "text": "Ama doğuda, bozkırın öbür ucunda, yeni bir güç yükseliyordu. Selçuklular.",
+   "type": "bt_an_riders",
+   "visual": "Alçak güneşte geniş bozkır, uzak tepeler; ufuk çizgisinde bir sıra atlı silueti (bazılarında mızrak, ikisinde kırmızı sancak) çok yavaşça sağa ilerler; 'Selçuklular'da üstte 'Selçuklular'",
+   "params": {
+    "mode": "horizon",
+    "label": "Selçuklular"
+   },
+   "cues": {
+    "hit": "Selçuklular"
+   }
+  },
+  {
+   "text": "1064 yazında Sultan Alp Arslan, ordusuyla Ani'nin önüne geldi.",
+   "type": "bt_an_walls",
+   "visual": "Gece, yıldızlar; yarım daire kuleli yüksek iç sur ve önünde alçak dış sur; önündeki ovada ordunun kamp ateşleri yavaşça titrer; üstte '1064'",
+   "params": {
+    "mode": "siege",
+    "label": "1064"
+   },
+   "cues": {
+    "hit": "ordusuyla"
+   }
+  },
+  {
+   "text": "Vadiler ve surlar şehri yenilmez gösteriyordu. Kuşatma yirmi beş gün sürdü.",
+   "type": "bt_an_days",
+   "visual": "Surun büyük kesme taşlarına yakın plan, alacakaranlık; taşın üstüne yirmi beş çentik birer birer kazınır (her beşinci altın çapraz); mazgalların üstünde ince bir hilal ay yavaşça yükselir; 'yirmi'de altta altın '25 gün'",
+   "params": {
+    "label": "25 gün"
+   },
+   "cues": {
+    "hit": "yirmi"
+   }
+  },
+  {
+   "text": "Türk kaynaklarına göre, 16 Ağustos'ta surlar aşıldı.",
+   "type": "bt_an_walls",
+   "visual": "Gündüz, aynı sur; 'aşıldı'da ortadaki iki kule arasındaki iç sur yıkılır, ardından sıcak altın ışık sızar, kırık kenarlar altın, önüne moloz yığılır; üstte '16 Ağustos'",
+   "params": {
+    "mode": "breach",
+    "label": "16 Ağustos"
+   },
+   "cues": {
+    "hit": "surlar"
+   }
+  },
+  {
+   "text": "Anlatılana göre katedralin kubbesindeki haç indirildi, yerine bir hilal kondu. Katedral artık Fethiye Camii'ydi.",
+   "type": "bt_an_cathedral",
+   "visual": "Işık havuzunda tamamlanmış katedral; 'indirildi'de kubbenin tepesindeki haç yavaşça solar; 'hilal'de yerinde altın bir hilal belirir; sağda 'Fethiye Camii'",
+   "params": {
+    "mode": "crescent",
+    "label": "Fethiye Camii"
+   },
+   "cues": {
+    "a": "indirildi",
+    "b": "hilal"
+   }
+  },
+  {
+   "text": "Bu, Malazgirt'ten yedi yıl önceydi. Anadolu'nun kapılarından biri açılmıştı.",
+   "type": "bt_an_map",
+   "visual": "Aynı bölge haritası; altın nokta 'Ani', italik '1064'; 'Malazgirt'te güneyinde ikinci nokta 'Malazgirt', italik '1071'",
+   "params": {
+    "bounds": [
+     36.5,
+     37.0,
+     50.5,
+     43.4
+    ],
+    "regions": [
+     {
+      "lon": 39.0,
+      "lat": 38.2,
+      "text": "A N A D O L U"
+     },
+     {
+      "lon": 38.6,
+      "lat": 42.4,
+      "text": "Karadeniz"
+     },
+     {
+      "lon": 49.6,
+      "lat": 41.6,
+      "text": "Hazar"
+     }
+    ],
+    "points": [
+     {
+      "lon": 43.57,
+      "lat": 40.51,
+      "label": "Ani",
+      "sub": "1064",
+      "at": "p1",
+      "side": "right",
+      "dy": -40
+     },
+     {
+      "lon": 42.53,
+      "lat": 39.14,
+      "label": "Malazgirt",
+      "sub": "1071",
+      "at": "p2",
+      "side": "left",
+      "dy": 30
+     }
+    ]
+   },
+   "cues": {
+    "p1": "Bu",
+    "p2": "Malazgirt"
+   }
+  },
+  {
+   "text": "Ama Ani için asıl uzun yolculuk daha yeni başlayacaktı.",
+   "type": "bt_an_caravan",
+   "visual": "Alacakaranlıkta bozkıra uzanan boş, uzun yol; uzakta tepede şehrin küçük silueti; yolun ortasında tek, küçük bir deve silueti çok yavaş ilerler",
+   "params": {
+    "mode": "road"
+   }
+  },
+  {
+   "text": "Bundan sonra şehir, bir anahtar gibi elden ele geçti.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'III', ince çizgi, büyük ince 'El değiştiren kapı', altında italik '1072 – 1236'",
+   "params": {
+    "n": "III",
+    "title": "El değiştiren kapı",
+    "sub": "1072 – 1236"
+   },
+   "chapter": "El değiştiren kapı"
+  },
+  {
+   "text": "1072'de Selçuklular Ani'yi Şeddadilere bıraktı. Yeni yönetici Menuçehr adında bir beydi.",
+   "type": "bt_an_line",
+   "visual": "Zaman çizelgesi 1040–1260; soluk '1064 · Selçuklu'; 'Şeddadilere'de altın '1072', altında italik 'Şeddadiler'",
+   "params": {
+    "range": [
+     1040,
+     1260
+    ],
+    "items": [
+     {
+      "year": 1064,
+      "label": "Selçuklu",
+      "at": "a",
+      "dim": true
+     },
+     {
+      "year": 1072,
+      "label": "Şeddadiler",
+      "at": "b",
+      "up": false
+     }
+    ]
+   },
+   "cues": {
+    "a": "Selçuklular",
+    "b": "Şeddadilere"
+   }
+  },
+  {
+   "text": "Onun adını taşıyan cami, Anadolu'daki ilk Türk camilerinden sayılır. Minaresinde bugün hâlâ kufi bir besmele okunur.",
+   "type": "bt_an_mosque",
+   "visual": "Işık havuzunda yarı yıkık ibadet salonu ve yanında yükselen sekizgen tuğla minare kendini çizer; sağda 'Ebu'l-Menuçehr Camii'; 'besmele'de minarenin üstündeki kufi yazı şeridi altın yanar, altında altın italik 'kufi besmele'",
+   "params": {
+    "label": "Ebu'l-Menuçehr Camii",
+    "sub": "kufi besmele"
+   },
+   "cues": {
+    "hit": "besmele"
+   }
+  },
+  {
+   "text": "Sonra Gürcüler geldi. Şehri defalarca aldılar, defalarca kaybettiler.",
+   "type": "bt_an_line",
+   "visual": "Aynı zaman çizelgesi; altın işaretler sırayla belirir: 1124, 1161, 1174, 1199 · Tamar; 'kaybettiler'de altta altın italik 'Gürcüler'",
+   "params": {
+    "range": [
+     1040,
+     1260
+    ],
+    "items": [
+     {
+      "year": 1124,
+      "at": "a"
+     },
+     {
+      "year": 1161,
+      "at": "b",
+      "up": false
+     },
+     {
+      "year": 1174,
+      "at": "c"
+     },
+     {
+      "year": 1199,
+      "label": "Tamar",
+      "at": "d",
+      "up": false
+     }
+    ],
+    "note": "Gürcüler"
+   },
+   "cues": {
+    "a": "Gürcüler",
+    "b": "aldılar",
+    "c": "defalarca",
+    "note": "kaybettiler"
+   }
+  },
+  {
+   "text": "1199'da Kraliçe Tamar'ın ordusu girdi. Ani bir süre yeniden parladı.",
+   "type": "bt_an_skyline",
+   "visual": "Akşam; yaylanın sağlam silueti (katedral kubbesiyle, kiliseler, minare, sur); kiliselerin kapılarında sıcak altın ışıklar yavaşça nefes alır; üstte '1199'",
+   "params": {
+    "mode": "glow",
+    "label": "1199"
+   }
+  },
+  {
+   "text": "Her yeni sahip surları onardı, kendi tapınağını yaptırdı. Ama çarşı yaşamaya devam etti.",
+   "type": "bt_an_city",
+   "visual": "Gece; uzun bir çarşı kemeraltı kendini çizer: beş dükkân kemeri, her birinde küpler ve çuvallar, kemerlerin üstünde asılı kandiller yavaşça nefes alır; 'çarşı'da üstte 'çarşı'",
+   "params": {
+    "mode": "bazaar",
+    "label": "çarşı"
+   },
+   "cues": {
+    "hit": "çarşı"
+   }
+  },
+  {
+   "text": "Kılıçlar gelip geçti. Kervanlar geldikçe Ani yaşadı.",
+   "type": "bt_an_caravan",
+   "visual": "Alçak güneş; sağda şehrin suru ve içinden sıcak ışık sızan kemerli kapısı; yükü sırtında beş deve ve önde yürüyen bir adam soldan kapıya doğru yavaşça ilerler",
+   "params": {
+    "mode": "gate"
+   }
+  },
+  {
+   "text": "Sonra 1236'da, doğuda büyük bir toz bulutu belirdi. Ama bu kez gelen kimdi?",
+   "type": "bt_an_riders",
+   "visual": "Bozkırın ufkunda kocaman, yavaşça yükselen bir toz bulutu; altında ufuk boyunca küçücük atlı siluetleri; '1236'da üstte '1236'",
+   "params": {
+    "mode": "dust",
+    "label": "1236"
+   },
+   "cues": {
+    "hit": "1236"
+   }
+  },
+  {
+   "text": "Bu kez gelen, bir imparatorluktu.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'IV', ince çizgi, büyük ince 'Deprem ve yol', altında italik '1236 – 1735'",
+   "params": {
+    "n": "IV",
+    "title": "Deprem ve yol",
+    "sub": "1236 – 1735"
+   },
+   "chapter": "Deprem ve yol"
+  },
+  {
+   "text": "Moğollar on yıl önce bir kez denemiş, şehri alamamıştı. Bu kez aldılar ve yağmaladılar. Ani yaralandı, ama yine ayakta kaldı.",
+   "type": "bt_an_walls",
+   "visual": "Gündüz; çifte sur ve kuleler; surun arkasından iki koyu duman sütunu çok yavaşça yükselir, gökyüzünde pas rengi bir ışık; 'aldılar'da üstte 'Moğollar'",
+   "params": {
+    "mode": "smoke",
+    "label": "Moğollar"
+   },
+   "cues": {
+    "hit": "aldılar"
+   }
+  },
+  {
+   "text": "Asıl sarsıntı, 1319'da yerin altından geldi.",
+   "type": "bt_an_quake",
+   "visual": "Toprağın kesiti: üstte yaylanın küçük silueti (katedral, kiliseler), altında katman katman toprak ve taşlar; 'yerin'de derinden yüzeye doğru altın bir çatlak çizilir, sağdaki katmanlar biraz aşağı oturur, yüzeyden toz kalkar; sağda '1319'",
+   "params": {
+    "label": "1319"
+   },
+   "cues": {
+    "hit": "yerin"
+   }
+  },
+  {
+   "text": "Büyük bir deprem, katedralin kubbesini çökertti. Ani bu darbeden sonra bir daha toparlanamadı.",
+   "type": "bt_an_cathedral",
+   "visual": "Işık havuzunda katedral; 'çökertti'de kasnak ve konik kubbe aşağı çöker, taş parçaları yavaşça düşer, toz bulutu yükselir; kırık üst kenar altın çizgiyle kalır",
+   "params": {
+    "mode": "collapse"
+   },
+   "cues": {
+    "hit": "çökertti"
+   }
+  },
+  {
+   "text": "Ama bir şey, depremden de sessizdi.",
+   "type": "bt_text",
+   "visual": "Işık havuzunda büyük altın italik 'sessiz'",
+   "params": {
+    "lines": [
+     {
+      "text": "sessiz",
+      "at": "c1",
+      "size": 170,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "şey"
+   }
+  },
+  {
+   "text": "Ticaret yolları yavaş yavaş kaydı. Kervanlar başka geçitlerden, başka şehirlerden geçmeye başladı.",
+   "type": "bt_an_map",
+   "visual": "Aynı bölge haritası; Ani'den geçen altın kervan yolu; 'kaydı'da kesikli soluk çizgiye döner; 'Kervanlar'da daha güneyden, Ani'ye uğramadan geçen yeni bir altın yol çizilir",
+   "params": {
+    "bounds": [
+     36.5,
+     37.0,
+     50.5,
+     43.4
+    ],
+    "regions": [
+     {
+      "lon": 39.0,
+      "lat": 38.2,
+      "text": "A N A D O L U"
+     },
+     {
+      "lon": 38.6,
+      "lat": 42.4,
+      "text": "Karadeniz"
+     },
+     {
+      "lon": 49.6,
+      "lat": 41.6,
+      "text": "Hazar"
+     }
+    ],
+    "points": [
+     {
+      "lon": 43.57,
+      "lat": 40.51,
+      "label": "Ani",
+      "at": "p1",
+      "side": "right",
+      "dy": -40
+     }
+    ],
+    "routes": [
+     {
+      "path": [
+       [
+        54,
+        38.6
+       ],
+       [
+        50.5,
+        38.4
+       ],
+       [
+        48.3,
+        38.3
+       ],
+       [
+        46.3,
+        38.1
+       ],
+       [
+        44.9,
+        39.4
+       ],
+       [
+        43.57,
+        40.51
+       ]
+      ],
+      "at": "r0",
+      "t0": 0,
+      "fade": "kaydı"
+     },
+     {
+      "path": [
+       [
+        43.57,
+        40.51
+       ],
+       [
+        42.3,
+        40.2
+       ],
+       [
+        41.27,
+        39.9
+       ],
+       [
+        39.5,
+        39.75
+       ],
+       [
+        37.0,
+        39.75
+       ],
+       [
+        34.5,
+        39.4
+       ],
+       [
+        32.0,
+        39.1
+       ],
+       [
+        30,
+        39.3
+       ]
+      ],
+      "at": "r0",
+      "t0": 0,
+      "fade": "kaydı"
+     },
+     {
+      "path": [
+       [
+        54,
+        38.6
+       ],
+       [
+        50.5,
+        38.4
+       ],
+       [
+        48.3,
+        38.3
+       ],
+       [
+        46.3,
+        38.1
+       ],
+       [
+        44.6,
+        38.9
+       ],
+       [
+        43.4,
+        39.1
+       ],
+       [
+        42.3,
+        39.4
+       ],
+       [
+        41.27,
+        39.9
+       ],
+       [
+        39.5,
+        39.75
+       ],
+       [
+        37.0,
+        39.75
+       ],
+       [
+        34.5,
+        39.4
+       ],
+       [
+        32.0,
+        39.1
+       ],
+       [
+        30,
+        39.3
+       ]
+      ],
+      "at": "r1"
+     }
+    ]
+   },
+   "cues": {
+    "p1": "Ticaret",
+    "r1": "Kervanlar"
+   }
+  },
+  {
+   "text": "Bir şehir kılıçtan sağ çıkabilir. Depremden de. Ama yolunu kaybederse…",
+   "type": "bt_text",
+   "visual": "Işık havuzunda büyük italik 'yolunu kaybederse'",
+   "params": {
+    "lines": [
+     {
+      "text": "yolunu kaybederse",
+      "at": "c1",
+      "size": 130,
+      "italic": true
+     }
+    ]
+   },
+   "cues": {
+    "c1": "yolunu"
+   }
+  },
+  {
+   "text": "Önce tüccarlar gitti. Sonra ustalar. Evlerin ışıkları birer birer söndü.",
+   "type": "bt_an_city",
+   "visual": "Gece; sur ve arkasında yığılmış taş evler, pencerelerde altın ışıklar; 'tüccarlar'da bir grup pencere söner, 'ustalar'da ikinci grup, 'söndü'de sonuncular; bacalardaki duman da kesilir",
+   "params": {
+    "mode": "dark"
+   },
+   "cues": {
+    "a": "tüccarlar",
+    "b": "ustalar",
+    "c": "söndü"
+   }
+  },
+  {
+   "text": "Şehir büyük olasılıkla on yedinci yüzyılda boşaldı. Kalan son keşişlerin de 1735 dolaylarında ayrıldığı anlatılır. Ama toprak, bir sırrı saklamaya devam etti.",
+   "type": "bt_an_cathedral",
+   "visual": "Işık havuzunda bugünkü katedral: kubbesi ve kasnağı yok, çatı kırık, bir köşesi yıkık, kırık kenarlar altın; önünde boş bozkır; havada toz",
+   "params": {
+    "mode": "ruin"
+   }
+  },
+  {
+   "text": "Geriye taş kaldı. Rüzgâr. Ve toprak.",
+   "type": "bt_chapter",
+   "visual": "Bölüm kartı: altın 'V', ince çizgi, büyük ince 'Küpler', altında italik 'bugün'",
+   "params": {
+    "n": "V",
+    "title": "Küpler",
+    "sub": "bugün"
+   },
+   "chapter": "Küpler"
+  },
+  {
+   "text": "2016'da Ani, UNESCO Dünya Mirası Listesi'ne girdi.",
+   "type": "bt_an_skyline",
+   "visual": "Şafak; yaylanın yıkık silueti, güneş yavaşça yükselir; üstte 'UNESCO Dünya Mirası', italik '2016'",
+   "params": {
+    "mode": "unesco",
+    "label": "UNESCO Dünya Mirası",
+    "sub": "2016"
+   }
+  },
+  {
+   "text": "Ve 2026'da kazıcılar, Selçuklu Çarşısı'nın bir deposunda o beş küpü buldu.",
+   "type": "bt_an_dig",
+   "visual": "Kazı çukuru; beş dev küp tamamen açılmış duruyor; sağda diz çökmüş yüzsüz bir kazıcı silueti; 'Selçuklu'da üstte 'Selçuklu Çarşısı', italik '2026'",
+   "params": {
+    "mode": "find",
+    "label": "Selçuklu Çarşısı",
+    "sub": "2026"
+   },
+   "cues": {
+    "hit": "Selçuklu"
+   }
+  },
+  {
+   "text": "Üzerlerinde S biçimli, dalgalı kabartmalar vardı. Büyük olasılıkla içlerinde bakliyat gibi kuru erzak saklanırdı.",
+   "type": "bt_an_jar",
+   "visual": "Işık havuzunda tek büyük küp; 'dalgalı'da omzundaki S biçimli kabartma şeridi altın yanar ve sağda altın 'S kabartma'; 'erzak'ta altında italik 'kuru erzak'",
+   "params": {
+    "mode": "relief",
+    "label": "S kabartma",
+    "sub": "kuru erzak"
+   },
+   "cues": {
+    "hit": "dalgalı",
+    "b": "erzak"
+   }
+  },
+  {
+   "text": "Bu şehri kim öldürdü? Tek bir darbe değil: kuşatmalar yaraladı, deprem sarstı. Ama asıl ölüm sessizdi: kervanlar başka yoldan gitti.",
+   "type": "bt_an_caravan",
+   "visual": "Alacakaranlık; solda soluk, yıkık şehir silueti; şehre giden eski yol kesikli ve 'yaraladı'da iyice solar; önde yeni bir altın yol çizilir ve kervan o yol boyunca şehirden uzaklaşır",
+   "params": {
+    "mode": "away"
+   },
+   "cues": {
+    "hit": "yaraladı"
+   }
+  },
+  {
+   "text": "Bu küpler, o sessizlikten önceki son hayatın izi. Biri onları, yarın da burada olacağını düşünerek doldurmuştu.",
+   "type": "bt_an_dig",
+   "visual": "Kazı çukurundaki beş küp, sıcak ışık havuzunun ortasında; S şeritleri altın; uzak ufuk soluk; havada yavaşça süzülen toz",
+   "params": {
+    "mode": "last"
+   },
+   "camera": {
+    "focus": [
+     960,
+     700
+    ],
+    "zoom": 1.25
+   }
+  },
+  {
+   "text": "Sizce bir şehri en çok ne öldürür: savaş mı, deprem mi, unutulmak mı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "type": "bt_an_cathedral",
+   "visual": "Gece, yıldızlar; bozkırın ortasında kubbesiz, yıkık katedral, kırık kenarları altın; havada yavaşça süzülen toz; sessiz",
+   "params": {
+    "mode": "night"
+   }
+  }
+ ]
+}
