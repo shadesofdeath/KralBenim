@@ -1,0 +1,182 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "fildisi",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Britannica: Battle of Manzikert",
+      "url": "https://www.britannica.com/event/Battle-of-Manzikert"
+    },
+    {
+      "title": "Britannica: Romanus IV Diogenes",
+      "url": "https://www.britannica.com/biography/Romanus-IV-Diogenes"
+    },
+    {
+      "title": "World History Encyclopedia: Battle of Manzikert",
+      "url": "https://www.worldhistory.org/article/1189/battle-of-manzikert/"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Düşmanı",
+      "bağışladı"
+    ],
+    "highlight": [
+      "bağışladı"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu imparatoru düşmanı bağışladı.",
+      "type": "bt_mlz_captive",
+      "visual": "Akşam karanlığında alçak tepeli bir savaş alanı; ışık havuzunun içinde diz çökmüş tek yüzsüz tutsak: başı öne eğik, bilekleri önde iple bağlı, ipin ucu yere sarkıyor, pelerininin ucu yavaşça kalkıyor; önünde yerde duran kapalı Bizans tacı; arkada yere saplanmış mızrakta yırtık flama dalgalanır, ışıkta toz; 'bağışladı'da tacın çevresinde ince altın çizgi dolaşır",
+      "cues": {
+        "hit": "bağışladı"
+      }
+    },
+    {
+      "text": "Malazgirt, 1071.",
+      "type": "bt_mlz_map",
+      "visual": "Karadeniz ile Akdeniz arasında tam Anadolu yarımadası (Kıbrıs, Marmara, Van Gölü), kara temanın zemininden biraz koyu, denizler zemin renginde; batıda Konstantinopolis noktası ve italik adı; doğuya akan kesik altın sefer çizgisi; Van Gölü'nün kuzeyinde yanıp sönen altın halka, üstünde 'Malazgirt' ve altın '1071'",
+      "cues": {
+        "hit": "1071"
+      }
+    },
+    {
+      "text": "Bizans imparatoru Romen Diyojen esir düştü.",
+      "type": "bt_mlz_tent",
+      "visual": "Yuvarlak keçe otağ, kapı kanatları rüzgârda yavaşça oynar; kapının içinde minderde oturan yüzsüz siluet (sultan); önünde ayakta, otağa dönük, bilekleri önde bağlı tutsak; solda tuğ sallanır; 'esir'de bileklerinden sarkan kalın zincir halkaları belirir, üstüne ışık düşer",
+      "cues": {
+        "hit": "esir"
+      }
+    },
+    {
+      "text": "Rivayete göre Alparslan sordu: Sen olsan ne yapardın?",
+      "type": "bt_text",
+      "visual": "Işık havuzunda iki satır büyük ince yazı: önce 'Sen olsan', 'yapardın'da altında italik 'ne yapardın?'",
+      "params": {
+        "lines": [
+          {
+            "text": "Sen olsan"
+          },
+          {
+            "text": "ne yapardın?",
+            "italic": true,
+            "at": "hit"
+          }
+        ]
+      },
+      "cues": {
+        "hit": "yapardın"
+      }
+    },
+    {
+      "text": "Seni kırbaçlatıp öldürürdüm.",
+      "type": "bt_mlz_sword",
+      "visual": "Işık havuzunda ucu aşağı bakan tek düz kılıç kendini çizer: yuvarlak kabza topuzu, sarılı kabza, kavisli balçak, uzun ağız; bıçak boyunca yavaş bir parıltı iner; 'öldürürdüm'de ağzın kenarı boyunca altın çizgi akar",
+      "cues": {
+        "hit": "öldürürdüm"
+      }
+    },
+    {
+      "text": "Sultan onu ağırlayıp bıraktı.",
+      "type": "bt_mlz_road",
+      "visual": "Akşam, batı ufkunda alçak güneş; ufka kıvrılarak uzanan uzun yol; yolda küçük bir atlı yavaşça uzaklaşır; ön planda yolun üstünde kırık bir zincir: dört sağlam halka, sonra açılmış bir halka ve kopuk yarısı; 'bıraktı'da açık halka altın renkte çizilir",
+      "cues": {
+        "hit": "bıraktı"
+      }
+    },
+    {
+      "text": "Ama tahtına başkası oturmuştu.",
+      "type": "bt_mlz_throne",
+      "visual": "Altın kenarlı yüksek bir apsis kemeri, iki basamaklı kürsüde yüksek arkalıklı Bizans tahtı, ışık huzmesinde toz; taht önce boş, 'başkası'nda tahtta ağır kaftanlı (loros, altın şeritli) dolgun bir siluet belirir, başında altın taç",
+      "cues": {
+        "hit": "başkası"
+      }
+    },
+    {
+      "text": "Tahtı için savaştı, yenildi. Canı bağışlanacaktı.",
+      "type": "bt_mlz_oath",
+      "visual": "Işık havuzunda hafif eğik tek bir yazılı belge (can güvencesi): başında küçük haç, satırlar kendini yazar; 'Canı'da altında kırmızı kordona asılı yuvarlak altın mühür belirir ve çok yavaş sallanır",
+      "cues": {
+        "hit": "Canı"
+      }
+    },
+    {
+      "text": "Yine de ertesi yıl gözlerine mil çekildi.",
+      "type": "bt_mlz_candle",
+      "visual": "Masada şamdanın üstünde tek uzun mum, alev sakin yanar ve ışık havuzu yayılır; 'mil'de alev küçülüp söner, ışık çekilir, fitilden ince duman yükselir (şiddet yok, soyut)",
+      "params": {
+        "mode": "out"
+      },
+      "cues": {
+        "hit": "mil"
+      }
+    },
+    {
+      "text": "Düşmanı onu bağışladı. Kendi sarayı bağışlamadı.",
+      "type": "bt_text",
+      "visual": "İki satır büyük ince yazı, anlatımla aynı: 'Düşmanı onu bağışladı.' ve altında altın renkte 'Kendi sarayı bağışlamadı.'",
+      "params": {
+        "lines": [
+          {
+            "text": "Düşmanı onu bağışladı.",
+            "size": 110
+          },
+          {
+            "text": "Kendi sarayı bağışlamadı.",
+            "size": 110,
+            "accent": true,
+            "at": "hit"
+          }
+        ]
+      },
+      "cues": {
+        "hit": "sarayı"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_mlz_isle",
+      "visual": "Akşam, sakin deniz; ufukta tepesinde küçük bir şapel olan alçak tek ada silueti (Prote); yanında güneş yavaşça ufka iner; suda yavaş kayan çizgiler ve güneşin titreşmeden genişleyip daralan altın yansıması"
+    }
+  ],
+  "youtube": {
+    "title": "Malazgirt Savaşı: Alparslan Esir İmparatoru Neden Bıraktı?",
+    "description": "Malazgirt Savaşı'nda, 26 Ağustos 1071'de, Bizans imparatoru IV. Romanos Diyojen Sultan Alparslan'a esir düştü. Düşmanı onu bağışladı; onu affetmeyen kendi sarayı oldu.\n\nRivayete göre Alparslan esir imparatora \"Sen olsan ne yapardın?\" diye sordu, cevap sertti. Ama Selçuklu sultanı onu yaklaşık bir hafta ağırladı, bir antlaşma ve fidye sözüyle serbest bıraktı. Romen Diyojen geri döndüğünde Konstantinopolis'te tahta VII. Mihail Doukas çıkarılmıştı. Tahtı için savaşıp yenilen eski imparatora can güvencesi verilmişti; yine de 1072'de gözlerine mil çekildi; kısa süre sonra Prote (Kınalıada) adasında öldü. Malazgirt, Anadolu'nun kapılarını Türklere açan savaş olarak hatırlanır.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Alparslan onu bırakmakla doğru mu yaptı? Yorumlara yaz!\n\n#shorts #malazgirt #alparslan #selçuklu #düşünbakalım",
+    "tags": [
+      "malazgirt savaşı",
+      "malazgirt meydan muharebesi",
+      "malazgirt 1071",
+      "malazgirt zaferi",
+      "alparslan",
+      "sultan alparslan",
+      "romen diyojen",
+      "romanos diogenes",
+      "esir imparator",
+      "büyük selçuklu",
+      "bizans imparatorluğu",
+      "türk tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-13T19:00:00+03:00",
+    "related": "videos/2026-11-12/02-ani-antik-kenti.json"
+  }
+}
