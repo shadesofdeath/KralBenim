@@ -1,0 +1,17 @@
+{
+ "id": "2QFdVOTT4gw",
+ "thumbnail": false,
+ "url": "https://youtu.be/2QFdVOTT4gw",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-13T19:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Douglas Mawson: How Did One Man Survive Antarctica Alone?",
+ "script": "videos/2026-11-13/ag-03-mawson-antarctica.json"
+}
