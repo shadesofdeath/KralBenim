@@ -1,0 +1,604 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "bombardier-beetle",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-newsprint",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Swallowed,",
+   "then it",
+   "escaped"
+  ],
+  "highlight": [
+   "escaped"
+  ],
+  "scene": 5,
+  "t": 0.35,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 790,
+   "y": 1900,
+   "scale": 1.35,
+   "face": -1
+  }
+ },
+ "sources": [
+  {
+   "title": "Science News (2018) — It's a bad idea for a toad to swallow a bombardier beetle (Sugiura & Sato, Biology Letters: 43% vomited alive, 12 to 107 minutes, spray around 100 °C)",
+   "url": "https://www.sciencenews.org/article/bombardier-beetles-toads-chemical-defense"
+  },
+  {
+   "title": "National Geographic (2018) — See the amazing way a beetle survives being eaten (Pheropsophus jessoensis, Bufo japonicus, 43%, 12 to 107 minutes)",
+   "url": "https://www.nationalgeographic.com/animals/article/beetle-survives-toad-vomit-animals"
+  },
+  {
+   "title": "National Geographic — How this beetle creates 500 explosions per second (Arndt et al., Science 2015: reservoir + reaction chamber, 368 to 735 pulses per second, about 100 °C)",
+   "url": "https://www.nationalgeographic.com/science/article/how-this-beetle-creates-500-explosions-per-second-in-its-bum"
+  },
+  {
+   "title": "Dryad — Data from: Successful escape of bombardier beetles from predator digestive systems (Sugiura & Sato 2018)",
+   "url": "https://datadryad.org/dataset/doi:10.5061/dryad.ng788"
+  }
+ ],
+ "youtube": {
+  "title": "Bombardier Beetle: The Bug That Escapes a Toad's Stomach",
+  "description": "The bombardier beetle can get swallowed by a toad and still come back out alive. How does a tiny bug win that fight?\n\nInside its abdomen, the bombardier beetle keeps two chemicals apart. When it is attacked, they mix in a hard reaction chamber and blast out as a boiling, toxic spray, hundreds of pulses every second. In a 2018 experiment in Japan, toads swallowed these beetles whole. The beetles kept spraying inside, and 43 percent of them were thrown back up alive, after 12 to 107 minutes in the toad's stomach.\n\nSubscribe to Stickstory for a true story like this every day. Which animal superpower should we cover next? Tell me in the comments!\n\n#shorts #bombardierbeetle #stickstory",
+  "tags": [
+   "bombardier beetle",
+   "bombardier beetle toad",
+   "bombardier beetle spray",
+   "bombardier beetle facts",
+   "beetle escapes toad",
+   "toad vomits beetle",
+   "animal superpowers",
+   "insect defense",
+   "chemical defense",
+   "boiling spray",
+   "pheropsophus jessoensis",
+   "animal facts",
+   "science shorts",
+   "nature is wild",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-13T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "bmb_toad",
+   "text": "This beetle escaped from inside a toad.",
+   "visual": "Ground level in a summer field, giant grass blades: a big warty toad sits on the left; on 'escaped' its mouth opens, a wisp of steam rises, and a black-and-orange beetle crawls out over its lip and drops onto the ground in front of it.",
+   "title": {
+    "white": "Nature"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "open": "escaped"
+   },
+   "params": {
+    "mode": "hook",
+    "gy": 0.6,
+    "front": 0.615,
+    "toad": {
+     "x": 0.3,
+     "s": 1.75,
+     "face": 1
+    },
+    "beetle": {
+     "s": 1.0
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bmb_beetle",
+   "text": "The bombardier beetle's butt is a weapon.",
+   "visual": "Close to the ground: the fez host kneels on the left with a big magnifying glass over a large bombardier beetle (black wing cases with two pale spots, orange head, long antennae) that walks in from the left; on 'bombardier' the label 'BOMBARDIER BEETLE' appears, on 'weapon' a red ring and arrow mark the tip of its abdomen and a red 'WEAPON' label pops.",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "name": "bombardier",
+    "w": "weapon"
+   },
+   "params": {
+    "mode": "meet",
+    "target": "w",
+    "beetle": {
+     "x": 0.64,
+     "s": 1.45,
+     "face": 1,
+     "from": 0.2
+    },
+    "kasif": {
+     "x": 0.19,
+     "y": 0.6,
+     "scale": 1.2,
+     "pose": "point",
+     "dir": -10,
+     "face": "right",
+     "emotion": "surprised",
+     "lens": true,
+     "lensAt": [
+      0.8,
+      0.52
+     ],
+     "lensR": 115,
+     "seq": [
+      {
+       "at": "w",
+       "pose": "shock",
+       "face": "right"
+      }
+     ],
+     "lensHandle": [
+      -0.2,
+      1
+     ]
+    },
+    "labels": [
+     {
+      "text": "BOMBARDIER BEETLE",
+      "x": 0.55,
+      "y": 0.22,
+      "size": 78,
+      "color": "ink",
+      "at": "name",
+      "card": true
+     },
+     {
+      "text": "WEAPON",
+      "x": 0.4,
+      "y": 0.505,
+      "size": 76,
+      "color": "red",
+      "at": "w",
+      "font": "serif",
+      "rot": -6
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "bmb_cut",
+   "text": "Two chemicals mix in a chamber,",
+   "visual": "A giant cut-away beetle fills the frame: a window in its back shows two tanks, one gold and one blue; on 'mix' gold and blue drops race down two tubes into a small chamber with a thick red wall near the tail, which starts to glow and throb; labels 'TWO CHEMICALS' and 'CHAMBER'.",
+   "title": {
+    "white": "Inside"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "mix": "mix",
+    "ch": "chamber"
+   },
+   "params": {
+    "mode": "beetle",
+    "beetle": {
+     "x": 0.52,
+     "s": 3.3,
+     "face": 1
+    },
+    "labels": [
+     {
+      "text": "TWO CHEMICALS",
+      "x": 0.58,
+      "y": 0.27,
+      "size": 74,
+      "color": "ink",
+      "at": "mix",
+      "card": true
+     },
+     {
+      "text": "CHAMBER",
+      "x": 0.24,
+      "y": 0.34,
+      "size": 80,
+      "color": "red",
+      "at": "ch",
+      "card": true,
+      "rot": 4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bmb_beetle",
+   "text": "and blast out boiling hot, hundreds of times a second.",
+   "visual": "Close-up on the beetle's tail at ground level: an ant creeps up behind it; on 'blast' the beetle tips its rear and fires a thick, pulsing gold-and-red jet wrapped in white steam just above the grass, the ant is blown backwards and flips onto its back; heat shimmer above; red label 'BOILING HOT'.",
+   "source": "Science, 2015",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "fire": "blast",
+    "b": "boiling"
+   },
+   "params": {
+    "mode": "fire",
+    "beetle": {
+     "x": 0.58,
+     "s": 1.3,
+     "face": 1,
+     "tilt": 14,
+     "aim": -0.05
+    },
+    "ant": {
+     "x": 0.33,
+     "s": 1.0,
+     "fly": 60,
+     "up": 200
+    },
+    "len": 380,
+    "labels": [
+     {
+      "text": "BOILING HOT",
+      "x": 0.44,
+      "y": 0.45,
+      "size": 62,
+      "color": "red",
+      "font": "serif",
+      "at": "b",
+      "rot": -4
+     }
+    ],
+    "thick": 2.4,
+    "puff": 1.5,
+    "front": 0.665,
+    "stream": true
+   },
+   "camera": {
+    "focus": [
+     480,
+     1030
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bmb_toad",
+   "text": "Can it survive being eaten? Scientists fed them to toads.",
+   "visual": "A glass terrarium in a lab: a toad sits on moss; a gloved hand lowers the beetle on long tweezers in front of its face; on 'toads' the toad's red tongue flicks out, the beetle is gone and the toad's throat bulges with the gulp.",
+   "title": {
+    "white": "The test",
+    "gray": "Japan, 2018"
+   },
+   "source": "Biology Letters, 2018",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "gulp": "toads"
+   },
+   "params": {
+    "mode": "feed",
+    "front": 0.665,
+    "tank": {
+     "x0": 0.05,
+     "x1": 0.95,
+     "top": 0.3,
+     "bottom": 0.665
+    },
+    "toad": {
+     "x": 0.36,
+     "s": 1.45,
+     "face": 1
+    },
+    "beetle": {
+     "s": 0.5,
+     "dx": 420,
+     "dy": 340
+    },
+    "frontKind": "desk"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bmb_cut",
+   "text": "The beetles kept firing inside.",
+   "visual": "Close-up of the toad with an x-ray window on its round belly: inside, the swallowed beetle keeps shooting puffs of gold steam; with every blast the toad's body jerks, its eyes squeeze shut and twitch marks flash around it.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "fire": "firing"
+   },
+   "params": {
+    "mode": "belly",
+    "front": 0.62,
+    "toad": {
+     "x": 0.38,
+     "s": 2.1,
+     "face": 1
+    },
+    "labels": [
+     {
+      "text": "STILL FIRING",
+      "x": 0.4,
+      "y": 0.34,
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "at": "fire",
+      "rot": -3
+     }
+    ],
+    "frontKind": "desk"
+   },
+   "camera": {
+    "focus": [
+     440,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bmb_toad",
+   "text": "Forty-three percent came up alive,",
+   "visual": "In the terrarium the toad heaves and gags, then on 'thrown' throws the beetle out of its mouth in a high arc; the beetle tumbles, lands on its feet and walks away; a big red '43%' and the hand label 'ALIVE'.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "gag": "came",
+    "n": "Forty",
+    "a": "alive"
+   },
+   "params": {
+    "mode": "gag",
+    "front": 0.665,
+    "tank": {
+     "x0": 0.05,
+     "x1": 0.95,
+     "top": 0.3,
+     "bottom": 0.665
+    },
+    "toad": {
+     "x": 0.3,
+     "s": 1.45,
+     "face": 1
+    },
+    "beetle": {
+     "s": 0.55,
+     "land": 0.72
+    },
+    "labels": [
+     {
+      "text": "43%",
+      "x": 0.68,
+      "y": 0.24,
+      "size": 170,
+      "color": "red",
+      "font": "serif",
+      "at": "n",
+      "rot": -5
+     },
+     {
+      "text": "ALIVE",
+      "x": 0.76,
+      "y": 0.5,
+      "size": 84,
+      "color": "ink",
+      "at": "a",
+      "card": true
+     }
+    ],
+    "frontKind": "desk"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "bmb_clock",
+   "text": "one after 107 minutes.",
+   "visual": "Back in the lab, on the desk beside the terrarium: a big stopwatch on a stand counts from 0 up to a red '107 MIN' while a bloated toad hiccups; on 'minutes' the toad spits the beetle out, it tumbles through the air and lands on the desk.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "end": "minutes"
+   },
+   "params": {
+    "watch": [
+     0.3,
+     0.34,
+     200
+    ],
+    "minutes": 107,
+    "toad": {
+     "x": 0.7,
+     "s": 1.35,
+     "face": -1
+    },
+    "front": 0.665,
+    "frontKind": "desk"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bmb_cut",
+   "text": "Beetles that had used up their spray? Almost all stayed down.",
+   "visual": "The toad's x-ray belly again, but calm: inside sits a beetle that has used up its spray; nothing fires, the toad sits content with half-closed eyes and a full round belly; labels 'NO SPRAY LEFT' and red 'STAYED DOWN' above it.",
+   "source": "Biology Letters, 2018",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "e": "spray",
+    "d": "stayed"
+   },
+   "params": {
+    "mode": "belly",
+    "empty": true,
+    "front": 0.62,
+    "frontKind": "desk",
+    "toad": {
+     "x": 0.42,
+     "s": 2.0,
+     "face": 1
+    },
+    "labels": [
+     {
+      "text": "NO SPRAY LEFT",
+      "x": 0.42,
+      "y": 0.22,
+      "size": 72,
+      "color": "ink",
+      "at": "e",
+      "card": true
+     },
+     {
+      "text": "STAYED DOWN",
+      "x": 0.6,
+      "y": 0.3,
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "at": "d",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "bmb_toad",
+   "text": "Their spray is a ticket out of a stomach.",
+   "visual": "Sunset over the field: the toad sits slumped with spiral dizzy eyes and stars circling its head, while the little beetle marches off to the right across the ground; red label 'SPRAY WINS'.",
+   "set": {
+    "name": "hills",
+    "ground": 1152
+   },
+   "cues": {
+    "won": "ticket"
+   },
+   "params": {
+    "mode": "end",
+    "toad": {
+     "x": 0.32,
+     "s": 1.5,
+     "face": 1
+    },
+    "beetle": {
+     "x": 0.62,
+     "to": 0.88,
+     "s": 0.75
+    },
+    "labels": [
+     {
+      "text": "SPRAY WINS",
+      "x": 0.52,
+      "y": 0.3,
+      "size": 88,
+      "color": "red",
+      "font": "serif",
+      "at": "won",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "bmb_beetle",
+   "text": "Subscribe for a true story every day.",
+   "visual": "A night meadow under the stars: the bombardier beetle walks up to the fez host, who waves; on 'story' the beetle lets off a small puff of steam and the host jumps, then grins and points at the viewer.",
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "puff": "story",
+    "s2": "every"
+   },
+   "params": {
+    "mode": "end",
+    "beetle": {
+     "x": 0.7,
+     "s": 1.0,
+     "face": -1,
+     "from": 0.25
+    },
+    "kasif": {
+     "x": 0.32,
+     "y": 0.6,
+     "scale": 1.45,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "puff",
+       "pose": "shock",
+       "face": "right"
+      },
+      {
+       "at": "s2",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

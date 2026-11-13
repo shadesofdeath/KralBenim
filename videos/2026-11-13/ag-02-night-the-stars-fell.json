@@ -1,0 +1,619 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "night-the-stars-fell",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "The stars",
+   "fell"
+  ],
+  "highlight": [
+   "stars"
+  ],
+  "scene": 0,
+  "t": 1.4,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "Smithsonian Magazine — Americans fell in love with science when the breathtaking Leonid meteor shower lit up the skies (13 November 1833; 50,000 to 150,000 meteors an hour; Olmsted's appeal for reports; radiant in Leo)",
+   "url": "https://www.smithsonianmag.com/smart-news/americans-fell-in-love-with-science-when-the-breathtaking-leonid-meteor-shower-lit-up-the-skies-across-nation-180985435/"
+  },
+  {
+   "title": "Linda Hall Library — Scientist of the Day: Denison Olmsted (some 100,000 meteors an hour at the peak; radiant in Leo moved with the stars, so a cosmic origin)",
+   "url": "https://www.lindahall.org/about/news/scientist-of-the-day/denison-olmsted/"
+  },
+  {
+   "title": "The Irish Times — 'They thought it was judgment day': the night the stars fell on the US south (eyewitness: some were screaming, some were praying)",
+   "url": "https://www.irishtimes.com/culture/they-thought-it-was-judgment-day-the-night-the-stars-fell-on-the-us-south-1.4075652"
+  },
+  {
+   "title": "Space.com — Leonid meteor shower 2026 (debris of comet 55P/Tempel–Tuttle; peak 17 November 2026)",
+   "url": "https://www.space.com/leonid-meteor-shower"
+  }
+ ],
+ "youtube": {
+  "title": "Leonid Meteor Storm: Why Did the Stars Fall in 1833?",
+  "description": "The Leonid meteor storm of 1833 made people think the stars were falling. On the night of 12 to 13 November 1833, observers in America counted up to 100,000 meteors an hour, and many families prayed because they thought it was Judgment Day.\n\nYale professor Denison Olmsted asked a better question: where did the shooting stars come from? He asked newspapers for eyewitness reports and found that every streak pointed back to one spot in the constellation Leo, a spot that moved with the stars. So the meteors came from space, not from the air. Today we know the Leonid meteor shower is dust from comet Tempel–Tuttle, and Earth flies through it every November.\n\nSubscribe to Stickstory for a true story like this every day. Have you ever seen a meteor shower? Tell me in the comments!\n\n#shorts #leonids #stickstory",
+  "tags": [
+   "leonid meteor storm",
+   "leonid meteor shower",
+   "leonids 1833",
+   "1833 meteor storm",
+   "the night the stars fell",
+   "leonids",
+   "meteor shower",
+   "denison olmsted",
+   "comet tempel tuttle",
+   "shooting stars",
+   "meteor storm",
+   "space history",
+   "history shorts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-13T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ln_sky",
+   "text": "People thought the stars were falling.",
+   "visual": "Night on an 1833 farm: a deep dark sky packed with bright white meteor streaks fanning down and outward from one point high in the sky; dark hills and a wooden farmhouse with a lit window and chimney smoke behind a rail fence; in the left foreground, in front of the fence, the fez host, big, jumps back in shock looking up; grass fills the bottom.",
+   "title": {
+    "white": "The sky"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "fall": "falling"
+   },
+   "params": {
+    "mode": "farm",
+    "radiant": [
+     0.5,
+     0.27
+    ],
+    "rate": 1.0,
+    "meteors": 420,
+    "arc": [
+     12,
+     168
+    ],
+    "d0": [
+     90,
+     620
+    ],
+    "len": [
+     220,
+     480
+    ],
+    "mw": 1.25,
+    "mdur": 0.34,
+    "house": {
+     "x": 0.84,
+     "s": 0.8
+    },
+    "front_y": 0.66,
+    "kasif": {
+     "x": 0.3,
+     "y": 0.86,
+     "scale": 1.5,
+     "pose": "shock",
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "fall",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "cast_front": true,
+    "mglow": 0
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ln_sky",
+   "text": "On this night in 1833, up to 100,000 meteors an hour lit up America.",
+   "visual": "A small American town of 1833 at night: a row of wooden houses with lit windows and a white church steeple on the horizon under a sky crowded with meteor streaks; a wooden boardwalk with a hitching rail fills the bottom, two townsfolk in the foreground point up at the stamp; stamps 'UP TO 100,000' and 'AN HOUR' slam on.",
+   "title": {
+    "white": "America",
+    "gray": "November 1833"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "source": "Linda Hall Library",
+   "cues": {
+    "num": "100,000",
+    "hr": "hour"
+   },
+   "params": {
+    "mode": "town",
+    "radiant": [
+     0.45,
+     0.03
+    ],
+    "rate": 1.0,
+    "meteors": 60,
+    "front_y": 0.7,
+    "labels": [
+     {
+      "text": "UP TO 100,000",
+      "x": 0.5,
+      "y": 0.25,
+      "at": "num",
+      "stamp": true,
+      "size": 96,
+      "color": "red"
+     },
+     {
+      "text": "AN HOUR",
+      "x": 0.6,
+      "y": 0.36,
+      "at": "hr",
+      "stamp": true,
+      "size": 76,
+      "color": "ink",
+      "rot": 4
+     }
+    ],
+    "cast": [
+     {
+      "who": "man",
+      "x": 0.6,
+      "y": 0.95,
+      "scale": 0.9,
+      "pose": "point",
+      "dir": 70,
+      "face": "left",
+      "beard": "short"
+     },
+     {
+      "who": "woman",
+      "x": 0.82,
+      "y": 0.96,
+      "scale": 0.82,
+      "pose": "point",
+      "dir": 75,
+      "face": "left"
+     }
+    ],
+    "cast_front": true
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "ln_pray",
+   "text": "Families knelt to pray.",
+   "visual": "Close-up in the grass under the dark, streaking sky: a father, a mother in a blue shawl and a child kneel with folded hands and bow their heads on 'pray'; a big lantern in the grass in front of them throws a pool of gold light over the foreground grass.",
+   "title": {
+    "white": "Judgment Day?"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "pr": "pray"
+   },
+   "params": {
+    "at": "pr",
+    "radiant": [
+     0.6,
+     0.04
+    ],
+    "rate": 0.9,
+    "house": false,
+    "lantern": [
+     0.42,
+     0.895
+    ],
+    "front_y": 0.76,
+    "gy": 0.66,
+    "figs": [
+     {
+      "x": 0.22,
+      "y": 0.72,
+      "s": 1.15,
+      "face": 1,
+      "hair": true
+     },
+     {
+      "x": 0.46,
+      "y": 0.72,
+      "s": 1.0,
+      "face": 1,
+      "shawl": true,
+      "hair": true
+     },
+     {
+      "x": 0.64,
+      "y": 0.725,
+      "s": 0.72,
+      "face": 1,
+      "hair": true
+     }
+    ],
+    "lantern_s": 1.2
+   },
+   "camera": {
+    "focus": [
+     470,
+     1260
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ln_desk",
+   "text": "But Professor Olmsted asked where they came from.",
+   "visual": "A candle-lit college study in New Haven: a big sash window full of falling streaks over dark rooftops, a bookshelf, a desk with papers, an inkwell and a quill; Professor Olmsted (bare head, behind the desk) turns and points at the window on 'Olmsted', then on 'where' rubs his chin as a big red question mark pops up.",
+   "title": {
+    "white": "Yale College"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1075
+   },
+   "cues": {
+    "lk": "Olmsted",
+    "q": "where"
+   },
+   "params": {
+    "mode": "ask",
+    "look": "lk",
+    "ask": "q",
+    "prof_x": 0.38,
+    "labels": [
+     {
+      "text": "?",
+      "x": 0.2,
+      "y": 0.42,
+      "at": "q",
+      "font": "serif",
+      "size": 260,
+      "color": "red",
+      "rot": -8
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ln_letters",
+   "text": "Reports poured in,",
+   "visual": "Close-up of the same desk: envelopes come flying in through the window one after another and pile up into a heap on the papers while Olmsted jumps back in surprise, then points down at the heap, delighted.",
+   "title": {
+    "white": "The reports"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1075
+   },
+   "cues": {
+    "po": "poured"
+   },
+   "params": {
+    "mode": "letters",
+    "pour": 0.05,
+    "prof_x": 0.42
+   },
+   "camera": {
+    "focus": [
+     560,
+     960
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ln_chart",
+   "text": "and every streak pointed back to one spot in Leo.",
+   "visual": "A full-frame, hand-drawn night-sky chart with a gold border: the stars and lines of Leo (the sickle and the triangle) and white meteor arrows flying outward all over the sheet; on 'back' red dashed lines run back from every arrow and meet in one spot, on 'Leo' a red ring pulses there; the fez host, big, stands in front of the chart and traces one red dashed line from his hand back to the spot.",
+   "title": {
+    "white": "One spot"
+   },
+   "source": "Smithsonian",
+   "cues": {
+    "back": "back",
+    "leo": "Leo"
+   },
+   "params": {
+    "back": "back",
+    "leo_at": "leo",
+    "chart_b": 0.8,
+    "leo": [
+     0.06,
+     0.2,
+     0.8,
+     0.62
+    ],
+    "name_at": [
+     0.62,
+     0.27
+    ],
+    "kasif": {
+     "x": 0.72,
+     "y": 0.8,
+     "scale": 1.2,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "back",
+       "pose": "point",
+       "dir": 40,
+       "face": "left",
+       "emotion": "surprised"
+      },
+      {
+       "at": "leo",
+       "pose": "point",
+       "dir": 42,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "chart_t": 0.14,
+    "trace": {
+     "from": [
+      0.6,
+      0.56
+     ],
+     "at": "back"
+    }
+   },
+   "set": false,
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ln_space",
+   "text": "It moved with the stars, so they came from space!",
+   "visual": "Full frame: dark space with stars above the curved Earth and its glowing band of air; dozens of big gold dust grains with short tails stream in, all parallel, from the first frame, and flash into white streaks the moment they hit the air; a red stamp 'FROM SPACE' slams on.",
+   "title": {
+    "white": "Not air"
+   },
+   "cues": {
+    "sp": "space"
+   },
+   "params": {
+    "at": "sp",
+    "labels": [
+     {
+      "text": "FROM SPACE",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "sp",
+      "stamp": true,
+      "size": 110,
+      "color": "red"
+     }
+    ],
+    "earth_y": 0.56
+   },
+   "set": false,
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ln_comet",
+   "text": "It's comet dust Earth crosses every November.",
+   "visual": "Full frame: the Sun glows in the lower-left corner; a whole comet with a gold and a blue tail sits up right and leaves a wide, glittering river of dust diagonally across the sky; the big Earth rolls along its dashed orbit into the river on 'cross' and sparks fly off it; labels 'Tempel–Tuttle' and a stamp 'EVERY NOVEMBER'.",
+   "title": {
+    "white": "Comet dust"
+   },
+   "cues": {
+    "cr": "crosses",
+    "nov": "November"
+   },
+   "params": {
+    "cross": "cr",
+    "labels": [
+     {
+      "text": "Tempel–Tuttle",
+      "x": 0.3,
+      "y": 0.2,
+      "at": 0.3,
+      "font": "hand",
+      "size": 72,
+      "color": "gold",
+      "rot": -4
+     },
+     {
+      "text": "EVERY NOVEMBER",
+      "x": 0.5,
+      "y": 0.37,
+      "at": "nov",
+      "stamp": true,
+      "size": 88,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ln_sky",
+   "text": "The world didn't end. Meteor science began.",
+   "visual": "Next morning on the farm: low sun over green hills, the farmhouse with its smoking chimney; the family stands relieved and waves; Professor Olmsted walks in holding a sheet marked 'LEO'; on 'science' a stamp 'METEOR SCIENCE' slams on; grass and fence fill the bottom.",
+   "title": {
+    "white": "Next morning"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1152,
+    "horizon": 980
+   },
+   "cues": {
+    "sc": "science"
+   },
+   "params": {
+    "mode": "dawn",
+    "rate": 0,
+    "house": {
+     "x": 0.8,
+     "s": 1.0
+    },
+    "front_y": 0.72,
+    "cast": [
+     {
+      "who": "olmsted",
+      "x": -0.12,
+      "to": 0.18,
+      "walk_at": 0,
+      "walk_dur": 1.4,
+      "y": 0.68,
+      "scale": 0.8,
+      "pose": "walk",
+      "then": "hold",
+      "at": 1.4,
+      "text": "LEO",
+      "face": "right"
+     },
+     {
+      "who": "father",
+      "x": 0.42,
+      "y": 0.68,
+      "scale": 0.78,
+      "pose": "wave",
+      "face": "left",
+      "beard": "short",
+      "emotion": "happy"
+     },
+     {
+      "who": "kid",
+      "x": 0.56,
+      "y": 0.69,
+      "scale": 0.5,
+      "pose": "shrug",
+      "face": "left",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "METEOR SCIENCE",
+      "x": 0.5,
+      "y": 0.27,
+      "at": "sc",
+      "stamp": true,
+      "size": 92,
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ln_sky",
+   "text": "Subscribe for a true story every day.",
+   "visual": "The farm at night again under the meteor storm: the farmer waves, then on 'story' points up at the spot all the streaks come from; his child points up beside him.",
+   "title": {
+    "white": "Stickstory"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "st": "story"
+   },
+   "params": {
+    "mode": "farm",
+    "radiant": [
+     0.62,
+     0.05
+    ],
+    "rate": 0.9,
+    "house": {
+     "x": 0.82,
+     "s": 0.95
+    },
+    "front_y": 0.66,
+    "cast": [
+     {
+      "who": "father",
+      "x": 0.3,
+      "y": 0.66,
+      "scale": 1.0,
+      "pose": "wave",
+      "face": "right",
+      "beard": "short",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "st",
+        "pose": "point",
+        "dir": 65,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "who": "kid",
+      "x": 0.46,
+      "y": 0.67,
+      "scale": 0.65,
+      "pose": "point",
+      "dir": 70,
+      "face": "right",
+      "emotion": "happy"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

@@ -1,0 +1,2632 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-mawson-antarctica",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "14 FEET",
+   "DOWN"
+  ],
+  "highlight": [
+   "DOWN"
+  ],
+  "scene": 1,
+  "t": 3.0,
+  "focus": [
+   1170,
+   500
+  ],
+  "zoom": 1.38,
+  "size": 280,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.0,
+   "face": -1,
+   "x": 1560,
+   "y": 960
+  }
+ },
+ "sources": [
+  {
+   "title": "Far Eastern Party (Wikipedia)",
+   "url": "https://en.wikipedia.org/wiki/Far_Eastern_Party"
+  },
+  {
+   "title": "Mawson's fatal journey: Last gasp (Mawson's Huts, Australian Antarctic Division)",
+   "url": "https://mawsonshuts.antarctica.gov.au/cape-denison/mawsons-fatal-journey/last-gasp/"
+  },
+  {
+   "title": "Mawson's fatal journey: Hanging by a thread (Mawson's Huts)",
+   "url": "https://mawsonshuts.antarctica.gov.au/cape-denison/mawsons-fatal-journey/hanging-by-a-thread/"
+  },
+  {
+   "title": "Windy, windier (Mawson's Huts)",
+   "url": "https://mawsonshuts.antarctica.gov.au/cape-denison/at-home/windy-windier/"
+  },
+  {
+   "title": "Douglas Mawson (Australian Antarctic Program)",
+   "url": "https://www.antarctica.gov.au/about-antarctica/history/people/douglas-mawson/"
+  },
+  {
+   "title": "Mawson and Mertz: a re-evaluation of their ill-fated mapping journey (Medical Journal of Australia, 2005)",
+   "url": "https://www.mja.com.au/journal/2005/183/11/mawson-and-mertz-re-evaluation-their-ill-fated-mapping-journey-during-1911-1914"
+  },
+  {
+   "title": "Fastest katabatic wind (Guinness World Records)",
+   "url": "https://www.guinnessworldrecords.com/world-records/404553-fastest-katabatic-wind"
+  },
+  {
+   "title": "Just Have One More Try: Douglas Mawson's Antarctic trek (Today I Found Out)",
+   "url": "https://www.todayifoundout.com/index.php/2016/02/just-one-try-miraculous-story-douglas-mawsons-300-mile-race-survive-antarctic/"
+  },
+  {
+   "title": "The $100 man (Reserve Bank of Australia Museum)",
+   "url": "https://www.museum.rba.gov.au/exhibitions/centenary-celebrations-100-man"
+  }
+ ],
+ "scenes": [
+  {
+   "type": "mw_crevasse",
+   "text": "Picture this. You're hanging inside a crack in the ice, fourteen feet down, on a rope tied to a sledge.",
+   "visual": "Cut-away of a crevasse under a snow plain: blue ice walls dropping into the dark; a bearded man in a wool cap hangs on a rope deep inside, swinging slowly; the rope runs up over the lip to a half sledge on the surface; snow crumbs fall; red '14 feet' dimension line draws on 'fourteen'.",
+   "title": {
+    "white": "January 1913"
+   },
+   "cues": {
+    "ft": "fourteen",
+    "rp": "rope"
+   },
+   "params": {
+    "mode": "hang",
+    "surface": 0.3,
+    "gap": {
+     "x": 0.46,
+     "w": 0.2
+    },
+    "depth": 0.6,
+    "sledge": {
+     "x": 0.74,
+     "to": 0.7
+    },
+    "dim": {
+     "text": "14 feet",
+     "at": "ft"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 324
+   },
+   "chapter": "The Rope"
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "Above you, the sledge is creeping toward the edge. Below you, there's no bottom at all.",
+   "visual": "Close-up at the lip: the half sledge on the snow slides a little toward the gap and lurches on 'edge'; the rope pulls tight over the lip down into the blue-black depth; red note 'no bottom' on 'bottom'.",
+   "title": {
+    "white": "The sledge"
+   },
+   "cues": {
+    "ed": "edge",
+    "slide": "edge",
+    "bt": "bottom"
+   },
+   "params": {
+    "mode": "hang",
+    "surface": 0.3,
+    "gap": {
+     "x": 0.46,
+     "w": 0.2
+    },
+    "depth": 0.62,
+    "sledge": {
+     "x": 0.72,
+     "to": 0.64
+    },
+    "labels": [
+     {
+      "text": "no bottom",
+      "x": 0.42,
+      "y": 0.5,
+      "at": "bt",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 324
+   },
+   "camera": {
+    "focus": [
+     1150,
+     470
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_trek",
+   "text": "The man on that rope is Douglas Mawson.",
+   "visual": "Close on a lone bearded man in a wool cap hauling a half sledge across the windy plateau, leaning into the wind; his name writes itself beside him.",
+   "title": {
+    "white": "Douglas Mawson"
+   },
+   "cues": {
+    "nm": "Mawson"
+   },
+   "params": {
+    "mode": "solo",
+    "ground": 0.8,
+    "man_x": 0.5,
+    "wind": 0.9,
+    "labels": [
+     {
+      "text": "Douglas Mawson",
+      "x": 0.5,
+      "y": 0.46,
+      "at": "nm",
+      "size": 60,
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_trek",
+   "text": "His two friends are dead, his food is almost gone, and the soles of his feet have come away.",
+   "visual": "The same man hauling on, a little wider; three red stamps land beside him one by one: 'FRIENDS', 'FOOD', 'FEET', each struck through on the next.",
+   "title": {
+    "white": "Lost"
+   },
+   "cues": {
+    "fr": "friends",
+    "fd": "food",
+    "ft": "soles",
+    "aw": "away"
+   },
+   "params": {
+    "mode": "solo",
+    "ground": 0.8,
+    "man_x": 0.42,
+    "wind": 0.9,
+    "labels": [
+     {
+      "text": "friends",
+      "x": 0.62,
+      "y": 0.42,
+      "at": "fr",
+      "stamp": true,
+      "color": "red",
+      "size": 56,
+      "strike": "fd"
+     },
+     {
+      "text": "food",
+      "x": 0.66,
+      "y": 0.53,
+      "at": "fd",
+      "stamp": true,
+      "color": "red",
+      "size": 56,
+      "strike": "ft"
+     },
+     {
+      "text": "feet",
+      "x": 0.62,
+      "y": 0.64,
+      "at": "ft",
+      "stamp": true,
+      "color": "red",
+      "size": 56,
+      "strike": "aw"
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1000,
+     650
+    ],
+    "zoom": 1.6,
+    "move": "left"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So how did he climb out, and walk all the way home? Let me show you.",
+   "visual": "The fez narrator stands on the snow, hand on chin thinking, then holds up a sign 'HOW?' on 'home', then points ahead on 'show'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "cl": "climb",
+    "hm": "home",
+    "sh": "show"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "think",
+      "scale": 1.0,
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "hm",
+        "pose": "hold",
+        "emotion": "surprised"
+       },
+       {
+        "at": "sh",
+        "pose": "point",
+        "dir": "right",
+        "emotion": "happy"
+       }
+      ],
+      "text": "HOW?"
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "To understand how he got there, we have to go back a year.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, title 'The Home of the Blizzard'.",
+   "title": {},
+   "cues": {
+    "n": "understand",
+    "title": "back"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "The Home of the Blizzard",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Home of the Blizzard"
+  },
+  {
+   "type": "map",
+   "text": "In December 1911, Mawson, a young geologist from Adelaide, sailed south to a place called Cape Denison, in Antarctica. Nobody had ever lived there.",
+   "visual": "Old map from southern Australia down to the Antarctic coast; Adelaide and Hobart marked; a red dashed route draws from Hobart south across the ocean to Cape Denison on 'Denison'; note '1911'.",
+   "title": {
+    "white": "1911"
+   },
+   "cues": {
+    "ad": "Adelaide",
+    "cd": "Denison",
+    "route": "sailed",
+    "note": "Nobody"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.071,
+       -0.182
+      ],
+      [
+       0.027,
+       -0.136
+      ],
+      [
+       0.036,
+       -0.045
+      ],
+      [
+       0.054,
+       0.08
+      ],
+      [
+       0.055,
+       0.141
+      ],
+      [
+       0.107,
+       0.159
+      ],
+      [
+       0.177,
+       0.134
+      ],
+      [
+       0.214,
+       0.114
+      ],
+      [
+       0.25,
+       0.098
+      ],
+      [
+       0.304,
+       0.082
+      ],
+      [
+       0.348,
+       0.08
+      ],
+      [
+       0.393,
+       0.105
+      ],
+      [
+       0.421,
+       0.155
+      ],
+      [
+       0.455,
+       0.13
+      ],
+      [
+       0.466,
+       0.145
+      ],
+      [
+       0.461,
+       0.173
+      ],
+      [
+       0.493,
+       0.202
+      ],
+      [
+       0.511,
+       0.227
+      ],
+      [
+       0.562,
+       0.245
+      ],
+      [
+       0.588,
+       0.225
+      ],
+      [
+       0.613,
+       0.252
+      ],
+      [
+       0.643,
+       0.223
+      ],
+      [
+       0.679,
+       0.214
+      ],
+      [
+       0.682,
+       0.175
+      ],
+      [
+       0.702,
+       0.132
+      ],
+      [
+       0.734,
+       0.068
+      ],
+      [
+       0.743,
+       0.0
+      ],
+      [
+       0.857,
+       -0.182
+      ]
+     ],
+     [
+      [
+       0.582,
+       0.289
+      ],
+      [
+       0.618,
+       0.298
+      ],
+      [
+       0.648,
+       0.293
+      ],
+      [
+       0.648,
+       0.323
+      ],
+      [
+       0.639,
+       0.345
+      ],
+      [
+       0.618,
+       0.355
+      ],
+      [
+       0.595,
+       0.327
+      ]
+     ],
+     [
+      [
+       -0.214,
+       0.852
+      ],
+      [
+       0.0,
+       0.864
+      ],
+      [
+       0.071,
+       0.877
+      ],
+      [
+       0.143,
+       0.877
+      ],
+      [
+       0.214,
+       0.87
+      ],
+      [
+       0.286,
+       0.868
+      ],
+      [
+       0.357,
+       0.866
+      ],
+      [
+       0.429,
+       0.87
+      ],
+      [
+       0.5,
+       0.88
+      ],
+      [
+       0.548,
+       0.886
+      ],
+      [
+       0.58,
+       0.891
+      ],
+      [
+       0.607,
+       0.895
+      ],
+      [
+       0.6,
+       0.882
+      ],
+      [
+       0.623,
+       0.884
+      ],
+      [
+       0.639,
+       0.898
+      ],
+      [
+       0.679,
+       0.914
+      ],
+      [
+       0.714,
+       0.925
+      ],
+      [
+       0.75,
+       0.93
+      ],
+      [
+       0.786,
+       0.936
+      ],
+      [
+       0.857,
+       0.955
+      ],
+      [
+       0.929,
+       0.968
+      ],
+      [
+       1.036,
+       0.989
+      ],
+      [
+       1.036,
+       1.182
+      ],
+      [
+       -0.214,
+       1.182
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Adelaide",
+      "x": 0.475,
+      "y": 0.158,
+      "at": "ad",
+      "dy": 44
+     },
+     {
+      "name": "Hobart",
+      "x": 0.631,
+      "y": 0.338,
+      "dy": -40,
+      "dx": 60
+     },
+     {
+      "name": "Cape Denison",
+      "x": 0.547,
+      "y": 0.886,
+      "at": "cd",
+      "color": "red",
+      "dy": -44
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.631,
+       0.345
+      ],
+      [
+       0.62,
+       0.5
+      ],
+      [
+       0.58,
+       0.7
+      ],
+      [
+       0.547,
+       0.874
+      ]
+     ],
+     "at": "route",
+     "dur": 2.4
+    },
+    "seas": [
+     {
+      "name": "Southern Ocean",
+      "x": 0.3,
+      "y": 0.55
+     }
+    ],
+    "note": {
+     "text": "Dec 1911",
+     "x": 0.68,
+     "y": 0.55,
+     "at": "note"
+    },
+    "compass": "br",
+    "zoom": 1.08,
+    "focus": [
+     0.55,
+     0.7
+    ]
+   },
+   "camera": {
+    "focus": [
+     800,
+     520
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_hut",
+   "text": "And without knowing it, he had picked one of the windiest places on Earth.",
+   "visual": "The expedition hut at Cape Denison: low plank walls and a steep pyramid roof half buried in drift; snow streaks race sideways across the whole frame, chimney smoke tears off flat, the anemometer cups on a mast spin fast; red note 'windiest on Earth' on 'windiest'.",
+   "title": {
+    "white": "Cape Denison"
+   },
+   "cues": {
+    "wd": "windiest"
+   },
+   "params": {
+    "mode": "blizzard",
+    "hut": {
+     "x": 0.42,
+     "s": 1.1
+    },
+    "wind": 1,
+    "labels": [
+     {
+      "text": "one of the windiest places on Earth",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "wd",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "Guinness World Records"
+  },
+  {
+   "type": "mw_katabatic",
+   "text": "Freezing air pours off the ice cap like water off a roof, and slams into the sea.",
+   "visual": "Diagram: the ice cap slopes from the top left down to the sea at right; blue arrows of cold air stream down the slope and speed up; spray explodes off the water on 'slams'; a tiny hut on the shore; labels 'ice cap', 'cold air', 'sea'.",
+   "title": {
+    "white": "Katabatic wind"
+   },
+   "cues": {
+    "flow": "pours",
+    "sl": "slams"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "ice cap",
+      "x": 0.14,
+      "y": 0.62,
+      "at": 0.3,
+      "size": 70
+     },
+     {
+      "text": "cold air",
+      "x": 0.4,
+      "y": 0.3,
+      "at": "flow",
+      "color": "blue",
+      "size": 70
+     },
+     {
+      "text": "the sea",
+      "x": 0.84,
+      "y": 0.88,
+      "at": "sl",
+      "size": 66
+     }
+    ]
+   },
+   "set": false,
+   "camera": false
+  },
+  {
+   "type": "title",
+   "text": "Mawson wrote that gusts of one hundred and fifty miles per hour were common.",
+   "visual": "Giant words '150 mph' / 'gusts' word by word, '150' in a red box; the fez narrator beside them holds his fez on with one hand, shocked, on 'common'.",
+   "title": {
+    "white": "The wind"
+   },
+   "cues": {
+    "w0": "gusts",
+    "cm": "common"
+   },
+   "params": {
+    "lines": [
+     "150 mph",
+     "gusts"
+    ],
+    "highlight": [
+     "150"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "at": "cm",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   },
+   "source": "Home of the Blizzard"
+  },
+  {
+   "type": "mw_hut",
+   "text": "One afternoon, the wind averaged ninety-seven for six hours straight. They called it the home of the blizzard.",
+   "visual": "Outside the hut in the blizzard: two expedition men lean far forward into the wind, and the fez narrator leans beside them clutching his fez; big red counter runs up to '97 mph' on 'ninety'.",
+   "title": {
+    "white": "97 mph"
+   },
+   "cues": {
+    "nn": "ninety",
+    "hb": "blizzard"
+   },
+   "params": {
+    "mode": "lean",
+    "hut": {
+     "x": 0.26,
+     "s": 0.9
+    },
+    "wind": 1,
+    "men": [
+     {
+      "x": 0.56,
+      "lean": -18,
+      "face": -1,
+      "beard": "short"
+     },
+     {
+      "x": 0.88,
+      "lean": -20,
+      "face": -1
+     }
+    ],
+    "kasif": {
+     "x": 0.72,
+     "y": 0.8,
+     "scale": 0.5,
+     "pose": "walk",
+     "face": -1,
+     "lean": -16,
+     "at": "hb",
+     "then": "shock",
+     "emotion": "surprised"
+    },
+    "counter": {
+     "x": 0.72,
+     "y": 0.22,
+     "from": 0,
+     "to": 97,
+     "at": "nn",
+     "dur": 1.6,
+     "suffix": " mph",
+     "size": 110
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "Mawson's Huts Foundation"
+  },
+  {
+   "type": "map",
+   "text": "But Mawson didn't come to sit in a hut. He came to map a coast nobody had ever seen.",
+   "visual": "Close old map of the Antarctic coast east of Cape Denison: the coastline drawn in, a red '?' note over the blank coast to the east, the hut marked at Cape Denison.",
+   "title": {
+    "white": "Unknown coast"
+   },
+   "cues": {
+    "cd": "hut",
+    "note": "coast"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.273,
+       0.262
+      ],
+      [
+       0.0,
+       0.277
+      ],
+      [
+       0.182,
+       0.338
+      ],
+      [
+       0.305,
+       0.385
+      ],
+      [
+       0.386,
+       0.415
+      ],
+      [
+       0.455,
+       0.446
+      ],
+      [
+       0.436,
+       0.354
+      ],
+      [
+       0.495,
+       0.369
+      ],
+      [
+       0.536,
+       0.462
+      ],
+      [
+       0.636,
+       0.569
+      ],
+      [
+       0.691,
+       0.538
+      ],
+      [
+       0.723,
+       0.585
+      ],
+      [
+       0.727,
+       0.646
+      ],
+      [
+       0.818,
+       0.677
+      ],
+      [
+       0.909,
+       0.723
+      ],
+      [
+       1.091,
+       0.846
+      ],
+      [
+       1.273,
+       1.154
+      ],
+      [
+       -0.273,
+       1.154
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Cape Denison",
+      "x": 0.303,
+      "y": 0.385,
+      "at": "cd",
+      "color": "red",
+      "dy": -44
+     }
+    ],
+    "note": {
+     "text": "unmapped coast ?",
+     "x": 0.5,
+     "y": 0.22,
+     "at": "note",
+     "color": "red"
+    },
+    "seas": [
+     {
+      "name": "Southern Ocean",
+      "x": 0.3,
+      "y": 0.2
+     }
+    ],
+    "compass": "bl",
+    "zoom": 1.1,
+    "focus": [
+     0.5,
+     0.5
+    ]
+   },
+   "camera": {
+    "focus": [
+     800,
+     600
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "On the tenth of November 1912, he set out east with two men and two dog sledges.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'The Far Eastern Party'.",
+   "title": {},
+   "cues": {
+    "n": "tenth",
+    "title": "east"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Far Eastern Party",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Far Eastern Party"
+  },
+  {
+   "type": "mw_camp",
+   "text": "Belgrave Ninnis was a young British army officer. Xavier Mertz was a Swiss ski champion.",
+   "visual": "Camp on the snow: a pyramid tent, two loaded sledges; three men stand in front, names pop up over them one by one: 'Ninnis', 'Mertz', 'Mawson' (red).",
+   "title": {
+    "white": "The team"
+   },
+   "cues": {
+    "nn": "Ninnis",
+    "mz": "Mertz"
+   },
+   "params": {
+    "mode": "trio",
+    "names": [
+     "Ninnis",
+     "Mertz",
+     "Mawson"
+    ],
+    "tent": {
+     "x": 0.56,
+     "s": 1
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mw_trek",
+   "text": "For five weeks, it worked. They crossed two huge glaciers and covered more than three hundred miles.",
+   "visual": "Side view across the plateau: two dog sledges, each pulled by five trotting huskies, with men walking beside, while sastrugi scroll past; the fez narrator walks along at left and points at a red mileage counter that runs to '311 miles'.",
+   "title": {
+    "white": "Five weeks"
+   },
+   "cues": {
+    "wk": "weeks",
+    "ml": "three"
+   },
+   "params": {
+    "mode": "march",
+    "teams": [
+     {
+      "x": 0.36,
+      "dogs": 3
+     },
+     {
+      "x": 0.7,
+      "dogs": 3,
+      "beard": "black"
+     }
+    ],
+    "skier": {
+     "x": 0.9
+    },
+    "kasif": {
+     "x": 0.1,
+     "y": 0.8,
+     "scale": 0.44,
+     "pose": "walk",
+     "face": 1,
+     "at": "ml",
+     "then": "point",
+     "dir": "up",
+     "emotion": "happy"
+    },
+    "counter": {
+     "x": 0.5,
+     "y": 0.2,
+     "from": 0,
+     "to": 311,
+     "at": "wk",
+     "dur": 3.2,
+     "suffix": " miles",
+     "size": 100
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "Wikipedia: Far Eastern Party"
+  },
+  {
+   "type": "mw_trek",
+   "text": "Then, on the fourteenth of December, Mertz looked back over his shoulder.",
+   "visual": "The dog team trots on; Mertz on skis out in front at right stops and turns round on 'looked'; a red note '14 December 1912'.",
+   "title": {
+    "white": "14 December"
+   },
+   "cues": {
+    "lk": "looked",
+    "dt": "fourteenth"
+   },
+   "params": {
+    "mode": "look",
+    "teams": [
+     {
+      "x": 0.42,
+      "dogs": 3
+     }
+    ],
+    "skier": {
+     "x": 0.86,
+     "beard": "black"
+    },
+    "labels": [
+     {
+      "text": "14 December 1912",
+      "x": 0.3,
+      "y": 0.2,
+      "at": "dt",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1650,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "Where Ninnis and his sledge should have been, there was nothing. Just a hole in the snow.",
+   "visual": "The snow plain with sledge tracks running in from the left that end in a broken black hole; snow blows over it; far right two small men stand and stare back; red note 'Ninnis?' on 'hole'.",
+   "title": {
+    "white": "Gone"
+   },
+   "cues": {
+    "nt": "nothing",
+    "hl": "hole"
+   },
+   "params": {
+    "mode": "hole",
+    "surface": 0.62,
+    "gap": {
+     "x": 0.42,
+     "w": 0.18
+    },
+    "men": [
+     {
+      "x": 0.7,
+      "face": -1,
+      "beard": "black"
+     },
+     {
+      "x": 0.8,
+      "face": -1,
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Ninnis?",
+      "x": 0.42,
+      "y": 0.36,
+      "at": "hl",
+      "color": "red",
+      "size": 80
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 670
+   },
+   "camera": {
+    "focus": [
+     860,
+     600
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "Far down, on a ledge, they saw one dog still alive. They called for hours. No answer ever came.",
+   "visual": "Cut-away: two men kneel at the lip and call down, grey sound arcs sink into the gap; far below on an ice ledge lie a broken sledge and one husky that lifts its head on 'alive'.",
+   "title": {
+    "white": "The ledge"
+   },
+   "cues": {
+    "dog": "alive",
+    "call": "called"
+   },
+   "params": {
+    "mode": "ledge",
+    "surface": 0.3,
+    "gap": {
+     "x": 0.48,
+     "w": 0.26
+    },
+    "men": [
+     {
+      "x": 0.32,
+      "beard": "short"
+     },
+     {
+      "x": 0.66,
+      "face": -1,
+      "beard": "black"
+     }
+    ],
+    "labels": [
+     {
+      "text": "no answer",
+      "x": 0.84,
+      "y": 0.55,
+      "at": "No",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 324
+   },
+   "camera": false
+  },
+  {
+   "type": "mw_gear",
+   "text": "And here's the worst part. That sledge carried the main tent, most of the food, and all of the dog food.",
+   "visual": "On the snow, the lost sledge's load laid out in a row: a pyramid tent, a pile of food bags, a stack of dog-food boxes with a hungry husky beside them; a big red X slams onto each on 'tent', 'most' and 'dog'.",
+   "title": {
+    "white": "Worst part"
+   },
+   "cues": {
+    "a": "tent",
+    "b": "most",
+    "c": "dog"
+   },
+   "params": {
+    "mode": "lost",
+    "ground": 0.8,
+    "labels": [
+     {
+      "text": "gone with Ninnis",
+      "x": 0.5,
+      "y": 0.42,
+      "at": "tent",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     700
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "map",
+   "text": "They were more than three hundred miles from the hut, with about ten days of food. And nobody knew where they were.",
+   "visual": "Old map of the coast: the red dashed route from Cape Denison east to a red X far away; note '300+ miles · 10 days of food'.",
+   "title": {
+    "white": "300 miles"
+   },
+   "cues": {
+    "route": "three",
+    "x": "hut",
+    "note": "ten"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.273,
+       0.262
+      ],
+      [
+       0.0,
+       0.277
+      ],
+      [
+       0.182,
+       0.338
+      ],
+      [
+       0.305,
+       0.385
+      ],
+      [
+       0.386,
+       0.415
+      ],
+      [
+       0.455,
+       0.446
+      ],
+      [
+       0.436,
+       0.354
+      ],
+      [
+       0.495,
+       0.369
+      ],
+      [
+       0.536,
+       0.462
+      ],
+      [
+       0.636,
+       0.569
+      ],
+      [
+       0.691,
+       0.538
+      ],
+      [
+       0.723,
+       0.585
+      ],
+      [
+       0.727,
+       0.646
+      ],
+      [
+       0.818,
+       0.677
+      ],
+      [
+       0.909,
+       0.723
+      ],
+      [
+       1.091,
+       0.846
+      ],
+      [
+       1.273,
+       1.154
+      ],
+      [
+       -0.273,
+       1.154
+      ]
+     ]
+    ],
+    "cities": [
+     {
+      "name": "Cape Denison",
+      "x": 0.303,
+      "y": 0.385,
+      "dy": -44
+     },
+     {
+      "name": "X",
+      "x": 0.709,
+      "y": 0.677,
+      "at": "note",
+      "color": "red",
+      "dy": -44
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       0.303,
+       0.385
+      ],
+      [
+       0.341,
+       0.462
+      ],
+      [
+       0.423,
+       0.508
+      ],
+      [
+       0.523,
+       0.569
+      ],
+      [
+       0.614,
+       0.631
+      ],
+      [
+       0.709,
+       0.677
+      ]
+     ],
+     "at": "route",
+     "dur": 2.0
+    },
+    "note": {
+     "text": "300+ miles · 10 days of food",
+     "x": 0.36,
+     "y": 0.86,
+     "at": "note",
+     "color": "red"
+    },
+    "compass": false,
+    "zoom": 1.12,
+    "focus": [
+     0.5,
+     0.55
+    ]
+   },
+   "source": "Mawson's Huts Foundation",
+   "camera": {
+    "focus": [
+     760,
+     560
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "So they turned around, and did the only thing they could.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'The Way Back'.",
+   "title": {},
+   "cues": {
+    "n": "turned",
+    "title": "only"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Way Back",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Way Back"
+  },
+  {
+   "type": "mw_trek",
+   "text": "Each time a dog collapsed, they killed it and ate it. Mawson wrote that the meat was tough and stringy.",
+   "visual": "Dusk on the plateau, low gold sun: one sledge with a shrinking dog team; above, a row of six dog icons, each crossed out in red one after another; note 'tough and stringy'.",
+   "title": {
+    "white": "The dogs"
+   },
+   "cues": {
+    "cl": "collapsed",
+    "k": "killed",
+    "at": "ate",
+    "mw": "wrote",
+    "tg": "tough",
+    "st": "stringy"
+   },
+   "params": {
+    "mode": "dogs",
+    "dusk": true,
+    "teams": [
+     {
+      "x": 0.5,
+      "dogs": 3
+     }
+    ],
+    "dog_tally": {
+     "n": 6,
+     "x": 0.22,
+     "y": 0.34,
+     "cross": [
+      "cl",
+      "k",
+      "at",
+      "mw",
+      "tg",
+      "st"
+     ]
+    },
+    "labels": [
+     {
+      "text": "\"tough and stringy\"",
+      "x": 0.66,
+      "y": 0.46,
+      "at": "tg",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mw_camp",
+   "text": "They ate the livers too. Remember that liver, because it comes back later.",
+   "visual": "In front of the pyramid tent a cooker steams; the fez narrator stands beside it and points at the pot on 'Remember'; red note 'liver' with an arrow to the pot.",
+   "title": {
+    "white": "Remember this"
+   },
+   "cues": {
+    "lv": "livers",
+    "rm": "Remember"
+   },
+   "params": {
+    "mode": "cook",
+    "tent": {
+     "x": 0.36,
+     "s": 1
+    },
+    "kasif": {
+     "x": 0.84,
+     "y": 0.8,
+     "scale": 0.55,
+     "pose": "think",
+     "face": -1,
+     "at": "rm",
+     "then": "point",
+     "dir": "down",
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "liver",
+      "x": 0.7,
+      "y": 0.4,
+      "at": "lv",
+      "color": "red",
+      "size": 80,
+      "arrow": [
+       0.515,
+       0.73
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1200,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_camp",
+   "text": "By New Year's Eve, Mertz was sick. His skin began to peel, and his strength just drained away.",
+   "visual": "Beside the tent Mertz sits slumped forward on the snow; Mawson stands over him, worried; notes '31 December' and red 'skin peeling'.",
+   "title": {
+    "white": "Mertz"
+   },
+   "cues": {
+    "ny": "New",
+    "sk": "skin"
+   },
+   "params": {
+    "mode": "sick",
+    "tent": {
+     "x": 0.34,
+     "s": 1
+    },
+    "men": [
+     {
+      "x": 0.8,
+      "beard": "short",
+      "face": -1,
+      "emotion0": "worried"
+     }
+    ],
+    "labels": [
+     {
+      "text": "31 December",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "ny",
+      "size": 64
+     },
+     {
+      "text": "skin peeling",
+      "x": 0.62,
+      "y": 0.38,
+      "at": "sk",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mw_trek",
+   "text": "Mawson tied him onto the sledge and pulled him.",
+   "visual": "Mawson leans hard into the harness and hauls the sledge alone; Mertz lies wrapped on top of it; wind streaks.",
+   "title": {
+    "white": "Hauling"
+   },
+   "cues": {
+    "td": "tied",
+    "pl": "pulled"
+   },
+   "params": {
+    "mode": "pull",
+    "man_x": 0.66,
+    "wind": 0.6,
+    "labels": [
+     {
+      "text": "no dogs left",
+      "x": 0.28,
+      "y": 0.24,
+      "at": "pl",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1050,
+     700
+    ],
+    "zoom": 1.4,
+    "move": "left"
+   }
+  },
+  {
+   "type": "mw_camp",
+   "text": "On the eighth of January, around two in the morning, Mertz died in the tent. Mawson had no one left.",
+   "visual": "Night on the ice: stars, a lone pyramid tent glowing from a lantern inside; the glow slowly dims to dark on 'died'; note '8 January 1913'.",
+   "title": {
+    "white": "8 January"
+   },
+   "cues": {
+    "dt": "eighth",
+    "dim": "died"
+   },
+   "params": {
+    "mode": "night",
+    "tent": {
+     "x": 0.5,
+     "s": 1.1
+    },
+    "labels": [
+     {
+      "text": "8 January 1913",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "dt",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "source": "Wikipedia: Far Eastern Party"
+  },
+  {
+   "type": "chapter",
+   "text": "Now he was alone, about one hundred miles from the hut. How do you even start that walk?",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title 'Alone'.",
+   "title": {},
+   "cues": {
+    "n": "alone",
+    "title": "hundred"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "Alone",
+    "label": "CHAPTER"
+   },
+   "chapter": "Alone"
+  },
+  {
+   "type": "mw_gear",
+   "text": "First, he cut his sledge in half to make it lighter.",
+   "visual": "Close-up of the long sledge on the snow: a red line draws down its middle on 'cut', a saw rasps, and the rear half slides away and fades; note 'half the weight'.",
+   "title": {
+    "white": "Lighter"
+   },
+   "cues": {
+    "cut": "cut",
+    "lg": "lighter"
+   },
+   "params": {
+    "mode": "cut",
+    "labels": [
+     {
+      "text": "half the weight",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "lg",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 842
+   },
+   "camera": {
+    "focus": [
+     1180,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_gear",
+   "text": "Then he looked at his feet. The skin of each sole had come off in one piece.",
+   "visual": "Close-up: a bare foot seen from below, big; on 'skin' the sole layer lifts off and swings aside, a red raw patch underneath; note 'in one piece'.",
+   "title": {
+    "white": "His feet"
+   },
+   "cues": {
+    "ft": "feet",
+    "peel": "skin",
+    "op": "piece"
+   },
+   "params": {
+    "mode": "feet",
+    "labels": [
+     {
+      "text": "in one piece",
+      "x": 0.22,
+      "y": 0.4,
+      "at": "op",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "mw_trek",
+   "text": "So he rubbed them with lanolin, bound them back on, and kept walking.",
+   "visual": "The lone man hauls his half sledge on into the wind across the plateau; notes 'lanolin' and 'bound back on' pop up beside him.",
+   "title": {
+    "white": "Keep walking"
+   },
+   "cues": {
+    "ln": "lanolin",
+    "bd": "bound",
+    "kw": "walking"
+   },
+   "params": {
+    "mode": "solo",
+    "man_x": 0.4,
+    "wind": 0.8,
+    "labels": [
+     {
+      "text": "lanolin",
+      "x": 0.66,
+      "y": 0.4,
+      "at": "ln",
+      "size": 66
+     },
+     {
+      "text": "bound back on",
+      "x": 0.68,
+      "y": 0.54,
+      "at": "bd",
+      "color": "blue",
+      "size": 62
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     900,
+     640
+    ],
+    "zoom": 1.5,
+    "move": "right"
+   }
+  },
+  {
+   "type": "mw_trek",
+   "text": "And then, on the seventeenth of January, the snow gave way.",
+   "visual": "The lone man hauls his half sledge; on 'gave' a black hole opens under his feet and he drops out of sight; the sledge skids up to the edge; snow puffs; red note '17 January'.",
+   "title": {
+    "white": "17 January"
+   },
+   "cues": {
+    "dt": "seventeenth",
+    "gave": "gave"
+   },
+   "params": {
+    "mode": "collapse",
+    "man_x": 0.56,
+    "wind": 0.6,
+    "labels": [
+     {
+      "text": "17 January",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "dt",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1075,
+     780
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "He dropped into a crevasse and jolted to a stop, fourteen feet down on the rope.",
+   "visual": "Cut-away of the crevasse: the man swings on the rope deep inside the blue ice walls, the half sledge jerks toward the lip on 'jolted'; red '14 feet' dimension line.",
+   "title": {
+    "white": "14 feet"
+   },
+   "cues": {
+    "jt": "jolted",
+    "slide": "jolted",
+    "hit": "jolted",
+    "ft": "fourteen"
+   },
+   "params": {
+    "mode": "hang",
+    "surface": 0.34,
+    "gap": {
+     "x": 0.48,
+     "w": 0.2
+    },
+    "depth": 0.62,
+    "sledge": {
+     "x": 0.76,
+     "to": 0.73
+    },
+    "dim": {
+     "text": "14 feet",
+     "at": "ft"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 367
+   },
+   "source": "Mawson's Huts Foundation"
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "He pulled himself up, knot by knot, and reached the edge. Then he slipped, and slid all the way back down.",
+   "visual": "Closer on the rope: the man climbs up the knotted rope hand over hand to the lip on 'knot', then on 'slipped' drops back down to the end of the rope and swings.",
+   "title": {
+    "white": "Climbing"
+   },
+   "cues": {
+    "up": "knot",
+    "break": "slipped"
+   },
+   "params": {
+    "mode": "climb",
+    "surface": 0.34,
+    "gap": {
+     "x": 0.48,
+     "w": 0.2
+    },
+    "depth": 0.7,
+    "sledge": {
+     "x": 0.74,
+     "to": 0.74
+    },
+    "labels": [
+     {
+      "text": "knot by knot",
+      "x": 0.3,
+      "y": 0.5,
+      "at": "up",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 367
+   },
+   "camera": {
+    "focus": [
+     880,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "up"
+   }
+  },
+  {
+   "type": "title",
+   "text": "In that dark moment, he remembered a line from a poem by Robert Service: just have one more try.",
+   "visual": "Giant words 'Just have' / 'one more try' word by word, 'try' in a red box; note 'Robert Service'; the fez narrator beside them nods and raises a fist on 'try'.",
+   "title": {
+    "white": "The poem"
+   },
+   "cues": {
+    "w0": "remembered",
+    "rs": "Service",
+    "tr": "try"
+   },
+   "params": {
+    "lines": [
+     "Just have",
+     "one more try"
+    ],
+    "highlight": [
+     "try"
+    ],
+    "y": 0.42,
+    "note": {
+     "text": "Robert Service",
+     "at": "rs"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "at": "tr",
+     "then": "point",
+     "dir": "up",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "So he did. One last huge effort, and he rolled out onto the snow.",
+   "visual": "The man hauls himself up the rope, over the lip on 'rolled' and rolls out flat onto the snow beside the half sledge, chest heaving.",
+   "title": {
+    "white": "Out"
+   },
+   "cues": {
+    "up": "So",
+    "out": "rolled"
+   },
+   "params": {
+    "mode": "out",
+    "surface": 0.34,
+    "gap": {
+     "x": 0.48,
+     "w": 0.2
+    },
+    "depth": 0.62,
+    "sledge": {
+     "x": 0.74,
+     "to": 0.74
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 367
+   },
+   "camera": {
+    "focus": [
+     1040,
+     360
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_crevasse",
+   "text": "Then he made a rope ladder and tied it to the sledge, so no crevasse could trap him again.",
+   "visual": "The half sledge at the lip; on 'ladder' a rope ladder unrolls from it over the edge down into the crevasse, rung by rung; note 'rope ladder'.",
+   "title": {
+    "white": "Rope ladder"
+   },
+   "cues": {
+    "ladder": "ladder",
+    "tr": "trap"
+   },
+   "params": {
+    "mode": "ladder",
+    "surface": 0.34,
+    "gap": {
+     "x": 0.46,
+     "w": 0.2
+    },
+    "labels": [
+     {
+      "text": "rope ladder",
+      "x": 0.2,
+      "y": 0.6,
+      "at": "ladder",
+      "color": "blue",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 367
+   }
+  },
+  {
+   "type": "mw_cairn",
+   "text": "On the twenty-ninth of January, he saw something black flapping in the snow.",
+   "visual": "Wide snow plain in the wind: the lone man with his half sledge at left stops and stares; far at right a small snow cairn with a black cloth flapping on a pole; note '29 January'.",
+   "title": {
+    "white": "29 January"
+   },
+   "cues": {
+    "dt": "twenty",
+    "black": "black"
+   },
+   "params": {
+    "mode": "far",
+    "labels": [
+     {
+      "text": "29 January",
+      "x": 0.5,
+      "y": 0.18,
+      "at": "dt",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "mw_gear",
+   "text": "It was a cairn left by a search party, with food and a note pointing the way home. But who had left it?",
+   "visual": "Close-up on a snow block: a paper note pinned with a red pin writes itself in handwriting: 'Food here', 'Cave: 21 miles'.",
+   "title": {
+    "white": "The note"
+   },
+   "cues": {
+    "nt": "note"
+   },
+   "params": {
+    "mode": "note",
+    "lines": [
+     "Food here",
+     "Cave: 21 miles"
+    ],
+    "at": 0.4
+   },
+   "set": false,
+   "source": "Wikipedia: Far Eastern Party"
+  },
+  {
+   "type": "chapter",
+   "text": "The men had built it that same morning. He had missed them by hours. But soon, he would miss something much bigger.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Ship on the Horizon'.",
+   "title": {},
+   "cues": {
+    "n": "morning",
+    "title": "bigger"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Ship on the Horizon",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Ship on the Horizon"
+  },
+  {
+   "type": "mw_trek",
+   "text": "The last slope was steep ice, and the wind trapped him in an ice cave for a whole week.",
+   "visual": "The lone man hauls his half sledge down a slope in a howling blizzard, snow streaks racing; notes 'steep ice' and red 'one week in an ice cave' on 'week'.",
+   "title": {
+    "white": "Last week"
+   },
+   "cues": {
+    "si": "steep",
+    "wk": "week"
+   },
+   "params": {
+    "mode": "solo",
+    "man_x": 0.48,
+    "wind": 1,
+    "labels": [
+     {
+      "text": "steep ice",
+      "x": 0.4,
+      "y": 0.4,
+      "at": "si",
+      "size": 64
+     },
+     {
+      "text": "one week in an ice cave",
+      "x": 0.62,
+      "y": 0.24,
+      "at": "wk",
+      "color": "red",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     920,
+     640
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_ship",
+   "text": "Finally, on the eighth of February 1913, he came over the last rise and saw the bay.",
+   "visual": "From a snow ridge in front, a bearded man in a wool cap looks out through a spyglass; below, the hut on the shore of the bay, and far out the ship small on the horizon; note '8 February 1913'.",
+   "title": {
+    "white": "The bay"
+   },
+   "cues": {
+    "dt": "eighth",
+    "by": "bay"
+   },
+   "params": {
+    "mode": "rise",
+    "ship": {
+     "x": 0.74,
+     "y": 0.52,
+     "s": 0.3,
+     "to": 0.8
+    },
+    "labels": [
+     {
+      "text": "8 February 1913",
+      "x": 0.62,
+      "y": 0.18,
+      "at": "dt",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 690,
+    "horizon": 560
+   }
+  },
+  {
+   "type": "mw_ship",
+   "text": "Out on the water, the Aurora was sailing away. She had left only a few hours before.",
+   "visual": "Close on the water: the Aurora, a barquentine with a red funnel, sails away to the right and grows smaller, smoke trailing; red note 'Aurora' and 'a few hours ago'.",
+   "title": {
+    "white": "The Aurora"
+   },
+   "cues": {
+    "au": "Aurora",
+    "hr": "hours"
+   },
+   "params": {
+    "mode": "close",
+    "ship": {
+     "x": 0.46,
+     "y": 0.62,
+     "s": 0.75,
+     "to": 0.62,
+     "s1": 0.5
+    },
+    "labels": [
+     {
+      "text": "Aurora",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "au",
+      "font": "serif",
+      "size": 80
+     },
+     {
+      "text": "left a few hours ago",
+      "x": 0.74,
+      "y": 0.32,
+      "at": "hr",
+      "color": "red",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 690,
+    "horizon": 670
+   },
+   "source": "Mawson's Huts Foundation"
+  },
+  {
+   "type": "mw_hut",
+   "text": "They called her back by radio, but the wind was so violent that no boat could reach the shore.",
+   "visual": "The hut on the shore with two tall wireless masts; red radio rings pulse out over the water to the small ship on the horizon on 'radio'; snow streaks blow out to sea.",
+   "title": {
+    "white": "Radio"
+   },
+   "cues": {
+    "radio": "radio",
+    "wd": "violent"
+   },
+   "params": {
+    "mode": "radio",
+    "hut": {
+     "x": 0.36,
+     "s": 0.8
+    },
+    "wind": 0.9,
+    "ship": {
+     "x": 0.88,
+     "y": 0.6,
+     "s": 0.2
+    },
+    "labels": [
+     {
+      "text": "come back!",
+      "x": 0.68,
+      "y": 0.26,
+      "at": "radio",
+      "color": "red",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 864,
+    "horizon": 660
+   },
+   "camera": false
+  },
+  {
+   "type": "mw_hut",
+   "text": "Six men had stayed behind to search for him. So Mawson spent a second winter in the blizzard.",
+   "visual": "Night falls over the hut: its windows glow gold, seven small men stand in front of it; note 'second winter'.",
+   "title": {
+    "white": "Second winter"
+   },
+   "cues": {
+    "sx": "Six",
+    "sw": "second"
+   },
+   "params": {
+    "mode": "winter",
+    "hut": {
+     "x": 0.5,
+     "s": 1
+    },
+    "wind": 0.6,
+    "men": [
+     {
+      "x": 0.2,
+      "scale": 0.32,
+      "beard": null,
+      "face": 1
+     },
+     {
+      "x": 0.30000000000000004,
+      "scale": 0.32,
+      "beard": null,
+      "face": 1
+     },
+     {
+      "x": 0.4,
+      "scale": 0.32,
+      "beard": null,
+      "face": 1
+     },
+     {
+      "x": 0.6000000000000001,
+      "scale": 0.32,
+      "beard": null,
+      "face": -1
+     },
+     {
+      "x": 0.7,
+      "scale": 0.32,
+      "beard": null,
+      "face": -1
+     },
+     {
+      "x": 0.8,
+      "scale": 0.32,
+      "beard": null,
+      "face": -1
+     },
+     {
+      "x": 0.5,
+      "scale": 0.34,
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "second winter",
+      "x": 0.5,
+      "y": 0.18,
+      "at": "sw",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "title",
+   "text": "Now, why did Mertz get so sick, so fast? One theory points straight at those dog livers.",
+   "visual": "Giant words 'The liver' / 'theory' word by word, 'liver' in a red box; the fez narrator beside them thinks, then points at the words on 'livers'.",
+   "title": {
+    "white": "Why?"
+   },
+   "cues": {
+    "w0": "why",
+    "lv": "livers"
+   },
+   "params": {
+    "lines": [
+     "The liver",
+     "theory"
+    ],
+    "highlight": [
+     "liver"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "at": "lv",
+     "then": "point",
+     "emotion": "worried"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "mw_gear",
+   "text": "Husky liver can hold huge amounts of vitamin A, and too much of it makes your skin peel. Two researchers suggested this in 1969.",
+   "visual": "Left: a cooker with a dark red liver in the pot, steaming; right: Mertz's hand, big, palm up, and on 'peel' flakes of skin lift off it and drift away; blue note 'vitamin A' with an arrow from pot to hand; note '1969 theory'.",
+   "title": {
+    "white": "Vitamin A"
+   },
+   "cues": {
+    "va": "vitamin",
+    "peel": "peel",
+    "th": "researchers"
+   },
+   "params": {
+    "mode": "hand",
+    "ground": 0.8,
+    "labels": [
+     {
+      "text": "vitamin A",
+      "x": 0.46,
+      "y": 0.24,
+      "at": "va",
+      "color": "blue",
+      "size": 72,
+      "arrow": [
+       0.56,
+       0.46
+      ]
+     },
+     {
+      "text": "1969 theory",
+      "x": 0.24,
+      "y": 0.36,
+      "at": "th",
+      "color": "red",
+      "size": 76
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "Cleland and Southcott, 1969"
+  },
+  {
+   "type": "mw_trek",
+   "text": "Other doctors say starving dogs had lean livers, and hunger and cold were enough. Nobody knows for sure.",
+   "visual": "Beside a loaded sledge in the wind stands one thin husky, head down, ribs showing, breathing; notes 'lean liver?' and 'hunger + cold'; red stamp 'NOBODY KNOWS' on 'Nobody'.",
+   "title": {
+    "white": "Or hunger?"
+   },
+   "cues": {
+    "ln": "lean",
+    "hc": "hunger",
+    "nb": "Nobody"
+   },
+   "params": {
+    "mode": "husky",
+    "dog_x": 0.4,
+    "dog_s": 2.2,
+    "wind": 0.7,
+    "speed": 0,
+    "labels": [
+     {
+      "text": "lean liver?",
+      "x": 0.74,
+      "y": 0.3,
+      "at": "ln",
+      "size": 64
+     },
+     {
+      "text": "hunger + cold",
+      "x": 0.74,
+      "y": 0.42,
+      "at": "hc",
+      "size": 64,
+      "color": "blue"
+     },
+     {
+      "text": "nobody knows",
+      "x": 0.5,
+      "y": 0.55,
+      "at": "nb",
+      "stamp": true,
+      "color": "red",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "Medical Journal of Australia",
+   "camera": {
+    "focus": [
+     900,
+     680
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Mawson sailed home in 1914. He was knighted that year, and later his face went on Australia's hundred dollar note.",
+   "visual": "Horizontal timeline: '1911 / Cape Denison', '1912 / Far East trek', '1913 / alone', '1914 / knighted', '1984 / $100 note'; the marker runs to the end; the fez narrator points at it.",
+   "title": {
+    "white": "Sir Douglas"
+   },
+   "cues": {
+    "a": "Mawson",
+    "b": "sailed",
+    "c": "1914",
+    "d": "knighted",
+    "e": "hundred"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1911",
+      "text": "sails south",
+      "at": "a"
+     },
+     {
+      "year": "1912",
+      "text": "the trek",
+      "at": "b"
+     },
+     {
+      "year": "1913",
+      "text": "alone",
+      "at": "b"
+     },
+     {
+      "year": "1914",
+      "text": "knighted",
+      "at": "d"
+     },
+     {
+      "year": "1984",
+      "text": "$100 note",
+      "at": "e"
+     }
+    ],
+    "focus": 4,
+    "kasif": {
+     "x": 0.88,
+     "y": 0.86,
+     "pose": "idle",
+     "at": "e",
+     "then": "point",
+     "scale": 0.45,
+     "face": -1,
+     "emotion": "happy"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "stage",
+   "text": "So what would have kept you walking: the poem, the men at the hut, or pure stubbornness?",
+   "visual": "The fez narrator on the snow, big, holds up a sign 'YOU?' and thinks, then points at the viewer on 'stubbornness'.",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "wk": "walking",
+    "st": "stubbornness"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "hold",
+      "text": "YOU?",
+      "scale": 1.0,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "st",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mw_cairn",
+   "text": "Tell me in the comments, and subscribe to Stickstory for more survival stories that sound impossible.",
+   "visual": "The snow cairn with its black cloth flapping; the fez narrator stands beside it and waves goodbye on 'subscribe'; footprints run off to three tiny figures on the horizon.",
+   "title": {
+    "white": "Subscribe"
+   },
+   "cues": {
+    "cm": "comments",
+    "sb": "subscribe"
+   },
+   "params": {
+    "mode": "near",
+    "cairn_x": 0.46,
+    "kasif": {
+     "x": 0.7,
+     "y": 0.8,
+     "scale": 0.62,
+     "pose": "point",
+     "dir": "forward",
+     "face": -1,
+     "at": "sb",
+     "then": "wave",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1100,
+     640
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "Douglas Mawson: How Did One Man Survive Antarctica Alone?",
+  "description": "Douglas Mawson was hanging fourteen feet down a crevasse in Antarctica, alone, with his two friends dead and the soles of his feet gone. How did he get out, and walk home?\n\nIn 1912, Mawson's Far Eastern Party set out from Cape Denison, one of the windiest places on Earth, to map an unknown coast. Belgrave Ninnis vanished into a crevasse with most of the food. Xavier Mertz fell sick on the way back. Mawson kept going alone, and reached the hut just hours after his ship, the Aurora, sailed away. This is one of the greatest Antarctic survival stories ever told.\n\nIn this video:\n- Cape Denison, the home of the blizzard\n- The day Ninnis disappeared into a crevasse\n- The dogs, the livers and the death of Mertz\n- Fourteen feet down on a rope, alone\n- The ship on the horizon and the vitamin A theory\n\nSubscribe to Stickstory for more true survival stories. What would have kept you walking? Tell me in the comments!\n\n#douglasmawson #antarctica #survivalstory #stickstory",
+  "tags": [
+   "douglas mawson",
+   "douglas mawson antarctica",
+   "douglas mawson survival story",
+   "mawson far eastern party",
+   "far eastern party",
+   "xavier mertz",
+   "belgrave ninnis",
+   "antarctic survival story",
+   "mawson antarctic expedition",
+   "cape denison",
+   "home of the blizzard",
+   "husky liver vitamin a",
+   "antarctic exploration history",
+   "crevasse survival",
+   "survival stories",
+   "true survival stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-13T14:00:00-05:00"
+ }
+}
