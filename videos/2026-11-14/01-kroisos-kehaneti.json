@@ -1,0 +1,175 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "kum",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Herodot, Tarih I.53 (Perseus, İngilizce çeviri)",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0016/tlg001/perseus-eng2/1.53.1-1.54.2"
+    },
+    {
+      "title": "Herodot, Tarih I.91 (Perseus, İngilizce çeviri)",
+      "url": "https://fgh.perseids.org/read/greekLit/tlg0016/tlg001/perseus-eng2/1.91.1-1.91.6"
+    },
+    {
+      "title": "Britannica: Croesus",
+      "url": "https://www.britannica.com/biography/Croesus"
+    },
+    {
+      "title": "Livius: Croesus",
+      "url": "https://livius.org/articles/person/croesus"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Kehanet",
+      "doğru çıktı"
+    ],
+    "highlight": [
+      "doğru"
+    ],
+    "scene": 0,
+    "t": 1.6,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu kehanet doğru çıktı.",
+      "type": "bt_kr_tripod",
+      "visual": "Koyu zeminde dar ışık havuzu: büyütülmüş koyu bronz Delfi tripodu (aslan pençeli üç ayak, iki halka kulp); karedeki tek parlak nokta kazanın içeriden altın parlayan ağzı; ağızdan yumuşak, kalın buhar kıvrımları yükselir; 'doğru'da ağzın çevresinde altın çizgi dolaşır",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "doğru"
+      }
+    },
+    {
+      "text": "Yirmi altı asır önce, Lidya kralı Kroisos savaş istiyordu.",
+      "type": "bt_kr_coin",
+      "visual": "Işık havuzunda tek oval Lidya altın sikkesi (Kroisos dönemi): karşı karşıya aslan ve boğa ön gövdesi; üstünden yumuşak bir parıltı yavaşça geçer; 'Kroisos'ta sikkenin kenarı altın çizilir",
+      "params": {
+        "mode": "gold"
+      },
+      "cues": {
+        "hit": "Kroisos"
+      }
+    },
+    {
+      "text": "Önce Delfi'ye sordu.",
+      "type": "bt_kr_map",
+      "visual": "Kadrajı dolduran Ege haritası: Yunanistan, Anadolu kıyısı, adalar, ortada italik 'Ege'; Sardes noktası yanıp söner, sahne başından altın rota denizin üstünden kavis çizerek ilerler ve 'Delfi'de Delfi'ye varır, Delfi noktası belirip yanıp söner",
+      "cues": {
+        "hit": "Delfi"
+      }
+    },
+    {
+      "text": "Cevap geldi: Savaşırsan büyük bir imparatorluk yıkılacak.",
+      "type": "bt_text",
+      "visual": "Işık havuzunda kehanetin kendisi, üç satır: üstte küçük büyük harf 'SAVAŞIRSAN', ortada 'büyük bir imparatorluk', 'imparatorluk'ta altında büyük italik vurgu renginde 'yıkılacak' (söylendiği an tam görünür)",
+      "params": {
+        "lines": [
+          {
+            "text": "SAVAŞIRSAN",
+            "size": 64
+          },
+          {
+            "text": "büyük bir imparatorluk",
+            "size": 104
+          },
+          {
+            "text": "yıkılacak",
+            "accent": true,
+            "italic": true,
+            "size": 150,
+            "at": "a"
+          }
+        ],
+        "gap": 170
+      },
+      "cues": {
+        "a": "imparatorluk",
+        "hit": "yıkılacak"
+      }
+    },
+    {
+      "text": "Kroisos sevindi. Kızılırmak'ı geçti.",
+      "type": "bt_kr_river",
+      "visual": "Alacakaranlıkta geniş, toprak renkli nehir (Halys/Kızılırmak), alçak kıyılar, ufukta güneş; mızraklı yüzsüz askerler bel suyunda çapraz bir sırayla karşı kıyıya yürür, su çizgileri akar; 'geçti'de karşı kıyıya varan öndeki sancak altın olur",
+      "cues": {
+        "hit": "geçti"
+      }
+    },
+    {
+      "text": "İlk savaş sonuçsuz kaldı. Kiros peşinden geldi, Sardes düştü.",
+      "type": "bt_kr_sardes",
+      "visual": "Aşınmış, dişli sırtlı sarp kumtaşı kayası (Sardes akropolü), sırttaki her çentikten aşağı inen oyuklar, zirvede burçlu surlar, eteğinde alçak evler; surların ardından kalın, kıvrımlı duman yükselir; 'düştü'de surların arkasında sıcak kırmızı-altın ışık belirir, ışık kararır",
+      "cues": {
+        "hit": "düştü"
+      }
+    },
+    {
+      "text": "Herodot'a göre rahibe sonra şöyle dedi: Hangisi, diye sormalıydı.",
+      "type": "bt_kr_tripod",
+      "visual": "Karanlık tapınağın içinde iki soluk sütun arasında, tripodun üstünde oturan peçeli yüzsüz rahibe silueti, elinde defne dalı; yerdeki yarıktan buhar yükselir; 'Hangisi'de ışık havuzu ona doğru daralır",
+      "params": {
+        "mode": "pythia"
+      },
+      "cues": {
+        "hit": "Hangisi"
+      }
+    },
+    {
+      "text": "Yıkılan imparatorluk, onunkiydi.",
+      "type": "bt_kr_coin",
+      "visual": "Aynı Lidya altın sikkesi ışık havuzunda; 'imparatorluk'ta ortasından bir çatlak iner, iki yarım yavaşça ayrılır, altın rengi söner",
+      "params": {
+        "mode": "crack"
+      },
+      "cues": {
+        "hit": "imparatorluk"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_kr_ruins",
+      "visual": "Bugün Sardes: Artemis Tapınağı'nın ayakta kalan iki İon sütunu, platform, yerde devrik sütun tamburları, arkada akropol tepesi; güneş yavaşça iner, toz süzülür"
+    }
+  ],
+  "youtube": {
+    "title": "Kroisos ve Delfi Kehaneti: Yıkılan İmparatorluk Kimindi?",
+    "description": "Kroisos, Lidya'nın son kralı, Perslerle savaşmadan önce Delfi kehanetine sordu. Cevap: savaşırsan büyük bir imparatorluk yıkılacak. Kehanet doğru çıktı, ama hangi imparatorluk?\n\nLidya kralı Kroisos zenginliğiyle efsaneleşmişti; Sardes'te altın ve gümüş sikke bastırdı. Herodot'a göre kehaneti duyunca sevindi, Kızılırmak'ı (Halys) geçip Pers kralı Kiros'a saldırdı. Pteria'daki ilk savaş sonuçsuz kaldı; Kroisos Sardes'e döndü, Kiros peşinden gelip başkenti aldı ve Lidya Krallığı Pers egemenliğine girdi. Herodot'a göre Delfi'deki rahibe sonra, Kroisos'un \"hangi imparatorluk?\" diye sorması gerektiğini söyledi.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Kroisos kehaneti mi yanlış anladı, yoksa duymak istediğini mi duydu? Yorumlara yaz!\n\n#shorts #kroisos #lidya #düşünbakalım",
+    "tags": [
+      "kroisos",
+      "kroisos kehaneti",
+      "kral kroisos",
+      "karun",
+      "karun hazinesi",
+      "lidya krallığı",
+      "lidya",
+      "sardes",
+      "delfi kehaneti",
+      "delfi",
+      "kiros",
+      "herodot",
+      "anadolu tarihi",
+      "antik tarih",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-14T19:00:00+03:00"
+  }
+}
