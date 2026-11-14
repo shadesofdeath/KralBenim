@@ -1,0 +1,962 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-myeongnyang-13-ships",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-sage",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "13 ships",
+   "vs 133"
+  ],
+  "highlight": [
+   "133"
+  ],
+  "scene": 0,
+  "t": 0.02,
+  "focus": [
+   540,
+   900
+  ],
+  "zoom": 1.12,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 800,
+   "y": 1720,
+   "scale": 1.15,
+   "face": -1
+  }
+ },
+ "sources": [
+  {
+   "title": "Encyclopaedia Britannica — Yi Sun-shin (demoted to common soldier in 1597; Korean navy almost destroyed; reinstated with the few remaining ships)",
+   "url": "https://www.britannica.com/biography/Yi-Sun-shin"
+  },
+  {
+   "title": "Encyclopedia.com — Yi Sunsin (arrest and death sentence commuted; 12 ships, none of them turtle ships; 133 Japanese ships; 31 sunk, none lost)",
+   "url": "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/yi-sunsin"
+  },
+  {
+   "title": "Battle of Myeongnyang (Wikipedia; 13 panokseon vs 133 warships, Yi's letter 'I still have twelve ships', the tide reversal)",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Myeongnyang"
+  },
+  {
+   "title": "Korea JoongAng Daily — Items from the sea recall an epic battle (13 vs 133 ships, 31 Japanese ships sunk, strong currents of Uldolmok)",
+   "url": "https://www.koreajoongangdaily.com/lifestyle/items-from-the-sea-recall-an-epic-battle/10201396"
+  },
+  {
+   "title": "Myeongnyang Strait (Wikipedia; narrowest about 293 m, currents up to 11.5 knots, 'Uldolmok' = screaming sea)",
+   "url": "https://en.wikipedia.org/wiki/Myeongnyang_Strait"
+  }
+ ],
+ "youtube": {
+  "title": "Battle of Myeongnyang: How Did 13 Ships Beat 133?",
+  "description": "Battle of Myeongnyang, 1597: Admiral Yi Sun-sin had 13 warships. Japan came with about 133. How did he win without losing a single ship?\n\nJapan had just wiped out Korea's navy while Yi was demoted to a common soldier. The king told him to give up the sea and fight on land, but Yi wrote back: \"I still have twelve ships.\" He waited in the Myeongnyang Strait, a narrow channel where the tide roars like a river. When the current turned, the crowded Japanese fleet drifted back into itself, and about thirty Japanese ships were lost.\n\nSubscribe to Stickstory for a true story like this every day. Would you have trusted the tide like Admiral Yi? Tell me in the comments!\n\n#shorts #myeongnyang #yisunsin #stickstory",
+  "tags": [
+   "battle of myeongnyang",
+   "myeongnyang battle",
+   "battle of myeongnyang 1597",
+   "myeongnyang yi sun-sin",
+   "myeongnyang strait",
+   "admiral yi sun-sin",
+   "yi sun-sin",
+   "yi sun shin",
+   "imjin war",
+   "korean history",
+   "japanese invasion of korea",
+   "naval battle",
+   "13 ships vs 133",
+   "panokseon",
+   "uldolmok",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-14T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "mn_sea",
+   "text": "Thirteen ships against 133.",
+   "visual": "Open sea: far back on the horizon a solid wall of 133 Japanese warships (slim hulls, plank-shield boxes, tall red banners) in three rows; a clear band of water; in front, a row of 13 small Joseon panokseon (walled decks, roofed pavilions, blue pennants) spaced so each can be counted; blue stamp '13' with an arrow to the row, then a big red stamp '133' over the wall.",
+   "title": {
+    "white": "Korea",
+    "gray": "1597"
+   },
+   "source": "Yi's war diary",
+   "set": {
+    "name": "ocean",
+    "ground": 1150,
+    "horizon": 690
+   },
+   "cues": {
+    "k": "Thirteen",
+    "j": "133"
+   },
+   "params": {
+    "water": 0.36,
+    "front": 0.66,
+    "wall": {
+     "rows": [
+      40,
+      45,
+      48
+     ],
+     "y0": 0.372,
+     "dy": 0.022,
+     "s0": 0.1,
+     "ds": 0.04,
+     "face": -1,
+     "adv": 5,
+     "dark": true
+    },
+    "line": {
+     "n": 13,
+     "from": [
+      0.12,
+      0.535,
+      0.15
+     ],
+     "to": [
+      0.88,
+      0.535,
+      0.15
+     ],
+     "pow": 1,
+     "stagger": 0.022,
+     "face": 1,
+     "flag0": "yi",
+     "vx": 6,
+     "pen": 1.7
+    },
+    "labels": [
+     {
+      "text": "13",
+      "x": 0.13,
+      "y": 0.455,
+      "size": 100,
+      "color": "blue",
+      "stamp": true,
+      "at": "k",
+      "arrow": [
+       0.17,
+       0.5
+      ]
+     },
+     {
+      "text": "133",
+      "x": 0.7,
+      "y": 0.25,
+      "size": 140,
+      "color": "red",
+      "stamp": true,
+      "at": "j",
+      "arrow": [
+       0.66,
+       0.36
+      ]
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mn_sea",
+   "text": "In 1597, Japan wiped out Korea's navy.",
+   "visual": "Night sea: three Joseon panokseon burn with gold and red flames and smoke and sink one after another, dark Japanese warships with red banners close in from both sides; red '1597' and a red stamp 'NAVY GONE'.",
+   "title": {
+    "white": "1597"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1150,
+    "horizon": 870
+   },
+   "cues": {
+    "y": "1597",
+    "w": "wiped",
+    "n": "navy"
+   },
+   "params": {
+    "water": 0.455,
+    "front": 0.68,
+    "glow": true,
+    "ships": [
+     {
+      "kind": "joseon",
+      "x": 0.34,
+      "y": 0.61,
+      "s": 0.5,
+      "face": 1,
+      "burn": 0.0,
+      "sink": "w"
+     },
+     {
+      "kind": "joseon",
+      "x": 0.74,
+      "y": 0.555,
+      "s": 0.34,
+      "face": -1,
+      "burn": 0.2,
+      "sink": "n"
+     },
+     {
+      "kind": "joseon",
+      "x": 0.55,
+      "y": 0.5,
+      "s": 0.2,
+      "face": 1,
+      "burn": 0.0,
+      "sink": 0.6
+     },
+     {
+      "kind": "japan",
+      "x": 0.06,
+      "y": 0.53,
+      "s": 0.3,
+      "face": 1,
+      "big": true
+     },
+     {
+      "kind": "japan",
+      "x": 0.98,
+      "y": 0.63,
+      "s": 0.44,
+      "face": -1
+     },
+     {
+      "kind": "japan",
+      "x": 0.3,
+      "y": 0.49,
+      "s": 0.18,
+      "face": 1,
+      "lite": true,
+      "soft": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "1597",
+      "x": 0.5,
+      "y": 0.27,
+      "size": 130,
+      "color": "red",
+      "font": "serif",
+      "at": "y"
+     },
+     {
+      "text": "NAVY GONE",
+      "x": 0.5,
+      "y": 0.37,
+      "size": 88,
+      "color": "red",
+      "stamp": true,
+      "at": "n"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mn_deck",
+   "text": "Yi Sun-sin, its demoted admiral, got back what was left.",
+   "visual": "A dirt road through hills: a column of four Joseon foot soldiers in small felt hats walks right, spears up; the third, bearded, is Yi. Cards: 'ADMIRAL' already crossed out, red stamp 'SOLDIER' on 'demoted'; on 'got back' 'SOLDIER' is struck, Yi's hat flips into an officer's wide hat with a red tassel, he points ahead and a blue stamp 'ADMIRAL' lands.",
+   "title": {
+    "white": "Yi Sun-sin"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1152
+   },
+   "cues": {
+    "d": "demoted",
+    "g": "got"
+   },
+   "params": {
+    "mode": "march",
+    "ground": 0.6,
+    "figs": [
+     {
+      "x": -0.02,
+      "y": 0.6,
+      "s": 0.7,
+      "hat": "soldier",
+      "pose": "walk",
+      "face": "right",
+      "speed": 60,
+      "spear": true
+     },
+     {
+      "x": 0.22,
+      "y": 0.6,
+      "s": 0.7,
+      "hat": "soldier",
+      "pose": "walk",
+      "face": "right",
+      "speed": 60,
+      "spear": true
+     },
+     {
+      "x": 0.46,
+      "y": 0.6,
+      "s": 0.76,
+      "hat": "soldier",
+      "pose": "walk",
+      "face": "right",
+      "speed": 60,
+      "spear": true,
+      "beard": "short",
+      "emotion": "worried",
+      "hat_to": {
+       "at": "g",
+       "hat": "jeonrip"
+      },
+      "seq": [
+       {
+        "at": "g",
+        "pose": "point",
+        "dir": 20,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     },
+     {
+      "x": 0.72,
+      "y": 0.6,
+      "s": 0.7,
+      "hat": "soldier",
+      "pose": "walk",
+      "face": "right",
+      "speed": 60,
+      "spear": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "ADMIRAL",
+      "x": 0.55,
+      "y": 0.335,
+      "size": 84,
+      "color": "blue",
+      "stamp": true,
+      "at": "g",
+      "rot": -6,
+      "arrow": [
+       0.62,
+       0.44
+      ]
+     }
+    ],
+    "labels_out": {
+     "at": "g",
+     "list": [
+      {
+       "text": "ADMIRAL",
+       "x": 0.3,
+       "y": 0.2,
+       "size": 72,
+       "color": "ink",
+       "stamp": true,
+       "at": 0.05,
+       "strike": 0.25,
+       "rot": -4
+      },
+      {
+       "text": "SOLDIER",
+       "x": 0.68,
+       "y": 0.25,
+       "size": 72,
+       "color": "red",
+       "stamp": true,
+       "at": "d",
+       "strike": "g",
+       "rot": 5
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "mn_letter",
+   "text": "The king said: fight on land.",
+   "visual": "A low writing table under an oil lamp: a royal scroll with red rods unrolls, the words 'FIGHT ON LAND' write themselves, and on 'land' a big red square royal seal stamps down.",
+   "title": {
+    "white": "Royal order"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "f": "fight",
+    "l": "land"
+   },
+   "params": {
+    "mode": "order",
+    "lines": [
+     "FIGHT",
+     "ON LAND"
+    ],
+    "red": [
+     1
+    ],
+    "size": 150,
+    "at": "f",
+    "dur": 1.0,
+    "seal": "l",
+    "seal_text": "KING",
+    "seal_x": 0.75,
+    "seal_y": 0.76,
+    "seal_scale": 0.7,
+    "line0": 0.2,
+    "gap": 0.22,
+    "table": 0.6
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mn_letter",
+   "text": "Yi replied, \"I still have twelve ships.\" One more joined.",
+   "visual": "Close-up on the table: a hand holding a brush writes 'I STILL HAVE' and a red '12 SHIPS' on paper, then lifts the brush and parks it below; on 'One more joined' a red-ringed patch covers the '12' and a red '13' is written on it; ink stone, flickering lamp.",
+   "title": {
+    "white": "His reply"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "w": "still",
+    "j": "One"
+   },
+   "params": {
+    "mode": "reply",
+    "lines": [
+     "I STILL HAVE",
+     "12 SHIPS"
+    ],
+    "red": [
+     1
+    ],
+    "size": 112,
+    "at": "w",
+    "dur": 1.6,
+    "table": 0.6,
+    "line0": 0.24,
+    "gap": 0.3,
+    "fix": {
+     "at": "j",
+     "line": 1,
+     "word": "12",
+     "text": "13",
+     "over": true
+    }
+   },
+   "camera": {
+    "focus": [
+     540,
+     780
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mn_map",
+   "text": "His trick? A narrow strait where the tide roars.",
+   "visual": "Full-frame old chart: two coasts squeeze a channel into a narrow neck; tide streamlines rush through it and two whirlpools spin in the neck; a line of 13 blue ship marks blocks the top mouth, a mass of red marks pours in from the bottom; the fez host stands on the left coast pointing at the neck, red width marks and label '300 M WIDE', blue label 'TIDE'.",
+   "title": {
+    "white": "The trick"
+   },
+   "set": false,
+   "cues": {
+    "n": "narrow",
+    "t": "tide",
+    "r": "roars"
+   },
+   "params": {
+    "neck": [
+     0.6,
+     0.45
+    ],
+    "a": [
+     0.96,
+     0.8
+    ],
+    "b": [
+     0.3,
+     0.2
+    ],
+    "wide": 340,
+    "narrow": 80,
+    "red": 42,
+    "blue": 13,
+    "enter": 0,
+    "flow": 1.4,
+    "width_at": "n",
+    "whirl_at": "t",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.2,
+      "y": 0.62,
+      "scale": 0.82,
+      "pose": "point",
+      "dir": 25,
+      "face": "right",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "r",
+        "pose": "shock",
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "300 m wide",
+      "x": 0.66,
+      "y": 0.28,
+      "size": 76,
+      "color": "red",
+      "stamp": true,
+      "at": "n",
+      "rot": -4,
+      "arrow": [
+       0.63,
+       0.42
+      ]
+     },
+     {
+      "text": "TIDE",
+      "x": 0.42,
+      "y": 0.5,
+      "size": 84,
+      "color": "blue",
+      "font": "serif",
+      "at": "t",
+      "arrow": [
+       0.6,
+       0.47
+      ]
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mn_sea",
+   "text": "When it turned, the Japanese ships drifted back and smashed together.",
+   "visual": "Inside the strait between two dark cliffs: tide streaks first run left, on 'turned' they reverse; the Japanese warships are swept backwards, tilt and ram into the ships behind them; on 'smashed' a gold flash, flying planks and smoke; a whirlpool spins in front; red label 'TIDE TURNS'.",
+   "set": {
+    "name": "ocean",
+    "ground": 1150,
+    "horizon": 880
+   },
+   "cues": {
+    "turn": "turned",
+    "dr": "drifted",
+    "hit": "smashed"
+   },
+   "params": {
+    "water": 0.46,
+    "front": 0.68,
+    "cliffs": {
+     "left": 0.26,
+     "right": 0.8,
+     "top": 0.33,
+     "slope": 0.1
+    },
+    "tide": {
+     "y0": 0.5,
+     "y1": 0.66,
+     "n": 10,
+     "dir": -1,
+     "flip": "turn",
+     "speed": 240
+    },
+    "ships": [
+     {
+      "kind": "japan",
+      "x": 0.44,
+      "y": 0.6,
+      "s": 0.55,
+      "face": -1,
+      "drift": {
+       "at": "turn",
+       "dx": 0.15,
+       "rot": 9,
+       "dur": 1.6
+      }
+     },
+     {
+      "kind": "japan",
+      "x": 0.72,
+      "y": 0.56,
+      "s": 0.47,
+      "face": -1,
+      "big": true,
+      "drift": {
+       "at": "hit",
+       "dx": 0.03,
+       "rot": -12,
+       "dur": 1.0
+      }
+     },
+     {
+      "kind": "japan",
+      "x": 0.44,
+      "y": 0.515,
+      "s": 0.3,
+      "face": -1,
+      "drift": {
+       "at": "turn",
+       "dx": 0.2,
+       "rot": 6,
+       "dur": 2.0
+      }
+     },
+     {
+      "kind": "japan",
+      "x": 0.6,
+      "y": 0.495,
+      "s": 0.22,
+      "face": -1,
+      "lite": true,
+      "soft": true,
+      "drift": {
+       "at": "dr",
+       "dx": 0.1,
+       "rot": -6,
+       "dur": 1.6
+      }
+     }
+    ],
+    "crash": [
+     {
+      "x": 0.58,
+      "y": 0.49,
+      "at": "hit",
+      "size": 1.2
+     }
+    ],
+    "whirl": [
+     {
+      "x": 0.4,
+      "y": 0.645,
+      "r": 130,
+      "at": 0
+     }
+    ],
+    "labels": [
+     {
+      "text": "TIDE TURNS",
+      "x": 0.52,
+      "y": 0.3,
+      "size": 84,
+      "color": "red",
+      "stamp": true,
+      "at": "turn"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mn_sea",
+   "text": "About thirty were lost. Yi lost none.",
+   "visual": "Calm water after the battle: in the background five Japanese warships burn and sink one after another; in front, the line of 13 Joseon ships sits untouched, blue pennants flying; a red counter runs up to '30 SUNK', then a blue stamp 'YI: 0 LOST'.",
+   "source": "Yi's war diary",
+   "set": {
+    "name": "ocean",
+    "ground": 1150,
+    "horizon": 806
+   },
+   "cues": {
+    "c": "thirty",
+    "z": "none"
+   },
+   "params": {
+    "water": 0.42,
+    "front": 0.6,
+    "ships": [
+     {
+      "kind": "japan",
+      "x": 0.18,
+      "y": 0.455,
+      "s": 0.17,
+      "face": -1,
+      "burn": 0,
+      "sink": 0.1
+     },
+     {
+      "kind": "japan",
+      "x": 0.4,
+      "y": 0.45,
+      "s": 0.14,
+      "face": -1,
+      "burn": 0,
+      "sink": 0.5
+     },
+     {
+      "kind": "japan",
+      "x": 0.6,
+      "y": 0.46,
+      "s": 0.18,
+      "face": 1,
+      "burn": 0,
+      "sink": 0.9
+     },
+     {
+      "kind": "japan",
+      "x": 0.8,
+      "y": 0.45,
+      "s": 0.15,
+      "face": -1,
+      "burn": 0,
+      "sink": 1.3
+     },
+     {
+      "kind": "japan",
+      "x": 0.96,
+      "y": 0.455,
+      "s": 0.13,
+      "face": -1,
+      "burn": 0,
+      "sink": 1.7,
+      "lite": true
+     }
+    ],
+    "line": {
+     "n": 13,
+     "from": [
+      0.1,
+      0.55,
+      0.3
+     ],
+     "to": [
+      0.95,
+      0.5,
+      0.13
+     ],
+     "face": 1,
+     "flag0": "yi",
+     "pow": 0.9,
+     "vx": 8
+    },
+    "counter": {
+     "x": 0.5,
+     "y": 0.25,
+     "to": 30,
+     "at": "c",
+     "dur": 1.0,
+     "suffix": " SUNK",
+     "size": 150,
+     "color": "red"
+    },
+    "labels": [
+     {
+      "text": "YI: 0 LOST",
+      "x": 0.5,
+      "y": 0.345,
+      "size": 84,
+      "color": "blue",
+      "stamp": true,
+      "at": "z"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "mn_deck",
+   "text": "The sea fought for him.",
+   "visual": "On Yi's flagship: Admiral Yi (officer's wide hat with a red tassel, short beard) stands behind the battlement wall with gun ports, first scanning the sea, then pointing; a blue command pennant on its pole snaps in the wind; tide streaks race by and a whirlpool swallows two Japanese warships, which circle and go under.",
+   "set": {
+    "name": "ocean",
+    "ground": 1267,
+    "horizon": 900
+   },
+   "cues": {
+    "sea": "sea"
+   },
+   "params": {
+    "mode": "deck",
+    "water": 0.47,
+    "rail": 0.66,
+    "figs": [
+     {
+      "x": 0.32,
+      "y": 0.7,
+      "s": 1.15,
+      "hat": "jeonrip",
+      "beard": "short",
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "sea",
+        "pose": "point",
+        "dir": 5,
+        "face": "right"
+       }
+      ]
+     }
+    ],
+    "whirl": [
+     {
+      "x": 0.72,
+      "y": 0.545,
+      "r": 170,
+      "at": 0,
+      "spin": 1
+     }
+    ],
+    "ships": [
+     {
+      "kind": "japan",
+      "x": 0.94,
+      "y": 0.535,
+      "s": 0.24,
+      "face": -1,
+      "spin": {
+       "at": 0.0,
+       "x": 0.72,
+       "y": 0.545,
+       "dur": 2.2
+      }
+     },
+     {
+      "kind": "japan",
+      "x": 0.55,
+      "y": 0.5,
+      "s": 0.15,
+      "face": 1,
+      "lite": true,
+      "soft": true,
+      "spin": {
+       "at": 0.4,
+       "x": 0.72,
+       "y": 0.545,
+       "dur": 2.4
+      }
+     }
+    ],
+    "streaks": true,
+    "banner": {
+     "x": 0.88,
+     "h": 0.3,
+     "w": 165,
+     "fh": 105
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mn_sea",
+   "text": "Subscribe for a true story every day.",
+   "visual": "Evening on a rocky headland above the strait: the fez host waves at the viewer, then points down at the line of 13 Joseon ships sailing home through the water below.",
+   "set": {
+    "name": "ocean",
+    "ground": 1150,
+    "horizon": 900
+   },
+   "cues": {
+    "st": "story"
+   },
+   "params": {
+    "water": 0.47,
+    "front": 0.7,
+    "head": {
+     "side": "left",
+     "top": 0.6,
+     "edge": 0.5
+    },
+    "line": {
+     "n": 13,
+     "from": [
+      0.66,
+      0.685,
+      0.5
+     ],
+     "to": [
+      0.97,
+      0.52,
+      0.12
+     ],
+     "face": 1,
+     "flag0": "yi",
+     "vx": 22
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.22,
+      "y": 0.6,
+      "scale": 1.1,
+      "pose": "wave",
+      "face": "right",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "st",
+        "pose": "point",
+        "dir": -25,
+        "face": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

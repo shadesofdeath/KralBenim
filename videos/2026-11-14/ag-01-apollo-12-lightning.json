@@ -1,0 +1,545 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-apollo-12-lightning",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-dusk",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Hit by",
+   "lightning"
+  ],
+  "highlight": [
+   "lightning"
+  ],
+  "scene": 0,
+  "t": 2.7,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 800,
+   "y": 1900,
+   "scale": 1.3,
+   "face": -1
+  }
+ },
+ "sources": [
+  {
+   "title": "NASA Science — Lightning Strikes Twice (Apollo 12: struck at 36.5 and 52 seconds; John Aaron and SCE to AUX)",
+   "url": "https://science.nasa.gov/resource/lightning-strikes-twice/"
+  },
+  {
+   "title": "NASA — Repeat Performance: Apollo 12 Achieves Second Moon Landing (launch 14 Nov 1969, landing 19 Nov 1969)",
+   "url": "https://www.nasa.gov/humans-in-space/repeat-performance-apollo-12-achieves-second-moon-landing"
+  },
+  {
+   "title": "AmericaSpace — 'SCE to Aux': Remembering Apollo 12's Hair-Raising Launch (fuel cells, warning panel, Alan Bean flips the switch)",
+   "url": "https://www.americaspace.com/2020/11/14/sce-to-aux-remembering-apollo-12s-hair-raising-launch-otd-in-1969/"
+  },
+  {
+   "title": "Space.com — 50 Years Ago: Apollo 12 Was Struck By Lightning Right After Launch, Twice",
+   "url": "https://www.space.com/apollo-12-lightning-strike-twice-launch-video.html"
+  }
+ ],
+ "youtube": {
+  "title": "Apollo 12: Hit by Lightning Twice, Saved by One Switch",
+  "description": "Apollo 12 was hit by lightning twice in the first minute of its flight to the Moon. So how did one tiny switch save the mission?\n\nOn November 14, 1969, the Saturn V rocket climbed into a rain cloud and was struck 36.5 and 52 seconds after liftoff. Alarms went off, the warning panel lit up and the data in Mission Control turned to nonsense. Flight controller John Aaron remembered the pattern from a training run and called: \"Try SCE to Aux.\" Alan Bean flipped the switch, the data came back, and five days later Pete Conrad and Alan Bean landed on the Moon.\n\nSubscribe to Stickstory for a true story like this every day. Would you have aborted? Tell me in the comments!\n\n#shorts #apollo12 #stickstory",
+  "tags": [
+   "apollo 12",
+   "apollo 12 lightning",
+   "apollo 12 lightning strike",
+   "apollo 12 launch",
+   "sce to aux",
+   "john aaron",
+   "alan bean",
+   "pete conrad",
+   "saturn v",
+   "saturn v lightning",
+   "nasa history",
+   "moon landing",
+   "space history",
+   "mission control",
+   "survival stories",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-14T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ap12_climb",
+   "text": "Lightning hit this Moon rocket. Twice.",
+   "visual": "A rain storm over the Cape: the white Saturn V climbs on its flame into low dark clouds, a thick smoke column running down to the red launch tower at the bottom left; on 'hit' a forked bolt jumps from the clouds to the rocket's nose and runs down the smoke to the pad, on 'Twice' a second bolt hits its side; the clouds flash, the rocket shakes.",
+   "title": {
+    "white": "Apollo 12"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1600,
+    "horizon": 1560
+   },
+   "cues": {
+    "b1": "hit",
+    "b2": "Twice"
+   },
+   "params": {
+    "rocket": {
+     "x": 0.6,
+     "y": 0.6,
+     "s": 0.74,
+     "rot": 7
+    },
+    "pad": [
+     0.2,
+     0.86
+    ],
+    "boltW": 1.4,
+    "bolts": [
+     {
+      "at": "b1",
+      "from": [
+       0.04,
+       0.4
+      ],
+      "hit": "top"
+     },
+     {
+      "at": "b2",
+      "from": [
+       0.97,
+       0.34
+      ],
+      "hit": "mid"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ap12_clock",
+   "text": "On November 14, 1969, Apollo 12 was hit at 36 seconds,",
+   "visual": "The press site lawn in the rain: a long countdown clock board counts up to +00:00:36 and blinks red on '36'; a crowd of umbrellas and upturned heads fills the bottom; far up right the rocket climbs into the clouds on its smoke trail; the label 'NOV 14, 1969' pops on 'November'.",
+   "title": {
+    "white": "Launch"
+   },
+   "source": "NASA",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "d": "November",
+    "n1": "36"
+   },
+   "params": {
+    "from": 30,
+    "marks": [
+     {
+      "at": "n1",
+      "v": 36
+     }
+    ],
+    "rocket": {
+     "x": 0.76,
+     "y": 0.27,
+     "s": 0.2
+    },
+    "labels": [
+     {
+      "text": "NOV 14, 1969",
+      "x": 0.5,
+      "y": 0.38,
+      "size": 84,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "at": "d",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "right"
+   }
+  },
+  {
+   "type": "ap12_clock",
+   "text": "and again at 52.",
+   "visual": "Same lawn, the clock runs on from +00:00:36 to +00:00:52 and blinks red; on 'again' a second bolt strikes the small rocket high in the clouds and runs down its smoke trail; the crowd under the umbrellas.",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "s": "again",
+    "n2": "52"
+   },
+   "params": {
+    "from": 36,
+    "marks": [
+     {
+      "at": "n2",
+      "v": 52,
+      "lead": 0.35
+     }
+    ],
+    "strike": "s",
+    "rocket": {
+     "x": 0.66,
+     "y": 0.33,
+     "s": 0.2
+    },
+    "labels": [
+     {
+      "text": "AGAIN!",
+      "x": 0.3,
+      "y": 0.38,
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "at": "s",
+      "rot": -5
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ap12_cabin",
+   "text": "Alarms blared, the cabin lit up,",
+   "visual": "Inside the command module, over the backs of three white helmets: the grey main panel shakes, the red MASTER ALARM button flashes with sound marks, on 'lit' the caution-and-warning lights come on in a cascade of red and gold, the attitude ball tumbles, gauge needles swing; rain streaks the two small windows.",
+   "title": {
+    "white": "Cabin"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "lit": "lit"
+   },
+   "params": {
+    "mode": "alarm"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ap12_mc",
+   "text": "and Mission Control's data turned to garbage.",
+   "visual": "Mission Control: a big wall screen with the flight track, a console with two screens of numbers between two controllers in white shirts and headsets; on 'garbage' the numbers scramble into symbols and static, the lamps blink red, the controller on the right throws up his hands; red label 'GARBAGE'.",
+   "title": {
+    "white": "Houston"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "garble": "garbage"
+   },
+   "params": {
+    "mode": "room",
+    "garble": "garble",
+    "labels": [
+     {
+      "text": "GARBAGE",
+      "x": 0.62,
+      "y": 0.17,
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "at": "garble",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ap12_cabin",
+   "text": "So do you abort?",
+   "visual": "Back in the cabin, all warning lights blinking: the fez host, worried, has his hand on the black T-grip of the abort handle (shaft with a red 'ABORT' placard); on 'abort' the handle glows red and he jumps back in shock; crew helmets in front; red label 'ABORT?'.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "abort": "abort"
+   },
+   "params": {
+    "mode": "abort",
+    "handle": [
+     0.32,
+     0.45
+    ],
+    "kasif": {
+     "x": 0.6,
+     "y": 0.72,
+     "scale": 1.15,
+     "pose": "point",
+     "dir": 22,
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "abort",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "ABORT?",
+      "x": 0.7,
+      "y": 0.335,
+      "size": 104,
+      "color": "red",
+      "font": "serif",
+      "at": "abort",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ap12_mc",
+   "text": "One engineer, John Aaron, had seen this mess in a drill.",
+   "visual": "Closer at the console: John Aaron in a white shirt and headset leans toward his garbled screens; on 'drill' a thought bubble opens above showing a small screen with the same garbage and the words 'IN A DRILL'; label 'JOHN AARON'.",
+   "title": {
+    "white": "EECOM"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "name": "Aaron",
+    "think": "drill"
+   },
+   "params": {
+    "mode": "aaron",
+    "garble": 0,
+    "other": false,
+    "bubble": {
+     "x": 0.66,
+     "y": 0.22,
+     "w": 560,
+     "h": 330,
+     "at": "think",
+     "text": "IN A DRILL"
+    },
+    "labels": [
+     {
+      "text": "JOHN AARON",
+      "x": 0.28,
+      "y": 0.255,
+      "size": 62,
+      "color": "ink",
+      "card": true,
+      "at": "name",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ap12_mc",
+   "text": "“Try SCE to Aux.”",
+   "visual": "Aaron grips his headset microphone and speaks; a big speech balloon from his mouth says 'SCE TO AUX'; his screens are still garbled.",
+   "source": "NASA",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "say": "Try"
+   },
+   "params": {
+    "mode": "call",
+    "garble": 0,
+    "other": false,
+    "bubble": {
+     "x": 0.62,
+     "y": 0.22,
+     "w": 700,
+     "h": 250,
+     "at": 0.05,
+     "text": "SCE TO AUX",
+     "size": 104
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ap12_switch",
+   "text": "Alan Bean flipped one switch, and the data came back.",
+   "visual": "Extreme close-up of a cabin panel: a toggle switch under a black 'SCE' strip, positions NORM and AUX; a white-gloved hand reaches in and on 'flipped' pushes the lever down to AUX, which turns red; from 'data' all five red status lamps turn green one by one; big blue label 'DATA BACK'.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "flip": "flipped",
+    "back": "data"
+   },
+   "params": {
+    "view": {
+     "focus": [
+      540,
+      760
+     ],
+     "zoom": 1.7
+    },
+    "label": "SCE",
+    "labels": [
+     {
+      "text": "DATA BACK",
+      "x": 0.5,
+      "y": 0.155,
+      "size": 120,
+      "color": "blue",
+      "font": "serif",
+      "at": "back",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     760
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ap12_moon",
+   "text": "Five days later, they still landed on the Moon.",
+   "visual": "The grey lunar surface under a black starry sky with a blue Earth: the gold-foil lunar module comes down on its engine plume, kicks up a spray of dust and touches down on 'landed'; label '5 DAYS LATER'.",
+   "title": {
+    "white": "The Moon"
+   },
+   "set": {
+    "name": "night",
+    "ground": 1152
+   },
+   "cues": {
+    "five": "Five",
+    "land": "landed"
+   },
+   "params": {
+    "mode": "land",
+    "lm": {
+     "x": 0.56,
+     "s": 1.25
+    },
+    "earth": {
+     "x": 0.763,
+     "y": 0.114,
+     "r": 84
+    },
+    "labels": [
+     {
+      "text": "5 DAYS LATER",
+      "x": 0.33,
+      "y": 0.3,
+      "size": 80,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "at": "five",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "up"
+   }
+  },
+  {
+   "type": "ap12_moon",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "On the Moon beside the landed lunar module and a flag, footprints lead to the fez host, who waves and then points at the viewer with a big smile.",
+   "set": {
+    "name": "night",
+    "ground": 1152,
+    "horizon": 940
+   },
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "mode": "end",
+    "lm": {
+     "x": 0.5,
+     "s": 1.1
+    },
+    "earth": {
+     "x": 0.822,
+     "y": 0.104,
+     "r": 84
+    },
+    "kasif": {
+     "x": 0.24,
+     "y": 0.62,
+     "scale": 1.25,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}
