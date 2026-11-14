@@ -1,0 +1,17 @@
+{
+ "id": "mZs41Zkkqgc",
+ "thumbnail": false,
+ "url": "https://youtu.be/mZs41Zkkqgc",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-15T00:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Battle of Myeongnyang: How Did 13 Ships Beat 133?",
+ "script": "videos/2026-11-14/ag-02-myeongnyang-13-ships.json"
+}

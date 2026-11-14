@@ -1,0 +1,17 @@
+{
+ "id": "TLpN_NUD8tg",
+ "thumbnail": false,
+ "url": "https://youtu.be/TLpN_NUD8tg",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-14T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Apollo 12: Hit by Lightning Twice, Saved by One Switch",
+ "script": "videos/2026-11-14/ag-01-apollo-12-lightning.json"
+}
