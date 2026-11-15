@@ -1,0 +1,561 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-kentucky-meat-shower",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-sage",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "It rained",
+   "meat"
+  ],
+  "highlight": [
+   "meat"
+  ],
+  "scene": 0,
+  "t": 1.27,
+  "focus": [
+   598,
+   931
+  ],
+  "zoom": 1.35,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 760,
+   "y": 1450,
+   "scale": 1.2,
+   "face": -1
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — Kentucky meat shower (3 March 1876, Bath County; Mrs. Crouch; lung tissue, cartilage, muscle; vulture theory)",
+   "url": "https://en.wikipedia.org/wiki/Kentucky_meat_shower"
+  },
+  {
+   "title": "Mental Floss — That Time It Rained Flesh in Kentucky (clear sky, making soap, 'either mutton or venison', Kastenbine)",
+   "url": "https://www.mentalfloss.com/history/time-it-rained-flesh-kentucky"
+  },
+  {
+   "title": "Today I Found Out — The Mystery of the Kentucky Meat Shower (pieces on the fences, histologists, vultures vomiting)",
+   "url": "https://www.todayifoundout.com/index.php/2015/07/kentucky-meat-shower/"
+  }
+ ],
+ "youtube": {
+  "title": "Kentucky Meat Shower: The Day Raw Meat Fell From a Clear Sky",
+  "description": "The Kentucky Meat Shower: in 1876, flakes of raw red meat fell from a perfectly clear sky onto a farm. So where did it come from?\n\nOn March 3, 1876, near Olympia Springs in Bath County, Kentucky, Mrs. Crouch was making soap in her yard when pieces of meat began to fall all around her. Two men tasted it and guessed mutton or venison. Under the microscope, doctors found lung tissue, cartilage and muscle. The best explanation is even stranger: a flock of vultures throwing up their meal high overhead.\n\nSubscribe to Stickstory for one strange true story a day. Would you have tasted it? Tell me in the comments!\n\n#shorts #kentuckymeatshower #stickstory",
+  "tags": [
+   "kentucky meat shower",
+   "meat shower",
+   "meat rain kentucky",
+   "it rained meat",
+   "kentucky meat shower 1876",
+   "raining meat",
+   "vulture vomit",
+   "strange history",
+   "weird history",
+   "unexplained events",
+   "bath county kentucky",
+   "olympia springs",
+   "history mysteries",
+   "true story",
+   "1876",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-15T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "km_yard",
+   "text": "It rained meat in Kentucky.",
+   "visual": "An 1876 farm yard under a clear sky: log cabin with a smoking stone chimney on the left, a split-rail fence; red flakes of raw meat flutter down everywhere and lie on the ground and the fence rail; one big raw steak-shaped chunk with a white fat rim tumbles slowly down through the middle of the frame.",
+   "title": {
+    "white": "Kentucky"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "hit": "meat"
+   },
+   "params": {
+    "mode": "rain",
+    "lady": false,
+    "kettle": false,
+    "chunk": {
+     "at": 2.4,
+     "fall": 2.6,
+     "r": 92,
+     "x": 0.42,
+     "y": 0.8
+    },
+    "flakes": {
+     "n": 100,
+     "at": -3,
+     "span": 6.5,
+     "size": 1.45,
+     "ymin": 0.62,
+     "ymax": 0.98,
+     "rail": 0.15
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "km_yard",
+   "text": "On March 3, 1876, Mrs. Crouch was making soap in her yard,",
+   "visual": "The same yard before it began: Mrs. Crouch in a blue dress, white apron and hair bun stirs the soap kettle with a long wooden paddle, the fire crackles, steam rises, the sun shines; a red stamp 'MARCH 3, 1876' pops on 'March'.",
+   "title": {
+    "white": "Bath County"
+   },
+   "source": "New York Times, 1876",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "d": "March"
+   },
+   "params": {
+    "mode": "soap",
+    "flakes": false,
+    "lady": {
+     "x": 0.4,
+     "s": 0.95,
+     "face": "right"
+    },
+    "kettle": {
+     "x": 0.68,
+     "s": 1
+    },
+    "labels": [
+     {
+      "text": "MARCH 3, 1876",
+      "x": 0.5,
+      "y": 0.24,
+      "size": 84,
+      "stamp": true,
+      "color": "red",
+      "at": "d"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "km_sky",
+   "text": "under a clear sky. Then red flakes of meat fell all around her!",
+   "visual": "Mrs. Crouch waist-up behind the near fence of her yard, the steaming kettle and back fence behind her, a clear sky with the sun above (top third); on 'Then' big red flakes of meat flutter down toward the viewer and land on her shoulders, her apron, the fence rails and the ground; on 'fell' she jumps back in shock and a red 'MEAT!' pops.",
+   "set": {
+    "name": "field",
+    "ground": 1000,
+    "horizon": 640
+   },
+   "cues": {
+    "f0": "Then",
+    "hit": "fell"
+   },
+   "params": {
+    "mode": "fall",
+    "sun": [
+     0.78,
+     0.13,
+     80
+    ],
+    "lady": {
+     "x": 0.5,
+     "y": 0.82,
+     "s": 1.8
+    },
+    "front": 0.78,
+    "yard": {
+     "y": 0.52,
+     "kettle": 0.86,
+     "ks": 0.6,
+     "n": 26
+    },
+    "flakes": {
+     "n": 64,
+     "at": "f0",
+     "span": 2.6,
+     "ymin": 0.55,
+     "ymax": 0.98,
+     "toward": true,
+     "stay": true,
+     "size": 1.15,
+     "targets": [
+      [
+       0.43,
+       0.545
+      ],
+      [
+       0.58,
+       0.55
+      ],
+      [
+       0.5,
+       0.66
+      ],
+      [
+       0.45,
+       0.68
+      ],
+      [
+       0.56,
+       0.64
+      ]
+     ]
+    },
+    "labels": [
+     {
+      "text": "MEAT!",
+      "x": 0.74,
+      "y": 0.3,
+      "size": 110,
+      "font": "serif",
+      "color": "red",
+      "at": "hit",
+      "rot": -6
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "km_yard",
+   "text": "Two men even tasted it and guessed mutton or venison.",
+   "visual": "In the meat-strewn yard two bearded farmers: the left one holds up a bitten red flake in front of his face and chews, the right one frowns, then shrugs; thought bubbles pop up, a sheep on 'mutton', a deer on 'venison', with the words 'MUTTON?' and 'VENISON?'.",
+   "title": {
+    "white": "Taste test"
+   },
+   "source": "Scientific American, 1876",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "mut": "mutton",
+    "ven": "venison"
+   },
+   "params": {
+    "mode": "taste",
+    "lady": false,
+    "men": {
+     "x": 0.3,
+     "gap": 0.42,
+     "s": 1.05,
+     "seq2": [
+      {
+       "at": "ven",
+       "pose": "shrug",
+       "face": "left"
+      }
+     ]
+    },
+    "flakes": {
+     "n": 40,
+     "at": -6,
+     "span": 2
+    },
+    "bubbles": [
+     {
+      "at": "mut",
+      "kind": "sheep",
+      "x": 0.3,
+      "y": 0.235,
+      "r": 140,
+      "from": 0
+     },
+     {
+      "at": "ven",
+      "kind": "deer",
+      "x": 0.72,
+      "y": 0.235,
+      "r": 140,
+      "from": 1
+     }
+    ],
+    "labels": [
+     {
+      "text": "MUTTON?",
+      "x": 0.3,
+      "y": 0.335,
+      "size": 64,
+      "color": "ink",
+      "at": "mut"
+     },
+     {
+      "text": "VENISON?",
+      "x": 0.72,
+      "y": 0.335,
+      "size": 64,
+      "color": "ink",
+      "at": "ven"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "km_scope",
+   "text": "But under the microscope,",
+   "visual": "An 1876 laboratory: shelves of jars, a sunny window, a wooden table with a brass microscope and an oil lamp; a white-haired scientist bends down to the eyepiece; in front an open notebook and a glass jar of red flakes labelled 'SAMPLE'.",
+   "title": {
+    "white": "The lab"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "m": "microscope"
+   },
+   "params": {
+    "jar": "SAMPLE",
+    "found": false
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "km_lens",
+   "text": "scientists found lung tissue and cartilage.",
+   "visual": "Through the eyepiece, a bright round field in a brass ring: pink honeycomb air sacs of lung on the upper left, blue-grey cartilage cells on the lower right, drifting slowly; on 'lung' the air sacs ring red and a red stamp 'LUNG' pops, on 'cartilage' the cells ring blue and a blue stamp 'CARTILAGE' pops. Below the eyepiece: the brass stage with the glass slide (red smear) under two clips, and a notebook with sketched cells and a pen.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "lung": "lung",
+    "cart": "cartilage"
+   },
+   "params": {
+    "view": {
+     "focus": [
+      540,
+      760
+     ],
+     "zoom": 1.7
+    },
+    "labels": [
+     {
+      "text": "LUNG",
+      "x": 0.3,
+      "y": 0.27,
+      "size": 84,
+      "stamp": true,
+      "color": "red",
+      "at": "lung"
+     },
+     {
+      "text": "CARTILAGE",
+      "x": 0.62,
+      "y": 0.5,
+      "size": 76,
+      "stamp": true,
+      "color": "blue",
+      "at": "cart"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     760
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "km_sky",
+   "text": "So where did it come from? The best guess is even grosser:",
+   "visual": "Over the meat-strewn yard (back fence, steaming kettle, red flakes lying everywhere) six turkey vultures with red heads and fingered wingtips circle low in the clear sky; the fez host stands in the yard, scans them through his binoculars, then points up on 'guess'; a red stamp 'BEST GUESS' pops.",
+   "set": {
+    "name": "hills",
+    "ground": 1100,
+    "horizon": 1020
+   },
+   "cues": {
+    "guess": "guess"
+   },
+   "params": {
+    "mode": "circle",
+    "birds": 6,
+    "ring": {
+     "x": 0.55,
+     "y": 0.31,
+     "rx": 0.33,
+     "ry": 0.07,
+     "s": 0.42,
+     "span": 1.3,
+     "spread": 1.6
+    },
+    "kasif": {
+     "x": 0.3,
+     "y": 0.68,
+     "scale": 0.95,
+     "pose": "look",
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "guess",
+       "pose": "point",
+       "dir": 70,
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "BEST GUESS",
+      "x": 0.66,
+      "y": 0.52,
+      "size": 84,
+      "stamp": true,
+      "color": "red",
+      "at": "guess"
+     }
+    ],
+    "yard": {
+     "y": 0.57,
+     "kettle": 0.84,
+     "ks": 0.7,
+     "n": 46
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "up"
+   }
+  },
+  {
+   "type": "km_sky",
+   "text": "a flock of vultures, throwing up their lunch to fly away faster.",
+   "visual": "Close-up under one big turkey vulture gliding over the yard in the middle of the frame, the rest of the flock circling higher; on 'throwing' it jerks its red head and one continuous stream of red meat chunks pours from its beak down past the fence into the meat-strewn yard; on 'fly' it beats its wings hard and lifts a little, lighter.",
+   "set": {
+    "name": "hills",
+    "ground": 900,
+    "horizon": 830
+   },
+   "cues": {
+    "throw": "throwing",
+    "fly": "fly"
+   },
+   "params": {
+    "mode": "vomit",
+    "birds": 6,
+    "ring": {
+     "x": 0.5,
+     "y": 0.2,
+     "rx": 0.42,
+     "ry": 0.06,
+     "s": 0.26,
+     "span": 1.3,
+     "spread": 1.6
+    },
+    "big": {
+     "x": 0.5,
+     "y": 0.385,
+     "s": 0.8,
+     "drift": 12,
+     "climb": 40,
+     "climbX": 0,
+     "stream": 34,
+     "gap": 0.06,
+     "xmin": 0.38,
+     "xmax": 0.62
+    },
+    "yard": {
+     "y": 0.47,
+     "kettle": 0.8,
+     "ks": 0.6,
+     "n": 50
+    }
+   },
+   "camera": {
+    "focus": [
+     540,
+     700
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "km_yard",
+   "text": "Subscribe for one strange true story a day.",
+   "visual": "Back in the yard, everything is covered in red flakes and the last few still drift down; the fez host waves at the viewer, then points at them with a big smile.",
+   "set": {
+    "name": "field",
+    "ground": 1152
+   },
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "mode": "end",
+    "lady": false,
+    "kettle": {
+     "x": 0.74,
+     "s": 0.95
+    },
+    "flakes": {
+     "n": 40,
+     "at": -5,
+     "span": 5.6
+    },
+    "kasif": {
+     "x": 0.42,
+     "y": 0.6,
+     "scale": 1.1,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

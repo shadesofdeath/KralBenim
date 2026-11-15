@@ -1,0 +1,697 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-roman-dodecahedron",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-newsprint",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "What was",
+   "this for?"
+  ],
+  "highlight": [
+   "this"
+  ],
+  "scene": 0,
+  "t": 1.3,
+  "focus": [
+   571,
+   943
+  ],
+  "zoom": 1.25,
+  "kasif": {
+   "pose": "shock",
+   "x": 725,
+   "y": 1890,
+   "scale": 1.7,
+   "face": -1,
+   "emotion": "surprised"
+  }
+ },
+ "sources": [
+  {
+   "title": "Big Think — Roman dodecahedrons: the mystery object nobody can explain (about 116 found, mostly Gaul and the Rhine, 2nd–3rd century AD, holes 6 to 40 mm, no Roman text)",
+   "url": "https://bigthink.com/strange-maps/roman-dodecahedrons"
+  },
+  {
+   "title": "Atlas Obscura — What were Roman dodecahedrons for? (northern England to Hungary, opposite holes of different sizes, list of theories)",
+   "url": "https://atlasobscura.com/articles/dodecahedrons-roman-empire"
+  },
+  {
+   "title": "The Conversation — Beautifully crafted Roman dodecahedron discovered in Lincoln, but what were they for? (about 130 found, none in Italy, no mention in Roman texts)",
+   "url": "https://theconversation.com/beautifully-crafted-roman-dodecahedron-discovered-in-lincoln-but-what-were-they-for-229131"
+  },
+  {
+   "title": "ScienceAlert — Rare Roman dodecahedron found in England baffles archaeologists (Norton Disney, June 2023)",
+   "url": "https://www.sciencealert.com/rare-roman-dodecahedron-found-in-england-baffles-archaeologists"
+  }
+ ],
+ "youtube": {
+  "title": "Roman Dodecahedron: Nobody Knows What This Was For",
+  "description": "The Roman dodecahedron is a small bronze object with twelve faces, a hole in every face and a knob on every corner, and nobody knows what it was for.\n\nOver a hundred of them, about 1,800 years old, have been dug up in Britain, France, Germany and Switzerland, but not one in Italy. The Romans wrote about almost everything, yet no Roman text or picture ever mentions these objects. Knitting tool for gloves, a calendar for sowing grain, a candle holder: every theory is still unproven, and new ones keep turning up, like the Norton Disney find in England in 2023.\n\nSubscribe to Stickstory for a true mystery like this every day. What do you think it was for? Tell me in the comments!\n\n#shorts #romandodecahedron #stickstory",
+  "tags": [
+   "roman dodecahedron",
+   "roman dodecahedrons",
+   "roman dodecahedron mystery",
+   "what is the roman dodecahedron",
+   "dodecahedron",
+   "ancient rome",
+   "roman empire",
+   "ancient mysteries",
+   "unsolved mysteries",
+   "archaeology",
+   "mystery objects",
+   "norton disney",
+   "roman britain",
+   "history mysteries",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-15T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "rd_object",
+   "text": "No one knows what this was for.",
+   "visual": "An archaeologist's wooden table under a hanging green lamp: a big bronze dodecahedron with twelve round holes and knobs on every corner slowly turns on a red velvet cushion in the light cone; the fez host leans in from the right, shocked on 'knows' (in the hook frame he stands big in front of the table).",
+   "title": {
+    "white": "Ancient Rome"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1114
+   },
+   "cues": {
+    "shock": "knows"
+   },
+   "params": {
+    "obj": {
+     "x": 0.44,
+     "r": 280
+    },
+    "table": 0.58,
+    "spin": 0.55,
+    "hit": "shock",
+    "kasif": {
+     "x": 1.35,
+     "y": 0.756,
+     "scale": 1.5,
+     "pose": "point",
+     "dir": -10,
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "shock",
+       "pose": "shock",
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [],
+    "shelf": false
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "rd_map",
+   "text": "Over a hundred of these bronze balls surfaced in Rome's northern provinces.",
+   "visual": "A full-frame old map of western Europe with hatched sea, the Alps, the Rhine and the Danube, Rome as a star: from 'hundred' over a hundred red find dots pop up one after another across Britain, Gaul, the Rhine and the Danube, each with a ripple; card 'OVER 100' and the names BRITAIN, GAUL, GERMANIA appear.",
+   "title": {
+    "white": "The finds"
+   },
+   "source": "Big Think",
+   "set": false,
+   "cues": {
+    "d": "hundred",
+    "n": "hundred",
+    "b": "bronze",
+    "f": "northern",
+    "g": "provinces"
+   },
+   "params": {
+    "dots": "d",
+    "dur": 2.6,
+    "labels": [
+     {
+      "text": "OVER 100",
+      "x": 0.27,
+      "y": 0.575,
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "at": "n",
+      "rot": -4
+     },
+     {
+      "text": "BRITAIN",
+      "x": 0.18,
+      "y": 0.24,
+      "size": 58,
+      "color": "ink",
+      "at": "b",
+      "rot": -6
+     },
+     {
+      "text": "GAUL",
+      "x": 0.26,
+      "y": 0.43,
+      "size": 58,
+      "color": "ink",
+      "at": "f",
+      "rot": -4
+     },
+     {
+      "text": "GERMANIA",
+      "x": 0.66,
+      "y": 0.285,
+      "size": 58,
+      "color": "ink",
+      "at": "g",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "rd_map",
+   "text": "Not one in Italy.",
+   "visual": "Close-up on the same map: all the red dots stop at the Alps; on 'Italy' the whole Italian peninsula fills red and its border pulses; a big red '0' pops in the Adriatic and the hand label 'ITALY'; Rome's star sits in an empty land.",
+   "set": false,
+   "cues": {
+    "it": "Italy"
+   },
+   "params": {
+    "dots": "all",
+    "italy": "it",
+    "labels": [
+     {
+      "text": "0",
+      "x": 0.82,
+      "y": 0.47,
+      "size": 190,
+      "color": "red",
+      "font": "serif",
+      "at": "it",
+      "rot": -4
+     },
+     {
+      "text": "ITALY",
+      "x": 0.55,
+      "y": 0.57,
+      "size": 60,
+      "color": "red",
+      "at": "it",
+      "rot": 52,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     700,
+     900
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "rd_object",
+   "text": "Every face has a hole,",
+   "visual": "Close-up of the bronze dodecahedron on its cushion, turning: on 'face' its pentagon faces light up gold one by one, label '12 FACES'.",
+   "set": {
+    "name": "interior",
+    "ground": 1114
+   },
+   "cues": {
+    "f": "face"
+   },
+   "params": {
+    "obj": {
+     "x": 0.45,
+     "r": 270
+    },
+    "table": 0.58,
+    "spin": 0.4,
+    "faces": "f",
+    "shelf": false,
+    "labels": [
+     {
+      "text": "12 FACES",
+      "x": 0.45,
+      "y": 0.33,
+      "size": 66,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "at": "f",
+      "rot": -3
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     486,
+     780
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "rd_object",
+   "text": "and opposite holes don't match.",
+   "visual": "Even closer on the turning dodecahedron: on 'match' every round hole gets a pulsing gold rim, small ones and big ones side by side; label 'NO MATCH'.",
+   "set": {
+    "name": "interior",
+    "ground": 1114
+   },
+   "cues": {
+    "h": "match"
+   },
+   "params": {
+    "obj": {
+     "x": 0.45,
+     "r": 270
+    },
+    "table": 0.58,
+    "spin": 0.3,
+    "tilt": 0.7,
+    "shelf": false,
+    "lamp": false,
+    "labels": [
+     {
+      "text": "NO MATCH",
+      "x": 0.5,
+      "y": 0.36,
+      "size": 54,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "at": "h",
+      "rot": 4
+     }
+    ],
+    "holes": "h"
+   },
+   "camera": {
+    "focus": [
+     520,
+     800
+    ],
+    "zoom": 2.0,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "rd_scroll",
+   "text": "Rome wrote about everything, yet you won't find a word.",
+   "visual": "A Roman library: a wide wooden shelf of big pigeonholes stacked with side-on scroll rolls and red and blue tags; a hatless scribe with a laurel wreath writes on a scroll on a stand, the lines growing; on 'everything' the rolls flash gold in a wave; on 'word' the dodecahedron drops onto the desk beside a blank rolled scroll and the scribe shrugs; red label 'NOT ONE WORD' on the plain wall above.",
+   "title": {
+    "white": "Rome"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "e": "everything",
+    "o": "word"
+   },
+   "params": {
+    "every": "e",
+    "objAt": "o",
+    "desk": 0.6,
+    "obj": {
+     "x": 0.72,
+     "r": 190
+    },
+    "scribe": {
+     "x": 0.47,
+     "y": 0.72,
+     "scale": 1.3,
+     "pose": "point",
+     "dir": -30,
+     "face": "left",
+     "accessory": "laurel",
+     "seq": [
+      {
+       "at": "o",
+       "pose": "shrug",
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "NOT ONE WORD",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 100,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "at": "o",
+      "rot": -4
+     }
+    ],
+    "shelfTop": 0.31,
+    "stand": [
+     0.04,
+     0.34
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "rd_theory",
+   "text": "Gloves? A calendar?",
+   "visual": "A street of a Roman frontier town: hatless townsfolk each holding a dodecahedron pop in one by one: the first has a knitted wool finger hanging from it with red yarn to a ball on the ground ('GLOVES?'), the second holds it up to a low sun beside a wheat sheaf, a dashed sunbeam running through it ('CALENDAR?').",
+   "set": {
+    "name": "field",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "a": "Gloves",
+    "b": "calendar"
+   },
+   "params": {
+    "ground": 0.6,
+    "bubbleY": 0.3,
+    "figs": [
+     {
+      "kind": "glove",
+      "x": 0.31,
+      "at": "a",
+      "face": "left",
+      "bx": 0.23,
+      "by": 0.29,
+      "bw": 229
+     },
+     {
+      "kind": "calendar",
+      "x": 0.53,
+      "at": "b",
+      "face": "right",
+      "accessory": "laurel",
+      "bx": 0.49,
+      "by": 0.205,
+      "bw": 283
+     }
+    ],
+    "labels": [
+     {
+      "text": "GLOVES?",
+      "x": 0.23,
+      "y": 0.29,
+      "size": 72,
+      "color": "ink",
+      "card": true,
+      "at": "a",
+      "rot": -4,
+      "font": "serif"
+     },
+     {
+      "text": "CALENDAR?",
+      "x": 0.49,
+      "y": 0.205,
+      "size": 72,
+      "color": "ink",
+      "card": true,
+      "at": "b",
+      "rot": 3,
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "still"
+   }
+  },
+  {
+   "type": "rd_theory",
+   "text": "A candle holder? No one can prove it.",
+   "visual": "Same street: a third townsman pops in with a candle burning in his dodecahedron ('CANDLE?'); on 'prove' a thick red X slashes across each card in turn, the three townsfolk shrug; big red stamp 'UNPROVEN'.",
+   "set": {
+    "name": "field",
+    "ground": 1152,
+    "horizon": 1000
+   },
+   "cues": {
+    "c": "candle",
+    "x": "prove"
+   },
+   "params": {
+    "ground": 0.6,
+    "bubbleY": 0.3,
+    "cross": "x",
+    "figs": [
+     {
+      "kind": "glove",
+      "x": 0.31,
+      "face": "left",
+      "bx": 0.23,
+      "by": 0.29,
+      "bw": 229
+     },
+     {
+      "kind": "calendar",
+      "x": 0.53,
+      "face": "right",
+      "accessory": "laurel",
+      "bx": 0.49,
+      "by": 0.205,
+      "bw": 283
+     },
+     {
+      "kind": "candle",
+      "x": 0.8,
+      "face": "left",
+      "at": "c",
+      "bx": 0.77,
+      "by": 0.29,
+      "bw": 229
+     }
+    ],
+    "labels": [
+     {
+      "text": "GLOVES?",
+      "x": 0.23,
+      "y": 0.29,
+      "size": 72,
+      "color": "ink",
+      "card": true,
+      "at": 0,
+      "rot": -4,
+      "font": "serif"
+     },
+     {
+      "text": "CALENDAR?",
+      "x": 0.49,
+      "y": 0.205,
+      "size": 72,
+      "color": "ink",
+      "card": true,
+      "at": 0,
+      "rot": 3,
+      "font": "serif"
+     },
+     {
+      "text": "CANDLE?",
+      "x": 0.77,
+      "y": 0.29,
+      "size": 72,
+      "color": "ink",
+      "card": true,
+      "at": "c",
+      "rot": -3,
+      "font": "serif"
+     },
+     {
+      "text": "UNPROVEN",
+      "x": 0.5,
+      "y": 0.47,
+      "size": 130,
+      "color": "red",
+      "font": "serif",
+      "at": "x",
+      "rot": -8
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.0,
+    "move": "still"
+   }
+  },
+  {
+   "type": "rd_altar",
+   "text": "Some archaeologists suspect a sacred Celtic object.",
+   "visual": "Green hills of Celtic Gaul: a hatless Gaul with a gold torc round his neck carries the bronze dodecahedron to a rough stone altar carved with a ring and sets it on top on 'sacred'; label 'SACRED?'.",
+   "title": {
+    "white": "Gaul"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1210,
+    "horizon": 1040
+   },
+   "cues": {
+    "s": "sacred"
+   },
+   "params": {
+    "ground": 0.63,
+    "town": false,
+    "bubbleY": 0.3,
+    "figs": [
+     {
+      "kind": "altar",
+      "x": 0.28,
+      "face": "right",
+      "torc": true,
+      "place": "s",
+      "r": 120,
+      "scale": 1.38,
+      "altarDx": 360,
+      "accessory": null,
+      "altarS": 1.15
+     }
+    ],
+    "labels": [
+     {
+      "text": "SACRED?",
+      "x": 0.62,
+      "y": 0.26,
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "at": "s",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     860
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "rd_dig",
+   "text": "Rome left us the thing and kept the manual.",
+   "visual": "An English field dig on the old frontier: a trench with layered soil walls, a red string line and pegs; on its clay floor the bronze dodecahedron slowly comes out of the soil, crumbs rolling off; gold sparkles on 'thing'; a bucket, trowel and spoil heap in the grass in front; red label 'NO MANUAL' on 'manual'.",
+   "title": {
+    "white": "England"
+   },
+   "set": {
+    "name": "field",
+    "ground": 768,
+    "horizon": 600
+   },
+   "cues": {
+    "g": "thing",
+    "m": "manual"
+   },
+   "params": {
+    "mode": "find",
+    "ground": 0.4,
+    "glint": "g",
+    "obj": {
+     "x": 0.42,
+     "r": 170
+    },
+    "labels": [
+     {
+      "text": "NO MANUAL",
+      "x": 0.5,
+      "y": 0.25,
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "at": "m",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "rd_dig",
+   "text": "Subscribe for a true mystery every day.",
+   "visual": "Same dig: the fez host stands on the grass beside the trench, the big bronze dodecahedron resting on his hand at his side, and points straight at the viewer, smiling; on 'mystery' he points harder.",
+   "set": {
+    "name": "field",
+    "ground": 768,
+    "horizon": 600
+   },
+   "cues": {
+    "p": "mystery"
+   },
+   "params": {
+    "mode": "end",
+    "ground": 0.4,
+    "obj": {
+     "x": 0.42,
+     "r": 140
+    },
+    "hold": 180,
+    "kasif": {
+     "x": 0.5,
+     "y": 0.68,
+     "scale": 1.35,
+     "pose": "point",
+     "dir": "forward",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": "forward",
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "holdLow": true
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}

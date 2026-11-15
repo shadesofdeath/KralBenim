@@ -1,0 +1,2306 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-suez-canal",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "SHIPS IN",
+   "THE DESERT"
+  ],
+  "highlight": [
+   "DESERT"
+  ],
+  "scene": 2,
+  "t": 1.0,
+  "focus": [
+   380,
+   680
+  ],
+  "zoom": 2.2,
+  "size": 250,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.3,
+   "face": -1,
+   "x": 1660,
+   "y": 1010
+  }
+ },
+ "sources": [
+  {
+   "title": "Suez Canal: History (Encyclopaedia Britannica)",
+   "url": "https://www.britannica.com/topic/Suez-Canal/History"
+  },
+  {
+   "title": "Suez Canal (HISTORY.com)",
+   "url": "https://www.history.com/articles/suez-canal"
+  },
+  {
+   "title": "9 Fascinating Facts About the Suez Canal (HISTORY.com)",
+   "url": "https://www.history.com/news/9-fascinating-facts-about-the-suez-canal"
+  },
+  {
+   "title": "The Suez Canal: a history of men and politics, interview with Caroline Piquet (CNRS News)",
+   "url": "https://news.cnrs.fr/node/1562"
+  },
+  {
+   "title": "The Opening of the Suez Canal, 1869 and HMS Newport (Dawlish Chronicles)",
+   "url": "https://dawlishchronicles.com/?p=2830"
+  },
+  {
+   "title": "Lionel de Rothschild and the Suez Canal (The Rothschild Archive)",
+   "url": "https://rothschildarchive.org/business/n_m_rothschild_and_sons_london/lionel_de_rothschild_and_the_suez_canal"
+  },
+  {
+   "title": "Geographical Impacts of the Suez and Panama Canals (The Geography of Transport Systems)",
+   "url": "https://transportgeography.org/contents/chapter1/emergence-of-mechanized-transportation-systems/suez-panama-canal-geography-impacts/"
+  },
+  {
+   "title": "Traffic in Suez Canal resumes after stranded ship refloated (Al Jazeera, 29 March 2021)",
+   "url": "https://www.aljazeera.com/news/2021/3/29/traffic-in-suez-canal-resumes-after-stranded-ship-refloated"
+  }
+ ],
+ "youtube": {
+  "title": "Suez Canal: How Did a Ditch in the Sand Rewire the World?",
+  "description": "The Suez Canal opened on 17 November 1869, and the night before, a British warship crept through the harbor with every light off to grab first place. How did a ditch in the sand change the map of the world, and who paid for it?\n\nNapoleon's engineers said the Red Sea was ten meters higher than the Mediterranean. They were wrong. Ferdinand de Lesseps, a diplomat with a friend in Said Pasha, started digging in 1859. Tens of thousands of Egyptian peasants were forced to dig by hand, then giant steam dredgers finished the job. Six years later, Egypt was drowning in debt and Britain bought its shares.\n\nIn this video:\n- HMS Newport and the empress's yacht on opening day\n- The pharaohs' canal and Napoleon's ten meter mistake\n- The corvée: digging the canal by hand\n- Steam dredgers and seventy-five million cubic meters of sand\n- Disraeli's four million pounds, 1956 and the Ever Given\n\nSubscribe to Stickstory for more stories of how the world was built. Who deserves the credit for the canal: Lesseps or the diggers? Tell me in the comments!\n\n#suezcanal #history #howitwasbuilt #stickstory",
+  "tags": [
+   "suez canal",
+   "suez canal history",
+   "suez canal construction",
+   "how the suez canal was built",
+   "building the suez canal",
+   "ferdinand de lesseps",
+   "said pasha",
+   "ismail pasha",
+   "hms newport",
+   "opening of the suez canal 1869",
+   "corvee labor egypt",
+   "steam dredger",
+   "disraeli suez canal shares",
+   "ever given",
+   "how it was built",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-15T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "sz_harbor",
+   "text": "It's the night of the sixteenth of November, 1869, and a British warship is sliding through a crowded harbor with every single light switched off.",
+   "visual": "Night at Port Said: dark water, four moored steamships glow with gold lanterns and their reflections; one black warship with no lights at all slides from left to right between them.",
+   "title": {
+    "white": "16 November"
+   },
+   "cues": {
+    "sw": "switched",
+    "lt": "light"
+   },
+   "chapter": "Cold open: the dark harbor",
+   "params": {
+    "mode": "dark",
+    "water": 0.56,
+    "ghost": {
+     "x": 0.02,
+     "to": 0.58
+    },
+    "labels": [
+     {
+      "text": "no lights",
+      "x": 0.72,
+      "y": 0.86,
+      "at": "sw",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 610
+   }
+  },
+  {
+   "type": "sz_harbor",
+   "text": "By sunrise, it sits right in front of the French empress's yacht.",
+   "visual": "Dawn at the canal mouth: a lighthouse on the breakwater at left; the white imperial yacht with flags in the middle, and the dark British gunboat sitting just ahead of it in the line; red note 'first in line' on 'front'.",
+   "title": {
+    "white": "Sunrise"
+   },
+   "cues": {
+    "front": "front",
+    "em": "empress"
+   },
+   "params": {
+    "mode": "dawn",
+    "ground": 0.6,
+    "yacht_x": 0.5,
+    "gun_x": 0.8,
+    "labels": [
+     {
+      "text": "first in line",
+      "x": 0.8,
+      "y": 0.33,
+      "at": "front",
+      "color": "red",
+      "size": 66,
+      "arrow": [
+       0.8,
+       0.46
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 648
+   },
+   "camera": {
+    "focus": [
+     1240,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sz_canal",
+   "text": "Tomorrow, the whole world wants to watch ships sail straight through a desert.",
+   "visual": "Wide desert: a narrow strip of blue water runs straight across the sand; masts, funnels and flags of steamships glide along it as if sailing through the dunes; a crowd waves flags on the near bank.",
+   "title": {
+    "white": "Port Said"
+   },
+   "cues": {
+    "ds": "desert",
+    "wh": "whole"
+   },
+   "params": {
+    "mode": "opening",
+    "ground": 0.72,
+    "speed": 60,
+    "crowd_at": "wh",
+    "labels": [
+     {
+      "text": "through a desert",
+      "x": 0.66,
+      "y": 0.18,
+      "at": "ds",
+      "size": 72
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 778
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So how did a ditch in the sand change the map of the planet? And who paid for it? Let me show you.",
+   "visual": "The fez narrator on the desert bank of the canal, hand on chin, then holds up a sign 'HOW?' on 'map', then points ahead on 'show'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "mp": "map",
+    "pd": "paid",
+    "sh": "show"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "think",
+      "scale": 1.0,
+      "emotion": "worried",
+      "text": "HOW?",
+      "seq": [
+       {
+        "at": "mp",
+        "pose": "hold",
+        "text": "HOW?",
+        "emotion": "surprised"
+       },
+       {
+        "at": "sh",
+        "pose": "point",
+        "dir": "right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.84,
+      "y": 0.8,
+      "scale": 0.8
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 900
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Before 1869,",
+   "visual": "CHAPTER 1 / 6 card: blue disc with 1, title 'The Long Way Round'.",
+   "title": {},
+   "cues": {
+    "n": "Before",
+    "title": "1869"
+   },
+   "params": {
+    "n": 1,
+    "total": 6,
+    "title": "The Long Way Round",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Long Way Round"
+  },
+  {
+   "type": "sz_route",
+   "text": "a ship from London to India had to go all the way around Africa. That meant months at sea, and the storms off the Cape of Good Hope.",
+   "visual": "Full-frame old chart of the Atlantic, Africa and India: a red dashed route draws from London down past West Africa, around the Cape of Good Hope where a storm swirls, and up to Bombay; a tiny ship rides the end of the line.",
+   "title": {
+    "white": "Before 1869"
+   },
+   "cues": {
+    "lo": "London",
+    "mo": "months",
+    "st": "storms"
+   },
+   "params": {
+    "routes": [
+     {
+      "pts": [
+       [
+        -0.1,
+        51.5
+       ],
+       [
+        -5,
+        49
+       ],
+       [
+        -12,
+        43
+       ],
+       [
+        -14,
+        35
+       ],
+       [
+        -20,
+        22
+       ],
+       [
+        -20,
+        12
+       ],
+       [
+        -12,
+        2
+       ],
+       [
+        2,
+        -6
+       ],
+       [
+        9,
+        -20
+       ],
+       [
+        14,
+        -32
+       ],
+       [
+        20,
+        -38
+       ],
+       [
+        30,
+        -36
+       ],
+       [
+        42,
+        -27
+       ],
+       [
+        55,
+        -14
+       ],
+       [
+        62,
+        0
+       ],
+       [
+        70,
+        13
+       ],
+       [
+        72.8,
+        19
+       ]
+      ],
+      "at": "lo",
+      "dur": 4.0
+     }
+    ],
+    "cities": [
+     {
+      "name": "London",
+      "lon": -0.1,
+      "lat": 51.5,
+      "dx": 0,
+      "dy": -32
+     },
+     {
+      "name": "Bombay",
+      "lon": 72.8,
+      "lat": 19,
+      "dx": 110,
+      "dy": 12,
+      "color": "red"
+     },
+     {
+      "name": "Cape of Good Hope",
+      "lon": 18.5,
+      "lat": -34.4,
+      "dx": -290,
+      "dy": 0,
+      "at": "st"
+     }
+    ],
+    "storm": [
+     22,
+     -37
+    ],
+    "labels": [
+     {
+      "text": "months at sea",
+      "x": 0.82,
+      "y": 0.68,
+      "at": "mo",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_route",
+   "text": "And here's the crazy part. A canal across Egypt would be only about a hundred and twenty miles long.",
+   "visual": "Close-up of the same chart on Egypt: the Mediterranean above, the Nile in blue, the Gulf of Suez below; a red line draws straight across the narrow neck of land from Port Said to Suez on 'canal'; note '120 miles'.",
+   "title": {
+    "white": "Shortcut"
+   },
+   "cues": {
+    "cz": "crazy",
+    "cn": "canal",
+    "ml": "miles"
+   },
+   "source": "History.com",
+   "params": {
+    "view": {
+     "lon0": 26.5,
+     "lat0": 33.5,
+     "k": 150
+    },
+    "rivers": [
+     "nile"
+    ],
+    "river_w": 18,
+    "measure": {
+     "from": [
+      32.3,
+      31.26
+     ],
+     "to": [
+      32.55,
+      29.97
+     ],
+     "at": "cn"
+    },
+    "cities": [
+     {
+      "name": "Port Said",
+      "lon": 32.3,
+      "lat": 31.26,
+      "dx": 0,
+      "dy": -34
+     },
+     {
+      "name": "Suez",
+      "lon": 32.55,
+      "lat": 29.97,
+      "dx": 90,
+      "dy": 20,
+      "at": "cn"
+     },
+     {
+      "name": "Cairo",
+      "lon": 31.25,
+      "lat": 30.05,
+      "dx": -90,
+      "dy": 10,
+      "at": 0.2
+     }
+    ],
+    "labels": [
+     {
+      "text": "about 120 miles",
+      "x": 0.66,
+      "y": 0.4,
+      "at": "ml",
+      "color": "red",
+      "size": 76
+     },
+     {
+      "text": "Mediterranean",
+      "x": 0.52,
+      "y": 0.18,
+      "at": 0.2,
+      "color": "blue",
+      "size": 60
+     },
+     {
+      "text": "Red Sea",
+      "x": 0.86,
+      "y": 0.66,
+      "at": 0.4,
+      "color": "blue",
+      "size": 56
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_ancient",
+   "text": "The pharaohs had already dug a canal from the Nile to the Red Sea, but in the year 775, a caliph had it filled in on purpose.",
+   "visual": "From above: the Nile with green banks at left, the Red Sea at right, and an ancient canal between them with a reed boat sailing; on 'filled' sand creeps along the canal and fills it; note 'year 775'.",
+   "title": {
+    "white": "Ancient canal"
+   },
+   "cues": {
+    "ph": "pharaohs",
+    "fill": "filled"
+   },
+   "source": "Britannica",
+   "params": {
+    "labels": [
+     {
+      "text": "the pharaohs' canal",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "ph",
+      "size": 64
+     },
+     {
+      "text": "775: filled in",
+      "x": 0.52,
+      "y": 0.78,
+      "at": "fill",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_survey",
+   "text": "Then, in 1798, Napoleon invaded Egypt, and his engineers measured the two seas.",
+   "visual": "Desert: a French engineer in a bicorne peers through a levelling instrument on a tripod; far right a peasant holds a red-striped measuring staff; a red sight line dashes between them; note '1798'.",
+   "title": {
+    "white": "Napoleon"
+   },
+   "cues": {
+    "yr": "1798",
+    "ms": "measured"
+   },
+   "params": {
+    "mode": "survey",
+    "labels": [
+     {
+      "text": "1798",
+      "x": 0.56,
+      "y": 0.2,
+      "at": "yr",
+      "font": "serif",
+      "size": 96
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 900
+   }
+  },
+  {
+   "type": "sz_levels",
+   "text": "Their answer? The Red Sea was about ten meters higher. Cut through, and you might flood Egypt.",
+   "visual": "Cross-section of the isthmus: the Mediterranean basin at left, the Red Sea basin at right drawn much higher, a red '+10 m?' dimension line; on 'flood' its water spills over the land toward the left.",
+   "title": {
+    "white": "The error"
+   },
+   "cues": {
+    "hi": "higher",
+    "flood": "flood"
+   },
+   "source": "Britannica",
+   "params": {
+    "mode": "high",
+    "labels": [
+     {
+      "text": "+10 meters?",
+      "x": 0.84,
+      "y": 0.3,
+      "at": "hi",
+      "color": "red",
+      "size": 76
+     },
+     {
+      "text": "Mediterranean",
+      "x": 0.14,
+      "y": 0.48,
+      "at": 0.3,
+      "color": "blue",
+      "size": 56
+     },
+     {
+      "text": "Red Sea",
+      "x": 0.86,
+      "y": 0.6,
+      "at": 0.3,
+      "color": "blue",
+      "size": 56
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_levels",
+   "text": "They were wrong. The two seas sit at almost the same level. But that one bad number kept the idea buried for decades, until a Frenchman with a lot of charm showed up.",
+   "visual": "The same cross-section: on 'wrong' the Red Sea drops down to the same level as the Mediterranean, a green dashed line joins them; red stamp 'WRONG'; the fez narrator at right shrugs, then points.",
+   "title": {
+    "white": "Same level"
+   },
+   "cues": {
+    "wrong": "wrong",
+    "lv": "level",
+    "bur": "buried"
+   },
+   "params": {
+    "mode": "fixed",
+    "labels": [
+     {
+      "text": "wrong",
+      "x": 0.26,
+      "y": 0.24,
+      "at": "wrong",
+      "stamp": true,
+      "color": "red",
+      "size": 110
+     },
+     {
+      "text": "same level",
+      "x": 0.4,
+      "y": 0.66,
+      "at": "lv",
+      "color": "green",
+      "size": 64
+     }
+    ],
+    "kasif": {
+     "x": 0.56,
+     "y": 0.505,
+     "scale": 0.6,
+     "pose": "shrug",
+     "face": -1,
+     "at": "bur",
+     "then": "point",
+     "dir": "left",
+     "emotion": "surprised"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "His name was Ferdinand de Lesseps.",
+   "visual": "CHAPTER 2 / 6 card: blue disc with 2, title 'The Friend of the Pasha'.",
+   "title": {},
+   "cues": {
+    "n": "name",
+    "title": "Lesseps"
+   },
+   "params": {
+    "n": 2,
+    "total": 6,
+    "title": "The Friend of the Pasha",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Friend of the Pasha"
+  },
+  {
+   "type": "sz_room",
+   "text": "He wasn't an engineer. He was a diplomat.",
+   "visual": "Lesseps's study: a tall bookshelf with coloured spines at left, a globe slowly turning at right, a desk edge in the foreground; Ferdinand de Lesseps (short beard) shrugs on 'engineer', then holds up a sign 'DIPLOMAT' on 'diplomat'.",
+   "title": {
+    "white": "Lesseps"
+   },
+   "cues": {
+    "en": "engineer",
+    "dp": "diplomat"
+   },
+   "params": {
+    "room": "study",
+    "cast": [
+     {
+      "who": "lesseps",
+      "beard": "short",
+      "x": 0.5,
+      "pose": "shrug",
+      "scale": 0.95,
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "dp",
+        "pose": "hold",
+        "text": "DIPLOMAT",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "not an engineer",
+      "x": 0.69,
+      "y": 0.62,
+      "at": "en",
+      "color": "red",
+      "size": 52,
+      "strike": "dp"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sz_room",
+   "text": "What he had was a friend: Said Pasha, the new ruler of Egypt.",
+   "visual": "Said Pasha's palace: pointed arches with blue sky, a red divan with cushions, a swinging brass lamp, a red rug in front; Lesseps and Said Pasha (turban) talk like old friends; a big label 'Said Pasha' writes above Said on 'Said'.",
+   "title": {
+    "white": "Old friends"
+   },
+   "cues": {
+    "fr": "friend",
+    "sd": "Said"
+   },
+   "params": {
+    "room": "palace",
+    "cast": [
+     {
+      "who": "lesseps",
+      "beard": "short",
+      "x": 0.28,
+      "pose": "talk",
+      "scale": 1.15,
+      "face": "right",
+      "emotion": "happy"
+     },
+     {
+      "who": "said",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.5,
+      "pose": "idle",
+      "scale": 1.2,
+      "face": "left",
+      "at": "fr",
+      "then": "talk",
+      "emotion": "happy"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Said Pasha",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "sd",
+      "font": "serif",
+      "size": 84
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_paper",
+   "text": "In 1854, Said gave him the right to build the canal, and Egypt would supply the workers.",
+   "visual": "Close on a desk: a big scroll unrolls, the heading 'Concession · 1854' writes itself, lines of handwriting follow, and a red wax seal stamps onto it on 'workers'.",
+   "title": {
+    "white": "1854"
+   },
+   "cues": {
+    "seal": "workers"
+   },
+   "source": "Britannica",
+   "params": {
+    "mode": "concession",
+    "lines": [
+     "Concession",
+     "1854"
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_room",
+   "text": "Britain hated the idea. A French canal on the road to India? Never.",
+   "visual": "The House of Commons: tiers of green benches packed with members behind; a grey-bearded British statesman stands in front, angry, and holds up a sign 'NEVER!' on 'India' and keeps it up through 'Never.'; green bench backs in the foreground.",
+   "title": {
+    "white": "London"
+   },
+   "cues": {
+    "br": "Britain",
+    "nv": "India"
+   },
+   "params": {
+    "room": "parliament",
+    "cast": [
+     {
+      "who": "britain",
+      "beard": "grey",
+      "x": 0.5,
+      "pose": "talk",
+      "scale": 0.95,
+      "emotion": "angry",
+      "seq": [
+       {
+        "at": "nv",
+        "pose": "hold",
+        "text": "NEVER!",
+        "emotion": "angry"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Britain",
+      "x": 0.7,
+      "y": 0.3,
+      "at": "br",
+      "font": "serif",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sz_paper",
+   "text": "So Lesseps sold shares, mostly to the French public, and simply started.",
+   "visual": "Close on the desk: share certificates of the canal company fan out one after another; note '500 francs each'.",
+   "title": {
+    "white": "Shares"
+   },
+   "cues": {
+    "sh": "shares",
+    "st": "started"
+   },
+   "params": {
+    "mode": "shares",
+    "n": 6,
+    "labels": [
+     {
+      "text": "500 francs each",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "sh",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_beach",
+   "text": "On the twenty-fifth of April 1859, on a strip of beach that would become Port Said, he swung the first pickaxe.",
+   "visual": "A flat beach by the sea: Lesseps in a top hat raises a pickaxe and strikes the sand on 'pickaxe', sand bursts up; flags on poles snap in the wind, onlookers watch; note '25 April 1859'.",
+   "title": {
+    "white": "Port Said"
+   },
+   "cues": {
+    "dt": "twenty",
+    "pick": "pickaxe"
+   },
+   "params": {
+    "ground": 0.78,
+    "x": 0.44,
+    "labels": [
+     {
+      "text": "25 April 1859",
+      "x": 0.3,
+      "y": 0.18,
+      "at": "dt",
+      "size": 72
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 850
+   },
+   "camera": {
+    "focus": [
+     900,
+     600
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "He promised six years. It took ten. But the hardest question was who would do the digging.",
+   "visual": "On the beach the fez narrator holds up a sign '6 YEARS?', then on 'ten' the sign turns to '10', and he shrugs on 'digging'.",
+   "title": {
+    "white": "Ten years"
+   },
+   "cues": {
+    "tn": "ten",
+    "dg": "digging"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "hold",
+      "scale": 1.0,
+      "emotion": "happy",
+      "text": "6 YEARS?",
+      "seq": [
+       {
+        "at": "tn",
+        "pose": "hold",
+        "text": "10 YEARS",
+        "emotion": "surprised"
+       },
+       {
+        "at": "dg",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "sea",
+    "ground": 840
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Egypt had an old system called the corvée.",
+   "visual": "CHAPTER 3 / 6 card: blue disc with 3, title 'The Diggers'.",
+   "title": {},
+   "cues": {
+    "n": "old",
+    "title": "corv"
+   },
+   "params": {
+    "n": 3,
+    "total": 6,
+    "title": "The Diggers",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Diggers"
+  },
+  {
+   "type": "sz_corvee",
+   "text": "Peasants could be ordered to work for the state, a month at a time.",
+   "visual": "A field by the Nile: an official in a blue robe and turban reads a decree from an unrolling scroll; the peasants in the field drop their hoes and walk into a line on 'ordered'; red stamp '1 MONTH' on 'month'.",
+   "title": {
+    "white": "The corvée"
+   },
+   "cues": {
+    "line": "ordered",
+    "st": "state",
+    "mn": "month"
+   },
+   "params": {
+    "ground": 0.84,
+    "labels": [
+     {
+      "text": "1 month",
+      "x": 0.72,
+      "y": 0.2,
+      "at": "mn",
+      "stamp": true,
+      "color": "red",
+      "size": 100
+     },
+     {
+      "text": "for the state",
+      "x": 0.4,
+      "y": 0.2,
+      "at": "st",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   }
+  },
+  {
+   "type": "sz_dig",
+   "text": "So tens of thousands of fellahin were marched into the desert at once, far from their own fields.",
+   "visual": "Across the desert a long column of peasants in wrapped caps walks to the dig, some with picks on their shoulders, some with empty baskets on their backs; note 'tens of thousands'.",
+   "title": {
+    "white": "The corvée"
+   },
+   "cues": {
+    "tt": "tens",
+    "fd": "fields"
+   },
+   "source": "CNRS",
+   "params": {
+    "mode": "march",
+    "n": 15,
+    "s": 0.5,
+    "ground": 0.88,
+    "labels": [
+     {
+      "text": "tens of thousands",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "tt",
+      "color": "red",
+      "size": 76
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 860
+   }
+  },
+  {
+   "type": "sz_dig",
+   "text": "They dug with picks and bare hands, and carried the wet sand up the banks in baskets on their backs.",
+   "visual": "Cut-away of the trench: at the bottom diggers swing picks into the wet sand; on the left bank a line of carriers climbs out with full baskets on their backs; on the right two men tip sand onto the growing spoil heap.",
+   "title": {
+    "white": "By hand"
+   },
+   "cues": {
+    "pk": "picks",
+    "bk": "baskets"
+   },
+   "params": {
+    "mode": "trench",
+    "ground": 0.56,
+    "diggers": 4,
+    "carriers": 5,
+    "s": 0.4,
+    "trench": {
+     "x0": 0.1,
+     "x1": 0.78,
+     "d": 0.3
+    }
+   },
+   "set": {
+    "name": "desert",
+    "ground": 605
+   }
+  },
+  {
+   "type": "sz_water",
+   "text": "Now think about that heat. At first, even drinking water came by camel, until a second canal brought it from the Nile.",
+   "visual": "Along the dig a camel caravan carries red water jars, led by a man on foot; on 'canal' a blue fresh-water canal draws along the ground from the left; note 'from the Nile'.",
+   "title": {
+    "white": "Thirst"
+   },
+   "cues": {
+    "ht": "heat",
+    "cm": "camel",
+    "canal": "canal"
+   },
+   "params": {
+    "n": 4,
+    "ground": 0.86,
+    "speed": 80,
+    "labels": [
+     {
+      "text": "water by camel",
+      "x": 0.42,
+      "y": 0.2,
+      "at": "cm",
+      "size": 66
+     },
+     {
+      "text": "fresh water from the Nile",
+      "x": 0.62,
+      "y": 0.5,
+      "at": "canal",
+      "color": "blue",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 930
+   }
+  },
+  {
+   "type": "title",
+   "text": "How many died? Nobody knows.",
+   "visual": "Giant words 'Nobody' / 'knows' word by word, 'knows' in a red box; handwritten note '120,000? no records'.",
+   "title": {
+    "white": "The cost"
+   },
+   "cues": {
+    "w0": "died",
+    "w1": "knows",
+    "dd": "many"
+   },
+   "params": {
+    "lines": [
+     "Nobody",
+     "knows"
+    ],
+    "highlight": [
+     "knows"
+    ],
+    "y": 0.4,
+    "note": {
+     "text": "how many died",
+     "at": "dd",
+     "color": "red"
+    }
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "board",
+   "text": "Historians say many thousands, maybe tens of thousands. The famous number, one hundred and twenty thousand, has no records behind it.",
+   "visual": "Pinned board 'The death toll': card 'Historians' with ✓ 'many thousands' and 'maybe tens of thousands'; card 'The famous number' with ✗ '120,000' and 'no records'; red pill 'no records'.",
+   "title": {
+    "white": "The toll"
+   },
+   "cues": {
+    "mt": "many",
+    "tt": "tens",
+    "fm": "famous",
+    "rc": "records"
+   },
+   "source": "CNRS: Caroline Piquet",
+   "params": {
+    "title": "The death toll",
+    "cards": [
+     {
+      "title": "Historians",
+      "items": [
+       {
+        "text": "many thousands",
+        "mark": "check",
+        "at": "mt"
+       },
+       {
+        "text": "maybe tens of thousands",
+        "mark": null,
+        "at": "tt"
+       }
+      ]
+     },
+     {
+      "title": "The famous number",
+      "items": [
+       {
+        "text": "120,000",
+        "mark": "x",
+        "at": "fm"
+       },
+       {
+        "text": "no records",
+        "mark": null,
+        "at": "rc"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "no records behind it",
+     "color": "red",
+     "at": "rc"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "sz_room",
+   "text": "Then, in 1863, the new ruler, Ismail Pasha, moved to end the forced labor.",
+   "visual": "Ismail Pasha's throne room: one tall arch, a gilded chair, palms in pots and a red rug; Ismail Pasha (turban, black beard) talks, then holds up a sign 'NO FORCED LABOR' on 'end'.",
+   "title": {
+    "white": "1863"
+   },
+   "cues": {
+    "is": "Ismail",
+    "en": "end"
+   },
+   "params": {
+    "room": "throne",
+    "cast": [
+     {
+      "who": "ismail",
+      "accessory": "turban",
+      "beard": "black",
+      "x": 0.42,
+      "pose": "talk",
+      "scale": 1.2,
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "en",
+        "pose": "hold",
+        "text": "NO FORCED LABOR",
+        "emotion": "neutral"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Ismail Pasha · 1863",
+      "x": 0.74,
+      "y": 0.12,
+      "at": "is",
+      "font": "serif",
+      "size": 64
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "board",
+   "text": "Lesseps was furious, and Emperor Napoleon the Third himself had to settle the fight. Egypt was ordered to pay the company a fortune.",
+   "visual": "Pinned board 'Who pays?': card 'Egypt' with ✓ forced labor ends and ✗ pays the company; card 'The company' with ✗ loses its diggers and ✓ gets a fortune; red pill 'Napoleon III decides'.",
+   "title": {
+    "white": "The deal"
+   },
+   "cues": {
+    "np": "Napoleon",
+    "st": "settle",
+    "fo": "fortune"
+   },
+   "params": {
+    "title": "Who pays?",
+    "cards": [
+     {
+      "title": "Egypt",
+      "items": [
+       {
+        "text": "forced labor ends",
+        "mark": "check",
+        "at": "st"
+       },
+       {
+        "text": "pays a fortune",
+        "mark": "x",
+        "at": "fo"
+       }
+      ]
+     },
+     {
+      "title": "The company",
+      "items": [
+       {
+        "text": "loses diggers",
+        "mark": "x",
+        "at": "st"
+       },
+       {
+        "text": "gets paid",
+        "mark": "check",
+        "at": "fo"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "Napoleon III decides",
+     "color": "red",
+     "at": "np"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "sz_dig",
+   "text": "But with the diggers gone, the company needed something new.",
+   "visual": "The trench lies empty: abandoned baskets and picks half buried, sand blowing across; far away on 'new' a black smoke plume rises from a chimney behind the dunes.",
+   "title": {
+    "white": "Empty"
+   },
+   "cues": {
+    "gn": "gone",
+    "new": "needed"
+   },
+   "params": {
+    "mode": "empty",
+    "ground": 0.54,
+    "trench": {
+     "x0": 0.08,
+     "x1": 0.74,
+     "d": 0.24
+    }
+   },
+   "set": {
+    "name": "desert",
+    "ground": 583
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Steam.",
+   "visual": "CHAPTER 4 / 6 card: blue disc with 4, title 'The Machines'.",
+   "title": {},
+   "cues": {
+    "n": "Steam",
+    "title": "Steam"
+   },
+   "params": {
+    "n": 4,
+    "total": 6,
+    "title": "The Machines",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Machines"
+  },
+  {
+   "type": "sz_dredger",
+   "text": "Hundreds of steam dredgers and excavators, many built just for this desert.",
+   "visual": "A steam dredger floats in the channel: a tall frame holds a long ladder down into the water with a chain of iron buckets running up it, a funnel smokes, a chute pours mud onto the bank; the fez narrator on the bank points at it.",
+   "title": {
+    "white": "Steam"
+   },
+   "cues": {
+    "dr": "dredgers",
+    "ds": "desert"
+   },
+   "params": {
+    "ground": 0.8,
+    "x": 0.38,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.72,
+     "scale": 0.6,
+     "pose": "point",
+     "dir": "left",
+     "face": -1,
+     "emotion": "surprised",
+     "at": "dr",
+     "then": "shock"
+    },
+    "labels": [
+     {
+      "text": "steam dredger",
+      "x": 0.36,
+      "y": 0.14,
+      "at": "dr",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sz_dredger",
+   "text": "Chains of iron buckets scooped up the mud and dumped it on the banks, day and night.",
+   "visual": "Close on the bucket chain: iron buckets rise out of the water full of wet sand, mud splashes, and the load slides down the chute onto the bank; note 'day and night'.",
+   "title": {
+    "white": "Buckets"
+   },
+   "cues": {
+    "bk": "buckets",
+    "dn": "night"
+   },
+   "params": {
+    "close": true,
+    "ground": 0.84,
+    "x": 0.36,
+    "labels": [
+     {
+      "text": "day and night",
+      "x": 0.74,
+      "y": 0.2,
+      "at": "dn",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 907
+   }
+  },
+  {
+   "type": "title",
+   "text": "In total, about seventy-five million cubic meters of sand were moved, and machines did roughly three quarters of it.",
+   "visual": "Giant words '75 million' / 'cubic meters' word by word, '75' in a red box; note '3/4 by machine'.",
+   "title": {
+    "white": "Sand moved"
+   },
+   "cues": {
+    "w0": "seventy",
+    "mc": "machines"
+   },
+   "source": "History.com",
+   "params": {
+    "lines": [
+     "75 million",
+     "cubic meters"
+    ],
+    "highlight": [
+     "75"
+    ],
+    "y": 0.4,
+    "note": {
+     "text": "three quarters by machine",
+     "at": "mc"
+    },
+    "kasif": {
+     "x": 0.86,
+     "pose": "think",
+     "face": -1,
+     "scale": 0.85,
+     "at": "mc",
+     "then": "shock",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "sz_camp",
+   "text": "Even then, the desert fought back. In 1865, cholera swept through the camps, and work slowed down.",
+   "visual": "Night over the work camp: a row of tents glows gold from lanterns inside; one by one the lanterns go out; note '1865: cholera'.",
+   "title": {
+    "white": "1865"
+   },
+   "cues": {
+    "ch": "cholera"
+   },
+   "source": "Britannica",
+   "params": {
+    "n": 6,
+    "ground": 0.8,
+    "out_at": 1.4,
+    "labels": [
+     {
+      "text": "1865: cholera",
+      "x": 0.7,
+      "y": 0.18,
+      "at": "ch",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "sz_canal",
+   "text": "But by the summer of 1869, it was done. For the first time ever, a ship could sail straight from one sea to the other.",
+   "visual": "Side view of the finished dry channel through the desert; on 'done' sea water rushes in from the left with foam at its front and fills it bank to bank; note 'summer 1869'.",
+   "title": {
+    "white": "Done"
+   },
+   "cues": {
+    "sm": "summer",
+    "flow": "done",
+    "st": "straight"
+   },
+   "params": {
+    "mode": "flow",
+    "ground": 0.66,
+    "labels": [
+     {
+      "text": "summer 1869",
+      "x": 0.72,
+      "y": 0.2,
+      "at": "sm",
+      "size": 72
+     },
+     {
+      "text": "sea meets sea",
+      "x": 0.3,
+      "y": 0.32,
+      "at": "st",
+      "color": "blue",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 640
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Which brings us back to that dark harbor. Remember that sneaky British ship?",
+   "visual": "Night harbor again: the fez narrator on the quay looks out through a spyglass, then points at a dark ship on 'sneaky'.",
+   "title": {
+    "white": "Port Said"
+   },
+   "cues": {
+    "hb": "harbor",
+    "sn": "sneaky"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.36,
+      "pose": "look",
+      "scale": 0.95,
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "sn",
+        "pose": "point",
+        "dir": "right",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.78,
+      "y": 0.82,
+      "scale": 0.9
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     700,
+     520
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "The warship was HMS Newport.",
+   "visual": "CHAPTER 5 / 6 card: blue disc with 5, title 'Opening Day'.",
+   "title": {},
+   "cues": {
+    "n": "warship",
+    "title": "Newport"
+   },
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "Opening Day",
+    "label": "CHAPTER"
+   },
+   "chapter": "Opening Day"
+  },
+  {
+   "type": "sz_harbor",
+   "text": "Her captain, George Nares, had grabbed first place in the dark.",
+   "visual": "Close on the dark harbor: the black warship with no lights slides past the glowing lanterns of the moored ships; labels 'HMS Newport' and 'Captain George Nares'.",
+   "title": {
+    "white": "The ghost"
+   },
+   "cues": {
+    "gn": "George",
+    "dk": "dark"
+   },
+   "params": {
+    "mode": "dark",
+    "water": 0.56,
+    "moored_s": 1.0,
+    "ghost_s": 1.7,
+    "ghost": {
+     "x": 0.28,
+     "to": 0.48
+    },
+    "moored": [
+     [
+      0.24,
+      0.45
+     ],
+     [
+      0.4,
+      0.4
+     ]
+    ],
+    "tags": [
+     {
+      "text": "HMS Newport",
+      "x": 0.66,
+      "y": 0.478,
+      "at": 0.3,
+      "size": 52
+     },
+     {
+      "text": "Captain George Nares",
+      "x": 0.66,
+      "y": 0.53,
+      "at": "gn",
+      "size": 34,
+      "font": "hand"
+     }
+    ],
+    "labels": []
+   },
+   "set": {
+    "name": "night",
+    "ground": 610
+   },
+   "camera": {
+    "focus": [
+     960,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "sz_canal",
+   "text": "The channel was too narrow to pass. So the empress Eugénie, on the yacht L'Aigle, had to follow a British ship through France's big triumph.",
+   "visual": "The procession in the desert canal: the dark British gunboat leads, the white imperial yacht with flags follows right behind, another steamer last; crowds wave on the near bank; labels 'HMS Newport' and 'L'Aigle'.",
+   "title": {
+    "white": "17 November"
+   },
+   "cues": {
+    "np": "narrow",
+    "ag": "Aigle"
+   },
+   "params": {
+    "mode": "procession",
+    "ground": 0.72,
+    "ships": [
+     {
+      "x": 0.74,
+      "dark": true
+     },
+     {
+      "x": 0.42,
+      "hull": "paperLight",
+      "flags": true,
+      "paddle": true
+     },
+     {
+      "x": 0.1
+     }
+    ],
+    "labels": [
+     {
+      "text": "HMS Newport",
+      "x": 0.8,
+      "y": 0.3,
+      "at": "np",
+      "color": "red",
+      "size": 64
+     },
+     {
+      "text": "L'Aigle",
+      "x": 0.48,
+      "y": 0.3,
+      "at": "ag",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 778
+   }
+  },
+  {
+   "type": "sz_room",
+   "text": "The Navy scolded Nares in public, and quietly thanked him.",
+   "visual": "The Admiralty: a big sea chart on the wall, a ship model on a shelf, a desk edge in front; an admiral in a bicorne wags his finger at Captain Nares (beret, beard) with angry brows, then on 'thanked' both smile and shake hands.",
+   "title": {
+    "white": "Scolded"
+   },
+   "cues": {
+    "nr": "Nares",
+    "th": "thanked"
+   },
+   "params": {
+    "room": "admiralty",
+    "shake": {
+     "at": "th",
+     "s": 0.95,
+     "mid": 0.56,
+     "a": {
+      "cap": "bicorne",
+      "beard": true
+     },
+     "b": {
+      "cap": "beret",
+      "beard": true
+     }
+    },
+    "labels": [
+     {
+      "text": "Captain Nares",
+      "x": 0.78,
+      "y": 0.12,
+      "at": "nr",
+      "font": "serif",
+      "size": 64
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_route",
+   "text": "And the canal worked. The trip from Europe to Bombay became about forty percent shorter. But who paid for it?",
+   "visual": "The world chart again: the old route around Africa stays as a faint grey line, and a new red route draws from London through the Mediterranean, the canal and the Red Sea to Bombay; note '40% shorter'.",
+   "title": {
+    "white": "Shortcut"
+   },
+   "cues": {
+    "wk": "worked",
+    "fp": "forty",
+    "wp": "paid"
+   },
+   "source": "Transport Geography",
+   "params": {
+    "routes": [
+     {
+      "pts": [
+       [
+        -0.1,
+        51.5
+       ],
+       [
+        -5,
+        49
+       ],
+       [
+        -12,
+        43
+       ],
+       [
+        -14,
+        35
+       ],
+       [
+        -20,
+        22
+       ],
+       [
+        -20,
+        12
+       ],
+       [
+        -12,
+        2
+       ],
+       [
+        2,
+        -6
+       ],
+       [
+        9,
+        -20
+       ],
+       [
+        14,
+        -32
+       ],
+       [
+        20,
+        -38
+       ],
+       [
+        30,
+        -36
+       ],
+       [
+        42,
+        -27
+       ],
+       [
+        55,
+        -14
+       ],
+       [
+        62,
+        0
+       ],
+       [
+        70,
+        13
+       ],
+       [
+        72.8,
+        19
+       ]
+      ],
+      "ghost": true,
+      "color": "soft",
+      "width": 6
+     },
+     {
+      "pts": [
+       [
+        -0.1,
+        51.5
+       ],
+       [
+        -5,
+        49
+       ],
+       [
+        -11,
+        43
+       ],
+       [
+        -9.5,
+        37.5
+       ],
+       [
+        -6,
+        36
+       ],
+       [
+        3,
+        37.5
+       ],
+       [
+        12,
+        36.5
+       ],
+       [
+        20,
+        34
+       ],
+       [
+        28,
+        33
+       ],
+       [
+        32.3,
+        31.4
+       ],
+       [
+        32.55,
+        29.8
+       ],
+       [
+        34.5,
+        27
+       ],
+       [
+        38,
+        21
+       ],
+       [
+        42,
+        14.5
+       ],
+       [
+        46,
+        12.6
+       ],
+       [
+        52,
+        13.5
+       ],
+       [
+        62,
+        16
+       ],
+       [
+        72.8,
+        19
+       ]
+      ],
+      "at": "wk",
+      "dur": 2.6
+     }
+    ],
+    "cities": [
+     {
+      "name": "London",
+      "lon": -0.1,
+      "lat": 51.5,
+      "dx": 0,
+      "dy": -32
+     },
+     {
+      "name": "Bombay",
+      "lon": 72.8,
+      "lat": 19,
+      "dx": 110,
+      "dy": 12,
+      "color": "red"
+     },
+     {
+      "name": "Suez",
+      "lon": 32.55,
+      "lat": 29.97,
+      "dx": -80,
+      "dy": 30,
+      "color": "red",
+      "at": "wk"
+     }
+    ],
+    "labels": [
+     {
+      "text": "about 40% shorter",
+      "x": 0.8,
+      "y": 0.62,
+      "at": "fp",
+      "color": "red",
+      "size": 72
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "Here's the twist.",
+   "visual": "CHAPTER 6 / 6 card: blue disc with 6, title 'Who Paid?'.",
+   "title": {},
+   "cues": {
+    "n": "here",
+    "title": "twist"
+   },
+   "params": {
+    "n": 6,
+    "total": 6,
+    "title": "Who Paid?",
+    "label": "CHAPTER"
+   },
+   "chapter": "Who Paid?"
+  },
+  {
+   "type": "sz_paper",
+   "text": "Egypt had paid a huge part of the bill, with borrowed money. By 1875, it was drowning in debt, and its ruler had to sell his shares.",
+   "visual": "Close on a desk: a ledger opens, lines of figures write themselves, the last ones in red; stacks of bills pile up on both sides; red stamp 'DEBT' on 'debt'.",
+   "title": {
+    "white": "1875"
+   },
+   "cues": {
+    "db": "debt",
+    "sl": "sell"
+   },
+   "params": {
+    "mode": "debt",
+    "lines": [
+     "Egypt · 1875"
+    ],
+    "labels": [
+     {
+      "text": "debt",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "db",
+      "stamp": true,
+      "color": "red",
+      "size": 120
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_room",
+   "text": "Britain's prime minister, Benjamin Disraeli, borrowed four million pounds from the Rothschild bank and bought them.",
+   "visual": "Disraeli's London study: a fireplace with flickering flames, a gilt portrait above it, wood panelling, a desk edge with a money bag in front; Benjamin Disraeli (short beard) talks, holds up a sign '£4,000,000' on 'four'; label 'Rothschild loan'.",
+   "title": {
+    "white": "Disraeli"
+   },
+   "cues": {
+    "fr": "four",
+    "rt": "Rothschild",
+    "bt": "bought"
+   },
+   "source": "Rothschild Archive",
+   "params": {
+    "room": "london",
+    "cast": [
+     {
+      "who": "disraeli",
+      "beard": "short",
+      "x": 0.52,
+      "pose": "talk",
+      "scale": 1.2,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "fr",
+        "pose": "hold",
+        "text": "£4,000,000",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Rothschild loan",
+      "x": 0.28,
+      "y": 0.45,
+      "at": "rt",
+      "font": "serif",
+      "size": 48
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So the country that hated the canal ended up owning a big part of it.",
+   "visual": "A London street: the fez narrator spreads his hands in an ironic shrug, then holds up a sign 'BRITAIN?!' on 'owning'.",
+   "title": {
+    "white": "The irony"
+   },
+   "cues": {
+    "ht": "hated",
+    "ow": "owning"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "shrug",
+      "scale": 1.0,
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "ow",
+        "pose": "hold",
+        "text": "BRITAIN?!",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 900
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "In 1956, Egypt took the canal back, and a war followed.",
+   "visual": "Horizontal timeline: '1798 / the wrong survey', '1859 / first pickaxe', '1869 / opening', '1875 / shares sold', '1956 / Egypt takes it', '2021 / Ever Given'; the marker runs to 1956 in red.",
+   "title": {
+    "white": "1956"
+   },
+   "cues": {
+    "ea": "Egypt",
+    "wr": "war"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1798",
+      "text": "wrong survey",
+      "at": 0.2
+     },
+     {
+      "year": "1859",
+      "text": "first pickaxe",
+      "at": 0.4
+     },
+     {
+      "year": "1869",
+      "text": "opening",
+      "at": 0.6
+     },
+     {
+      "year": "1875",
+      "text": "sold",
+      "at": 0.8
+     },
+     {
+      "year": "1956",
+      "text": "Egypt takes it",
+      "at": "ea"
+     },
+     {
+      "year": "2021",
+      "text": "Ever Given",
+      "at": "wr"
+     }
+    ],
+    "focus": 4,
+    "kasif": {
+     "x": 0.78,
+     "y": 0.9,
+     "pose": "point",
+     "at": "ea",
+     "dir": 60,
+     "scale": 0.6,
+     "face": -1,
+     "emotion": "surprised"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "sz_aerial",
+   "text": "And in March 2021, one giant ship, the Ever Given, got stuck sideways and blocked it for six days.",
+   "visual": "From above: the blue canal between sand banks; a giant container ship with rows of coloured containers lies wedged diagonally from bank to bank; red tugs pull at its stern and a small excavator digs at the bow; note 'Ever Given · 6 days'.",
+   "title": {
+    "white": "March 2021"
+   },
+   "cues": {
+    "eg": "Ever",
+    "sx": "six"
+   },
+   "params": {
+    "mode": "stuck",
+    "labels": [
+     {
+      "text": "Ever Given",
+      "x": 0.42,
+      "y": 0.33,
+      "at": "eg",
+      "font": "serif",
+      "size": 64
+     },
+     {
+      "text": "6 days",
+      "x": 0.66,
+      "y": 0.62,
+      "at": "sx",
+      "color": "red",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     540
+    ],
+    "zoom": 1.6,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "sz_aerial",
+   "text": "Hundreds of ships waited, because more than a tenth of world trade squeezes through this one ditch in the sand.",
+   "visual": "Far above the canal: a long line of ship shapes queues at both ends of the blocked spot, more appearing; note 'more than a tenth of world trade'.",
+   "title": {
+    "white": "Traffic jam"
+   },
+   "cues": {
+    "hw": "Hundreds",
+    "tr": "trade"
+   },
+   "source": "Al Jazeera",
+   "params": {
+    "mode": "queue",
+    "n": 30,
+    "cy": 0.52,
+    "cw": 0.2,
+    "labels": [
+     {
+      "text": "hundreds of ships",
+      "x": 0.25,
+      "y": 0.26,
+      "at": "hw",
+      "size": 68
+     },
+     {
+      "text": "> 1/10 of world trade",
+      "x": 0.72,
+      "y": 0.76,
+      "at": "tr",
+      "color": "red",
+      "size": 68
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "sz_memory",
+   "text": "So here's my question: should we remember this canal as Lesseps's triumph, or as the work of diggers whose names nobody wrote down?",
+   "visual": "Desert at dusk: at left a big statue of Lesseps on a stone plinth; at right, one by one, a row of faint diggers with baskets appears on 'diggers'; the fez narrator between them thinks.",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "ls": "Lesseps",
+    "dg": "diggers",
+    "nm": "names"
+   },
+   "params": {
+    "ground": 0.82,
+    "statue_x": 0.2,
+    "kasif": {
+     "x": 0.42,
+     "y": 0.84,
+     "scale": 0.5,
+     "pose": "think",
+     "face": 1,
+     "emotion": "worried",
+     "at": "nm",
+     "then": "shrug"
+    },
+    "labels": [
+     {
+      "text": "Lesseps?",
+      "x": 0.34,
+      "y": 0.22,
+      "at": "ls",
+      "size": 70
+     },
+     {
+      "text": "or them?",
+      "x": 0.72,
+      "y": 0.3,
+      "at": "dg",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 886
+   }
+  },
+  {
+   "type": "stage",
+   "text": "Tell me in the comments, and subscribe to Stickstory for more stories of how the world was built.",
+   "visual": "By the canal the fez narrator points at the viewer on 'comments', then waves goodbye on 'subscribe'; a steamship glides on the water behind him.",
+   "title": {
+    "white": "Subscribe"
+   },
+   "cues": {
+    "cm": "comments",
+    "sb": "subscribe"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "pose": "point",
+      "dir": "forward",
+      "scale": 1.0,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "sb",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "ship",
+      "x": 0.78,
+      "y": 0.78,
+      "scale": 0.9
+     }
+    ]
+   },
+   "set": {
+    "name": "desert",
+    "ground": 900
+   }
+  }
+ ]
+}
