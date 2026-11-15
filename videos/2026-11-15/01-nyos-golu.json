@@ -1,0 +1,156 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Britannica: Lake Nyos disaster",
+      "url": "https://www.britannica.com/event/Lake-Nyos-disaster"
+    },
+    {
+      "title": "EARTH Magazine: Benchmarks, August 15, 1984 & August 21, 1986: African killer lakes erupt",
+      "url": "https://www.earthmagazine.org/article/benchmarks-august-15-1984-august-21-1986-african-killer-lakes-erupt/"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Göl",
+      "nefes verdi"
+    ],
+    "highlight": [
+      "nefes"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "focus": [
+      620,
+      900
+    ],
+    "zoom": 1.2,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu göl bir gece nefes verdi.",
+      "type": "bt_ny_lake",
+      "visual": "Gece, ay solda, ayın suda parlak yolu; yüksekten bakılan geniş kara göl kadrajın ortasını doldurur; suyun üstünde sağa doğru kayan, farklı boylarda yumuşak, dibi parlak, yukarı doğru silinen gaz kümeleri yükselir; 'nefes'te sağ taraf kabarır ve bir gaz dili sağdaki kıyıyı aşıp yamaçtan aşağı akar; önde kamışlar",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "nefes"
+      }
+    },
+    {
+      "text": "Kamerun, 21 Ağustos 1986.",
+      "type": "bt_ny_map",
+      "visual": "Koyu zeminde tek başına Afrika kıtası (Madagaskar ile); Kamerun'da Nyos Gölü'nün yerinde altın bir nokta nabız gibi atar, yanında 'Kamerun'; 'Ağustos'ta altında altın italik '21 Ağustos 1986' belirir",
+      "params": {
+        "label": "Kamerun",
+        "sub": "21 Ağustos 1986"
+      },
+      "cues": {
+        "hit": "Ağustos"
+      }
+    },
+    {
+      "text": "Gölün dibinde yıllarca karbondioksit birikmişti. Kimse bilmiyordu.",
+      "type": "bt_ny_section",
+      "visual": "Gölün dikey kesiti: krater duvarları, koyu su, dipte minik kabarcıklarla dolu soluk bir gaz katmanı yavaşça kalınlaşır; derindeki sıcak ışıktan ince bir sızıntı yükselir; 'karbondioksit'te katmanın içinde italik 'CO₂' belirir",
+      "params": {
+        "mode": "still"
+      },
+      "cues": {
+        "hit": "karbondioksit"
+      }
+    },
+    {
+      "text": "O gece gaz bir anda yüzeye çıktı.",
+      "type": "bt_ny_section",
+      "visual": "Aynı kesit: dipteki katmandan geniş bir kabarcık sütunu yukarı fırlar; 'yüzeye'de yüzey bir su kubbesi gibi kabarır, damlalar sıçrar, üstünde soluk bir bulut kaynar",
+      "params": {
+        "mode": "burst"
+      },
+      "cues": {
+        "hit": "yüzeye"
+      }
+    },
+    {
+      "text": "Görünmeyen, ağır bir bulut vadilerden aşağı aktı.",
+      "type": "bt_ny_valley",
+      "visual": "Yukarıdan eş yükselti haritası: yukarıyı gösteren V çizgileri aşağıya doğru açılan bir vadi çizer, tepede göl; soluk gaz dili vadi tabanından aşağı akar ve genişler; üç köyün küçük konik kulübelerindeki sıcak ışıklar gaz geçtikçe birer birer söner, sonuncusu 'aşağı'da",
+      "cues": {
+        "hit": "aşağı"
+      }
+    },
+    {
+      "text": "Sabah, bin yedi yüzden fazla insan uyanmadı.",
+      "type": "bt_ny_hut",
+      "visual": "Şafak: tek sazdan çatılı kulübe, karanlık kapı, kapıdan aşağı inen patika, otlar, taşlar; üç taş üstünde tencere; ocağın son ince dumanı ve közü 'uyanmadı'dan önce tamamen söner; yerde alçak sis",
+      "cues": {
+        "hit": "uyanmadı"
+      }
+    },
+    {
+      "text": "Mavi göl kırmızıya dönmüştü.",
+      "type": "bt_ny_lake",
+      "visual": "Aynı göl soğuk bir şafakta, yüksekten: mavi su kadrajın ortasını doldurur; 'kırmızıya'da ortadan çamurlu kırmızı-kahverengi girdaplar yayılır ve sonunda bütün yüzeyi kaplar; önde kamışlar",
+      "params": {
+        "mode": "red"
+      },
+      "cues": {
+        "hit": "kırmızıya"
+      }
+    },
+    {
+      "text": "Bugün göl, borulardan her gün biraz nefes veriyor.",
+      "type": "bt_ny_pipe",
+      "visual": "Bugün: gölün ortasında küçük bir sal; salın altından derindeki gaz katmanına inen boru, içinde yukarı koşan kabarcıklar; saldan ince bir su ve gaz fıskiyesi yükselip geri düşer; 'nefes'te fıskiye yükselir",
+      "cues": {
+        "hit": "nefes"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_ny_lake",
+      "visual": "Gece yine: durgun, geniş göl, ayın sudaki parlak yolu, gölün ortasında küçük sal ve ince fıskiye, halkalar; önde kamışlar",
+      "params": {
+        "mode": "calm"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Nyos Gölü: 1.700 Kişi Neden Bir Gecede Uyanmadı?",
+    "description": "Nyos Gölü, 21 Ağustos 1986 gecesi Kamerun'da sessizce nefes verdi: gölün dibinde yıllarca birikmiş karbondioksit bir anda yüzeye çıktı ve görünmeyen bir bulut vadilere aktı.\n\nLimnik patlama denen bu olayda havadan ağır gaz, gölden 26 kilometre uzağa kadar ilerledi; sabah 1.746 kişi ve binlerce hayvan uyanmadı. Berrak mavi göl çamurlu bir kırmızıya döndü. 2001'den beri gölün dibine inen borular gazı yavaş yavaş boşaltıyor.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence dünyada başka nefes veren göller var mı? Yorumlara yaz!\n\n#shorts #nyosgölü #kamerun #düşünbakalım",
+    "tags": [
+      "nyos gölü",
+      "nyos gölü felaketi",
+      "nyos faciası",
+      "lake nyos",
+      "limnik patlama",
+      "karbondioksit gölü",
+      "öldüren göl",
+      "kamerun",
+      "kamerun gölü faciası",
+      "monoun gölü",
+      "doğal afetler",
+      "felaketler",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-15T19:00:00+03:00"
+  }
+}
