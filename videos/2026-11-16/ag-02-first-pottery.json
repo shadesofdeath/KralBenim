@@ -1,0 +1,545 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-first-pottery",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-sage",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Older than",
+   "farming"
+  ],
+  "highlight": [
+   "farming"
+  ],
+  "scene": 0,
+  "t": 2.2,
+  "focus": [
+   470,
+   800
+  ],
+  "zoom": 1.1,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "Wu et al., Science 336 (2012) — Early Pottery at 20,000 Years Ago in Xianrendong Cave, China",
+   "url": "https://doi.org/10.1126/science.1218643"
+  },
+  {
+   "title": "Science News — Oldest pottery comes from Chinese cave (19,000–20,000 years; hunter-gatherers; burn marks; 10,000 years before farming)",
+   "url": "https://www.sciencenews.org/article/oldest-pottery-comes-chinese-cave"
+  },
+  {
+   "title": "American Ceramic Society — Oldest known pottery dates back 20,000 years (scorch and soot marks: 'likely was used for cooking')",
+   "url": "https://ceramics.org/news/oldest-known-pottery-dates-back-20000-years-and-may-have-changed-the-course-of-human-history/"
+  },
+  {
+   "title": "Archaeology Magazine (12 Nov 2026) — Fired Clay Fragments Offer Hints to Development of Near Eastern Pottery (Cemka Hoyuk, Turkey)",
+   "url": "https://archaeology.org/news/2026/11/12/fired-clay-fragments-offer-hints-to-development-of-near-eastern-pottery/"
+  }
+ ],
+ "youtube": {
+  "title": "Oldest Pottery: Why Ice Age Hunters Made Clay Pots",
+  "description": "The oldest pottery ever found is older than farming. In Xianrendong Cave in southern China, scientists dated broken clay pots to about 20,000 years ago, in the middle of the Ice Age.\n\nThe people who made them were hunter-gatherers: no farms, no villages, no fields of wheat. So why carry heavy clay pots? Scorch and soot marks on the outside say they sat in a fire, so they were probably used for cooking. Farming only showed up about 10,000 years later. This week, fired clay from Cemka Hoyuk in Turkey put the story of the first pots back in the news.\n\nSubscribe to Stickstory for the strange origin of everyday things. What would you have cooked in the first pot? Tell me in the comments!\n\n#shorts #oldestpottery #stickstory",
+  "tags": [
+   "oldest pottery",
+   "oldest pottery in the world",
+   "first pottery",
+   "world's oldest pottery",
+   "xianrendong cave",
+   "ice age pottery",
+   "20000 year old pottery",
+   "history of pottery",
+   "first cooking pots",
+   "hunter gatherers",
+   "ice age",
+   "prehistoric cooking",
+   "archaeology",
+   "origin of everyday things",
+   "ancient china",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-16T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "po_cave",
+   "text": "Cooking pots are older than farming.",
+   "visual": "Inside an Ice Age rock shelter looking out at falling snow: a stone-ringed fire on the cave floor, a round-bottomed, cord-marked clay pot sits in the flames with steam rising and soot on its belly; the fez host on the left jumps back in shock and points at the pot; shells and bones on the floor, boulders in the foreground.",
+   "title": {
+    "white": "Clay pots"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1120,
+    "horizon": 880
+   },
+   "cues": {
+    "hit": "older"
+   },
+   "params": {
+    "mode": "hook",
+    "snow": 110,
+    "snowSize": 1.3,
+    "pot": {
+     "x": 0.56,
+     "s": 1.25,
+     "soot": 0.7,
+     "steam": 2.2,
+     "boil": true
+    },
+    "fire": {
+     "x": 0.56,
+     "s": 1.1
+    },
+    "kasif": {
+     "x": 0.25,
+     "y": 0.583,
+     "scale": 1.15,
+     "pose": "point",
+     "dir": 0,
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "hit",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "po_dig",
+   "text": "In a Chinese cave, scientists dated broken pots to about 20,000 years ago.",
+   "visual": "An excavation inside the cave: rock wall and a hanging work lamp at the top, a trench face with coloured soil layers and lettered tags, a string grid on pegs; sherds lie in a deep layer and an archaeologist kneels and brushes the oldest one (close-up push); on '20,000' it rings red and a red stamp '20,000 YEARS' pops; a bucket, a sieve full of sherds, sample bags and a trowel in front.",
+   "title": {
+    "white": "Southern China"
+   },
+   "source": "Science, 2012",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "find": "20,000"
+   },
+   "params": {
+    "find": "find",
+    "person": {
+     "x": 0.56,
+     "s": 1.1,
+     "kneel": true
+    },
+    "labels": [
+     {
+      "text": "20,000 YEARS",
+      "x": 0.42,
+      "y": 0.38,
+      "size": 64,
+      "stamp": true,
+      "color": "red",
+      "at": "find"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     400,
+     960
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "po_ice",
+   "text": "That's the Ice Age!",
+   "visual": "Outside in the Ice Age: a tall cracked wall of glacier ice with a snow cap and blue crevasses fills the horizon; in the middle a big snow-capped boulder with icicles and a frozen dead tree; snow blows sideways in gusts over drifts, rocks and dry grass in the foreground; a blue stamp 'ICE AGE' pops over the ice.",
+   "title": {
+    "white": "Back then"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 620
+   },
+   "cues": {
+    "hit": "Ice"
+   },
+   "params": {
+    "mode": "glacier",
+    "snow": 120,
+    "wind": 1.4,
+    "glacier": {
+     "y": 700,
+     "h": 480
+    },
+    "boulder": {
+     "x": 0.5,
+     "y": 1010,
+     "rx": 340,
+     "ry": 190,
+     "tree": -0.9
+    },
+    "labels": [
+     {
+      "text": "ICE AGE",
+      "x": 0.6,
+      "y": 0.29,
+      "size": 120,
+      "stamp": true,
+      "color": "blue",
+      "at": "hit"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "po_ice",
+   "text": "No farms, no villages, just hunters in the cold.",
+   "visual": "Three hunters in fur coats and fur hoods trudge left to right through the snow with spears, breath puffing, leaving footprints under the glacier; red labels 'NO FARMS' and 'NO VILLAGES' pop one after the other.",
+   "title": {
+    "white": "Hunters"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1150,
+    "horizon": 620
+   },
+   "cues": {
+    "farms": "farms",
+    "vil": "villages"
+   },
+   "params": {
+    "mode": "hunters",
+    "snow": 80,
+    "wind": 1,
+    "hunters": [
+     {
+      "x0": 0.05,
+      "x1": 0.3,
+      "s": 0.85
+     },
+     {
+      "x0": 0.3,
+      "x1": 0.55,
+      "s": 0.9
+     },
+     {
+      "x0": 0.55,
+      "x1": 0.8,
+      "s": 0.8,
+      "dy": -10
+     }
+    ],
+    "labels": [
+     {
+      "text": "NO FARMS",
+      "x": 0.3,
+      "y": 0.2,
+      "size": 80,
+      "stamp": true,
+      "color": "red",
+      "at": "farms"
+     },
+     {
+      "text": "NO VILLAGES",
+      "x": 0.66,
+      "y": 0.29,
+      "size": 80,
+      "stamp": true,
+      "color": "red",
+      "at": "vil"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "po_cave",
+   "text": "So why would you haul heavy clay pots?",
+   "visual": "Close-up, low and in front: a hunter in a fur coat and hood strains under a big clay pot in both arms, swaying, sweat lines by his worried face; the cave rock and falling snow behind him; a red 'WHY?' pops beside his head.",
+   "title": {
+    "white": "Heavy pots"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1120,
+    "horizon": 880
+   },
+   "cues": {
+    "why": "why"
+   },
+   "params": {
+    "mode": "lift",
+    "fire": {
+     "x": 0.74,
+     "s": 0.9
+    },
+    "pot": {
+     "s": 0.85,
+     "soot": 0.3
+    },
+    "hunters": [
+     {
+      "x": 0.4,
+      "s": 1.05,
+      "face": "right",
+      "carry": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "WHY?",
+      "x": 0.52,
+      "y": 0.305,
+      "size": 80,
+      "font": "serif",
+      "color": "red",
+      "at": "why",
+      "rot": -6
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     450,
+     850
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "po_shard",
+   "text": "Here's the clue: scorch marks from the fire.",
+   "visual": "Close-up of one big broken sherd on a linen cloth on the finds table: cord marks on its outer face, black soot across its lower half; a magnifying glass drifts over it; on 'scorch' the soot is ringed in red and a red stamp 'SCORCH MARKS' pops; on 'fire' ghost flames lick up both sides of it; below the subtitle a brush, tweezers, a scale ruler and a whole find tag on a string.",
+   "title": {
+    "white": "The clue"
+   },
+   "source": "Science, 2012",
+   "set": false,
+   "cues": {
+    "scorch": "scorch",
+    "fire": "fire"
+   },
+   "params": {
+    "view": {
+     "focus": [
+      540,
+      740
+     ],
+     "zoom": 1.6
+    },
+    "cx": 540,
+    "cy": 760,
+    "rx": 430,
+    "ry": 360,
+    "labels": [
+     {
+      "text": "SCORCH MARKS",
+      "x": 0.546,
+      "y": 0.2635,
+      "size": 52,
+      "stamp": true,
+      "color": "red",
+      "at": "scorch"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     740
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "po_cave",
+   "text": "They were probably cooking.",
+   "visual": "Deeper inside the cave, the opening off to the right: two hunters in fur sit by the fire; the pot sits in the flames, bubbling and steaming, and one hunter stirs it with a stick; a red stamp 'PROBABLY COOKING' pops.",
+   "title": {
+    "white": "Dinner"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1120,
+    "horizon": 880
+   },
+   "cues": {
+    "cook": "cooking"
+   },
+   "params": {
+    "mode": "cook",
+    "arch": {
+     "x0": 400,
+     "x1": 1180,
+     "top": 330
+    },
+    "pot": {
+     "x": 0.5,
+     "s": 1.0,
+     "soot": 0.85,
+     "steam": true,
+     "boil": true
+    },
+    "fire": {
+     "x": 0.5,
+     "s": 1
+    },
+    "hunters": [
+     {
+      "x": 0.24,
+      "s": 0.95,
+      "face": "right",
+      "pose": "sit",
+      "stir": true,
+      "dy": 0
+     },
+     {
+      "x": 0.78,
+      "s": 0.9,
+      "face": "left",
+      "pose": "sit"
+     }
+    ],
+    "labels": [
+     {
+      "text": "PROBABLY COOKING",
+      "x": 0.5,
+      "y": 0.302,
+      "size": 56,
+      "stamp": true,
+      "color": "red",
+      "at": "cook"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     880
+    ],
+    "zoom": 1.25,
+    "move": "up"
+   }
+  },
+  {
+   "type": "po_field",
+   "text": "Farming showed up about 10,000 years later.",
+   "visual": "The first farms along the Yangtze: flooded rice terraces with rows of green seedlings, thatched huts on low stilts and wooded hills behind, a hatless farmer with a topknot bent over planting seedlings from a bundle, ripples around his legs; big ripe rice stalks with drooping grain heads in the foreground water; a red stamp '10,000 YEARS LATER' pops on '10,000'.",
+   "title": {
+    "white": "Farming"
+   },
+   "set": {
+    "name": "field",
+    "ground": 1150,
+    "horizon": 640
+   },
+   "cues": {
+    "hit": "10,000"
+   },
+   "params": {
+    "farmer": {
+     "x": 0.6,
+     "s": 1.0
+    },
+    "labels": [
+     {
+      "text": "10,000 YEARS LATER",
+      "x": 0.5,
+      "y": 0.2,
+      "size": 70,
+      "stamp": true,
+      "color": "red",
+      "at": "hit"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "po_cave",
+   "text": "So dinner came before farming. Subscribe for the strange origin of everyday things.",
+   "visual": "Back in the cave, the camera pushes in on the fez host and the pot; the pot bubbles in the fire with snow falling outside; the fez host stands beside it, points at the pot, then waves to the viewer with a smile.",
+   "set": {
+    "name": "snow",
+    "ground": 1120,
+    "horizon": 880
+   },
+   "cues": {
+    "sub": "Subscribe"
+   },
+   "params": {
+    "mode": "end",
+    "pot": {
+     "x": 0.62,
+     "s": 1.05,
+     "soot": 0.85,
+     "steam": true,
+     "boil": true
+    },
+    "fire": {
+     "x": 0.62,
+     "s": 0.95
+    },
+    "kasif": {
+     "x": 0.27,
+     "y": 0.583,
+     "scale": 0.95,
+     "pose": "point",
+     "dir": -10,
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "sub",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "focus": [
+     470,
+     820
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  }
+ ]
+}

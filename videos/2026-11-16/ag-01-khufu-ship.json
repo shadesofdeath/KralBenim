@@ -1,0 +1,478 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-khufu-ship",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-slate",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "No nails",
+   "at all"
+  ],
+  "highlight": [
+   "nails"
+  ],
+  "scene": 0,
+  "t": 2.2,
+  "focus": [
+   540,
+   900
+  ],
+  "zoom": 1.0,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 250,
+   "y": 1500,
+   "scale": 0.95,
+   "face": 1
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — Khufu ship (1954, Kamal el-Mallakh, 1,224 pieces, 43.4 m, Lebanon cedar, halfa-grass lashings, Ahmed Youssef Moustafa, moved to the GEM in 2021)",
+   "url": "https://en.wikipedia.org/wiki/Khufu_ship"
+  },
+  {
+   "title": "PBS NOVA — Building Pharaoh's Ship (no nails; rope through V-shaped channels on the inside faces; 1,224 pieces; Hag Ahmed Youssef Moustafa)",
+   "url": "https://www.pbs.org/wgbh/nova/pharaoh/expl-06.html"
+  },
+  {
+   "title": "Ahram Online — A royal boat: The last journey (1,224 pieces of cedar; Ahmed Youssef took almost 14 years; move to the Grand Egyptian Museum)",
+   "url": "https://english.ahram.org.eg/NewsContentP/50/418844/AlAhram-Weekly/A-royal-boat-The-last-journey.aspx"
+  },
+  {
+   "title": "AramcoWorld — The Smell of Time (26 May 1954, 41 limestone blocks, 1,224 pieces, stitched with rope)",
+   "url": "https://archive.aramcoworld.com/issue/198001/the.smell.of.time.htm"
+  },
+  {
+   "title": "Daily News Egypt (3 Oct 2026) — Egypt-Japan team completes restoration, installation of 16 pieces from Khufu's Second Boat",
+   "url": "https://www.dailynewsegypt.com/2026/10/03/egypt-japan-team-completes-restoration-installation-of-16-pieces-from-khufus-second-boat/"
+  }
+ ],
+ "youtube": {
+  "title": "Khufu Ship: How Do You Build a Ship With No Nails?",
+  "description": "The Khufu ship is a 4,500-year-old cedar ship with no nails at all. So what holds it together?\n\nIn 1954, archaeologist Kamal el-Mallakh found it sealed in a pit beside the Great Pyramid of Giza, sealed for 4,500 years and taken apart into 1,224 loose pieces, with no plans. The secret: the planks were sewn together with rope that ran through hidden channels inside the wood. Restorer Ahmed Youssef Moustafa spent more than ten years rebuilding the pharaoh's boat, and today its twin is being reassembled in front of visitors at the Grand Egyptian Museum.\n\nSubscribe to Stickstory for one true story like this every day. Would you trust a ship held together by rope? Tell me in the comments!\n\n#shorts #khufuship #stickstory",
+  "tags": [
+   "khufu ship",
+   "khufu boat",
+   "khufu solar boat",
+   "solar boat of khufu",
+   "great pyramid boat",
+   "ancient egyptian ship",
+   "ship without nails",
+   "sewn boat",
+   "grand egyptian museum",
+   "ahmed youssef moustafa",
+   "kamal el-mallakh",
+   "ancient egypt",
+   "how it was built",
+   "history",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-16T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "kh_ship",
+   "text": "This ship has no nails at all.",
+   "visual": "The 4,500-year-old Khufu ship in full side view on wooden props on the Giza sand, the Great Pyramid behind it: papyrus-bundle prow on the left, stern post curling in on the right, deckhouse, canopy, four oars; the rope stitches along every plank seam glow gold and a bright shimmer travels from prow to stern; wind blows streaks of sand across the dune in front.",
+   "title": {
+    "white": "Giza"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 880
+   },
+   "cues": {
+    "hit": "nails"
+   },
+   "params": {
+    "mode": "desert",
+    "glow": 0.4,
+    "pyramid": {
+     "x": 0.45,
+     "w": 1300,
+     "h": 720
+    },
+    "drift": 80,
+    "wind": 0.8,
+    "stitch": 1.6,
+    "ship": {
+     "x": 0.6,
+     "L": 640,
+     "ex": 1.5
+    },
+    "oars": 4
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kh_pit",
+   "text": "In 1954, it was found beside the Great Pyramid, sealed for 4,500 years,",
+   "visual": "1954 at the foot of the Great Pyramid: a row of huge limestone blocks seals a long trench; on 'found' the middle block rises on ropes from a wooden derrick while two workers in turbans haul the rope; under it the dark pit with cedar timber ends in a shaft of gold light; red stamps '1954' and, on '4,500', '4,500 YEARS'.",
+   "title": {
+    "white": "1954"
+   },
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 870
+   },
+   "cues": {
+    "lift": "found",
+    "y": "1954",
+    "old": "4,500"
+   },
+   "params": {
+    "lift": "lift",
+    "labels": [
+     {
+      "text": "1954",
+      "x": 0.76,
+      "y": 0.17,
+      "size": 100,
+      "stamp": true,
+      "color": "red",
+      "at": "y"
+     },
+     {
+      "text": "4,500 YEARS",
+      "x": 0.64,
+      "y": 0.27,
+      "size": 76,
+      "stamp": true,
+      "color": "red",
+      "at": "old",
+      "rot": 4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "kh_pieces",
+   "text": "in 1,224 loose pieces.",
+   "visual": "Cross-section of the pit at the base of the Great Pyramid (sand and pyramid above, limestone cover blocks with one open and a shaft of light): inside, cedar planks, beams, oars and rope coils appear layer by layer while a red counter runs from 0 to 1,224 'PIECES'; in the sand foreground numbered pieces are already laid out next to a rope coil.",
+   "title": {
+    "white": "The pit"
+   },
+   "source": "Ahram Online",
+   "set": {
+    "name": "desert",
+    "ground": 442,
+    "horizon": 380
+   },
+   "cues": {
+    "done": "pieces"
+   },
+   "params": {
+    "at": 0.05,
+    "done": "done",
+    "count": 1224,
+    "gy": 0.23,
+    "bottom": 0.7,
+    "front": 0.74,
+    "counter": {
+     "x": 0.7,
+     "y": 0.11,
+     "size": 150
+    },
+    "labels": [
+     {
+      "text": "PIECES",
+      "x": 0.7,
+      "y": 0.18,
+      "size": 64,
+      "color": "ink",
+      "at": 0.2
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "down"
+   }
+  },
+  {
+   "type": "kh_lash",
+   "text": "So how do you build it? You sew it!",
+   "visual": "Close on the inside face of three cedar planks with frames at both ends and pairs of holes on both sides of each seam (a gap between the planks); on 'sew' a thick rope end races zig-zag from hole to hole across both seams and the gaps close; a red stamp 'SEW IT!'. Workshop floor with shavings, a rope coil and a mallet below.",
+   "title": {
+    "white": "The trick"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1320
+   },
+   "cues": {
+    "sew": "sew"
+   },
+   "params": {
+    "sew": "sew",
+    "span": 0.9,
+    "labels": [
+     {
+      "text": "SEW IT!",
+      "x": 0.62,
+      "y": 0.2,
+      "size": 120,
+      "stamp": true,
+      "color": "red",
+      "at": "sew"
+     }
+    ],
+    "gap": 30
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kh_lash",
+   "text": "Rope ran through hidden holes inside the planks.",
+   "visual": "Extreme close-up of one seam: the rope dives into a hole, and on 'hidden' a gold X-ray line shows its V-shaped channel running inside the wood to the hole on the other plank; the holes ring gold on 'holes'.",
+   "set": {
+    "name": "interior",
+    "ground": 1320
+   },
+   "source": "PBS NOVA",
+   "cues": {
+    "holes": "holes",
+    "hidden": "hidden"
+   },
+   "params": {
+    "sew": 0,
+    "span": 3.2,
+    "done": 0.45,
+    "holes": "holes",
+    "hidden": "hidden",
+    "labels": [
+     {
+      "text": "HIDDEN",
+      "x": 0.5,
+      "y": 0.415,
+      "size": 72,
+      "stamp": true,
+      "color": "red",
+      "at": "hidden"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     700
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kh_ship",
+   "text": "One restorer, Ahmed Youssef Moustafa, spent over ten years on that puzzle.",
+   "visual": "A restoration shed: the hull half rebuilt on wooden props (planked from the prow, bare ribs toward the stern, ghost outline of the rest), the restorer carries the next cedar plank to it; numbered planks lie on the floor like puzzle pieces; on a wall board tally marks appear one by one and a red stamp '10+ YEARS' pops on 'ten'.",
+   "title": {
+    "white": "Restorer"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "s": "spent",
+    "ten": "ten"
+   },
+   "params": {
+    "mode": "shed",
+    "build": [
+     0.5,
+     0.66
+    ],
+    "tally": {
+     "at": "s",
+     "n": 10,
+     "x": 0.7,
+     "y": 0.14
+    },
+    "labels": [
+     {
+      "text": "10+ YEARS",
+      "x": 0.62,
+      "y": 0.27,
+      "size": 96,
+      "stamp": true,
+      "color": "red",
+      "at": "ten"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "kh_twin",
+   "text": "Its twin is being rebuilt today.",
+   "visual": "A modern museum hall with a glass wall (pyramids far off): a steel cradle with thick U-shaped ribs, the first cedar floor planks in place, a new plank lowered on straps between two conservators; visitors watch over a glass rail in the foreground; a red stamp 'TODAY'.",
+   "title": {
+    "white": "Giza, 2026"
+   },
+   "source": "Daily News Egypt, 2026",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "now": "today"
+   },
+   "params": {
+    "lower": 1.6,
+    "n": 3,
+    "labels": [
+     {
+      "text": "TODAY",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 96,
+      "stamp": true,
+      "color": "red",
+      "at": "now"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "kh_ship",
+   "text": "Next time you tie your shoes, think of a pharaoh's ship.",
+   "visual": "The finished Khufu ship in its museum hall under spotlights, behind a glass rail with visitors' heads in front; on 'shoes' an inset circle pops up with a laced sneaker (toe cap, pale sole, eyelets); on 'think' its criss-cross laces and every rope stitch along the hull glow gold together; on 'ship' a red stamp 'SAME IDEA' appears at the bottom of the inset. The fez host at the rail on the right points up at the shoe, then down at the hull on 'think'.",
+   "set": {
+    "name": "interior",
+    "ground": 1152
+   },
+   "cues": {
+    "shoes": "shoes",
+    "think": "think",
+    "ship": "ship"
+   },
+   "params": {
+    "mode": "hall",
+    "glow": "think",
+    "stitch": 1.5,
+    "ship": {
+     "x": 0.42,
+     "L": 760,
+     "ex": 1.6
+    },
+    "shoe": {
+     "at": "shoes",
+     "glow": "think",
+     "x": 0.33,
+     "y": 0.27,
+     "s": 1
+    },
+    "labels": [
+     {
+      "text": "SAME IDEA",
+      "x": 0.33,
+      "y": 0.35,
+      "size": 56,
+      "stamp": true,
+      "color": "red",
+      "at": "ship",
+      "rot": -3
+     }
+    ],
+    "kasif": {
+     "x": 0.88,
+     "y": 0.66,
+     "scale": 0.72,
+     "pose": "point",
+     "dir": 40,
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "think",
+       "pose": "point",
+       "dir": -15,
+       "face": "left",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "kh_ship",
+   "text": "Subscribe for one true story like this every day.",
+   "visual": "Back on the Giza sand in front of the ship and the pyramid, the fez host waves at the viewer, then points at them with a big smile.",
+   "set": {
+    "name": "desert",
+    "ground": 1152,
+    "horizon": 880
+   },
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "mode": "desert",
+    "pyramid": {
+     "x": 0.62,
+     "w": 1300,
+     "h": 720
+    },
+    "kasif": {
+     "x": 0.3,
+     "y": 0.71,
+     "scale": 0.95,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}
