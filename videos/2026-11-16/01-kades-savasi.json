@@ -1,0 +1,172 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "kum",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Britannica: Battle of Kadesh",
+      "url": "https://www.britannica.com/event/Battle-of-Kadesh"
+    },
+    {
+      "title": "World History Encyclopedia: The Battle of Kadesh & the First Peace Treaty",
+      "url": "https://www.worldhistory.org/article/78/the-battle-of-kadesh--the-first-peace-treaty/"
+    },
+    {
+      "title": "Türkiye Müzeleri (Kültür ve Turizm Bakanlığı): Do You Know World's First International Peace Treaty?",
+      "url": "https://turkishmuseums.com/blog/detail/do-you-know-worlds-first-international-peace-treaty/10040/4"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "İki taraf da",
+      "kazandı"
+    ],
+    "highlight": [
+      "kazandı"
+    ],
+    "scene": 0,
+    "t": 2.2,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu savaşı iki taraf da kazandı.",
+      "type": "bt_kd_standards",
+      "visual": "Işık havuzunda tek özne: çapraz duran iki sancak; soldan sağa uzanan firavunun mavi yelpaze başlıklı direği ve sağdan sola uzanan Hitit kralının ucu kıvrık asası, ikisinin de flamaları rüzgârda sağa dalgalanır; dibinde ortadan kırılmış tek mızrak, yerde savrulan toz; 'kazandı'da iki tarafın flamaları ve kesiştikleri düğüm birlikte altına döner",
+      "cues": {
+        "hit": "kazandı"
+      }
+    },
+    {
+      "text": "En azından öyle yazdılar.",
+      "type": "bt_kd_wall",
+      "visual": "Yandan vuran ışıkta kumtaşı tapınak duvarı (taş sıraları); üç sütun hiyeroglif (güneş, su, kamış, kuş, göz, ankh) sırayla oyulur; ortadaki sütunda bir kartuş, 'yazdılar'da kartuşun çevresi altın çizilir",
+      "params": {
+        "mode": "glyphs"
+      },
+      "cues": {
+        "hit": "yazdılar"
+      }
+    },
+    {
+      "text": "Üç bin üç yüz yıl önce, Kadeş'te Mısır ile Hititler çarpıştı.",
+      "type": "bt_kd_map",
+      "visual": "Yakın Doğu Akdeniz haritası (y 150–1150): mavi-gri deniz üstünde ince dalgalar ve 'Akdeniz', Kıbrıs adası, açık renk kara, mavi Asi nehri (içinde akan ışık); kuzeyde 'Hatti', güneyde 'Mısır'; iki ordu rotası (güneyden kıyı boyunca, kuzeyden Asi boyunca) sahne boyunca Kadeş'e doğru çizilir; 'Kadeş'te altın nokta ve solunda 'Kadeş', altında italik 'yaklaşık MÖ 1274'; 'çarpıştı'da rotalar Kadeş'te buluşur, altın halka genişler",
+      "params": {
+        "sub": "yaklaşık MÖ 1274"
+      },
+      "cues": {
+        "kadesh": "Kadeş",
+        "hit": "çarpıştı"
+      }
+    },
+    {
+      "text": "Savaş belirsiz bitti. Ramses geri döndü.",
+      "type": "bt_kd_field",
+      "visual": "Alacakaranlıkta boş savaş alanı: toprağa yarı gömülmüş, bir parmağı kırık altı parmaklı savaş arabası tekerleği, eğik saplanmış mızrak; ufukta küçük bir savaş arabası kolu tozu ardında bırakarak sola, eve doğru uzaklaşır; 'belirsiz'de alçak güneş pusun içine batmaya başlar",
+      "params": {
+        "mode": "after"
+      },
+      "cues": {
+        "hit": "belirsiz"
+      }
+    },
+    {
+      "text": "Ama zaferini duvarlara kazıttı.",
+      "type": "bt_kd_wall",
+      "visual": "Kumtaşı duvarda gömme kabartma kendini oyar: uzun boyunlu, ince bacaklı, sorguçlu ve kuyruğu savrulan dörtnala bir atın arkasında, savaş arabasında mavi miğferli firavun yayını germiş; 'duvarlara'da at, tekerlek, araba, miğfer ve yay altınla çizilir",
+      "params": {
+        "mode": "relief"
+      },
+      "cues": {
+        "hit": "duvarlara"
+      }
+    },
+    {
+      "text": "Kadeş ise Hititlerin elinde kaldı.",
+      "type": "bt_kd_kings",
+      "visual": "Ovada iki kral karşı karşıya: solda mavi miğferli, beyaz etekli firavun; sağda sivri başlıklı, uzun saç örgülü, saçaklı pelerinli, ucu kalkık ayakkabılı Hitit kralı, elinde kıvrık asa; aralarında arkada tepe üstünde surlu Kadeş kalesi; 'Hititlerin'de firavun gölgeye çekilir, Hitit kralının ışığı büyür, kalenin çevresi altınla çizilir, kralın flaması altına döner",
+      "params": {
+        "mode": "hatti"
+      },
+      "cues": {
+        "hit": "Hititlerin"
+      }
+    },
+    {
+      "text": "Yıllar sonra barış yazıldı.",
+      "type": "bt_kd_tablet",
+      "visual": "Işık havuzunda tek büyük, köşesi kırık kil tablet; çivi yazısı satırları yukarıdan aşağı sırayla basılır; 'barış'ta ortadaki üç satır sırayla altın yanar; üstünden yavaş bir parıltı geçer",
+      "cues": {
+        "hit": "barış"
+      }
+    },
+    {
+      "text": "O kil tablet bugün İstanbul'da.",
+      "type": "bt_kd_museum",
+      "visual": "Spot ışığı altında müze vitrini: kaide, cam kutu, içinde küçük bir sehpada aynı kil tablet, ışıkta toz zerreleri, camda yavaş kayan yansıma; 'İstanbul'da kaidenin ön yüzünde 'İstanbul', altında italik 'Arkeoloji Müzeleri' belirir",
+      "params": {
+        "label": "İstanbul",
+        "sub": "Arkeoloji Müzeleri"
+      },
+      "cues": {
+        "hit": "İstanbul"
+      }
+    },
+    {
+      "text": "Kazanılamayan bu savaş, ilk barışlardan birini bıraktı.",
+      "type": "bt_kd_tablet",
+      "visual": "Işık havuzunda aynı kil tablet tek özne, tümü yazılı; önünde yerde ortadan kırılmış mızrak; 'barışlardan'da satırlar yukarıdan aşağı birer birer altın yanar, ışık havuzu büyür",
+      "params": {
+        "mode": "peace"
+      },
+      "cues": {
+        "hit": "barışlardan"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_kd_field",
+      "visual": "Bugün: ufuktan öne doğru kıvrılarak gelen Asi nehri, karşı kıyıda Kadeş'in düz tepeli höyüğü, önde kamışlar, suda öne kayan ışık çizgileri, güneş yavaşça iner",
+      "params": {
+        "mode": "river"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Kadeş Savaşı: İki Tarafın da Kazandığı Savaş Nasıl Bitti?",
+    "description": "Kadeş Savaşı'nı iki taraf da kazandı; en azından öyle yazdılar. Yaklaşık MÖ 1274'te Asi nehri kıyısında Mısır firavunu II. Ramses ile Hitit kralı II. Muvatalli karşılaştı.\n\nSavaş belirsiz bitti: Ramses ordusuyla geri döndü ama zaferini tapınak duvarlarına kazıttı; Kadeş ise Hititlerin elinde kaldı. Yaklaşık on beş yıl sonra Ramses ile III. Hattuşili, bilinen en eski barış antlaşmalarından birini imzaladı. Antlaşmanın Akadca yazılmış kil tablet kopyası Hattuşa'da (Boğazköy) bulundu ve bugün İstanbul Arkeoloji Müzeleri'nde.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Kadeş'i gerçekte kim kazandı? Yorumlara yaz!\n\n#shorts #kadeşsavaşı #hititler #düşünbakalım",
+    "tags": [
+      "kadeş savaşı",
+      "kadeş antlaşması",
+      "kadeş barış antlaşması",
+      "kadeş",
+      "ilk barış antlaşması",
+      "hititler",
+      "hitit mısır savaşı",
+      "ikinci ramses",
+      "muvatalli",
+      "hattuşili",
+      "hattuşa",
+      "istanbul arkeoloji müzeleri",
+      "anadolu tarihi",
+      "antik tarih",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-16T19:00:00+03:00"
+  }
+}

@@ -1,0 +1,870 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "grafit",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Kimse",
+   "okuyamadı"
+  ],
+  "highlight": [
+   "okuyamadı"
+  ],
+  "scene": 15,
+  "t": 3.0,
+  "focus": [
+   960,
+   470
+  ],
+  "zoom": 1.25,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Paris, Eylül 1822. Bir adam, elinde kâğıtlarla dar bir sokakta koşuyordu.",
+   "visual": "Gece, dar bir Paris sokağı: iki yanda yüksek taş cepheler, tek gaz lambası (alev yavaş). Soldan sağa koşan yüzsüz bir siluet, elinde bir deste kâğıt; 'koşuyordu'da kâğıtların ucu ışıkta parlar.",
+   "type": "bt_rosa_street",
+   "params": {
+    "mode": "run"
+   },
+   "cues": {
+    "hit": "koşuyordu"
+   },
+   "chapter": "Paris, 1822"
+  },
+  {
+   "text": "Ağabeyinin odasına daldı ve tek bir söz söyledi.",
+   "visual": "Sade bir çalışma odası: masa, üstünde tek mum ve kitap yığını; sağda kapı aralığından içeri giren siluet, elinde kâğıtlar; 'söz'de mum alevi hafifçe eğilir.",
+   "type": "bt_rosa_room",
+   "params": {
+    "mode": "door"
+   },
+   "cues": {
+    "hit": "söz"
+   }
+  },
+  {
+   "text": "Buldum. Rivayete göre hemen ardından yere yığıldı.",
+   "visual": "Aynı oda, alçak plan: masanın yanında yere yığılmış siluet, kâğıtlar yerde yelpaze gibi açılmış; mum yanmaya devam eder. Kanlı/dramatik değil, sessiz.",
+   "type": "bt_rosa_room",
+   "params": {
+    "mode": "fall"
+   },
+   "cues": {
+    "hit": "yığıldı"
+   }
+  },
+  {
+   "text": "Masadaki kâğıtlarda bir firavunun adı vardı. Ve o adı, bin dört yüz yıldır kimse okuyamamıştı.",
+   "visual": "Yakın plan: ışık havuzunda tek kâğıt yaprağı; üstünde kurşunkalemle çizilmiş dikey bir Ramses kartuşu (oval çerçeve: güneş diski, ms işareti, iki katlanmış kumaş 's') kendini çizer; 'kimse'de kâğıdın kenarları karanlığa erir.",
+   "type": "bt_rosa_cartouche",
+   "params": {
+    "mode": "paper"
+   },
+   "cues": {
+    "hit": "firavunun",
+    "b": "kimse"
+   },
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.3
+   }
+  },
+  {
+   "text": "Bu adam, ölü bir yazıyı yeniden konuşturmuştu. Nasıl?",
+   "visual": "Işık havuzunda büyük ince 'nasıl?'; altında küçük italik 'ölü bir yazı'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "nasıl?",
+      "at": "c1",
+      "size": 170
+     },
+     {
+      "text": "ölü bir yazı",
+      "at": "c0",
+      "size": 84,
+      "italic": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "ölü",
+    "c1": "Nasıl"
+   }
+  },
+  {
+   "text": "Herkes cevabın kara bir taşta olduğunu söyler. Ama taş, hikâyenin sadece yarısıydı.",
+   "visual": "Karanlıkta dik duran kara bir taş levha (kırık üst kenar, yüzeyinde soluk yazı bantları); 'kara'da taş ışık havuzunda belirir; 'yarısıydı'da ışık yalnız taşın sol yarısında kalır, sağ yarısı karanlığa çekilir.",
+   "type": "bt_rosa_stone",
+   "params": {
+    "mode": "reveal"
+   },
+   "cues": {
+    "hit": "kara",
+    "b": "yarısıydı"
+   }
+  },
+  {
+   "text": "24 Ağustos 394. Mısır'ın güneyinde, Nil'deki Philae adasında bir rahip, tapınağın duvarına birkaç satır kazıdı.",
+   "visual": "Bölüm kartı: altın 'I', ince çizgi, büyük ince 'Sessizlik', italik 'Philae, 394'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "I",
+    "title": "Sessizlik",
+    "sub": "Philae, 394"
+   },
+   "chapter": "Sessizlik"
+  },
+  {
+   "text": "Bilinen son hiyeroglif yazıt buydu. Ondan sonra kimse bu işaretlerle yazmadı.",
+   "visual": "Nil üstünde Philae tapınağının pilon kapısı silueti, suda ince yansıma; kapının yanındaki duvarda küçük bir tanrı figürü ve birkaç satır işaret ince altın çizgiyle kendini kazır; 'son'da italik '394' belirir.",
+   "type": "bt_rosa_philae",
+   "params": {
+    "mode": "carve",
+    "label": "394"
+   },
+   "cues": {
+    "hit": "son"
+   }
+  },
+  {
+   "text": "Tapınaklar kapandı. Ve yazıyı okuma bilgisi, son rahiplerle birlikte kayboldu.",
+   "visual": "Aynı tapınak, alacakaranlık: kapının önünde tek kandil; 'kayboldu'da alev yavaşça söner, duvardaki altın satırlar griye döner, ince duman yükselir.",
+   "type": "bt_rosa_philae",
+   "params": {
+    "mode": "dusk"
+   },
+   "cues": {
+    "hit": "kayboldu"
+   }
+  },
+  {
+   "text": "Yüzyıllar boyunca bilginler bu işaretlerin gizli semboller olduğuna inandı.",
+   "visual": "Gece, yıldızlı gök altında tek, yüksek dikilitaş (alttan bakış); yüzeyinde dikey sıra işaretler; 'semboller'de işaretler birer birer soluk altın parlar.",
+   "type": "bt_rosa_obelisk",
+   "params": {},
+   "cues": {
+    "hit": "semboller"
+   }
+  },
+  {
+   "text": "Her kuşun, her gözün, her yılanın derin bir fikri sakladığını sandılar.",
+   "visual": "Işık havuzunda sırayla üç büyük, sade hiyeroglif: kuş (baykuş), göz, yılan; her biri cue'sunda kendini çizer; sonda üçünün altında soluk italik 'gizli anlam?'.",
+   "type": "bt_rosa_glyphs",
+   "params": {
+    "mode": "trio",
+    "label": "gizli anlam?"
+   },
+   "cues": {
+    "c0": "kuşun",
+    "c1": "gözün",
+    "c2": "yılanın"
+   }
+  },
+  {
+   "text": "Bu yanlış inanç, kapıyı kilitli tuttu. Ama anahtar, eski bir duvarın içinde bekliyordu.",
+   "visual": "Yıkık bir kale duvarının kesiti: üst üste sade taş blokları; 'anahtar'da aralarındaki tek koyu taşın kenarı ince altın bir çizgiyle belirir.",
+   "type": "bt_rosa_wall",
+   "params": {
+    "mode": "hidden"
+   },
+   "cues": {
+    "hit": "anahtar"
+   }
+  },
+  {
+   "text": "1798'de Napolyon'un ordusu Mısır'a çıktı. Askerlerle birlikte yüzü aşkın bilgin de gelmişti.",
+   "visual": "Bölüm kartı: 'II', 'Kara taş', italik 'Reşit, 1799'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "II",
+    "title": "Kara taş",
+    "sub": "Reşit, 1799"
+   },
+   "chapter": "Kara taş"
+  },
+  {
+   "text": "Temmuz 1799. Reşit kasabasının yakınında, Fransızlar eski bir kaleyi onarıyordu.",
+   "visual": "Sade Nil deltası haritası: kıyı çizgisi, Nil'in iki kolu; İskenderiye, Kahire ve Memfis soluk noktalar; 'Reşit'te Reşit noktası altın atar, italik 'Reşit (Rosetta)'.",
+   "type": "bt_rosa_map",
+   "params": {
+    "preset": "delta",
+    "bounds": [
+     29.3,
+     29.6,
+     32.6,
+     32.0
+    ],
+    "points": [
+     {
+      "lon": 30.42,
+      "lat": 31.4,
+      "label": "Reşit",
+      "sub": "Rosetta",
+      "at": "c1"
+     },
+     {
+      "lon": 29.92,
+      "lat": 31.2,
+      "label": "İskenderiye",
+      "side": "left"
+     },
+     {
+      "lon": 31.24,
+      "lat": 30.04,
+      "label": "Kahire"
+     },
+     {
+      "lon": 31.25,
+      "lat": 29.85,
+      "label": "Memfis"
+     }
+    ]
+   },
+   "cues": {
+    "c1": "Reşit"
+   }
+  },
+  {
+   "text": "Teğmen Pierre-François Bouchard, eski bir duvarın taşları arasında koyu renkli bir taş fark etti.",
+   "visual": "Gün batımında yıkık kale duvarı: kazmalı iki asker silueti uzakta, önde eğilmiş bir subay silueti (bikorn şapka); 'koyu'da taşların arasında kara taşın köşesi ışık havuzunda belirir; italik 'Bouchard'.",
+   "type": "bt_rosa_fort",
+   "params": {
+    "mode": "dig",
+    "label": "Bouchard"
+   },
+   "cues": {
+    "hit": "koyu"
+   }
+  },
+  {
+   "text": "Taşın yüzü üç ayrı yazıyla kaplıydı.",
+   "visual": "Işık havuzunda kara taş, ön yüz; 'üç'te üç yazı bandı yukarıdan aşağı sırayla kendini çizer (üstte resimli işaretler, ortada kıvrık kısa çizgiler, altta düzenli harf satırları). Kapak adayı.",
+   "type": "bt_rosa_stone",
+   "params": {
+    "mode": "three"
+   },
+   "cues": {
+    "hit": "üç"
+   }
+  },
+  {
+   "text": "En üstte hiyeroglif. Ortada, Mısırlıların gündelik yazısı demotik. En altta eski Yunanca.",
+   "visual": "Aynı taş; her cue'da o bant ışıklanır, diğerleri soluklaşır; bandın yanında italik etiket: 'hiyeroglif', 'demotik', 'Yunanca'.",
+   "type": "bt_rosa_stone",
+   "params": {
+    "mode": "bands",
+    "labels": [
+     "hiyeroglif",
+     "demotik",
+     "Yunanca"
+    ]
+   },
+   "cues": {
+    "c0": "hiyeroglif",
+    "c1": "demotik",
+    "c2": "Yunanca"
+   }
+  },
+  {
+   "text": "Yunanca okunabiliyordu. Ve aynı fermanın üç yazıyla yazıldığını söylüyordu.",
+   "visual": "Yakın plan: Yunanca bandının birkaç satırı (sade büyük harf satırlar, bir satırda okunur 'ΠΤΟΛΕΜΑΙΟΣ'); ince altın çizgi satır boyunca okunur gibi ilerler; 'üç'te yukarıdaki iki banda doğru iki ince çizgi uzanır.",
+   "type": "bt_rosa_greek",
+   "params": {
+    "mode": "read"
+   },
+   "cues": {
+    "hit": "okunabiliyordu",
+    "b": "üç"
+   }
+  },
+  {
+   "text": "Milattan önce 196'da Memfis'teki rahipler, on üç yaşındaki kral Ptolemaios'u onurlandırmıştı.",
+   "visual": "Tapınak içi: tahtta oturan genç kral silueti (çift taç), önünde eğilmiş üç rahip silueti (tıraşlı baş, uzun etek); 'on üç'te kralın üstüne ışık düşer; italik 'Memfis · MÖ 196'.",
+   "type": "bt_rosa_king",
+   "params": {
+    "label": "Memfis · MÖ 196"
+   },
+   "cues": {
+    "hit": "üç"
+   }
+  },
+  {
+   "text": "Ama taşın üst kısmı kırıktı. Hiyerogliflerden sadece on dört satır kalmıştı.",
+   "visual": "Taşın kırık üst kısmına yakın plan (gövde aşağıda karanlığa erir); kayıp kısım kesik ince çizgiyle havada belirir ve solar; 'dört'te kalan 14 satır tek tek ince altın çizgiyle işaretlenir, italik '14 satır'.",
+   "type": "bt_rosa_stone",
+   "params": {
+    "mode": "broken",
+    "label": "14 satır"
+   },
+   "cues": {
+    "hit": "kırıktı",
+    "b": "dört"
+   }
+  },
+  {
+   "text": "1801'de Fransızlar yenildi. Taş İngilizlere geçti ve ertesi yıl Londra'da British Museum'a kondu.",
+   "visual": "Sade Akdeniz–Atlas kıyısı haritası: İskenderiye'den Cebelitarık üzerinden Londra'ya ince altın rota kendini çizer; 'Londra'da'da Londra noktası atar, italik '1802'.",
+   "type": "bt_rosa_map",
+   "params": {
+    "preset": "europe",
+    "bounds": [
+     -11,
+     28,
+     33,
+     54
+    ],
+    "points": [
+     {
+      "lon": 29.92,
+      "lat": 31.2,
+      "label": "İskenderiye",
+      "sub": "1801",
+      "side": "left"
+     },
+     {
+      "lon": -0.13,
+      "lat": 51.51,
+      "label": "Londra",
+      "sub": "1802",
+      "at": "c1"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "c0",
+      [
+       [
+        25,
+        33.4
+       ],
+       [
+        19,
+        34.6
+       ],
+       [
+        12,
+        37.3
+       ],
+       [
+        5,
+        37.9
+       ],
+       [
+        -1,
+        36.6
+       ],
+       [
+        -5.5,
+        35.97
+       ],
+       [
+        -9.8,
+        36.6
+       ],
+       [
+        -10.2,
+        40
+       ],
+       [
+        -9.9,
+        43.6
+       ],
+       [
+        -6,
+        48.6
+       ],
+       [
+        -3,
+        49.6
+       ],
+       [
+        0.5,
+        50.4
+       ],
+       [
+        1.6,
+        51.35
+       ],
+       [
+        0.6,
+        51.48
+       ]
+      ]
+     ]
+    ]
+   },
+   "cues": {
+    "c0": "geçti",
+    "c1": "Londra'da"
+   }
+  },
+  {
+   "text": "Kopyaları bütün Avrupa'ya dağıldı. Anahtar artık herkesin elindeydi. Ama kapıyı kimse açamadı.",
+   "visual": "Işık havuzunda taşın mürekkep baskısı bir kâğıt (soluk üç bant); arkasında aynı kâğıttan birkaç kopya yelpaze gibi açılır; 'kimse'de kâğıtlar karanlığa solar, yalnız ortadaki kalır.",
+   "type": "bt_rosa_copies",
+   "params": {},
+   "cues": {
+    "hit": "dağıldı",
+    "b": "kimse"
+   }
+  },
+  {
+   "text": "Londra'da hekim Thomas Young, 1814'te taşın üzerine eğildi.",
+   "visual": "Bölüm kartı: 'III', 'Yarış', italik 'Londra · Paris, 1814 – 1822'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "III",
+    "title": "Yarış",
+    "sub": "Londra · Paris, 1814 – 1822"
+   },
+   "cues": {},
+   "chapter": "Yarış"
+  },
+  {
+   "text": "Bazı işaretler oval bir çerçevenin içindeydi. Bunlara kartuş denir; içlerinde kral adları vardı.",
+   "visual": "Işık havuzunda yatay bir oval çerçeve (sağ ucunda dikey çizgi) kendini çizer; içinde soluk işaretler; 'kartuş'ta altında altın italik 'kartuş'.",
+   "type": "bt_rosb_cartouche",
+   "params": {
+    "mode": "frame"
+   },
+   "cues": {
+    "hit": "kartuş"
+   }
+  },
+  {
+   "text": "Çerçevedeki ad Ptolemaios'tu. Young, işaretlerin bu adı seslerle yazdığını gösterdi.",
+   "visual": "Aynı kartuş, işaretler net: tabure (p), ekmek somunu (t), kement/ilmek (o), aslan (l), (m), iki saz (i), katlanmış kumaş (s); 'seslerle'de her işaretin altında küçük harf belirir: P T O L M İ S; üstte italik 'Ptolemaios'.",
+   "type": "bt_rosb_cartouche",
+   "params": {
+    "mode": "ptolemy"
+   },
+   "cues": {
+    "hit": "seslerle"
+   }
+  },
+  {
+   "text": "Ama orada durdu. Ona göre sesler sadece yabancı adlar içindi.",
+   "visual": "Gece, Young'ın masası: mum, açık defter, kalem; 'durdu'da kalem deftere bırakılır, defterde yarım kalmış bir satır; italik 'Thomas Young'.",
+   "type": "bt_rosb_desk",
+   "params": {},
+   "cues": {
+    "hit": "durdu"
+   }
+  },
+  {
+   "text": "Fransa'da ise Jean-François Champollion vardı. Gençken birçok dil öğrenmişti. Biri her şeyi değiştirecekti: Kıptice.",
+   "visual": "Raf yerine masada üst üste dizili birkaç eski kitap sırtı; 'Kıptice'de tek kitap öne kayar, açılır, sayfasında birkaç Kıpti harfi (ⲣⲏ ⲙⲓⲥⲉ gibi sade harfler) altın belirir; italik 'Champollion'.",
+   "type": "bt_rosb_books",
+   "params": {},
+   "cues": {
+    "hit": "Champollion",
+    "b": "Biri",
+    "c": "Kıptice"
+   }
+  },
+  {
+   "text": "Kıptice, eski Mısır dilinin son hâliydi ve kilise dualarında hâlâ yaşıyordu.",
+   "visual": "Loş bir Kıpti kilisesi içi: tek kemer, asılı tek kandil (alev yavaş), kürsüde açık dua kitabı; 'dualarında'da kitabın sayfası ışıklanır.",
+   "type": "bt_rosb_church",
+   "params": {},
+   "cues": {
+    "hit": "dualarında"
+   }
+  },
+  {
+   "text": "1822'de eline bir dikilitaşın kopyası geçti. Üstünde bir kartuş daha vardı: Kleopatra.",
+   "visual": "Soluk bir dikilitaş silueti; 'Kleopatra'da üstünden bir kartuş öne büyür: tepe/sepet (k), aslan (l), saz (e), kement (o), tabure (p), akbaba (a), el (t), ağız (r), akbaba (a); italik 'Kleopatra'.",
+   "type": "bt_rosb_cartouche",
+   "params": {
+    "mode": "kleopatra"
+   },
+   "cues": {
+    "hit": "kartuş",
+    "b": "Kleopatra"
+   }
+  },
+  {
+   "text": "İki adı yan yana koydu. P, O ve L, iki adda da aynı işaretlerle yazılmıştı.",
+   "visual": "İki kartuş üst üste: Ptolemaios ve Kleopatra; 'aynı'da tabure, kement ve aslan işaretleri altın yanar, aralarında ince altın çizgiler kurulur.",
+   "type": "bt_rosb_cartouche",
+   "params": {
+    "mode": "compare"
+   },
+   "cues": {
+    "hit": "aynı"
+   }
+  },
+  {
+   "text": "Ama bunlar Yunan kökenli kralların adlarıydı. Gerçek Mısırlılar da sesle mi yazmıştı?",
+   "visual": "Işık havuzunda büyük ince 'sesle mi?'; üstünde küçük italik 'Yunan adları'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "Yunan adları",
+      "at": "c0",
+      "size": 84,
+      "italic": true
+     },
+     {
+      "text": "sesle mi?",
+      "at": "c1",
+      "size": 170
+     }
+    ]
+   },
+   "cues": {
+    "c0": "Yunan",
+    "c1": "Gerçek"
+   }
+  },
+  {
+   "text": "14 Eylül 1822'de Ebu Simbel tapınağından çizimler geldi.",
+   "visual": "Bölüm kartı: 'IV', 'Ses mi, resim mi?', italik '14 Eylül 1822'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "IV",
+    "title": "Ses mi, resim mi?",
+    "sub": "14 Eylül 1822"
+   },
+   "cues": {},
+   "chapter": "Ses mi, resim mi?"
+  },
+  {
+   "text": "Bu adlar çok daha eskiydi.",
+   "visual": "Gece, kumun içinde kayaya oyulmuş dört dev oturan heykel silueti (Ebu Simbel cephesi), üstte yıldızlar; 'eskiydi'de cephenin ortasındaki kapıdan ince ışık sızar.",
+   "type": "bt_rosb_abusimbel",
+   "params": {},
+   "cues": {
+    "hit": "eskiydi"
+   }
+  },
+  {
+   "text": "Bir kartuşun başında bir güneş diski vardı. Güneş, Mısır dilinde Ra'ydı.",
+   "visual": "Işık havuzunda tek, büyük güneş diski işareti (daire, ortada nokta) kendini çizer; 'Ra'ydı'da altında altın 'Ra'.",
+   "type": "bt_rosb_sign",
+   "params": {
+    "mode": "sun"
+   },
+   "cues": {
+    "hit": "güneş",
+    "b": "Ra'ydı"
+   }
+  },
+  {
+   "text": "Ardından bildiği bir işaret geldi: mes. Ve sonda, s sesi.",
+   "visual": "Dikey kartuş: en üstte güneş diski, altına 'mes'te üç saplı ms işareti, 's sesi'nde katlanmış kumaş işaretleri belirir; yanlarında küçük 'ra', 'mes', 's'.",
+   "type": "bt_rosb_cartouche",
+   "params": {
+    "mode": "mes"
+   },
+   "cues": {
+    "hit": "mes",
+    "b": "sesi"
+   }
+  },
+  {
+   "text": "Ra, mes, ses. Ramses.",
+   "visual": "Tam Ramses kartuşu ışık havuzunda; 'Ramses'te kartuş altın kontürle parlar, altında büyük ince 'Ramses'. Kapak adayı.",
+   "type": "bt_rosb_cartouche",
+   "params": {
+    "mode": "ramses"
+   },
+   "cues": {
+    "hit": "Ramses"
+   }
+  },
+  {
+   "text": "Kıpticede mise, doğurmak demekti. Ad, kendi anlamını taşıyordu: Ra onu doğurdu.",
+   "visual": "Kelime kökü: 'mise' (Kıptice, doğurmak) → 'Ramses' (Ra onu doğurdu).",
+   "type": "bt_word",
+   "params": {
+    "from": {
+     "word": "mise",
+     "gloss": "doğurmak"
+    },
+    "to": {
+     "word": "Ramses",
+     "gloss": "Ra onu doğurdu"
+    }
+   },
+   "cues": {
+    "to": "anlamını"
+   }
+  },
+  {
+   "text": "İşte sır buydu. Aynı işaret hem bir resimdi hem bir ses.",
+   "visual": "Tek güneş diski işareti ortada; 'resimdi'de solunda italik 'resim', 'ses'te sağında italik 'ses' belirir; ikisi de altın, işaret ikisine ince çizgiyle bağlanır.",
+   "type": "bt_rosb_sign",
+   "params": {
+    "mode": "dual"
+   },
+   "cues": {
+    "hit": "resimdi",
+    "b": "ses."
+   }
+  },
+  {
+   "text": "Champollion kâğıtları kapıp ağabeyine koştu. Yere yığılan adam oydu.",
+   "visual": "Soğuk açılıştaki gece sokağına dönüş: koşan siluet, elinde kâğıtlar; 'yığılan'da gaz lambası titremeden söner gibi kısılır.",
+   "type": "bt_rosa_street",
+   "params": {
+    "mode": "run"
+   },
+   "cues": {
+    "hit": "kâğıtları",
+    "b": "yığılan"
+   }
+  },
+  {
+   "text": "Sık anlatılan hikâyede Rosetta Taşı bu yazıyı tek başına çözdü. Öyle olmadı.",
+   "visual": "Işık havuzunda büyük ince 'tek başına?'; 'olmadı'da altında altın italik 'öyle olmadı'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "tek başına?",
+      "at": "c0",
+      "size": 150
+     },
+     {
+      "text": "öyle olmadı",
+      "at": "c1",
+      "size": 90,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "Sık",
+    "c1": "olmadı"
+   }
+  },
+  {
+   "text": "Taş kapıyı gösterdi. Kilidi Kıptice, yıllarca süren sabır ve uzak bir tapınaktan gelen bir ad açtı.",
+   "visual": "Üç öğe yan yana, aralarında boşluk: küçük kara taş, açık Kıpti kitabı, Ramses kartuşu; her biri cue'sunda ışıklanır ('Taş', 'Kıptice', 'ad'), sonda üçü ince altın çizgiyle bağlanır.",
+   "type": "bt_rosb_triad",
+   "params": {},
+   "cues": {
+    "hit": "Kıptice",
+    "b": "sabır",
+    "c": "ad"
+   }
+  },
+  {
+   "text": "27 Eylül 1822'de Champollion buluşunu Paris'te bilginlere okudu. Hemen yanında Thomas Young oturuyordu.",
+   "visual": "Kubbeli bir salon (Institut de France): sıra sıra yüzsüz oturan siluetler, ortada kürsüde ayakta biri, elinde kâğıt; 'Young'da ön sırada kürsüye yakın bir siluet ışıklanır; italik '27 Eylül 1822'.",
+   "type": "bt_rosb_academy",
+   "params": {},
+   "cues": {
+    "hit": "Young"
+   }
+  },
+  {
+   "text": "İki rakip ilk kez yüz yüzeydi. Young, kendi payının unutulduğunu düşündü. Ama taşın kendi hikâyesi bitmemişti.",
+   "visual": "İki yüzsüz profil karşı karşıya (solda Young, sağda Champollion), aralarında küçük kartuş; 'unutulduğunu'da Young'ın profili soluklaşır; 'bitmemişti'de aralarındaki kartuş yerini kara taşın küçük silueti alır.",
+   "type": "bt_rosb_rivals",
+   "params": {
+    "mode": "face"
+   },
+   "cues": {
+    "hit": "rakip",
+    "b": "unutulduğunu",
+    "c": "bitmemişti"
+   }
+  },
+  {
+   "text": "Champollion 1828'de Mısır'a gitti, tapınak duvarlarını okudu. Dört yıl sonra, kırk bir yaşında öldü.",
+   "visual": "Bölüm kartı: 'V', 'Taş bugün', italik '1828 – bugün'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "V",
+    "title": "Taş bugün",
+    "sub": "1828 – bugün"
+   },
+   "cues": {},
+   "chapter": "Taş bugün"
+  },
+  {
+   "text": "Taş ise hâlâ British Museum'da. Yan yüzünde beyaz boyayla bir satır var: 1801'de İngiliz ordusu tarafından Mısır'da ele geçirildi.",
+   "visual": "Müze salonu, loş: cam vitrin içinde kara taş, üstten tek spot; 'Yan'da kamera taşın yan yüzüne yaklaşır, beyaz boyalı ince bir satır (okunmayan soluk harfler) belirir; 'ele geçirildi'de altında italik 'ele geçirildi · 1801'.",
+   "type": "bt_rosa_stone",
+   "params": {
+    "mode": "side"
+   },
+   "cues": {
+    "hit": "Yan",
+    "b": "1801"
+   },
+   "camera": {
+    "focus": [
+     820,
+     500
+    ],
+    "zoom": 1.1
+   }
+  },
+  {
+   "text": "Mısır'da birçok kişi taşın geri dönmesini istiyor. 2022'de bir dilekçe yüz bini aşkın imza topladı. Müze ise 1801 anlaşmasının geçerli olduğunu söylüyor.",
+   "visual": "Sade harita: Londra ve Kahire iki nokta, aralarında ok olmadan kesik ince çizgi (tarafsız); 'geri'de Kahire noktası, 'anlaşmasının'da Londra noktası atar; italik '2022'.",
+   "type": "bt_rosb_map",
+   "params": {
+    "preset": "europe",
+    "bounds": [
+     -11,
+     26,
+     35,
+     55
+    ],
+    "points": [
+     {
+      "lon": -0.13,
+      "lat": 51.51,
+      "label": "Londra",
+      "at": "c1"
+     },
+     {
+      "lon": 31.24,
+      "lat": 30.04,
+      "label": "Kahire",
+      "sub": "2022",
+      "at": "c0",
+      "side": "left"
+     }
+    ],
+    "link": [
+     0,
+     1,
+     "c0"
+    ]
+   },
+   "cues": {
+    "c0": "geri",
+    "c1": "anlaşmasının"
+   }
+  },
+  {
+   "text": "Bin dört yüz yıl susan yazı nasıl yeniden konuştu? Bir taş aynı sözü üç yazıyla söyledi. Bir dil dualarda yaşadı.",
+   "visual": "Işık havuzunda kara taş, üç bant aynı anda yumuşakça ışıklanır (açılıştaki taşın tamamı ışıkta).",
+   "type": "bt_rosa_stone",
+   "params": {
+    "mode": "three",
+    "all": true
+   },
+   "cues": {
+    "hit": "üç"
+   }
+  },
+  {
+   "text": "Ve bir adam, bir güneş resminin aynı zamanda bir ses olduğunu gördü.",
+   "visual": "Karanlıkta tek güneş diski işareti, etrafında büyüyen ışık havuzu; 'ses'te diskin altında ince altın 'Ra'. Kapak adayı.",
+   "type": "bt_rosb_sign",
+   "params": {
+    "mode": "glow"
+   },
+   "cues": {
+    "hit": "ses"
+   }
+  },
+  {
+   "text": "Sizce bu yazıyı asıl kim çözdü: yolu açan Young mu, kapıdan geçen Champollion mu? Yorumlara yazın.",
+   "visual": "İki yüzsüz profil yan yana, aralarında boşluk; altlarında italik 'Young' ve 'Champollion'; 'Young'da sol, 'Champollion'da sağ ışıklanır.",
+   "type": "bt_rosb_rivals",
+   "params": {
+    "mode": "ask"
+   },
+   "cues": {
+    "hit": "Young",
+    "b": "Champollion"
+   }
+  },
+  {
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "visual": "Gece, Nil üstünde Philae tapınağının silueti, yıldızlar, suda ince yansıma; tek kandil yanık kalır.",
+   "type": "bt_rosb_philae",
+   "params": {},
+   "cues": {
+    "hit": "abone"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "British Museum — Everything you ever wanted to know about the Rosetta Stone",
+   "url": "https://www.britishmuseum.org/blog/everything-you-ever-wanted-know-about-rosetta-stone"
+  },
+  {
+   "title": "Wikipedia — Rosetta Stone",
+   "url": "https://en.wikipedia.org/wiki/Rosetta_Stone"
+  },
+  {
+   "title": "Britannica — Hieroglyphic writing: discovery of the Rosetta Stone and decipherment",
+   "url": "https://www.britannica.com/topic/hieroglyphic-writing/Discovery-of-the-Rosetta-Stone"
+  },
+  {
+   "title": "Wikipedia — Graffito of Esmet-Akhom (Philae, 24 August 394)",
+   "url": "https://en.wikipedia.org/wiki/Graffito_of_Esmet-Akhom"
+  },
+  {
+   "title": "Wikipedia — Lettre à M. Dacier (27 September 1822)",
+   "url": "https://en.wikipedia.org/wiki/Lettre_%C3%A0_M._Dacier"
+  },
+  {
+   "title": "National Geographic — Hieroglyphics were a mystery until this man solved the riddle of the Rosetta Stone",
+   "url": "https://www.nationalgeographic.com/history/history-magazine/article/hieroglyphics-were-a-mystery-until-he-solved-the-rosetta-stone"
+  },
+  {
+   "title": "Royal College of Physicians — Thomas Young and the decipherment of hieroglyphics",
+   "url": "https://history.rcp.ac.uk/blog/thomas-young-and-decipherment-hieroglyphics"
+  },
+  {
+   "title": "Al Jazeera — ‘Act of plunder’: Egyptians want the Rosetta Stone back (2022)",
+   "url": "https://www.aljazeera.com/news/2022/11/30/after-220-years-egypt-demands-the-return-of-the-rosetta-stone"
+  }
+ ],
+ "youtube": {
+  "title": "Rosetta Taşı: 1.400 Yıl Susan Yazıyı Kim Çözdü?",
+  "description": "Rosetta Taşı 1799'da Mısır'da bir kale duvarından çıktığında, hiyeroglifleri 1.400 yıldır kimse okuyamıyordu. Napolyon'un askerlerinin bulduğu bu kara taşta aynı ferman üç yazıyla yazılıydı: hiyeroglif, demotik ve eski Yunanca. Ama taş yazıyı tek başına çözmedi. Londra'da Thomas Young ile Paris'te Jean-François Champollion arasındaki sessiz yarış, Kıptice ve Ebu Simbel'den gelen bir firavun adı, 1822'de ölü bir yazıyı yeniden konuşturdu.\n\nBu videoda:\n• Philae'deki son hiyeroglif yazıt (394) ve 1.400 yıllık sessizlik\n• 1799'da Reşit'te kara taşın bulunuşu ve Londra'ya yolculuğu\n• Thomas Young ve Ptolemaios kartuşu\n• Champollion, Kıptice ve Ramses adının okunduğu gün\n• Taş bugün nerede ve Mısır neden geri istiyor\n\nHer gün yeni bir \"neden?\" için abone ol. Sence bu yazıyı asıl kim çözdü: Young mu, Champollion mu? Yorumlara yaz!\n\n#rosettataşı #hiyeroglif #antikmısır #tarih #düşünbakalım",
+  "tags": [
+   "rosetta taşı",
+   "rosetta taşı hikayesi",
+   "rosetta taşının sırrı",
+   "rosetta stone",
+   "champollion",
+   "thomas young",
+   "hiyeroglif",
+   "hiyeroglifler nasıl çözüldü",
+   "mısır hiyeroglifleri",
+   "antik mısır",
+   "napolyon mısır seferi",
+   "kıptice",
+   "british museum",
+   "ramses",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-16T20:30:00+03:00"
+ }
+}
