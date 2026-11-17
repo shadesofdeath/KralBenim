@@ -1,0 +1,17 @@
+{
+ "id": "tnZjOJZsdok",
+ "thumbnail": false,
+ "url": "https://youtu.be/tnZjOJZsdok",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-17T19:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "DART Asteroid Impact: Can We Really Knock an Asteroid Away?",
+ "script": "videos/2026-11-17/ag-03-dart-asteroid.json"
+}
