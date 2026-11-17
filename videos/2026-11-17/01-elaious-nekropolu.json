@@ -1,0 +1,188 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "obsidyen",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: Elaeus",
+      "url": "https://en.wikipedia.org/wiki/Elaeus"
+    },
+    {
+      "title": "Little Gully: Elaeus necropolis 1915",
+      "url": "https://steadyhq.com/littlegully/posts/4796b9a4-49e9-428c-bdcb-9f2a551da4d1"
+    },
+    {
+      "title": "APAN Archive: Waiblinger, Findings of the French excavations at Elaeous (1978)",
+      "url": "https://archive.apan.gr/en/data/Accompanying-Item/10277"
+    },
+    {
+      "title": "State Library NSW: Found in the trenches",
+      "url": "https://www.sl.nsw.gov.au/stories/found-trenches"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Siperin altında",
+      "antik mezarlık"
+    ],
+    "highlight": [
+      "antik"
+    ],
+    "scene": 0,
+    "t": 2.2,
+    "focus": [
+      540,
+      940
+    ],
+    "zoom": 1.5,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu siperin altında antik bir mezarlık vardı.",
+      "type": "bt_el_section",
+      "visual": "Gece, toprağın kesiti: üstte kum torbalı bir siper, tabanında saplanmış bir kazma; hemen altında, ışık havuzunda üçgen kapaklı, kapalı taş bir lahit; 'mezarlık'ta lahdin çevresi altına döner, ışık büyür (kapak karesinde lahit kesit olarak çizilir: içte ince kafatası çizgisi ve parlayan küçük şişe)",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "mezarlık"
+      }
+    },
+    {
+      "text": "Mayıs 1915, Gelibolu'nun ucu.",
+      "type": "bt_el_map",
+      "visual": "Gelibolu Yarımadası'nın ucu ve Çanakkale Boğazı sade kıyı çizgileriyle kendini çizer, yarımada boyunca italik 'Gelibolu'; Seddülbahir'de altın nokta atar, yanında 'Seddülbahir', '1915'te altında altın italik 'Mayıs 1915'",
+      "params": {
+        "label": "Seddülbahir",
+        "sub": "Mayıs 1915",
+        "region": "Gelibolu"
+      },
+      "cues": {
+        "hit": "1915"
+      }
+    },
+    {
+      "text": "Fransız askerleri siper kazıyordu.",
+      "type": "bt_el_dig",
+      "visual": "Alacakaranlık, ufukta boğazın koyu suyu ve karşı kıyı; toprak kesitinde bir siper: önde miğferli bir asker silueti eğilmiş, kazmayı yavaşça savuruyor; arkada daha soluk ikinci bir asker küreğine dayanmış; kazmanın vurduğu yerden toprak parçaları sıçrar, siper ağzındaki toprak yığını büyür",
+      "params": {}
+    },
+    {
+      "text": "Kazmalar taş bir kapağa çarptı.",
+      "type": "bt_el_strike",
+      "visual": "Yakın plan: karanlık çukurun dibinde enine yatan, keski izli taş bir levha; sol üstten bir kazmanın demir ucu yavaşça iner; 'çarptı'da levhaya değer, levhanın üst kenarı boyunca altın bir ışık çizgisi iki yana yayılır, toz yavaşça savrulur",
+      "cues": {
+        "hit": "çarptı"
+      }
+    },
+    {
+      "text": "Altında iki bin yıldan eski ölüler yatıyordu.",
+      "type": "bt_el_section",
+      "visual": "Siper lahde kadar inmiş; taş kapak yavaşça yana kayar, açılan kısımda karanlık içte bir kafatasının ve omurganın ince çizgileri, başın yanında küçük bir yağ şişesi (lekythos); ışıkta toz zerreleri yükselir; 'eski'de şişe altına döner",
+      "params": {
+        "mode": "open"
+      },
+      "camera": {
+        "focus": [
+          430,
+          990
+        ],
+        "zoom": 1.5,
+        "move": "push"
+      },
+      "cues": {
+        "hit": "eski"
+      }
+    },
+    {
+      "text": "Burası Elaious'tu. Unutulmuş bir Yunan kenti.",
+      "type": "bt_el_city",
+      "visual": "Alacakaranlıkta koyu denize uzanan bir burun; yamaçta bir zeytin ağacı hafifçe salınır; burnun üstünde antik bir Yunan kentinin hayaleti ince çizgilerle kendini çizer: kuleli sur, evler, altı sütunlu tapınak; suda aşağı inen ince ışık yolu, önde karanlık kayalar; 'Elaious'ta tapınak altın çizilir, gökyüzünde 'Elaious' ve italik 'zeytin kenti' belirir",
+      "params": {
+        "label": "Elaious",
+        "sub": "zeytin kenti"
+      },
+      "cues": {
+        "hit": "Elaious"
+      }
+    },
+    {
+      "text": "Ordu, siperi kazı alanına çevirdi.",
+      "type": "bt_el_lamp",
+      "visual": "Gece, siperin içi: siper ağzının üstünde uzak top parlamaları; soldaki direğe asılı fenerin alevi yavaşça kıpırdar; siper duvarında yan yatmış büyük bir küp (pithos), yanında diz çökmüş bir asker silueti elindeki fırçayla küpün ağzındaki toprağı temizliyor; 'kazı'da küpün çevresi altın çizilir",
+      "cues": {
+        "hit": "kazı"
+      }
+    },
+    {
+      "text": "Top ateşi altında elli altı mezar açıldı.",
+      "type": "bt_el_graves",
+      "visual": "Karanlık ufukta tepelerin ardında yavaş top parlamaları; toprağın içinde sıra sıra 56 küçük lahit kapağı; 'elli'de büyük altın sayı 0'dan 56'ya sayar, altında italik 'mezar', kapaklar birer birer altına döner",
+      "params": {
+        "n": 56,
+        "label": "mezar"
+      },
+      "cues": {
+        "hit": "elli"
+      }
+    },
+    {
+      "text": "Yeni ölüler, çok eski ölülerin üstüne düşüyordu.",
+      "type": "bt_el_section",
+      "visual": "Toprak kesitinde iki katman: üstte siperde tüfekli, miğferli üç asker silueti, gökyüzünde top parlamaları; hemen altlarında toprağın içinde iki sıra eski mezar (küçük lahitler ve yan yatmış küpler); 'eski'de mezarlar birer birer altın yanar; 'düşüyordu'da siper ağzındaki kum torbasının üstünde duran tek bir miğfer yavaşça kayıp ters dönerek yere düşer, yanında soluk bir ışık",
+      "params": {
+        "mode": "layers"
+      },
+      "cues": {
+        "hit": "eski",
+        "fall": "düşüyordu"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_el_section",
+      "visual": "Boş siper, altında tek lahit ışık havuzunda, kesitte içindeki ince kafatası çizgisi ve soluk altın şişe; yıldızlar ve toprak yavaşça karanlığa gömülür, sadece lahit kalır",
+      "params": {
+        "mode": "end"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Çanakkale Savaşı: Siperin Altında Kimler Yatıyordu?",
+    "description": "Çanakkale Savaşı'nda, Seddülbahir'de siper kazan Fransız askerlerinin kazmaları taş bir kapağa çarptı. Altında iki bin yıldan eski ölüler yatıyordu: unutulmuş Yunan kenti Elaious'un mezarlığı.\n\nElaious, MÖ 7. yüzyılda Gelibolu Yarımadası'nın ucunda kuruldu. Ordu siperi bir kazı alanına çevirdi: 1915'te Temmuz'dan Aralık'a kadar, Osmanlı top ateşi altında 56 mezar açıldı. Taş lahitlerden ve büyük küplerden çıkan kaplar ve heykelcikler bugün büyük ölçüde Louvre Müzesi'nde. Yeni ölüler, çok eski ölülerin üstüne düşüyordu.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence toprağın altında daha neler saklı? Yorumlara yaz!\n\n#shorts #çanakkalesavaşı #elaious #düşünbakalım",
+    "tags": [
+      "çanakkale savaşı",
+      "çanakkale savaşı 1915",
+      "çanakkale kara savaşları",
+      "çanakkale savaşı arkeoloji",
+      "elaious",
+      "elaious antik kenti",
+      "seddülbahir",
+      "gelibolu yarımadası",
+      "gelibolu",
+      "antik mezarlık",
+      "lahit",
+      "louvre",
+      "arkeoloji",
+      "antik yunan",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-17T19:00:00+03:00",
+    "related": "videos/2026-10-20/05-nusret-mayin-gemisi.json"
+  }
+}
