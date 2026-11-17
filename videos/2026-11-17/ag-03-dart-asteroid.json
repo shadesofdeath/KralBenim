@@ -1,0 +1,2053 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-dart-asteroid",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "WE PUNCHED",
+   "AN ASTEROID"
+  ],
+  "highlight": [
+   "PUNCHED"
+  ],
+  "scene": 31,
+  "t": 1.0,
+  "focus": [
+   700,
+   562
+  ],
+  "zoom": 0.95,
+  "size": 230,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 0.88,
+   "face": -1,
+   "x": 1650,
+   "y": 1010
+  }
+ },
+ "sources": [
+  {
+   "title": "DART: Planetary Defense (NASA Science)",
+   "url": "https://science.nasa.gov/planetary-defense-dart/"
+  },
+  {
+   "title": "DART Mission Overview (Johns Hopkins APL)",
+   "url": "https://dart.jhuapl.edu/Mission"
+  },
+  {
+   "title": "NASA's DART successfully altered an asteroid's orbit (Johns Hopkins University Hub, 11 Oct 2022)",
+   "url": "https://hub.jhu.edu/2022/10/11/dart-successfully-altered-asteroid-orbit/"
+  },
+  {
+   "title": "Daly et al., Successful kinetic impact into an asteroid for planetary defence (Nature, 2023)",
+   "url": "https://ui.adsabs.harvard.edu/abs/2023Natur.616..443D/abstract"
+  },
+  {
+   "title": "NASA's DART asteroid smash flung 2 million pounds of rock into space (Space.com)",
+   "url": "https://www.space.com/dart-asteroid-impact-ejecta-findings-beta"
+  },
+  {
+   "title": "ESA's Hera targets early arrival at Didymos asteroids (ESA)",
+   "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+  },
+  {
+   "title": "Hera spots its target: a first glimpse of the Didymos binary asteroid (DLR, 12 Nov 2026)",
+   "url": "https://www.dlr.de/en/latest/news/2026/hera-spots-its-target-a-first-glimpse-into-the-study-of-the-didymos-binary-asteroid-system"
+  },
+  {
+   "title": "A spacecraft has arrived at an asteroid that a NASA probe crashed into (BBC Sky at Night Magazine)",
+   "url": "https://www.skyatnightmagazine.com/news/esa-hera-first-images"
+  },
+  {
+   "title": "Asteroid moonlet Dimorphos may have been reshaped by DART (Sci.News, on Raducan et al., Nature Astronomy 2024)",
+   "url": "https://www.sci.news/astronomy/reshaped-dimorphos-12726.html"
+  },
+  {
+   "title": "Notable asteroid impacts in Earth's history (The Planetary Society)",
+   "url": "https://planetary.org/notable-asteroid-impacts-in-earths-history"
+  },
+  {
+   "title": "Chelyabinsk meteor: a wake-up call for Earth (Space.com)",
+   "url": "https://www.space.com/33623-chelyabinsk-meteor-wake-up-call-for-earth.html"
+  }
+ ],
+ "youtube": {
+  "title": "DART Asteroid Impact: Can We Really Knock an Asteroid Away?",
+  "description": "The DART asteroid impact, 26 September 2022: NASA flew a little spacecraft into a moonlet seven million miles away at fourteen thousand miles per hour, on purpose. Did it work? Can we really push an asteroid off its path?\n\nAfter Chicxulub, Tunguska and the Chelyabinsk meteor that nobody saw coming, NASA's DART mission tested a simple idea: hit the rock. The target was Dimorphos, the small moon of the asteroid Didymos, and the result was far bigger than the goal. Now ESA's Hera mission has arrived at the crash site, and it may find something stranger than a crater.\n\nIn this video:\n- The last pictures from DART's camera\n- Chicxulub, Tunguska and Chelyabinsk\n- How a light curve measures an asteroid's orbit\n- 73 seconds vs. 33 minutes: the result\n- Hera arrives: boulders, grooves and a reshaped moon\n\nSubscribe to Stickstory for more true stories from space. Would you trust a punch like DART if an asteroid were heading our way? Tell me in the comments!\n\n#dart #asteroid #planetarydefense #stickstory",
+  "tags": [
+   "dart asteroid impact",
+   "nasa dart mission",
+   "dart impact",
+   "dart asteroid mission",
+   "dimorphos",
+   "didymos",
+   "hera mission",
+   "esa hera",
+   "planetary defense",
+   "asteroid deflection",
+   "kinetic impactor",
+   "liciacube",
+   "chelyabinsk meteor",
+   "space stories",
+   "science history",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-17T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "da_craft",
+   "text": "Seven million miles from Earth, a little spacecraft is racing toward a rock that nobody has ever seen up close.",
+   "visual": "Deep space with stars: the DART spacecraft (a box-shaped body with two long striped solar arrays, a dish and a camera tube) flies to the right past speed streaks; far ahead two tiny dots of rock appear on 'rock'; note '7 million miles'.",
+   "title": {
+    "white": "Sept 2022"
+   },
+   "cues": {
+    "mi": "million",
+    "rk": "rock"
+   },
+   "params": {
+    "craft": {
+     "x": 0.36,
+     "y": 0.47,
+     "s": 0.85,
+     "rot": -4,
+     "arr": 330
+    },
+    "pair": {
+     "x": 0.84,
+     "y": 0.36,
+     "s": 2.2,
+     "at": "rk"
+    },
+    "labels": [
+     {
+      "text": "7 million miles from Earth",
+      "x": 0.64,
+      "y": 0.74,
+      "at": "mi",
+      "size": 66
+     }
+    ]
+   },
+   "chapter": "Cold open: the last minutes",
+   "set": false
+  },
+  {
+   "type": "da_craft",
+   "text": "It's moving at fourteen thousand miles per hour.",
+   "visual": "Close on the spacecraft racing right, speed streaks rushing past; a red note '14,000 mph' pops in on 'fourteen'.",
+   "title": {
+    "white": "Full speed"
+   },
+   "cues": {
+    "ft": "fourteen"
+   },
+   "params": {
+    "craft": {
+     "x": 0.45,
+     "y": 0.5,
+     "s": 1.05,
+     "rot": -6,
+     "drift": 20
+    },
+    "pair": false,
+    "labels": [
+     {
+      "text": "14,000 mph",
+      "x": 0.6,
+      "y": 0.36,
+      "at": "ft",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     880,
+     540
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   },
+   "set": false
+  },
+  {
+   "type": "da_draco",
+   "text": "On the screen, the rock grows. Boulders. More boulders.",
+   "visual": "DART's camera view: a viewfinder with corner brackets and crosshair; the moonlet swells from a small lump to fill the frame, more and more boulders appearing on its surface.",
+   "title": {
+    "white": "Camera view"
+   },
+   "cues": {
+    "gr": "grows",
+    "bo": "Boulders"
+   },
+   "params": {
+    "mode": "grow",
+    "r0": 60,
+    "r1": 560,
+    "labels": [
+     {
+      "text": "boulders!",
+      "x": 0.83,
+      "y": 0.3,
+      "at": "bo",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_draco",
+   "text": "Then the picture freezes, halfway down.",
+   "visual": "The viewfinder shows a boulder field arriving line by line from the top; on 'freezes' it stops halfway, the lower half turns to grey static; red stamp 'SIGNAL LOST'.",
+   "title": {
+    "white": "Last frame"
+   },
+   "cues": {
+    "freeze": "freezes"
+   },
+   "params": {
+    "mode": "freeze",
+    "cut": 0.55,
+    "labels": [
+     {
+      "text": "SIGNAL LOST",
+      "x": 0.5,
+      "y": 0.66,
+      "at": "freeze",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "rot": -4
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_room",
+   "text": "And in a control room in Maryland, people cheer. Because this crash was the whole point.",
+   "visual": "Mission control: a big wall screen reads 'NO SIGNAL' in red; consoles with glowing monitors; four team members throw their arms up on 'cheer'; label 'the whole point' on 'point'.",
+   "title": {
+    "white": "Maryland"
+   },
+   "cues": {
+    "cut": "control",
+    "cheer": "cheer",
+    "pt": "point"
+   },
+   "params": {
+    "screen": "lost",
+    "cut": 0,
+    "cheer": "cheer",
+    "labels": [
+     {
+      "text": "the whole point",
+      "x": 0.5,
+      "y": 0.43,
+      "at": "pt",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 930
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So here's the question: can we actually push an asteroid off its path? Let me show you.",
+   "visual": "Night sky over a hill: the fez narrator holds up a sign 'PUSH IT?' and looks up at a big ink rock in the sky, then points ahead on 'show'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "ps": "push",
+    "sh": "show"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.42,
+      "pose": "think",
+      "scale": 1.25,
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "ps",
+        "pose": "hold",
+        "text": "PUSH IT?",
+        "emotion": "surprised"
+       },
+       {
+        "at": "sh",
+        "pose": "point",
+        "dir": "up-right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 900
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Now, why would anyone smash a spacecraft on purpose? Because Earth gets hit.",
+   "visual": "CHAPTER 1 / 5 card: blue disc with 1, title 'Nobody Saw It Coming'.",
+   "title": {},
+   "cues": {
+    "n": "why",
+    "title": "Earth"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Nobody Saw It Coming",
+    "label": "CHAPTER"
+   },
+   "chapter": "Nobody Saw It Coming"
+  },
+  {
+   "type": "da_sky",
+   "text": "Sixty-six million years ago, a rock about six miles wide slammed into what is now Mexico, and the age of the dinosaurs was over.",
+   "visual": "Desert plain with two sauropods and cycad trees; a huge flaming rock with a smoke trail dives toward the horizon and on 'slammed' a gold blast dome rises from the ground; note '66 million years ago'.",
+   "title": {
+    "white": "Chicxulub"
+   },
+   "cues": {
+    "sx": "Sixty",
+    "hit": "slammed",
+    "di": "dinosaurs"
+   },
+   "params": {
+    "mode": "dino",
+    "ground": 0.84,
+    "rock": {
+     "from": [
+      1.1,
+      -0.1
+     ],
+     "to": [
+      0.72,
+      0.84
+     ],
+     "at": 0.2,
+     "dur": 2.9
+    },
+    "hit": "hit",
+    "labels": [
+     {
+      "text": "66 million years ago",
+      "x": 0.52,
+      "y": 0.15,
+      "at": "sx",
+      "size": 70
+     },
+     {
+      "text": "about 6 miles wide",
+      "x": 0.42,
+      "y": 0.32,
+      "at": 1.4,
+      "size": 58,
+      "color": "red"
+     }
+    ]
+   },
+   "source": "Planetary Society",
+   "set": {
+    "name": "desert",
+    "ground": 907
+   }
+  },
+  {
+   "type": "tunguska",
+   "text": "Smaller rocks hit more often. In June 1908, something exploded in the sky over Siberia and flattened about eighty million trees.",
+   "visual": "Siberian taiga from the side: a fireball streaks in and bursts in the sky on 'exploded'; the shock front knocks every tree over away from the blast; note '80 million trees'.",
+   "title": {
+    "white": "Tunguska 1908"
+   },
+   "cues": {
+    "streak": "Smaller",
+    "boom": "exploded",
+    "tr": "eighty"
+   },
+   "params": {
+    "blast": [
+     0.6,
+     0.26
+    ],
+    "from": [
+     -0.15,
+     -0.02
+    ],
+    "streak": "streak",
+    "speed": 1800,
+    "n": 10,
+    "far": 18,
+    "tree_scale": 1.1,
+    "labels": [
+     {
+      "text": "80 million trees",
+      "x": 0.3,
+      "y": 0.36,
+      "at": "tr",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "source": "Planetary Society",
+   "set": {
+    "name": "field",
+    "ground": 605
+   }
+  },
+  {
+   "type": "da_sky",
+   "text": "In 2013, a rock about sixty-five feet wide blew up over the Russian city of Chelyabinsk. Windows shattered all over town, and about fifteen hundred people were hurt, mostly by flying glass.",
+   "visual": "Snowy city of apartment blocks; a bright fireball crosses the sky with a long white smoke trail and bursts into a gold flash on 'blew'; on 'Windows' red cracks run across the windows and glass shards fall; red box 'about 1,500 hurt'.",
+   "title": {
+    "white": "Chelyabinsk"
+   },
+   "cues": {
+    "flash": "blew",
+    "ch": "Chelyabinsk",
+    "glass": "Windows",
+    "hu": "hurt"
+   },
+   "params": {
+    "mode": "city",
+    "ground": 0.84,
+    "rock": {
+     "from": [
+      -0.1,
+      0.06
+     ],
+     "to": [
+      0.7,
+      0.3
+     ],
+     "at": 0.1,
+     "dur": 2.4
+    },
+    "flash": "flash",
+    "glass": "glass",
+    "labels": [
+     {
+      "text": "about 65 feet wide",
+      "x": 0.46,
+      "y": 0.11,
+      "at": 1.2,
+      "size": 60
+     },
+     {
+      "text": "Chelyabinsk, 2013",
+      "x": 0.26,
+      "y": 0.26,
+      "at": "ch",
+      "size": 66,
+      "color": "red"
+     },
+     {
+      "text": "about 1,500 hurt",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "hu",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "source": "Planetary Society",
+   "set": {
+    "name": "snow",
+    "ground": 907
+   }
+  },
+  {
+   "type": "da_sky",
+   "text": "Here's the scary part. No telescope had spotted it. So if we ever do see one coming, what do we actually do?",
+   "visual": "Snowy Chelyabinsk at dawn: the fireball streaks over the apartment blocks; the fez narrator on the street peers up through a spyglass, jumps back in shock on 'spotted' as a big red stamp 'NO WARNING' appears, then shrugs on 'actually'.",
+   "title": {
+    "white": "No warning"
+   },
+   "cues": {
+    "sc": "scary",
+    "sp": "spotted",
+    "ac": "actually"
+   },
+   "params": {
+    "mode": "city",
+    "ground": 0.84,
+    "blocks": [
+     [
+      0.02,
+      0.2,
+      0.34
+     ],
+     [
+      0.62,
+      0.8,
+      0.46
+     ],
+     [
+      0.84,
+      1.02,
+      0.3
+     ]
+    ],
+    "rock": {
+     "from": [
+      -0.1,
+      0.1
+     ],
+     "to": [
+      0.9,
+      0.24
+     ],
+     "at": 0.1,
+     "dur": 3.4
+    },
+    "flash": 99,
+    "kasif": {
+     "x": 0.42,
+     "y": 0.86,
+     "scale": 1.0,
+     "pose": "look",
+     "dir": "up-right",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "sp",
+       "pose": "shock",
+       "emotion": "surprised"
+      },
+      {
+       "at": "ac",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "NO WARNING",
+      "x": 0.74,
+      "y": 0.3,
+      "at": "sp",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "box": true
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 907
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Their answer sounds almost too simple.",
+   "visual": "CHAPTER 2 / 5 card: blue disc with 2, title 'A Rock With a Moon'.",
+   "title": {},
+   "cues": {
+    "n": "answer",
+    "title": "simple"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "A Rock With a Moon",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Rock With a Moon"
+  },
+  {
+   "type": "da_craft",
+   "text": "You hit it. Not with a bomb. With something fast.",
+   "visual": "Space: a spacecraft races toward a far rock past speed streaks; the fez narrator at right points at it on 'hit'; a red label 'a bomb' is struck through on 'bomb'; a gold label 'fast!' pops on 'fast'.",
+   "title": {
+    "white": "The idea"
+   },
+   "cues": {
+    "ht": "hit",
+    "bm": "bomb",
+    "fs": "fast"
+   },
+   "params": {
+    "craft": {
+     "x": 0.3,
+     "y": 0.42,
+     "s": 0.7,
+     "rot": -6,
+     "drift": 30,
+     "arr": 330
+    },
+    "pair": {
+     "x": 0.62,
+     "y": 0.3,
+     "s": 2.4
+    },
+    "kasif": {
+     "x": 0.84,
+     "y": 0.86,
+     "scale": 0.95,
+     "pose": "think",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "ht",
+       "pose": "point",
+       "dir": "left",
+       "emotion": "happy"
+      },
+      {
+       "at": "bm",
+       "pose": "shrug",
+       "emotion": "worried"
+      },
+      {
+       "at": "fs",
+       "pose": "point",
+       "dir": "up-left",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "HIT IT!",
+      "x": 0.6,
+      "y": 0.62,
+      "at": "ht",
+      "size": 92,
+      "font": "serif",
+      "color": "red"
+     },
+     {
+      "text": "a bomb",
+      "x": 0.36,
+      "y": 0.68,
+      "at": "bm",
+      "size": 70,
+      "strike": "fs"
+     },
+     {
+      "text": "fast!",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "fs",
+      "size": 76,
+      "color": "gold",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_nudge",
+   "text": "Give a rock a tiny nudge years ahead of time, and that nudge can grow into a miss of thousands of miles.",
+   "visual": "Space diagram: a rock on a grey dashed path heading straight at Earth; on 'nudge' a tiny red arrow pushes it and a new red path bends away and sails clearly above Earth; a red bracket right of Earth marks the gap, note 'a miss!'.",
+   "title": {
+    "white": "Tiny nudge"
+   },
+   "cues": {
+    "nudge": "nudge",
+    "ms": "miss"
+   },
+   "params": {
+    "earth": {
+     "x": 0.7,
+     "y": 0.62,
+     "r": 140
+    },
+    "rock": {
+     "x": 0.08,
+     "y": 0.62
+    },
+    "nudge": "nudge",
+    "gap": {
+     "at": "ms",
+     "text": "a miss!"
+    },
+    "labels": [
+     {
+      "text": "tiny nudge",
+      "x": 0.12,
+      "y": 0.42,
+      "at": "nudge",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_binary",
+   "text": "But nobody had ever tried it. So NASA picked a harmless target: a pair of asteroids. The big one, Didymos, is about half a mile wide.",
+   "visual": "Space: the big spinning-top asteroid Didymos with an equatorial ridge, and its little moon on a dashed orbit around it; labels 'harmless' and 'Didymos · half a mile'.",
+   "title": {
+    "white": "Didymos"
+   },
+   "cues": {
+    "hm": "harmless",
+    "dd": "Didymos"
+   },
+   "params": {
+    "didy": {
+     "x": 0.5,
+     "y": 0.52,
+     "r": 200
+    },
+    "orbit": {
+     "rx": 560,
+     "ry": 130,
+     "tilt": -8
+    },
+    "moon": {
+     "s": 40,
+     "speed": 0.05,
+     "a0": 2.4
+    },
+    "labels": [
+     {
+      "text": "harmless",
+      "x": 0.8,
+      "y": 0.2,
+      "at": "hm",
+      "size": 70,
+      "color": "green"
+     },
+     {
+      "text": "Didymos: about half a mile",
+      "x": 0.74,
+      "y": 0.72,
+      "at": "dd",
+      "size": 62
+     }
+    ]
+   },
+   "source": "NASA",
+   "set": false
+  },
+  {
+   "type": "da_binary",
+   "text": "Circling it is a little moon called Dimorphos, about as wide as the Great Pyramid is tall.",
+   "visual": "Close on the little moon Dimorphos on its orbit with a label riding over it; on 'Pyramid' a hatched Great Pyramid rises beside it at the same size.",
+   "title": {
+    "white": "Dimorphos"
+   },
+   "cues": {
+    "dm": "Dimorphos",
+    "py": "Pyramid"
+   },
+   "params": {
+    "didy": {
+     "x": 0.17,
+     "y": 0.46,
+     "r": 190
+    },
+    "orbit": {
+     "rx": 640,
+     "ry": 120,
+     "tilt": -6
+    },
+    "moon": {
+     "s": 92,
+     "speed": 0.0,
+     "a0": 0.3
+    },
+    "tag": {
+     "text": "Dimorphos",
+     "at": "dm",
+     "size": 66,
+     "dy": -150
+    },
+    "pyramid": {
+     "at": "py",
+     "x": 0.79,
+     "y": 0.66,
+     "h": 184,
+     "text": "Great Pyramid",
+     "size": 60
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "da_light",
+   "text": "And here's the clever part. Every time the little moon passes in front of the big one, the pair gets a bit dimmer.",
+   "visual": "Graph paper: a pen draws a brightness line from left to right that dips every time; over each deep dip a small eclipse icon (little moon in front of the big one); label 'dimmer'.",
+   "title": {
+    "white": "The trick"
+   },
+   "cues": {
+    "cv": "clever",
+    "dm": "dimmer"
+   },
+   "params": {
+    "period": 420,
+    "draw": {
+     "at": "cv",
+     "dur": 4.5
+    },
+    "labels": [
+     {
+      "text": "dimmer!",
+      "x": 0.3,
+      "y": 0.74,
+      "at": "dm",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_light",
+   "text": "Telescopes on Earth can time those dips. Before the crash, one lap took eleven hours and fifty-five minutes. Change the lap, and you've proven the push worked.",
+   "visual": "The light curve, already drawn; the fez narrator stands at the right edge of the graph; on 'eleven' a red bracket spans one deep dip to the next with '11 h 55 min' and he points at it; on 'Change' a red curve with closer dips draws over the old one; note 'proof!' on 'worked'.",
+   "title": {
+    "white": "One lap"
+   },
+   "cues": {
+    "tm": "time",
+    "el": "eleven",
+    "ch": "Change",
+    "wk": "worked"
+   },
+   "params": {
+    "period": 330,
+    "x1": 0.74,
+    "draw": {
+     "at": 0,
+     "dur": 0.6
+    },
+    "bracket": {
+     "text": "11 h 55 min",
+     "at": "el",
+     "i": 0,
+     "size": 66
+    },
+    "shift": {
+     "at": "ch",
+     "k": 0.82
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.84,
+     "scale": 1.0,
+     "pose": "think",
+     "face": "left",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "el",
+       "pose": "point",
+       "dir": "left",
+       "emotion": "happy"
+      },
+      {
+       "at": "wk",
+       "pose": "point",
+       "dir": "up-left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "proof!",
+      "x": 0.86,
+      "y": 0.2,
+      "at": "wk",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "source": "NASA",
+   "set": false
+  },
+  {
+   "type": "phobos_launch",
+   "text": "In November 2021, a Falcon 9 rocket launched the spacecraft from California. Its name was DART.",
+   "visual": "California coast at dawn: a rocket on a pad beside a lattice tower; on 'launched' the engines light, smoke billows and it lifts off; red note 'DART' on 'DART'.",
+   "title": {
+    "white": "Nov 2021"
+   },
+   "cues": {
+    "go": "launched",
+    "dt": "DART"
+   },
+   "params": {
+    "rocket": {
+     "x": 0.4,
+     "s": 0.8,
+     "rise": 260
+    },
+    "go": "go",
+    "sea": {
+     "from": 0.7
+    },
+    "ground": 0.8,
+    "smoke_max": 300,
+    "labels": [
+     {
+      "text": "Falcon 9",
+      "x": 0.18,
+      "y": 0.3,
+      "at": 0.4,
+      "size": 64
+     },
+     {
+      "text": "DART",
+      "x": 0.72,
+      "y": 0.28,
+      "at": "dt",
+      "size": 110,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": {
+    "name": "coast",
+    "ground": 864
+   }
+  },
+  {
+   "type": "da_craft",
+   "text": "It carried one camera, and a tiny Italian satellite called LICIACube, to film the crash.",
+   "visual": "Close on the spacecraft: a red ring circles its camera tube on 'camera' with note 'one camera'; a small gold cubesat sits on its side, note 'LICIACube' on 'Italian'.",
+   "title": {
+    "white": "On board"
+   },
+   "cues": {
+    "cm": "camera",
+    "it": "Italian"
+   },
+   "params": {
+    "craft": {
+     "x": 0.45,
+     "y": 0.5,
+     "s": 1.0,
+     "rot": 0,
+     "drift": 4
+    },
+    "pair": false,
+    "streaks": false,
+    "tag": {
+     "at": "cm"
+    },
+    "labels": [
+     {
+      "text": "one camera",
+      "x": 0.6,
+      "y": 0.36,
+      "at": "cm",
+      "size": 66,
+      "color": "red"
+     },
+     {
+      "text": "LICIACube",
+      "x": 0.36,
+      "y": 0.68,
+      "at": "it",
+      "size": 60,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     880,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "da_room",
+   "text": "Ten months later, DART was closing in. And the scariest part wasn't the speed. Nobody on Earth would be steering.",
+   "visual": "Mission control: the wall screen shows the asteroid pair; the team stands still at the consoles with arms down; red note 'nobody steering' on 'steering'.",
+   "title": {
+    "white": "Ten months"
+   },
+   "cues": {
+    "cl": "closing",
+    "st": "steering"
+   },
+   "params": {
+    "screen": "pair",
+    "labels": [
+     {
+      "text": "nobody steering",
+      "x": 0.5,
+      "y": 0.43,
+      "at": "st",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 930
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In the final hours, DART steered itself.",
+   "visual": "CHAPTER 3 / 5 card: blue disc with 3, title 'The Last Hour'.",
+   "title": {},
+   "cues": {
+    "n": "final",
+    "title": "steered"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Last Hour",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Last Hour"
+  },
+  {
+   "type": "da_draco",
+   "text": "First it saw one dot of light. Then the dot split into two.",
+   "visual": "Camera view: one blurry dot in the middle of the viewfinder; on 'split' it separates into a big dot and a tiny dot.",
+   "title": {
+    "white": "One dot"
+   },
+   "cues": {
+    "dot": "dot",
+    "split": "split"
+   },
+   "params": {
+    "mode": "dots",
+    "split": "split",
+    "labels": [
+     {
+      "text": "two!",
+      "x": 0.66,
+      "y": 0.3,
+      "at": "split",
+      "size": 76,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_draco",
+   "text": "The computer had to pick the small one and aim for its middle.",
+   "visual": "Camera view: the crosshair glides from the big dot to the tiny one; on 'aim' a red target box snaps around the small dot; note 'target'.",
+   "title": {
+    "white": "Autopilot"
+   },
+   "cues": {
+    "pk": "pick",
+    "lock": "aim"
+   },
+   "params": {
+    "mode": "lock",
+    "lock": "lock",
+    "labels": [
+     {
+      "text": "target",
+      "x": 0.68,
+      "y": 0.22,
+      "at": "lock",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_craft",
+   "text": "By then, LICIACube had split off to watch from a distance.",
+   "visual": "Space: the gold little cubesat drifts away behind the spacecraft, leaving a dotted trail; note 'to watch' on 'watch'.",
+   "title": {
+    "white": "LICIACube"
+   },
+   "cues": {
+    "rel": "split",
+    "wt": "watch"
+   },
+   "params": {
+    "craft": {
+     "x": 0.55,
+     "y": 0.42,
+     "s": 0.85,
+     "rot": -4,
+     "drift": 20
+    },
+    "pair": {
+     "x": 0.92,
+     "y": 0.34,
+     "s": 1.6
+    },
+    "release": 0.0,
+    "labels": [
+     {
+      "text": "LICIACube",
+      "x": 0.4,
+      "y": 0.42,
+      "at": "rel",
+      "size": 56,
+      "color": "blue"
+     },
+     {
+      "text": "to watch",
+      "x": 0.42,
+      "y": 0.66,
+      "at": "wt",
+      "size": 52,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     840,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "da_draco",
+   "text": "On the twenty-sixth of September 2022, the little moon filled the screen.",
+   "visual": "Camera view: the moonlet grows fast until it fills the whole viewfinder; date note '26 September 2022'.",
+   "title": {
+    "white": "Impact day"
+   },
+   "cues": {
+    "tw": "twenty",
+    "fl": "filled"
+   },
+   "params": {
+    "mode": "grow",
+    "r0": 120,
+    "r1": 620,
+    "labels": [
+     {
+      "text": "26 September 2022",
+      "x": 0.5,
+      "y": 0.07,
+      "at": "tw",
+      "size": 56
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_draco",
+   "text": "For the first time, we saw what Dimorphos looked like.",
+   "visual": "Camera view filled with a field of rocks and boulders of every size, slowly drifting closer; note 'first look' on 'first'.",
+   "title": {
+    "white": "First look"
+   },
+   "cues": {
+    "fs": "first",
+    "lk": "looked"
+   },
+   "params": {
+    "mode": "surface",
+    "labels": [
+     {
+      "text": "first look ever",
+      "x": 0.5,
+      "y": 0.07,
+      "at": "fs",
+      "size": 62,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_rubble",
+   "text": "And it wasn't a solid rock. It was a pile of boulders, loosely stuck together.",
+   "visual": "Cut-away of Dimorphos: boulders pop in one by one and pack the outline with gaps between them; the fez narrator points at it from the right; note 'rubble pile'.",
+   "title": {
+    "white": "Rubble pile"
+   },
+   "cues": {
+    "sl": "solid",
+    "pile": "pile"
+   },
+   "params": {
+    "x": 0.42,
+    "y": 0.5,
+    "r": 330,
+    "pile": 0.3,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.86,
+     "scale": 0.75,
+     "pose": "think",
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "pile",
+       "pose": "point",
+       "dir": "left",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "not solid",
+      "x": 0.12,
+      "y": 0.5,
+      "at": "sl",
+      "size": 64,
+      "color": "red"
+     },
+     {
+      "text": "rubble pile",
+      "x": 0.7,
+      "y": 0.22,
+      "at": "pile",
+      "size": 76,
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_draco",
+   "text": "The last full picture came about two seconds before the end, from roughly seven miles away. Then the signal stopped.",
+   "visual": "Camera view: a last boulder frame arrives line by line and stops halfway on 'stopped', the rest static; notes '2 seconds' and '7 miles'.",
+   "title": {
+    "white": "Last picture"
+   },
+   "cues": {
+    "two": "two",
+    "sv": "seven",
+    "freeze": "stopped"
+   },
+   "params": {
+    "mode": "freeze",
+    "cut": 0.55,
+    "freeze": "freeze",
+    "labels": [
+     {
+      "text": "2 seconds left",
+      "x": 0.86,
+      "y": 0.22,
+      "at": "two",
+      "size": 58,
+      "color": "red"
+     },
+     {
+      "text": "7 miles",
+      "x": 0.12,
+      "y": 0.55,
+      "at": "sv",
+      "size": 62,
+      "color": "red"
+     }
+    ]
+   },
+   "source": "NASA",
+   "set": false
+  },
+  {
+   "type": "da_room",
+   "text": "In the control room, that silence meant a direct hit. But did it actually move anything?",
+   "visual": "Mission control: the wall screen shows 'NO SIGNAL'; the team cheers on 'hit'; the fez narrator in front scratches his chin and shrugs on 'move'.",
+   "title": {
+    "white": "Direct hit"
+   },
+   "cues": {
+    "hit": "hit",
+    "mv": "move"
+   },
+   "params": {
+    "screen": "lost",
+    "cut": 0,
+    "cheer": "hit",
+    "team": [
+     {
+      "x": 0.12,
+      "scale": 0.72,
+      "face": "right"
+     },
+     {
+      "x": 0.3,
+      "scale": 0.7,
+      "face": "right",
+      "beard": "short"
+     },
+     {
+      "x": 0.7,
+      "scale": 0.72,
+      "face": "left"
+     },
+     {
+      "x": 0.88,
+      "scale": 0.74,
+      "face": "left",
+      "beard": "grey"
+     }
+    ],
+    "kasif": {
+     "x": 0.5,
+     "y": 0.93,
+     "scale": 0.9,
+     "pose": "think",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "mv",
+       "pose": "shrug",
+       "emotion": "worried"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "interior",
+    "ground": 930
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Three minutes later, LICIACube flew past and caught the moment.",
+   "visual": "CHAPTER 4 / 5 card: blue disc with 4, title 'The Surprise'.",
+   "title": {},
+   "cues": {
+    "n": "Three",
+    "title": "moment"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "The Surprise",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Surprise"
+  },
+  {
+   "type": "da_impact",
+   "text": "A huge spray of rock and dust was blasting off Dimorphos.",
+   "visual": "Space: the moonlet with a gold flash on its right edge and a wide cone of dust, gold sparks and tumbling rocks spraying out; the little cubesat glides past at the top.",
+   "title": {
+    "white": "The plume"
+   },
+   "cues": {
+    "sp": "spray",
+    "bl": "blasting"
+   },
+   "params": {
+    "mode": "plume",
+    "rock": {
+     "x": 0.32,
+     "y": 0.52,
+     "r": 230
+    },
+    "cube": {
+     "at": 1.6
+    },
+    "labels": [
+     {
+      "text": "rock and dust",
+      "x": 0.74,
+      "y": 0.8,
+      "at": "sp",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_impact",
+   "text": "Later, Hubble saw that debris stretched into a comet-like tail thousands of miles long.",
+   "visual": "Far view in space: the asteroid pair at left with a long feathery tail of debris growing out to the right like a comet's; note 'thousands of miles'.",
+   "title": {
+    "white": "Hubble"
+   },
+   "cues": {
+    "hb": "Hubble",
+    "th": "thousands"
+   },
+   "params": {
+    "mode": "tail",
+    "rock": {
+     "x": 0.12,
+     "y": 0.44,
+     "r": 110
+    },
+    "labels": [
+     {
+      "text": "a tail!",
+      "x": 0.5,
+      "y": 0.18,
+      "at": "hb",
+      "size": 76,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "thousands of miles",
+      "x": 0.62,
+      "y": 0.68,
+      "at": "th",
+      "size": 64
+     }
+    ]
+   },
+   "source": "NASA / Hubble",
+   "set": false
+  },
+  {
+   "type": "da_light",
+   "text": "Then came the real test: the timing. NASA's minimum goal was a change of seventy-three seconds.",
+   "visual": "Graph paper light curve again; on 'seventy' a thin red dashed line appears just before one dip with the note 'goal: 73 seconds'.",
+   "title": {
+    "white": "The goal"
+   },
+   "cues": {
+    "tst": "test",
+    "sv": "seventy"
+   },
+   "params": {
+    "period": 420,
+    "draw": {
+     "at": 0,
+     "dur": 1.2
+    },
+    "goal": {
+     "text": "goal: 73 seconds",
+     "at": "sv",
+     "i": 1,
+     "size": 58
+    }
+   },
+   "source": "NASA",
+   "set": false
+  },
+  {
+   "type": "title",
+   "text": "The result? The lap got shorter by about thirty-three minutes. More than twenty-five times the goal.",
+   "visual": "Giant words '33' / 'minutes' word by word, '33' in a red box; handwritten note '25 times the goal'.",
+   "title": {
+    "white": "The result"
+   },
+   "cues": {
+    "lp": "lap",
+    "tt": "thirty",
+    "tw": "twenty"
+   },
+   "params": {
+    "lines": [
+     "33",
+     "minutes"
+    ],
+    "highlight": [
+     "33"
+    ],
+    "y": 0.4,
+    "note": {
+     "text": "more than 25 times the goal",
+     "at": "tw",
+     "color": "red"
+    },
+    "arrow": false
+   },
+   "source": "NASA"
+  },
+  {
+   "type": "da_impact",
+   "text": "And here's the crazy part. The spacecraft wasn't doing most of the pushing.",
+   "visual": "Space: the moonlet with the debris cone spraying to the right; the fez narrator stands below the spray, points at it, then jumps back in shock on 'pushing'; red note 'not DART?'.",
+   "title": {
+    "white": "Plot twist"
+   },
+   "cues": {
+    "cz": "crazy",
+    "pu": "pushing"
+   },
+   "params": {
+    "mode": "plume",
+    "rock": {
+     "x": 0.26,
+     "y": 0.42,
+     "r": 200
+    },
+    "kasif": {
+     "x": 0.6,
+     "y": 0.8,
+     "scale": 0.95,
+     "pose": "point",
+     "dir": "up-left",
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "pu",
+       "pose": "shock",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "not DART?",
+      "x": 0.36,
+      "y": 0.6,
+      "at": "pu",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "da_impact",
+   "text": "All that rubble flying off worked like a rocket engine, and it pushed the moon more than twice as hard as DART itself.",
+   "visual": "Space: the moonlet with debris spraying out to the right; a small blue arrow 'DART' and then, on 'twice', a big red arrow 'rubble' pointing the other way, more than twice as long.",
+   "title": {
+    "white": "Rocket effect"
+   },
+   "cues": {
+    "dart": "rubble",
+    "rubble": "twice",
+    "en": "engine"
+   },
+   "params": {
+    "mode": "push",
+    "rock": {
+     "x": 0.5,
+     "y": 0.5,
+     "r": 190
+    },
+    "dart": "dart",
+    "rubble": "rubble",
+    "labels": [
+     {
+      "text": "DART",
+      "x": 0.34,
+      "y": 0.4,
+      "at": "dart",
+      "size": 64,
+      "color": "blue"
+     },
+     {
+      "text": "flying rubble",
+      "x": 0.28,
+      "y": 0.64,
+      "at": "rubble",
+      "size": 70,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "source": "Nature, 2023",
+   "set": false
+  },
+  {
+   "type": "da_binary",
+   "text": "The asteroid helped push itself. But that left one big question. What did the crash do to the little moon?",
+   "visual": "Space: Didymos and its moon; on 'push' the dashed orbit tightens with red arrows pointing inward; on 'crash' a big red question mark pops up over the little moon.",
+   "title": {
+    "white": "New question"
+   },
+   "cues": {
+    "ps": "push",
+    "cr": "crash"
+   },
+   "params": {
+    "didy": {
+     "x": 0.5,
+     "y": 0.54,
+     "r": 180
+    },
+    "orbit": {
+     "rx": 520,
+     "ry": 130,
+     "tilt": -8
+    },
+    "moon": {
+     "s": 48,
+     "speed": 0.04,
+     "a0": 0.25
+    },
+    "shrink": {
+     "at": "ps",
+     "to": 0.85
+    },
+    "question": {
+     "at": "cr"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "chapter",
+   "text": "For two years, nobody could get close enough to check.",
+   "visual": "CHAPTER 5 / 5 card: blue disc with 5, title 'The Crime Scene'.",
+   "title": {},
+   "cues": {
+    "n": "two",
+    "title": "check"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Crime Scene",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Crime Scene"
+  },
+  {
+   "type": "da_hera",
+   "text": "In October 2024, Europe launched Hera, a crash site investigator.",
+   "visual": "Space: ESA's Hera spacecraft (a gold box with two square blue solar wings and a dish) cruises past speed streaks toward two tiny dots; notes 'Hera' and 'crash site investigator'.",
+   "title": {
+    "white": "Hera"
+   },
+   "cues": {
+    "hr": "Hera",
+    "cs": "crash"
+   },
+   "params": {
+    "mode": "fly",
+    "hera": {
+     "x": 0.4,
+     "y": 0.46,
+     "s": 1.25,
+     "rot": -6
+    },
+    "labels": [
+     {
+      "text": "Hera",
+      "x": 0.4,
+      "y": 0.13,
+      "at": "hr",
+      "size": 96,
+      "font": "serif",
+      "color": "blue"
+     },
+     {
+      "text": "crash site investigator",
+      "x": 0.5,
+      "y": 0.74,
+      "at": "cs",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_hera",
+   "text": "And this month, it finally arrived. The first pictures show Didymos covered in boulders, craters and strange grooves, and some of those boulders might be rubble from DART's crash.",
+   "visual": "Space: a giant Didymos fills the right side, covered in boulders, craters, grooves and a ridge; small Hera at left with a gold camera beam on it; notes 'November 2026' and 'DART rubble?'.",
+   "title": {
+    "white": "November 2026"
+   },
+   "cues": {
+    "ar": "arrived",
+    "bo": "boulders",
+    "rb": "rubble"
+   },
+   "params": {
+    "mode": "arrive",
+    "hera": {
+     "x": 0.2,
+     "y": 0.44,
+     "s": 0.55,
+     "rot": 8
+    },
+    "labels": [
+     {
+      "text": "this month",
+      "x": 0.18,
+      "y": 0.64,
+      "at": "ar",
+      "size": 64,
+      "color": "blue"
+     },
+     {
+      "text": "DART rubble?",
+      "x": 0.26,
+      "y": 0.76,
+      "at": "rb",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "source": "ESA / DLR",
+   "set": false
+  },
+  {
+   "type": "da_room",
+   "text": "The lead scientist said, \"The first thing we said was wow!\"",
+   "visual": "Hera control room: the wall screen shows the boulder-covered asteroid; a scientist at the left throws up his arms and a big red 'WOW!' bursts above him on 'wow'.",
+   "title": {
+    "white": "Mission control"
+   },
+   "cues": {
+    "wow": "thing"
+   },
+   "params": {
+    "screen": "hera",
+    "cheer": "wow",
+    "team": [
+     {
+      "x": 0.16,
+      "scale": 0.82,
+      "face": "right",
+      "beard": "short"
+     },
+     {
+      "x": 0.36,
+      "scale": 0.72,
+      "face": "right"
+     },
+     {
+      "x": 0.78,
+      "scale": 0.76,
+      "face": "left"
+     }
+    ],
+    "wow": {
+     "text": "WOW!",
+     "at": "wow",
+     "x": 0.14,
+     "y": 0.36,
+     "size": 120
+    }
+   },
+   "source": "Sky at Night",
+   "set": {
+    "name": "interior",
+    "ground": 930
+   }
+  },
+  {
+   "type": "da_hera",
+   "text": "Over the next months, Hera will weigh the little moon and look for the crater.",
+   "visual": "Space: Hera at left beams a red dashed laser at a big Dimorphos; two little cubesats drift out of it on 'weigh'; on 'crater' a red ring circles a spot on the moon.",
+   "title": {
+    "white": "Next months"
+   },
+   "cues": {
+    "cubes": "weigh",
+    "laser": "Over",
+    "crater": "crater"
+   },
+   "params": {
+    "mode": "measure",
+    "labels": [
+     {
+      "text": "crater?",
+      "x": 0.6,
+      "y": 0.18,
+      "at": "crater",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_rubble",
+   "text": "And here's a twist. Some scientists think there is no crater at all. Their models say DART may have reshaped the whole moon, like a fist in a beanbag.",
+   "visual": "Space: the round moonlet; an ink fist pushes in from the right and on 'reshaped' the whole moon squashes wider and flatter, its old outline left as a dashed ghost; note 'no crater?'.",
+   "title": {
+    "white": "The twist"
+   },
+   "cues": {
+    "nc": "crater",
+    "reshape": "reshaped",
+    "bb": "beanbag"
+   },
+   "params": {
+    "mode": "reshape",
+    "x": 0.42,
+    "y": 0.52,
+    "r": 230,
+    "reshape": "reshape",
+    "labels": [
+     {
+      "text": "no crater?",
+      "x": 0.66,
+      "y": 0.18,
+      "at": "nc",
+      "size": 76,
+      "color": "red",
+      "font": "serif"
+     },
+     {
+      "text": "reshaped!",
+      "x": 0.42,
+      "y": 0.76,
+      "at": "reshape",
+      "size": 70
+     }
+    ]
+   },
+   "source": "Nature Astronomy",
+   "set": false
+  },
+  {
+   "type": "stage",
+   "text": "So, can we push an asteroid off its path? Yes. We did it once, on purpose, and it worked better than anyone hoped.",
+   "visual": "Night hill: the fez narrator thinks, then holds up a big sign 'YES!' on 'Yes', then points up at the rock in the sky on 'better'.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "ys": "Yes",
+    "bt": "better"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.45,
+      "pose": "think",
+      "scale": 1.15,
+      "emotion": "neutral",
+      "seq": [
+       {
+        "at": "ys",
+        "pose": "hold",
+        "text": "YES!",
+        "emotion": "happy"
+       },
+       {
+        "at": "bt",
+        "pose": "point",
+        "dir": "up-right",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     870,
+     470
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "da_nudge",
+   "text": "The catch is time. A nudge only works if we spot the rock years before it arrives.",
+   "visual": "Space diagram again: the rock far out on its dashed path to Earth; on 'nudge' the tiny red push and the red path bends away; note 'years early'.",
+   "title": {
+    "white": "The catch"
+   },
+   "cues": {
+    "nudge": "nudge",
+    "yr": "years"
+   },
+   "params": {
+    "earth": {
+     "x": 0.7,
+     "y": 0.6,
+     "r": 130
+    },
+    "rock": {
+     "x": 0.08,
+     "y": 0.6
+    },
+    "nudge": "nudge",
+    "gap": {
+     "at": "yr",
+     "text": "a miss!"
+    },
+    "labels": [
+     {
+      "text": "years early",
+      "x": 0.3,
+      "y": 0.22,
+      "at": "yr",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "da_nudge",
+   "text": "So here's my question: if we found one heading our way, would you trust a punch like this, or something bigger?",
+   "visual": "Space: a rock on a dashed path straight at Earth; the fez narrator stands below and thinks; on 'punch' a tiny red push bends the path away; note 'a punch... or bigger?'.",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "hd": "heading",
+    "nudge": "punch",
+    "bg": "bigger"
+   },
+   "params": {
+    "earth": {
+     "x": 0.7,
+     "y": 0.5,
+     "r": 130
+    },
+    "rock": {
+     "x": 0.08,
+     "y": 0.52
+    },
+    "nudge": "nudge",
+    "miss": 2.0,
+    "kasif": {
+     "x": 0.36,
+     "y": 0.9,
+     "scale": 0.8,
+     "pose": "think",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "bg",
+       "pose": "shrug",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "a punch... or bigger?",
+      "x": 0.42,
+      "y": 0.14,
+      "at": "nudge",
+      "size": 80,
+      "color": "red",
+      "font": "serif"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "stage",
+   "text": "Tell me in the comments, and subscribe to Stickstory for more true stories from space.",
+   "visual": "Close-up on the fez narrator on a green hill: he points straight at the viewer on 'comments', then waves goodbye on 'subscribe'.",
+   "title": {
+    "white": "Subscribe"
+   },
+   "cues": {
+    "cm": "comments",
+    "sb": "subscribe"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.4,
+      "pose": "point",
+      "dir": "forward",
+      "scale": 1.25,
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "sb",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     770,
+     390
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  }
+ ]
+}

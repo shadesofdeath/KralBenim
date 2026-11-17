@@ -1,0 +1,633 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-emperor-penguin",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-dusk",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "4 months",
+   "no food"
+  ],
+  "highlight": [
+   "food"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "focus": [
+   480,
+   1012
+  ],
+  "zoom": 1.35,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 300,
+   "y": 1600,
+   "scale": 1.35
+  }
+ },
+ "sources": [
+  {
+   "title": "Guinness World Records — Longest egg incubation for a penguin (emperor: 62–67 days, average 64; egg on the male's feet under a brood pouch; down to −40 °C; males fast through it)",
+   "url": "https://www.guinnessworldrecords.com/world-records/540367-longest-egg-incubation-for-a-penguin"
+  },
+  {
+   "title": "WWF UK — Top 10 facts about emperor penguins (males fast for up to four months and lose almost half their body weight; the female spends about nine weeks at sea)",
+   "url": "https://www.wwf.org.uk/node/35036"
+  },
+  {
+   "title": "Australian Antarctic Division — Penguin huddle makes waves (Zitterbart et al. 2011: steps of 5–10 cm in travelling waves every 30–60 seconds, at −43 °C)",
+   "url": "https://www.antarctica.gov.au/news/2011/penguin-huddle-makes-waves/"
+  },
+  {
+   "title": "Zitterbart et al. (2011), PLoS ONE — Coordinated Movements Prevent Jamming in an Emperor Penguin Huddle",
+   "url": "https://doaj.org/article/ded615fd3b7e48f780a3ee56fc5d002e"
+  },
+  {
+   "title": "Popular Science — Most male emperor penguins fast for 115 days (Kooyman, Journal of Experimental Biology)",
+   "url": "https://www.popsci.com/emperor-penguins-fast-snack/"
+  },
+  {
+   "title": "Cool Antarctica — Emperor penguins (egg on the feet under a fold of skin, about 40 % weight loss, birds rotate between the windward edge and the middle)",
+   "url": "https://coolantarctica.com/Antarctica%20fact%20file/wildlife/Emperor-penguins.php"
+  }
+ ],
+ "youtube": {
+  "title": "Emperor Penguin Dads: How Do They Survive Without Food?",
+  "description": "Emperor penguin dads go almost four months without food, in the worst winter on Earth. So how do they survive?\n\nIn the Antarctic winter, at around minus 40 degrees, each male keeps a single egg on his feet under a fold of belly skin for about two months while the mother feeds at sea. He loses nearly half his body weight. The secret is the huddle: thousands of penguins pack together and shuffle a few centimeters in waves about every minute, so the freezing edge slowly keeps changing faces.\n\nSubscribe to Stickstory for one wild true story every day. Could you stand still for two months in a blizzard? Tell me in the comments!\n\n#shorts #emperorpenguin #stickstory",
+  "tags": [
+   "emperor penguin",
+   "emperor penguins",
+   "emperor penguin dad",
+   "emperor penguin huddle",
+   "penguin huddle",
+   "penguin egg",
+   "emperor penguin facts",
+   "penguin fasting",
+   "antarctica",
+   "antarctic winter",
+   "animal superpowers",
+   "animal facts",
+   "wildlife",
+   "nature",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-17T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ep_colony",
+   "text": "These dads starve for almost four months.",
+   "visual": "Blizzard on the Antarctic sea ice: one big emperor penguin dad stands in the middle, his egg resting on his feet half under his belly fold, frost on his back, his breath puffing downwind; snow streaks race across the frame, a far grey colony of hunched penguins on the horizon; pressure-ice blocks and drifting snow fill the foreground.",
+   "title": {
+    "white": "Antarctica"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1402,
+    "horizon": 1180
+   },
+   "cues": {
+    "hit": "starve"
+   },
+   "params": {
+    "mode": "hook",
+    "backs": [
+     [
+      0.1,
+      0.9
+     ],
+     [
+      0.86,
+      0.75
+     ]
+    ],
+    "hero": {
+     "x": 0.52,
+     "s": 1.55,
+     "face": 1,
+     "egg": 1,
+     "pouch": 0.3,
+     "tuck": 0.15
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ep_colony",
+   "text": "In the Antarctic winter, at minus 40 degrees,",
+   "visual": "A storm: three dads shuffle in a line with heads tucked and eggs on their feet, wind and snow streak past; a big thermometer on the right whose red column drops to the bottom on '40'; a red card '-40°' stamps beside it.",
+   "title": {
+    "white": "Winter"
+   },
+   "source": "Guinness World Records",
+   "set": {
+    "name": "storm",
+    "ground": 1470,
+    "horizon": 1460
+   },
+   "cues": {
+    "cold": "40"
+   },
+   "params": {
+    "mode": "storm",
+    "gy": 0.766,
+    "front": 0.8,
+    "backs": [
+     [
+      0.93,
+      1.15
+     ]
+    ],
+    "labels": [
+     {
+      "text": "-40°",
+      "x": 0.6,
+      "y": 0.27,
+      "at": "cold",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "ep_feet",
+   "text": "each one keeps an egg on his feet for two months.",
+   "visual": "Medium close-up of one dad from beak to toes: the single egg rests on his feet, glowing warm gold; on 'feet' the feathered brood fold of his belly curls down over the egg like a blanket; snow streams past; a red card '2 MONTHS'.",
+   "title": {
+    "white": "The egg"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1402,
+    "horizon": 1180
+   },
+   "cues": {
+    "cover": "feet",
+    "two": "two"
+   },
+   "params": {
+    "backs": [
+     [
+      0.03,
+      1.0
+     ]
+    ],
+    "labels": [
+     {
+      "text": "2 MONTHS",
+      "x": 0.66,
+      "y": 0.31,
+      "at": "two",
+      "size": 56,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     720
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ep_sea",
+   "text": "With Mom at sea,",
+   "visual": "The edge of the sea ice: the mother penguin waddles to the edge and dives into the dark water on 'sea' (splash, rings, bubbles), while far back on the ice the dad stands alone with his egg; a red card 'MOM: AT SEA'.",
+   "title": {
+    "white": "Mom"
+   },
+   "set": {
+    "name": "ocean",
+    "ground": 1152,
+    "horizon": 860
+   },
+   "cues": {
+    "sea": "sea"
+   },
+   "params": {
+    "edge": 0.5,
+    "floes": [
+     [
+      0.9,
+      0.64,
+      100
+     ],
+     [
+      0.82,
+      0.8,
+      150
+     ],
+     [
+      0.62,
+      0.9,
+      170
+     ],
+     [
+      0.95,
+      0.93,
+      110
+     ]
+    ],
+    "mom": {
+     "x": 0.24,
+     "s": 1.1
+    },
+    "dad": {
+     "x": 0.1,
+     "s": 0.8
+    },
+    "labels": [
+     {
+      "text": "AT SEA",
+      "x": 0.62,
+      "y": 0.28,
+      "at": 0.35,
+      "size": 96,
+      "color": "blue",
+      "font": "serif",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ep_weight",
+   "text": "he loses nearly half his weight.",
+   "visual": "Polar night with stars: the dad with the egg in his pouch stands alone; a dashed gold outline keeps his plump autumn shape while his body slims inside it from 'loses'; he stands on an old platform scale whose dial needle swings down from the red 'heavy' zone; a red card 'NEARLY HALF'.",
+   "title": {
+    "white": "Weight"
+   },
+   "source": "WWF",
+   "set": {
+    "name": "night",
+    "ground": 1402,
+    "horizon": 1230
+   },
+   "cues": {
+    "loses": "loses",
+    "half": "half"
+   },
+   "params": {
+    "thin": 0.7,
+    "gy": 0.78,
+    "front": 0.83,
+    "blocks": false,
+    "backs": [
+     [
+      0.95,
+      0.8
+     ]
+    ],
+    "labels": [
+     {
+      "text": "NEARLY HALF",
+      "x": 0.6,
+      "y": 0.23,
+      "at": "half",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ep_colony",
+   "text": "So how does he survive?",
+   "visual": "The fez host, bundled in a blue scarf that flaps in the wind, shivers in the snow with his breath puffing, thinking; on 'survive' he turns and points at the colony of penguins on the horizon.",
+   "set": {
+    "name": "snow",
+    "ground": 1402,
+    "horizon": 1180
+   },
+   "cues": {
+    "how": "survive"
+   },
+   "params": {
+    "mode": "ask",
+    "sastrugi": true,
+    "blocks": false,
+    "backs": [
+     [
+      0.94,
+      0.85
+     ]
+    ],
+    "kasif": {
+     "x": 0.3,
+     "y": 0.73,
+     "scale": 1.05,
+     "pose": "think",
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "how",
+       "pose": "point",
+       "dir": 10,
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ep_colony",
+   "text": "Thousands pack together,",
+   "visual": "A huge huddle seen from the side: rows of penguins packed shoulder to shoulder, the far rows pale and small, steam rising above them, the birds on the windward left frosted white, the whole mass shuffling; a red card 'THOUSANDS'.",
+   "title": {
+    "white": "The huddle"
+   },
+   "set": {
+    "name": "storm",
+    "ground": 1402,
+    "horizon": 1390
+   },
+   "cues": {
+    "t": "Thousands"
+   },
+   "params": {
+    "mode": "huddle",
+    "blocks": false,
+    "backs": [
+     [
+      0.0,
+      1.0
+     ],
+     [
+      0.2,
+      0.92
+     ],
+     [
+      0.4,
+      1.05
+     ],
+     [
+      0.6,
+      0.95
+     ],
+     [
+      0.8,
+      1.05
+     ],
+     [
+      1.0,
+      0.95
+     ]
+    ],
+    "wind": 0.7,
+    "labels": [
+     {
+      "text": "THOUSANDS",
+      "x": 0.55,
+      "y": 0.24,
+      "at": "t",
+      "size": 92,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ep_huddle",
+   "text": "and every minute, the huddle shuffles a few centimeters.",
+   "visual": "The huddle from straight above on the ice, a red wind arrow from the left: a gold wave runs through the packed penguins from the front to the back and every bird steps forward a little as it passes; latecomers walk in from below; a red card '5-10 CM'.",
+   "title": {
+    "white": "From above"
+   },
+   "source": "Australian Antarctic Division",
+   "set": false,
+   "cues": {
+    "wave": "minute",
+    "cm": "centimeters"
+   },
+   "params": {
+    "mode": "wave",
+    "cy": 0.45,
+    "ry": 0.15,
+    "labels": [
+     {
+      "text": "5-10 CM",
+      "x": 0.6,
+      "y": 0.25,
+      "at": "cm",
+      "size": 92,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ep_huddle",
+   "text": "Slowly, the freezing edge keeps changing faces.",
+   "visual": "Same top view: the whole huddle slowly circulates, frost marks whoever is on the windward edge, and one gold-ringed bird follows a dotted gold spiral from the frozen edge into the warm gold middle while others drift out to the edge; a red card 'NEW FACES' on 'changing'.",
+   "set": false,
+   "cues": {
+    "edge": "changing"
+   },
+   "params": {
+    "mode": "turn",
+    "cy": 0.45,
+    "ry": 0.15,
+    "labels": [
+     {
+      "text": "NEW FACES",
+      "x": 0.6,
+      "y": 0.25,
+      "at": "edge",
+      "size": 88,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ep_colony",
+   "text": "Nobody gets left out in the cold.",
+   "visual": "The huddle at night from the side under the stars: the gold-ringed bird now stands in the middle, warm air rises from the huddle and turns gold on 'cold'; a red card 'NOBODY LEFT OUT'.",
+   "set": {
+    "name": "night",
+    "ground": 1402,
+    "horizon": 1230
+   },
+   "cues": {
+    "hit": "cold"
+   },
+   "params": {
+    "mode": "warm",
+    "blocks": false,
+    "backs": [
+     [
+      0.05,
+      0.95
+     ],
+     [
+      0.25,
+      1.05
+     ],
+     [
+      0.75,
+      1.0
+     ],
+     [
+      0.95,
+      1.08
+     ]
+    ],
+    "wind": 0.35,
+    "hero": [
+     {
+      "x": 0.5,
+      "s": 1.35,
+      "face": 1,
+      "egg": 0,
+      "pouch": 1,
+      "tuck": 0.1,
+      "ring": 1,
+      "dy": 40
+     }
+    ],
+    "labels": [
+     {
+      "text": "NOBODY LEFT OUT",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "hit",
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ep_colony",
+   "text": "Subscribe for a wild true story every day.",
+   "visual": "Back in the snow: the fez host in his scarf waves at the viewer next to a dad with his egg on his feet, then points at the viewer with a big smile; the colony on the horizon.",
+   "set": {
+    "name": "snow",
+    "ground": 1402,
+    "horizon": 1180
+   },
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "mode": "end",
+    "sastrugi": true,
+    "blocks": false,
+    "backs": [
+     [
+      0.06,
+      0.8
+     ]
+    ],
+    "kasif": {
+     "x": 0.3,
+     "y": 0.73,
+     "scale": 1.0,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

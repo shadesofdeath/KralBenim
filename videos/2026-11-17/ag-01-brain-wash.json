@@ -1,0 +1,418 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-brain-wash",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-dusk",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Your brain",
+   "gets washed"
+  ],
+  "highlight": [
+   "washed"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   400,
+   820
+  ],
+  "zoom": 1.7,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "x": 860,
+   "y": 1500,
+   "scale": 1.15,
+   "face": -1
+  }
+ },
+ "sources": [
+  {
+   "title": "ScienceDaily (2013) — Brain may flush out toxins during sleep (University of Rochester, Nedergaard lab: space between brain cells grew 60 percent in sleeping mice)",
+   "url": "https://www.sciencedaily.com/releases/2013/10/131017144636.htm"
+  },
+  {
+   "title": "Live Science (2013) — A night's sleep cleans brain of harmful toxins (60 percent larger spaces, beta-amyloid cleared twice as fast)",
+   "url": "https://www.livescience.com/40510-sleep-cleans-brain-harmful-toxins.html"
+  },
+  {
+   "title": "Frontiers in Neurology (2013) — commentary on Xie et al., 'Sleep drives metabolite clearance from the adult brain', Science 342",
+   "url": "https://www.frontiersin.org/articles/10.3389/fneur.2013.00206/full"
+  },
+  {
+   "title": "NIBIB / NIH (2019) — Sleep triggers brain fluid refresh (Fultz et al., Science 366: cerebrospinal fluid waves during non-REM sleep in 13 volunteers)",
+   "url": "https://www.nibib.nih.gov/news-events/newsroom/sleep-triggers-brain-fluid-refresh"
+  },
+  {
+   "title": "MIT News (2026) — Pink noise burst may mean more restorative sleep (sound bursts strengthen the fluid waves in sleeping people)",
+   "url": "https://news.mit.edu/2026/pink-noise-burst-may-mean-more-restorative-sleep-0909"
+  },
+  {
+   "title": "Nature Neuroscience (2024) — Miao et al., 'Brain clearance is reduced during sleep and anesthesia' (the debate)",
+   "url": "https://www.nature.com/articles/s41593-024-01638-y"
+  },
+  {
+   "title": "Louveau et al. (2015), Nature — Structural and functional features of central nervous system lymphatic vessels (in the meninges)",
+   "url": "https://www.nature.com/articles/nature14432"
+  }
+ ],
+ "youtube": {
+  "title": "Glymphatic System: Your Brain Takes a Bath Every Night",
+  "description": "The glymphatic system washes your brain while you sleep. Your body hauls its trash out through lymph vessels, but deep inside the brain tissue there are none (only its outer wrapping has a few, found in 2015). So how does it clean up?\n\nIn 2013, Maiken Nedergaard's lab watched mice sleep: the gaps between their brain cells grew about 60 percent, and cerebrospinal fluid flushed through, clearing waste like beta-amyloid about twice as fast as when awake. In 2019, MRI scans caught waves of that fluid washing through the brains of sleeping people, and this year MIT researchers made those waves stronger with tiny bursts of sound. Scientists still debate how big this night shift really is in humans, but the idea is changing how we think about sleep.\n\nSubscribe to Stickstory for one true story like this every day. How many hours do you really sleep? Tell me in the comments!\n\n#shorts #glymphaticsystem #stickstory",
+  "tags": [
+   "glymphatic system",
+   "glymphatic system sleep",
+   "brain glymphatic system",
+   "glymphatic clearance",
+   "brain cleaning during sleep",
+   "brain washes itself",
+   "why do we sleep",
+   "sleep and the brain",
+   "cerebrospinal fluid",
+   "beta amyloid",
+   "maiken nedergaard",
+   "human body facts",
+   "science facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-17T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "bw_bed",
+   "text": "Every night, your brain takes a bath.",
+   "visual": "A bedroom at night: a sleeper lies on the back under a blue quilt, nose up, crown on the pillow; through the skull the brain shows like an X-ray and blue tides with foam lines sweep through it from the neck end to the front; bubbles rise from it, Z's drift up. Night window with moon and twinkling stars. The fez host stands in front of the bed at the right, jumps back in shock, then points at the head on 'bath'.",
+   "title": {
+    "white": "Every night"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "bath": "bath"
+   },
+   "params": {
+    "wash": 0,
+    "kasif": {
+     "x": 0.8,
+     "y": 0.8,
+     "scale": 1.05,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "bath",
+       "pose": "point",
+       "dir": 20,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_body",
+   "text": "Your body has lymph vessels to haul out trash.",
+   "visual": "A giant front-view body against a clinic wall with a height chart: green lymph vessels branch through arms, legs and torso with little nodes, and gold specks of waste run along them up to the neck; a handwritten label 'LYMPH VESSELS' with an arrow to the arm on 'lymph', a red stamp 'TRASH OUT' on 'trash'.",
+   "title": {
+    "white": "Your body"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1850
+   },
+   "cues": {
+    "lymph": "lymph",
+    "trash": "trash"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "lymph vessels",
+      "x": 0.26,
+      "y": 0.27,
+      "size": 64,
+      "color": "green",
+      "at": "lymph",
+      "arrow": [
+       0.27,
+       0.43
+      ]
+     },
+     {
+      "text": "TRASH OUT",
+      "x": 0.66,
+      "y": 0.47,
+      "size": 70,
+      "stamp": true,
+      "color": "red",
+      "at": "trash",
+      "rot": 5
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "down"
+   }
+  },
+  {
+   "type": "bw_body",
+   "text": "Deep inside your brain? None.",
+   "visual": "Close-up on the head: the X-ray brain tissue has no vessels at all; the green vessels stop at the neck. On 'None' a red line flashes at the neck, a red oval rings the brain tissue only, a red '?' appears in it and a red stamp 'NONE' slams on the chest.",
+   "title": {
+    "white": "Your brain"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1850
+   },
+   "cues": {
+    "none": "None"
+   },
+   "params": {
+    "none": "none",
+    "labels": [
+     {
+      "text": "NONE",
+      "x": 0.5,
+      "y": 0.33,
+      "size": 70,
+      "stamp": true,
+      "color": "red",
+      "at": "none",
+      "rot": -5
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     470
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_lab",
+   "text": "So how? In 2013, scientists watched mice sleep.",
+   "visual": "A sleep lab at night (dark window with moon, wall clock): a scientist in a lab coat and glasses leans over a glass box where a mouse sleeps curled on its bedding with Z's rising, a wire from its head to a wall monitor with a slow trace; lab bench with glassware in front. A big red '?' pops between the window and the monitor on 'how', a red stamp '2013' on '2013'.",
+   "title": {
+    "white": "Sleep lab"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1110
+   },
+   "cues": {
+    "q": "how",
+    "y": "2013"
+   },
+   "params": {
+    "q": "q",
+    "labels": [
+     {
+      "text": "2013",
+      "x": 0.5,
+      "y": 0.22,
+      "size": 100,
+      "stamp": true,
+      "color": "red",
+      "at": "y"
+     }
+    ],
+    "qy": 0.4
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "bw_cells",
+   "text": "The gaps between their brain cells grew 60 percent,",
+   "visual": "Full-frame mouse brain tissue under the microscope: packed cells that gently breathe and drift, narrow pale gaps with gold specks of waste; on 'grew' the cells draw in, the gaps widen and turn blue, the specks start to drift, double arrows push the cells apart, and a red card counts '+0%' up to '+60%'.",
+   "title": {
+    "white": "Mouse brain"
+   },
+   "source": "Science, 2013",
+   "set": false,
+   "cues": {
+    "grow": "grew"
+   },
+   "params": {
+    "mode": "grow",
+    "grow": "grow",
+    "pct": 60,
+    "counter": {
+     "x": 0.5,
+     "y": 0.3,
+     "size": 170
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "bw_cells",
+   "text": "and fluid flushed through, clearing waste twice as fast.",
+   "visual": "The same tissue, now with wide gaps: blue fluid streams fast through them from upper left to lower right, the cells sway in the current and the gold waste specks wash out of the frame; a red stamp '2× FASTER' on 'twice'.",
+   "title": {
+    "white": "Mouse brain"
+   },
+   "set": false,
+   "cues": {
+    "twice": "twice"
+   },
+   "params": {
+    "mode": "flow",
+    "labels": [
+     {
+      "text": "2× faster",
+      "x": 0.5,
+      "y": 0.3,
+      "size": 100,
+      "stamp": true,
+      "color": "red",
+      "at": "twice",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_scan",
+   "text": "In 2019, scans caught that flush in sleeping people.",
+   "visual": "An MRI room: a big scanner ring with a sleeping person's head in the bore, blue rings of fluid pulsing round the head on 'flush'; the patient table runs toward us under a blue blanket with two feet at the bottom; a wall monitor shows a brain with a blue wave sweeping through it and a trace; a red stamp '2019'.",
+   "title": {
+    "white": "Boston, 2019"
+   },
+   "source": "Science, 2019",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "y": "2019",
+    "pulse": "flush"
+   },
+   "params": {
+    "pulse": "pulse",
+    "labels": [
+     {
+      "text": "2019",
+      "x": 0.25,
+      "y": 0.235,
+      "size": 100,
+      "stamp": true,
+      "color": "red",
+      "at": "y"
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_bed",
+   "text": "Skip sleep, and your brain may skip the wash.",
+   "visual": "Back in the bedroom, closer on the sleeper: the tide washes the X-ray brain; on 'Skip' the sleeper's eye opens, the tide drains away, the bubbles and Z's stop and gold specks of waste stay behind in the brain; a red stamp 'NO WASH' lands on the quilt on 'wash'.",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "skip": "Skip",
+    "wash": "wash"
+   },
+   "params": {
+    "skip": "skip",
+    "labels": [
+     {
+      "text": "no wash",
+      "x": 0.4,
+      "y": 0.53,
+      "size": 70,
+      "stamp": true,
+      "color": "red",
+      "at": "wash",
+      "rot": -4
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     400,
+     860
+    ],
+    "zoom": 1.45,
+    "move": "push"
+   }
+  },
+  {
+   "type": "bw_bed",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Wide bedroom again: the sleeper breathes calmly while the tide washes the brain and bubbles rise; the fez host in front of the bed at the right waves at the viewer, then points at them with a big smile.",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.78,
+     "y": 0.86,
+     "scale": 1.05,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  }
+ ]
+}
