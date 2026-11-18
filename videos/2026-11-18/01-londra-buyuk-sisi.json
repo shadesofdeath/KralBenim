@@ -1,0 +1,188 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "grafit",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Met Office: The Great Smog of 1952",
+      "url": "https://weather.metoffice.gov.uk/learn-about/weather/case-studies/great-smog"
+    },
+    {
+      "title": "Historic England: The Great Smog of London 1952",
+      "url": "https://heritagecalling.com/2022/12/01/the-great-smog-of-london-1952"
+    },
+    {
+      "title": "London Museum: The Great Smog of 1952",
+      "url": "https://www.londonmuseum.org.uk/collections/london-stories/the-great-smog-of-1952/"
+    },
+    {
+      "title": "History.com: The Killer Fog That Blanketed London",
+      "url": "https://www.history.com/articles/the-killer-fog-that-blanketed-london-60-years-ago"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Bu sis",
+      "öldürdü"
+    ],
+    "highlight": [
+      "öldürdü"
+    ],
+    "scene": 0,
+    "t": 2.2,
+    "focus": [
+      600,
+      740
+    ],
+    "zoom": 1.65,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu sis binlerce kişiyi öldürdü.",
+      "type": "bt_smog_lamp",
+      "visual": "Gece, sisin içinde tek bir gaz sokak lambası: camlı fenerde alev yavaşça nefes alır, ışığın etrafında sisin halesi ve içinde süzülen is zerreleri; arkada soluk sıra evler ve iki uzak lamba; 'öldürdü'de sis yavaşça kapanır, uzak lambalar söner",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "öldürdü"
+      }
+    },
+    {
+      "text": "Aralık 1952, Londra.",
+      "type": "bt_smog_city",
+      "visual": "Thames kıyısında Parlamento binası ve saat kulesinin silueti, suda yavaş ışık çizgileri, binaların ayağında sis toplanır; gökyüzünde 'Londra' ve altın italik 'Aralık 1952'",
+      "params": {
+        "label": "Londra",
+        "sub": "Aralık 1952",
+        "lid": false
+      },
+      "cues": {
+        "hit": "Londra"
+      }
+    },
+    {
+      "text": "Sis dağılmadı, çünkü ılık bir hava katmanı kömür dumanını hapsetti.",
+      "type": "bt_smog_chimney",
+      "visual": "Çatılar, tuğla baca kümeleri ve aşağı inen ev cepheleri (birkaç pencere yanık); bacalardan sürekli duman sütunları yükselir, y≈450'deki kesik çizgili tavana çarpıp yanlara yayılır; tavanın üstünde soluk sıcak bir ışık bandı; 'ılık'ta altın italik 'ılık hava' belirir, 'hapsetti'de tavan çizgisi altın olur",
+      "params": {
+        "label": "ılık hava"
+      },
+      "cues": {
+        "warm": "ılık",
+        "hit": "hapsetti"
+      }
+    },
+    {
+      "text": "Görüş birkaç metreye indi.",
+      "type": "bt_smog_walk",
+      "visual": "Sisli sokak, kaldırım ve parmaklıklar uzağa kaybolur; şapkalı bir adam silueti yavaşça uzaklaşıp sise karışır; 'metreye'de kaldırımdan adama uzanan altın ölçü çizgisi ve italik 'birkaç metre'",
+      "params": {
+        "label": "birkaç metre"
+      },
+      "cues": {
+        "hit": "metreye"
+      }
+    },
+    {
+      "text": "Otobüslerin önünde ışık tutan adamlar yürüdü.",
+      "type": "bt_smog_bus",
+      "visual": "Önden çift katlı bir otobüs sisin içinden yavaşça belirir, iki far parlar; önünde kasketli bir kondüktör silueti, elinde yanan bir işaret fişeğini (ışık) havaya tutarak yürür; 'ışık'ta alev büyür",
+      "cues": {
+        "hit": "ışık"
+      },
+      "camera": {
+        "focus": [
+          540,
+          1000
+        ],
+        "zoom": 1.12,
+        "move": "push"
+      }
+    },
+    {
+      "text": "Bir opera bile sisten yarıda kaldı.",
+      "type": "bt_smog_opera",
+      "visual": "Tiyatro: kemerli sahne, spot altında uzun elbiseli tek şarkıcı, önde sıra sıra seyirci başları; üstte italik 'La Traviata'; sis sahneyi doldurur, şarkıcı silinir; 'yarıda'da gri perde yavaşça iner",
+      "params": {
+        "label": "La Traviata"
+      },
+      "cues": {
+        "hit": "yarıda"
+      }
+    },
+    {
+      "text": "Haftalar içinde en az dört bin kişi öldü.",
+      "type": "bt_smog_count",
+      "visual": "Sisli karanlık zemin, ortada italik 'en az', büyük altın sayı 0'dan 4.000'e sayar, altında 'kişi'; sis yavaşça kayar",
+      "params": {
+        "n": 4000,
+        "label": "kişi",
+        "note": "en az",
+        "marks": false
+      },
+      "cues": {
+        "hit": "dört"
+      }
+    },
+    {
+      "text": "Onların ölümü, dört yıl sonra Temiz Hava Yasası'nı doğurdu.",
+      "type": "bt_smog_act",
+      "visual": "Işık havuzunda 1956 Temiz Hava Yasası'nın metni: arma, 'Temiz Hava Yasası', '1956', satırlar ve mühür; etrafındaki sis yavaşça dağılır; 'Temiz'de mühür ve yıl altın olur",
+      "params": {
+        "title": [
+          "Temiz Hava",
+          "Yasası"
+        ],
+        "year": "1956"
+      },
+      "cues": {
+        "hit": "Temiz"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_smog_lamp",
+      "visual": "Aynı gaz lambası; sis yavaşça incelir, arkadaki evler ve uzak lambalar belirir, gökyüzünde yıldızlar çıkar",
+      "params": {
+        "mode": "end"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Londra Büyük Sisi: Binlerce Kişiyi Öldüren Sis Neden Çöktü?",
+    "description": "Londra Büyük Sisi, Aralık 1952'de şehri beş gün boyunca kapattı ve binlerce kişinin ölümüne yol açtı. Sis dağılmadı, çünkü ılık bir hava katmanı evlerin ve santrallerin kömür dumanını şehrin üstüne hapsetti.\n\nGörüş yer yer birkaç metreye indi; otobüs kondüktörleri ellerinde fener ve işaret fişekleriyle otobüslerin önünde yürüdü. Sadler's Wells'te La Traviata, salon sisle dolduğu için yarıda kaldı. Sis günlerinde ve sonraki haftalarda en az 4.000 ölüm sayıldı; sonraki tahminler 8.000 ile 12.000 arasında. Bu felaket, 1956'da İngiltere'nin Temiz Hava Yasası'nı doğurdu.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence bugün şehirlerin havası ne kadar temiz? Yorumlara yaz!\n\n#shorts #londrabüyüksisi #düşünbakalım",
+    "tags": [
+      "londra büyük sisi",
+      "londra sisi 1952",
+      "londra büyük sisi 1952",
+      "büyük sis 1952",
+      "great smog",
+      "londra",
+      "hava kirliliği",
+      "kömür dumanı",
+      "temiz hava yasası",
+      "sıcaklık terselmesi",
+      "büyük londra sisi",
+      "felaketler",
+      "ingiltere tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-18T19:00:00+03:00"
+  }
+}

@@ -1,0 +1,818 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "fildisi",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Altın",
+   "Priamos'un",
+   "değildi"
+  ],
+  "highlight": [
+   "değildi"
+  ],
+  "scene": 1,
+  "t": 3.2,
+  "focus": [
+   960,
+   560
+  ],
+  "zoom": 1.2,
+  "kasif": false
+ },
+ "scenes": [
+  {
+   "text": "Mayıs 1873. Kuzeybatı Anadolu'da bir tepenin derinliklerinde, bir kazma sert bir şeye çarptı.",
+   "visual": "Yakın plan katmanlı hendek duvarı (dalgalı toprak bantları, taşlar). Sağ alttan bir kazma yavaşça iner; 'çarptı'da ucu duvara değer, ince toprak kırıntıları düşer, değdiği yerde soluk altın bir parıltı belirir.",
+   "type": "bt_tr_dig",
+   "params": {
+    "mode": "pick"
+   },
+   "cues": {
+    "hit": "çarptı"
+   },
+   "chapter": "Mayıs 1873"
+  },
+  {
+   "text": "Toprağın arasından soluk bir parıltı göründü. Altın.",
+   "visual": "Daha yakın: toprağın içinden ince altın bir bandın kenarı ve sarkan altın zincirler çıkar; ışık havuzu yavaşça büyür, kırıntılar düşmeye devam eder.",
+   "type": "bt_tr_dig",
+   "params": {
+    "mode": "glint"
+   },
+   "cues": {
+    "hit": "Altın"
+   },
+   "camera": {
+    "focus": [
+     960,
+     540
+    ],
+    "zoom": 1.3
+   }
+  },
+  {
+   "text": "Kazının sahibi Heinrich Schliemann'dı. Kendi anlattığına göre işçilere hemen paydos dedi.",
+   "visual": "Gün batımında Hisarlık tepesi, tepede açılmış bir yarık ve çevresinde küçük işçi siluetleri; 'paydos'ta işçiler yavaşça yamaçtan aşağı yürüyüp uzaklaşır, yarığın dibinde tek bir diz çökmüş siluet kalır, yanında küçük altın ışık.",
+   "type": "bt_tr_hill",
+   "params": {
+    "mode": "paydos",
+    "label": "Heinrich Schliemann"
+   },
+   "cues": {
+    "hit": "paydos"
+   }
+  },
+  {
+   "text": "Sonra toprağı bıçakla kendisi oydu ve bulduklarını gizlice çıkardı.",
+   "visual": "Hendek duvarının dibinde diz çökmüş yüzsüz bir siluet, elindeki bıçak duvara uzanır; duvarda yarı açılmış altın zincirler; yerde küçük bir kandil alevi yavaşça yanar.",
+   "type": "bt_tr_dig",
+   "params": {
+    "mode": "knife"
+   },
+   "cues": {
+    "hit": "gizlice"
+   }
+  },
+  {
+   "text": "Ona göre bu, Kral Priamos'un hazinesiydi. Homeros'un Troya'sı bulunmuştu.",
+   "visual": "Işık havuzunda büyük altın diadem: kavisli bant ve ondan sarkan yaprak biçimli altın pandantif zincirleri, yanlarda uzun zincirler; tek başına, yazısız. Kapak karesi.",
+   "type": "bt_tr_diadem",
+   "params": {
+    "mode": "show"
+   },
+   "cues": {
+    "hit": "Priamos"
+   }
+  },
+  {
+   "text": "Ama altın, Troya Savaşı'ndan bin yıldan eskiydi. Aradığı şehir çok daha yukarıdaydı.",
+   "visual": "Tepenin kesiti: dokuz toprak katmanı, ortada Schliemann'ın hendeği. 'eskiydi'de dipteki ikinci katman altın çerçevelenir, içinde küçük diadem parlar, 'Troya II · altın'; 'yukarısında'da altıncı ve yedinci katmanlar çerçevelenir: 'Homeros'un Troya'sı?'.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "two"
+   },
+   "cues": {
+    "a": "eskiydi",
+    "b": "yukarıdaydı"
+   }
+  },
+  {
+   "text": "Bu adam efsanedeki şehri buldu mu? Yoksa onu kendi eliyle mi yok etti?",
+   "visual": "Işık havuzunda büyük ince 'buldu mu?'; altında vurgu renginde italik 'yok mu etti?'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "buldu mu?",
+      "at": "c0",
+      "size": 160
+     },
+     {
+      "text": "yok mu etti?",
+      "at": "c1",
+      "size": 110,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "buldu",
+    "c1": "yok"
+   }
+  },
+  {
+   "text": "2026 Eylül'ünde, aynı tepede iki bin sekiz yüz yıllık bir meydan bulundu. Ama o meydan başka bir hikâye anlatıyordu.",
+   "visual": "Tepenin kesiti, dokuz katman; 'meydan'da en üstteki katmanlardan sekizinci altın çerçevelenir, yanında '≈ 2.800 yıl'.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "agora",
+    "label": "≈ 2.800 yıl"
+   },
+   "cues": {
+    "hit": "meydan"
+   }
+  },
+  {
+   "text": "Troya önce bir şarkıydı. Homeros'un İlyada'sı, surları yüksek bir şehrin kuşatmasını anlatır.",
+   "visual": "Bölüm kartı: 'I', ince çizgi, büyük ince 'Şarkıdaki şehir', italik 'Homeros'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "I",
+    "title": "Şarkıdaki şehir",
+    "sub": "Homeros"
+   },
+   "chapter": "Şarkıdaki şehir"
+  },
+  {
+   "text": "Destan, savaştan yüzyıllar sonra yazıya geçti.",
+   "visual": "Işık havuzunda açık bir papirüs rulo: iki sap arasında satırlar; başta altın 'ΙΛΙΑΣ', altında İlyada'nın ilk dizesi Yunan büyük harfleriyle satır satır yazılır.",
+   "type": "bt_tr_scroll",
+   "params": {
+    "mode": "read"
+   },
+   "cues": {
+    "hit": "yazıya"
+   }
+  },
+  {
+   "text": "Zamanla yeri unutuldu. Pek çok bilgin, Troya'nın hiç var olmadığına inandı.",
+   "visual": "Aynı rulo; 'unutuldu'da satırlar alttan yukarı soluklaşıp silinir, boş papirüs kalır, ışık azalır; altında 'yer: ?'.",
+   "type": "bt_tr_scroll",
+   "params": {
+    "mode": "fade",
+    "label": "yer: ?"
+   },
+   "cues": {
+    "hit": "unutuldu"
+   }
+  },
+  {
+   "text": "Oysa Çanakkale Boğazı'nın ağzında, bir ovanın kenarında alçak bir tepe vardı.",
+   "visual": "Sade Ege haritası (kara açık, deniz zemin rengi): Yunanistan ve Anadolu kıyıları; 'tepe'de Boğaz'ın ağzında altın nokta atar, 'Hisarlık', italik 'Çanakkale'.",
+   "type": "bt_tr_map",
+   "params": {
+    "bounds": [
+     19.5,
+     35.5,
+     31.0,
+     42.5
+    ],
+    "points": [
+     {
+      "lon": 26.24,
+      "lat": 39.96,
+      "label": "Hisarlık",
+      "sub": "Çanakkale",
+      "at": "c0"
+     }
+    ]
+   },
+   "cues": {
+    "c0": "tepe"
+   }
+  },
+  {
+   "text": "Adı Hisarlık'tı. İngiliz Frank Calvert, Troya'nın burada olduğuna inanıyordu.",
+   "visual": "Gün batımında geniş ova; ortada alçak, yuvarlak Hisarlık tepesi, arkasında Boğaz'ın ince su şeridi ve karşı kıyının tepeleri; güneş yavaşça alçalır; 'Hisarlık' yazısı belirir.",
+   "type": "bt_tr_hill",
+   "params": {
+    "mode": "plain",
+    "label": "Hisarlık"
+   },
+   "cues": {
+    "hit": "Hisarlık"
+   }
+  },
+  {
+   "text": "Tepenin yarısı onundu ama büyük bir kazıya parası yetmedi. 1868'de tepeyi zengin bir yabancıya gösterdi.",
+   "visual": "Aynı tepe, daha yakın: tepenin üstünde tek, yüzsüz bir siluet ayakta (Calvert); altında 'Frank Calvert'.",
+   "type": "bt_tr_hill",
+   "params": {
+    "mode": "calvert",
+    "label": "Frank Calvert"
+   },
+   "cues": {
+    "hit": "yabancıya"
+   },
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.4
+   }
+  },
+  {
+   "text": "Oysa tepenin altında tek bir şehir yoktu. Ve bunu kimse bilmiyordu.",
+   "visual": "Tepenin kesiti, katmanlar henüz tek renk ve belirsiz; 'tek'te toprak dokuz ayrı banda ayrılır, her bantta eski duvar parçaları belirir.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "hidden"
+   },
+   "cues": {
+    "hit": "tek"
+   }
+  },
+  {
+   "text": "1870'te ilk kazmayı vurdu. Ona göre Homeros'un Troya'sı en eski, yani en alttaki şehirdi.",
+   "visual": "Bölüm kartı: 'II', ince çizgi, büyük ince 'Hendek', italik 'Hisarlık, 1870 – 1873'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "II",
+    "title": "Hendek",
+    "sub": "Hisarlık, 1870 – 1873"
+   },
+   "chapter": "Hendek"
+  },
+  {
+   "text": "Yüzü aşkın işçiyle tepenin ortasına dev bir hendek açtı.",
+   "visual": "Hisarlık tepesi: ortasında koyu bir yarık, çevresinde ve içinde küçük işçi siluetleri (eğilen, ayakta).",
+   "type": "bt_tr_hill",
+   "params": {
+    "mode": "trench",
+    "label": "1872"
+   },
+   "cues": {
+    "hit": "hendek"
+   }
+  },
+  {
+   "text": "Hendek, üst üste yığılmış şehirleri kesiyordu. Her katman bir çağdı.",
+   "visual": "Tepenin kesiti: dokuz katman, her birinde duvar parçaları; ortada hendeğin kesik çizgili hatları kendini çizer.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "trench",
+    "cut": false
+   },
+   "cues": {
+    "hit": "şehirleri"
+   }
+  },
+  {
+   "text": "Schliemann üstteki duvarları, evleri, ocakları engel gibi gördü. Ve onları kazıp attı.",
+   "visual": "Aynı kesit; 'kazıp'ta hendeğin içi boşalır: içindeki duvar parçaları solar, yerlerinde kesik çizgili hayaletler kalır, hendek ikinci katmana kadar açık.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "trench",
+    "cut": true
+   },
+   "cues": {
+    "hit": "kazıp"
+   }
+  },
+  {
+   "text": "O yara bugün hâlâ tepede durur. Adı Schliemann Hendeği.",
+   "visual": "Hisarlık tepesi, kimse yok: ortada derin yarık; 'Hendeği'nde 'Schliemann Hendeği' yazısı belirir.",
+   "type": "bt_tr_hill",
+   "params": {
+    "mode": "scar",
+    "label": "Schliemann Hendeği"
+   },
+   "cues": {
+    "hit": "Hendeği"
+   }
+  },
+  {
+   "text": "Sonunda derinde yanmış bir şehre ulaştı ve onu Homeros'un Troya'sı sandı.",
+   "visual": "Kesit, hendek açık; 'yanmış'ta ikinci katman ve üstündeki kül çizgisi altın çerçevelenir, içindeki küçük altın parlar; 'yanmış şehir'.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "burnt",
+    "label": "yanmış şehir"
+   },
+   "cues": {
+    "hit": "yanmış"
+   }
+  },
+  {
+   "text": "Ve Mayıs 1873'te o altın çıktı. Taçlar, küpeler, kupalar, binlerce boncuk.",
+   "visual": "Işık havuzlarında yan yana dört altın nesne cue'larda kendini çizer: diadem, sepet biçimli küpe, iki kulplu kupa, bir avuç boncuk; altlarında küçük italik adlar.",
+   "type": "bt_tr_hoard",
+   "params": {
+    "labels": [
+     "taç",
+     "küpe",
+     "kupa",
+     "boncuk"
+    ]
+   },
+   "cues": {
+    "c0": "Taçlar",
+    "c1": "küpeler",
+    "c2": "kupalar",
+    "c3": "boncuk"
+   }
+  },
+  {
+   "text": "Kazı iznine göre buluntuların bir kısmı Osmanlı'nındı.",
+   "visual": "Işık havuzunda katlanmış tek bir belge, satırlar ve mühür; 'kısmı'nda belgenin alt yarısı altın çerçevelenir; yanında 'kazı izni', italik 'Osmanlı payı'.",
+   "type": "bt_tr_paper",
+   "params": {
+    "mode": "permit",
+    "label": "kazı izni",
+    "sub": "Osmanlı payı"
+   },
+   "cues": {
+    "hit": "kısmı"
+   }
+  },
+  {
+   "text": "Schliemann bulduklarını kimseye göstermedi.",
+   "visual": "Kandil ışığında açık bir tahta sandık, içinde altının parıltısı; 'kaçırıldı'da kapak yavaşça kapanır, ışık söner.",
+   "type": "bt_tr_crate",
+   "params": {
+    "mode": "crate"
+   },
+   "cues": {
+    "hit": "göstermedi"
+   }
+  },
+  {
+   "text": "Hazine gizlice Yunanistan'a kaçırıldı. Ama altının asıl yolculuğu daha başlamamıştı.",
+   "visual": "Alacakaranlıkta sakin deniz; küçük bir yelkenli buharlı gemi yavaşça sağa süzülür, bacasından ince duman; 'Atina'ya'.",
+   "type": "bt_tr_crate",
+   "params": {
+    "mode": "ship",
+    "label": "Atina'ya"
+   }
+  },
+  {
+   "text": "Hazine önce Atina'ya ulaştı.",
+   "visual": "Bölüm kartı: 'III', ince çizgi, büyük ince 'Kayıp hazine', italik 'Atina · Berlin · Moskova'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "III",
+    "title": "Kayıp hazine",
+    "sub": "Atina · Berlin · Moskova"
+   },
+   "chapter": "Kayıp hazine"
+  },
+  {
+   "text": "Schliemann, genç eşi Sophia'yı bu takılarla süsleyip fotoğrafını çektirdi. Fotoğraf dünyayı dolaştı.",
+   "visual": "Oval, eski bir kartvizit fotoğraf çerçevesi; içinde yüzsüz bir kadın büstü, alnında altın diadem ve yüzünün iki yanından sarkan zincirler; sağda 'Sophia Schliemann', italik 'Atina'.",
+   "type": "bt_tr_diadem",
+   "params": {
+    "mode": "portrait",
+    "label": "Sophia Schliemann",
+    "sub": "Atina"
+   },
+   "cues": {
+    "hit": "dolaştı"
+   }
+  },
+  {
+   "text": "Dava açıldı. Kazıdaki Osmanlı görevlisi Amin Efendi hapse mahkûm edildi. Schliemann ise para ödedi ve hazineyi tuttu.",
+   "visual": "Aynı belge, ışık havuzunda; 'hapse'de mühür ortasından çatlar; yanında 'dava', italik 'Atina'.",
+   "type": "bt_tr_paper",
+   "params": {
+    "mode": "court",
+    "label": "dava",
+    "sub": "Atina"
+   },
+   "cues": {
+    "hit": "hapse"
+   }
+  },
+  {
+   "text": "1881'de altınları Berlin'e bağışladı. Hazine altmış yıl orada sessizce durdu.",
+   "visual": "Sade Avrupa haritası: Akdeniz, Kuzey Denizi ve Baltık kıyıları; Hisarlık, Atina ve Berlin noktaları; 'Berlin'e'de Atina'dan Berlin'e ince altın rota çizilir.",
+   "type": "bt_tr_map",
+   "params": {
+    "bounds": [
+     6.0,
+     36.0,
+     34.0,
+     57.0
+    ],
+    "points": [
+     {
+      "lon": 26.24,
+      "lat": 39.96,
+      "label": "Hisarlık"
+     },
+     {
+      "lon": 23.73,
+      "lat": 37.98,
+      "label": "Atina",
+      "sub": "1873",
+      "side": "left",
+      "dy": -110
+     },
+     {
+      "lon": 13.4,
+      "lat": 52.52,
+      "label": "Berlin",
+      "sub": "1881",
+      "at": "c0"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "c1"
+     ],
+     [
+      1,
+      2,
+      "c0"
+     ]
+    ]
+   },
+   "cues": {
+    "c0": "Berlin",
+    "c1": "altınları"
+   }
+  },
+  {
+   "text": "Sonra savaş geldi. Sandıklar Berlin'de dev bir beton kuleye indirildi.",
+   "visual": "Gece Berlin: Hayvanat Bahçesi uçaksavar kulesi, köşelerinde iki ağır yuvarlak kule ve üstlerinde top platformları, pencere yerine dar mazgallar; iki projektör huzmesi yavaşça döner, arkada duman; 'Berlin', italik '1941 – 1945'.",
+   "type": "bt_tr_tower",
+   "params": {
+    "mode": "war",
+    "label": "Berlin",
+    "sub": "1941 – 1945"
+   },
+   "cues": {
+    "hit": "kuleye"
+   }
+  },
+  {
+   "text": "1945 baharında Berlin düştü. Müze müdürü sandıkları Sovyet askerlerine teslim etti.",
+   "visual": "Aynı kule; 'sandıkları'nda dipteki kapı ışıkla dolar, iki koyu siluet ve bir sandık kapıdan çıkıp yavaşça sağa, kulenin dışına yürür.",
+   "type": "bt_tr_tower",
+   "params": {
+    "mode": "open",
+    "label": "1945"
+   },
+   "cues": {
+    "hit": "sandıkları"
+   }
+  },
+  {
+   "text": "Ve hazine kayboldu. Yarım asır boyunca kimse yerini bilmedi.",
+   "visual": "Işık havuzunda diadem; 'kayboldu'da altın solar, yerinde kesik çizgili hayalet bir taslak ve büyük soluk bir '?' kalır.",
+   "type": "bt_tr_diadem",
+   "params": {
+    "mode": "lost"
+   },
+   "cues": {
+    "hit": "kayboldu"
+   }
+  },
+  {
+   "text": "1990'larda gerçek ortaya çıktı. Altınlar Moskova'da, Puşkin Müzesi'ndeydi.",
+   "visual": "Kuzey Avrupa haritası: Baltık ve Kuzey Denizi kıyıları; Berlin'den Moskova'ya ince altın rota çizilir; 'Moskova' noktası atar, italik 'Puşkin Müzesi'.",
+   "type": "bt_tr_map",
+   "params": {
+    "bounds": [
+     8.0,
+     46.0,
+     42.0,
+     61.0
+    ],
+    "points": [
+     {
+      "lon": 13.4,
+      "lat": 52.52,
+      "label": "Berlin",
+      "sub": "1945",
+      "side": "left"
+     },
+     {
+      "lon": 37.6,
+      "lat": 55.75,
+      "label": "Moskova",
+      "sub": "Puşkin Müzesi",
+      "at": "c0"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "c0"
+     ]
+    ]
+   },
+   "cues": {
+    "c0": "Moskova"
+   }
+  },
+  {
+   "text": "Bugün de oradalar. Altın Priamos'un değilse, onun şehri neredeydi?",
+   "visual": "Müze vitrini: kaide üstünde ince camlı bir kutu, içinde altın diadem, yukarıdan spot ışığı; sağda 'Moskova', italik 'bugün'.",
+   "type": "bt_tr_diadem",
+   "params": {
+    "mode": "case",
+    "label": "Moskova",
+    "sub": "bugün"
+   },
+   "cues": {
+    "hit": "neredeydi"
+   }
+  },
+  {
+   "text": "Ondan sonra kazıyı Wilhelm Dörpfeld, 1930'larda da Carl Blegen sürdürdü.",
+   "visual": "Bölüm kartı: 'IV', ince çizgi, büyük ince 'Dokuz şehir', italik 'Troya I – IX'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "IV",
+    "title": "Dokuz şehir",
+    "sub": "Troya I – IX"
+   },
+   "chapter": "Dokuz şehir"
+  },
+  {
+   "text": "Toprağı katman katman okudular. Tepe, üst üste en az dokuz şehirdi.",
+   "visual": "Tepenin kesiti; 'katman'dan itibaren katmanlar alttan yukarı birer birer altın çerçevelenir ve yanlarında Roma rakamları I'den IX'a belirir.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "layers"
+   },
+   "cues": {
+    "hit": "katman"
+   }
+  },
+  {
+   "text": "En altta beş bin yıllık bir köy. En üstte Roma'nın İlion'u.",
+   "visual": "Yatay zaman çubuğu: dokuz şehir I–IX ardışık bölümler halinde soldan sağa belirir (II altın, VI–VII koyu); solda '≈ MÖ 3000', 'üstte'de sağda '≈ MS 500' ve üstte altın '3.500 yıl'.",
+   "type": "bt_tr_timeline",
+   "params": {
+    "from": "≈ MÖ 3000",
+    "to": "≈ MS 500"
+   },
+   "cues": {
+    "c0": "altta",
+    "c1": "üstte"
+   }
+  },
+  {
+   "text": "Schliemann'ın altını ikinci şehirdendi. Dört bin üç yüz yıldan da eskiydi.",
+   "visual": "Işık havuzunda altın diadem; altında 'Troya II', italik '≈ MÖ 2500 – 2300'.",
+   "type": "bt_tr_diadem",
+   "params": {
+    "mode": "show",
+    "label": "Troya II",
+    "sub": "≈ MÖ 2500 – 2300"
+   },
+   "cues": {
+    "hit": "ikinci"
+   }
+  },
+  {
+   "text": "Homeros'un şehrine benzeyenler çok daha yukarıdaydı. Altıncı ve yedinci Troya. Eğimli taş surlar.",
+   "visual": "Altıncı Troya'nın eğimli kireçtaşı suru: kademeli parçalar, sağda kare bir kule, ortada kapı boşluğu; üstte 'Troya VI – VII'.",
+   "type": "bt_tr_walls",
+   "params": {
+    "mode": "wall",
+    "label": "Troya VI – VII"
+   },
+   "cues": {
+    "hit": "Eğimli"
+   }
+  },
+  {
+   "text": "Yedinci şehrin katmanında yangın izleri ve ok uçları vardı. Milattan önce 1180 civarı.",
+   "visual": "Aynı sur; 'yangın'da surun üstü boyunca yavaş alevler yükselir, duman göğe çekilir; üstte '≈ MÖ 1180'.",
+   "type": "bt_tr_walls",
+   "params": {
+    "mode": "fire",
+    "label": "≈ MÖ 1180"
+   },
+   "cues": {
+    "hit": "yangın"
+   }
+  },
+  {
+   "text": "Hendek bu katmanlardan da geçmişti. Schliemann, aradığı şehrin bir parçasını kendi eliyle kazıp atmıştı.",
+   "visual": "Kesit, hendek açık, içindeki duvarlar kesik çizgili hayalet; 'kendi'de altıncı ve yedinci katmanlar altın çerçevelenir; 'aradığı şehir'.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "trench",
+    "cut": "done",
+    "hl": [
+     5,
+     6
+    ],
+    "label": "aradığı şehir"
+   },
+   "cues": {
+    "hit": "kendi"
+   }
+  },
+  {
+   "text": "1988'de kazıyı Manfred Korfmann devraldı. Manyetik taramalar, tepenin eteğinde hendekle çevrili bir aşağı şehir gösterdi.",
+   "visual": "Kuşbakışı plan: üstte küçük kale halkası ('kale'); 'Manyetik'te güneye doğru geniş aşağı şehir sınırı çizilir; 'hendekle'de çevresinde kesik çizgili altın hendek dolanır.",
+   "type": "bt_tr_plan",
+   "params": {
+    "label": "aşağı şehir",
+    "sub": "hendek"
+   },
+   "cues": {
+    "hit": "Manyetik",
+    "b": "hendekle"
+   }
+  },
+  {
+   "text": "Hitit tabletleri de bu kıyıdaki bir krallıktan söz ediyordu. Adı Wilusa'ydı.",
+   "visual": "Işık havuzunda çivi yazılı tek bir kil tablet; 'Wilusa'da bir satır altın yanar, yanında altın 'Wilusa', italik 'Hitit kayıtları'.",
+   "type": "bt_tr_tablet",
+   "params": {
+    "label": "Wilusa",
+    "sub": "Hitit kayıtları"
+   },
+   "cues": {
+    "hit": "Wilusa"
+   }
+  },
+  {
+   "text": "Dilbilimciler bu adı Homeros'un İlios'uyla eşleştirdi. Efsanenin altında büyük olasılıkla gerçek bir şehir vardı. Ama yıkımdan sonra ne oldu?",
+   "visual": "Solda 'Wilusa' (italik 'Hitit'), altın ok, sağda 'İlios' (italik 'Homeros').",
+   "type": "bt_word",
+   "params": {
+    "from": {
+     "word": "Wilusa",
+     "gloss": "Hitit"
+    },
+    "to": {
+     "word": "İlios",
+     "gloss": "Homeros"
+    }
+   },
+   "cues": {
+    "to": "İlios"
+   }
+  },
+  {
+   "text": "Uzun süre cevap sessizlikti. Yangından sonra tepenin yüzyıllarca boş kaldığı sanıldı.",
+   "visual": "Bölüm kartı: 'V', ince çizgi, büyük ince 'Yıkımdan sonra', italik 'Hisarlık, 2026'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "V",
+    "title": "Yıkımdan sonra",
+    "sub": "Hisarlık, 2026"
+   },
+   "chapter": "Yıkımdan sonra"
+  },
+  {
+   "text": "Meydanın yanında, güney kapısına uzanan taş döşeli bir yol da vardı.",
+   "visual": "Eski surun önünde taş döşeli geniş bir meydan perspektifte belirir, ardından kapıya uzanan taş döşeli yol çizilir; üstte 'agora', italik 'güney kapısına yol'.",
+   "type": "bt_tr_walls",
+   "params": {
+    "mode": "agora",
+    "label": "agora",
+    "sub": "güney kapısına yol"
+   },
+   "cues": {
+    "hit": "Meydanın"
+   }
+  },
+  {
+   "text": "Reyhan Körpe'ye göre yeni insanlar yıkımdan seksen, doksan yıl sonra geldi. Ve eski surları kullandı.",
+   "visual": "Eski sur; 'geldi'de önüne, sura yaslanmış küçük, kaba taş evler birer birer belirir; üstte '80 – 90 yıl sonra'.",
+   "type": "bt_tr_walls",
+   "params": {
+    "mode": "reuse",
+    "label": "80 – 90 yıl sonra"
+   },
+   "cues": {
+    "hit": "geldi"
+   }
+  },
+  {
+   "text": "Şehir, sanıldığı gibi yüzyıllarca boş kalmadı. Yandı, gömüldü ve yeniden kuruldu.",
+   "visual": "Tepenin kesiti, rakamlar yerinde; 'Yandı'dan itibaren dokuz katman alttan yukarı sırayla altın yanar, en üstteki yanık kalır.",
+   "type": "bt_tr_section",
+   "params": {
+    "mode": "all"
+   },
+   "cues": {
+    "hit": "Yandı"
+   }
+  },
+  {
+   "text": "Schliemann aradığı şehri buldu. Ama bulurken bir parçasını yok etti. İkisi de doğru.",
+   "visual": "Gün batımında Hisarlık tepesi bugün: ortada yarık, yamaçta kesik çizgili patika; güneş alçalır; 'Hisarlık', italik 'bugün'.",
+   "type": "bt_tr_hill",
+   "params": {
+    "mode": "today",
+    "label": "Hisarlık",
+    "sub": "bugün"
+   },
+   "cues": {
+    "hit": "doğru"
+   }
+  },
+  {
+   "text": "Siz olsaydınız, efsaneye inanıp kazar mıydınız, yoksa bekler miydiniz? Yorumlara yazın. Böyle hikâyeler için abone olun.",
+   "visual": "Işık havuzunda büyük ince 'kazar mıydınız?'; altında vurgu renginde italik 'bekler miydiniz?'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "kazar mıydınız?",
+      "at": "c0",
+      "size": 140
+     },
+     {
+      "text": "bekler miydiniz?",
+      "at": "c1",
+      "size": 100,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "kazar",
+    "c1": "bekler"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Euronews Türkçe — Troya'da arkeoloji: 2.800 yıllık agora bulundu, kent savaş sonrası terk edilmedi (22 Eylül 2026)",
+   "url": "https://tr.euronews.com/kultur/2026/09/22/troyada-arkeoloji-2800-yillik-agora-bulundu-kent-savas-sonrasi-terk-edilmedi"
+  },
+  {
+   "title": "Wikipedia — Troy (katmanlar, Schliemann Hendeği, Dörpfeld, Blegen, Korfmann, Wilusa)",
+   "url": "https://en.wikipedia.org/wiki/Troy"
+  },
+  {
+   "title": "Wikipedia — Priam's Treasure",
+   "url": "https://en.wikipedia.org/wiki/Priam%27s_Treasure"
+  },
+  {
+   "title": "Staatliche Museen zu Berlin — 150 Years Since Heinrich Schliemann Uncovered the Treasure of Priamos",
+   "url": "https://www.smb.museum/en/whats-new/detail/150-years-since-heinrich-schliemann-uncovered-the-treasure-of-priamos-in-troy/"
+  },
+  {
+   "title": "Wikipedia — Frank Calvert",
+   "url": "https://en.wikipedia.org/wiki/Frank_Calvert"
+  },
+  {
+   "title": "Archaeology (AIA) — Troy: Korfmann'ın kazıları, manyetometre taramaları ve aşağı şehir hendeği (2004)",
+   "url": "https://archive.archaeology.org/0405/etc/troy.html"
+  }
+ ],
+ "youtube": {
+  "title": "Troya Antik Kenti: Efsaneyi Bulan Adam Onu Yok mu Etti?",
+  "description": "Troya antik kenti, Homeros'un destanındaki şehir, gerçekten Çanakkale'deki Hisarlık tepesinde miydi? 1873'te Heinrich Schliemann tepenin derinliklerinde altın buldu ve onu Kral Priamos'un hazinesi sandı. Ama altın, Troya Savaşı'ndan bin yıldan daha eskiydi ve Schliemann'ın dev hendeği, aradığı şehrin bir parçasını yok etmişti. Atina'dan Berlin'e, 1945'te bir beton kuleden Moskova'ya uzanan kayıp bir hazine; üst üste dokuz şehir ve Eylül 2026'da bulunan 2.800 yıllık agora.\n\nBu videoda:\n• Priamos'un Hazinesi'nin bulunuşu ve Yunanistan'a kaçırılması\n• Frank Calvert, Hisarlık ve Schliemann Hendeği\n• Hazinenin Berlin'den Moskova'ya kayboluşu\n• Troya I – IX: üst üste dokuz şehir, Wilusa ve Homeros'un İlios'u\n• 2026'da bulunan agora: şehir savaştan sonra neden terk edilmedi?\n\nHer gün yeni bir \"neden?\" için abone ol. Sence Schliemann Troya'yı buldu mu, yoksa yok mu etti? Yorumlara yaz!\n\n#troya #truva #schliemann #tarih #düşünbakalım",
+  "tags": [
+   "troya antik kenti",
+   "troya",
+   "truva",
+   "truva antik kenti",
+   "troya antik şehri",
+   "priamos'un hazinesi",
+   "heinrich schliemann",
+   "schliemann hendeği",
+   "hisarlık",
+   "çanakkale tarihi",
+   "troya savaşı",
+   "homeros ilyada",
+   "wilusa",
+   "kayıp şehirler",
+   "arkeoloji",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-18T20:30:00+03:00"
+ }
+}
