@@ -1,0 +1,17 @@
+{
+ "id": "JkyH-lYRoQM",
+ "thumbnail": false,
+ "url": "https://youtu.be/JkyH-lYRoQM",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-18T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Cosmic Microwave Background: Why Were Pigeons Blamed?",
+ "script": "videos/2026-11-18/ag-01-cmb-pigeons.json"
+}
