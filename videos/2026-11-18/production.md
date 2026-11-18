@@ -22,3 +22,16 @@ ElevenLabs: `warning: true` (ay içi 259.362 / bütçe 231.442, yenileme 2026-11
 ## Yönetmen son kapısı
 Lint iki dosyada OK (SEO 100). İki kapak ve iki kontak sayfası gözle incelendi: sol üst boş, taşan yazı yok, tek özne.
 Konular birbirinden (1952 Londra / Tunç Çağı Troya + 1873–1994) ve geçmişten farklı.
+
+---
+
+# 2026-11-18 — Stickstory production note
+
+Plan (`tools/plan.py --channel ag`): 2 Shorts (13:00 and 19:00 New York). No long video today; next one 2026-11-19.
+ElevenLabs: `warning: true` (263,758 used / 231,442 budget, renews 2026-11-20), so narration stays near the low end (423 + 438 chars).
+`tools/news.py` failed (proxy 403 on all 7 countries), so headlines came from web search.
+- **ag-01 — Cosmic microwave background / the pigeons (13:00 NY):** ScienceDaily (US), 17 Nov 2026, "A Mysterious Twist in the
+  Universe's Oldest Light Could Reveal New Physics". The first pick, Voyager 1 one light-day, was dropped because Düşün
+  Bakalım already covered it on 2026-10-17. Details: `production-ag-01.md`. Final round: all ≥ 7, cover 8.
+- **ag-02 — Duff children, Victoria 1864 (19:00 NY):** Australia (CBS News / AU press, 12–13 Nov 2026), "Boy found alive after
+  6 days lost in Australian wilderness" (Walhalla, Victoria). Details: `production-ag-02.md`. Final round: all ≥ 7, cover 8.
