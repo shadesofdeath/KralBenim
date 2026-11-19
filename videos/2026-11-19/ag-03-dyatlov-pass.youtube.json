@@ -1,0 +1,17 @@
+{
+ "id": "HBbdeHkju5k",
+ "thumbnail": false,
+ "url": "https://youtu.be/HBbdeHkju5k",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-19T19:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Dyatlov Pass Incident: Why Did Nine Hikers Cut Open Their Tent?",
+ "script": "videos/2026-11-19/ag-03-dyatlov-pass.json"
+}
