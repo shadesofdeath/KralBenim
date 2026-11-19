@@ -1,0 +1,514 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-laughter-epidemic",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-slate",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Laughter",
+   "shut this school"
+  ],
+  "highlight": [
+   "laughter"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "Hempelmann, C. F. (2007). The laughter of the 1962 Tanganyika 'laughter epidemic'. Humor 20(1), with Rankin & Philip's 1963 report (30 January 1962, Kashasha, 95 of 159 pupils, school closed 18 March, Nshamba, tests negative; stress after independence on 9 December 1961 as the likely indirect cause)",
+   "url": "https://argia.eus/fitxategiak/ckfinder/files/Hempelmann2007.pdf"
+  },
+  {
+   "title": "Wikipedia — Tanganyika laughter epidemic (Kashasha girls' boarding school, 95 of 159, spread to Nshamba and other schools)",
+   "url": "https://en.wikipedia.org/wiki/Tanganyika_laughter_epidemic"
+  },
+  {
+   "title": "Radiolab — Contagious Laughter (1962, a girls' boarding school in Tanganyika)",
+   "url": "https://www.radiolab.org/podcast/91595-contagious-laughter"
+  },
+  {
+   "title": "Now I Know — Tanganyika's Laughing Epidemic (mass psychogenic illness, no medical cause found)",
+   "url": "https://nowiknow.com/tanganyikas-laughing-epidemic/"
+  }
+ ],
+ "youtube": {
+  "title": "Tanganyika Laughter Epidemic: The Laugh That Shut a School",
+  "description": "The Tanganyika laughter epidemic of 1962 began with three schoolgirls who could not stop laughing, and it ended up closing their school.\n\nOn 30 January 1962, at a mission boarding school for girls in Kashasha, near Lake Victoria, three pupils burst into fits of laughing and crying. Within weeks, 95 of the 159 girls had the same attacks, some lasting hours. Doctors tested for poison and infection and found nothing. The school closed, the girls went home, and the contagious laughter spread to villages like Nshamba. Experts call it mass psychogenic illness, and one researcher links it to the stress of a country that had won independence only weeks before.\n\nSubscribe to Stickstory for one strange true story every day. Have you ever caught a laugh you couldn't stop? Tell me in the comments!\n\n#shorts #laughterepidemic #stickstory",
+  "tags": [
+   "tanganyika laughter epidemic",
+   "laughter epidemic",
+   "1962 laughter epidemic",
+   "laughing epidemic",
+   "contagious laughter",
+   "mass hysteria",
+   "mass psychogenic illness",
+   "kashasha",
+   "tanzania history",
+   "lake victoria",
+   "strange history",
+   "history facts",
+   "weird history",
+   "true story",
+   "unexplained events",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-19T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "lg_school",
+   "text": "A laugh shut down this school.",
+   "visual": "A red-brick mission school with a corrugated roof and a cross on the gable, banana plants either side, a bell swinging on its post; big gold laugh bursts pour out of the door and all four windows and a hand-lettered HA HA HA floats up from the doorway; in the foreground the iron gate is chained shut with a red padlock; the fez host, big in front of the gate, jumps back in shock looking at the school.",
+   "title": {
+    "white": "Tanganyika"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 860,
+    "horizon": 740
+   },
+   "cues": {
+    "shut": "shut"
+   },
+   "params": {
+    "mode": "hook",
+    "gy": 0.43,
+    "gate": {
+     "top": 0.48,
+     "bottom": 0.8
+    },
+    "kasif": {
+     "x": 0.72,
+     "y": 0.8,
+     "scale": 1.5,
+     "pose": "shock",
+     "face": "left",
+     "emotion": "surprised"
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lg_map",
+   "text": "In 1962, in Tanganyika,",
+   "visual": "An old map: the west half of Lake Victoria draws itself in blue wash with drifting waves, the dashed red Uganda border, hill marks on the land; a red pin drops on Kashasha on the west shore near Bukoba and sends red pulse rings; little beehive huts pop up around it; in the foreground banana plants and two grass huts; labels LAKE VICTORIA, Bukoba, Kashasha, TANGANYIKA.",
+   "title": {
+    "white": "1962"
+   },
+   "set": false,
+   "cues": {
+    "pin": "Tanganyika"
+   },
+   "params": {
+    "cy": 0.343,
+    "labels": [
+     {
+      "text": "LAKE VICTORIA",
+      "x": 0.66,
+      "y": 0.31,
+      "at": 0.2,
+      "size": 58,
+      "color": "blue",
+      "font": "serif",
+      "card": false,
+      "rot": -2,
+      "underline": false
+     },
+     {
+      "text": "Bukoba",
+      "x": 0.37,
+      "y": 0.355,
+      "at": 0.5,
+      "size": 56,
+      "color": "ink",
+      "font": "hand",
+      "card": false,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "Kashasha",
+      "x": 0.38,
+      "y": 0.47,
+      "at": "pin",
+      "size": 72,
+      "color": "red",
+      "font": "hand",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     },
+     {
+      "text": "TANGANYIKA",
+      "x": 0.55,
+      "y": 0.74,
+      "at": 0.4,
+      "size": 70,
+      "color": "ink",
+      "font": "serif",
+      "card": false,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lg_class",
+   "text": "three schoolgirls burst out laughing, then crying.",
+   "visual": "A classroom: a blackboard with '30 January 1962' in chalk, three rows of girls in blue uniforms behind long wooden desks, a teacher at the board; on 'laughing' the three girls in the big front row burst out laughing, hands to their mouths, eyes squeezed shut, and on 'crying' tears run down, gold ripples around their heads; the girls behind turn to look.",
+   "title": {
+    "white": "Kashasha"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "laugh": "laughing",
+    "s": "crying"
+   },
+   "params": {
+    "mode": "start",
+    "labels": [
+     {
+      "text": "THEN CRYING",
+      "x": 0.66,
+      "y": 0.39,
+      "at": "s",
+      "size": 62,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "lg_class",
+   "text": "Within weeks, 95 of 159 girls had the same fits,",
+   "visual": "The same classroom from further back: the laughing spreads girl to girl, front row to back row, gold ripples popping up on every desk; on the blackboard a big chalk number counts up from 3 to 95, 'of 159' under it.",
+   "source": "Rankin & Philip, 1963",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "spread": "Within"
+   },
+   "params": {
+    "mode": "spread",
+    "count": [
+     3,
+     95
+    ],
+    "of": "159"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "lg_hours",
+   "text": "some for hours.",
+   "visual": "Close on one girl at her desk, laughing and crying at once, hands at her face, tears running; above her a wall clock whose hands race round and a patch of window light sliding across the wall; a second girl behind her laughs too; card 'FOR HOURS'.",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "h": "hours",
+    "hit": "hours"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "FOR HOURS",
+      "x": 0.78,
+      "y": 0.13,
+      "at": "h",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     880
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lg_lab",
+   "text": "Doctors found no poison, no germ.",
+   "visual": "A 1962 doctor in a white coat bends over a microscope on a lab bench; a rack of test tubes and a bottle get a big red cross on 'poison' (card NO POISON); a round inset of the microscope view shows only pale blood cells under a moving cross-hair, and 'NO GERM' is stamped in it on 'germ'.",
+   "title": {
+    "white": "Tests"
+   },
+   "source": "Rankin & Philip, 1963",
+   "set": {
+    "name": "interior",
+    "ground": 1150
+   },
+   "cues": {
+    "poison": "poison",
+    "germ": "germ"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "NO POISON",
+      "x": 0.64,
+      "y": 0.4,
+      "at": "poison",
+      "size": 56,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "NO GERM",
+      "x": 0.72,
+      "y": 0.265,
+      "at": "germ",
+      "size": 64,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "lg_school",
+   "text": "So the school closed,",
+   "visual": "The school gate is chained with a red padlock and a CLOSED card; girls in uniform carry little suitcases and walk away along the dirt yard to the right; faint gold ripples still come from the windows.",
+   "set": {
+    "name": "field",
+    "ground": 1080,
+    "horizon": 900
+   },
+   "cues": {
+    "c": "closed"
+   },
+   "params": {
+    "mode": "closed",
+    "road": 1.0,
+    "gate": {
+     "top": 0.6,
+     "bottom": 0.86
+    },
+    "girls": [
+     [
+      0.3,
+      0.75,
+      0.8
+     ],
+     [
+      0.12,
+      0.55,
+      0.85
+     ],
+     [
+      -0.05,
+      0.38,
+      0.9
+     ]
+    ],
+    "labels": [
+     {
+      "text": "CLOSED",
+      "x": 0.5,
+      "y": 0.53,
+      "at": "c",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "lg_road",
+   "text": "and the laughter followed the girls home to the villages.",
+   "visual": "Hilly countryside: a dirt road winds down from the tiny school on the far hill past beehive grass huts and banana plants; two girls walk down it; from 'followed' a gold dotted trail runs along the road and each hut in turn starts sending out gold laugh ripples.",
+   "title": {
+    "white": "Villages"
+   },
+   "set": {
+    "name": "hills",
+    "ground": 760,
+    "horizon": 600
+   },
+   "cues": {
+    "follow": "followed"
+   },
+   "params": {},
+   "camera": {
+    "zoom": 1.05,
+    "move": "down"
+   }
+  },
+  {
+   "type": "lg_flag",
+   "text": "The cause? One researcher blames stress.",
+   "visual": "The school field: Tanganyika's new flag (green, gold-edged black band, green) waves on a tall pole; a notice board with a tear-off calendar reading 1962; three schoolgirls in front look up at the flag, faint gold laugh lines around them; card STRESS.",
+   "title": {
+    "white": "Independence"
+   },
+   "source": "Hempelmann, 2007",
+   "set": {
+    "name": "field",
+    "ground": 1270,
+    "horizon": 1100
+   },
+   "cues": {
+    "stress": "stress"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "STRESS",
+      "x": 0.36,
+      "y": 0.56,
+      "at": "stress",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "lg_flag",
+   "text": "The country was seven weeks old, and its schoolgirls carried huge expectations.",
+   "visual": "Closer on the flag and the notice board: the calendar sheds its leaves from 'seven' (December 1961 to January 1962) while the new flag waves beside it; the schoolgirls below; card 7 WEEKS OLD.",
+   "set": {
+    "name": "field",
+    "ground": 1270,
+    "horizon": 1100
+   },
+   "cues": {
+    "weeks": "seven"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "7 WEEKS OLD",
+      "x": 0.6,
+      "y": 0.575,
+      "at": "weeks",
+      "size": 50,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     600,
+     880
+    ],
+    "zoom": 1.1,
+    "move": "push"
+   }
+  },
+  {
+   "type": "lg_school",
+   "text": "Subscribe for a strange true story every day.",
+   "visual": "Daylight at the school, the gate open, banana plants swaying; the fez host waves at the viewer in the yard, then points at the viewer with a smile.",
+   "set": {
+    "name": "hills",
+    "ground": 1080,
+    "horizon": 900
+   },
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "mode": "end",
+    "kasif": {
+     "x": 0.5,
+     "y": 1.0,
+     "scale": 1.0,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}

@@ -1,0 +1,1855 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-dyatlov-pass",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-dusk",
+ "cover": {
+  "lines": [
+   "CUT FROM",
+   "INSIDE"
+  ],
+  "highlight": [
+   "INSIDE"
+  ],
+  "scene": 1,
+  "t": 4.15,
+  "focus": [
+   1150,
+   500
+  ],
+  "zoom": 1.0,
+  "size": 240,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 0.72,
+   "face": -1,
+   "x": 1600,
+   "y": 1075
+  }
+ },
+ "sources": [
+  {
+   "title": "Has science solved one of history's greatest adventure mysteries? (National Geographic)",
+   "url": "https://www.nationalgeographic.com/science/article/has-science-solved-history-greatest-adventure-mystery-dyatlov"
+  },
+  {
+   "title": "Using science to explore a 60-year-old Russian mystery (EPFL, via ScienceDaily, 29 Jan 2021)",
+   "url": "https://www.sciencedaily.com/releases/2021/01/210129090520.htm"
+  },
+  {
+   "title": "Gaume & Puzrin, Mechanisms of slab avalanche release and impact in the Dyatlov Pass incident in 1959 (Communications Earth & Environment, 2021)",
+   "url": "https://www.nature.com/articles/s43247-020-00081-8"
+  },
+  {
+   "title": "Intense press coverage prompts new expeditions to Dyatlov Pass (EPFL / EurekAlert, 2022)",
+   "url": "https://www.eurekalert.org/news-releases/947564"
+  },
+  {
+   "title": "The Dyatlov Pass Incident (Atlas Obscura)",
+   "url": "https://www.atlasobscura.com/articles/the-dyatlov-pass-incident"
+  }
+ ],
+ "youtube": {
+  "title": "Dyatlov Pass Incident: Why Did Nine Hikers Cut Open Their Tent?",
+  "description": "The Dyatlov Pass incident, February 1959: nine experienced hikers cut their own tent open from the inside and walked into a night of about thirty below zero on the mountain Kholat Syakhl. None of them came back. Why?\n\nThe Soviet investigators blamed a \"compelling natural force\" and closed the case. For sixty years the Dyatlov Pass mystery fed theories, from military tests to infrasound. Then in 2021 two Swiss scientists, Johan Gaume and Alexander Puzrin, modelled a small delayed slab avalanche, with help from the snow code of Disney's Frozen. Did they solve it, or is the Dyatlov Pass mystery still open?\n\nIn this video:\n- The night the tent was cut from the inside\n- Yuri Yudin, the hiker who turned back\n- The search: the cedar, the fire and the ravine\n- A compelling natural force: the Soviet verdict\n- The snow slab theory and its critics\n\nSubscribe to Stickstory for more true mysteries like this one. What do you think drove them out of the tent? Tell me in the comments!\n\n#dyatlovpass #unsolvedmysteries #stickstory",
+  "tags": [
+   "dyatlov pass incident",
+   "dyatlov pass",
+   "dyatlov pass mystery",
+   "dyatlov pass avalanche",
+   "igor dyatlov",
+   "yuri yudin",
+   "kholat syakhl",
+   "dead mountain",
+   "ural mountains",
+   "unsolved mysteries",
+   "soviet mystery",
+   "slab avalanche",
+   "cold case",
+   "1959 mystery",
+   "history mysteries",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-19T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "dp_slope",
+   "text": "It's the middle of the night on a frozen mountain, and it's about thirty below zero.",
+   "visual": "Night on the bare snow slope: a long ridge tent glows gold from a lantern; wind streaks race across; dark forest bottom-left.",
+   "title": {
+    "white": "1959"
+   },
+   "cues": {
+    "thirty": "thirty"
+   },
+   "params": {
+    "mode": "night",
+    "tent": {
+     "x": 0.62,
+     "s": 1.1
+    },
+    "wind": 0.8,
+    "labels": [
+     {
+      "text": "about -30°",
+      "x": 0.55,
+      "y": 0.3,
+      "at": "thirty",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1190,
+     640
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   },
+   "chapter": "Cold open"
+  },
+  {
+   "type": "dp_inside",
+   "text": "Inside a small tent, someone grabs a knife and slices the wall open. From the inside.",
+   "visual": "Full-frame inside the tent: lantern glow on the canvas wall; a knife blade pushes through and slices down; the slit opens on the black night.",
+   "title": {
+    "white": "From inside"
+   },
+   "cues": {
+    "cut": "slices",
+    "hit": "inside"
+   },
+   "params": {
+    "mode": "cut"
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     520
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_slope",
+   "text": "Nine young hikers crawl out into the dark. No boots, no coats. Some are only in socks.",
+   "visual": "The slit tent on the night slope; nine small hikers walk out and down the slope one after another, leaving footprints.",
+   "title": {
+    "white": "Nine"
+   },
+   "cues": {
+    "go": "crawl",
+    "boots": "boots"
+   },
+   "params": {
+    "mode": "flee",
+    "tent": {
+     "x": 0.66,
+     "s": 1
+    },
+    "wind": 0.7,
+    "labels": [
+     {
+      "text": "no boots",
+      "x": 0.6,
+      "y": 0.32,
+      "at": "boots",
+      "color": "red",
+      "size": 72,
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1250,
+     560
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_cedar",
+   "text": "And they walk away from the only shelter for miles. None of them will come back.",
+   "visual": "From the forest edge: the slope rises to a tiny slit tent at upper right; three small hikers lean into the wind in the snow.",
+   "title": {
+    "white": "No return"
+   },
+   "cues": {
+    "go": "walk",
+    "shelter": "shelter"
+   },
+   "params": {
+    "mode": "return",
+    "away": true,
+    "labels": [
+     {
+      "text": "the only shelter",
+      "x": 0.8,
+      "y": 0.12,
+      "at": "shelter",
+      "size": 60,
+      "arrow": [
+       0.86,
+       0.44
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So what makes nine experienced hikers cut their way out of their own tent? Science may finally have an answer. And not everyone believes it.",
+   "visual": "The fez narrator on the night snow holds a sign 'WHY?', then shrugs on 'not everyone'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "nine": "nine",
+    "believes": "believes"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "think",
+      "scale": 1.0,
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "nine",
+        "pose": "hold",
+        "emotion": "surprised",
+        "text": "WHY?"
+       },
+       {
+        "at": "believes",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Let's go back to January 1959, in the Soviet Union.",
+   "visual": "CHAPTER 1 / 5 card: 'Ten Friends, One Mountain'.",
+   "title": {},
+   "cues": {
+    "n": "back",
+    "title": "January"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "Ten Friends, One Mountain",
+    "label": "CHAPTER"
+   },
+   "chapter": "Ten Friends, One Mountain"
+  },
+  {
+   "type": "dp_map",
+   "text": "Ten hikers, most of them students and graduates of the Ural Polytechnic Institute, set off on skis into the northern Urals.",
+   "visual": "Old map of the Northern Urals: a north-south mountain chain, rivers, forest; the dashed ski route draws itself from the village of Vizhai north toward the mountains.",
+   "title": {
+    "white": "Northern Urals"
+   },
+   "cues": {
+    "students": "students",
+    "skis": "skis",
+    "route": "skis",
+    "Urals": "Urals"
+   },
+   "params": {
+    "route": [
+     [
+      0.2,
+      0.82
+     ],
+     [
+      0.28,
+      0.66
+     ],
+     [
+      0.36,
+      0.58
+     ],
+     [
+      0.44,
+      0.44
+     ],
+     [
+      0.5,
+      0.36
+     ]
+    ],
+    "places": [
+     {
+      "name": "Sverdlovsk",
+      "x": 0.12,
+      "y": 0.93,
+      "at": "students"
+     },
+     {
+      "name": "Vizhai",
+      "x": 0.2,
+      "y": 0.82,
+      "at": "skis"
+     },
+     {
+      "name": "Ural Mountains",
+      "x": 0.6,
+      "y": 0.62,
+      "kind": "peak",
+      "at": "Urals",
+      "size": 64,
+      "anchor": "end",
+      "dx": -70
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     700,
+     620
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_ski",
+   "text": "Their leader was Igor Dyatlov, twenty-three years old.",
+   "visual": "A line of skiers with backpacks glides right through the snowy forest; the lead skier is labelled 'Igor Dyatlov, 23'.",
+   "title": {
+    "white": "The leader"
+   },
+   "cues": {
+    "Dyatlov": "Dyatlov,"
+   },
+   "params": {
+    "mode": "march",
+    "n": 5,
+    "labels": [
+     {
+      "text": "Igor Dyatlov, 23",
+      "x": 0.78,
+      "y": 0.3,
+      "at": "Dyatlov",
+      "size": 64,
+      "color": "red",
+      "arrow": [
+       0.9,
+       0.56
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1500,
+     640
+    ],
+    "zoom": 1.35,
+    "move": "left"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Their goal was Mount Otorten, on a route rated Category Three, the toughest grade back then. They had done hard winter trips before.",
+   "visual": "Giant words 'Category III' / 'the toughest', 'III' in a red box; the fez narrator stands big beside them on the snow and jumps back in shock on 'toughest'.",
+   "title": {
+    "white": "The route"
+   },
+   "cues": {
+    "w0": "Category",
+    "tg": "toughest"
+   },
+   "params": {
+    "lines": [
+     "Category III",
+     "the toughest"
+    ],
+    "highlight": [
+     "III"
+    ],
+    "y": 0.45,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.88,
+     "pose": "shock",
+     "face": -1,
+     "scale": 1.1,
+     "at": "tg",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   },
+   "source": "ScienceDaily / EPFL"
+  },
+  {
+   "type": "dp_ski",
+   "text": "But on the twenty-eighth of January, Yuri Yudin got sick and had to turn back. He said goodbye and skied away.",
+   "visual": "The group of skiers glides off to the right while one skier, Yuri Yudin, turns left, waves back on 'goodbye' and glides away the other way; note '28 January'.",
+   "title": {
+    "white": "Yuri Yudin"
+   },
+   "cues": {
+    "twenty": "twenty-eighth",
+    "Yudin": "Yudin",
+    "bye": "goodbye"
+   },
+   "params": {
+    "mode": "goodbye",
+    "n": 10,
+    "yudin": 0,
+    "yudin_x": 0.3,
+    "yudin_s": 0.55,
+    "labels": [
+     {
+      "text": "28 January",
+      "x": 0.62,
+      "y": 0.18,
+      "at": "twenty",
+      "size": 66,
+      "color": "red"
+     },
+     {
+      "text": "Yuri Yudin",
+      "x": 0.16,
+      "y": 0.3,
+      "at": "Yudin",
+      "size": 68,
+      "arrow": [
+       0.28,
+       0.5
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "dp_ski",
+   "text": "He had no idea that this goodbye would save his life.",
+   "visual": "Close on Yudin alone, waving back and skiing away to the left; three tiny skiers far right; label 'the only survivor' with an arrow to him.",
+   "title": {
+    "white": "Survivor"
+   },
+   "cues": {
+    "bye": "He",
+    "idea": "idea"
+   },
+   "params": {
+    "mode": "goodbye",
+    "n": 10,
+    "yudin": 0,
+    "alone": true,
+    "yudin_x": 0.34,
+    "yudin_s": 0.6,
+    "labels": [
+     {
+      "text": "the only survivor",
+      "x": 0.36,
+      "y": 0.3,
+      "at": "idea",
+      "size": 68,
+      "color": "red",
+      "arrow": [
+       0.33,
+       0.5
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     700,
+     600
+    ],
+    "zoom": 1.4,
+    "move": "left"
+   }
+  },
+  {
+   "type": "dp_map",
+   "text": "Four days later, the other nine reached a mountain the Mansi people called Kholat Syakhl, often translated as Dead Mountain. They would never leave it.",
+   "visual": "The old map again, closer: the dashed route reaches a peak marked 'Kholat Syakhl' in red, with 'Dead Mountain' written under it; a red stub points on to 'Otorten'.",
+   "title": {
+    "white": "Dead Mountain"
+   },
+   "cues": {
+    "goal": "Dead",
+    "nine": "nine",
+    "Kholat": "Kholat",
+    "Dead": "Dead"
+   },
+   "params": {
+    "route": [
+     [
+      0.2,
+      0.82
+     ],
+     [
+      0.28,
+      0.66
+     ],
+     [
+      0.36,
+      0.58
+     ],
+     [
+      0.44,
+      0.44
+     ],
+     [
+      0.52,
+      0.38
+     ]
+    ],
+    "goal": [
+     [
+      0.52,
+      0.38
+     ],
+     [
+      0.56,
+      0.2
+     ]
+    ],
+    "places": [
+     {
+      "name": "Vizhai",
+      "x": 0.2,
+      "y": 0.82,
+      "at": 0
+     },
+     {
+      "name": "Otorten",
+      "x": 0.56,
+      "y": 0.2,
+      "kind": "peak",
+      "at": "nine"
+     },
+     {
+      "name": "Kholat Syakhl",
+      "x": 0.52,
+      "y": 0.38,
+      "kind": "peak",
+      "color": "red",
+      "at": "Kholat",
+      "size": 64
+     }
+    ],
+    "labels": [
+     {
+      "text": "\"Dead Mountain\"",
+      "x": 0.66,
+      "y": 0.5,
+      "at": "Dead",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     420
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   },
+   "source": "National Geographic"
+  },
+  {
+   "type": "chapter",
+   "text": "On the first of February, they pitched their tent on its open slope.",
+   "visual": "CHAPTER 2 / 5 card: 'The Night on Dead Mountain'.",
+   "title": {},
+   "cues": {
+    "n": "first",
+    "title": "tent"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "The Night on Dead Mountain",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Night on Dead Mountain"
+  },
+  {
+   "type": "dp_slope",
+   "text": "To make a flat spot, they dug a cut into the snow. Remember that cut, because it comes back later.",
+   "visual": "Dusk on the open slope: three hikers dig a notch into the snow with shovels, snow flies, then the long ridge tent rises in the cut; the fez narrator points at the cut on 'Remember'.",
+   "title": {
+    "white": "The cut"
+   },
+   "cues": {
+    "cut": "cut",
+    "tent": "snow.",
+    "rm": "Remember"
+   },
+   "params": {
+    "mode": "pitch",
+    "tent": {
+     "x": 0.6,
+     "s": 1
+    },
+    "kasif": {
+     "x": 0.86,
+     "y": 0.9,
+     "scale": 0.78,
+     "pose": "idle",
+     "face": -1,
+     "at": "rm",
+     "then": "point",
+     "dir": "down",
+     "emotion": "worried"
+    },
+    "labels": [
+     {
+      "text": "the cut",
+      "x": 0.4,
+      "y": 0.42,
+      "at": "cut",
+      "size": 66,
+      "color": "red",
+      "arrow": [
+       0.52,
+       0.58
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "dp_slope",
+   "text": "They ate, they talked, and they went to sleep. And then, sometime that night, something scared them so badly that they didn't use the door.",
+   "visual": "Night: the tent glows warm on the slope, wind streaks; the glow goes out on 'night' and the dark tent sits alone.",
+   "title": {
+    "white": "That night"
+   },
+   "cues": {
+    "dim": "night,",
+    "door": "door"
+   },
+   "params": {
+    "mode": "night",
+    "tent": {
+     "x": 0.6,
+     "s": 1.15
+    },
+    "wind": 0.9,
+    "labels": [
+     {
+      "text": "not the door",
+      "x": 0.32,
+      "y": 0.2,
+      "at": "door",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1150,
+     660
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_inside",
+   "text": "They cut through the wall and went out into the wind, barely dressed.",
+   "visual": "Inside the tent again: the slit is wide open, the canvas flaps and snow pours in from the black night.",
+   "title": {
+    "white": "Out"
+   },
+   "cues": {
+    "hit": "wind"
+   },
+   "params": {
+    "mode": "out",
+    "x": 0.46
+   },
+   "set": false
+  },
+  {
+   "type": "dp_slope",
+   "text": "Their footprints led down toward the forest, about a mile away. And here's the strange part: there were only their own footprints. Nobody else's.",
+   "visual": "Night slope: footprint tracks draw themselves from the slit tent down to the forest, in a fan of nine lines; note 'about 1 mile' and 'no one else'.",
+   "title": {
+    "white": "Footprints"
+   },
+   "cues": {
+    "go": "footprints",
+    "mile": "mile",
+    "Nobody": "Nobody"
+   },
+   "params": {
+    "mode": "tracks",
+    "tent": {
+     "x": 0.68,
+     "s": 1
+    },
+    "wind": 0.5,
+    "labels": [
+     {
+      "text": "about 1 mile",
+      "x": 0.4,
+      "y": 0.3,
+      "at": "mile",
+      "size": 64
+     },
+     {
+      "text": "no one else",
+      "x": 0.7,
+      "y": 0.18,
+      "at": "Nobody",
+      "size": 66,
+      "stamp": true,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "source": "Atlas Obscura"
+  },
+  {
+   "type": "dp_cedar",
+   "text": "Under a tall cedar at the forest edge, they managed to light a small fire.",
+   "visual": "Night at the forest edge: a tall cedar; a small fire flickers at its foot, sparks rise; two hikers crouch close to it.",
+   "title": {
+    "white": "The cedar"
+   },
+   "cues": {},
+   "params": {
+    "mode": "fire",
+    "tree_x": 0.52,
+    "tree_h": 0.66
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1060,
+     700
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_cedar",
+   "text": "Then three of them headed back uphill toward the tent. Why would you walk back to the place you just ran from?",
+   "visual": "From the cedar the slope rises to the tiny tent at upper right; three small hikers climb back up it, bent into the wind; the fez narrator by the tree shrugs on 'Why'.",
+   "title": {
+    "white": "Back uphill"
+   },
+   "cues": {
+    "go": "three",
+    "Why": "Why"
+   },
+   "params": {
+    "mode": "return",
+    "kasif": {
+     "x": 0.3,
+     "y": 0.9,
+     "scale": 0.78,
+     "pose": "look",
+     "face": 1,
+     "at": "Why",
+     "then": "shrug",
+     "emotion": "worried"
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "When nobody came home, students and soldiers went out to search.",
+   "visual": "CHAPTER 3 / 5 card: 'The Search'.",
+   "title": {},
+   "cues": {
+    "n": "nobody",
+    "title": "search"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "The Search",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Search"
+  },
+  {
+   "type": "dp_slope",
+   "text": "On the twenty-sixth of February, they found the tent, half buried in snow.",
+   "visual": "Grey daylight on the slope: the long tent sags, half buried in snow, the slit flapping; three searchers with poles stand by it, one points on 'found'.",
+   "title": {
+    "white": "26 Feb"
+   },
+   "cues": {
+    "twenty": "twenty-sixth",
+    "pt": "found"
+   },
+   "params": {
+    "mode": "found",
+    "tent": {
+     "x": 0.6,
+     "s": 1.1
+    },
+    "labels": [
+     {
+      "text": "26 February",
+      "x": 0.55,
+      "y": 0.22,
+      "at": "twenty",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "National Geographic"
+  },
+  {
+   "type": "dp_inside",
+   "text": "It had been cut open from the inside. Boots, coats and food were all still there.",
+   "visual": "Daylight inside the empty tent: the slit flaps in the wall; a pair of boots and a folded coat lie on the floor.",
+   "title": {
+    "white": "Left behind"
+   },
+   "cues": {
+    "inside": "inside",
+    "Boots": "Boots",
+    "coats": "coats"
+   },
+   "params": {
+    "mode": "found",
+    "x": 0.5,
+    "labels": [
+     {
+      "text": "cut from inside",
+      "x": 0.5,
+      "y": 0.1,
+      "at": "inside",
+      "size": 62,
+      "color": "red"
+     },
+     {
+      "text": "boots",
+      "x": 0.26,
+      "y": 0.62,
+      "at": "Boots",
+      "size": 60
+     },
+     {
+      "text": "coats",
+      "x": 0.7,
+      "y": 0.7,
+      "at": "coats",
+      "size": 60
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     860,
+     700
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   },
+   "source": "Atlas Obscura"
+  },
+  {
+   "type": "dp_cedar",
+   "text": "Two of the hikers lay under the cedar, by the ashes of the fire. Three more lay on the slope between the tree and the tent.",
+   "visual": "Daylight: the cedar with cold ashes at its foot; small red marker flags pop up, two by the tree, then three going up the slope.",
+   "title": {
+    "white": "Five found"
+   },
+   "cues": {
+    "Two": "Two",
+    "cedar,": "cedar,",
+    "Three": "Three",
+    "slope": "slope",
+    "tent.": "tent."
+   },
+   "params": {
+    "mode": "ash",
+    "tree_x": 0.3,
+    "flags": [
+     {
+      "x": 0.4,
+      "y": 0.85,
+      "at": "Two"
+     },
+     {
+      "x": 0.46,
+      "y": 0.86,
+      "at": "cedar,"
+     },
+     {
+      "x": 0.62,
+      "y": 0.82,
+      "at": "Three"
+     },
+     {
+      "x": 0.74,
+      "y": 0.8,
+      "at": "slope"
+     },
+     {
+      "x": 0.86,
+      "y": 0.79,
+      "at": "tent."
+     }
+    ],
+    "labels": [
+     {
+      "text": "toward the tent →",
+      "x": 0.78,
+      "y": 0.42,
+      "at": "Three",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  },
+  {
+   "type": "title",
+   "text": "But four were still missing, and the snow kept them hidden for months.",
+   "visual": "Giant words '4 missing' word by word, '4' in a red box; the fez narrator beside them looks worried and points down at the snow on 'hidden'.",
+   "title": {
+    "white": "Missing"
+   },
+   "cues": {
+    "w0": "four",
+    "hd": "hidden"
+   },
+   "params": {
+    "lines": [
+     "4",
+     "missing"
+    ],
+    "highlight": [
+     "4"
+    ],
+    "y": 0.38,
+    "kasif": {
+     "x": 0.82,
+     "y": 0.88,
+     "pose": "point",
+     "dir": -70,
+     "face": -1,
+     "scale": 1.0,
+     "at": "hd",
+     "emotion": "worried"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "dp_ravine",
+   "text": "In May, the last four were found in a ravine near the cedar, under deep snow.",
+   "visual": "Cut-away of a ravine filled with layered snow over a running stream; searchers on both banks push long probes into the snow; one hits on 'found', a red marker appears; note 'May 1959'.",
+   "title": {
+    "white": "The ravine"
+   },
+   "cues": {
+    "May": "May,",
+    "deep": "deep"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "May 1959",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "May",
+      "size": 70,
+      "color": "red"
+     },
+     {
+      "text": "deep snow",
+      "x": 0.5,
+      "y": 0.62,
+      "at": "deep",
+      "size": 60,
+      "color": "blue"
+     }
+    ],
+    "find": "found"
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   },
+   "source": "Atlas Obscura"
+  },
+  {
+   "type": "dp_desk",
+   "text": "And then the case turned dark. Some had serious chest and skull injuries, the kind you'd expect from a car crash.",
+   "visual": "A typed autopsy page fills the frame; lines type themselves: 'chest injuries', 'skull injuries', 'like a car crash', the last underlined red.",
+   "title": {
+    "white": "The report"
+   },
+   "cues": {
+    "chest": "chest",
+    "skull": "skull",
+    "car": "car",
+    "hit": "crash."
+   },
+   "params": {
+    "mode": "report",
+    "lines": [
+     "REPORT, 1959",
+     "chest injuries",
+     "skull injuries",
+     "like a car crash"
+    ],
+    "line_at": [
+     0,
+     "chest",
+     "skull",
+     "car"
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   },
+   "source": "EPFL"
+  },
+  {
+   "type": "stage",
+   "text": "Yet the searchers found no signs of a fight. So who, or what, could do that?",
+   "visual": "The fez narrator on the night snow looks around with a spyglass, then holds up a sign '?' on 'what'.",
+   "title": {
+    "white": "No fight"
+   },
+   "cues": {
+    "what": "what,"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "look",
+      "scale": 1.0,
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "what",
+        "pose": "hold",
+        "emotion": "surprised",
+        "text": "WHAT?"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "In May 1959, the Soviet investigators closed the case with one strange phrase.",
+   "visual": "CHAPTER 4 / 5 card: 'A Compelling Natural Force'.",
+   "title": {},
+   "cues": {
+    "n": "May",
+    "title": "closed"
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "A Compelling Natural Force",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Compelling Natural Force"
+  },
+  {
+   "type": "dp_desk",
+   "text": "The nine had died because of a compelling natural force.",
+   "visual": "An investigator's desk under a swinging lamp: typed lines appear on the case file ('Cause: natural force'), a hand brings a red rubber stamp in from the right, stamps 'CASE CLOSED' on the lower page on 'compelling' and lifts away.",
+   "title": {
+    "white": "Case closed"
+   },
+   "cues": {
+    "compelling": "compelling",
+    "stamp": "compelling"
+   },
+   "params": {
+    "mode": "stamp",
+    "stamp": "case closed",
+    "lines": [
+     "Case: 9 hikers",
+     "Cause: natural force"
+    ],
+    "line_at": [
+     0,
+     0.8
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 700
+   },
+   "camera": {
+    "focus": [
+     960,
+     480
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   },
+   "source": "ScienceDaily / EPFL"
+  },
+  {
+   "type": "dp_board",
+   "text": "For decades, people filled that gap with theories: secret military tests, strange lights in the sky, a deep sound called infrasound.",
+   "visual": "Evidence board 'Theories': three pinned cards pop in, each with a moving ink icon: a rocket 'military tests', blinking lights 'lights in the sky', sound waves 'infrasound'.",
+   "title": {
+    "white": "Theories"
+   },
+   "cues": {
+    "military": "military",
+    "lights": "lights",
+    "infrasound": "infrasound."
+   },
+   "params": {
+    "title": "Theories",
+    "cards": [
+     {
+      "icon": "rocket",
+      "text": "military tests",
+      "at": "military"
+     },
+     {
+      "icon": "lights",
+      "text": "lights in the sky",
+      "at": "lights"
+     },
+     {
+      "icon": "waves",
+      "text": "infrasound",
+      "at": "infrasound"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "dp_slab",
+   "text": "An avalanche? Most people said no. The slope looked too gentle, and the searchers saw no clear avalanche.",
+   "visual": "Cross-section of the snow slope with the tent; a red angle arc grows at the foot of the slope with the label '< 30°?'.",
+   "title": {
+    "white": "Too gentle?"
+   },
+   "cues": {
+    "hit": "gentle,",
+    "clear": "clear"
+   },
+   "params": {
+    "mode": "doubt",
+    "angle": "< 30°?",
+    "labels": [
+     {
+      "text": "no clear avalanche",
+      "x": 0.7,
+      "y": 0.12,
+      "at": "clear",
+      "size": 62,
+      "stamp": true,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "dp_desk",
+   "text": "Then a scientist in Switzerland got a phone call.",
+   "visual": "The desk under the lamp: an old telephone starts to ring on 'phone' (shakes, red sound arcs); the fez narrator beside it points at it, surprised.",
+   "title": {
+    "white": "The call"
+   },
+   "cues": {
+    "Switzerland": "Switzerland",
+    "ring": "phone",
+    "phone": "phone"
+   },
+   "params": {
+    "mode": "phone",
+    "phone_x": 0.42,
+    "kasif": {
+     "x": 0.74,
+     "y": 0.84,
+     "scale": 0.7,
+     "pose": "think",
+     "face": -1,
+     "at": "phone",
+     "then": "point",
+     "dir": "down",
+     "emotion": "surprised"
+    },
+    "labels": [
+     {
+      "text": "Switzerland",
+      "x": 0.72,
+      "y": 0.3,
+      "at": "Switzerland",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 700
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "In 2019, Russia reopened the case, and a year later blamed a snow slab, but never really explained how.",
+   "visual": "Horizontal timeline: '1959 / case closed', '2019 / reopened', '2020 / snow slab'; below it the fez narrator shrugs on 'explained'.",
+   "title": {
+    "white": "Reopened"
+   },
+   "cues": {
+    "a": "2019,",
+    "b": "reopened",
+    "c": "slab,",
+    "d": "explained"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1959",
+      "text": "case closed",
+      "at": "a"
+     },
+     {
+      "year": "2019",
+      "text": "reopened",
+      "at": "b"
+     },
+     {
+      "year": "2020",
+      "text": "\"snow slab\"",
+      "at": "c"
+     }
+    ],
+    "focus": 2,
+    "kasif": {
+     "x": 0.5,
+     "y": 0.97,
+     "pose": "idle",
+     "at": "d",
+     "then": "shrug",
+     "scale": 0.7,
+     "face": 1,
+     "emotion": "worried"
+    }
+   },
+   "set": false,
+   "source": "National Geographic"
+  },
+  {
+   "type": "dp_desk",
+   "text": "That year, a journalist called Johan Gaume, an avalanche scientist at EPFL. He teamed up with Alexander Puzrin from ETH Zurich. Could the answer be in the snow itself?",
+   "visual": "Two scientists stand at a desk with a laptop that shows a slope diagram with a blinking snow slab; names 'Johan Gaume, EPFL' and 'Alexander Puzrin, ETH Zurich'.",
+   "title": {
+    "white": "Two scientists"
+   },
+   "cues": {
+    "Gaume,": "Gaume,",
+    "Puzrin": "Puzrin",
+    "snow": "snow"
+   },
+   "params": {
+    "mode": "duo",
+    "cast": [
+     {
+      "who": "gaume",
+      "x": 0.28,
+      "y": 0.66,
+      "scale": 0.7,
+      "pose": "point",
+      "face": 1,
+      "dir": "down"
+     },
+     {
+      "who": "puzrin",
+      "x": 0.72,
+      "y": 0.66,
+      "scale": 0.7,
+      "pose": "think",
+      "face": -1,
+      "beard": "short"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Johan Gaume",
+      "x": 0.24,
+      "y": 0.24,
+      "at": "Gaume,",
+      "size": 60
+     },
+     {
+      "text": "Alexander Puzrin",
+      "x": 0.76,
+      "y": 0.24,
+      "at": "Puzrin",
+      "size": 60
+     },
+     {
+      "text": "the snow itself?",
+      "x": 0.5,
+      "y": 0.7,
+      "at": "snow",
+      "size": 66,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 700
+   },
+   "source": "EPFL"
+  },
+  {
+   "type": "chapter",
+   "text": "Remember that cut in the snow?",
+   "visual": "CHAPTER 5 / 5 card: 'The Snow Slab'.",
+   "title": {},
+   "cues": {
+    "n": "Remember",
+    "title": "cut"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Snow Slab",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Snow Slab"
+  },
+  {
+   "type": "dp_slab",
+   "text": "Digging it removed the support under the snow above.",
+   "visual": "Cross-section of the layered snow slope: a notch is cut out under the tent on 'Digging', red arrows show the snow above losing its support.",
+   "title": {
+    "white": "The cut"
+   },
+   "cues": {
+    "cut": "Digging",
+    "support": "support"
+   },
+   "params": {
+    "mode": "cut",
+    "labels": [
+     {
+      "text": "support removed",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "support",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_slab",
+   "text": "All night, the wind blew more snow onto the slope, adding weight, slowly.",
+   "visual": "Same cross-section: blue wind arrows blow snow up the slope; a drift wedge grows above the tent.",
+   "title": {
+    "white": "The wind"
+   },
+   "cues": {
+    "load": "wind",
+    "weight": "weight,"
+   },
+   "params": {
+    "mode": "wind",
+    "labels": [
+     {
+      "text": "more weight",
+      "x": 0.74,
+      "y": 0.14,
+      "at": "weight",
+      "size": 64,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "title",
+   "text": "At least nine hours later, a slab of snow broke loose.",
+   "visual": "Giant words '9 hours' / 'later', '9' in a red box; the fez narrator beside them is shocked on 'loose'.",
+   "title": {
+    "white": "Nine hours"
+   },
+   "cues": {
+    "w0": "nine",
+    "ls": "loose."
+   },
+   "params": {
+    "lines": [
+     "9 hours",
+     "later"
+    ],
+    "highlight": [
+     "9"
+    ],
+    "y": 0.38,
+    "kasif": {
+     "x": 0.82,
+     "y": 0.88,
+     "pose": "shock",
+     "face": -1,
+     "scale": 1.0,
+     "at": "ls",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   },
+   "source": "Gaume & Puzrin, 2021"
+  },
+  {
+   "type": "dp_slope",
+   "text": "Not a huge avalanche. A block about the size of a car. Small enough to leave almost no trace, but heavy enough to crush part of the tent.",
+   "visual": "Night slope: a crack opens above the tent, a snow block the size of a car slides down onto it and the tent sags flat; snow crumbs spray.",
+   "title": {
+    "white": "The slab"
+   },
+   "cues": {
+    "crack": "huge",
+    "slab": "block",
+    "car.": "car."
+   },
+   "params": {
+    "mode": "slab",
+    "tent": {
+     "x": 0.56,
+     "s": 1
+    },
+    "wind": 0.5,
+    "labels": [
+     {
+      "text": "car-sized block",
+      "x": 0.62,
+      "y": 0.32,
+      "at": "car.",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     1180,
+     640
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   },
+   "source": "National Geographic"
+  },
+  {
+   "type": "dp_slope",
+   "text": "And if you fear a bigger avalanche in the dark, running for the trees makes sense.",
+   "visual": "Night slope: the hikers leave the slit tent and hurry down toward the forest in a line, leaving footprints.",
+   "title": {
+    "white": "Run"
+   },
+   "cues": {
+    "go": "bigger",
+    "running": "running"
+   },
+   "params": {
+    "mode": "flee",
+    "tent": {
+     "x": 0.7,
+     "s": 0.9
+    },
+    "wind": 0.8,
+    "labels": [
+     {
+      "text": "run for the trees",
+      "x": 0.3,
+      "y": 0.2,
+      "at": "running",
+      "size": 64
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "dp_slab",
+   "text": "To test the injuries, the team adapted the snow animation code from Disney's Frozen. They combined it with old car crash test data, and the injuries matched.",
+   "visual": "Stamp 'Frozen snow code' on 'Frozen'; the slope cross-section as a simulation: a slab made of blue particles slides into a crash-test dummy outline lying in the tent; a green check pops on 'matched'.",
+   "title": {
+    "white": "Simulation"
+   },
+   "cues": {
+    "Frozen.": "Frozen.",
+    "crash": "crash",
+    "match": "matched."
+   },
+   "params": {
+    "mode": "sim",
+    "labels": [
+     {
+      "text": "Frozen snow code",
+      "x": 0.42,
+      "y": 0.32,
+      "at": "Frozen.",
+      "size": 66,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "crash test data",
+      "x": 0.74,
+      "y": 0.2,
+      "at": "crash",
+      "size": 62
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     520
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "In January 2022, an expedition even filmed two fresh snow slabs there.",
+   "visual": "Horizontal timeline: '1959', '2019', '2021 / the study', '2022 / two slabs filmed'; the marker runs to 2022.",
+   "title": {
+    "white": "Expeditions"
+   },
+   "cues": {
+    "a": "January",
+    "b": "expedition",
+    "c": "filmed"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1959",
+      "text": "the night",
+      "at": "a"
+     },
+     {
+      "year": "2019",
+      "text": "reopened",
+      "at": "a"
+     },
+     {
+      "year": "2021",
+      "text": "the study",
+      "at": "b"
+     },
+     {
+      "year": "2022",
+      "text": "2 slabs filmed",
+      "at": "c"
+     }
+    ],
+    "focus": 3
+   },
+   "set": false,
+   "source": "EPFL"
+  },
+  {
+   "type": "dp_board",
+   "text": "Case closed? Not for everyone. Critics still doubt the snow and the wind, and many relatives were never convinced.",
+   "visual": "Evidence board 'Case closed?': cards 'small slab' (sliding slab icon, green check), 'snow and wind?' (wind arrows, red question mark), 'relatives unconvinced' (three figures); pill 'still debated'.",
+   "title": {
+    "white": "Critics"
+   },
+   "cues": {
+    "Case": "Case",
+    "doubt": "doubt",
+    "relatives": "relatives",
+    "convinced": "convinced."
+   },
+   "params": {
+    "title": "Case closed?",
+    "cards": [
+     {
+      "icon": "slab",
+      "text": "small slab",
+      "mark": "check",
+      "at": "Case"
+     },
+     {
+      "icon": "wind",
+      "text": "snow and wind?",
+      "mark": "?",
+      "at": "doubt"
+     },
+     {
+      "icon": "family",
+      "text": "relatives unconvinced",
+      "at": "relatives"
+     }
+    ],
+    "pill": {
+     "text": "still debated",
+     "color": "red",
+     "at": "convinced"
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "dp_cedar",
+   "text": "Even the scientists say nobody knows exactly what happened. They only showed that a small avalanche could explain it.",
+   "visual": "Calm night at the cedar: snow falls softly; the slope rises to the tiny tent at upper right; note 'could'.",
+   "title": {
+    "white": "Nobody knows"
+   },
+   "cues": {
+    "could": "could"
+   },
+   "params": {
+    "mode": "calm",
+    "tree_x": 0.55,
+    "tree_h": 0.66,
+    "labels": [
+     {
+      "text": "could, not did",
+      "x": 0.76,
+      "y": 0.16,
+      "at": "could",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "stage",
+   "text": "So what do you think drove them out of that tent: a slab of snow, or something we still don't understand?",
+   "visual": "The fez narrator on the snow at night holds a sign 'SNOW OR ?', then points at the viewer on 'understand'.",
+   "title": {
+    "white": "Your call"
+   },
+   "cues": {
+    "understand": "understand?"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "pose": "hold",
+      "scale": 1.0,
+      "emotion": "worried",
+      "text": "SNOW?",
+      "seq": [
+       {
+        "at": "understand",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 900
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "dp_cedar",
+   "text": "Tell me in the comments, and subscribe to Stickstory for more true mysteries like this one.",
+   "visual": "Daylight snow at the cedar with the slope and tiny tent behind; the fez narrator stands by the tree and waves on 'subscribe'.",
+   "title": {
+    "white": "Subscribe"
+   },
+   "cues": {
+    "sb": "subscribe"
+   },
+   "params": {
+    "mode": "calm",
+    "kasif": {
+     "x": 0.38,
+     "y": 0.9,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": "forward",
+     "face": 1,
+     "at": "sb",
+     "then": "wave",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 864
+   }
+  }
+ ]
+}

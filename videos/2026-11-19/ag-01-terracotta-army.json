@@ -1,0 +1,438 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-terracotta-army",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-newsprint",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Kids made",
+   "this army?"
+  ],
+  "highlight": [
+   "kids"
+  ],
+  "scene": 0,
+  "t": 1.8,
+  "focus": [
+   640,
+   600
+  ],
+  "zoom": 1.45,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "dir": 45,
+   "face": 1,
+   "x": 380,
+   "y": 2120,
+   "scale": 2.0
+  }
+ },
+ "sources": [
+  {
+   "title": "ScienceAlert — 2,200-year-old fingerprints reveal who really built China's Terracotta Army (Journal of Cultural Heritage, 79 prints: about 45% men, 33% women, 22% children under 15)",
+   "url": "https://sciencealert.com/2200-year-old-fingerprints-reveal-who-really-built-chinas-mysterious-terracotta-army"
+  },
+  {
+   "title": "South China Morning Post — Terracotta warriors could be mainly built by women and children, fingerprints show",
+   "url": "https://www.scmp.com/news/china/science/article/3371607/terracotta-warriors-could-be-mainly-built-women-and-children-batch-fingerprints-show"
+  },
+  {
+   "title": "National Geographic — Terra-cotta warriors (1974 well; the lacquer curls after 15 seconds and flakes off in four minutes)",
+   "url": "https://www.nationalgeographic.com/magazine/article/terra-cotta-warriors"
+  },
+  {
+   "title": "IFLScience — The Terracotta Army guards the First Emperor's tomb (Yang Zhifa's well in 1974, about 8,000 soldiers, the unopened tomb)",
+   "url": "https://www.iflscience.com/the-terracotta-army-guards-the-first-emperors-tomb-which-archaeologists-are-too-terrified-to-open-82230"
+  }
+ ],
+ "youtube": {
+  "title": "Terracotta Army: Why Are Kids' Fingerprints in the Clay?",
+  "description": "The Terracotta Army has a secret in its clay: fingerprints, and some of them came from children. Here is the true story behind China's 2,200-year-old soldiers.\n\nChina's first emperor, Qin Shi Huang, had thousands of life-size clay warriors made to guard his tomb near Xi'an. They lay forgotten until 1974, when farmers digging a well struck a clay head. The warriors were once brightly painted, but the lacquer curls and flakes off within minutes of meeting air. Now a fingerprint study in the Journal of Cultural Heritage suggests men, women and children shaped them, with about one in five prints left by kids.\n\nSubscribe to Stickstory for one true story from history every day. Would you have guessed kids helped build an emperor's army? Tell me in the comments!\n\n#shorts #terracottaarmy #stickstory",
+  "tags": [
+   "terracotta army",
+   "terracotta warriors",
+   "terracotta army fingerprints",
+   "terracotta soldiers",
+   "qin shi huang",
+   "first emperor of china",
+   "xi'an",
+   "ancient china",
+   "qin dynasty",
+   "archaeology",
+   "fingerprints",
+   "ancient history",
+   "history facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-19T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "tc_head",
+   "text": "Kids' fingerprints are hidden in this army.",
+   "visual": "Inside the pit: one clay warrior seen big, his calm moustached face and topknot, armoured chest running off the frame bottom, rows of clay warriors behind him; a fingerprint draws itself on his cheek and glows gold.",
+   "set": {
+    "name": "interior",
+    "ground": 1080
+   },
+   "cues": {
+    "hit": "hidden"
+   },
+   "params": {
+    "mode": "hook",
+    "x": 0.6,
+    "y": 0.34,
+    "s": 2.4
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tc_emperor",
+   "text": "2,200 years ago, China's first emperor ordered thousands of clay soldiers.",
+   "visual": "A throne hall: Qin Shi Huang in a black robe and a flat crown hung with bead strings sits on his red throne before a gold sun screen and points forward; incense smoke curls from two bronze vessels; on 'soldiers' a row of little clay soldiers springs up on the dais steps; card 'FIRST EMPEROR'.",
+   "title": {
+    "white": "Qin China"
+   },
+   "set": {
+    "name": "interior",
+    "ground": 1420
+   },
+   "cues": {
+    "order": "ordered",
+    "soldiers": "soldiers",
+    "f": "first"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "FIRST EMPEROR",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "f",
+      "size": 62,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tc_army",
+   "text": "Their job: guard his tomb.",
+   "visual": "Open hills: the emperor's burial mound, a stepped earth pyramid with trees on top, on the horizon under drifting clouds; in front of it rows of clay warriors rise out of the ground one row after another, birds drifting over; card 'HIS TOMB'.",
+   "set": {
+    "name": "hills",
+    "ground": 1040,
+    "horizon": 880
+   },
+   "cues": {
+    "tomb": "tomb"
+   },
+   "params": {
+    "mode": "mound",
+    "labels": [
+     {
+      "text": "HIS TOMB",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "tomb",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tc_well",
+   "text": "They lay buried until 1974,",
+   "visual": "Cross-section of a dry field near Xi'an: above, stubble and a persimmon tree; below, layers of earth stacking up over toppled clay warriors while a big year counter runs from '210 BC' to a red '1974'; three farmers with spades walk in on the surface.",
+   "set": {
+    "name": "field",
+    "ground": 960,
+    "horizon": 820
+   },
+   "cues": {
+    "y": "1974"
+   },
+   "params": {
+    "mode": "buried",
+    "gy": 0.5
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tc_well",
+   "text": "when farmers digging a well hit a clay head.",
+   "visual": "Close on a well shaft in cross-section: a farmer down in the shaft swings his spade while earth flies out, two farmers at the rim peer down; on 'head' the spade strikes a clay warrior's head sticking out of the shaft floor, gold impact lines; card 'CLAY HEAD!'.",
+   "set": {
+    "name": "field",
+    "ground": 960,
+    "horizon": 820
+   },
+   "cues": {
+    "hit": "head",
+    "c": "clay"
+   },
+   "params": {
+    "mode": "dig",
+    "gy": 0.5,
+    "bottom": 0.76,
+    "labels": [
+     {
+      "text": "CLAY HEAD!",
+      "x": 0.74,
+      "y": 0.66,
+      "at": "hit",
+      "size": 40,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     640,
+     1250
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tc_paint",
+   "text": "The soldiers were once brightly painted,",
+   "visual": "A museum hall with panelled display walls: one full clay warrior on a plinth; from 'brightly' a big brush sweeps down him and colour appears top to bottom: black hair, pink face, black armour with red rivets, green sleeves, red robe, blue trousers; sparkles; card 'ONCE PAINTED'.",
+   "set": {
+    "name": "interior",
+    "ground": 1500
+   },
+   "cues": {
+    "paint": "brightly",
+    "p": "painted"
+   },
+   "params": {
+    "mode": "reveal",
+    "labels": [
+     {
+      "text": "ONCE PAINTED",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "p",
+      "size": 76,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "up"
+   }
+  },
+  {
+   "type": "tc_paint",
+   "text": "but that colour flakes off minutes after touching air.",
+   "visual": "The same painted warrior in front of the museum's display wall: wavy air lines drift across him and from 'flakes' the paint curls up and falls away in chips, leaving bare clay; a stopwatch spins top right with a card '4 MINUTES'; the fez host, full figure at the left, points at him and then jumps back in shock as the chips fly.",
+   "source": "National Geographic",
+   "set": {
+    "name": "interior",
+    "ground": 1500
+   },
+   "cues": {
+    "flake": "flakes",
+    "m": "minutes"
+   },
+   "params": {
+    "mode": "flake",
+    "x": 0.6,
+    "kasif": {
+     "x": 0.27,
+     "y": 0.98,
+     "scale": 1.2,
+     "pose": "point",
+     "dir": 10,
+     "face": "right",
+     "emotion": "neutral",
+     "seq": [
+      {
+       "at": "flake",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "4 MINUTES",
+      "x": 0.75,
+      "y": 0.315,
+      "at": "m",
+      "size": 52,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tc_head",
+   "text": "The prints survived.",
+   "visual": "Close on the bare clay warrior's face with only a few traces of paint left: a magnifying glass slides in over the fingerprint on his cheek, its whorl ridges big inside the lens; card 'STILL IN THE CLAY'.",
+   "set": {
+    "name": "interior",
+    "ground": 1080
+   },
+   "cues": {
+    "lens": "prints",
+    "s": "survived"
+   },
+   "params": {
+    "mode": "lens",
+    "x": 0.6,
+    "y": 0.34,
+    "s": 2.4,
+    "traces": 0.85,
+    "labels": [
+     {
+      "text": "STILL IN THE CLAY",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "s",
+      "size": 46,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     700,
+     640
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tc_workshop",
+   "text": "Scientists think one in five came from kids.",
+   "visual": "A Qin workshop with a smoking kiln at the back: an unfinished clay warrior on a stand; a man at the left edge smooths its armour, a woman at the right edge carries a lump of clay; a child, big in the foreground, presses a thumb into the robe hem; on 'one' a row of five fingerprint cards pops up, the last one red; on 'kids' a big red fingerprint glows on the hem; card '1 IN 5'.",
+   "source": "Journal of Cultural Heritage",
+   "set": {
+    "name": "interior",
+    "ground": 1267
+   },
+   "cues": {
+    "kid": "kids",
+    "o": "one",
+    "row": "one"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "1 IN 5",
+      "x": 0.5,
+      "y": 0.24,
+      "at": "o",
+      "size": 96,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "tc_army",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Pit 1 today under its arched hangar roof: corridors of clay warriors in long rows between earthen walls, dust drifting in light shafts; the fez host stands on the earth walkway in front of the first rank, waves at the viewer, then points at them.",
+   "set": false,
+   "cues": {
+    "p": "true"
+   },
+   "params": {
+    "mode": "pit",
+    "walk": 0.76,
+    "kasif": {
+     "x": 0.3,
+     "y": 1.1,
+     "scale": 1.3,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  }
+ ]
+}
