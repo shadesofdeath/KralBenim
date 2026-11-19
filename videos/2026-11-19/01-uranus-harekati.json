@@ -1,0 +1,179 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Encyclopaedia Britannica: Timeline of the Battle of Stalingrad",
+      "url": "https://www.britannica.com/list/timeline-of-the-battle-of-stalingrad"
+    },
+    {
+      "title": "Encyclopaedia Britannica: Battle of Stalingrad (summary)",
+      "url": "https://www.britannica.com/summary/Battle-of-Stalingrad"
+    },
+    {
+      "title": "HISTORY: Battle of Stalingrad ends",
+      "url": "https://www.history.com/this-day-in-history/battle-of-stalingrad-ends"
+    },
+    {
+      "title": "HistoryNet: The Romanian Nightmare at Stalingrad",
+      "url": "https://historynet.com/romanian-nightmare-stalingrad/"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Kuşatanlar",
+      "kuşatıldı"
+    ],
+    "highlight": [
+      "kuşatıldı"
+    ],
+    "scene": 0,
+    "t": 2.4,
+    "focus": [
+      545,
+      880
+    ],
+    "zoom": 1.15,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Kuşatanlar, bir sabah kuşatıldı.",
+      "type": "bt_uranus_helmet",
+      "visual": "Gece, karlı bozkırda ışık havuzunun içinde alt üçte biri kar birikintisine gömülü koyu bir Alman Stahlhelm miğferi (alın siperi, dışa açılan ense koruması, havalandırma perçini); kar yağar, önde kar dalgaları; önünden başlayan iki ince altın yay iki yandan dolanıp miğferin arkasında buluşarak çemberi kapatır",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "kuşatıldı"
+      }
+    },
+    {
+      "text": "19 Kasım 1942, Stalingrad.",
+      "type": "bt_uranus_city",
+      "visual": "Volga'nın karşı kıyısından yıkık şehir silueti: dişli kırık duvarlar, boş pencereler, uzun tahıl silosu, yavaşça yükselen iki duman sütunu; önde karanlık nehir, kar yağar; üstte 'Stalingrad' ve altın italik '19 Kasım 1942'",
+      "params": {
+        "label": "Stalingrad",
+        "sub": "19 Kasım 1942"
+      },
+      "cues": {
+        "hit": "Stalingrad"
+      }
+    },
+    {
+      "text": "Alman ordusu aylardır şehirde savaşıyordu.",
+      "type": "bt_uranus_ruin",
+      "visual": "Yakın plan: içi boşalmış bir fabrika duvarı, kırık çatı makasları, sıra sıra boş pencereler, pervazlarda kar; arkada duman yavaşça kayar; 'aylardır'da duvarın ardında soluk bir ateş ışığı nefes alır",
+      "cues": {
+        "hit": "aylardır"
+      }
+    },
+    {
+      "text": "Kanatlarda ise silahı az Romenler vardı.",
+      "type": "bt_uranus_map",
+      "visual": "Sade harita: Volga ve Don, Stalingrad noktası, aradaki soluk leke Alman ordusu; kuzey ve güney yanında iki belirgin kesik çizgi ve okunur 'Romenler' etiketleri; 'Romen'de çizgiler altın olur, incelir ve solar",
+      "params": {
+        "mode": "flanks"
+      },
+      "cues": {
+        "hit": "Romen"
+      }
+    },
+    {
+      "text": "O sabah donmuş bir sis vardı.",
+      "type": "bt_uranus_steppe",
+      "visual": "Şafakta donmuş bozkır: tek bir telgraf direği, ufka doğru küçülen çit kazıkları; sis bantları yerde yavaşça kayar; 'donmuş'ta sis koyulaşır",
+      "cues": {
+        "hit": "donmuş"
+      }
+    },
+    {
+      "text": "Binlerce top, sisin içinden Romen hattına ateş açtı.",
+      "type": "bt_uranus_guns",
+      "visual": "Sisli ufuk: alçak karanlık sırt boyunca (Romen hattının önü) namlu ağızlarının ışıkları birbiri ardına yumuşakça yanıp söner; 'ateş'te bütün ufuk aynı anda aydınlanır, sis içeriden parlar",
+      "cues": {
+        "hit": "ateş"
+      }
+    },
+    {
+      "text": "Dört gün sonra yüz binlerce asker çemberde kaldı.",
+      "type": "bt_uranus_map",
+      "visual": "Aynı harita: kuzey kolu Don'un kuzeybatısından güneydoğuya, güney kolu Stalingrad'ın güneyinden batıya kıvrılan iki ayrı altın ok; ok başları Don kıvrımında Kalaç'ta buluşur ('Kalaç', altın italik '23 Kasım'), orada yumuşak bir ışık; 'çemberde'de altın halka cebi sarar, içinde küçük işaretler belirir",
+      "params": {
+        "mode": "ring"
+      },
+      "cues": {
+        "hit": "çemberde"
+      }
+    },
+    {
+      "text": "Şubat'ta teslim olan doksan bir bin esirden,",
+      "type": "bt_uranus_march",
+      "visual": "Üstte ilk kareden itibaren italik 'Şubat 1943', büyük altın '91.000' ve italik 'esir'; altında karlı düzlükte ufka doğru uzanan iz boyunca yavaşça uzaklaşan uzun bir siluet kolu (y≈650–1110), sisin içinde küçülerek kaybolur; altı ön plan kar dalgalarıyla dolu",
+      "params": {
+        "when": "Şubat 1943",
+        "n": "91.000",
+        "label": "esir"
+      },
+      "cues": {
+        "hit": "esir"
+      }
+    },
+    {
+      "text": "ancak beş bin kadarı eve döndü.",
+      "type": "bt_uranus_return",
+      "visual": "Sıra sıra 91 küçük siluet (her biri bin kişi); 'beş'te beşi dışında hepsi solar, kalan beşi altın olur; üstte büyük altın '5.000' ve italik 'eve döndü'",
+      "params": {
+        "n": "5.000",
+        "label": "eve döndü"
+      },
+      "cues": {
+        "hit": "beş"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_uranus_helmet",
+      "visual": "Aynı miğfer ışık havuzunda; kar yağmaya devam eder, kapalı çember solar, kar birikintisi yavaşça yükselip miğferi örter; gökyüzünde yıldızlar",
+      "params": {
+        "mode": "end"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Stalingrad Savaşı: Kuşatanlar Bir Sabah Nasıl Kuşatıldı?",
+    "description": "Stalingrad Savaşı'nda 19 Kasım 1942 sabahı, aylardır şehri kuşatan Alman ordusu bir anda kuşatılan taraf oldu. Uranüs Harekâtı donmuş bir sisin içinde, binlerce topun Romen hattına açtığı ateşle başladı.\n\nSovyet ordusu yıkık şehre değil, Alman ordusunun kanatlarını tutan silahı az Romen birliklerine vurdu: 19 Kasım'da kuzeyden, 20 Kasım'da güneyden. Kuzeyden ve güneyden ilerleyen iki kol 23 Kasım'da Don kıyısındaki Kalaç'ta buluştu ve yüz binlerce asker çemberin içinde kaldı. Şubat 1943'te teslim olan yaklaşık 91.000 esirden ancak 5.000 kadarı eve dönebildi.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Stalingrad'da asıl hata neydi? Yorumlara yaz!\n\n#shorts #stalingrad #düşünbakalım",
+    "tags": [
+      "stalingrad savaşı",
+      "stalingrad",
+      "stalingrad muharebesi",
+      "stalingrad savaşı 1942",
+      "uranüs harekâtı",
+      "uranüs operasyonu",
+      "ikinci dünya savaşı",
+      "doğu cephesi",
+      "alman 6. ordusu",
+      "kalaç",
+      "romen ordusu",
+      "savaş tarihi",
+      "büyük savaşlar",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-19T19:00:00+03:00"
+  }
+}
