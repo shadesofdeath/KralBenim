@@ -1,0 +1,781 @@
+{
+ "engine": "studio",
+ "theme": "belgesel",
+ "palette": "grafit",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Yenildiler",
+   "ama",
+   "kazandılar"
+  ],
+  "highlight": [
+   "kazandılar"
+  ],
+  "scene": 2,
+  "t": 5.3,
+  "focus": [
+   960,
+   470
+  ],
+  "zoom": 1.2,
+  "kasif": false
+ },
+ "sources": [
+  {
+   "title": "TDV İslâm Ansiklopedisi — İnebahtı Deniz Savaşı",
+   "url": "https://islamansiklopedisi.org.tr/inebahti-deniz-savasi"
+  },
+  {
+   "title": "Britannica — Battle of Lepanto",
+   "url": "https://www.britannica.com/event/Battle-of-Lepanto"
+  },
+  {
+   "title": "TDV İslâm Ansiklopedisi — Sokullu Mehmed Paşa",
+   "url": "https://islamansiklopedisi.org.tr/sokullu-mehmed-pasa"
+  },
+  {
+   "title": "Mediterranea — The Battle of Lepanto and its impact on Ottoman History and Historiography (Peçevi, Uzunçarşılı)",
+   "url": "https://storiamediterranea.it/wp-content/uploads/mediterranea/p2357/The%20Battle%20of%20Lepanto%20and%20its%20impact%20on%20Ottoman%20History%20and%20Historiography.pdf"
+  },
+  {
+   "title": "Habertürk, Murat Bardakçı — İnebahtı ile ilgili belgeler Londra'da mezata çıkıyor (9 Aralık 2025)",
+   "url": "https://www.haberturk.com/ozel-icerikler/murat-bardakci/3844042-londrada-yarin-denizcilik-tarihimizin-en-buyuk-bozgunu-olan-inebahti-ile-ilgili-belgeler-mezata-ciki"
+  }
+ ],
+ "scenes": [
+  {
+   "text": "7 Ekim 1571, öğleden sonra. Bir körfezin ağzında, duman denizin üstüne çökmüştü.",
+   "visual": "Geniş deniz, ufukta yarı batmış kadırga siluetleri; üçünden yavaş duman sütunları yükselir, altlarında sönük kor ışığı; önde sürüklenen kırık bir kürek. 'duman'da duman koyulaşır.",
+   "type": "bt_ib_sea",
+   "params": {
+    "mode": "smoke"
+   },
+   "cues": {
+    "hit": "duman"
+   },
+   "chapter": "7 Ekim 1571"
+  },
+  {
+   "text": "Amiral gemisi Sultana'nın kıç direğinde, büyük sancak hâlâ dalgalanıyordu.",
+   "visual": "Yakın plan: amiral kadırgasının kıç köşkü, fenerler; uzun gönderde hilalli büyük sancak rüzgârda yavaşça dalgalanır; arkada duman.",
+   "type": "bt_ib_galley",
+   "params": {
+    "mode": "flag"
+   },
+   "cues": {
+    "hit": "sancak"
+   }
+  },
+  {
+   "text": "Sonra o sancak yavaşça aşağı indi. Kaptan-ı derya Müezzinzade Ali Paşa ölmüştü.",
+   "visual": "Aynı gönder, daha yakın; 'aşağı'da sancak gönderden yavaşça aşağı kayar, dalgası söner, gevşek sarkar.",
+   "type": "bt_ib_galley",
+   "params": {
+    "mode": "lower"
+   },
+   "cues": {
+    "hit": "aşağı"
+   },
+   "camera": {
+    "focus": [
+     840,
+     560
+    ],
+    "zoom": 1.25
+   }
+  },
+  {
+   "text": "Birkaç saat içinde, en korkulan donanmalardan biri dağılmıştı. Denizde kırık kürekler ve sarıklar yüzüyordu.",
+   "visual": "Alçak açıdan deniz yüzeyi: yüzen kırık kürekler, tahta parçaları ve sarıklar yavaşça dalgalanır, çevrelerinde halkalar; 'kürekler'de bir kürek altınla çizilir.",
+   "type": "bt_ib_sea",
+   "params": {
+    "mode": "debris"
+   },
+   "cues": {
+    "hit": "kürekler"
+   }
+  },
+  {
+   "text": "Haber batıya ulaştığında kiliseler çan çaldı.",
+   "visual": "Alacakaranlıkta alçak çatılar ve bir çan kulesi; altın çan yavaşça sallanır; 'çan'da kuleden ince ses halkaları yayılır.",
+   "type": "bt_ib_bell",
+   "params": {},
+   "cues": {
+    "hit": "çan"
+   }
+  },
+  {
+   "text": "Ama iki yıl sonra, uğruna savaşılan ada yine Osmanlı'nındı. Yenilen taraf, savaşı nasıl kazandı?",
+   "visual": "Işık havuzunda büyük ince 'iki yıl sonra'; altında vurgu renginde italik 'kim kazandı?'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "iki yıl sonra",
+      "at": "c0",
+      "size": 150
+     },
+     {
+      "text": "kim kazandı?",
+      "at": "c1",
+      "size": 110,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "iki",
+    "c1": "kazandı"
+   }
+  },
+  {
+   "text": "Hikâye bir adayla başladı. Kıbrıs, seksen yılı aşkın süredir Venedik'indi.",
+   "visual": "Bölüm kartı: 'I', ince çizgi, büyük ince 'Ada', italik 'Kıbrıs, 1570 – 1571'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "I",
+    "title": "Ada",
+    "sub": "Kıbrıs, 1570 – 1571"
+   },
+   "chapter": "Ada"
+  },
+  {
+   "text": "Ada, Anadolu kıyısının hemen karşısındaydı. Venedik ise haftalarca uzaktaydı.",
+   "visual": "Sade Akdeniz haritası: İtalya, Balkanlar, Anadolu, Kıbrıs; 'karşısındaydı'da Kıbrıs'ta altın nokta atar; 'Venedik'te Venedik noktası belirir ve Kıbrıs'a uzun altın rota çizilir.",
+   "type": "bt_map",
+   "params": {
+    "bounds": [
+     10.5,
+     33.0,
+     36.5,
+     46.0
+    ],
+    "points": [
+     {
+      "lon": 33.4,
+      "lat": 35.1,
+      "label": "Kıbrıs",
+      "at": "c0"
+     },
+     {
+      "lon": 12.33,
+      "lat": 45.44,
+      "label": "Venedik",
+      "at": "c1"
+     }
+    ],
+    "routes": [
+     [
+      1,
+      0,
+      "c1"
+     ]
+    ]
+   },
+   "cues": {
+    "c0": "karşısındaydı",
+    "c1": "Venedik"
+   }
+  },
+  {
+   "text": "1570 yazında Osmanlı ordusu adaya çıktı. Lefkoşa birkaç hafta içinde düştü.",
+   "visual": "Kıbrıs adasının sade çizimi, üstte soluk Anadolu kıyısı; güney kıyıya altın bir çıkarma oku çizilir; 'Lefkoşa'da Lefkoşa noktası ve '1570', sonra Magosa noktası ve '1571'.",
+   "type": "bt_ib_island",
+   "params": {
+    "mode": "land"
+   },
+   "cues": {
+    "hit": "Lefkoşa"
+   }
+  },
+  {
+   "text": "Geriye tek bir kale kaldı. Deniz kıyısında, kalın surlarıyla Magosa.",
+   "visual": "Gece, yıldızlar; denizin kıyısında kalın, mazgallı Magosa surları ve yuvarlak kuleler, arkada gotik katedralin kesik iki kulesi; orta kulede bayrak dalgalanır; 'Magosa' yazısı.",
+   "type": "bt_ib_fort",
+   "params": {
+    "mode": "magosa",
+    "label": "Magosa"
+   },
+   "cues": {
+    "hit": "Magosa"
+   }
+  },
+  {
+   "text": "Magosa neredeyse bir yıl direndi. Ağustos 1571'in başında teslim oldu.",
+   "visual": "Aynı surlar; surların ardında kuşatma ateşleri ve yavaş duman sütunları; 'teslim'de dumanlar incelir ve orta kulede soluk bir bayrak yükselir.",
+   "type": "bt_ib_fort",
+   "params": {
+    "mode": "siege",
+    "label": "Ağustos 1571"
+   },
+   "cues": {
+    "hit": "teslim"
+   }
+  },
+  {
+   "text": "Ama Magosa düşerken, batıda başka bir şey toplanıyordu. Bir donanma.",
+   "visual": "Alacakaranlıkta sakin deniz, ufka yakın alçak güneş; 'donanma'da ufukta yelkenli kadırga siluetleri birer birer belirir ve yavaşça süzülür.",
+   "type": "bt_ib_sea",
+   "params": {
+    "mode": "horizon"
+   },
+   "cues": {
+    "hit": "donanma"
+   }
+  },
+  {
+   "text": "Papa Beşinci Pius, yıllardır Osmanlı'ya karşı bir birlik istiyordu.",
+   "visual": "Bölüm kartı: 'II', ince çizgi, büyük ince 'Kutsal İttifak', italik 'Roma · Madrid · Venedik'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "II",
+    "title": "Kutsal İttifak",
+    "sub": "Roma · Madrid · Venedik"
+   },
+   "chapter": "Kutsal İttifak"
+  },
+  {
+   "text": "Mayıs 1571'de istediğini aldı. Papalık, İspanya ve Venedik, Kutsal İttifak'ı kurdu.",
+   "visual": "Işık havuzunda bir antlaşma sayfası, satırlar kendini yazar; altta üç kırmızı mühür (anahtarlar, kule, aslan) ve adları 'Papalık', 'İspanya', 'Venedik'; 'Kutsal'da üç mührü altın bir kordon birbirine bağlar.",
+   "type": "bt_ib_seals",
+   "params": {
+    "mode": "join"
+   },
+   "cues": {
+    "hit": "Kutsal"
+   }
+  },
+  {
+   "text": "Aralık 2025'te Londra'da, bu hazırlığın İspanyol belgeleri mezata çıktı. Askerlerin, cerrahların, hatta müzisyenlerin maaşları yazılıydı.",
+   "visual": "Üst üste iki eski sayfa; öndeki bir maaş listesi: başta '1571', satırlar ve rakam sütunu kendini yazar; 'müzisyenlerin'de bir satır altına döner; solda 'Londra, 2025', italik 'mezat'.",
+   "type": "bt_ib_papers",
+   "params": {
+    "mode": "pay",
+    "label": "Londra, 2025",
+    "sub": "mezat"
+   },
+   "cues": {
+    "hit": "müzisyenlerin"
+   }
+  },
+  {
+   "text": "Komutan yirmi dört yaşındaydı. İspanya kralının baba bir kardeşi, Avusturyalı Don Juan.",
+   "visual": "Sakin denizde yandan bir kadırga, kürekler yavaşça çekilir; pruvada tek, yüzsüz, ayakta bir siluet; 'Don Juan'da altında 'Don Juan' yazısı.",
+   "type": "bt_ib_galley",
+   "params": {
+    "mode": "prow",
+    "label": "Don Juan"
+   },
+   "cues": {
+    "hit": "Juan"
+   }
+  },
+  {
+   "text": "Donanma Sicilya'da, Messina'da toplandı. İki yüzü aşkın kadırga doğuya yelken açtı. Ama asıl sürpriz kadırgalar değildi.",
+   "visual": "Sahne 7'deki sade Akdeniz haritası (aynı kıyılar): Sicilya, İtalya, Yunanistan; 'Messina'da altın nokta; 'doğuya'da Messina'dan İnebahtı'ya altın rota çizilir.",
+   "type": "bt_map",
+   "params": {
+    "bounds": [
+     10.5,
+     33.0,
+     36.5,
+     46.0
+    ],
+    "points": [
+     {
+      "lon": 15.55,
+      "lat": 38.19,
+      "label": "Messina",
+      "at": "c0"
+     },
+     {
+      "lon": 21.83,
+      "lat": 38.39,
+      "label": "İnebahtı",
+      "sub": "Ekim 1571",
+      "at": "c1"
+     }
+    ],
+    "routes": [
+     [
+      0,
+      1,
+      "c1"
+     ]
+    ]
+   },
+   "cues": {
+    "c0": "Messina",
+    "c1": "doğuya"
+   }
+  },
+  {
+   "text": "Aralarında Venedik'in altı tuhaf gemisi vardı. Galeas.",
+   "visual": "Işık havuzunda yandan Venedik galeası kendini çizer: yüksek borda, pruvada yuvarlak top kalesi, yan yana top lumbarları, üç direk; sakin deniz.",
+   "type": "bt_ib_galleass",
+   "params": {
+    "mode": "profile"
+   },
+   "cues": {
+    "hit": "Galeas"
+   }
+  },
+  {
+   "text": "Kadırgadan çok daha büyüktü, bordaları toplarla doluydu. Denizde yüzen birer kale gibiydiler.",
+   "visual": "Solda küçük bir kadırga, sağda dev galeas; altlarında 'kadırga' ve vurgu renginde 'galeas'.",
+   "type": "bt_ib_galleass",
+   "params": {
+    "mode": "compare"
+   },
+   "cues": {
+    "hit": "kale"
+   }
+  },
+  {
+   "text": "Rivayete göre Osmanlı tarafı onları yük gemisi sandı. Ama bu yanılgının bedeli ağır olacaktı.",
+   "visual": "Işık havuzunda büyük ince 'yük gemisi?'; altında vurgu renginde italik 'yanılgı'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "yük gemisi?",
+      "at": "c0",
+      "size": 150
+     },
+     {
+      "text": "yanılgı",
+      "at": "c1",
+      "size": 110,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "yük",
+    "c1": "yanılgı"
+   }
+  },
+  {
+   "text": "Osmanlı donanması o yaz Adriyatik kıyılarını dolaşmış, sonra İnebahtı limanına çekilmişti.",
+   "visual": "Bölüm kartı: 'III', ince çizgi, büyük ince 'Körfez', italik 'İnebahtı, Ekim 1571'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "III",
+    "title": "Körfez",
+    "sub": "İnebahtı, Ekim 1571"
+   },
+   "chapter": "Körfez"
+  },
+  {
+   "text": "Liman, dar bir körfezin içindeydi. Ekim başında düşman, körfezin ağzına geldi.",
+   "visual": "Patras Körfezi'nin sade haritası: kuzey ve güney kıyılar, dar boğaz; İnebahtı'da altın nokta atar, 'Mora'; 'ağzına'da batıdan körfezin ağzına küçük koyu gemi işaretleri gelir, 'Kutsal İttifak'.",
+   "type": "bt_ib_gulf",
+   "params": {},
+   "cues": {
+    "hit": "ağzına"
+   }
+  },
+  {
+   "text": "Ali Paşa cesurdu ama denizde tecrübesi azdı. Anlatılana göre bazı paşalar beklemeyi önerdi. Ama İstanbul'dan gelen emir açıktı: savaşılacaktı.",
+   "visual": "Gece, çadırda savaş meclisi: ortada asılı kandil, alevi yavaşça kıpırdar; halka olmuş oturan yüzsüz siluetler; 'emir'de ortadaki siluet ayağa kalkar.",
+   "type": "bt_ib_council",
+   "params": {},
+   "cues": {
+    "hit": "emir"
+   }
+  },
+  {
+   "text": "7 Ekim sabahı iki donanma karşı karşıya geldi. Her birinde iki yüzü aşkın gemi vardı.",
+   "visual": "Yukarıdan körfezin ağzı: üstte kuzey kıyı, altta Mora; batıda koyu mürekkep, doğuda altın renkli küçük gemi işaretleri üç kanat halinde dizilir ve yavaşça birbirine yaklaşır; 'Kutsal İttifak', 'Osmanlı'.",
+   "type": "bt_ib_order",
+   "params": {
+    "mode": "meet"
+   },
+   "cues": {
+    "hit": "karşı"
+   }
+  },
+  {
+   "text": "İttifak hattının önünde, altı galeas tek başına duruyordu.",
+   "visual": "Aynı düzen; İttifak hattının önünde altı büyük işaret; 'altı'da her birinin çevresinden halkalar yayılır.",
+   "type": "bt_ib_order",
+   "params": {
+    "mode": "galleass"
+   },
+   "cues": {
+    "hit": "altı"
+   }
+  },
+  {
+   "text": "Osmanlı kadırgaları yaklaştığında galeaslar ateş açtı.",
+   "visual": "Yandan galeas; 'ateş'te bordadaki lumbarlardan sırayla altın çakmalar ve yavaşça yükselen duman bulutları çıkar.",
+   "type": "bt_ib_galleass",
+   "params": {
+    "mode": "fire"
+   },
+   "cues": {
+    "hit": "ateş"
+   }
+  },
+  {
+   "text": "Bir kadırga yalnızca önüne ateş edebilirdi. Galeas ise neredeyse her yöne.",
+   "visual": "Yukarıdan: solda dar uzun bir kadırga, önünde dar altın atış yelpazesi; sağda geniş galeas, 'her'de çevresinin her yanında altın yelpazeler açılır; 'kadırga', 'galeas'.",
+   "type": "bt_ib_arcs",
+   "params": {},
+   "cues": {
+    "a": "önüne",
+    "b": "her"
+   }
+  },
+  {
+   "text": "Osmanlı hattı göğüs göğüse savaşa girmeden bozuldu. Ama asıl hesap ortada görülecekti.",
+   "visual": "Aynı düzen; altın Osmanlı hattı galeasların arasından geçer, galeasların çevresinde duman; 'bozuldu'da altın işaretlerin sırası dağılır.",
+   "type": "bt_ib_order",
+   "params": {
+    "mode": "broken"
+   },
+   "cues": {
+    "hit": "bozuldu"
+   }
+  },
+  {
+   "text": "Savaşın kaderi ortada, iki amiral gemisinin arasında belirlendi.",
+   "visual": "Bölüm kartı: 'IV', ince çizgi, büyük ince 'Sultana', italik '7 Ekim, öğleden sonra'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "IV",
+    "title": "Sultana",
+    "sub": "7 Ekim, öğleden sonra"
+   },
+   "chapter": "Sultana"
+  },
+  {
+   "text": "Ali Paşa'nın Sultana'sı ile Don Juan'ın Real'i, pruva pruvaya çarpıştı.",
+   "visual": "Yandan iki kadırga, mahmuzları birbirine dönük, yavaşça yaklaşır; 'çarpıştı'da değdikleri yerde altın parıltı ve duman; altlarında 'Real', 'Sultana'.",
+   "type": "bt_ib_ram",
+   "params": {
+    "mode": "ram"
+   },
+   "cues": {
+    "hit": "çarpıştı"
+   }
+  },
+  {
+   "text": "Güverteler bir köprüye döndü. İspanyol askerleri iki kez Sultana'ya girdi, iki kez geri atıldı.",
+   "visual": "Aynı iki gemi kenetli; küçük siluetler Real'den Sultana'ya geçer, 'geri'de yavaşça geri çekilir; duman.",
+   "type": "bt_ib_ram",
+   "params": {
+    "mode": "board"
+   },
+   "cues": {
+    "hit": "geri"
+   }
+  },
+  {
+   "text": "Üçüncüsünde Ali Paşa vuruldu. Amiral gemisi düştü ve Osmanlı'nın ortası çöktü.",
+   "visual": "Işık havuzunda kırık bir gönder ve hilalli sancak suya düşmüş, yarı batık; kumaş dalgayla yavaşça kabarır, hilal suyun altından soluk görünür; 'vuruldu'da sancak biraz daha batar, çevresinden yavaş halkalar yayılır.",
+   "type": "bt_ib_sea",
+   "params": {
+    "mode": "banner"
+   },
+   "cues": {
+    "hit": "vuruldu"
+   }
+  },
+  {
+   "text": "Güneyde Uluç Ali, ortanın çöktüğünü görünce otuz kadar gemiyle hattı yarıp çıktı.",
+   "visual": "Yukarıdan aynı düzen; ortadaki altın işaretler solmuş; 'yarıp'ta güney kanattaki altın işaretlerin bir bölümü güneydoğuya kayar, arkalarında altın kesik çizgili rota.",
+   "type": "bt_ib_order",
+   "params": {
+    "mode": "escape"
+   },
+   "cues": {
+    "hit": "yarıp"
+   }
+  },
+  {
+   "text": "Akşam, Osmanlı'nın yaklaşık yüz doksan gemisi batmış ya da ele geçirilmişti.",
+   "visual": "Yukarıdan görülen küçük altın gemi işaretleri sıra sıra dizili (≈230); 'doksan'da 190'ı söner ve hafifçe batar, yerlerinde ince hayalet çizgiler kalır; sağda sayılan '190', 'gemi', italik '≈ 230 gemiden'.",
+   "type": "bt_ib_tally",
+   "params": {
+    "total": 230,
+    "hit": 190,
+    "label": "gemi",
+    "note": "≈ 230 gemiden"
+   },
+   "cues": {
+    "hit": "doksan"
+   }
+  },
+  {
+   "text": "Kürek çeken yaklaşık on beş bin Hristiyan esir zincirlerinden kurtuldu. İki tarafta da binlerce insan aynı denizde kaldı.",
+   "visual": "Işık havuzunda bir kürek sapının üstünden geçen zincir; 'kurtuldu'da ortadaki halka açılır, iki yarı yavaşça ayrılır; üstte altın '≈ 15.000'.",
+   "type": "bt_ib_chain",
+   "params": {
+    "label": "≈ 15.000"
+   },
+   "cues": {
+    "hit": "kurtuldu"
+   }
+  },
+  {
+   "text": "Yaralılardan biri, sol elini bir daha kullanamayacak genç bir askerdi: Miguel de Cervantes. Yıllar sonra Don Kişot'u yazacaktı. Ama İstanbul'da biri, o günü başka okuyordu.",
+   "visual": "Mum ışığında masa: bir kâğıt, mürekkep hokkası ve kendini çizen uzun bir tüy kalem; 'Cervantes'te altında 'Miguel de Cervantes'.",
+   "type": "bt_ib_quill",
+   "params": {
+    "mode": "pen",
+    "label": "Miguel de Cervantes"
+   },
+   "cues": {
+    "hit": "Cervantes"
+   }
+  },
+  {
+   "text": "O kişi Sadrazam Sokullu Mehmed Paşa'ydı. Savaştan sonra Venedik balyosu onunla görüştü.",
+   "visual": "Bölüm kartı: 'V', ince çizgi, büyük ince 'Sakal', italik 'İstanbul, 1571 – 1573'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "V",
+    "title": "Sakal",
+    "sub": "İstanbul, 1571 – 1573"
+   },
+   "chapter": "Sakal"
+  },
+  {
+   "text": "Sokullu'nun ona söyledikleri, Venedik kayıtlarıyla tarihe geçti.",
+   "visual": "Sarayda bir oda: kafesli kemerli pencereden ışık; solda sedirde oturan yüzsüz siluet, sağda yavaşça yaklaşan ayakta bir siluet; köşede kandil; 'Sokullu', 'balyos'.",
+   "type": "bt_ib_room",
+   "params": {
+    "labels": [
+     "Sokullu",
+     "balyos"
+    ]
+   },
+   "cues": {
+    "hit": "söyledikleri"
+   }
+  },
+  {
+   "text": "“Biz Kıbrıs'ı almakla sizin bir kolunuzu kestik. Siz donanmamızı yenmekle sakalımızı tıraş ettiniz.”",
+   "visual": "Işık havuzunda büyük ince 'bir kol'; altında vurgu renginde italik 'bir sakal'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "bir kol",
+      "at": "c0",
+      "size": 160
+     },
+     {
+      "text": "bir sakal",
+      "at": "c1",
+      "size": 120,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "kolunuzu",
+    "c1": "sakalımızı"
+   }
+  },
+  {
+   "text": "“Kesilen kol yerine gelmez. Ama tıraş edilen sakal daha gür çıkar.”",
+   "visual": "Işık havuzunda büyük ince 'yerine gelmez'; altında vurgu renginde italik 'daha gür çıkar'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "yerine gelmez",
+      "at": "c0",
+      "size": 140
+     },
+     {
+      "text": "daha gür çıkar",
+      "at": "c1",
+      "size": 120,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "gelmez",
+    "c1": "gür"
+   }
+  },
+  {
+   "text": "O kış, İstanbul'dan Alanya'ya kadar tersaneler gece gündüz çalıştı.",
+   "visual": "Gece tersane: suya açılan kemerli kadırga gözleri, fenerler; ortadaki gözde omurga üstünde kaburgalar birer birer yükselir; küçük işçi siluetleri.",
+   "type": "bt_ib_yard",
+   "params": {
+    "mode": "build",
+    "label": "Tersane-i Âmire"
+   },
+   "cues": {
+    "hit": "tersaneler"
+   }
+  },
+  {
+   "text": "Peçevi'ye göre Sokullu, yeni kaptan-ı deryaya şöyle dedi: Bu devlet isterse çapaları gümüşten, halatları ipekten, yelkenleri atlastan yapar.",
+   "visual": "Işık havuzunda büyük bir çapa ve kıvrılmış halat kendini çizer; 'gümüşten'de çapanın gövdesi ve kolu altın-gümüş çizgiyle parlar; altta italik 'Peçevi'.",
+   "type": "bt_ib_anchor",
+   "params": {
+    "label": "Peçevi"
+   },
+   "cues": {
+    "hit": "gümüşten"
+   }
+  },
+  {
+   "text": "Beş altı ayda yüz otuzu aşkın yeni gemi suya indi. Haziran 1572'de donanma yeniden denizdeydi.",
+   "visual": "Aynı tersane; gözlerde bitmiş gövdeler; 'suya'da ortadaki gövde yavaşça kızaktan suya kayar ve öne gelir.",
+   "type": "bt_ib_yard",
+   "params": {
+    "mode": "launch"
+   },
+   "cues": {
+    "hit": "suya"
+   }
+  },
+  {
+   "text": "Bir Fransız elçisi krala şöyle yazdı: Kendi gözleriyle görmese, bu güce asla inanmazdı.",
+   "visual": "Işık havuzunda katlanmış bir mektup, satırlar kendini yazar, ortada kırmızı mühür; üstte 'Mayıs 1572', altta italik 'Fransız elçisi'.",
+   "type": "bt_ib_papers",
+   "params": {
+    "mode": "letter",
+    "label": "Fransız elçisi",
+    "sub": "Mayıs 1572"
+   },
+   "cues": {
+    "hit": "asla"
+   }
+  },
+  {
+   "text": "Kutsal İttifak ise zaferini kullanamadı.",
+   "visual": "Bölüm kartı: 'VI', ince çizgi, büyük ince 'Bedel', italik 'Venedik, 1573'.",
+   "type": "bt_chapter",
+   "params": {
+    "n": "VI",
+    "title": "Bedel",
+    "sub": "Venedik, 1573"
+   },
+   "chapter": "Bedel"
+  },
+  {
+   "text": "Papa Pius 1572'de öldü, müttefikler birbirine güvenmedi. Mart 1573'te Venedik, Osmanlı ile tek başına barış yaptı.",
+   "visual": "Aynı antlaşma sayfası, üç mühür altın kordonla bağlı; 'tek'te kordon solar, Venedik mührü yavaşça sağa kayıp ayrılır.",
+   "type": "bt_ib_seals",
+   "params": {
+    "mode": "break"
+   },
+   "cues": {
+    "hit": "tek"
+   }
+  },
+  {
+   "text": "Kıbrıs'ı resmen bıraktı, üstüne tazminat ödedi. Ada üç yüz yılı aşkın Osmanlı'da kaldı.",
+   "visual": "Kıbrıs adası; 'üç'te kıyı çizgisi altınla yeniden çizilir, altında '1571 – 1878'.",
+   "type": "bt_ib_island",
+   "params": {
+    "mode": "final",
+    "label": "1571 – 1878"
+   },
+   "cues": {
+    "hit": "üç"
+   }
+  },
+  {
+   "text": "Yani zaferi kazanan, uğruna savaştığı adayı kaybetti. Avrupa'nın kazancı başkaydı: Osmanlı donanmasının yenilebileceğini gördü.",
+   "visual": "Gün batımında sakin deniz; amiral kadırgasının kıç köşkü ve bomboş, sancaksız gönder; alçak güneş yavaşça iner.",
+   "type": "bt_ib_galley",
+   "params": {
+    "mode": "empty"
+   },
+   "cues": {
+    "hit": "yenilebileceğini"
+   }
+  },
+  {
+   "text": "Bazen bir yenilgi, bir zaferden daha az şey değiştirir. Kol gitti. Sakal yeniden çıktı.",
+   "visual": "Işık havuzunda büyük ince 'kol gitti'; altında vurgu renginde italik 'sakal çıktı'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "kol gitti",
+      "at": "c0",
+      "size": 150
+     },
+     {
+      "text": "sakal çıktı",
+      "at": "c1",
+      "size": 120,
+      "italic": true,
+      "accent": true
+     }
+    ]
+   },
+   "cues": {
+    "c0": "Kol",
+    "c1": "Sakal"
+   }
+  },
+  {
+   "text": "Sizce İnebahtı'yı gerçekten kim kazandı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+   "visual": "Işık havuzunda büyük ince 'kim kazandı?'.",
+   "type": "bt_text",
+   "params": {
+    "lines": [
+     {
+      "text": "kim kazandı?",
+      "at": "c0",
+      "size": 150
+     }
+    ]
+   },
+   "cues": {
+    "c0": "kazandı"
+   }
+  }
+ ],
+ "youtube": {
+  "title": "İnebahtı Deniz Savaşı: Donanmasını Kaybeden Osmanlı Neden Kazandı?",
+  "description": "İnebahtı Deniz Savaşı, 7 Ekim 1571: Osmanlı donanması bir öğleden sonra yok oldu. Peki neden iki yıl sonra Kıbrıs yine Osmanlı'daydı ve Venedik tazminat ödüyordu? Magosa'nın düşüşünden Kutsal İttifak'a, Venedik galeaslarından Müezzinzade Ali Paşa'nın amiral gemisi Sultana'ya, Uluç Ali'nin kaçışından Sokullu Mehmed Paşa'nın ünlü \"kol ve sakal\" sözüne uzanan bir Osmanlı deniz tarihi hikâyesi.\n\nBu videoda:\n• Kıbrıs seferi ve Magosa'nın düşüşü (1570 – 1571)\n• Kutsal İttifak, Don Juan ve Venedik'in galeasları\n• İnebahtı'da birkaç saatte gelen bozgun ve Uluç Ali'nin kaçışı\n• Sokullu'nun balyosa sözü ve bir kışta yeniden kurulan donanma\n• 1573 barışı: zaferi kazanan neden adayı kaybetti?\n\nHer gün yeni bir \"neden?\" için abone ol. Sence İnebahtı'yı gerçekten kim kazandı? Yorumlara yaz!\n\n#inebahtı #osmanlı #sokullu #tarih #düşünbakalım",
+  "tags": [
+   "inebahtı deniz savaşı",
+   "inebahtı",
+   "inebahtı deniz savaşı 1571",
+   "lepanto deniz savaşı",
+   "inebahtı bozgunu",
+   "sokullu mehmed paşa",
+   "müezzinzade ali paşa",
+   "uluç ali paşa",
+   "kılıç ali paşa",
+   "kıbrıs fethi",
+   "magosa kuşatması",
+   "osmanlı donanması",
+   "osmanlı deniz tarihi",
+   "kutsal ittifak",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-20T20:30:00+03:00"
+ }
+}

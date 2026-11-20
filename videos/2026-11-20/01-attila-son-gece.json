@@ -1,0 +1,180 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "obsidyen",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Jordanes, Getica (çev. C. C. Mierow), ToposText — §254–260",
+      "url": "https://topostext.org/work/744"
+    },
+    {
+      "title": "Encyclopaedia Britannica: Attila",
+      "url": "https://www.britannica.com/EBchecked/topic/42236/Attila"
+    },
+    {
+      "title": "Encyclopaedia Britannica: Attila summary",
+      "url": "https://www.britannica.com/summary/Attila-king-of-the-Huns"
+    },
+    {
+      "title": "Medievalists.net: Collapse of the Hunnic Empire: Jordanes, Ardaric and the Battle of Nedao",
+      "url": "https://www.medievalists.net/2018/02/collapse-hunnic-empire-jordanes-ardaric-battle-nedao/"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Yatağında",
+      "boğuldu"
+    ],
+    "highlight": [
+      "boğuldu"
+    ],
+    "scene": 0,
+    "t": 3.2,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Roma'yı titreten adam yatağında boğuldu.",
+      "type": "bt_attila_bed",
+      "visual": "Karanlık ahşap oda: alçak yatakta kürk örtünün altında yüzsüz yatan bir siluet, başı yastıkta; solda ayaklı kandil yanar; 'boğuldu'da alev küçülüp söner ve kandilden ince bir duman yükselir",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "boğuldu"
+      }
+    },
+    {
+      "text": "Yıl 453. Attila evlenmişti.",
+      "type": "bt_attila_hall",
+      "visual": "Gece, yıldızlar; ovada sivri kazıklı bir çitin ardında uzun, yüksek çatılı ahşap salon silueti, çatıdan ince duman; 'evlenmişti'de tek pencere sıcak altın ışıkla yanar; üstte büyük altın '453'",
+      "params": {
+        "label": "453"
+      },
+      "cues": {
+        "hit": "evlen"
+      }
+    },
+    {
+      "text": "Düğün gecesi çok içti.",
+      "type": "bt_attila_cup",
+      "visual": "Kandil ışığında ahşap masada tek, geniş ağızlı ahşap kupa, içinde koyu şarap; 'içti'de kenardan ince bir şarap izi aşağı süzülür, ucunda bir damla toplanıp masaya düşer",
+      "cues": {
+        "hit": "içti"
+      }
+    },
+    {
+      "text": "Sabah muhafızlar kapıyı kırdı.",
+      "type": "bt_attila_door",
+      "visual": "Karanlık odada demir kuşaklı kalın tahta kapı, kenarlarından ince ışık sızar; 'kapıyı'da kapı içeri açılır, üst menteşesi kopup serbest kenarı aşağı sarkar, kilit tarafında kasada kıymıklar, kırık bir tahta parçası yere düşmüş; kapı ağzında sabah ışığına karşı iki siluet, karanlık zemine solgun ışık kaması, ışıkta toz zerreleri",
+      "cues": {
+        "hit": "kapıyı"
+      }
+    },
+    {
+      "text": "Üstünde tek yara yoktu.",
+      "type": "bt_attila_bed",
+      "visual": "Aynı yatak ve siluet, kandil sönük; sağ üstten soluk sabah ışığı kaması yatağın üstüne düşer, ışıkta toz zerreleri; 'yara'da ışık siluetin üstünde yumuşakça yoğunlaşır",
+      "params": {
+        "mode": "dawn"
+      },
+      "cues": {
+        "hit": "yara"
+      }
+    },
+    {
+      "text": "Jordanes'e göre burun kanı boğazına akmıştı.",
+      "type": "bt_attila_codex",
+      "visual": "Kandil ışığında açık eski bir el yazması kodeks, iki sayfada soluk yazı satırları; üstte 'Jordanes' ve altın italik 'Getica, MS 551'; 'kanı'nda sağ sayfadaki tek satır kendini altınla yeniden çizer",
+      "params": {
+        "label": "Jordanes",
+        "sub": "Getica, MS 551"
+      },
+      "cues": {
+        "hit": "boğazına"
+      }
+    },
+    {
+      "text": "Üç tabuta kondu: altın, gümüş, demir.",
+      "type": "bt_attila_coffins",
+      "visual": "Üstten bakılan iç içe üç tabut, ışık havuzunda, aynı merkezde: içteki altın tabut sahne başından çizili; 'gümüş'te çevresinde kapalı gümüş tabut, 'demir'de en dışta kalın koyu demir tabut belirir; altta okunur italik 'altın' (baştan), 'gümüş', 'demir'",
+      "cues": {
+        "a": "altın",
+        "b": "gümüş",
+        "c": "demir"
+      }
+    },
+    {
+      "text": "Rivayete göre gömenler de öldürüldü. Mezar hâlâ kayıp.",
+      "type": "bt_attila_grave",
+      "visual": "Gece ovanın toprak kesiti: üstte yıldızlar, yüzeyde içine üç kürek saplanmış bir toprak yığını, derinde soluk ışıkta yan yatmış iç içe üç tabut; 'öldürüldü'de kürekler solar, 'kayıp'ta yığın düzleşir ve yüzeyi otlar kapatır",
+      "params": {
+        "mode": "cut"
+      },
+      "cues": {
+        "a": "öldürüldü",
+        "b": "kayıp"
+      }
+    },
+    {
+      "text": "Oğulları mirası paylaşamadı. Hun gücü dağıldı.",
+      "type": "bt_attila_map",
+      "visual": "Sade şema: altta Tuna nehri, nehrin kuzeyinde tek soluk leke halinde Hun toprakları, ortasında 'Hunlar'; 'dağıldı'da leke beş parçaya çatlar, parçalar birbirinden uzaklaşıp solar",
+      "cues": {
+        "hit": "dağıldı"
+      }
+    },
+    {
+      "text": "Bir burun kanaması bir imparatorluğu bitirdi.",
+      "type": "bt_attila_drop",
+      "visual": "Gece, yıldızlar; karanlık durgun suda sahne 9'daki Hun haritasının aynı dış çizgisi ince ışıklı kontur halinde yansır; yukarıdan iri, kırmızı tek bir damla yavaşça düşer, 'imparatorluğu'nda suya değer, halkalar yayılır, yansıma yatay şeritler halinde kayarak bozulur ve söner",
+      "cues": {
+        "hit": "imparator"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_attila_grave",
+      "visual": "Aynı toprak kesiti: düz ova, otlar, yıldızlar; derindeki iç içe tabutların ışığı yavaşça söner",
+      "params": {
+        "mode": "end"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Attila'nın Ölümü: Roma'yı Titreten Adam Neden Boğuldu?",
+    "description": "Attila'nın ölümü, Roma'yı titreten Hun hükümdarının hikâyesini tek bir gecede bitirdi. 453'te yeniden evlenen Attila, düğün gecesinin sabahında odasında ölü bulundu ve üstünde tek bir yara yoktu.\n\nGotların tarihçisi Jordanes, Priskos'a dayanarak burundan akması gereken kanın boğazına aktığını ve Attila'yı uykusunda boğduğunu yazar. Hun hükümdarının cenazesi altın, gümüş ve demirden üç tabuta kondu; anlatılana göre onu gömenler de öldürüldü ve Attila'nın mezarı bugün hâlâ kayıp. Oğulları mirası paylaşamadı ve Nedao Savaşı'ndan sonra Hun İmparatorluğu dağıldı.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Attila'nın mezarı bir gün bulunacak mı? Yorumlara yaz!\n\n#shorts #attila #düşünbakalım",
+    "tags": [
+      "attila'nın ölümü",
+      "attila",
+      "attila'nın ölümü 453",
+      "attila'nın ölümü ve mezarı",
+      "attila nasıl öldü",
+      "attila'nın mezarı",
+      "hun imparatorluğu",
+      "hunlar",
+      "avrupa hun imparatorluğu",
+      "ildiko",
+      "jordanes",
+      "nedao savaşı",
+      "roma imparatorluğu",
+      "imparatorlukların çöküşü",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-20T19:00:00+03:00"
+  }
+}
