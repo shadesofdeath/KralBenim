@@ -1,0 +1,526 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-holland-tunnel",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-slate",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "It should",
+   "kill you"
+  ],
+  "highlight": [
+   "kill"
+  ],
+  "scene": 0,
+  "t": 2.6,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "worried",
+   "dir": 45,
+   "face": 1,
+   "x": 360,
+   "y": 2100,
+   "scale": 2.0
+  }
+ },
+ "sources": [
+  {
+   "title": "ASME — Holland Tunnel Ventilation System, National Historic Mechanical Engineering Landmark brochure (84 fans in four buildings, air changed every 90 seconds at full speed, opened 13 November 1927)",
+   "url": "https://www.asme.org/wwwasmeorg/media/ResourceFiles/AboutASME/Who%20We%20Are/Engineering%20History/Landmarks/93-Holland-Tunnel-Ventilation-System.pdf"
+  },
+  {
+   "title": "ASME / ETHW — Holland Tunnel Ventilation System landmark (four ventilation buildings, 84 fans, air replaced every 90 seconds at full speed, fresh-air duct under the roadway)",
+   "url": "https://ethw.org/ASME-Landmark%3AHolland_Tunnel_Ventilation_System"
+  },
+  {
+   "title": "WTTW — 10 That Changed America: Holland Tunnel (tests with student volunteers in a prototype tunnel in a Pennsylvania mine; Holland died in 1924 at 41)",
+   "url": "https://interactive.wttw.com/node/7084"
+  },
+  {
+   "title": "US Bureau of Mines RI 2288 — Experimental tunnel at the Bruceton experimental mine for studying the removal of automotive exhaust gas",
+   "url": "https://onemine.org/documents/ri-2288-bureau-of-mines-experimental-tunnel-for-studying-the-removal-of-automotive-exhaust-gas"
+  },
+  {
+   "title": "Hagerty — America's first vehicular tunnel likely cost its brilliant creator his life (opened 13 November 1927; Holland and Freeman)",
+   "url": "https://www.hagerty.com/media/?p=177293"
+  },
+  {
+   "title": "Wikipedia — Clifford Milburn Holland (died 27 October 1924, age 41)",
+   "url": "https://en.wikipedia.org/wiki/Clifford_Milburn_Holland"
+  },
+  {
+   "title": "CT Mirror — The Holland Tunnel's centennial year (15 November 2026)",
+   "url": "https://ctmirror.org/2026/11/15/the-holland-tunnels-centennial-year/"
+  }
+ ],
+ "youtube": {
+  "title": "Holland Tunnel: Why Didn't the Fumes Kill Every Driver?",
+  "description": "The Holland Tunnel should have poisoned you, and every other driver who used it. So how did a road under the Hudson River survive its own exhaust?\n\nIn the 1920s New York and New Jersey wanted a road tunnel under the Hudson, but cars in a sealed tube fill the air with invisible carbon monoxide. Engineers made volunteers breathe exhaust in a test tunnel inside a Pennsylvania mine and checked their blood. The answer was four ventilation buildings and 84 giant fans that can replace all the air every 90 seconds. Chief engineer Clifford Holland died in 1924 at 41, three years before the tunnel opened in 1927. Nearly 100 years later, it still breathes.\n\nSubscribe to Stickstory for how the world was really built. Would you have driven through it on opening day? Tell me in the comments!\n\n#shorts #hollandtunnel #stickstory",
+  "tags": [
+   "holland tunnel",
+   "holland tunnel history",
+   "holland tunnel ventilation",
+   "holland tunnel 1927",
+   "clifford holland",
+   "hudson river tunnel",
+   "new york history",
+   "carbon monoxide",
+   "tunnel ventilation fans",
+   "how it was built",
+   "engineering history",
+   "nyc tunnels",
+   "new jersey",
+   "history facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-20T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ht_tube",
+   "text": "This tunnel should have poisoned you.",
+   "visual": "Inside the tiled Holland Tunnel tube in deep perspective: catwalk on the left, wall lamps running to the far end, boxy 1920s cars driving away with red tail lights; grey exhaust puffs pour from their tailpipes and pile up under the ceiling, thicker and darker on 'poisoned'. (Hook frame: the cover block with the big shocked fez host.)",
+   "set": false,
+   "cues": {
+    "fume": "tunnel",
+    "hit": "poisoned"
+   },
+   "params": {
+    "haze": 0.15,
+    "grow": 0.2,
+    "thick": 0.65,
+    "cars": [
+     [
+      -300,
+      2.0,
+      1.6
+     ],
+     [
+      300,
+      3.4,
+      1.4
+     ],
+     [
+      -300,
+      6.5,
+      1.2
+     ],
+     [
+      300,
+      9,
+      1.1
+     ],
+     [
+      -300,
+      14,
+      1.0
+     ],
+     [
+      300,
+      20,
+      1.0
+     ]
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ht_river",
+   "text": "In the 1920s New York wanted a road under the Hudson.",
+   "visual": "The Hudson in cross-section: low New Jersey roofs on the left bank, the tall Manhattan skyline on the right, crowded ferries puffing smoke on the water; on 'road' a thick red tube outline draws itself under the riverbed from bank to bank; dark bedrock boulders fill the bottom; card 'HUDSON RIVER' in the water.",
+   "title": {
+    "white": "New York",
+    "gray": "1920s"
+   },
+   "set": false,
+   "cues": {
+    "road": "road",
+    "r": "Hudson"
+   },
+   "params": {
+    "mode": "plan",
+    "labels": [
+     {
+      "text": "HUDSON RIVER",
+      "x": 0.5,
+      "y": 0.36,
+      "at": "r",
+      "size": 56,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "ht_river",
+   "text": "But cars in a sealed tube?",
+   "visual": "The tube under the riverbed in cross-section, bank to bank: little 1920s cars drive through it nose to tail, each puffing exhaust, and grey clouds fill the tube; dark bedrock boulders below.",
+   "set": false,
+   "cues": {
+    "fume": "cars",
+    "hit": "sealed"
+   },
+   "params": {
+    "mode": "fumes",
+    "labels": []
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ht_tube",
+   "text": "That means invisible, deadly fumes.",
+   "visual": "Close inside the tube behind the nearest car: its tailpipe pours grey exhaust, the haze rolls toward us and swallows the wall lamps; on 'deadly' it turns thick and dark; red card 'CARBON MONOXIDE'.",
+   "set": false,
+   "cues": {
+    "fume": "means",
+    "hit": "deadly",
+    "c": "invisible"
+   },
+   "params": {
+    "haze": 0.55,
+    "cars": [
+     [
+      -300,
+      1.3,
+      0.25
+     ],
+     [
+      300,
+      3.4,
+      0.5
+     ],
+     [
+      -300,
+      6.5,
+      0.5
+     ],
+     [
+      300,
+      9,
+      0.5
+     ]
+    ],
+    "labels": [
+     {
+      "text": "CARBON MONOXIDE",
+      "x": 0.5,
+      "y": 0.42,
+      "at": "c",
+      "size": 50,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     980
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ht_mine",
+   "text": "So engineers made volunteers breathe car exhaust.",
+   "visual": "A timbered test gallery with hanging lamps: at its end a round concrete chamber with a sign 'EXHAUST TEST', a 1920s car idling inside, exhaust rolling out of the mouth; from 'made' three volunteers in sweaters walk in one after another toward the fumes; card 'VOLUNTEERS'.",
+   "title": {
+    "white": "Exhaust tests"
+   },
+   "set": false,
+   "cues": {
+    "walk": "made",
+    "v": "volunteers"
+   },
+   "params": {
+    "mode": "enter",
+    "labels": [
+     {
+      "text": "VOLUNTEERS",
+      "x": 0.3,
+      "y": 0.45,
+      "at": "v",
+      "size": 52,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "sign": "EXHAUST TEST",
+    "walk_dy": -80
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ht_mine",
+   "text": "Then they checked their blood.",
+   "visual": "Close in the test gallery: a volunteer sits on a stool, a doctor in a white coat lifts a glass vial that fills red on 'blood'; a wall gauge marked 'CO' with its needle creeping toward the red zone; card 'BLOOD TEST'.",
+   "source": "US Bureau of Mines",
+   "set": false,
+   "cues": {
+    "blood": "blood",
+    "hit": "blood"
+   },
+   "params": {
+    "mode": "blood",
+    "labels": [
+     {
+      "text": "BLOOD TEST",
+      "x": 0.62,
+      "y": 0.08,
+      "at": "blood",
+      "size": 54,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ht_fan",
+   "text": "The answer was 84 giant fans.",
+   "visual": "Inside a brick ventilation building with a tall arched window: one huge steel centrifugal fan close up, its bladed wheel spinning, a green motor on a belt, air whooshing out of the outlet; a row of more fans behind it; a big red counter high at the upper right runs from 1 to 84; the fez host, standing on the floor right of the fan base, points up at the counter and jumps back in shock on 'fans'.",
+   "title": {
+    "white": "The answer"
+   },
+   "set": false,
+   "cues": {
+    "count": "fans"
+   },
+   "params": {
+    "num_x": 0.72,
+    "num_y": 0.22,
+    "windows": [
+     0.14
+    ],
+    "kasif": {
+     "x": 0.74,
+     "y": 0.6,
+     "scale": 1.1,
+     "pose": "point",
+     "dir": 65,
+     "face": "right",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "count",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "ht_river",
+   "text": "They can swap all the air every 90 seconds.",
+   "visual": "The tunnel in cross-section with a brick ventilation tower on each bank, fans turning inside: thick blue fresh-air arrows run down the left tower, along the duct under the road and up into the tube; thick red foul-air arrows rise into the ceiling duct and out of the right tower; a stopwatch at the top runs to 90; card 'FRESH AIR IN' by the left tower's down-arrows, card 'FOUL AIR OUT' by the right tower.",
+   "source": "ASME landmark report",
+   "set": false,
+   "cues": {
+    "clock": "seconds",
+    "a": "air"
+   },
+   "params": {
+    "mode": "air",
+    "labels": [
+     {
+      "text": "FRESH AIR IN",
+      "x": 0.25,
+      "y": 0.3,
+      "at": "a",
+      "size": 50,
+      "color": "blue",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "FOUL AIR OUT",
+      "x": 0.74,
+      "y": 0.38,
+      "at": "clock",
+      "size": 44,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": 3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.03,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ht_desk",
+   "text": "Its chief engineer, Clifford Holland, died at 41, three years before it opened.",
+   "visual": "A 1920s office: Clifford Holland leans over his drafting table drawing the tunnel's two tubes on a blueprint, a hanging lamp above, a '1924' calendar on the wall, the Hudson through the window; on 'died' the lamp goes out and a red card 'DIED AT 41' appears.",
+   "title": {
+    "white": "Chief engineer"
+   },
+   "set": false,
+   "cues": {
+    "dim": "died",
+    "d": "died",
+    "n": "Clifford"
+   },
+   "params": {
+    "table": 0.52,
+    "front": 0.74,
+    "labels": [
+     {
+      "text": "CLIFFORD HOLLAND",
+      "x": 0.6,
+      "y": 0.18,
+      "at": "n",
+      "size": 48,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "DIED AT 41",
+      "x": 0.72,
+      "y": 0.4,
+      "at": "d",
+      "size": 62,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ht_tower",
+   "text": "Nearly 100 years later, it still breathes.",
+   "visual": "The New York ventilation building today: a tall brick tower with louvred bands breathing out puffs of air, the stone 'HOLLAND TUNNEL' portal at its foot with cars driving in, a zebra crossing and kerb in front; red card '100 YEARS' on 'turns'.",
+   "title": {
+    "white": "Today"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1152
+   },
+   "cues": {
+    "y": "100",
+    "hit": "breathes"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "100 YEARS",
+      "x": 0.7,
+      "y": 0.5,
+      "at": "y",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "ht_tower",
+   "text": "Subscribe for how the world was really built.",
+   "visual": "The same street in front of the breathing tower: the fez host stands on the pavement between the tunnel portal and the brick tower, waves at the viewer, then points at them.",
+   "set": {
+    "name": "city",
+    "ground": 1152
+   },
+   "cues": {
+    "p": "world"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.54,
+     "y": 0.6,
+     "scale": 1.05,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  }
+ ]
+}

@@ -1,0 +1,495 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-kyrenia-ship",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-sage",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Who speared",
+   "this ship?"
+  ],
+  "highlight": [
+   "speared"
+  ],
+  "scene": 0,
+  "t": 2.5,
+  "focus": [
+   640,
+   700
+  ],
+  "zoom": 1.15,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "dir": 30,
+   "face": 1,
+   "x": 330,
+   "y": 2060,
+   "scale": 1.8
+  }
+ },
+ "sources": [
+  {
+   "title": "PLOS ONE (2024) — Manning et al., radiocarbon dating of the Kyrenia ship (final voyage around 280 BC)",
+   "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0302645"
+  },
+  {
+   "title": "CNN — How almonds from over 2,000 years ago helped researchers date this iconic shipwreck",
+   "url": "https://amp.cnn.com/cnn/2024/06/26/science/kyrenia-shipwreck-radiocarbon-dating-almonds-scn"
+  },
+  {
+   "title": "Popular Science — Nuts, bones, and wood help date a 2,000-year-old Greek shipwreck (sponge diver, thousands of almonds, crew of four)",
+   "url": "https://www.popsci.com/science/ancient-greece-shipwreck/"
+  },
+  {
+   "title": "Archaeology magazine — History's 10 greatest wrecks: Kyrenia (four-person crew, iron spear points embedded in the hull, possible pirate attack)",
+   "url": "https://archaeology.org/issues/online/collection/kyrenia-2/historys-10-greatest-wrecks/"
+  },
+  {
+   "title": "MASS / Cultural Heritage Agency of the Netherlands — Kyrenia (400 amphorae, utensils for a crew of four, spear points in the hull)",
+   "url": "https://mass.cultureelerfgoed.nl/kyrenia"
+  },
+  {
+   "title": "Institute of Nautical Archaeology — Kyrenia shipwreck excavation (discovered in 1965 by Andreas Cariolou)",
+   "url": "https://nauticalarch.org/projects/kyrenia-shipwreck-excavation/"
+  }
+ ],
+ "youtube": {
+  "title": "Kyrenia Ship: Why Were Spearheads Stuck in Her Hull?",
+  "description": "The Kyrenia ship sank with iron spearheads stuck in her hull. Who attacked a small Greek trader off Cyprus 2,300 years ago, and what happened to her crew?\n\nA sponge diver, Andreas Cariolou, found this ancient Greek shipwreck near Kyrenia in 1965. She still carried hundreds of wine jars and thousands of almonds, and her cabin held cups, oil jugs and spoons in sets of four, so archaeologists think she had a crew of just four. A 2024 radiocarbon study in PLOS ONE dated her last voyage to around 280 BC. Was it pirates? Nobody knows for sure.\n\nSubscribe to Stickstory for one true mystery every day. What do you think happened to the four sailors? Tell me in the comments!\n\n#shorts #kyreniaship #stickstory",
+  "tags": [
+   "kyrenia ship",
+   "kyrenia shipwreck",
+   "kyrenia ship mystery",
+   "ancient greek shipwreck",
+   "greek merchant ship",
+   "shipwreck mystery",
+   "ancient shipwreck",
+   "cyprus history",
+   "kyrenia castle",
+   "andreas cariolou",
+   "ancient pirates",
+   "underwater archaeology",
+   "ancient greece",
+   "unsolved mysteries",
+   "history facts",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-20T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "ky_sea",
+   "text": "This ship sank with spears in her hull.",
+   "visual": "Underwater on the sandy sea floor: a mound of lying clay amphorae over the half-buried hull with ribs sticking out; in front a broken hull timber with a big iron spearhead stuck in it; on 'spears' a red ink ring circles the spearhead and it glints gold; fish and light rays drift.",
+   "set": false,
+   "cues": {
+    "hit": "spears"
+   },
+   "params": {
+    "mode": "hook"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ky_chart",
+   "text": "About 2,300 years ago, a Greek trader went down off Cyprus,",
+   "visual": "Full-frame old sea chart of the eastern Mediterranean: Anatolian coast at the top, Levant and Egypt below, Cyprus big in the middle, a compass rose with rhumb lines, a little sea serpent coiling in the open sea; on 'Cyprus' a red pin marks Kyrenia; on 'down' the little square-sailed ship off Kyrenia heels over and sinks with ripple rings; card '2,300 YEARS AGO'.",
+   "source": "PLOS ONE",
+   "set": false,
+   "cues": {
+    "city": "Cyprus",
+    "down": "down",
+    "y": "years"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "2,300 YEARS AGO",
+      "x": 0.56,
+      "y": 0.24,
+      "at": "y",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "scale": 260
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ky_ship",
+   "text": "full of wine jars and thousands of almonds.",
+   "visual": "The merchant ship sails past the rocky coast of Cyprus, side view (square sail, steering oar, eye on the bow); her hull side is cut away and rows of amphorae pop into the hold on 'wine'; on 'almonds' a big lens opens over a jar mouth packed with almonds; surf breaks on dark rocks in the foreground; cards 'WINE JARS' and 'THOUSANDS OF ALMONDS'.",
+   "set": {
+    "name": "coast",
+    "horizon": 760,
+    "ground": 1900
+   },
+   "cues": {
+    "jars": "wine",
+    "almonds": "almonds"
+   },
+   "params": {
+    "mode": "hold",
+    "wl": 0.55,
+    "lens": {
+     "x": 0.3,
+     "y": 0.3,
+     "r": 200
+    },
+    "labels": [
+     {
+      "text": "WINE JARS",
+      "x": 0.55,
+      "y": 0.12,
+      "at": "jars",
+      "size": 70,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "THOUSANDS OF ALMONDS",
+      "x": 0.37,
+      "y": 0.44,
+      "at": "almonds",
+      "size": 50,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": 2,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ky_sea",
+   "text": "In 1965, a sponge diver found her.",
+   "visual": "Sea cross-section: a small wooden sponge boat rocks on the surface; a diver with a mask, fins and a sponge net swims down through light rays and bubbles to the amphora mound on the floor; on 'found' the mound glows gold; card '1965' in the sky.",
+   "set": false,
+   "cues": {
+    "found": "found",
+    "y": "1965"
+   },
+   "params": {
+    "mode": "dive",
+    "surface": 0.2,
+    "mound": {
+     "x": 0.6,
+     "k": 0.72
+    },
+    "labels": [
+     {
+      "text": "1965",
+      "x": 0.74,
+      "y": 0.11,
+      "at": "y",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "floor": 0.58
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "down"
+   }
+  },
+  {
+   "type": "ky_cabin",
+   "text": "In the cabin: four cups, four spoons, four oil jugs.",
+   "visual": "The ship's cabin under a heavy beam with a swinging oil lamp: a wooden table; on 'cups' four black two-handled cups pop up in a row, on 'spoons' four long-handled wooden spoons, on 'oil' four round oil jugs; amphorae stand on the floor; card 'ALL IN FOURS'.",
+   "set": {
+    "name": "interior",
+    "ground": 1500
+   },
+   "cues": {
+    "cups": "cups",
+    "spoons": "spoons",
+    "jugs": "oil"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "ALL IN FOURS",
+      "x": 0.5,
+      "y": 0.15,
+      "at": "jugs",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ky_ship",
+   "text": "So the crew was probably four men.",
+   "visual": "Open sea: the ship under full sail with four hatless sailors on deck (one at the steering oar, one pointing ahead, two talking); from 'crew' red numbers 1 to 4 pop up over their heads one by one; rolling swells with foam and a drifting oar fill the foreground; card 'CREW OF FOUR'.",
+   "set": {
+    "name": "ocean",
+    "horizon": 700
+   },
+   "cues": {
+    "four": "crew"
+   },
+   "params": {
+    "mode": "crew",
+    "wl": 0.6,
+    "s": 1.0,
+    "labels": [
+     {
+      "text": "CREW OF FOUR",
+      "x": 0.55,
+      "y": 0.18,
+      "at": "four",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "crew_scale": 0.5,
+    "stagger": 0.16
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "ky_sea",
+   "text": "Here's the creepy part: iron spearheads were stuck in her wood.",
+   "visual": "Close on the outside of the hull underwater: wooden strakes with grain, caulked seams and rows of treenails, two strakes of lead sheathing with tack rows, a jar half in the sand below; on 'iron' dark leaf-shaped iron spearheads with a ringed socket and a short broken wooden stub appear stuck point-first in the wood one after another; on 'stuck' a red ink ring circles the first.",
+   "source": "Archaeology magazine",
+   "set": false,
+   "cues": {
+    "spear": "iron",
+    "ring": "stuck"
+   },
+   "params": {
+    "mode": "spear"
+   },
+   "camera": {
+    "focus": [
+     480,
+     760
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ky_sea",
+   "text": "The spears sank with her.",
+   "visual": "The camera pulls back from the same hull: all three spearheads sit in the planks right above the lead sheathing, the first still ringed in red; a jar lies in the sand and fish drift past; card 'IN THE HULL'.",
+   "set": false,
+   "cues": {
+    "e": "sank"
+   },
+   "params": {
+    "mode": "spear",
+    "spear_at": -2,
+    "labels": [
+     {
+      "text": "IN THE HULL",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "e",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "ky_pirate",
+   "text": "Pirates, maybe? Nobody knows the crew's fate.",
+   "visual": "A beach over the sea: the little trader sails on the left; a long dark galley with a dark red sail and sweeping oars rows in from the right towards her; the fez host on the beach points at the galley, then shrugs on 'maybe'; card 'PIRATES?'.",
+   "set": {
+    "name": "sea",
+    "horizon": 860,
+    "ground": 1478
+   },
+   "cues": {
+    "p": "Pirates",
+    "m": "maybe"
+   },
+   "params": {
+    "galley": {
+     "from": 0.95,
+     "to": 0.45,
+     "at": 0,
+     "wl": 0.53
+    },
+    "kasif": {
+     "x": 0.83,
+     "y": 0.77,
+     "scale": 0.9,
+     "pose": "point",
+     "face": "left",
+     "dir": 15,
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "m",
+       "pose": "shrug",
+       "face": "left",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "PIRATES?",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "p",
+      "size": 120,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "trader": {
+     "x": 0.2,
+     "wl": 0.5
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "ky_museum",
+   "text": "Their cups survived 2,300 years. Their story didn't.",
+   "visual": "Kyrenia Castle museum: the reassembled hull on its scaffold under a stone vault; in front a glass case with the four cups; four dotted ghost sailors stand behind the case and on 'story' they drift up and fade away; plaque 'KYRENIA, c. 280 BC'.",
+   "set": {
+    "name": "interior",
+    "ground": 1500
+   },
+   "cues": {
+    "fade": "story"
+   },
+   "params": {
+    "ghosts": {
+     "at": 0.2,
+     "fade": "fade"
+    },
+    "plaque": "KYRENIA, c. 280 BC"
+   },
+   "camera": {
+    "focus": [
+     620,
+     760
+    ],
+    "zoom": 1.1,
+    "move": "push"
+   }
+  },
+  {
+   "type": "ky_museum",
+   "text": "Subscribe for a true mystery every day.",
+   "visual": "The same museum room, wide: the fez host stands left of the glass case with the four cups and the hull behind, waves at the viewer, then points at the cups; card 'KYRENIA CASTLE'.",
+   "set": {
+    "name": "interior",
+    "ground": 1500
+   },
+   "cues": {
+    "p": "mystery"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.18,
+     "y": 0.79,
+     "scale": 1.25,
+     "pose": "wave",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 10,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "KYRENIA CASTLE",
+      "x": 0.6,
+      "y": 0.15,
+      "at": 0.3,
+      "size": 70,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "plaque": "KYRENIA, c. 280 BC"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  }
+ ]
+}
