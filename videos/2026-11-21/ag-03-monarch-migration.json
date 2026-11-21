@@ -1,0 +1,1920 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-monarch-migration",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-sage",
+ "cover": {
+  "lines": [
+   "3,000 MILES",
+   "NO MAP"
+  ],
+  "highlight": [
+   "MAP"
+  ],
+  "scene": 3,
+  "t": 4.6,
+  "focus": [
+   1330,
+   500
+  ],
+  "zoom": 0.66,
+  "size": 200,
+  "fade": false,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "scale": 1.35,
+   "face": -1,
+   "x": 1600,
+   "y": 1050
+  }
+ },
+ "sources": [
+  {
+   "title": "AP: Monarch butterflies get tiny trackers to help scientists follow their mysterious migration (4 Nov 2026, via WCAX)",
+   "url": "https://www.wcax.com/2026/11/04/monarch-butterflies-get-tiny-trackers-help-scientists-follow-their-mysterious-migration/"
+  },
+  {
+   "title": "Star Tribune: The amazing tale of butterfly PS 397, which helped illuminate monarch migration",
+   "url": "https://www.startribune.com/the-amazing-tale-of-butterfly-ps-397-which-helped-illuminate-monarch-migration/559486682"
+  },
+  {
+   "title": "Royal Ontario Museum: A discovery of Monarchs",
+   "url": "https://www.rom.on.ca/magazine/discovery-monarchs"
+  },
+  {
+   "title": "U.S. Fish & Wildlife Service: The monarch super generation and their phenomenal migration",
+   "url": "https://www.fws.gov/story/phenomenal-monarch-migration"
+  },
+  {
+   "title": "AAAS / Science (2009): Butterfly navigation system found in antennae, not brain",
+   "url": "https://www.aaas.org/news/science-butterfly-navigation-system-found-antennae-not-brain"
+  },
+  {
+   "title": "WPI: Monarch butterflies use a magnetic compass (Guerra, Gegear & Reppert, Nature Communications 2014)",
+   "url": "https://www.wpi.edu/news/gegearpaper"
+  },
+  {
+   "title": "WWF: Monarch butterfly population increases 64 percent (2025-2026 count)",
+   "url": "https://www.worldwildlife.org/news/stories/monarch-butterfly-population-increases-64-percent/"
+  },
+  {
+   "title": "UNESCO World Heritage: Monarch Butterfly Biosphere Reserve",
+   "url": "https://whc.unesco.org/en/list/1290"
+  }
+ ],
+ "youtube": {
+  "title": "Monarch Butterfly Migration: How Do They Find a Place They Never Saw?",
+  "description": "Monarch butterfly migration: every autumn, monarchs fly up to 3,000 miles to a few mountain forests in Mexico they have never seen. How do they find them?\n\nFor almost forty years, Canadian zoologist Fred Urquhart and his wife Norah tagged monarchs and asked volunteers for help, but every trail went cold in Mexico. Then in 1975, Ken Brugger and Catalina Aguado found the winter colonies in Michoacán, and in 1976 a falling branch dropped a tagged butterfly from Minnesota into Fred's hands. Today scientists know about a sun compass, a clock in the antennae and a magnetic backup, and they follow the monarch butterfly migration with tiny solar radio tags.\n\nIn this video:\n- The branch that snapped in a Mexican forest in 1976\n- The super generation that lives up to eight months\n- Forty years of tiny wing tags and a notice in a Mexico City newspaper\n- The 1975 discovery of the overwintering colonies\n- A clock in the antennae: how the monarch sun compass works\n- Why the winter forest keeps shrinking\n\nSubscribe to Stickstory for more of nature's strange superpowers. Have you ever seen a monarch where you live? Tell me in the comments!\n\n#monarchbutterfly #animalfacts #stickstory",
+  "tags": [
+   "monarch butterfly migration",
+   "monarch butterflies",
+   "monarch migration",
+   "monarch butterfly",
+   "monarch butterfly mexico",
+   "fred urquhart",
+   "monarch butterfly tagging",
+   "super generation",
+   "sun compass",
+   "monarch biosphere reserve",
+   "animal migration",
+   "animal superpowers",
+   "insect navigation",
+   "michoacan",
+   "butterfly facts",
+   "nature documentary animation",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-21T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "mon_forest",
+   "text": "In January 1976, a Canadian scientist sat in a forest high in Mexico's mountains, and every tree around him was orange.",
+   "visual": "A mountain fir forest: every fir hangs heavy with orange butterfly clusters, monarchs drift in the air; an old man in a hat (Fred Urquhart) sits on the ground in the middle; label 'Mexico, 1976'.",
+   "title": {
+    "white": "1976"
+   },
+   "cues": {
+    "January": "January",
+    "orange": "orange."
+   },
+   "params": {
+    "mode": "colony",
+    "cast": [
+     {
+      "who": "fred",
+      "x": 0.5,
+      "y": 0.9,
+      "scale": 0.99,
+      "pose": "sit",
+      "face": "right",
+      "accessory": "slouch"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Mexico, 1976",
+      "x": 0.2,
+      "y": 0.12,
+      "at": "January",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   },
+   "chapter": "Cold open",
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_wing",
+   "text": "Not leaves. Butterflies. Millions of them, hanging in heavy clusters.",
+   "visual": "Close on the fir branches: dense clusters of resting monarchs with folded wings hang like bunches of dry leaves; a few flutter off.",
+   "title": {
+    "white": "Butterflies"
+   },
+   "cues": {
+    "Millions": "Millions"
+   },
+   "params": {
+    "mode": "cluster",
+    "fliers": 3,
+    "labels": [
+     {
+      "text": "millions",
+      "x": 0.72,
+      "y": 0.1,
+      "at": "Millions",
+      "size": 76,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     900,
+     480
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_forest",
+   "text": "Then a branch above him snapped under their weight, and thousands of them tumbled down at his feet.",
+   "visual": "A heavy branch at the top right, thick with butterflies, cracks on 'snapped', swings down and drops; a burst of monarchs rains onto the ground around the sitting man.",
+   "title": {
+    "white": "Snap"
+   },
+   "cues": {
+    "snap": "weight,",
+    "snapped": "snapped"
+   },
+   "params": {
+    "mode": "snap",
+    "branch": {
+     "x": 0.8,
+     "y": 0.26,
+     "len": 560,
+     "dir": -1
+    },
+    "cast": [
+     {
+      "who": "fred",
+      "x": 0.42,
+      "y": 0.9,
+      "scale": 0.99,
+      "pose": "sit",
+      "face": "right",
+      "at": "snapped",
+      "then": "shock",
+      "accessory": "slouch"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mon_wing",
+   "text": "He picked one up and froze. On its wing was a tiny white tag. His tag.",
+   "visual": "Extreme close-up on the forest floor among fallen monarchs: one big monarch, wings open; on 'tiny' a white sticker 'PS 397 / TORONTO' shows on the edge of its right forewing.",
+   "title": {
+    "white": "The tag"
+   },
+   "cues": {
+    "tag": "tiny",
+    "His": "His"
+   },
+   "params": {
+    "mode": "tag",
+    "tag": [
+     "PS 397",
+     "TORONTO"
+    ],
+    "s": 3.6,
+    "y": 0.52,
+    "labels": [
+     {
+      "text": "his tag",
+      "x": 0.8,
+      "y": 0.1,
+      "at": "His",
+      "size": 72,
+      "color": "red",
+      "arrow": [
+       0.7,
+       0.2
+      ]
+     }
+    ],
+    "floor": true,
+    "fliers": 2
+   },
+   "set": false
+  },
+  {
+   "type": "mon_forest",
+   "text": "So how does an insect lighter than a paperclip find this one forest, when it has never been here before?",
+   "visual": "The fez narrator stands among the orange-clustered firs, holds up a sign 'HOW?', then points up at the clusters on 'never'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "insect": "insect",
+    "never": "never"
+   },
+   "params": {
+    "mode": "colony",
+    "fliers": 12,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.41,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "think",
+      "emotion": "surprised",
+      "seq": [
+       {
+        "at": "insect",
+        "pose": "hold",
+        "emotion": "surprised",
+        "text": "HOW?"
+       },
+       {
+        "at": "never",
+        "pose": "point",
+        "dir": "up",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_wing",
+   "text": "Nobody has fully answered that yet. This autumn, scientists put tiny solar radio tags on nearly 1,750 monarchs, just to follow them south.",
+   "visual": "Close-up of a monarch from above with a tiny blue solar radio tag on its body and a thin antenna wire; red radio arcs pulse from cue 'radio'; label '1,750 tagged'.",
+   "title": {
+    "white": "This autumn"
+   },
+   "cues": {
+    "ping": "radio",
+    "1,750": "1,750"
+   },
+   "params": {
+    "mode": "radio",
+    "labels": [
+     {
+      "text": "1,750 tagged",
+      "x": 0.2,
+      "y": 0.16,
+      "at": "1,750",
+      "size": 76,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "source": "AP News, Nov 2026",
+   "camera": {
+    "focus": [
+     960,
+     700
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "To see how anyone found this forest, after a forty-year hunt, let's start in a summer meadow.",
+   "visual": "CHAPTER 1 / 6 card: 'A Few Weeks to Live'.",
+   "title": {},
+   "cues": {
+    "n": "forty-year",
+    "title": "summer"
+   },
+   "params": {
+    "n": 1,
+    "total": 6,
+    "title": "A Few Weeks to Live",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Few Weeks to Live"
+  },
+  {
+   "type": "mon_life",
+   "text": "A summer monarch lives only a few weeks. It hatches, eats, turns into a butterfly, lays eggs, and dies. Three or four generations come and go like that.",
+   "visual": "Life cycle on milkweed leaves, left to right: egg, striped caterpillar, green chrysalis with gold dots, butterfly; red arrows between; the butterfly flies off and fades on 'dies'.",
+   "title": {
+    "white": "Life cycle"
+   },
+   "cues": {
+    "c1": "hatches",
+    "c2": "eats",
+    "c3": "turns",
+    "c4": "butterfly",
+    "go": "dies",
+    "few": "few"
+   },
+   "params": {
+    "mode": "cycle",
+    "labels": [
+     {
+      "text": "a few weeks",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "few",
+      "size": 74,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mon_life",
+   "text": "Its caterpillars eat only milkweed, which is poisonous, so birds learn to leave monarchs alone.",
+   "visual": "Close: a striped caterpillar chews the edge of a big milkweed leaf, bites appear; a small bird swoops in on 'birds' and veers away; label 'poison'.",
+   "title": {
+    "white": "Milkweed"
+   },
+   "cues": {
+    "poisonous": "poisonous,",
+    "bird": "birds"
+   },
+   "params": {
+    "mode": "eat",
+    "labels": [
+     {
+      "text": "poison",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "poisonous",
+      "size": 80,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     1000,
+     520
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "title",
+   "text": "Then, at the end of summer, a different generation hatches. It lives up to eight months, and it flies south.",
+   "visual": "Giant words 'up to' / '8 months', '8' in a red box; the fez narrator beside them jumps back in shock on 'eight'.",
+   "title": {
+    "white": "Super generation"
+   },
+   "cues": {
+    "w0": "different",
+    "eight": "eight"
+   },
+   "params": {
+    "lines": [
+     "up to",
+     "8 months"
+    ],
+    "highlight": [
+     "8"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.9,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.95,
+     "at": "eight",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   },
+   "source": "US Fish & Wildlife"
+  },
+  {
+   "type": "mon_map",
+   "text": "Some fly up to 3,000 miles, from Canada to the mountains of central Mexico.",
+   "visual": "Old parchment map of North America: red dashed flight lines draw themselves from Canada and the eastern US and converge on a red ring in central Mexico; small monarchs travel along them; label 'up to 3,000 miles'.",
+   "title": {
+    "white": "The route"
+   },
+   "cues": {
+    "route": "fly",
+    "3,000": "3,000",
+    "site": "Mexico."
+   },
+   "params": {
+    "mode": "routes",
+    "labels": [
+     {
+      "text": "up to 3,000 miles",
+      "x": 0.76,
+      "y": 0.5,
+      "at": "3,000",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "source": "US Fish & Wildlife"
+  },
+  {
+   "type": "mon_life",
+   "text": "And here's the crazy part. None of them has made this trip before. The last ones to fly it were their great-great-grandparents.",
+   "visual": "A family row: on the left 'last winter' (a butterfly in a red ring), then 'gen 1', 'gen 2', 'gen 3', and on the right the glowing 'this fall' super generation.",
+   "title": {
+    "white": "Never been"
+   },
+   "cues": {
+    "None": "None",
+    "last": "last",
+    "fly": "fly",
+    "were": "were",
+    "great-great": "great-great"
+   },
+   "params": {
+    "mode": "gens",
+    "gens": [
+     {
+      "text": "last winter",
+      "at": "last",
+      "kind": "old"
+     },
+     {
+      "text": "gen 1",
+      "at": "fly",
+      "kind": "short"
+     },
+     {
+      "text": "gen 2",
+      "at": "were",
+      "kind": "short"
+     },
+     {
+      "text": "gen 3",
+      "at": "great-great",
+      "kind": "short"
+     },
+     {
+      "text": "this fall",
+      "at": "None",
+      "kind": "super"
+     }
+    ],
+    "labels": [
+     {
+      "text": "never been there",
+      "x": 0.82,
+      "y": 0.12,
+      "at": "None",
+      "size": 64,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "mon_life",
+   "text": "So where were they all going? For most of the twentieth century, no scientist could tell you.",
+   "visual": "The milkweed meadow, monarchs drifting off south; the fez narrator looks south through a spyglass, then lowers it and shrugs on 'no scientist'.",
+   "title": {
+    "white": "Where?"
+   },
+   "cues": {
+    "scientist": "scientist"
+   },
+   "params": {
+    "mode": "meadow",
+    "fliers": 4,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "look",
+      "face": "left",
+      "at": "scientist",
+      "then": "shrug"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907,
+    "horizon": 380
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "But in Toronto, one young man refused to let that question go.",
+   "visual": "CHAPTER 2 / 6 card: 'Forty Years of Tiny Tags'.",
+   "title": {},
+   "cues": {
+    "n": "Toronto",
+    "title": "refused"
+   },
+   "params": {
+    "n": 2,
+    "total": 6,
+    "title": "Forty Years of Tiny Tags",
+    "label": "CHAPTER"
+   },
+   "chapter": "Forty Years of Tiny Tags"
+  },
+  {
+   "type": "mon_desk",
+   "text": "Fred Urquhart, a Canadian zoologist, started chasing the monarchs in 1937. His wife Norah later joined the hunt.",
+   "visual": "A Toronto study: desk, lamp, a box of pinned butterflies, a wall map of North America; Fred and Norah stand at the desk; labels 'Fred Urquhart' and 'Norah'.",
+   "title": {
+    "white": "Toronto"
+   },
+   "cues": {
+    "Fred": "Fred",
+    "Norah": "Norah",
+    "1937.": "1937."
+   },
+   "params": {
+    "mode": "lab",
+    "map_x": 0.5,
+    "cast": [
+     {
+      "who": "fred",
+      "x": 0.2,
+      "y": 0.92,
+      "scale": 1.12,
+      "pose": "point",
+      "face": "right",
+      "dir": 30,
+      "accessory": "slouch"
+     },
+     {
+      "who": "norah",
+      "x": 0.8,
+      "y": 0.92,
+      "scale": 1.08,
+      "pose": "think",
+      "face": "left",
+      "accessory": "beret"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Fred Urquhart",
+      "x": 0.2,
+      "y": 0.3,
+      "at": "Fred",
+      "size": 66,
+      "color": "red"
+     },
+     {
+      "text": "Norah",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "Norah",
+      "size": 66,
+      "color": "red"
+     },
+     {
+      "text": "1937",
+      "x": 0.5,
+      "y": 0.62,
+      "at": "1937,",
+      "size": 72,
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 980
+   },
+   "source": "Royal Ontario Museum"
+  },
+  {
+   "type": "mon_wing",
+   "text": "But how do you follow a butterfly? They used tiny sticky labels folded over the edge of a wing, each with a number and a Toronto address.",
+   "visual": "Close-up of a monarch from above; on 'labels' a white sticker 'No. ____ / RETURN TO / TORONTO' is pressed onto the front edge of its right forewing.",
+   "title": {
+    "white": "The tags"
+   },
+   "cues": {
+    "tag": "labels",
+    "address.": "address."
+   },
+   "params": {
+    "mode": "tag",
+    "tag": [
+     "No. ____",
+     "RETURN TO",
+     "TORONTO"
+    ],
+    "s": 2.8,
+    "y": 0.5,
+    "labels": [
+     {
+      "text": "an address",
+      "x": 0.86,
+      "y": 0.12,
+      "at": "address.",
+      "size": 66,
+      "arrow": [
+       0.74,
+       0.24
+      ]
+     }
+    ],
+    "tag_size": [
+     36,
+     34
+    ],
+    "tag_w": 300
+   },
+   "set": false
+  },
+  {
+   "type": "mon_life",
+   "text": "Then they asked for help. Hundreds of volunteers caught monarchs, tagged them, and let them go.",
+   "visual": "A meadow: a girl holds up a butterfly net, an older volunteer stands beside her; a tagged monarch flies up out of her hand on 'let them go'.",
+   "title": {
+    "white": "Volunteers"
+   },
+   "cues": {
+    "go": "let",
+    "Hundreds": "Hundreds"
+   },
+   "params": {
+    "mode": "release",
+    "from": [
+     0.36,
+     0.48
+    ],
+    "net": [
+     0.3,
+     0.4
+    ],
+    "cast": [
+     {
+      "who": "girl",
+      "x": 0.26,
+      "y": 0.9,
+      "scale": 0.9,
+      "pose": "point",
+      "dir": 40,
+      "face": "right",
+      "accessory": "beret"
+     },
+     {
+      "who": "retiree",
+      "x": 0.66,
+      "y": 0.9,
+      "scale": 1.08,
+      "pose": "talk",
+      "face": "left",
+      "beard": "grey"
+     }
+    ],
+    "labels": [
+     {
+      "text": "hundreds of volunteers",
+      "x": 0.7,
+      "y": 0.12,
+      "at": "Hundreds",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mon_desk",
+   "text": "Whenever someone found a tag, they mailed it back. For years, the letters piled up in Toronto.",
+   "visual": "Fred's desk: envelopes fly in from both sides and pile up into a stack; red pins pop into the wall map; Fred looks at them.",
+   "title": {
+    "white": "Letters"
+   },
+   "cues": {
+    "mail": "mailed",
+    "mailed": "mailed",
+    "years,": "years,",
+    "piled": "piled",
+    "Toronto.": "Toronto."
+   },
+   "params": {
+    "mode": "letters",
+    "pins": [
+     {
+      "lon": -79.4,
+      "lat": 43.7,
+      "at": "mailed"
+     },
+     {
+      "lon": -84,
+      "lat": 40,
+      "at": "Toronto."
+     },
+     {
+      "lon": -90,
+      "lat": 37,
+      "at": "years,"
+     },
+     {
+      "lon": -96,
+      "lat": 33,
+      "at": "piled"
+     }
+    ],
+    "cast": [
+     {
+      "who": "fred",
+      "x": 0.17,
+      "y": 0.92,
+      "scale": 1.08,
+      "pose": "think",
+      "face": "right",
+      "accessory": "slouch"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 980
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_map",
+   "text": "Bit by bit, the returns drew a line on the map: southwest, through Texas, toward Mexico. And then the line just stopped.",
+   "visual": "The parchment map: red tag-return dots pop along a dashed line from Toronto southwest through Texas; at the Mexican border the line stops and a big red '?' grows.",
+   "title": {
+    "white": "Tag returns"
+   },
+   "cues": {
+    "stop": "stopped.",
+    "Texas,": "Texas,"
+   },
+   "params": {
+    "mode": "tags",
+    "no_site": true,
+    "labels": [
+     {
+      "text": "Toronto",
+      "x": 0.76,
+      "y": 0.24,
+      "at": 0.2,
+      "size": 56
+     },
+     {
+      "text": "Texas",
+      "x": 0.37,
+      "y": 0.5,
+      "at": "Texas,",
+      "size": 60
+     }
+    ]
+   },
+   "set": false
+  },
+  {
+   "type": "title",
+   "text": "Tags came back from all over the United States and Canada. From Mexico? Not one.",
+   "visual": "Giant words '0 tags' / 'from Mexico', '0' in a red box; the fez narrator beside them points at the 0 and looks worried.",
+   "title": {
+    "white": "Dead end"
+   },
+   "cues": {
+    "w0": "Tags",
+    "not": "Not"
+   },
+   "params": {
+    "lines": [
+     "0 tags",
+     "from Mexico"
+    ],
+    "highlight": [
+     "0"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.9,
+     "pose": "point",
+     "dir": 30,
+     "face": -1,
+     "scale": 0.95,
+     "at": "not",
+     "emotion": "worried"
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "So in 1972, the Urquharts tried something new.",
+   "visual": "CHAPTER 3 / 6 card: 'A Notice in the Paper'.",
+   "title": {},
+   "cues": {
+    "n": "1972,",
+    "title": "new"
+   },
+   "params": {
+    "n": 3,
+    "total": 6,
+    "title": "A Notice in the Paper",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Notice in the Paper"
+  },
+  {
+   "type": "mon_desk",
+   "text": "They placed a notice in a Mexico City newspaper, asking for help to find the butterflies.",
+   "visual": "A full-frame newspaper page with grey columns; a red box draws itself around a notice that types 'VOLUNTEERS WANTED / monarch butterflies / write to Toronto', with a small butterfly drawing.",
+   "title": {
+    "white": "The notice"
+   },
+   "cues": {
+    "notice": "notice"
+   },
+   "params": {
+    "mode": "notice",
+    "masthead": "MEXICO CITY, 1972",
+    "notice": [
+     "VOLUNTEERS WANTED",
+     "monarch butterflies",
+     "write to Toronto"
+    ]
+   },
+   "set": false,
+   "source": "Royal Ontario Museum",
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.1,
+    "move": "push"
+   }
+  },
+  {
+   "type": "stage",
+   "text": "An American engineer named Ken Brugger read it. He lived in Mexico, and he loved nature.",
+   "visual": "A Mexico City street: Ken Brugger (grey beard) stands reading a newspaper sign, then turns and points up, excited; label 'Ken Brugger'.",
+   "title": {
+    "white": "Ken Brugger"
+   },
+   "cues": {
+    "Brugger": "Brugger",
+    "naturalist": "loved"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "ken",
+      "x": 0.42,
+      "y": 0.9,
+      "scale": 1.6,
+      "pose": "hold",
+      "face": "right",
+      "beard": "grey",
+      "accessory": "slouch",
+      "text": "WANTED",
+      "at": "naturalist",
+      "then": "point",
+      "dir": "up",
+      "emotion": "happy"
+     }
+    ],
+    "label": {
+     "text": "Ken Brugger",
+     "x": 0.72,
+     "y": 0.2,
+     "size": 70,
+     "at": "Brugger",
+     "arrow": [
+      0.5,
+      0.36
+     ]
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 950
+   }
+  },
+  {
+   "type": "mon_map",
+   "text": "In 1973, he talked Catalina Aguado into joining him. They married and kept searching together.",
+   "visual": "Close on the map of central Mexico: from the Mexico City dot a red dashed search route wanders back and forth through the mountains to the west; label two small walkers at the head of the route; label 'Ken & Catalina's search'.",
+   "title": {
+    "white": "The search"
+   },
+   "cues": {
+    "Catalina": "Catalina"
+   },
+   "params": {
+    "mode": "search",
+    "no_site": true,
+    "labels": [
+     {
+      "text": "Ken & Catalina's search",
+      "x": 0.3,
+      "y": 0.6,
+      "at": "Catalina",
+      "size": 64,
+      "color": "red"
+     },
+     {
+      "text": "Mexico City",
+      "x": 0.52,
+      "y": 0.78,
+      "at": 0.3,
+      "size": 56,
+      "arrow": [
+       0.41,
+       0.84
+      ]
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     740,
+     800
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_forest",
+   "text": "Funny thing is, the families living in those mountains had known about the butterflies for generations. Only the scientists didn't.",
+   "visual": "On the trail between bare mountain firs, a local farmer in a hat points up the slope; the fez narrator beside him shrugs with a smile on 'didn't'.",
+   "title": {
+    "white": "Locals knew"
+   },
+   "cues": {
+    "didn't": "didn't."
+   },
+   "params": {
+    "mode": "search",
+    "fliers": 5,
+    "cast": [
+     {
+      "who": "farmer",
+      "x": 0.34,
+      "y": 0.9,
+      "scale": 1.25,
+      "pose": "point",
+      "dir": "up",
+      "face": "right",
+      "accessory": "slouch"
+     },
+     {
+      "who": "kasif",
+      "x": 0.68,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "talk",
+      "face": "left",
+      "at": "didn't",
+      "then": "shrug",
+      "emotion": "happy"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 950
+   }
+  },
+  {
+   "type": "mon_forest",
+   "text": "On the second of January 1975, Ken and Catalina climbed a mountain in Michoacán, and suddenly every tree was covered in butterflies.",
+   "visual": "A clearing in the fir forest: Ken and Catalina stand at its edge; from 'suddenly' the bare trees fill up, one after another, with orange clusters; label '2 January 1975'.",
+   "title": {
+    "white": "Michoacán"
+   },
+   "cues": {
+    "fill": "suddenly",
+    "second": "second"
+   },
+   "params": {
+    "mode": "discover",
+    "cast": [
+     {
+      "who": "ken",
+      "x": 0.4,
+      "y": 0.92,
+      "scale": 0.99,
+      "pose": "look",
+      "face": "right",
+      "beard": "grey",
+      "accessory": "slouch",
+      "at": "suddenly",
+      "then": "shock"
+     },
+     {
+      "who": "catalina",
+      "x": 0.56,
+      "y": 0.92,
+      "scale": 0.94,
+      "pose": "idle",
+      "face": "right",
+      "accessory": "beret",
+      "at": "suddenly",
+      "then": "shock"
+     }
+    ],
+    "labels": [
+     {
+      "text": "2 January 1975",
+      "x": 0.74,
+      "y": 0.12,
+      "at": "second",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   },
+   "source": "Royal Ontario Museum"
+  },
+  {
+   "type": "mon_wing",
+   "text": "By one estimate, about sixty million monarchs were resting there.",
+   "visual": "Extreme close-up of two fir boughs packed with hanging monarchs; stamp '60 MILLION' on 'sixty'.",
+   "title": {
+    "white": "60 million"
+   },
+   "cues": {
+    "sixty": "sixty"
+   },
+   "params": {
+    "mode": "cluster",
+    "fliers": 3,
+    "labels": [
+     {
+      "text": "60 million",
+      "x": 0.7,
+      "y": 0.42,
+      "at": "sixty",
+      "size": 96,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "source": "Royal Ontario Museum",
+   "camera": {
+    "focus": [
+     960,
+     520
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_desk",
+   "text": "The message that reached Toronto was short: We have found them! Millions of monarchs, in evergreens beside a mountain clearing.",
+   "visual": "Fred's study in Toronto: the old telephone shakes and rings with red sound arcs; Norah lifts her hands; a quote types out: 'We have found them.'",
+   "title": {
+    "white": "The call"
+   },
+   "cues": {
+    "ring": "message",
+    "quote": "We"
+   },
+   "params": {
+    "mode": "call",
+    "map_x": 0.28,
+    "quote": [
+     "\"We have found them.\""
+    ],
+    "cast": [
+     {
+      "who": "norah",
+      "x": 0.84,
+      "y": 0.92,
+      "scale": 1.08,
+      "pose": "shock",
+      "face": "left",
+      "accessory": "beret"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 980
+   },
+   "camera": {
+    "focus": [
+     1100,
+     520
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "But Fred still needed proof.",
+   "visual": "CHAPTER 4 / 6 card: 'The Falling Branch'.",
+   "title": {},
+   "cues": {
+    "n": "Fred",
+    "title": "proof"
+   },
+   "params": {
+    "n": 4,
+    "total": 6,
+    "title": "The Falling Branch",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Falling Branch"
+  },
+  {
+   "type": "mon_forest",
+   "text": "Were these really the same butterflies from Canada and the United States? Only one of his tags could tell him.",
+   "visual": "Among the orange-clustered firs, the fez narrator holds up a sign 'SAME ONES?', then points at the viewer on 'tags'.",
+   "title": {
+    "white": "Proof"
+   },
+   "cues": {
+    "tags": "tags"
+   },
+   "params": {
+    "mode": "colony",
+    "fliers": 10,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.41,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "hold",
+      "text": "SAME ONES?",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "tags",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_forest",
+   "text": "A year later, Fred and Norah went to see it themselves. And that brings us back to that snapping branch.",
+   "visual": "The orange forest again: Fred and Norah sit among the clusters; the heavy branch above them cracks on 'snapping' and falls in a rain of butterflies.",
+   "title": {
+    "white": "1976"
+   },
+   "cues": {
+    "snap": "snapping",
+    "snapping": "snapping"
+   },
+   "params": {
+    "mode": "snap",
+    "branch": {
+     "x": 0.14,
+     "y": 0.18,
+     "len": 560,
+     "dir": 1
+    },
+    "cast": [
+     {
+      "who": "fred",
+      "x": 0.52,
+      "y": 0.9,
+      "scale": 0.99,
+      "pose": "sit",
+      "face": "left",
+      "accessory": "slouch"
+     },
+     {
+      "who": "norah",
+      "x": 0.68,
+      "y": 0.9,
+      "scale": 0.94,
+      "pose": "sit",
+      "face": "left",
+      "accessory": "beret",
+      "at": "snapping",
+      "then": "shock"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   },
+   "camera": {
+    "focus": [
+     900,
+     600
+    ],
+    "zoom": 1.2,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "mon_map",
+   "text": "That butterfly had been tagged the September before in Chaska, Minnesota, by a teacher and two students, about 1,750 miles away.",
+   "visual": "The map: a red dashed line draws itself from a dot at Chaska, Minnesota straight down to the red ring in central Mexico, a monarch flying along it; labels 'Chaska, Minnesota' and '1,750 miles'.",
+   "title": {
+    "white": "Chaska"
+   },
+   "cues": {
+    "route": "Chaska,",
+    "Chaska,": "Chaska,",
+    "1,750": "1,750"
+   },
+   "params": {
+    "mode": "line",
+    "from": {
+     "lon": -93.6,
+     "lat": 44.8
+    },
+    "labels": [
+     {
+      "text": "Chaska, Minnesota",
+      "x": 0.3,
+      "y": 0.3,
+      "at": "Chaska,",
+      "size": 60,
+      "arrow": [
+       0.46,
+       0.28
+      ]
+     },
+     {
+      "text": "1,750 miles",
+      "x": 0.24,
+      "y": 0.58,
+      "at": "1,750",
+      "size": 72,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "source": "Star Tribune"
+  },
+  {
+   "type": "title",
+   "text": "It was the first tagged monarch ever found in Mexico. Fred had his proof. But it opened an even bigger puzzle.",
+   "visual": "Giant words 'the first' / 'tag in Mexico', 'first' in a red box; the fez narrator beside them throws an arm up, happy, on 'proof'.",
+   "title": {
+    "white": "Proof"
+   },
+   "cues": {
+    "w0": "first",
+    "proof": "proof."
+   },
+   "params": {
+    "lines": [
+     "the first",
+     "tag in Mexico"
+    ],
+    "highlight": [
+     "first"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.9,
+     "pose": "wave",
+     "face": -1,
+     "scale": 0.95,
+     "at": "proof",
+     "emotion": "happy"
+    }
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   },
+   "source": "Star Tribune"
+  },
+  {
+   "type": "chapter",
+   "text": "How does a butterfly that has never been here find the way?",
+   "visual": "CHAPTER 5 / 6 card: 'A Clock in the Antennae'.",
+   "title": {},
+   "cues": {
+    "n": "How",
+    "title": "way"
+   },
+   "params": {
+    "n": 5,
+    "total": 6,
+    "title": "A Clock in the Antennae",
+    "label": "CHAPTER"
+   },
+   "chapter": "A Clock in the Antennae"
+  },
+  {
+   "type": "mon_sun",
+   "text": "The first part of the answer is the sun. Monarchs use it as a compass.",
+   "visual": "A field seen from above at the horizon: a monarch flies south (green arrow 'SOUTH'); the sun stands in the sky on its dashed day arc; a gold dashed ray and a red angle arc join the sun and the heading.",
+   "title": {
+    "white": "The sun"
+   },
+   "cues": {
+    "compass": "compass."
+   },
+   "params": {
+    "mode": "sun",
+    "labels": [
+     {
+      "text": "sun compass",
+      "x": 0.8,
+      "y": 0.2,
+      "at": "compass",
+      "size": 70,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mon_sun",
+   "text": "But the sun moves, from east to west. Follow it blindly, and you'd fly in a big curve.",
+   "visual": "The sun slides along its arc from east (E) to west (W); a red dashed path shows a butterfly that follows the sun bending away in a curve.",
+   "title": {
+    "white": "Moving sun"
+   },
+   "cues": {
+    "curve": "blindly,",
+    "morning": "east",
+    "evening": "west."
+   },
+   "params": {
+    "mode": "arc",
+    "labels": [
+     {
+      "text": "morning",
+      "x": 0.12,
+      "y": 0.4,
+      "at": "morning",
+      "size": 60
+     },
+     {
+      "text": "evening",
+      "x": 0.88,
+      "y": 0.4,
+      "at": "evening",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mon_life",
+   "text": "So to use the sun, you need a clock, to know what time it is and how much to correct.",
+   "visual": "In the milkweed meadow the fez narrator holds up a big clock on 'clock', then points up at the sun's path on 'correct'.",
+   "title": {
+    "white": "A clock"
+   },
+   "cues": {
+    "clock": "clock,",
+    "correct": "correct."
+   },
+   "params": {
+    "mode": "meadow",
+    "fliers": 4,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "talk",
+      "seq": [
+       {
+        "at": "clock",
+        "pose": "hold",
+        "item": "clock",
+        "emotion": "happy"
+       },
+       {
+        "at": "correct",
+        "pose": "point",
+        "dir": "up",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907,
+    "horizon": 380
+   }
+  },
+  {
+   "type": "mon_wing",
+   "text": "In 2009, Steven Reppert's team found where the monarch keeps that clock. Not in its brain. In its antennae.",
+   "visual": "Extreme close-up of the monarch's head: on 'antennae' both antennae glow gold, and a small clock dial ticks next to an antenna tip.",
+   "title": {
+    "white": "Antennae"
+   },
+   "cues": {
+    "clock": "antennae.",
+    "antennae.": "antennae."
+   },
+   "params": {
+    "mode": "antenna"
+   },
+   "set": false,
+   "source": "Science, 2009",
+   "camera": {
+    "focus": [
+     960,
+     300
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_wing",
+   "text": "When they painted some monarchs' antennae black, so no light got in, those butterflies lost their way.",
+   "visual": "A brush paints both antennae black on 'painted'; then the butterfly turns in confused circles and a red question mark appears on 'lost'.",
+   "title": {
+    "white": "Painted"
+   },
+   "cues": {
+    "paint": "painted",
+    "lost": "lost"
+   },
+   "params": {
+    "mode": "paint",
+    "s": 2.4
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     960,
+     400
+    ],
+    "zoom": 1.25,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_sun",
+   "text": "In 2014, the same lab found a backup: a magnetic compass, also in the antennae, so even under thick clouds, a monarch keeps heading south.",
+   "visual": "Clouds slide over the sun on 'backup'; blue dashed magnetic field lines draw themselves across the sky; a compass dial appears; the green SOUTH arrow holds.",
+   "title": {
+    "white": "Backup"
+   },
+   "cues": {
+    "cloud": "backup:",
+    "field": "magnetic",
+    "magnetic": "magnetic"
+   },
+   "params": {
+    "mode": "cloud",
+    "labels": [
+     {
+      "text": "magnetic compass",
+      "x": 0.8,
+      "y": 0.3,
+      "at": "magnetic",
+      "size": 66,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907
+   },
+   "source": "Nature Comms, 2014"
+  },
+  {
+   "type": "mon_life",
+   "text": "A sun compass, a clock and a magnetic compass. But a compass only tells you which way to go. It doesn't tell you where to stop.",
+   "visual": "In the milkweed meadow the fez narrator thinks, then holds up a sign 'STOP WHERE?' on 'where'.",
+   "title": {
+    "white": "Stop where?"
+   },
+   "cues": {
+    "compass": "only",
+    "stop": "where"
+   },
+   "params": {
+    "mode": "meadow",
+    "fliers": 5,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "talk",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "compass",
+        "pose": "think",
+        "emotion": "worried"
+       },
+       {
+        "at": "stop",
+        "pose": "hold",
+        "text": "STOP WHERE?",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907,
+    "horizon": 380
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "And the place where they stop is getting smaller.",
+   "visual": "CHAPTER 6 / 6 card: 'The Shrinking Forest'.",
+   "title": {},
+   "cues": {
+    "n": "place",
+    "title": "smaller"
+   },
+   "params": {
+    "n": 6,
+    "total": 6,
+    "title": "The Shrinking Forest",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Shrinking Forest"
+  },
+  {
+   "type": "mon_map",
+   "text": "Every winter, the eastern monarchs gather on a few mountains west of Mexico City. In 2008, those forests became a UNESCO World Heritage Site.",
+   "visual": "Close on the map of central Mexico: a red ring pops on the winter forests, a dot for Mexico City; label 'UNESCO, 2008'.",
+   "title": {
+    "white": "The reserve"
+   },
+   "cues": {
+    "site": "mountains",
+    "City.": "City.",
+    "UNESCO": "UNESCO"
+   },
+   "params": {
+    "mode": "pin",
+    "labels": [
+     {
+      "text": "Mexico City",
+      "x": 0.52,
+      "y": 0.78,
+      "at": "City.",
+      "size": 56,
+      "arrow": [
+       0.41,
+       0.84
+      ]
+     },
+     {
+      "text": "UNESCO, 2008",
+      "x": 0.32,
+      "y": 0.6,
+      "at": "UNESCO",
+      "size": 68,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "camera": {
+    "focus": [
+     740,
+     800
+    ],
+    "zoom": 1.7,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_patch",
+   "text": "Scientists measure the colonies by the forest they cover: about 45 acres in the mid-1990s, and just over seven last winter, even after a 64 percent jump.",
+   "visual": "The winter forest from above (fir crowns): an orange patch of colonies spreads big on '45', then shrinks to a small patch on 'seven', the old outline left as a red dashed line; labels '45 acres', '7 acres', '+64%'.",
+   "title": {
+    "white": "The count"
+   },
+   "cues": {
+    "big": "45",
+    "45": "45",
+    "small": "seven",
+    "seven": "seven",
+    "64": "64"
+   },
+   "params": {
+    "big": 0.33,
+    "small": 0.133,
+    "labels": [
+     {
+      "text": "1990s: 45 acres",
+      "x": 0.78,
+      "y": 0.16,
+      "at": "45",
+      "size": 56,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "now: 7 acres",
+      "x": 0.78,
+      "y": 0.6,
+      "at": "seven",
+      "size": 56,
+      "color": "ink",
+      "stamp": true
+     },
+     {
+      "text": "+64% last year",
+      "x": 0.78,
+      "y": 0.76,
+      "at": "64",
+      "size": 50,
+      "color": "green",
+      "stamp": true
+     }
+    ]
+   },
+   "set": false,
+   "source": "WWF Mexico",
+   "camera": false
+  },
+  {
+   "type": "mon_life",
+   "text": "Since the mid-1990s, the eastern monarchs have dropped by more than 80 percent, hit by lost milkweed, pesticides, logging and wild weather.",
+   "visual": "A thin meadow with only four milkweed plants and two monarchs; the fez narrator holds up a sign 'DOWN 80%', then shrugs sadly on 'logging'.",
+   "title": {
+    "white": "Decline"
+   },
+   "cues": {
+    "dropped": "dropped",
+    "logging": "logging"
+   },
+   "params": {
+    "mode": "meadow",
+    "fliers": 2,
+    "plants": 4,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.92,
+      "scale": 1.2,
+      "pose": "idle",
+      "emotion": "worried",
+      "seq": [
+       {
+        "at": "dropped",
+        "pose": "hold",
+        "text": "DOWN 80%",
+        "emotion": "worried"
+       },
+       {
+        "at": "logging",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907,
+    "horizon": 380
+   }
+  },
+  {
+   "type": "mon_map",
+   "text": "That's why those radio tags matter: about 175 have already pinged receivers in Mexico.",
+   "visual": "The map: receiver towers blink across Texas and Mexico; gold dots light up in central Mexico while a red counter counts to '175 in Mexico'.",
+   "title": {
+    "white": "Tracking"
+   },
+   "cues": {
+    "count": "175"
+   },
+   "params": {
+    "mode": "radio",
+    "count": 175
+   },
+   "set": false,
+   "source": "AP News",
+   "camera": {
+    "focus": [
+     780,
+     760
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "mon_forest",
+   "text": "So how does a monarch find that one mountain? A clock in its antennae, the sun and a magnetic backup get it close, but those last few miles? Honestly, nobody fully knows.",
+   "visual": "Calm orange forest with butterflies drifting; the fez narrator stands among the trees, counts on his fingers, then shrugs on 'nobody'.",
+   "title": {
+    "white": "Nobody knows"
+   },
+   "cues": {
+    "nobody": "nobody"
+   },
+   "params": {
+    "mode": "calm",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.41,
+      "y": 0.9,
+      "scale": 1.12,
+      "pose": "talk",
+      "emotion": "happy",
+      "at": "nobody",
+      "then": "shrug"
+     }
+    ]
+   },
+   "set": {
+    "name": "hills",
+    "ground": 907
+   }
+  },
+  {
+   "type": "mon_life",
+   "text": "Have you ever seen a monarch where you live? Tell me in the comments, and subscribe to Stickstory for more of nature's strange superpowers.",
+   "visual": "The summer milkweed meadow with monarchs; the fez narrator points at the viewer, then waves on 'subscribe'.",
+   "title": {
+    "white": "Subscribe"
+   },
+   "cues": {
+    "subscribe": "subscribe"
+   },
+   "params": {
+    "mode": "meadow",
+    "fliers": 9,
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.9,
+      "scale": 1.5,
+      "pose": "point",
+      "dir": "forward",
+      "emotion": "happy",
+      "at": "subscribe",
+      "then": "wave"
+     }
+    ]
+   },
+   "set": {
+    "name": "field",
+    "ground": 907,
+    "horizon": 380
+   }
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-prison-toothbrush",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-dusk",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Born in",
+   "prison"
+  ],
+  "highlight": [
+   "prison"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "focus": [
+   600,
+   900
+  ],
+  "zoom": 1.45,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "dir": 45,
+   "face": 1,
+   "x": 330,
+   "y": 2120,
+   "scale": 1.9
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — William Addis (entrepreneur): jailed in Newgate in 1770 for causing a riot; the bone-and-bristle toothbrush legend; first mass-produced toothbrush c. 1780; firm now Wisdom Toothbrushes",
+   "url": "https://en.wikipedia.org/wiki/William_Addis_(entrepreneur)"
+  },
+  {
+   "title": "History.com — Who invented the toothbrush? (Addis jailed for inciting a riot; bone handle drilled with holes, boar bristles)",
+   "url": "https://www.history.com/articles/who-invented-the-toothbrush"
+  },
+  {
+   "title": "Wisdom Toothbrushes — About us (established as Addis by William Addis in 1780; bored small holes in a bone; still making toothbrushes)",
+   "url": "https://wisdom-toothbrushes.com/about-us/"
+  },
+  {
+   "title": "Grace's Guide to British Industrial History — Addis (1780: William Addis founded the company; 1940 Wisdom brand)",
+   "url": "https://www.gracesguide.co.uk/Addis"
+  },
+  {
+   "title": "Bite Sized Britain — The toothbrush: great result from a spell in jail (teeth cleaned with a cloth and soot or crushed shell)",
+   "url": "https://www.bitesizedbritain.co.uk/the-first-mass-produced-toothbrush111/"
+  }
+ ],
+ "youtube": {
+  "title": "Who Invented the Toothbrush? A Prisoner With a Dinner Bone",
+  "description": "Who invented the toothbrush in your bathroom? The story goes it was a prisoner in a London jail, with a bone saved from his dinner.\n\nAround 1770, William Addis was locked in Newgate Prison for causing a riot. Back then, people scrubbed their teeth with a rag and soot. Legend says Addis drilled tiny holes in a dinner bone, got bristles from a guard, tied them in tufts and pushed them through. Once free, he started making and selling them, around 1780. Nearly 250 years later, the company he founded, now Wisdom Toothbrushes, still makes toothbrushes.\n\nSubscribe to Stickstory for one strange true story every day. What everyday object do you think has the weirdest origin? Tell me in the comments!\n\n#shorts #toothbrush #stickstory",
+  "tags": [
+   "who invented the toothbrush",
+   "who invented toothbrush",
+   "invented the toothbrush",
+   "toothbrush inventor",
+   "first toothbrush",
+   "william addis",
+   "addis toothbrush",
+   "toothbrush made in prison",
+   "newgate prison",
+   "wisdom toothbrushes",
+   "origins of everyday things",
+   "georgian london",
+   "weird history",
+   "history facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-21T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "tb_cell",
+   "text": "Your toothbrush was born in prison.",
+   "visual": "A stone prison cell at night: moonlight falls through a small barred window, a barred door on the left; William Addis sits on a stool at a rough table with a candle and a wooden bowl and holds a finished bone toothbrush with dark bristle tufts up to the candlelight; it gleams on 'prison'; a rat scurries across the flagstones, straw and a chain on the floor. (Hook frame: cover block with the big shocked fez host.)",
+   "set": false,
+   "cues": {
+    "hit": "prison"
+   },
+   "params": {
+    "mode": "hook"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tb_street",
+   "text": "Around 1770, a riot landed William Addis in Newgate Prison.",
+   "visual": "The windowless front of Newgate Prison, built of huge rusticated stone blocks, with 'NEWGATE' carved over a dark arched gate and stone fetters above it: two guards march Addis, in a red neckerchief, into the gateway while the angry rioters' heads and fists bob in the foreground; card 'WILLIAM ADDIS' above the arch; an iron grille slams down behind him on 'Prison'.",
+   "title": {
+    "white": "London",
+    "gray": "1770"
+   },
+   "set": {
+    "name": "city",
+    "ground": 1152
+   },
+   "cues": {
+    "name": "William",
+    "slam": "Prison"
+   },
+   "params": {
+    "mode": "gate",
+    "gate_text": "NEWGATE",
+    "crowd": true,
+    "labels": [
+     {
+      "text": "WILLIAM ADDIS",
+      "x": 0.5,
+      "y": 0.4,
+      "at": "name",
+      "size": 50,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tb_soot",
+   "text": "Back then, you scrubbed your teeth with a rag and soot.",
+   "visual": "Close-up in a Georgian washroom: the fez host scrubs his teeth with a sooty rag and pulls a disgusted face, a black smudge grows round his mouth and soot crumbs fall; beside him on the washstand a basin, a jug and a black jar labelled 'SOOT' that pops on 'soot'.",
+   "title": {
+    "white": "Back then"
+   },
+   "set": false,
+   "cues": {
+    "hit": "soot"
+   },
+   "params": {
+    "kasif": {
+     "x": 0.36,
+     "y": 0.62,
+     "scale": 1.3,
+     "pose": "think",
+     "face": "right",
+     "emotion": "worried"
+    }
+   },
+   "camera": {
+    "focus": [
+     470,
+     720
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tb_bone",
+   "text": "So, the story goes, Addis saved a dinner bone,",
+   "visual": "Close on the cell table by candlelight: a wooden dinner bowl in the foreground; right away Addis's hand comes in from the right, grips the bone by its handle end and lifts it out of the bowl to the middle of the frame; card 'DINNER BONE'; the table's front edge runs along the bottom.",
+   "title": {
+    "white": "The legend"
+   },
+   "set": false,
+   "cues": {
+    "save": "saved"
+   },
+   "params": {
+    "mode": "drill",
+    "drill": false,
+    "labels": [
+     {
+      "text": "DINNER BONE",
+      "x": 0.68,
+      "y": 0.17,
+      "at": "save",
+      "size": 58,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "save_at": 0
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tb_bone",
+   "text": "and drilled tiny holes in it.",
+   "visual": "Closer on the bone in Addis's fist: an awl in his other hand twists into its flat end and tiny holes appear one by one with puffs of bone dust; the empty bowl and the table edge in the foreground.",
+   "source": "Wikipedia, History.com",
+   "set": false,
+   "cues": {
+    "drill": "drilled"
+   },
+   "params": {
+    "mode": "drill",
+    "saved": true
+   },
+   "camera": {
+    "focus": [
+     380,
+     780
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tb_cell",
+   "text": "A guard slipped him bristles,",
+   "visual": "The cell from the other side: a guard with a ring of keys behind the barred door reaches through the bars and hands Addis a bundle of stiff bristles tied with red thread; Addis, on his stool by the table and candle, reaches out and takes it; card 'BRISTLES'.",
+   "set": false,
+   "cues": {
+    "give": "slipped",
+    "b": "bristles"
+   },
+   "params": {
+    "mode": "guard",
+    "labels": [
+     {
+      "text": "BRISTLES",
+      "x": 0.5,
+      "y": 0.28,
+      "at": "b",
+      "size": 58,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "tb_bone",
+   "text": "and he pushed them through in tufts.",
+   "visual": "Extreme close-up of the drilled bone gripped in Addis's fist: his other hand carries tuft after tuft of dark bristles from a pile in the foreground and pushes them into the holes until the head is full; the finished brush gleams on 'tufts'; a red thread and the table edge below.",
+   "set": false,
+   "cues": {
+    "tie": "pushed",
+    "done": "tufts"
+   },
+   "params": {
+    "mode": "tufts"
+   },
+   "camera": {
+    "focus": [
+     400,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tb_shop",
+   "text": "Once free, he sold them.",
+   "visual": "Addis's little London shop: a swinging sign 'W. ADDIS', shelves of jars packed with bone toothbrushes, a tray of brushes on the counter; a customer pays, coins clink onto the counter on 'selling' and Addis hands over a brush.",
+   "title": {
+    "white": "London",
+    "gray": "1780s"
+   },
+   "set": false,
+   "cues": {
+    "pay": "sold",
+    "hit": "sold"
+   },
+   "params": {
+    "sign": "W. ADDIS"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "up"
+   }
+  },
+  {
+   "type": "tb_bath",
+   "text": "Nearly 250 years later, his company still makes toothbrushes. All from one leftover bone.",
+   "visual": "A bathroom today: tiled wall, mirror, sink with a dripping tap and a glass of three modern toothbrushes; on 'company' the old bone toothbrush springs up on a little stand on the left; card 'SINCE 1780'; on 'leftover' it rises and grows to 1.6 times its size and gleams.",
+   "title": {
+    "white": "Today"
+   },
+   "source": "Wisdom Toothbrushes",
+   "set": false,
+   "cues": {
+    "old": "company",
+    "s": "toothbrushes",
+    "hit": "leftover"
+   },
+   "params": {
+    "old": "old",
+    "labels": [
+     {
+      "text": "SINCE 1780",
+      "x": 0.64,
+      "y": 0.3,
+      "at": "s",
+      "size": 64,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "old_x": 0.3
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tb_bath",
+   "text": "Subscribe for one strange true story every day.",
+   "visual": "The same bathroom, seen from the mirror: the fez host stands at the sink brushing his teeth with a blue modern toothbrush, foam at his mouth, then waves at the viewer and points at them; the old bone brush on its stand beside him.",
+   "set": false,
+   "cues": {
+    "w": "one",
+    "p": "every"
+   },
+   "params": {
+    "old": -1,
+    "kasif": {
+     "x": 0.48,
+     "y": 0.66,
+     "scale": 1.6,
+     "pose": "think",
+     "face": "right",
+     "emotion": "happy",
+     "brush": "w",
+     "seq": [
+      {
+       "at": "w",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      },
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "old_x": 0.3
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  }
+ ]
+}

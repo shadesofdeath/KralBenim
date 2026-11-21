@@ -1,0 +1,453 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-forssmann-heart",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-newsprint",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "Into his",
+   "own heart"
+  ],
+  "highlight": [
+   "heart"
+  ],
+  "scene": 0,
+  "t": 2.3,
+  "focus": [
+   540,
+   700
+  ],
+  "zoom": 1.2,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "dir": 45,
+   "face": 1,
+   "x": 330,
+   "y": 2000,
+   "scale": 1.6
+  }
+ },
+ "sources": [
+  {
+   "title": "Nobel Prize — Werner Forssmann, facts (1929 experiment in Eberswalde: catheter from the crook of his arm into his heart, X-ray photo; 1956 prize)",
+   "url": "https://www.nobelprize.org/prizes/medicine/1956/forssmann/facts/"
+  },
+  {
+   "title": "Nobel Prize — Werner Forssmann, biographical",
+   "url": "https://www.nobelprize.org/prizes/medicine/1956/forssmann/biographical/"
+  },
+  {
+   "title": "Siemens Healthineers MedMuseum — Cardiac catheterization (Auguste-Victoria hospital, Eberswalde; director refused; ran to the X-ray room; Sauerbruch's 'circus' remark)",
+   "url": "https://www.medmuseum.siemens-healthineers.com/en/stories-from-the-museum/cardiac-catheterization"
+  },
+  {
+   "title": "MDedge / The Hospitalist — First catheterization (nurse Gerda Ditzen strapped to the table; ureteral catheter; X-ray in the basement)",
+   "url": "https://mdedge.com/content/first-catheterization"
+  },
+  {
+   "title": "Wikipedia — Werner Forssmann (nurse Gerda Ditzen; X-ray department on the floor below; switched to urology; Nobel 1956 with Cournand and Richards)",
+   "url": "https://en.wikipedia.org/wiki/Werner_Forssmann"
+  }
+ ],
+ "youtube": {
+  "title": "Werner Forssmann: He Pushed a Tube Into His Own Heart!",
+  "description": "Werner Forssmann pushed a tube into his own heart in 1929, when doctors believed anything inside the heart would kill you. Why did he risk it?\n\nThe young doctor in Eberswalde, Germany, wanted a way to get drugs straight into a dying heart through a vein. His chief forbade it. The operating nurse, Gerda Ditzen, offered to be the test subject, but he strapped her to the table and used his own arm instead. He walked to the X-ray room and photographed the catheter inside his heart. Leading surgeons mocked him and he left heart medicine for urology. In 1956 the heart catheter won him a share of the Nobel Prize, with Andre Cournand and Dickinson Richards.\n\nSubscribe to Stickstory for one wild true story a day. Would you have helped him, or stopped him? Tell me in the comments!\n\n#shorts #wernerforssmann #stickstory",
+  "tags": [
+   "werner forssmann",
+   "forssmann heart catheter",
+   "werner forssmann 1929",
+   "werner forssmann nobel prize",
+   "cardiac catheterization",
+   "forssmann self experiment",
+   "heart catheter",
+   "doctor self experiment",
+   "medical history",
+   "history of medicine",
+   "human body",
+   "nobel prize 1956",
+   "crazy history facts",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-21T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "fh_body",
+   "text": "He pushed a tube into his own heart.",
+   "visual": "A big front-view bust of the young doctor in his white lab coat, a see-through window in his chest showing ribs and a beating red heart; from a white bandage at his left elbow a gold tube slides up the blue arm vein, under the collarbone and into the heart; gold rings pulse round the heart on 'heart'. (Hook frame: the cover block with the big shocked fez host.)",
+   "set": false,
+   "cues": {
+    "tube": "tube",
+    "heart": "heart",
+    "hit": "heart"
+   },
+   "params": {
+    "mode": "hook"
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fh_hospital",
+   "text": "It was 1929, in Germany.",
+   "visual": "A 1920s red-brick hospital with a steep slate roof, a smoking chimney, rows of windows (some lit), a sign 'HOSPITAL' over the arched door, trees on both sides; a nurse walks along the path; an iron fence and a hedge fill the foreground; card 'GERMANY, 1929'.",
+   "set": {
+    "name": "city",
+    "ground": 1152
+   },
+   "cues": {
+    "y": "1929"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "GERMANY, 1929",
+      "x": 0.6,
+      "y": 0.115,
+      "at": "y",
+      "size": 56,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "fh_body",
+   "text": "Werner Forssmann wanted to get drugs into a dying heart, through a vein.",
+   "visual": "An anatomy chart of the same bust pinned to the tiled wall; from 'drugs' a red dashed route draws itself from the elbow up the arm vein into the heart; the young doctor in his lab coat follows the route with a pointer stick; name card 'FORSSMANN'; a lab bench with flasks in the foreground.",
+   "set": false,
+   "cues": {
+    "route": "drugs",
+    "n": "Werner"
+   },
+   "params": {
+    "mode": "plan",
+    "labels": [
+     {
+      "text": "FORSSMANN",
+      "x": 0.22,
+      "y": 0.2,
+      "at": "n",
+      "size": 54,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "right"
+   }
+  },
+  {
+   "type": "fh_office",
+   "text": "His boss said no. It could kill you!",
+   "visual": "The chief's wood-panelled office: the white-haired chief with glasses behind a big desk shakes his head and lifts his hand on 'no'; the young doctor holds out the coiled tube; red card 'NO!'; the fez host at the left points at the chief, then jumps back in shock on 'kill'; patterned rug in the foreground.",
+   "set": false,
+   "cues": {
+    "no": "no",
+    "hit": "kill",
+    "k": "kill"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "NO!",
+      "x": 0.8,
+      "y": 0.27,
+      "at": "no",
+      "size": 110,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     }
+    ],
+    "kasif": {
+     "x": 0.14,
+     "y": 0.6,
+     "scale": 1.12,
+     "pose": "point",
+     "dir": 20,
+     "face": "right",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "k",
+       "pose": "shock",
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "left"
+   }
+  },
+  {
+   "type": "fh_room",
+   "text": "A nurse offered her arm.",
+   "visual": "The 1920s operating room with white tiles and a round surgical lamp: the nurse (white cap, blue dress, apron) turns a gold key in the glass instrument cabinet, the door swings open and she takes out a coiled rubber tube; on 'offered' she turns to the doctor and points at her own arm, his brows shoot up; card 'GERDA DITZEN'; the operating table's white sheet fills the foreground.",
+   "set": false,
+   "cues": {
+    "unlock": "nurse",
+    "offer": "offered",
+    "n": "nurse"
+   },
+   "params": {
+    "mode": "cabinet",
+    "labels": [
+     {
+      "text": "GERDA DITZEN",
+      "x": 0.68,
+      "y": 0.115,
+      "at": "n",
+      "size": 52,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fh_room",
+   "text": "But he tricked her, strapped her down, and used his own arm.",
+   "visual": "Close on the operating table and the doctor: the nurse lies under a sheet with her head on the pillow next to him; two leather straps drop over her on 'strapped' and she stares, waving a hand; the doctor sits beside her with his own arm on a small board, the tube runs from a coil into a white bandage at his elbow and, from 'own', a gold see-through line climbs his arm to a small red heart in his chest; card 'HIS OWN ARM'.",
+   "set": false,
+   "cues": {
+    "strap": "strapped",
+    "own": "own",
+    "a": "own",
+    "trick": "tricked"
+   },
+   "params": {
+    "mode": "strap",
+    "labels": [
+     {
+      "text": "HIS OWN ARM",
+      "x": 0.62,
+      "y": 0.27,
+      "at": "a",
+      "size": 40,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     690,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fh_stairs",
+   "text": "Then he walked to the X-ray room.",
+   "visual": "A tiled hospital stairwell: the doctor walks down the stairs step by step, holding his arm, the tube dangling from the bandage at his elbow; the nurse follows behind him; at the bottom right a door glows gold under a black sign 'X-RAY' with a bobbing red arrow; the stair's side panel and banister fill the foreground.",
+   "set": false,
+   "cues": {},
+   "params": {},
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "fh_xray",
+   "text": "There it was, inside his heart!",
+   "visual": "Close on the X-ray film on a glowing lightbox: spine, ribs, collarbones and the pale shadow of the heart; a bright white line draws in from his left arm, under the collarbone and down beside the spine into the heart; on 'heart' a gold ring pulses round its tip; red card 'HIS HEART'.",
+   "source": "nobelprize.org",
+   "set": false,
+   "cues": {
+    "heart": "heart",
+    "h": "heart"
+   },
+   "params": {
+    "mode": "plate",
+    "labels": [
+     {
+      "text": "HIS HEART",
+      "x": 0.37,
+      "y": 0.33,
+      "at": "h",
+      "size": 52,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     480,
+     800
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "fh_mock",
+   "text": "Surgeons mocked him, so he quit heart medicine.",
+   "visual": "A lecture room: the doctor stands on the low stage holding up his X-ray beside his head before a blackboard with a chalk heart; two rows of senior surgeons in dark suits fill the foreground, rocking with mocking laughter, some pointing; 'HA!' marks pop up on 'mocked'; on 'quit' a red cross strikes the chalk heart and he lowers the X-ray and hangs his head.",
+   "set": false,
+   "cues": {
+    "laugh": "mocked",
+    "quit": "quit"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "HA!",
+      "x": 0.18,
+      "y": 0.5,
+      "at": "laugh",
+      "size": 80,
+      "color": "red",
+      "font": "hand",
+      "rot": -8,
+      "underline": false
+     },
+     {
+      "text": "HA!",
+      "x": 0.5,
+      "y": 0.53,
+      "at": 0.6,
+      "size": 70,
+      "color": "red",
+      "font": "hand",
+      "rot": 6,
+      "underline": false
+     },
+     {
+      "text": "HA!",
+      "x": 0.4,
+      "y": 0.47,
+      "at": 0.9,
+      "size": 64,
+      "color": "red",
+      "font": "hand",
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "fh_nobel",
+   "text": "27 years later, that tube won him a share of the Nobel Prize.",
+   "visual": "A gold medal with a profile relief swings on a blue ribbon before a blue stage curtain, a light sweeping across it; a year counter at the top rolls from 1929 to 1956 and turns red; the old doctor (white hair, glasses, dark suit), big at the left, looks up at it smiling; flowers along the stage front; card 'NOBEL PRIZE' on 'Nobel'.",
+   "source": "nobelprize.org",
+   "set": false,
+   "cues": {
+    "years": "27",
+    "hit": "Nobel",
+    "n": "Nobel"
+   },
+   "params": {
+    "from": 1929,
+    "to": 1956,
+    "labels": [
+     {
+      "text": "NOBEL PRIZE",
+      "x": 0.6,
+      "y": 0.565,
+      "at": "n",
+      "size": 60,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "fh_xray",
+   "text": "Subscribe for one wild true story a day.",
+   "visual": "The X-ray room: the famous film glows on the lightbox at the left, a 1920s X-ray stand at the right; the fez host stands between them, waves at the viewer, then points at them on 'story'.",
+   "set": false,
+   "cues": {
+    "p": "story"
+   },
+   "params": {
+    "mode": "host",
+    "kasif": {
+     "x": 0.72,
+     "y": 0.6,
+     "scale": 1.1,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  }
+ ]
+}
