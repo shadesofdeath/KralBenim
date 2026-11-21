@@ -1,0 +1,169 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "derin",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Wikipedia: HMHS Britannic",
+      "url": "https://en.wikipedia.org/wiki/HMHS_Britannic"
+    },
+    {
+      "title": "Euronews (17 Kasım 2026): 'Everest of diving': exploring Titanic's sister ship Britannic in Kea",
+      "url": "https://www.euronews.com/2026/11/17/everest-of-diving-underwater-adventures-in-kea-exploring-titanics-sister-ship-britannic"
+    },
+    {
+      "title": "Wikipedia: Violet Jessop",
+      "url": "https://en.wikipedia.org/wiki/Violet_Jessop"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Titanik'in",
+      "kardeşi battı"
+    ],
+    "highlight": [
+      "kardeşi"
+    ],
+    "scene": 0,
+    "t": 2.4,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Titanik'in kardeşi Ege'de battı.",
+      "type": "bt_britannic_sink",
+      "visual": "Soluk sabah ışığında sakin koyu deniz, ufukta alçak bir ada; arkasında ışık havuzu, 32° eğik batan dört bacalı beyaz gemi: başı suya gömülmüş, kıçı ve dönen üç pervanesi sudan açıkça çıkmış, beyaz gövdede yeşil şerit ve kırmızı haç; suya girdiği yerde köpük, suda kıpırdayan ışık pırıltıları; gemi yavaşça daha da batar",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "battı"
+      }
+    },
+    {
+      "text": "1916'da Britannic hastane gemisiydi.",
+      "type": "bt_britannic_ship",
+      "visual": "Sakin denizde yandan, yakın orta plan: geminin orta bölümü kadrajı doldurur, gövde su çizgisinden belirgin yükselir; dört eğik baca (üçünden duman çıkar, dördüncüsü sahte), yüksek kren tipi filika vinçleri, beyaz gövde; üstte büyük altın '1916'; 'hastane'de kalın yeşil şerit gövde boyunca kendini çizer ve iki büyük kırmızı haç hafifçe parlayarak belirir",
+      "params": {
+        "label": "1916"
+      },
+      "cues": {
+        "hit": "hastane"
+      }
+    },
+    {
+      "text": "Kea açığında mayına çarptı.",
+      "type": "bt_britannic_mine",
+      "visual": "Su yüzeyinde ikiye bölünmüş kare: üstte suya oturmuş geminin ön yarısı ve bacaları, altta koyu suda zincirine bağlı tek dikenli mayın, dipte ağırlığı; gövde yavaşça mayının üstüne kayar; 'mayına'da ışık çakması, mayın kaybolur, kabarcıklar yükselir, pruvanın altında koyu bir yarık belirir",
+      "cues": {
+        "hit": "mayına"
+      }
+    },
+    {
+      "text": "Ama koğuşlar havalansın diye lombozlar açıktı. Su hızla doldu.",
+      "type": "bt_britannic_portholes",
+      "visual": "Yakın plan beyaz gövde sacı, perçin dikişleri, üstte yeşil şerit, alt kısım deniz; pirinç çerçeveli dört yuvarlak lomboz; 'açıktı'da camlı kapakları yukarı açılır; sonra deniz sacın üstünde hızla yükselir ve lombozların alt kenarından içeri akar",
+      "cues": {
+        "hit": "açıktı"
+      }
+    },
+    {
+      "text": "Kaptan gemiyi kıyıya oturtmak istedi.",
+      "type": "bt_britannic_map",
+      "visual": "Sade deniz haritası, y 300–1100: solda Attika'nın Sunion ucu tam kadrajda, sağda Kea adası; güneybatıdan kanala uzanan geminin rotası, rotanın kırıldığı noktada kırmızı X (mayın); 'kıyıya'da X'ten Kea kıyısına altın kesikli çizgi kendini çizer, geminin işareti onu izler, X ile kıyının ortasında durur ve orada bir halka yayılarak söner",
+      "params": {
+        "land": "Kea",
+        "cape": "Sunion"
+      },
+      "cues": {
+        "hit": "kıyıya"
+      }
+    },
+    {
+      "text": "Ama pervaneler hâlâ dönüyordu. Erken inen iki filika onlara çekildi.",
+      "type": "bt_britannic_prop",
+      "visual": "Yakın plan yükselmiş kıç: beyaz gövde, yeşil şerit, kırmızı haç, kırmızı karina boyası, tek dümen; şaftın ucunda dev bronz pervane yarısı sudan çıkmış halde yavaşça döner, çevresinde su girdap çizer; 'filika'da iki küçük filika (içinde yüzsüz baş siluetleri) yavaşça girdaba doğru sürüklenir",
+      "cues": {
+        "hit": "filika"
+      }
+    },
+    {
+      "text": "Gemi elli beş dakikada kayboldu.",
+      "type": "bt_britannic_sink",
+      "visual": "Aynı deniz: geminin sadece dikleşmiş kıçı ve pervaneleri suyun üstünde, yavaşça kayarak suya gömülür; üstte büyük altın '55 dakika'; 'kayboldu'da yüzeyde halkalar yayılır",
+      "params": {
+        "mode": "gone",
+        "label": "55 dakika"
+      },
+      "cues": {
+        "hit": "kayboldu"
+      }
+    },
+    {
+      "text": "Kurtulanlardan biri bir hemşireydi: Violet Jessop.",
+      "type": "bt_britannic_nurse",
+      "visual": "Soluk sabah ışığında sakin denizde tek filika, kürek filika boyunca yatırılmış; içinde yandan oturan yüzsüz bir kadın silueti: iki bacak dizden kırık, elleri kucağında, başında omuzlarına inen beyaz hemşire örtüsü, beyaz önlük; filika suda hafifçe sallanır; 'hemşire'de önlüğün göğsünde küçük kırmızı haç belirir",
+      "cues": {
+        "hit": "hemşire"
+      }
+    },
+    {
+      "text": "Titanik'ten de sağ çıkmıştı.",
+      "type": "bt_britannic_two",
+      "visual": "Alt alta suya oturmuş iki gemi profili: üstte koyu gövdeli 'Titanik' + altın '1912', altta beyaz gövdeli, yeşil şeritli, kırmızı haçlı 'Britannic' + altın '1916'; Britannic'in güvertesinde tek küçük altın ışık yanar; 'sağ'da Titanik'in güvertesinde de aynı ışık yanar ve iki ışığı ince altın noktalı bir çizgi birleştirir",
+      "params": {
+        "a": "Titanik",
+        "ay": "1912",
+        "b": "Britannic",
+        "by": "1916"
+      },
+      "cues": {
+        "hit": "sağ"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_britannic_wreck",
+      "visual": "Su altı, uzaktan gelen soluk ışık huzmeleri; y 900–1150 bandında sancak tarafına yatmış büyük batık: iskele gövdesi yukarı bakar (kırmızı karina, soluk şerit ve haçlar, lomboz sırası), güverte izleyiciye döner, baca yuvaları güverte boyunca ince açık halkalı koyu açıklıklar; altında kum dalgası çizgileri ve birkaç kaya (y ≈ 1150–1430); üstte soluk italik '120 m'; yavaş yükselen kabarcıklar, ışık yavaşça kısılır",
+      "params": {
+        "label": "120 m"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Britannic: Hastane Gemisi Neden 55 Dakikada Kayboldu?",
+    "description": "Britannic, Titanik'in kardeş gemisiydi ve 21 Kasım 1916'da Ege'de, Kea adası açığında 55 dakikada kayboldu. Birinci Dünya Savaşı'nda hastane gemisi olan Britannic, bir Alman denizaltısının döşediği mayına çarptı.\n\nKoğuşlar havalansın diye açık bırakılan lombozlardan su hızla doldu; kaptan gemiyi Kea kıyısına oturtmak istedi ama erken indirilen iki filika hâlâ dönen pervanelere çekildi. Kurtulanlardan biri, Titanik'ten de sağ çıkmış olan hemşire Violet Jessop'tu. Britannic batığı bugün yaklaşık 120 metre derinlikte, sancak tarafına yatmış halde, dalgıçların \"dalışın Everest'i\" dediği yerde yatıyor.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence Violet Jessop şanslı mıydı, yoksa lanetli mi? Yorumlara yaz!\n\n#shorts #britannic #düşünbakalım",
+    "tags": [
+      "britannic",
+      "hmhs britannic",
+      "britannic gemisi",
+      "britannic batışı",
+      "britannic neden battı",
+      "titanik'in kardeş gemisi",
+      "titanik",
+      "violet jessop",
+      "hastane gemisi",
+      "kea adası",
+      "birinci dünya savaşı",
+      "gemi kazaları",
+      "deniz tarihi",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-21T19:00:00+03:00",
+    "related": "videos/2026-10-15/10-titanik-neden-batti.json"
+  }
+}
