@@ -1,0 +1,17 @@
+{
+ "id": "Az01dDFgMx8",
+ "thumbnail": false,
+ "url": "https://youtu.be/Az01dDFgMx8",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-24T14:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "Tulip Mania: Did a Flower Really Ruin Holland?",
+ "script": "videos/2026-11-23/ag-05-tulip-mania.json"
+}
