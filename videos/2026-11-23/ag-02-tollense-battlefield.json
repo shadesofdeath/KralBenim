@@ -1,0 +1,451 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-02-tollense-battlefield",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-slate",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "One bone,",
+   "lost war"
+  ],
+  "highlight": [
+   "war"
+  ],
+  "scene": 0,
+  "t": 2.5,
+  "focus": [
+   620,
+   1000
+  ],
+  "zoom": 1.2,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 330,
+   "y": 2230,
+   "scale": 1.35
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — Tollense valley battlefield (1996: humerus with an embedded flint arrowhead found on the riverbank; radiocarbon 1300–1200 BC; ~140 individuals by 2017; causeway; estimates of several thousand fighters)",
+   "url": "https://en.wikipedia.org/wiki/Tollense_valley_battlefield"
+  },
+  {
+   "title": "Smithsonian Magazine — These 3,000-year-old arrowheads are pivotal clues in the mystery of Europe's oldest known battlefield (1996 arm bone pierced by a flint arrowhead; about 150 individuals; c. 1250 BCE; Bavaria or Moravia)",
+   "url": "https://www.smithsonianmag.com/smart-news/these-3000-year-old-arrowheads-are-pivotal-clues-in-the-mystery-of-europes-oldest-known-battlefield-180985142/"
+  },
+  {
+   "title": "Archaeology Magazine — Arrowhead study sheds light on Bronze Age battle (about 3,250 years ago; arrowhead types from areas more than 300 miles away; Antiquity 2024, Inselmann et al.)",
+   "url": "https://archaeology.org/?p=43919"
+  },
+  {
+   "title": "HeritageDaily — New findings at Europe's oldest battlefield (c. 1250 BC; over 150 individuals; more than 2,000 participants suggested; southern arrowhead types)",
+   "url": "https://www.heritagedaily.com/2024/09/new-findings-at-europes-oldest-battlefield/153511"
+  },
+  {
+   "title": "The History Blog — The first Bronze Age battlefield found? (ash-wood club shaped like a bat, sloe-wood club like a croquet mallet; skulls with unhealed holes)",
+   "url": "https://www.thehistoryblog.com/archives/date/2011/05/23"
+  }
+ ],
+ "youtube": {
+  "title": "Tollense Valley: One Bone Exposed a Lost Bronze Age War",
+  "description": "The Tollense Valley in northern Germany hides Europe's oldest known battlefield, and it was found because of one arm bone. How did a whole war stay hidden for 3,250 years?\n\nIn 1996 an amateur archaeologist spotted an upper-arm bone in the bank of the Tollense River with a flint arrowhead still stuck in it. Digs since then have found skulls with holes, wooden clubs, bronze and flint arrowheads and the remains of about 150 people from around 1250 BC. Researchers think thousands fought at this Bronze Age battle by a river crossing, and some arrowhead types point to warriors from more than 300 miles south, in today's Bavaria or Moravia.\n\nSubscribe to Stickstory for one forgotten true story a day. Who do you think these warriors were fighting for? Tell me in the comments!\n\n#shorts #tollense #stickstory",
+  "tags": [
+   "tollense valley",
+   "tollense valley battlefield",
+   "tollense battle",
+   "battle of tollense",
+   "tollense river",
+   "oldest battle in europe",
+   "europe oldest battlefield",
+   "bronze age battle",
+   "bronze age",
+   "archaeology",
+   "archaeology discovery",
+   "ancient warfare",
+   "ancient history",
+   "history",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-23T19:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "tol_bank",
+   "text": "One buried bone exposed a lost war.",
+   "visual": "Close on the reedy mud bank of the Tollense River: a big pale upper-arm bone juts out of the mud, its head end still buried, a grey flint arrowhead stuck in its shaft; a gold ring pulses round it on 'bone'; the fez host on the bank top at the left points at it, then jumps back in shock on 'war' as a pale ghost army of spears and round shields rises along the horizon; slow river water and tall cattails fill the bottom of the frame.",
+   "set": {
+    "name": "field",
+    "ground": 883
+   },
+   "cues": {
+    "bone": "bone",
+    "war": "war",
+    "k": "war"
+   },
+   "params": {
+    "mode": "hook",
+    "ground": 0.46,
+    "water": 0.72,
+    "bone": {
+     "x": 0.6,
+     "y": 0.575,
+     "L": 720,
+     "lump": 0
+    },
+    "kasif": {
+     "x": 0.13,
+     "y": 0.66,
+     "scale": 0.8,
+     "pose": "shock",
+     "dir": -30,
+     "face": "right",
+     "emotion": "surprised",
+     "seq": []
+    },
+    "ghosts": {
+     "n": 14,
+     "s": 1.5,
+     "alpha": 0.9
+    }
+   },
+   "camera": {
+    "zoom": 1.04,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tol_bank",
+   "text": "In 1996, an amateur archaeologist spotted it by Germany's Tollense River.",
+   "visual": "Wide view of the grassy bank of the Tollense River in northern Germany: a man in a green jacket walks along the bank, stops on 'spotted', bends and points down at a big arm bone with a flint arrowhead sticking out of the mud below him (under the subtitles); a gold ring pulses round it; card 'TOLLENSE RIVER, 1996'; slow water and cattails at the bottom.",
+   "set": {
+    "name": "hills",
+    "ground": 1094
+   },
+   "cues": {
+    "spot": "spotted",
+    "y": "1996"
+   },
+   "params": {
+    "mode": "walk",
+    "ground": 0.7,
+    "labels": [
+     {
+      "text": "TOLLENSE RIVER, 1996",
+      "x": 0.6,
+      "y": 0.17,
+      "at": "y",
+      "size": 52,
+      "color": "ink",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "water": 0.8,
+    "bone": {
+     "x": 0.5,
+     "dy": 0.055,
+     "L": 300
+    },
+    "man": {
+     "x0": 0.04,
+     "x": 0.2,
+     "y": 0.57
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "tol_bone",
+   "text": "A flint arrowhead was still stuck in it!",
+   "visual": "Close-up of the bone lying diagonally in wet mud with pebbles and roots: the grey chipped flint arrowhead is lodged in its shaft; a magnifying glass slides in over the arrowhead on 'flint'; a gold ring pulses round it on 'stuck'; red card 'FLINT ARROWHEAD'; the water's edge and cattails at the bottom.",
+   "source": "Smithsonian",
+   "set": false,
+   "cues": {
+    "lens": "flint",
+    "hit": "stuck",
+    "f": "flint"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "FLINT ARROWHEAD",
+      "x": 0.6,
+      "y": 0.52,
+      "at": "f",
+      "size": 38,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "water": 0.67,
+    "reeds": [
+     {
+      "x": 330,
+      "y": 1600,
+      "h": 380,
+      "n": 6,
+      "s": 1.0
+     },
+     {
+      "x": 890,
+      "y": 1600,
+      "h": 420,
+      "n": 7,
+      "s": 1.1
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     670,
+     790
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tol_dig",
+   "text": "Archaeologists dug, and found smashed skulls, clubs, and the bones of about 150 people.",
+   "visual": "The excavation by the river: a string-gridded pit, two archaeologists kneel and brush, bones surface; on 'found' we cut close to the pit floor: two skulls with small holes appear on 'skulls', a long bat-shaped and a mallet-shaped wooden club on 'clubs' with bronze and flint arrowheads beside them, arm and leg bones; a card rolls up to '≈150 PEOPLE' landing on '150'; a trowel and a find tag in the foreground.",
+   "set": {
+    "name": "field",
+    "ground": 1018
+   },
+   "cues": {
+    "dig": "Archaeologists",
+    "finds": "found",
+    "skulls": "skulls",
+    "clubs": "clubs",
+    "count": "150"
+   },
+   "params": {
+    "mode": "dig",
+    "count": 150,
+    "count_label": "PEOPLE"
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tol_valley",
+   "text": "All of it is about 3,250 years old.",
+   "visual": "The Tollense valley in the Bronze Age seen from the near bank: the river flows across the frame, a wooden causeway on posts runs from the near bank to the far bank; two travellers walk on it; a year card rolls from 2026 AD back to 1250 BC and turns red.",
+   "set": {
+    "name": "hills",
+    "ground": 960
+   },
+   "cues": {
+    "years": "All"
+   },
+   "params": {
+    "mode": "then",
+    "from": 2026,
+    "to": -1250
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "tol_valley",
+   "text": "Researchers think thousands fought here.",
+   "visual": "The same causeway in battle: red-shield warriors with spears pour down the causeway, blue-shield warriors run up on the near bank, arrows arc over the river, dust rises; on 'thousands' rows of spears rise along the far hills; card 'THOUSANDS?'.",
+   "set": {
+    "name": "hills",
+    "ground": 960
+   },
+   "cues": {
+    "crowd": "thousands",
+    "hit": "fought",
+    "c": "thousands"
+   },
+   "params": {
+    "mode": "clash",
+    "labels": [
+     {
+      "text": "THOUSANDS?",
+      "x": 0.66,
+      "y": 0.17,
+      "at": "c",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "tol_map",
+   "text": "Some arrowheads match types from over 300 miles south.",
+   "visual": "A full-frame old map of Central Europe from the Baltic coast to the Adriatic: rivers, the Alps; labels TOLLENSE, BAVARIA, MORAVIA; on 'arrowheads' two red dashed routes run north from Bavaria and Moravia to the Tollense, an arrowhead type travelling at each tip; crossed swords at the Tollense pulse on arrival; card '300+ MILES'.",
+   "source": "Antiquity, 2024",
+   "set": false,
+   "cues": {
+    "route": "arrowheads",
+    "m": "miles"
+   },
+   "params": {
+    "labels": [
+     {
+      "text": "300+ MILES",
+      "x": 0.75,
+      "y": 0.52,
+      "at": "m",
+      "size": 62,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "tol_valley",
+   "text": "Europe's oldest known battle, and nobody wrote a word.",
+   "visual": "The empty Tollense valley today: big rotted stumps of the old causeway stand out of the quiet river in the foreground; on 'oldest' a pale ghost army rises on the far bank and fades on 'word'; big red card 'NOT ONE WORD'; cattails at the edges.",
+   "set": {
+    "name": "hills",
+    "ground": 960
+   },
+   "cues": {
+    "ghost": "oldest",
+    "fade": "word",
+    "w": "word"
+   },
+   "params": {
+    "mode": "today",
+    "labels": [
+     {
+      "text": "NOT ONE WORD",
+      "x": 0.62,
+      "y": 0.18,
+      "at": "w",
+      "size": 84,
+      "color": "red",
+      "font": "serif",
+      "card": true,
+      "rot": -3,
+      "underline": false
+     }
+    ],
+    "near": 0.86,
+    "ghost_alpha": 0.6,
+    "stumps": [
+     [
+      0.16,
+      0.76,
+      150,
+      36
+     ],
+     [
+      0.34,
+      0.8,
+      130,
+      30
+     ],
+     [
+      0.62,
+      0.78,
+      160,
+      38
+     ],
+     [
+      0.8,
+      0.83,
+      140,
+      32
+     ],
+     [
+      0.93,
+      0.75,
+      120,
+      28
+     ]
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "tol_bank",
+   "text": "Subscribe for one forgotten true story a day.",
+   "visual": "The quiet riverbank with a red dig flag on a stake: the fez host holds up an empty scroll, then waves at the viewer on 'story'; reeds and water in the foreground.",
+   "set": {
+    "name": "field",
+    "ground": 1114
+   },
+   "cues": {
+    "p": "story"
+   },
+   "params": {
+    "mode": "host",
+    "ground": 0.58,
+    "kasif": {
+     "x": 0.42,
+     "y": 0.58,
+     "scale": 1.05,
+     "pose": "hold",
+     "item": "scroll",
+     "text": "",
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "wave",
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  }
+ ]
+}

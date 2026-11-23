@@ -1,0 +1,2813 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-nazi-spies-maine",
+ "engine": "studio",
+ "theme": "parchment",
+ "format": "long",
+ "fps": 30,
+ "palette": "ag-slate",
+ "cover": {
+  "lines": [
+   "SPIES FROM",
+   "THE SEA"
+  ],
+  "highlight": [
+   "SPIES"
+  ],
+  "scene": 1,
+  "t": 2.0,
+  "focus": [
+   920,
+   610
+  ],
+  "zoom": 1.8,
+  "size": 190,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "scared",
+   "scale": 0.95,
+   "face": -1,
+   "x": 1690,
+   "y": 1080
+  }
+ },
+ "sources": [
+  {
+   "title": "Boston.com: After 7-year search, divers find ship sunk by Nazis off New England coast (1 Nov 2026)",
+   "url": "https://www.boston.com/news/local-news/2026/11/01/after-7-year-search-divers-find-ship-sunk-by-nazis-off-new-england-coast/"
+  },
+  {
+   "title": "Smithsonian Magazine: A Nazi submarine torpedoed a merchant ship off Maine in 1944; divers have finally located the wreckage",
+   "url": "https://www.smithsonianmag.com/smart-news/a-nazi-submarine-torpedoed-a-merchant-ship-just-off-the-coast-of-maine-in-1944-divers-have-finally-located-the-wreckage-400-feet-below-the-surface-180989822/"
+  },
+  {
+   "title": "Bangor Daily News: How a Down East Boy Scout and his neighbor helped foil the plans of two Nazi spies",
+   "url": "https://www.bangordailynews.com/2020/11/29/hancock/how-a-down-east-boy-scout-and-his-neighbor-helped-foil-the-plans-of-two-nazi-spies"
+  },
+  {
+   "title": "HistoryNet: The secret life of Erich Gimpel",
+   "url": "https://historynet.com/secret-life-erich-gimpel/"
+  },
+  {
+   "title": "New England Historical Society: William Colepaugh, the Connecticut spy who went out in the Maine cold",
+   "url": "https://newenglandhistoricalsociety.com/william-colepaugh-the-connecticut-spy-who-went-out-in-the-maine-cold/"
+  },
+  {
+   "title": "FBI: A Brief History, World War and Cold War (1942 saboteur landings)",
+   "url": "https://www.fbi.gov/history/brief-history/world-war-cold-war"
+  },
+  {
+   "title": "Wikipedia: Operation Elster (overview and references)",
+   "url": "https://en.wikipedia.org/wiki/Operation_Elster"
+  }
+ ],
+ "youtube": {
+  "title": "Nazi Spies in Maine: Why Hitler's $60,000 Mission Failed in a Month",
+  "description": "Nazi spies in Maine: on a snowy night in November 1944, a German U-boat landed two agents at Hancock Point with $60,000 and a bag of diamonds. Within a month, both were in custody. Who gave them away?\n\nOperation Elster (Magpie) sent William Colepaugh, an American who had switched sides, and the German radio expert Erich Gimpel to spy on American shipyards, aircraft factories and rockets from New York. A Boy Scout and a neighbor spotted them in the snow, but the real reason the mission collapsed was far stranger. Four days after the landing, the same submarine, U-1230, sank the Canadian freighter SS Cornwallis, and in 2026 divers finally found the wreck in the Gulf of Maine.\n\nIn this video:\n- The night a U-boat surfaced in Frenchman Bay\n- The American spy and his German partner\n- The Boy Scout who followed the footprints\n- Hitler's money in Manhattan nightclubs\n- The Times Square newsstand arrest\n- The death sentence, Roosevelt's death and Truman's decision\n- The SS Cornwallis wreck found 400 feet down\n\nSubscribe to Stickstory for more of history's strangest true stories. Would you have followed those footprints? Tell me in the comments!\n\n#nazispies #ww2history #stickstory",
+  "tags": [
+   "nazi spies in maine",
+   "nazi spies",
+   "nazi spies maine 1944",
+   "nazi spies landed in maine",
+   "operation elster",
+   "operation magpie",
+   "william colepaugh",
+   "erich gimpel",
+   "u-1230",
+   "hancock point maine",
+   "ss cornwallis wreck",
+   "ww2 history",
+   "world war 2 spies",
+   "fbi history",
+   "history's strangest moments",
+   "true spy story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-23T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "spy_bay",
+   "text": "Near midnight on the twenty-ninth of November, 1944, snow was falling on a quiet bay in Maine. And out in the black water, a German submarine rose to the surface.",
+   "visual": "A snowy night bay: dark pines on the far shore, one lit cabin window; on 'submarine' a black U-boat rises out of the water with its conning tower; label 'Maine, 29 Nov 1944'.",
+   "title": {
+    "white": "Maine, 1944"
+   },
+   "cues": {
+    "rise": "submarine",
+    "Maine.": "Maine."
+   },
+   "params": {
+    "mode": "surface",
+    "sub": {
+     "x": 0.38,
+     "s": 1.0,
+     "rise": "rise"
+    },
+    "cabin": {
+     "x": 0.78
+    },
+    "labels": [
+     {
+      "text": "Maine, 29 Nov 1944",
+      "x": 0.66,
+      "y": 0.24,
+      "at": "Maine.",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 605
+   },
+   "chapter": "Cold open",
+   "camera": {
+    "focus": [
+     760,
+     540
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_bay",
+   "text": "A rubber boat pushed off from it. Inside sat two men dressed for a city street, not a snowstorm, each holding a heavy suitcase.",
+   "visual": "Close on the water: a small rubber dinghy, paddles dipping, carries two men with red suitcases from the surfaced U-boat toward snowy rocks in the foreground.",
+   "title": {
+    "white": "The landing"
+   },
+   "cues": {
+    "rubber": "rubber",
+    "two": "two"
+   },
+   "params": {
+    "mode": "row",
+    "sub": {
+     "x": 0.4
+    },
+    "raft": {
+     "from": 0.5,
+     "to": 0.8,
+     "at": "rubber",
+     "dur": 7,
+     "y": 0.8,
+     "rower": false
+    },
+    "rocks": true,
+    "shore": true,
+    "labels": [
+     {
+      "text": "two men",
+      "x": 0.66,
+      "y": 0.4,
+      "at": "two",
+      "size": 66
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 605
+   },
+   "camera": {
+    "focus": [
+     1150,
+     720
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_case",
+   "text": "What was in them? Sixty thousand American dollars, and a little packet of diamonds.",
+   "visual": "Close-up: a red leather suitcase on a table swings open: rows of banded dollar bundles; a small pouch beside it spills sparkling diamonds on 'diamonds'; stamp '$60,000'.",
+   "title": {
+    "white": "The suitcase"
+   },
+   "cues": {
+    "What": "What",
+    "Sixty": "Sixty",
+    "diamonds.": "diamonds."
+   },
+   "params": {
+    "mode": "cash",
+    "open": "What",
+    "diamonds": "diamonds.",
+    "x": 0.33,
+    "w": 0.48,
+    "labels": [
+     {
+      "text": "$60,000",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "Sixty",
+      "size": 110,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "99 diamonds",
+      "x": 0.7,
+      "y": 0.46,
+      "at": "diamonds.",
+      "size": 60,
+      "color": "blue"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 842
+   },
+   "source": "Smithsonian",
+   "camera": {
+    "focus": [
+     900,
+     600
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_road",
+   "text": "These two were Hitler's spies, and they had come to stay for two years.",
+   "visual": "A snowy night road: the two men in long city coats walk left to right with their suitcases, footprints behind them; the fez narrator on the right points at them, then holds up a sign '2 YEARS'.",
+   "title": {
+    "white": "Hitler's spies"
+   },
+   "cues": {
+    "years.": "years."
+   },
+   "params": {
+    "mode": "walk",
+    "ground": 0.8,
+    "spies": {
+     "x": 0.1,
+     "to": 0.44,
+     "dur": 5
+    },
+    "kasif": {
+     "x": 0.8,
+     "y": 0.9,
+     "scale": 1.05,
+     "pose": "point",
+     "dir": "forward",
+     "face": "left",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "years.",
+       "pose": "hold",
+       "text": "2 YEARS",
+       "emotion": "surprised"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   }
+  },
+  {
+   "type": "title",
+   "text": "They lasted about a month. So how does a mission this expensive fall apart that fast, and who gave them away? Stick with me.",
+   "visual": "Giant words '2 years?' / '1 month', 'month' in a red box; the fez narrator beside them jumps back in shock on 'month'.",
+   "title": {
+    "white": "The question"
+   },
+   "cues": {
+    "w0": "They",
+    "w1": "lasted",
+    "w2": "month.",
+    "w3": "month.",
+    "month": "month."
+   },
+   "params": {
+    "lines": [
+     "2 years?",
+     "1 month"
+    ],
+    "highlight": [
+     "month"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.9,
+     "pose": "shock",
+     "face": -1,
+     "scale": 0.95,
+     "at": "month",
+     "emotion": "surprised"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Picture Hancock Point in 1944: a tiny summer village, almost empty in winter.",
+   "visual": "CHAPTER 1 / 5 card: 'The Passengers'.",
+   "title": {},
+   "cues": {
+    "n": "Hancock",
+    "title": "village,"
+   },
+   "params": {
+    "n": 1,
+    "total": 5,
+    "title": "The Passengers",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Passengers"
+  },
+  {
+   "type": "spy_road",
+   "text": "The war felt far away. But it wasn't.",
+   "visual": "Hancock Point at night: two snow-roofed summer cottages among pines, dark windows, one window lit; snow falls; label 'Hancock Point, Maine'.",
+   "title": {
+    "white": "Hancock Point"
+   },
+   "cues": {
+    "wasn't.": "wasn't."
+   },
+   "params": {
+    "mode": "village",
+    "ground": 0.8,
+    "houses": [
+     {
+      "x": 0.3,
+      "w": 0.18,
+      "lit": false
+     },
+     {
+      "x": 0.76,
+      "w": 0.2,
+      "lit": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "Hancock Point, Maine",
+      "x": 0.5,
+      "y": 0.22,
+      "at": 0.2,
+      "size": 66
+     },
+     {
+      "text": "far away?",
+      "x": 0.5,
+      "y": 0.33,
+      "at": "wasn't.",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_bay",
+   "text": "German U-boats hunted ships off this coast, and the one in the bay that night was U-1230.",
+   "visual": "Close-up of the U-boat lying surfaced in the snowy bay: long black hull, conning tower with periscope; stamp 'U-1230'.",
+   "title": {
+    "white": "U-1230"
+   },
+   "cues": {
+    "U-1230.": "U-1230."
+   },
+   "params": {
+    "mode": "sub",
+    "sub": {
+     "x": 0.5,
+     "s": 1.5
+    },
+    "shore": true,
+    "labels": [
+     {
+      "text": "U-1230",
+      "x": 0.5,
+      "y": 0.26,
+      "at": "U-1230.",
+      "size": 100,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 605
+   },
+   "camera": {
+    "focus": [
+     960,
+     520
+    ],
+    "zoom": 1.5,
+    "move": "push"
+   }
+  },
+  {
+   "type": "map",
+   "text": "It had crossed the Atlantic for almost two months with one secret job: deliver two passengers.",
+   "visual": "Old parchment map of the North Atlantic: a red dashed route draws itself from the waters north of Britain across the ocean to Maine; note 'almost 2 months at sea'.",
+   "title": {
+    "white": "The crossing"
+   },
+   "cues": {
+    "route": "crossed",
+    "crossed": "crossed",
+    "deliver": "deliver",
+    "months": "months"
+   },
+   "params": {
+    "preset": "atlantic",
+    "route": {
+     "points": [
+      [
+       -3,
+       58.5
+      ],
+      [
+       -20,
+       55
+      ],
+      [
+       -40,
+       50
+      ],
+      [
+       -58,
+       46
+      ],
+      [
+       -68.3,
+       44.3
+      ]
+     ],
+     "at": "crossed",
+     "dur": 3,
+     "color": "red"
+    },
+    "cities": [
+     {
+      "name": "Maine",
+      "x": -68.3,
+      "y": 44.3,
+      "at": "deliver"
+     }
+    ],
+    "note": {
+     "text": "almost 2 months at sea",
+     "x": 0.55,
+     "y": 0.55,
+     "at": "months"
+    }
+   },
+   "source": "Bangor Daily News",
+   "camera": {
+    "focus": [
+     900,
+     540
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_lineup",
+   "text": "Germany had tried this once, in 1942, and the FBI caught all eight saboteurs. So why try again?",
+   "visual": "A police line-up wall with height lines: eight hatless men with number plates pop in, two rows of four; on 'caught' each gets a red cross; red pill 'Why again?'.",
+   "title": {
+    "white": "1942"
+   },
+   "cues": {
+    "tried": "tried",
+    "caught": "caught",
+    "why": "why"
+   },
+   "params": {
+    "n": 8,
+    "title": "1942: eight saboteurs",
+    "landed": "tried",
+    "caught": "caught",
+    "labels": [
+     {
+      "text": "Why again?",
+      "x": 0.5,
+      "y": 0.5,
+      "at": "why",
+      "size": 80,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 929
+   },
+   "source": "FBI"
+  },
+  {
+   "type": "stage",
+   "text": "Because this time, one spy was American.",
+   "visual": "A city street: the fez narrator holds up a sign 'AN AMERICAN?' and jumps back in shock on 'American'.",
+   "title": {
+    "white": "The twist"
+   },
+   "cues": {
+    "spy": "spy",
+    "American.": "American."
+   },
+   "params": {
+    "foreground": "hatch",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.32,
+      "y": 0.9,
+      "scale": 1.15,
+      "pose": "walk",
+      "to": 0.5,
+      "face": "right",
+      "at": "spy",
+      "then": "hold",
+      "text": "AN AMERICAN?",
+      "emotion": "surprised"
+     }
+    ],
+    "props": [
+     {
+      "type": "house",
+      "x": 0.8,
+      "y": 0.9,
+      "scale": 1.2
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 972
+   },
+   "camera": {
+    "focus": [
+     900,
+     600
+    ],
+    "zoom": 1.15,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_dossier",
+   "text": "William Colepaugh was born in Connecticut, studied at MIT, and served in the U.S. Navy. But he admired Nazi Germany, and in 1944 he switched sides.",
+   "visual": "Full frame: an open manila file with a clipped portrait sketch of a young hatless man 'W. C. COLEPAUGH'; typed lines appear: 'Connecticut', 'MIT', 'U.S. Navy'; red stamp 'SWITCHED SIDES' slams across.",
+   "title": {
+    "white": "Colepaugh"
+   },
+   "cues": {
+    "Connecticut,": "Connecticut,",
+    "MIT,": "MIT,",
+    "Navy.": "Navy.",
+    "switched": "switched",
+    "hit": "switched"
+   },
+   "params": {
+    "name": "W. C. COLEPAUGH",
+    "tab": "FILE",
+    "lines": [
+     {
+      "text": "Connecticut",
+      "at": "Connecticut,"
+     },
+     {
+      "text": "MIT",
+      "at": "MIT,"
+     },
+     {
+      "text": "U.S. Navy",
+      "at": "Navy."
+     }
+    ],
+    "stamp": {
+     "text": "switched sides",
+     "at": "switched",
+     "x": 0.7,
+     "y": 0.7,
+     "size": 84
+    }
+   },
+   "set": false
+  },
+  {
+   "type": "spy_room",
+   "text": "His partner, Erich Gimpel, was a German radio expert and an experienced spy.",
+   "visual": "A dim room: a table with a home-built radio transmitter (glowing tubes, dials, aerial wire), morse dots rising; Erich Gimpel stands beside it pointing at it; label 'Erich Gimpel'.",
+   "title": {
+    "white": "Gimpel"
+   },
+   "cues": {
+    "Gimpel,": "Gimpel,",
+    "radio": "radio"
+   },
+   "params": {
+    "mode": "radio",
+    "ground": 0.84,
+    "door": {
+     "x": 0.86
+    },
+    "cast": [
+     {
+      "who": "gimpel",
+      "x": 0.36,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "point",
+      "dir": "forward",
+      "face": "left",
+      "emotion": "neutral"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Erich Gimpel",
+      "x": 0.46,
+      "y": 0.4,
+      "at": "Gimpel,",
+      "size": 70,
+      "color": "red"
+     },
+     {
+      "text": "radio expert",
+      "x": 0.66,
+      "y": 0.3,
+      "at": "radio",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "board",
+   "text": "The plan? Live in New York, collect secrets about shipyards, airplane factories and rockets, and send them home by radio and invisible ink.",
+   "visual": "Pinned board 'The plan': card 'Spy on' with shipyards, airplane factories, rockets; card 'Send by' with radio, invisible ink; blue pill 'New York'.",
+   "title": {
+    "white": "The plan"
+   },
+   "cues": {
+    "shipyards,": "shipyards,",
+    "airplane": "airplane",
+    "rockets,": "rockets,",
+    "radio": "radio",
+    "invisible": "invisible",
+    "Live": "Live"
+   },
+   "params": {
+    "title": "The plan",
+    "cards": [
+     {
+      "title": "Spy on",
+      "items": [
+       {
+        "text": "Shipyards",
+        "at": "shipyards,"
+       },
+       {
+        "text": "Aircraft plants",
+        "at": "airplane"
+       },
+       {
+        "text": "Rockets",
+        "at": "rockets,"
+       }
+      ]
+     },
+     {
+      "title": "Send by",
+      "items": [
+       {
+        "text": "Radio",
+        "at": "radio"
+       },
+       {
+        "text": "Invisible ink",
+        "at": "invisible"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "New York",
+     "color": "blue",
+     "at": "Live"
+    }
+   }
+  },
+  {
+   "type": "title",
+   "text": "On paper, it looked perfect. But Germany made one huge mistake. They trusted the American.",
+   "visual": "Giant words 'one huge' / 'mistake', 'mistake' in a red box; the fez narrator points at it.",
+   "title": {
+    "white": "The mistake"
+   },
+   "cues": {
+    "w0": "huge",
+    "w1": "mistake.",
+    "trusted": "trusted"
+   },
+   "params": {
+    "lines": [
+     "One huge",
+     "mistake"
+    ],
+    "highlight": [
+     "mistake"
+    ],
+    "y": 0.42,
+    "kasif": {
+     "x": 0.84,
+     "y": 0.9,
+     "pose": "point",
+     "dir": 30,
+     "face": -1,
+     "scale": 0.95,
+     "at": "trusted",
+     "emotion": "worried"
+    }
+   },
+   "set": {
+    "name": "snow",
+    "ground": 1000
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Back to that snowy night.",
+   "visual": "CHAPTER 2 / 5 card: 'Footprints in the Snow'.",
+   "title": {},
+   "cues": {
+    "n": "Back",
+    "title": "snowy"
+   },
+   "params": {
+    "n": 2,
+    "total": 5,
+    "title": "Footprints in the Snow",
+    "label": "CHAPTER"
+   },
+   "chapter": "Footprints in the Snow"
+  },
+  {
+   "type": "spy_bay",
+   "text": "The two men climbed off the rocks onto a dark country road.",
+   "visual": "The snowy shore at night: the empty rubber dinghy bobs by the rocks while the two men climb up over the snowy rocks with their suitcases toward the pines.",
+   "title": {
+    "white": "Ashore"
+   },
+   "cues": {},
+   "params": {
+    "mode": "row",
+    "sub": false,
+    "raft": {
+     "from": 0.36,
+     "to": 0.38,
+     "at": 0,
+     "dur": 8,
+     "y": 0.8,
+     "s0": 1.1,
+     "s1": 1.1,
+     "empty": true
+    },
+    "rocks": {
+     "x0": 0.5
+    },
+    "cast": [
+     {
+      "who": "gimpel",
+      "x": 0.62,
+      "to": 0.82,
+      "walk_at": 0.3,
+      "walk_dur": 4,
+      "y": 0.8,
+      "scale": 0.5,
+      "pose": "walk",
+      "face": "right"
+     },
+     {
+      "who": "colepaugh",
+      "x": 0.55,
+      "to": 0.73,
+      "walk_at": 0.6,
+      "walk_dur": 4,
+      "y": 0.85,
+      "scale": 0.52,
+      "pose": "walk",
+      "face": "right"
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 605
+   },
+   "camera": {
+    "focus": [
+     1150,
+     760
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_road",
+   "text": "Headlights came around the bend. Mary Forni, driving home, saw two strangers in city clothes walking through the snow at midnight. She didn't stop, but she remembered.",
+   "visual": "On the snowy road a 1940s car with glowing headlights drives past the two men in city coats; a woman at the wheel; label 'Mary Forni'.",
+   "title": {
+    "white": "Mary Forni"
+   },
+   "cues": {
+    "Headlights": "Headlights",
+    "Forni,": "Forni,",
+    "remembered.": "remembered."
+   },
+   "params": {
+    "mode": "car",
+    "ground": 0.78,
+    "spies": {
+     "x": 0.5,
+     "to": 0.64,
+     "dur": 11
+    },
+    "car": {
+     "at": "Headlights",
+     "dur": 7,
+     "from": 1.25,
+     "to": -0.35,
+     "y": 0.87
+    },
+    "labels": [
+     {
+      "text": "Mary Forni",
+      "x": 0.5,
+      "y": 0.22,
+      "at": "Forni,",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "she remembered",
+      "x": 0.5,
+      "y": 0.36,
+      "at": "remembered.",
+      "size": 58
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 842
+   }
+  },
+  {
+   "type": "spy_road",
+   "text": "Then a 17-year-old Boy Scout, Harvard Hodgkins, passed the same two men.",
+   "visual": "Close on the road: a teenage boy in a scout hat walks past the two men going the other way, then turns back and stares at them; red question marks; label 'Harvard Hodgkins, 17'.",
+   "title": {
+    "white": "Boy Scout"
+   },
+   "cues": {
+    "Hodgkins,": "Hodgkins,",
+    "City": "passed",
+    "men.": "men."
+   },
+   "params": {
+    "mode": "teen",
+    "ground": 0.78,
+    "spies": {
+     "x": 0.5,
+     "to": 0.66,
+     "dur": 10
+    },
+    "teen": {
+     "x": 0.92,
+     "to": 0.36,
+     "at": 0.2,
+     "dur": 4,
+     "y": 0.7,
+     "scale": 0.58,
+     "look": "City",
+     "then": "think"
+    },
+    "labels": [
+     {
+      "text": "Harvard Hodgkins, 17",
+      "x": 0.4,
+      "y": 0.24,
+      "at": "Hodgkins,",
+      "size": 64,
+      "color": "red"
+     },
+     {
+      "text": "?",
+      "x": 0.6,
+      "y": 0.38,
+      "at": "men.",
+      "size": 120,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 842
+   },
+   "camera": {
+    "focus": [
+     1000,
+     680
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "board",
+   "text": "City coats and big suitcases, in a snowstorm, in an empty winter village? That made no sense.",
+   "visual": "Pinned board 'What he saw': 'City coats', 'Big suitcases', 'Midnight snowstorm', 'Empty village', each with a red cross; red pill 'No sense'.",
+   "title": {
+    "white": "No sense"
+   },
+   "cues": {
+    "City": "City",
+    "suitcases,": "suitcases,",
+    "snowstorm,": "snowstorm,",
+    "empty": "empty",
+    "sense.": "sense."
+   },
+   "params": {
+    "title": "What he saw",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "City coats",
+        "mark": "x",
+        "at": "City"
+       },
+       {
+        "text": "Big suitcases",
+        "mark": "x",
+        "at": "suitcases,"
+       },
+       {
+        "text": "A snowstorm",
+        "mark": "x",
+        "at": "snowstorm,"
+       },
+       {
+        "text": "Empty village",
+        "mark": "x",
+        "at": "empty"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "No sense",
+     "color": "red",
+     "at": "sense."
+    }
+   },
+   "source": "Bangor Daily News"
+  },
+  {
+   "type": "spy_road",
+   "text": "So he did something smart. He turned around and followed their footprints all the way back to the water.",
+   "visual": "The boy follows a trail of footprints in the snow down to the shore at the right, where an empty rubber dinghy rocks in the dark water.",
+   "title": {
+    "white": "Footprints"
+   },
+   "cues": {
+    "followed": "followed",
+    "water.": "water."
+   },
+   "params": {
+    "mode": "tracks",
+    "ground": 0.66,
+    "prints": {
+     "from": 0.06,
+     "to": 0.74,
+     "at": "followed",
+     "dur": 3
+    },
+    "water": {
+     "from": 0.74
+    },
+    "teen": {
+     "x": 0.26,
+     "to": 0.6,
+     "at": "followed",
+     "dur": 4,
+     "y": 0.4,
+     "scale": 0.55
+    },
+    "labels": [
+     {
+      "text": "the raft",
+      "x": 0.84,
+      "y": 0.42,
+      "at": "water.",
+      "size": 64,
+      "color": "red",
+      "arrow": [
+       0.88,
+       0.68
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 713
+   },
+   "camera": {
+    "focus": [
+     1100,
+     620
+    ],
+    "zoom": 1.2,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_street",
+   "text": "His father was the deputy sheriff. So the local kid cracks the case, right?",
+   "visual": "The Hodgkins house at night, snow on the roof, lit windows: the fez narrator stands at the door holding a sign 'CASE CLOSED?', knocks, then shrugs.",
+   "title": {
+    "white": "Deputy sheriff"
+   },
+   "cues": {
+    "sheriff.": "sheriff.",
+    "right?": "right?",
+    "father": "father"
+   },
+   "params": {
+    "mode": "porch",
+    "ground": 0.9,
+    "porch": {
+     "x": 0.6,
+     "wreath": false,
+     "knock": "sheriff."
+    },
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.3,
+      "y": 0.92,
+      "scale": 1.0,
+      "pose": "hold",
+      "text": "CASE CLOSED?",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "right?",
+        "pose": "shrug",
+        "emotion": "worried"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "the sheriff's house",
+      "x": 0.62,
+      "y": 0.24,
+      "at": "father",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "snow",
+    "ground": 972
+   }
+  },
+  {
+   "type": "spy_road",
+   "text": "Not quite. Days passed before anyone acted. The spies were long gone.",
+   "visual": "The empty snowy road at night: the footprints slowly fill with falling snow and vanish; label 'days later'.",
+   "title": {
+    "white": "Long gone"
+   },
+   "cues": {
+    "Days": "Days"
+   },
+   "params": {
+    "mode": "empty",
+    "ground": 0.8,
+    "prints": {
+     "from": 0.08,
+     "to": 0.92,
+     "at": 0,
+     "fill": "Days"
+    },
+    "labels": [
+     {
+      "text": "days later...",
+      "x": 0.5,
+      "y": 0.26,
+      "at": "Days",
+      "size": 72,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 864
+   },
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.12,
+    "move": "left"
+   }
+  },
+  {
+   "type": "map",
+   "text": "They had walked five miles to the main road, taken a taxi to Bangor, then trains to Boston and New York. But in New York, the real trouble began.",
+   "visual": "Old map of the New England coast: a red dashed route draws from Hancock Point inland to Bangor, then south along the coast to Boston and New York; city dots pop in turn.",
+   "title": {
+    "white": "The getaway"
+   },
+   "cues": {
+    "route": "taxi",
+    "walked": "walked",
+    "Bangor,": "Bangor,",
+    "Boston": "Boston",
+    "York.": "York."
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.1,
+       1.067
+      ],
+      [
+       0.19,
+       0.92
+      ],
+      [
+       0.2,
+       0.8
+      ],
+      [
+       0.24,
+       0.747
+      ],
+      [
+       0.34,
+       0.7
+      ],
+      [
+       0.45,
+       0.68
+      ],
+      [
+       0.53,
+       0.66
+      ],
+      [
+       0.605,
+       0.64
+      ],
+      [
+       0.595,
+       0.593
+      ],
+      [
+       0.54,
+       0.62
+      ],
+      [
+       0.505,
+       0.56
+      ],
+      [
+       0.52,
+       0.513
+      ],
+      [
+       0.54,
+       0.46
+      ],
+      [
+       0.58,
+       0.387
+      ],
+      [
+       0.63,
+       0.353
+      ],
+      [
+       0.7,
+       0.327
+      ],
+      [
+       0.74,
+       0.3
+      ],
+      [
+       0.78,
+       0.283
+      ],
+      [
+       0.84,
+       0.267
+      ],
+      [
+       0.9,
+       0.227
+      ],
+      [
+       0.91,
+       0.173
+      ],
+      [
+       1.0,
+       0.133
+      ],
+      [
+       1.1,
+       0.067
+      ],
+      [
+       1.1,
+       -0.133
+      ],
+      [
+       -0.1,
+       -0.133
+      ]
+     ],
+     [
+      [
+       0.205,
+       0.787
+      ],
+      [
+       0.4,
+       0.72
+      ],
+      [
+       0.41,
+       0.74
+      ],
+      [
+       0.21,
+       0.793
+      ]
+     ]
+    ],
+    "route": {
+     "points": [
+      [
+       0.77,
+       0.28
+      ],
+      [
+       0.72,
+       0.227
+      ],
+      [
+       0.57,
+       0.373
+      ],
+      [
+       0.494,
+       0.552
+      ],
+      [
+       0.3,
+       0.68
+      ],
+      [
+       0.2,
+       0.767
+      ]
+     ],
+     "at": "taxi",
+     "dur": 4,
+     "color": "red"
+    },
+    "cities": [
+     {
+      "name": "Hancock Point",
+      "x": 0.77,
+      "y": 0.28,
+      "at": "walked",
+      "dx": -70,
+      "dy": 52
+     },
+     {
+      "name": "Bangor",
+      "x": 0.72,
+      "y": 0.227,
+      "at": "Bangor,",
+      "dx": -110,
+      "dy": -20
+     },
+     {
+      "name": "Boston",
+      "x": 0.494,
+      "y": 0.552,
+      "at": "Boston"
+     },
+     {
+      "name": "New York",
+      "x": 0.2,
+      "y": 0.767,
+      "at": "York."
+     }
+    ],
+    "compass": "br"
+   },
+   "camera": {
+    "focus": [
+     980,
+     480
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "They rented a Manhattan apartment under fake names.",
+   "visual": "CHAPTER 3 / 5 card: 'Hitler's Money in Manhattan'.",
+   "title": {},
+   "cues": {
+    "n": "rented",
+    "title": "fake"
+   },
+   "params": {
+    "n": 3,
+    "total": 5,
+    "title": "Hitler's Money in Manhattan",
+    "label": "CHAPTER"
+   },
+   "chapter": "Hitler's Money in Manhattan"
+  },
+  {
+   "type": "spy_room",
+   "text": "Gimpel bought radio parts for a transmitter that could reach Germany.",
+   "visual": "Close on the apartment table: Gimpel works over the home-built transmitter, tubes glowing, morse dots rising, aerial wire; label 'to Germany'.",
+   "title": {
+    "white": "Radio parts"
+   },
+   "cues": {
+    "transmitter": "transmitter",
+    "Germany.": "Germany."
+   },
+   "params": {
+    "mode": "radio",
+    "ground": 0.84,
+    "door": {
+     "x": 0.88
+    },
+    "cast": [
+     {
+      "who": "gimpel",
+      "x": 0.52,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "think",
+      "face": "left",
+      "seq": [
+       {
+        "at": "transmitter",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "to Germany",
+      "x": 0.3,
+      "y": 0.18,
+      "at": "Germany.",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   },
+   "camera": {
+    "focus": [
+     560,
+     560
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_street",
+   "text": "Colepaugh had other plans. Nightclubs, bars, shows, new clothes.",
+   "visual": "A New York street at night: bulb-lit signs 'NIGHTCLUB', 'BAR', 'SHOWS' flash on one by one; Colepaugh in a new coat waves, dollar bills fly up around him.",
+   "title": {
+    "white": "Night life"
+   },
+   "cues": {
+    "Nightclubs,": "Nightclubs,",
+    "bars,": "bars,",
+    "shows,": "shows,",
+    "new": "new"
+   },
+   "params": {
+    "mode": "club",
+    "ground": 0.86,
+    "money": "new",
+    "money_x": 0.5,
+    "signs": [
+     {
+      "text": "NIGHTCLUB",
+      "x": 0.26,
+      "y": 0.26,
+      "at": "Nightclubs,",
+      "color": "red"
+     },
+     {
+      "text": "BAR",
+      "x": 0.74,
+      "y": 0.2,
+      "at": "bars,",
+      "color": "gold"
+     },
+     {
+      "text": "SHOWS",
+      "x": 0.62,
+      "y": 0.46,
+      "at": "shows,",
+      "color": "red"
+     }
+    ],
+    "cast": [
+     {
+      "who": "colepaugh",
+      "x": 0.5,
+      "y": 0.86,
+      "scale": 0.7,
+      "pose": "talk",
+      "face": "right",
+      "emotion": "happy",
+      "seq": [
+       {
+        "at": "new",
+        "pose": "wave",
+        "emotion": "happy"
+       }
+      ]
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 929
+   }
+  },
+  {
+   "type": "spy_case",
+   "text": "Within weeks, thousands of dollars of Hitler's money were gone.",
+   "visual": "Close-up of the open suitcase: bills fly out one after another and the rows of bundles shrink; label 'thousands gone'.",
+   "title": {
+    "white": "Money"
+   },
+   "cues": {
+    "thousands": "thousands",
+    "gone.": "gone."
+   },
+   "params": {
+    "mode": "spend",
+    "fly": "thousands",
+    "labels": [
+     {
+      "text": "thousands gone",
+      "x": 0.5,
+      "y": 0.12,
+      "at": "gone.",
+      "size": 76,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 842
+   },
+   "camera": {
+    "focus": [
+     810,
+     600
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_room",
+   "text": "Then, on the twenty-first of December, Colepaugh picked up the suitcases and walked out.",
+   "visual": "The apartment: Colepaugh in his long coat picks up both red suitcases and walks to the door, which swings open; stamp '21 Dec 1944'.",
+   "title": {
+    "white": "21 December"
+   },
+   "cues": {
+    "twenty-first": "twenty-first",
+    "picked": "picked",
+    "walked": "walked"
+   },
+   "params": {
+    "mode": "walkout",
+    "ground": 0.84,
+    "radio": true,
+    "door": {
+     "x": 0.84,
+     "open": "walked"
+    },
+    "walker": {
+     "x": 0.52,
+     "to": 0.84,
+     "at": "picked",
+     "dur": 3.2,
+     "scale": 0.62
+    },
+    "labels": [
+     {
+      "text": "21 Dec 1944",
+      "x": 0.6,
+      "y": 0.13,
+      "at": "twenty-first",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "stage",
+   "text": "And he was about to do the one thing a spy should never do.",
+   "visual": "On a night street the fez narrator taps his chin thinking, then jumps back in shock on 'never'.",
+   "title": {
+    "white": "Spy rule"
+   },
+   "cues": {
+    "never": "never"
+   },
+   "params": {
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.5,
+      "y": 0.9,
+      "scale": 1.3,
+      "pose": "think",
+      "face": "right",
+      "at": "never",
+      "then": "shock",
+      "emotion": "surprised"
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 972
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_street",
+   "text": "Two days before Christmas, he knocked on the door of an old school friend in Queens, and he told him everything. The submarine, the money, the mission.",
+   "visual": "A Queens house front at night with a Christmas wreath on the door: Colepaugh knocks, the door opens and his old friend appears; hand labels pop: 'the submarine', 'the money', 'the mission'.",
+   "title": {
+    "white": "Queens"
+   },
+   "cues": {
+    "knocked": "knocked",
+    "friend": "friend",
+    "told": "told",
+    "Christmas,": "Christmas,",
+    "submarine,": "submarine,",
+    "money,": "money,",
+    "mission.": "mission."
+   },
+   "params": {
+    "mode": "porch",
+    "ground": 0.9,
+    "porch": {
+     "x": 0.56,
+     "knock": "knocked",
+     "open": "friend"
+    },
+    "cast": [
+     {
+      "who": "colepaugh",
+      "x": 0.3,
+      "y": 0.9,
+      "scale": 0.66,
+      "pose": "idle",
+      "face": "right",
+      "seq": [
+       {
+        "at": "knocked",
+        "pose": "point",
+        "dir": "forward"
+       },
+       {
+        "at": "told",
+        "pose": "talk"
+       }
+      ]
+     },
+     {
+      "who": "friend",
+      "x": 0.56,
+      "y": 0.88,
+      "scale": 0.62,
+      "pose": "idle",
+      "face": "left",
+      "hide_until": "friend",
+      "seq": [
+       {
+        "at": "submarine,",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     }
+    ],
+    "labels": [
+     {
+      "text": "Queens, 23 Dec",
+      "x": 0.18,
+      "y": 0.3,
+      "at": "Christmas,",
+      "size": 60,
+      "color": "red"
+     },
+     {
+      "text": "the submarine",
+      "x": 0.82,
+      "y": 0.18,
+      "at": "submarine,",
+      "size": 56
+     },
+     {
+      "text": "the money",
+      "x": 0.84,
+      "y": 0.3,
+      "at": "money,",
+      "size": 56
+     },
+     {
+      "text": "the mission",
+      "x": 0.84,
+      "y": 0.42,
+      "at": "mission.",
+      "size": 56,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 972
+   }
+  },
+  {
+   "type": "spy_room",
+   "text": "His friend didn't believe him. Who would? But Colepaugh told it again, sober this time, and his friend said, you have to go to the FBI.",
+   "visual": "A living room: Colepaugh talks, his friend shrugs, then points at him; a speech bubble pops: 'Go to the FBI!'.",
+   "title": {
+    "white": "Confession"
+   },
+   "cues": {
+    "FBI.": "FBI."
+   },
+   "params": {
+    "mode": "talk",
+    "radio": false,
+    "ground": 0.84,
+    "door": {
+     "x": 0.9
+    },
+    "cast": [
+     {
+      "who": "colepaugh",
+      "x": 0.54,
+      "y": 0.84,
+      "scale": 0.66,
+      "pose": "talk",
+      "face": "right"
+     },
+     {
+      "who": "friend",
+      "x": 0.76,
+      "y": 0.84,
+      "scale": 0.62,
+      "pose": "shrug",
+      "face": "left",
+      "seq": [
+       {
+        "at": "FBI.",
+        "pose": "point",
+        "dir": "forward",
+        "emotion": "angry"
+       }
+      ]
+     }
+    ],
+    "bubbles": [
+     {
+      "text": "Go to the FBI!",
+      "at": "FBI.",
+      "x": 0.7,
+      "y": 0.24,
+      "tail": 0.1
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "spy_room",
+   "text": "On the evening of December twenty-sixth, FBI agents took Colepaugh into custody. But his partner was still out there.",
+   "visual": "The room: the door bursts open, two FBI agents in hats walk in toward Colepaugh, who raises his hands; stamp '26 Dec 1944'.",
+   "title": {
+    "white": "26 December"
+   },
+   "cues": {
+    "agents": "agents",
+    "custody.": "custody.",
+    "twenty-sixth,": "twenty-sixth,"
+   },
+   "params": {
+    "mode": "arrest",
+    "radio": false,
+    "ground": 0.84,
+    "door": {
+     "x": 0.84,
+     "open": "agents"
+    },
+    "cast": [
+     {
+      "who": "colepaugh",
+      "x": 0.3,
+      "y": 0.84,
+      "scale": 0.66,
+      "pose": "idle",
+      "face": "right",
+      "at": "custody.",
+      "then": "shrug",
+      "emotion": "worried"
+     },
+     {
+      "who": "agent1",
+      "x": 0.84,
+      "to": 0.6,
+      "at": "custody.",
+      "scale": 0.64,
+      "pose": "walk",
+      "face": "left",
+      "accessory": "slouch",
+      "hide_until": "agents"
+     },
+     {
+      "who": "agent2",
+      "x": 0.9,
+      "to": 0.72,
+      "at": "custody.",
+      "scale": 0.64,
+      "pose": "walk",
+      "face": "left",
+      "accessory": "slouch",
+      "hide_until": "agents"
+     }
+    ],
+    "labels": [
+     {
+      "text": "26 Dec 1944",
+      "x": 0.5,
+      "y": 0.24,
+      "at": "twenty-sixth,",
+      "size": 70,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Here's the answer to our big question.",
+   "visual": "CHAPTER 4 / 5 card: 'The Spy Who Gave Up'.",
+   "title": {},
+   "cues": {
+    "n": "answer",
+    "title": "question."
+   },
+   "params": {
+    "n": 4,
+    "total": 5,
+    "title": "The Spy Who Gave Up",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Spy Who Gave Up"
+  },
+  {
+   "type": "board",
+   "text": "The mission didn't fall apart because of the snow, the Boy Scout, or clever detective work. It fell apart because one of the spies gave himself up.",
+   "visual": "Pinned board 'Why it failed': 'The snow' (red cross), 'The Boy Scout' (red cross), 'Detective work' (red cross); red pill 'He gave himself up'.",
+   "title": {
+    "white": "The answer"
+   },
+   "cues": {
+    "snow,": "snow,",
+    "Scout,": "Scout,",
+    "detective": "detective",
+    "himself": "himself"
+   },
+   "params": {
+    "title": "Why it failed",
+    "cards": [
+     {
+      "items": [
+       {
+        "text": "The snow",
+        "mark": "x",
+        "at": "snow,"
+       },
+       {
+        "text": "The Boy Scout",
+        "mark": "x",
+        "at": "Scout,"
+       },
+       {
+        "text": "Detective work",
+        "mark": "x",
+        "at": "detective"
+       }
+      ]
+     }
+    ],
+    "pill": {
+     "text": "He gave himself up",
+     "color": "red",
+     "at": "himself"
+    }
+   },
+   "source": "HistoryNet"
+  },
+  {
+   "type": "stage",
+   "text": "And then he helped the FBI catch his partner.",
+   "visual": "A night city street: the fez narrator holds up a sign 'HIS PARTNER?' and points ahead.",
+   "title": {
+    "white": "The partner"
+   },
+   "cues": {
+    "partner.": "partner."
+   },
+   "params": {
+    "foreground": "wall",
+    "cast": [
+     {
+      "who": "kasif",
+      "x": 0.62,
+      "y": 0.9,
+      "scale": 1.1,
+      "pose": "look",
+      "face": "right",
+      "seq": [
+       {
+        "at": "partner.",
+        "pose": "point",
+        "dir": "forward",
+        "face": "left",
+        "emotion": "angry"
+       }
+      ]
+     }
+    ],
+    "props": [
+     {
+      "type": "sign",
+      "text": "PERU",
+      "x": 0.38,
+      "y": 0.9,
+      "scale": 1.0
+     }
+    ]
+   },
+   "set": {
+    "name": "city",
+    "ground": 972
+   },
+   "camera": {
+    "focus": [
+     1100,
+     560
+    ],
+    "zoom": 1.3,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_street",
+   "text": "He told them about one tiny habit. Gimpel read Spanish, and he liked to buy Peruvian newspapers at a newsstand in Times Square. So the agents watched that newsstand, and waited.",
+   "visual": "A Times Square newsstand at night: striped awning, a rack of papers 'NEWS', 'PERU', 'TIMES'; the 'PERU' paper gets a red ring; sign 'TIMES SQUARE' lights up; on 'watched' two FBI agents in hats step out of the shadows on both sides and wait.",
+   "title": {
+    "white": "The habit"
+   },
+   "cues": {
+    "Peruvian": "Peruvian",
+    "Times": "Times",
+    "watched": "watched"
+   },
+   "params": {
+    "mode": "stand",
+    "ground": 0.9,
+    "stand": {
+     "x": 0.5,
+     "w": 0.42,
+     "name": "NEWS",
+     "papers": [
+      {
+       "text": "NEWS"
+      },
+      {
+       "text": "PERU",
+       "hl": true,
+       "at": "Peruvian"
+      },
+      {
+       "text": "TIMES"
+      }
+     ]
+    },
+    "signs": [
+     {
+      "text": "TIMES SQUARE",
+      "x": 0.5,
+      "y": 0.24,
+      "at": "Times",
+      "color": "gold",
+      "size": 70
+     }
+    ],
+    "cast": [
+     {
+      "who": "agent1",
+      "x": 0.19,
+      "y": 0.92,
+      "scale": 0.62,
+      "pose": "think",
+      "face": "right",
+      "accessory": "slouch",
+      "hide_until": "watched"
+     },
+     {
+      "who": "agent2",
+      "x": 0.81,
+      "y": 0.92,
+      "scale": 0.62,
+      "pose": "think",
+      "face": "left",
+      "accessory": "slouch",
+      "hide_until": "watched"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Peruvian papers",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "Peruvian",
+      "size": 56,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 972
+   },
+   "source": "HistoryNet",
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.35,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_street",
+   "text": "On the thirtieth of December, a man stepped up for his Peruvian paper. As he reached into his coat for money, the agents grabbed him. It was Gimpel.",
+   "visual": "At the newsstand Gimpel walks up and reaches into his coat; the two agents rush in from both sides and grab him; stamp 'GIMPEL'.",
+   "title": {
+    "white": "30 December"
+   },
+   "cues": {
+    "thirtieth": "thirtieth",
+    "stepped": "stepped",
+    "reached": "reached",
+    "grabbed": "grabbed",
+    "Gimpel.": "Gimpel.",
+    "Peruvian": "Peruvian",
+    "hit": "grabbed"
+   },
+   "params": {
+    "mode": "stand",
+    "ground": 0.9,
+    "stand": {
+     "x": 0.56,
+     "w": 0.34,
+     "name": "NEWS",
+     "papers": [
+      {
+       "text": "NEWS"
+      },
+      {
+       "text": "PERU",
+       "hl": true,
+       "at": "Peruvian"
+      },
+      {
+       "text": "TIMES"
+      }
+     ]
+    },
+    "cast": [
+     {
+      "who": "gimpel",
+      "x": 0.2,
+      "to": 0.42,
+      "at": "stepped",
+      "walk_dur": 2,
+      "y": 0.92,
+      "scale": 0.66,
+      "pose": "walk",
+      "face": "right",
+      "seq": [
+       {
+        "at": "reached",
+        "pose": "hold",
+        "item": "coin"
+       },
+       {
+        "at": "grabbed",
+        "pose": "shock",
+        "emotion": "surprised"
+       }
+      ]
+     },
+     {
+      "who": "agent1",
+      "x": 0.02,
+      "to": 0.32,
+      "walk_at": "grabbed",
+      "walk_dur": 1,
+      "run": true,
+      "y": 0.92,
+      "scale": 0.66,
+      "pose": "idle",
+      "face": "right",
+      "accessory": "slouch"
+     },
+     {
+      "who": "agent2",
+      "x": 0.98,
+      "to": 0.52,
+      "walk_at": "grabbed",
+      "walk_dur": 1,
+      "run": true,
+      "y": 0.92,
+      "scale": 0.66,
+      "pose": "idle",
+      "face": "left",
+      "accessory": "slouch"
+     }
+    ],
+    "labels": [
+     {
+      "text": "30 Dec 1944",
+      "x": 0.8,
+      "y": 0.24,
+      "at": "thirtieth",
+      "size": 56,
+      "color": "red",
+      "stamp": true
+     },
+     {
+      "text": "Gimpel",
+      "x": 0.42,
+      "y": 0.3,
+      "at": "Gimpel.",
+      "size": 90,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "night",
+    "ground": 972
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "One month and one day after the submarine surfaced, both spies were locked up. But now they faced something much worse than prison.",
+   "visual": "Hand-drawn time line: 29 Nov U-boat lands, 21 Dec walkout, 26 Dec Colepaugh caught, 30 Dec Gimpel caught (in red).",
+   "title": {
+    "white": "One month"
+   },
+   "cues": {
+    "submarine": "submarine",
+    "surfaced,": "surfaced,",
+    "both": "both",
+    "locked": "locked"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "29 Nov",
+      "text": "U-boat lands",
+      "at": "submarine"
+     },
+     {
+      "year": "21 Dec",
+      "text": "Walkout",
+      "at": "surfaced,"
+     },
+     {
+      "year": "26 Dec",
+      "text": "Colepaugh caught",
+      "at": "both"
+     },
+     {
+      "year": "30 Dec",
+      "text": "Gimpel caught",
+      "at": "locked"
+     }
+    ],
+    "focus": 3
+   },
+   "source": "FBI"
+  },
+  {
+   "type": "spy_court",
+   "text": "In February 1945, a military court in New York found them guilty, and both men were sentenced to hang in April.",
+   "visual": "A military court room: an American flag on the wall, three officers behind a long bench, the two defendants seated at a small table in front; red stamp 'GUILTY'.",
+   "title": {
+    "white": "The tribunal"
+   },
+   "cues": {
+    "February": "February",
+    "guilty,": "guilty,",
+    "hit": "guilty,"
+   },
+   "params": {
+    "stamp": {
+     "text": "Guilty",
+     "at": "guilty,",
+     "x": 0.5,
+     "y": 0.28,
+     "size": 130
+    },
+    "labels": [
+     {
+      "text": "February 1945",
+      "x": 0.24,
+      "y": 0.45,
+      "at": "February",
+      "size": 60,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "interior",
+    "ground": 907
+   },
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.12,
+    "move": "push"
+   }
+  },
+  {
+   "type": "timeline",
+   "text": "Then, on April twelfth, President Franklin Roosevelt died, just days before the executions. Everything was put on hold.",
+   "visual": "Hand-drawn time line of 1945: Feb sentenced, 12 Apr Roosevelt dies (red), April executions on hold.",
+   "title": {
+    "white": "April 1945"
+   },
+   "cues": {
+    "Then,": "Then,",
+    "Roosevelt": "Roosevelt",
+    "hold.": "hold."
+   },
+   "params": {
+    "items": [
+     {
+      "year": "Feb 1945",
+      "text": "Sentenced",
+      "at": "Then,"
+     },
+     {
+      "year": "12 Apr",
+      "text": "Roosevelt dies",
+      "at": "Roosevelt"
+     },
+     {
+      "year": "April",
+      "text": "Executions on hold",
+      "at": "hold."
+     }
+    ],
+    "focus": 1
+   },
+   "camera": false
+  },
+  {
+   "type": "title",
+   "text": "Germany soon surrendered, and President Harry Truman changed both sentences to life in prison. Gimpel was freed in 1955, Colepaugh in 1960.",
+   "visual": "Giant words 'life in' / 'prison', 'life' in a red box; handwritten note 'freed 1955 & 1960'.",
+   "title": {
+    "white": "Truman"
+   },
+   "cues": {
+    "w0": "life",
+    "w1": "prison.",
+    "note": "1955,"
+   },
+   "params": {
+    "lines": [
+     "Life in",
+     "prison"
+    ],
+    "highlight": [
+     "life"
+    ],
+    "y": 0.4,
+    "note": {
+     "text": "freed 1955 & 1960",
+     "at": "1955,"
+    }
+   },
+   "set": {
+    "name": "city",
+    "ground": 1000
+   },
+   "source": "Boston.com"
+  },
+  {
+   "type": "spy_bay",
+   "text": "But U-1230 had left something else behind in Maine. Something that stayed hidden for over eighty years.",
+   "visual": "The snowy bay again: the U-boat sinks back under the water in a trail of bubbles; the fez narrator on the near rocks points at it, worried.",
+   "title": {
+    "white": "Hidden"
+   },
+   "cues": {
+    "left": "left",
+    "hidden": "hidden",
+    "eighty": "eighty"
+   },
+   "params": {
+    "mode": "dive",
+    "sub": {
+     "x": 0.45,
+     "dive": "hidden"
+    },
+    "rocks": true,
+    "kasif": {
+     "x": 0.86,
+     "y": 0.76,
+     "scale": 0.9,
+     "pose": "point",
+     "dir": 10,
+     "face": "left",
+     "emotion": "worried",
+     "at": "hidden",
+     "then": "think"
+    },
+    "labels": [
+     {
+      "text": "80 years",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "eighty",
+      "size": 80,
+      "color": "red",
+      "stamp": true
+     }
+    ]
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 605
+   }
+  },
+  {
+   "type": "chapter",
+   "text": "Four days after the landing, the same submarine struck again.",
+   "visual": "CHAPTER 5 / 5 card: 'The Other Victim'.",
+   "title": {},
+   "cues": {
+    "n": "Four",
+    "title": "struck"
+   },
+   "params": {
+    "n": 5,
+    "total": 5,
+    "title": "The Other Victim",
+    "label": "CHAPTER"
+   },
+   "chapter": "The Other Victim"
+  },
+  {
+   "type": "spy_sea",
+   "text": "On the third of December, it torpedoed a Canadian cargo ship, the SS Cornwallis. Of the 48 aboard, only five survived.",
+   "visual": "Open sea: a steam cargo ship with a red funnel sails right; a torpedo wake streaks in from bottom left and hits it, a white water column bursts up, the ship lists; label 'SS Cornwallis', note '48 aboard, 5 survived'.",
+   "title": {
+    "white": "SS Cornwallis"
+   },
+   "cues": {
+    "third": "third",
+    "hit": "Canadian",
+    "Cornwallis.": "Cornwallis.",
+    "five": "five"
+   },
+   "params": {
+    "mode": "torpedo",
+    "water": 0.56,
+    "ship": {
+     "x": 0.6
+    },
+    "torpedo": {
+     "at": "third",
+     "dur": 2
+    },
+    "labels": [
+     {
+      "text": "SS Cornwallis",
+      "x": 0.25,
+      "y": 0.28,
+      "at": "Cornwallis.",
+      "size": 72,
+      "color": "red"
+     },
+     {
+      "text": "48 aboard, 5 survived",
+      "x": 0.25,
+      "y": 0.38,
+      "at": "five",
+      "size": 60
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 605
+   },
+   "source": "Boston.com"
+  },
+  {
+   "type": "map",
+   "text": "For decades, nobody knew where she lay. In 2019, a team of civilian divers, the Nomad Exploration Team, began to search. It took seven years of sonar scans.",
+   "visual": "Close on the old map of the Maine coast: a red dashed search track zig-zags back and forth over the sea off Mount Desert Island; note 'seven years of sonar scans'.",
+   "title": {
+    "white": "The search"
+   },
+   "cues": {
+    "route": "search.",
+    "search.": "search.",
+    "seven": "seven"
+   },
+   "params": {
+    "coords": "sheet",
+    "land": [
+     [
+      [
+       -0.1,
+       1.067
+      ],
+      [
+       0.19,
+       0.92
+      ],
+      [
+       0.2,
+       0.8
+      ],
+      [
+       0.24,
+       0.747
+      ],
+      [
+       0.34,
+       0.7
+      ],
+      [
+       0.45,
+       0.68
+      ],
+      [
+       0.53,
+       0.66
+      ],
+      [
+       0.605,
+       0.64
+      ],
+      [
+       0.595,
+       0.593
+      ],
+      [
+       0.54,
+       0.62
+      ],
+      [
+       0.505,
+       0.56
+      ],
+      [
+       0.52,
+       0.513
+      ],
+      [
+       0.54,
+       0.46
+      ],
+      [
+       0.58,
+       0.387
+      ],
+      [
+       0.63,
+       0.353
+      ],
+      [
+       0.7,
+       0.327
+      ],
+      [
+       0.74,
+       0.3
+      ],
+      [
+       0.78,
+       0.283
+      ],
+      [
+       0.84,
+       0.267
+      ],
+      [
+       0.9,
+       0.227
+      ],
+      [
+       0.91,
+       0.173
+      ],
+      [
+       1.0,
+       0.133
+      ],
+      [
+       1.1,
+       0.067
+      ],
+      [
+       1.1,
+       -0.133
+      ],
+      [
+       -0.1,
+       -0.133
+      ]
+     ],
+     [
+      [
+       0.205,
+       0.787
+      ],
+      [
+       0.4,
+       0.72
+      ],
+      [
+       0.41,
+       0.74
+      ],
+      [
+       0.21,
+       0.793
+      ]
+     ]
+    ],
+    "route": {
+     "points": [
+      [
+       0.9,
+       0.44
+      ],
+      [
+       0.67,
+       0.44
+      ],
+      [
+       0.67,
+       0.407
+      ],
+      [
+       0.9,
+       0.407
+      ],
+      [
+       0.9,
+       0.373
+      ],
+      [
+       0.67,
+       0.373
+      ],
+      [
+       0.67,
+       0.34
+      ],
+      [
+       0.86,
+       0.34
+      ]
+     ],
+     "at": 0.4,
+     "dur": 5,
+     "color": "red"
+    },
+    "cities": [
+     {
+      "name": "Hancock Point",
+      "x": 0.77,
+      "y": 0.28,
+      "at": 0.3,
+      "dx": 20,
+      "dy": 48
+     },
+     {
+      "name": "Bangor",
+      "x": 0.72,
+      "y": 0.227,
+      "at": 0.3,
+      "dx": -110,
+      "dy": -20
+     }
+    ],
+    "note": {
+     "text": "7 years of sonar scans",
+     "x": 0.66,
+     "y": 0.72,
+     "at": "seven"
+    },
+    "compass": "br"
+   },
+   "camera": {
+    "focus": [
+     1060,
+     480
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_sea",
+   "text": "This July, they finally found her, almost four hundred feet down in the Gulf of Maine.",
+   "visual": "Deep on the sea floor: the dark hull of a steamship lies on the bottom with broken masts and portholes, divers' torch beams sweep over it, fish drift by; a red depth arrow '400 FT'.",
+   "title": {
+    "white": "Found"
+   },
+   "cues": {
+    "four": "four",
+    "July,": "July,"
+   },
+   "params": {
+    "mode": "wreck",
+    "x": 0.52,
+    "depth": {
+     "text": "400 FT",
+     "at": "four",
+     "x": 0.8,
+     "tx": 0.68,
+     "y0": 0.08,
+     "y1": 0.66
+    },
+    "labels": [
+     {
+      "text": "July 2026",
+      "x": 0.42,
+      "y": 0.45,
+      "at": "July,",
+      "size": 66,
+      "color": "red"
+     }
+    ]
+   },
+   "set": {
+    "name": "ocean",
+    "horizon": 60
+   },
+   "source": "Smithsonian",
+   "camera": {
+    "focus": [
+     1000,
+     660
+    ],
+    "zoom": 1.4,
+    "move": "push"
+   }
+  },
+  {
+   "type": "spy_bay",
+   "text": "A submarine, two months at sea, sixty thousand dollars. And it all came undone because one spy decided he had made a huge mistake.",
+   "visual": "The snowy bay: the U-boat slides under the water on 'submarine'; on the near rocks a red suitcase sits open and dollar bills flutter out of it on 'sixty'; the fez narrator points at it, then shrugs on 'mistake'.",
+   "title": {
+    "white": "Undone"
+   },
+   "cues": {
+    "submarine,": "submarine,",
+    "sixty": "sixty",
+    "undone": "undone",
+    "mistake.": "mistake."
+   },
+   "params": {
+    "mode": "dive",
+    "sub": {
+     "x": 0.3,
+     "dive": "submarine,"
+    },
+    "rocks": {
+     "x0": 0.38
+    },
+    "case": {
+     "x": 0.5,
+     "y": 0.76,
+     "fly": "sixty"
+    },
+    "kasif": {
+     "x": 0.76,
+     "y": 0.9,
+     "scale": 0.95,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "surprised",
+     "seq": [
+      {
+       "at": "undone",
+       "pose": "point",
+       "dir": "forward",
+       "emotion": "surprised"
+      },
+      {
+       "at": "mistake.",
+       "pose": "shrug",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "storm",
+    "horizon": 605
+   }
+  },
+  {
+   "type": "spy_road",
+   "text": "If you had been Harvard Hodgkins that night, would you have followed those footprints? Tell me in the comments, and subscribe to Stickstory for more of history's strangest true stories.",
+   "visual": "The snowy night shore: a trail of footprints leads down to the empty raft at the water; the fez narrator stands beside the trail, points at it, then waves.",
+   "title": {
+    "white": "Your turn"
+   },
+   "cues": {
+    "subscribe": "subscribe"
+   },
+   "params": {
+    "mode": "tracks",
+    "ground": 0.66,
+    "prints": {
+     "from": 0.06,
+     "to": 0.74,
+     "at": 0.2,
+     "dur": 2.5
+    },
+    "water": {
+     "from": 0.74
+    },
+    "kasif": {
+     "x": 0.36,
+     "y": 0.9,
+     "scale": 1.0,
+     "pose": "point",
+     "dir": -20,
+     "face": "right",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "subscribe",
+       "pose": "wave",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "set": {
+    "name": "night",
+    "ground": 713
+   }
+  }
+ ]
+}

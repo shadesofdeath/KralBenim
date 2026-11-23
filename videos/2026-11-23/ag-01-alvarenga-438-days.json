@@ -1,0 +1,786 @@
+{
+ "lang": "en",
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "subtitles": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-01-alvarenga-438-days",
+ "engine": "studio",
+ "theme": "parchment",
+ "palette": "ag-slate",
+ "format": "short",
+ "fps": 30,
+ "cover": {
+  "lines": [
+   "438 days",
+   "adrift"
+  ],
+  "highlight": [
+   "adrift"
+  ],
+  "scene": 0,
+  "t": 2.2,
+  "focus": [
+   560,
+   820
+  ],
+  "zoom": 1.38,
+  "kasif": {
+   "pose": "shock",
+   "emotion": "surprised",
+   "face": 1,
+   "x": 330,
+   "y": 2250,
+   "scale": 1.6
+  }
+ },
+ "sources": [
+  {
+   "title": "Wikipedia — José Salvador Alvarenga (left Costa Azul, Chiapas, 17 Nov 2012 in a 7 m fiberglass skiff; storm damaged the motor, radio battery died; fish, turtles, birds; turtle blood and urine; landed on Ebon Atoll, Marshall Islands, 30 Jan 2014; 438 days, est. 5,500–6,700 miles)",
+   "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Salvador_Alvarenga"
+  },
+  {
+   "title": "National Geographic (2014) — Man adrift at sea: how he survived (fish, birds and turtles caught by hand; turtle blood and urine when there was no rain; companion died)",
+   "url": "https://www.nationalgeographic.com/science/article/140203-man-adrift-sea-survival-oceans-medicine-science"
+  },
+  {
+   "title": "CNN (2016) — Real-life castaway survived 438 days lost at sea (left Costa Azul 17 Nov 2012; engine failed in a storm; caught fish and seabirds with bare hands; about 6,000 miles by drift models)",
+   "url": "https://amp.cnn.com/cnn/2016/01/08/world/rewind-real-life-castaway/index.html"
+  },
+  {
+   "title": "AP via NY1 (3 Nov 2026) — After months lost at sea on a small boat, 5 people are rescued in Kiribati",
+   "url": "https://ny1.com/nyc/all-boroughs/ap-top-news/2026/11/03/after-months-lost-at-sea-on-a-small-boat-5-people-are-rescued-in-the-island-nation-of-kiribati"
+  }
+ ],
+ "youtube": {
+  "title": "Salvador Alvarenga: How Did He Survive 438 Days Adrift?",
+  "description": "Salvador Alvarenga drifted across the Pacific for 438 days in an open fishing boat. How does a man stay alive for 14 months with no engine, no radio and no food?\n\nIn November 2012 the fisherman left Costa Azul, Mexico, with a young crewmate. A storm killed the outboard and the radio went dead. Alvarenga caught fish, seabirds and sea turtles by hand, drank rainwater and, when the rain stopped, turtle blood. His crewmate did not survive. In January 2014 he washed ashore on Ebon Atoll in the Marshall Islands, about 6,000 miles from where he started, one of the longest survival-at-sea stories ever recorded.\n\nSubscribe to Stickstory for one wild true story a day. Could you last even one week out there? Tell me in the comments!\n\n#shorts #salvadoralvarenga #stickstory",
+  "tags": [
+   "salvador alvarenga",
+   "jose salvador alvarenga",
+   "alvarenga 438 days",
+   "salvador alvarenga lost at sea",
+   "438 days at sea",
+   "lost at sea survival",
+   "castaway true story",
+   "survival at sea",
+   "pacific ocean castaway",
+   "marshall islands",
+   "ebon atoll",
+   "survival stories",
+   "true survival story",
+   "crazy true stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-23T13:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "alv_sea",
+   "text": "This man drifted at sea for 438 days.",
+   "visual": "Open Pacific under a blazing sun: a small white fiberglass skiff with a blue stripe, its dead outboard tilted up, rocks alone on the swell; the thin fisherman sits on it staring at the empty horizon; two gulls circle; a big dark swell rolls across the foreground. (Hook frame: cover block with the big shocked fez host.)",
+   "set": {
+    "name": "ocean",
+    "horizon": 600,
+    "ground": 960
+   },
+   "cues": {
+    "hit": "438"
+   },
+   "params": {
+    "mode": "hook",
+    "sea": 0.5,
+    "boat": {
+     "x": 0.56,
+     "s": 1.15
+    },
+    "hero": {
+     "scale": 0.55,
+     "pose": "sit",
+     "face": "right",
+     "emotion": "worried",
+     "beard": "short"
+    },
+    "hero_at": -150
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "alv_map",
+   "text": "Five people just survived three months adrift near Kiribati.",
+   "visual": "Old ink map of the Pacific: the Americas on the right, the island dots of Kiribati in the middle; on 'Kiribati' a red pin drops on the Line Islands with a pulsing ring and card 'KIRIBATI, 2026'; the fez host stands on the map at the lower right and points at the pin.",
+   "set": false,
+   "cues": {
+    "k": "Kiribati",
+    "m": "months"
+   },
+   "params": {
+    "pins": [
+     {
+      "lon": 200.6,
+      "lat": 3.9,
+      "at": "k"
+     }
+    ],
+    "labels": [
+     {
+      "text": "KIRIBATI, 2026",
+      "x": 0.44,
+      "y": 0.33,
+      "at": "k",
+      "size": 62,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     },
+     {
+      "text": "3 MONTHS",
+      "x": 0.42,
+      "y": 0.47,
+      "at": "m",
+      "size": 70,
+      "color": "ink",
+      "font": "hand",
+      "rot": -4,
+      "underline": false
+     }
+    ],
+    "kasif": {
+     "x": 0.82,
+     "y": 0.58,
+     "scale": 0.8,
+     "pose": "point",
+     "dir": 25,
+     "face": "left",
+     "emotion": "surprised"
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "left"
+   }
+  },
+  {
+   "type": "alv_shore",
+   "text": "But in 2012, Salvador Alvarenga went further.",
+   "visual": "A Mexican beach at Costa Azul: a palm-thatch hut and a palm at the left, the white skiff afloat at the surf line; the fisherman (soft hat) stands on the sand and points at the boat while his young crewmate in the skiff waves; cards 'ALVARENGA' and 'MEXICO, 2012'; driftwood, shells and beach grass in the foreground.",
+   "set": {
+    "name": "coast",
+    "horizon": 880,
+    "ground": 1056
+   },
+   "cues": {
+    "y": "2012",
+    "n": "Alvarenga"
+   },
+   "params": {
+    "mode": "start",
+    "gy": 0.55,
+    "hut": 0.17,
+    "palms": [
+     [
+      0.05,
+      0.9,
+      false
+     ]
+    ],
+    "boat": {
+     "x": 0.68,
+     "s": 1.0,
+     "water": true
+    },
+    "hero": {
+     "x": 0.3,
+     "y": 0.63,
+     "scale": 0.8,
+     "pose": "idle",
+     "face": "right",
+     "accessory": "slouch",
+     "seq": [
+      {
+       "at": "n",
+       "pose": "point",
+       "dir": 5,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "mate": {
+     "scale": 0.58,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy"
+    },
+    "mate_at": -110,
+    "labels": [
+     {
+      "text": "MEXICO, 2012",
+      "x": 0.66,
+      "y": 0.2,
+      "at": "y",
+      "size": 62,
+      "color": "ink",
+      "font": "serif",
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "ALVARENGA",
+      "x": 0.64,
+      "y": 0.28,
+      "at": "n",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "right"
+   }
+  },
+  {
+   "type": "alv_sea",
+   "text": "A storm killed his engine.",
+   "visual": "A storm at sea: black clouds, slanting rain, a lightning bolt; the skiff pitches on big waves, the outboard coughs smoke, then on 'engine' a last black puff and a red spark: it dies; the fisherman jumps back in shock, the crewmate clings on; red card 'ENGINE DEAD'; a huge dark swell in the foreground.",
+   "set": {
+    "name": "storm",
+    "horizon": 600,
+    "ground": 960
+   },
+   "cues": {
+    "bolt": "storm",
+    "engine": "engine",
+    "hit": "engine"
+   },
+   "params": {
+    "mode": "storm",
+    "sea": 0.5,
+    "boat": {
+     "x": 0.54,
+     "s": 1.1
+    },
+    "engine": "engine",
+    "bolt": [
+     "bolt"
+    ],
+    "hero": {
+     "scale": 0.55,
+     "pose": "look",
+     "face": "left",
+     "accessory": "slouch",
+     "emotion": "worried",
+     "seq": [
+      {
+       "at": "engine",
+       "pose": "shock",
+       "face": "left"
+      }
+     ]
+    },
+    "hero_at": -170,
+    "mate": {
+     "scale": 0.5,
+     "pose": "idle",
+     "face": "left",
+     "emotion": "worried"
+    },
+    "mate_at": -40,
+    "labels": [
+     {
+      "text": "ENGINE DEAD",
+      "x": 0.6,
+      "y": 0.27,
+      "at": "engine",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "alv_close",
+   "text": "Then his radio died.",
+   "visual": "Close-up in the rain: a hand holds a walkie-talkie up over the boat's gunwale, its screen glows gold and signal arcs pulse from the antenna; hand-written 'HELP!'; on 'died' the screen goes black, the arcs stop and a battery icon at the top right drains to red; red card 'DEAD'.",
+   "set": {
+    "name": "storm",
+    "horizon": 1056,
+    "ground": 1400
+   },
+   "cues": {
+    "help": "radio",
+    "dead": "died",
+    "hit": "died"
+   },
+   "params": {
+    "mode": "radio",
+    "dead": "dead",
+    "labels": [
+     {
+      "text": "HELP!",
+      "x": 0.27,
+      "y": 0.2,
+      "at": 0.05,
+      "size": 110,
+      "color": "ink",
+      "font": "hand",
+      "rot": -8,
+      "underline": false
+     },
+     {
+      "text": "DEAD",
+      "x": 0.3,
+      "y": 0.32,
+      "at": "dead",
+      "size": 90,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "alv_sea",
+   "text": "So he caught fish and birds by hand,",
+   "visual": "Close on the drifting skiff in calm sun: the bearded fisherman holds his arm out to the side and a fish leaps out of the water straight into his hand, splash; on 'birds' a gull swoops in and he grabs it with the other hand, its wings flapping; card 'BY HAND'; foreground swell.",
+   "set": {
+    "name": "ocean",
+    "horizon": 600,
+    "ground": 960
+   },
+   "cues": {
+    "fish": "fish",
+    "bird": "birds",
+    "h": "hand"
+   },
+   "params": {
+    "mode": "catch",
+    "sea": 0.5,
+    "boat": {
+     "x": 0.5,
+     "s": 1.1,
+     "rock": 2
+    },
+    "fish": "fish",
+    "bird": "bird",
+    "gulls": 1,
+    "hero": {
+     "scale": 0.58,
+     "pose": "point",
+     "dir": 15,
+     "face": "right",
+     "emotion": "angry",
+     "beard": "short",
+     "seq": [
+      {
+       "at": "fish",
+       "pose": "point",
+       "dir": 15,
+       "face": "right",
+       "emotion": "happy"
+      }
+     ]
+    },
+    "hero_at": -60,
+    "labels": [
+     {
+      "text": "BY HAND",
+      "x": 0.52,
+      "y": 0.2,
+      "at": "h",
+      "size": 80,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     720
+    ],
+    "zoom": 1.6,
+    "move": "push"
+   }
+  },
+  {
+   "type": "alv_close",
+   "text": "and when the rain stopped, he drank turtle blood.",
+   "visual": "Close-up: the bearded, sunburnt fisherman stands big behind the boat's white gunwale under a blazing sun; a raindrop icon appears and is crossed out red on 'rain'; on 'turtle' he lifts a sea turtle out of the water into his arms; red card 'TURTLE BLOOD'; on the hull in front: a drying line with fish skeletons, a rope coil hanging over the rim, water lapping at the bottom.",
+   "set": {
+    "name": "ocean",
+    "horizon": 860,
+    "ground": 1500
+   },
+   "cues": {
+    "rain": "rain",
+    "turtle": "turtle",
+    "b": "blood"
+   },
+   "params": {
+    "mode": "turtle",
+    "rain": "rain",
+    "turtle": "turtle",
+    "gy": 0.74,
+    "gun": 0.68,
+    "hero": {
+     "x": 0.34,
+     "scale": 1.3,
+     "pose": "idle",
+     "face": "right",
+     "emotion": "worried",
+     "beard": "short",
+     "seq": [
+      {
+       "at": "turtle",
+       "pose": "point",
+       "dir": 50,
+       "face": "right",
+       "emotion": "worried"
+      }
+     ]
+    },
+    "labels": [
+     {
+      "text": "TURTLE BLOOD",
+      "x": 0.56,
+      "y": 0.35,
+      "at": "b",
+      "size": 72,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "up"
+   }
+  },
+  {
+   "type": "alv_sea",
+   "text": "His young crewmate didn't make it.",
+   "visual": "Night on the open sea: moon and stars, dark water; the skiff drifts with only the fisherman on board, sitting with his head down; the crewmate's red cap lies on the icebox; small hand-written card 'EZEQUIEL' beside it.",
+   "set": {
+    "name": "night",
+    "horizon": 620,
+    "ground": 960
+   },
+   "cues": {
+    "n": "crewmate"
+   },
+   "params": {
+    "mode": "night",
+    "sea": 0.5,
+    "boat": {
+     "x": 0.48,
+     "s": 1.15,
+     "rock": 2
+    },
+    "cap": true,
+    "hero": {
+     "scale": 0.56,
+     "pose": "sit",
+     "face": "right",
+     "emotion": "worried",
+     "beard": "short"
+    },
+    "hero_at": -150,
+    "labels": [
+     {
+      "text": "EZEQUIEL",
+      "x": 0.62,
+      "y": 0.3,
+      "at": "n",
+      "size": 64,
+      "color": "ink",
+      "font": "hand",
+      "rot": -4,
+      "underline": false
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "pull"
+   }
+  },
+  {
+   "type": "alv_shore",
+   "text": "Fourteen months later, he washed up in the Marshall Islands.",
+   "visual": "A tropical atoll: tall palms sway on a white beach at the right; the battered skiff drifts in from the left and runs onto the sand; the thin, long-bearded fisherman stands up in it and points at the palms, stunned; card 'EBON ATOLL'; shells, driftwood and beach grass in the foreground.",
+   "set": {
+    "name": "coast",
+    "horizon": 880,
+    "ground": 1056
+   },
+   "cues": {
+    "palm": "washed",
+    "d": "Fourteen",
+    "m": "Marshall"
+   },
+   "params": {
+    "mode": "land",
+    "gy": 0.55,
+    "palms": [
+     [
+      0.68,
+      0.95,
+      false
+     ],
+     [
+      0.84,
+      0.8,
+      true
+     ],
+     [
+      0.98,
+      1.05,
+      false
+     ]
+    ],
+    "boat": {
+     "x": 0.42,
+     "s": 1.15,
+     "from": -0.4,
+     "at": "d",
+     "dur": 1.6,
+     "water": true
+    },
+    "hero": {
+     "scale": 0.7,
+     "pose": "sit",
+     "face": "right",
+     "emotion": "worried",
+     "beard": "black",
+     "seq": [
+      {
+       "at": "palm",
+       "pose": "point",
+       "dir": 25,
+       "face": "right",
+       "emotion": "surprised"
+      }
+     ]
+    },
+    "hero_at": -110,
+    "labels": [
+     {
+      "text": "EBON ATOLL",
+      "x": 0.7,
+      "y": 0.17,
+      "at": "m",
+      "size": 70,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  },
+  {
+   "type": "alv_map",
+   "text": "He'd drifted about 6,000 miles with no engine.",
+   "visual": "The Pacific map again: a red dashed drift line draws itself from Mexico west across the ocean, a tiny white skiff at its head, and ends on the Marshall Islands where a red pin drops; a card counts up to '~6,000 MILES' and turns red; labels 'MEXICO' and 'MARSHALL ISLANDS'.",
+   "source": "CNN, National Geographic",
+   "set": false,
+   "cues": {
+    "c": "about",
+    "mi": "miles",
+    "e": "engine",
+    "hit": "engine"
+   },
+   "params": {
+    "pins": [
+     {
+      "lon": 266.8,
+      "lat": 15.4,
+      "at": 0.1
+     },
+     {
+      "lon": 168.8,
+      "lat": 4.6,
+      "at": 0.1
+     }
+    ],
+    "route": {
+     "points": [
+      [
+       266.8,
+       15.4
+      ],
+      [
+       258,
+       12.4
+      ],
+      [
+       246,
+       10.8
+      ],
+      [
+       232,
+       10.2
+      ],
+      [
+       218,
+       9.6
+      ],
+      [
+       204,
+       9.4
+      ],
+      [
+       190,
+       8.6
+      ],
+      [
+       178,
+       7.2
+      ],
+      [
+       168.8,
+       4.6
+      ]
+     ],
+     "at": 0.1,
+     "dur": 2.4
+    },
+    "counter": {
+     "to": 6000,
+     "unit": "MILES",
+     "at": "c",
+     "dur": 1.6,
+     "x": 0.5,
+     "y": 0.53,
+     "size": 92
+    },
+    "labels": [
+     {
+      "text": "MEXICO",
+      "x": 0.8,
+      "y": 0.43,
+      "at": 0.2,
+      "size": 60,
+      "color": "ink",
+      "font": "serif",
+      "rot": -3,
+      "underline": false
+     },
+     {
+      "text": "MARSHALL ISLANDS",
+      "x": 0.4,
+      "y": 0.3,
+      "at": 0.1,
+      "size": 60,
+      "color": "red",
+      "font": "serif",
+      "rot": -3,
+      "underline": false,
+      "box": true
+     }
+    ]
+   },
+   "camera": {
+    "zoom": 1.06,
+    "move": "push"
+   }
+  },
+  {
+   "type": "alv_shore",
+   "text": "Subscribe for a wild true story every day.",
+   "visual": "The atoll beach: the battered skiff lies beached on its side under the palms; the fez host stands on the sand next to it, waves at the viewer, then points at them on 'story'; beach grass and shells in the foreground.",
+   "set": {
+    "name": "coast",
+    "horizon": 880,
+    "ground": 1056
+   },
+   "cues": {
+    "p": "story"
+   },
+   "params": {
+    "mode": "end",
+    "gy": 0.55,
+    "palms": [
+     [
+      0.08,
+      0.95,
+      true
+     ],
+     [
+      0.88,
+      1.05,
+      false
+     ]
+    ],
+    "boat": {
+     "x": 0.34,
+     "s": 1.0,
+     "rot": -5
+    },
+    "kasif": {
+     "x": 0.74,
+     "y": 0.7,
+     "scale": 1.15,
+     "pose": "wave",
+     "face": "left",
+     "emotion": "happy",
+     "seq": [
+      {
+       "at": "p",
+       "pose": "point",
+       "dir": 8,
+       "face": "left",
+       "emotion": "happy"
+      }
+     ]
+    }
+   },
+   "camera": {
+    "zoom": 1.05,
+    "move": "push"
+   }
+  }
+ ]
+}

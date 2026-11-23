@@ -115,3 +115,19 @@ birde, etiket ilk karede soluk; (3) runik sahnesinde harflerin altı boş + y≈
 Tur 2'nin kalan 3 notu düzeltildi: uydu çerçevesi y 300–1150 + "saray"da yaklaşma, harita odağı kadraj ortasında ve
 etiket ilk karede koyu, runik sütunlar kadrajı dolduruyor ve başıboş çizgi kaldırıldı, açılışta "uyarı" parıltısı güçlendi.
 Metin ve kapak ayarı değişmedi. Yönetmen sheet.png ve cover.jpg'yi gördü; yeniden puanlama yapılmadı (tur 2 puanları geçerli).
+
+---
+
+# Daily batch 2026-11-23 — Stickstory
+
+- Plan (`plan.py --channel ag`): 2 Shorts (13:00 + 19:00 New York = 21:00 / 03:00 Istanbul) + 1 long (14:00 New York = 22:00 Istanbul). Next long video: 2026-11-25.
+- ElevenLabs: 12,532 chars used this month (budget 231,442; renews 2026-12-20), no warning.
+- 2026-11-22 folder missing (no production that day); all 2026-11-21 Stickstory scripts have `*.youtube.json`.
+- API check (`api-check.yml`) triggered.
+- `tools/news.py` blocked by agent proxy (403 for Google News, all 7 countries) → headlines scanned with WebSearch.
+- Per-video briefs: `production-ag-01.md`, `production-ag-02.md`, `production-ag-03.md`.
+
+## Stickstory — director's final gate (12:50 Istanbul)
+- 3 rounds of critique each; final scores: ag-01 all 8 (accuracy 9), ag-02 all 8 (accuracy 9), ag-03 7–9 (cover 8).
+- Lint 0 errors / SEO 100 on all files; director viewed every sheet.png and cover.jpg.
+- Topics differ from each other and from both channels' history (Alvarenga ≠ Poon Lim raft story; Tollense, Operation Elster new).
