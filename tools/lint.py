@@ -13,14 +13,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
-from plan import LIMITS_BELGESEL, LIMITS, SCENES  # noqa: E402
+from plan import SCENES, limits_of  # noqa: E402
 from channels import CHANNELS, DEFAULT, of_file  # noqa: E402
 
 MODEL = "eleven_v3"     # voice per channel: tools/channels.py voice_id
 SETS = ["field", "hills", "desert", "sea", "ocean", "coast", "city", "interior", "night", "snow", "storm"]   # scenes/studio/sets.js
 CAM_MOVES = ["push", "pull", "left", "right", "up", "down", "still"]                                  # engine.js camera
-THEME = "parchment"   # sepia parchment + Kaşif (brand/kit/BRAND.md): Stickstory
-BELGESEL = "belgesel"  # documentary style (docs/BELGESEL.md, owner 2026-10-29): every Düşün Bakalım video
+THEME = "parchment"   # sepia parchment + Kaşif (brand/kit/BRAND.md): Stickstory until 2026-11-23
+BELGESEL = "belgesel"  # documentary style (docs/BELGESEL.md, owner 2026-10-29): Düşün Bakalım until 2026-11-23
+WATERCOLOR = "watercolor"  # watercolor documentary style (docs/SULUBOYA.md, owner 2026-11-23): every video of both channels
+DOCS = {WATERCOLOR: "docs/SULUBOYA.md", BELGESEL: "docs/BELGESEL.md", THEME: "brand/kit/BRAND.md"}
 # channel analytics (owner, 2026-10-26): ~46% of Shorts viewers swipe away in the first 1-2 s, long videos are left
 # halfway (39% average view), long-video CTR 0.96%, Shorts viewers rarely subscribe. The rules below target that.
 GREETING = re.compile(r"\b(merhaba|selam(lar)?|hoş ?geldiniz|kanal(ım)?a hoş|bu videoda|bugün sizlere|bugün size|"
@@ -41,7 +43,7 @@ def shot_types():
     kinds = {}
     for js in sorted((ROOT / "scenes/studio/shots").glob("*.js")):
         # SHOTS.x = {kind: ...}, SH.x = {\n kind: ...}, (window.SHOTS || ...).x = {...}
-        for name, kind in re.findall(r"\.(\w+)\s*=\s*\{\s*kind:\s*'(\w+)'", js.read_text()):
+        for name, kind in re.findall(r"\.(\w+)\s*=\s*\{\s*kind:\s*'(\w+)'", js.read_text(encoding="utf-8")):
             kinds[name] = kind
     kinds["photo"] = "real"
     return kinds
@@ -58,18 +60,19 @@ def sentences(text):
 
 def lint(path, kinds):
     err, warn = [], []
-    s = json.loads(Path(path).read_text())
+    s = json.loads(Path(path).read_text(encoding="utf-8"))
     fmt = s.get("format", "short")
     short = fmt == "short"
     sc = s.get("scenes", [])
 
     if s.get("engine") != "studio":
         err.append('"engine" must be "studio"')
+    wct = s.get("theme") == WATERCOLOR
     bt = s.get("theme") == BELGESEL
+    calm = bt or wct          # documentary styles: no host, no kicker, no on-screen source notes, no sets
     want = CHANNELS.get(s.get("channel"), {}).get("theme")
     if want and s.get("theme") != want:
-        err.append(f'"theme" must be "{want}" for {s.get("channel")} (tools/channels.py; '
-                   + ("docs/BELGESEL.md" if want == BELGESEL else "brand/kit/BRAND.md") + ")")
+        err.append(f'"theme" must be "{want}" for {s.get("channel")} (tools/channels.py; {DOCS.get(want, "")})')
     if s.get("fps") != 30:
         err.append('"fps" must be 30')
     # channel: on-screen name, file prefix and narrator must agree (tools/channels.py)
@@ -94,7 +97,7 @@ def lint(path, kinds):
     if not lo <= len(sc) <= hi:
         err.append(f"{len(sc)} scenes, need {lo}-{hi}")
     text = " ".join(x.get("text", "") for x in sc)
-    tlo, thi, hard = (LIMITS_BELGESEL if bt else LIMITS)[fmt]
+    tlo, thi, hard = limits_of(cfg if not bt else dict(cfg, theme=BELGESEL))[fmt]
     if len(text) > hard:
         err.append(f"{len(text)} chars > hard limit {hard}")
     elif not tlo <= len(text) <= thi:
@@ -131,8 +134,8 @@ def lint(path, kinds):
         if short and len(x.get("text", "").split()) > 14:
             warn.append(f"{tag}: {len(x['text'].split())} words, likely > 4 s on screen; split it")
         t = x.get("title", {})
-        if bt and (t.get("white") or t.get("gray")):
-            warn.append(f"{tag}: belgesel style shows no kicker title (top-left stays empty)")
+        if calm and (t.get("white") or t.get("gray")):
+            warn.append(f"{tag}: {s.get('theme')} style shows no kicker title (top-left stays empty)")
         elif len(t.get("white", "").split()) > 2 or len(t.get("gray", "").split()) > 3:
             warn.append(f"{tag}: kicker title too long (white <= 2, gray <= 3 words)")
         for name, needle in (x.get("cues") or {}).items():
@@ -153,23 +156,37 @@ def lint(path, kinds):
             err.append(f"{tag}: AI-generated clip; the owner banned Higgsfield/AI footage (2026-10-22), draw it in code")
         if x.get("mascot"):
             err.append(f"{tag}: \"mascot\" (the old bulb) was removed; Kaşif appears through 'stage' or params.cast/kasif")
+        if wct and isinstance(x.get("camera"), dict) and x["camera"].get("zoom", 1.8) > 2.4:
+            warn.append(f"{tag}: camera zoom > 2.4 blurs the brushwork; paint the detail bigger instead (wc_specimen, item s)")
         if x.get("type") == "photo" and p.get("grade") not in (None, "sepia", "mono"):
             warn.append(f"{tag}: photo grade {p.get('grade')!r} is ignored; photos are printed sepia on the parchment")
 
     # variety
     types = [x.get("type") for x in sc]
-    if short and len(set(types)) < 4:
-        err.append(f"only {len(set(types))} scene types, Shorts need >= 4")
+    # watercolor: wc_scene is the general painted picture (its sky, land and objects change from scene to scene), so
+    # it may carry more of the video; maps, specimens, numbers, letters and timelines break it up
+    min_types, top_share = (3, 0.7) if wct else (4, 0.6)
+    if short and len(set(types)) < min_types:
+        err.append(f"only {len(set(types))} scene types, Shorts need >= {min_types}")
     if types:
         top = max(set(types), key=types.count)
-        if types.count(top) > 0.6 * len(types):
-            err.append(f"'{top}' is {types.count(top)}/{len(types)} scenes (> 60%)")
+        if types.count(top) > top_share * len(types):
+            err.append(f"'{top}' is {types.count(top)}/{len(types)} scenes (> {top_share:.0%})")
     run = 1
     for i in range(1, len(types)):
         run = run + 1 if types[i] == types[i - 1] else 1
-        cap = 3 if types[i] == "stage" else 2   # Kaşif's journey may run 3 stage scenes
+        cap = 3 if types[i] in ("stage", "wc_scene") else 2   # Kaşif's journey / painted scenes may run 3 in a row
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
+    if wct:   # two painted scenes in a row must not look the same (a different sky, land or subject)
+        for i in range(1, len(sc)):
+            a, b = sc[i - 1], sc[i]
+            if a.get("type") == b.get("type") == "wc_scene":
+                pa, pb = a.get("params") or {}, b.get("params") or {}
+                same = [k for k in ("sky", "land") if pa.get(k, "day") == pb.get(k, "day")]
+                ga, gb = sorted(str(it.get("g")) for it in pa.get("items") or []), sorted(str(it.get("g")) for it in pb.get("items") or [])
+                if len(same) == 2 and ga == gb:
+                    warn.append(f"scenes {i - 1}-{i}: same sky, land and objects; change the picture (place, time of day, subject, close-up)")
 
     # Kaşif is the host (owner, 2026-10-26): on screen in 15-25% of the scenes (opening, chapter turns, key moments),
     # the rest belongs to the story itself. He is in a scene through params.kasif or a params.cast entry ("who" kasif or none).
@@ -178,9 +195,9 @@ def lint(path, kinds):
         return bool(p.get("kasif")) or any(
             isinstance(c, dict) and (c.get("who") or "kasif") == "kasif" for c in (p.get("cast") or []))
     nk = sum(1 for x in sc if has_kasif(x))
-    if bt and nk:
-        err.append("belgesel style has no on-screen host: remove params.kasif / Kaşif cast (docs/BELGESEL.md)")
-    if types and not bt:
+    if calm and nk:
+        err.append(f"{s.get('theme')} style has no on-screen host: remove params.kasif / Kaşif cast ({DOCS[s.get('theme')]})")
+    if types and not calm:
         share = nk / len(types)
         if nk == 0:
             err.append("Kaşif in no scene: the host opens or turns the story at least once (BRAND.md §2)")
@@ -200,15 +217,18 @@ def lint(path, kinds):
         if c not in (None, False) and not (isinstance(c, dict) and (not c.get("focus") or (isinstance(c["focus"], list) and len(c["focus"]) == 2))
                                            and c.get("move", "push") in CAM_MOVES):
             err.append(f'scene {i}: "camera" is false or {{"focus": [x, y], "zoom", "move": {"|".join(CAM_MOVES)}}}')
-    if bt and named - {False, None}:
-        warn.append('belgesel shots draw their own sparse world; "set" is ignored')
-    if bt and not s.get("palette"):
-        warn.append('no "palette": pick the belgesel theme that fits the topic and differs from the last video (docs/BELGESEL.md)')
+    if calm and named - {False, None}:
+        warn.append(f'{s.get("theme")} shots paint their own world; "set" is ignored')
+    if calm and not s.get("palette"):
+        warn.append(f'no "palette": pick the paper set that fits the topic and differs from the last video ({DOCS[s.get("theme")]})')
     if bt and any(not str(x.get("type", "")).startswith("bt_") and x.get("type") != "photo" for x in sc):
         err.append("belgesel videos use only bt_* shots (and photo); parchment shots (stage, map, board...) are another style")
-    if not bt and not named - {False, None}:
+    if wct and any(not str(x.get("type", "")).startswith("wc_") and x.get("type") != "photo" for x in sc):
+        err.append("watercolor videos use only wc_* shots (and photo): wc_scene, wc_map, wc_specimen, wc_number, wc_timeline, "
+                   "wc_letter, wc_chapter, wc_title or a new wc_<topic> type (docs/SULUBOYA.md)")
+    if not calm and not named - {False, None}:
         warn.append('no scene has a "set": give the story its world (hills, sea, city, interior, night...; BRAND.md §5.1)')
-    if not bt and close < (1 if short else 4):
+    if not calm and close < (1 if short else 4):
         warn.append(f'{close} close-up(s) ("camera": {{"focus": [x, y], "zoom"}}): use >= {1 if short else 4} to vary the shot sizes (BRAND.md §5.1)')
     # first ~30 s (~420 chars): straight into the event, no greeting / channel intro / "in this video"
     if GREETING.search(text[:420]):
@@ -255,13 +275,13 @@ def lint(path, kinds):
     elif not any(str(x.get("url", "")).startswith("http") for x in srcs):
         warn.append("sources: no entry has a url; add the page you verified the facts on")
     notes = [x for x in sc if x.get("source")]
-    if not bt and len(notes) < (1 if short else 3):
+    if not calm and len(notes) < (1 if short else 3):
         err.append(f'scene "source" (short on-screen note, e.g. "NASA"): need >= {1 if short else 3} scenes with one, on the key facts')
     for i, x in enumerate(notes):
         if len(str(x["source"]).split()) > 5:
             warn.append(f"scene {sc.index(x)}: on-screen source note too long (<= 5 words)")
-    pals = json.loads((ROOT / "scenes/studio" / ("belgesel-themes.json" if bt else "palettes.json")).read_text())
-    own = [k for k in pals if not k.startswith("_") and (bt or k.startswith("ag-") == (ch == "Stickstory"))]
+    pals = json.loads((ROOT / "scenes/studio" / ("watercolor-themes.json" if wct else "belgesel-themes.json" if bt else "palettes.json")).read_text(encoding="utf-8"))
+    own = [k for k in pals if not k.startswith("_") and (calm or k.startswith("ag-") == (ch == "Stickstory"))]
     if s.get("palette") and s["palette"] not in own:
         err.append(f'"palette" must be one of this channel\'s sets: {", ".join(own)} (or leave it out: random per video)')
 
@@ -273,8 +293,12 @@ def lint(path, kinds):
         words = " ".join(c.get("lines", [])).split()
         if not 1 <= len(c.get("lines", [])) <= 3 or not 2 <= len(words) <= 4:
             err.append(f"cover: {len(c.get('lines', []))} lines / {len(words)} words (need 1-3 lines, 2-4 words: one curiosity claim)")
-        if not short and not (isinstance(c.get("focus"), list) and len(c["focus"]) == 2):
+        if not short and not wct and not (isinstance(c.get("focus"), list) and len(c["focus"]) == 2):
             err.append("long cover needs \"focus\": [x, y] (stage px) of the ONE object it shows; the rest fades out (BRAND.md §9)")
+        if wct and c.get("kasif") not in (None, False):
+            err.append("cover.kasif: the watercolor style has no host; remove it (docs/SULUBOYA.md §7)")
+        if wct and not short and not c.get("focus"):
+            warn.append("long cover without \"focus\": [x, y]; a close-up of the one subject under the title reads better (docs/SULUBOYA.md §7)")
         hl = c.get("highlight", [])
         if len(hl) != 1 or low(hl[0]) not in low(" ".join(c.get("lines", []))):
             err.append("cover.highlight must be exactly one word that appears in cover.lines")

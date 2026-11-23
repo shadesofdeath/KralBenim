@@ -1,15 +1,18 @@
 // Studio engine: timeline -> frames. window.init(timeline), window.seek(t), window.cover(c).
-// One visual style (brand/kit/BRAND.md): sepia parchment + the stick-figure Kaşif ("theme": "parchment").
-// Layers (back to front): paper background (canvas, parchment-theme.js) · 2D ink shots ·
-// HUD (kicker, captions, brand, progress) · cover.
+// Styles ("theme"): "watercolor" (docs/SULUBOYA.md; every video of both channels since 2026-11-23), and the older
+// "belgesel" (docs/BELGESEL.md) and "parchment" (brand/kit/BRAND.md) that past scripts still render with.
+// Layers (back to front): paper background (canvas, <theme>-theme.js) · shots ·
+// HUD (kicker, captions, chapter label, brand, progress) · cover.
 'use strict';
 
 let D, S = [], W, H, BT = false;   // BT: belgesel (documentary) style, "theme": "belgesel" (docs/BELGESEL.md)
-let PAPER = null, PCAP = null, PBRAND = null, BG_AT = { i: 0, prev: -1, p: 1 };   // parchment-theme.js
+let WCT = false, CALM = false;     // WCT: watercolor style (docs/SULUBOYA.md); CALM: either documentary style (no host,
+                                   // no kicker, no brand, still camera unless a close-up, soft transitions)
+let PAPER = null, PCAP = null, PBRAND = null, PCHAP = null, BG_AT = { i: 0, prev: -1, p: 1 };   // <theme>-theme.js
 const $ = id => document.getElementById(id);
 
 function makeKicker(sc) {
-  if (BT) return { update() {} };   // belgesel: nothing in the top-left corner (owner, 2026-10-29)
+  if (CALM) return { update() {} };   // belgesel / watercolor: no kicker in the top-left corner (owner, 2026-10-29)
   // scene "source": a short on-screen source note under the kicker ("Kaynak: NASA"), BRAND.md §6.12
   return PARCHMENT.kicker($('kickers'), W, H, Object.assign({}, sc.title || {},
     sc.source ? { source: (D.lang === 'en' ? 'Source: ' : 'Kaynak: ') + sc.source } : {}));
@@ -24,18 +27,22 @@ window.init = async (data) => {
   if (typeof KASIF !== 'undefined' && KASIF && KASIF.setNarrator) KASIF.setNarrator(D.narrator);
   const root = document.documentElement;
   BT = D.theme === 'belgesel';
-  window.INK_STILL = BT;           // _ink.js: no boil, every line stands still
+  WCT = D.theme === 'watercolor';
+  CALM = BT || WCT;
+  window.INK_STILL = CALM;         // _ink.js: no boil, every line stands still
   for (const k of ['paper', 'paperLight', 'paperDark', 'ink', 'inkSoft', 'red', 'blue', 'gold']) root.style.setProperty('--' + k, THEME_PARCHMENT[k]);
   root.classList.add(D.format || 'short');
-  root.classList.add(BT ? 'belgesel' : 'parchment');
+  root.classList.add(WCT ? 'watercolor' : BT ? 'belgesel' : 'parchment');
   // each channel its own HUD and cover type (BRAND.md §11): Stickstory (fez narrator) never looks like Düşün Bakalım
   const skin = D.narrator === 'fes' ? 'ag' : 'db';
   root.classList.add('ch-' + skin); PARCHMENT.setSkin(skin);
 
   const bg = $('bg'); bg.width = W / 2; bg.height = H / 2;
-  PAPER = BT ? BELGESEL.background(bg, W, H) : PARCHMENT.background(bg, W, H, { scale: 0.5 });
+  PAPER = WCT ? WATERCOLOR.background(bg, W, H) : BT ? BELGESEL.background(bg, W, H) : PARCHMENT.background(bg, W, H, { scale: 0.5 });
   // shots measure text while building: fonts must be ready first
-  await Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"', '700 100px "Zilla Slab"', '600 100px "Zilla Slab"'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
+  await Promise.all(['900 100px Fraunces', '800 100px Fraunces', '700 100px Lora', '400 100px "Patrick Hand"', '700 100px "Zilla Slab"', '600 100px "Zilla Slab"',
+    '600 100px "Cormorant Garamond"', '700 100px "Cormorant Garamond"', 'italic 600 100px "Cormorant Garamond"', '600 100px Caveat',
+    '700 100px Caveat', '900 100px Nunito'].map(f => document.fonts.load(f, 'AĞİŞÇÖÜ0123')));
 
   S = D.scenes.map((sc, i) => {
     const shot = SHOTS[sc.type];
@@ -60,7 +67,8 @@ window.init = async (data) => {
   S.forEach((o, i) => {
     o.env = { prevP: null, prevCam: null };
     // paper slide or a soft cross-dissolve; every third boundary fades
-    o.trans = i === 0 ? 'cut' : (o.sc.transition || (BT ? (o.sc.chapter ? 'dip' : 'dissolve') : (i % 3 === 2 ? 'fade' : 'slide')));
+    // watercolor: a brush-edge wipe paints the next picture over the last; a chapter washes back to paper (dip)
+    o.trans = i === 0 ? 'cut' : (o.sc.transition || (WCT ? (o.sc.chapter ? 'dip' : 'wipe') : BT ? (o.sc.chapter ? 'dip' : 'dissolve') : (i % 3 === 2 ? 'fade' : 'slide')));
     if (!TRANS_WIN[o.trans]) o.trans = 'slide';
     // cue times that belong to this scene (captions colour these words)
     o.cueTimes = Object.values(o.sc.cues || {});
@@ -71,8 +79,11 @@ window.init = async (data) => {
     const so = S[sceneAt(w.t)], key = keys.some(kt => Math.abs(kt - w.t) < 0.01);
     return { t: w.t, text: w.text, cue: key ? (so && so.P.caption_color === 'red' ? 'red' : true) : false };
   }) }));
-  PCAP = (BT ? BELGESEL : PARCHMENT).captions($('kickers'), W, H, groups);
-  PBRAND = BT ? null : PARCHMENT.brand($('kickers'), W, H, D.channel || '');
+  PCAP = (WCT ? WATERCOLOR : BT ? BELGESEL : PARCHMENT).captions($('kickers'), W, H, groups);
+  PBRAND = CALM ? null : PARCHMENT.brand($('kickers'), W, H, D.channel || '');
+  PCHAP = WCT && D.format === 'long'
+    // a chapter that opens on its own wc_chapter card shows the corner label only after the card (no double title)
+    ? WATERCOLOR.chapters($('kickers'), W, H, S.filter(o => o.sc.chapter).map(o => ({ start: o.sc.type === 'wc_chapter' ? o.sc.end : o.sc.start, name: String(o.sc.chapter) }))) : null;
 
   await document.fonts.ready;
   await window.seek(0);
@@ -115,17 +126,27 @@ function transStyle(kind, role, t, T) {
     if (role === 'out') { const p = lin(t, T - 0.7, 0.7); return { show: p < 1, tf: '', op: 1 - EASE_IO(p), blur: 0 }; }
     const q = lin(t, T + 0.1, 0.9); return { show: q > 0, tf: '', op: EASE_IO(q), blur: 0 };
   }
+  // watercolor: the next picture is painted over the last one behind a wavy, brush-edged boundary (left to right)
+  if (kind === 'wipe') {
+    if (role === 'out') return { show: t < T + 0.62, tf: '', op: 1, blur: 0 };
+    const q = lin(t, T - 0.38, 1.0);
+    if (q >= 1) return { show: true, tf: '', op: 1, blur: 0 };
+    const R = lerp(-0.18 * W, 1.18 * W, EASE_IO(q)), pts = [];
+    for (let y = -20; y <= H + 40; y += 24) pts.push(`${(R + (Math.sin(y * 0.0042 + 1.3) * 0.55 + Math.sin(y * 0.011 + 4.1) * 0.3 + Math.sin(y * 0.031 + 2.2) * 0.12) * W * 0.05).toFixed(1)}px ${y}px`);
+    return { show: q > 0, tf: '', op: 1, blur: 0, clip: `polygon(-20px -20px, ${pts.join(', ')}, -20px ${H + 60}px)` };
+  }
   // cut: hard switch at T
   if (role === 'out') return { show: t < T, tf: '', op: 1, blur: 0 };
   return { show: t >= T, tf: '', op: 1, blur: 0 };
 }
-const TRANS_WIN = { cut: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2], dissolve: [0.6, 0.6], dip: [0.7, 1.0] };
+const TRANS_WIN = { cut: [0, 0], slide: [0.2, 0.3], fade: [0.2, 0.2], dissolve: [0.6, 0.6], dip: [0.7, 1.0], wipe: [0.38, 0.62] };
 
 function applyStyle(node, st, cam = '') {
   node.style.display = st.show ? '' : 'none';
   node.style.opacity = st.op;
   node.style.transform = (st.tf || '') + (cam ? ' ' + cam : '');
   node.style.filter = st.blur > 0.3 ? `blur(${st.blur.toFixed(1)}px)` : '';
+  node.style.clipPath = st.clip || '';
 }
 
 // ------------------------------------------------------------ camera
@@ -137,7 +158,7 @@ function applyStyle(node, st, cam = '') {
 // {zoom, focus: [x, y] (stage px, the close-up's subject), move: 'push'|'pull'|'left'|'right'|'up'|'down'|'still'}.
 const CAM_MOVES = ['push', 'left', 'pull', 'push', 'right', 'up'];
 function cameraArea() {   // the picture area: under the brand/kicker, above the caption strip
-  if (BT) return H > W ? { x0: 40, x1: W - 40, y0: 200, y1: 1150 } : { x0: 60, x1: W - 60, y0: 60, y1: H - 150 };
+  if (CALM) return H > W ? { x0: 40, x1: W - 40, y0: 200, y1: 1150 } : { x0: 60, x1: W - 60, y0: 60, y1: H - 150 };
   return H > W ? { x0: 40, x1: W - 40, y0: 300, y1: 1150 } : { x0: 80, x1: W - 80, y0: 210, y1: H - 190 };
 }
 function measureInk(o) {
@@ -165,7 +186,7 @@ function planCamera(o, i, b) {
   if (c === false || o.sc.type === 'photo') return null;      // photos frame themselves (Ken Burns)
   const C = typeof c === 'object' && c ? c : {};
   // belgesel: shots are composed full-frame; no automatic reframing, only an explicit close-up (focus) moves in
-  if (BT && !Array.isArray(C.focus)) return null;
+  if (CALM && !Array.isArray(C.focus)) return null;
   let s, fx, fy;
   if (Array.isArray(C.focus)) {
     [fx, fy] = C.focus; s = C.zoom ?? 1.8;
@@ -185,7 +206,7 @@ function planCamera(o, i, b) {
 // transform for scene-local time lt: p -> C + T + s (p - C) about the stage centre, clamped so the stage covers the frame
 function cameraAt(o, lt, pk) {
   const k = o.cam, p = progIO(lt, 0, Math.max(o.dur, 1)), cx = W / 2, cy = H / 2;
-  if (BT) {   // belgesel: one slow, steady push-in; no drift, no punch, no sway (owner: "sabit ve net")
+  if (CALM) {   // belgesel / watercolor: one slow, steady push-in; no drift, no punch, no sway (owner: "sabit ve net")
     if (!k) return { s: lerp(1, 1.03, p), tx: 0, ty: 0 };
     const s = k.s * lerp(1, 1.04, p), lx = (s - 1) * cx, ly = (s - 1) * cy;
     return { s, tx: Math.max(-lx, Math.min(lx, k.ax - cx - s * (k.fx - cx))), ty: Math.max(-ly, Math.min(ly, k.ay - cy - s * (k.fy - cy))) };
@@ -208,7 +229,7 @@ const camCss = k => (k.tx || k.ty ? `translate(${k.tx.toFixed(1)}px, ${k.ty.toFi
 // the scene's set (sets.js): "set": "<name>" | {name, ground, horizon} | false; a shot with a ground line gets "field"
 function planSet(o, b) {
   const v = o.sc.set;
-  if (BT || v === false || typeof SETS === 'undefined') return null;   // belgesel shots draw their own (sparse) world
+  if (CALM || v === false || typeof SETS === 'undefined') return null;   // belgesel / watercolor shots draw their own world
   const name = typeof v === 'string' ? v : (v && v.name) || (b && b.ground ? 'field' : null);
   if (!name || !SETS.names.includes(name)) return null;
   const gy = (v && v.ground) || (b && b.ground) || H * 0.6, hy = v && v.horizon;
@@ -218,7 +239,7 @@ function planSet(o, b) {
 // draw one frame. visible = [{o, lt, st}], hook/cover handled by callers
 function compose(t, visible, pend, coverCam) {
   for (const v of visible) {   // the cover frames its own focus (stage px); scenes use their camera
-    let pk = 0; if (!BT) for (const c of Object.values(localCues(v.o))) pk = Math.max(pk, punch(v.lt, c, 0.5));
+    let pk = 0; if (!CALM) for (const c of Object.values(localCues(v.o))) pk = Math.max(pk, punch(v.lt, c, 0.5));
     v.cam = coverCam || cameraAt(v.o, v.lt, pk);
   }
   drawBg(t, visible);
@@ -241,6 +262,7 @@ function hud(t, i, hooking) {
   S.forEach((s, k) => s.kick.update(k !== i || hooking ? -1 : t - s.sc.start, 1 - prog(t, s.sc.end - 0.15, 0.15)));
   // captions: 1-3 words, each appears when spoken (parchment-theme.js)
   PCAP.update(hooking ? -1 : t);
+  if (PCHAP) PCHAP.update(hooking ? -1 : t);
   $('bar').style.width = (100 * clamp01(t / D.duration)) + '%';
 }
 
@@ -296,7 +318,7 @@ function buildCoverText(c) {
 function coverKasif(c, lt) {
   const node = $('kasifcover');
   node.innerHTML = '';
-  if (c.kasif === false || BT || typeof KASIF === 'undefined' || !KASIF || typeof KASIF.create !== 'function') return;
+  if (c.kasif === false || CALM || typeof KASIF === 'undefined' || !KASIF || typeof KASIF.create !== 'function') return;
   node.setAttribute('width', W); node.setAttribute('height', H); node.setAttribute('viewBox', `0 0 ${W} ${H}`);
   const portrait = H > W, k = typeof c.kasif === 'object' ? c.kasif : { pose: c.kasif };
   const pose = k.pose || 'shock';
@@ -315,9 +337,17 @@ const coverShift = (c) => {
   const long = D.format === 'long';
   if (c && Array.isArray(c.focus)) {
     const s = c.zoom ?? (long ? 1.6 : 1.25), [fx, fy] = c.focus;
-    const tx = long ? W * 0.72 : W * 0.5, ty = long ? H * 0.52 : H * 0.6;
-    return { s, tx: tx - W / 2 - s * (fx - W / 2), ty: ty - H / 2 - s * (fy - H / 2) };
+    // watercolor: the big title runs across the top, the one subject sits under it (centre, or c.side "left"|"right")
+    const side = WCT ? ({ left: 0.3, right: 0.7 }[c.side] ?? 0.5) : 0;
+    const tx = WCT ? W * side : long ? W * 0.72 : W * 0.5, ty = WCT ? H * (long ? 0.66 : 0.62) : long ? H * 0.52 : H * 0.6;
+    const k = { s, tx: tx - W / 2 - s * (fx - W / 2), ty: ty - H / 2 - s * (fy - H / 2) };
+    if (WCT) {   // the painting always covers the frame: never a strip of bare paper at an edge
+      const lx = Math.max(0, (s - 1) * W / 2), ly = Math.max(0, (s - 1) * H / 2);
+      k.tx = Math.max(-lx, Math.min(lx, k.tx)); k.ty = Math.max(-ly, Math.min(ly, k.ty));
+    }
+    return k;
   }
+  if (WCT) return { s: 1, tx: 0, ty: 0 };
   return long ? { s: 1.12, tx: W * 0.2, ty: 0 } : { s: 1, tx: 0, ty: H * 0.17 };
 };
 const coverFocusClass = (c, on) => document.documentElement.classList.toggle('focus', !!(on && c && Array.isArray(c.focus) && c.fade !== false));

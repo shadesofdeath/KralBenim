@@ -11,6 +11,7 @@
   build(ctx) {
     const { P, pal, W, H, root, svg } = ctx;
     const BTH = ctx.theme === 'belgesel';   // docs/BELGESEL.md: a quiet black-and-white print, no paper multiply
+    const WCT = ctx.theme === 'watercolor'; // docs/SULUBOYA.md: a warm print laid into the painted journal page, hand notes
     const TP = THEME_PARCHMENT;
     const dpr = devicePixelRatio;
     const cv = document.createElement('canvas');
@@ -96,7 +97,7 @@
           if (m.text) {
             const tx = X + (m.dx ?? 0), ty = Y + (m.dy ?? -((m.r || 0.08) * iw * geom.s) - 40);
             const t = svgText(g, m.text, tx, ty, m.size || 56,
-              { fill: TP.ink, 'font-family': BTH ? 'Lora, Georgia, serif' : "'Patrick Hand', sans-serif", opacity: clamp01(a * 1.4), style: `paint-order: stroke; stroke: ${TP.paperLight}; stroke-width: 12px` });
+              { fill: TP.ink, 'font-family': BTH ? 'Lora, Georgia, serif' : WCT ? 'Caveat, cursive' : "'Patrick Hand', sans-serif", opacity: clamp01(a * 1.4), style: `paint-order: stroke; stroke: ${TP.paperLight}; stroke-width: 12px` });
             t.setAttribute('transform', `translate(${tx} ${ty}) scale(${lerp(0.6, 1, a)}) translate(${-tx} ${-ty})`);
           }
         });

@@ -1,65 +1,69 @@
 # Düşün Bakalım + Stickstory — video otomasyonu
 
-İki YouTube kanalı için anlatım videoları üreten pipeline (Düşün Bakalım: **belgesel tarzı**; Stickstory: parşömen + çöp adam). Senaryolar bu bulut oturumunda yazılır,
-push'tan sonra GitHub Actions render edip YouTube'a zamanlanmış olarak yükler.
+İki YouTube kanalı için anlatım videoları üreten pipeline. **İki kanal da belgesel ve tarih kanalıdır ve aynı
+suluboya (watercolor) tarzında boyanır** (Lemo-Opuscar'ın Watercolor Brush stili; anayasa `docs/SULUBOYA.md`).
+Senaryolar bu bulut oturumunda yazılır, push'tan sonra GitHub Actions render edip YouTube'a zamanlanmış olarak yükler.
 
 | Kanal | Dil | Shorts | Uzun video (5–6 dk) | Saat dilimi |
 |---|---|---|---|---|
-| **Düşün Bakalım** (Türkçe, tarih) | tr | günde **1** — 19:00 | **2 günde 1** — 20:30 | İstanbul |
-| **Stickstory** (global, İngilizce) | en | günde **2** — 13:00, 19:00 | **2 günde 1** — 14:00 | **New York** |
+| **Düşün Bakalım** (Türkçe, belgesel + tarih) | tr | günde **1** — 19:00 | **2 günde 1** — 20:30 | İstanbul |
+| **Stickstory** (global, İngilizce, belgesel + tarih) | en | günde **2** — 13:00, 19:00 | **2 günde 1** — 14:00 | **New York** |
+
+**Kanal sahibinin kararı (2026-11-23):** "Tüm videolar https://github.com/lemomo-ai/lemo-opuscar reposu kullanılarak
+üretilecek. Styles olarak watercolor stili kullan." İki kanalın tarzı **belgesel ve tarih**; **haber/manşetten konu
+seçme tamamen kaldırıldı, içerik özgün**; **kapaklar büyük, dikkat çeken yazılı** (örnek: "**5** TÜR VARDI");
+**altyazı her videoda kesin var**. Eski tarzlar (Düşün Bakalım'ın koyu "belgesel" çizgi tarzı, Stickstory'nin parşömen +
+çöp adam Kaşif'i) yeni videolarda kullanılmaz; `videos/` altındaki eski senaryolar sadece geçmiş kayıttır (konu
+tekrarını önlemek için okunur) ve eski motorla render olmaya devam eder.
 
 **Daha az ama daha iyi (kanal sahibinin kararı, 2026-10-26):** YouTube seri üretilmiş/tekrarlayan içeriğe para
-kazanma açmıyor; bu yüzden sıklık düşürüldü (uzun videolar 2 günde bir, Stickstory Shorts günde 2). Kazanılan zaman
+kazanma açmıyor; bu yüzden sıklık düşük (uzun videolar 2 günde bir, Stickstory Shorts günde 2). Kazanılan zaman
 araştırmaya, kaynaklara ve kaliteye gider; her video bir öncekinden kalıp olarak da farklı olmalı.
 
 **İki kanal asla karışmaz:** Türkçe videolar sadece Düşün Bakalım'a, İngilizce videolar sadece Stickstory'ye gider.
 Kanal dosya önekinden gelir (`ag-` = Stickstory); `upload.py` token'ın bağlı olduğu YouTube kanalını kontrol eder,
 yanlış kanalsa yüklemez. **Üretim saatleri ayrı:** Düşün Bakalım sabah 05:50'de, Stickstory 11:50'de (İstanbul)
-üretilir; bir oturum sadece kendi kanalının videolarını yazar.
+üretilir; bir oturum sadece kendi kanalının videolarını yazar. Aynı tarzı paylaşsalar da iki kanal aynı konuyu,
+aynı kapak düzenini ya da aynı sahne kurgusunu aynı gün kullanmaz.
 
-Takvim, saatler, ses, hashtag, kategori havuzu, dosya öneki ve YouTube secret'ı tek yerde: `tools/channels.py`.
+Takvim, saatler, ses, hashtag, kategori havuzu, dosya öneki, tarz ve YouTube secret'ı tek yerde: `tools/channels.py`.
 Stickstory saatleri New York saatidir (en büyük İngilizce kitle ABD; aynı saatler İngiltere/Avrupa öğleden sonra
 ve akşamına denk gelir; yaz/kış saati otomatik). İstanbul'da gece olması sorun değil, YouTube zamanlanmış videoyu
 kendisi yayınlar. **Tarih/saat hesabını elle yapma: `python tools/plan.py [--channel ag]` kullan.**
 
-**Kanal başına bir tarz (`tools/channels.py` → `theme`; lint denetler):**
-- **Düşün Bakalım = belgesel tarzı (kanal sahibinin kesin kararı, 2026-10-29: "bu tarza bayıldım, artık bütün video
-  üretimleri böyle olsun"; uzun ve Shorts).** `"theme": "belgesel"`, ses `mF7tIc9VLrznhGooGjaT`: koyu (ya da açık) temiz
-  zemin, titremeyen ince çizgiler, sahne başına tek özne, yavaş ve hafif ürkütücü uzay belgeseli anlatımı, sol üstte
-  hiçbir şey yok, Kaşif yok, ses işlenmez, tema her videoda değişir. **Anayasa `docs/BELGESEL.md`** (Düşün Bakalım için
-  çelişkide BELGESEL.md kazanır; BRAND.md'den sadece §1 konu havuzu, §6.1/6.3/6.3b/6.6/6.7/6.12 geçerli). Sahne tipleri
-  sadece `bt_*` ve `photo`. Referans: `videos/2026-10-29/04-ilk-kasik.json`.
-- **Stickstory = parşömen + çöp adam:** sepya parşömen üstüne elle çizilmiş mürekkep ve kırmızı fesli anlatıcı
-  (`"theme": "parchment"`). Anayasa `brand/kit/BRAND.md` (çelişkide BRAND.md kazanır).
-
-Senaryo yazmadan önce `.claude/skills/tarih-bolumu/SKILL.md` yüklenir.
-Eski "Studio" tarzı (paletler, 3D, maskot ampul, headline/bars/compare…) kaldırıldı; geri getirme.
-**Sinematik parşömen (Stickstory; kanal sahibinin kararı, 2026-10-26: "videolar birbirine çok benziyor"):** parşömen korunur ama
-her kare bir dünya (`"set"` dekorları), kamera plan büyüklüğünü değiştirir (`"camera"` yakın plan), Kaşif figüran değil
-**sunucu** (sahnelerin %15–25'i), iki kanalın ekran kimliği ayrı (Stickstory: soğuk `ag-` kâğıtlar, Zilla Slab,
-koyu şerit altyazı). Ayrıntı BRAND.md §2, §5.1, §11.
-`videos/` altındaki eski tarz senaryolar sadece geçmiş kayıttır (konu tekrarını önlemek için okunur).
+**Tarz (`"theme": "watercolor"`, iki kanal; lint denetler; anayasa `docs/SULUBOYA.md`, çelişkide o kazanır):**
+sıcak pamuk kâğıdı üstünde kendini darbe darbe boyayan yarı saydam fırça darbeleri ve suluboya yıkamaları, el yazısı
+notlar ve kalem çizgileri, sahne başına tek kahraman özne, yavaş doğal hareket (boyanma, rüzgâr, alev, duman, su),
+sahneler arası fırça kenarlı silme. Kâğıt seti (`palette`: pamuk, keten, sepya, yaz, gurub) her videoda değişir.
+Sahne tipleri sadece `wc_*` ve `photo`. Sunucu/maskot yok, sol üst köşe boş (uzunda sadece bölüm etiketi birkaç saniye).
+Senaryo yazmadan önce `.claude/skills/tarih-bolumu/SKILL.md` yüklenir ve `docs/SULUBOYA.md` okunur;
+`python tools/wc_catalog.py` boyanabilen bütün nesneleri ve sahne tiplerini listeler.
 
 ## Yapı
 
-- `build.py` — `<senaryo>.json -> mp4`. ElevenLabs (kelime zamanlamalı, nefes sesleri kısılır: `debreath`),
+- `build.py` — `<senaryo>.json -> mp4`. ElevenLabs (kelime zamanlamalı; watercolor tarzında ses hiç işlenmez),
   sahneleri Playwright ile kare kare çeker (CPU sayısı kadar paralel tarayıcı), ffmpeg ile birleştirir. Sadece `"engine": "studio"`.
 - `scenes/studio/` — tek motor: `engine.js` (zaman çizelgesi, kamera, geçişler, kapak), `core.js` (yardımcılar, `SHOTS`,
-  `THEME_PARCHMENT`), `parchment-theme.js` (kâğıt, altyazı, kicker, marka; kanal başına `setSkin`), `sets.js` (dekorlar). Zaman sadece `window.seek(t)`;
-  her şey deterministik (`Math.random` yok, `rng(seed)`).
-- `scenes/studio/shots/<tip>.js` — her sahne tipi kendi dosyasında (otomatik yüklenir): `_ink.js`, `kasif.js`
-  (Kaşif + `stage`), `parchment2d.js` (`chapter`, `title`, `board`, `map`, `timeline`), `photo.js` ve konuya özel tipler.
-- **Belgesel tarzı (Düşün Bakalım):** `belgesel-theme.js` (temiz zemin, sakin tek satır altyazı; kicker/marka yok),
-  `belgesel-themes.json` (temalar: obsidyen, derin, grafit, fildisi, kum), `shots/bt__lib.js` (ortak çizim kiti `BTL`,
-  nesne kütüphanesi `BTL.OBJ`, siluetler, dikey çerçeveleme `BTL.stage`) ve `shots/bt_*.js` sahne tipleri. Motor bu
-  tarzda çizgi titreşimini, kâğıt kaymasını, kamera gezinmesini ve punch'ı kapatır, geçişler `dissolve`/`dip`.
-- Referans kalite: Düşün Bakalım `videos/2026-10-29/04-ilk-kasik.json` (belgesel, uzun); Stickstory
-  `videos/2026-10-20/01-emu-savasi.json` (Short), `videos/2026-10-19/05-piri-reis-haritasi.json` (uzun; parşömen tarzı).
-- `docs/BELGESEL.md` (Düşün Bakalım), `docs/ANIMATION_GUIDE.md` (parşömen: görsel dil, sahne tipleri, yeni tip şablonu)
-  ve `docs/REVIEW.md` (11 kriterli eleştiri). **Düşün Bakalım senaryosu yazan ya da sahne kodlayan her ajan önce
-  BELGESEL.md'yi; Stickstory için BRAND.md'yi ve ANIMATION_GUIDE'ı okur.**
+  `THEME_PARCHMENT` renk token'ları). Zaman sadece `window.seek(t)`; her şey deterministik (`Math.random` yok).
+- **Suluboya tarzı (iki kanal):** `watercolor-theme.js` (kâğıt dokusu, altyazı, uzun videoda bölüm etiketi),
+  `watercolor-themes.json` (kâğıt + pigment setleri), `shots/wc__lib.js` (fırça motoru `WC.*`, nesne kaydı `WC.G`,
+  genel sahne kurgulayıcı `wc_scene`; Lemo-Opuscar'dan MIT kodla uyarlandı), `shots/wc_g_places.js` (mimari),
+  `shots/wc_g_people.js` (insanlar, ordular, hayvanlar), `shots/wc_g_sea.js` (gemiler, deniz, hava, felaketler),
+  `shots/wc_g_objects.js` (eşyalar), `shots/wc_specimen.js` (tek nesne levhası), `shots/wc_map.js` + `shots/wc_world.js`
+  (Natural Earth kıyıları ile boyanmış harita), `shots/wc_cards.js` (bölüm, sayı, zaman çizelgesi, mektup, başlık kartları)
+  ve konuya özel `shots/wc_<konu>.js` tipleri. Yazı tipleri: Cormorant Garamond (başlık/altyazı), Caveat (el yazısı),
+  Nunito Black (kapak).
+- **Referans kalite (suluboya):** `docs/ornek/01-rumeli-hisari.json` (Düşün Bakalım Short) ve
+  `docs/ornek/ag-01-pharos-of-alexandria.json` (Stickstory Short). Yayınlanmaz; sahne tipi, ölçek, cue ve kapak
+  kullanımına örnektir (`python tools/preview.py docs/ornek/<dosya>.json`).
+- Eski tarzların dosyaları (`parchment-theme.js`, `sets.js`, `belgesel-theme.js`, `shots/bt_*.js`, `_ink.js`, `kasif.js`,
+  `parchment2d.js` …) eski senaryolar için durur; yeni videoda kullanılmaz, silinmez.
+- `docs/SULUBOYA.md` (anayasa) ve `docs/REVIEW.md` (11 kriterli eleştiri). `docs/BELGESEL.md` §3 Düşün Bakalım'ın
+  anlatım sesi için, `brand/kit/BRAND.md` §1, §6, §11 konu havuzu ve anlatım kuralları için hâlâ geçerli (görsel
+  kısımları eski). **Senaryo yazan ya da sahne kodlayan her ajan önce SULUBOYA.md'yi okur.**
 - `tools/plan.py` planı · `tools/lint.py` kural + SEO denetimi · `tools/preview.py` TTS'siz kontak sayfası + kapak +
-  hareket ölçümü (`STATIC?`) · `tools/media.py` telifsiz fotoğraf (Wikimedia, Pexels) · `tools/news.py` konu için manşetler (Stickstory 7 ülke, Düşün Bakalım Türkiye) · `tools/sfx.py` hafif ambiyans müziği.
+  hareket ölçümü (`STATIC?`) · `tools/wc_catalog.py` suluboya nesne/sahne kataloğu · `tools/media.py` telifsiz fotoğraf
+  (Wikimedia, Pexels) · `tools/sfx.py` hafif ambiyans müziği.
 - `tools/upload.py` YouTube yüklemesi (kanal dosya önekinden; krediler ve bölümler açıklamaya eklenir).
 - `tools/check.py` **API kontrolü**: ElevenLabs anahtarı/kalan kredi/sesler, iki kanalın YouTube girişi (token tazelenir,
   doğru kanala mı bağlı), Telegram botu. `.github/workflows/api-check.yml` her sabah 03:15'te ve her `Daily batch`
@@ -68,11 +72,11 @@ koyu şerit altyazı). Ayrıntı BRAND.md §2, §5.1, §11.
 - `tools/telegram.py` + `tools/live.py` — **kanal başına günde tek** Telegram mesajı (her video bir blok, yerinde
   güncellenir), Shorts'un Instagram'a hazır dosyası. API kontrolü Telegram'a sadece sorun varsa yazar. `cloudflare/telegram-worker.js` — Telegram `/uzun`, `/shorts` komutları (`cloudflare/KURULUM.md`).
 
-Ses: anlatım + çok hafif ambiyans (`"sfx": false` kapatır; belgeselde koyu yavaş drone). **Efekt sesi (whoosh, pop) yok** —
-kanal sahibi istemiyor. Parşömen tarzında nefes sesleri kısılır (`debreath`); **belgesel tarzında ses hiç işlenmez**
-(kanal sahibi, 2026-10-29: kırpma/nefes efekti yok). **Görseller sadece kodla üretilir:** Higgsfield (kanal sahibi tamamen kaldırdı, 2026-10-26: Higgsfield araçları
-hiçbir oturumda çağrılmaz) ya da başka bir yapay zekâ görsel/video
-aracı hiç kullanılmaz (lint engeller); çizilemeyen an için yeni sahne tipi (Düşün Bakalım `bt_*`, Stickstory parşömen) ya da telifsiz gerçek fotoğraf.
+Ses: anlatım + çok hafif ambiyans (suluboya tarzında sıcak, yavaş ped + seyrek yumuşak piyano; `"sfx": false` kapatır).
+**Efekt sesi (whoosh, pop) yok** — kanal sahibi istemiyor. **Ses işlenmez** (kanal sahibi, 2026-10-29: kırpma/nefes
+efekti yok). **Görseller sadece kodla üretilir:** Higgsfield (kanal sahibi tamamen kaldırdı, 2026-10-26: Higgsfield
+araçları hiçbir oturumda çağrılmaz) ya da başka bir yapay zekâ görsel/video aracı hiç kullanılmaz (lint engeller);
+çizilemeyen an için yeni `wc_<konu>` sahne tipi/nesne ya da telifsiz gerçek fotoğraf.
 Bu bulut ortamından ElevenLabs ve YouTube'a erişim yok; ses ve yükleme sadece Actions'ta. Yerel kontrol: `preview.py`.
 
 ## Günlük üretim görevi
@@ -84,7 +88,7 @@ Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Sticksto
 | Shorts | 28–35 sn | **330–420** (sert sınır 480; belgesel sesi yavaş) | 8–11 |
 | Uzun video | **5–6 dk** | **3.900–4.500** (sert sınır 5.000) | **40–50**, her 8–12 sahnede bir `"chapter"` (ilk sahnede mutlaka) |
 
-(Stickstory'nin parşömen tarzı: Shorts 400–500 / 550, uzun 4.300–5.000 / 5.400; `tools/plan.py` kanala göre verir.)
+(Stickstory'nin sesi daha hızlı: Shorts 400–500 / 550, uzun 4.300–5.000 / 5.400; `tools/plan.py` kanala göre verir.)
 
 ### Akış (ana oturum = yönetmen; alt ajanlar commit/push yapmaz; bağımsız işler aynı mesajda paralel)
 
@@ -95,28 +99,26 @@ Zamanlanmış görev her sabah bu bölümü uygular (Düşün Bakalım; Sticksto
    aralığın alt ucunda tut ve raporda belirt. Plan dışına çıkma, fazladan video üretme.
 2. **Geçmiş:** `videos/*/` altındaki tüm senaryoların (iki kanal; `ag-` Stickstory'dir) `youtube.title` ve konularını
    oku, aynı ya da çok benzer konuyu seçme. Dünün senaryolarının `*.youtube.json`'u yoksa (yüklenmemiş) raporla.
-3. **Konu önce manşetten (kanal sahibinin kalıcı kuralı, 2026-10-26):** her Düşün Bakalım videosunda (günlük,
-   ek, Shorts ve uzun) konu seçmeden önce `python tools/news.py --channel db` çalıştır (Google News Türkiye
-   manşetleri). Kanalın havuzuna uyan bir manşetin **arkasındaki gerçek tarih hikâyesini** anlat (ör. bir kazı
-   haberi → o şehrin hikâyesi; bir yıl dönümü → o günün kendisi; bir rekor ya da keşif → ilk kez nasıl olduğu);
-   haber ilk cümlelerde kanca olur, gerisi kalıcı tarih. Siyaset, seçim, suç, kurbanı olan güncel felaket, ölüm
-   haberi, magazin, spor sonucu ve ürün haberi seçilmez. Aynı gün her video ayrı manşetten; uyan manşet yoksa o
-   video için havuza dön ve raporda belirt; seçilen manşeti `production.md`'ye yaz.
+3. **Konu özgün (kanal sahibinin kararı, 2026-11-23: haberden/manşetten konu seçme kaldırıldı):** konu kanalın
+   havuzundan, plan'ın önerdiği `category`'den başlayarak seçilir; güncel haber aranmaz, haber kanca olarak
+   kullanılmaz. Video yıllarca izlenecek kalıcı bir hikâye anlatır.
    **Konu havuzu:** niş **tarih hikâyeleri** (BRAND §1): gerçek olay, gerçek insanlar, gerilim, "peki neden oldu?".
    Havuzu dönüşümlü kullan (felaketler ve kazalar · kayıp şehirler ve gizemler · büyük kararlar ve savaşlar ·
    keşifler ve icatlar · imparatorlukların yükselişi/çöküşü · **Türkiye ve Osmanlı tarihi, haftada en az 2 video**).
-   Konu `tarih-bolumu` becerisinin 4 testini geçmeli. Uzun video: birden fazla perdesi olan daha derin bir olay;
-   aynı günün Short'undan farklı.
+   Konu `tarih-bolumu` becerisinin 4 testini geçmeli; az bilinen bir açı, beklenmedik bir neden ya da az anlatılmış
+   bir insan seç (herkesin bildiği konuyu bildik açıdan anlatma). Uzun video: birden fazla perdesi olan daha derin
+   bir olay; aynı günün Short'undan farklı.
 4. **`videos/<tarih>/production.md`:** her video için konu, havuz, "izleyici sonunda ne hisseder", kanca + kapak
-   fikri, seçilen tema (`palette`, bir önceki videodan farklı), önce **tek parça akıcı anlatım metni**, sonra çekim
-   listesi (her sahne: cümle, `visual`, tip, cue, kamera notu; Stickstory'de Kaşif ne yapıyor). **Önce senaryo, sonra görüntü** (kanal sahibinin kuralı, BRAND §6.10): metin sahne düşünmeden
-   yazılır, sesli okunur gibi kontrol edilir, sonra sahnelere bölünür. Sahne başına cümle yazıp görsel tarif etmek yasak.
+   fikri, seçilen kâğıt seti (`palette`, bir önceki videodan farklı), önce **tek parça akıcı anlatım metni**, sonra
+   çekim listesi (her sahne: cümle, `visual`, tip, boyanacak nesneler, cue, kamera notu). **Önce senaryo, sonra
+   görüntü** (kanal sahibinin kuralı, BRAND §6.10): metin sahne düşünmeden yazılır, sesli okunur gibi kontrol edilir,
+   sonra sahnelere bölünür. Sahne başına cümle yazıp görsel tarif etmek yasak.
 5. **Yazım:** video başına 1 yazar ajan (uzunda: önce tek yazar tüm anlatımı, sonra bölüm başına bir ajan sahneleri).
-   Her ajana `production.md` bölümünü, dosya adını, `publish_at`'i ver; CLAUDE.md + BRAND.md + ANIMATION_GUIDE okusun,
-   `tarih-bolumu` becerisini yüklesin (Düşün Bakalım: önce `docs/BELGESEL.md`), bilgileri doğrulasın, JSON'u yazsın,
-   `lint` hatasız + `preview` çalıştırıp `sheet.png`/`cover.jpg`'ye baksın. Yeni sahne tipi/nesne gerekirse **kendi
-   dosyasına** yazar (`bt_<konu>.js`); ortak dosyalara (`engine.js`, `core.js`, `parchment-theme.js`, `belgesel-theme.js`,
-   `sets.js`, `_ink.js`, `kasif.js`, `parchment2d.js`, `bt__lib.js`, `bt_type.js`, `bt_objects.js`, `bt_places.js`) paralel ajan dokunmaz.
+   Her ajana `production.md` bölümünü, dosya adını, `publish_at`'i ver; CLAUDE.md + `docs/SULUBOYA.md` okusun,
+   `python tools/wc_catalog.py` ile nesneleri görsün, `tarih-bolumu` becerisini yüklesin, bilgileri doğrulasın, JSON'u
+   yazsın, `lint` hatasız + `preview` çalıştırıp `sheet.png`/`cover.jpg`'ye baksın. Yeni sahne tipi/nesne gerekirse
+   **kendi dosyasına** yazar (`wc_<konu>.js`); ortak dosyalara (`engine.js`, `core.js`, `watercolor-theme.js`,
+   `wc__lib.js`, `wc_g_*.js`, `wc_map.js`, `wc_world.js`, `wc_cards.js`, `wc_specimen.js`, `photo.js`) paralel ajan dokunmaz.
 6. **Eleştiri:** video başına yazardan farklı 1 eleştirmen ajan, `docs/REVIEW.md`'ye göre puanlar, en büyük 3 sorunu
    yazar, düzeltmez. **Düzeltme turu:** aynı yazar ajan (SendMessage) düzeltir → lint → preview → tekrar puan.
    En az 2, en fazla 3 tur; hedef tüm kriterler ≥ 7 (kapak ≥ 8). Her tur `production.md` → "Eleştiri günlüğü".
@@ -136,19 +138,20 @@ Yönetmen (bulut oturumu) Telegram'a **hiçbir şey göndermez**. Her kanalın g
 Böylece mesaj hiçbir zaman eski kalmaz.
 
 ### Senaryo kuralları (lint denetler)
-- Alanlar: `"engine": "studio"`, `"theme": <kanalın tarzı: Düşün Bakalım "belgesel" + "palette", Stickstory "parchment">`,
-  `"format": "short|long"`, `"fps": 30`, `"subtitles": true`,
-  `"channel"`, `"tts": {"provider": "elevenlabs", "voice_id": <kanalın sesi>, "model": "eleven_v3"}`.
-  `tts.settings`, `pacing`, `max_pause`, sahne `tone`, `art`, `mascot` yok. **Ses asla değişmez** (Stickstory'nin sesi
-  kanal sahibinin isteğiyle 2026-10-26'da değişti; yenisi kalıcı)
-  (Düşün Bakalım `mF7tIc9VLrznhGooGjaT` — belgesel sesi, kanal sahibinin isteğiyle 2026-10-29'dan beri, uzun ve Shorts;
-  Stickstory `2t85BBUECtLLKQzxLD95`).
-- **Düşün Bakalım'da anlatıcı bir belgesel sesidir (BELGESEL.md §3):** yavaş, alçak, hafif ürkütücü, merak uyandıran;
-  kısa ağır cümleler, sessizlik bırakan noktalama, derin zaman ve bilinmeyen imgeleri; "Peki", "inanılmaz", "hemen
-  anlatayım" gibi enerjik kalıplar yok. Aşağıdaki "-yor", devrik cümle, kısaltma, kanca kuralları aynen geçerli.
-- **Stickstory'de anlatıcı bir YouTuber'dır:** izleyiciye "you" der, merakı paylaşır ve açıklar; olayı altyazı gibi sayan "yapıyor
-  ediyor" anlatım yasak (en fazla üçte biri "-yor"), **devrik cümle yok**, ekrandakini tarif etmez, cümleler birbirine
-  bağlanır, her 20–30 sn'de gerilim kancası, dolgu cümle yok (BRAND §6). Kısaltmaları açık yaz ("km/sa" değil).
+- Alanlar: `"engine": "studio"`, `"theme": "watercolor"`, `"palette": "<pamuk|keten|sepya|yaz|gurub>"`,
+  `"format": "short|long"`, `"fps": 30`, `"subtitles": true`, `"channel"`, `"narrator"` (kanal anahtarı: Düşün
+  Bakalım `kasif`, Stickstory `fes`; ekranda sunucu yok), `"lang"`,
+  `"tts": {"provider": "elevenlabs", "voice_id": <kanalın sesi>, "model": "eleven_v3"}`.
+  `tts.settings`, `pacing`, `max_pause`, sahne `tone`, `art`, `mascot` yok. **Ses asla değişmez**
+  (Düşün Bakalım `mF7tIc9VLrznhGooGjaT` — belgesel sesi, kanal sahibinin isteğiyle 2026-10-29'dan beri; Stickstory
+  `2t85BBUECtLLKQzxLD95`, kanal sahibinin isteğiyle 2026-10-26'dan beri).
+- **Anlatım belgeseldir (SULUBOYA.md §3).** Düşün Bakalım: yavaş, alçak, hafif ürkütücü, merak uyandıran belgesel sesi
+  (BELGESEL.md §3): kısa ağır cümleler, sessizlik bırakan noktalama, derin zaman ve bilinmeyen imgeleri; "Peki",
+  "inanılmaz", "hemen anlatayım" gibi enerjik kalıplar yok. Stickstory: sıcak, meraklı, net bir İngilizce belgesel
+  anlatıcısı (BRAND.md §11 dil kuralları); "you" hitabı seyrek ve doğal; aşırı heyecanlı YouTuber kalıpları yok.
+  İkisinde de: olayı altyazı gibi sayan "yapıyor ediyor" anlatım yasak (Türkçede en fazla üçte biri "-yor"),
+  **devrik cümle yok**, ekrandakini tarif etmez, cümleler birbirine bağlanır, dolgu cümle yok (BRAND §6).
+  Kısaltmaları açık yaz ("km/sa" değil).
 - **Kanal analizi (2026-10-26, iki kanal için de geçerli):** Shorts izleyicilerinin ~%46'sı ilk 1–2 saniyede
   kaydırıyor (hedef ≥ %70 devam); uzun videolar yarıda bırakılıyor (ortalama %39 izlenme); uzun video tıklama oranı
   %0,96; trafiğin %99'u Shorts'tan ama abone ve uzun video izlenmesi neredeyse yok. Aşağıdaki kurallar bunun için.
@@ -165,74 +168,61 @@ Böylece mesaj hiçbir zaman eski kalmaz.
   yayınlandığında yayında olan en yeni uzun video. Konuyla bağlantılı bir uzun video varsa yönetmen `related`'ı
   yazar. (YouTube'un Shorts "İlgili video" alanının API'si yok; istenirse Studio'dan elle de seçilir.)
 - **Uzun — ilk 30 saniye (soğuk açılış):** selam, kanal tanıtımı, "bu videoda", "bugün size", uzun giriş yok (lint).
-  Video, vaat edilen olayın **en dramatik anının içinde** açılır (bölüm kartıyla değil: ilk sahne `chapter` tipi
+  Video, vaat edilen olayın **en dramatik anının içinde** açılır (bölüm kartıyla değil: ilk sahne `wc_chapter` tipi
   olamaz) ve videonun cevaplayacağı soruyu sorar (açık döngü; cevap sonda). Arka plan bilgisi kısa tutulur ve
   hep "bu neden önemli?" sorusuna bağlanır.
 - **Uzun — tempo:** her **45–60 saniyede** bir hikâye kancası (yeni soru, "ama kimse bilmiyordu ki…", sürpriz,
-  cliffhanger) ve bir **görsel değişim** (yeni yer, harita/zaman çizelgesi, büyük sayı kartı, yakın plan). Her bölüm
-  bir sonraki bölüme çeken bir cümleyle biter (lint uyarır). Efekt sesi yine yok (kanal sahibinin kuralı); dikkat
-  görsel değişim ve hikâye kancasıyla tutulur.
+  cliffhanger) ve bir **görsel değişim** (yeni yer, harita/zaman çizelgesi, büyük sayı, yakın plan, nesne levhası).
+  Her bölüm bir sonraki bölüme çeken bir cümleyle biter (lint uyarır). Efekt sesi yine yok; dikkat görsel değişim ve
+  hikâye kancasıyla tutulur.
 - **Uzun yapı:** soğuk açılış → BÖLÜM 1 sıradan dünya → kıvılcım/karar → felaket/dönüm noktası → "peki neden?" →
   sonrası ve bugün → tek yorum sorusu + abone çağrısı (`tarih-bolumu` §2). Bölümler YouTube'a otomatik eklenir.
-- Her sahne 1–3 cümle (Shorts'ta en fazla 2), `"visual"` = ekranda tam olarak ne görünüyor; seçilen tip bunu **birebir**
-  göstermeli, uygun tip yoksa yeni tip kodla. **Belgesel tarzında `title` yazılmaz (sol üst boş).** Stickstory'de `title` sol üstte küçük kicker: `white` 1–2, `gray` ≤ 3 kelime;
-  `title`/`chapter` sahnesinde `{}`. `cues`: sahne metnindeki dramatik bir kelimenin parçası (ilk eşleşme; erken bir
-  kelimeye denk gelmesin), altyazıda altın (sahnede `params.caption_color: "red"` ile kırmızı) yanar.
-- **Sahne tipleri (Düşün Bakalım):** sadece `bt_*` ve `photo` (BELGESEL.md §6; yeni nesne/mekân `bt_<konu>.js`).
-- **Sahne tipleri (Stickstory):** `stage` (Kaşif + dönem karakterleri, tek aksesuar), `map`, `timeline`, `board`, `title`, `chapter`,
-  `photo` (gerçek fotoğraf/klip, hep sepya; sadece gerçek tarihî belge/yer/eser için: `python tools/media.py search
+  Sahnenin `"chapter"` alanı bölüm adıdır (uzunda sol üstte birkaç saniye "02 / 05 · ad" olarak da görünür).
+- Her sahne 1–3 cümle (Shorts'ta en fazla 2), `"visual"` = ekranda tam olarak ne görünüyor; seçilen tip ve
+  boyanan nesneler bunu **birebir** göstermeli; uygun nesne/tip yoksa yeni `wc_<konu>` kodla. `title` (kicker)
+  yazılmaz. `cues`: sahne metnindeki dramatik bir kelimenin parçası (ilk eşleşme; erken bir kelimeye denk gelmesin),
+  altyazıda vurgu renginde yanar; sahne içinde bir olayı (bir nesnenin boyanması, bir notun yazılması, bir rotanın
+  çizilmesi) o ana bağlamak için `"at": "<cue adı>"` ile kullanılır.
+- **Sahne tipleri (SULUBOYA.md §4):** `wc_scene` (genel boyanmış sahne: gökyüzü, zemin, nesneler, notlar, ateş, duman,
+  hava), `wc_map`, `wc_specimen`, `wc_number`, `wc_timeline`, `wc_letter`, `wc_chapter`, `wc_title`, `photo`
+  (gerçek fotoğraf/belge, sıcak baskı; sadece gerçek tarihî belge/yer/eser için: `python tools/media.py search
   "<İngilizce sorgu>" --dir videos/<tarih>/media` → `candidates.jpg`'ye bak → `get <no> --dir … --name <ad>`;
-  `params.credit` zorunlu, ajan başına ayrı `--name`) ve konuya özel tipler (parametreler dosya başındaki yorumda).
-- **Kaşif kuralı (Stickstory; Düşün Bakalım'da Kaşif yok) (2026-10-26):** Kaşif **sunucu**: sahnelerin **%15–25'inde** (en fazla %35, lint; `params.cast`/`kasif`
-  ile), açılışta, bölüm dönüşlerinde, kilit anda ve kapanışta; göründüğünde bir eylem yapıyor. Diğer sahneleri olay doldurur.
-- **Dekor ve kamera (Stickstory, BRAND §5.1; belgeselde dekor yok, kamera sadece yavaş yaklaşır):** sahneler bir dünyada geçer (`"set": "hills|sea|ocean|coast|city|interior|night|desert|snow|storm|field"`),
-  yer değiştikçe dekor değişir; plan büyüklüğü değişir: Shorts'ta ≥ 1, uzunda ≥ 4 yakın plan
-  (`"camera": {"focus": [x, y], "zoom": 1.8, "move": "push"}`). Her video önceki videolardan kalıp olarak farklı.
-- **Çeşitlilik:** Shorts'ta en az 4 farklı tip; aynı tip üst üste en fazla 2 (`stage` 3); tek tip toplamın %60'ını geçmez.
-- **Kalite (belgesel):** sabit ve net; hareket yavaş ve doğal (çizilen çizgi, alev, buhar, su), zıplama/titreşim yok;
-  sahne başına tek özne, bol boşluk (BELGESEL.md §4). **Kalite (Stickstory):** her sahnede sürekli hareket (kaynayan çizgi tek başına yetmez), girişlerde `spring()`, vurguda
-  `punch(lt, cue)` ya da Kaşif poz değişimi. Ekranda sahne başına en fazla 5 kelime, en küçük yazı 44 px.
-  **Kadraj dolu (Stickstory, 2026-10-27 eleştirilerinden):** boş kâğıt üstünde küçük kart/diyagram/harita yok (tam kadraj ya da
-  bir mekânın içinde: masa, tezgâh, oda); dikeyde altyazının altı (y 1320–1920) boş kalmaz, ön plan katmanı (zemin,
-  kaldırım, masa önü, kalabalık başları) iner; gökyüzü kadrajın en fazla üçte biri; yakın plan zoom ≥ 1,6. Dikey ekranda
-  önemli ayrıntı altyazı şeridine (y ≈ 1170–1320) ve YouTube arayüzüne (y > 1500) konmaz; sol üst marka + kicker'ındır.
-- Geçişler otomatik (belgesel: `dissolve`, bölüm başında `dip`; parşömen: `slide`, her üçüncüde `fade`); elle `"transition"`.
+  `params.credit` zorunlu, ajan başına ayrı `--name`) ve konuya özel `wc_<konu>` tipleri.
+- **Kamera:** sahne boyunca tek yavaş yaklaşma (motor); yakın plan `"camera": {"focus": [x, y], "zoom": 1.6–2.2}` ya da
+  nesneyi büyük boyamak (`s`, `wc_specimen`). Plan büyüklüğü değişir: Shorts'ta ≥ 1, uzunda ≥ 4 yakın plan/levha.
+- **Çeşitlilik:** Shorts'ta en az 3 farklı tip; `wc_scene` üst üste en fazla 3, diğerleri 2; tek tip toplamın %70'ini
+  geçmez; ardışık iki `wc_scene` aynı gökyüzü + zemin + nesneyle tekrar etmez (lint). Her video önceki videolardan
+  kalıp olarak farklı (yer, gün saati, kâğıt seti, açılış görüntüsü, kapak düzeni).
+- **Kalite:** her sahnede yavaş, doğal hareket (boyanma, salınım, alev, duman, su, ilerleyen bir şey); zıplama/titreşim
+  yok. Sahne başına tek kahraman özne, bol kâğıt boşluğu; ekranda sahne başına en fazla 5 kelime not. **Dikey ekranda**
+  özne y ≈ 200–1150'de; altyazı şeridi (y ≈ 1170–1320) ve YouTube arayüzü (y > 1500) üstüne önemli ayrıntı konmaz,
+  zemin ve ön plan oraya kadar boyanır (boş kalmaz).
+- Geçişler otomatik (sahneler arası fırça kenarlı `wipe`, bölüm başında `dip`); elle `"transition"`.
 - **Kaynaklar görünür (kanal sahibinin kararı, 2026-10-26; lint):** senaryoda `"sources": [{"title": "NASA — Phobos",
   "url": "https://…"}, …]` (Shorts ≥ 2, uzun ≥ 3; bilgilerin doğrulandığı gerçek sayfalar, uydurma yok) →
-  `upload.py` açıklamaya "📚 Kaynaklar / Sources" bölümü olarak ekler. Ekranda: kilit bilgi/sayı sahnelerinde
-  sahne alanı `"source": "NASA"` (≤ 5 kelime) kicker'ın altında "Kaynak: NASA" notu olarak görünür (Shorts ≥ 1,
-  uzun ≥ 3 sahne; **belgesel tarzında ekranda kaynak notu yok**, kaynaklar açıklamada). Mümkünse gerçek belge, mektup, eski harita (`photo`) ve kişilerin kendi sözleri kullanılır.
-- **Renk/tema her videoda değişir:** Düşün Bakalım `scenes/studio/belgesel-themes.json` (obsidyen, derin, grafit,
-  fildisi, kum; yazar konuya uyanı ve bir öncekinden farklısını `"palette"` ile seçer, BELGESEL.md §5); Stickstory
-  `scenes/studio/palettes.json` (`ag-newsprint`, `ag-slate`, `ag-sage`, `ag-dusk`; kâğıt + mürekkep, aynı kontrast).
-  `build.py` kanalın setlerinden dosya adına göre sabit ama videoya göre farklı birini seçer;
-  senaryoda `"palette": "<ad>"` ile elle seçilebilir. Sahne kodu renkleri sadece `INK.*` / `THEME_PARCHMENT.*`
-  token'larından alır (sabit hex yazılmaz), Kaşif'in şapkası hep aynı.
+  `upload.py` açıklamaya "📚 Kaynaklar / Sources" bölümü olarak ekler. Suluboya tarzında ekranda kaynak notu yok.
+  Mümkünse gerçek belge, mektup, eski harita (`photo`, `wc_letter`) ve kişilerin kendi sözleri kullanılır.
+- **Kâğıt seti her videoda değişir:** `scenes/studio/watercolor-themes.json` (pamuk, keten, sepya, yaz, gurub); yazar
+  konuya uyanı ve bir öncekinden farklısını `"palette"` ile seçer (SULUBOYA.md §2). Sahne kodu renkleri sadece
+  token'lardan alır (`WC.C.*` / `THEME_PARCHMENT.*`; sabit hex yazılmaz).
 
 ### Kapak (tıklanma oranını belirler, en çok özen burada)
 
-**Düşün Bakalım (belgesel, BELGESEL.md §7):** temanın zemini, Fraunces büyük harf 2–4 kelime, tek kelime vurgu renginde
-(kutu yok), tek özne ışık havuzunda, Kaşif yok (`"kasif": false`), çerçeve yok; en gizemli an (ör. mezar kesitinde parlayan
-kaşık). Uzunda `focus` zorunlu. Aşağıdaki Kaşif/kırmızı kutu/çerçeve kuralları **Stickstory** içindir; 3 aday kuralı ikisi için de geçerli.
+**Büyük, dikkat çeken yazı (kanal sahibinin kararı, 2026-11-23; SULUBOYA.md §7):** kalın, yuvarlak büyük harfler
+(Nunito Black), açık kâğıt renginde dolgu, kalın mürekkep kontur ve sert gölge; **tek kelime kehribar sarısında**
+(örnek: "**5** TÜR VARDI"). Yazı üstte, altında boyanmış tek net özne. Çerçeve yok, sunucu yok.
 
 ```json
-"cover": {"lines": ["Kuşlara", "yenildiler"], "highlight": ["kuşlara"], "scene": 0, "t": 2.4, "kasif": "shock"}
-"cover": {"lines": ["200 gemi", "tek ada"], "highlight": ["ada"], "scene": 21, "t": 1.5, "focus": [831, 567], "zoom": 1.5, "kasif": "shock"}
+"cover": {"lines": ["5 tür", "vardı"], "highlight": ["5"], "scene": 3, "t": 2.2}
+"cover": {"lines": ["200 gemi", "tek ada"], "highlight": ["ada"], "scene": 21, "t": 2.5, "focus": [960, 640], "zoom": 1.5}
 ```
-- BRAND §9: parşömen, Fraunces 900 dev yazı, tek kelime kırmızı kutuda, yanında **büyük Kaşif** güçlü bir duyguyla
-  (şok, korku, hayret; yüzü okunur) ve olayın **tek simgesi**. **Görsel karmaşa yok: tek net odak noktası.**
-  `lines` 1–3 satır, toplam **2–4 kelime** (lint), başlığı tekrar etmeyen merak patlatan iddia. `highlight` tek kelime. `scene` + `t`: en dramatik, dolu an (boş/yarım çizilmiş kare,
-  sıkıcı harita/pano, uzak plan olmaz; gerekirse nesneyi büyüt). `kasif`: `"shock"`, `{"pose", "emotion", "dir",
-  "face", "scale", "x", "y"}` ya da sahnede zaten büyükse `false`.
-- Uzun video kapağı 1280×720 (solda yazı, sağda tek nesne + Kaşif); Shorts 1080×1920 (üstte yazı; aynı kare ilk 2
-  saniyenin kancasıdır). **Uzun kapakta `focus` zorunlu (lint):** `[x, y]` = kapağın gösterdiği tek nesnenin sahne
-  pikseli; motor onu sağ yarının ortasına büyütür (`zoom`, varsayılan 1.6) ve gerisini kâğıda eritir (`"fade": false`
-  kapatır). Shorts'ta `focus` isteğe bağlı (nesneyi yazının altına büyütür). Kalabalık sahne (çok gemi, çok asker,
-  çok yazı) yerine tek nesne + Kaşif'in yüzü.
-- **Çerçeve (kanal sahibinin kararı, 2026-10-26, tıklanma için):** motor her küçük resmin kenarına kalın bir çerçeve
-  koyar (Düşün Bakalım kırmızı + mürekkep çizgi, Stickstory koyu mürekkep + altın çizgi); senaryoya bir şey yazılmaz.
-  Videonun içindeki kanca karesinde çerçeve yoktur. Kapak yazısı ve Kaşif çerçeveye değmez.
-- **Her video için en az 3 kapak adayı** üret (farklı sahne/an/poz/metin), `cover.jpg`'leri karşılaştır, en güçlüsünü
+- `lines` 1–3 satır, toplam **2–4 kelime** (lint), başlığı tekrar etmeyen merak patlatan iddia. `highlight` tek kelime.
+  `scene` + `t`: en dramatik, **tam boyanmış** an (boş/yarım boyanmış kare, sıkıcı harita, uzak plan olmaz).
+  **Görsel karmaşa yok: tek net odak noktası.** Kalabalık sahne yerine tek nesne/tek insan/tek gemi.
+- `focus` [x, y]: kapağın gösterdiği tek öznenin sahne pikseli; motor onu yazının altına büyütür (`zoom`; uzun
+  varsayılan 1,6, Shorts 1,25); `"side": "left"|"right"` yana kaydırır. Uzun kapakta önerilir (lint uyarır).
+- Uzun video kapağı 1280×720; Shorts 1080×1920 (aynı kare ilk 2 saniyenin kancasıdır).
+- **Her video için en az 3 kapak adayı** üret (farklı sahne/an/metin), `cover.jpg`'leri karşılaştır, en güçlüsünü
   seç; telefonda küçükken okunmalı. Eleştirmen kapağa **8'in altında** verirse kapak yenilenir.
 
 ### YouTube SEO (lint 100/100 ister; altı hatadır, push yok)
@@ -254,32 +244,27 @@ kaşık). Uzunda `focus` zorunlu. Aşağıdaki Kaşif/kırmızı kutu/çerçeve 
 ### Kontrol
 `pip install -r requirements.txt`, `python tools/lint.py videos/<tarih>/*.json` (hata kalmayana kadar), her dosya için
 `python tools/preview.py …` (`CHROMIUM_PATH=/opt/pw-browsers/chromium`). `STATIC?` sahneyi hareketlendir. `sheet.png` ve
-`cover.jpg`'de: taşan/üst üste binen yazı, ekran dışı nesne, boş kare, palet dışı renk, (Stickstory) Kaşif'siz ya da duran sahne, (belgesel) sallanan/titreyen öğe ya da sol üstte yazı,
-altyazının arkasında kalan ayrıntı, eşleşmeyen cue uyarısı, karakter bütçesi. Doğruluk: sadece emin olunan bilgiler;
-web varsa tarih ve sayıları doğrula, emin olmadığın sayıyı yazma, yaygın yanlış efsaneleri anlatma.
+`cover.jpg`'de: taşan/üst üste binen yazı, ekran dışı nesne, boş ya da yarım boyanmış kare, palet dışı renk, sallanan/
+titreyen öğe, altyazının arkasında kalan ayrıntı, okunmayan altyazı, eşleşmeyen cue uyarısı, karakter bütçesi.
+Doğruluk: sadece emin olunan bilgiler; web varsa tarih ve sayıları doğrula, emin olmadığın sayıyı yazma, yaygın yanlış
+efsaneleri anlatma.
 
 ## İkinci kanal: Stickstory (global, İngilizce)
 
-Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı görev, saate göre kanal seçer). Akış, eleştiri ve SEO kuralları yukarıdakiyle
-**birebir aynı**; tarz Düşün Bakalım'ınkinden farklı: **parşömen + fesli çöp adam** (`"theme": "parchment"`, BRAND.md;
-yukarıdaki "Stickstory" işaretli kurallar), İngilizce anlatım kuralları **BRAND.md §11**. Farklar:
+Ayrı bir zamanlanmış görev her gün 11:50'de (İstanbul) bunu uygular (aynı görev, saate göre kanal seçer). Akış, tarz
+(suluboya, `"theme": "watercolor"`), eleştiri ve SEO kuralları yukarıdakiyle **birebir aynı**. Farklar:
 - `python tools/plan.py --channel ag`; dosyalar `ag-NN-<slug>.json`; plan her video için farklı bir `category` önerir.
-- **Konu önce manşetten (kanal sahibinin kalıcı kuralı, 2026-10-26):** her Stickstory videosunda (günlük, ek video,
-  Shorts ve uzun) konu seçmeden önce `python tools/news.py` çalıştır: ABD, Avustralya, İsviçre, Norveç, Yeni Zelanda,
-  Kanada ve Almanya'nın Google News manşetleri (birden çok ülkede manşette olanlar en üstte). Kanal kategorilerinden
-  birine uyan bir manşet seç ve **haberin arkasındaki gerçek, doğrulanabilir hikâyeyi** anlat (ör. "Japonya Mars'ın
-  uydusuna sonda fırlattı" → "Phobos Mars'a düşüyor"); haber ilk cümlelerde kanca olarak geçer, gerisi kalıcı bilgi
-  (video yıllarca izlenir). Habere ait tarih/sayıyı web'de doğrula. Siyaset, seçim, suç, kurbanı olan güncel
-  felaket, ölüm haberi, ünlü/magazin, spor sonucu ve ürün haberi seçilmez. Aynı gün her video ayrı manşetten;
-  uyan manşet yoksa o video için kategori havuzuna dön ve raporda belirt. `production.md`'ye seçilen manşeti
-  (ülke, kaynak, başlık) yaz. Plan'ın önerdiği `category` bu durumda manşetin kategorisiyle değişebilir.
-- **Her şey İngilizce:** ses, ekrandaki her yazı (kicker, etiketler, el yazısı notlar, "CHAPTER 2 / 5"), altyazı, kapak,
+- **Konu özgün** (kanal sahibinin kararı, 2026-11-23: haber/manşetten konu seçme kaldırıldı): kanalın kategori
+  havuzundan, plan'ın önerdiği `category`'den başlayarak gerçek, doğrulanabilir, kalıcı bir hikâye.
+- **Her şey İngilizce:** ses, ekrandaki her yazı (notlar, etiketler, harita yazıları, "CHAPTER 2"), altyazı, kapak,
   başlık/açıklama/etiketler. Metadata'da Türkçe karakter ve "Düşün Bakalım" geçmez.
-- **Niş:** sadece tarih değil, en çok izlenen Shorts kategorilerinden parşömen + çöp adama uyanlar (`channels.py`
-  `categories`; Osmanlı/Türk tarihi "empires and battles" altında global izleyiciye). Her konu yine gerçek ve
-  doğrulanabilir (`tarih-bolumu` 4 testi; bilim/hayvan konularında kahraman bir canlı ya da deney olabilir). Konu iki
-  kanalın geçmişinde işlenmemiş ve aynı gün Düşün Bakalım'la çakışmıyor olmalı.
-- Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"`, `"lang": "en"`, ses `2t85BBUECtLLKQzxLD95`.
+- **Niş: belgesel + tarih**, en çok izlenen kategorilerde (`channels.py` `categories`: tarihin en tuhaf anları,
+  çözülmemiş gizemler, bir şey nasıl inşa edildi, gündelik eşyaların kökeni, insan vücudu, hayvanların süper güçleri,
+  uzay ve dünya, hayatta kalma hikâyeleri, imparatorluklar ve savaşlar; Osmanlı/Türk tarihi "empires and battles"
+  altında global izleyiciye). Her konu yine gerçek ve doğrulanabilir (`tarih-bolumu` 4 testi; bilim/hayvan
+  konularında kahraman bir canlı ya da deney olabilir) ve tarihsel bir hikâye olarak anlatılır (ilk kim fark etti,
+  nasıl keşfedildi). Konu iki kanalın geçmişinde işlenmemiş ve aynı gün Düşün Bakalım'la çakışmıyor olmalı.
+- Senaryo: `"channel": "Stickstory"`, `"narrator": "fes"` (kanal anahtarı), `"lang": "en"`, ses `2t85BBUECtLLKQzxLD95`.
 - SEO: başlık aranan İngilizce ifadeyle başlar ("Mary Celeste: …"); uzunda "In this video:"; "Subscribe to Stickstory
   for …" + yorum sorusu; hashtag'ler `#shorts` (Shorts'ta ilk) + konu + `#stickstory`; etiketlerde `stickstory`.
 - `category_id` **"28"** (Bilim ve Teknoloji); yüklemede "yapay zekâ kullanımı / değiştirilmiş ya da sentetik içerik"
@@ -289,9 +274,10 @@ yukarıdaki "Stickstory" işaretli kurallar), İngilizce anlatım kuralları **B
 ## Elle başlatılan ek video
 Telegram `/uzun [konu]`, `/shorts [konu]` (payload "EK VİDEO: uzun|shorts · Konu: …") ya da sohbetten istek: plan
 dışı ama **istenmiş** bir videodur. `python tools/plan.py --extra short|long [--channel ag]` numara ve en erken
-`publish_at`'i verir (konu verilmemişse iki kanalda da önce `tools/news.py` manşetleri); senaryoya `"extra": true` yaz (günlük plana sayılmaz). Kanal sahibi "hemen paylaş" derse
-`"publish_at": "now"`: render biter bitmez herkese açık yayınlanır (sadece `extra` videolarda, lint denetler). Konu yoksa geçmişte işlenmemiş bir konu
-seç (Stickstory'de önce `tools/news.py` manşetleri, yukarıdaki kural). Akış aynı (eleştirmen en az 1 tur, zaman yetiyorsa 2); commit `Extra video YYYY-MM-DD: <başlık>`.
+`publish_at`'i verir; senaryoya `"extra": true` yaz (günlük plana sayılmaz). Kanal sahibi "hemen paylaş" derse
+`"publish_at": "now"`: render biter bitmez herkese açık yayınlanır (sadece `extra` videolarda, lint denetler). Konu
+verilmemişse geçmişte işlenmemiş özgün bir konu seç (kanalın havuzundan). Akış aynı (eleştirmen en az 1 tur, zaman
+yetiyorsa 2); commit `Extra video YYYY-MM-DD: <başlık>`.
 
 ## Komutlar
 
@@ -299,15 +285,15 @@ seç (Stickstory'de önce `tools/news.py` manşetleri, yukarıdaki kural). Akı�
 python tools/plan.py [--channel ag] [--date YYYY-MM-DD] [--extra short|long]
 python tools/lint.py videos/<tarih>/*.json
 python tools/preview.py videos/<tarih>/<dosya>.json [--times 3,12.5]
+python tools/wc_catalog.py [arama]                         # suluboya nesneleri ve sahne tipleri
 python tools/media.py search "Piri Reis map" --dir videos/<tarih>/media
 python tools/check.py                                      # API kontrolü (secret'lar Actions'ta)
-python tools/news.py [--channel db] [--links]              # Google News manşetleri (Stickstory 7 ülke / Türkiye)
 python build.py <dosya>.json [--scenes 3 | --still 12.5 | --cover | --no-tts -o out/draft.mp4]
 python build.py <dosya>.json -o out/x.mp4 --prepare | --shard 2/5 | --finish   # Actions'ın parçalı render'ı
-python tools/brand_sheet.py                                # Kaşif referans çizimleri (brand/kit/)
 ```
 
-**Performans kuralı (sahne kodu):** pahalı desenleri açılışta bir kez pişir, karede sadece kopyala; `mix-blend-mode`,
-büyük `filter: blur`, tam ekran yarı saydam katman ve SVG grup `opacity`'sinden kaçın (yazılım raster'ında şerit
-artefaktı). Motor 1080p/30 fps çizer (yazılım compositor'ı, CDP yakalama), ffmpeg 1440p'ye büyütür. Actions'ta bir
-video ~40 sn'lik parçalara (en çok 16) bölünüp ayrı işlerde render edilir.
+**Performans kuralı (sahne kodu):** pahalı şeyleri açılışta bir kez pişir (`WC.make` nesne sprite'ları, `WC.backdrop`
+arka plan tuvali), karede sadece kopyala; boyanma bitince nesne sprite'tan çizilir. `mix-blend-mode`, büyük
+`filter: blur`, tam ekran yarı saydam katmanlar ve kare başına binlerce fırça darbesinden kaçın (yazılım raster'ı).
+Motor 1080p/30 fps çizer (yazılım compositor'ı, CDP yakalama), ffmpeg 1440p'ye büyütür. Actions'ta bir video
+~40 sn'lik parçalara (en çok 16) bölünüp ayrı işlerde render edilir.

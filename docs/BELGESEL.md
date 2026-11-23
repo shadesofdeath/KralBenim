@@ -1,4 +1,9 @@
-# Düşün Bakalım — belgesel tarzı (anayasa)
+# Düşün Bakalım — belgesel tarzı (eski anayasa)
+
+> **2026-11-23'ten beri iki kanalın bütün videoları suluboya (watercolor) tarzındadır: anayasa `docs/SULUBOYA.md`.**
+> Bu dosyanın görsel kuralları (§4–7: zemin, `bt_*` tipleri, kapak) sadece eski videolar içindir. Düşün Bakalım'ın
+> anlatım sesi için **§3 aynen geçerlidir** (SULUBOYA.md §3), §1'in 1–3. maddeleri (sakin hareket, ürkütücü merak
+> uyandıran anlatım, ses işlenmez) de.
 
 **Kanal sahibinin kararı (2026-10-29, "Bu tarza bayıldım… artık bütün video üretimleri böyle olsun"):** Düşün Bakalım'ın
 **bütün videoları**, uzun ve Shorts, bu tarzda ve bu sesle üretilir. Senaryoda `"theme": "belgesel"` (lint ister;

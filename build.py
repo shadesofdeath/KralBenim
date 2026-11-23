@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Video pipeline: videos/<date>/<file>.json -> out/video.mp4 (studio engine, parchment + Kaşif style)
+"""Video pipeline: videos/<date>/<file>.json -> out/video.mp4 (studio engine; watercolor style, docs/SULUBOYA.md)
 
   python build.py <file>.json                 # full video
   python build.py <file>.json --scenes 3      # only the first 3 scenes (test)
@@ -151,7 +151,8 @@ def debreath(mp3, words, floor=0.06, min_gap=0.22, pad_out=0.06, pad_in=0.03, ra
 
 def synthesize(text, cfg, work, breath=True):
     """(mp3, words), cached in the work dir by text + tts config (re-renders spend no credits).
-    breath=False (belgesel style, owner 2026-10-29): the narration stays exactly as ElevenLabs reads it, no ducking."""
+    breath=False (belgesel and watercolor styles, owner 2026-10-29): the narration stays exactly as ElevenLabs reads it,
+    no ducking."""
     key = hashlib.sha1(json.dumps([text, cfg], sort_keys=True).encode()).hexdigest()
     mp3, wj = work / "audio.mp3", work / "words.json"
     if mp3.exists() and wj.exists():
@@ -179,8 +180,8 @@ def estimate_words(text):
 # ---------------------------------------------------------------- timeline
 
 def captions_of(ws, end, calm=False):
-    """Punchy 1-3 word caption groups, broken at punctuation or ~16 chars. calm (belgesel style): one quiet subtitle
-    line per phrase, up to ~7 words / 38 chars."""
+    """Punchy 1-3 word caption groups, broken at punctuation or ~16 chars. calm (belgesel / watercolor style): one
+    subtitle phrase at a time, up to ~7 words / 38 chars."""
     chunks, chunk = [], []
     most, chars = (7, 38) if calm else (3, 16)
     for k, w in enumerate(ws):
@@ -225,7 +226,7 @@ def build_timeline(script, text, ranges, words, duration):
         out_scenes.append({"start": starts[i], "end": ends[i], "type": sc["type"], "chapter": sc.get("chapter"),
                            "title": sc.get("title", {}), "source": sc.get("source"), "params": sc.get("params", {}), "cues": cues,
                            **{k: sc[k] for k in ("transition", "camera", "set") if k in sc}})
-        captions += captions_of(per[i], ends[i], calm=belgesel(script))
+        captions += captions_of(per[i], ends[i], calm=theme(script) != "parchment")
 
     fmt = script.get("format", "short")
     hook = None
@@ -235,19 +236,28 @@ def build_timeline(script, text, ranges, words, duration):
         hook = {**script["cover"], "end": min(3.2, max(1.2, first["end"] + 0.1))}
     return {"hook": hook, "duration": duration, "fps": script.get("fps", 30), "format": fmt, "size": SIZES[fmt],
             "channel": script.get("channel", ""), "narrator": script.get("narrator", "kasif"),
-            "lang": script.get("lang", "tr"), "theme": "belgesel" if belgesel(script) else "parchment", **palette(script),
+            "lang": script.get("lang", "tr"), "theme": theme(script), **palette(script),
             "scenes": out_scenes, "captions": captions if script.get("subtitles", True) else []}
 
 
-PALETTES = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scenes/studio/palettes.json").read_text()).items()
+PALETTES = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scenes/studio/palettes.json").read_text(encoding="utf-8")).items()
             if not k.startswith("_")}
 # belgesel (documentary) style, "theme": "belgesel" (docs/BELGESEL.md): its own colour themes, dark and light
-THEMES = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scenes/studio/belgesel-themes.json").read_text()).items()
+THEMES = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scenes/studio/belgesel-themes.json").read_text(encoding="utf-8")).items()
           if not k.startswith("_")}
+# watercolor style, "theme": "watercolor" (docs/SULUBOYA.md; both channels since 2026-11-23): paper + pigment sets
+WATERCOLOR = {k: v for k, v in json.loads((Path(__file__).resolve().parent / "scenes/studio/watercolor-themes.json").read_text(encoding="utf-8")).items()
+              if not k.startswith("_")}
+
+
+def theme(script):
+    """The script's visual style: "watercolor" (current), "belgesel" or "parchment" (older scripts)."""
+    t = script.get("theme")
+    return t if t in ("watercolor", "belgesel") else "parchment"
 
 
 def belgesel(script):
-    return script.get("theme") == "belgesel"
+    return theme(script) == "belgesel"
 
 
 def channel_palettes(script):
@@ -259,11 +269,12 @@ def channel_palettes(script):
 def palette(script):
     """The video's paper/ink colours (scenes/studio/palettes.json): the script's "palette", else a stable pick from
     the file name, so every video gets a different but repeatable set (preview = render = every shard)."""
-    sets = THEMES if belgesel(script) else PALETTES
+    th = theme(script)
+    sets = WATERCOLOR if th == "watercolor" else THEMES if th == "belgesel" else PALETTES
     name = script.get("palette")
     if name not in sets:
         key = script.get("_name") or script.get("youtube", {}).get("title", "")
-        own = sorted(THEMES) if belgesel(script) else channel_palettes(script)
+        own = sorted(sets) if th != "parchment" else channel_palettes(script)
         name = own[int(hashlib.sha1(key.encode()).hexdigest(), 16) % len(own)]
     return {"palette": name, "colors": sets[name]}
 
@@ -280,7 +291,7 @@ def draft_timeline(script):
 def load_script(path):
     """Read a script and resolve media paths (params.src / params.video) relative to the script file."""
     path = Path(path).resolve()
-    script = json.loads(path.read_text())
+    script = json.loads(path.read_text(encoding="utf-8"))
     script["_name"] = path.stem
     if script.get("engine") != "studio":
         sys.exit(f'{path.name}: "engine" must be "studio"')
@@ -575,7 +586,7 @@ def main():
         mp3 = work / "silence.wav"
         ffmpeg("-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", f"{speech:.2f}", mp3)
     else:
-        mp3, words = synthesize(text, script.get("tts", {}), work, breath=not belgesel(script))
+        mp3, words = synthesize(text, script.get("tts", {}), work, breath=theme(script) == "parchment")
     duration = audio_duration(mp3) + TAIL
     timeline = build_timeline(script, text, ranges, words, duration)
     prepare_media(timeline, work)

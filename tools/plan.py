@@ -6,8 +6,8 @@
   python tools/plan.py --date 2026-10-26
   python tools/plan.py --extra long  # one extra video started by hand: file number + earliest publish_at
 
-Schedules live in tools/channels.py (Düşün Bakalım: 1 Short + 1 long video a day; Stickstory: 3 Shorts +
-1 long video a day, in New York time). Videos already in the day's folder are "done"; the daily task
+Schedules live in tools/channels.py (Düşün Bakalım: 1 Short a day + a long video every 2nd day; Stickstory:
+2 Shorts a day + a long video every 2nd day, in New York time). Videos already in the day's folder are "done"; the daily task
 makes only the "todo" ones. Extra videos carry "extra": true and never count against the plan.
 The daily task follows this output instead of doing date arithmetic by hand.
 """
@@ -27,13 +27,14 @@ MONTHLY_CHARS = 231442                 # ElevenLabs Creator plan credits (panel,
 BILLING_DAY = 20                       # credits renew on this day of the month
 # narration chars: target min, target max, hard max (~14 chars/s: Shorts 28-35 s, long videos 5-6 min)
 LIMITS = {"short": (400, 500, 550), "long": (4300, 5000, 5400)}
-# belgesel style (docs/BELGESEL.md §3): the slow documentary voice reads fewer characters per second
+# a slow documentary voice ("pace": "slow" in tools/channels.py, Düşün Bakalım) reads fewer characters per second
 # (4,355 chars = 5:23 on 2026-10-29), so the same durations need shorter texts
-LIMITS_BELGESEL = {"short": (330, 420, 480), "long": (3900, 4500, 5000)}
+LIMITS_SLOW = {"short": (330, 420, 480), "long": (3900, 4500, 5000)}
+LIMITS_BELGESEL = LIMITS_SLOW     # older name
 
 
 def limits_of(cfg):
-    return LIMITS_BELGESEL if cfg.get("theme") == "belgesel" else LIMITS
+    return LIMITS_SLOW if cfg.get("pace") == "slow" or cfg.get("theme") == "belgesel" else LIMITS
 SCENES = {"short": (8, 11), "long": (40, 50)}
 
 
@@ -50,7 +51,7 @@ def next_long(d, ch=DEFAULT):
 
 def script_info(path):
     """(narration chars, format, extra) of a script file."""
-    s = json.loads(path.read_text())
+    s = json.loads(path.read_text(encoding="utf-8"))
     return (sum(len(sc["text"]) for sc in s["scenes"]) + max(0, len(s["scenes"]) - 1),
             s.get("format", "short"), bool(s.get("extra")))
 

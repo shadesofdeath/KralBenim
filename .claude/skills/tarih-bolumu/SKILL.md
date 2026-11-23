@@ -1,21 +1,18 @@
 ---
 name: tarih-bolumu
-description: Düşün Bakalım (belgesel tarzı) ve Stickstory (parşömen + çöp adam) için tarih hikâyesi bölümü (Shorts ya da uzun video) planlarken ve senaryosunu yazarken kullan. Konu seçimi, hikâye yapısı, sahne seçimi ve anlatım kuralları. Senaryo JSON'u yazmadan önce yükle.
+description: Düşün Bakalım ve Stickstory (ikisi de belgesel + tarih, suluboya/watercolor tarzı) için tarih hikâyesi bölümü (Shorts ya da uzun video) planlarken ve senaryosunu yazarken kullan. Konu seçimi, hikâye yapısı, sahne seçimi ve anlatım kuralları. Senaryo JSON'u yazmadan önce yükle.
 ---
 
 # Tarih bölümü yazma becerisi
 
-**Düşün Bakalım:** önce `docs/BELGESEL.md` oku (anayasa; 2026-10-29'dan beri bütün videolar belgesel tarzında, ses
-`mF7tIc9VLrznhGooGjaT`). Bu becerinin §1–2'si (konu, yapı) aynen geçerli; sahne seçimi ve anlatım için §3b ve §4b'ye bak,
-§3 ve §4 Stickstory'nindir.
+**Önce `docs/SULUBOYA.md`** (anayasa; 2026-11-23'ten beri iki kanalın bütün videoları suluboya tarzında, belgesel +
+tarih, `"theme": "watercolor"`). Sonra `python tools/wc_catalog.py` ile boyanabilen nesnelere ve sahne tiplerine bak.
 
-**Stickstory:** önce `brand/kit/BRAND.md` dosyasını oku; §3 ve §4 onun uygulamasıdır.
+- **Düşün Bakalım** (Türkçe): ses `mF7tIc9VLrznhGooGjaT`, yavaş belgesel anlatımı (§4).
+- **Stickstory** (global, İngilizce): ses `2t85BBUECtLLKQzxLD95`, İngilizce belgesel anlatıcısı (§4; dil kuralları
+  BRAND.md §11). Metin, ekran yazıları, harita etiketleri, bölüm kartı ("CHAPTER 2") ve kapak İngilizce.
 
-**Stickstory (eski Anlatayım Gel; global, İngilizce):** aynı yapı ve kurallar; metin, ekran yazıları ve kapak İngilizce
-(BRAND.md §11), konu önce `python tools/news.py` manşetlerinden (kategoriye uyan manşetin arkasındaki gerçek hikâye; CLAUDE.md), uyan yoksa `tools/plan.py --channel ag` çıktısındaki `category`'den; "-yor"/devrik cümle kuralları
-yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPTER" yazar.
-
-## 1. Konu seçimi
+## 1. Konu seçimi (özgün; haber/manşetten konu seçilmez — kanal sahibi, 2026-11-23)
 
 İyi bir tarih bölümü konusu şu dört testi geçer:
 
@@ -24,7 +21,10 @@ yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPT
 3. **Bir "neden" var:** izleyicinin aklındaki yanlış ya da eksik cevap ("Titanik buzdağı yüzünden battı" → asıl neden perçinler ve hız).
 4. **Doğrulanabilir:** tarih, sayı ve isimler güvenilir kaynaklarda var.
 
-**Önce manşet:** `python tools/news.py --channel db` (Türkiye) / `python tools/news.py` (Stickstory); havuza uyan bir manşetin arkasındaki gerçek hikâyeyi seç (CLAUDE.md). `videos/*/` altındaki geçmiş başlıkları kontrol et, tekrar etme. Konu havuzunu dönüşümlü kullan (BRAND.md §1), Türkiye/Osmanlı tarihinden haftada en az 2 bölüm.
+Konu kanalın havuzundan, `tools/plan.py` çıktısındaki `category`'den başlayarak seçilir (BRAND.md §1; Stickstory
+`channels.py` `categories`). `videos/*/` altındaki geçmiş başlıkları kontrol et, tekrar etme. Havuzu dönüşümlü kullan;
+Düşün Bakalım'da Türkiye/Osmanlı tarihinden haftada en az 2 bölüm. Herkesin bildiği konuyu bildik açıdan anlatma: az
+bilinen bir açı, beklenmedik bir neden, unutulmuş bir insan. Video yıllarca izlenecek; güncel habere bağlama.
 
 ## 2. Hikâye yapısı
 
@@ -32,67 +32,60 @@ yerine İngilizce YouTuber anlatıcı kuralları geçerli. Bölüm kartı "CHAPT
 1. İlk 2 saniye: en çarpıcı an ya da iddia, 3–8 kelime — kapak yazısıyla aynı fikir (tarih/yer ikinci cümlede).
 2. Gerilimi kur (bir şey ters gidiyor).
 3. Şaşırtıcı ayrıntı / asıl neden.
-4. Net, akılda kalan punchline + tek kısa, doğal abone cümlesi nedeniyle ("Her gün böyle gerçek bir hikâye için abone olun.").
+4. Net, akılda kalan punchline + tek kısa, doğal abone cümlesi nedeniyle ("Böyle sessiz hikâyeler için abone olun." /
+   "Subscribe for a true story like this every day.").
 
 **Uzun video (5–6 dk, 40–50 sahne, 4–5 bölüm):**
 **Soğuk açılış (ilk 30 sn):** selam/giriş yok; olayın en dramatik anının içinde aç, videonun cevaplayacağı soruyu sor
 (cevap sonda). Sonra `BÖLÜM 1` sıradan dünya → `BÖLÜM 2` kıvılcım/karar → `BÖLÜM 3` felaket ya da dönüm noktası →
 `BÖLÜM 4` "peki neden?" (asıl açıklama, yaygın yanlışı düzelt) → `BÖLÜM 5` sonrası ve bugün → tek yorum sorusu.
-5–6 dakika sıkı bir anlatım ister: hikâyeyi uzatma, derinleştir: olayın içinde 1–2 ara dönüm noktası, gerçek insanların kararları ve sözleri, beklenmedik ayrıntılar. Tekrar ve dolgu yok; her bölüm yeni bir soru açıp kapatır.
+5–6 dakika sıkı bir anlatım ister: hikâyeyi uzatma, derinleştir: olayın içinde 1–2 ara dönüm noktası, gerçek insanların
+kararları ve sözleri, beklenmedik ayrıntılar. Tekrar ve dolgu yok; her bölüm yeni bir soru açıp kapatır.
 Her 20–30 saniyede bir gerilim cümlesi: "Ama kimse asıl tehlikeyi fark etmemişti." Her 45–60 saniyede bir görsel
-değişim (yeni yer, harita, büyük sayı, yakın plan); her bölüm bir sonrakine çeken bir cümleyle biter.
-Kapak: Düşün Bakalım'da tek özne ışık havuzunda, Kaşif yok (BELGESEL.md §7); Stickstory'de tek nesne + büyük Kaşif.
-2–4 kelime, uzunda `cover.focus` zorunlu. Başlık bilgi değil kanca (CLAUDE.md).
+değişim (yeni yer, harita, büyük sayı, nesne levhası, yakın plan); her bölüm bir sonrakine çeken bir cümleyle biter.
+Kapak: büyük kalın yazı (2–4 kelime, tek kelime kehribar), altında tek net boyanmış özne (SULUBOYA.md §7). Başlık bilgi
+değil kanca (CLAUDE.md).
 
-## 3b. Sahne seçimi — Düşün Bakalım (belgesel, `"theme": "belgesel"`)
+## 3. Sahne seçimi (suluboya, sadece `wc_*` ve `photo`)
 
-Sadece `bt_*` ve `photo` (BELGESEL.md §6). Sahne başına tek özne; konuya özel nesne ya da mekân yoksa kendi dosyanda
-(`scenes/studio/shots/bt_<konu>.js`) yeni tip yaz. Ritim: mekân (siluet + ışık) → nesne (`bt_object`/`bt_relic`) → veri
-(`bt_count`/`bt_clock`/`bt_map`) dönüşümlü; aynı tip üst üste en fazla 2. Uzunda her bölüm `bt_chapter` ile açılabilir
-(ilk sahne hariç: soğuk açılış olayın içinde). Tema (`palette`) konuya göre, bir öncekinden farklı. Kaşif, dekor (`set`),
-kicker (`title`), ekranda kaynak notu yok.
-
-## 4b. Anlatım — Düşün Bakalım (belgesel)
-
-Yavaş, alçak, hafif ürkütücü, merak uyandıran belgesel sesi (BELGESEL.md §3): kısa ağır cümleler + arada akan uzun
-cümle, sessizlik bırakan noktalama, derin zaman/karanlık/bilinmeyen imgeleri, cevabı bekleten yapı. Enerjik YouTuber
-kalıpları ("Peki", "inanılmaz", "hemen anlatayım", ünlem) yok; "siz" hitabı seyrek ve sakin. Devrik cümle yok, "-yor"
-≤ 1/3, geçmiş zaman ağırlıklı, kısaltma yok, tartışmalı bilgi "büyük olasılıkla"/"rivayete göre". Karakter: uzun
-3.900–4.500, Shorts 330–420.
-
-## 3. Sahne seçimi — Stickstory (sepya stil, `"theme": "parchment"`)
-
-| Anlatılan şey | Sahne tipi |
+| Anlatılan şey | Sahne |
 |---|---|
-| Biri bir şey yapıyor, karar veriyor, şaşırıyor | `stage` — Kaşif ve dönem karakterleri, prop'lar |
-| Yer ve yolculuk | `map` (eski harita, rota) |
-| Tarihler, sıra | `timeline` |
-| Karşılaştırma, kanıtlar, kontrol listesi | `board` |
-| Bölüm açılışı | `chapter` ("BÖLÜM 2 / 5") |
-| Tek güçlü cümle, sayı | `title` |
-| Atmosfer (mekân, doğa olayı) | konuya özel kod sahnesi ya da gerçek telifsiz fotoğraf (`photo`); yapay zekâ klibi yok |
+| Bir yer, bir an, bir olay (ordu ilerliyor, gemi batıyor, şehir yanıyor, biri karar veriyor) | `wc_scene`: `sky` + `land` + boyanan nesneler (`items`), `notes`, `fire`/`smoke`/`weather` |
+| Yer ve yolculuk, sınırlar, yayılma | `wc_map` (bölge, şehirler, rota, imparatorluk alanı) |
+| Kanıt, eser, silah, alet, belge nesnesi | `wc_specimen` (tek nesne büyük, el yazısı notlar) |
+| Tek çarpıcı sayı/tarih | `wc_number` |
+| Sıra, tarihler | `wc_timeline` |
+| Mektup, ferman, kitabe, günlük, bir sözün kendisi | `wc_letter` |
+| Bölüm açılışı (uzun; ilk sahne olamaz) | `wc_chapter` ("BÖLÜM 2" / "CHAPTER 2") |
+| Gerçek belge/harita/yer fotoğrafı | `photo` (telifsiz, `credit` zorunlu) |
+| Hiçbiri birebir göstermiyorsa | kendi dosyanda yeni `wc_<konu>` tipi ya da `WC.G` nesnesi (SULUBOYA.md §9) |
 
-- Kaşif **sunucudur**: sahnelerin **%15–25'inde** (açılış, bölüm dönüşü, kilit an, kapanış) ve her seferinde bir eylem
-  yapıyor (işaret ediyor, şaşırıyor, bir nesne tutuyor). Diğer sahnelerde olayın kendisi ve dönem karakterleri oynar.
-- Her sahne bir dünyada geçer: `"set"` (hills, sea, ocean, coast, city, interior, night, desert, snow, storm, field);
-  yer değiştikçe dekor değişir. Plan büyüklüğü değişir: en az 1 (uzunda 4) yakın plan `"camera": {"focus": [x, y], "zoom": 1.8}`
-  (BRAND.md §5.1). Kalıp tekrarı yok: dünkü videonun dekor/plan/kapak düzenini aynen kopyalama.
-- Aynı tip üst üste en fazla 2 sahne; `stage` 3 sahne sürebilir.
-- Kaşif anlatıcıdır; olayın kahramanları şapkasız dönem figürleridir (defne tacı, sarık, bere, miğfer).
+- Sahne başına **tek kahraman özne** ve onu anlatan bir not; kalabalık yerine tek gemi, tek insan, tek kapı.
+- Ritim: mekân → ayrıntı → bilgi dönüşümlü; `wc_scene` üst üste en fazla 3, ardışık iki sahne aynı görünmez (yer,
+  gün saati, gökyüzü, plan büyüklüğü değişir). Plan büyüklüğü değişir: geniş manzara → orta → yakın/levha.
+- Bir olayı sözle eşzamanla: nesnenin boyanması (`"at": "<cue>"`), notun yazılması, rotanın çizilmesi cue kelimesinde.
+- Kâğıt seti (`palette`) konuya göre (pamuk, keten, sepya, yaz, gurub) ve bir önceki videodan farklı.
+- Sunucu, maskot, kicker, ekranda kaynak notu yok.
 
-## 4. Anlatım — Stickstory
+## 4. Anlatım
 
-- Ses ayarı yok: `pacing`, `tone`, `tts.settings` kullanılmaz; ses doğal okur, tonlamayı noktalama taşır (BRAND.md §6.2).
-- **Düz anlatım yok:** izleyiciye seslen, merakı bekletip cevapla, zıtlık ve duyusal ayrıntı kullan,
-  cümle uzunluklarını değiştir (BRAND.md §6.9). Kaşif'in ağzı sabittir (konuşma animasyonu yok).
-- **Anlatıcı bir YouTuber:** izleyiciye "siz" diye hitap et, merakı paylaş, "gelin anlatayım", "bakın", "sizce?" (BRAND.md §6.0).
-- **Devrik cümle yok:** özne başta, yüklem sonda ("Ordu geldi.", "Geldi ordu." değil) — BRAND.md §6.3b.
-- YouTube anlatıcısı gibi: geçmiş zamanla hikâye anlat, kipleri karıştır, soru/ünlem/hitap kullan; cümlelerin en fazla üçte biri "-yor" ile biter (BRAND.md §6.3). Selam/giriş yok.
-- Ekranda en fazla 5 kelime/sahne; asıl bilgiyi ses taşır.
+**Düşün Bakalım (belgesel sesi, BELGESEL.md §3):** yavaş, alçak, hafif ürkütücü, merak uyandıran: kısa ağır cümleler +
+arada akan uzun cümle, sessizlik bırakan noktalama, derin zaman/karanlık/bilinmeyen imgeleri, cevabı bekleten yapı.
+Enerjik YouTuber kalıpları ("Peki", "inanılmaz", "hemen anlatayım", ünlem) yok; "siz" hitabı seyrek ve sakin. Devrik
+cümle yok, "-yor" ≤ 1/3, geçmiş zaman ağırlıklı, kısaltma yok, tartışmalı bilgi "büyük olasılıkla"/"rivayete göre".
+Karakter: uzun 3.900–4.500, Shorts 330–420.
+
+**Stickstory (İngilizce belgesel anlatıcısı):** sıcak, meraklı, net; kısa cümleler ve aktif fiiller, cümle uzunlukları
+değişir; "you" hitabı seyrek ve doğal ("Picture the harbour that morning."); aşırı heyecanlı kalıplar ("guys",
+"insane", "you won't believe") yok; kısaltma yok; dolgu yok (BRAND.md §11). Karakter: uzun 4.300–5.000, Shorts 400–500.
+
+**İkisinde de:**
+- Ses ayarı yok: `pacing`, `tone`, `tts.settings` kullanılmaz; ses doğal okur, tonlamayı noktalama taşır.
+- Görüntüyü tarif etme; görüntünün söyleyemediğini söyle. Cümleler birbirine bağlanır ("ama", "çünkü", "ve tam o anda").
+- Ekranda en fazla 5 kelime/sahne (notlar); asıl bilgiyi ses taşır.
 - Ölüm ve acıyı saygıyla, sayıyla değil insan hikâyesiyle anlat.
-- Tartışmalı bilgiyi "büyük olasılıkla", "bir görüşe göre" diye ver.
 
 ## 5. Kontrol
 
-Düşün Bakalım: `docs/BELGESEL.md` §8; Stickstory: `brand/kit/BRAND.md` §10 kontrol listesi. Sonra `tools/lint.py` +
-`tools/preview.py` (sheet ve cover'ı aç, bak).
+`docs/SULUBOYA.md` §11 kontrol listesi, sonra `tools/lint.py` + `tools/preview.py` (sheet ve cover'ı aç, bak: her
+sahnenin ikinci karesi tam boyanmış mı, altyazı okunuyor mu, kapak yazısı telefonda okunuyor mu).

@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<!-- Studio engine, one style: sepia parchment + Kaşif (brand/kit/BRAND.md). Full-bleed ink shots
+<!-- Studio engine. Current style: watercolor (docs/SULUBOYA.md); older scripts: parchment + Kaşif / belgesel. Full-bleed shots
      (scenes/studio/shots/<type>.js, loaded by build.py), word-by-word captions. Time is driven only by
      window.seek(t) (deterministic). -->
 <style>
@@ -26,7 +26,24 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
   @font-face { font-family: 'Zilla Slab'; src: url(fonts/zilla-slab-700-latin-ext.woff2) format('woff2'); font-weight: 700; font-display: block;
     unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-  /* one visual style: sepia parchment + Kaşif (brand/kit/BRAND.md §3-5) */
+  /* watercolor (docs/SULUBOYA.md): Cormorant Garamond titles + subtitles, Caveat hand notes, Nunito Black cover type */
+  @font-face { font-family: 'Cormorant Garamond'; src: url(fonts/cormorant-latin.woff2) format('woff2'); font-style: normal; font-weight: 500 700; font-display: block;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Cormorant Garamond'; src: url(fonts/cormorant-latin-ext.woff2) format('woff2'); font-style: normal; font-weight: 500 700; font-display: block;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: 'Cormorant Garamond'; src: url(fonts/cormorant-italic-latin.woff2) format('woff2'); font-style: italic; font-weight: 500 700; font-display: block;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Cormorant Garamond'; src: url(fonts/cormorant-italic-latin-ext.woff2) format('woff2'); font-style: italic; font-weight: 500 700; font-display: block;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: 'Caveat'; src: url(fonts/caveat-latin.woff2) format('woff2'); font-style: normal; font-weight: 500 700; font-display: block;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Caveat'; src: url(fonts/caveat-latin-ext.woff2) format('woff2'); font-style: normal; font-weight: 500 700; font-display: block;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  @font-face { font-family: 'Nunito'; src: url(fonts/nunito-latin.woff2) format('woff2'); font-style: normal; font-weight: 900; font-display: block;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+  @font-face { font-family: 'Nunito'; src: url(fonts/nunito-latin-ext.woff2) format('woff2'); font-style: normal; font-weight: 900; font-display: block;
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+  /* older styles: sepia parchment + Kaşif (brand/kit/BRAND.md §3-5), belgesel (docs/BELGESEL.md) */
   :root { --W: 1080px; --H: 1920px; }
   html, body { margin: 0; width: var(--W); height: var(--H); overflow: hidden; background: var(--paper, #E9DCC0); }
   html.long { --W: 1920px; --H: 1080px; }
@@ -75,6 +92,19 @@
     color: var(--ink); text-shadow: 0 4px 30px var(--paper); }
   html.belgesel.cover #covertext .hl { color: var(--gold); background: none; border: 0; padding: 0; margin: 0; transform: none; box-shadow: none; display: inline; }
   html.belgesel.long.cover #covershade { background: linear-gradient(90deg, var(--paper) 0%, var(--paper) 30%, transparent 58%); }
+  /* ---- watercolor style (docs/SULUBOYA.md §7, owner 2026-11-23): a big, loud title over the painting, like a hand-lettered
+     poster: heavy rounded capitals in light paper colour with a thick ink outline and a hard drop shadow, ONE word in amber.
+     No frame, no host, no progress bar. The title runs across the top; the one subject sits under it. */
+  html.watercolor #progress, html.watercolor #coverframe, html.watercolor #coverfade { display: none !important; }
+  html.watercolor.cover #covershade { background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 78%, transparent) 0%,
+    color-mix(in srgb, var(--paper) 50%, transparent) 24%, transparent 44%); }
+  html.watercolor.cover #covertext { left: 56px; right: 56px; top: 120px; text-align: center; font-family: Nunito, 'Cormorant Garamond', sans-serif;
+    font-weight: 900; font-size: 200px; line-height: 0.98; letter-spacing: 0.01em; word-spacing: 0.06em; color: var(--paperLight);
+    -webkit-text-stroke: 0.085em var(--ink); paint-order: stroke fill; text-shadow: 0 0.075em 0 var(--ink), 0.02em 0.1em 0.04em rgba(0,0,0,.22); }
+  html.watercolor.cover #covertext .hl { color: var(--gold); background: none; border: 0; padding: 0; margin: 0; transform: none; box-shadow: none; display: inline; }
+  html.watercolor.long.cover #covertext { left: 70px; right: 70px; top: 40px; width: auto; transform: none; font-size: 214px; }
+  html.watercolor.long.cover #covershade { background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 78%, transparent) 0%,
+    color-mix(in srgb, var(--paper) 45%, transparent) 30%, transparent 52%); }
 </style>
 </head>
 <body>
@@ -93,6 +123,7 @@
 <script src="parchment-theme.js"></script>
 <script src="sets.js"></script>
 <script src="belgesel-theme.js"></script>
+<script src="watercolor-theme.js"></script>
 <script src="engine.js"></script>
 </body>
 </html>

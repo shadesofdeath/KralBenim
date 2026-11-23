@@ -1,5 +1,8 @@
 # Animasyon rehberi (parşömen + Kaşif)
 
+> **Eski tarz (parşömen + Kaşif).** 2026-11-23'ten beri iki kanal da suluboya (watercolor) tarzındadır: `docs/SULUBOYA.md`.
+> Bu rehber sadece eski senaryoların sahne tipleri için duruyor.
+
 > Bu rehber **Stickstory**'nin parşömen tarzı içindir. Düşün Bakalım 2026-10-29'dan beri belgesel tarzındadır:
 > görsel dil, `bt_*` sahne tipleri ve yeni tip şablonu `docs/BELGESEL.md`'de.
 

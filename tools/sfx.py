@@ -37,13 +37,47 @@ def drone(total):
     return (low + air) * _env(len(t), 3.0, 2.0)
 
 
+def paper_bed(total, seed=0):
+    """Watercolor style (docs/SULUBOYA.md): a warm, unhurried bed: a soft pad that moves between two chords every
+    ~9 s and sparse felt-piano notes (soft attack, long decay) from a pentatonic scale. Deterministic per video."""
+    t = np.arange(int(total * SR)) / SR
+    rs = np.random.RandomState(seed % (2 ** 31))
+    chords = [[146.83, 220.0, 293.66, 329.63], [130.81, 196.0, 261.63, 329.63], [110.0, 164.81, 220.0, 277.18],
+              [123.47, 185.0, 246.94, 293.66]]
+    order = [chords[i % len(chords)] for i in rs.permutation(len(chords))]
+    span = 9.0
+    pad = np.zeros_like(t)
+    for k in range(int(total / span) + 2):
+        notes = order[k % len(order)]
+        a, b = k * span - 2.0, (k + 1) * span + 2.0
+        n0, n1 = max(0, int(a * SR)), min(len(t), int(b * SR))
+        if n0 >= n1:
+            continue
+        tt = t[n0:n1]
+        win = np.clip(np.minimum((tt - a) / 3.0, (b - tt) / 3.0), 0, 1) ** 2
+        pad[n0:n1] += win * sum(np.sin(2 * np.pi * f * tt + i) * (0.7 + 0.3 * np.sin(2 * np.pi * 0.07 * tt + i)) for i, f in enumerate(notes)) / 4
+    keys = np.zeros_like(t)
+    scale = [293.66, 329.63, 369.99, 440.0, 493.88, 587.33, 659.25]
+    at = 1.5 + rs.uniform(0, 2)
+    while at < total - 2:
+        f = scale[rs.randint(len(scale))]
+        n0, n1 = int(at * SR), min(len(t), int((at + 4.5) * SR))
+        tt = t[n0:n1] - at
+        env = (1 - np.exp(-tt / 0.012)) * np.exp(-tt / 1.3)
+        keys[n0:n1] += env * (np.sin(2 * np.pi * f * tt) + 0.35 * np.sin(2 * np.pi * 2 * f * tt) + 0.12 * np.sin(2 * np.pi * 3 * f * tt)) * 0.5
+        at += rs.uniform(1.6, 4.2)
+    return (pad * 0.8 + keys * 0.55) * _env(len(t), 2.0, 2.0)
+
+
 def db(x):
     return 10 ** (x / 20)
 
 
 def render(timeline, path, total=None):
     total = total or timeline["duration"]
-    mix = drone(total) * db(-31) if timeline.get("theme") == "belgesel" else bed(total) * db(-34)
+    th = timeline.get("theme")
+    seed = int(round(timeline.get("duration", total) * 1000))
+    mix = paper_bed(total, seed) * db(-30) if th == "watercolor" else drone(total) * db(-31) if th == "belgesel" else bed(total) * db(-34)
     pcm = (np.clip(mix, -1, 1) * 32767).astype(np.int16)
     with wave.open(str(path), "wb") as w:
         w.setnchannels(1)

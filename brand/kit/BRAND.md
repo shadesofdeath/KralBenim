@@ -1,6 +1,13 @@
-# Marka Kitabı (parşömen tarzı — Stickstory)
+# Marka Kitabı (parşömen tarzı — eski)
 
-> **2026-10-29'dan beri Düşün Bakalım'ın bütün videoları belgesel tarzındadır: anayasası `docs/BELGESEL.md`**
+> **2026-11-23'ten beri iki kanalın bütün videoları suluboya (watercolor) tarzındadır: anayasa `docs/SULUBOYA.md`**
+> (kanal sahibinin kararı: belgesel + tarih, Lemo-Opuscar watercolor stili, özgün konular, haberden konu yok). Bu
+> dosyanın görsel kuralları (Kaşif, parşömen, renkler, çizim, kapak) ve YouTuber anlatıcı kuralları artık sadece eski
+> videolar içindir. İki kanal için hâlâ geçerli olanlar: §1 kimlik/niş/konu havuzu, §6.1, §6.3, §6.3b, §6.6, §6.7,
+> §6.10, §6.12 ve §11'in İngilizce dil kuralları (anlatıcı artık belgesel anlatıcısıdır, SULUBOYA.md §3).
+> `tools/news.py` kaldırıldı; konu manşetten seçilmez.
+>
+> (Önceki not:) **2026-10-29'dan beri Düşün Bakalım'ın bütün videoları belgesel tarzındadır: anayasası `docs/BELGESEL.md`**
 > (kanal sahibinin kararı). Bu dosyanın görsel kuralları (§2 Kaşif, §3 renkler, §4–5 çizim, §6.0 YouTuber anlatıcı,
 > §9 kapak, §10–11) artık **Stickstory**'nin parşömen tarzı içindir. Düşün Bakalım için buradan sadece §1 (kimlik,
 > niş, konu havuzu) ve §6.1, §6.3, §6.3b, §6.6, §6.7, §6.12 geçerlidir.
@@ -216,8 +223,7 @@ Dil, niş ve anlatım:
 - **Niş:** `tools/channels.py` → `categories` (tarihin en tuhaf anları, çözülmemiş gizemler, nasıl inşa edildi,
   gündelik şeylerin kökeni, insan vücudu, hayvanların süper güçleri, uzay ve gezegenimiz, hayatta kalma hikâyeleri,
   imparatorluklar ve savaşlar). Her video gerçek ve doğrulanabilir bir hikâye/olgu anlatır; Kaşif yine anlatıcıdır.
-  Konu önce günün manşetlerinden seçilir (`tools/news.py`: ABD, Avustralya, İsviçre, Norveç, Yeni Zelanda, Kanada,
-  Almanya); kategoriye uyan manşetin arkasındaki kalıcı hikâye anlatılır, uyan yoksa kategori havuzu (CLAUDE.md).
+  Konu özgündür, kategori havuzundan seçilir (2026-11-23'ten beri manşetten konu seçilmez; CLAUDE.md).
 - **Anlatıcı (İngilizce YouTuber sesi):** izleyiciye "you" diye seslenir, "I" diye anlatır, merakı paylaşır:
   *"Why do cats always land on their feet? Let me show you."*, *"Here's the crazy part."*, *"Now think about that
   for a second."*, *"So what actually happened?"*. Selam/kanal tanıtımı yok; ilk cümle doğrudan kanca.
