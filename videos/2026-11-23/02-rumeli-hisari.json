@@ -1,0 +1,556 @@
+{
+ "engine": "studio",
+ "extra": true,
+ "theme": "watercolor",
+ "palette": "sepya",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Şehri boğan",
+   "hisar"
+  ],
+  "highlight": [
+   "boğan"
+  ],
+  "scene": 0,
+  "t": 2.8
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "Bu hisar bir şehri boğmak için yapıldı.",
+   "visual": "Akşam; Boğaz kıyısında yamaca tırmanan Rumeli Hisarı, önünde su; boğazdan geçen bir kadırga, selviler, kuşlar.",
+   "params": {
+    "sky": "dusk",
+    "land": "coast",
+    "coast": "right",
+    "horizon": 0.56,
+    "sun": false,
+    "items": [
+     {
+      "g": "castle",
+      "o": {
+       "style": "ottoman"
+      },
+      "x": 0.34,
+      "s": 1.25,
+      "at": 0.1
+     },
+     {
+      "g": "cypress",
+      "x": 0.05,
+      "s": 1.1
+     },
+     {
+      "g": "galley",
+      "o": {
+       "style": "ottoman",
+       "sails": "full"
+      },
+      "layer": "mid",
+      "x": 0.95,
+      "y": 0.6,
+      "move": {
+       "to": [
+        0.74
+       ],
+       "at": 0,
+       "dur": 3.2
+      }
+     },
+     {
+      "g": "shrub",
+      "x": 0.12,
+      "layer": "fg"
+     },
+     {
+      "g": "reeds",
+      "x": 0.42,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.28,
+      "layer": "fg",
+      "s": 0.8
+     }
+    ],
+    "birds": {
+     "x": 0.6,
+     "y": 0.16,
+     "n": 6
+    }
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Yıl 1452. Genç Sultan Mehmed, Boğaz'ın en dar yerini seçti.",
+   "visual": "İstanbul haritası; Boğaz'ın en dar yerinde kırmızı bir yıldız ve 'en dar yer' notu, güneyde Konstantinopolis.",
+   "params": {
+    "region": "istanbul",
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Konstantinopolis",
+      "lon": 28.975,
+      "lat": 41.012,
+      "kind": "city",
+      "at": 0.5
+     },
+     {
+      "name": "en dar yer",
+      "lon": 29.056,
+      "lat": 41.085,
+      "kind": "star",
+      "at": 1.1,
+      "color": "red",
+      "align": "left"
+     }
+    ],
+    "seas": [
+     {
+      "text": "Karadeniz",
+      "lon": 29.12,
+      "lat": 41.24
+     },
+     {
+      "text": "Marmara",
+      "lon": 28.95,
+      "lat": 40.93
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Karşıda atasının kalesi vardı; iki kale Boğaz'ı kapattı.",
+   "visual": "Boğaz'ın dar boğazına yakın plan harita: iki kıyıda iki kale işareti, aralarında suyu kesen kırmızı bir çizgi.",
+   "cues": {
+    "iki": "iki"
+   },
+   "params": {
+    "region": [
+     29.04,
+     41.07,
+     29.08,
+     41.1
+    ],
+    "paint": 0.8,
+    "places": [
+     {
+      "name": "Rumeli Hisarı",
+      "lon": 29.056,
+      "lat": 41.0846,
+      "kind": "star",
+      "at": 0.3,
+      "align": "left"
+     },
+     {
+      "name": "Anadolu Hisarı",
+      "lon": 29.067,
+      "lat": 41.0822,
+      "kind": "star",
+      "at": 1.0,
+      "align": "right"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        29.054,
+        41.0852
+       ],
+       [
+        29.0615,
+        41.0838
+       ],
+       [
+        29.069,
+        41.0818
+       ]
+      ],
+      "at": "iki",
+      "dur": 0.8,
+      "color": "red",
+      "arrow": false,
+      "width": 14
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Hisar dört buçuk ayda yükseldi.",
+   "visual": "Hisar yavaş yavaş boyanarak yükseliyor; önde sırtında taş ve sepet taşıyan iki işçi, yerde taş blokları.",
+   "params": {
+    "sky": "day",
+    "land": "hills",
+    "horizon": 0.6,
+    "amp": 0.6,
+    "items": [
+     {
+      "g": "castle",
+      "o": {
+       "style": "ottoman"
+      },
+      "x": 0.5,
+      "s": 1.05,
+      "at": 0.0,
+      "paint": 3.0
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "carry",
+       "dress": "peasant",
+       "load": "sack"
+      },
+      "x": 0.27,
+      "s": 1.25,
+      "dy": 8,
+      "at": 0.4
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "carry",
+       "dress": "peasant",
+       "load": "basket"
+      },
+      "x": 0.75,
+      "s": 1.2,
+      "dy": 12,
+      "flip": true,
+      "at": 0.6
+     },
+     {
+      "g": "rock",
+      "x": 0.12,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.55,
+      "layer": "fg",
+      "s": 0.8
+     },
+     {
+      "g": "grass",
+      "x": 0.86,
+      "layer": "fg"
+     },
+     {
+      "g": "shrub",
+      "x": 0.35,
+      "layer": "fg"
+     }
+    ],
+    "weather": "fog"
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Adı Boğazkesen'di.",
+   "visual": "Kâğıda büyük serif harflerle 'Boğazkesen', altında küçük bir hisar kulesi.",
+   "params": {
+    "text": "Boğazkesen",
+    "sub": "Rumeli Hisarı, 1452",
+    "g": "tower",
+    "o": {
+     "style": "round",
+     "pointed": true,
+     "roof": true
+    },
+    "s": 0.75,
+    "color": "skyWarm"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Kasımda bir Venedik gemisi durmadı.",
+   "visual": "Soğuk, bulutlu bir kasım günü; yelkenleri dolu bir Venedik gemisi Boğaz'dan hızla geçiyor.",
+   "params": {
+    "sky": "storm",
+    "land": "sea",
+    "horizon": 0.5,
+    "clouds": 0,
+    "items": [
+     {
+      "g": "carrack",
+      "o": {
+       "sails": "full",
+       "flag": "red",
+       "wind": "right"
+      },
+      "x": 0.12,
+      "y": 0.58,
+      "s": 1.35,
+      "at": 0.0,
+      "move": {
+       "to": [
+        0.6
+       ],
+       "at": 0.2,
+       "dur": 3.2
+      }
+     }
+    ],
+    "birds": {
+     "x": 0.2,
+     "y": 0.2,
+     "n": 4
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Toplar onu Boğaz'ın sularına gömdü.",
+   "visual": "Hisarın toplarından duman; gemi patlamayla yarı batmış, direkleri kırık, alevler içinde.",
+   "cues": {
+    "toplar": "Toplar"
+   },
+   "params": {
+    "sky": "storm",
+    "land": "sea",
+    "horizon": 0.48,
+    "clouds": 0,
+    "items": [
+     {
+      "g": "castle",
+      "o": {
+       "style": "ottoman"
+      },
+      "x": 0.14,
+      "layer": "mid",
+      "s": 0.9
+     },
+     {
+      "g": "cannon_smoke",
+      "o": {
+       "n": 2,
+       "w": 90,
+       "dir": 1
+      },
+      "x": 0.16,
+      "y": 0.47,
+      "at": 0.1
+     },
+     {
+      "g": "carrack",
+      "o": {
+       "damage": true,
+       "sink": 0.45,
+       "burning": true
+      },
+      "x": 0.58,
+      "y": 0.56,
+      "s": 1.3,
+      "at": 0.0
+     },
+     {
+      "g": "explosion",
+      "o": {
+       "size": 1.1
+      },
+      "x": 0.56,
+      "y": 0.52,
+      "at": {
+       "cue": "toplar",
+       "d": 0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Kaptanı, herkes görsün diye kazığa geçirildi.",
+   "visual": "Alacakaranlıkta sisli, boş bir tepe; tek başına dikilmiş uzun bir kazık ve tepesinde dönen kargalar.",
+   "params": {
+    "sky": "dusk",
+    "land": "hills",
+    "horizon": 0.55,
+    "sun": false,
+    "amp": 0.7,
+    "items": [
+     {
+      "g": "stake",
+      "x": 0.46,
+      "s": 1.5,
+      "at": 0.4
+     },
+     {
+      "g": "grass",
+      "x": 0.2,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.78,
+      "layer": "fg",
+      "s": 0.9
+     },
+     {
+      "g": "shrub",
+      "x": 0.9,
+      "layer": "mid"
+     }
+    ],
+    "birds": {
+     "x": 0.5,
+     "y": 0.27,
+     "n": 6,
+     "dx": 4,
+     "spread": 110,
+     "spreadY": 50,
+     "size": 14
+    },
+    "weather": "fog"
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Şehir daha kuşatılmadan nefessiz kalmıştı.",
+   "visual": "Karadeniz'den şehre inen kırmızı ikmal rotası, hisarın önünde bir X ile kesiliyor.",
+   "cues": {
+    "kus": "kuşatılmadan"
+   },
+   "params": {
+    "region": [
+     28.88,
+     40.97,
+     29.22,
+     41.26
+    ],
+    "paint": 0,
+    "routes": [
+     {
+      "points": [
+       [
+        29.13,
+        41.24
+       ],
+       [
+        29.08,
+        41.16
+       ],
+       [
+        29.06,
+        41.095
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.2,
+      "color": "red",
+      "arrow": false
+     }
+    ],
+    "places": [
+     {
+      "name": "Boğazkesen",
+      "lon": 29.056,
+      "lat": 41.085,
+      "kind": "x",
+      "at": "kus",
+      "color": "red",
+      "align": "left"
+     },
+     {
+      "name": "Konstantinopolis",
+      "lon": 28.975,
+      "lat": 41.012,
+      "kind": "city",
+      "at": 0.1
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "visual": "Gece; ay ışığında Boğaz kıyısında Rumeli Hisarı, suda ay yansıması, sis kâğıda doğru siliyor.",
+   "params": {
+    "sky": "night",
+    "land": "coast",
+    "coast": "left",
+    "horizon": 0.56,
+    "sun": {
+     "x": 0.25,
+     "y": 0.22,
+     "r": 56
+    },
+    "items": [
+     {
+      "g": "castle",
+      "o": {
+       "style": "ottoman"
+      },
+      "x": 0.68,
+      "s": 1.0,
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.95,
+      "s": 1.0,
+      "at": -1
+     },
+     {
+      "g": "reeds",
+      "x": 0.8,
+      "layer": "fg",
+      "at": -1
+     }
+    ],
+    "mist": 3.0
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Rumelihisarı — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Rumelihisar%C4%B1"
+  },
+  {
+   "title": "Rumeli Fortress — History Hit",
+   "url": "https://www.historyhit.com/locations/rumeli-fortress/"
+  },
+  {
+   "title": "1453: The Fall of Constantinople — World History Encyclopedia",
+   "url": "https://www.worldhistory.org/article/1180/1453-the-fall-of-constantinople/"
+  }
+ ],
+ "youtube": {
+  "title": "Rumeli Hisarı: Bir Şehri Kuşatmadan Önce Nasıl Boğdular?",
+  "description": "Rumeli Hisarı 1452'de tek bir amaçla yükseldi: Konstantinopolis'i daha kuşatma başlamadan denizden kesmek. Fatih Sultan Mehmed Boğaz'ın en dar yerini seçti; karşıda atası Yıldırım Bayezid'in Anadolu Hisarı vardı ve iki kale Boğaz'ı kapattı. Hisar dört buçuk ayda bitti, adı Boğazkesen'di. Kasım ayında durmayan bir Venedik gemisi hisarın toplarıyla batırıldı.\n\nHer gün yeni bir 'neden?' için abone ol. Sence İstanbul'un fethi bu hisar olmadan mümkün olur muydu? Yorumlara yaz!\n\n#shorts #rumelihisarı #düşünbakalım",
+  "tags": [
+   "rumeli hisarı",
+   "rumeli hisarı tarihi",
+   "rumeli hisarı boğazkesen",
+   "rumeli hisarı 1452",
+   "boğazkesen",
+   "fatih sultan mehmed",
+   "istanbulun fethi",
+   "anadolu hisarı",
+   "osmanlı tarihi",
+   "boğaziçi",
+   "konstantinopolis",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-24T12:30:00+03:00"
+ }
+}

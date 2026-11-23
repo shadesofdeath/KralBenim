@@ -178,6 +178,12 @@ def lint(path, kinds):
         cap = 3 if types[i] in ("stage", "wc_scene") else 2   # Kaşif's journey / painted scenes may run 3 in a row
         if run > cap:
             err.append(f"scenes {i - run + 1}-{i}: {run}x '{types[i]}' in a row (max {cap})")
+    if wct and short:   # vertical: objects stand on the ground line; below ~0.62 of the height it is the subtitle band
+        for i, x in enumerate(sc):
+            p = x.get("params") or {}
+            if x.get("type") == "wc_scene" and (p.get("horizon") or 0.6) > 0.62 and p.get("land") not in ("sea", "none") and \
+                    any((it.get("layer") or "main") == "main" and it.get("y") is None for it in p.get("items") or []):
+                warn.append(f"scene {i}: horizon {p['horizon']} puts the subject's base under the subtitles (y 1170-1320); use <= 0.6")
     if wct:   # two painted scenes in a row must not look the same (a different sky, land or subject)
         for i in range(1, len(sc)):
             a, b = sc[i - 1], sc[i]

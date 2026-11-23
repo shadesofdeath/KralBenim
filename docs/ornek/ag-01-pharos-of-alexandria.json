@@ -1,63 +1,478 @@
 {
- "engine": "studio", "theme": "watercolor", "palette": "yaz", "format": "short", "fps": 30, "subtitles": true,
- "channel": "Stickstory", "narrator": "fes", "lang": "en", "slug": "ornek-pharos",
- "tts": {"provider": "elevenlabs", "voice_id": "2t85BBUECtLLKQzxLD95", "model": "eleven_v3"},
- "cover": {"lines": ["A wonder", "underwater"], "highlight": ["underwater"], "scene": 3, "t": 2.8},
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "yaz",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "A wonder",
+   "underwater"
+  ],
+  "highlight": [
+   "underwater"
+  ],
+  "scene": 0,
+  "t": 2.4
+ },
  "scenes": [
-  {"type": "wc_scene", "text": "A wonder of the world lies underwater.", "visual": "Calm sea from just above the surface; under the pale water, broken columns and giant blocks.",
-   "params": {"sky": "dawn", "land": "sea", "horizon": 0.42, "sun": {"x": 0.25, "y": 0.6, "r": 60},
-    "items": [{"g": "ruin", "x": 0.5, "y": 0.8, "s": 1.5, "a": 0.42, "sway": false, "bob": false},
-              {"g": "column", "o": {"broken": 0.4}, "x": 0.2, "y": 0.9, "s": 1.2, "a": 0.38, "bob": false},
-              {"g": "sailboat", "o": {"rig": "lateen"}, "x": 0.72, "y": 0.43, "layer": "mid"}]}},
-  {"type": "wc_map", "text": "Over two thousand years ago, it rose in Alexandria.", "visual": "Map of the eastern Mediterranean and Egypt; Alexandria marked with a star, the Nile delta below it.",
-   "cues": {"alex": "Alexandria"},
-   "params": {"region": [25.5, 27.5, 34.5, 34.5], "paint": 1.2,
-    "places": [{"name": "Alexandria", "lon": 29.9, "lat": 31.2, "kind": "star", "at": "alex", "color": "red"}],
-    "seas": [{"text": "Mediterranean Sea", "lon": 28.5, "lat": 33.2}]}},
-  {"type": "wc_scene", "text": "Three towers in one, maybe over a hundred metres tall.", "visual": "The three-tiered Pharos rising over the harbour island, a small ship below for scale, a hand note '100 m?'.",
-   "params": {"sky": "day", "land": "coast", "coast": "right", "horizon": 0.66,
-    "items": [{"g": "lighthouse", "o": {"style": "pharos", "lit": false}, "x": 0.38, "s": 1.5},
-              {"g": "sailboat", "o": {"rig": "lateen"}, "x": 0.82, "y": 0.69, "s": 0.8}],
-    "notes": [{"text": "100 m?", "x": 0.68, "y": 0.26, "ax": 0.47, "ay": 0.3, "at": 1.4}]}},
-  {"type": "wc_scene", "text": "At night, a fire at the top guided ships home.", "visual": "Night harbour; the Pharos with a fire at its top, glow on the water, two small ships sailing towards it.",
-   "params": {"sky": "night", "land": "coast", "coast": "right", "horizon": 0.66,
-    "items": [{"g": "lighthouse", "o": {"style": "pharos", "lit": true}, "x": 0.4, "s": 1.5, "at": 0.1},
-              {"g": "sailboat", "o": {"rig": "lateen"}, "x": 0.95, "y": 0.7, "s": 0.8, "move": {"to": [0.7], "at": 0.2, "dur": 4}},
-              {"g": "rowboat", "o": {"rowers": 2}, "x": 0.82, "y": 0.78, "s": 0.9, "flip": true}]}},
-  {"type": "wc_timeline", "text": "It stood for well over a thousand years.", "visual": "A vertical painted timeline: built (3rd century BC), 956 earthquake, 1303 earthquake, 1477 fortress.",
-   "params": {"items": [{"year": "c. 280 BC", "label": "built", "at": 0.2}, {"year": "956", "label": "first great quake", "at": 0.9},
-                        {"year": "1303", "label": "the worst quake", "at": 1.5}, {"year": "1477", "label": "a fortress", "at": 2.1}], "highlight": 2}},
-  {"type": "wc_scene", "text": "Then the earthquakes came.", "visual": "The ground splits open in front of the lighthouse; dust rises, a stormy sky.",
-   "cues": {"quake": "earthquakes"},
-   "params": {"sky": "storm", "land": "plain", "horizon": 0.6,
-    "items": [{"g": "lighthouse", "o": {"style": "pharos", "lit": false}, "x": 0.5, "s": 1.8, "at": -1},
-              {"g": "quake_crack", "o": {"w": 1.6, "open": 1.8}, "x": 0.5, "y": 0.74, "s": 1.1, "at": "quake"}]}},
-  {"type": "wc_scene", "text": "By the 1300s, it was a ruin.", "visual": "A ruined base of stone on the empty shore in fog; fallen blocks around it.",
-   "params": {"sky": "fog", "land": "coast", "coast": "right", "horizon": 0.62,
-    "items": [{"g": "ruin", "o": {"n": 5}, "x": 0.4, "s": 1.9}, {"g": "rock", "x": 0.2, "s": 1.1}, {"g": "rock", "x": 0.62, "s": 0.8}]}},
-  {"type": "wc_scene", "text": "In 1477, a sultan built a fortress from its stones.", "visual": "A square stone fortress with round towers on the same spot by the sea, a red flag on top.",
-   "params": {"sky": "dusk", "land": "coast", "coast": "right", "horizon": 0.62, "sun": false,
-    "items": [{"g": "castle", "o": {"style": "medieval", "flag": true}, "x": 0.4, "s": 1.6}, {"g": "palm", "x": 0.08, "s": 1.0}]}},
-  {"type": "wc_specimen", "text": "In 1994, divers found its stones and statues on the harbour floor.", "visual": "One huge granite block on the sea bed, painted like a specimen plate with notes: 'harbour floor', '1994'.",
-   "cues": {"divers": "divers"},
-   "params": {"g": "statue", "pigment": "water", "s": 1.0, "title": {"text": "Found in 1994", "sub": "Eastern Harbour, Alexandria"},
-    "notes": [{"text": "harbour floor", "part": "bottom", "at": "divers"}, {"text": "granite", "part": "top", "at": {"cue": "divers", "d": 0.8}}]}},
-  {"type": "wc_scene", "text": "The wonder never left.", "visual": "Dawn over the water; the ghost of the lighthouse faintly painted over the sea, mist washing it back to paper.",
-   "params": {"sky": "dawn", "land": "sea", "horizon": 0.62,
-    "items": [{"g": "lighthouse", "o": {"style": "pharos", "lit": false}, "x": 0.5, "s": 2.0, "a": 0.35, "bob": false}],
-    "mist": 1.0}},
-  {"type": "wc_title", "text": "It just went under. Subscribe for a true story like this every day.", "visual": "Title card: 'Pharos of Alexandria', small painted lighthouse, sub 'still on the harbour floor'.",
-   "params": {"text": "Pharos of Alexandria", "sub": "still on the harbour floor", "g": "lighthouse", "o": {"style": "pharos", "lit": false}, "s": 0.6, "color": "sky"}}
+  {
+   "type": "wc_scene",
+   "text": "A wonder of the world lies underwater.",
+   "visual": "A calm sea at dawn seen from the surface; under the pale water, the ghost of the three-tiered lighthouse and scattered stone blocks; a small boat on the surface.",
+   "params": {
+    "sky": "dawn",
+    "land": "sea",
+    "horizon": 0.34,
+    "sun": false,
+    "items": [
+     {
+      "g": "lighthouse",
+      "o": {
+       "style": "pharos",
+       "lit": false
+      },
+      "x": 0.5,
+      "y": 0.84,
+      "s": 1.35,
+      "a": 0.5,
+      "bob": false,
+      "sway": false,
+      "at": 0.0
+     },
+     {
+      "g": "rock",
+      "x": 0.18,
+      "y": 0.9,
+      "s": 1.3,
+      "a": 0.5,
+      "bob": false
+     },
+     {
+      "g": "rock",
+      "x": 0.84,
+      "y": 0.86,
+      "s": 1.0,
+      "a": 0.45,
+      "bob": false
+     },
+     {
+      "g": "sailboat",
+      "o": {
+       "rig": "lateen"
+      },
+      "x": 0.85,
+      "y": 0.35,
+      "layer": "mid",
+      "move": {
+       "to": [
+        0.6
+       ],
+       "at": 0,
+       "dur": 3.2
+      }
+     }
+    ],
+    "birds": {
+     "x": 0.3,
+     "y": 0.12,
+     "n": 4
+    }
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "It was the Lighthouse of Alexandria, raised on the island of Pharos.",
+   "visual": "Map of the Nile delta coast; Alexandria marked with a red star, the Mediterranean above.",
+   "cues": {
+    "alex": "Alexandria"
+   },
+   "params": {
+    "region": [
+     28.8,
+     30.2,
+     31.8,
+     32.0
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Alexandria",
+      "lon": 29.9,
+      "lat": 31.2,
+      "kind": "star",
+      "at": "alex",
+      "color": "red",
+      "align": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Nile Delta",
+      "lon": 31.0,
+      "lat": 30.75,
+      "caps": true,
+      "at": 0.8
+     }
+    ],
+    "seas": [
+     {
+      "text": "Mediterranean Sea",
+      "lon": 30.2,
+      "lat": 31.75
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Three towers in one, maybe over a hundred metres tall.",
+   "visual": "The lighthouse alone on a plate: square base, eight-sided middle, round top with the fire chamber; notes '100 m?' and 'square base'.",
+   "params": {
+    "g": "lighthouse",
+    "o": {
+     "style": "pharos",
+     "lit": false
+    },
+    "s": 1.0,
+    "pigment": "sky",
+    "title": {
+     "text": "Three towers in one",
+     "sub": "square · eight-sided · round"
+    },
+    "notes": [
+     {
+      "text": "100 m?",
+      "part": "top",
+      "at": 1.2,
+      "color": "red"
+     },
+     {
+      "text": "square base",
+      "part": "bottom",
+      "at": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "At night, its fire guided ships home.",
+   "visual": "Night harbour; the lighthouse with its fire burning at the top, a sailboat gliding in towards it, a rowboat on the water.",
+   "params": {
+    "sky": "night",
+    "land": "coast",
+    "coast": "right",
+    "horizon": 0.56,
+    "sun": {
+     "x": 0.8,
+     "y": 0.18,
+     "r": 46
+    },
+    "items": [
+     {
+      "g": "lighthouse",
+      "o": {
+       "style": "pharos",
+       "lit": true
+      },
+      "x": 0.36,
+      "s": 1.25,
+      "at": 0.0
+     },
+     {
+      "g": "sailboat",
+      "o": {
+       "rig": "lateen"
+      },
+      "x": 1.02,
+      "y": 0.6,
+      "s": 0.85,
+      "move": {
+       "to": [
+        0.72
+       ],
+       "at": 0.1,
+       "dur": 3.2
+      }
+     },
+     {
+      "g": "rowboat",
+      "o": {
+       "rowers": 2
+      },
+      "x": 0.84,
+      "y": 0.76,
+      "s": 0.9,
+      "flip": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Then earthquakes cracked it, again and again, until only a stump was left.",
+   "visual": "Grey stormy shore; the broken stump of the tower with fallen blocks; the ground splits open in front of it and dust rises.",
+   "cues": {
+    "quake": "earthquakes"
+   },
+   "params": {
+    "sky": "storm",
+    "land": "plain",
+    "horizon": 0.58,
+    "clouds": 0,
+    "items": [
+     {
+      "g": "pharos_stump",
+      "x": 0.5,
+      "s": 1.35,
+      "at": 0.0
+     },
+     {
+      "g": "rock",
+      "x": 0.24,
+      "s": 1.1
+     },
+     {
+      "g": "rock",
+      "x": 0.74,
+      "s": 0.9
+     },
+     {
+      "g": "rock",
+      "x": 0.62,
+      "layer": "mid",
+      "s": 0.8
+     },
+     {
+      "g": "quake_crack",
+      "o": {
+       "w": 1.5,
+       "open": 1.6
+      },
+      "x": 0.5,
+      "y": 0.75,
+      "s": 1.0,
+      "at": "quake"
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.5,
+      "y": 0.58,
+      "h": 520,
+      "a": 0.3,
+      "at": "quake"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "In 1477, Sultan Qaitbay built a fortress on the spot, from its stones.",
+   "visual": "Dusk on the same spot by the sea: a square stone keep between two towers and a curtain wall, a palm beside it.",
+   "params": {
+    "sky": "dusk",
+    "land": "coast",
+    "coast": "right",
+    "horizon": 0.58,
+    "sun": false,
+    "items": [
+     {
+      "g": "wall",
+      "o": {
+       "len": 520,
+       "buttress": false
+      },
+      "x": 0.42,
+      "s": 1.0
+     },
+     {
+      "g": "tower",
+      "o": {
+       "style": "round"
+      },
+      "x": 0.17,
+      "s": 0.85
+     },
+     {
+      "g": "tower",
+      "o": {
+       "style": "round"
+      },
+      "x": 0.67,
+      "s": 0.85
+     },
+     {
+      "g": "tower",
+      "o": {
+       "style": "square",
+       "h": 1.15,
+       "flag": true
+      },
+      "x": 0.42,
+      "s": 1.05,
+      "dy": 6
+     },
+     {
+      "g": "palm",
+      "x": 0.84,
+      "s": 0.85
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "And the rest? Divers mapped it on the harbour floor in 1994.",
+   "visual": "Close map of Alexandria's harbour; a red X where the ruins lie underwater, label 'ruins, 1994'.",
+   "cues": {
+    "divers": "Divers"
+   },
+   "params": {
+    "region": [
+     29.78,
+     31.13,
+     30.0,
+     31.29
+    ],
+    "paint": 0.6,
+    "places": [
+     {
+      "name": "ruins, 1994",
+      "lon": 29.89,
+      "lat": 31.222,
+      "kind": "x",
+      "at": "divers",
+      "color": "red",
+      "align": "right",
+      "size": 1.4
+     },
+     {
+      "name": "Alexandria",
+      "lon": 29.92,
+      "lat": 31.19,
+      "kind": "city",
+      "at": 0.3,
+      "align": "below"
+     }
+    ],
+    "seas": [
+     {
+      "text": "Mediterranean",
+      "lon": 29.86,
+      "lat": 31.26
+     }
+    ],
+    "labels": [
+     {
+      "text": "Eastern Harbour",
+      "lon": 29.905,
+      "lat": 31.235,
+      "italic": true,
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "The wonder never left. It just went under.",
+   "visual": "Dusk over the water; the faint ghost of the lighthouse painted under the surface, a single boat above it.",
+   "params": {
+    "sky": "dusk",
+    "land": "sea",
+    "horizon": 0.34,
+    "sun": false,
+    "items": [
+     {
+      "g": "lighthouse",
+      "o": {
+       "style": "pharos",
+       "lit": false
+      },
+      "x": 0.5,
+      "y": 0.84,
+      "s": 1.45,
+      "a": 0.48,
+      "bob": false,
+      "sway": false,
+      "at": 0.2
+     },
+     {
+      "g": "rowboat",
+      "o": {
+       "rowers": 1
+      },
+      "x": 0.62,
+      "y": 0.35,
+      "s": 0.8,
+      "layer": "mid"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Title card: 'Pharos of Alexandria', a small painted lighthouse, sub 'still on the seabed'.",
+   "params": {
+    "text": "Pharos of Alexandria",
+    "sub": "still on the seabed",
+    "g": "lighthouse",
+    "o": {
+     "style": "pharos",
+     "lit": false
+    },
+    "s": 0.6,
+    "color": "sky"
+   }
+  }
  ],
  "sources": [
-  {"title": "Lighthouse of Alexandria — Wikipedia", "url": "https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria"},
-  {"title": "The Lighthouse of Alexandria — History.com", "url": "https://www.history.com/articles/lighthouse-alexandria"},
-  {"title": "Alexandria, Egypt — French Ministry of Culture, underwater archaeology", "url": "https://archeologie.culture.gouv.fr/archeo-sous-marine/en/alexandria-egypt"}
+  {
+   "title": "Lighthouse of Alexandria — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria"
+  },
+  {
+   "title": "The Lighthouse of Alexandria — History.com",
+   "url": "https://www.history.com/articles/lighthouse-alexandria"
+  },
+  {
+   "title": "Alexandria, Egypt — French Ministry of Culture, underwater archaeology",
+   "url": "https://archeologie.culture.gouv.fr/archeo-sous-marine/en/alexandria-egypt"
+  }
  ],
  "youtube": {
   "title": "Lighthouse of Alexandria: Where Did a Wonder Go?",
-  "description": "The Lighthouse of Alexandria was one of the Seven Wonders of the Ancient World, a three-tiered tower that may have stood over 100 metres tall. Built more than 2,000 years ago on the island of Pharos, it guided ships with fire for well over a thousand years. Then earthquakes broke it, a sultan reused its stones in 1477, and in 1994 divers found its giant blocks on the harbour floor.\n\nSubscribe to Stickstory for a true story like this every day. Which ancient wonder would you bring back? Tell us in the comments!\n\n#shorts #lighthouseofalexandria #stickstory",
-  "tags": ["lighthouse of alexandria", "alexandria lighthouse history", "lighthouse of alexandria ruins", "pharos of alexandria", "pharos lighthouse", "seven wonders of the world", "ancient wonders", "alexandria egypt", "ancient egypt", "underwater archaeology", "qaitbay citadel", "history", "history stories", "stickstory"],
-  "category_id": "28", "publish_at": "2026-12-31T13:00:00-05:00"
- }
+  "description": "The Lighthouse of Alexandria was one of the Seven Wonders of the Ancient World: three towers in one on the island of Pharos, possibly over 100 metres tall, its fire guiding ships into the harbour. Earthquakes cracked it again and again until only a stump was left, and in 1477 Sultan Qaitbay built a fortress on the spot from its stones. The rest is still down there: divers mapped its blocks and statues on the harbour floor in 1994.\n\nSubscribe to Stickstory for a true story like this every day. Which ancient wonder would you bring back? Tell us in the comments!\n\n#shorts #lighthouseofalexandria #stickstory",
+  "tags": [
+   "lighthouse of alexandria",
+   "alexandria lighthouse history",
+   "lighthouse of alexandria ruins",
+   "pharos of alexandria",
+   "pharos lighthouse",
+   "seven wonders of the world",
+   "ancient wonders",
+   "alexandria egypt",
+   "ancient egypt",
+   "underwater archaeology",
+   "qaitbay citadel",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-12-31T13:00:00-05:00"
+ },
+ "slug": "ornek-pharos"
 }

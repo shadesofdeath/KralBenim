@@ -110,6 +110,9 @@ Her tipin parametreleri dosyasının başındaki yorumda yazılıdır (`scenes/s
 **Ölçek (önemli):** `s` 1 doğal boydur (insan ≈ 170 px, ev ≈ 220 px, gemi ≈ 320 px). Dikey Short'ta `wc_scene` nesneleri
 zaten 1,45 kat büyütür ama **kahraman özne için `s` 1,4–2,5** verilir (telefonda tek net özne); 16:9'da kahraman gemi/bina
 `s` 1,3–1,8. Uzak plan (`layer: "far"`) küçük kalır. Nesneler y'ye göre sıralanır; birini öne almak için `dy`.
+**Dikeyde ufuk (`horizon`) en fazla 0,6:** nesneler zemin çizgisinde durur; 0,62'nin altı altyazı bandıdır (lint uyarır).
+Altyazının altını ön plan (`layer: "fg"`: çalı, kaya, çimen) ve zemin doldurur. Cue'yu cümlenin son kelimesine koyma:
+o anda başlayan not/rota sahne bitmeden tamamlanmaz; olayı daha erken bir kelimeye bağla.
 `cues` bir sözlüktür (`"cues": {"hit": "battı"}`), liste değil.
 
 **Ritim:** mekân (`wc_scene`) → ayrıntı (`wc_specimen` ya da yakın plan) → bilgi (`wc_map`/`wc_number`/`wc_timeline`)

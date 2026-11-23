@@ -567,6 +567,26 @@ const WC = (() => {
     for (let i = 0; i < 7; i++) { const yy = -r * .8 + i * r * .26, hw = Math.sqrt(Math.max(0, r * r - yy * yy)); drawS(c, mk(qcurve(x - hw + 4, y + yy, x + hw - 4, y + yy + rnd(-2, 2), 0, 8), r * .1, mixc(C.red, C.ink, .15), { prof: 'even', nb: 3, a: .35 })); }
     c.restore();
   }
+  // uneven tone across a wash: large soft blooms, slightly darker or lighter than the pigment (wet-in-wet)
+  function blooms(c, x0, y0, x1, y1, base, n = 8, a = .14) {
+    for (let i = 0; i < n; i++) {
+      const x = rnd(x0, x1), y = rnd(y0, y1), r = rnd(.12, .3) * (x1 - x0), dark = rnd() < .55;
+      const cc = dark ? mixc(base, C.ink, rnd(.12, .25)) : mixc(base, C.paperLight, rnd(.3, .5));
+      const g = c.createRadialGradient(x, y, r * .15, x, y, r);
+      g.addColorStop(0, rgbaC(cc, a)); g.addColorStop(.65, rgbaC(cc, a * .6)); g.addColorStop(1, rgbaC(cc, 0));
+      c.save(); c.translate(x, y); c.scale(1, rnd(.35, .6)); c.translate(-x, -y);
+      c.fillStyle = g; c.beginPath(); c.arc(x, y, r, 0, 7); c.fill(); c.restore();
+    }
+  }
+  // granulation: pigment settles into the paper's tooth as fine irregular specks (baked once with the backdrop)
+  function granulate(c, x0, y0, x1, y1, base, density = 1, a = .16) {
+    const n = Math.round((x1 - x0) * (y1 - y0) / 900 * density);
+    for (let i = 0; i < n; i++) {
+      const x = rnd(x0, x1), y = rnd(y0, y1), r = rnd(.6, 2.2);
+      c.fillStyle = rgbaC(rnd() < .7 ? mixc(base, C.ink, .3) : C.paperLight, a * rnd(.4, 1));
+      c.fillRect(x, y, r, r * rnd(.6, 1.4));
+    }
+  }
   function groundTex(c, W, H, gy, kind) {
     const area = (H - gy) * W / (1920 * 300);
     if (kind === 'sea') return;
@@ -578,7 +598,7 @@ const WC = (() => {
       else if (kind === 'snow') drawS(c, mk(qcurve(x, y, x + rnd(60, 160) * (1 + k), y + rnd(-4, 4), rnd(-6, 6), 8), rnd(3, 6) * (1 + k), C.far, { prof: 'leaf', nb: 0, a: .3 }));
       else if (kind === 'interior') drawS(c, mk(qcurve(x, y, x + rnd(100, 260), y, 0, 6), rnd(1.5, 2.5), C.stoneDark, { prof: 'even', nb: 0, a: .25 }));
       else if (kind === 'city') { if (rnd() < .6) drawS(c, mk(qcurve(x, y, x + rnd(30, 70) * (1 + k), y + rnd(-2, 2), 0, 4), rnd(2, 3), C.stoneDark, { prof: 'even', nb: 0, a: .3 })); }
-      else for (let q = 0; q < 3; q++) drawS(c, mk(polar(x + q * 5, y, -Math.PI / 2 + rnd(-.45, .45), rnd(10, 24) * (1 + k * 1.4), 2, 4), 2 * (1 + k), pick(shades(C.leaf, .2)), { prof: 'tip', nb: 0, a: .55 }));
+      else if (rnd() < .55) for (let q = 0; q < 3; q++) drawS(c, mk(polar(x + q * 5, y, -Math.PI / 2 + rnd(-.45, .45), rnd(10, 24) * (1 + k * 1.4), 2, 4), 2 * (1 + k), pick(shades(C.leaf, .2)), { prof: 'tip', nb: 0, a: .4 }));
     }
   }
   function landWash(c, W, H, gy, kind, P) {
@@ -614,13 +634,24 @@ const WC = (() => {
       const pp = paper(); if (pp) c.drawImage(pp, 0, 0);
       const g = c.createLinearGradient(0, gy, 0, H); g.addColorStop(0, rgbaC(C.water, .6)); g.addColorStop(1, rgbaC(C.waterDeep, .62));
       c.fillStyle = g; c.fillRect(-20, gy, W + 40, H - gy + 20);
-      for (let i = 0; i < 26 * (H - gy) / 400; i++) { const y = gy + 6 + Math.pow(rnd(), 1.4) * (H - gy); const k = (y - gy) / (H - gy); band(c, rnd(-100, W), rnd(0, W + 100), y, (4 + k * 10), pick([C.water, C.waterDeep, C.paperLight]), .2 + k * .1); }
+      blooms(c, -20, gy, W + 20, H, C.water, Math.round(6 + 6 * (H - gy) / 600), .2);
+      for (let i = 0; i < 9 * (H - gy) / 400; i++) { const y = gy + 10 + Math.pow(rnd(), 1.3) * (H - gy); const k = (y - gy) / (H - gy); softBand(c, rnd(-300, W * .5), rnd(W * .5, W + 300), y, 14 + k * 46, rnd() < .6 ? C.waterDeep : C.paperLight, .1 + k * .06); }
+      for (let i = 0; i < 12 * (H - gy) / 400; i++) { const y = gy + 6 + Math.pow(rnd(), 1.5) * (H - gy); const k = (y - gy) / (H - gy), x = rnd(-50, W); drawS(c, mk(qcurve(x, y, x + rnd(40, 140) * (1 + k), y + rnd(-2, 2), rnd(-3, 3), 8), 1.6 + k * 2.4, C.paperLight, { prof: 'leaf', nb: 0, a: .35 })); }
+      granulate(c, -20, gy, W + 20, H, C.waterDeep, .7, .12);
       c.restore();
       drawS(c, mk(qcurve(-10, gy, W + 10, gy + rnd(-2, 2), 0, 24), 3, C.waterDeep, { prof: 'even', nb: 3, a: .6, rough: .3 }));
       if (sea) return;
-      wash(c, landPoly, C.ground, .62, 3, 3);
-      drawS(c, mk(along(shore, 24), 7, mixc(C.ground, C.paperLight, .5), { prof: 'even', nb: 4, a: .7 }));   // wet sand line
-      c.save(); clipTo(landPoly); groundTex(c, W, H, gy, 'grass'); c.restore();
+      wash(c, landPoly, C.ground, .6, 3, 4);
+      c.save(); clipTo(landPoly);
+      blooms(c, -20, gy, W + 20, H, C.ground, 9, .2);
+      granulate(c, -20, gy, W + 20, H, C.ground, .8, .14);
+      groundTex(c, W, H, gy, 'grass');
+      c.restore();
+      // the shore: wet, darker sand on the land side, a pale line of foam on the water side, both soft-edged
+      const off = right ? -1 : 1;
+      drawS(c, mk(along(shore.map(([x, y]) => [x + off * 22, y]), 30), 46, mixc(C.ground, C.stoneDark, .35), { prof: 'even', nb: 6, a: .28, rough: .4 }));
+      drawS(c, mk(along(shore.map(([x, y]) => [x - off * 6, y]), 30), 7, C.paperLight, { prof: 'even', nb: 4, a: .6, rough: .5 }));
+      drawS(c, mk(along(shore.map(([x, y]) => [x - off * 20, y]), 30), 4, C.paperLight, { prof: 'leaf', nb: 3, a: .35, rough: .6 }));
       return;
     }
     ridgeWash(c, W, H, gy - 14, (kind === 'plain' || kind === 'city' ? 8 : kind === 'desert' ? 26 : 28) * (P.amp ?? 1), 420, seed + 3, kind === 'desert' ? mixc(C.ground, C.skyWarm, .4) : kind === 'snow' ? mixc(C.sky, C.paper, .4) : C.mid, .5);
@@ -628,6 +659,8 @@ const WC = (() => {
     const pts = []; for (let x = -20; x <= W + 20; x += 20) pts.push([x, gy + 2 + Math.sin(x / 300 + seed) * 3]);
     pts.push([W + 20, H + 20], [-20, H + 20]);
     wash(c, pts, gcol, .55, 3, 3);
+    blooms(c, -20, gy, W + 20, H, gcol, 9, .18);
+    granulate(c, -20, gy, W + 20, H, gcol, .7, .12);
     if (kind === 'river') {
       const rp = []; for (let y = gy; y <= H + 30; y += 15) { const k = (y - gy) / (H - gy); rp.push([W * (.5 + Math.sin(k * 3 + seed) * .18) - (20 + k * 160), y]); }
       const rr = rp.map(([x, y]) => [x + 40 + (y - gy) / (H - gy) * 320, y]).reverse();
@@ -731,7 +764,7 @@ const WC = (() => {
     C, G, rnd, pick, withSeed, clamp, mix: mixN, seg, ss, eio, eo, ei, hash, vnoise, fbm, fade2,
     col, mixc, rgba: rgbaC, shades,
     qcurve, qctrl, polar, along, mk, drawS, drawList, drawItem, washShape, washFill, bbox, sprite, clump, edgeOf, inkLine,
-    wash, blob, blobPts, band, softBand, cloudMass, paper, mist, hand, leader, note, serif, font, HANDF, SERIF,
+    wash, blob, blobPts, band, softBand, cloudMass, blooms, granulate, paper, mist, hand, leader, note, serif, font, HANDF, SERIF,
     flame, smoke, rain, snow, birds, make, drawObj, canvas, timeOf, backdrop, ridge, scene, LAYERS,
   };
 })();
