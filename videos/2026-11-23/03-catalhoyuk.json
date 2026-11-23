@@ -1,0 +1,370 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "pamuk",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "slug": "03-catalhoyuk",
+ "extra": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Kapısız",
+   "şehir"
+  ],
+  "highlight": [
+   "kapısız"
+  ],
+  "scene": 7,
+  "t": 3.2,
+  "focus": [
+   560,
+   830
+  ],
+  "zoom": 1.45
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "Bu şehirde evlerin kapısı yoktu.",
+   "visual": "Kanca (ilk cümle boyunca kapak karesi, sahne 7'nin yakın planı): höyüğün kesitinde kapısız, duvar duvara odalar, damlardaki deliklerden inen merdivenler, damda yürüyen insanlar ve her tabanın altında büzülmüş gömüler; üstte KAPISIZ ŞEHİR. (Sahnenin kendi resmi — damdaki delikten sepetiyle çıkan kadın — kanca sırasında gösterilmez.)",
+   "params": {
+    "sky": "dusk",
+    "land": "plain",
+    "horizon": 0.6,
+    "sun": false,
+    "items": [
+     {
+      "g": "catal_town",
+      "x": 0.56,
+      "layer": "mid",
+      "s": 1.35,
+      "o": {
+       "smoke": 3
+      },
+      "at": -1
+     },
+     {
+      "g": "catal_house",
+      "x": 0.5,
+      "s": 1.3,
+      "o": {
+       "n": 3,
+       "climber": true,
+       "walker": true,
+       "smoke": true
+      },
+      "at": -1
+     },
+     {
+      "g": "tree",
+      "x": 0.93,
+      "layer": "far",
+      "s": 0.8
+     },
+     {
+      "g": "reeds",
+      "x": 0.06,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.72,
+      "layer": "fg"
+     }
+    ],
+    "birds": {
+     "x": 0.3,
+     "y": 0.2,
+     "n": 5
+    }
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Dokuz bin yıl önce, Konya Ovası'ndaki Çatalhöyük'te,",
+   "visual": "Türkiye haritası Konya Ovası'na yavaşça yaklaşır; Çatalhöyük kırmızı bir yıldızla işaretlenir, 'Konya Ovası' yazısı.",
+   "cues": {
+    "çatal": "çatalhöyük"
+   },
+   "params": {
+    "region": "anatolia",
+    "paint": 1.0,
+    "zoom": {
+     "to": [
+      30.6,
+      36.4,
+      35.2,
+      39.3
+     ],
+     "at": 0.5,
+     "dur": 2.0
+    },
+    "places": [
+     {
+      "name": "Çatalhöyük",
+      "lon": 32.83,
+      "lat": 37.67,
+      "kind": "star",
+      "at": {
+       "cue": "çatal",
+       "d": -0.9
+      },
+      "color": "red",
+      "align": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Konya Ovası",
+      "lon": 32.75,
+      "lat": 38.2,
+      "italic": true,
+      "at": 0.9,
+      "size": 46
+     }
+    ],
+    "seas": [
+     {
+      "text": "Akdeniz",
+      "lon": 31.6,
+      "lat": 36.05
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_catalhoyuk_plan",
+   "text": "evler duvar duvara bitişikti. Aralarında tek bir sokak bile yoktu.",
+   "visual": "Yukarıdan bakış, bir kazı planı gibi: bal peteği gibi bitişik ev odaları ortadan dışa doğru tek tek boyanır, her damda bir giriş deliği ve merdiven; deliklerden duman; 'sokak yok' notu iki evin ortak duvarını gösterir.",
+   "cues": {
+    "sokak": "sokak"
+   },
+   "params": {
+    "note": {
+     "text": "sokak yok",
+     "at": {
+      "cue": "sokak",
+      "d": -0.5
+     },
+     "color": "red"
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "İnsanlar damların üstünde yürürdü.",
+   "visual": "Gündüz, yakın plan: bitişik damların üstünde yavaşça yürüyen insanlar (biri başında sepet taşıyor), damlardaki deliklerden çıkan merdivenler.",
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.62,
+    "items": [
+     {
+      "g": "catal_town",
+      "x": 0.5,
+      "s": 1.6,
+      "o": {
+       "walkers": 3,
+       "smoke": 1,
+       "person": 0.5
+      },
+      "at": 0.05,
+      "seed": 7
+     },
+     {
+      "g": "grass",
+      "x": 0.15,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.85,
+      "layer": "fg"
+     }
+    ],
+    "birds": {
+     "x": 0.6,
+     "y": 0.12,
+     "n": 3
+    }
+   }
+  },
+  {
+   "type": "wc_catalhoyuk_house",
+   "text": "Eve, damdaki bir delikten merdivenle inerlerdi.",
+   "visual": "Bir evin kesiti: damdaki delikten odaya düşen ışık, merdivenden aşağı inen bir kadın; deliğin altında ocak, dumanı delikten çıkıyor; solda beyaz sıvalı seki, duvarda kırmızı aşı boyası desen.",
+   "cues": {
+    "delik": "delikten"
+   },
+   "params": {
+    "at": 0.4
+   }
+  },
+  {
+   "type": "wc_catalhoyuk_grave",
+   "text": "Ve aşağıda, sıvalı tabanın altında, ölüler yatardı.",
+   "visual": "Yakın kesit: beyaz sıvalı seki ve kat kat sıvalı taban; altındaki toprakta büzülmüş, yan yatan bir gömü belirir.",
+   "cues": {
+    "ölüler": "ölüler"
+   },
+   "params": {
+    "at": {
+     "cue": "ölüler",
+     "d": -1.1
+    },
+    "note": {
+     "text": "sıvalı taban",
+     "at": 0.6
+    }
+   }
+  },
+  {
+   "type": "wc_catalhoyuk_grave",
+   "text": "Aileler, ölülerinin üstünde uyurdu.",
+   "visual": "Gece, aynı seki: ocakta köz ve sıcak bir ışık, sekide battaniye altında uyuyan bir yetişkin ve bir çocuk; altlarındaki toprakta soluk gömü.",
+   "cues": {
+    "ölüleri": "ölülerinin"
+   },
+   "params": {
+    "night": true,
+    "at": "ölüleri"
+   }
+  },
+  {
+   "type": "wc_catalhoyuk_mound",
+   "text": "Bu şehrin sokakları damlarıydı, mezarlığı evleri.",
+   "visual": "Höyüğün kesiti: yan yana üç ev, damlarında yürüyen insanlar ve merdivenler; her evin tabanının altında gömüler belirir, altta daha eski evlerin kalıntıları; 'sokak' ve 'mezarlık' notları.",
+   "cues": {
+    "sokak": "sokakları",
+    "mezar": "mezarlığı"
+   },
+   "params": {
+    "at": {
+     "cue": "mezar",
+     "d": -0.4
+    },
+    "sky": "dusk",
+    "notes": [
+     {
+      "text": "sokak",
+      "at": "sokak",
+      "x": 0.03,
+      "y": 0.13,
+      "ax": 0.15,
+      "ay": 0.203
+     },
+     {
+      "text": "mezarlık",
+      "at": {
+       "cue": "mezar",
+       "d": -0.3
+      },
+      "x": 0.6,
+      "y": 0.575,
+      "ax": 0.53,
+      "ay": 0.455,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "visual": "Gece, höyüğün üstünde uyuyan kent: düz damlar ay ışığında, her damdaki delikten aşağıdaki ocakların sıcak ışığı yukarı vuruyor, ince dumanlar yükseliyor; gökyüzüne el yazısıyla 'Çatalhöyük'.",
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.6,
+    "sun": {
+     "x": 0.8,
+     "y": 0.2,
+     "r": 50
+    },
+    "items": [
+     {
+      "g": "catal_town",
+      "x": 0.5,
+      "s": 1.05,
+      "o": {
+       "smoke": 4,
+       "glow": true
+      },
+      "at": 0.1,
+      "seed": 3
+     },
+     {
+      "g": "reeds",
+      "x": 0.9,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.12,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Çatalhöyük",
+      "x": 0.42,
+      "y": 0.12,
+      "at": 0.8,
+      "size": 72
+     }
+    ]
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Neolithic Site of Çatalhöyük — UNESCO World Heritage Centre",
+   "url": "https://whc.unesco.org/en/list/1405/"
+  },
+  {
+   "title": "Çatalhöyük, one of the world's first cities — National Geographic",
+   "url": "https://www.nationalgeographic.com/history/magazine/2019/03-04/early-agricultural-settlement-catalhoyuk-turkey/"
+  },
+  {
+   "title": "An Ancient Proto-City Reveals the Origin of Home — Scientific American",
+   "url": "https://www.scientificamerican.com/article/an-ancient-proto-city-reveals-the-origin-of-home/"
+  },
+  {
+   "title": "Çatalhöyük — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/%C3%87atalh%C3%B6y%C3%BCk"
+  }
+ ],
+ "youtube": {
+  "title": "Çatalhöyük: Evlerine Damdan Girilen Kapısız Şehir",
+  "description": "Çatalhöyük'te evlerin kapısı yoktu: dokuz bin yıl önce Konya Ovası'nda insanlar evlerine damdaki bir delikten, merdivenle inerdi. Neolitik çağın bu yerleşiminde evler duvar duvara bitişikti, aralarında sokak yoktu; insanlar damların üstünde yürürdü. Ölüler ise evlerin sıvalı tabanlarının ve sekilerinin altına gömülürdü. Çatalhöyük 2012'de UNESCO Dünya Mirası listesine girdi.\n\nHer gün yeni bir 'neden?' için abone ol. Sence insanlar neden kapısız evlerde yaşamayı seçti? Yorumlara yaz!\n\n#shorts #çatalhöyük #düşünbakalım",
+  "tags": [
+   "çatalhöyük",
+   "çatalhöyük evleri",
+   "çatalhöyük neolitik kent",
+   "çatalhöyük konya",
+   "çatalhöyük höyüğü",
+   "neolitik çağ",
+   "konya ovası",
+   "kayıp şehirler",
+   "ilk şehirler",
+   "anadolu tarihi",
+   "unesco dünya mirası",
+   "arkeoloji",
+   "tarih öncesi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-24T16:00:00+03:00"
+ }
+}

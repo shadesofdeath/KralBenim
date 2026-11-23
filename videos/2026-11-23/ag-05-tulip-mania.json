@@ -1,0 +1,474 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "gurub",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "extra": true,
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "One bulb,",
+   "one house"
+  ],
+  "highlight": [
+   "house"
+  ],
+  "scene": 0,
+  "t": 1.6
+ },
+ "scenes": [
+  {
+   "type": "wc_tulipmania_canal",
+   "text": "One tulip bulb was worth a house.",
+   "visual": "Dusk on an Amsterdam canal: a flamed white-and-red tulip painted as tall as the narrow brick canal house beside it, both mirrored in the water.",
+   "params": {
+    "sky": "dusk",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "step",
+       "lit": true
+      },
+      "x": 0.7,
+      "s": 1.6,
+      "at": -1
+     },
+     {
+      "g": "tulip",
+      "o": {
+       "style": "broken"
+      },
+      "x": 0.29,
+      "s": 1.6,
+      "at": -1
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_tulipmania_chart",
+   "text": "By early 1637, Dutch tulip prices were soaring.",
+   "visual": "A hand-painted price chart: the line creeps along, then climbs almost straight up, a small flamed tulip riding its tip.",
+   "cues": {
+    "soar": "soaring"
+   },
+   "params": {
+    "phase": "rise",
+    "title": "Tulip prices",
+    "from": "Nov 1636",
+    "peak": "Feb 1637"
+   }
+  },
+  {
+   "type": "wc_tulipmania_soil",
+   "text": "Bulbs still underground were sold on paper, in taverns.",
+   "visual": "A winter garden cut open: snow on the bed, three bulbs asleep in the soil; a promissory note with a red seal paints itself in above the snow, dashed red lines down to the bulbs.",
+   "cues": {
+    "under": "underground",
+    "paper": "sold"
+   },
+   "params": {
+    "n": 3,
+    "under": {
+     "text": "still underground",
+     "at": "under"
+    },
+    "note": {
+     "text": "sold on paper"
+    }
+   }
+  },
+  {
+   "type": "wc_tulipmania_chart",
+   "text": "In February, the buyers vanished.",
+   "visual": "The same chart at its peak; on 'February' the line plunges in red and the little tulip tumbles down it; red note 'no buyers'.",
+   "cues": {
+    "crash": "February"
+   },
+   "params": {
+    "phase": "crash",
+    "from": "Nov 1636",
+    "peak": "Feb 1637",
+    "after": {
+     "text": "no buyers"
+    }
+   }
+  },
+  {
+   "type": "wc_tulipmania_canal",
+   "text": "We are told merchants became beggars.",
+   "visual": "A rainy canal at dusk; houses on both sides, open sky behind a merchant in a fine cape and plumed hat kneeling on the wet quay, empty-handed; hand note 'ruined?'.",
+   "params": {
+    "sky": "storm",
+    "horizon": 0.6,
+    "weather": "rain",
+    "items": [
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "bell",
+       "w": 1.3,
+       "col": "roof"
+      },
+      "layer": "back",
+      "x": 0.09,
+      "s": 1.7
+     },
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "step",
+       "w": 1.3,
+       "col": "stoneDark"
+      },
+      "layer": "back",
+      "x": 0.27,
+      "s": 1.7
+     },
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "neck",
+       "w": 1.3,
+       "col": "cloth"
+      },
+      "layer": "back",
+      "x": 0.73,
+      "s": 1.7
+     },
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "step",
+       "w": 1.3,
+       "floors": 5,
+       "col": "wood"
+      },
+      "layer": "back",
+      "x": 0.91,
+      "s": 1.7
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "noble",
+       "face": "right",
+       "hold": "none",
+       "beard": true,
+       "cols": {
+        "cloth": "clothB",
+        "cape": "night"
+       },
+       "headgear": "feather"
+      },
+      "x": 0.5,
+      "s": 2.0,
+      "at": 0.1,
+      "paint": 0.9
+     }
+    ],
+    "notes": [
+     {
+      "text": "ruined?",
+      "x": 0.62,
+      "y": 0.2,
+      "ax": 0.53,
+      "ay": 0.36,
+      "at": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "But that tale became famous in 1841, two centuries later.",
+   "visual": "Quote card: Charles Mackay's words 'Reduced almost to beggary' in big serif letters over a small painted book, signed 'Charles Mackay, 1841'.",
+   "params": {
+    "text": "“Reduced almost to beggary”",
+    "sub": "Charles Mackay, 1841",
+    "g": "book",
+    "o": {
+     "color": "cloth"
+    },
+    "s": 0.75,
+    "color": "stain"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Historian Anne Goldgar searched the records.",
+   "visual": "A quiet archive room: tall shelves of old ledgers, a writing desk with an open record book and a candle, light from a window.",
+   "params": {
+    "land": "interior",
+    "horizon": 0.53,
+    "wall": "stone",
+    "items": [
+     {
+      "g": "shelf",
+      "o": {
+       "style": "books",
+       "rows": 5
+      },
+      "x": 0.2,
+      "s": 1.6
+     },
+     {
+      "g": "window",
+      "o": {
+       "style": "rect",
+       "side": 1
+      },
+      "x": 0.8,
+      "s": 1.2
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "desk"
+      },
+      "x": 0.55,
+      "s": 1.5
+     },
+     {
+      "g": "book",
+      "o": {
+       "open": true
+      },
+      "x": 0.55,
+      "y": 0.418,
+      "s": 0.8
+     }
+    ],
+    "notes": [
+     {
+      "text": "Dutch archives",
+      "x": 0.36,
+      "y": 0.17,
+      "ax": 0.5,
+      "ay": 0.39,
+      "at": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "She found only 37 buyers paying over a year's wages for a bulb.",
+   "visual": "A big painted '37' counting up, a tulip bulb painted above it, hand label '300+ guilders: a year's pay'.",
+   "params": {
+    "value": "37",
+    "label": "300+ guilders: a year's pay",
+    "g": "tulip_bulb",
+    "o": {
+     "sprout": true,
+     "peel": false
+    },
+    "s": 1.0,
+    "color": "skyWarm"
+   }
+  },
+  {
+   "type": "wc_tulipmania_canal",
+   "text": "Almost no one was ruined by it.",
+   "visual": "The same canal in clear morning light; the merchant stands upright on the quay against open sky; red note 'almost no bankruptcies'.",
+   "params": {
+    "sky": "dawn",
+    "horizon": 0.6,
+    "birds": {
+     "x": 0.82,
+     "y": 0.07,
+     "n": 5
+    },
+    "items": [
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "bell",
+       "w": 1.3,
+       "col": "clothC"
+      },
+      "layer": "back",
+      "x": 0.09,
+      "s": 1.7
+     },
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "step",
+       "w": 1.3,
+       "col": "roof"
+      },
+      "layer": "back",
+      "x": 0.27,
+      "s": 1.7
+     },
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "neck",
+       "w": 1.3,
+       "col": "stoneDark"
+      },
+      "layer": "back",
+      "x": 0.73,
+      "s": 1.7
+     },
+     {
+      "g": "canal_house",
+      "o": {
+       "gable": "step",
+       "w": 1.3,
+       "floors": 5,
+       "col": "cloth"
+      },
+      "layer": "back",
+      "x": 0.91,
+      "s": 1.7
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "noble",
+       "face": "right",
+       "beard": true,
+       "cols": {
+        "cloth": "clothB",
+        "cape": "night"
+       },
+       "headgear": "feather"
+      },
+      "x": 0.5,
+      "s": 2.0,
+      "at": 0.1,
+      "paint": 0.9
+     }
+    ],
+    "notes": [
+     {
+      "text": "almost no bankruptcies",
+      "x": 0.5,
+      "y": 0.155,
+      "at": 0.8,
+      "color": "red",
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_tulipmania_still",
+   "text": "The crash was real. The ruin was a legend.",
+   "visual": "A Dutch still life: one flamed tulip in a blue vase on a table by a window, evening light.",
+   "params": {
+    "wall": "skyWarm",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "style": "rect",
+       "side": 1
+      },
+      "x": 0.22,
+      "s": 1.3,
+      "solid": false
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "western",
+       "cloth": true
+      },
+      "x": 0.58,
+      "s": 1.5
+     },
+     {
+      "g": "tulip",
+      "o": {
+       "style": "broken",
+       "lean": 0.1
+      },
+      "x": 0.6,
+      "y": 0.42,
+      "s": 0.9
+     },
+     {
+      "g": "vase",
+      "o": {
+       "style": "plain",
+       "color": "clothB"
+      },
+      "x": 0.58,
+      "y": 0.475,
+      "s": 0.75
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Title card: 'Tulip Mania', a small flamed tulip, sub 'Holland, 1637'.",
+   "params": {
+    "text": "Tulip Mania",
+    "sub": "Holland, 1637",
+    "g": "tulip",
+    "o": {
+     "style": "broken"
+    },
+    "s": 0.7,
+    "color": "skyWarm"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Tulip mania — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Tulip_mania"
+  },
+  {
+   "title": "There Never Was a Real Tulip Fever? (Anne Goldgar's findings) — History.com",
+   "url": "https://www.history.com/articles/tulip-mania-financial-crash-holland"
+  },
+  {
+   "title": "Review of Anne Goldgar, Tulipmania (2007) — Reviews in History, Institute of Historical Research",
+   "url": "https://reviews.history.ac.uk/review/666"
+  }
+ ],
+ "youtube": {
+  "title": "Tulip Mania: Did a Flower Really Ruin Holland?",
+  "description": "Tulip mania is the most famous crash in history. In the winter of 1636–37, a single tulip bulb could cost as much as a house in the Dutch Republic, and bulbs still in the frozen ground were traded on paper in taverns. Then, in February, the buyers vanished. The legend of ruined merchants was made famous by Charles Mackay in 1841, but historian Anne Goldgar searched the archives and found almost no one ruined by it.\n\nSubscribe to Stickstory for a true story like this every day. Would you have bought a tulip bulb in 1637? Tell us in the comments!\n\n#shorts #tulipmania #stickstory",
+  "tags": [
+   "tulip mania",
+   "tulip mania 1637",
+   "tulip mania explained",
+   "tulip bubble",
+   "dutch tulip mania",
+   "semper augustus",
+   "first financial bubble",
+   "economic bubble",
+   "dutch golden age",
+   "charles mackay",
+   "anne goldgar",
+   "history of money",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-24T09:00:00-05:00"
+ }
+}
