@@ -1,0 +1,186 @@
+{
+  "engine": "studio",
+  "theme": "belgesel",
+  "palette": "kum",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "sources": [
+    {
+      "title": "Britannica: Orhon inscriptions",
+      "url": "https://www.britannica.com/topic/Orhon-inscriptions"
+    },
+    {
+      "title": "Wikipedia: Orkhon inscriptions",
+      "url": "https://en.wikipedia.org/wiki/Orkhon_inscriptions"
+    },
+    {
+      "title": "Wikipedia: Bilge Qaghan",
+      "url": "https://en.wikipedia.org/wiki/Bilge_Qaghan"
+    },
+    {
+      "title": "Wikipedia: Second Turkic Khaganate",
+      "url": "https://en.wikipedia.org/wiki/Second_Turkic_Khaganate"
+    },
+    {
+      "title": "Sputnik Türkiye (18 Kasım 2026): Bilge Kağan'ın kayıp sarayı bulunmuş olabilir",
+      "url": "https://anlatilaninotesi.com.tr/20261118/turk-tarihini-degistirecek-kesif-bilge-kaganin-kayip-sarayi-bulunmus-olabilir-1110422463.html"
+    }
+  ],
+  "cover": {
+    "lines": [
+      "Bu taş",
+      "bir uyarı"
+    ],
+    "highlight": [
+      "uyarı"
+    ],
+    "scene": 0,
+    "t": 2.3,
+    "focus": [
+      540,
+      760
+    ],
+    "zoom": 1.18,
+    "kasif": false
+  },
+  "scenes": [
+    {
+      "text": "Bu taş bir imparatorluğun uyarısı.",
+      "type": "bt_orhun_stele",
+      "visual": "Açık kum renkli bozkır, alçak tepeler, yavaş kayan bulutlar ve gölgeleri; ortada taş kaplumbağa kaidesi üstünde tek dikili yazıt taşı, oymalı başlık, yüzünde çizgili sütunlar içinde runik harfler; bir harf sütunu yukarıdan aşağı altınla yeniden yazılır; 'uyarı'da çevresinde altın hale ve büyüyen ışık",
+      "params": {
+        "mode": "hook"
+      },
+      "cues": {
+        "hit": "uyarı"
+      }
+    },
+    {
+      "text": "Orhun Vadisi'nde duruyor.",
+      "type": "bt_orhun_map",
+      "visual": "Orhun vadisine yakın plan harita, tüm kadraj: kıvrılan mavi Orhun ırmağı ve soluk vadi tabanı yukarı sağa çizilir, taralı küçük tepe işaretleri kadrajın altına kadar uzanır; kadraj ortasında yazıtların yeri, 'Orhun Vadisi' etiketi ilk karede tam koyu, 'Vadisi'nde altın nokta ve yayılan halka; sağda ırmağın altında küçük Moğolistan haritası, içinde bu görünümün altın çerçevesi ve altında koyu italik 'Moğolistan'",
+      "params": {
+        "label": "Orhun Vadisi",
+        "sub": "Moğolistan"
+      },
+      "cues": {
+        "hit": "Vadisi"
+      }
+    },
+    {
+      "text": "Geçenlerde Bilge Kağan'ın kayıp sarayı uydudan seçilmiş olabilir.",
+      "type": "bt_orhun_sat",
+      "visual": "Yukarıdan uydu görüntüsü, tüm kadraj: soluk arazi eş yükselti çizgileri, kıvrılan dere, üstte italik 'Hotont', köşe işaretli büyük tarama çerçevesi ve yavaş inen tarama çizgisi; 'saray'da altın çizgilerle iç içe büyük sur izleri ve ortada höyük belirir, kamera onlara yavaşça yaklaşır; altta arazi sürer: ikinci dere, koyu doku, tarla şeritleri",
+      "params": {
+        "label": "Hotont"
+      },
+      "cues": {
+        "hit": "saray"
+      }
+    },
+    {
+      "text": "Taştaki yazı bin yılı aşkın okunamadı.",
+      "type": "bt_orhun_runes",
+      "visual": "Taş yüzeyi yakın plan, tüm kadraj: çukurcuklu taş, çizgili altı sütun arasında büyük runik harfler sütun sütun oyulur; sütunlar altyazının altında soluk ve aşınmış olarak sürer; yavaş bir ışık taşın üstünde gezinir; 'okunamadı'da harfler aşınmış soluk griye döner",
+      "cues": {
+        "hit": "okunamadı"
+      }
+    },
+    {
+      "text": "Kağan taşa şunu yazdırmıştı.",
+      "type": "bt_orhun_khagan",
+      "visual": "Bozkırda büyük keçe otağ, tepesinden yavaş duman; önünde alçak tahtta oturan yüzsüz kağan silueti, sivri başlık; solda ucu altın topuzlu tuğ; 'Kağan'da kağanın çevresindeki ışık ısınır",
+      "cues": {
+        "hit": "Kağan"
+      }
+    },
+    {
+      "text": "Çin'in sözü tatlı, ipeği yumuşak.",
+      "type": "bt_orhun_silk",
+      "visual": "Çubuğa sarılı bir top ipek; kumaş çubuktan aşağı sarkar, altın tonlu dikey kıvrımlar, eteğe yakın dokuma baklava şeridi ve saçak, altında yumuşak gölge; kumaş havada çok yavaş salınır; 'ipeği'nde üstünden aşağı soluk bir parıltı kayar",
+      "cues": {
+        "hit": "ipeği"
+      }
+    },
+    {
+      "text": "Atalar o ipeğe kandı ve elli yıl boyun eğdi.",
+      "type": "bt_orhun_years",
+      "visual": "Soluk taş zemin; beşli gruplar halinde kazınan çentik işaretleri tek tek çizilir; üstte altın renkli büyük sayı 0'dan 50'ye sayar, altında italik 'yıl'",
+      "params": {
+        "n": 50,
+        "label": "yıl"
+      },
+      "cues": {
+        "hit": "elli"
+      }
+    },
+    {
+      "text": "Kağan 734'te zehirlendi.",
+      "type": "bt_orhun_cup",
+      "visual": "Tek bir içki kâsesi yakın plan, kadraj ortasında; altında ince ahşap kenar ve yumuşak gölge, içinden yavaş buhar, arkada sıcak ışık havuzu; 'zehir'de içki koyulaşır, yüzeyde halkalar yavaşça yayılır, buhar kesilir, ışık havuzu daralır",
+      "cues": {
+        "hit": "zehir"
+      }
+    },
+    {
+      "text": "On yıl sonra imparatorluk çöktü.",
+      "type": "bt_orhun_camp",
+      "visual": "Alacakaranlıkta bozkırda beş keçe otağ, tepelerinden duman; sahnenin ilk yarısından başlayarak otağların dumanı tek tek kesilir, otağlar soluk çizgilere dönüşerek söner; 'çöktü'de son otağ da söner",
+      "cues": {
+        "hit": "çöktü"
+      }
+    },
+    {
+      "text": "Uyarı taşta kaldı. Taş on üç asırdır bekliyor.",
+      "type": "bt_orhun_stele",
+      "visual": "Aynı yazıt taşı kaplumbağa kaidesi üstünde, arkasında alçak güneş yavaşça batar, taşın uzun gölgesi bozkıra uzar, bulutlar kayar (on üç asırlık bekleyiş)",
+      "params": {
+        "mode": "end"
+      },
+      "cues": {
+        "hit": "asır"
+      }
+    },
+    {
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "type": "bt_orhun_stele",
+      "visual": "Geniş plan: uçsuz bozkırda küçük tek yazıt taşı, güneş ufka değip batar, uzun gölge, bulutlar",
+      "params": {
+        "mode": "far"
+      }
+    }
+  ],
+  "youtube": {
+    "title": "Orhun Yazıtları: Bilge Kağan Taşa Hangi Uyarıyı Yazdırdı?",
+    "description": "Orhun Yazıtları, Moğolistan bozkırında 732 ve 735'te dikilen taşlardır ve Bilge Kağan'ın halkına bıraktığı bir uyarıyı taşır. Göktürk harfleriyle yazılan bu metin bin yılı aşkın okunamadı; Danimarkalı dilbilimci Vilhelm Thomsen onu ancak 1893'te çözdü.\n\nKül Tigin ve Bilge Kağan yazıtlarında kağan, Çin'in sözünün tatlı, ipeğinin yumuşak olduğunu ve atalarının buna kanıp elli yıl boyun eğdiğini anlatır. Bilge Kağan 734'te zehirlendi; İkinci Göktürk Kağanlığı 744'te yıkıldı. Kasım 2026'da iki Türk akademisyen, uydu görüntülerinde kağanın kayıp sarayına ait olabilecek izler gördüklerini açıkladı; bu henüz kazıyla doğrulanmadı.\n\nHer gün yeni bir sessiz hikâye için abone ol. Sence bir uyarı taşa yazılınca dinlenir mi? Yorumlara yaz!\n\n#shorts #orhunyazıtları #düşünbakalım",
+    "tags": [
+      "orhun yazıtları",
+      "orhun abideleri",
+      "göktürk yazıtları",
+      "bilge kağan",
+      "kül tigin",
+      "göktürkler",
+      "göktürk alfabesi",
+      "bilge kağan yazıtı",
+      "vilhelm thomsen",
+      "ikinci göktürk kağanlığı",
+      "türk tarihi",
+      "orhun vadisi",
+      "moğolistan",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-23T19:00:00+03:00"
+  }
+}
