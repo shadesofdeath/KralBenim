@@ -1,0 +1,572 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "keten",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Stolen",
+   "bucket"
+  ],
+  "highlight": [
+   "bucket"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "focus": [
+   540,
+   700
+  ],
+  "zoom": 1.25
+ },
+ "scenes": [
+  {
+   "type": "wc_bucket_relic",
+   "text": "A city still guards a stolen bucket.",
+   "visual": "A cool stone wall indoors; an arched stone niche with a candle burning on each side of the sill; an old oak bucket with iron hoops hangs in it on an iron chain, swinging very slowly.",
+   "params": {
+    "wall": "stone",
+    "chain": 70,
+    "swing": 2
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "A plain oak pail, taken from Bologna in 1325.",
+   "visual": "The bucket alone on a clean plate, painted large: tapered oak staves, three iron hoops, an iron handle; notes 'oak staves' at a stave and '1325' in red at the handle.",
+   "cues": {
+    "bol": "Bologna"
+   },
+   "params": {
+    "g": "bucket",
+    "s": 1.0,
+    "pigment": "stain",
+    "at": 0.1,
+    "notes": [
+     {
+      "text": "oak staves",
+      "part": "stave",
+      "at": 0.9
+     },
+     {
+      "text": "1325",
+      "part": "handle",
+      "at": 1.6,
+      "color": "red",
+      "x": 0.72,
+      "y": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_bucket_well",
+   "text": "Legend says it started a war. The truth runs backwards.",
+   "visual": "Night, the walls and towers of a medieval city behind; a stone well with a roller; a soldier with a lantern beside it as a bucket is hauled up out of the dark mouth; red note 'the legend'.",
+   "cues": {
+    "start": "started"
+   },
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.6,
+    "well": {
+     "x": 0.44,
+     "s": 1.25
+    },
+    "lift": {
+     "at": "start",
+     "dur": 1.6
+    },
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "s": 1.6,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "soldier",
+       "hold": "lantern"
+      },
+      "x": 0.8,
+      "s": 1.25,
+      "at": 0.3,
+      "flip": true
+     },
+     {
+      "g": "grass",
+      "x": 0.12,
+      "layer": "fg",
+      "s": 1.2
+     },
+     {
+      "g": "rock",
+      "x": 0.9,
+      "layer": "fg",
+      "s": 0.9
+     }
+    ],
+    "notes": [
+     {
+      "text": "the legend",
+      "x": 0.5,
+      "y": 0.17,
+      "at": 0.4,
+      "color": "red",
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Some thirty thousand Bolognese met Modena at Zappolino.",
+   "visual": "A close painted map of the plain between Modena and Bologna; Zappolino marked early with crossed swords and its name; a red brush route grows from Bologna to Zappolino on 'thirty'.",
+   "cues": {
+    "thirty": "thirty"
+   },
+   "params": {
+    "region": [
+     10.88,
+     44.3,
+     11.4,
+     44.72
+    ],
+    "paint": 0.6,
+    "places": [
+     {
+      "name": "Modena",
+      "lon": 10.925,
+      "lat": 44.647,
+      "kind": "city",
+      "at": 0.3,
+      "align": "above",
+      "size": 1.4
+     },
+     {
+      "name": "Bologna",
+      "lon": 11.343,
+      "lat": 44.494,
+      "kind": "city",
+      "at": 0.5,
+      "align": "right",
+      "size": 1.4
+     },
+     {
+      "name": "Zappolino",
+      "lon": 11.09,
+      "lat": 44.44,
+      "kind": "battle",
+      "at": 0.3,
+      "color": "red",
+      "align": "below",
+      "size": 1.6
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        11.33,
+        44.49
+       ],
+       [
+        11.22,
+        44.46
+       ],
+       [
+        11.1,
+        44.445
+       ]
+      ],
+      "at": "thirty",
+      "dur": 1.8,
+      "color": "red"
+     }
+    ],
+    "labels": [
+     {
+      "text": "November 1325",
+      "lon": 11.15,
+      "lat": 44.69,
+      "italic": true,
+      "at": 0.6,
+      "size": 56
+     }
+    ],
+    "mountains": false,
+    "land": "ground"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Modena had seven thousand. Within hours, Bologna broke.",
+   "visual": "Dawn over low hills: a small army with banners on the left, a far bigger army filling the right; at 'broke' smoke rises and the big army falls back off to the right; notes '7,000' and '30,000'.",
+   "cues": {
+    "broke": "broke"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "hills",
+    "horizon": 0.58,
+    "items": [
+     {
+      "g": "army",
+      "o": {
+       "rows": 2,
+       "n": 5,
+       "banner": 1,
+       "face": "right",
+       "dress": "knight"
+      },
+      "x": 0.2,
+      "s": 0.9,
+      "at": 0.1
+     },
+     {
+      "g": "army",
+      "o": {
+       "rows": 5,
+       "n": 14,
+       "banner": 3,
+       "face": "left",
+       "dress": "soldier"
+      },
+      "x": 0.7,
+      "layer": "mid",
+      "s": 1.0,
+      "at": 0.3,
+      "move": {
+       "to": [
+        1.25
+       ],
+       "at": "broke",
+       "dur": 2.6
+      }
+     },
+     {
+      "g": "shrub",
+      "x": 0.06,
+      "layer": "fg",
+      "s": 1.0
+     },
+     {
+      "g": "grass",
+      "x": 0.6,
+      "layer": "fg",
+      "s": 1.3
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.55,
+      "y": 0.55,
+      "h": 420,
+      "a": 0.32,
+      "at": "broke"
+     }
+    ],
+    "notes": [
+     {
+      "text": "7,000",
+      "x": 0.18,
+      "y": 0.3,
+      "ax": 0.2,
+      "ay": 0.47,
+      "at": 0.6
+     },
+     {
+      "text": "30,000",
+      "x": 0.62,
+      "y": 0.22,
+      "ax": 0.7,
+      "ay": 0.42,
+      "at": 1.2,
+      "color": "red",
+      "align": "left"
+     }
+    ],
+    "sun": false
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "The victors chased them home and raced horses at the gates.",
+   "visual": "Dusk before a city wall with an arched gate between two towers, the towers of the city behind; two riders gallop past along the wall; note 'a victory race'.",
+   "cues": {
+    "raced": "raced"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "plain",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "s": 1.5,
+      "at": -1
+     },
+     {
+      "g": "wall",
+      "o": {
+       "len": 560,
+       "gate": true,
+       "crenel": true
+      },
+      "x": 0.5,
+      "layer": "mid",
+      "s": 1.3,
+      "at": 0.1
+     },
+     {
+      "g": "tower",
+      "o": {
+       "style": "square",
+       "h": 1.1
+      },
+      "x": 0.16,
+      "layer": "mid",
+      "s": 1.2,
+      "at": 0.3
+     },
+     {
+      "g": "tower",
+      "o": {
+       "style": "square",
+       "h": 1.25
+      },
+      "x": 0.84,
+      "layer": "mid",
+      "s": 1.2,
+      "at": 0.4
+     },
+     {
+      "g": "rider",
+      "o": {
+       "pose": "gallop",
+       "dress": "knight",
+       "hold": "flag"
+      },
+      "x": -0.5,
+      "s": 1.05,
+      "at": -1,
+      "move": {
+       "to": [
+        0.62
+       ],
+       "at": "raced",
+       "dur": 3.0
+      }
+     },
+     {
+      "g": "rider",
+      "o": {
+       "pose": "gallop",
+       "dress": "soldier"
+      },
+      "x": -0.75,
+      "s": 1.0,
+      "dy": 30,
+      "at": -1,
+      "move": {
+       "to": [
+        0.3
+       ],
+       "at": "raced",
+       "dur": 3.0
+      }
+     },
+     {
+      "g": "grass",
+      "x": 0.82,
+      "layer": "fg",
+      "s": 1.3
+     }
+    ],
+    "notes": [
+     {
+      "text": "a victory race",
+      "x": 0.5,
+      "y": 0.16,
+      "at": "raced",
+      "size": 64
+     }
+    ],
+    "sun": false
+   }
+  },
+  {
+   "type": "wc_bucket_well",
+   "text": "Then they took a bucket from a well.",
+   "visual": "Close-up at the mouth of a stone well in daylight: a soldier's hand grips the rope as the oak bucket rises out of the dark water shaft; red note 'the trophy'.",
+   "cues": {
+    "bucket": "bucket"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.6,
+    "well": {
+     "x": 0.58,
+     "s": 1.35
+    },
+    "lift": {
+     "at": "bucket",
+     "dur": 1.5
+    },
+    "bucket_s": 0.55,
+    "items": [
+     {
+      "g": "wall",
+      "o": {
+       "len": 640,
+       "gate": true,
+       "crenel": true
+      },
+      "x": 0.5,
+      "layer": "far",
+      "s": 1.8,
+      "at": -1
+     },
+     {
+      "g": "shrub",
+      "x": 0.92,
+      "layer": "fg",
+      "s": 1.0
+     },
+     {
+      "g": "grass",
+      "x": 0.3,
+      "layer": "fg",
+      "s": 1.2
+     }
+    ],
+    "notes": [
+     {
+      "text": "the trophy",
+      "x": 0.26,
+      "y": 0.4,
+      "ax": 0.5,
+      "ay": 0.42,
+      "at": "bucket",
+      "color": "red",
+      "size": 46
+     }
+    ],
+    "hand": true
+   },
+   "camera": {
+    "focus": [
+     600,
+     900
+    ],
+    "zoom": 1.4
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "It never started the war. It was the trophy for winning it.",
+   "visual": "A vertical timeline painting itself in: '15 Nov 1325 — the battle', 'days later — the race', 'then — the bucket' (the bucket mark in red).",
+   "cues": {
+    "trophy": "trophy"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "15 Nov",
+      "label": "the battle",
+      "at": 0.2
+     },
+     {
+      "year": "after",
+      "label": "the race",
+      "at": 1.0
+     },
+     {
+      "year": "then",
+      "label": "the bucket",
+      "at": "trophy"
+     }
+    ],
+    "highlight": 2
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for history's strangest true stories.",
+   "visual": "Title card 'The Stolen Bucket' with a small painted oak bucket, sub 'Modena, since 1325'.",
+   "params": {
+    "text": "The Stolen Bucket",
+    "sub": "Modena, since 1325",
+    "g": "bucket",
+    "s": 0.7,
+    "color": "stain"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Battle of Zappolino — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Zappolino"
+  },
+  {
+   "title": "The Absurd Medieval Legend of the War of the Bucket Is Mostly False — TheCollector",
+   "url": "https://www.thecollector.com/medieval-legend-war-bucket/"
+  },
+  {
+   "title": "Palazzo Comunale di Modena — Visit Modena",
+   "url": "https://www.visitmodena.it/en/discover-modena/art-and-culture/historic-buildings-and-castles/palazzo-comunale"
+  },
+  {
+   "title": "Did Medieval Italians Declare War Over a Wooden Bucket? — HistoryNet",
+   "url": "https://historynet.com/what-we-learned-from-the-battle-of-zappolino-1325/"
+  }
+ ],
+ "youtube": {
+  "title": "War of the Bucket: Did a Stolen Pail Really Start a War?",
+  "description": "The War of the Bucket is one of history's strangest stories: Modena, in Italy, still keeps a plain oak bucket taken from Bologna in 1325. Legend says the stolen bucket started the war. The truth runs the other way. In November 1325 a Bolognese army of about 30,000 met Modena's 7,000 at the Battle of Zappolino and broke within hours. The Modenese chased them to Bologna's walls, held a victory horse race outside the gates, and took a bucket from a well as their trophy. Centuries later, Alessandro Tassoni's mock-epic poem \"La secchia rapita\" made it famous.\n\nSubscribe to Stickstory for history's strangest true stories. What is the oddest war trophy you have ever heard of? Tell us in the comments!\n\n#shorts #warofthebucket #stickstory",
+  "tags": [
+   "war of the bucket",
+   "the war of the bucket",
+   "war of the bucket 1325",
+   "bucket war",
+   "battle of zappolino",
+   "secchia rapita",
+   "stolen bucket",
+   "modena vs bologna",
+   "modena",
+   "bologna",
+   "medieval italy",
+   "medieval history",
+   "weird history",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-24T13:00:00-05:00"
+ }
+}

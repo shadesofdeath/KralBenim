@@ -1,0 +1,315 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "pamuk",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Nobody can",
+   "read it"
+  ],
+  "highlight": [
+   "read"
+  ],
+  "scene": 0,
+  "t": 1.2,
+  "focus": [
+   540,
+   760
+  ],
+  "zoom": 1.15
+ },
+ "scenes": [
+  {
+   "type": "wc_phaistos_disc",
+   "text": "Nobody on Earth can read this disc.",
+   "visual": "The Phaistos Disc alone, face on and big on warm paper: pale fired clay, a spiral groove from the rim to the centre, tiny stamped signs between its turns; it turns very slowly on a wooden table.",
+   "params": {
+    "mode": "hero",
+    "at": -1,
+    "turn": 5
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "In 1908, Luigi Pernier dug it out of a palace ruin on Crete.",
+   "visual": "Bright day on a Cretan hillside: the stumps of a ruined colonnade and scattered fallen stones, hills behind; an archaeologist in a 1900s suit and hat kneels in the dig, and a small clay disc paints itself in at his knees on 'dug'.",
+   "cues": {
+    "dug": "dug"
+   },
+   "params": {
+    "sky": "day",
+    "land": "hills",
+    "horizon": 0.56,
+    "sun": false,
+    "items": [
+     {
+      "g": "cypress",
+      "x": 0.9,
+      "layer": "far",
+      "s": 0.8
+     },
+     {
+      "g": "ruin",
+      "o": {
+       "n": 3
+      },
+      "x": 0.78,
+      "layer": "mid",
+      "s": 1.0
+     },
+     {
+      "g": "rock",
+      "o": {
+       "w": 1.3
+      },
+      "x": 0.14,
+      "layer": "mid",
+      "s": 1.1
+     },
+     {
+      "g": "rock",
+      "x": 0.27,
+      "layer": "mid",
+      "s": 0.8
+     },
+     {
+      "g": "rock",
+      "o": {
+       "w": 0.8
+      },
+      "x": 0.58,
+      "layer": "mid",
+      "s": 0.9
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "modern",
+       "face": "right",
+       "beard": true
+      },
+      "x": 0.4,
+      "s": 1.9,
+      "at": 0.1
+     },
+     {
+      "g": "phaistos_disc",
+      "o": {
+       "tilt": 0.45
+      },
+      "x": 0.62,
+      "s": 0.36,
+      "at": "dug"
+     },
+     {
+      "g": "rock",
+      "x": 0.1,
+      "layer": "fg",
+      "s": 1.2
+     },
+     {
+      "g": "shrub",
+      "x": 0.9,
+      "layer": "fg",
+      "s": 1.0
+     },
+     {
+      "g": "grass",
+      "x": 0.7,
+      "layer": "fg",
+      "s": 1.4
+     }
+    ],
+    "notes": [
+     {
+      "text": "Phaistos, Crete · 1908",
+      "x": 0.5,
+      "y": 0.13,
+      "at": 0.9,
+      "size": 58
+     }
+    ],
+    "amp": 2.2
+   }
+  },
+  {
+   "type": "wc_phaistos_signs",
+   "text": "Tiny pictures spiral across it: plumed heads, fish, a ship.",
+   "visual": "Close on the clay: the disc's rim arcs across the top; a turn of the spiral fills with small stamped signs one after another, then a plumed head, a fish and a ship stamp themselves into the outer turn, each named in pen above the rim as it is spoken.",
+   "cues": {
+    "head": "plumed",
+    "fish": "fish",
+    "ship": "ship"
+   },
+   "params": {
+    "signs": [
+     {
+      "sign": "head",
+      "at": "head",
+      "label": "plumed head"
+     },
+     {
+      "sign": "fish",
+      "at": {
+       "cue": "head",
+       "d": 0.7
+      },
+      "label": "fish"
+     },
+     {
+      "sign": "ship",
+      "at": {
+       "cue": "head",
+       "d": 1.4
+      },
+      "label": "ship"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_phaistos_stamp",
+   "text": "But nobody drew them. Each sign was pressed in with a stamp.",
+   "visual": "Close on a blank clay disc lying on a table: a right hand in a washed blue sleeve shows a round carved wooden stamp, its face carved with the plumed head; it turns upright, presses it into the outer turn of the spiral on 'pressed', lifts away, and the same sign is left in the clay beside four earlier ones; red note 'stamped, not drawn'.",
+   "cues": {
+    "press": "pressed"
+   },
+   "params": {
+    "sign": "head",
+    "press": "press",
+    "notes": [
+     {
+      "text": "stamped, not drawn",
+      "x": 0.6,
+      "y": 0.075,
+      "at": {
+       "cue": "press",
+       "d": 0.5
+      },
+      "color": "red",
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "That was about three thousand years before Gutenberg.",
+   "visual": "A vertical painted timeline: 'c. 1700 BC — the disc' and, far below, '1450s — Gutenberg's press'.",
+   "cues": {
+    "gut": "Gutenberg"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "c. 1700 BC",
+      "label": "the disc",
+      "at": 0.2
+     },
+     {
+      "year": "1450s",
+      "label": "Gutenberg's press",
+      "at": 1.4
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Forty-five different signs, and not one other text to check a guess against.",
+   "visual": "A big painted '45' counting up over a gold swatch; above it one stamped plumed-head sign on a clay patch and, beside it, the dashed ghost outline of a second disc that does not exist; hand label 'signs, no second text'.",
+   "params": {
+    "value": "45",
+    "label": "signs, no second text",
+    "g": "phaistos_pair",
+    "o": {
+     "sign": "head"
+    },
+    "s": 1.6,
+    "color": "gold"
+   }
+  },
+  {
+   "type": "wc_phaistos_disc",
+   "text": "Someone made stamps to print copies, yet only one has ever been found.",
+   "visual": "A dark museum room: the disc stands alone on a thin stand in a glass case on a pale stone plinth, a pool of light falling on it with dust drifting; red note 'one copy'.",
+   "cues": {
+    "one": "only"
+   },
+   "params": {
+    "mode": "museum",
+    "at": 0.1,
+    "paint": 1.0,
+    "side": "B",
+    "notes": [
+     {
+      "text": "one copy",
+      "x": 0.5,
+      "y": 0.09,
+      "at": "one",
+      "color": "red",
+      "size": 66
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for one unsolved mystery a day.",
+   "visual": "Title card: 'The Phaistos Disc' in serif over a small painted disc, sub 'Crete · still unread'.",
+   "params": {
+    "text": "The Phaistos Disc",
+    "sub": "Crete · still unread",
+    "g": "phaistos_disc",
+    "o": {},
+    "s": 0.75,
+    "color": "skyWarm"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Phaistos Disc — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Phaistos_Disc"
+  },
+  {
+   "title": "This ancient script has remained unsolved for over a century — National Geographic",
+   "url": "https://www.nationalgeographic.com/history/article/phaistos-clay-disk-minoans-mystery"
+  }
+ ],
+ "youtube": {
+  "title": "Phaistos Disc: Why Can Nobody Read It?",
+  "description": "The Phaistos Disc is a fired clay disc found in 1908 by archaeologist Luigi Pernier in a Minoan palace ruin on Crete, and nobody can read it. Tiny pictures spiral over both sides: plumed heads, fish, a ship. They were not drawn but pressed into the clay with stamps, about three thousand years before Gutenberg. There are 45 different signs, and no other text in this script has ever been found.\n\nSubscribe to Stickstory for one unsolved mystery a day. What do you think the disc says? Tell us in the comments!\n\n#shorts #phaistosdisc #stickstory",
+  "tags": [
+   "phaistos disc",
+   "phaistos disc mystery",
+   "phaistos disc crete",
+   "phaistos disk",
+   "undeciphered scripts",
+   "minoan civilization",
+   "ancient crete",
+   "luigi pernier",
+   "ancient mysteries",
+   "unsolved mysteries",
+   "lost languages",
+   "ancient writing",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-24T19:00:00-05:00"
+ }
+}
