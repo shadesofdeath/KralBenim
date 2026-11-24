@@ -1,0 +1,907 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "yaz",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Yakıtın",
+   "yarısı",
+   "yoktu"
+  ],
+  "highlight": [
+   "yarısı"
+  ],
+  "scene": 0,
+  "t": 0.85,
+  "focus": [
+   500,
+   800
+  ],
+  "zoom": 1.3
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "Bu jet yakıtın yarısını bile almadan kalktı.",
+   "visual": "Yaz günü; ovadan yükselen beyaz-kırmızı kuyruklu iki motorlu jet tek başına; kanadı gösteren kırmızı not 'yakıt yarısından az'; önde koyu ot tutamları.",
+   "cues": {
+    "yari": "yarısını"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.6,
+    "clouds": 3,
+    "items": [
+     {
+      "g": "meadow",
+      "o": {},
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "airliner",
+      "x": 0.51,
+      "y": 0.41,
+      "s": 1.05,
+      "rot": -0.12,
+      "at": 0.05,
+      "paint": 0.7,
+      "move": {
+       "to": [
+        0.53,
+        0.4
+       ],
+       "at": 0,
+       "dur": 3.2
+      }
+     },
+     {
+      "g": "rock",
+      "x": 0.3,
+      "layer": "fg",
+      "s": 0.7
+     },
+     {
+      "g": "shrub",
+      "x": 0.62,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "yakıt yarısından az",
+      "x": 0.14,
+      "y": 0.56,
+      "ax": 0.47,
+      "ay": 0.425,
+      "at": 0.9,
+      "color": "red"
+     }
+    ],
+    "birds": {
+     "x": 0.75,
+     "y": 0.16,
+     "n": 4
+    }
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "1983'te yakıt kilogram yerine librenin çarpanıyla hesaplandı.",
+   "visual": "Kâğıtta büyük boyanmış '1,77' sayısı; altında el yazısıyla 'libre, kilogram değil'.",
+   "cues": {
+    "libre": "librenin"
+   },
+   "params": {
+    "value": "1,77",
+    "count": false,
+    "label": "libre, kilogram değil",
+    "color": "gold",
+    "at": 0.1
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Önce bir motor, sonra öteki sustu.",
+   "visual": "Yakın plan: bulut denizinin üstünde süzülen jetin susmuş motoru ve altında sarkan küçük rüzgâr türbini; kırmızı 'motorlar sustu', '12.500 m'.",
+   "cues": {
+    "motor": "motor"
+   },
+   "params": {
+    "sky": "day",
+    "land": "none",
+    "horizon": 0.6,
+    "clouds": 3,
+    "items": [
+     {
+      "g": "cloud_sea",
+      "x": 0.5,
+      "y": 0.58,
+      "at": -1,
+      "sway": false,
+      "bob": false
+     },
+     {
+      "g": "airliner",
+      "o": {
+       "rat": true
+      },
+      "x": 0.52,
+      "y": 0.43,
+      "s": 1.0,
+      "rot": 0.06,
+      "at": 0.05,
+      "paint": 1.2,
+      "move": {
+       "to": [
+        0.48,
+        0.45
+       ],
+       "at": 0,
+       "dur": 3.2
+      }
+     }
+    ],
+    "notes": [
+     {
+      "text": "12.500 m",
+      "x": 0.56,
+      "y": 0.36,
+      "at": 0.6
+     },
+     {
+      "text": "motorlar sustu",
+      "x": 0.3,
+      "y": 0.57,
+      "ax": 0.5,
+      "ay": 0.474,
+      "at": "motor",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     560,
+     900
+    ],
+    "zoom": 1.9
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ama kaptan planörcüydü,",
+   "visual": "Sabah ışığında yeşil tepelerin üstünde uzun kanatlı beyaz bir planör süzülüyor, kuşlar; kokpiti gösteren not 'Bob Pearson'.",
+   "cues": {
+    "planor": "planörcü"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "hills",
+    "horizon": 0.6,
+    "amp": 1.1,
+    "sun": {
+     "x": 0.2,
+     "y": 0.55,
+     "r": 54
+    },
+    "items": [
+     {
+      "g": "meadow",
+      "o": {},
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "glider",
+      "x": 0.52,
+      "y": 0.27,
+      "s": 1.25,
+      "at": 0.1,
+      "paint": 1.3,
+      "move": {
+       "to": [
+        0.6,
+        0.25
+       ],
+       "at": 0,
+       "dur": 4
+      }
+     },
+     {
+      "g": "tree",
+      "x": 0.15,
+      "layer": "far"
+     },
+     {
+      "g": "tree",
+      "x": 0.82,
+      "layer": "mid"
+     },
+     {
+      "g": "rock",
+      "x": 0.4,
+      "layer": "fg",
+      "s": 0.8
+     },
+     {
+      "g": "shrub",
+      "x": 0.9,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Bob Pearson",
+      "x": 0.14,
+      "y": 0.17,
+      "ax": 0.67,
+      "ay": 0.245,
+      "at": 0.1
+     }
+    ],
+    "birds": {
+     "x": 0.3,
+     "y": 0.42,
+     "n": 3
+    }
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "yardımcısı Gimli'yi biliyordu.",
+   "visual": "Kanada haritası: Ottawa'dan batıya uzanan kırmızı rota Red Lake'te bir X ile kesiliyor, oradan kesik çizgiyle Gimli'ye kıvrılıyor; Gimli kırmızı yıldız, harita oraya yaklaşıyor.",
+   "params": {
+    "region": [
+     -100,
+     44,
+     -73,
+     58
+    ],
+    "paint": 0.5,
+    "places": [
+     {
+      "name": "Ottawa",
+      "lon": -75.7,
+      "lat": 45.42,
+      "kind": "city",
+      "at": 0.05,
+      "align": "left"
+     },
+     {
+      "name": "Red Lake",
+      "lon": -93.8,
+      "lat": 51.07,
+      "kind": "x",
+      "at": 0.3,
+      "color": "red",
+      "align": "right"
+     },
+     {
+      "name": "Gimli",
+      "lon": -96.99,
+      "lat": 50.63,
+      "kind": "star",
+      "at": 0.45,
+      "color": "red",
+      "align": "above"
+     },
+     {
+      "name": "Winnipeg",
+      "lon": -97.14,
+      "lat": 49.9,
+      "kind": "city",
+      "at": 0.5,
+      "align": "below"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        -75.7,
+        45.42
+       ],
+       [
+        -84,
+        49.2
+       ],
+       [
+        -93.8,
+        51.07
+       ]
+      ],
+      "at": 0.05,
+      "dur": 0.5,
+      "color": "red",
+      "arrow": false
+     },
+     {
+      "points": [
+       [
+        -93.8,
+        51.07
+       ],
+       [
+        -95.6,
+        51.2
+       ],
+       [
+        -96.99,
+        50.63
+       ]
+      ],
+      "at": 0.4,
+      "dur": 0.4,
+      "color": "red",
+      "dashed": true
+     }
+    ],
+    "zoom": {
+     "to": [
+      -99.5,
+      48.5,
+      -91.5,
+      53
+     ],
+     "at": 0.3,
+     "dur": 1.3
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Jet çok yüksekti; pistte yarış vardı.",
+   "visual": "Ovada eski pist; gökte çok yüksekten yaklaşan büyük jet (odak); aşağıda küçük, soluk iki yarış arabası, uzakta tek leke gibi küçük izleyici grubu ve çadırlar; 'çok yüksek', 'aile günü' notları.",
+   "cues": {
+    "jet": "Jet"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.5,
+    "clouds": 2,
+    "items": [
+     {
+      "g": "meadow",
+      "o": {},
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "military",
+       "stripes": true,
+       "flag": "red"
+      },
+      "layer": "far",
+      "x": 0.12,
+      "at": -1,
+      "a": 0.6
+     },
+     {
+      "g": "crowd",
+      "o": {
+       "n": 9,
+       "w": 260,
+       "flags": 0
+      },
+      "layer": "far",
+      "x": 0.55,
+      "at": -1,
+      "a": 0.55
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "military",
+       "stripes": true,
+       "flag": false
+      },
+      "layer": "far",
+      "x": 0.88,
+      "at": -1,
+      "a": 0.6
+     },
+     {
+      "g": "runway",
+      "o": {
+       "w": 900,
+       "d": 110
+      },
+      "x": 0.5,
+      "y": 0.555,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "race_car",
+      "o": {
+       "col": "stoneDark",
+       "num": "7"
+      },
+      "x": 0.18,
+      "y": 0.585,
+      "s": 0.62,
+      "at": 0.1,
+      "move": {
+       "to": [
+        0.4
+       ],
+       "at": 0.1,
+       "dur": 3,
+       "ease": false
+      },
+      "a": 0.85
+     },
+     {
+      "g": "race_car",
+      "o": {
+       "col": "inkSoft",
+       "num": "12"
+      },
+      "x": 0.6,
+      "y": 0.565,
+      "s": 0.62,
+      "at": 0.3,
+      "move": {
+       "to": [
+        0.82
+       ],
+       "at": 0.1,
+       "dur": 3,
+       "ease": false
+      },
+      "a": 0.85
+     },
+     {
+      "g": "airliner",
+      "o": {
+       "gear": "down"
+      },
+      "x": 0.35,
+      "y": 0.25,
+      "s": 0.8,
+      "rot": 0.08,
+      "at": 0.2,
+      "paint": 0.9,
+      "move": {
+       "to": [
+        0.5,
+        0.28
+       ],
+       "at": 0.2,
+       "dur": 3
+      }
+     },
+     {
+      "g": "rock",
+      "x": 0.35,
+      "layer": "fg",
+      "s": 0.7
+     },
+     {
+      "g": "shrub",
+      "x": 0.88,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "çok yüksek",
+      "x": 0.12,
+      "y": 0.13,
+      "ax": 0.42,
+      "ay": 0.24,
+      "at": "jet",
+      "color": "red"
+     },
+     {
+      "text": "aile günü",
+      "x": 0.5,
+      "y": 0.43,
+      "at": 1.2,
+      "align": "center"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Pearson yan kayarak alçaldı.",
+   "visual": "Tepelerin üstünde burnu aşağıda, tekerlekleri açık, yana kayarak hızla alçalan jet; uzakta pist; kırmızı not 'yan kayma'.",
+   "cues": {
+    "yan": "yan"
+   },
+   "params": {
+    "sky": "day",
+    "land": "hills",
+    "horizon": 0.6,
+    "amp": 0.6,
+    "clouds": 2,
+    "items": [
+     {
+      "g": "meadow",
+      "o": {},
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "runway",
+      "o": {
+       "w": 700,
+       "d": 60
+      },
+      "layer": "far",
+      "x": 0.62,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "airliner",
+      "o": {
+       "gear": "down"
+      },
+      "x": 0.4,
+      "y": 0.3,
+      "s": 1.0,
+      "rot": 0.2,
+      "at": 0.05,
+      "paint": 1.0,
+      "move": {
+       "to": [
+        0.56,
+        0.42
+       ],
+       "at": 0,
+       "dur": 2.8
+      }
+     },
+     {
+      "g": "tree",
+      "x": 0.1,
+      "layer": "mid"
+     },
+     {
+      "g": "pine",
+      "x": 0.92,
+      "layer": "mid"
+     },
+     {
+      "g": "shrub",
+      "x": 0.5,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.78,
+      "layer": "fg",
+      "s": 0.8
+     }
+    ],
+    "notes": [
+     {
+      "text": "yan kayma",
+      "x": 0.14,
+      "y": 0.18,
+      "ax": 0.38,
+      "ay": 0.33,
+      "at": 0.3,
+      "color": "red"
+     }
+    ],
+    "birds": {
+     "x": 0.75,
+     "y": 0.15,
+     "n": 3
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ön teker çöktü; jet burnu üstünde durdu.",
+   "visual": "Akşam ışığı; ön tekeri çökmüş jet burnu pistte sürtünerek kayıyor ve duruyor, arkasında toz izi, burnunda küçük alev; kırmızı not 'ön teker'.",
+   "cues": {
+    "teker": "teker"
+   },
+   "camera": {
+    "focus": [
+     600,
+     1000
+    ],
+    "zoom": 1.35
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "plain",
+    "horizon": 0.48,
+    "sun": {
+     "x": 0.66,
+     "y": 0.6,
+     "r": 46
+    },
+    "items": [
+     {
+      "g": "meadow",
+      "o": {},
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "crowd",
+      "o": {
+       "n": 12,
+       "w": 320,
+       "flags": 0
+      },
+      "layer": "far",
+      "x": 0.15,
+      "at": -1
+     },
+     {
+      "g": "runway",
+      "o": {
+       "w": 900,
+       "d": 110
+      },
+      "x": 0.5,
+      "y": 0.56,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "airliner",
+      "o": {
+       "gear": "nose"
+      },
+      "x": 0.36,
+      "y": 0.575,
+      "s": 0.95,
+      "at": -1,
+      "move": {
+       "to": [
+        0.5
+       ],
+       "at": 0,
+       "dur": 2.6
+      }
+     },
+     {
+      "g": "rock",
+      "x": 0.55,
+      "layer": "fg",
+      "s": 0.7
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.64,
+      "y": 0.575,
+      "h": 220,
+      "at": 0.2,
+      "a": 0.55,
+      "drift": -1
+     },
+     {
+      "x": 0.7,
+      "y": 0.575,
+      "h": 260,
+      "at": 0.8,
+      "a": 0.55,
+      "drift": -1
+     },
+     {
+      "x": 0.76,
+      "y": 0.575,
+      "h": 300,
+      "at": 1.4,
+      "a": 0.6,
+      "drift": -1
+     }
+    ],
+    "fire": [
+     {
+      "x": 0.78,
+      "y": 0.575,
+      "h": 45,
+      "at": 2.0
+     }
+    ],
+    "notes": [
+     {
+      "text": "ön teker",
+      "x": 0.55,
+      "y": 0.38,
+      "ax": 0.74,
+      "ay": 0.56,
+      "at": 0.3,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Altmış dokuz kişi kurtuldu.",
+   "visual": "Kâğıtta büyük boyanmış '69' sayısı sayarak yükseliyor; altında 'kişi', küçük not 'hepsi'.",
+   "cues": {
+    "kurt": "kurtuldu"
+   },
+   "params": {
+    "value": "69",
+    "label": "kişi",
+    "note": "hepsi kurtuldu",
+    "color": "sky",
+    "at": 0.1
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Jeti bir çarpım susturdu, bir planörcü indirdi.",
+   "visual": "Müze levhası: burnu yere değmiş jet yandan, büyük; el yazısı notlar 'bir çarpım' (motora, kırmızı) ve 'bir planörcü' (kokpite); başlık 'Gimli Planörü', 'Air Canada 143 · 23 Temmuz 1983'.",
+   "cues": {
+    "carp": "çarpım",
+    "plan": "planörcü"
+   },
+   "params": {
+    "g": "airliner",
+    "o": {
+     "gear": "nose",
+     "rat": true
+    },
+    "s": 1.1,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "bir çarpım",
+      "part": "engine",
+      "at": "carp",
+      "color": "red"
+     },
+     {
+      "text": "bir planörcü",
+      "part": "cockpit",
+      "at": "plan"
+     }
+    ],
+    "title": {
+     "text": "Gimli Planörü",
+     "sub": "Air Canada 143 · 23 Temmuz 1983",
+     "at": 0.3
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "visual": "Gece; ay ışığında pistte burnu yere değmiş, ana tekerlekleri üstünde duran jet; sonda sahne kâğıda siliniyor.",
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.48,
+    "sun": {
+     "x": 0.22,
+     "y": 0.3,
+     "r": 48
+    },
+    "items": [
+     {
+      "g": "meadow",
+      "o": {
+       "night": true
+      },
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "runway",
+      "o": {
+       "w": 900,
+       "d": 110
+      },
+      "x": 0.5,
+      "y": 0.54,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "airliner",
+      "o": {
+       "gear": "nose"
+      },
+      "x": 0.55,
+      "y": 0.555,
+      "s": 0.9,
+      "at": -1
+     },
+     {
+      "g": "pine",
+      "x": 0.06,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "shrub",
+      "x": 0.12,
+      "layer": "fg",
+      "at": -1
+     },
+     {
+      "g": "rock",
+      "x": 0.85,
+      "layer": "fg",
+      "s": 0.8,
+      "at": -1
+     }
+    ],
+    "notes": [],
+    "mist": 2.4
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Gimli Glider — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Gimli_Glider"
+  },
+  {
+   "title": "When a metric mix-up led to the 'Gimli Glider' emergency — CBC Archives",
+   "url": "https://www.cbc.ca/archives/when-a-metric-mix-up-led-to-the-gimli-glider-emergency-1.4754039"
+  }
+ ],
+ "youtube": {
+  "title": "Gimli Planörü: Yakıtı Havada Biten Jet Nereye İndi?",
+  "description": "Gimli Planörü: 23 Temmuz 1983'te Air Canada'nın yepyeni Boeing 767'si, gereken yakıtın yarısını bile almadan havalandı. Yakıt kilogramla hesaplanacaktı ama hesapta librenin çarpanı kullanıldı. 41.000 fitte, yani yaklaşık 12.500 metrede önce sol motor, alçalırken de sağ motor durdu. Planör pilotu olan Kaptan Bob Pearson ve eski askerî üssü hatırlayan ikinci pilot Maurice Quintal, jeti motorsuz olarak Gimli'deki eski piste indirdi; Pearson çok yüksek gelen jeti yan kaydırarak alçalttı. O gün pistte bir araba yarışı vardı. Ön teker çöktü, jet burnunun üstünde durdu ve uçaktaki 69 kişinin hepsi kurtuldu.\n\nHer gün yeni bir 'neden?' için abone ol. Sence küçük bir birim hatası bugün de böyle bir kazaya yol açabilir mi? Yorumlara yaz!\n\n#shorts #gimliplanörü #düşünbakalım",
+  "tags": [
+   "gimli planörü",
+   "gimli glider",
+   "gimli planörü hikayesi",
+   "gimli planörü 1983",
+   "air canada 143",
+   "yakıtı biten uçak",
+   "motorsuz iniş",
+   "boeing 767",
+   "bob pearson",
+   "uçak kazası",
+   "havacılık tarihi",
+   "birim hatası",
+   "kanada tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-24T19:00:00+03:00"
+ }
+}

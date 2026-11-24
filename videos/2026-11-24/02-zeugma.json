@@ -1,0 +1,2131 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "sepya",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Kaçakçılar",
+   "görmedi"
+  ],
+  "highlight": [
+   "görmedi"
+  ],
+  "scene": 2,
+  "t": 5.5,
+  "focus": [
+   1040,
+   480
+  ],
+  "zoom": 1.3
+ },
+ "scenes": [
+  {
+   "type": "wc_zeugma_floor",
+   "text": "Haziran, iki bin. Fırat kıyısında bir odanın tabanına su sızdı.",
+   "visual": "Yukarıdan bir villa tabanı: ortasında bir kadın yüzü olan mozaik; sağ kenardan dalgalı bir su cephesi tabanın üstüne yayılıyor.",
+   "chapter": "Su odada",
+   "cues": {
+    "su": "su"
+   },
+   "params": {
+    "design": "medallion",
+    "flood": {
+     "at": 0.2,
+     "dur": 5.5,
+     "to": 0.5
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Önce bir parmak boyu, sonra bir karış. Arkeologlar suyun kenarında diz çökmüş, tabanı kurtarmaya çalışıyordu.",
+   "visual": "Gündüz; Fırat kıyısında kazı alanı: yerde bezle örtülmüş bir mozaik levha, yanında diz çökmüş iki arkeolog, sağdan yükselen çamurlu su; önde sazlar.",
+   "cues": {
+    "karis": "karış"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.64,
+    "items": [
+     {
+      "g": "column",
+      "o": {
+       "broken": 0.45
+      },
+      "x": 0.12,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "mosaic_slab",
+      "x": 0.42,
+      "s": 2.2,
+      "dy": 70,
+      "at": 0.1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "worker"
+      },
+      "x": 0.2,
+      "s": 1.9,
+      "dy": 70,
+      "at": 0.3
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "modern"
+      },
+      "x": 0.64,
+      "s": 1.8,
+      "dy": 74,
+      "flip": true,
+      "at": 0.5
+     },
+     {
+      "g": "flood",
+      "x": 0.86,
+      "s": 1.5,
+      "dy": 60,
+      "at": 0.4
+     },
+     {
+      "g": "reeds",
+      "x": 0.05,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.9,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.72,
+      "layer": "fg",
+      "s": 0.8
+     }
+    ],
+    "notes": [
+     {
+      "text": "su yükseliyor",
+      "x": 0.7,
+      "y": 0.22,
+      "ax": 0.84,
+      "ay": 0.7,
+      "at": "karis"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "O tabanda bin sekiz yüz yıllık bir resim yatıyordu. Taş taş dizilmiş yüzler, kuşlar, tanrılar.",
+   "visual": "Taş taş dizilmiş bir kadın yüzü mozaiği; sağdan gelen su cephesi yavaşça mozaiğin kenarına dayanıyor.",
+   "params": {
+    "mode": "plain",
+    "front": {
+     "at": 0.3,
+     "dur": 5.0,
+     "to": 0.08
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Barajın kapakları kapanmıştı ve göl her gün yükseliyordu.",
+   "visual": "Akşam; Fırat vadisinde nehrin üstüne kurulmuş beton bir baraj duvarı, kapakları kapalı, önünde sakin su; kuşlar.",
+   "params": {
+    "sky": "dusk",
+    "land": "river",
+    "horizon": 0.62,
+    "items": [
+     {
+      "g": "dam",
+      "x": 0.5,
+      "layer": "mid",
+      "s": 2.0,
+      "at": 0.1
+     },
+     {
+      "g": "reeds",
+      "x": 0.08,
+      "layer": "fg"
+     },
+     {
+      "g": "shrub",
+      "x": 0.92,
+      "layer": "fg"
+     }
+    ],
+    "birds": {
+     "x": 0.7,
+     "y": 0.2,
+     "n": 5
+    },
+    "notes": [
+     {
+      "text": "Birecik Barajı",
+      "x": 0.2,
+      "y": 0.18,
+      "ax": 0.38,
+      "ay": 0.5,
+      "at": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_floor",
+   "text": "Ama bu şehrin en güzel resimlerinden bazıları sudan çok önce gitmişti. Biri onları kesip götürmüştü.",
+   "visual": "Yukarıdan on iki panelli bir mozaik taban; kırmızı kesik çizgiler onu karelere bölüyor, dört kare boş: yerinde sadece toprak.",
+   "cues": {
+    "kesip": "kesip"
+   },
+   "params": {
+    "design": "grid",
+    "cut": 0.2,
+    "missing": [
+     1,
+     6,
+     8,
+     11
+    ],
+    "missing_at": "kesip"
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Bu şehri, sular gelmeden önce kim soydu? Ve kaçakçılar neden tek bir yüzü göremedi?",
+   "visual": "Kâğıda büyük serif harflerle 'Zeugma', altında 'Fırat'ın batık şehri'; küçük kırık bir sütun.",
+   "cues": {
+    "yuz": "yüzü"
+   },
+   "params": {
+    "text": "Zeugma",
+    "sub": "Fırat'ın batık şehri",
+    "g": "column",
+    "o": {
+     "broken": 0.55
+    },
+    "s": 0.7,
+    "color": "skyWarm"
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Milattan önce üç yüz yılı. Büyük İskender ölmüş, imparatorluğu generalleri arasında paylaşılmıştı.",
+   "visual": "Bölüm kartı: 'Bölüm 1 — Fırat'ın köprüsü', küçük bir Roma köprüsü.",
+   "chapter": "Fırat'ın köprüsü",
+   "params": {
+    "num": "Bölüm 1",
+    "title": "Fırat'ın köprüsü",
+    "sub": "MÖ 300 – MS 250",
+    "g": "bridge",
+    "o": {
+     "style": "roman",
+     "spans": 3
+    },
+    "s": 0.55
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Generallerden Seleukos, Fırat'ın en kolay geçildiği yere iki şehir kurdu.",
+   "visual": "Boyanmış harita: Anadolu'nun güneydoğusu, kuzeyden güneye akan mavi Fırat; nehrin batı kıyısında kırmızı bir yıldız 'Zeugma'.",
+   "cues": {
+    "iki": "iki"
+   },
+   "params": {
+    "region": [
+     35.3,
+     35.2,
+     41.0,
+     38.9
+    ],
+    "paint": 1.2,
+    "routes": [
+     {
+      "points": [
+       [
+        38.75,
+        38.75
+       ],
+       [
+        38.45,
+        37.75
+       ],
+       [
+        38.05,
+        37.35
+       ],
+       [
+        37.9,
+        37.12
+       ],
+       [
+        37.97,
+        36.95
+       ],
+       [
+        38.02,
+        36.7
+       ],
+       [
+        38.3,
+        36.05
+       ],
+       [
+        39.0,
+        35.95
+       ],
+       [
+        40.1,
+        35.35
+       ]
+      ],
+      "at": 0.4,
+      "dur": 2.0,
+      "color": "blue",
+      "arrow": false,
+      "width": 9
+     }
+    ],
+    "places": [
+     {
+      "name": "Zeugma",
+      "lon": 37.87,
+      "lat": 37.06,
+      "kind": "star",
+      "color": "red",
+      "at": "iki",
+      "align": "above"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Fırat",
+      "lon": 39.6,
+      "lat": 36.5,
+      "italic": true,
+      "at": 1.6
+     }
+    ],
+    "seas": [
+     {
+      "text": "Akdeniz",
+      "lon": 35.2,
+      "lat": 35.5
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Batı yakadakine kendi adını verdi: Seleukeia. Doğu yakadakine karısının adını: Apameia.",
+   "visual": "Gündüz; bir nehrin iki yakasında iki küçük antik şehir, aralarında akan nehir; solda 'Seleukeia', sağda 'Apameia' notları.",
+   "cues": {
+    "sel": "Seleukeia",
+    "dog": "Doğu"
+   },
+   "params": {
+    "sky": "day",
+    "land": "river",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.2,
+      "layer": "far",
+      "at": 0.2
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.16,
+      "s": 1.0,
+      "at": 0.3
+     },
+     {
+      "g": "temple",
+      "x": 0.3,
+      "layer": "mid",
+      "s": 0.9,
+      "at": 0.4
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.84,
+      "s": 0.95,
+      "flip": true,
+      "at": 0.6
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.73,
+      "layer": "mid",
+      "at": 0.7
+     },
+     {
+      "g": "cypress",
+      "x": 0.92,
+      "layer": "mid"
+     },
+     {
+      "g": "reeds",
+      "x": 0.42,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.05,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Seleukeia",
+      "x": 0.1,
+      "y": 0.22,
+      "ax": 0.17,
+      "ay": 0.5,
+      "at": 0.8
+     },
+     {
+      "text": "Apameia",
+      "x": 0.74,
+      "y": 0.22,
+      "ax": 0.82,
+      "ay": 0.5,
+      "at": "dog"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "Romalılar bu ikiz şehri tek bir kelimeyle andı: Zeugma. Yani köprü. Geçit.",
+   "visual": "Taşa kazınmış bir yazıt gibi: büyük harflerle 'ΖΕΥΓΜΑ', altında 'köprü · geçit'.",
+   "params": {
+    "style": "stone",
+    "lines": [
+     "ΖΕΥΓΜΑ",
+     "Zeugma",
+     "köprü · geçit"
+    ],
+    "at": 0.3
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Doğuda Roma'nın büyük rakibi Partlar vardı. Bu yüzden şehre bir lejyon yerleşti: Dördüncü İskit Lejyonu.",
+   "visual": "Gündüz; Fırat'ın kıyısındaki ovada Roma ordugâhı: çadırlar, sancaklı bir lejyon sırası, mızrak ormanı.",
+   "cues": {
+    "lej": "lejyon"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.66,
+    "items": [
+     {
+      "g": "tent",
+      "o": {
+       "style": "military"
+      },
+      "x": 0.14,
+      "layer": "mid",
+      "at": 0.2
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "military"
+      },
+      "x": 0.26,
+      "layer": "mid",
+      "at": 0.3
+     },
+     {
+      "g": "army",
+      "o": {
+       "dress": "roman",
+       "banner": true,
+       "rows": 3,
+       "n": 10
+      },
+      "x": 0.6,
+      "s": 1.4,
+      "at": 0.4
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.88,
+      "layer": "fg",
+      "s": 0.8
+     }
+    ],
+    "notes": [
+     {
+      "text": "Dördüncü Lejyon",
+      "x": 0.74,
+      "y": 0.18,
+      "ax": 0.66,
+      "ay": 0.36,
+      "at": "lej"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Tahminlere göre burada seksen bin kadar insan yaşadı.",
+   "visual": "Kâğıda boyanmış büyük sayı '80.000', altında el yazısıyla 'insan (tahmin)'.",
+   "params": {
+    "value": "80.000",
+    "label": "insan (tahmin)",
+    "count": true
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Zenginler, nehre bakan yamaçlara villalar yaptırdı. Ve odalarının tabanını resimlerle döşetti.",
+   "visual": "Gün batımına yakın; nehre bakan bir yamaçta beyaz badanalı, sütunlu Roma villaları, selviler ve zeytin ağaçları.",
+   "camera": {
+    "focus": [
+     700,
+     560
+    ],
+    "zoom": 1.5
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "hills",
+    "amp": 1.5,
+    "horizon": 0.64,
+    "items": [
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient",
+       "lit": true
+      },
+      "x": 0.34,
+      "s": 2.0,
+      "at": 0.2
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.64,
+      "layer": "mid",
+      "s": 1.5,
+      "at": 0.5
+     },
+     {
+      "g": "cypress",
+      "x": 0.5,
+      "s": 1.1
+     },
+     {
+      "g": "tree",
+      "x": 0.82,
+      "s": 0.9
+     },
+     {
+      "g": "cypress",
+      "x": 0.14,
+      "layer": "mid"
+     },
+     {
+      "g": "shrub",
+      "x": 0.06,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.6,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "villalar",
+      "x": 0.18,
+      "y": 0.3,
+      "ax": 0.3,
+      "ay": 0.5,
+      "at": 1.2
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_floor",
+   "text": "Her biri tırnaktan küçük milyonlarca taş, yere tanrıları, nehir kuşlarını ve tiyatro maskelerini işledi.",
+   "visual": "Mozaik tabanın taşları; bir tiyatro maskesi, bir nehir kuşu, bir rozet, kırmızı dalga bordür.",
+   "params": {
+    "design": "grid",
+    "fit": "upper"
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "Bir evin yemek odasında, tabanın ortasından bir kadın yüzü bakıyordu. Saçları dağınıktı, gözleri bir yana kaymıştı.",
+   "visual": "Mozaik kadın yüzü: dağınık kıvırcık saçlar, sarmaşık yaprakları, yana bakan iri gözler, küpe; 'gözler yana' notu.",
+   "cues": {
+    "goz": "gözleri"
+   },
+   "params": {
+    "mode": "plain",
+    "notes": [
+     {
+      "text": "gözler yana",
+      "x": 0.75,
+      "y": 0.22,
+      "ax": 0.48,
+      "ay": 0.37,
+      "at": "goz"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Kimin yüzü olduğunu kimse yazmadı. Ama o odanın tavanı bir gün çökecekti.",
+   "visual": "Akşam, bir Roma evinin içi: alçak bir sofrada yanan kandil ve amfora, pencereden son ışık; tavan kirişleri karanlıkta.",
+   "cues": {
+    "cok": "çökecekti"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "stoneDark",
+    "horizon": 0.7,
+    "items": [
+     {
+      "g": "window",
+      "x": 0.72,
+      "at": 0.1
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "low"
+      },
+      "x": 0.4,
+      "s": 1.3,
+      "at": 0.3
+     },
+     {
+      "g": "oil_lamp",
+      "x": 0.4,
+      "y": 0.645,
+      "s": 1.0,
+      "at": 0.6
+     },
+     {
+      "g": "amphora",
+      "x": 0.18,
+      "s": 1.1,
+      "at": 0.5
+     }
+    ],
+    "notes": [
+     {
+      "text": "yemek odası",
+      "x": 0.14,
+      "y": 0.18,
+      "at": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Milattan sonra iki yüz elli üç. Doğuda yeni bir güç vardı: Sasaniler.",
+   "visual": "Bölüm kartı: 'Bölüm 2 — Yangın', küçük bir kandil.",
+   "chapter": "Yangın",
+   "params": {
+    "num": "Bölüm 2",
+    "title": "Yangın",
+    "sub": "MS 253",
+    "g": "oil_lamp",
+    "s": 0.8
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Sasani ordusu, büyük olasılıkla Birinci Şapur'un seferinde, Fırat boyunca yürüdü.",
+   "visual": "Harita: Mezopotamya'dan Fırat boyunca kuzeybatıya uzanan kırmızı bir ordu rotası, ucunda Zeugma'da kırmızı X.",
+   "cues": {
+    "fir": "Fırat"
+   },
+   "params": {
+    "region": [
+     35.4,
+     32.4,
+     45.6,
+     38.6
+    ],
+    "paint": 1.0,
+    "routes": [
+     {
+      "points": [
+       [
+        38.75,
+        38.75
+       ],
+       [
+        38.45,
+        37.75
+       ],
+       [
+        38.05,
+        37.35
+       ],
+       [
+        37.9,
+        37.12
+       ],
+       [
+        37.97,
+        36.95
+       ],
+       [
+        38.02,
+        36.7
+       ],
+       [
+        38.3,
+        36.05
+       ],
+       [
+        39.0,
+        35.95
+       ],
+       [
+        40.1,
+        35.35
+       ],
+       [
+        41.0,
+        34.6
+       ],
+       [
+        42.2,
+        34.4
+       ],
+       [
+        43.3,
+        33.6
+       ],
+       [
+        44.3,
+        32.9
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.6,
+      "color": "blue",
+      "arrow": false,
+      "width": 7
+     },
+     {
+      "points": [
+       [
+        44.58,
+        33.09
+       ],
+       [
+        43.3,
+        33.75
+       ],
+       [
+        42.0,
+        34.5
+       ],
+       [
+        40.4,
+        35.2
+       ],
+       [
+        39.0,
+        35.95
+       ],
+       [
+        38.2,
+        36.3
+       ],
+       [
+        37.9,
+        36.95
+       ]
+      ],
+      "at": "fir",
+      "dur": 2.4,
+      "color": "red",
+      "width": 12
+     }
+    ],
+    "places": [
+     {
+      "name": "Ktesifon",
+      "lon": 44.58,
+      "lat": 33.09,
+      "kind": "city",
+      "at": 0.6,
+      "align": "below"
+     },
+     {
+      "name": "Zeugma",
+      "lon": 37.87,
+      "lat": 37.06,
+      "kind": "x",
+      "color": "red",
+      "at": {
+       "cue": "fir",
+       "d": 2.2
+      },
+      "align": "left"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Sasaniler",
+      "lon": 44.2,
+      "lat": 34.1,
+      "caps": true,
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Zeugma yağmalandı ve yakıldı. Çatılar çöktü, kerpiç duvarlar odaların içine yığıldı.",
+   "visual": "Gece; Roma evleri alevler içinde, çatılardan duman yükseliyor, kızıl bir gökyüzü altında yangın şeridi.",
+   "camera": {
+    "focus": [
+     1000,
+     600
+    ],
+    "zoom": 1.3
+   },
+   "params": {
+    "sky": "night",
+    "land": "hills",
+    "horizon": 0.7,
+    "sun": false,
+    "items": [
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.3,
+      "s": 1.2,
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.55,
+      "s": 1.35,
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "ancient"
+      },
+      "x": 0.78,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "burning",
+      "x": 0.5,
+      "s": 1.6,
+      "at": 0.2
+     },
+     {
+      "g": "rock",
+      "x": 0.1,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.9,
+      "layer": "fg"
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.35,
+      "h": 500,
+      "at": 0.4
+     },
+     {
+      "x": 0.62,
+      "h": 520,
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Arkeologlar yangın tabakasında bir küp buldu. İçinde kömürleşmiş cevizler ve narlar vardı, yarım kalmış bir akşam yemeği gibi.",
+   "visual": "Müze levhası: ağzı açık, çatlak bir toprak küp; notlar 'kömürleşmiş ceviz' ve 'nar'.",
+   "cues": {
+    "cev": "cevizler",
+    "nar": "narlar"
+   },
+   "params": {
+    "g": "jar",
+    "o": {
+     "lid": false
+    },
+    "pigment": "stain",
+    "notes": [
+     {
+      "text": "kömürleşmiş ceviz",
+      "part": "mouth",
+      "at": "cev",
+      "color": "red"
+     },
+     {
+      "text": "nar",
+      "part": "body",
+      "at": "nar"
+     }
+    ],
+    "title": {
+     "text": "Yangın tabakası",
+     "sub": "MS 253 civarı"
+    }
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Bir de dört yüz altmış iki bronz sikkelik bir hazine. Sahibi onu almaya hiç dönmedi.",
+   "visual": "Müze levhası: kırık bir çömlekten dökülmüş bronz sikke yığını; not '462 bronz sikke'.",
+   "cues": {
+    "haz": "hazine"
+   },
+   "params": {
+    "g": "coin_hoard",
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "462 bronz sikke",
+      "part": "heap",
+      "at": "haz",
+      "color": "red"
+     }
+    ],
+    "title": {
+     "text": "Gömülü hazine",
+     "sub": "sahibi dönmedi"
+    }
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Şehirde iki yüz elli üçten sonra basılmış tek bir sikke bile bulunmadı.",
+   "visual": "Büyük sayı '253', altında el yazısıyla 'en son sikke'.",
+   "params": {
+    "value": "253",
+    "label": "en son sikke",
+    "count": false,
+    "color": "red"
+   }
+  },
+  {
+   "type": "wc_zeugma_layers",
+   "text": "Tam burada tuhaf bir şey oldu. Çöken duvarlar, mozaiklerin üstünü bir yorgan gibi örttü.",
+   "visual": "Kesit: bir odanın iki duvarı mozaik tabanın üstünde dururken çöküyor; kerpiç bloklar aşağı düşüp tabanı örtüyor, alevler ve duman.",
+   "cues": {
+    "cok": "Çöken"
+   },
+   "params": {
+    "mode": "collapse",
+    "at": "cok",
+    "notes": [
+     {
+      "text": "mozaik taban",
+      "x": 0.42,
+      "y": 0.42,
+      "ax": 0.5,
+      "ay": 0.75,
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_layers",
+   "text": "Yangın şehri öldürmüştü ama resimlerini korumuştu. Yüzyıllar boyunca toprak kalınlaştı, üstünde köylüler tarla sürdü.",
+   "visual": "Kesit: mozaik tabanın üstünde moloz, onun üstünde toprak katmanları bir bir birikiyor; en üstte tarla, öküz süren bir köylü, bir ağaç.",
+   "params": {
+    "mode": "time",
+    "at": 0.3,
+    "labels": true
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ve bin yedi yüz yıl sonra biri o yorganı kaldırmaya geldi. Ama bilim için değil.",
+   "visual": "Gece, ay ışığında boş bir tarla; elinde fenerle yürüyen tek bir adam, çıplak bir ağaç.",
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.66,
+    "sun": {
+     "x": 0.78,
+     "y": 0.22,
+     "r": 46
+    },
+    "items": [
+     {
+      "g": "tree",
+      "o": {
+       "bare": true
+      },
+      "x": 0.8,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "peasant",
+       "hold": "lantern"
+      },
+      "x": 0.2,
+      "s": 1.4,
+      "at": 0.2,
+      "move": {
+       "to": [
+        0.45
+       ],
+       "at": 0.2,
+       "dur": 5
+      }
+     },
+     {
+      "g": "grass",
+      "x": 0.08,
+      "layer": "fg"
+     },
+     {
+      "g": "shrub",
+      "x": 0.92,
+      "layer": "fg"
+     }
+    ],
+    "weather": "fog"
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Bin dokuz yüz altmışların başı. Gece, bir tarlada kazma sesleri.",
+   "visual": "Bölüm kartı: 'Bölüm 3 — Kaçakçılar', küçük bir fener.",
+   "chapter": "Kaçakçılar",
+   "params": {
+    "num": "Bölüm 3",
+    "title": "Kaçakçılar",
+    "sub": "1960'lar",
+    "g": "lantern",
+    "s": 0.8
+   }
+  },
+  {
+   "type": "wc_zeugma_floor",
+   "text": "Kaçak kazıcılar bir villanın tabanına ulaştı. Mozaiği kesip on iki parçaya böldüler.",
+   "visual": "Gece, yukarıdan mozaik taban; bir fenerin ışık havuzu; kırmızı kesik çizgiler tabanı on iki kareye bölüyor; '12 parça' notu.",
+   "cues": {
+    "kes": "kesip"
+   },
+   "params": {
+    "design": "grid",
+    "night": true,
+    "lantern": [
+     0.8,
+     0.36
+    ],
+    "cut": "kes",
+    "notes": [
+     {
+      "text": "12 parça",
+      "x": 0.5,
+      "y": 0.1,
+      "at": {
+       "cue": "kes",
+       "d": 1.0
+      },
+      "color": "red",
+      "size": 52
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Parçalar Türkiye'den kaçırıldı ve New York'ta bir sanat galerisine ulaştı.",
+   "visual": "Dünya haritası: Gaziantep'ten Akdeniz ve Atlas Okyanusu üstünden New York'a uzanan kırmızı kesik bir rota.",
+   "cues": {
+    "ny": "New"
+   },
+   "params": {
+    "region": [
+     -80,
+     22,
+     45,
+     55
+    ],
+    "paint": 1.0,
+    "grid": false,
+    "routes": [
+     {
+      "points": [
+       [
+        37.38,
+        37.07
+       ],
+       [
+        30,
+        35
+       ],
+       [
+        10,
+        37
+       ],
+       [
+        -8,
+        37
+       ],
+       [
+        -40,
+        38
+       ],
+       [
+        -74.0,
+        40.7
+       ]
+      ],
+      "at": 0.6,
+      "dur": 2.6,
+      "color": "red",
+      "dashed": true
+     }
+    ],
+    "places": [
+     {
+      "name": "Gaziantep",
+      "lon": 37.38,
+      "lat": 37.07,
+      "kind": "city",
+      "at": 0.4,
+      "align": "below"
+     },
+     {
+      "name": "New York",
+      "lon": -74.0,
+      "lat": 40.7,
+      "kind": "star",
+      "color": "red",
+      "at": "ny",
+      "align": "above"
+     }
+    ],
+    "seas": [
+     {
+      "text": "Atlas Okyanusu",
+      "lon": -40,
+      "lat": 33
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Bin dokuz yüz altmış beşte Ohio'daki Bowling Green Devlet Üniversitesi on iki parçayı yaklaşık otuz beş bin dolara aldı.",
+   "visual": "Büyük sayı '35.000 $', altında el yazısıyla 'Ohio, 1965'.",
+   "params": {
+    "value": "35.000",
+    "unit": "$",
+    "label": "Ohio, 1965",
+    "count": true
+   }
+  },
+  {
+   "type": "wc_zeugma_layers",
+   "text": "Kaçakçılar acele etmişti. Aynı evde bir yüz, kaçak kazının toprağı altında kaldı ve gözden kaçtı.",
+   "visual": "Kesit: solda yüzeyden mozaik tabana inen bir kaçak çukuru ve içinde fenerli bir adam; sağda kazının toprağı altında kalmış taban, hafif bir ışıltı; 'gözden kaçtı' notu.",
+   "cues": {
+    "yuz": "yüz"
+   },
+   "params": {
+    "mode": "pit",
+    "at": 0.3,
+    "notes": [
+     {
+      "text": "kaçak çukur",
+      "x": 0.25,
+      "y": 0.18,
+      "ax": 0.2,
+      "ay": 0.45,
+      "at": 1.0
+     },
+     {
+      "text": "gözden kaçtı",
+      "x": 0.6,
+      "y": 0.6,
+      "ax": 0.7,
+      "ay": 0.76,
+      "at": "yuz",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "Bin dokuz yüz doksan sekizde Gaziantep Müzesi'nin kazısı o yüzü gün ışığına çıkardı.",
+   "visual": "Toprakla örtülü mozaik; fırça darbeleriyle toprak kalkıyor ve altından kadın yüzü çıkıyor.",
+   "params": {
+    "mode": "reveal",
+    "at": 0.3,
+    "paint": 3.2,
+    "notes": [
+     {
+      "text": "1998",
+      "x": 0.78,
+      "y": 0.16,
+      "at": 2.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "Kazıdakiler ona bir ad taktı. Dağınık saçları ve küpeleriyle bir Çingene kızına benziyordu: Çingene Kızı.",
+   "visual": "Yakın plan: mozaik yüzün gözleri ve dağınık saçları; kırmızı 'Çingene Kızı' notu.",
+   "cues": {
+    "ad": "benziyordu"
+   },
+   "camera": {
+    "focus": [
+     960,
+     470
+    ],
+    "zoom": 1.4
+   },
+   "params": {
+    "mode": "plain",
+    "size": 0.8,
+    "y": 0.38,
+    "notes": [
+     {
+      "text": "Çingene Kızı",
+      "x": 0.7,
+      "y": 0.5,
+      "ax": 0.61,
+      "ay": 0.36,
+      "at": "ad",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ama o yıllarda vadiye başka bir tehlike yaklaşıyordu. Bu kez sudan.",
+   "visual": "Fırtınalı gökyüzü altında Fırat vadisi; uzakta nehrin üstünde gri bir baraj duvarı; önde kırık bir antik sütun.",
+   "params": {
+    "sky": "storm",
+    "land": "river",
+    "horizon": 0.6,
+    "clouds": 0,
+    "items": [
+     {
+      "g": "dam",
+      "x": 0.55,
+      "layer": "far",
+      "s": 1.6,
+      "at": 0.3
+     },
+     {
+      "g": "column",
+      "o": {
+       "broken": 0.5,
+       "style": "corinthian"
+      },
+      "x": 0.18,
+      "s": 1.3,
+      "at": 0.1
+     },
+     {
+      "g": "grass",
+      "x": 0.9,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.32,
+      "layer": "fg"
+     }
+    ],
+    "birds": {
+     "x": 0.6,
+     "y": 0.18,
+     "n": 4
+    }
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Birecik'te, Fırat'ın üstünde dev bir baraj yükselmişti.",
+   "visual": "Bölüm kartı: 'Bölüm 4 — Suyla yarış', küçük bir kum saati.",
+   "chapter": "Suyla yarış",
+   "params": {
+    "num": "Bölüm 4",
+    "title": "Suyla yarış",
+    "sub": "2000",
+    "g": "hourglass",
+    "s": 0.8
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Göl dolunca, hesaplara göre, antik şehrin yaklaşık üçte biri suyun altında kalacaktı.",
+   "visual": "Yakın harita: Fırat'ın Birecik ile Zeugma arası; nehrin üstünde yayılan mavi bir göl lekesi; Zeugma kırmızı yıldızla işaretli.",
+   "cues": {
+    "gol": "Göl"
+   },
+   "params": {
+    "region": [
+     37.3,
+     36.85,
+     38.4,
+     37.45
+    ],
+    "paint": 0.8,
+    "mountains": false,
+    "routes": [
+     {
+      "points": [
+       [
+        38.0,
+        37.45
+       ],
+       [
+        37.95,
+        37.28
+       ],
+       [
+        37.9,
+        37.12
+       ],
+       [
+        37.93,
+        37.05
+       ],
+       [
+        37.98,
+        37.0
+       ],
+       [
+        38.0,
+        36.88
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.2,
+      "color": "blue",
+      "arrow": false,
+      "width": 10
+     }
+    ],
+    "areas": [
+     {
+      "poly": [
+       [
+        37.9,
+        37.06
+       ],
+       [
+        37.97,
+        37.04
+       ],
+       [
+        38.01,
+        37.14
+       ],
+       [
+        37.99,
+        37.3
+       ],
+       [
+        37.95,
+        37.42
+       ],
+       [
+        37.9,
+        37.35
+       ],
+       [
+        37.86,
+        37.2
+       ],
+       [
+        37.84,
+        37.08
+       ]
+      ],
+      "color": "water",
+      "alpha": 0.5,
+      "at": "gol",
+      "dur": 2.4,
+      "from": [
+       37.97,
+       37.05
+      ],
+      "label": "baraj gölü",
+      "label_at": [
+       38.12,
+       37.25
+      ]
+     }
+    ],
+    "places": [
+     {
+      "name": "Zeugma",
+      "lon": 37.87,
+      "lat": 37.06,
+      "kind": "star",
+      "color": "red",
+      "at": 0.6,
+      "align": "left"
+     },
+     {
+      "name": "Birecik",
+      "lon": 37.98,
+      "lat": 37.02,
+      "kind": "city",
+      "at": 0.8,
+      "align": "right"
+     },
+     {
+      "name": "Nizip",
+      "lon": 37.79,
+      "lat": 37.01,
+      "kind": "city",
+      "at": 0.9,
+      "align": "left"
+     },
+     {
+      "name": "Gaziantep",
+      "lon": 37.38,
+      "lat": 37.07,
+      "kind": "city",
+      "at": 1.0,
+      "align": "right"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Üç Mayıs iki binde topraktan bir bronz çıktı. Savaş tanrısı Mars'ın bir buçuk metreyi aşan heykeli.",
+   "visual": "Müze levhası: kaide üstünde mızraklı, miğferli bronz bir Roma tanrısı heykeli; başlık 'Mars', notlar '3 Mayıs 2000'.",
+   "cues": {
+    "bronz": "bronz",
+    "metre": "metreyi"
+   },
+   "params": {
+    "g": "bronze_statue",
+    "s": 1.4,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "3 Mayıs 2000",
+      "part": "plinth",
+      "at": "bronz",
+      "color": "red"
+     },
+     {
+      "text": "1,55 metre",
+      "part": "top",
+      "at": "metre"
+     }
+    ],
+    "title": {
+     "text": "Mars",
+     "sub": "bronz heykel"
+    }
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Yedi Haziran'da Packard Beşerî Bilimler Enstitüsü beş milyon dolara kadar destek sözü verdi.",
+   "visual": "Büyük sayı '5.000.000 $', altında 'Packard desteği'.",
+   "params": {
+    "value": "5.000.000",
+    "unit": "$",
+    "label": "Packard desteği",
+    "note": "7 Haziran 2000",
+    "count": true,
+    "color": "blue"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Yaklaşık iki yüz arkeolog gece gündüz çalıştı. Mozaikleri bezle kapladılar, tutkalladılar, parça parça kaldırdılar.",
+   "visual": "Gündüz; kazı alanında iki arkeolog diz çökmüş, mozaik levhanın yarısı beyaz bezle kaplı, yanında kalkmış başka bir levha; 'bez ve tutkal' notu.",
+   "cues": {
+    "bez": "bezle"
+   },
+   "camera": {
+    "focus": [
+     760,
+     640
+    ],
+    "zoom": 1.35
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "mosaic_slab",
+      "x": 0.4,
+      "s": 1.9,
+      "dy": 60,
+      "at": 0.2
+     },
+     {
+      "g": "mosaic_slab",
+      "o": {
+       "gauze": false
+      },
+      "x": 0.68,
+      "s": 1.1,
+      "layer": "mid",
+      "at": 0.5
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "worker"
+      },
+      "x": 0.2,
+      "s": 1.35,
+      "dy": 40,
+      "at": 0.3
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "modern"
+      },
+      "x": 0.62,
+      "s": 1.3,
+      "dy": 40,
+      "flip": true,
+      "at": 0.4
+     },
+     {
+      "g": "grass",
+      "x": 0.05,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.95,
+      "layer": "fg",
+      "s": 0.7
+     }
+    ],
+    "notes": [
+     {
+      "text": "bez ve tutkal",
+      "x": 0.3,
+      "y": 0.42,
+      "ax": 0.44,
+      "ay": 0.64,
+      "at": "bez"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_floor",
+   "text": "Su beklemedi. Kazılamayan evler gölün altında kaldı.",
+   "visual": "Yukarıdan kadın yüzlü mozaik taban; alttan yükselen su tabanın neredeyse tamamını örtüyor.",
+   "params": {
+    "design": "medallion",
+    "fit": "upper",
+    "flood": {
+     "at": 0.2,
+     "dur": 5,
+     "from": "bottom",
+     "from0": 0.25,
+     "to": 0.92
+    }
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "Eylül ortasında kazı bitti. Kurtarılamayanları Fırat aldı.",
+   "visual": "Yatay zaman çizelgesi: 3 Mayıs Mars heykeli, 7 Haziran Packard desteği, Haziran ilk bölge suda, Eylül kazı biter (kırmızı).",
+   "params": {
+    "items": [
+     {
+      "year": "3 Mayıs",
+      "label": "Mars heykeli"
+     },
+     {
+      "year": "7 Haziran",
+      "label": "Packard desteği"
+     },
+     {
+      "year": "Haziran",
+      "label": "ilk bölge suda"
+     },
+     {
+      "year": "Eylül",
+      "label": "kazı biter"
+     }
+    ],
+    "highlight": 3,
+    "title": "2000"
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Ama kaçakçıların kestiği on iki parça hâlâ okyanusun öbür yakasındaydı.",
+   "visual": "Kuzey Amerika'nın doğusu: Ohio'da kırmızı bir yıldız ve '12 parça' notu, kıyıda New York.",
+   "cues": {
+    "oke": "okyanusun"
+   },
+   "params": {
+    "region": [
+     -92,
+     33,
+     -68,
+     46
+    ],
+    "paint": 1.0,
+    "grid": false,
+    "places": [
+     {
+      "name": "New York",
+      "lon": -74.0,
+      "lat": 40.7,
+      "kind": "city",
+      "at": 0.4,
+      "align": "right"
+     },
+     {
+      "name": "Ohio: 12 parça",
+      "lon": -83.65,
+      "lat": 41.37,
+      "kind": "star",
+      "color": "red",
+      "at": "oke",
+      "align": "above",
+      "size": 1.3
+     }
+    ],
+    "seas": [
+     {
+      "text": "Atlas Okyanusu",
+      "lon": -71,
+      "lat": 36
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "İki bin on birde Gaziantep'te Zeugma Mozaik Müzesi açıldı. Çingene Kızı orada, karanlık bir odada, tek başına sergilendi.",
+   "visual": "Sıcak kâğıt tonunda bir müze odası; sıcak bir ışık havuzunda, yakın planda kadın yüzü mozaiği.",
+   "chapter": "Eve dönüş",
+   "camera": {
+    "focus": [
+     960,
+     380
+    ],
+    "zoom": 1.6
+   },
+   "params": {
+    "mode": "museum",
+    "size": 0.7,
+    "y": 0.36
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "İki bin on ikide iki araştırmacı, Ohio'daki parçaların Antakya'dan değil, büyük olasılıkla Zeugma'dan geldiğini gösterdi.",
+   "visual": "Harita: Doğu Akdeniz kıyısı; Antakya kırmızı X ile üstü çizili, Fırat kıyısında Zeugma kırmızı yıldızla yanıyor.",
+   "cues": {
+    "ant": "Antakya",
+    "zeu": "Zeugma"
+   },
+   "params": {
+    "region": [
+     35.0,
+     35.3,
+     39.0,
+     37.9
+    ],
+    "paint": 0.8,
+    "routes": [
+     {
+      "points": [
+       [
+        38.45,
+        37.75
+       ],
+       [
+        38.05,
+        37.35
+       ],
+       [
+        37.9,
+        37.12
+       ],
+       [
+        37.97,
+        36.95
+       ],
+       [
+        38.02,
+        36.7
+       ],
+       [
+        38.3,
+        36.05
+       ]
+      ],
+      "at": 0.1,
+      "dur": 1.0,
+      "color": "blue",
+      "arrow": false,
+      "width": 8
+     }
+    ],
+    "places": [
+     {
+      "name": "Antakya",
+      "lon": 36.16,
+      "lat": 36.2,
+      "kind": "x",
+      "color": "red",
+      "at": "ant",
+      "align": "below",
+      "size": 1.3
+     },
+     {
+      "name": "Zeugma",
+      "lon": 37.87,
+      "lat": 37.06,
+      "kind": "star",
+      "color": "red",
+      "at": "zeu",
+      "align": "above",
+      "size": 1.4
+     }
+    ],
+    "seas": [
+     {
+      "text": "Akdeniz",
+      "lon": 35.2,
+      "lat": 35.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Aynı yıl Türkiye parçaları geri istedi.",
+   "visual": "Dünya haritası: Ohio'dan Atlas Okyanusu üstünden Gaziantep'e dönen kırmızı bir rota.",
+   "cues": {
+    "geri": "geri"
+   },
+   "params": {
+    "region": [
+     -90,
+     22,
+     45,
+     55
+    ],
+    "paint": 1.0,
+    "grid": false,
+    "routes": [
+     {
+      "points": [
+       [
+        -83.65,
+        41.37
+       ],
+       [
+        -60,
+        42
+       ],
+       [
+        -30,
+        40
+       ],
+       [
+        -8,
+        37
+       ],
+       [
+        10,
+        37
+       ],
+       [
+        30,
+        35
+       ],
+       [
+        37.38,
+        37.07
+       ]
+      ],
+      "at": 0.1,
+      "dur": 2.2,
+      "color": "red"
+     }
+    ],
+    "places": [
+     {
+      "name": "Ohio",
+      "lon": -83.65,
+      "lat": 41.37,
+      "kind": "city",
+      "at": 0.1,
+      "align": "below"
+     },
+     {
+      "name": "Gaziantep",
+      "lon": 37.38,
+      "lat": 37.07,
+      "kind": "star",
+      "color": "red",
+      "at": 2.0,
+      "align": "above"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_floor",
+   "text": "İki bin on sekizde on iki parça eve döndü. Türk yetkililerine göre parçalar, Çingene Kızı'yla aynı kompozisyondandı.",
+   "visual": "Yukarıdan on iki panelli mozaik taban; dört boş kareye eksik parçalar yavaşça kayarak yerleşiyor.",
+   "cues": {
+    "don": "döndü"
+   },
+   "params": {
+    "design": "grid",
+    "missing": [
+     1,
+     6,
+     8,
+     11
+    ],
+    "ret": "don"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Bu şehri sulardan önce kim soydu? Gece tarlaları kazan kaçakçılar ve kökenini sormayan bir sanat pazarı.",
+   "visual": "Gece bir tarlada, fener ışığında diz çökmüş iki kaçak kazıcı ve yanlarında bir sandık; uzakta karanlık tepeler.",
+   "cues": {
+    "pazar": "pazarı"
+   },
+   "params": {
+    "sky": "night",
+    "land": "hills",
+    "horizon": 0.66,
+    "sun": false,
+    "items": [
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "peasant",
+       "hold": "lantern"
+      },
+      "x": 0.34,
+      "s": 1.9,
+      "at": 0.2
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "peasant"
+      },
+      "x": 0.5,
+      "s": 1.85,
+      "flip": true,
+      "at": 0.4
+     },
+     {
+      "g": "crate",
+      "x": 0.7,
+      "s": 0.65,
+      "at": "pazar"
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.88,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "kökeni sorulmadı",
+      "x": 0.7,
+      "y": 0.2,
+      "ax": 0.68,
+      "ay": 0.6,
+      "at": "pazar"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "Ya o yüz neden kurtuldu? Kaçak kazı sırasında toprağın altında kaldı. Onu saklayan, büyük olasılıkla kaçakçıların kendi kazdığı topraktı.",
+   "visual": "Kadın yüzü mozaiği; soldan kaçak kazının kazılmış toprak yığını yavaşça mozaiğin kenarına kayıp yüzün bir kısmını örtüyor; 'kaçakçıların toprağı' notu.",
+   "cues": {
+    "top": "toprağın",
+    "kaz": "kazdığı"
+   },
+   "params": {
+    "mode": "plain",
+    "x": 0.55,
+    "spoil": {
+     "at": {
+      "cue": "kaz",
+      "d": -1.4
+     },
+     "dur": 2.2,
+     "to": 0.42
+    },
+    "notes": [
+     {
+      "text": "kaçakçıların toprağı",
+      "x": 0.04,
+      "y": 0.16,
+      "ax": 0.3,
+      "ay": 0.42,
+      "at": {
+       "cue": "kaz",
+       "d": -1.2
+      },
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ateşin sakladığını kaçakçılar buldu. Kaçakçıların kaçırdığını kendi toprakları sakladı. Ve o kadının kim olduğu hâlâ bilinmiyor.",
+   "visual": "Akşam; gölün kıyısında yamaçta kalan antik kalıntılar, kırık sütunlar; gölün suyu sakin.",
+   "params": {
+    "sky": "dusk",
+    "land": "coast",
+    "coast": "right",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "ruin",
+      "x": 0.28,
+      "s": 1.3,
+      "at": 0.2
+     },
+     {
+      "g": "cypress",
+      "x": 0.1,
+      "layer": "mid"
+     },
+     {
+      "g": "shrub",
+      "x": 0.05,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.4,
+      "layer": "fg"
+     }
+    ],
+    "birds": {
+     "x": 0.7,
+     "y": 0.2,
+     "n": 4
+    }
+   }
+  },
+  {
+   "type": "wc_zeugma_face",
+   "text": "Kimine göre toprak tanrıçası Gaia. Kimine göre Dionysos'un peşinden giden bir menad.",
+   "visual": "Mozaik kadın yüzü solda; sağda iki el yazısı not: 'Gaia?' ve 'menad?'.",
+   "cues": {
+    "gaia": "Gaia",
+    "men": "Dionysos"
+   },
+   "params": {
+    "mode": "plain",
+    "x": 0.36,
+    "size": 0.9,
+    "notes": [
+     {
+      "text": "Gaia?",
+      "x": 0.72,
+      "y": 0.3,
+      "ax": 0.46,
+      "ay": 0.3,
+      "at": "gaia"
+     },
+     {
+      "text": "menad?",
+      "x": 0.72,
+      "y": 0.6,
+      "ax": 0.46,
+      "ay": 0.55,
+      "at": "men",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Sence bu yüz kimin? Yorumlara yaz. Böyle sessiz hikâyeler için de abone ol.",
+   "visual": "Kâğıda büyük harflerle 'Çingene Kızı', altında 'Zeugma Mozaik Müzesi, Gaziantep'; küçük bir tiyatro maskesi; sahne kâğıda yıkanıyor.",
+   "params": {
+    "text": "Çingene Kızı",
+    "sub": "Zeugma Mozaik Müzesi, Gaziantep",
+    "g": "mask",
+    "o": {
+     "style": "theatre"
+    },
+    "s": 0.6,
+    "color": "skyWarm"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Bowling Green State University returns ancient mosaics to the Republic of Turkey — BGSU (2018)",
+   "url": "https://www.bgsu.edu/news/2018/11/-bowling-green-state-university-returns-ancient-mosaics.html"
+  },
+  {
+   "title": "Iconic 'Gypsy Girl' welcomes visitors with missing pieces retrieved decades later — Daily Sabah (2018)",
+   "url": "https://www.dailysabah.com/turkey/2018/12/08/iconic-gypsy-girl-welcomes-visitors-with-missing-pieces-retrieved-decades-later"
+  },
+  {
+   "title": "Excavation exposes Roman imperial outpost at its bitter end — University of Wisconsin–Madison",
+   "url": "https://news.wisc.edu/excavation-exposes-roman-imperial-outpost-at-its-bitter-end"
+  },
+  {
+   "title": "Rescue Studies for Ancient Belkıs – Zeugma City — T.C. Kültür ve Turizm Bakanlığı",
+   "url": "https://www.ktb.gov.tr/EN-114048/rescue-studies-for-ancient-belkis---zeugma-city.html"
+  },
+  {
+   "title": "Gypsy Girl: Roman-era mosaics returned to Turkey decades after being smuggled out — CBS News",
+   "url": "https://www.cbsnews.com/news/gypsy-girl-roman-era-mosaics-returned-to-turkey-decades-after-being-smuggled-out"
+  },
+  {
+   "title": "Zeugma Archaeological Project, Vol. 1 Preface — Packard Humanities Institute",
+   "url": "https://zeugma.packhum.org/pdfs/v1pref.pdf"
+  },
+  {
+   "title": "Zeugma (Belkıs) — Livius.org",
+   "url": "https://livius.org/articles/place/zeugma-belkis"
+  },
+  {
+   "title": "Zeugma'nın sırları: Çingene Kızı kaçakçılardan nasıl kaçtı — Hürriyet",
+   "url": "https://www.hurriyet.com.tr/gundem/zeugmanin-sirlari-cingene-kizi-kacakcilardan-nasil-kacti-43175988"
+  }
+ ],
+ "youtube": {
+  "title": "Zeugma: Sular Gelmeden Önce Bu Şehri Kim Soydu?",
+  "description": "Zeugma, Fırat'ın kıyısında Seleukos'un kurduğu ikiz şehir, 2000 yazında Birecik Barajı'nın gölü yükselirken arkeologların suyla yarıştığı yer oldu. Ama en güzel mozaiklerinden bazıları sudan çok önce, 1960'larda kaçakçılar tarafından kesilip Amerika'ya götürülmüştü. Bu belgeselde Zeugma mozaiklerinin, Çingene Kızı'nın ve kesilen on iki parçanın eve dönüşünün gerçek hikâyesi var.\n\nBu videoda:\n• Seleukeia ve Apameia: Fırat'ın iki yakasındaki ikiz şehir ve Roma'nın Zeugma'sı\n• MS 253 Sasani baskını: yangın Zeugma mozaiklerini nasıl örttü?\n• 1960'ların kaçakçıları ve Ohio'ya giden on iki mozaik parçası\n• Çingene Kızı kaçakçılardan nasıl kurtuldu ve 2000 kurtarma kazısı\n• 2011 Zeugma Mozaik Müzesi ve 2018'deki dönüş\n\nHer gün yeni bir 'neden?' için abone ol. Sence Çingene Kızı kim: Gaia mı, bir menad mı, yoksa sıradan bir kadın mı? Yorumlara yaz!\n\n#zeugma #çingenekızı #gaziantep #tarih #düşünbakalım",
+  "tags": [
+   "zeugma",
+   "zeugma antik kenti",
+   "zeugma mozaikleri",
+   "zeugma mozaik müzesi",
+   "çingene kızı",
+   "çingene kızı mozaiği",
+   "gaziantep",
+   "birecik barajı",
+   "belkıs zeugma",
+   "seleukos",
+   "roma mozaikleri",
+   "kaçakçılık",
+   "arkeoloji",
+   "türkiye tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-24T20:30:00+03:00"
+ }
+}
