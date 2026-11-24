@@ -1,0 +1,17 @@
+{
+ "id": "5dPWKopB2yY",
+ "thumbnail": true,
+ "url": "https://youtu.be/5dPWKopB2yY",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-24T16:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": false
+ },
+ "title": "Gimli Planörü: Yakıtı Havada Biten Jet Nereye İndi?",
+ "script": "videos/2026-11-24/01-gimli-planoru.json"
+}
