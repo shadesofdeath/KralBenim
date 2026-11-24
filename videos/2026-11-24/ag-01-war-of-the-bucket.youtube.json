@@ -1,0 +1,17 @@
+{
+ "id": "wueQ2bogpuE",
+ "thumbnail": false,
+ "url": "https://youtu.be/wueQ2bogpuE",
+ "status": {
+  "uploadStatus": "uploaded",
+  "privacyStatus": "private",
+  "publishAt": "2026-11-24T18:00:00Z",
+  "license": "youtube",
+  "embeddable": true,
+  "publicStatsViewable": true,
+  "selfDeclaredMadeForKids": false,
+  "containsSyntheticMedia": true
+ },
+ "title": "War of the Bucket: Did a Stolen Pail Really Start a War?",
+ "script": "videos/2026-11-24/ag-01-war-of-the-bucket.json"
+}
