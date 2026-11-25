@@ -1,0 +1,1210 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "gurub",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Orduyu",
+   "susuzluk",
+   "yendi"
+  ],
+  "highlight": [
+   "susuzluk"
+  ],
+  "scene": 0,
+  "t": 2.2,
+  "focus": [
+   520,
+   1000
+  ],
+  "zoom": 1.45
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "Orduyu kılıçtan önce susuzluk yendi.",
+   "visual": "Kızıl akşam göğü, çatlamış kuru toprak; diz çökmüş tek Haçlı şövalyesi ve yanında devrilmiş, boş, çatlak toprak testi (ağzından kuru bir iz); kırmızı not 'su yok'.",
+   "cues": {
+    "su": "susuzluk"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "desert",
+    "horizon": 0.58,
+    "sun": false,
+    "items": [
+     {
+      "g": "cracked_ground",
+      "o": {},
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "kneel",
+       "dress": "knight",
+       "hold": "sword"
+      },
+      "x": 0.36,
+      "s": 2.0,
+      "at": -1
+     },
+     {
+      "g": "testi",
+      "o": {
+       "tipped": true
+      },
+      "x": 0.62,
+      "s": 0.62,
+      "at": 0.3,
+      "paint": 0.8
+     },
+     {
+      "g": "rock",
+      "x": 0.1,
+      "layer": "fg",
+      "s": 0.8
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.92,
+      "h": 420,
+      "at": 0,
+      "a": 0.18,
+      "drift": 1.2
+     }
+    ],
+    "notes": [
+     {
+      "text": "su yok",
+      "x": 0.66,
+      "y": 0.47,
+      "ax": 0.62,
+      "ay": 0.56,
+      "at": 0.6,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "1187'de Haçlılar Saffuriye pınarlarındaydı,",
+   "visual": "Yaz günü; su kenarında büyük bir Haçlı çadırı ve sancağı, arkada küçük çadırlar ve palmiyeler; suya uzanan not 'Saffuriye pınarları'.",
+   "cues": {
+    "pinar": "pınarlarında"
+   },
+   "params": {
+    "sky": "day",
+    "land": "river",
+    "horizon": 0.55,
+    "clouds": 2,
+    "items": [
+     {
+      "g": "tent",
+      "o": {
+       "style": "military",
+       "stripes": true,
+       "flag": "red"
+      },
+      "x": 0.45,
+      "s": 1.7,
+      "at": 0.1
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "military",
+       "stripes": true,
+       "flag": false
+      },
+      "layer": "far",
+      "x": 0.15,
+      "at": -1
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "military",
+       "flag": false
+      },
+      "layer": "far",
+      "x": 0.8,
+      "at": -1
+     },
+     {
+      "g": "palm",
+      "x": 0.88,
+      "layer": "mid"
+     },
+     {
+      "g": "palm",
+      "x": 0.1,
+      "layer": "mid",
+      "s": 0.9
+     },
+     {
+      "g": "reeds",
+      "x": 0.2,
+      "layer": "fg"
+     },
+     {
+      "g": "reeds",
+      "x": 0.82,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Saffuriye pınarları",
+      "x": 0.5,
+      "y": 0.73,
+      "ax": 0.55,
+      "ay": 0.64,
+      "at": 0.2
+     },
+     {
+      "text": "Temmuz 1187",
+      "x": 0.5,
+      "y": 0.12,
+      "at": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Selahaddin Taberiye'yi kuşatmıştı.",
+   "visual": "Celile haritası: kuru yayla yıkaması, Saffuriye ve Nasıra, doğuda Celile Gölü ve kıyısında Taberiye'de kırmızı çapraz kılıçlar; 'CELİLE', 'Tabor Dağı' etiketleri.",
+   "cues": {
+    "kus": "kuşatmıştı"
+   },
+   "params": {
+    "region": [
+     35.2,
+     32.64,
+     35.68,
+     32.92
+    ],
+    "paint": 0.5,
+    "areas": [
+     {
+      "poly": [
+       [
+        35.6,
+        32.885
+       ],
+       [
+        35.57,
+        32.872
+       ],
+       [
+        35.545,
+        32.855
+       ],
+       [
+        35.525,
+        32.838
+       ],
+       [
+        35.535,
+        32.81
+       ],
+       [
+        35.545,
+        32.79
+       ],
+       [
+        35.555,
+        32.76
+       ],
+       [
+        35.565,
+        32.73
+       ],
+       [
+        35.575,
+        32.705
+       ],
+       [
+        35.6,
+        32.712
+       ],
+       [
+        35.625,
+        32.73
+       ],
+       [
+        35.64,
+        32.76
+       ],
+       [
+        35.648,
+        32.8
+       ],
+       [
+        35.645,
+        32.84
+       ],
+       [
+        35.63,
+        32.87
+       ]
+      ],
+      "color": "water",
+      "alpha": 0.75,
+      "at": 0,
+      "dur": 0.4
+     },
+     {
+      "poly": [
+       [
+        35.3,
+        32.73
+       ],
+       [
+        35.36,
+        32.715
+       ],
+       [
+        35.46,
+        32.74
+       ],
+       [
+        35.5,
+        32.8
+       ],
+       [
+        35.46,
+        32.85
+       ],
+       [
+        35.36,
+        32.84
+       ],
+       [
+        35.3,
+        32.8
+       ]
+      ],
+      "color": "clothC",
+      "alpha": 0.2,
+      "at": 0,
+      "dur": 0.4
+     }
+    ],
+    "places": [
+     {
+      "name": "Saffuriye",
+      "lon": 35.28,
+      "lat": 32.75,
+      "kind": "city",
+      "at": 0.1,
+      "align": "left",
+      "size": 1.4
+     },
+     {
+      "name": "Taberiye",
+      "lon": 35.538,
+      "lat": 32.79,
+      "kind": "battle",
+      "at": 0.2,
+      "color": "red",
+      "align": "below",
+      "size": 1.4
+     },
+     {
+      "name": "Nasıra",
+      "lon": 35.3,
+      "lat": 32.7,
+      "kind": "city",
+      "at": 0.25,
+      "align": "below",
+      "size": 1.0
+     }
+    ],
+    "labels": [
+     {
+      "text": "Celile Gölü",
+      "lon": 35.6,
+      "lat": 32.67,
+      "italic": true,
+      "at": 0.1,
+      "size": 1.2
+     },
+     {
+      "text": "CELİLE",
+      "lon": 35.36,
+      "lat": 32.9,
+      "caps": true,
+      "at": 0.1,
+      "size": 1.3,
+      "spacing": 6
+     },
+     {
+      "text": "Tabor Dağı",
+      "lon": 35.39,
+      "lat": 32.67,
+      "italic": true,
+      "at": 0.2,
+      "size": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Kalede Raymond'un eşi vardı.",
+   "visual": "Alacakaranlık; göl kıyısında bir sırtta düz çatılı, bazalt Taberiye kalesi; önünde ateş ve yükselen duman; kuleye uzanan kırmızı not 'Eschiva'.",
+   "cues": {
+    "esi": "eşi"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "coast",
+    "coast": "right",
+    "horizon": 0.56,
+    "sun": {
+     "x": 0.88,
+     "y": 0.3,
+     "r": 40
+    },
+    "items": [
+     {
+      "g": "levant_castle",
+      "x": 0.36,
+      "s": 1.25,
+      "at": -1
+     },
+     {
+      "g": "palm",
+      "x": 0.08,
+      "layer": "mid",
+      "s": 0.8,
+      "at": -1
+     },
+     {
+      "g": "shrub",
+      "x": 0.12,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.45,
+      "layer": "fg",
+      "s": 0.9
+     },
+     {
+      "g": "grass",
+      "o": {
+       "leaf": "clothC"
+      },
+      "x": 0.3,
+      "layer": "fg",
+      "s": 1.3
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.15,
+      "h": 640,
+      "at": 0,
+      "a": 0.4
+     },
+     {
+      "x": 0.58,
+      "h": 560,
+      "at": 0.3,
+      "a": 0.3
+     }
+    ],
+    "fire": [
+     {
+      "x": 0.15,
+      "h": 110,
+      "at": 0
+     },
+     {
+      "x": 0.58,
+      "h": 80,
+      "at": 0.3
+     }
+    ],
+    "notes": [
+     {
+      "text": "Eschiva",
+      "x": 0.55,
+      "y": 0.26,
+      "ax": 0.37,
+      "ay": 0.38,
+      "at": 0.2,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Kont yine de, burada kalın, dedi, çünkü su oradaydı.",
+   "visual": "Gece, savaş meclisi çadırının içi: dikişli kanvas paneller ve orta direk, masada tek mum ve sıcak ışık halesi; eliyle yeri gösteren tek şövalye (Raymond); notlar 'burada kalın' ve 'su orada'.",
+   "cues": {
+    "kal": "kalın",
+    "su": "oradaydı"
+   },
+   "params": {
+    "land": "interior",
+    "wall": "clothC",
+    "floor": "ground",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "tent_interior",
+      "o": {},
+      "layer": "main",
+      "x": 0.5,
+      "y": 0.6,
+      "at": -1,
+      "sway": false,
+      "dy": 0
+     },
+     {
+      "g": "candle_halo",
+      "o": {
+       "r": 260
+      },
+      "x": 0.66,
+      "y": 0.47,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "western",
+       "cloth": true
+      },
+      "x": 0.66,
+      "s": 1.2,
+      "at": -1
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.67,
+      "y": 0.5,
+      "s": 0.85,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "point",
+       "dress": "knight"
+      },
+      "x": 0.3,
+      "s": 1.8,
+      "at": 0.05,
+      "paint": 0.6
+     }
+    ],
+    "notes": [
+     {
+      "text": "burada kalın",
+      "x": 0.12,
+      "y": 0.24,
+      "ax": 0.3,
+      "ay": 0.36,
+      "at": 0.25,
+      "color": "red"
+     },
+     {
+      "text": "su orada",
+      "x": 0.62,
+      "y": 0.25,
+      "at": 0.8
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ama o gece Tapınakçıların başı kralı yürüyüşe ikna etti.",
+   "visual": "Gece, ay ışığı; dışarıda büyük kral çadırı, önünde küçük kamp ateşi; çadıra yürüyen beyaz cüppesinde kırmızı haç taşıyan tek bir Tapınak şövalyesi; ona uzanan kırmızı not 'Gérard de Ridefort'.",
+   "cues": {
+    "ikna": "yürüyüşe"
+   },
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.58,
+    "sun": {
+     "x": 0.2,
+     "y": 0.3,
+     "r": 46
+    },
+    "items": [
+     {
+      "g": "meadow",
+      "o": {
+       "leaf": "clothC",
+       "ground": "ground",
+       "night": true
+      },
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "military",
+       "stripes": true,
+       "flag": "red"
+      },
+      "x": 0.64,
+      "s": 1.9,
+      "at": -1
+     },
+     {
+      "g": "lantern",
+      "x": 0.86,
+      "s": 0.4,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "knight",
+       "cols": {
+        "cloth": "paperLight",
+        "shield": "paperLight"
+       }
+      },
+      "x": 0.2,
+      "s": 1.8,
+      "at": 0.1,
+      "move": {
+       "to": [
+        0.4
+       ],
+       "at": 0,
+       "dur": 3.0
+      },
+      "seed": 3
+     },
+     {
+      "g": "rock",
+      "x": 0.9,
+      "layer": "fg",
+      "s": 0.8
+     }
+    ],
+    "fire": [
+     {
+      "x": 0.47,
+      "h": 80,
+      "at": 0
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.47,
+      "h": 380,
+      "at": 0,
+      "a": 0.25
+     }
+    ],
+    "notes": [
+     {
+      "text": "Gérard de Ridefort",
+      "x": 0.3,
+      "y": 0.3,
+      "ax": 0.33,
+      "ay": 0.42,
+      "at": 0.8,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Ordu susuz yaylaya çıktı;",
+   "visual": "Aynı harita yaklaşırken Saffuriye'den kuru yayla boyunca doğuya büyüyen kırmızı rota, Hıttin'de kırmızı çarpı, 'su yok'.",
+   "cues": {
+    "susuz": "susuz"
+   },
+   "params": {
+    "region": [
+     35.2,
+     32.64,
+     35.68,
+     32.92
+    ],
+    "paint": 0,
+    "zoom": {
+     "to": [
+      35.24,
+      32.68,
+      35.64,
+      32.88
+     ],
+     "at": 0.3,
+     "dur": 1.8
+    },
+    "areas": [
+     {
+      "poly": [
+       [
+        35.6,
+        32.885
+       ],
+       [
+        35.57,
+        32.872
+       ],
+       [
+        35.545,
+        32.855
+       ],
+       [
+        35.525,
+        32.838
+       ],
+       [
+        35.535,
+        32.81
+       ],
+       [
+        35.545,
+        32.79
+       ],
+       [
+        35.555,
+        32.76
+       ],
+       [
+        35.565,
+        32.73
+       ],
+       [
+        35.575,
+        32.705
+       ],
+       [
+        35.6,
+        32.712
+       ],
+       [
+        35.625,
+        32.73
+       ],
+       [
+        35.64,
+        32.76
+       ],
+       [
+        35.648,
+        32.8
+       ],
+       [
+        35.645,
+        32.84
+       ],
+       [
+        35.63,
+        32.87
+       ]
+      ],
+      "color": "water",
+      "alpha": 0.75,
+      "at": 0,
+      "dur": 0.1
+     },
+     {
+      "poly": [
+       [
+        35.3,
+        32.73
+       ],
+       [
+        35.36,
+        32.715
+       ],
+       [
+        35.46,
+        32.74
+       ],
+       [
+        35.5,
+        32.8
+       ],
+       [
+        35.46,
+        32.85
+       ],
+       [
+        35.36,
+        32.84
+       ],
+       [
+        35.3,
+        32.8
+       ]
+      ],
+      "color": "clothC",
+      "alpha": 0.2,
+      "at": 0,
+      "dur": 0.4
+     }
+    ],
+    "places": [
+     {
+      "name": "Saffuriye",
+      "lon": 35.28,
+      "lat": 32.75,
+      "kind": "city",
+      "at": 0,
+      "align": "left",
+      "size": 1.3
+     },
+     {
+      "name": "Taberiye",
+      "lon": 35.538,
+      "lat": 32.79,
+      "kind": "battle",
+      "at": 0,
+      "color": "red",
+      "align": "below",
+      "size": 1.2
+     },
+     {
+      "name": "Hıttin",
+      "lon": 35.45,
+      "lat": 32.8,
+      "kind": "x",
+      "at": 0.3,
+      "color": "red",
+      "align": "above",
+      "size": 1.5
+     },
+     {
+      "name": "Nasıra",
+      "lon": 35.3,
+      "lat": 32.7,
+      "kind": "city",
+      "at": 0.25,
+      "align": "below",
+      "size": 1.0
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        35.28,
+        32.75
+       ],
+       [
+        35.36,
+        32.775
+       ],
+       [
+        35.45,
+        32.8
+       ]
+      ],
+      "at": 0.0,
+      "dur": 0.9,
+      "color": "red",
+      "arrow": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "Celile Gölü",
+      "lon": 35.6,
+      "lat": 32.67,
+      "italic": true,
+      "at": 0.1,
+      "size": 1.2
+     },
+     {
+      "text": "CELİLE",
+      "lon": 35.36,
+      "lat": 32.9,
+      "caps": true,
+      "at": 0.1,
+      "size": 1.3,
+      "spacing": 6
+     },
+     {
+      "text": "Tabor Dağı",
+      "lon": 35.39,
+      "lat": 32.67,
+      "italic": true,
+      "at": 0.2,
+      "size": 1.0
+     },
+     {
+      "text": "su yok",
+      "lon": 35.37,
+      "lat": 32.82,
+      "italic": true,
+      "at": 0.3,
+      "color": "red",
+      "size": 1.1
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "gece otlar yakıldı,",
+   "visual": "Gece; yayla boyunca kuru otlar yanıyor, ön planda uzun alev şeridi ve yükselen kalın duman; kırmızı not 'kuru otlar'.",
+   "cues": {
+    "ot": "otlar"
+   },
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.56,
+    "sun": false,
+    "items": [
+     {
+      "g": "meadow",
+      "o": {
+       "leaf": "clothC",
+       "ground": "ground",
+       "night": true
+      },
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "burning",
+      "x": 0.5,
+      "s": 2.4,
+      "at": 0.05
+     },
+     {
+      "g": "shrub",
+      "x": 0.1,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "o": {
+       "leaf": "clothC"
+      },
+      "x": 0.85,
+      "layer": "fg",
+      "s": 1.5
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.3,
+      "h": 760,
+      "at": 0,
+      "a": 0.5
+     },
+     {
+      "x": 0.62,
+      "h": 820,
+      "at": 0.2,
+      "a": 0.5
+     }
+    ],
+    "notes": [
+     {
+      "text": "kuru otlar",
+      "x": 0.5,
+      "y": 0.3,
+      "at": 0.3,
+      "color": "red"
+     }
+    ],
+    "fire": [
+     {
+      "x": 0.18,
+      "h": 170,
+      "at": 0
+     },
+     {
+      "x": 0.42,
+      "h": 220,
+      "at": 0.2
+     },
+     {
+      "x": 0.66,
+      "h": 190,
+      "at": 0.1
+     },
+     {
+      "x": 0.88,
+      "h": 150,
+      "at": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_hittin_horns",
+   "text": "sabah Hıttin'de çöktü.",
+   "visual": "Şafak; alçak, geniş, iki tepeli bazalt sırt (Hıttin Boynuzları), önünden ince duman tabakası akıyor; ön planda yere düşmüş kırmızı haçlı sancak; kırmızı not 'Hıttin Boynuzları'.",
+   "cues": {
+    "hit": "Hıttin"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "plain",
+    "horizon": 0.6,
+    "sun": {
+     "x": 0.82,
+     "y": 0.62,
+     "r": 60
+    },
+    "horns": {
+     "x": 0.5,
+     "s": 1.0,
+     "o": {
+      "w": 0.82
+     },
+     "at": -1
+    },
+    "smoke_at": 0,
+    "smoke_a": 0.4,
+    "items": [
+     {
+      "g": "meadow",
+      "o": {
+       "leaf": "clothC",
+       "ground": "ground"
+      },
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "fallen_banner",
+      "x": 0.3,
+      "y": 0.605,
+      "s": 1.5,
+      "at": 0.1,
+      "paint": 0.8
+     },
+     {
+      "g": "rock",
+      "x": 0.2,
+      "layer": "fg",
+      "s": 0.9
+     },
+     {
+      "g": "grass",
+      "o": {
+       "leaf": "clothC"
+      },
+      "x": 0.82,
+      "layer": "fg",
+      "s": 1.4
+     }
+    ],
+    "notes": [
+     {
+      "text": "Hıttin Boynuzları",
+      "x": 0.42,
+      "y": 0.36,
+      "ax": 0.6,
+      "ay": 0.5,
+      "at": 0.15,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "O tek karar, Kudüs'ün ordusunu susuz bir tepede bitirdi.",
+   "visual": "Levha: devrilmiş, boş, çatlak toprak testi ve ağzından kuru iz; notlar 'tek bir karar' (kırmızı, ağzında) ve 'susuz bir tepe'; başlık 'Hıttin, 4 Temmuz 1187'.",
+   "cues": {
+    "karar": "karar"
+   },
+   "params": {
+    "g": "testi",
+    "s": 1.0,
+    "rot": 0,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "tek bir karar",
+      "part": "mouth",
+      "at": 0.4,
+      "color": "red"
+     },
+     {
+      "text": "susuz bir tepe",
+      "part": "body",
+      "at": 1.2
+     }
+    ],
+    "title": {
+     "text": "Hıttin, 4 Temmuz 1187",
+     "at": 0.2
+    },
+    "o": {
+     "tipped": true
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Böyle sessiz hikâyeler için abone olun.",
+   "visual": "Akşam; büyük Kudüs suru ve kapısı, arkasında altın kubbe; selviler; zemin altyazının altına kadar boyalı; uzakta kuşlar.",
+   "params": {
+    "sky": "dusk",
+    "land": "hills",
+    "horizon": 0.6,
+    "sun": {
+     "x": 0.25,
+     "y": 0.6,
+     "r": 50
+    },
+    "items": [
+     {
+      "g": "meadow",
+      "o": {
+       "leaf": "clothC",
+       "ground": "ground"
+      },
+      "layer": "fg",
+      "x": 0.5,
+      "y": 1.0,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "dome",
+      "o": {
+       "col": "gold",
+       "alem": "ball"
+      },
+      "x": 0.6,
+      "layer": "mid",
+      "s": 1.7,
+      "at": -1
+     },
+     {
+      "g": "wall",
+      "o": {
+       "len": 620,
+       "gate": true,
+       "crenel": true
+      },
+      "x": 0.5,
+      "s": 1.6,
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.08,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.93,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "shrub",
+      "x": 0.25,
+      "layer": "fg",
+      "at": -1
+     },
+     {
+      "g": "rock",
+      "x": 0.78,
+      "layer": "fg",
+      "s": 0.8,
+      "at": -1
+     }
+    ],
+    "birds": {
+     "x": 0.3,
+     "y": 0.2,
+     "n": 4
+    }
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Battle of Hattin — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Battle_of_Hattin"
+  },
+  {
+   "title": "Battle of Hattin — World History Encyclopedia",
+   "url": "https://www.worldhistory.org/Battle_of_Hattin/"
+  },
+  {
+   "title": "Give the Lie to the Devil: The Battle of Hattin — Medievalists.net",
+   "url": "https://www.medievalists.net/2023/12/give-the-lie-to-the-devil-the-battle-of-hattin/"
+  },
+  {
+   "title": "Ernoul: The Battle of Hattin, 1187 — Fordham Medieval Sourcebook",
+   "url": "https://sourcebooks.web.fordham.edu/source/1187ernoul.html"
+  }
+ ],
+ "youtube": {
+  "title": "Hıttin Savaşı: Kudüs'ü Kaybettiren Gece Kararı Neydi?",
+  "description": "Hıttin Savaşı, 4 Temmuz 1187: Kudüs Krallığı'nın ordusu kılıçtan önce susuzluğa yenildi. Haçlılar Saffuriye pınarlarının başındaydı; Selahaddin Eyyubi Taberiye'yi kuşattı ve kalede Trablus Kontu III. Raymond'un karısı Eschiva vardı. Raymond yine de suyun başında kalmayı öğütledi. Ama o gece Tapınak Şövalyeleri'nin büyük üstadı Gérard de Ridefort, Kral Guy de Lusignan'ı yürüyüşe ikna etti. Ordu 3 Temmuz'da susuz yaylaya çıktı, gece kuru otlar ateşe verildi ve sabah Hıttin Boynuzları'nda koca ordu çöktü. Gerçek Haç ele geçirildi, Kudüs 2 Ekim 1187'de teslim oldu.\n\nHer gün yeni bir 'neden?' için abone ol. Sence Kral Guy o gece kimi dinlemeliydi? Yorumlara yaz!\n\n#shorts #hıttinsavaşı #selahaddineyyubi #düşünbakalım",
+  "tags": [
+   "hıttin savaşı",
+   "hıttin savaşı 1187",
+   "hıttin muharebesi",
+   "hıttin savaşı hikayesi",
+   "battle of hattin",
+   "selahaddin eyyubi",
+   "haçlı seferleri",
+   "kudüs krallığı",
+   "kudüsün fethi",
+   "tapınak şövalyeleri",
+   "trablus kontu raymond",
+   "guy de lusignan",
+   "orta çağ tarihi",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-25T19:00:00+03:00"
+ }
+}
