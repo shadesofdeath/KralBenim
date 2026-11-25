@@ -1,0 +1,656 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "gurub",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "A sinful",
+   "fork"
+  ],
+  "highlight": [
+   "sinful"
+  ],
+  "scene": 0,
+  "t": 1.6,
+  "focus": [
+   520,
+   720
+  ],
+  "zoom": 1.2
+ },
+ "scenes": [
+  {
+   "type": "wc_fork_lift",
+   "text": "Forks were once called sinful.",
+   "visual": "Candlelight on a table: a hand in a deep blue sleeve with a gold, pearl-studded cuff holds up a small golden fork with two long prongs, a piece of roast meat on it; a glazed dish of cut morsels on the red cloth below, a candle burning on the left.",
+   "params": {
+    "wall": "stoneDark",
+    "floor": "cloth",
+    "plate": {
+     "x": 0.42,
+     "s": 1.15,
+     "morsels": 4
+    },
+    "candle": {
+     "x": 0.15,
+     "s": 0.8
+    },
+    "fork": {
+     "s": 1.5,
+     "x": 0.47,
+     "y": 0.3,
+     "rot": -14
+    },
+    "lift": {
+     "at": -1
+    },
+    "sleeve": "clothB",
+    "rise": 110
+   },
+   "cues": {
+    "sin": "sinful"
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "In 1004, a Byzantine princess married the son of Venice's doge.",
+   "visual": "Painted map from Italy to the Aegean; Constantinople marked; a red brush route with a ship sails from Constantinople round Greece and up the Adriatic's eastern side; Venice appears as a red star on 'Venice'.",
+   "cues": {
+    "ven": "Venice"
+   },
+   "params": {
+    "region": [
+     7.5,
+     34.5,
+     31.5,
+     47.5
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Constantinople",
+      "lon": 28.97,
+      "lat": 41.01,
+      "kind": "city",
+      "at": 0.4,
+      "align": "left",
+      "size": 1.3
+     },
+     {
+      "name": "Venice",
+      "lon": 12.33,
+      "lat": 45.44,
+      "kind": "star",
+      "at": 1.0,
+      "color": "red",
+      "align": "right",
+      "size": 1.5
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        28.9,
+        40.9
+       ],
+       [
+        26.2,
+        40.2
+       ],
+       [
+        25.0,
+        38.0
+       ],
+       [
+        22.6,
+        36.4
+       ],
+       [
+        20.2,
+        38.2
+       ],
+       [
+        19.2,
+        40.6
+       ],
+       [
+        17.4,
+        42.4
+       ],
+       [
+        15.0,
+        44.2
+       ],
+       [
+        12.6,
+        45.3
+       ]
+      ],
+      "at": 1.2,
+      "dur": 2.4,
+      "color": "red",
+      "ship": true
+     }
+    ],
+    "seas": [
+     {
+      "text": "Adriatic",
+      "lon": 14.0,
+      "lat": 42.3,
+      "curve": -0.2
+     },
+     {
+      "text": "Aegean",
+      "lon": 25.2,
+      "lat": 39.2
+     },
+     {
+      "text": "Mediterranean",
+      "lon": 17.5,
+      "lat": 35.6
+     }
+    ],
+    "labels": [
+     {
+      "text": "1004",
+      "lon": 21.0,
+      "lat": 45.4,
+      "italic": true,
+      "at": 0.3,
+      "size": 60
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "She refused to eat with her fingers.",
+   "visual": "Medium shot in a candlelit rose hall: the princess in a wine gown and gold headscarf sits behind a laid table, a dish of cut food in front of her, a goblet and two candles; a robed servant stands beside her, waiting on her; red note 'no fingers'.",
+   "cues": {
+    "fing": "fingers"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stain",
+    "floor": "stoneDark",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "person",
+      "o": {
+       "pose": "sit",
+       "dress": "woman",
+       "face": "front",
+       "cols": {
+        "cloth": "cloth",
+        "clothC": "gold",
+        "hat": "gold"
+       },
+       "seat": "stool"
+      },
+      "x": 0.42,
+      "s": 2.6,
+      "dy": -60,
+      "at": -1
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "western",
+       "cloth": true
+      },
+      "x": 0.47,
+      "s": 1.55,
+      "dy": 20,
+      "at": -1
+     },
+     {
+      "g": "fork_plate",
+      "o": {
+       "morsels": 4
+      },
+      "x": 0.42,
+      "y": 0.492,
+      "s": 0.26,
+      "at": -1,
+      "sway": false,
+      "layer": "fg"
+     },
+     {
+      "g": "cup",
+      "o": {
+       "style": "goblet"
+      },
+      "x": 0.6,
+      "y": 0.497,
+      "s": 0.36,
+      "at": -1
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.25,
+      "y": 0.497,
+      "s": 0.5,
+      "at": -1
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.69,
+      "y": 0.497,
+      "s": 0.5,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "robe",
+       "face": "left"
+      },
+      "x": 0.76,
+      "s": 2.2,
+      "dy": 30,
+      "at": 0.2
+     }
+    ],
+    "notes": [
+     {
+      "text": "no fingers",
+      "x": 0.6,
+      "y": 0.28,
+      "at": 0.3,
+      "color": "red",
+      "size": 66
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     540,
+     880
+    ],
+    "zoom": 1.35
+   }
+  },
+  {
+   "type": "wc_fork_lift",
+   "text": "Servants cut her food, and she ate it with a two-pronged golden fork.",
+   "visual": "Close on the table top: the glazed dish of cut morsels paints itself in on a rose cloth; the jewelled hand brings the golden two-pronged fork down, spears a morsel on 'ate' and raises it, turning upright; note 'two prongs'.",
+   "cues": {
+    "lift": "ate",
+    "gold": "pronged"
+   },
+   "params": {
+    "wall": "night",
+    "floor": "stain",
+    "plate": {
+     "x": 0.42,
+     "s": 1.25,
+     "morsels": 5,
+     "at": 0.1
+    },
+    "candle": {
+     "x": 0.84,
+     "s": 0.75
+    },
+    "fork": {
+     "s": 1.25,
+     "x": 0.44,
+     "y": 0.25,
+     "rot": -10
+    },
+    "lift": {
+     "at": "lift",
+     "dur": 1.5
+    },
+    "notes": [
+     {
+      "text": "two prongs",
+      "x": 0.66,
+      "y": 0.2,
+      "ax": 0.5,
+      "ay": 0.24,
+      "at": "gold",
+      "size": 56
+     }
+    ],
+    "sleeve": "clothB"
+   },
+   "camera": {
+    "focus": [
+     540,
+     820
+    ],
+    "zoom": 1.1
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "To Venice, it looked like vanity.",
+   "visual": "The golden fork alone on a clean plate, painted large and laid slightly diagonal: ball finial, baluster handle, curved yoke, two long prongs; notes 'solid gold' at the handle and red 'vanity' at the prongs.",
+   "cues": {
+    "van": "vanity"
+   },
+   "params": {
+    "g": "fork",
+    "s": 1.15,
+    "rot": 18,
+    "pigment": "skyWarm",
+    "at": 0.05,
+    "paint": 1.0,
+    "notes": [
+     {
+      "text": "gold",
+      "part": "handle",
+      "at": 0.9
+     },
+     {
+      "text": "vanity",
+      "part": "prongs",
+      "at": 1.3,
+      "color": "red",
+      "size": 64
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Plague took her, her husband and son.",
+   "visual": "Night over a foggy lagoon: the low, dark skyline of a medieval city with a tall square bell tower, a lone rowing boat on the black water; red note 'plague'.",
+   "cues": {
+    "pl": "plague"
+   },
+   "params": {
+    "sky": "night",
+    "land": "sea",
+    "horizon": 0.55,
+    "sun": {
+     "x": 0.8,
+     "y": 0.2,
+     "r": 40
+    },
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "mid",
+      "s": 1.6,
+      "at": -1,
+      "bob": false
+     },
+     {
+      "g": "tower",
+      "o": {
+       "style": "square",
+       "h": 1.6
+      },
+      "x": 0.62,
+      "layer": "mid",
+      "s": 1.0,
+      "at": -1,
+      "bob": false
+     },
+     {
+      "g": "rowboat",
+      "o": {
+       "rowers": 1
+      },
+      "x": 0.66,
+      "y": 0.75,
+      "s": 1.15,
+      "at": -1
+     }
+    ],
+    "notes": [
+     {
+      "text": "plague",
+      "x": 0.5,
+      "y": 0.15,
+      "at": "pl",
+      "color": "red",
+      "size": 66
+     }
+    ],
+    "weather": "fog"
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "A churchman called it God's punishment.",
+   "visual": "An aged manuscript page written in by hand: Peter Damian's own chapter title in English translation, 'Of the Venetian Doge's wife, whose body, after her excessive delicacy, entirely rotted away.'; signed 'Peter Damian', 'c. 1059'.",
+   "cues": {
+    "pun": "punishment"
+   },
+   "params": {
+    "style": "letter",
+    "lines": [
+     "\"Of the Venetian Doge's wife,",
+     "whose body, after her",
+     "excessive delicacy,",
+     "entirely rotted away.\""
+    ],
+    "sign": "Peter Damian",
+    "date": "c. 1059",
+    "at": 0.1
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "In 1611, an Englishman was still mocked for using one.",
+   "visual": "A grey daylight room with a tall window: an English traveller in a cape and plumed hat sits at a table, a dish and a silver fork laid in front of him; a man stands at the right pointing at him; red note 'Furcifer!' with 'fork-bearer' under it.",
+   "cues": {
+    "mock": "mocked"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "sky",
+    "floor": "wood",
+    "horizon": 0.6,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "style": "rect",
+       "side": 1
+      },
+      "x": 0.15,
+      "s": 1.1,
+      "at": -1
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "western",
+       "cloth": false
+      },
+      "x": 0.3,
+      "s": 1.45,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "sit",
+       "dress": "noble",
+       "face": "right",
+       "seat": "stool"
+      },
+      "x": 0.13,
+      "s": 1.8,
+      "dy": 6,
+      "at": -1
+     },
+     {
+      "g": "fork_plate",
+      "o": {
+       "morsels": 2
+      },
+      "x": 0.47,
+      "y": 0.487,
+      "s": 0.3,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "fork",
+      "o": {
+       "style": "modern",
+       "metal": "silver"
+      },
+      "x": 0.26,
+      "y": 0.484,
+      "s": 0.32,
+      "rot": 1.5,
+      "at": -1,
+      "sway": false
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "point",
+       "dress": "noble",
+       "face": "left"
+      },
+      "x": 0.68,
+      "s": 1.75,
+      "at": 0.2
+     }
+    ],
+    "notes": [
+     {
+      "text": "\"Furcifer!\"",
+      "x": 0.5,
+      "y": 0.3,
+      "at": "mock",
+      "color": "red",
+      "size": 66
+     },
+     {
+      "text": "fork-bearer",
+      "x": 0.5,
+      "y": 0.345,
+      "at": "mock",
+      "size": 44
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     460,
+     880
+    ],
+    "zoom": 1.3
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "The fork won. It just took six centuries.",
+   "visual": "A vertical timeline painting itself in: '1004 — Venice, a scandal', '1611 — England, still mocked', 'today — every table' (in red).",
+   "cues": {
+    "won": "won"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1004",
+      "label": "Venice: a scandal",
+      "at": 0.1
+     },
+     {
+      "year": "1611",
+      "label": "England: mocked",
+      "at": 0.7
+     },
+     {
+      "year": "today",
+      "label": "every table",
+      "at": 1.6
+     }
+    ],
+    "highlight": 2
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for more everyday origins.",
+   "visual": "Title card 'The Sinful Fork' with the small golden two-pronged fork painted beneath it, sub 'Venice, 1004'.",
+   "params": {
+    "text": "The Sinful Fork",
+    "sub": "Venice, 1004",
+    "g": "fork",
+    "s": 0.75,
+    "color": "skyWarm"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Maria Argyropoulina — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Maria_Argyropoulina"
+  },
+  {
+   "title": "Theodora Doukaina Selvo — Wikipedia (Peter Damian's account and its attribution)",
+   "url": "https://en.wikipedia.org/wiki/Theodora_Doukaina_Selvo"
+  },
+  {
+   "title": "A History of Western Eating Utensils, From the Scandalous Fork to the Incredible Spork — Smithsonian Magazine",
+   "url": "https://www.smithsonianmag.com/arts-culture/a-history-of-western-eating-utensils-from-the-scandalous-fork-to-the-incredible-spork-64593179/"
+  },
+  {
+   "title": "Curious Questions: Who invented the fork? — Country Life",
+   "url": "https://www.countrylife.co.uk/food-drink/curious-questions-who-invented-the-fork-251540"
+  },
+  {
+   "title": "Thomas Coryat — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Thomas_Coryat"
+  }
+ ],
+ "youtube": {
+  "title": "Fork History: Why Was Eating With One a Sin?",
+  "description": "Fork history starts with a scandal. In 1004 a Byzantine princess married the son of the doge of Venice, and at the table she refused to touch her food with her fingers: her servants cut it up and she ate with a small two-pronged golden fork. To many in Venice it looked like vanity. When plague killed her, her husband and their son a few years later, the churchman Peter Damian presented her death as God's punishment. Six centuries on, in 1611, the English traveller Thomas Coryat was still mocked as a \"fork-bearer\" for praising forks.\n\nSubscribe to Stickstory for the strange origins of everyday things. Which ordinary object do you think has the strangest history? Tell us in the comments!\n\n#shorts #historyofthefork #stickstory",
+  "tags": [
+   "fork history",
+   "history of the fork",
+   "who invented the fork",
+   "origin of the fork",
+   "byzantine princess fork",
+   "fork scandal venice",
+   "peter damian",
+   "thomas coryat",
+   "medieval venice",
+   "byzantine empire",
+   "table manners history",
+   "origins of everyday things",
+   "weird history",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-25T19:00:00-05:00"
+ }
+}

@@ -1,0 +1,492 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "yaz",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Glued with",
+   "rice"
+  ],
+  "highlight": [
+   "rice"
+  ],
+  "scene": 0,
+  "t": 2.4,
+  "focus": [
+   366,
+   830
+  ],
+  "zoom": 1.4
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "The Great Wall is partly glued with rice.",
+   "visual": "Bright summer day: the Great Wall paints itself up a green ridge; front and centre, a large blue-and-white bowl heaped with steaming sticky rice, with a big Ming watchtower (lookout roof, waving banner) directly behind it; a cloud drifts.",
+   "params": {
+    "sky": "day",
+    "land": "hills",
+    "horizon": 0.6,
+    "sun": false,
+    "amp": 0.6,
+    "items": [
+     {
+      "g": "cloud",
+      "x": 0.05,
+      "y": 0.27,
+      "s": 1.0,
+      "move": {
+       "to": [
+        0.35
+       ],
+       "at": 0,
+       "dur": 6
+      }
+     },
+     {
+      "g": "great_wall",
+      "x": 0.56,
+      "s": 1.1,
+      "at": 0,
+      "paint": 1.8,
+      "sway": false
+     },
+     {
+      "g": "rice_bowl",
+      "x": 0.34,
+      "y": 0.665,
+      "s": 1.4,
+      "at": 0.4
+     },
+     {
+      "g": "shrub",
+      "x": 0.08,
+      "layer": "fg",
+      "s": 1.0
+     },
+     {
+      "g": "grass",
+      "x": 0.6,
+      "layer": "fg",
+      "s": 1.4
+     },
+     {
+      "g": "rock",
+      "x": 0.92,
+      "layer": "fg",
+      "s": 0.9
+     }
+    ],
+    "birds": {
+     "x": 0.7,
+     "y": 0.18,
+     "n": 4
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ming builders boiled sticky rice into soup,",
+   "visual": "Dawn at a builders' camp: a big iron wok set in a mud-brick stove, fire in its mouth, full of white rice soup, a wooden paddle stirring slowly, steam rising; a worker stands beside it; the wall is a faint line on the far hills. Note 'sticky rice' points at the soup. A rice sack and a basket of lime lumps sit in the foreground.",
+   "cues": {
+    "rice": "sticky"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "plain",
+    "horizon": 0.6,
+    "sun": {
+     "x": 0.8,
+     "y": 0.35,
+     "r": 60
+    },
+    "items": [
+     {
+      "g": "great_wall",
+      "layer": "far",
+      "x": 0.5,
+      "s": 1.2,
+      "o": {
+       "hero": false,
+       "base": 40
+      },
+      "sway": false
+     },
+     {
+      "g": "cauldron",
+      "x": 0.46,
+      "s": 1.45,
+      "at": 0
+     },
+     {
+      "g": "person",
+      "x": 0.85,
+      "s": 1.2,
+      "o": {
+       "pose": "stand",
+       "dress": "worker",
+       "face": "left"
+      },
+      "at": 0.5
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg",
+      "s": 1.3
+     },
+     {
+      "g": "rock",
+      "x": 0.86,
+      "layer": "fg",
+      "s": 0.9
+     },
+     {
+      "g": "rice_sack",
+      "x": 0.14,
+      "y": 0.79,
+      "s": 0.9,
+      "at": 0.4
+     },
+     {
+      "g": "lime_basket",
+      "x": 0.72,
+      "y": 0.8,
+      "s": 0.85,
+      "at": 0.6
+     }
+    ],
+    "notes": [
+     {
+      "text": "sticky rice",
+      "x": 0.06,
+      "y": 0.3,
+      "ax": 0.38,
+      "ay": 0.42,
+      "at": "rice"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_ricemortar_mix",
+   "text": "then stirred it into slaked lime.",
+   "visual": "Close on a wooden trough of pale slaked lime: a ladle tips in from the top right and pours a stream of cream rice soup; a swirl opens, then a wooden paddle stirs it slowly round; a sack of rice and a basket of lime stand in the foreground. Notes: 'rice soup' (red) at the stream, 'slaked lime' at the paste.",
+   "cues": {
+    "stir": "stirred",
+    "slaked": "slaked"
+   },
+   "params": {
+    "pour": "stir",
+    "notes": [
+     {
+      "text": "rice soup",
+      "x": 0.06,
+      "y": 0.2,
+      "ax": 0.45,
+      "ay": 0.4,
+      "at": "stir",
+      "color": "red"
+     },
+     {
+      "text": "slaked lime",
+      "x": 0.06,
+      "y": 0.55,
+      "ax": 0.25,
+      "ay": 0.43,
+      "at": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_ricemortar_brick",
+   "text": "It sounds like a kitchen trick, but it worked.",
+   "visual": "Close on the wall face: big grey bricks and pale mortar seams with specks of rice, summer sky and a far ridge above; one gap in the top course; a new brick comes down into its fresh mortar bed and a bead of mortar squeezes out. Note 'rice + lime' (red) points at a seam.",
+   "cues": {
+    "worked": "worked"
+   },
+   "params": {
+    "set": "worked",
+    "notes": [
+     {
+      "text": "rice + lime",
+      "x": 0.56,
+      "y": 0.12,
+      "ax": 0.66,
+      "ay": 0.44,
+      "at": 0.6,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "One Ming tomb was so hard, a bulldozer could do nothing.",
+   "visual": "Clear day on a plain: a Ming tomb's soul tower (crenellated brick platform with an arched tunnel, red pavilion with a yellow double-eaved roof, the green burial mound behind); a yellow bulldozer rolls in from the right and stops with its blade against the platform, exhaust smoke rising. Rocks, a shrub and grass fill the foreground.",
+   "cues": {
+    "bull": "bulldozer"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.6,
+    "sun": {
+     "x": 0.2,
+     "y": 0.3,
+     "r": 50
+    },
+    "items": [
+     {
+      "g": "pine",
+      "layer": "far",
+      "x": 0.15,
+      "s": 1.0
+     },
+     {
+      "g": "pine",
+      "layer": "far",
+      "x": 0.85,
+      "s": 0.9
+     },
+     {
+      "g": "ming_tomb",
+      "x": 0.3,
+      "s": 0.85,
+      "at": 0
+     },
+     {
+      "g": "bulldozer",
+      "x": 0.98,
+      "s": 0.8,
+      "at": 0.2,
+      "move": {
+       "to": [
+        0.735
+       ],
+       "at": "bull",
+       "dur": 1.8
+      }
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg",
+      "s": 1.3
+     },
+     {
+      "g": "shrub",
+      "x": 0.9,
+      "layer": "fg",
+      "s": 1.0
+     },
+     {
+      "g": "rock",
+      "x": 0.16,
+      "y": 0.79,
+      "s": 1.3
+     },
+     {
+      "g": "shrub",
+      "x": 0.52,
+      "y": 0.8,
+      "s": 1.1
+     },
+     {
+      "g": "grass",
+      "x": 0.84,
+      "y": 0.81,
+      "s": 1.5
+     },
+     {
+      "g": "rock",
+      "x": 0.66,
+      "y": 0.85,
+      "s": 0.9
+     }
+    ],
+    "notes": [
+     {
+      "text": "Ming tomb",
+      "x": 0.08,
+      "y": 0.22,
+      "ax": 0.27,
+      "ay": 0.38,
+      "at": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "In 2010, chemists in China found out why.",
+   "visual": "A big painted '2010' on a pale blue swatch, hand-written under it 'Zhejiang University chemists'.",
+   "cues": {
+    "chem": "chemists"
+   },
+   "params": {
+    "value": "2010",
+    "label": "Zhejiang University",
+    "note": "chemists find out why",
+    "color": "sky",
+    "count": false
+   }
+  },
+  {
+   "type": "wc_ricemortar_crystals",
+   "text": "A starch in the rice, amylopectin, keeps the lime's crystals tiny and tight.",
+   "visual": "Two microscope views stacked: top 'lime only', big loose crystals with dark pores between them; bottom 'with rice' (red), gold threads of starch appear, then tiny crystals fill in packed tight around them.",
+   "cues": {
+    "starch": "starch",
+    "tiny": "tiny"
+   },
+   "params": {
+    "top": {
+     "label": "lime only",
+     "at": 0.1
+    },
+    "bottom": {
+     "label": "with rice",
+     "at": "starch",
+     "fill": "tiny"
+    }
+   }
+  },
+  {
+   "type": "wc_ricemortar_brick",
+   "text": "The mortar sets tough and shrugs off rain.",
+   "visual": "Close-up on one mortar seam of the wall in a storm: wet grey bricks, slanted rain, wide dark wet streaks and drops running down the brick faces and off the seam. Note 'rain runs off'.",
+   "params": {
+    "rain": true,
+    "set": false,
+    "notes": [
+     {
+      "text": "rain runs off",
+      "x": 0.3,
+      "y": 0.33,
+      "ax": 0.38,
+      "ay": 0.42,
+      "at": 0.8
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     430,
+     800
+    ],
+    "zoom": 1.9
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Centuries later, dinner is still holding up the wall.",
+   "visual": "Dusk: the Great Wall and its watchtower on the ridge, the banner still waving, warm low sun; then the whole picture slowly washes back into the paper.",
+   "params": {
+    "sky": "dusk",
+    "land": "hills",
+    "horizon": 0.6,
+    "sun": {
+     "x": 0.75,
+     "y": 0.45,
+     "r": 70
+    },
+    "items": [
+     {
+      "g": "great_wall",
+      "x": 0.56,
+      "s": 1.1,
+      "at": 0,
+      "sway": false,
+      "seed": 9
+     },
+     {
+      "g": "grass",
+      "x": 0.08,
+      "layer": "fg",
+      "s": 1.3
+     },
+     {
+      "g": "rock",
+      "x": 0.88,
+      "layer": "fg",
+      "s": 1.0
+     }
+    ],
+    "mist": 3.0
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for how the past was built.",
+   "visual": "Title card: a small bowl of rice, 'Sticky-rice mortar', sub 'Ming walls, still standing'.",
+   "params": {
+    "text": "Sticky-rice mortar",
+    "sub": "Ming walls, still standing",
+    "g": "rice_bowl",
+    "o": {
+     "steam": false
+    },
+    "s": 0.6,
+    "color": "skyWarm"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "National Geographic — Sticky rice mortar: why ancient Chinese walls still stand (2010)",
+   "url": "https://www.nationalgeographic.com/history/article/100608-sticky-rice-mortar-china-science"
+  },
+  {
+   "title": "ScienceDaily / American Chemical Society — Revealing the ancient Chinese secret of sticky rice mortar",
+   "url": "https://sciencedaily.com/releases/2010/05/100530093704.htm"
+  },
+  {
+   "title": "Yang, Zhang & Ma — Study of sticky rice-lime mortar technology, Accounts of Chemical Research (2010)",
+   "url": "https://pubs.acs.org/doi/10.1021/ar9001944"
+  },
+  {
+   "title": "Live Science — Secret ingredient in ancient mortar: sticky rice",
+   "url": "https://www.livescience.com/9930-secret-ingredient-ancient-mortar-sticky-rice.html"
+  },
+  {
+   "title": "Smithsonian Magazine — Sticky rice mortar and more facts about China's Great Wall",
+   "url": "https://www.smithsonianmag.com/history/sticky-rice-mortar-view-space-and-more-fun-facts-about-chinas-great-wall-180962197/"
+  }
+ ],
+ "youtube": {
+  "title": "Sticky Rice Mortar: How Did Rice Hold Up the Great Wall?",
+  "description": "Sticky rice mortar is real: Ming builders boiled sticky rice into a thin soup and stirred it into slaked lime, and parts of the Great Wall, city walls, tombs and pagodas were built with it. One Ming tomb was so hard that a bulldozer could do nothing. In 2010, chemists at Zhejiang University found out why: amylopectin, a starch in the rice, keeps the lime's crystals tiny and packed tight, so the mortar is tougher and resists water.\n\nSubscribe to Stickstory for how the past was built. What everyday ingredient would you never expect in a building? Tell us in the comments!\n\n#shorts #greatwall #stickstory",
+  "tags": [
+   "sticky rice mortar",
+   "sticky rice mortar great wall",
+   "great wall sticky rice",
+   "sticky rice lime mortar",
+   "great wall of china",
+   "ming dynasty",
+   "ming great wall",
+   "ancient chinese mortar",
+   "amylopectin",
+   "ancient engineering",
+   "how it was built",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-25T13:00:00-05:00"
+ },
+ "slug": "sticky-rice-mortar"
+}

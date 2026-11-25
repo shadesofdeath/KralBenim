@@ -1,0 +1,2214 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "sepya",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "slug": "ag-03-first-blood-transfusion",
+ "cover": {
+  "lines": [
+   "Blood from",
+   "a calf"
+  ],
+  "highlight": [
+   "calf"
+  ],
+  "scene": 1,
+  "t": 8.0,
+  "focus": [
+   1050,
+   650
+  ],
+  "zoom": 1.4
+ },
+ "sources": [
+  {
+   "title": "Smithsonian Magazine: 350 years ago, a doctor performed the first human blood transfusion. A sheep was involved",
+   "url": "https://www.smithsonianmag.com/smart-news/350-years-ago-doctor-performed-first-human-blood-transfusion-sheep-was-involved-180963631/"
+  },
+  {
+   "title": "LITFL: Jean-Baptiste Denis",
+   "url": "https://litfl.com/jean-baptiste-denis/"
+  },
+  {
+   "title": "Wikipedia: Jean-Baptiste Denys (overview and references)",
+   "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Denys"
+  },
+  {
+   "title": "British Blood Transfusion Society: The history of blood transfusion prior to the 20th century, part 2 (Phil Learoyd)",
+   "url": "https://www.bbts.org.uk/downloads/05._the_history_of_blood_transfusion_prior_to_the_20th_century_-_part_2_-_phil_learoyd.pdf"
+  },
+  {
+   "title": "American Red Cross: History of blood transfusion",
+   "url": "https://www.redcrossblood.org/learn-about-blood/history-blood-transfusion"
+  },
+  {
+   "title": "The Rockefeller University: Karl Landsteiner, Nobel Prize 1930",
+   "url": "https://www.rockefeller.edu/our-scientists/karl-landsteiner/2554-nobel-prize/"
+  },
+  {
+   "title": "Smithsonian Magazine: The first ever blood bank opened 80 years ago (Bernard Fantus, 1937)",
+   "url": "https://www.smithsonianmag.com/smart-news/first-ever-blood-bank-opened-80-years-ago-today-180962486/"
+  }
+ ],
+ "youtube": {
+  "title": "First Blood Transfusion: Why Did Some Live and Others Die?",
+  "description": "The first blood transfusion experiments began in 1667, when a Paris doctor put the blood of a lamb, then a calf, into human veins. Some patients lived. Many did not, and nobody knew why for more than two hundred years.\n\nJean-Baptiste Denys, a physician to Louis XIV, gave lamb's blood to a feverish fifteen-year-old boy, then tried calf's blood on Antoine Mauroy, a man with fits of madness. Mauroy's urine turned black, he later died, and the case ended in a Paris court with arsenic, a suspected wife and a ruling that stopped transfusion for about 150 years. James Blundell brought it back in London with human blood, and Karl Landsteiner finally found the answer in Vienna in 1901: blood groups.\n\nIn this video:\n- Harvey's circle and Richard Lower's dogs in Oxford\n- The boy and the lamb, Paris, June 1667\n- The madman, the calf and the black urine\n- Arsenic, a trial and the 1668 ruling\n- Blundell's gamble with human blood in London\n- Landsteiner's red knots and the first blood bank\n\nSubscribe to Stickstory for more true stories of the human body. Would you have let a doctor try this in 1667? Tell me in the comments!\n\n#bloodtransfusion #historyofmedicine #stickstory",
+  "tags": [
+   "first blood transfusion",
+   "first transfusion in history",
+   "first human blood transfusion",
+   "blood transfusion history",
+   "jean-baptiste denys",
+   "antoine mauroy",
+   "animal blood transfusion",
+   "karl landsteiner",
+   "blood groups discovery",
+   "james blundell",
+   "history of medicine",
+   "medical history",
+   "human body",
+   "strange history",
+   "true story",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-25T14:00:00-05:00"
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "Paris, at the end of 1667. A man lies in a candlelit room, and beside him a calf is tied down.",
+   "visual": "Night interior, stone wall: a dark window, a candle in the foreground; a man asleep in a wooden bed paints in, then a calf lying tied on the floor beside it; note 'Paris, 1667'.",
+   "chapter": "The black urine",
+   "cues": {
+    "calf": "calf"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "night": true,
+       "style": "rect"
+      },
+      "x": 0.12,
+      "at": -1
+     },
+     {
+      "g": "sickbed",
+      "o": {
+       "who": "man"
+      },
+      "x": 0.4,
+      "s": 1.7,
+      "at": 0.2
+     },
+     {
+      "g": "calf",
+      "o": {
+       "rope": true
+      },
+      "x": 0.79,
+      "s": 1.55,
+      "at": 0.6
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.06,
+      "layer": "fg",
+      "s": 0.55,
+      "at": -1
+     }
+    ],
+    "notes": [
+     {
+      "text": "Paris, 1667",
+      "x": 0.6,
+      "y": 0.3,
+      "at": 0.8,
+      "size": 56
+     },
+     {
+      "text": "a calf",
+      "x": 0.8,
+      "y": 0.38,
+      "ax": 0.76,
+      "ay": 0.6,
+      "at": "calf"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     960,
+     620
+    ],
+    "zoom": 1.2
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "A thin tube carries the animal's blood into his arm. His doctors hope a gentle animal's blood will cure his madness.",
+   "visual": "Closer on the same candlelit room: a thin silver tube runs from the calf's neck to the man's arm, and on 'blood' it fills red from the calf toward the arm. From 'hope' a faint red warmth gathers over his arm where the tube goes in.",
+   "cues": {
+    "blood": "blood",
+    "hope": "hope"
+   },
+   "camera": {
+    "focus": [
+     1060,
+     700
+    ],
+    "zoom": 1.6
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "night": true,
+       "style": "rect"
+      },
+      "x": 0.12,
+      "at": -1
+     },
+     {
+      "g": "sickbed",
+      "o": {
+       "who": "man"
+      },
+      "x": 0.4,
+      "s": 1.7,
+      "at": -1
+     },
+     {
+      "g": "calf",
+      "o": {
+       "rope": true
+      },
+      "x": 0.79,
+      "s": 1.55,
+      "at": -1
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.06,
+      "layer": "fg",
+      "s": 0.55,
+      "at": -1
+     }
+    ],
+    "tube": {
+     "from": [
+      2,
+      "neck"
+     ],
+     "to": [
+      1,
+      "arm"
+     ],
+     "at": "blood",
+     "dur": 2.4,
+     "bend": 80
+    },
+    "burn": {
+     "item": 1,
+     "part": "arm",
+     "at": "hope",
+     "r": 80
+    }
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "Within minutes, his arm begins to burn.",
+   "visual": "Close-up plate on clean paper: the crook of a bare arm above a rolled white cuff, the silver tube entering the vein already full of red; on 'arm' a hot red glow swells around it; note 'burning'.",
+   "cues": {
+    "arm": "arm"
+   },
+   "params": {
+    "sky": "none",
+    "land": "none",
+    "horizon": 0.72,
+    "items": [
+     {
+      "g": "forearm",
+      "x": 0.62,
+      "s": 2.2,
+      "at": -1
+     }
+    ],
+    "tube": {
+     "from": [
+      0.3,
+      0.3
+     ],
+     "to": [
+      0,
+      "vein"
+     ],
+     "at": 0,
+     "dur": 0.6,
+     "show": 0,
+     "bend": -60
+    },
+    "burn": {
+     "item": 0,
+     "part": "vein",
+     "at": "arm",
+     "r": 120
+    },
+    "notes": [
+     {
+      "text": "burning",
+      "x": 0.7,
+      "y": 0.36,
+      "ax": 0.64,
+      "ay": 0.53,
+      "at": "arm",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     1000,
+     640
+    ],
+    "zoom": 1.4
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "The next morning, his urine is as black as chimney soot.",
+   "visual": "An aged sheet written in line by line: Denys's own words, 'as black as if it had been mixed with the soot of chimneys', signed 'J.-B. Denys, 1668'.",
+   "cues": {
+    "black": "black"
+   },
+   "params": {
+    "style": "letter",
+    "lines": [
+     "...a colour as black",
+     "as if it had been mixed",
+     "with the soot of chimneys."
+    ],
+    "sign": "J.-B. Denys, 1668",
+    "at": 0.2
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Some of the first people to receive blood survived. Many did not. But it would take more than two hundred years to learn why.",
+   "visual": "One big painted number '200+' on a gold swatch, hand note 'years to learn why'.",
+   "params": {
+    "value": "200+",
+    "label": "years to learn why",
+    "count": false,
+    "color": "red"
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "For most of history, doctors did not give blood. They took it. Sick patients were bled to restore the balance of the body's fluids.",
+   "visual": "Specimen plate: a pewter bleeding bowl full of blood with a lancet beside it; notes 'bloodletting' and 'the lancet'.",
+   "cues": {
+    "bled": "bled",
+    "balance": "balance"
+   },
+   "params": {
+    "g": "bleeding_bowl",
+    "pigment": "stain",
+    "notes": [
+     {
+      "text": "bloodletting",
+      "part": "blood",
+      "at": "bled",
+      "color": "red"
+     },
+     {
+      "text": "the lancet",
+      "part": "lancet",
+      "at": "balance"
+     }
+    ],
+    "title": {
+     "text": "Bloodletting",
+     "sub": "the cure for almost everything"
+    }
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Then, in 1628, William Harvey showed that the heart pumps blood around the body in a closed circle.",
+   "visual": "An anatomical heart painted large with its great vessels; a red ring of three arrows circles it; notes 'William Harvey, 1628' and 'a closed circle'.",
+   "cues": {
+    "Harvey": "Harvey",
+    "circle": "circle."
+   },
+   "params": {
+    "g": "heart",
+    "o": {
+     "loop": true
+    },
+    "s": 0.95,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "William Harvey, 1628",
+      "part": "aorta",
+      "at": "Harvey"
+     },
+     {
+      "text": "a closed circle",
+      "part": "loop",
+      "at": "circle",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "That opened a door. If blood travels in a circle, perhaps it could be moved from one body into another.",
+   "visual": "A plate on clean paper: the silver transfusion tube painted large, a quill joint at one end, a red drop at the tip, a thin red line inside; note 'one body to another?'.",
+   "cues": {
+    "moved": "moved"
+   },
+   "params": {
+    "sky": "none",
+    "land": "none",
+    "horizon": 0.66,
+    "items": [
+     {
+      "g": "silver_tube",
+      "x": 0.48,
+      "s": 2.3,
+      "at": 0.2,
+      "paint": 1.6
+     }
+    ],
+    "notes": [
+     {
+      "text": "one body to another?",
+      "x": 0.5,
+      "y": 0.2,
+      "at": "moved",
+      "color": "red",
+      "size": 56
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "In Oxford, in 1665, Richard Lower drained a dog almost to death and refilled it with another dog's blood. The dog lived. In Paris, an ambitious doctor wondered: could it work on a human?",
+   "visual": "Map of southern England and northern France: Oxford marked with a star and 'Richard Lower, 1665'; on 'Paris' a red route crosses the Channel to Paris.",
+   "cues": {
+    "Oxford": "Oxford",
+    "Lower": "Lower",
+    "Paris": "Paris,"
+   },
+   "params": {
+    "region": [
+     -4.5,
+     47.6,
+     5.5,
+     53.0
+    ],
+    "paint": 1.2,
+    "places": [
+     {
+      "name": "Oxford",
+      "lon": -1.26,
+      "lat": 51.75,
+      "kind": "star",
+      "color": "red",
+      "at": "Oxford",
+      "align": "left"
+     },
+     {
+      "name": "Paris",
+      "lon": 2.35,
+      "lat": 48.86,
+      "kind": "city",
+      "at": "Paris",
+      "align": "right"
+     }
+    ],
+    "labels": [
+     {
+      "text": "Richard Lower, 1665",
+      "lon": -1.0,
+      "lat": 52.45,
+      "italic": true,
+      "at": "Lower"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        -1.26,
+        51.75
+       ],
+       [
+        0.4,
+        50.6
+       ],
+       [
+        1.6,
+        49.7
+       ],
+       [
+        2.35,
+        48.86
+       ]
+      ],
+      "at": "Paris",
+      "dur": 2.0,
+      "color": "red",
+      "dashed": true
+     }
+    ],
+    "seas": [
+     {
+      "text": "English Channel",
+      "lon": -1.6,
+      "lat": 50.1
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Jean-Baptiste Denys was a physician to King Louis the Fourteenth.",
+   "visual": "Chapter card: 'Chapter 2 · The Boy and the Lamb · Paris, June 1667' with a small lamb lying down.",
+   "chapter": "The boy and the lamb",
+   "params": {
+    "num": "Chapter 2",
+    "title": "The Boy and the Lamb",
+    "sub": "Paris, June 1667",
+    "g": "lamb",
+    "s": 0.5
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "On the fifteenth of June, 1667, he was called to a fifteen-year-old boy who had burned with fever for two months.",
+   "visual": "A Paris street on a summer day: half-timbered and stone houses on both sides, a spire beyond; a physician in a cape and plumed hat walks down it; note '15 June 1667'.",
+   "cues": {
+    "June": "June,"
+   },
+   "params": {
+    "sky": "day",
+    "land": "city",
+    "horizon": 0.72,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european"
+      },
+      "x": 0.1,
+      "s": 1.4,
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european",
+       "half": false
+      },
+      "x": 0.28,
+      "s": 1.25,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european"
+      },
+      "x": 0.7,
+      "s": 1.5,
+      "at": 0.2
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european",
+       "half": false
+      },
+      "x": 0.9,
+      "s": 1.35,
+      "at": -1
+     },
+     {
+      "g": "church",
+      "o": {
+       "style": "gothic"
+      },
+      "x": 0.48,
+      "layer": "far",
+      "s": 1.2,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "noble"
+      },
+      "x": 0.3,
+      "s": 1.5,
+      "at": 0.3,
+      "move": {
+       "to": [
+        0.55
+       ],
+       "at": 0.3,
+       "dur": 6
+      }
+     }
+    ],
+    "notes": [
+     {
+      "text": "15 June 1667",
+      "x": 0.5,
+      "y": 0.24,
+      "at": "June",
+      "size": 56
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "Bled about twenty times, the boy could barely stay awake.",
+   "visual": "Close on the pale boy asleep on his pillow, a bleeding bowl full of blood on the floor by the bed; note 'bled 20 times'.",
+   "cues": {
+    "Bled": "Bled",
+    "twenty": "twenty"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "style": "arched"
+      },
+      "x": 0.08,
+      "at": -1
+     },
+     {
+      "g": "sickbed",
+      "o": {
+       "who": "boy",
+       "blanket": "clothB"
+      },
+      "x": 0.48,
+      "s": 1.8,
+      "at": 0.1
+     },
+     {
+      "g": "bleeding_bowl",
+      "x": 0.2,
+      "s": 1.0,
+      "at": "Bled"
+     }
+    ],
+    "notes": [
+     {
+      "text": "bled 20 times",
+      "x": 0.3,
+      "y": 0.46,
+      "ax": 0.2,
+      "ay": 0.74,
+      "at": "twenty",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     580,
+     700
+    ],
+    "zoom": 1.8
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Denys decided to put blood back in, but not human blood. He chose a lamb, the purest animal he could think of.",
+   "visual": "Specimen plate: a white lamb lying down, painted large on clean paper; notes 'the purest animal' and 'not human blood'.",
+   "cues": {
+    "human": "human",
+    "lamb": "lamb,",
+    "purest": "purest"
+   },
+   "params": {
+    "g": "lamb",
+    "s": 0.95,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "not human blood",
+      "part": "body",
+      "at": "human"
+     },
+     {
+      "text": "the purest animal",
+      "part": "head",
+      "at": "purest",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "About twelve ounces went into the boy's arm, and the next morning he was alert.",
+   "visual": "A big painted '12' on a red swatch, hand note 'ounces of lamb's blood', smaller note 'alert next morning'.",
+   "params": {
+    "value": "12",
+    "label": "ounces of lamb's blood",
+    "note": "alert the next morning",
+    "count": true,
+    "color": "red"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "It looked like a miracle. Soon all of Paris was talking about Denys. But that fame led him to his most dangerous patient.",
+   "visual": "A Paris street at dusk between lit houses: a knot of townspeople gathered talking; note 'the talk of Paris'.",
+   "cues": {
+    "Paris": "Paris",
+    "talking": "talking"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "city",
+    "horizon": 0.72,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european",
+       "lit": true
+      },
+      "x": 0.12,
+      "s": 1.45,
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european",
+       "half": false,
+       "lit": true
+      },
+      "x": 0.86,
+      "s": 1.45,
+      "at": -1
+     },
+     {
+      "g": "crowd",
+      "o": {
+       "n": 14,
+       "w": 360,
+       "flags": 0,
+       "arms": 0
+      },
+      "x": 0.48,
+      "s": 1.2,
+      "at": "Paris"
+     }
+    ],
+    "notes": [
+     {
+      "text": "the talk of Paris",
+      "x": 0.48,
+      "y": 0.26,
+      "at": "talking"
+     }
+    ],
+    "sun": false
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Antoine Mauroy was thirty-four, and he suffered from fits of madness.",
+   "visual": "Chapter card: 'Chapter 3 · The Madman and the Calf · Paris, winter 1667' with a small calf lying down.",
+   "chapter": "The madman and the calf",
+   "params": {
+    "num": "Chapter 3",
+    "title": "The Madman and the Calf",
+    "sub": "Paris, winter 1667",
+    "g": "calf",
+    "s": 0.5
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Denys and his patrons had a bold idea. If a calm animal's blood flowed into a troubled man, perhaps it would calm him too.",
+   "visual": "A study at night: a writing desk with an open book, a quill in its ink pot and a candle; note 'calm blood, calm mind?'.",
+   "cues": {
+    "calm": "calm"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stoneDark",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "shelf",
+      "x": 0.2,
+      "s": 1.2,
+      "at": -1
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "desk"
+      },
+      "x": 0.56,
+      "s": 1.6,
+      "at": 0.2
+     },
+     {
+      "g": "book",
+      "o": {
+       "open": true
+      },
+      "x": 0.5,
+      "y": 0.667,
+      "s": 0.8,
+      "at": 0.6
+     },
+     {
+      "g": "quill",
+      "x": 0.66,
+      "y": 0.667,
+      "s": 0.6,
+      "at": 0.9
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.4,
+      "y": 0.667,
+      "s": 0.6,
+      "at": 0.4
+     }
+    ],
+    "notes": [
+     {
+      "text": "calm blood, calm mind?",
+      "x": 0.56,
+      "y": 0.3,
+      "at": "calm",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     1000,
+     640
+    ],
+    "zoom": 1.4
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "So they chose a calf. The first time, only five or six ounces got through, and afterwards Mauroy seemed quieter.",
+   "visual": "Winter night, the candlelit room again: Mauroy in the bed, the calf tied on the floor, the tube between them filling red on 'five'; note '5 or 6 ounces'.",
+   "cues": {
+    "calf": "calf.",
+    "five": "five",
+    "ounces": "ounces"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "night": true,
+       "style": "rect"
+      },
+      "x": 0.88,
+      "at": -1
+     },
+     {
+      "g": "sickbed",
+      "o": {
+       "who": "man",
+       "blanket": "clothC"
+      },
+      "x": 0.62,
+      "s": 1.7,
+      "flip": true,
+      "at": -1
+     },
+     {
+      "g": "calf",
+      "o": {
+       "rope": true
+      },
+      "x": 0.22,
+      "s": 1.55,
+      "flip": true,
+      "at": "calf"
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.95,
+      "layer": "fg",
+      "s": 0.55,
+      "at": -1
+     }
+    ],
+    "tube": {
+     "from": [
+      2,
+      "neck"
+     ],
+     "to": [
+      1,
+      "arm"
+     ],
+     "at": "five",
+     "dur": 2.0,
+     "bend": 80
+    },
+    "notes": [
+     {
+      "text": "5 or 6 ounces",
+      "x": 0.44,
+      "y": 0.36,
+      "ax": 0.44,
+      "ay": 0.56,
+      "at": "ounces",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     880,
+     700
+    ],
+    "zoom": 1.4
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "When they tried again, his body fought back. His pulse raced, his back ached, and he felt as if he would choke.",
+   "visual": "Denys's account of the second transfusion written in line by line: 'a great heat along his arm · his pulse rising · pains in his kidneys · as if ready to choke', signed 'Denys's account, 1667'.",
+   "params": {
+    "style": "diary",
+    "lines": [
+     "a great heat along his arm",
+     "his pulse rising",
+     "pains in his kidneys",
+     "as if ready to choke"
+    ],
+    "sign": "Denys's account, 1667",
+    "at": 0.2
+   }
+  },
+  {
+   "type": "wc_transfusion_cells",
+   "text": "Then came the black urine. His body was treating the calf's blood as an invader, destroying it cell by cell, and the wreckage poured out through his kidneys.",
+   "visual": "A brass magnifying lens on the paper: red human cells and paler calf cells drift in the liquid; on 'destroying' the calf cells break up into dark specks that sink away; notes 'calf cells' and 'destroyed'.",
+   "cues": {
+    "invader": "invader",
+    "destroying": "destroying",
+    "wreckage": "wreckage"
+   },
+   "params": {
+    "mode": "attack",
+    "at": "destroying",
+    "notes": [
+     {
+      "text": "calf cells",
+      "x": 0.84,
+      "y": 0.24,
+      "ax": 0.66,
+      "ay": 0.36,
+      "at": "invader"
+     },
+     {
+      "text": "destroyed",
+      "x": 0.84,
+      "y": 0.62,
+      "ax": 0.66,
+      "ay": 0.56,
+      "at": "wreckage",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Yet Mauroy recovered and went home to his wife, Perrine.",
+   "visual": "A quiet Paris lane on a grey winter morning: a man and a woman walk side by side toward a small house; note 'home'.",
+   "cues": {
+    "wife": "wife,",
+    "Perrine": "Perrine"
+   },
+   "params": {
+    "sky": "fog",
+    "land": "city",
+    "horizon": 0.72,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european",
+       "half": false
+      },
+      "x": 0.78,
+      "s": 1.4,
+      "at": 0.2
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "peasant"
+      },
+      "x": 0.2,
+      "s": 1.5,
+      "at": 0.3,
+      "move": {
+       "to": [
+        0.46
+       ],
+       "at": 0.3,
+       "dur": 5
+      }
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "woman"
+      },
+      "x": 0.27,
+      "s": 1.45,
+      "at": 0.5,
+      "move": {
+       "to": [
+        0.53
+       ],
+       "at": 0.3,
+       "dur": 5
+      }
+     },
+     {
+      "g": "rock",
+      "x": 0.06,
+      "layer": "fg",
+      "s": 0.7
+     }
+    ],
+    "weather": "snow",
+    "notes": [
+     {
+      "text": "Perrine",
+      "x": 0.42,
+      "y": 0.46,
+      "ax": 0.5,
+      "ay": 0.55,
+      "at": "wife"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     800,
+     700
+    ],
+    "zoom": 1.6
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Months later his madness returned, and Perrine begged Denys to try once more.",
+   "visual": "Night interior: Perrine, hands clasped, pleading before the physician in his cape by a candle; note 'once more'.",
+   "cues": {
+    "begged": "begged"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stoneDark",
+    "floor": "stoneDark",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "door",
+      "x": 0.12,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "pray",
+       "dress": "woman"
+      },
+      "x": 0.4,
+      "s": 1.8,
+      "at": 0.2
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "noble"
+      },
+      "x": 0.64,
+      "s": 1.85,
+      "flip": true,
+      "at": 0.5
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.86,
+      "s": 0.8,
+      "at": -1
+     }
+    ],
+    "notes": [
+     {
+      "text": "once more",
+      "x": 0.52,
+      "y": 0.4,
+      "at": "begged",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     960,
+     650
+    ],
+    "zoom": 1.5
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "The attempt was barely under way when Mauroy shook in a violent fit. The next day, he was dead. So was it the blood?",
+   "visual": "The candlelit room with the bed and the calf, the tube only half-laid; on 'dead' the whole picture washes slowly back into paper; note 'the blood?'.",
+   "cues": {
+    "shook": "shook",
+    "dead": "dead.",
+    "blood": "blood?"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "night": true,
+       "style": "rect"
+      },
+      "x": 0.12,
+      "at": -1
+     },
+     {
+      "g": "sickbed",
+      "o": {
+       "who": "man"
+      },
+      "x": 0.4,
+      "s": 1.7,
+      "at": -1
+     },
+     {
+      "g": "calf",
+      "o": {
+       "rope": true
+      },
+      "x": 0.79,
+      "s": 1.55,
+      "at": -1
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.06,
+      "layer": "fg",
+      "s": 0.55,
+      "at": -1
+     }
+    ],
+    "tube": {
+     "from": [
+      2,
+      "neck"
+     ],
+     "to": [
+      1,
+      "arm"
+     ],
+     "at": "shook",
+     "dur": 0.8,
+     "bend": 80
+    },
+    "mist": "dead",
+    "late_notes": [
+     {
+      "text": "the blood?",
+      "x": 0.5,
+      "y": 0.42,
+      "at": {
+       "cue": "dead",
+       "d": 1.0
+      },
+      "color": "red",
+      "size": 72
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Perrine blamed Denys, and the case went to court.",
+   "visual": "The Grand Châtelet, Paris's fortress court: a gate between two round towers under a grey sky; note 'Grand Châtelet'.",
+   "chapter": "Arsenic",
+   "cues": {
+    "court": "court"
+   },
+   "params": {
+    "sky": "storm",
+    "land": "city",
+    "horizon": 0.72,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "arch",
+      "o": {
+       "style": "gate"
+      },
+      "x": 0.5,
+      "s": 1.8,
+      "at": 0.1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "woman"
+      },
+      "x": 0.16,
+      "s": 1.3,
+      "at": 0.6
+     },
+     {
+      "g": "grass",
+      "x": 0.94,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Grand Châtelet",
+      "x": 0.82,
+      "y": 0.22,
+      "ax": 0.62,
+      "ay": 0.42,
+      "at": "court"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Then investigators found something no one expected. Arsenic.",
+   "visual": "A small glass flask alone on the plate, a white powder inside; on 'Arsenic' a red note 'arsenic'.",
+   "cues": {
+    "expected": "expected"
+   },
+   "params": {
+    "g": "bottle",
+    "o": {
+     "style": "flask"
+    },
+    "s": 0.9,
+    "pigment": "stain",
+    "notes": [
+     {
+      "text": "arsenic",
+      "part": "body",
+      "at": "expected",
+      "color": "red",
+      "size": 64
+     }
+    ],
+    "title": {
+     "text": "Poison",
+     "sub": "found by the investigators"
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "The court decided that poison, not calf's blood, had killed Mauroy. Some said his wife had slipped it into his broth.",
+   "visual": "A plain kitchen table by a window: a plain bowl of broth and the little flask beside it, a candle; note 'in his broth?'.",
+   "cues": {
+    "wife": "wife"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "style": "rect"
+      },
+      "x": 0.8,
+      "at": -1
+     },
+     {
+      "g": "table",
+      "x": 0.42,
+      "s": 2.2,
+      "at": -1
+     },
+     {
+      "g": "bleeding_bowl",
+      "o": {
+       "broth": true
+      },
+      "x": 0.38,
+      "y": 0.6,
+      "s": 1.0,
+      "at": 0.4
+     },
+     {
+      "g": "bottle",
+      "o": {
+       "style": "flask"
+      },
+      "x": 0.5,
+      "y": 0.6,
+      "s": 0.6,
+      "at": "wife"
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.6,
+      "y": 0.6,
+      "s": 0.6,
+      "at": -1
+     }
+    ],
+    "notes": [
+     {
+      "text": "in his broth?",
+      "x": 0.24,
+      "y": 0.24,
+      "ax": 0.36,
+      "ay": 0.46,
+      "at": "wife",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Others believed Denys's rivals had paid her to blame him. Denys walked free.",
+   "visual": "A gold coin painted large, slowly turning; note 'paid to blame him?'.",
+   "cues": {
+    "paid": "paid"
+   },
+   "params": {
+    "g": "coin",
+    "o": {
+     "metal": "gold",
+     "motif": "head"
+    },
+    "s": 0.9,
+    "drift": "turn",
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "paid to blame him?",
+      "part": "face",
+      "at": "paid",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "But in April 1668, the court added a rule. No transfusion on any human body without the approval of the Paris Faculty of Medicine, and the Faculty wanted nothing to do with it.",
+   "visual": "The court's ruling on old paper, written in line by line: 'No transfusion upon any human body without the approval of the Faculty of Medicine.' signed 'Paris court, 17 April 1668'.",
+   "params": {
+    "style": "letter",
+    "lines": [
+     "No transfusion",
+     "upon any human body",
+     "without the approval",
+     "of the Faculty of Medicine."
+    ],
+    "sign": "Paris court, 17 April 1668",
+    "at": 0.3
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Transfusion stopped. For about a hundred and fifty years, almost nobody dared to try again.",
+   "visual": "One big painted number '150' on a red swatch, hand note 'years of silence'.",
+   "params": {
+    "value": "150",
+    "label": "years of silence",
+    "count": true,
+    "color": "stain"
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "The silence ended in London.",
+   "visual": "Chapter card: 'Chapter 5 · A Gamble in London · 1818 – 1829' with a small candle.",
+   "chapter": "A gamble in London",
+   "params": {
+    "num": "Chapter 5",
+    "title": "A Gamble in London",
+    "sub": "1818 – 1829",
+    "g": "candle",
+    "o": {
+     "holder": true
+    },
+    "s": 0.6
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "The obstetrician James Blundell kept watching women bleed to death after giving birth.",
+   "visual": "London in rain: a brick hospital with many windows, St Paul's-like dome far away; a doctor in a dark coat and hat stands outside; note 'James Blundell'.",
+   "cues": {
+    "Blundell": "Blundell"
+   },
+   "params": {
+    "sky": "storm",
+    "land": "city",
+    "horizon": 0.74,
+    "weather": "rain",
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "modern"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "modern",
+       "floors": 3,
+       "lit": true
+      },
+      "x": 0.62,
+      "s": 1.7,
+      "at": 0.1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "modern"
+      },
+      "x": 0.26,
+      "s": 1.6,
+      "at": "Blundell"
+     },
+     {
+      "g": "shrub",
+      "x": 0.94,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "James Blundell",
+      "x": 0.4,
+      "y": 0.32,
+      "ax": 0.26,
+      "ay": 0.5,
+      "at": "Blundell"
+     },
+     {
+      "text": "London",
+      "x": 0.84,
+      "y": 0.16,
+      "at": 0.8
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     900,
+     640
+    ],
+    "zoom": 1.3
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "His experiments on dogs showed what Denys had missed: blood from another species was dangerous.",
+   "visual": "A bare laboratory floor: a dog lying on one side, a lamb on the other, a tube between them; on 'another' a red note 'another species: danger'.",
+   "cues": {
+    "dogs": "dogs",
+    "another": "another"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "dog",
+      "o": {
+       "pose": "sit"
+      },
+      "x": 0.3,
+      "s": 2.0,
+      "at": 0.2
+     },
+     {
+      "g": "lamb",
+      "x": 0.72,
+      "s": 1.5,
+      "flip": true,
+      "at": 0.5
+     }
+    ],
+    "tube": {
+     "from": [
+      0,
+      "top"
+     ],
+     "to": [
+      1,
+      "neck"
+     ],
+     "at": "dogs",
+     "dur": 1.6,
+     "bend": -70
+    },
+    "notes": [
+     {
+      "text": "another species: danger",
+      "x": 0.5,
+      "y": 0.4,
+      "at": "another",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     960,
+     720
+    ],
+    "zoom": 1.5
+   }
+  },
+  {
+   "type": "wc_transfusion_room",
+   "text": "So the blood had to come from a human. In 1829 he reported a mother, bleeding after childbirth, who received about eight ounces from his assistant.",
+   "visual": "A London lying-in room, pale walls and a pointed window: the mother in bed, head to the right; the assistant stands right beside the bed and a tube runs from his arm to hers, filling red on 'eight'; note '8 ounces'.",
+   "cues": {
+    "human": "human",
+    "eight": "eight",
+    "ounces": "ounces"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "paperDark",
+    "floor": "stoneDark",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "style": "pointed"
+      },
+      "x": 0.92,
+      "at": -1
+     },
+     {
+      "g": "sickbed",
+      "o": {
+       "who": "woman",
+       "blanket": "clothB"
+      },
+      "x": 0.6,
+      "s": 1.8,
+      "flip": true,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "modern"
+      },
+      "x": 0.38,
+      "s": 1.8,
+      "at": 0.2
+     }
+    ],
+    "tube": {
+     "from": [
+      0.395,
+      0.66
+     ],
+     "to": [
+      1,
+      "arm"
+     ],
+     "at": "eight",
+     "dur": 2.0,
+     "bend": -30
+    },
+    "notes": [
+     {
+      "text": "8 ounces",
+      "x": 0.42,
+      "y": 0.36,
+      "ax": 0.42,
+      "ay": 0.56,
+      "at": "ounces",
+      "color": "red"
+     }
+    ]
+   },
+   "camera": {
+    "focus": [
+     880,
+     660
+    ],
+    "zoom": 1.35
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "She said it felt as if life were being poured into her body. She lived.",
+   "visual": "Blundell's report in The Lancet, written in by hand: 'She felt as if life were infused into her body.' signed 'The Lancet, 1829'.",
+   "params": {
+    "style": "letter",
+    "lines": [
+     "She felt",
+     "as if life were infused",
+     "into her body."
+    ],
+    "sign": "The Lancet, 1829",
+    "at": 0.2
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "But across ten recorded attempts, success came only some of the time.",
+   "visual": "One big painted number '10' on a blue swatch, hand note 'recorded attempts', smaller note 'only some lived'.",
+   "params": {
+    "value": "10",
+    "label": "recorded attempts",
+    "note": "only some lived",
+    "count": true,
+    "color": "blue"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Same doctor, same method, same human blood, and still one patient lived while another died. Nobody could explain it.",
+   "visual": "Two candles on clean paper: the left one burning, the right one just blown out with a curl of smoke; notes 'lived' and 'died' and a red 'why?'.",
+   "cues": {
+    "lived": "lived",
+    "died": "died.",
+    "Nobody": "Nobody"
+   },
+   "params": {
+    "sky": "none",
+    "land": "none",
+    "horizon": 0.74,
+    "items": [
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.36,
+      "s": 2.2,
+      "at": 0.2
+     },
+     {
+      "g": "candle_out",
+      "x": 0.64,
+      "s": 2.0,
+      "at": 0.6
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.641,
+      "y": 0.5,
+      "h": 300,
+      "at": "died",
+      "a": 0.35
+     }
+    ],
+    "notes": [
+     {
+      "text": "lived",
+      "x": 0.36,
+      "y": 0.3,
+      "at": "lived",
+      "size": 52
+     },
+     {
+      "text": "died",
+      "x": 0.64,
+      "y": 0.3,
+      "at": "died",
+      "size": 52
+     },
+     {
+      "text": "why?",
+      "x": 0.5,
+      "y": 0.14,
+      "at": "Nobody",
+      "color": "red",
+      "size": 70
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "In 1900, in Vienna, Karl Landsteiner tried a simple experiment.",
+   "visual": "Chapter card: 'Chapter 6 · Red Knots · Vienna, 1900' with a small rack of test tubes.",
+   "chapter": "Red knots",
+   "params": {
+    "num": "Chapter 6",
+    "title": "Red Knots",
+    "sub": "Vienna, 1900",
+    "g": "test_tubes",
+    "s": 0.45
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "He took blood from his colleagues, separated the red cells from the clear liquid, and mixed them in every combination.",
+   "visual": "A Vienna laboratory by a tall window: a desk with a brass microscope and a rack of test tubes, bookshelves behind; note 'cells + serum'.",
+   "cues": {
+    "colleagues": "colleagues",
+    "mixed": "mixed"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.8,
+    "items": [
+     {
+      "g": "window",
+      "o": {
+       "style": "rect"
+      },
+      "x": 0.84,
+      "at": -1
+     },
+     {
+      "g": "shelf",
+      "x": 0.14,
+      "s": 1.3,
+      "at": -1
+     },
+     {
+      "g": "table",
+      "o": {
+       "style": "desk"
+      },
+      "x": 0.5,
+      "s": 1.6,
+      "at": -1
+     },
+     {
+      "g": "microscope",
+      "x": 0.42,
+      "y": 0.667,
+      "s": 0.75,
+      "at": 0.2
+     },
+     {
+      "g": "test_tubes",
+      "x": 0.58,
+      "y": 0.667,
+      "s": 0.6,
+      "at": "colleagues"
+     }
+    ],
+    "notes": [
+     {
+      "text": "cells + serum",
+      "x": 0.66,
+      "y": 0.3,
+      "ax": 0.58,
+      "ay": 0.4,
+      "at": "mixed"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_transfusion_cells",
+   "text": "Sometimes the mixture stayed smooth. Sometimes the cells clumped into tiny red knots.",
+   "visual": "Under the brass lens: red cells drifting evenly in pale liquid; on 'clumped' they pull together into five tight red knots; note 'clumped'.",
+   "cues": {
+    "smooth": "smooth.",
+    "clumped": "clumped",
+    "knots": "knots"
+   },
+   "params": {
+    "mode": "clump",
+    "at": "clumped",
+    "notes": [
+     {
+      "text": "smooth",
+      "x": 0.16,
+      "y": 0.3,
+      "at": "smooth"
+     },
+     {
+      "text": "clumped",
+      "x": 0.84,
+      "y": 0.5,
+      "at": "clumped",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "In 1901 he published the answer. Human blood comes in different groups.",
+   "visual": "Specimen plate: the rack of four test tubes painted large, two smooth red, two clumped; notes 'smooth' and 'clumped' and 'groups'.",
+   "cues": {
+    "published": "published",
+    "Human": "Human"
+   },
+   "params": {
+    "g": "test_tubes",
+    "s": 1.0,
+    "pigment": "sky",
+    "notes": [
+     {
+      "text": "smooth",
+      "part": "t0",
+      "at": "published"
+     },
+     {
+      "text": "clumped",
+      "part": "t3",
+      "at": "Human",
+      "color": "red"
+     }
+    ],
+    "title": {
+     "text": "Landsteiner, 1901",
+     "sub": "different groups"
+    }
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "He called them A, B and C, the group we now call O. A year later, two colleagues found a fourth, AB.",
+   "visual": "A short timeline painting itself in: 1901 'A, B, C', 'C = O', 1902 'AB'.",
+   "cues": {
+    "called": "called",
+    "now": "now",
+    "fourth": "fourth"
+   },
+   "params": {
+    "title": "Blood groups",
+    "items": [
+     {
+      "year": "1901",
+      "label": "A, B and C",
+      "at": "called"
+     },
+     {
+      "year": "later",
+      "label": "C becomes O",
+      "at": "now"
+     },
+     {
+      "year": "1902",
+      "label": "AB",
+      "at": "fourth"
+     }
+    ],
+    "highlight": 2
+   }
+  },
+  {
+   "type": "wc_transfusion_cells",
+   "text": "Suddenly the old mystery made sense. Blood attacks cells it does not recognise. A matching donor is safe, and the wrong one can kill.",
+   "visual": "The lens again: red cells with a few paler strangers among them; on 'attacks' the strangers break apart into dark specks; notes 'match: safe' and 'wrong: deadly'.",
+   "cues": {
+    "attacks": "attacks",
+    "matching": "matching",
+    "wrong": "wrong"
+   },
+   "params": {
+    "mode": "attack",
+    "at": "attacks",
+    "x": 0.42,
+    "notes": [
+     {
+      "text": "match: safe",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "matching"
+     },
+     {
+      "text": "wrong: deadly",
+      "x": 0.82,
+      "y": 0.56,
+      "at": "wrong",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Denys's first patients probably survived because very little animal blood reached them. Blundell's patients lived or died by the luck of the match. At first, almost nobody paid attention.",
+   "visual": "Map of western Europe: Paris marked 'a few ounces', London marked 'luck of the match', Vienna with a red star.",
+   "cues": {
+    "Denys": "Denys",
+    "Blundell": "Blundell",
+    "nobody": "nobody"
+   },
+   "params": {
+    "region": [
+     -6,
+     44,
+     19,
+     54.5
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Paris: a few ounces",
+      "lon": 2.35,
+      "lat": 48.86,
+      "kind": "city",
+      "at": "Denys",
+      "align": "below"
+     },
+     {
+      "name": "London: luck of the match",
+      "lon": -0.13,
+      "lat": 51.51,
+      "kind": "city",
+      "at": "Blundell",
+      "align": "above"
+     },
+     {
+      "name": "Vienna",
+      "lon": 16.37,
+      "lat": 48.21,
+      "kind": "star",
+      "color": "red",
+      "at": "nobody",
+      "align": "above"
+     }
+    ],
+    "seas": [
+     {
+      "text": "North Sea",
+      "lon": 3.5,
+      "lat": 54.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "That changed in New York in 1907, when Reuben Ottenberg tested a donor's blood against his patient's before a transfusion, the first one matched by type.",
+   "visual": "Map of the American east coast: New York marked with a red star, 'Reuben Ottenberg, 1907' written in.",
+   "chapter": "The blood bank",
+   "cues": {
+    "York": "York",
+    "Ottenberg": "Ottenberg"
+   },
+   "params": {
+    "region": [
+     -90,
+     30,
+     -60,
+     47
+    ],
+    "paint": 1.0,
+    "grid": false,
+    "places": [
+     {
+      "name": "New York",
+      "lon": -74.0,
+      "lat": 40.71,
+      "kind": "star",
+      "color": "red",
+      "at": "York",
+      "align": "right",
+      "size": 1.3
+     }
+    ],
+    "seas": [
+     {
+      "text": "Atlantic Ocean",
+      "lon": -66,
+      "lat": 35
+     }
+    ],
+    "labels": [
+     {
+      "text": "Reuben Ottenberg, 1907",
+      "lon": -79.5,
+      "lat": 43.8,
+      "italic": true,
+      "at": "Ottenberg"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "In 1930, Landsteiner won the Nobel Prize.",
+   "visual": "A gold medal on a blue ribbon, a profile head in relief, painted large; note 'Nobel Prize, 1930'.",
+   "cues": {
+    "Landsteiner": "Landsteiner"
+   },
+   "params": {
+    "g": "nobel_medal",
+    "o": {},
+    "s": 0.85,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "Nobel Prize, 1930",
+      "part": "disc",
+      "at": "Landsteiner",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "In 1937, in Chicago, Bernard Fantus opened a place where donated blood could be kept for days. He called it a blood bank.",
+   "visual": "A modern blood bag painted large, red with a white label and its tube; notes 'Chicago, 1937' and 'blood bank'.",
+   "cues": {
+    "Chicago": "Chicago",
+    "bank": "bank."
+   },
+   "params": {
+    "g": "blood_bag",
+    "s": 1.0,
+    "pigment": "sky",
+    "notes": [
+     {
+      "text": "Chicago, 1937",
+      "part": "top",
+      "at": "Chicago"
+     },
+     {
+      "text": "a blood bank",
+      "part": "bag",
+      "at": "bank",
+      "color": "red"
+     }
+    ],
+    "title": {
+     "text": "Bernard Fantus",
+     "sub": "Cook County Hospital"
+    }
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Today the fourteenth of June, Landsteiner's birthday, is World Blood Donor Day.",
+   "visual": "A big painted date '14 June' on a red swatch, hand note 'World Blood Donor Day'.",
+   "params": {
+    "value": "14 June",
+    "label": "World Blood Donor Day",
+    "note": "Landsteiner's birthday",
+    "count": false,
+    "color": "red"
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "Every bag of blood passed safely between strangers carries a little of this story, from a calf in a candlelit room to red knots in a glass tube.",
+   "visual": "The whole story as a timeline painting itself in: 1628 Harvey's circle, 1667 the lamb and the calf, 1668 the ban, 1829 Blundell, 1901 blood groups, 1937 blood bank.",
+   "cues": {
+    "calf": "calf",
+    "knots": "knots"
+   },
+   "params": {
+    "title": "From a calf to a blood bank",
+    "items": [
+     {
+      "year": "1628",
+      "label": "Harvey's circle"
+     },
+     {
+      "year": "1667",
+      "label": "lamb and calf",
+      "at": "calf"
+     },
+     {
+      "year": "1668",
+      "label": "the ban"
+     },
+     {
+      "year": "1829",
+      "label": "Blundell"
+     },
+     {
+      "year": "1901",
+      "label": "blood groups",
+      "at": "knots"
+     },
+     {
+      "year": "1937",
+      "label": "blood bank"
+     }
+    ],
+    "highlight": 4
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Would you have let a doctor try this in 1667? Tell me in the comments, and subscribe to Stickstory for more true stories of the human body.",
+   "visual": "Closing title card: 'The Wrong Blood' with the silver tube and its red drop painted below, subtitle 'Paris 1667 · Vienna 1901'.",
+   "params": {
+    "text": "The Wrong Blood",
+    "sub": "Paris 1667 · Vienna 1901",
+    "g": "silver_tube",
+    "s": 1.2,
+    "color": "skyWarm"
+   }
+  }
+ ]
+}
