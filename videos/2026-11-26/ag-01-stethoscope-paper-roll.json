@@ -1,0 +1,398 @@
+{
+  "engine": "studio",
+  "theme": "watercolor",
+  "palette": "pamuk",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Stickstory",
+  "narrator": "fes",
+  "lang": "en",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "2t85BBUECtLLKQzxLD95",
+    "model": "eleven_v3"
+  },
+  "cover": {
+    "lines": [
+      "Born from",
+      "a blush"
+    ],
+    "highlight": [
+      "blush"
+    ],
+    "scene": 0,
+    "t": 2.3,
+    "focus": [
+      430,
+      900
+    ],
+    "zoom": 1.6
+  },
+  "scenes": [
+    {
+      "type": "wc_steth_ward",
+      "text": "The stethoscope was born from embarrassment.",
+      "visual": "The hook, under the cover text: close in the ward, the doctor in a grey-blue coat bends over the bed, eyes closed, his ear on the top of a rolled paper tube standing on the young woman's chest; his hand holds it; from the first frame a red bloom beats through her dress and red pulses climb the tube, her chest rises and falls, the light shimmers, his blush deepens.",
+      "params": {
+        "mode": "listen",
+        "beat_at": 0,
+        "window": false
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "In 1816, Paris doctor René Laennec faced a young woman with heart trouble.",
+      "visual": "A pale hospital ward by day: a tall arched window with light falling in, a wooden bed with a young woman lying under a blanket, and the doctor in a grey-blue coat with a white collar standing large at the foot of the bed, turned toward her. Note 'Necker Hospital, Paris'.",
+      "cues": {
+        "doc": "Laennec",
+        "heart": "heart"
+      },
+      "params": {
+        "sky": "none",
+        "land": "interior",
+        "wall": "stone",
+        "floor": "wood",
+        "items": [
+          {
+            "g": "window",
+            "o": {
+              "style": "arched",
+              "w": 1.3
+            },
+            "x": 0.2,
+            "at": -1
+          },
+          {
+            "g": "sickbed",
+            "o": {
+              "who": "woman",
+              "blanket": "clothB"
+            },
+            "x": 0.45,
+            "s": 1.25,
+            "at": 0.1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "stand",
+              "dress": "modern",
+              "face": "left",
+              "headgear": "bare",
+              "cols": {
+                "cloth": "clothB",
+                "clothB": "ink"
+              }
+            },
+            "x": 0.78,
+            "s": 2.2,
+            "at": "doc",
+            "seed": 3
+          }
+        ],
+        "notes": [
+          {
+            "text": "Necker Hospital, Paris",
+            "x": 0.5,
+            "y": 0.3,
+            "at": 0.4,
+            "size": 56
+          }
+        ]
+      },
+      "camera": {
+        "focus": [
+          560,
+          900
+        ],
+        "zoom": 1.1
+      }
+    },
+    {
+      "type": "wc_steth_ward",
+      "text": "Tapping her chest told him little, and pressing his ear to it was improper.",
+      "visual": "Medium shot in the ward: the doctor in a dark coat stands behind the bed, cheeks a little flushed, and taps her chest twice with two fingers (small grey rings fade at once, note 'dull'); then he draws his hand back and 'improper' is written in red above.",
+      "cues": {
+        "tap": "Tapping",
+        "ear": "pressing"
+      },
+      "params": {
+        "mode": "tap",
+        "taps": [
+          0.6,
+          1.5
+        ],
+        "withdraw": "ear",
+        "notes": [
+          {
+            "text": "dull",
+            "x": 0.14,
+            "y": 0.4,
+            "ax": 0.43,
+            "ay": 0.465,
+            "at": 0.9
+          },
+          {
+            "text": "improper",
+            "x": 0.5,
+            "y": 0.13,
+            "at": {
+              "cue": "ear",
+              "d": 0.4
+            },
+            "color": "red",
+            "size": 66
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Then he recalled a trick children play:",
+      "visual": "A courtyard on a soft day, the city's roofs and spire far behind; a long squared timber beam lies on two stone blocks, a child kneeling at each end. Note 'a game'.",
+      "params": {
+        "sky": "day",
+        "land": "plain",
+        "horizon": 0.56,
+        "sun": false,
+        "paint": true,
+        "items": [
+          {
+            "g": "skyline",
+            "o": {
+              "style": "medieval"
+            },
+            "layer": "far",
+            "x": 0.5,
+            "s": 1.5,
+            "at": -1
+          },
+          {
+            "g": "timber_beam",
+            "x": 0.5,
+            "s": 0.66,
+            "at": 0.3
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "kneel",
+              "dress": "child",
+              "face": "right"
+            },
+            "x": 0.12,
+            "s": 2.5,
+            "at": 0.6,
+            "dy": 4
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "kneel",
+              "dress": "child",
+              "face": "left"
+            },
+            "x": 0.88,
+            "s": 2.5,
+            "at": 0.8,
+            "dy": 4,
+            "seed": 5
+          },
+          {
+            "g": "grass",
+            "x": 0.08,
+            "layer": "fg",
+            "s": 1.3
+          },
+          {
+            "g": "rock",
+            "x": 0.9,
+            "layer": "fg",
+            "s": 0.9
+          },
+          {
+            "g": "shrub",
+            "x": 0.5,
+            "y": 0.86,
+            "s": 0.9
+          }
+        ],
+        "notes": [
+          {
+            "text": "a children's game",
+            "x": 0.5,
+            "y": 0.3,
+            "at": 0.9,
+            "size": 58
+          }
+        ],
+        "birds": {
+          "x": 0.65,
+          "y": 0.18,
+          "n": 3
+        }
+      }
+    },
+    {
+      "type": "wc_steth_beam",
+      "text": "scratch one end of a long beam, and listen at the other.",
+      "visual": "Close on the beam: at the far (left) end a hand comes in with a pin and scratches the wood; at the near end a child kneels bent over the beam, cheek and ear on the wood; red arcs run through the beam from the pin to the ear. Notes 'a pin' and 'listening' (red).",
+      "cues": {
+        "scr": "scratch",
+        "lis": "listen"
+      },
+      "params": {
+        "waves_at": "scr",
+        "notes": [
+          {
+            "text": "a pin",
+            "x": 0.06,
+            "y": 0.36,
+            "ax": 0.08,
+            "ay": 0.48,
+            "at": {
+              "cue": "scr",
+              "d": 0.2
+            }
+          },
+          {
+            "text": "listening",
+            "x": 0.42,
+            "y": 0.3,
+            "ax": 0.7,
+            "ay": 0.47,
+            "at": "lis",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_steth_roll",
+      "text": "He rolled paper into a tight tube,",
+      "visual": "From above on a writing desk (an inkwell with a quill, the desk's front edge low in frame): a sheet of notepaper with faint handwriting rolls up from its top edge into a tight paper tube; two hands in grey-blue coat sleeves, short forearms coming in from the sides, hold its ends and follow it down.",
+      "cues": {
+        "roll": "rolled"
+      },
+      "params": {
+        "at": "roll",
+        "dur": 2.0,
+        "notes": [
+          {
+            "text": "a few sheets",
+            "x": 0.36,
+            "y": 0.17,
+            "at": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_steth_ward",
+      "text": "and set it on her chest. Her heartbeat came through clearer than ever.",
+      "visual": "The whole moment wide in the ward (the hook was the close-up): the woman's whole head on the pillow, the doctor bent over her, his ear at the top of the paper tube on her chest, his hand holding it. On 'heartbeat' a red bloom beats under her dress and red pulses run up the tube to his ear. Note 'lub-dub' in red.",
+      "cues": {
+        "beat": "heartbeat",
+        "clear": "clearer"
+      },
+      "params": {
+        "mode": "listen",
+        "beat_at": "beat",
+        "notes": [
+          {
+            "text": "lub-dub",
+            "x": 0.1,
+            "y": 0.3,
+            "ax": 0.42,
+            "ay": 0.37,
+            "at": "clear",
+            "color": "red",
+            "size": 56
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Today, his blush hangs around every doctor's neck.",
+      "visual": "A specimen plate: the rolled paper tube lies beside a modern stethoscope draped as if round a neck, painting in over a warm bloom. Notes '1816: paper' and 'today'.",
+      "cues": {
+        "neck": "neck"
+      },
+      "params": {
+        "g": "steth_pair",
+        "s": 1.0,
+        "pigment": "skyWarm",
+        "notes": [
+          {
+            "text": "1816: paper",
+            "part": "tube_end",
+            "at": 0.8,
+            "color": "red"
+          },
+          {
+            "text": "today",
+            "part": "top",
+            "at": "neck"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_title",
+      "text": "Subscribe for a true story like this every day.",
+      "visual": "Title card: a small rolled paper tube, 'The paper stethoscope', sub 'Paris, 1816'.",
+      "params": {
+        "text": "The paper stethoscope",
+        "sub": "Paris, 1816",
+        "g": "paper_tube",
+        "s": 1.2,
+        "color": "skyWarm"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia — René Laennec (invention at the Necker Hospital, 1816; De l'auscultation médiate, 1819; death 1826)",
+      "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Laennec"
+    },
+    {
+      "title": "PBS NewsHour — A curious inspiration for the first stethoscope",
+      "url": "https://www.pbs.org/newshour/health/a-curious-inspiration-for-the-first-stethoscope"
+    },
+    {
+      "title": "University of Virginia, Claude Moore Health Sciences Library — René Théophile Hyacinthe Laennec",
+      "url": "https://exhibits.hsl.virginia.edu/treasures/rene-theophile-hyacinthe-laennec-1781-1825"
+    },
+    {
+      "title": "Lemelson-MIT — René Laennec",
+      "url": "https://lemelson.mit.edu/resources/rene-laennec"
+    }
+  ],
+  "youtube": {
+    "title": "Stethoscope Invention: Why Did a Doctor Roll Up Paper?",
+    "description": "The stethoscope invention began with embarrassment. In 1816, at the Necker Hospital in Paris, Dr René Laennec had to examine a young woman with heart trouble. Tapping her chest told him little, and pressing his ear to a young woman's chest was improper. Then he remembered children scratching one end of a long piece of wood and listening at the other. He rolled a quire of paper into a tube, and her heartbeat came through clearer than ever. He later made it in wood and named it the stethoscope.\n\nSubscribe to Stickstory for a true story like this every day. Which everyday tool do you think has the strangest origin? Tell us in the comments!\n\n#shorts #stethoscope #stickstory",
+    "tags": [
+      "stethoscope invention",
+      "who invented the stethoscope",
+      "first stethoscope",
+      "invention of the stethoscope",
+      "rene laennec",
+      "laennec stethoscope",
+      "paper stethoscope",
+      "history of medicine",
+      "medical history",
+      "necker hospital",
+      "the human body",
+      "inventions",
+      "history",
+      "history stories",
+      "stickstory"
+    ],
+    "category_id": "28",
+    "publish_at": "2026-11-26T13:00:00-05:00",
+    "related": "videos/2026-11-25/ag-03-first-blood-transfusion.json"
+  },
+  "slug": "stethoscope-paper-roll"
+}

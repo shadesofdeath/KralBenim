@@ -1,0 +1,369 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "yaz",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Horses",
+   "vs eels"
+  ],
+  "highlight": [
+   "eels"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "focus": [
+   580,
+   820
+  ],
+  "zoom": 1.25
+ },
+ "scenes": [
+  {
+   "type": "wc_eel_strike",
+   "text": "Horses were sent to battle eels.",
+   "visual": "Hot day on the Venezuelan plains, palms on the far bank: a bay horse stands belly-deep in a brown pond; an electric eel arches out of the water and presses its chin against the horse's flank; gold sparks pulse from the contact from the first frame, rings spread; a second eel glides under the surface.",
+   "cues": {
+    "battle": "battle"
+   },
+   "params": {
+    "mode": "pond",
+    "painted": true,
+    "rise": -1,
+    "rise_dur": 0.7,
+    "fire": -1.2,
+    "coat": "bay",
+    "spark_s": 1.35
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "In 1800, Alexander von Humboldt wanted live electric eels in Venezuela.",
+   "visual": "Map of northern South America zooming in on Venezuela; Venezuela washes in; a red star marks Calabozo on the plains (Llanos), the Orinoco labelled.",
+   "cues": {
+    "ven": "Venezuela"
+   },
+   "params": {
+    "region": "south_america",
+    "paint": 1.0,
+    "zoom": {
+     "to": [
+      -74,
+      1,
+      -59,
+      13
+     ],
+     "at": 0.6,
+     "dur": 2.4
+    },
+    "areas": [
+     {
+      "countries": [
+       "VEN"
+      ],
+      "color": "leaf",
+      "alpha": 0.35,
+      "at": 1.4,
+      "dur": 1.6
+     }
+    ],
+    "places": [
+     {
+      "name": "Calabozo",
+      "lon": -67.43,
+      "lat": 8.92,
+      "kind": "star",
+      "at": 1.4,
+      "color": "red",
+      "align": "right",
+      "size": 1.3
+     }
+    ],
+    "labels": [
+     {
+      "text": "Llanos",
+      "lon": -66.5,
+      "lat": 7.6,
+      "italic": true,
+      "at": 2.6
+     }
+    ],
+    "seas": [
+     {
+      "text": "Caribbean Sea",
+      "lon": -67.5,
+      "lat": 12.4
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_eel_herd",
+   "text": "So local men drove about thirty wild horses into a muddy pond.",
+   "visual": "Wide sunny plain with palms: a herd of horses gallops in from the left and wades into a muddy pond, their legs vanishing under the brown water, rings and splashes spreading; two riders drive them from behind. Note 'about 30 horses'.",
+   "cues": {
+    "pond": "muddy"
+   },
+   "params": {
+    "n": 8,
+    "at": 0.0,
+    "notes": [
+     {
+      "text": "about 30 horses",
+      "x": 0.5,
+      "y": 0.2,
+      "at": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_eel_strike",
+   "text": "The eels rose, pressed against their bellies and fired, again and again.",
+   "visual": "Closer on the water line: a chestnut horse belly-deep, whole in frame, seen from the other side; an eel rises out of the brown water on 'rose', its chin pressed against the horse's flank; on 'fired' gold sparks pulse from the contact again and again. Red note 'shock!'.",
+   "cues": {
+    "rose": "rose",
+    "fired": "fired"
+   },
+   "params": {
+    "mode": "pond",
+    "flip": true,
+    "coat": "chestnut",
+    "rise": "rose",
+    "fire": "fired",
+    "pulse": 0.5,
+    "second": false,
+    "notes": [
+     {
+      "text": "shock!",
+      "x": 0.42,
+      "y": 0.2,
+      "ax": 0.66,
+      "ay": 0.45,
+      "at": "fired",
+      "color": "red",
+      "align": "left"
+     }
+    ],
+    "horse_s": 3.6,
+    "horse_x": 0.56,
+    "eel_s": 2.7,
+    "eel_x": 0.84
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Two horses drowned within minutes.",
+   "visual": "A big painted '2' on a water-blue swatch; above it a patch of brown pond water with rings spreading where something went under; hand-written under the number 'horses drowned'.",
+   "params": {
+    "value": "2",
+    "label": "horses drowned",
+    "color": "water",
+    "count": false,
+    "g": "eel_rings",
+    "s": 1.3
+   }
+  },
+  {
+   "type": "wc_eel_catch",
+   "text": "Then the tired eels were caught.",
+   "visual": "A still, muddy pond, fully in frame, upright palms behind: on the left bank a plainsman in profile, straw hat, a coil of rope in his hand; the rope runs down to a harpoon shaft standing in the shallows beside a limp, exhausted eel, which is drawn slowly toward the bank; rings spread. Note 'harpoons on ropes'.",
+   "cues": {
+    "tired": "tired"
+   },
+   "params": {
+    "pull": 0.5,
+    "notes": [
+     {
+      "text": "harpoons on ropes",
+      "x": 0.3,
+      "y": 0.2,
+      "ax": 0.44,
+      "ay": 0.43,
+      "at": 0.6
+     }
+    ],
+    "man_seed": 3
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "For two centuries, it sounded like a tall tale.",
+   "visual": "A naturalist's diary page written in line by line: 'March 1800', 'thirty horses and mules', 'the eels pressed against them', 'two drowned', signed 'A. von Humboldt'.",
+   "cues": {
+    "tale": "tall"
+   },
+   "params": {
+    "style": "diary",
+    "date": "March 1800",
+    "lines": [
+     "thirty horses and mules",
+     "the eels pressed against them",
+     "two horses drowned"
+    ],
+    "sign": "A. von Humboldt"
+   }
+  },
+  {
+   "type": "wc_eel_strike",
+   "text": "In 2016, a biologist filmed eels leaping from the water to shock a threat.",
+   "visual": "A lab: a glass tank on a table with low clear water; an aluminium plate with a column of small lights dips into it; an eel leaps up out of the water and presses its chin to the plate; on 'shock' the lights glow gold with each discharge. Note 'Vanderbilt lab, 2016'.",
+   "cues": {
+    "leap": "leaping",
+    "shock": "shock"
+   },
+   "params": {
+    "mode": "tank",
+    "rise": "leap",
+    "fire": "shock",
+    "pulse": 0.45,
+    "notes": [
+     {
+      "text": "Vanderbilt lab, 2016",
+      "x": 0.08,
+      "y": 0.13,
+      "at": 0.4,
+      "align": "left"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Humboldt was right.",
+   "visual": "Dusk on the llanos: the pond calm and gold with the low sun, a single horse standing on the bank, palms dark against the sky; the picture slowly washes back to paper.",
+   "params": {
+    "sky": "dusk",
+    "land": "plain",
+    "horizon": 0.48,
+    "sun": {
+     "x": 0.7,
+     "y": 0.6,
+     "r": 70
+    },
+    "items": [
+     {
+      "g": "palm",
+      "x": 0.14,
+      "layer": "mid",
+      "s": 1.4
+     },
+     {
+      "g": "palm",
+      "x": 0.9,
+      "layer": "mid",
+      "s": 1.1
+     },
+     {
+      "g": "pond",
+      "x": 0.5,
+      "y": 0.64,
+      "s": 1.0,
+      "o": {
+       "w": 780,
+       "h": 240
+      },
+      "at": -1
+     },
+     {
+      "g": "horse",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 1.3,
+      "o": {
+       "pose": "stand",
+       "coat": "bay"
+      },
+      "at": 0.2
+     },
+     {
+      "g": "grass",
+      "x": 0.85,
+      "layer": "fg",
+      "s": 1.4
+     },
+     {
+      "g": "reeds",
+      "x": 0.08,
+      "layer": "fg",
+      "s": 1.0
+     }
+    ],
+    "birds": {
+     "x": 0.6,
+     "y": 0.2,
+     "n": 4
+    },
+    "mist": 1.6
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Title card: a small painted electric eel, 'The horses and the eels', sub 'Humboldt, Venezuela, 1800'.",
+   "params": {
+    "text": "The horses and the eels",
+    "sub": "Humboldt, Venezuela, 1800",
+    "g": "electric_eel",
+    "o": {
+     "pose": "swim"
+    },
+    "s": 0.6,
+    "color": "water"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Catania — Leaping eels electrify threats, supporting Humboldt's account of a battle with horses, PNAS (2016)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4922196"
+  },
+  {
+   "title": "Vanderbilt University — Electric eels make leaping attacks (2016)",
+   "url": "https://news.vanderbilt.edu/2016/06/electric-eels-make-leaping-attacks/"
+  },
+  {
+   "title": "Smithsonian Magazine — Science proves electric eels can leap out of the water to attack",
+   "url": "https://www.smithsonianmag.com/science-nature/science-proves-electric-eels-can-leap-from-water-attack-180959319/"
+  },
+  {
+   "title": "APS News — This month in physics history: Humboldt and the electric eels (March 1800)",
+   "url": "https://aps.org/publications/apsnews/201703/physicshistory.cfm"
+  }
+ ],
+ "youtube": {
+  "title": "Electric Eels vs Horses: Did Humboldt Tell the Truth?",
+  "description": "Electric eels against horses sounds impossible: in March 1800, on the plains of Venezuela, Alexander von Humboldt wanted live electric eels, so local men drove about thirty wild horses and mules into a muddy pond. The eels rose, pressed against the horses and discharged again and again; two horses drowned within minutes, and only when the eels were exhausted could they be caught with harpoons on ropes. For two centuries scientists called it a tall tale, until biologist Kenneth Catania filmed electric eels leaping out of the water to shock a threat in 2016.\n\nSubscribe to Stickstory for a true story like this every day. Which animal superpower surprises you most? Tell us in the comments!\n\n#shorts #electriceel #humboldt #stickstory",
+  "tags": [
+   "electric eels",
+   "electric eel",
+   "electric eel shock",
+   "electric eel vs horse",
+   "alexander von humboldt",
+   "humboldt electric eels",
+   "leaping electric eels",
+   "kenneth catania",
+   "venezuela llanos",
+   "animal superpowers",
+   "history of science",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-26T19:00:00-05:00",
+  "related": "videos/2026-11-03/ag-03-bat-echolocation.json"
+ },
+ "slug": "humboldt-electric-eels"
+}
