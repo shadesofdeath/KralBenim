@@ -1,0 +1,526 @@
+{
+  "engine": "studio",
+  "theme": "watercolor",
+  "palette": "keten",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "cover": {
+    "lines": [
+      "Şölende",
+      "yakıldı"
+    ],
+    "highlight": [
+      "yakıldı"
+    ],
+    "scene": 0,
+    "t": 2.2,
+    "focus": [
+      540,
+      900
+    ],
+    "zoom": 1.25
+  },
+  "scenes": [
+    {
+      "type": "wc_persepolis_fire",
+      "text": "Bu saray bir şölende yakıldı.",
+      "visual": "Gece; önde şölen masasında tek bir altın kadeh, arkada uzakta boğa başlıklı sütunlarıyla alev alev yanan Persepolis sarayı, yükselen duman ve kıvılcımlar.",
+      "cues": {
+        "yak": "yakıldı"
+      },
+      "params": {
+        "mode": "toast",
+        "fire_at": 0
+      }
+    },
+    {
+      "type": "wc_map",
+      "text": "Milattan önce 330'da İskender, Pers başkenti Persepolis'teydi.",
+      "visual": "Yunanistan'dan İran'a boyanmış harita; Makedonya'dan Persepolis'e uzanan kırmızı sefer yolu, Persepolis'te kırmızı yıldız.",
+      "params": {
+        "region": [
+          20.5,
+          27.5,
+          55.5,
+          42.5
+        ],
+        "paint": 1.0,
+        "places": [
+          {
+            "name": "Makedonya",
+            "lon": 22.52,
+            "lat": 40.76,
+            "kind": "city",
+            "at": 0.3,
+            "align": "above"
+          },
+          {
+            "name": "Persepolis",
+            "lon": 52.89,
+            "lat": 29.93,
+            "kind": "star",
+            "at": 1.4,
+            "color": "red",
+            "align": "left"
+          }
+        ],
+        "routes": [
+          {
+            "points": [
+              [
+                22.52,
+                40.76
+              ],
+              [
+                27.5,
+                40.0
+              ],
+              [
+                33.0,
+                38.6
+              ],
+              [
+                36.2,
+                36.9
+              ],
+              [
+                40.5,
+                35.6
+              ],
+              [
+                44.4,
+                32.5
+              ],
+              [
+                48.25,
+                32.19
+              ],
+              [
+                52.89,
+                29.93
+              ]
+            ],
+            "at": 0.6,
+            "dur": 2.4,
+            "color": "red",
+            "arrow": true
+          }
+        ],
+        "seas": [
+          {
+            "text": "Akdeniz",
+            "lon": 30.5,
+            "lat": 33.6
+          },
+          {
+            "text": "Basra Körfezi",
+            "lon": 46.6,
+            "lat": 27.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Şölende Atinalı Thais sarayı yakmayı önerdi.",
+      "visual": "Kandil ışığının yıkadığı şölen salonu; iki Pers sütunu arasında yandan görünen Atinalı Thais, kolu ileride, elinde küçük altın kadeh; yanında amfora ve kandil, ön planda meyve ve ekmekle dolu şölen masası.",
+      "cues": {
+        "oner": "önerdi"
+      },
+      "params": {
+        "sky": "none",
+        "land": "interior",
+        "wall": "night",
+        "floor": "stoneDark",
+        "horizon": 0.6,
+        "items": [
+          {
+            "g": "hall_wash",
+            "x": 0.5,
+            "layer": "far",
+            "y": 0.6,
+            "at": -1,
+            "sway": false,
+            "s": 1
+          },
+          {
+            "g": "persian_column",
+            "x": 0.08,
+            "layer": "mid",
+            "s": 1.25,
+            "at": -1
+          },
+          {
+            "g": "persian_column",
+            "x": 0.92,
+            "layer": "mid",
+            "s": 1.25,
+            "at": -1
+          },
+          {
+            "g": "toast_woman",
+            "x": 0.4,
+            "s": 2.3,
+            "at": 0.05,
+            "paint": 1.0
+          },
+          {
+            "g": "amphora",
+            "o": {
+              "style": "greek"
+            },
+            "x": 0.8,
+            "s": 0.55,
+            "at": 0.3
+          },
+          {
+            "g": "oil_lamp",
+            "x": 0.2,
+            "s": 0.45,
+            "at": 0.2
+          },
+          {
+            "g": "feast_table",
+            "o": {
+              "w": 1240,
+              "h": 280,
+              "cloth": "clothC"
+            },
+            "x": 0.5,
+            "y": 0.97,
+            "at": -1,
+            "sway": false
+          }
+        ],
+        "notes": [
+          {
+            "text": "Thais",
+            "x": 0.62,
+            "y": 0.22,
+            "ax": 0.47,
+            "ay": 0.33,
+            "at": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Çünkü Persler Atina'yı yakmıştı.",
+      "visual": "Alacakaranlıkta bir tepe üstünde yanan bir Yunan tapınağı, tepeden yükselen duman; el yazısıyla 'Atina, MÖ 480'.",
+      "params": {
+        "sky": "dusk",
+        "land": "hills",
+        "horizon": 0.58,
+        "sun": false,
+        "amp": 1.3,
+        "items": [
+          {
+            "g": "temple",
+            "o": {
+              "cols": 6
+            },
+            "x": 0.5,
+            "s": 1.35,
+            "at": 0.0,
+            "paint": 1.2
+          },
+          {
+            "g": "burning",
+            "o": {
+              "w": 1.1
+            },
+            "x": 0.5,
+            "s": 1.2,
+            "at": 0.3,
+            "dy": 6
+          },
+          {
+            "g": "cypress",
+            "x": 0.1,
+            "s": 1.1
+          },
+          {
+            "g": "shrub",
+            "x": 0.15,
+            "layer": "fg"
+          },
+          {
+            "g": "rock",
+            "x": 0.82,
+            "layer": "fg",
+            "s": 0.9
+          }
+        ],
+        "smoke": [
+          {
+            "x": 0.55,
+            "h": 700,
+            "at": 0.3,
+            "a": 0.45
+          }
+        ],
+        "notes": [
+          {
+            "text": "Atina, MÖ 480",
+            "x": 0.5,
+            "y": 0.13,
+            "at": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_persepolis_fire",
+      "text": "İlk meşaleyi İskender attı.",
+      "visual": "Saray içi, gece; solda kırmızı pelerinli, kollarını kaldırmış İskender, elinden fırlayan meşale yay çizerek iki sütun arasındaki kırmızı perdeye düşüyor, perde alev alıyor; önde şölen masası.",
+      "cues": {
+        "mesale": "meşaleyi"
+      },
+      "params": {
+        "mode": "throw",
+        "throw": "mesale"
+      }
+    },
+    {
+      "type": "wc_persepolis_fire",
+      "text": "Sedir tavan kirişleri tutuştu.",
+      "visual": "Yakın plan, tavana bakış: kareyi yatay kesen üç kalın sedir kiriş, ortadaki çatlamış ve sarkmış, hepsinin üstünde alevler, aşağı dökülen kıvılcımlar, tavanda dönen duman.",
+      "cues": {
+        "sedir": "Sedir"
+      },
+      "params": {
+        "mode": "beams",
+        "fire_at": 0,
+        "notes": [
+          {
+            "text": "sedir",
+            "x": 0.62,
+            "y": 0.07,
+            "ax": 0.52,
+            "ay": 0.15,
+            "at": "sedir"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_letter",
+      "text": "Arrianos'a göre bu bir intikam kararıydı.",
+      "visual": "Eski bir sayfa: satır satır yazılan özet 'Sarayı, Atina'nın öcü olarak yaktı.' altında 'Arrianos, Anabasis 3.18 (özet)'.",
+      "cues": {
+        "intikam": "intikam"
+      },
+      "params": {
+        "style": "letter",
+        "lines": [
+          "Sarayı, Atina'nın",
+          "öcü olarak yaktı."
+        ],
+        "sign": "Arrianos, Anabasis 3.18 (özet)",
+        "at": 0.2
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Plutarkhos'a göre İskender hemen pişman oldu.",
+      "visual": "Şafak; dumanı tüten yıkık terasın önünde tek başına oturmuş bir adam, arkada kırık sütunlar ve yükselen ince duman.",
+      "cues": {
+        "pisman": "pişman"
+      },
+      "params": {
+        "sky": "dawn",
+        "land": "plain",
+        "horizon": 0.58,
+        "sun": false,
+        "items": [
+          {
+            "g": "apadana",
+            "o": {
+              "ruined": true,
+              "burnt": true,
+              "n": 6
+            },
+            "x": 0.5,
+            "layer": "mid",
+            "s": 1.2,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "sit",
+              "dress": "soldier",
+              "cape": "cloth",
+              "face": "left"
+            },
+            "x": 0.36,
+            "s": 1.9,
+            "dy": 0,
+            "at": 0.2
+          },
+          {
+            "g": "rock",
+            "x": 0.2,
+            "layer": "fg",
+            "s": 0.9
+          },
+          {
+            "g": "grass",
+            "x": 0.72,
+            "layer": "fg"
+          }
+        ],
+        "smoke": [
+          {
+            "x": 0.3,
+            "h": 600,
+            "at": 0,
+            "a": 0.35
+          },
+          {
+            "x": 0.7,
+            "h": 520,
+            "at": 0.3,
+            "a": 0.3
+          }
+        ],
+        "notes": [
+          {
+            "text": "pişmanlık",
+            "x": 0.62,
+            "y": 0.4,
+            "ax": 0.38,
+            "ay": 0.47,
+            "at": 1.0,
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Bir imparatorluğun kalbi belki bir kadeh yüzünden kül oldu.",
+      "visual": "Kül rengi lekede dik duran tek altın kadeh, büyük levha; el yazısıyla 'tek bir kadeh' notu.",
+      "cues": {
+        "kadeh": "kadeh"
+      },
+      "params": {
+        "g": "cup",
+        "o": {
+          "style": "goblet"
+        },
+        "rot": 0,
+        "s": 1.05,
+        "drift": "float",
+        "pigment": "stain",
+        "notes": [
+          {
+            "text": "tek bir kadeh",
+            "part": "bowl",
+            "at": "kadeh",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "visual": "Bugün: gündüz, çöl ovasında Persepolis'in yıkık terası ve ayakta kalmış üç uzun sütun, kuşlar.",
+      "params": {
+        "sky": "day",
+        "land": "desert",
+        "horizon": 0.6,
+        "amp": 1.2,
+        "items": [
+          {
+            "g": "apadana",
+            "o": {
+              "ruined": true,
+              "n": 6
+            },
+            "x": 0.5,
+            "s": 0.82,
+            "at": -1
+          },
+          {
+            "g": "shrub",
+            "x": 0.12,
+            "layer": "fg"
+          },
+          {
+            "g": "rock",
+            "x": 0.86,
+            "layer": "fg",
+            "s": 0.8
+          }
+        ],
+        "birds": {
+          "x": 0.3,
+          "y": 0.18,
+          "n": 5
+        },
+        "notes": [
+          {
+            "text": "Persepolis, bugün",
+            "x": 0.5,
+            "y": 0.09,
+            "at": 0.4
+          }
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "Diodorus on the sack of Persepolis — Livius.org",
+      "url": "https://livius.org/sources/content/diodorus/alexander-sacks-persepolis"
+    },
+    {
+      "title": "Alexander the Great & the Burning of Persepolis — World History Encyclopedia",
+      "url": "https://www.worldhistory.org/article/214/alexander-the-great--the-burning-of-persepolis"
+    },
+    {
+      "title": "Plutarch, Life of Alexander 38 — Lexundria",
+      "url": "https://lexundria.com/plut_alex/38/prr"
+    },
+    {
+      "title": "Persepolis — UNESCO World Heritage Centre",
+      "url": "https://whc.unesco.org/en/list/114"
+    }
+  ],
+  "youtube": {
+    "title": "Persepolis Yangını: Bir Saray Neden Şölende Yakıldı?",
+    "description": "Persepolis yangını milattan önce 330'da bir şölende başladı. Büyük İskender, Pers krallarının sarayında aylarca kaldıktan sonra sarayı ateşe verdi. Diodoros, Curtius ve Plutarkhos'a göre Atinalı Thais sarayı yakmayı önerdi, çünkü Persler Atina'yı yakmıştı. İlk meşaleyi İskender attı. Arrianos ise bunun bir intikam kararı olduğunu yazdı. Plutarkhos'a göre İskender hemen pişman oldu.\n\nBöyle sessiz tarih hikâyeleri için abone ol. Sence Persepolis bir intikam için mi, bir kadeh yüzünden mi yandı? Yorumlara yaz!\n\n#shorts #persepolis #büyükiskender #düşünbakalım",
+    "tags": [
+      "persepolis yangını",
+      "persepolis",
+      "persepolis sarayı",
+      "persepolis neden yakıldı",
+      "büyük iskender",
+      "iskender persepolis",
+      "pers imparatorluğu",
+      "ahameniş",
+      "thais",
+      "arrianos",
+      "plutarkhos",
+      "antik çağ",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-26T19:00:00+03:00"
+  },
+  "slug": "persepolis-yangini"
+}

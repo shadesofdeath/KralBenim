@@ -1,0 +1,2887 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "pamuk",
+ "format": "long",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Düşün Bakalım",
+ "narrator": "kasif",
+ "lang": "tr",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "mF7tIc9VLrznhGooGjaT",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "Taht yerine",
+   "kule"
+  ],
+  "highlight": [
+   "kule"
+  ],
+  "scene": 29,
+  "t": 4.5,
+  "focus": [
+   1075,
+   469
+  ],
+  "zoom": 1.8
+ },
+ "sources": [
+  {
+   "title": "CEM SULTAN — TDV İslâm Ansiklopedisi",
+   "url": "https://islamansiklopedisi.org.tr/cem-sultan"
+  },
+  {
+   "title": "CEM SULTAN TÜRBESİ — TDV İslâm Ansiklopedisi",
+   "url": "https://islamansiklopedisi.org.tr/cem-sultan-turbesi"
+  },
+  {
+   "title": "Cem — Encyclopaedia Britannica",
+   "url": "https://www.britannica.com/biography/Cem"
+  },
+  {
+   "title": "Cem Sultan — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Cem_Sultan"
+  },
+  {
+   "title": "Kemal Yavuz, Frengistan'da Ağlayan Bir Şair: Ölümünün 515. Yılında Cem Sultan — DergiPark",
+   "url": "https://dergipark.org.tr/en/download/article-file/157490"
+  },
+  {
+   "title": "Pope Innocent VIII — Wikipedia",
+   "url": "https://en.wikipedia.org/wiki/Pope_Innocent_VIII"
+  },
+  {
+   "title": "La Tour Zizim, Bourganeuf — Creuse Tourisme",
+   "url": "https://www.tourisme-creuse.com/en/creuse-sud-ouest/discover/our-heritage/remarkable-buildings/zizim-tower"
+  }
+ ],
+ "youtube": {
+  "title": "Cem Sultan: Tahtı Kaybeden Şehzade Neden Düşmana Sığındı?",
+  "description": "Cem Sultan, Fatih Sultan Mehmet'in küçük oğlu, 1482 yazında babasının kuşattığı Rodos'a, Saint-Jean şövalyelerine sığındı ve oradan hiç özgür çıkamadı. Ağabeyi II. Bayezid ile taht kavgasını kaybeden şehzade, on üç yıla yakın bir süre Avrupa'nın elinde bir rehineye dönüştü: önce şövalyeler, sonra Papa, Osmanlı sarayından her yıl kırk bin altın aldı. Bu belgeselde Cem Sultan'ın Yenişehir'den Kahire'ye, Rodos'tan Bourganeuf kulesine ve Napoli'ye uzanan gerçek hikâyesi var.\n\nBu videoda:\n• 1481: Fatih'in ölümü ve İstanbul'a yarış\n• Bursa'da on sekiz günlük saltanat, Yenişehir ve imparatorluğu bölme teklifi\n• Kahire, hac ve 1482'deki ikinci deneme\n• Rodos'un gizli pazarlığı ve Bourganeuf'teki yedi katlı kule\n• Papa VIII. Innocentius, Kutsal Mızrak, Napoli'de ölüm ve Bursa Muradiye'ye dönüş\n\nHer gün yeni bir 'neden?' için abone ol. Sence Cem Sultan, Rodos yerine ağabeyine teslim olsaydı yaşar mıydı? Yorumlara yaz!\n\n#cemsultan #osmanlıtarihi #ikincibayezid #tarih #düşünbakalım",
+  "tags": [
+   "cem sultan",
+   "cem sultan hayatı",
+   "cem sultan rodos",
+   "cem sultan ölümü",
+   "şehzade cem",
+   "ikinci bayezid",
+   "fatih sultan mehmet",
+   "rodos şövalyeleri",
+   "bourganeuf",
+   "papa innocentius",
+   "yenişehir savaşı",
+   "muradiye",
+   "osmanlı tarihi",
+   "osmanlı şehzadeleri",
+   "tarih",
+   "tarih hikayeleri",
+   "düşün bakalım"
+  ],
+  "category_id": "27",
+  "publish_at": "2026-11-26T20:30:00+03:00"
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "Temmuz, bin dört yüz seksen iki. Bir gemi Rodos limanına süzüldü. İçinde yirmi iki yaşında bir Osmanlı şehzadesi vardı.",
+   "visual": "Alacakaranlık; sağda kıyıda sur ve kuleleriyle bir şövalye kalesi, soldan limana süzülen tek bir büyük yelkenli; denizde ışıltı.",
+   "chapter": "Rodos, 1482",
+   "cues": {
+    "rod": "Rodos",
+    "seh": "şehzadesi"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "coast",
+    "coast": "left",
+    "horizon": 0.66,
+    "sun": false,
+    "items": [
+     {
+      "g": "castle",
+      "o": {
+       "style": "medieval",
+       "flag": "red"
+      },
+      "x": 0.8,
+      "layer": "mid",
+      "s": 1.3,
+      "at": -1
+     },
+     {
+      "g": "carrack",
+      "x": 0.18,
+      "s": 1.5,
+      "at": 0.2,
+      "move": {
+       "to": [
+        0.42
+       ],
+       "at": 0.2,
+       "dur": 9
+      }
+     },
+     {
+      "g": "rock",
+      "x": 0.95,
+      "layer": "fg"
+     }
+    ],
+    "birds": {
+     "x": 0.55,
+     "y": 0.18,
+     "n": 4
+    },
+    "notes": [
+     {
+      "text": "Rodos",
+      "x": 0.82,
+      "y": 0.16,
+      "ax": 0.8,
+      "ay": 0.42,
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Babası İstanbul'u fethetmişti. İki yıl önce de bu adayı kuşatmış, alamamıştı.",
+   "visual": "Ege haritası: kuzeyde İstanbul'da bir yıldız, güneyde Rodos adasında çarpışan kılıçlar işareti ve '1480' notu; İstanbul'dan Rodos'a kırmızı bir sefer rotası.",
+   "cues": {
+    "kus": "kuşatmış"
+   },
+   "params": {
+    "region": [
+     25.0,
+     35.6,
+     31.5,
+     41.6
+    ],
+    "paint": 1.2,
+    "places": [
+     {
+      "name": "İstanbul",
+      "lon": 28.97,
+      "lat": 41.01,
+      "kind": "star",
+      "color": "red",
+      "at": 0.4,
+      "align": "right"
+     },
+     {
+      "name": "Rodos",
+      "lon": 28.22,
+      "lat": 36.44,
+      "kind": "battle",
+      "at": "kus",
+      "align": "right"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        28.97,
+        41.01
+       ],
+       [
+        28.0,
+        40.0
+       ],
+       [
+        27.0,
+        38.5
+       ],
+       [
+        27.6,
+        37.0
+       ],
+       [
+        28.1,
+        36.55
+       ]
+      ],
+      "at": 1.0,
+      "dur": 2.2,
+      "color": "red"
+     }
+    ],
+    "labels": [
+     {
+      "text": "1480",
+      "lon": 29.4,
+      "lat": 36.0,
+      "at": {
+       "cue": "kus",
+       "d": 0.6
+      }
+     }
+    ],
+    "seas": [
+     {
+      "text": "Ege Denizi",
+      "lon": 25.6,
+      "lat": 38.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Şimdi oğlu, aynı şövalyelerin kapısındaydı. Şövalyeler onu bir hükümdar gibi karşıladı.",
+   "visual": "Gündüz; taş bir kale kapısının önünde iki şövalye (zırh, haçlı üstlük) ve karşılarında kaftanlı, sarıklı genç bir şehzade.",
+   "camera": {
+    "focus": [
+     860,
+     620
+    ],
+    "zoom": 1.8
+   },
+   "cues": {
+    "kap": "kapısındaydı",
+    "sov": "Şövalyeler"
+   },
+   "params": {
+    "sky": "day",
+    "land": "hills",
+    "amp": 0.5,
+    "clouds": 3,
+    "horizon": 0.74,
+    "items": [
+     {
+      "g": "cypress",
+      "x": 0.12,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "tree",
+      "x": 0.88,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "wall",
+      "o": {
+       "len": 900,
+       "h": 230,
+       "gate": true
+      },
+      "x": 0.5,
+      "layer": "mid",
+      "s": 1.4,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "knight",
+       "hold": "spear"
+      },
+      "x": 0.52,
+      "s": 1.8,
+      "flip": true,
+      "at": 0.3
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "knight",
+       "hold": "flag"
+      },
+      "x": 0.61,
+      "s": 1.7,
+      "flip": true,
+      "at": 0.6
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "ottoman"
+      },
+      "x": 0.37,
+      "s": 1.9,
+      "at": "kap"
+     },
+     {
+      "g": "grass",
+      "x": 0.08,
+      "layer": "fg"
+     },
+     {
+      "g": "shrub",
+      "x": 0.92,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Saint-Jean şövalyeleri",
+      "x": 0.37,
+      "y": 0.39,
+      "ax": 0.52,
+      "ay": 0.46,
+      "at": "sov"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ama Cem Sultan o adadan bir daha özgür bir adam olarak ayrılmayacaktı.",
+   "visual": "Gece; kalenin kapısı kapanmış, surun önünde elinde fenerle tek bir şövalye nöbet tutuyor; ayın altında deniz.",
+   "cues": {
+    "ayr": "ayrılmayacaktı"
+   },
+   "params": {
+    "sky": "night",
+    "land": "coast",
+    "coast": "left",
+    "horizon": 0.7,
+    "sun": {
+     "x": 0.25,
+     "y": 0.25,
+     "r": 40
+    },
+    "items": [
+     {
+      "g": "tower",
+      "o": {
+       "style": "round",
+       "h": 1.3,
+       "roof": true
+      },
+      "x": 0.72,
+      "layer": "mid",
+      "s": 1.4,
+      "at": -1
+     },
+     {
+      "g": "wall",
+      "o": {
+       "len": 500,
+       "h": 150
+      },
+      "x": 0.88,
+      "layer": "mid",
+      "s": 1.2,
+      "at": -1
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "knight",
+       "hold": "lantern"
+      },
+      "x": 0.6,
+      "s": 1.7,
+      "flip": true,
+      "at": 0.2
+     },
+     {
+      "g": "rock",
+      "x": 0.4,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "bir daha çıkmadı",
+      "x": 0.72,
+      "y": 0.8,
+      "at": 1.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Bir Osmanlı şehzadesi neden düşmanın kapısını çaldı? Ve oradan neden hiç çıkamadı?",
+   "visual": "Kâğıda büyük serif harflerle 'Cem Sultan', altında '1459 – 1495'; küçük bir kapalı kapı.",
+   "cues": {
+    "kap": "kapısını"
+   },
+   "params": {
+    "text": "Cem Sultan",
+    "sub": "1459 – 1495",
+    "g": "door",
+    "o": {
+     "style": "arched"
+    },
+    "s": 0.7,
+    "color": "skyWarm"
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Mayıs, bin dört yüz seksen bir. Fatih Sultan Mehmet, Gebze yakınlarındaki ordugâhında öldü.",
+   "visual": "Bölüm kartı: 'Bölüm 1 — İki kardeş', '1481', küçük bir ordugâh çadırı.",
+   "chapter": "İki kardeş",
+   "params": {
+    "num": "Bölüm 1",
+    "title": "İki kardeş",
+    "sub": "1481",
+    "g": "tent",
+    "o": {
+     "style": "military"
+    },
+    "s": 0.7
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Geride iki oğlu kalmıştı. Büyüğü Bayezid, Amasya'daydı. Küçüğü Cem, Konya'da.",
+   "visual": "Anadolu haritası: kuzeyde Amasya, güneyde Konya'da birer nokta ve adlar; batıda İstanbul'da kırmızı yıldız.",
+   "cues": {
+    "bay": "Bayezid",
+    "cem": "Cem"
+   },
+   "params": {
+    "region": "anatolia",
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "İstanbul",
+      "lon": 28.97,
+      "lat": 41.01,
+      "kind": "star",
+      "color": "red",
+      "at": 0.3,
+      "align": "above"
+     },
+     {
+      "name": "Bayezid · Amasya",
+      "lon": 35.83,
+      "lat": 40.65,
+      "kind": "city",
+      "at": "bay",
+      "align": "above"
+     },
+     {
+      "name": "Cem · Konya",
+      "lon": 32.49,
+      "lat": 37.87,
+      "kind": "city",
+      "at": "cem",
+      "align": "below"
+     }
+    ],
+    "seas": [
+     {
+      "text": "Karadeniz",
+      "lon": 34.0,
+      "lat": 42.6
+     },
+     {
+      "text": "Akdeniz",
+      "lon": 31.0,
+      "lat": 35.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "İkisi de aynı şeyi biliyordu. İstanbul'a ilk varan tahta oturacaktı. Ve kaybeden büyük olasılıkla yaşamayacaktı.",
+   "visual": "Bir saray odasının içi: pencereden düşen ışıkta halı üstünde boş, yaldızlı bir Osmanlı tahtı.",
+   "camera": {
+    "focus": [
+     820,
+     560
+    ],
+    "zoom": 1.5
+   },
+   "cues": {
+    "taht": "tahta"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "wood",
+    "horizon": 0.74,
+    "items": [
+     {
+      "g": "window",
+      "x": 0.75,
+      "at": -1
+     },
+     {
+      "g": "throne",
+      "o": {
+       "style": "ottoman"
+      },
+      "x": 0.42,
+      "s": 1.8,
+      "at": 0.2
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.16,
+      "s": 1.3,
+      "at": 0.6
+     }
+    ],
+    "notes": [
+     {
+      "text": "boş taht",
+      "x": 0.22,
+      "y": 0.24,
+      "ax": 0.38,
+      "ay": 0.5,
+      "at": "taht"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "Çünkü babalarının kanunu, tahta çıkan kardeşe öbürünü öldürme hakkı veriyordu.",
+   "visual": "Eski bir kanun sayfası: 'Kanunnâme', 'nizâm-ı âlem için…', 'karındaş katli' satırları beliriyor.",
+   "params": {
+    "style": "letter",
+    "lines": [
+     "Kanunnâme",
+     "nizâm-ı âlem için…",
+     "karındaş katli"
+    ],
+    "sign": "Fâtih Sultan Mehmed",
+    "at": 0.3
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Yirmi bir Mayıs'ta Bayezid İstanbul'a girdi. Cem yarışı kaybetmişti. Ama vazgeçmedi.",
+   "visual": "Anadolu haritası: Amasya'dan İstanbul'a uzanan kırmızı bir rota, ucunda İstanbul yıldızı; Konya'dan kısa, kesik bir çizgi geride kalıyor.",
+   "cues": {
+    "kay": "kaybetmişti"
+   },
+   "params": {
+    "region": "anatolia",
+    "paint": 0,
+    "places": [
+     {
+      "name": "İstanbul",
+      "lon": 28.97,
+      "lat": 41.01,
+      "kind": "star",
+      "color": "red",
+      "at": 0.1,
+      "align": "above"
+     },
+     {
+      "name": "Amasya",
+      "lon": 35.83,
+      "lat": 40.65,
+      "kind": "city",
+      "at": 0.1,
+      "align": "above"
+     },
+     {
+      "name": "Konya",
+      "lon": 32.49,
+      "lat": 37.87,
+      "kind": "city",
+      "at": 0.1,
+      "align": "below"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        35.83,
+        40.65
+       ],
+       [
+        33.5,
+        40.6
+       ],
+       [
+        31.0,
+        40.7
+       ],
+       [
+        28.97,
+        41.01
+       ]
+      ],
+      "at": 0.3,
+      "dur": 2.4,
+      "color": "red",
+      "width": 11
+     },
+     {
+      "points": [
+       [
+        32.49,
+        37.87
+       ],
+       [
+        31.6,
+        38.6
+       ],
+       [
+        30.8,
+        39.2
+       ]
+      ],
+      "at": "kay",
+      "dur": 1.2,
+      "color": "ink",
+      "dashed": true
+     }
+    ],
+    "labels": [
+     {
+      "text": "21 Mayıs",
+      "lon": 31.5,
+      "lat": 41.3,
+      "at": 2.0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Cem, Bursa'ya yürüdü ve şehri aldı. On sekiz gün boyunca orada padişahtı.",
+   "visual": "Bölüm kartı: 'Bölüm 2 — On sekiz gün', 'Bursa, 1481', küçük bir cami.",
+   "chapter": "On sekiz gün",
+   "params": {
+    "num": "Bölüm 2",
+    "title": "On sekiz gün",
+    "sub": "Bursa, 1481",
+    "g": "mosque",
+    "o": {
+     "minarets": 2
+    },
+    "s": 0.45
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Adına para bastırdı, camilerde onun adına hutbe okundu.",
+   "visual": "Müze levhası: büyük, gümüş bir Osmanlı akçesi, portresiz, üç satır yazılı; notlar 'Cem adına' ve 'Bursa'.",
+   "cues": {
+    "para": "para"
+   },
+   "params": {
+    "g": "cem_akce",
+    "o": {
+     "metal": "silver"
+    },
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "Cem adına",
+      "part": "text",
+      "at": "para",
+      "color": "red"
+     },
+     {
+      "text": "Bursa, 1481",
+      "part": "rim",
+      "at": 1.6
+     }
+    ],
+    "title": {
+     "text": "Bir sultanın parası",
+     "sub": "on sekiz günlük saltanat"
+    }
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Sonra ağabeyine bir mektup gönderdi. Teklifi basitti. Anadolu onun olacaktı, Rumeli Bayezid'in.",
+   "visual": "Harita: Anadolu bir renkle, Rumeli (Balkanlar) başka bir renkle yıkanıyor; üstlerinde 'Cem' ve 'Bayezid' yazıları, aralarında Boğaz.",
+   "cues": {
+    "ana": "Anadolu",
+    "rum": "Rumeli"
+   },
+   "params": {
+    "region": [
+     20.0,
+     35.5,
+     42.0,
+     45.5
+    ],
+    "paint": 1.0,
+    "areas": [
+     {
+      "poly": [
+       [
+        26.2,
+        40.3
+       ],
+       [
+        29.0,
+        41.1
+       ],
+       [
+        33.0,
+        42.0
+       ],
+       [
+        36.5,
+        41.6
+       ],
+       [
+        40.0,
+        41.0
+       ],
+       [
+        40.5,
+        38.0
+       ],
+       [
+        36.5,
+        36.6
+       ],
+       [
+        32.0,
+        36.2
+       ],
+       [
+        28.0,
+        36.6
+       ],
+       [
+        26.3,
+        38.8
+       ]
+      ],
+      "color": "gold",
+      "alpha": 0.45,
+      "at": "ana",
+      "from": [
+       32.49,
+       37.87
+      ],
+      "label": "Cem",
+      "label_at": [
+       33.0,
+       39.0
+      ]
+     },
+     {
+      "poly": [
+       [
+        19.5,
+        41.5
+       ],
+       [
+        20.5,
+        44.5
+       ],
+       [
+        24.0,
+        45.0
+       ],
+       [
+        28.6,
+        44.2
+       ],
+       [
+        28.0,
+        42.0
+       ],
+       [
+        29.0,
+        41.25
+       ],
+       [
+        26.2,
+        40.6
+       ],
+       [
+        24.0,
+        40.3
+       ],
+       [
+        22.6,
+        40.0
+       ]
+      ],
+      "color": "red",
+      "alpha": 0.4,
+      "at": "ana",
+      "dur": 1.8,
+      "from": [
+       28.97,
+       41.01
+      ],
+      "label": "Bayezid",
+      "label_at": [
+       23.6,
+       42.6
+      ]
+     }
+    ],
+    "seas": [
+     {
+      "text": "Karadeniz",
+      "lon": 34.0,
+      "lat": 43.3
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "İmparatorluk ikiye bölünecekti. Bayezid'in cevabı eski bir Arap sözüydü: hükümdarlar arasında akrabalık olmaz.",
+   "visual": "Eski bir mektup sayfası: tek bir cümle satır satır yazılıyor, 'Hükümdarlar arasında / akrabalık olmaz.', imza 'Bayezid'.",
+   "cues": {
+    "cev": "cevabı"
+   },
+   "params": {
+    "style": "letter",
+    "lines": [
+     "Hükümdarlar arasında",
+     "akrabalık olmaz."
+    ],
+    "sign": "Bayezid",
+    "at": "cev"
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Haziranda iki ordu Yenişehir ovasında karşılaştı. Cem yenildi.",
+   "visual": "Tozlu bir gün; yakın planda rüzgârda savrulan at kılı bir tuğ ve kırmızı, çatal uçlu düz bir sancak; arkada ovada toz ve duman içinde karşı karşıya iki ordu.",
+   "cues": {
+    "yen": "Yenişehir",
+    "yenil": "yenildi"
+   },
+   "params": {
+    "sky": "storm",
+    "land": "plain",
+    "horizon": 0.7,
+    "clouds": 4,
+    "items": [
+     {
+      "g": "army",
+      "o": {
+       "dress": "ottoman",
+       "banner": false,
+       "rows": 3,
+       "n": 10,
+       "face": "right"
+      },
+      "x": 0.18,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "army",
+      "o": {
+       "dress": "janissary",
+       "banner": false,
+       "rows": 3,
+       "n": 12,
+       "face": "left"
+      },
+      "x": 0.84,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "cem_tug",
+      "x": 0.45,
+      "s": 2.3,
+      "at": 0.2
+     },
+     {
+      "g": "cem_sancak",
+      "o": {
+       "color": "red"
+      },
+      "x": 0.53,
+      "s": 2.0,
+      "at": 0.5
+     },
+     {
+      "g": "cannon_smoke",
+      "o": {
+       "n": 2,
+       "dir": -1
+      },
+      "x": 0.72,
+      "y": 0.66,
+      "at": 1.0
+     },
+     {
+      "g": "grass",
+      "x": 0.3,
+      "layer": "fg"
+     },
+     {
+      "g": "rock",
+      "x": 0.92,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.7,
+      "layer": "fg"
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.2,
+      "h": 320,
+      "at": 0.3,
+      "a": 0.4
+     },
+     {
+      "x": 0.82,
+      "h": 340,
+      "at": 0.6,
+      "a": 0.4
+     }
+    ],
+    "notes": [
+     {
+      "text": "Yenişehir, 1481",
+      "x": 0.22,
+      "y": 0.2,
+      "at": "yen"
+     },
+     {
+      "text": "yenildi",
+      "x": 0.2,
+      "y": 0.46,
+      "ax": 0.18,
+      "ay": 0.62,
+      "at": "yenil",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ailesini alıp güneye kaçtı.",
+   "visual": "Gece; ay ışığında çölde ilerleyen küçük bir kervan: yüklü develer ve atlı, sarıklı bir şehzade; uzakta tek bir hurma.",
+   "params": {
+    "sky": "night",
+    "land": "desert",
+    "horizon": 0.7,
+    "sun": {
+     "x": 0.8,
+     "y": 0.22,
+     "r": 44
+    },
+    "items": [
+     {
+      "g": "camel",
+      "o": {
+       "pose": "walk",
+       "load": true
+      },
+      "x": 0.3,
+      "s": 1.5,
+      "at": 0.2,
+      "move": {
+       "to": [
+        0.42
+       ],
+       "at": 0.2,
+       "dur": 7
+      }
+     },
+     {
+      "g": "rider",
+      "o": {
+       "pose": "walk",
+       "dress": "ottoman"
+      },
+      "x": 0.55,
+      "s": 1.6,
+      "at": 0.4,
+      "move": {
+       "to": [
+        0.66
+       ],
+       "at": 0.4,
+       "dur": 7
+      }
+     },
+     {
+      "g": "camel",
+      "o": {
+       "pose": "walk",
+       "load": true
+      },
+      "x": 0.14,
+      "layer": "mid",
+      "at": 0.6,
+      "move": {
+       "to": [
+        0.24
+       ],
+       "at": 0.6,
+       "dur": 7
+      }
+     },
+     {
+      "g": "palm",
+      "x": 0.88,
+      "layer": "mid",
+      "at": -1
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Kahire'de Memlük sultanı Kayıtbay onu onurla karşıladı. Cem oradan Mekke'ye gitti ve hac farizasını yerine getirdi.",
+   "visual": "Doğu Akdeniz ve Kızıldeniz haritası: Konya'dan Kahire'ye, oradan Mekke'ye uzanan kırmızı bir yol; Kahire ve Mekke'de işaretler.",
+   "cues": {
+    "kah": "Kahire",
+    "mek": "Mekke"
+   },
+   "params": {
+    "region": [
+     26.0,
+     19.0,
+     44.0,
+     40.0
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Konya",
+      "lon": 32.49,
+      "lat": 37.87,
+      "kind": "city",
+      "at": 0.2,
+      "align": "above"
+     },
+     {
+      "name": "Kahire",
+      "lon": 31.24,
+      "lat": 30.04,
+      "kind": "city",
+      "at": "kah",
+      "align": "left"
+     },
+     {
+      "name": "Mekke",
+      "lon": 39.83,
+      "lat": 21.42,
+      "kind": "star",
+      "color": "red",
+      "at": "mek",
+      "align": "right"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        32.49,
+        37.87
+       ],
+       [
+        34.5,
+        36.6
+       ],
+       [
+        34.0,
+        33.0
+       ],
+       [
+        32.6,
+        31.0
+       ],
+       [
+        31.24,
+        30.04
+       ]
+      ],
+      "at": 0.3,
+      "dur": 2.0,
+      "color": "red"
+     },
+     {
+      "points": [
+       [
+        31.24,
+        30.04
+       ],
+       [
+        33.5,
+        29.0
+       ],
+       [
+        35.5,
+        27.0
+       ],
+       [
+        38.0,
+        24.0
+       ],
+       [
+        39.83,
+        21.42
+       ]
+      ],
+      "at": "mek",
+      "dur": 2.2,
+      "color": "red",
+      "dashed": true
+     }
+    ],
+    "seas": [
+     {
+      "text": "Akdeniz",
+      "lon": 30.0,
+      "lat": 33.5
+     },
+     {
+      "text": "Kızıldeniz",
+      "lon": 37.0,
+      "lat": 22.5
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Hacca giden tek Osmanlı şehzadesi oydu.",
+   "visual": "Şafak; çölde, bir hurma ağacının yanında secdeye eğilmiş beyaz sarıklı tek bir adam; arkada bedevi çadırı.",
+   "camera": {
+    "focus": [
+     900,
+     600
+    ],
+    "zoom": 1.5
+   },
+   "cues": {
+    "tek": "tek"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "desert",
+    "horizon": 0.72,
+    "sun": false,
+    "items": [
+     {
+      "g": "person",
+      "o": {
+       "pose": "pray",
+       "dress": "ottoman"
+      },
+      "x": 0.46,
+      "s": 2.1,
+      "at": 0.2
+     },
+     {
+      "g": "palm",
+      "x": 0.72,
+      "s": 1.3,
+      "at": -1
+     },
+     {
+      "g": "tent",
+      "o": {
+       "style": "bedouin"
+      },
+      "x": 0.2,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "rock",
+      "x": 0.9,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "tek şehzade",
+      "x": 0.25,
+      "y": 0.3,
+      "ax": 0.43,
+      "ay": 0.56,
+      "at": "tek",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Bin dört yüz seksen iki baharında Anadolu'ya döndü ve Konya'yı kuşattı. Ama yine yenildi.",
+   "visual": "Harita: Kahire'den kuzeye, Konya'ya dönen kırmızı bir yol; Konya'da çarpışan kılıçlar ve kırmızı bir X.",
+   "cues": {
+    "kus": "kuşattı",
+    "yine": "yine"
+   },
+   "params": {
+    "region": [
+     27.0,
+     29.0,
+     40.0,
+     41.0
+    ],
+    "paint": 0.8,
+    "places": [
+     {
+      "name": "Kahire",
+      "lon": 31.24,
+      "lat": 30.04,
+      "kind": "city",
+      "at": 0.1,
+      "align": "left"
+     },
+     {
+      "name": "Konya",
+      "lon": 32.49,
+      "lat": 37.87,
+      "kind": "battle",
+      "at": "kus",
+      "align": "above"
+     },
+     {
+      "name": "",
+      "lon": 32.49,
+      "lat": 37.6,
+      "kind": "x",
+      "color": "red",
+      "at": "yine",
+      "align": "below"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        31.24,
+        30.04
+       ],
+       [
+        33.2,
+        31.4
+       ],
+       [
+        34.6,
+        34.0
+       ],
+       [
+        34.4,
+        36.6
+       ],
+       [
+        33.2,
+        37.6
+       ]
+      ],
+      "at": 0.2,
+      "dur": 2.4,
+      "color": "red"
+     }
+    ],
+    "labels": [
+     {
+      "text": "1482",
+      "lon": 36.5,
+      "lat": 34.2,
+      "at": 0.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Önünde iki yol kalmıştı. Ağabeyine teslim olmak ya da denize açılmak.",
+   "visual": "Akşam; kayalık bir kıyıda denize bakan tek bir figür; solda içeri doğru giden toprak yol, sağda açık deniz ve ufukta küçük bir yelken.",
+   "camera": {
+    "focus": [
+     806,
+     560
+    ],
+    "zoom": 1.8
+   },
+   "cues": {
+    "tes": "teslim",
+    "den": "denize"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "coast",
+    "coast": "right",
+    "horizon": 0.68,
+    "sun": false,
+    "clouds": 3,
+    "amp": 0.6,
+    "items": [
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "ottoman"
+      },
+      "x": 0.42,
+      "s": 1.9,
+      "at": 0.2
+     },
+     {
+      "g": "sailboat",
+      "x": 0.62,
+      "layer": "far",
+      "at": 0.8
+     },
+     {
+      "g": "cypress",
+      "x": 0.14,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "rock",
+      "x": 0.55,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.08,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "teslim?",
+      "x": 0.25,
+      "y": 0.36,
+      "at": "tes"
+     },
+     {
+      "text": "deniz?",
+      "x": 0.6,
+      "y": 0.36,
+      "at": "den",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Cem denizi seçti. Ama denizin öbür yanında onu bir düşman bekliyordu.",
+   "visual": "Gece; ay ışıklı açık denizde fenerli tek bir yelkenli gemi; ufukta karanlık bir ada siluetinde bir kale.",
+   "cues": {
+    "dus": "düşman"
+   },
+   "params": {
+    "sky": "night",
+    "land": "sea",
+    "horizon": 0.62,
+    "sun": {
+     "x": 0.7,
+     "y": 0.2,
+     "r": 42
+    },
+    "items": [
+     {
+      "g": "carrack",
+      "x": 0.36,
+      "s": 1.6,
+      "at": 0.1,
+      "move": {
+       "to": [
+        0.5
+       ],
+       "at": 0.1,
+       "dur": 9
+      }
+     },
+     {
+      "g": "island",
+      "x": 0.86,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "castle",
+      "o": {
+       "style": "medieval",
+       "flag": false
+      },
+      "x": 0.86,
+      "layer": "far",
+      "s": 0.6,
+      "at": "dus"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Rodos",
+      "x": 0.86,
+      "y": 0.4,
+      "ax": 0.86,
+      "ay": 0.56,
+      "at": "dus",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Rodos şövalyelerinin başında Pierre d'Aubusson vardı. İki yıl önce Fatih'in ordusunu surlarından geri çeviren adam.",
+   "visual": "Bölüm kartı: 'Bölüm 3 — Rodos'un pazarlığı', '1482 – 1483', küçük bir şövalye miğferi.",
+   "chapter": "Rodos'un pazarlığı",
+   "params": {
+    "num": "Bölüm 3",
+    "title": "Rodos'un pazarlığı",
+    "sub": "1482 – 1483",
+    "g": "helmet",
+    "o": {
+     "style": "knight"
+    },
+    "s": 0.7
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Cem'e söz verdi. Onu Avrupa'ya götürecek, tahtı için oradan yardım bulacaktı.",
+   "visual": "Mum ışığında taş bir salon: bir masanın iki yanında ayakta konuşan başı açık, siyah cüppeli, göğsünde beyaz haçlı tarikat üstadı ve kaftanlı şehzade; masada açık bir mektup.",
+   "camera": {
+    "focus": [
+     960,
+     640
+    ],
+    "zoom": 1.7
+   },
+   "cues": {
+    "soz": "söz"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stoneDark",
+    "floor": "wood",
+    "horizon": 0.76,
+    "items": [
+     {
+      "g": "table",
+      "o": {
+       "style": "western"
+      },
+      "x": 0.5,
+      "s": 1.5,
+      "at": -1
+     },
+     {
+      "g": "letter",
+      "x": 0.5,
+      "y": 0.62,
+      "s": 0.8,
+      "at": 0.4
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.38,
+      "y": 0.62,
+      "s": 0.9,
+      "at": -1
+     },
+     {
+      "g": "cem_hospitaller",
+      "o": {
+       "pose": "point"
+      },
+      "x": 0.68,
+      "s": 1.9,
+      "flip": true,
+      "at": 0.2
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "ottoman"
+      },
+      "x": 0.27,
+      "s": 1.8,
+      "at": 0.3
+     }
+    ],
+    "notes": [
+     {
+      "text": "söz",
+      "x": 0.62,
+      "y": 0.4,
+      "ax": 0.68,
+      "ay": 0.5,
+      "at": "soz",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Eylülde Cem bir gemiyle Fransa'ya gönderildi.",
+   "visual": "Akdeniz haritası: Rodos'tan batıya, İtalya'nın güneyinden geçip Nice'e uzanan bir gemi rotası; ucunda küçük bir gemi.",
+   "cues": {
+    "fra": "Fransa"
+   },
+   "params": {
+    "region": [
+     3.0,
+     34.5,
+     31.0,
+     46.5
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Rodos",
+      "lon": 28.22,
+      "lat": 36.44,
+      "kind": "city",
+      "at": 0.2,
+      "align": "right"
+     },
+     {
+      "name": "Nice",
+      "lon": 7.27,
+      "lat": 43.7,
+      "kind": "star",
+      "color": "red",
+      "at": {
+       "cue": "fra",
+       "d": 1.4
+      },
+      "align": "above"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        28.22,
+        36.44
+       ],
+       [
+        23.0,
+        36.0
+       ],
+       [
+        16.5,
+        37.0
+       ],
+       [
+        12.0,
+        38.6
+       ],
+       [
+        9.5,
+        41.5
+       ],
+       [
+        8.0,
+        43.3
+       ],
+       [
+        7.27,
+        43.7
+       ]
+      ],
+      "at": 0.3,
+      "dur": 3.2,
+      "color": "red",
+      "ship": true
+     }
+    ],
+    "seas": [
+     {
+      "text": "Akdeniz",
+      "lon": 18.0,
+      "lat": 35.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Ama d'Aubusson aynı günlerde İstanbul'a da elçi göndermişti.",
+   "visual": "Alacakaranlık; ufukta İstanbul'un kubbeli silueti, öne doğru ilerleyen küçük bir yelkenli; kıyıda selviler.",
+   "cues": {
+    "ist": "İstanbul",
+    "elc": "elçi"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "sea",
+    "horizon": 0.64,
+    "sun": false,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "ottoman"
+      },
+      "x": 0.66,
+      "layer": "mid",
+      "s": 1.4,
+      "at": -1
+     },
+     {
+      "g": "sailboat",
+      "x": 0.3,
+      "s": 1.5,
+      "at": 0.2,
+      "move": {
+       "to": [
+        0.46
+       ],
+       "at": 0.2,
+       "dur": 7
+      }
+     }
+    ],
+    "birds": {
+     "x": 0.3,
+     "y": 0.2,
+     "n": 5
+    },
+    "notes": [
+     {
+      "text": "İstanbul",
+      "x": 0.74,
+      "y": 0.26,
+      "ax": 0.64,
+      "ay": 0.5,
+      "at": "ist"
+     },
+     {
+      "text": "gizli elçi",
+      "x": 0.18,
+      "y": 0.4,
+      "ax": 0.3,
+      "ay": 0.58,
+      "at": "elc",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Bayezid için kardeşi yaşayan bir tehlikeydi. Şövalyeler için ise bir hazine.",
+   "visual": "Müze levhası: kilitli, demir kuşaklı ahşap bir hazine sandığı; notlar 'tehlike' ve 'hazine'.",
+   "cues": {
+    "teh": "tehlike",
+    "haz": "hazine"
+   },
+   "params": {
+    "g": "chest",
+    "pigment": "gold",
+    "notes": [
+     {
+      "text": "tehlike",
+      "part": "lid",
+      "at": "teh"
+     },
+     {
+      "text": "hazine",
+      "part": "front",
+      "at": "haz",
+      "color": "red"
+     }
+    ],
+    "title": {
+     "text": "Bir şehzadenin değeri",
+     "sub": "1482"
+    }
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Mart bin dört yüz seksen üçte anlaşma gizlice imzalandı. Bayezid şövalyelere her yıl kırk bin altın ödeyecekti. Karşılığında Cem hiçbir yere gitmeyecekti.",
+   "visual": "Kâğıda boyanmış büyük sayı '40.000', altında el yazısıyla 'altın, her yıl'.",
+   "params": {
+    "value": "40.000",
+    "label": "altın, her yıl",
+    "note": "şövalyelere",
+    "count": true,
+    "g": "cem_akce",
+    "o": {
+     "metal": "gold"
+    },
+    "s": 0.5
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "O artık bir misafir değil… bir rehineydi.",
+   "visual": "Karanlık taş bir oda, yakın plan: mum ışığında yere oturmuş kaftanlı tek bir adam; not 'rehine'.",
+   "camera": {
+    "focus": [
+     760,
+     640
+    ],
+    "zoom": 2.0
+   },
+   "cues": {
+    "reh": "rehine"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stoneDark",
+    "floor": "stoneDark",
+    "horizon": 0.76,
+    "items": [
+     {
+      "g": "person",
+      "o": {
+       "pose": "sit",
+       "dress": "ottoman"
+      },
+      "x": 0.42,
+      "s": 2.0,
+      "at": 0.2
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.22,
+      "s": 1.2,
+      "at": 0.4
+     }
+    ],
+    "notes": [
+     {
+      "text": "rehine",
+      "x": 0.5,
+      "y": 0.52,
+      "at": 0.3,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Nice'te bir yıl geçti. Sonra şövalyeler onu Fransa'nın iç kesimlerine, kaleden kaleye taşıdı.",
+   "visual": "Bölüm kartı: 'Bölüm 4 — Kule', 'Fransa ve Roma, 1483 – 1494', küçük bir yuvarlak kule.",
+   "chapter": "Kule",
+   "params": {
+    "num": "Bölüm 4",
+    "title": "Kule",
+    "sub": "Fransa ve Roma, 1483 – 1494",
+    "g": "tower",
+    "o": {
+     "style": "round",
+     "roof": true
+    },
+    "s": 0.6
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Bourganeuf kasabasında onun için yedi katlı bir kule yapıldı. Kule şehri korumak için değil, tek bir adamı saklamak içindi.",
+   "visual": "Gece; yeşil tepelerin üstünde yükselen uzun, yuvarlak, külahlı bir taş kule; en üst penceresinde mum ışığı ve sarıklı bir adamın silueti; yanında küçük köy evleri.",
+   "cues": {
+    "yedi": "yedi",
+    "adam": "adamı"
+   },
+   "params": {
+    "sky": "night",
+    "land": "hills",
+    "horizon": 0.8,
+    "sun": {
+     "x": 0.76,
+     "y": 0.5,
+     "r": 36
+    },
+    "clouds": 4,
+    "items": [
+     {
+      "g": "cem_tower",
+      "o": {
+       "h": 0.78,
+       "wide": 1.6
+      },
+      "x": 0.56,
+      "s": 1.0,
+      "at": 0.1,
+      "paint": 2.0
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european"
+      },
+      "x": 0.06,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "house",
+      "o": {
+       "style": "european"
+      },
+      "x": 0.96,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "pine",
+      "x": 0.2,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "shrub",
+      "x": 0.92,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.4,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "tek bir adam",
+      "x": 0.68,
+      "y": 0.84,
+      "ax": 0.575,
+      "ay": 0.52,
+      "at": "adam"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Ama Avrupa'nın sarayları onu unutmamıştı. Macar kralı, Venedik, Napoli ve Papa onu istiyordu.",
+   "visual": "Avrupa haritası: Fransa'da Bourganeuf'te kırmızı bir yıldız; Budin, Venedik, Napoli ve Roma'da birer işaret beliriyor, hepsinden yıldıza ince çizgiler.",
+   "cues": {
+    "mac": "Macar",
+    "ven": "Venedik",
+    "nap": "Napoli",
+    "pap": "Papa"
+   },
+   "params": {
+    "region": [
+     -3.0,
+     38.0,
+     23.0,
+     50.0
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Bourganeuf",
+      "lon": 1.75,
+      "lat": 45.95,
+      "kind": "star",
+      "color": "red",
+      "at": 0.2,
+      "align": "left"
+     },
+     {
+      "name": "Macar kralı",
+      "lon": 19.04,
+      "lat": 47.5,
+      "kind": "city",
+      "at": "mac",
+      "align": "right"
+     },
+     {
+      "name": "Venedik",
+      "lon": 12.33,
+      "lat": 45.44,
+      "kind": "city",
+      "at": "ven",
+      "align": "above"
+     },
+     {
+      "name": "Napoli",
+      "lon": 14.27,
+      "lat": 40.85,
+      "kind": "city",
+      "at": "nap",
+      "align": "right"
+     },
+     {
+      "name": "Papa · Roma",
+      "lon": 12.5,
+      "lat": 41.9,
+      "kind": "city",
+      "at": "pap",
+      "align": "left"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        19.04,
+        47.5
+       ],
+       [
+        10.0,
+        47.5
+       ],
+       [
+        3.0,
+        46.4
+       ]
+      ],
+      "at": "mac",
+      "dur": 1.2,
+      "color": "ink",
+      "dashed": true
+     },
+     {
+      "points": [
+       [
+        12.5,
+        41.9
+       ],
+       [
+        7.0,
+        44.5
+       ],
+       [
+        3.0,
+        46.0
+       ]
+      ],
+      "at": "pap",
+      "dur": 1.2,
+      "color": "ink",
+      "dashed": true
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Çünkü Cem bir anahtardı.",
+   "visual": "Müze levhası: büyük, eski bir demir anahtar; not 'Haçlı kozu'.",
+   "cues": {
+    "anah": "anahtar"
+   },
+   "params": {
+    "g": "key",
+    "rot": -20,
+    "pigment": "stain",
+    "notes": [
+     {
+      "text": "Haçlı kozu",
+      "part": "bit",
+      "at": 0.5,
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Bir Osmanlı şehzadesi bir Haçlı ordusunun önünde yürürse, belki Anadolu ona kapılarını açardı.",
+   "visual": "Şafak; yakın planda beyaz atın üstünde sarıklı tek bir şehzade; arkasında yıkamaya karışan haç sancaklı bir şövalye ordusu.",
+   "camera": {
+    "focus": [
+     1267,
+     560
+    ],
+    "zoom": 2.0
+   },
+   "cues": {
+    "seh": "şehzadesi",
+    "bel": "belki"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "hills",
+    "horizon": 0.7,
+    "sun": false,
+    "items": [
+     {
+      "g": "army",
+      "o": {
+       "dress": "knight",
+       "banner": 3,
+       "rows": 3,
+       "n": 10,
+       "march": true,
+       "face": "right"
+      },
+      "x": 0.5,
+      "layer": "mid",
+      "s": 1.0,
+      "at": 0.2
+     },
+     {
+      "g": "rider",
+      "o": {
+       "pose": "walk",
+       "dress": "ottoman",
+       "coat": "white"
+      },
+      "x": 0.66,
+      "s": 1.7,
+      "at": 0.4
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg"
+     },
+     {
+      "g": "shrub",
+      "x": 0.9,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "belki…",
+      "x": 0.77,
+      "y": 0.36,
+      "at": "bel"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Mart, bin dört yüz seksen dokuz. Cem, Roma'ya getirildi ve Papa Sekizinci Innocentius'a teslim edildi.",
+   "visual": "Gündüz; Roma'nın silueti ve bir zafer takı önünde, beyaz cüppeli, kırmızı pelerinli, üç katlı taçlı ve haçlı asalı Papa ile karşısında kaftanlı şehzade.",
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.6
+   },
+   "cues": {
+    "pap": "Papa"
+   },
+   "params": {
+    "sky": "day",
+    "land": "city",
+    "horizon": 0.72,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.5,
+      "layer": "far",
+      "s": 1.4,
+      "at": -1
+     },
+     {
+      "g": "arch",
+      "o": {
+       "style": "triumphal"
+      },
+      "x": 0.5,
+      "layer": "mid",
+      "s": 0.9,
+      "at": -1
+     },
+     {
+      "g": "column",
+      "o": {
+       "broken": 0.5
+      },
+      "x": 0.14,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.88,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "cem_pope",
+      "x": 0.58,
+      "s": 1.9,
+      "flip": true,
+      "at": "pap"
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "stand",
+       "dress": "ottoman"
+      },
+      "x": 0.42,
+      "s": 1.9,
+      "at": 0.3
+     }
+    ],
+    "notes": [
+     {
+      "text": "VIII. Innocentius",
+      "x": 0.62,
+      "y": 0.36,
+      "ax": 0.59,
+      "ay": 0.47,
+      "at": "pap"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_timeline",
+   "text": "Bayezid, Papa'ya da her yıl kırk bin altın ödemeyi kabul etti. Fiyat aynıydı. Sadece alıcı değişmişti.",
+   "visual": "Yatay zaman çizelgesi: '1482 Rodos', '1483 şövalyelere 40.000', '1489 Roma', '1490 Papa'ya 40.000' (vurgulu).",
+   "cues": {
+    "fiy": "Fiyat"
+   },
+   "params": {
+    "items": [
+     {
+      "year": "1482",
+      "label": "Rodos",
+      "at": 0.2
+     },
+     {
+      "year": "1483",
+      "label": "şövalyelere 40.000",
+      "at": 0.9
+     },
+     {
+      "year": "1489",
+      "label": "Roma",
+      "at": 1.6
+     },
+     {
+      "year": "1490",
+      "label": "Papa'ya 40.000",
+      "at": "fiy"
+     }
+    ],
+    "highlight": 3,
+    "title": "Aynı fiyat"
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Bin dört yüz doksan ikide Bayezid, Roma'ya bir hediye daha gönderdi. Hristiyanların inancına göre çarmıhtaki İsa'yı yaralayan mızrağın ucu. O emanet bugün hâlâ Aziz Petrus Bazilikası'ndadır.",
+   "visual": "Müze levhası: eski bir demir mızrak ucu; notlar 'Kutsal Mızrak' ve '1492'.",
+   "cues": {
+    "miz": "mızrağın"
+   },
+   "params": {
+    "g": "spear",
+    "rot": 0,
+    "pigment": "skyWarm",
+    "notes": [
+     {
+      "text": "Kutsal Mızrak",
+      "part": "head",
+      "at": "miz",
+      "color": "red"
+     },
+     {
+      "text": "1492",
+      "part": "shaft",
+      "at": 1.0
+     }
+    ],
+    "title": {
+     "text": "Bayezid'in hediyesi",
+     "sub": "Aziz Petrus Bazilikası"
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Cem bu yıllarda şiir yazdı. Ağabeyine af dileyen bir şiir gönderdi. Af gelmedi.",
+   "visual": "Gece, mum ışığında bir yazı masası: açık bir defter, hokkada kalem, eriyen mum; arkada karanlık bir pencere.",
+   "camera": {
+    "focus": [
+     920,
+     560
+    ],
+    "zoom": 1.7
+   },
+   "cues": {
+    "af": "gelmedi"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stoneDark",
+    "floor": "wood",
+    "horizon": 0.78,
+    "items": [
+     {
+      "g": "table",
+      "o": {
+       "style": "desk"
+      },
+      "x": 0.5,
+      "s": 1.6,
+      "at": -1
+     },
+     {
+      "g": "book",
+      "o": {
+       "open": true
+      },
+      "x": 0.46,
+      "y": 0.655,
+      "s": 1.1,
+      "at": 0.2
+     },
+     {
+      "g": "quill",
+      "x": 0.6,
+      "y": 0.655,
+      "s": 1.0,
+      "at": 0.5
+     },
+     {
+      "g": "candle",
+      "o": {
+       "holder": true
+      },
+      "x": 0.34,
+      "y": 0.655,
+      "s": 1.1,
+      "at": -1
+     },
+     {
+      "g": "window",
+      "x": 0.82,
+      "at": -1
+     }
+    ],
+    "notes": [
+     {
+      "text": "af gelmedi",
+      "x": 0.62,
+      "y": 0.45,
+      "at": "af",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "Bir ağıtında feleğe sitem etti. Onu Frenk diyarının girdabına atan oydu.",
+   "visual": "Eski bir defter sayfası: el yazısıyla 'Frenk diyarının girdabı' notu.",
+   "cues": {
+    "gir": "Frenk"
+   },
+   "params": {
+    "style": "diary",
+    "lines": [
+     "Frenk diyarının girdabı"
+    ],
+    "at": 0.2
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Ama bir rehinenin değeri, onu tutanın gücü kadardı. Ve bin dört yüz doksan dörtte Alpler'in öbür yanından bir ordu geldi.",
+   "visual": "İtalya haritası: Fransa'dan Alpler'i aşıp İtalya boyunca güneye inen kalın kırmızı bir ordu oku; Roma ve Napoli işaretli.",
+   "cues": {
+    "alp": "Alpler",
+    "ord": "ordu"
+   },
+   "params": {
+    "region": [
+     3.0,
+     37.5,
+     19.0,
+     47.5
+    ],
+    "paint": 1.0,
+    "places": [
+     {
+      "name": "Roma",
+      "lon": 12.5,
+      "lat": 41.9,
+      "kind": "city",
+      "at": 0.4,
+      "align": "left"
+     },
+     {
+      "name": "Napoli",
+      "lon": 14.27,
+      "lat": 40.85,
+      "kind": "city",
+      "at": 0.5,
+      "align": "right"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        4.8,
+        45.7
+       ],
+       [
+        6.8,
+        45.1
+       ],
+       [
+        8.6,
+        44.8
+       ],
+       [
+        10.4,
+        43.8
+       ],
+       [
+        11.4,
+        42.9
+       ],
+       [
+        12.3,
+        42.1
+       ]
+      ],
+      "at": "alp",
+      "dur": 2.6,
+      "color": "red",
+      "width": 14
+     }
+    ],
+    "labels": [
+     {
+      "text": "Alpler",
+      "lon": 7.6,
+      "lat": 46.3,
+      "italic": true,
+      "at": 0.8
+     },
+     {
+      "text": "1494",
+      "lon": 6.0,
+      "lat": 44.0,
+      "at": "alp"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_chapter",
+   "text": "Fransa kralı Sekizinci Charles, Napoli'yi almak için İtalya'ya indi.",
+   "visual": "Bölüm kartı: 'Bölüm 5 — Dönüş', '1495 – 1499', küçük bir türbe kubbesi.",
+   "chapter": "Dönüş",
+   "params": {
+    "num": "Bölüm 5",
+    "title": "Dönüş",
+    "sub": "1495 – 1499",
+    "g": "dome",
+    "s": 0.6
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Yeni Papa Altıncı Aleksandr, Cem'i ona teslim etmek zorunda kaldı.",
+   "visual": "Kış günü; Roma'nın uzak siluetinin önünde sancaklı bir Fransız şövalye ordusu ve atlı kral; ordunun arasında yaya, sarıklı tek bir adam.",
+   "camera": {
+    "focus": [
+     960,
+     600
+    ],
+    "zoom": 1.4
+   },
+   "cues": {
+    "tes": "teslim"
+   },
+   "params": {
+    "sky": "fog",
+    "land": "hills",
+    "amp": 0.6,
+    "clouds": 3,
+    "horizon": 0.7,
+    "items": [
+     {
+      "g": "skyline",
+      "o": {
+       "style": "medieval"
+      },
+      "x": 0.3,
+      "layer": "far",
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.2,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "army",
+      "o": {
+       "dress": "knight",
+       "banner": 2,
+       "rows": 3,
+       "n": 9,
+       "face": "right"
+      },
+      "x": 0.7,
+      "layer": "mid",
+      "s": 1.1,
+      "at": 0.2
+     },
+     {
+      "g": "rider",
+      "o": {
+       "pose": "stand",
+       "dress": "noble",
+       "barding": true
+      },
+      "x": 0.6,
+      "s": 1.5,
+      "flip": true,
+      "at": 0.5
+     },
+     {
+      "g": "person",
+      "o": {
+       "pose": "walk",
+       "dress": "ottoman"
+      },
+      "x": 0.42,
+      "s": 1.9,
+      "at": "tes"
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "VIII. Charles",
+      "x": 0.64,
+      "y": 0.34,
+      "ax": 0.61,
+      "ay": 0.45,
+      "at": 0.9
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "Yirmi sekiz Ocak, bin dört yüz doksan beş. Cem, Fransız ordusuyla Roma'dan ayrıldı.",
+   "visual": "Orta İtalya haritası: Roma'dan güneydoğuya, Napoli'ye uzanan kırmızı bir yol; Roma ve Napoli işaretli.",
+   "cues": {
+    "ayr": "Roma'dan"
+   },
+   "params": {
+    "region": [
+     10.5,
+     39.5,
+     16.5,
+     43.3
+    ],
+    "paint": 0.8,
+    "places": [
+     {
+      "name": "Roma",
+      "lon": 12.5,
+      "lat": 41.9,
+      "kind": "city",
+      "at": 0.2,
+      "align": "above"
+     },
+     {
+      "name": "Napoli",
+      "lon": 14.27,
+      "lat": 40.85,
+      "kind": "city",
+      "at": 0.4,
+      "align": "right"
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        12.5,
+        41.9
+       ],
+       [
+        13.0,
+        41.6
+       ],
+       [
+        13.7,
+        41.3
+       ],
+       [
+        14.1,
+        41.1
+       ],
+       [
+        14.27,
+        40.85
+       ]
+      ],
+      "at": 0.6,
+      "dur": 3.0,
+      "color": "red"
+     }
+    ],
+    "seas": [
+     {
+      "text": "Tiren Denizi",
+      "lon": 12.0,
+      "lat": 40.3
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Bir ay sonra, yirmi beş Şubat'ta, Napoli'de öldü. Otuz beş yaşındaydı.",
+   "visual": "Kâğıda boyanmış büyük sayı '35', altında 'yaşında · Napoli, 25 Şubat 1495'.",
+   "params": {
+    "value": "35",
+    "label": "yaşında",
+    "note": "Napoli, 25 Şubat 1495",
+    "count": true,
+    "color": "skyWarm"
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Rivayete göre Papa, elinden alınan rehinesini zehirletmişti. Bunu kesin olarak gösteren bir belge yok.",
+   "visual": "Müze levhası: mücevherli metal bir kadeh; notlar 'zehir?' ve 'rivayet'.",
+   "cues": {
+    "zeh": "zehirletmişti",
+    "bel": "belge"
+   },
+   "params": {
+    "g": "cup",
+    "o": {
+     "style": "goblet"
+    },
+    "pigment": "stain",
+    "notes": [
+     {
+      "text": "zehir?",
+      "part": "bowl",
+      "at": "zeh",
+      "color": "red"
+     },
+     {
+      "text": "sadece rivayet",
+      "part": "foot",
+      "at": {
+       "cue": "zeh",
+       "d": 0.6
+      }
+     }
+    ],
+    "title": {
+     "text": "Bir söylenti",
+     "sub": "Napoli, 1495"
+    }
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Bayezid kardeşinin cesedini istedi. Pazarlık dört yıl sürdü.",
+   "visual": "Gri, sisli bir sabah; sakin denizde ağır ağır ilerleyen tek bir yelkenli; uzakta kıyıda bir kale; gökte martılar.",
+   "cues": {
+    "dort": "dört"
+   },
+   "params": {
+    "sky": "fog",
+    "land": "sea",
+    "horizon": 0.62,
+    "items": [
+     {
+      "g": "caravel",
+      "x": 0.4,
+      "s": 1.6,
+      "at": 0.1,
+      "move": {
+       "to": [
+        0.52
+       ],
+       "at": 0.1,
+       "dur": 9
+      }
+     },
+     {
+      "g": "castle",
+      "o": {
+       "style": "medieval",
+       "flag": false
+      },
+      "x": 0.86,
+      "layer": "far",
+      "s": 0.7,
+      "at": -1
+     }
+    ],
+    "birds": {
+     "x": 0.7,
+     "y": 0.2,
+     "n": 4
+    },
+    "notes": [
+     {
+      "text": "4 yıl",
+      "x": 0.82,
+      "y": 0.3,
+      "at": "dort",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Bin dört yüz doksan dokuzda Cem sonunda Bursa'ya döndü. Muradiye'de, ağabeyi Şehzade Mustafa'nın türbesine gömüldü. Burası, on sekiz gün padişah olduğu şehirdi.",
+   "visual": "Şafak; Bursa'da selviler arasında kubbeli bir türbe, arkada Uludağ'ın karlı tepeleri; önde güller ve çimen.",
+   "camera": {
+    "focus": [
+     960,
+     560
+    ],
+    "zoom": 1.4
+   },
+   "cues": {
+    "mur": "Muradiye"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "mountains",
+    "snowcaps": true,
+    "horizon": 0.72,
+    "sun": false,
+    "items": [
+     {
+      "g": "dome",
+      "x": 0.5,
+      "s": 1.9,
+      "at": 0.2
+     },
+     {
+      "g": "cypress",
+      "x": 0.28,
+      "s": 1.3,
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.72,
+      "s": 1.4,
+      "at": -1
+     },
+     {
+      "g": "cypress",
+      "x": 0.84,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "shrub",
+      "x": 0.1,
+      "layer": "fg"
+     },
+     {
+      "g": "grass",
+      "x": 0.6,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "Muradiye, Bursa",
+      "x": 0.3,
+      "y": 0.3,
+      "ax": 0.45,
+      "ay": 0.42,
+      "at": "mur"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Cem neden düşmanın kapısını çaldı? Çünkü kendi kardeşinin kapısı ona kapalıydı. Babasının kanunu ona dönüş yolu bırakmamıştı.",
+   "visual": "Akşam ışığında taş bir duvarda kapalı, ağır bir ahşap kapı; önünde kimse yok, yerde düşmüş yapraklar.",
+   "camera": {
+    "focus": [
+     960,
+     520
+    ],
+    "zoom": 1.35
+   },
+   "cues": {
+    "kapa": "kapalıydı"
+   },
+   "params": {
+    "sky": "none",
+    "land": "interior",
+    "wall": "stone",
+    "floor": "ground",
+    "horizon": 0.74,
+    "items": [
+     {
+      "g": "door",
+      "o": {
+       "style": "pointed"
+      },
+      "x": 0.5,
+      "s": 2.0,
+      "at": 0.2
+     },
+     {
+      "g": "oil_lamp",
+      "x": 0.3,
+      "s": 1.0,
+      "at": -1
+     }
+    ],
+    "notes": [
+     {
+      "text": "kapalı",
+      "x": 0.68,
+      "y": 0.3,
+      "ax": 0.55,
+      "ay": 0.42,
+      "at": "kapa",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "Ve neden hiç çıkamadı? Çünkü yaşadığı her gün birilerine para ediyordu. Ağabeyi onun uzakta kalması için ödedi.",
+   "visual": "Müze levhası: tek, büyük, portresiz, yazılı bir Osmanlı altını; notlar 'her gün' ve 'bir fiyat'.",
+   "cues": {
+    "gun": "gün",
+    "ode": "ödedi"
+   },
+   "params": {
+    "g": "cem_akce",
+    "o": {
+     "metal": "gold"
+    },
+    "pigment": "gold",
+    "notes": [
+     {
+      "text": "her gün",
+      "part": "rim",
+      "at": 0.1
+     },
+     {
+      "text": "bir fiyat",
+      "part": "face",
+      "at": "gun",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_cem_fog",
+   "text": "Avrupa onu bir koz olarak sakladı. Cem on üç yıla yakın bir süre bir insan değil, bir fiyattı.",
+   "visual": "Sisli bir şafakta tepede tek başına duran uzun, yuvarlak kule; penceresindeki ışık sönmüş; kule yavaşça sise karışıyor.",
+   "cues": {
+    "on": "üç",
+    "fiy": "fiyattı"
+   },
+   "params": {
+    "sky": "fog",
+    "land": "hills",
+    "horizon": 0.8,
+    "sun": false,
+    "clouds": 2,
+    "fog": 0.62,
+    "items": [
+     {
+      "g": "cem_tower",
+      "o": {
+       "lit": false,
+       "h": 0.78,
+       "wide": 1.6
+      },
+      "x": 0.5,
+      "s": 1.0,
+      "at": -1
+     },
+     {
+      "g": "pine",
+      "x": 0.2,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "pine",
+      "x": 0.8,
+      "layer": "mid",
+      "at": -1
+     },
+     {
+      "g": "grass",
+      "x": 0.3,
+      "layer": "fg"
+     }
+    ],
+    "notes": [
+     {
+      "text": "13 yıl",
+      "x": 0.68,
+      "y": 0.42,
+      "ax": 0.54,
+      "ay": 0.55,
+      "at": "on",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Sizce Rodos yerine ağabeyine teslim olsaydı yaşar mıydı? Yorumlara yazın. Böyle unutulmuş hikâyeler için abone olun.",
+   "visual": "Kâğıda büyük serif harflerle 'Cem Sultan', altında '1459 – 1495 · Bursa'; küçük bir türbe kubbesi.",
+   "params": {
+    "text": "Cem Sultan",
+    "sub": "1459 – 1495 · Bursa",
+    "g": "dome",
+    "s": 0.6,
+    "color": "skyWarm"
+   }
+  }
+ ]
+}
