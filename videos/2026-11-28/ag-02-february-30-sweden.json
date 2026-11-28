@@ -1,0 +1,560 @@
+{
+  "engine": "studio",
+  "theme": "watercolor",
+  "palette": "keten",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Stickstory",
+  "narrator": "fes",
+  "lang": "en",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "2t85BBUECtLLKQzxLD95",
+    "model": "eleven_v3"
+  },
+  "cover": {
+    "lines": [
+      "February",
+      "30"
+    ],
+    "highlight": [
+      "30"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "focus": [
+      520,
+      960
+    ],
+    "zoom": 1.35
+  },
+  "scenes": [
+    {
+      "type": "wc_feb30_page",
+      "text": "Sweden once had a February 30th.",
+      "visual": "The hook, under the cover text: an old almanac page centred on a wooden desk, a candle burning at its right; two big day rows, 29 and 30; over the first second a red wash spreads behind the 30 (red) and a red brush ring draws round it; '1712' written at the top right.",
+      "params": {
+        "month": "February",
+        "from": 29,
+        "to": 30,
+        "at": -1,
+        "add": [
+          {
+            "day": 30,
+            "at": 0,
+            "color": "red",
+            "paint": 1.5
+          }
+        ],
+        "ring": {
+          "day": 30,
+          "at": 0.2
+        },
+        "header": false,
+        "box": [
+          170,
+          500,
+          830,
+          1060
+        ],
+        "candle_x": 0.74,
+        "candle_y": 0.58,
+        "notes": [
+          {
+            "text": "1712",
+            "x": 0.66,
+            "y": 0.325,
+            "size": 60
+          }
+        ],
+        "num_size": 190,
+        "candle": true,
+        "num_x": 0.3
+      }
+    },
+    {
+      "type": "wc_feb30_leaps",
+      "text": "In 1700, it began easing into the new calendar, skipping leap days.",
+      "visual": "The plan on clean paper: eleven small calendar leaves '29 FEB' for the leap years 1700 to 1740 paint in one after another in a 3 × 4 grid; from 'skipping' a red brush cross goes over each, in order; the twelfth cell gets the red note '= 11 days'.",
+      "cues": {
+        "skip": "skipping"
+      },
+      "params": {
+        "title": {
+          "text": "The plan",
+          "at": 0.1
+        },
+        "strike": {
+          "at": "skip",
+          "dur": 1.0
+        },
+        "last": {
+          "text": "= 11 days",
+          "at": {
+            "cue": "skip",
+            "d": 0.3
+          }
+        }
+      }
+    },
+    {
+      "type": "wc_feb30_page",
+      "text": "So February lost its 29th.",
+      "visual": "The almanac page for February 1700 on the desk: rows 23 to 29; on 'lost' a red brush line strikes out the 29 and the row washes back to the paper, the red word 'skipped' beside it.",
+      "cues": {
+        "lost": "lost"
+      },
+      "params": {
+        "month": "February",
+        "year": "1700",
+        "from": 23,
+        "to": 29,
+        "at": -1,
+        "lose": {
+          "day": 29,
+          "at": "lost",
+          "label": "skipped"
+        },
+        "candle_x": 0.06
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "But with Sweden at war, 1704 and 1708 kept their leap days.",
+      "visual": "A snowy plain under a grey storm sky: one Swedish soldier in a blue coat with a musket walks large in the foreground, a column of troops with banners behind him on the right, smoke of cannon fire rising; red note '1704, 1708: kept'.",
+      "cues": {
+        "war": "war"
+      },
+      "params": {
+        "sky": "storm",
+        "land": "snow",
+        "horizon": 0.56,
+        "weather": "snow",
+        "items": [
+          {
+            "g": "army",
+            "o": {
+              "rows": 3,
+              "n": 10,
+              "dress": "soldier",
+              "banner": 2,
+              "weapon": "rifle",
+              "march": true,
+              "face": "right"
+            },
+            "x": 0.74,
+            "layer": "mid",
+            "s": 0.9,
+            "at": 0.1,
+            "seed": 2
+          },
+          {
+            "g": "cannon_smoke",
+            "x": 0.6,
+            "layer": "mid",
+            "s": 1.0,
+            "at": "war"
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "walk",
+              "dress": "soldier",
+              "hold": "rifle",
+              "headgear": "cap",
+              "face": "right",
+              "cols": {
+                "cloth": "clothB",
+                "clothB": "clothC"
+              }
+            },
+            "x": 0.36,
+            "s": 2.4,
+            "at": 0.2
+          },
+          {
+            "g": "rock",
+            "x": 0.86,
+            "layer": "fg",
+            "s": 1.1
+          },
+          {
+            "g": "grass",
+            "x": 0.1,
+            "layer": "fg",
+            "s": 1.3
+          }
+        ],
+        "smoke": [
+          {
+            "x": 0.75,
+            "h": 520,
+            "a": 0.32,
+            "at": "war"
+          }
+        ],
+        "notes": [
+          {
+            "text": "1704, 1708: kept",
+            "x": 0.62,
+            "y": 0.16,
+            "at": 1.4,
+            "color": "red",
+            "size": 64
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_map",
+      "text": "Now Sweden matched no one.",
+      "visual": "Painted map of Scandinavia and the Baltic: Sweden and Finland wash red with the red hand note 'own calendar' inside; 'new calendar' on Denmark–Norway, 'old calendar' on Russia.",
+      "cues": {
+        "swe": "Sweden"
+      },
+      "params": {
+        "region": [
+          8,
+          55,
+          38,
+          69
+        ],
+        "paint": 0.5,
+        "areas": [
+          {
+            "countries": [
+              "SWE",
+              "FIN"
+            ],
+            "color": "red",
+            "alpha": 0.45,
+            "at": 0.0,
+            "dur": 0.8
+          }
+        ],
+        "labels": [
+          {
+            "text": "new calendar",
+            "lon": 12.5,
+            "lat": 61.5,
+            "size": 56,
+            "italic": true,
+            "at": 0.2
+          },
+          {
+            "text": "old calendar",
+            "lon": 34.5,
+            "lat": 61.0,
+            "size": 56,
+            "italic": true,
+            "at": 0.35
+          }
+        ],
+        "places": [
+          {
+            "name": "own calendar",
+            "lon": 14.6,
+            "lat": 65.2,
+            "kind": "none",
+            "at": 0.5,
+            "color": "red",
+            "align": "right",
+            "size": 1.4
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "King Charles the Twelfth gave up.",
+      "visual": "Dusk on the steppe at Bender: a plain canvas army tent with a blue pennant, King Charles XII standing large in front of it, bare-headed, in a blue coat, a sword at his side; a scribe sits writing by the tent; note 'Bender, 1711'.",
+      "cues": {
+        "king": "Charles"
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "plain",
+        "horizon": 0.58,
+        "paint": true,
+        "items": [
+          {
+            "g": "feb30_tent",
+            "o": {
+              "flag": "clothB"
+            },
+            "x": 0.62,
+            "s": 1.4,
+            "at": 0.1
+          },
+          {
+            "g": "feb30_tent",
+            "o": {
+              "flag": false
+            },
+            "x": 0.18,
+            "layer": "far",
+            "s": 1.0,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "stand",
+              "dress": "soldier",
+              "headgear": "bare",
+              "hold": "sword",
+              "face": "right",
+              "cols": {
+                "cloth": "clothB",
+                "clothB": "clothC"
+              }
+            },
+            "x": 0.3,
+            "s": 2.4,
+            "at": 0.1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "sit",
+              "dress": "robe",
+              "hold": "book",
+              "face": "left",
+              "seat": "stool"
+            },
+            "x": 0.82,
+            "s": 1.9,
+            "at": 0.6
+          },
+          {
+            "g": "grass",
+            "x": 0.1,
+            "layer": "fg",
+            "s": 1.3
+          },
+          {
+            "g": "shrub",
+            "x": 0.9,
+            "layer": "fg",
+            "s": 1.0
+          }
+        ],
+        "notes": [
+          {
+            "text": "Bender, 1711",
+            "x": 0.5,
+            "y": 0.18,
+            "at": 0.4,
+            "size": 60
+          }
+        ],
+        "sun": false
+      }
+    },
+    {
+      "type": "wc_number",
+      "text": "Going back to the old calendar meant adding a day.",
+      "visual": "A big painted '24' counting up from 0 over a pale blue swatch, unit 'hours', the hand note 'added to February' under it.",
+      "cues": {
+        "add": "adding"
+      },
+      "params": {
+        "value": "24",
+        "unit": "hours",
+        "label": "added to February",
+        "color": "sky",
+        "count": true
+      }
+    },
+    {
+      "type": "wc_feb30_page",
+      "text": "In 1712, February got a 29th, and a 30th.",
+      "visual": "The almanac page for February 1712 on the desk, rows 25 to 30 with only 25–28 written; on '29th' the 29 writes itself in, on '30th' the 30 writes itself in red with a red wash behind it.",
+      "cues": {
+        "d29": "29th",
+        "d30": "30th"
+      },
+      "params": {
+        "month": "February",
+        "year": "1712",
+        "from": 25,
+        "to": 30,
+        "at": -1,
+        "add": [
+          {
+            "day": 29,
+            "at": {
+              "cue": "d29",
+              "d": -0.2
+            }
+          },
+          {
+            "day": 30,
+            "at": {
+              "cue": "d30",
+              "d": -0.45
+            },
+            "color": "red"
+          }
+        ],
+        "num_size": 100,
+        "candle_x": 0.06
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "One almanac marked it with one word: added.",
+      "visual": "A plate: a torn strip of the 1712 almanac with the rows 28, 29 and a red 30, painting in big; on 'added' the red hand note 'added' with a pen line to the 30.",
+      "cues": {
+        "add": "added"
+      },
+      "params": {
+        "g": "feb30_leaf",
+        "s": 1.25,
+        "pigment": "sky",
+        "drift": "turn",
+        "at": 0.05,
+        "paint": 1.0,
+        "notes": [
+          {
+            "text": "added",
+            "part": "thirty",
+            "at": 0.9,
+            "color": "red",
+            "size": 76
+          },
+          {
+            "text": "Feb 1712",
+            "part": "top",
+            "at": 0.6
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Sweden tried to lose days quietly, and invented one instead.",
+      "visual": "Stockholm on a winter evening: snow falling, a stone church standing alone on the snowy ground, a lone figure with a lantern walking slowly on the left, clear of the church front; red note '30 February 1712'.",
+      "cues": {
+        "inv": "invented"
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "snow",
+        "horizon": 0.58,
+        "weather": "snow",
+        "paint": true,
+        "items": [
+          {
+            "g": "church",
+            "o": {
+              "style": "gothic"
+            },
+            "x": 0.66,
+            "s": 1.5,
+            "at": 0.2
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "walk",
+              "dress": "peasant",
+              "hold": "lantern",
+              "face": "right",
+              "headgear": "fur"
+            },
+            "x": 0.1,
+            "s": 1.7,
+            "at": 0.6,
+            "move": {
+              "to": [
+                0.24
+              ],
+              "at": 0.6,
+              "dur": 4
+            }
+          },
+          {
+            "g": "rock",
+            "x": 0.9,
+            "layer": "fg",
+            "s": 1.0
+          },
+          {
+            "g": "grass",
+            "x": 0.08,
+            "layer": "fg",
+            "s": 1.2
+          }
+        ],
+        "notes": [
+          {
+            "text": "30 February 1712",
+            "x": 0.5,
+            "y": 0.17,
+            "at": "inv",
+            "color": "red",
+            "size": 66
+          }
+        ],
+        "sun": false
+      }
+    },
+    {
+      "type": "wc_title",
+      "text": "Subscribe for a strange true story every day.",
+      "visual": "Title card: a small torn almanac strip with a red 30, 'February 30, 1712', sub 'Sweden's extra day'.",
+      "params": {
+        "text": "February 30, 1712",
+        "sub": "Sweden's extra day",
+        "g": "feb30_leaf",
+        "s": 1.2,
+        "color": "sky"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia — Swedish calendar (1700 plan, return in 1712, 30 February, switch in 1753)",
+      "url": "https://en.wikipedia.org/wiki/Swedish_calendar"
+    },
+    {
+      "title": "timeanddate.com — February 30",
+      "url": "https://www.timeanddate.com/date/february-30.html"
+    },
+    {
+      "title": "Claus Tøndering — 30 February (Swedish almanac of 1712, 'Tillökad')",
+      "url": "https://tondering.dk/article/en/calendar/60-30feb.php"
+    },
+    {
+      "title": "Hans Högman — Change of calendars in Sweden",
+      "url": "https://hhogman.se/change-of-calendars-sweden.htm"
+    }
+  ],
+  "youtube": {
+    "title": "February 30: How Did Sweden Get a Day That Shouldn't Exist?",
+    "description": "February 30 really happened once, in Sweden, in 1712. In 1700 Sweden began a slow switch from the Julian to the Gregorian calendar by skipping every leap day for forty years. The leap day of 1700 was skipped, but in the chaos of the Great Northern War 1704 and 1708 kept theirs, and Sweden matched no one. King Charles XII gave up and returned to the old calendar, which needed one extra day: so February 1712 had a 29th and a 30th. Sweden finally switched to the Gregorian calendar in 1753, when 17 February was followed by 1 March.\n\nSubscribe to Stickstory for a strange true story every day. Would you have wanted to be born on February 30th? Tell us in the comments!\n\n#shorts #february30 #stickstory",
+    "tags": [
+      "february 30",
+      "february 30 1712",
+      "february 30th sweden",
+      "sweden february 30",
+      "swedish calendar",
+      "gregorian calendar",
+      "julian calendar",
+      "leap day",
+      "leap year history",
+      "charles xii",
+      "great northern war",
+      "calendar history",
+      "strange history",
+      "history",
+      "history stories",
+      "stickstory"
+    ],
+    "category_id": "28",
+    "publish_at": "2026-11-28T19:00:00-05:00"
+  },
+  "slug": "february-30-sweden"
+}

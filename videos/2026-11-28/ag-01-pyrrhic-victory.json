@@ -1,0 +1,597 @@
+{
+ "engine": "studio",
+ "theme": "watercolor",
+ "palette": "gurub",
+ "format": "short",
+ "fps": 30,
+ "subtitles": true,
+ "channel": "Stickstory",
+ "narrator": "fes",
+ "lang": "en",
+ "tts": {
+  "provider": "elevenlabs",
+  "voice_id": "2t85BBUECtLLKQzxLD95",
+  "model": "eleven_v3"
+ },
+ "cover": {
+  "lines": [
+   "He won.",
+   "He lost."
+  ],
+  "highlight": [
+   "lost"
+  ],
+  "scene": 0,
+  "t": 2.0,
+  "focus": [
+   540,
+   880
+  ],
+  "zoom": 1.25
+ },
+ "scenes": [
+  {
+   "type": "wc_scene",
+   "text": "He won, and it ruined him.",
+   "visual": "Dusk over the battlefield after the fight: one war elephant in a red caparison, its driver on its neck, walks slowly across the field; a thin wisp of smoke rises behind it; a dropped round shield lies near its feet.",
+   "params": {
+    "sky": "dusk",
+    "land": "plain",
+    "horizon": 0.6,
+    "sun": false,
+    "items": [
+     {
+      "g": "pyr_elephant",
+      "o": {
+       "pose": "walk",
+       "tower": false
+      },
+      "x": 0.44,
+      "s": 1.3,
+      "at": -1,
+      "move": {
+       "to": [
+        0.5
+       ],
+       "at": 0,
+       "dur": 6
+      }
+     },
+     {
+      "g": "pyr_aspis",
+      "x": 0.28,
+      "y": 0.6,
+      "s": 0.8,
+      "at": -1
+     },
+     {
+      "g": "grass",
+      "x": 0.86,
+      "layer": "fg",
+      "s": 1.4
+     },
+     {
+      "g": "grass",
+      "x": 0.06,
+      "layer": "fg",
+      "s": 1.2
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.82,
+      "y": 0.62,
+      "h": 320,
+      "a": 0.24,
+      "at": 0,
+      "drift": 0.6
+     }
+    ],
+    "birds": {
+     "x": 0.62,
+     "y": 0.1,
+     "n": 3
+    }
+   }
+  },
+  {
+   "type": "wc_map",
+   "text": "In 280 BC, Pyrrhus of Epirus crossed to Italy to fight Rome.",
+   "visual": "Map of southern Italy and western Greece: Epirus marked, a red route crosses the sea to Tarentum, Rome marked with a star to the north.",
+   "cues": {
+    "italy": "Italy",
+    "rome": "Rome"
+   },
+   "params": {
+    "region": [
+     10.8,
+     37.8,
+     22.0,
+     43.4
+    ],
+    "paint": 0.9,
+    "places": [
+     {
+      "name": "Epirus",
+      "lon": 20.98,
+      "lat": 39.16,
+      "kind": "city",
+      "at": 0.4,
+      "align": "right"
+     },
+     {
+      "name": "Tarentum",
+      "lon": 17.24,
+      "lat": 40.47,
+      "kind": "city",
+      "at": "italy",
+      "align": "below"
+     },
+     {
+      "name": "Rome",
+      "lon": 12.5,
+      "lat": 41.9,
+      "kind": "star",
+      "at": 1.6,
+      "color": "red",
+      "align": "right",
+      "size": 1.7
+     }
+    ],
+    "routes": [
+     {
+      "points": [
+       [
+        20.6,
+        39.3
+       ],
+       [
+        19.0,
+        39.9
+       ],
+       [
+        17.6,
+        40.35
+       ]
+      ],
+      "at": 0.9,
+      "dur": 1.8,
+      "color": "red",
+      "ship": true
+     }
+    ],
+    "seas": [
+     {
+      "text": "Ionian Sea",
+      "lon": 18.6,
+      "lat": 38.6
+     },
+     {
+      "text": "Adriatic",
+      "lon": 16.2,
+      "lat": 42.6
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_specimen",
+   "text": "He brought war elephants, beasts no Roman had ever faced.",
+   "visual": "Plate: one Indian war elephant with a wooden fighting tower on a red caparison, a driver on its neck, painted large; notes 'war elephant' and 'fighting tower'.",
+   "cues": {
+    "beasts": "beasts"
+   },
+   "params": {
+    "g": "pyr_elephant",
+    "o": {
+     "pose": "walk"
+    },
+    "s": 1.0,
+    "pigment": "skyWarm",
+    "drift": "float",
+    "notes": [
+     {
+      "text": "war elephant",
+      "part": "bottom",
+      "at": 0.8
+     },
+     {
+      "text": "fighting tower",
+      "part": "top",
+      "at": "beasts",
+      "color": "red"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "At Heraclea, Rome's horses panicked, and he won.",
+   "visual": "Day on the open plain of Heraclea: a war elephant charges from the left with its trunk raised; on 'panicked' a Roman rider's horse bolts away to the right, leaving a widening gap; dust rises in front of the elephant.",
+   "cues": {
+    "panic": "panicked"
+   },
+   "params": {
+    "sky": "day",
+    "land": "plain",
+    "horizon": 0.56,
+    "items": [
+     {
+      "g": "pyr_elephant",
+      "o": {
+       "pose": "charge"
+      },
+      "x": 0.26,
+      "s": 1.0,
+      "at": -1,
+      "move": {
+       "to": [
+        0.34
+       ],
+       "at": 0,
+       "dur": 3.5
+      }
+     },
+     {
+      "g": "rider",
+      "o": {
+       "pose": "gallop",
+       "dress": "roman",
+       "coat": "bay"
+      },
+      "x": 0.78,
+      "s": 1.2,
+      "at": -1,
+      "move": {
+       "to": [
+        1.05
+       ],
+       "at": "panic",
+       "dur": 1.6
+      }
+     },
+     {
+      "g": "grass",
+      "x": 0.5,
+      "layer": "fg",
+      "s": 1.4
+     },
+     {
+      "g": "grass",
+      "x": 0.1,
+      "layer": "fg",
+      "s": 1.2
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.42,
+      "y": 0.56,
+      "h": 260,
+      "a": 0.28,
+      "at": "panic"
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_number",
+   "text": "Then, at Asculum, he won again.",
+   "visual": "A big painted '2' on a gold swatch under a painted war elephant; hand-written 'wins: Heraclea, Asculum'.",
+   "cues": {
+    "asc": "Asculum"
+   },
+   "params": {
+    "value": "2",
+    "label": "wins: Heraclea, Asculum",
+    "count": false,
+    "color": "gold",
+    "g": "pyr_elephant",
+    "o": {
+     "still": true,
+     "pose": "walk"
+    },
+    "s": 1.2
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "But most of his generals were dead, and he had no others.",
+   "visual": "Dusk after the battle: an empty crested bronze helmet and a dropped round shield in the grass, a spear stuck in the ground; smoke over the hills. Note 'no one to replace them'.",
+   "cues": {
+    "dead": "dead"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "hills",
+    "horizon": 0.56,
+    "sun": false,
+    "items": [
+     {
+      "g": "helmet",
+      "o": {
+       "style": "corinthian"
+      },
+      "x": 0.42,
+      "y": 0.6,
+      "s": 1.0,
+      "at": 0.1
+     },
+     {
+      "g": "pyr_aspis",
+      "x": 0.64,
+      "y": 0.585,
+      "s": 0.8,
+      "at": 0.4
+     },
+     {
+      "g": "spear",
+      "x": 0.8,
+      "y": 0.58,
+      "s": 1.3,
+      "at": 0.6,
+      "o": {
+       "upright": true
+      }
+     },
+     {
+      "g": "grass",
+      "x": 0.3,
+      "layer": "fg",
+      "s": 1.4
+     },
+     {
+      "g": "grass",
+      "x": 0.82,
+      "layer": "fg",
+      "s": 1.3
+     }
+    ],
+    "smoke": [
+     {
+      "x": 0.2,
+      "y": 0.56,
+      "h": 320,
+      "a": 0.22,
+      "at": 0
+     }
+    ],
+    "notes": [
+     {
+      "text": "no one to replace them",
+      "x": 0.5,
+      "y": 0.2,
+      "ax": 0.43,
+      "ay": 0.42,
+      "at": 0.3
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "Rome just raised new legions.",
+   "visual": "Bright morning on green hills: a fresh rank of Roman legionaries with rectangular red shields and spears marches to the right.",
+   "cues": {
+    "new": "new"
+   },
+   "params": {
+    "sky": "dawn",
+    "land": "hills",
+    "horizon": 0.56,
+    "items": [
+     {
+      "g": "army",
+      "o": {
+       "dress": "roman",
+       "rows": 1,
+       "n": 7,
+       "banner": false,
+       "march": true,
+       "face": "right",
+       "weapon": "spear"
+      },
+      "x": 0.4,
+      "s": 1.6,
+      "at": 0.1,
+      "move": {
+       "to": [
+        0.52
+       ],
+       "at": 0,
+       "dur": 4
+      }
+     },
+     {
+      "g": "cypress",
+      "x": 0.88,
+      "layer": "mid",
+      "s": 1.2
+     },
+     {
+      "g": "grass",
+      "x": 0.15,
+      "layer": "fg",
+      "s": 1.3
+     }
+    ],
+    "sun": false
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "When a man congratulated him, he said:",
+   "visual": "Night camp: by a fire in front of a tent, an officer raises his arm in greeting to the king, who stands with his back to us in a red cloak and crested helmet.",
+   "params": {
+    "sky": "night",
+    "land": "plain",
+    "horizon": 0.56,
+    "items": [
+     {
+      "g": "tent",
+      "o": {
+       "style": "military"
+      },
+      "x": 0.5,
+      "layer": "mid",
+      "s": 1.3
+     },
+     {
+      "g": "pyr_hoplite",
+      "o": {
+       "view": "side",
+       "pose": "raise",
+       "shield": false
+      },
+      "x": 0.26,
+      "s": 1.5,
+      "at": 0.1
+     },
+     {
+      "g": "pyr_hoplite",
+      "o": {
+       "view": "back",
+       "king": true
+      },
+      "x": 0.68,
+      "s": 1.8,
+      "at": 0.2
+     }
+    ],
+    "fire": [
+     {
+      "x": 0.47,
+      "y": 0.6,
+      "h": 110,
+      "at": 0
+     }
+    ]
+   }
+  },
+  {
+   "type": "wc_letter",
+   "text": "“One more victory over the Romans, and we are ruined.”",
+   "visual": "An aged sheet with a quotation written in line by line: 'One more victory / over the Romans, / and we are ruined.' and '— Pyrrhus, in Plutarch' (no seal, no signature).",
+   "cues": {
+    "ruin": "ruined"
+   },
+   "params": {
+    "style": "letter",
+    "lines": [
+     "One more victory",
+     "over the Romans,",
+     "and we are ruined.",
+     "— Pyrrhus, in Plutarch"
+    ]
+   }
+  },
+  {
+   "type": "wc_scene",
+   "text": "His name became a word: Pyrrhic victory.",
+   "visual": "Sunset: the king stands alone on the empty field with his back to us, spear upright, a dropped shield in the grass; note 'Pyrrhic victory'; the picture slowly washes back to paper.",
+   "cues": {
+    "word": "word"
+   },
+   "params": {
+    "sky": "dusk",
+    "land": "plain",
+    "horizon": 0.58,
+    "sun": {
+     "x": 0.5,
+     "y": 0.62,
+     "r": 90
+    },
+    "items": [
+     {
+      "g": "pyr_hoplite",
+      "o": {
+       "view": "back",
+       "king": true
+      },
+      "x": 0.5,
+      "s": 2.3,
+      "at": -1
+     },
+     {
+      "g": "pyr_aspis",
+      "x": 0.3,
+      "y": 0.6,
+      "s": 0.8,
+      "at": -1
+     },
+     {
+      "g": "grass",
+      "x": 0.86,
+      "layer": "fg",
+      "s": 1.3
+     }
+    ],
+    "notes": [
+     {
+      "text": "Pyrrhic victory",
+      "x": 0.5,
+      "y": 0.14,
+      "at": 1.0,
+      "color": "red",
+      "align": "center"
+     }
+    ],
+    "mist": 2.8
+   }
+  },
+  {
+   "type": "wc_title",
+   "text": "Subscribe for a true story like this every day.",
+   "visual": "Title card: a small painted war elephant, 'The Pyrrhic victory', sub 'Heraclea 280 BC · Asculum 279 BC'.",
+   "params": {
+    "text": "The Pyrrhic victory",
+    "sub": "Heraclea 280 BC · Asculum 279 BC",
+    "g": "pyr_elephant",
+    "o": {
+     "still": true
+    },
+    "s": 0.6,
+    "color": "skyWarm"
+   }
+  }
+ ],
+ "sources": [
+  {
+   "title": "Plutarch, Life of Pyrrhus (Loeb translation, 1920) — LacusCurtius",
+   "url": "https://penelope.uchicago.edu/Thayer/e/roman/texts/plutarch/lives/pyrrhus*.html"
+  },
+  {
+   "title": "Encyclopaedia Britannica — Pyrrhus, king of Epirus",
+   "url": "https://www.britannica.com/biography/Pyrrhus"
+  },
+  {
+   "title": "World History Encyclopedia — Pyrrhus",
+   "url": "https://www.worldhistory.org/Pyrrhus/"
+  }
+ ],
+ "youtube": {
+  "title": "Pyrrhic Victory: How Did Winning Ruin a King?",
+  "description": "A Pyrrhic victory is a win that costs too much, and the phrase has a real face. In 280 BC King Pyrrhus of Epirus crossed to Italy to fight Rome with war elephants no Roman army had ever met. At Heraclea the Roman horses panicked and he won; a year later at Asculum he won again. But his generals and veterans were dead and he had no one to replace them, while Rome simply raised new legions. Plutarch records his answer to a man who congratulated him: one more victory over the Romans, and we are utterly ruined.\n\nSubscribe to Stickstory for a true story like this every day. Can a victory ever be worth any price? Tell us in the comments!\n\n#shorts #pyrrhicvictory #ancientrome #stickstory",
+  "tags": [
+   "pyrrhic victory",
+   "pyrrhic victory meaning",
+   "pyrrhic victory origin",
+   "what is a pyrrhic victory",
+   "pyrrhus of epirus",
+   "king pyrrhus",
+   "battle of heraclea",
+   "battle of asculum",
+   "pyrrhic war",
+   "war elephants",
+   "ancient rome",
+   "roman republic",
+   "plutarch",
+   "history",
+   "history stories",
+   "stickstory"
+  ],
+  "category_id": "28",
+  "publish_at": "2026-11-28T13:00:00-05:00"
+ },
+ "slug": "pyrrhic-victory"
+}
