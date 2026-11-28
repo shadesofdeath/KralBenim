@@ -1,0 +1,732 @@
+{
+  "engine": "studio",
+  "theme": "watercolor",
+  "palette": "yaz",
+  "format": "short",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "cover": {
+    "lines": [
+      "Tek bir",
+      "yalan"
+    ],
+    "highlight": [
+      "yalan"
+    ],
+    "scene": 0,
+    "t": 2.0,
+    "focus": [
+      520,
+      960
+    ],
+    "zoom": 1.55
+  },
+  "scenes": [
+    {
+      "type": "wc_salamis_night",
+      "text": "Bu savaşı tek bir yalan kazandı.",
+      "visual": "Gece, karanlık deniz; ortada tek bir küçük sandal: kukuletalı bir kürekçi ve pruvada pelerinli bir adam, kıçta küçük bir kandil yanıyor, ışığı suya vuruyor; uzakta karanlık bir ada sırtı, ay.",
+      "cues": {
+        "yalan": "yalan"
+      },
+      "params": {
+        "sky": "night",
+        "land": "sea",
+        "horizon": 0.45,
+        "sun": {
+          "x": 0.7,
+          "y": 0.82,
+          "r": 40
+        },
+        "path": 0.8,
+        "veil": 0.8,
+        "items": [
+          {
+            "g": "skiff",
+            "x": 0.4,
+            "y": 0.585,
+            "s": 2.1,
+            "at": -1,
+            "move": {
+              "to": [
+                0.56
+              ],
+              "at": 0,
+              "dur": 2.6,
+              "ease": false
+            }
+          }
+        ],
+        "ridge": {
+          "x0": 0,
+          "x1": 0.6,
+          "amp": 70
+        },
+        "sky_veil": 0.8
+      }
+    },
+    {
+      "type": "wc_map",
+      "text": "Milattan önce 480. Persler Atina'yı yakmıştı.",
+      "visual": "Attika ve Saronik Körfezi haritası; Atina'da kırmızı yıldız ve 'yandı' notu, Salamis adası, Faliron önünde Pers donanması işareti.",
+      "cues": {
+        "yak": "yakmıştı"
+      },
+      "params": {
+        "region": [
+          23.25,
+          37.78,
+          23.85,
+          38.12
+        ],
+        "paint": 1.0,
+        "places": [
+          {
+            "name": "Atina",
+            "lon": 23.727,
+            "lat": 37.972,
+            "kind": "star",
+            "at": 0.3,
+            "color": "red",
+            "align": "right"
+          },
+          {
+            "name": "Pers donanması",
+            "lon": 23.64,
+            "lat": 37.89,
+            "kind": "ship",
+            "at": 0.8,
+            "align": "left",
+            "size": 1.5
+          }
+        ],
+        "labels": [
+          {
+            "text": "Salamis",
+            "lon": 23.47,
+            "lat": 37.94,
+            "italic": true,
+            "at": 0.3
+          }
+        ],
+        "seas": [
+          {
+            "text": "Saronik Körfezi",
+            "lon": 23.52,
+            "lat": 37.82,
+            "at": 0
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Yunan donanması dağılmak üzereydi.",
+      "visual": "Akşamüstü Salamis önlerinde deniz; önde yelkenini açmış, açık denize doğru ilerleyen tek bir Yunan triremi (kalkanlar, göz, tunç mahmuz); arkada adanın önünde demirli küçük trireme'ler.",
+      "cues": {
+        "dag": "dağılmak"
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "sea",
+        "horizon": 0.48,
+        "sun": {
+          "x": 0.82,
+          "y": 0.62,
+          "r": 44
+        },
+        "items": [
+          {
+            "g": "island",
+            "o": {
+              "w": 2.6,
+              "h": 0.7,
+              "trees": 2,
+              "tree": "cypress"
+            },
+            "x": 0.2,
+            "y": 0.482,
+            "layer": "far",
+            "at": -1
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "greek"
+            },
+            "x": 0.12,
+            "y": 0.49,
+            "layer": "far",
+            "at": -1
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "greek"
+            },
+            "x": 0.34,
+            "y": 0.495,
+            "layer": "far",
+            "at": -1,
+            "flip": true
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "greek",
+              "sail": "full"
+            },
+            "x": 0.42,
+            "y": 0.58,
+            "s": 1.2,
+            "at": 0.1,
+            "move": {
+              "to": [
+                0.55
+              ],
+              "at": 0.6,
+              "dur": 3.2
+            }
+          }
+        ],
+        "notes": [
+          {
+            "text": "kaçmak isteyenler",
+            "x": 0.1,
+            "y": 0.24,
+            "ax": 0.53,
+            "ay": 0.42,
+            "at": 0.7,
+            "align": "left"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_salamis_night",
+      "text": "O gece Themistokles, oğullarının lalası Sikinnos'u düşmana yolladı.",
+      "visual": "Gece, kayalık kıyı; solda pelerinli Themistokles elini denize uzatmış; sağda kandilli sandal kıyıdan ayrılıp karanlık suya doğru ilerliyor; 'Sikinnos' notu sandalı gösteriyor.",
+      "cues": {
+        "sik": "Sikinnos"
+      },
+      "params": {
+        "sky": "night",
+        "land": "coast",
+        "coast": "right",
+        "horizon": 0.45,
+        "sun": {
+          "x": 0.2,
+          "y": 0.25,
+          "r": 40
+        },
+        "path": false,
+        "veil": 0.55,
+        "items": [
+          {
+            "g": "person",
+            "o": {
+              "pose": "point",
+              "dress": "robe",
+              "cape": "cloth",
+              "beard": true,
+              "face": "right"
+            },
+            "x": 0.22,
+            "y": 0.55,
+            "s": 1.4,
+            "at": 0.1
+          },
+          {
+            "g": "skiff",
+            "x": 0.55,
+            "y": 0.55,
+            "s": 1.25,
+            "at": 0.3,
+            "move": {
+              "to": [
+                0.8,
+                0.5
+              ],
+              "at": 0.8,
+              "dur": 4
+            }
+          },
+          {
+            "g": "rock",
+            "x": 0.1,
+            "layer": "fg",
+            "s": 1.1
+          },
+          {
+            "g": "shrub",
+            "x": 0.3,
+            "layer": "fg"
+          }
+        ],
+        "notes": [
+          {
+            "text": "Sikinnos",
+            "x": 0.6,
+            "y": 0.3,
+            "ax": 0.74,
+            "ay": 0.43,
+            "at": "sik"
+          }
+        ],
+        "sky_veil": 0.35
+      }
+    },
+    {
+      "type": "wc_salamis_message",
+      "text": "Mesaj: Yunanlılar kaçacak.",
+      "visual": "Ortada eski bir kâğıt; büyük el yazısıyla 'Yunanlılar kaçacak.' ve kırmızıyla 'Önlerini kesin.', altında küçük 'Sikinnos'un mesajı · Herodotos'a göre (özet)'.",
+      "cues": {
+        "kac": "kaçacak"
+      },
+      "params": {
+        "lines": [
+          "Yunanlılar kaçacak.",
+          "Önlerini kesin."
+        ],
+        "sub": "Sikinnos'un mesajı, Herodotos'a göre (özet)",
+        "at": 0.3
+      }
+    },
+    {
+      "type": "wc_map",
+      "text": "Kserkses inandı, boğazları gece kapattırdı.",
+      "visual": "Salamis Boğazı'na yakın plan harita; doğu ve batı çıkışlarını kesen iki kırmızı çizgi, Pers gemisi işaretleri, Psittalia adacığı.",
+      "cues": {
+        "kap": "kapattırdı",
+        "ina": "inandı"
+      },
+      "params": {
+        "region": [
+          23.36,
+          37.86,
+          23.68,
+          38.04
+        ],
+        "paint": 0.8,
+        "places": [
+          {
+            "name": "Pers gemileri",
+            "lon": 23.64,
+            "lat": 37.92,
+            "kind": "ship",
+            "at": 0.4,
+            "align": "right"
+          },
+          {
+            "name": "Psittalia",
+            "lon": 23.587,
+            "lat": 37.944,
+            "kind": "city",
+            "at": 0.3,
+            "align": "above"
+          }
+        ],
+        "labels": [
+          {
+            "text": "Salamis",
+            "lon": 23.48,
+            "lat": 37.92,
+            "italic": true,
+            "at": 0.3
+          }
+        ],
+        "routes": [
+          {
+            "points": [
+              [
+                23.565,
+                37.935
+              ],
+              [
+                23.6,
+                37.945
+              ],
+              [
+                23.63,
+                37.952
+              ]
+            ],
+            "at": {
+              "cue": "ina",
+              "d": 0.5
+            },
+            "dur": 0.8,
+            "color": "red",
+            "arrow": false,
+            "width": 20
+          },
+          {
+            "points": [
+              [
+                23.42,
+                37.97
+              ],
+              [
+                23.41,
+                37.99
+              ],
+              [
+                23.405,
+                38.01
+              ]
+            ],
+            "at": {
+              "cue": "ina",
+              "d": 0.9
+            },
+            "dur": 0.8,
+            "color": "red",
+            "arrow": false,
+            "width": 20
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Sabah dar suda Pers gemileri birbirine takıldı.",
+      "visual": "Şafak, dar boğaz; üst üste binmiş Pers trireme'leri; soldan kürek çeken bir Yunan triremi 'birbirine' anında tunç mahmuzunu yan yatmış, böğrü delik, kürekleri kırık Pers gövdesine sokuyor; duman yükseliyor.",
+      "cues": {
+        "bir": "birbirine"
+      },
+      "params": {
+        "sky": "dawn",
+        "land": "sea",
+        "horizon": 0.4,
+        "sun": {
+          "x": 0.2,
+          "y": 0.7,
+          "r": 40
+        },
+        "items": [
+          {
+            "g": "trireme",
+            "o": {
+              "side": "persian"
+            },
+            "x": 0.3,
+            "y": 0.405,
+            "layer": "far",
+            "at": -1,
+            "flip": true
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "persian"
+            },
+            "x": 0.62,
+            "y": 0.41,
+            "layer": "far",
+            "at": -1
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "persian"
+            },
+            "x": 0.82,
+            "y": 0.505,
+            "layer": "mid",
+            "at": -1,
+            "flip": true
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "persian",
+              "damage": true,
+              "list": 0.09
+            },
+            "x": 0.64,
+            "y": 0.54,
+            "s": 1.05,
+            "at": -1,
+            "flip": true
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "greek",
+              "row": true
+            },
+            "x": -0.25,
+            "y": 0.575,
+            "s": 1.1,
+            "at": -1,
+            "move": {
+              "to": [
+                0.36
+              ],
+              "at": {
+                "cue": "bir",
+                "d": -2.2
+              },
+              "dur": 2.2
+            }
+          }
+        ],
+        "smoke": [
+          {
+            "x": 0.6,
+            "y": 0.52,
+            "h": 520,
+            "at": "bir",
+            "a": 0.42
+          },
+          {
+            "x": 0.72,
+            "y": 0.5,
+            "h": 380,
+            "at": {
+              "cue": "bir",
+              "d": 0.4
+            },
+            "a": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Kserkses, Yunan zaferini tahtından izledi.",
+      "visual": "Gündüz, Salamis Boğazı yukarıdan: önde yan yatmış, yanan bir Pers triremi ve ona doğru kürek çeken Yunan triremi, dumanlar; sağda uzakta Aigaleos'un kayalık tepesinde şemsiye altında küçük Kserkses ve tahtı.",
+      "cues": {
+        "zafer": "zaferini"
+      },
+      "params": {
+        "sky": "day",
+        "land": "sea",
+        "horizon": 0.42,
+        "items": [
+          {
+            "g": "island",
+            "o": {
+              "w": 3.4,
+              "h": 0.9,
+              "trees": 0
+            },
+            "x": 0.25,
+            "y": 0.422,
+            "layer": "far",
+            "at": -1
+          },
+          {
+            "g": "xerxes",
+            "o": {
+              "rock": true
+            },
+            "x": 0.84,
+            "y": 0.37,
+            "s": 0.5,
+            "at": -1
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "persian"
+            },
+            "x": 0.45,
+            "y": 0.44,
+            "layer": "far",
+            "at": -1,
+            "flip": true
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "persian",
+              "damage": true,
+              "burning": true,
+              "list": 0.1
+            },
+            "x": 0.5,
+            "y": 0.55,
+            "s": 0.95,
+            "at": -1,
+            "flip": true
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "greek",
+              "row": true
+            },
+            "x": 0.12,
+            "y": 0.585,
+            "s": 0.95,
+            "at": -1,
+            "move": {
+              "to": [
+                0.2
+              ],
+              "at": 0,
+              "dur": 3
+            }
+          }
+        ],
+        "smoke": [
+          {
+            "x": 0.5,
+            "y": 0.53,
+            "h": 520,
+            "at": 0,
+            "a": 0.4
+          },
+          {
+            "x": 0.55,
+            "y": 0.45,
+            "h": 300,
+            "at": 0.3,
+            "a": 0.3
+          }
+        ],
+        "notes": [
+          {
+            "text": "Kserkses",
+            "x": 0.6,
+            "y": 0.16,
+            "ax": 0.84,
+            "ay": 0.27,
+            "at": "zafer"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Onu yenen, düşmanına inanmasıydı.",
+      "visual": "Büyük levha: kâğıt üstünde tek küçük sandal, kıçında kandil; el yazısıyla 'tek bir fısıltı' notu kandili gösteriyor.",
+      "cues": {
+        "ina": "inanmasıydı"
+      },
+      "params": {
+        "g": "skiff",
+        "o": {
+          "lamp": true,
+          "row": false
+        },
+        "s": 1.0,
+        "drift": "float",
+        "pigment": "stain",
+        "notes": [
+          {
+            "text": "tek bir fısıltı",
+            "part": "lamp",
+            "at": 0.3,
+            "color": "red",
+            "x": 0.62,
+            "y": 0.26
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Böyle sessiz hikâyeler için abone olun.",
+      "visual": "Sabah, sakin boğaz; uzakta Salamis adası, önde kürek çeken bir Yunan triremi, kuşlar; resim kâğıda doğru siliniyor.",
+      "params": {
+        "sky": "day",
+        "land": "sea",
+        "horizon": 0.5,
+        "items": [
+          {
+            "g": "island",
+            "o": {
+              "w": 3,
+              "h": 0.8,
+              "trees": 3,
+              "tree": "cypress"
+            },
+            "x": 0.72,
+            "y": 0.502,
+            "layer": "far",
+            "at": -1
+          },
+          {
+            "g": "trireme",
+            "o": {
+              "side": "greek",
+              "row": true
+            },
+            "x": 0.36,
+            "y": 0.58,
+            "s": 1.1,
+            "at": -1,
+            "move": {
+              "to": [
+                0.5
+              ],
+              "at": 0,
+              "dur": 3.5
+            }
+          }
+        ],
+        "birds": {
+          "x": 0.55,
+          "y": 0.2,
+          "n": 5
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "title": "Herodotus, Histories 8.75 (Sicinnus) — Perseus / Perseids",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0016/tlg001/perseus-eng2/8.75.1-8.75.3"
+    },
+    {
+      "title": "Herodotus, Histories 8.90 (Xerxes beneath Mount Aegaleos) — Perseus / Perseids",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0016/tlg001/perseus-eng2/8.90.4-8.91.1"
+    },
+    {
+      "title": "Aeschylus, Persians 345–420 — Perseus / Perseids",
+      "url": "https://cts.perseids.org/read/greekLit/tlg0085/tlg002/perseus-eng2/345-420"
+    },
+    {
+      "title": "Battle of Salamis — Britannica",
+      "url": "https://www.britannica.com/EBchecked/topic/518945/Battle-of-Salamis"
+    },
+    {
+      "title": "Battle of Salamis — World History Encyclopedia",
+      "url": "https://www.worldhistory.org/battle-of-salamis/"
+    }
+  ],
+  "youtube": {
+    "title": "Salamis Savaşı: Pers Donanmasını Tek Bir Yalan Nasıl Yendi?",
+    "description": "Salamis savaşı milattan önce 480'de, Persler Atina'yı yaktıktan sonra tek bir yalanla kazanıldı. Yunan donanması dağılmak üzereyken Themistokles, oğullarının lalası Sikinnos'u gece düşman kampına yolladı: Yunanlılar kaçacak. Herodotos'a göre Kserkses bu habere inandı ve gemilerine boğazları gece boyunca kapattırdı. Sabah dar suda Pers gemileri birbirine takıldı; Kserkses savaşı Aigaleos tepesinin eteğinden izledi.\n\nBöyle sessiz tarih hikâyeleri için abone ol. Sence Kserkses bu mesaja neden inandı? Yorumlara yaz!\n\n#shorts #salamis #themistokles #düşünbakalım",
+    "tags": [
+      "salamis savaşı",
+      "salamis",
+      "salamis deniz savaşı",
+      "salamis savaşı 480",
+      "themistokles",
+      "kserkses",
+      "sikinnos",
+      "pers savaşları",
+      "herodotos",
+      "trireme",
+      "antik yunan",
+      "antik çağ",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-28T19:00:00+03:00"
+  },
+  "slug": "salamis-mesaji"
+}

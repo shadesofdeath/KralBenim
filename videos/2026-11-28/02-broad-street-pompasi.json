@@ -1,0 +1,2397 @@
+{
+  "engine": "studio",
+  "theme": "watercolor",
+  "palette": "sepya",
+  "format": "long",
+  "fps": 30,
+  "subtitles": true,
+  "channel": "Düşün Bakalım",
+  "narrator": "kasif",
+  "lang": "tr",
+  "tts": {
+    "provider": "elevenlabs",
+    "voice_id": "mF7tIc9VLrznhGooGjaT",
+    "model": "eleven_v3"
+  },
+  "cover": {
+    "lines": [
+      "Katil bu",
+      "pompa"
+    ],
+    "highlight": [
+      "pompa"
+    ],
+    "scene": 1,
+    "t": 4.5,
+    "focus": [
+      1010,
+      600
+    ],
+    "zoom": 1.45
+  },
+  "sources": [
+    {
+      "title": "John Snow — Broad Street Pump Outbreak (UCLA Fielding School of Public Health)",
+      "url": "https://epi-snow.ph.ucla.edu/Stream2_BSPoutbreak_a.html"
+    },
+    {
+      "title": "Broad Street Outbreak: Whitehead, the Lewis infant and the cesspool (UCLA)",
+      "url": "https://epi-snow.ph.ucla.edu/Stream2_BSPoutbreak_e.html"
+    },
+    {
+      "title": "John Snow — Encyclopaedia Britannica",
+      "url": "https://www.britannica.com/biography/John-Snow-British-physician"
+    },
+    {
+      "title": "John Snow: Cholera & the Broad Street pump — London Museum",
+      "url": "https://www.londonmuseum.org.uk/collections/london-stories/john-snow-cholera-broad-street-pump/"
+    },
+    {
+      "title": "Dr John Snow and Reverend Whitehead — Cholera and the Thames",
+      "url": "https://www.choleraandthethames.co.uk/cholera-in-london/cholera-in-soho/"
+    },
+    {
+      "title": "John Snow Hunts the Blue Death — Science History Institute",
+      "url": "https://www.sciencehistory.org/stories/magazine/john-snow-hunts-the-blue-death/"
+    },
+    {
+      "title": "John Snow pump reinstated — London School of Hygiene & Tropical Medicine",
+      "url": "https://www.lshtm.ac.uk/research/centres/centre-history-public-health/john-snow-pump-reinstated"
+    }
+  ],
+  "youtube": {
+    "title": "John Snow: Londra'yı Öldüren Pompayı Kim Buldu?",
+    "description": "John Snow, 1854 yazında Londra'nın Soho semtini kasıp kavuran kolera salgınının sebebini kapı kapı dolaşarak buldu: Broad Street'teki bir sokak pompası. Doktorlar ölümü kötü havaya bağlıyordu; Snow ölüleri tek tek saydı, onları bir haritaya işledi ve kendi kuyusu olan ıslahevinin, bira içen fabrika işçilerinin ve Hampstead'de ölen bir dul kadının ipuçlarıyla suyun suçlu olduğunu gösterdi. Ona inanmayan papaz Henry Whitehead ise kanıtın son parçasını buldu.\n\nBu videoda:\n• 31 Ağustos 1854: Broad Street'te kolera ve miasma (kötü hava) inancı\n• John Snow, Kraliçe Victoria'nın kloroformu ve 1849'daki kitapçık\n• Kapı kapı ölüm listesi, nokta haritası, ıslahevi, bira fabrikası ve Hampstead'deki dul\n• 8 Eylül'de sökülen pompa kolu ve salgının zaten azaldığı gerçeği\n• Henry Whitehead, 40 Broad Street'teki bebek ve lağım çukuru; bugünkü Broadwick Street pompası\n\nHer gün yeni bir 'neden?' için abone ol. Sence bugün de herkesin gözü önünde duran ama kimsenin görmediği bir 'Broad Street pompası' var mı? Yorumlara yaz!\n\n#johnsnow #kolera #bilimtarihi #tarih #düşünbakalım",
+    "tags": [
+      "john snow",
+      "john snow kolera",
+      "john snow harita",
+      "broad street pompası",
+      "kolera salgını",
+      "1854 kolera salgını",
+      "londra kolera",
+      "soho",
+      "henry whitehead",
+      "epidemiyoloji tarihi",
+      "miasma",
+      "bilim tarihi",
+      "tıp tarihi",
+      "keşifler",
+      "tarih",
+      "tarih hikayeleri",
+      "düşün bakalım"
+    ],
+    "category_id": "27",
+    "publish_at": "2026-11-28T20:30:00+03:00"
+  },
+  "scenes": [
+    {
+      "type": "wc_scene",
+      "text": "Broad Street'te insanlar gece yarısı kıvranarak uyandı.",
+      "visual": "Gece, karanlık bir oda, yakın plan: saman şiltede yan yatmış, dizlerini karnına çekmiş, elini karnına bastırmış tek bir adam; başı yastıkta.",
+      "cues": {
+        "kiv": "kıvranarak"
+      },
+      "camera": {
+        "focus": [
+          1210,
+          650
+        ],
+        "zoom": 1.8
+      },
+      "params": {
+        "land": "interior",
+        "wall": "stoneDark",
+        "horizon": 0.72,
+        "items": [
+          {
+            "g": "window",
+            "o": {
+              "style": "rect",
+              "night": true
+            },
+            "x": 0.84,
+            "at": -1
+          },
+          {
+            "g": "bs_sick",
+            "x": 0.56,
+            "s": 1.7,
+            "at": 0.15,
+            "paint": 1.4
+          },
+          {
+            "g": "candle",
+            "x": 0.3,
+            "s": 0.8,
+            "at": -1
+          }
+        ]
+      },
+      "chapter": "Soho, 1854"
+    },
+    {
+      "type": "wc_scene",
+      "text": "Otuz bir Ağustos, bin sekiz yüz elli dört. Londra, Soho. Sıcak, ağır bir gece.",
+      "visual": "Gece; Broad Street: ay ışığında üç katlı tuğla sıra evler, köşede yanan bir gaz lambasının altında dökme demirden tek bir sokak pompası.",
+      "cues": {
+        "soho": "Soho"
+      },
+      "params": {
+        "sky": "night",
+        "land": "city",
+        "horizon": 0.8,
+        "amp": 0.25,
+        "sun": {
+          "x": 0.82,
+          "y": 0.22,
+          "r": 40
+        },
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 3,
+              "lit": true
+            },
+            "x": 0.06,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC"
+            },
+            "x": 0.2,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 1.3,
+              "col": "stone",
+              "lit": true
+            },
+            "x": 0.8,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 3,
+              "col": "stoneDark"
+            },
+            "x": 0.94,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "bs_gaslamp",
+            "x": 0.32,
+            "s": 1.3,
+            "at": 0.2
+          },
+          {
+            "g": "bs_pump",
+            "x": 0.55,
+            "s": 1.85,
+            "at": 0.4,
+            "o": {
+              "drip": true
+            }
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "type": "wc_number",
+      "text": "Kolera hızlı öldürürdü. Sabah sağlıklı olan biri akşamı göremeyebilirdi. Üç gün içinde bu birkaç sokakta yüzden fazla insan öldü.",
+      "visual": "Kâğıda boyanmış büyük '100+', altında el yazısıyla 'ölü · üç günde'; yanında üst haznesi boşalmak üzere bir kum saati.",
+      "cues": {
+        "uc": "Üç"
+      },
+      "params": {
+        "value": "100+",
+        "count": false,
+        "label": "ölü · üç günde",
+        "note": "Broad Street çevresi",
+        "color": "stain",
+        "g": "hourglass",
+        "o": {
+          "fill": 0.15
+        },
+        "s": 0.9,
+        "at": 0.2
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Kaçabilen herkes kaçtı. Doktorlar sebebi bildiklerinden emindi. Hava zehirliydi.",
+      "visual": "Sisli bir şafak; eşyaları yüklü üstü örtülü bir at arabası boş sokaktan sola, şehirden uzaklaşıyor; evlerin üstünde sis bantları; not 'kötü hava'.",
+      "cues": {
+        "hava": "Hava"
+      },
+      "params": {
+        "sky": "fog",
+        "land": "city",
+        "horizon": 0.74,
+        "weather": "fog",
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC"
+            },
+            "x": 0.1,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "w": 0.9
+            },
+            "x": 0.26,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 1.3,
+              "col": "stone"
+            },
+            "x": 0.76,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 3
+            },
+            "x": 0.92,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "cart",
+            "o": {
+              "style": "covered",
+              "animal": "horse",
+              "load": "sacks",
+              "driver": true,
+              "face": "left"
+            },
+            "x": 0.68,
+            "s": 1.5,
+            "at": 0.1,
+            "move": {
+              "to": [
+                0.36
+              ],
+              "at": 0.3,
+              "dur": 7
+            }
+          }
+        ],
+        "notes": [
+          {
+            "text": "kötü hava?",
+            "x": 0.5,
+            "y": 0.2,
+            "at": "hava"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Ama ölüm havada değildi. Sokağın tam ortasında duruyordu. Ve herkes ondan her gün su içiyordu.",
+      "visual": "Gündüz; köşedeki dökme demir pompa yakın plan, ağzından su damlıyor; yanında kova taşıyan başörtülü bir kadın; not 'su'.",
+      "cues": {
+        "orta": "ortasında",
+        "gun": "gün"
+      },
+      "camera": {
+        "focus": [
+          960,
+          600
+        ],
+        "zoom": 1.35
+      },
+      "params": {
+        "sky": "day",
+        "land": "city",
+        "horizon": 0.8,
+        "clouds": 2,
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 1.3,
+              "col": "stone"
+            },
+            "x": 0.13,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC"
+            },
+            "x": 0.88,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "bs_pump",
+            "x": 0.5,
+            "s": 2.0,
+            "at": 0.1,
+            "o": {
+              "drip": true
+            }
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "carry",
+              "dress": "woman",
+              "load": "jar",
+              "face": "left"
+            },
+            "x": 0.7,
+            "s": 1.6,
+            "at": 0.6
+          }
+        ],
+        "notes": [
+          {
+            "text": "her gün su",
+            "x": 0.27,
+            "y": 0.32,
+            "ax": 0.47,
+            "ay": 0.45,
+            "at": "gun",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_title",
+      "text": "Bu katili kim buldu? Ve neden kimse ona inanmadı?",
+      "visual": "Kâğıda büyük serif harflerle 'Broad Street', altında '1854'; küçük bir sokak pompası.",
+      "cues": {
+        "kat": "katili"
+      },
+      "params": {
+        "text": "Broad Street",
+        "sub": "Londra, 1854",
+        "g": "bs_pump",
+        "s": 0.7,
+        "color": "stain"
+      }
+    },
+    {
+      "type": "wc_chapter",
+      "text": "O yıllarda Londra kalabalık ve kirli bir şehirdi. Evlerin altında lağım çukurları vardı.",
+      "visual": "Bölüm kartı: 'Bölüm 1 — Kötü hava', 'Londra, 1849 – 1854', küçük bir gaz lambası.",
+      "chapter": "Kötü hava",
+      "params": {
+        "num": "Bölüm 1",
+        "title": "Kötü hava",
+        "sub": "Londra, 1849 – 1854",
+        "g": "bs_gaslamp",
+        "s": 0.6
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Doktorların çoğu hastalığın bu kokudan doğduğuna inanırdı. Buna miasma diyorlardı, yani kötü hava.",
+      "visual": "Alacakaranlık; nehrin ardında bacaları tüten bir 19. yüzyıl Londra silueti, üstüne çöken kahverengi duman; not 'miasma'.",
+      "cues": {
+        "mia": "miasma"
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "river",
+        "horizon": 0.62,
+        "items": [
+          {
+            "g": "skyline",
+            "o": {
+              "style": "modern"
+            },
+            "x": 0.5,
+            "layer": "far",
+            "s": 2.2,
+            "at": -1
+          },
+          {
+            "g": "factory",
+            "x": 0.2,
+            "layer": "mid",
+            "at": 0.2
+          },
+          {
+            "g": "reeds",
+            "x": 0.9,
+            "layer": "fg"
+          }
+        ],
+        "smoke": [
+          {
+            "x": 0.22,
+            "y": 0.42,
+            "h": 420,
+            "at": 0.4,
+            "a": 0.5
+          },
+          {
+            "x": 0.6,
+            "y": 0.5,
+            "h": 380,
+            "at": 0.8,
+            "a": 0.4
+          }
+        ],
+        "notes": [
+          {
+            "text": "miasma",
+            "x": 0.72,
+            "y": 0.2,
+            "at": "mia",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Ama birkaç sokak ötede yaşayan bir doktor buna inanmadı. Adı John Snow'du.",
+      "visual": "Gece; mum ışığında bir çalışma odası: masasında yazı yazan siyah ceketli bir doktor, arkasında kitap rafı; not 'John Snow'.",
+      "cues": {
+        "snow": "John"
+      },
+      "camera": {
+        "focus": [
+          1000,
+          560
+        ],
+        "zoom": 1.4
+      },
+      "params": {
+        "land": "interior",
+        "wall": "far",
+        "horizon": 0.74,
+        "items": [
+          {
+            "g": "shelf",
+            "x": 0.25,
+            "s": 1.3,
+            "at": -1
+          },
+          {
+            "g": "table",
+            "o": {
+              "style": "desk"
+            },
+            "x": 0.58,
+            "s": 1.3,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "sit",
+              "dress": "modern",
+              "seat": "stool",
+              "headgear": "bare",
+              "face": "right"
+            },
+            "x": 0.5,
+            "s": 1.9,
+            "at": 0.2
+          },
+          {
+            "g": "candle",
+            "x": 0.68,
+            "y": 0.63,
+            "s": 0.5,
+            "at": 0.4
+          }
+        ],
+        "notes": [
+          {
+            "text": "John Snow",
+            "x": 0.6,
+            "y": 0.27,
+            "ax": 0.52,
+            "ay": 0.5,
+            "at": "snow"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Hastaları ameliyatta uyutmasıyla tanınırdı. Bin sekiz yüz elli üçte Kraliçe Victoria'ya doğumda kloroform vermişti.",
+      "visual": "Müze levhası: koyu camdan, mantar tıpalı küçük bir kloroform şişesi; notlar 'kloroform' ve 'Kraliçe Victoria · 1853'.",
+      "cues": {
+        "kra": "Kraliçe",
+        "klo": "kloroform"
+      },
+      "params": {
+        "g": "bottle",
+        "o": {
+          "style": "onion",
+          "color": "stoneDark"
+        },
+        "pigment": "sky",
+        "notes": [
+          {
+            "text": "Kraliçe Victoria · 1853",
+            "part": "neck",
+            "at": "kra"
+          },
+          {
+            "text": "kloroform",
+            "part": "body",
+            "at": "klo",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_letter",
+      "text": "Bin sekiz yüz kırk dokuzda ise ince bir kitapçık yazmıştı. Adı, Koleranın Bulaşma Yolu Üzerine.",
+      "visual": "Eski bir kitap kapağı: 'On the Mode of / Communication / of Cholera', altında 'John Snow', '1849'.",
+      "cues": {
+        "kit": "kitapçık"
+      },
+      "params": {
+        "style": "letter",
+        "head": "1849",
+        "lines": [
+          "On the Mode of",
+          "Communication",
+          "of Cholera"
+        ],
+        "sign": "John Snow",
+        "at": 0.4
+      }
+    },
+    {
+      "type": "wc_letter",
+      "text": "Düşünce basitti. Kolera önce bağırsağı vurur, akciğeri değil. Demek ki hastalık solunmaz, yutulur.",
+      "visual": "Bir defter sayfası, el yazısıyla iki satır beliriyor: 'akciğer değil, bağırsak', 'solunmaz, yutulur'; imza 'J. Snow'.",
+      "cues": {
+        "bag": "bağırsağı",
+        "yut": "yutulur"
+      },
+      "params": {
+        "style": "diary",
+        "lines": [
+          "akciğer değil, bağırsak",
+          "solunmaz, yutulur."
+        ],
+        "sign": "J. Snow",
+        "at": "bag"
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Ve onu taşıyan şey büyük olasılıkla kirli sudur.",
+      "visual": "Müze levhası: bir bardak su, içinde ince bulanık zerreler süzülüyor; not 'kirli su?'.",
+      "cues": {
+        "kir": "kirli"
+      },
+      "params": {
+        "g": "bs_glass",
+        "o": {
+          "cloudy": true
+        },
+        "pigment": "sky",
+        "notes": [
+          {
+            "text": "kirli su?",
+            "part": "water",
+            "at": "kir",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Doktorlar kitapçığı okudu ve rafa kaldırdı. Beş yıl boyunca kimse ona kulak asmadı. Sonra Broad Street, Snow'a korkunç bir fırsat verdi.",
+      "visual": "Müze levhası: kapanmış, eski deri kaplı ince bir kitap; notlar '1849' ve 'rafa kaldırıldı'.",
+      "cues": {
+        "raf": "rafa",
+        "kor": "korkunç"
+      },
+      "params": {
+        "g": "book",
+        "o": {
+          "color": "clothB"
+        },
+        "pigment": "stain",
+        "notes": [
+          {
+            "text": "1849",
+            "part": "cover",
+            "at": 0.6
+          },
+          {
+            "text": "rafa kaldırıldı",
+            "part": "spine",
+            "at": "raf",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_chapter",
+      "text": "Snow, elinde ölenlerin adres listesiyle Broad Street'e yürüdü.",
+      "visual": "Bölüm kartı: 'Bölüm 2 — Kapı kapı', 'Eylül 1854', küçük bir ahşap kapı.",
+      "chapter": "Kapı kapı",
+      "params": {
+        "num": "Bölüm 2",
+        "title": "Kapı kapı",
+        "sub": "Eylül 1854",
+        "g": "door",
+        "o": {
+          "style": "rect"
+        },
+        "s": 0.6
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Kapı kapı dolaştı. Yas tutan ailelere tek bir soru sordu.",
+      "visual": "Gündüz, tuğla sıra evlerin önü: açık bir kapının eşiğinde siyah başörtülü bir kadın; karşısında şapkalı, ceketli doktor elinde defterle.",
+      "cues": {
+        "kap": "Kapı",
+        "soru": "soru"
+      },
+      "camera": {
+        "focus": [
+          1060,
+          620
+        ],
+        "zoom": 1.5
+      },
+      "params": {
+        "sky": "day",
+        "land": "city",
+        "horizon": 0.8,
+        "clouds": 2,
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC",
+              "w": 1.3
+            },
+            "x": 0.18,
+            "layer": "main",
+            "s": 1.3,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 1.3,
+              "col": "stone"
+            },
+            "x": 0.82,
+            "layer": "main",
+            "s": 1.3,
+            "at": -1
+          },
+          {
+            "g": "door",
+            "o": {
+              "style": "rect",
+              "open": true
+            },
+            "x": 0.5,
+            "s": 1.2,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "stand",
+              "dress": "woman",
+              "face": "right",
+              "cols": {
+                "cloth": "ink"
+              }
+            },
+            "x": 0.47,
+            "s": 1.3,
+            "at": 0.2
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "stand",
+              "dress": "modern",
+              "hold": "book",
+              "face": "left",
+              "headgear": "fedora"
+            },
+            "x": 0.62,
+            "s": 1.35,
+            "at": 0.5
+          }
+        ],
+        "notes": [
+          {
+            "text": "tek bir soru",
+            "x": 0.67,
+            "y": 0.34,
+            "ax": 0.62,
+            "ay": 0.5,
+            "at": "soru"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_letter",
+      "text": "Suyunuzu nereden alırdınız? Cevaplar hep aynı yere çıktı.",
+      "visual": "Snow'un defteri: adres satırları birer birer yazılıyor, her satırın sonunda aynı kelime 'pompa'.",
+      "cues": {
+        "ayn": "aynı"
+      },
+      "params": {
+        "style": "diary",
+        "lines": [
+          "Broad Street 38 · pompa",
+          "Broad Street 40 · pompa",
+          "Broad Street 42 · pompa",
+          "Cambridge St. · pompa"
+        ],
+        "at": 0.3
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Cambridge Street köşesindeki el pompası. Soho'nun en sevilen suyu oradaydı. Soğuk, berrak, tatlı.",
+      "visual": "Müze levhası: dökme demir sokak pompası büyük; uzun kolu, kubbeli başlığı, ağzından damlayan su; notlar 'kol' ve 'soğuk, berrak'.",
+      "cues": {
+        "pom": "pompası",
+        "sog": "Soğuk"
+      },
+      "params": {
+        "g": "bs_pump",
+        "o": {
+          "drip": true
+        },
+        "pigment": "sky",
+        "s": 1.05,
+        "notes": [
+          {
+            "text": "kol",
+            "part": "handle",
+            "at": "pom"
+          },
+          {
+            "text": "soğuk, berrak",
+            "part": "spout",
+            "at": "sog",
+            "color": "red"
+          }
+        ],
+        "title": {
+          "text": "Broad Street pompası",
+          "sub": "Soho, 1854"
+        }
+      }
+    },
+    {
+      "type": "wc_broadst_map",
+      "text": "Snow ölümleri bir haritaya işledi. Her ölüm, evin önüne çizilmiş küçük siyah bir çizgiydi.",
+      "visual": "Boyanmış sokak planı: Broad Street, Cambridge Street, Poland Street, Berwick Street ve Golden Square; pompa kırmızı halkayla işaretleniyor; evlerin önünde ilk siyah çizgiler beliriyor.",
+      "cues": {
+        "har": "haritaya",
+        "cizgi": "çizgiydi"
+      },
+      "params": {
+        "paint": 1.0,
+        "pump": {
+          "at": "har"
+        },
+        "deaths": {
+          "at": "cizgi",
+          "dur": 3,
+          "n": 90
+        }
+      }
+    },
+    {
+      "type": "wc_broadst_map",
+      "text": "Ve çizgiler pompanın çevresinde üst üste yığıldı.",
+      "visual": "Aynı plan yakın: pompanın çevresindeki evlerin önünde siyah çizgiler üst üste yığılıyor, kırmızı kesik bir halka onları çeviriyor.",
+      "cues": {
+        "yig": "yığıldı"
+      },
+      "camera": {
+        "focus": [
+          900,
+          520
+        ],
+        "zoom": 1.6
+      },
+      "params": {
+        "paint": 0,
+        "pump": {
+          "at": -1,
+          "label": false
+        },
+        "deaths": {
+          "at": 0.1,
+          "dur": 3.2,
+          "n": 300
+        },
+        "ring": {
+          "at": "yig",
+          "r": 300
+        }
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Yine de bir harita tek başına kanıt değildi. Belki o köşenin havası daha kötüydü. Snow'un başka ipuçlarına ihtiyacı vardı.",
+      "visual": "Alacakaranlık, sisli bir köşe: gaz lambasının yanında duran şapkalı doktor uzağa bakıyor; arkada sisin içinde evler.",
+      "cues": {
+        "kan": "kanıt",
+        "ipu": "ipuçlarına"
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "city",
+        "horizon": 0.78,
+        "weather": "fog",
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 3,
+              "col": "stoneDark"
+            },
+            "x": 0.1,
+            "layer": "far",
+            "s": 2.4,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC"
+            },
+            "x": 0.85,
+            "layer": "far",
+            "s": 2.4,
+            "at": -1
+          },
+          {
+            "g": "bs_gaslamp",
+            "x": 0.4,
+            "s": 1.5,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "look",
+              "dress": "modern",
+              "headgear": "fedora",
+              "face": "left"
+            },
+            "x": 0.56,
+            "s": 1.8,
+            "at": 0.2
+          }
+        ],
+        "notes": [
+          {
+            "text": "kanıt?",
+            "x": 0.64,
+            "y": 0.36,
+            "at": "kan",
+            "color": "red",
+            "align": "left"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_broadst_map",
+      "text": "Pompanın hemen yakınında bir ıslahevi vardı. İçinde beş yüzden fazla yoksul kalırdı. Ama orada sadece beş kişi öldü.",
+      "visual": "Sokak planı: çevresi siyah çizgilerle dolu; Poland Street'teki ıslahevi bloğu maviyle boyanıyor, içinde sadece beş çizgi; not 'ıslahevi · 5'.",
+      "cues": {
+        "isl": "ıslahevi",
+        "bes": "sadece"
+      },
+      "camera": {
+        "focus": [
+          620,
+          420
+        ],
+        "zoom": 1.6
+      },
+      "params": {
+        "paint": 0,
+        "pump": {
+          "at": -1,
+          "label": false
+        },
+        "deaths": {
+          "done": true,
+          "n": 300
+        },
+        "highlight": [
+          {
+            "what": "workhouse",
+            "at": "isl",
+            "label": "ıslahevi · 5"
+          }
+        ],
+        "notes": []
+      }
+    },
+    {
+      "type": "wc_bucket_well",
+      "text": "Çünkü binanın kendi kuyusu vardı.",
+      "visual": "Gündüz; arkada dört katlı, geniş taş ıslahevi binası; ön planda sağda avludaki taş kuyu, ipteki kova yukarı çekiliyor; not 'kendi kuyusu'.",
+      "cues": {
+        "kuyu": "kuyusu"
+      },
+      "params": {
+        "sky": "day",
+        "land": "city",
+        "horizon": 0.82,
+        "clouds": 2,
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "w": 2.6,
+              "col": "stone"
+            },
+            "x": 0.34,
+            "layer": "mid",
+            "s": 2.0,
+            "at": -1
+          },
+          {
+            "g": "tree",
+            "x": 0.92,
+            "layer": "mid",
+            "at": -1
+          },
+          {
+            "g": "grass",
+            "x": 0.55,
+            "layer": "fg"
+          },
+          {
+            "g": "shrub",
+            "x": 0.95,
+            "layer": "fg"
+          }
+        ],
+        "well": {
+          "x": 0.7,
+          "s": 1.25,
+          "at": -1
+        },
+        "lift": {
+          "at": 0.15,
+          "dur": 1.4
+        },
+        "notes": [
+          {
+            "text": "kendi kuyusu",
+            "x": 0.5,
+            "y": 0.22,
+            "ax": 0.68,
+            "ay": 0.45,
+            "at": "kuyu",
+            "color": "red"
+          }
+        ],
+        "bucket_s": 0.5
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Aynı sokaktaki bira fabrikasında yetmişten fazla işçi çalışırdı. Hiçbiri ağır hastalanmadı.",
+      "visual": "Gündüz; tuğla bir bira fabrikası, bacasından duman; avluda üst üste bira fıçıları ve fıçı yuvarlayan önlüklü bir işçi.",
+      "cues": {
+        "isci": "işçi",
+        "hic": "Hiçbiri"
+      },
+      "params": {
+        "sky": "day",
+        "land": "city",
+        "horizon": 0.78,
+        "clouds": 3,
+        "items": [
+          {
+            "g": "factory",
+            "x": 0.42,
+            "s": 1.25,
+            "at": 0.1
+          },
+          {
+            "g": "barrel",
+            "x": 0.72,
+            "s": 1.2,
+            "at": 0.6
+          },
+          {
+            "g": "barrel",
+            "x": 0.79,
+            "s": 1.2,
+            "at": 0.8
+          },
+          {
+            "g": "barrel",
+            "x": 0.755,
+            "y": 0.68,
+            "s": 1.2,
+            "at": 1.0
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "carry",
+              "dress": "worker",
+              "load": "sack",
+              "face": "left"
+            },
+            "x": 0.88,
+            "s": 1.3,
+            "at": "isci"
+          }
+        ],
+        "notes": [
+          {
+            "text": "70+ işçi",
+            "x": 0.73,
+            "y": 0.4,
+            "ax": 0.87,
+            "ay": 0.62,
+            "at": "isci"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Çünkü işçilere her gün bira verilirdi ve kimse pompanın suyuna dokunmamıştı. En tuhaf ipucu ise kilometrelerce uzaktaydı.",
+      "visual": "Müze levhası: demir çemberli tek bir meşe bira fıçısı; notlar 'her gün bira' ve 'su yok'.",
+      "cues": {
+        "bira": "bira",
+        "dok": "dokunmamıştı"
+      },
+      "params": {
+        "g": "barrel",
+        "pigment": "clothC",
+        "notes": [
+          {
+            "text": "her gün bira",
+            "part": "lid",
+            "at": "bira"
+          },
+          {
+            "text": "pompa suyu yok",
+            "part": "stave",
+            "at": "dok",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_chapter",
+      "text": "Kuzeydeki Hampstead'de salgın yoktu.",
+      "visual": "Bölüm kartı: 'Bölüm 3 — Uzaktaki ipucu', 'Hampstead, Eylül 1854', küçük bir cam şişe.",
+      "chapter": "Uzaktaki ipucu",
+      "params": {
+        "num": "Bölüm 3",
+        "title": "Uzaktaki ipucu",
+        "sub": "Hampstead, Eylül 1854",
+        "g": "bottle",
+        "o": {
+          "style": "flask",
+          "color": "water"
+        },
+        "s": 0.55
+      },
+      "cues": {
+        "ham": "Hampstead'de"
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Yine de orada yaşayan yaşlı bir dul, Susannah Eley, iki Eylül'de koleradan öldü.",
+      "visual": "Parlak bir sabah; yeşil Hampstead tepelerinde, ağaçlar arasında tek başına duran iki katlı beyaz bir ev; uzakta Londra'nın dumanlı silueti; not 'Hampstead'.",
+      "cues": {
+        "dul": "dul",
+        "eley": "Eley"
+      },
+      "params": {
+        "sky": "day",
+        "land": "hills",
+        "horizon": 0.72,
+        "clouds": 3,
+        "items": [
+          {
+            "g": "skyline",
+            "o": {
+              "style": "modern"
+            },
+            "x": 0.85,
+            "layer": "far",
+            "s": 1.4,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "european",
+              "half": false
+            },
+            "x": 0.42,
+            "s": 1.3,
+            "at": 0.2
+          },
+          {
+            "g": "tree",
+            "x": 0.2,
+            "at": 0.4
+          },
+          {
+            "g": "tree",
+            "x": 0.62,
+            "layer": "mid",
+            "at": 0.6
+          },
+          {
+            "g": "grass",
+            "x": 0.3,
+            "layer": "fg"
+          },
+          {
+            "g": "shrub",
+            "x": 0.75,
+            "layer": "fg"
+          }
+        ],
+        "birds": {
+          "x": 0.6,
+          "y": 0.18,
+          "n": 4
+        },
+        "notes": [
+          {
+            "text": "Hampstead",
+            "x": 0.42,
+            "y": 0.18,
+            "ax": 0.42,
+            "ay": 0.42,
+            "at": 0.5
+          },
+          {
+            "text": "Soho",
+            "x": 0.87,
+            "y": 0.5,
+            "at": "eley"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Kadın eskiden Broad Street'te yaşamış ve o pompanın suyunu çok sevmişti.",
+      "visual": "Gündüz, sessiz bir oda: açık pencereden düşen ışık, boş bir koltuk ve masada büyük bir su şişesi ile bir bardak.",
+      "cues": {
+        "suy": "suyunu",
+        "sev": "sevmişti"
+      },
+      "camera": {
+        "focus": [
+          1160,
+          560
+        ],
+        "zoom": 1.4
+      },
+      "params": {
+        "land": "interior",
+        "wall": "sky",
+        "horizon": 0.74,
+        "items": [
+          {
+            "g": "window",
+            "o": {
+              "style": "rect"
+            },
+            "x": 0.3,
+            "s": 1.1,
+            "at": -1
+          },
+          {
+            "g": "chair",
+            "x": 0.52,
+            "s": 1.3,
+            "at": -1
+          },
+          {
+            "g": "table",
+            "x": 0.72,
+            "s": 1.1,
+            "at": -1
+          },
+          {
+            "g": "bottle",
+            "o": {
+              "style": "flask",
+              "color": "water"
+            },
+            "x": 0.7,
+            "y": 0.6,
+            "s": 1.0,
+            "at": "suy"
+          },
+          {
+            "g": "bs_glass",
+            "x": 0.77,
+            "y": 0.6,
+            "s": 0.45,
+            "at": "suy"
+          }
+        ],
+        "notes": [
+          {
+            "text": "Broad Street suyu",
+            "x": 0.5,
+            "y": 0.27,
+            "ax": 0.7,
+            "ay": 0.53,
+            "at": "suy"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Bir arabacı ona düzenli olarak oradan büyük bir şişe su götürürdü.",
+      "visual": "Sabah; tepeler arasındaki toprak yolda sağa doğru ilerleyen tek atlı bir yük arabası, kasasında arabacının arkasında tek, büyük bir cam su şişesi.",
+      "cues": {
+        "araba": "arabacı"
+      },
+      "params": {
+        "sky": "dawn",
+        "land": "plain",
+        "horizon": 0.7,
+        "items": [
+          {
+            "g": "cart",
+            "o": {
+              "style": "horse",
+              "animal": "horse",
+              "load": "none",
+              "driver": true,
+              "face": "right"
+            },
+            "x": 0.25,
+            "s": 1.5,
+            "at": 0.1,
+            "move": {
+              "to": [
+                0.62
+              ],
+              "at": 0.3,
+              "dur": 5
+            }
+          },
+          {
+            "g": "bottle",
+            "o": {
+              "style": "flask",
+              "color": "water"
+            },
+            "x": 0.165,
+            "s": 0.5,
+            "at": 0.2,
+            "move": {
+              "to": [
+                0.535
+              ],
+              "at": 0.3,
+              "dur": 5
+            },
+            "layer": "fg",
+            "y": 0.645,
+            "sway": false
+          },
+          {
+            "g": "tree",
+            "x": 0.85,
+            "layer": "mid",
+            "at": -1
+          },
+          {
+            "g": "pine",
+            "x": 0.08,
+            "layer": "far",
+            "at": -1
+          },
+          {
+            "g": "grass",
+            "x": 0.5,
+            "layer": "fg"
+          }
+        ],
+        "notes": [
+          {
+            "text": "Broad Street → Hampstead",
+            "x": 0.5,
+            "y": 0.2,
+            "at": "araba"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Onu ziyarete gelen yeğeni de aynı sudan içti ve öldü. Hava değil, su yolculuk etmişti.",
+      "visual": "Müze levhası: büyük, mantarlı cam bir şişe dolusu su; notlar '31 Ağustos' ve 'su yolculuk etti'.",
+      "cues": {
+        "yeg": "yeğeni",
+        "yol": "yolculuk"
+      },
+      "params": {
+        "g": "bottle",
+        "o": {
+          "style": "flask",
+          "color": "water"
+        },
+        "pigment": "skyWarm",
+        "notes": [
+          {
+            "text": "31 Ağustos",
+            "part": "neck",
+            "at": 0.6
+          },
+          {
+            "text": "su yolculuk etti",
+            "part": "body",
+            "at": "yol",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Yedi Eylül akşamı Snow, mahallenin yönetim kurulunun karşısına çıktı. Üyeler ona inanmadı. Su berrak görünüyordu.",
+      "visual": "Akşam, mum ışığında bir kurul odası: örtülü uzun masada açık bir defter ve bir bardak berrak su; masanın başında ayakta gösteren doktor, oturan iki üye; not '7 Eylül'.",
+      "cues": {
+        "yedi": "Yedi",
+        "inan": "inanmadı"
+      },
+      "camera": {
+        "focus": [
+          1000,
+          560
+        ],
+        "zoom": 1.3
+      },
+      "params": {
+        "land": "interior",
+        "wall": "stoneDark",
+        "horizon": 0.74,
+        "items": [
+          {
+            "g": "window",
+            "o": {
+              "style": "arched",
+              "night": true
+            },
+            "x": 0.15,
+            "at": -1
+          },
+          {
+            "g": "table",
+            "o": {
+              "cloth": true
+            },
+            "x": 0.52,
+            "s": 1.5,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "sit",
+              "dress": "modern",
+              "seat": "stool",
+              "face": "right"
+            },
+            "x": 0.36,
+            "s": 1.25,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "sit",
+              "dress": "modern",
+              "seat": "stool",
+              "face": "right",
+              "headgear": "bare"
+            },
+            "x": 0.46,
+            "s": 1.25,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "point",
+              "dress": "modern",
+              "face": "left",
+              "headgear": "bare"
+            },
+            "x": 0.72,
+            "s": 1.4,
+            "at": 0.2
+          },
+          {
+            "g": "candle",
+            "x": 0.64,
+            "y": 0.6,
+            "s": 0.5,
+            "at": -1
+          },
+          {
+            "g": "book",
+            "o": {
+              "open": true
+            },
+            "x": 0.5,
+            "y": 0.6,
+            "s": 0.6,
+            "at": 0.3
+          },
+          {
+            "g": "bs_glass",
+            "x": 0.58,
+            "y": 0.6,
+            "s": 0.33,
+            "at": 0.5
+          }
+        ],
+        "notes": [
+          {
+            "text": "7 Eylül",
+            "x": 0.6,
+            "y": 0.25,
+            "at": "yedi",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_broadst_handle",
+      "text": "Ama ölüm listesi ortadaydı. Ertesi gün, sekiz Eylül'de, pompanın kolu söküldü. Efsaneye göre bir doktor bir kolu söktü ve salgın durdu.",
+      "visual": "Gündüz; sokak köşesindeki pompa yakın plan: uzun demir kolu yuvasından kalkıyor ve sola doğru götürülüp kayboluyor; not '8 Eylül'.",
+      "cues": {
+        "sek": "sekiz",
+        "sok": "söküldü"
+      },
+      "camera": {
+        "focus": [
+          1000,
+          600
+        ],
+        "zoom": 1.3
+      },
+      "params": {
+        "sky": "day",
+        "land": "city",
+        "horizon": 0.82,
+        "clouds": 2,
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "w": 0.9
+            },
+            "x": 0.1,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 1.3,
+              "col": "stone"
+            },
+            "x": 0.9,
+            "layer": "mid",
+            "s": 1.75,
+            "at": -1
+          }
+        ],
+        "pump": {
+          "x": 0.56,
+          "s": 2.1
+        },
+        "handle": {
+          "mode": "off",
+          "at": "sok",
+          "dur": 2.6
+        },
+        "notes": [
+          {
+            "text": "8 Eylül 1854",
+            "x": 0.72,
+            "y": 0.34,
+            "at": "sek",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_broadst_curve",
+      "text": "Oysa salgın zaten azalmıştı. Ölümle biten yeni vakalar bir Eylül'de yüz kırk üçtü. Kolun söküldüğü gün on ikiye inmişti.",
+      "visual": "Elle boyanmış gün gün çubuk grafik, 31 Ağustos – 15 Eylül: çubuklar sırayla yükselip alçalıyor, 143 ve 12 yazılı; 8 Eylül'e kırmızı kesik çizgi, not 'kol söküldü'.",
+      "cues": {
+        "aza": "azalmıştı",
+        "kolun": "Kolun"
+      },
+      "params": {
+        "title": "ölümle biten yeni vakalar, günlük",
+        "at": 0.5,
+        "step": 0.22,
+        "mark": "kolun",
+        "note": "kol söküldü"
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Çünkü binlerce insan semtten kaçmıştı. Su neden birdenbire zehirlenmişti? Bunu, Snow'a hiç inanmayan bir adam bulacaktı.",
+      "visual": "Alçak açı, fırtınalı gök: ön planda yere devrilmiş büyük bir ahşap kova; uzakta, boş sokağın sonunda küçük, kolsuz pompa ve kapalı evler.",
+      "cues": {
+        "kac": "kaçmıştı",
+        "ned": "neden"
+      },
+      "params": {
+        "sky": "storm",
+        "land": "city",
+        "horizon": 0.56,
+        "items": [
+          {
+            "g": "skyline",
+            "o": {
+              "style": "modern"
+            },
+            "x": 0.5,
+            "layer": "far",
+            "s": 2.4,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 3,
+              "col": "stoneDark"
+            },
+            "x": 0.3,
+            "layer": "mid",
+            "s": 1.6,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC"
+            },
+            "x": 0.78,
+            "layer": "mid",
+            "s": 1.6,
+            "at": -1
+          },
+          {
+            "g": "bs_pump",
+            "o": {
+              "handle": false
+            },
+            "x": 0.6,
+            "layer": "mid",
+            "s": 1.6,
+            "at": -1
+          },
+          {
+            "g": "bucket",
+            "x": 0.09,
+            "y": 0.73,
+            "s": 1.6,
+            "rot": 1.45,
+            "at": 0.3,
+            "sway": false
+          },
+          {
+            "g": "grass",
+            "x": 0.6,
+            "layer": "fg"
+          },
+          {
+            "g": "rock",
+            "x": 0.9,
+            "layer": "fg"
+          }
+        ],
+        "notes": [
+          {
+            "text": "neden?",
+            "x": 0.6,
+            "y": 0.22,
+            "at": "ned",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_chapter",
+      "text": "Henry Whitehead, Broad Street'in hemen yanındaki kilisenin genç papazıydı.",
+      "visual": "Bölüm kartı: 'Bölüm 4 — Papaz', 'Henry Whitehead, 1854 – 1855', küçük bir gaz lambası.",
+      "chapter": "Papaz",
+      "params": {
+        "num": "Bölüm 4",
+        "title": "Papaz",
+        "sub": "Henry Whitehead, 1854 – 1855",
+        "g": "bs_gaslamp",
+        "s": 0.5
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Ve Snow'un yanıldığını göstermek istedi.",
+      "visual": "Alacakaranlık; gotik bir kilisenin önünde siyah cüppeli genç bir papaz tek başına duruyor; yanda yanan bir gaz lambası.",
+      "cues": {
+        "adam": "yanıldığını"
+      },
+      "camera": {
+        "focus": [
+          1100,
+          600
+        ],
+        "zoom": 1.35
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "city",
+        "horizon": 0.8,
+        "items": [
+          {
+            "g": "church",
+            "o": {
+              "style": "gothic"
+            },
+            "x": 0.38,
+            "s": 1.1,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "stand",
+              "dress": "robe",
+              "face": "right",
+              "cols": {
+                "cloth": "ink"
+              },
+              "headgear": "bare"
+            },
+            "x": 0.62,
+            "s": 1.5,
+            "at": "adam"
+          },
+          {
+            "g": "bs_gaslamp",
+            "x": 0.8,
+            "s": 1.1,
+            "at": -1
+          }
+        ],
+        "notes": [
+          {
+            "text": "Henry Whitehead",
+            "x": 0.7,
+            "y": 0.3,
+            "ax": 0.63,
+            "ay": 0.55,
+            "at": 0.8
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Aylarca kapı kapı dolaştı, kaçanların izini sürdü. Ama her ayrıntı onu aynı pompaya geri götürdü.",
+      "visual": "Yağmurlu kış günü; ıslak sokakta siyah cüppeli papaz farklı evlerin önünden yürüyor; uzakta, sokağın sonunda küçük pompa.",
+      "cues": {
+        "ayl": "Aylarca",
+        "pom": "pompaya"
+      },
+      "params": {
+        "sky": "storm",
+        "land": "city",
+        "horizon": 0.8,
+        "weather": "rain",
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "col": "clothC"
+            },
+            "x": 0.12,
+            "layer": "main",
+            "s": 1.2,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 1.3,
+              "col": "stone"
+            },
+            "x": 0.88,
+            "layer": "main",
+            "s": 1.2,
+            "at": -1
+          },
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 4,
+              "w": 0.9
+            },
+            "x": 0.68,
+            "layer": "far",
+            "s": 2.4,
+            "at": -1
+          },
+          {
+            "g": "bs_pump",
+            "x": 0.55,
+            "layer": "far",
+            "s": 2.4,
+            "at": "pom"
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "walk",
+              "dress": "robe",
+              "face": "right",
+              "cols": {
+                "cloth": "ink"
+              },
+              "headgear": "bowler"
+            },
+            "x": 0.3,
+            "s": 1.45,
+            "at": 0.1,
+            "move": {
+              "to": [
+                0.42
+              ],
+              "at": 0.3,
+              "dur": 6
+            }
+          }
+        ],
+        "notes": [
+          {
+            "text": "yine pompa",
+            "x": 0.62,
+            "y": 0.4,
+            "ax": 0.555,
+            "ay": 0.6,
+            "at": "pom",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_letter",
+      "text": "Sonunda bir ölüm kaydındaki küçük bir satıra takıldı. Kırk numara, Broad Street.",
+      "visual": "Ölüm kayıt defterinden bir sayfa: '2 Eylül 1854', '40 Broad Street', 'Frances Lewis', 'beş aylık' satırları beliriyor.",
+      "cues": {
+        "kay": "kaydındaki"
+      },
+      "params": {
+        "style": "diary",
+        "lines": [
+          "2 Eylül 1854",
+          "40 Broad Street",
+          "Frances Lewis",
+          "beş aylık"
+        ],
+        "at": "kay"
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Frances Lewis. Beş aylık bir bebek. Salgından hemen önce hastalanmış, iki Eylül'de ölmüştü.",
+      "visual": "Gece; karanlık bir odada pencere pervazında tek başına yanan küçük bir mum, yanında boş bir sandalye.",
+      "cues": {
+        "ol": "ölmüştü"
+      },
+      "camera": {
+        "focus": [
+          920,
+          560
+        ],
+        "zoom": 1.6
+      },
+      "params": {
+        "land": "interior",
+        "wall": "night",
+        "horizon": 0.74,
+        "items": [
+          {
+            "g": "window",
+            "o": {
+              "style": "rect",
+              "night": true,
+              "light": false
+            },
+            "x": 0.48,
+            "s": 1.2,
+            "at": -1
+          },
+          {
+            "g": "candle",
+            "x": 0.56,
+            "y": 0.555,
+            "s": 1.0,
+            "at": 0.2
+          },
+          {
+            "g": "chair",
+            "x": 0.7,
+            "s": 1.2,
+            "at": -1
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_broadst_section",
+      "text": "Annesi, bebeğin kirli bezlerini yıkadığı suyu evin önündeki lağım çukuruna dökmüştü.",
+      "visual": "Kesit: solda 40 numaranın tuğla cephesi, önünde kovayı ızgaraya boşaltan başörtülü bir kadın; toprağın altında tuğla bir lağım çukuru; sağda pompa ve altındaki derin kuyu.",
+      "cues": {
+        "lag": "lağım",
+        "dok": "dökmüştü"
+      },
+      "params": {
+        "pour": 0.6,
+        "notes": [
+          {
+            "text": "lağım çukuru",
+            "x": 0.2,
+            "y": 0.62,
+            "ax": 0.38,
+            "ay": 0.62,
+            "at": "lag"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_broadst_section",
+      "text": "O çukur, pompanın kuyusundan bir metreden daha az uzaktaydı. Ve tuğlaları çürümüştü.",
+      "visual": "Aynı kesit yakın: çukurla kuyu arasında kırmızı çift yönlü ok ve 'bir metreden az' notu; çatlak tuğlalardan kahverengi sızıntı kuyuya uzanıyor, kuyudaki su bulanıyor.",
+      "cues": {
+        "metre": "metreden",
+        "tug": "tuğlaları"
+      },
+      "camera": {
+        "focus": [
+          1060,
+          560
+        ],
+        "zoom": 1.25
+      },
+      "params": {
+        "gap": "metre",
+        "seep": {
+          "cue": "metre",
+          "d": 0.6
+        },
+        "notes": [
+          {
+            "text": "bir metreden az",
+            "x": 0.555,
+            "y": 0.5,
+            "at": "metre",
+            "color": "red",
+            "align": "center"
+          },
+          {
+            "text": "kuyu",
+            "x": 0.77,
+            "y": 0.82,
+            "ax": 0.69,
+            "ay": 0.85,
+            "at": 1.0
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Snow'u çürütmek isteyen papaz, onun kanıtını tamamlamıştı. Whitehead'in de üyesi olduğu mahalle kurulu Snow'a hak verdi. Ama Londra'nın sağlık yetkilileri başka türlü düşünüyordu.",
+      "visual": "Mum ışığında bir oda: masanın üstünde açık bir sokak haritası; solda siyah cüppeli papaz, sağda haritayı gösteren doktor.",
+      "cues": {
+        "pap": "papaz",
+        "hak": "hak"
+      },
+      "params": {
+        "land": "interior",
+        "wall": "far",
+        "horizon": 0.74,
+        "items": [
+          {
+            "g": "shelf",
+            "x": 0.1,
+            "s": 1.2,
+            "at": -1
+          },
+          {
+            "g": "table",
+            "x": 0.5,
+            "s": 1.6,
+            "at": -1
+          },
+          {
+            "g": "map_scroll",
+            "x": 0.48,
+            "y": 0.6,
+            "s": 0.75,
+            "at": 0.3
+          },
+          {
+            "g": "candle",
+            "x": 0.62,
+            "y": 0.6,
+            "s": 0.5,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "stand",
+              "dress": "robe",
+              "face": "right",
+              "cols": {
+                "cloth": "ink"
+              },
+              "headgear": "bare"
+            },
+            "x": 0.3,
+            "s": 1.6,
+            "at": -1
+          },
+          {
+            "g": "person",
+            "o": {
+              "pose": "point",
+              "dress": "modern",
+              "face": "left",
+              "headgear": "bare"
+            },
+            "x": 0.7,
+            "s": 1.6,
+            "at": 0.4
+          }
+        ],
+        "notes": [
+          {
+            "text": "Whitehead",
+            "x": 0.16,
+            "y": 0.28,
+            "ax": 0.3,
+            "ay": 0.45,
+            "at": "pap"
+          },
+          {
+            "text": "Snow",
+            "x": 0.8,
+            "y": 0.28,
+            "ax": 0.7,
+            "ay": 0.45,
+            "at": "hak"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_letter",
+      "chapter": "Sonrası",
+      "text": "Bin sekiz yüz elli beşte Genel Sağlık Kurulu'nun komitesi Snow'un açıklamasını kabul etmedi.",
+      "visual": "Resmî bir rapor sayfası: 'Genel Sağlık Kurulu, 1855', 'Snow'un açıklaması', 'kabul edilmedi' satırları beliriyor.",
+      "cues": {
+        "kab": "kabul"
+      },
+      "params": {
+        "style": "letter",
+        "lines": [
+          "Genel Sağlık Kurulu, 1855",
+          "Snow'un açıklaması:",
+          "kabul edilmedi."
+        ],
+        "at": 0.3
+      }
+    },
+    {
+      "type": "wc_broadst_handle",
+      "text": "Pompanın kolu bir süre sonra yerine takıldı.",
+      "visual": "Sisli sabah, yakın plan: pompanın gövdesi ve kol yuvası; demir kol soldan gelip yeniden yuvasına oturuyor.",
+      "cues": {
+        "tak": "takıldı"
+      },
+      "camera": {
+        "focus": [
+          880,
+          520
+        ],
+        "zoom": 1.9
+      },
+      "params": {
+        "sky": "fog",
+        "land": "city",
+        "horizon": 0.82,
+        "weather": "fog",
+        "items": [],
+        "pump": {
+          "x": 0.52,
+          "s": 2.0
+        },
+        "handle": {
+          "mode": "on",
+          "at": 0.3,
+          "dur": 2.4
+        }
+      }
+    },
+    {
+      "type": "wc_timeline",
+      "text": "John Snow, bin sekiz yüz elli sekizde, kırk beş yaşında öldü. Haklı çıktığı günleri göremedi. Sekiz yıl sonra kolera Doğu Londra'yı vurdu.",
+      "visual": "Yatay zaman çizelgesi: '1849 kitapçık', '1854 Broad Street', '1858 Snow ölür' (vurgulu), '1866 Doğu Londra'.",
+      "cues": {
+        "ol": "öldü",
+        "dog": "Doğu"
+      },
+      "params": {
+        "items": [
+          {
+            "year": "1849",
+            "label": "kitapçık",
+            "at": 0.2
+          },
+          {
+            "year": "1854",
+            "label": "Broad Street",
+            "at": 0.8
+          },
+          {
+            "year": "1858",
+            "label": "Snow ölür",
+            "at": "ol"
+          },
+          {
+            "year": "1866",
+            "label": "Doğu Londra",
+            "at": "dog"
+          }
+        ],
+        "highlight": 2,
+        "title": "Haklı ama geç"
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Bu kez araştırmacılar önce suya baktı. Ve suçluyu bir su şirketinin kirlenmiş haznelerinde buldular.",
+      "visual": "Gri bir gün; nehir kıyısında tuğla bir su şirketi binası ve bacası, önünde bulanık su haznesi; kıyıda sazlar; not 'su şirketi'.",
+      "cues": {
+        "suya": "suya",
+        "suc": "suçluyu"
+      },
+      "params": {
+        "sky": "fog",
+        "land": "river",
+        "horizon": 0.6,
+        "items": [
+          {
+            "g": "factory",
+            "x": 0.3,
+            "s": 1.1,
+            "at": 0.1,
+            "o": {
+              "lit": false
+            }
+          },
+          {
+            "g": "reeds",
+            "x": 0.08,
+            "layer": "fg"
+          },
+          {
+            "g": "reeds",
+            "x": 0.95,
+            "layer": "fg"
+          },
+          {
+            "g": "rowboat",
+            "x": 0.72,
+            "layer": "mid",
+            "y": 0.78,
+            "at": -1
+          }
+        ],
+        "notes": [
+          {
+            "text": "su şirketi",
+            "x": 0.55,
+            "y": 0.2,
+            "ax": 0.32,
+            "ay": 0.35,
+            "at": "suc"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Bugün o sokağın adı Broadwick Street. Köşede eski pompanın bir kopyası durur. Kolu yoktur.",
+      "visual": "Parlak bugünkü gün: iki katlı, geniş, koyu renk boyalı bir köşe binasının önünde kaldırım; köşede kolsuz siyah pompa; yanda bir ağaç.",
+      "cues": {
+        "adi": "Broadwick",
+        "kolu": "Kolu"
+      },
+      "params": {
+        "sky": "day",
+        "land": "city",
+        "horizon": 0.8,
+        "clouds": 3,
+        "items": [
+          {
+            "g": "house",
+            "o": {
+              "style": "modern",
+              "floors": 2,
+              "w": 2.4,
+              "col": "clothB"
+            },
+            "x": 0.45,
+            "s": 1.3,
+            "at": -1
+          },
+          {
+            "g": "tree",
+            "x": 0.1,
+            "layer": "mid",
+            "at": -1
+          },
+          {
+            "g": "bs_pump",
+            "o": {
+              "handle": false,
+              "col": "ink"
+            },
+            "x": 0.8,
+            "s": 1.5,
+            "at": 0.2
+          }
+        ],
+        "notes": [
+          {
+            "text": "Broadwick Street",
+            "x": 0.3,
+            "y": 0.18,
+            "at": "adi"
+          },
+          {
+            "text": "kolu yok",
+            "x": 0.6,
+            "y": 0.42,
+            "ax": 0.78,
+            "ay": 0.6,
+            "at": "kolu",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_specimen",
+      "text": "Ölümü bu sokağa ne getirdi? Bir annenin döktüğü bir kova su.",
+      "visual": "Müze levhası: demir çemberli tek bir ahşap kova; not 'bir kova su'.",
+      "cues": {
+        "kova": "kova"
+      },
+      "params": {
+        "g": "bucket",
+        "pigment": "stain",
+        "notes": [
+          {
+            "text": "bir kova su",
+            "part": "mouth",
+            "at": "kova",
+            "color": "red"
+          }
+        ]
+      }
+    },
+    {
+      "type": "wc_broadst_map",
+      "text": "Onu kim buldu? Kimsenin inanmadığı bir doktor ve onu yanıltmak isterken haklı çıkaran bir papaz.",
+      "visual": "Snow'un sokak planı tamamlanmış hâliyle: pompanın çevresinde yığılmış bütün siyah çizgiler ve kırmızı halka; plan yavaşça kâğıda yıkanıyor.",
+      "cues": {
+        "dok": "doktor",
+        "pap": "papaz"
+      },
+      "camera": {
+        "focus": [
+          900,
+          520
+        ],
+        "zoom": 1.25
+      },
+      "params": {
+        "paint": 0,
+        "pump": {
+          "at": -1
+        },
+        "deaths": {
+          "done": true,
+          "n": 300
+        },
+        "ring": {
+          "at": 0.4,
+          "r": 300
+        }
+      }
+    },
+    {
+      "type": "wc_scene",
+      "text": "Sizce bugün de herkesin gözü önünde duran ama kimsenin görmediği bir pompa var mı? Yorumlara yazın. Böyle sessiz hikâyeler için abone olun.",
+      "visual": "Alacakaranlık, yakın plan: kolsuz dökme demir pompa tek başına; yanında yanmaya başlayan bir gaz lambası.",
+      "camera": {
+        "focus": [
+          960,
+          560
+        ],
+        "zoom": 1.5
+      },
+      "params": {
+        "sky": "dusk",
+        "land": "city",
+        "horizon": 0.84,
+        "sun": false,
+        "clouds": 2,
+        "items": [
+          {
+            "g": "bs_pump",
+            "o": {
+              "handle": false,
+              "col": "ink"
+            },
+            "x": 0.5,
+            "s": 2.3,
+            "at": -1
+          },
+          {
+            "g": "bs_gaslamp",
+            "x": 0.7,
+            "s": 1.5,
+            "at": 0.4
+          }
+        ]
+      }
+    }
+  ]
+}
